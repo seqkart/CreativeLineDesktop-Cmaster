@@ -1035,12 +1035,6 @@
     <Compile Include="Transaction\challans\frm_ChallanOutward.Designer.cs">
       <DependentUpon>frm_ChallanOutward.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\XtraReport1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Transaction\XtraReport1.Designer.cs">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transaction\frmAdvanceAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1581,9 +1575,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\challans\frm_ChallanOutward.resx">
       <DependentUpon>frm_ChallanOutward.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\XtraReport1.resx">
-      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmAdvanceAddEdit.resx">
       <DependentUpon>frmAdvanceAddEdit.cs</DependentUpon>
