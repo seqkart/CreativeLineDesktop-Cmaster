@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmAttendenceLaoding
+    partial class frmAttendanceLoading
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAttendenceLaoding));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAttendanceLoading));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();

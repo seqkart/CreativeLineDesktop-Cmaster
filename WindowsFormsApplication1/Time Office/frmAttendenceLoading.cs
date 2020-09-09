@@ -28,10 +28,10 @@ using WindowsFormsApplication1.Time_Office;
 namespace WindowsFormsApplication1.Forms_Master
 {
 
-    public partial class frmAttendenceLaoding : XtraForm
+    public partial class frmAttendanceLoading : XtraForm
     {
         private DataTable dt = new DataTable();
-        public frmAttendenceLaoding()
+        public frmAttendanceLoading()
         {
             InitializeComponent();
 

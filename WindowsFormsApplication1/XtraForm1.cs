@@ -1370,7 +1370,7 @@ namespace WindowsFormsApplication1
                 //    xtraTabControl1.SelectedTabPage = Page;
                 //    break;
                 case "PROG153":
-                    var PROG153 = new WindowsFormsApplication1.Forms_Master.frmAttendenceLaoding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG153 = new WindowsFormsApplication1.Forms_Master.frmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG153.Show();
                     PROG153.BringToFront();
                     PROG153.Parent = Page;

@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Time_Office
     {
         //public event EventHandler<ThresholdReachedEventArgs> ChildWantedSomething;        
 
-        private frmAttendenceLaoding _frmAttendenceLaoding = null;
+        private frmAttendanceLoading _frmAttendenceLaoding = null;
 
         //private string selected_employee_code = "";
         public int selected_serial_id = 0;// { get; set; }
@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         private bool input_fields_empty = false;
 
-        public XtraForm_EmployeeAttendence(frmAttendenceLaoding parent, int _selected_serial_id, string _come_from, string _selected_employee_code, string _selected_attendance_date)
+        public XtraForm_EmployeeAttendence(frmAttendanceLoading parent, int _selected_serial_id, string _come_from, string _selected_employee_code, string _selected_attendance_date)
         {
             InitializeComponent();
 
