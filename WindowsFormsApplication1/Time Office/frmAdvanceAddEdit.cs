@@ -462,5 +462,10 @@ string.Empty;
                 btnSave_Click(null, e);
             }
         }
+
+        private void txtPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -112,6 +112,9 @@
             this.txtSerialNo = new DevExpress.XtraEditors.TextEdit();
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.GridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -248,6 +251,13 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.xtraTabPage10 = new DevExpress.XtraTab.XtraTabPage();
+            this.DocsGrid = new DevExpress.XtraGrid.GridControl();
+            this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
             this.PSGrid = new DevExpress.XtraGrid.GridControl();
             this.PSGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -258,17 +268,7 @@
             this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.xtraTabPage10 = new DevExpress.XtraTab.XtraTabPage();
-            this.DocsGrid = new DevExpress.XtraGrid.GridControl();
-            this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -332,6 +332,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
@@ -395,21 +398,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankAccNo.Properties)).BeginInit();
             this.xtraTabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            this.xtraTabPage10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).BeginInit();
             this.groupControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PSGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            this.xtraTabPage10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -486,7 +486,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 29);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1222, 617);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1187, 617);
             this.xtraTabControl1.TabIndex = 475;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -510,7 +510,7 @@
             this.xtraTabPage1.Controls.Add(this.txtserial);
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1220, 589);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1185, 589);
             this.xtraTabPage1.Text = "Main Invoice Details";
             // 
             // groupControl4
@@ -547,7 +547,7 @@
             // 
             this.labelControl28.Location = new System.Drawing.Point(23, 88);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(79, 13);
+            this.labelControl28.Size = new System.Drawing.Size(80, 13);
             this.labelControl28.TabIndex = 540;
             this.labelControl28.Text = "Transporter Key";
             // 
@@ -555,7 +555,7 @@
             // 
             this.labelControl24.Location = new System.Drawing.Point(43, 65);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(59, 13);
+            this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 540;
             this.labelControl24.Text = "Transporter";
             // 
@@ -817,7 +817,7 @@
             // 
             this.labelControl22.Location = new System.Drawing.Point(15, 107);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(75, 13);
+            this.labelControl22.Size = new System.Drawing.Size(74, 13);
             this.labelControl22.TabIndex = 540;
             this.labelControl22.Text = "Agent / Broker";
             // 
@@ -825,7 +825,7 @@
             // 
             this.labelControl20.Location = new System.Drawing.Point(12, 82);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(78, 13);
+            this.labelControl20.Size = new System.Drawing.Size(77, 13);
             this.labelControl20.TabIndex = 540;
             this.labelControl20.Text = "Ledger Balance";
             // 
@@ -840,7 +840,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(51, 56);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(37, 13);
+            this.labelControl10.Size = new System.Drawing.Size(38, 13);
             this.labelControl10.TabIndex = 524;
             this.labelControl10.Text = "GST No";
             // 
@@ -1194,6 +1194,7 @@
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.HelpGrid);
             this.xtraTabPage2.Controls.Add(this.panelControl1);
             this.xtraTabPage2.Controls.Add(this.InfoGrid);
             this.xtraTabPage2.Controls.Add(this.groupControl9);
@@ -1203,8 +1204,40 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1185, 589);
             this.xtraTabPage2.Text = "Invoice Data";
+            // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(58, 214);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(717, 167);
+            this.HelpGrid.TabIndex = 475;
+            this.HelpGrid.TabStop = false;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
             // 
             // panelControl1
             // 
@@ -1755,11 +1788,11 @@
             // 
             this.txtTempPartyName.Enabled = false;
             this.txtTempPartyName.EnterMoveNextControl = true;
-            this.txtTempPartyName.Location = new System.Drawing.Point(159, 26);
+            this.txtTempPartyName.Location = new System.Drawing.Point(149, 26);
             this.txtTempPartyName.Name = "txtTempPartyName";
             this.txtTempPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTempPartyName.Properties.ReadOnly = true;
-            this.txtTempPartyName.Size = new System.Drawing.Size(316, 20);
+            this.txtTempPartyName.Size = new System.Drawing.Size(326, 20);
             this.txtTempPartyName.TabIndex = 532;
             this.txtTempPartyName.TabStop = false;
             // 
@@ -1769,7 +1802,7 @@
             this.txtTempPartyCode.Name = "txtTempPartyCode";
             this.txtTempPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTempPartyCode.Properties.MaxLength = 6;
-            this.txtTempPartyCode.Size = new System.Drawing.Size(77, 20);
+            this.txtTempPartyCode.Size = new System.Drawing.Size(67, 20);
             this.txtTempPartyCode.TabIndex = 533;
             // 
             // ArticleImageBox
@@ -1778,7 +1811,7 @@
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.ArticleImageBox.Size = new System.Drawing.Size(229, 289);
+            this.ArticleImageBox.Size = new System.Drawing.Size(202, 289);
             this.ArticleImageBox.TabIndex = 709;
             // 
             // xtraTabControl3
@@ -1907,7 +1940,7 @@
             // 
             this.labelControl40.Location = new System.Drawing.Point(95, 32);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(72, 13);
+            this.labelControl40.Size = new System.Drawing.Size(73, 13);
             this.labelControl40.TabIndex = 542;
             this.labelControl40.Text = "Discount Type";
             // 
@@ -1923,7 +1956,7 @@
             // 
             this.labelControl43.Location = new System.Drawing.Point(2, 54);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(88, 13);
+            this.labelControl43.Size = new System.Drawing.Size(90, 13);
             this.labelControl43.TabIndex = 542;
             this.labelControl43.Text = "Total Tax Amount";
             // 
@@ -1939,7 +1972,7 @@
             // 
             this.labelControl38.Location = new System.Drawing.Point(21, 10);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(70, 13);
+            this.labelControl38.Size = new System.Drawing.Size(71, 13);
             this.labelControl38.TabIndex = 542;
             this.labelControl38.Text = "Taxable Value";
             // 
@@ -2524,7 +2557,7 @@
             // 
             this.labelControl37.Location = new System.Drawing.Point(207, 78);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(73, 13);
+            this.labelControl37.Size = new System.Drawing.Size(72, 13);
             this.labelControl37.TabIndex = 542;
             this.labelControl37.Text = "Builty Amount";
             // 
@@ -2675,7 +2708,7 @@
             // 
             this.labelControl30.Location = new System.Drawing.Point(17, 20);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(58, 13);
+            this.labelControl30.Size = new System.Drawing.Size(57, 13);
             this.labelControl30.TabIndex = 542;
             this.labelControl30.Text = "Bank Name";
             // 
@@ -2692,14 +2725,81 @@
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.Name = "xtraTabPage8";
             this.xtraTabPage8.Size = new System.Drawing.Size(402, 154);
-            this.xtraTabPage8.Text = "Documents Attached";
+            this.xtraTabPage8.Text = "Attach Documents ";
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(402, 154);
+            this.pictureEdit1.TabIndex = 1;
+            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
+            // 
+            // xtraTabPage10
+            // 
+            this.xtraTabPage10.Controls.Add(this.DocsGrid);
+            this.xtraTabPage10.Name = "xtraTabPage10";
+            this.xtraTabPage10.Size = new System.Drawing.Size(402, 154);
+            this.xtraTabPage10.Text = "View Docs";
+            // 
+            // DocsGrid
+            // 
+            this.DocsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DocsGrid.Location = new System.Drawing.Point(0, 0);
+            this.DocsGrid.MainView = this.DocsGridView;
+            this.DocsGrid.Name = "DocsGrid";
+            this.DocsGrid.Size = new System.Drawing.Size(402, 154);
+            this.DocsGrid.TabIndex = 478;
+            this.DocsGrid.TabStop = false;
+            this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.DocsGridView,
+            this.gridView10});
+            this.DocsGrid.DoubleClick += new System.EventHandler(this.DocsGrid_DoubleClick);
+            // 
+            // DocsGridView
+            // 
+            this.DocsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn55,
+            this.gridColumn56});
+            this.DocsGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.DocsGridView.GridControl = this.DocsGrid;
+            this.DocsGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.DocsGridView.Name = "DocsGridView";
+            this.DocsGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.DocsGridView.OptionsBehavior.Editable = false;
+            this.DocsGridView.OptionsView.ShowGroupPanel = false;
+            this.DocsGridView.OptionsView.ShowIndicator = false;
+            this.DocsGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridColumn55
+            // 
+            this.gridColumn55.Caption = "Transid";
+            this.gridColumn55.FieldName = "Transid";
+            this.gridColumn55.Name = "gridColumn55";
+            this.gridColumn55.Visible = true;
+            this.gridColumn55.VisibleIndex = 0;
+            // 
+            // gridColumn56
+            // 
+            this.gridColumn56.Caption = "DocImage";
+            this.gridColumn56.FieldName = "DocImage";
+            this.gridColumn56.Name = "gridColumn56";
+            this.gridColumn56.Visible = true;
+            this.gridColumn56.VisibleIndex = 1;
+            // 
+            // gridView10
+            // 
+            this.gridView10.GridControl = this.DocsGrid;
+            this.gridView10.Name = "gridView10";
             // 
             // groupControl10
             // 
-            this.groupControl10.AutoSize = true;
             this.groupControl10.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl10.CaptionImageOptions.Image")));
             this.groupControl10.Controls.Add(this.PSGrid);
-            this.groupControl10.Location = new System.Drawing.Point(528, 14);
+            this.groupControl10.Location = new System.Drawing.Point(524, 14);
             this.groupControl10.Name = "groupControl10";
             this.groupControl10.Size = new System.Drawing.Size(445, 109);
             this.groupControl10.TabIndex = 533;
@@ -2707,10 +2807,10 @@
             // 
             // PSGrid
             // 
-            this.PSGrid.Location = new System.Drawing.Point(2, 19);
+            this.PSGrid.Location = new System.Drawing.Point(0, 22);
             this.PSGrid.MainView = this.PSGridView;
             this.PSGrid.Name = "PSGrid";
-            this.PSGrid.Size = new System.Drawing.Size(440, 87);
+            this.PSGrid.Size = new System.Drawing.Size(445, 87);
             this.PSGrid.TabIndex = 491;
             this.PSGrid.TabStop = false;
             this.PSGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2793,106 +2893,6 @@
             this.gridView8.GridControl = this.PSGrid;
             this.gridView8.Name = "gridView8";
             // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(339, 11);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(717, 167);
-            this.HelpGrid.TabIndex = 475;
-            this.HelpGrid.TabStop = false;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView1});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.HelpGrid;
-            this.gridView1.Name = "gridView1";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(402, 154);
-            this.pictureEdit1.TabIndex = 1;
-            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
-            // 
-            // xtraTabPage10
-            // 
-            this.xtraTabPage10.Controls.Add(this.DocsGrid);
-            this.xtraTabPage10.Name = "xtraTabPage10";
-            this.xtraTabPage10.Size = new System.Drawing.Size(402, 154);
-            this.xtraTabPage10.Text = "View Socs";
-            // 
-            // DocsGrid
-            // 
-            this.DocsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocsGrid.Location = new System.Drawing.Point(0, 0);
-            this.DocsGrid.MainView = this.DocsGridView;
-            this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(402, 154);
-            this.DocsGrid.TabIndex = 478;
-            this.DocsGrid.TabStop = false;
-            this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.DocsGridView,
-            this.gridView10});
-            this.DocsGrid.DoubleClick += new System.EventHandler(this.DocsGrid_DoubleClick);
-            // 
-            // DocsGridView
-            // 
-            this.DocsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn55,
-            this.gridColumn56});
-            this.DocsGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.DocsGridView.GridControl = this.DocsGrid;
-            this.DocsGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.DocsGridView.Name = "DocsGridView";
-            this.DocsGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.DocsGridView.OptionsBehavior.Editable = false;
-            this.DocsGridView.OptionsView.ShowGroupPanel = false;
-            this.DocsGridView.OptionsView.ShowIndicator = false;
-            this.DocsGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridColumn55
-            // 
-            this.gridColumn55.Caption = "Transid";
-            this.gridColumn55.FieldName = "Transid";
-            this.gridColumn55.Name = "gridColumn55";
-            this.gridColumn55.Visible = true;
-            this.gridColumn55.VisibleIndex = 0;
-            // 
-            // gridColumn56
-            // 
-            this.gridColumn56.Caption = "DocImage";
-            this.gridColumn56.FieldName = "DocImage";
-            this.gridColumn56.Name = "gridColumn56";
-            this.gridColumn56.Visible = true;
-            this.gridColumn56.VisibleIndex = 1;
-            // 
-            // gridView10
-            // 
-            this.gridView10.GridControl = this.DocsGrid;
-            this.gridView10.Name = "gridView10";
-            // 
             // frmInvoiceMstAdd
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -2901,7 +2901,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 643);
             this.ControlBox = false;
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Menu_ToolStrip);
@@ -2980,6 +2979,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
@@ -3048,21 +3050,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankAccNo.Properties)).EndInit();
             this.xtraTabPage8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            this.xtraTabPage10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).EndInit();
             this.groupControl10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PSGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            this.xtraTabPage10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

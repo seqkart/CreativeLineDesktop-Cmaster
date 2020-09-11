@@ -1221,6 +1221,12 @@
     <Compile Include="Transaction\frm_SupplierPaymentVoucherAdd_Upd.designer.cs">
       <DependentUpon>frm_SupplierPaymentVoucherAdd_Upd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Transaction\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserRoles\MainFormButtons.cs" />
     <Compile Include="WaitForm1.cs">
       <SubType>Form</SubType>
@@ -1668,6 +1674,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frm_SupplierPaymentVoucherAdd_Upd.resx">
       <DependentUpon>frm_SupplierPaymentVoucherAdd_Upd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>

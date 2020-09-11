@@ -1841,6 +1841,25 @@ namespace WindowsFormsApplication1.Time_Office
 
                         input_fields_empty = false;
                     }
+                    if (IsString.IsEqualTo(clearStr, "+0000"))
+                    {
+                        SetEditValue(timeEdit_Time_In_First, null);
+                        SetEditValue(timeEdit_Time_Out_First, null);
+                        SetEditValue(timeEdit_Time_In_Last, null);
+                        SetEditValue(timeEdit_Time_Out_Last, null);
+
+                        timeEdit_Time_In_First.Enabled = true;
+                        timeEdit_Time_Out_First.Enabled = true;
+
+                        timeEdit_Time_In_Last.Enabled = true;
+                        timeEdit_Time_Out_Last.Enabled = true;
+
+                        PrintLogWin.PrintLog("--------------- F " + clearStr);
+
+                        CalculateDUtyHours("comboBox_Status_SelectedValueChanged => +0000");
+
+                        input_fields_empty = false;
+                    }
                     if (IsString.IsEqualTo(clearStr, "0011"))
                     {
                         SetEditValue(timeEdit_Time_In_First, null);
