@@ -242,7 +242,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void OpenAttendanceForm(int _serial_id, string _employee_code, string _attendance_date)
         {
 
-            XtraForm_EmployeeAttendence xtraForm_EmployeeAttendence = new XtraForm_EmployeeAttendence(this, _serial_id, "frmAttendenceLoading => Add Button", _employee_code, _attendance_date)
+            XtraForm_EmployeeAttendance xtraForm_EmployeeAttendence = new XtraForm_EmployeeAttendance(this, _serial_id, "frmAttendenceLoading => Add Button", _employee_code, _attendance_date)
             {
                 StartPosition = FormStartPosition.CenterScreen
             };
@@ -378,7 +378,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            OpenAttendanceForm(0, "", "");
+            OpenAttendanceForm(0, string.Empty, string.Empty);
         }
 
         private void btnAdd2_Click(object sender, EventArgs e)
@@ -431,13 +431,13 @@ namespace WindowsFormsApplication1.Forms_Master
                     {
                         txtEmpCode.Text = ds.Tables[0].Rows[0]["EmpCode"].ToString();
                         txtEmpName.Text = ds.Tables[0].Rows[0]["EmpName"].ToString();
-                       lblemp.Text = ds.Tables[0].Rows[0]["EmpName"].ToString();
+                        lblemp.Text = ds.Tables[0].Rows[0]["EmpName"].ToString();
                         //txtDept.Text = ds.Tables[0].Rows[0]["DeptDesc"].ToString();
 
                         //LastInstlmnt();
                         //txtLoanAmount.Focus();
                         // btnLoad_Data.Focus();
-                        btnLoad_Data_Click((object)sender, (EventArgs)e);
+                        btnLoad_Data_Click(sender, (EventArgs)e);
                     }
                     else
                     {
@@ -716,7 +716,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
             EmployeeAttendanceDetails_Model employeeAttendanceDetails_Model = new EmployeeAttendanceDetails_Model
             {
-                EmpCode = txtEmpCode.EditValue + "",
+                EmpCode = txtEmpCode.EditValue + string.Empty,
                 AttendanceMonth = ConvertTo.DateTimeVal(DtStartDate.EditValue),
                 EmployeeAttendance_Get_List = EmployeeData.EmployeeAttendance_Get(programMaster.ProgProcName + "_v2", param),
                 EmployeesSalaryList = EmployeeData.GetEmployeesSalaryList("sp_Salary_Process", paramSalary),

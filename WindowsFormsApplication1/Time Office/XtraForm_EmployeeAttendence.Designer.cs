@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Time_Office
 {
-    partial class XtraForm_EmployeeAttendence
+    partial class XtraForm_EmployeeAttendance
     {
         /// <summary>
         /// Required designer variable.

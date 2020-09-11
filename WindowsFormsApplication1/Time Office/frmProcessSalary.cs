@@ -759,7 +759,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 {
                     if (ConvertTo.DecimalVal(e.Value) == 0)
                     {
-                        e.DisplayText = "";
+                        e.DisplayText = string.Empty;
                     }
                     //e.DisplayText = ConvertTo.MinutesToHours(e.Value, EmptyReturn.DbNull) + "";
                 }
@@ -861,7 +861,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         //cn.Execute(@"Insert INTO #routineUpdatedRecords VALUES('" + strEmpCode + "', '" + strSalaryMonth + "', " + strSalaryPaid + ")");
                     }
 
-                    PrintLogWin.PrintLog("*******************************" + "");
+                    PrintLogWin.PrintLog("*******************************" + string.Empty);
 
                     using (SqlConnection con = new SqlConnection(ProjectFunctionsUtils.ConnectionString))
                     {
@@ -955,7 +955,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         //cn.Execute(@"Insert INTO #routineUpdatedRecords VALUES('" + strEmpCode + "', '" + strSalaryMonth + "', " + strSalaryPaid + ")");
                     }
 
-                    PrintLogWin.PrintLog("*******************************" + "");
+                    PrintLogWin.PrintLog("*******************************" + string.Empty);
 
                     using (SqlConnection con = new SqlConnection(ProjectFunctionsUtils.ConnectionString))
                     {
@@ -1188,7 +1188,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             XtraReport_Salary Xtra_report_employeesSalaryList = new XtraReport_Salary();
 
             DynamicParameters param = new DynamicParameters();
-            param.Add("@Emp_Code_Processing", "");
+            param.Add("@Emp_Code_Processing", string.Empty);
             param.Add("@Salary_Month", DtStartDate.EditValue);
             param.Add("@Deduct_Advance", 1);
             param.Add("@Deduct_Loan", 1);

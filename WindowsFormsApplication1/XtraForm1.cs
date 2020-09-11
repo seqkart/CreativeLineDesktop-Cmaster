@@ -211,7 +211,7 @@ namespace WindowsFormsApplication1
                     //PROG172.Parent = Page;
                     //xtraTabControl1.SelectedTabPage = Page;
 
-                    var PROG172 = new frmGatePassLaoding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG172 = new FrmGatePassLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG172.Show();
                     PROG172.BringToFront();
                     PROG172.Parent = Page;

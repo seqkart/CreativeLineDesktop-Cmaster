@@ -25,10 +25,10 @@ using System.Windows.Forms;
 namespace WindowsFormsApplication1.Forms_Master
 {
 
-    public partial class frmGatePassLaoding : XtraForm
+    public partial class FrmGatePassLoading : XtraForm
     {
         private DataTable dt = new DataTable();
-        public frmGatePassLaoding()
+        public FrmGatePassLoading()
         {
             InitializeComponent();
 
@@ -39,32 +39,28 @@ namespace WindowsFormsApplication1.Forms_Master
             btnQuit.Visible = false;
             toolStripButton1.Visible = false;
 
-            //gridView_AttendanceData.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             gridView_AttendanceData.OptionsBehavior.Editable = false;
 
-            dt.Columns.Add("MonthYear", typeof(String));
-            dt.Columns.Add("EmpCode", typeof(String));
-            dt.Columns.Add("EmpName", typeof(String));
-            dt.Columns.Add("EmpDW", typeof(Decimal));
-            dt.Columns.Add("EmpPH", typeof(Decimal));
-            dt.Columns.Add("EmpEL", typeof(Decimal));
-            dt.Columns.Add("EmpCL", typeof(Decimal));
-            dt.Columns.Add("EmpSL", typeof(Decimal));
-            dt.Columns.Add("EmpPymtMode", typeof(String));
-
-
-
+            dt.Columns.Add("MonthYear", typeof(string));
+            dt.Columns.Add("EmpCode", typeof(string));
+            dt.Columns.Add("EmpName", typeof(string));
+            dt.Columns.Add("EmpDW", typeof(decimal));
+            dt.Columns.Add("EmpPH", typeof(decimal));
+            dt.Columns.Add("EmpEL", typeof(decimal));
+            dt.Columns.Add("EmpCL", typeof(decimal));
+            dt.Columns.Add("EmpSL", typeof(decimal));
+            dt.Columns.Add("EmpPymtMode", typeof(string));
         }
 
         private void SetMyControls1()
         {
-            //panelControl1.Location = new Point(ClientSize.Width / 2 - panelControl1.Size.Width / 2, ClientSize.Height / 2 - panelControl1.Size.Height / 2);
+
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
-            //ProjectFunctions.GroupCtrlVisualize(panelControl1);
+
             ProjectFunctions.XtraFormVisualize(this);
         }
         private void btnQuit_Click(object sender, EventArgs e)
@@ -75,7 +71,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void frmGatePassLaoding_Load(object sender, EventArgs e)
         {
             PrintLogWin.PrintLog("*[ frmGatePassLaoding_Load ]*");
-            //SetMyControls();
+
             SetMyControls2();
 
             LoadGatePassDataGrid(true);
@@ -115,18 +111,9 @@ namespace WindowsFormsApplication1.Forms_Master
         }
         public void LoadGatePassDataGrid_Obsoulete()
         {
-            //ProgramMasterModel programMaster = ProgramMasterData.GetProgramMasterModel(GlobalVariables.ProgCode);
 
-            //DataSet ds = ProjectFunctions.GetDataSet("Select ProgProcName,ProgDesc from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'");
-            //string ProcedureName = ds.Tables[0].Rows[0]["ProgProcName"].ToString();
 
             PrintLogWin.PrintLog("LoadGatePassDataGrid => GlobalVariables.ProgCode ******************** " + GlobalVariables.ProgCode);
-            //PrintLogWin.PrintLog("LoadAttendanceDataGrid => ProcedureName Dapper ******************** " + programMaster.ProgProcName);
-            //PrintLogWin.PrintLog("LoadAttendanceDataGrid => ProcedureName B ******************** " + ProcedureName);
-
-
-            //List<AttendanceModel> att = ProgramMasterData.GetData<AttendanceModel>(GlobalVariables.ProgCode);
-            //PrintLogWin.PrintLog("LoadAttendanceDataGrid => att ******************** " + att.Count);
 
 
             gridView_AttendanceData.Columns.Clear();
@@ -137,106 +124,9 @@ namespace WindowsFormsApplication1.Forms_Master
             if (ComparisonUtils.IsNotNull_DataSet(att_ds))
             {
                 gridControl_AttendanceData.DataSource = att_ds;
-                /*
-                BindingList<object> binding_list = new BindingList<object>();
-
-                foreach (DataRow dr in att_ds.Tables[0].Rows)
-                {
-                    var employeeAttendance = new
-                    {
-                        SerialId = dr[Col.EmployeeAttendance.serial_id],
-                        EntryDate = dr[Col.EmployeeAttendance.entry_date],
-                        AttendanceDate = dr[Col.EmployeeAttendance.attendance_date],
-                        EmployeeCode = dr[Col.EmployeeAttendance.employee_code],
-                        //Shift = dr[Col.DailyShifts.shift_name],
-                        Status = dr[Col.AttendanceStatus.status],
-                        TimeIn_First = dr[Col.EmployeeAttendance.attendance_in_first],
-                        TimeOut_First = dr[Col.EmployeeAttendance.attendance_out_first],
-                        TimeIn_Last = dr[Col.EmployeeAttendance.attendance_in_last],
-                        TimeOut_Last = dr[Col.EmployeeAttendance.attendance_out_last],
-                        WorkingHours = dr[Col.EmployeeAttendance.working_hours],
-                        GatePassTime = ConvertTo.IntVal(dr[Col.EmployeeAttendance.gate_pass_time]),
-                        DeductionTimeOT = dr[Col.EmployeeAttendance.ot_deducton_time],
-                        Source = dr[Col.AttendanceSource.source_name]
-                    };
-                    //ConvertTo.DateTimeVal(dr[Col.EmployeeAttendance.attendance_in_first]).ToString("hh:mm tt")
-
-                    binding_list.Add(employeeAttendance);
-                    
-                }
-
-                gridControl_AttendanceData.DataSource = binding_list;
-                */
-            }
-            /*
-             using (SEQKARTNewEntities db = new SEQKARTNewEntities())
-             {
-                 BindingList<AttendanceModel> binding_list = new BindingList<AttendanceModel>();
-
-                 List<EmployeeAttendance> employeeAttendances_List = db.EmployeeAttendances.OrderByDescending(s => s.entry_date).ToList();
-
-                 var employee_list = (from ea in db.EmployeeAttendances
-                                      join st in db.AttendanceStatus
-                                      on ea.status_id equals st.status_id
-                                      join sf in db.DailyShifts
-                                      on ea.shift_id equals sf.shift_id
-                                      join sr in db.AttendanceSources
-                                      on ea.attendance_source equals sr.source_id
-                                      orderby ea.attendance_date
-                                      select new {
-                                          serial_id = ea.serial_id,
-                                          entry_date = ea.entry_date,
-                                          shift_name = sf.shift_name,
-                                          status = st.status,
-                                          employee_code = ea.employee_code,
-                                          attendance_date = ea.attendance_date,
-                                          attendance_in = ea.attendance_in,
-                                          attendance_out = ea.attendance_out,
-                                          source_name = sr.source_name,
-                                          gate_pass_time = ea.gate_pass_time,
-                                          ot_deducton_time = ea.ot_deducton_time
-                                      }).ToList();
-
-
-                 gridControl_AttendanceData.DataSource = employee_list;
-                 gridView_AttendanceData.BestFitColumns();
-
-                 foreach (var item in employee_list)
-                 {
-
-                     AttendanceModel employeeAttendance = new AttendanceModel();
-                     employeeAttendance.serial_id = item.serial_id;
-                     employeeAttendance.entry_date = item.entry_date;
-                     employeeAttendance.shift_name = item.shift_name;
-                     employeeAttendance.status = item.status;
-                     employeeAttendance.employee_code = item.employee_code;
-                     employeeAttendance.attendance_date = item.attendance_date;
-
-                     //DateTime att_in = item.attendance_in.GetValueOrDefault(DateTime.Now);
-                     employeeAttendance.attendance_in = ConvertTo.Date_NullableToNon(item.attendance_in).ToString("hh:mm tt");
-                     employeeAttendance.attendance_out = ConvertTo.Date_NullableToNon(item.attendance_out).ToString("hh:mm tt");
-                     employeeAttendance.source_name = item.source_name;
-                     employeeAttendance.gate_pass_time = ConvertTo.Date_NullableToNon(item.gate_pass_time).ToString("hh:mm tt");
-                     employeeAttendance.ot_deducton_time = item.ot_deducton_time;
-
-                     binding_list.Add(employeeAttendance);
-                 }
-                 gridControl_AttendanceData.DataSource = binding_list;
-
-             }
-             */
-            /*
-            gridView_AttendanceData.Columns.Clear();
-
-            using (SEQKARTNewEntities db = new SEQKARTNewEntities())
-            {
-                //db.Database.
-                List<EmployeeAttendance> employeeAttendances_List = db.EmployeeAttendances.OrderByDescending(s => s.entry_date).ToList();
-                gridControl_AttendanceData.DataSource = employeeAttendances_List;
-                gridView_AttendanceData.BestFitColumns();               
 
             }
-            */
+
         }
 
         private void OpenAttendanceForm(string _s1, string _employee_code, string _attendance_date)
@@ -251,7 +141,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     frm.Text = "Gate Pass Entry";
 
                     frm.ShowDialog();
-                    //fillGrid();
+
                     LoadGatePassDataGrid(onFormLoad: false);
                 }
                 catch (Exception ex)
@@ -259,29 +149,24 @@ namespace WindowsFormsApplication1.Forms_Master
                     MessageBox.Show(ex.Message);
                 }
             }
-            //XtraForm_EmployeeAttendence xtraForm_EmployeeAttendence = new XtraForm_EmployeeAttendence(this, _serial_id, "frmAttendenceLoading => Add Button");
-            //xtraForm_EmployeeAttendence.StartPosition = FormStartPosition.CenterScreen;
 
-            //xtraForm_EmployeeAttendence.ShowDialog(Parent);
         }
 
         private void OnClickRow()
         {
-            //DataRow CurrentRow = gridView_AttendanceData.GetDataRow(gridView_AttendanceData.FocusedRowHandle);
+
             int row = (gridControl_AttendanceData.FocusedView as ColumnView).FocusedRowHandle;
             ColumnView detailView = (ColumnView)gridControl_AttendanceData.FocusedView;
-            //int cellValue_serial_id = ConvertTo.IntVal(detailView.GetFocusedRowCellValue("SerialId"));//.GetRowCellValue(row, "Edit_Link").ToString();
-            //
+
             string employee_code = detailView.GetFocusedRowCellValue("EmpCode").ToString();
             string gate_pass_date = detailView.GetFocusedRowCellValue("GatePassDate").ToString();
-            //
-            //PrintLogWin.PrintLog("%%%%%%%%%%%%%%%%" + cellValue_serial_id);
+
             PrintLogWin.PrintLog("%%%%%%%%%%%%%%%%" + row);
 
             PrintLogWin.PrintLog("%%%%%%%%%%%%%%%% employee_code " + employee_code);
             PrintLogWin.PrintLog("%%%%%%%%%%%%%%%% gate_pass_date " + gate_pass_date);
 
-            //MessageBox.Show(CurrentRow[0] + "");
+
 
 
             OpenAttendanceForm("Edit", employee_code, gate_pass_date);
@@ -308,8 +193,6 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void btnAdd2_Click(object sender, EventArgs e)
         {
-            //XtraForm_EmployeeAttendence xtraForm_EmployeeAttendence = new XtraForm_EmployeeAttendence() { s1 = btnAdd.Text, Text = "User Addition" }; ;
-
 
             AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { s1 = btnAdd2.Text, Text = "Add Addendance Details" }; ;
             addAttendanceDetails.StartPosition = FormStartPosition.CenterScreen;
@@ -326,9 +209,7 @@ namespace WindowsFormsApplication1.Forms_Master
         /// 
         private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
-            //txtEmpName.Text = string.Empty;
-            //txtDept.Text = string.Empty;
-            //txtPreviousInstlmnt.Text = "0";
+
         }
 
         private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
@@ -351,11 +232,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         txtEmpCode.Text = ds.Tables[0].Rows[0]["EmpCode"].ToString();
-                        //txtEmpName.Text = ds.Tables[0].Rows[0]["EmpName"].ToString();
-                        //txtDept.Text = ds.Tables[0].Rows[0]["DeptDesc"].ToString();
 
-                        //LastInstlmnt();
-                        //txtLoanAmount.Focus();
                         btnLoad_Data.Focus();
                     }
                     else
@@ -377,12 +254,11 @@ namespace WindowsFormsApplication1.Forms_Master
             if (HelpGrid.Text == "EmpCode")
             {
                 txtEmpCode.Text = row["EmpCode"].ToString();
-                //txtEmpName.Text = row["EmpName"].ToString();
-                //txtDept.Text = row["DeptDesc"].ToString();
+
                 HelpGrid.Visible = false;
                 btnLoad_Data.Focus();
 
-                //LastInstlmnt();
+
             }
 
 
@@ -399,9 +275,6 @@ namespace WindowsFormsApplication1.Forms_Master
         private void HelpGrid_Click(object sender, EventArgs e)
         {
         }
-        /////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
@@ -550,15 +423,11 @@ namespace WindowsFormsApplication1.Forms_Master
             MessageBox.Show("show");
         }
 
-        ////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////
+
         private void gridControl_AttendanceData_Load(object sender, EventArgs e)
         {
 
-            //ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
-            //ProjectFunctions.GirdViewVisualize(gridView_UserMaster);
-            //FillDataToGrid();
+
         }
 
         private void SetMyControls2()
@@ -582,7 +451,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 AddUnboundColumn();
                 AddButtonToGrid();
 
-                //toolStrip_lbl.Text = ds.Tables[0].Rows[0]["ProgDesc"].ToString();
+
             }
             catch (Exception ex)
             {
@@ -636,14 +505,9 @@ namespace WindowsFormsApplication1.Forms_Master
             PrintLogWin.PrintLog("*[ GridEvents ]*");
 
 
-            //Disableed
 
-            //gridControl_AttendanceData.Load += gridControl_AttendanceData_Load;
-            //In Non-Editable Mode
             gridView_AttendanceData.ShowingEditor += gridView_UserMaster_ShowingEditor;
-            //gridView_UserMaster.DoubleClick += gridView_DoubleClick;
 
-            //gridControl_AttendanceData.DoubleClick += gridControl_AttendanceData_DoubleClick;
             gridView_AttendanceData.DoubleClick += gridControl_AttendanceData_DoubleClick;
 
 
@@ -653,8 +517,6 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             PrintLogWin.PrintLog("*[ AddButtonToGrid ]*");
 
-            //In Editable Mode
-            //gridView_UserMaster.ShownEditor += gridView_ShownEditor;
 
             RepositoryItemButtonEdit edit = new RepositoryItemButtonEdit
             {
@@ -673,7 +535,7 @@ namespace WindowsFormsApplication1.Forms_Master
             button.Appearance.BackColor = Color.Red;
             button.Appearance.Options.UseBackColor = true;
             button.Appearance.BorderColor = Color.Transparent;
-            //edit.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+
 
             button.Appearance.Options.UseBackColor = true;
             button.Appearance.BackColor = Color.Transparent;
@@ -763,7 +625,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             if (txtEmpCode.Text.Trim().Length == 0)
             {
-                //XtraMessageBox.Show("Invalid Emp Code", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
                 ProjectFunctions.SpeakError("Enter Employee Code");
                 txtEmpCode.Focus();
                 return false;

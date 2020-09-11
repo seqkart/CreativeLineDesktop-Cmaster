@@ -39,12 +39,6 @@ namespace WindowsFormsApplication1.Prints
             label.Text = ConvertTo.MinutesToHours(label.Text);
         }
 
-        private void xrLabel_TimeIn_Out_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
-        {
-            XRLabel label = (XRLabel)sender;
-            label.Text = ConvertTo.TimeSpanString(label.Text);
-        }
-
         private void xrPictureBox1_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             //try
@@ -62,6 +56,11 @@ namespace WindowsFormsApplication1.Prints
             //{
             //    PrintLogWinForms.PrintLog("XtraReport_EmployeeAttendance => Exception : " + ex);
             //}
+        }
+
+        private void xrLabel20_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
         }
     }
 }
