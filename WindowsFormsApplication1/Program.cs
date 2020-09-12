@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
 
 
 
-            Application.Run(new frmLogincs());;
+            Application.Run(new frmLogins());;
 
             //var PROG153 = new WindowsFormsApplication1.Forms_Master.frmAttendenceLaoding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
             //PROG153.Show();

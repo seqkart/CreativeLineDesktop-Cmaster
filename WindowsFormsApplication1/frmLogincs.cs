@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmLogincs : DevExpress.XtraEditors.XtraForm
+    public partial class frmLogins : DevExpress.XtraEditors.XtraForm
     {
         [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
 
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
 
 
         private bool isDebug = false;
-        public frmLogincs()
+        public frmLogins()
         {
             InitializeComponent();
         }
