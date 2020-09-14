@@ -1802,6 +1802,7 @@
             this.DocsGridView.OptionsView.ShowGroupPanel = false;
             this.DocsGridView.OptionsView.ShowIndicator = false;
             this.DocsGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.DocsGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.DocsGridView_PopupMenuShowing);
             // 
             // gridColumn11
             // 

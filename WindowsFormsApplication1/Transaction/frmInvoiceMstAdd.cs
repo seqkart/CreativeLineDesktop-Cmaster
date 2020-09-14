@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraSpreadsheet.Commands;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -751,25 +752,29 @@ namespace WindowsFormsApplication1
                 btnRecalculate_Click(null, e);
                 ShowPendingPSlips();
 
+                LoadDocs();
 
-                DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='"+txtserial.Text+"' And DocNo='" + txtSerialNo.Text + "' And DocDate='" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "'");
-                if (dsDocs.Tables[0].Rows.Count > 0)
-                {
-                    DocsGrid.DataSource = dsDocs.Tables[0];
-                    DocsGridView.BestFitColumns();
-                }
-                else
-                {
-                    DocsGrid.DataSource = null;
-                    DocsGridView.BestFitColumns();
-                }
+
             }
         }
 
 
 
 
-
+        private void LoadDocs()
+        {
+            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='" + txtserial.Text + "' And DocNo='" + txtSerialNo.Text + "' And DocDate='" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "'", ProjectFunctions.ImageConnectionString);
+            if (dsDocs.Tables[0].Rows.Count > 0)
+            {
+                DocsGrid.DataSource = dsDocs.Tables[0];
+                DocsGridView.BestFitColumns();
+            }
+            else
+            {
+                DocsGrid.DataSource = null;
+                DocsGridView.BestFitColumns();
+            }
+        }
 
 
         private void SaveInvoice()
@@ -2132,7 +2137,7 @@ namespace WindowsFormsApplication1
                 ms.Position = 0;
                 ms.Read(photo, 0, photo.Length);
 
-                using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+                using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
                 {
                     sqlcon.Open();
                     String str = "";
@@ -2147,7 +2152,7 @@ namespace WindowsFormsApplication1
                     sqlcom.ExecuteNonQuery();
                     sqlcon.Close();
                     XtraMessageBox.Show("Document Saved Successfully");
-
+                    LoadDocs();
 
 
                 }
@@ -2177,7 +2182,7 @@ namespace WindowsFormsApplication1
         private void DocsGrid_DoubleClick(object sender, EventArgs e)
         {
             DataRow currentrow = DocsGridView.GetDataRow(DocsGridView.FocusedRowHandle);
-            DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'");
+            DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'",ProjectFunctions.ImageConnectionString);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 Byte[] MyData = new byte[0];
@@ -2192,6 +2197,25 @@ namespace WindowsFormsApplication1
                 {
                     pt.ShowRibbonPreviewDialog();
                 }
+            }
+        }
+
+        private void DocsGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        {
+            try
+            {
+                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete Current Record", (o1, e1) =>
+                {
+                    DataRow currentrow = DocsGridView.GetDataRow(DocsGridView.FocusedRowHandle);
+
+                    ProjectFunctions.GetDataSet("Delete from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
+                    LoadDocs();
+                }));
+
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
     }

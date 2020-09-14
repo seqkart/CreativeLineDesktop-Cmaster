@@ -179,15 +179,15 @@
             this.TXMAINREMARKS = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.chMultiParty = new DevExpress.XtraEditors.CheckEdit();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.DocsGrid = new DevExpress.XtraGrid.GridControl();
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.chMultiParty = new DevExpress.XtraEditors.CheckEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -258,12 +258,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
             this.xtraTabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chMultiParty.Properties)).BeginInit();
-            this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
+            this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chMultiParty.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -1901,31 +1901,6 @@
             this.xtraTabPage8.Size = new System.Drawing.Size(371, 157);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(216, 33);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 13);
-            this.labelControl2.TabIndex = 516;
-            this.labelControl2.Text = "Credit Note No";
-            // 
-            // chMultiParty
-            // 
-            this.chMultiParty.Location = new System.Drawing.Point(375, 263);
-            this.chMultiParty.Name = "chMultiParty";
-            this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
-            this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
-            this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(75, 20);
-            this.chMultiParty.TabIndex = 558;
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.Controls.Add(this.DocsGrid);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(371, 157);
-            this.xtraTabPage1.Text = "View Docs";
-            // 
             // pictureEdit1
             // 
             this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1936,6 +1911,13 @@
             this.pictureEdit1.Size = new System.Drawing.Size(371, 157);
             this.pictureEdit1.TabIndex = 2;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.DocsGrid);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(371, 157);
+            this.xtraTabPage1.Text = "View Docs";
             // 
             // DocsGrid
             // 
@@ -1965,6 +1947,7 @@
             this.DocsGridView.OptionsView.ShowGroupPanel = false;
             this.DocsGridView.OptionsView.ShowIndicator = false;
             this.DocsGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.DocsGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.DocsGridView_PopupMenuShowing);
             // 
             // gridColumn55
             // 
@@ -1986,6 +1969,24 @@
             // 
             this.gridView10.GridControl = this.DocsGrid;
             this.gridView10.Name = "gridView10";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(216, 33);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(77, 13);
+            this.labelControl2.TabIndex = 516;
+            this.labelControl2.Text = "Credit Note No";
+            // 
+            // chMultiParty
+            // 
+            this.chMultiParty.Location = new System.Drawing.Point(375, 263);
+            this.chMultiParty.Name = "chMultiParty";
+            this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
+            this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
+            this.chMultiParty.Properties.Caption = "Multi Party";
+            this.chMultiParty.Size = new System.Drawing.Size(75, 20);
+            this.chMultiParty.TabIndex = 558;
             // 
             // frmInvoiceMstAddCR
             // 
@@ -2091,12 +2092,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
             this.xtraTabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chMultiParty.Properties)).EndInit();
-            this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
+            this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chMultiParty.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -26,6 +26,9 @@ namespace WindowsFormsApplication1
     {
 
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
+        public static String ImageConnectionString = "Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
+
+
         public static String ConnectionString = ProjectFunctionsUtils.ConnectionString;////@"Data Source=cserver;Initial Catalog=SEQKART;User ID=sa;pwd=Seq@2021";
         //public static String ConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\server.txt");
 
@@ -264,9 +267,30 @@ namespace WindowsFormsApplication1
                     }
                     return _VarDataSet;
                 }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+                {
+                    System.Diagnostics.Debug.WriteLine("ProjectFunction => GetDataSet => " + Query);
+                    System.Diagnostics.Debug.WriteLine("ProjectFunction => GetDataSet => " + ex);
+                    return null;
+                }
+            }
+        }
+
+
+        public static DataSet GetDataSet(string Query,String ConnectionString)
+        {
+            using (var _VarDataSet = new DataSet())
+            {
+                try
+                {
+                    using (var _VarSqlDataAdapter = new SqlDataAdapter(Query, new SqlConnection(ConnectionString)))
+                    {
+                        _VarSqlDataAdapter.SelectCommand.CommandTimeout = 1200;
+                        _VarSqlDataAdapter.Fill(_VarDataSet);
+                    }
+                    return _VarDataSet;
+                }
+                catch (Exception ex)
                 {
                     System.Diagnostics.Debug.WriteLine("ProjectFunction => GetDataSet => " + Query);
                     System.Diagnostics.Debug.WriteLine("ProjectFunction => GetDataSet => " + ex);
