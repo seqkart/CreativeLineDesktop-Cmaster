@@ -178,13 +178,13 @@ namespace WindowsFormsApplication1
                 txtCompany.DisplayMember = SQL_COLUMNS.COMCONF._COMNAME;// "COMNAME";
             }
 
-            DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_FN_YEAR_ACTIVE("Y"));
-            if (ComparisonUtils.IsNotNull_DataSet(dsFNYear))
-            {
-                txtFNYear.DataSource = dsFNYear.Tables[0];
-                txtFNYear.ValueMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
-                txtFNYear.DisplayMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
-            }
+            //DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_FN_YEAR_ACTIVE("Y"));
+            //if (ComparisonUtils.IsNotNull_DataSet(dsFNYear))
+            //{
+            //    txtFNYear.DataSource = dsFNYear.Tables[0];
+            //    txtFNYear.ValueMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
+            //    txtFNYear.DisplayMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
+            //}
             if (isDebug)
             {
                 //MessageBox.Show(dsFNYear.Tables[0].Rows.Count.ToString());
@@ -224,6 +224,14 @@ namespace WindowsFormsApplication1
                         txtFNYear.DataSource = dsFNYear.Tables[0];
                         txtFNYear.ValueMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
                         txtFNYear.DisplayMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
+                    }
+
+                    DataSet dsFNYear2 = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_FN_YEAR_ACTIVE("Y"));
+                    if (ComparisonUtils.IsNotNull_DataSet(dsFNYear2))
+                    {
+                        txtFNYear.SelectedValue = dsFNYear2.Tables[0].Rows[0]["FNYearCode"].ToString();
+                        //txtFNYear.ValueMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
+                        //txtFNYear.DisplayMember = SQL_COLUMNS.FN_YEAR._FNYearCode;
                     }
                 }
                 else

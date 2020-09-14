@@ -130,7 +130,7 @@ namespace SeqKartLibrary
 
         public static string SQL_USER_FN_ACCESS_BY_USER(object UserName)
         {
-            return "SELECT FNYear.FNYearCode FROM  UserFNAccess INNER JOIN FNYear ON UserFNAccess.FNTransID = FNYear.TransID  Where UserName='" + UserName + "'";
+            return "SELECT FNYear.FNYearCode FROM  UserFNAccess INNER JOIN FNYear ON UserFNAccess.FNTransID = FNYear.TransID  Where UserName='" + UserName + "' Order by FNYear.TransID desc";
         }
 
         public static string _sp_EmployeesList()
