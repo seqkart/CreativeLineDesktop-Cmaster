@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmLogincs : DevExpress.XtraEditors.XtraForm
+    public partial class frmLogins : DevExpress.XtraEditors.XtraForm
     {
         [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
 
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
 
 
         private bool isDebug = false;
-        public frmLogincs()
+        public frmLogins()
         {
             InitializeComponent();
         }
@@ -246,6 +246,7 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 txtFNYear.Focus();
+                txtFNYear.Text = "2020-2021";
             }
         }
 
@@ -263,6 +264,7 @@ namespace WindowsFormsApplication1
             txtUserName.Text = "HAPPY";
 
             SendKeys.Send("{Enter}");
+
 
         }
 
@@ -292,7 +294,7 @@ namespace WindowsFormsApplication1
         }
         private void txtFNYear_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtFNYear.Text = "2020-2021";
+
         }
     }
 }

@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
         [STAThread]
         static void Main()
         {
-            //  Application.EnableVisualStyles();
+            Application.EnableVisualStyles();
 
             //  //Application.SetCompatibleTextRenderingDefault(false);
 
@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
 
             //  //System.Diagnostics.Process.Start(@"D:\New folder\Foxit Reader 720\FoxitReader720.0722_enu_Setup.exe");
 
-            //  DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin; 
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
 
             DevExpress.UserSkins.BonusSkins.Register();
             Application.EnableVisualStyles();
@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1
 
 
 
-            Application.Run(new frmLogincs());;
+            Application.Run(new frmLogins()); ;
 
             //var PROG153 = new WindowsFormsApplication1.Forms_Master.frmAttendenceLaoding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
             //PROG153.Show();
