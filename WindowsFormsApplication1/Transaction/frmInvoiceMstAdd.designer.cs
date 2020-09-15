@@ -248,13 +248,13 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
-            this.xtraTabPage10 = new DevExpress.XtraTab.XtraTabPage();
             this.DocsGrid = new DevExpress.XtraGrid.GridControl();
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
             this.PSGrid = new DevExpress.XtraGrid.GridControl();
             this.PSGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -395,11 +395,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankAccNo.Properties)).BeginInit();
             this.xtraTabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
-            this.xtraTabPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).BeginInit();
             this.groupControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PSGrid)).BeginInit();
@@ -510,7 +509,7 @@
             this.xtraTabPage1.Controls.Add(this.txtserial);
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1220, 589);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1220, 591);
             this.xtraTabPage1.Text = "Main Invoice Details";
             // 
             // groupControl4
@@ -547,7 +546,7 @@
             // 
             this.labelControl28.Location = new System.Drawing.Point(23, 88);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(79, 13);
+            this.labelControl28.Size = new System.Drawing.Size(80, 13);
             this.labelControl28.TabIndex = 540;
             this.labelControl28.Text = "Transporter Key";
             // 
@@ -555,7 +554,7 @@
             // 
             this.labelControl24.Location = new System.Drawing.Point(43, 65);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(59, 13);
+            this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 540;
             this.labelControl24.Text = "Transporter";
             // 
@@ -670,7 +669,7 @@
             this.chInclusive.Location = new System.Drawing.Point(23, 67);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(126, 20);
+            this.chInclusive.Size = new System.Drawing.Size(126, 18);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -679,7 +678,7 @@
             this.chExclusive.Location = new System.Drawing.Point(23, 46);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(126, 20);
+            this.chExclusive.Size = new System.Drawing.Size(126, 18);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -701,7 +700,7 @@
             this.checkEdit9.Location = new System.Drawing.Point(23, 88);
             this.checkEdit9.Name = "checkEdit9";
             this.checkEdit9.Properties.Caption = "Auto Mode";
-            this.checkEdit9.Size = new System.Drawing.Size(126, 20);
+            this.checkEdit9.Size = new System.Drawing.Size(126, 18);
             this.checkEdit9.TabIndex = 533;
             // 
             // checkEdit7
@@ -709,7 +708,7 @@
             this.checkEdit7.Location = new System.Drawing.Point(23, 67);
             this.checkEdit7.Name = "checkEdit7";
             this.checkEdit7.Properties.Caption = "Outstation";
-            this.checkEdit7.Size = new System.Drawing.Size(126, 20);
+            this.checkEdit7.Size = new System.Drawing.Size(126, 18);
             this.checkEdit7.TabIndex = 533;
             // 
             // checkEdit8
@@ -717,7 +716,7 @@
             this.checkEdit8.Location = new System.Drawing.Point(23, 46);
             this.checkEdit8.Name = "checkEdit8";
             this.checkEdit8.Properties.Caption = "Local";
-            this.checkEdit8.Size = new System.Drawing.Size(126, 20);
+            this.checkEdit8.Size = new System.Drawing.Size(126, 18);
             this.checkEdit8.TabIndex = 533;
             // 
             // groupControl6
@@ -736,7 +735,7 @@
             this.chLot.Location = new System.Drawing.Point(25, 67);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "Lot";
-            this.chLot.Size = new System.Drawing.Size(126, 20);
+            this.chLot.Size = new System.Drawing.Size(126, 18);
             this.chLot.TabIndex = 533;
             this.chLot.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
@@ -745,7 +744,7 @@
             this.chRegular.Location = new System.Drawing.Point(25, 46);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(126, 20);
+            this.chRegular.Size = new System.Drawing.Size(126, 18);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -765,7 +764,7 @@
             this.chDirect.Location = new System.Drawing.Point(19, 67);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(126, 20);
+            this.chDirect.Size = new System.Drawing.Size(126, 18);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
@@ -774,7 +773,7 @@
             this.chPackingSlip.Location = new System.Drawing.Point(19, 46);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(126, 20);
+            this.chPackingSlip.Size = new System.Drawing.Size(126, 18);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -817,7 +816,7 @@
             // 
             this.labelControl22.Location = new System.Drawing.Point(15, 107);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(75, 13);
+            this.labelControl22.Size = new System.Drawing.Size(74, 13);
             this.labelControl22.TabIndex = 540;
             this.labelControl22.Text = "Agent / Broker";
             // 
@@ -825,7 +824,7 @@
             // 
             this.labelControl20.Location = new System.Drawing.Point(12, 82);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(78, 13);
+            this.labelControl20.Size = new System.Drawing.Size(77, 13);
             this.labelControl20.TabIndex = 540;
             this.labelControl20.Text = "Ledger Balance";
             // 
@@ -840,7 +839,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(51, 56);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(37, 13);
+            this.labelControl10.Size = new System.Drawing.Size(38, 13);
             this.labelControl10.TabIndex = 524;
             this.labelControl10.Text = "GST No";
             // 
@@ -1823,7 +1822,7 @@
             this.xtraTabPage5.Controls.Add(this.txtInsuranceAmount);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(517, 154);
+            this.xtraTabPage5.Size = new System.Drawing.Size(517, 156);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -1907,7 +1906,7 @@
             // 
             this.labelControl40.Location = new System.Drawing.Point(95, 32);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(72, 13);
+            this.labelControl40.Size = new System.Drawing.Size(73, 13);
             this.labelControl40.TabIndex = 542;
             this.labelControl40.Text = "Discount Type";
             // 
@@ -1923,7 +1922,7 @@
             // 
             this.labelControl43.Location = new System.Drawing.Point(2, 54);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(88, 13);
+            this.labelControl43.Size = new System.Drawing.Size(90, 13);
             this.labelControl43.TabIndex = 542;
             this.labelControl43.Text = "Total Tax Amount";
             // 
@@ -1939,7 +1938,7 @@
             // 
             this.labelControl38.Location = new System.Drawing.Point(21, 10);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(70, 13);
+            this.labelControl38.Size = new System.Drawing.Size(71, 13);
             this.labelControl38.TabIndex = 542;
             this.labelControl38.Text = "Taxable Value";
             // 
@@ -2411,8 +2410,7 @@
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
             this.xtraTabPage4,
-            this.xtraTabPage8,
-            this.xtraTabPage10});
+            this.xtraTabPage8});
             // 
             // xtraTabPage3
             // 
@@ -2439,7 +2437,7 @@
             this.xtraTabPage3.Controls.Add(this.txtGRNo);
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(402, 154);
+            this.xtraTabPage3.Size = new System.Drawing.Size(402, 156);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -2463,7 +2461,7 @@
             this.chToPay.Location = new System.Drawing.Point(88, 76);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(61, 20);
+            this.chToPay.Size = new System.Drawing.Size(61, 18);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
@@ -2472,7 +2470,7 @@
             this.chPaid.Location = new System.Drawing.Point(35, 76);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(47, 20);
+            this.chPaid.Size = new System.Drawing.Size(47, 18);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 
@@ -2524,7 +2522,7 @@
             // 
             this.labelControl37.Location = new System.Drawing.Point(207, 78);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(73, 13);
+            this.labelControl37.Size = new System.Drawing.Size(72, 13);
             this.labelControl37.TabIndex = 542;
             this.labelControl37.Text = "Builty Amount";
             // 
@@ -2675,7 +2673,7 @@
             // 
             this.labelControl30.Location = new System.Drawing.Point(17, 20);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(58, 13);
+            this.labelControl30.Size = new System.Drawing.Size(57, 13);
             this.labelControl30.TabIndex = 542;
             this.labelControl30.Text = "Bank Name";
             // 
@@ -2689,37 +2687,20 @@
             // 
             // xtraTabPage8
             // 
+            this.xtraTabPage8.Controls.Add(this.DocsGrid);
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
+            this.xtraTabPage8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage8.ImageOptions.Image")));
             this.xtraTabPage8.Name = "xtraTabPage8";
             this.xtraTabPage8.Size = new System.Drawing.Size(402, 154);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(402, 154);
-            this.pictureEdit1.TabIndex = 1;
-            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
-            // 
-            // xtraTabPage10
-            // 
-            this.xtraTabPage10.Controls.Add(this.DocsGrid);
-            this.xtraTabPage10.Name = "xtraTabPage10";
-            this.xtraTabPage10.Size = new System.Drawing.Size(402, 154);
-            this.xtraTabPage10.Text = "View Socs";
-            // 
             // DocsGrid
             // 
-            this.DocsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DocsGrid.Location = new System.Drawing.Point(0, 0);
+            this.DocsGrid.Location = new System.Drawing.Point(109, 0);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(402, 154);
-            this.DocsGrid.TabIndex = 478;
+            this.DocsGrid.Size = new System.Drawing.Size(293, 154);
+            this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.DocsGridView,
@@ -2730,7 +2711,8 @@
             // 
             this.DocsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn55,
-            this.gridColumn56});
+            this.gridColumn56,
+            this.gridColumn57});
             this.DocsGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.DocsGridView.GridControl = this.DocsGrid;
             this.DocsGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -2740,7 +2722,6 @@
             this.DocsGridView.OptionsView.ShowGroupPanel = false;
             this.DocsGridView.OptionsView.ShowIndicator = false;
             this.DocsGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.DocsGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.DocsGridView_PopupMenuShowing);
             // 
             // gridColumn55
             // 
@@ -2758,10 +2739,30 @@
             this.gridColumn56.Visible = true;
             this.gridColumn56.VisibleIndex = 1;
             // 
+            // gridColumn57
+            // 
+            this.gridColumn57.Caption = "Attach";
+            this.gridColumn57.FieldNameSortGroup = "Attach";
+            this.gridColumn57.FilterMode = DevExpress.XtraGrid.ColumnFilterMode.DisplayText;
+            this.gridColumn57.Name = "gridColumn57";
+            this.gridColumn57.Visible = true;
+            this.gridColumn57.VisibleIndex = 2;
+            // 
             // gridView10
             // 
             this.gridView10.GridControl = this.DocsGrid;
             this.gridView10.Name = "gridView10";
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.ShowScrollBars = true;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(109, 154);
+            this.pictureEdit1.TabIndex = 1;
+            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
             // groupControl10
             // 
@@ -3049,11 +3050,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBankName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBankAccNo.Properties)).EndInit();
             this.xtraTabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
-            this.xtraTabPage10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).EndInit();
             this.groupControl10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PSGrid)).EndInit();
@@ -3303,11 +3303,11 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
         private DevExpress.XtraEditors.SimpleButton btnRecalculate;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage10;
         private DevExpress.XtraGrid.GridControl DocsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView DocsGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
     }
 }

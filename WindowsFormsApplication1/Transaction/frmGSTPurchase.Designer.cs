@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSTPurchase));
+            DevExpress.Utils.Drawing.StubGlyphOptions stubGlyphOptions1 = new DevExpress.Utils.Drawing.StubGlyphOptions();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -178,6 +179,7 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
@@ -719,7 +721,7 @@
             // 
             this.labelControl24.Location = new System.Drawing.Point(8, 70);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(59, 13);
+            this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 540;
             this.labelControl24.Text = "Transporter";
             // 
@@ -727,7 +729,7 @@
             // 
             this.labelControl16.Location = new System.Drawing.Point(199, 45);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(43, 13);
+            this.labelControl16.Size = new System.Drawing.Size(42, 13);
             this.labelControl16.TabIndex = 540;
             this.labelControl16.Text = "Bill Date";
             // 
@@ -735,7 +737,7 @@
             // 
             this.labelControl18.Location = new System.Drawing.Point(33, 45);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(34, 13);
+            this.labelControl18.Size = new System.Drawing.Size(33, 13);
             this.labelControl18.TabIndex = 540;
             this.labelControl18.Text = "Bill No";
             // 
@@ -792,7 +794,7 @@
             // 
             this.labelControl43.Location = new System.Drawing.Point(105, 104);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(88, 13);
+            this.labelControl43.Size = new System.Drawing.Size(90, 13);
             this.labelControl43.TabIndex = 580;
             this.labelControl43.Text = "Total Tax Amount";
             // 
@@ -800,7 +802,7 @@
             // 
             this.labelControl38.Location = new System.Drawing.Point(121, 38);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(70, 13);
+            this.labelControl38.Size = new System.Drawing.Size(71, 13);
             this.labelControl38.TabIndex = 581;
             this.labelControl38.Text = "Taxable Value";
             // 
@@ -877,7 +879,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(39, 177);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(37, 13);
+            this.labelControl10.Size = new System.Drawing.Size(38, 13);
             this.labelControl10.TabIndex = 546;
             this.labelControl10.Text = "GST No";
             // 
@@ -1234,7 +1236,7 @@
             // 
             this.labelControl40.Location = new System.Drawing.Point(95, 32);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(72, 13);
+            this.labelControl40.Size = new System.Drawing.Size(73, 13);
             this.labelControl40.TabIndex = 542;
             this.labelControl40.Text = "Discount Type";
             // 
@@ -1250,7 +1252,7 @@
             // 
             this.labelControl7.Location = new System.Drawing.Point(2, 54);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(88, 13);
+            this.labelControl7.Size = new System.Drawing.Size(90, 13);
             this.labelControl7.TabIndex = 542;
             this.labelControl7.Text = "Total Tax Amount";
             // 
@@ -1266,7 +1268,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(21, 10);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(70, 13);
+            this.labelControl8.Size = new System.Drawing.Size(71, 13);
             this.labelControl8.TabIndex = 542;
             this.labelControl8.Text = "Taxable Value";
             // 
@@ -1792,7 +1794,8 @@
             // 
             this.DocsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn11,
-            this.gridColumn12});
+            this.gridColumn12,
+            this.gridColumn14});
             this.DocsGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.DocsGridView.GridControl = this.DocsGrid;
             this.DocsGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -1829,7 +1832,7 @@
             // 
             this.labelControl14.Location = new System.Drawing.Point(478, 39);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(72, 13);
+            this.labelControl14.Size = new System.Drawing.Size(73, 13);
             this.labelControl14.TabIndex = 563;
             this.labelControl14.Text = "Purchase Type";
             // 
@@ -1844,6 +1847,17 @@
             this.comboBoxEdit1.Properties.Sorted = true;
             this.comboBoxEdit1.Size = new System.Drawing.Size(254, 20);
             this.comboBoxEdit1.TabIndex = 731;
+            // 
+            // gridColumn14
+            // 
+            stubGlyphOptions1.CaseMode = DevExpress.Utils.Drawing.GlyphTextCaseMode.UpperCase;
+            this.behaviorManager1.SetBehaviors(this.gridColumn14, new DevExpress.Utils.Behaviors.Behavior[] {
+            ((DevExpress.Utils.Behaviors.Behavior)(DevExpress.Utils.Behaviors.Common.StubGlyphBehavior.Create(typeof(DevExpress.XtraGrid.Views.Grid.BehaviorSource.StubGlyphBehaviorSourceForGridColumn), stubGlyphOptions1, new System.Drawing.Size(16, 16))))});
+            this.gridColumn14.Caption = "Attach";
+            this.gridColumn14.CustomizationCaption = "Attach";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 2;
             // 
             // frmGSTPurchase
             // 
@@ -2109,5 +2123,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
     }
 }

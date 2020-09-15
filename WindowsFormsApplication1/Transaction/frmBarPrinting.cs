@@ -517,6 +517,7 @@ namespace WindowsFormsApplication1.Transaction
                             {
 
 
+
                                 txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU Where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
@@ -601,16 +602,16 @@ namespace WindowsFormsApplication1.Transaction
 
 
                                 i++;
-
-                                txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU_Fix Where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU_Fix Where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                //txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU_Fix Where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
 
 
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
                                     SplashScreenManager.Default.SetWaitFormDescription("Saving Item " + i.ToString() + " / " + (BarCodeGrid.DataSource as DataTable).Rows.Count);
 
-
-                                    String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                    String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                    //String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     String SKUPRODUCTCODE = "FX" + SKUCode.PadLeft(5, '0');
 
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
@@ -931,6 +932,8 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
+                //ArticleImageBox = null;
+
                 DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
                 ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
             }
@@ -1072,6 +1075,16 @@ namespace WindowsFormsApplication1.Transaction
                     pt.ShowRibbonPreviewDialog();
                 }
             }
+        }
+
+        private void ChkFixedBarCode_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

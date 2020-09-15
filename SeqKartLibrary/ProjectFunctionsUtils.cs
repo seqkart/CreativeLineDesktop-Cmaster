@@ -19,7 +19,9 @@ namespace SeqKartLibrary
     public class ProjectFunctionsUtils
     {
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
-        public static String ConnectionString = ConnectionStringsDb.DefaultConnectionString;//@"Data Source=seqkart.ddns.net;Initial Catalog=SEQKARTNew;User ID=sa;pwd=Seq@2021";
+        public static String ConnectionString = ConnectionStringsDb.DefaultConnectionString;
+        public static String ImageConnectionString = ConnectionStringsDb.DefaultConnectionString;
+        //@"Data Source=seqkart.ddns.net;Initial Catalog=SEQKARTNew;User ID=sa;pwd=Seq@2021";
         //public static String ConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\server.txt");
 
         //public static void SendSMS(string uid, string password, string message, string no)

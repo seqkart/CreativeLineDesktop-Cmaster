@@ -2,10 +2,7 @@
 using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
-using SeqKartLibrary.CrudTask;
-using SeqKartLibrary.Models;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -21,24 +18,6 @@ namespace WindowsFormsApplication1
         public frmTransaction()
         {
             InitializeComponent();
-        }
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private async Task FillGrid_1()
-        {
-            try
-            {
-                List<EmployeeMasterModel> getEmployeeMasterDataList = await EmployeeData.GetEmployeeMasterDataList_Async("sp_LoadEmpMstFEditing", null);
-                MessageBox.Show("getEmployeeMasterDataList : " + getEmployeeMasterDataList.Count);
-            }
-            catch (Exception ex)
-            {
-                PrintLogWin.PrintLog("FillGrid_1 => Exception : " + ex);
-            }
         }
         private void FillGrid()
         {
@@ -572,12 +551,6 @@ namespace WindowsFormsApplication1
                 btnEdit_Click(null, e);
             }
         }
-
-
-        private void PrintReport(String PrintType)
-        {
-
-        }
         private void InvoiceGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
             try
@@ -931,8 +904,6 @@ namespace WindowsFormsApplication1
                                         dt.WriteXmlSchema("C://Temp//abc.xml");
                                         using (var pt = new ReportPrintTool(new Prints.BarPrinting() { DataSource = dt }))
                                         {
-
-
                                             pt.ShowRibbonPreviewDialog();
                                             FillGrid();
                                         }
@@ -993,6 +964,7 @@ namespace WindowsFormsApplication1
                         {
                             if (dr["Select"].ToString().ToUpper() == "TRUE" && dr["SKUPrintTag"].ToString().ToUpper() == "N")
                             {
+
                                 DataTable dt = new DataTable();
                                 if (dr["BarCodeType"].ToString() == "Unique")
                                 {
@@ -1008,6 +980,12 @@ namespace WindowsFormsApplication1
                                     }
                                     if (dt.Rows.Count > 0)
                                     {
+
+                                        // dt.ExportXlsStyleSheet(Application.StartupPath + @"\Sticker.XLS"));
+
+
+
+
                                         dt.WriteXmlSchema("C://Temp//abc.xml");
                                         using (var pt = new ReportPrintTool(new Prints.Mufflerprint() { DataSource = dt }))
                                         {

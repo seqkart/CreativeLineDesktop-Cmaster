@@ -1,7 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-using DevExpress.XtraSpreadsheet.Commands;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -24,8 +23,6 @@ namespace WindowsFormsApplication1
         public String ImSeries { get; set; }
         String StkTransfer = String.Empty;
         Decimal AccMRPMarkDown = 0;
-#pragma warning disable CS0169 // The field 'frmInvoiceMstAdd.SearchField' is never used
-        String SearchField;
 #pragma warning restore CS0169 // The field 'frmInvoiceMstAdd.SearchField' is never used
         DataSet dsPopUps = new DataSet();
         public frmInvoiceMstAdd()
@@ -515,26 +512,6 @@ namespace WindowsFormsApplication1
                 HSNGrid.DataSource = null;
             }
         }
-
-        private bool ValidateData()
-        {
-
-            if (txtDebitPartyCode.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Debit Party");
-                txtDebitPartyCode.Focus();
-                return false;
-            }
-            if (txtDebitPartyName.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Debit Party");
-                txtDebitPartyCode.Focus();
-                return false;
-            }
-
-
-            return true;
-        }
         private void ShowPendingPSlips()
         {
             DataSet dsPS = ProjectFunctions.GetDataSet("sp_LoadPackingSlipMstFInvoice '" + txtDebitPartyCode.Text + "'");
@@ -783,9 +760,9 @@ namespace WindowsFormsApplication1
             {
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                    var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+
+                    var MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                    //(InfoGrid.FocusedView as GridView).RowCount;
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
                     sqlcom.Connection = sqlcon;
@@ -1469,28 +1446,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnLoadOrder_Click(object sender, EventArgs e)
-        {
-            //HelpGridView.Columns.Clear();
-            //HelpGrid.Text = "btnLoadOrder";
-            //DataSet ds = new DataSet();
-
-            //ds = ProjectFunctions.GetDataSet("SELECT DISTINCT DealerOrderMst.OrdNo, DealerOrderMst.OrdDate, DealerOrderMst.OrdDealerCode, ActMst.AccName, ActMst.AccLcTag FROM         DealerOrderMst INNER JOIN ActMst ON DealerOrderMst.OrdDealerCode = ActMst.AccCode Where OrdForDate ='" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "' And  DealerOrderMst.ImPassTag='Y' And DealerOrderMst.OrdNo not in (Select Distinct ImOrderNo from InvoiceMst Where ImOrderNo<>'' and ImOrderNo is not null )");
-
-            //if (ds.Tables[0].Rows.Count > 0)
-            //{
-            //    HelpGrid.DataSource = ds.Tables[0];
-            //    HelpGrid.Visible = true;
-            //    HelpGrid.Focus();
-            //    HelpGridView.BestFitColumns();
-
-            //}
-            //else
-            //{
-            //    ProjectFunctions.SpeakError("No Order To Load");
-            //}
-        }
-
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTransporterName.Text = String.Empty;
@@ -1499,11 +1454,6 @@ namespace WindowsFormsApplication1
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterKey, HelpGrid, HelpGridView, e);
-        }
-
-        private void TxtProductRate_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ProjectFunctions.NumericWithDecimal(e);
         }
 
         private void ChDirect_CheckedChanged(object sender, EventArgs e)
@@ -1679,21 +1629,6 @@ namespace WindowsFormsApplication1
             catch (Exception ex)
             {
                 ProjectFunctions.SpeakError(ex.Message);
-            }
-        }
-        private void ShowImage(String ArticleID)
-        {
-            DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
-            if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
-            {
-                Byte[] MyData = new byte[0];
-                MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
-                MemoryStream stream = new MemoryStream(MyData)
-                {
-                    Position = 0
-                };
-
-                ArticleImageBox.Image = System.Drawing.Image.FromStream(stream);
             }
         }
         private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -2182,40 +2117,23 @@ namespace WindowsFormsApplication1
         private void DocsGrid_DoubleClick(object sender, EventArgs e)
         {
             DataRow currentrow = DocsGridView.GetDataRow(DocsGridView.FocusedRowHandle);
-            DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'",ProjectFunctions.ImageConnectionString);
+            DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 Byte[] MyData = new byte[0];
                 MyData = (Byte[])ds.Tables[0].Rows[0]["DocImage"];
                 MemoryStream stream = new MemoryStream(MyData);
                 stream.Position = 0;
+
                 pictureEdit1.Image = Image.FromStream(stream);
                 pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+
                 WindowsFormsApplication1.Transaction.challans.XtraReport1 rpt = new Transaction.challans.XtraReport1();
                 rpt.xrPictureBox1.ImageUrl = "C:\\Temp\\A.jpg";
                 using (var pt = new ReportPrintTool(rpt))
                 {
                     pt.ShowRibbonPreviewDialog();
                 }
-            }
-        }
-
-        private void DocsGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
-        {
-            try
-            {
-                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete Current Record", (o1, e1) =>
-                {
-                    DataRow currentrow = DocsGridView.GetDataRow(DocsGridView.FocusedRowHandle);
-
-                    ProjectFunctions.GetDataSet("Delete from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
-                    LoadDocs();
-                }));
-
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
             }
         }
     }

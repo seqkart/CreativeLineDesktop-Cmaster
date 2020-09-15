@@ -2,6 +2,7 @@
 using SeqKartLibrary;
 using System;
 using System.Data;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -277,21 +278,43 @@ namespace WindowsFormsApplication1
         }
 
         private void btnBackup_Click(object sender, EventArgs e)
+
         {
             DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, true);
             DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("Backing Up Initialized");
-            if (System.IO.Directory.Exists(Application.StartupPath + "\\Backup" + DateTime.Now.DayOfWeek.ToString()))
+
+            if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
             {
 
             }
             else
+                ProjectFunctions.SpeakError("Creating Folder on Server");
+            // System.IO.Directory.CreateDirectory(Application.StartupPath + "\\Backup" + DateTime.Now.DayOfWeek.ToString());
+            System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
+
+            string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+            string[] bakList = Directory.GetFiles(srcDir, "*.bak");
+
+            if (Directory.Exists(srcDir))
             {
-                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\Backup" + DateTime.Now.DayOfWeek.ToString());
-                // System.IO.Directory.CreateDirectory(@"\\cserver\New Software\Backup\" + DateTime.Now.DayOfWeek.ToString());
+                foreach (string f in bakList)
+                {
+                    File.Delete(f);
+                }
+
             }
 
-            Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + Application.StartupPath + "\\Backup" + DateTime.Now.DayOfWeek.ToString() + @"\SEQKARTNEW.bak'"));
+
+            Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+            Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+
+
             SplashScreenManager.CloseForm();
+
+
+
+            ProjectFunctions.SpeakError("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
+
         }
 
 

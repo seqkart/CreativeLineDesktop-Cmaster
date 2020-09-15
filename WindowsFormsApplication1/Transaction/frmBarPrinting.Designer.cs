@@ -63,9 +63,10 @@
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.txtBarCode = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
             this.RBBYFLTRT = new System.Windows.Forms.RadioButton();
             this.RBBYDSCPRCN = new System.Windows.Forms.RadioButton();
             this.btnReCalculate = new System.Windows.Forms.Button();
@@ -75,11 +76,8 @@
             this.txtSysID = new DevExpress.XtraEditors.TextEdit();
             this.Label15 = new System.Windows.Forms.Label();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.CBBARTYPE = new System.Windows.Forms.ComboBox();
             this.RBPUR = new System.Windows.Forms.RadioButton();
-            this.Label7 = new System.Windows.Forms.Label();
             this.ChkFixedBarCode = new System.Windows.Forms.CheckBox();
-            this.Label1 = new System.Windows.Forms.Label();
             this.RBIMPORT = new System.Windows.Forms.RadioButton();
             this.RBBATCH = new System.Windows.Forms.RadioButton();
             this.RBDIRECT = new System.Windows.Forms.RadioButton();
@@ -480,9 +478,10 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.btnPrint);
             this.groupControl1.Controls.Add(this.txtBarCode);
-            this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.RBBYFLTRT);
             this.groupControl1.Controls.Add(this.RBBYDSCPRCN);
             this.groupControl1.Controls.Add(this.btnReCalculate);
@@ -492,11 +491,8 @@
             this.groupControl1.Controls.Add(this.txtSysID);
             this.groupControl1.Controls.Add(this.Label15);
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.CBBARTYPE);
             this.groupControl1.Controls.Add(this.RBPUR);
-            this.groupControl1.Controls.Add(this.Label7);
             this.groupControl1.Controls.Add(this.ChkFixedBarCode);
-            this.groupControl1.Controls.Add(this.Label1);
             this.groupControl1.Controls.Add(this.RBIMPORT);
             this.groupControl1.Controls.Add(this.RBBATCH);
             this.groupControl1.Controls.Add(this.RBDIRECT);
@@ -507,34 +503,42 @@
             this.groupControl1.TabIndex = 709;
             this.groupControl1.Text = "Generate Mode";
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(41, 158);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.TabIndex = 707;
+            this.label2.Text = "BARCODE";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(31, 129);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.TabIndex = 706;
+            this.labelControl1.Text = "ORDER NO.";
+            // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(329, 158);
+            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
+            this.btnPrint.Location = new System.Drawing.Point(316, 149);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(88, 23);
+            this.btnPrint.Size = new System.Drawing.Size(87, 27);
             this.btnPrint.TabIndex = 705;
-            this.btnPrint.Text = "Print Duplicate";
+            this.btnPrint.Text = "Print";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // txtBarCode
             // 
             this.txtBarCode.EnterMoveNextControl = true;
-            this.txtBarCode.Location = new System.Drawing.Point(93, 155);
+            this.txtBarCode.Location = new System.Drawing.Point(93, 154);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarCode.Properties.MaxLength = 40;
             this.txtBarCode.Size = new System.Drawing.Size(217, 20);
             this.txtBarCode.TabIndex = 704;
             this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarCode_KeyDown);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 159);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
-            this.label2.TabIndex = 703;
-            this.label2.Text = "BarCode";
             // 
             // RBBYFLTRT
             // 
@@ -583,7 +587,7 @@
             // txtDeptCode
             // 
             this.txtDeptCode.EnterMoveNextControl = true;
-            this.txtDeptCode.Location = new System.Drawing.Point(93, 99);
+            this.txtDeptCode.Location = new System.Drawing.Point(93, 98);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
@@ -593,7 +597,7 @@
             // txtDeptDesc
             // 
             this.txtDeptDesc.EnterMoveNextControl = true;
-            this.txtDeptDesc.Location = new System.Drawing.Point(185, 99);
+            this.txtDeptDesc.Location = new System.Drawing.Point(185, 98);
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
@@ -609,6 +613,7 @@
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysID.Size = new System.Drawing.Size(83, 20);
             this.txtSysID.TabIndex = 699;
+            this.txtSysID.Visible = false;
             // 
             // Label15
             // 
@@ -619,29 +624,16 @@
             this.Label15.Size = new System.Drawing.Size(53, 18);
             this.Label15.TabIndex = 698;
             this.Label15.Text = "SYS ID :";
+            this.Label15.Visible = false;
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(52, 103);
+            this.labelControl6.Location = new System.Drawing.Point(21, 102);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(37, 13);
+            this.labelControl6.Size = new System.Drawing.Size(70, 13);
             this.labelControl6.TabIndex = 696;
-            this.labelControl6.Text = "Dept(P)";
-            // 
-            // CBBARTYPE
-            // 
-            this.CBBARTYPE.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBBARTYPE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CBBARTYPE.FormattingEnabled = true;
-            this.CBBARTYPE.Items.AddRange(new object[] {
-            "CATE V",
-            "CATE P",
-            "CATE K"});
-            this.CBBARTYPE.Location = new System.Drawing.Point(405, 125);
-            this.CBBARTYPE.Name = "CBBARTYPE";
-            this.CBBARTYPE.Size = new System.Drawing.Size(104, 21);
-            this.CBBARTYPE.TabIndex = 693;
-            this.CBBARTYPE.Visible = false;
+            this.labelControl6.Text = "DEPARTMENT";
+            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
             // 
             // RBPUR
             // 
@@ -656,36 +648,17 @@
             this.RBPUR.Text = "THRU PURCHASE";
             this.RBPUR.UseVisualStyleBackColor = true;
             // 
-            // Label7
-            // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label7.Location = new System.Drawing.Point(316, 128);
-            this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(83, 14);
-            this.Label7.TabIndex = 692;
-            this.Label7.Text = "BARCODE TYPE";
-            this.Label7.Visible = false;
-            // 
             // ChkFixedBarCode
             // 
             this.ChkFixedBarCode.AutoSize = true;
             this.ChkFixedBarCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ChkFixedBarCode.Location = new System.Drawing.Point(606, 29);
+            this.ChkFixedBarCode.Location = new System.Drawing.Point(316, 125);
             this.ChkFixedBarCode.Name = "ChkFixedBarCode";
             this.ChkFixedBarCode.Size = new System.Drawing.Size(108, 18);
             this.ChkFixedBarCode.TabIndex = 690;
             this.ChkFixedBarCode.Text = "FIXED BARCODE";
             this.ChkFixedBarCode.UseVisualStyleBackColor = true;
-            // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(25, 129);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(64, 13);
-            this.Label1.TabIndex = 689;
-            this.Label1.Text = "ORDER NO";
+            this.ChkFixedBarCode.CheckedChanged += new System.EventHandler(this.ChkFixedBarCode_CheckedChanged);
             // 
             // RBIMPORT
             // 
@@ -807,17 +780,15 @@
         private DevExpress.XtraEditors.TextEdit txtSysID;
         internal System.Windows.Forms.Label Label15;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        internal System.Windows.Forms.ComboBox CBBARTYPE;
         internal System.Windows.Forms.RadioButton RBPUR;
-        internal System.Windows.Forms.Label Label7;
         internal System.Windows.Forms.CheckBox ChkFixedBarCode;
-        internal System.Windows.Forms.Label Label1;
         internal System.Windows.Forms.RadioButton RBIMPORT;
         internal System.Windows.Forms.RadioButton RBBATCH;
         internal System.Windows.Forms.RadioButton RBDIRECT;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraEditors.TextEdit txtBarCode;
-        internal System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.SimpleButton btnPrint;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

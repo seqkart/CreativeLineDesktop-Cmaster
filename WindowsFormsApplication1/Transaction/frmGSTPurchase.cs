@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using DevExpress.Pdf;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -50,17 +51,6 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("GRPHSNCODE", typeof(String));
 
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
-        }
-        private void SetMyControls()
-        {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
-            ProjectFunctions.TextBoxVisualize(this);
-            ProjectFunctions.TextBoxVisualize(groupControl1);
-
-            ProjectFunctions.ButtonVisualize(this);
-            ProjectFunctions.GirdViewVisualize(InfoGridView);
-            ProjectFunctions.GirdViewVisualize(HelpGridView);
-            ProjectFunctions.TextBoxVisualize(groupControl2);
         }
         private void calculation()
         {
@@ -525,7 +515,23 @@ namespace WindowsFormsApplication1.Transaction
 
         private void LoadDocs()
         {
-            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='RM' And DocNo='" + txtPurchaseNo.Text + "' And DocDate='" + Convert.ToDateTime(txtPurchaseDate.Text).ToString("yyyy-MM-dd") + "'", ProjectFunctions.ImageConnectionString);
+            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='PUR' And DocNo='" + txtPurchaseNo.Text + "' And DocDate='" + Convert.ToDateTime(txtPurchaseDate.Text).ToString("yyyy-MM-dd") + "'", ProjectFunctions.ImageConnectionString);
+            if (dsDocs.Tables[0].Rows.Count > 0)
+            {
+                DocsGrid.DataSource = dsDocs.Tables[0];
+                DocsGridView.BestFitColumns();
+            }
+            else
+            {
+                DocsGrid.DataSource = null;
+                DocsGridView.BestFitColumns();
+            }
+        }
+
+
+        private void AttachDocs()
+        {
+            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='PUR' And DocNo='" + txtPurchaseNo.Text + "' And DocDate='" + Convert.ToDateTime(txtPurchaseDate.Text).ToString("yyyy-MM-dd") + "'", ProjectFunctions.ImageConnectionString);
             if (dsDocs.Tables[0].Rows.Count > 0)
             {
                 DocsGrid.DataSource = dsDocs.Tables[0];
@@ -1152,7 +1158,7 @@ namespace WindowsFormsApplication1.Transaction
 
                     str = "insert into ImagesData(DocType,DocNo,DocDate,DocImage) values(@DocType,@DocNo,@DocDate,@DocImage)";
                     var sqlcom = new SqlCommand(str, sqlcon);
-                    sqlcom.Parameters.AddWithValue("@DocType", "RM");
+                    sqlcom.Parameters.AddWithValue("@DocType", "PUR");
                     sqlcom.Parameters.AddWithValue("@DocNo", txtPurchaseNo.Text);
                     sqlcom.Parameters.AddWithValue("@DocDate", Convert.ToDateTime(txtPurchaseDate.Text).ToString("yyyy-MM-dd"));
                     sqlcom.Parameters.AddWithValue("@DocImage", photo);
@@ -1202,7 +1208,7 @@ namespace WindowsFormsApplication1.Transaction
                 MyData = (Byte[])ds.Tables[0].Rows[0]["DocImage"];
                 MemoryStream stream = new MemoryStream(MyData);
                 stream.Position = 0;
-               
+
                 pictureEdit1.Image = Image.FromStream(stream);
                 pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
@@ -1229,6 +1235,11 @@ namespace WindowsFormsApplication1.Transaction
                     ProjectFunctions.GetDataSet("Delete from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
                     LoadDocs();
                 }));
+
+                //e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Attach Document", (o1, e1) =>
+                //{
+                //   LoadDocs();
+                //}));
 
             }
             catch (Exception ex)
