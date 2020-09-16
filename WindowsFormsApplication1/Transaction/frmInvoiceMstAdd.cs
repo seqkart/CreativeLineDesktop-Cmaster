@@ -2075,7 +2075,7 @@ namespace WindowsFormsApplication1
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
                 {
                     sqlcon.Open();
-                    String str = "";
+                    String str = string.Empty;
 
                     str = "insert into ImagesData(DocType,DocNo,DocDate,DocImage) values(@DocType,@DocNo,@DocDate,@DocImage)";
                     var sqlcom = new SqlCommand(str, sqlcon);

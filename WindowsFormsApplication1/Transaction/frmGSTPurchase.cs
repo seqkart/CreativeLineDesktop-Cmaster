@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
-using DevExpress.Pdf;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -1154,7 +1153,7 @@ namespace WindowsFormsApplication1.Transaction
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
                 {
                     sqlcon.Open();
-                    String str = "";
+                    String str = string.Empty;
 
                     str = "insert into ImagesData(DocType,DocNo,DocDate,DocImage) values(@DocType,@DocNo,@DocDate,@DocImage)";
                     var sqlcom = new SqlCommand(str, sqlcon);

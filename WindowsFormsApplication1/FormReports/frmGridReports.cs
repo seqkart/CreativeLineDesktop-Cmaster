@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.FormReports
@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1.FormReports
 
         private void MasterGrid_DoubleClick(object sender, EventArgs e)
         {
-            if(GlobalVariables.ProgCode=="PROG201")
+            if (GlobalVariables.ProgCode == "PROG201")
             {
                 DataRow currentrow = MasterGridView.GetDataRow(MasterGridView.FocusedRowHandle);
 
@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1.FormReports
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.ShowDialog(Parent);
             }
-           
+
         }
     }
 }

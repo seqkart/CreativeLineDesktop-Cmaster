@@ -1,11 +1,6 @@
-﻿using Dapper;
-using DevExpress.XtraGrid.Views.Grid;
-using SeqKartLibrary;
-using SeqKartLibrary.HelperClass;
-using SeqKartLibrary.Repository;
+﻿using SeqKartLibrary;
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Transaction.challans
 {
@@ -70,7 +65,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             txtBillingAddress2.Text = String.Empty;
             txtBillingAddress3.Text = String.Empty;
             txtBillingCity.Text = String.Empty;
-          
+
         }
         private void PrepareActMstHelpGrid()
         {
@@ -140,7 +135,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             HelpGridView.Columns.Add(col8);
 
 
-        }   
+        }
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -177,7 +172,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         txtBillingAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
 
                         txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-                      
+
                         txtTransporterCode.Focus();
                         panelControl1.Visible = false;
                     }
@@ -355,7 +350,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 txtBillingAddress3.Text = row["AccAddress3"].ToString();
 
                 txtBillingCity.Text = row["CTNAME"].ToString();
-              
+
                 HelpGrid.Visible = false;
                 panelControl1.Visible = false;
                 txtTransporterCode.Focus();

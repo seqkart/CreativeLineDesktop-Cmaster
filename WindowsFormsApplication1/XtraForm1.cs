@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-       
+
         [System.ComponentModel.Browsable(false)]
         public override Image BackgroundImage { get; set; }
 
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
         {
 
             // DevExpress.Utils.AppearanceObject.DefaultFont = new Font(DevExpress.Utils.AppearanceObject.DefaultFont.FontFamily.Name, 10);
-            this.Text = GlobalVariables.CompanyName +" - "+ GlobalVariables.FinancialYear;
+            this.Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
             CreateMenuType1();
 
 
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1
                                 };
                                 InnerElement.Elements.Add(InnerMostElement);
                                 InnerMostElement.Click += InnerMostElement_Click;
-                                
+
                             }
                         }
                     }
@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                if(xtraTabControl1.TabPages.Count>0)
+                if (xtraTabControl1.TabPages.Count > 0)
                 {
                     if (!String.IsNullOrEmpty(xtraTabControl1.SelectedTabPage.Name))
                     {
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1
                     }
                 }
                 //MessageBox.Show(String.IsNullOrEmpty(xtraTabControl1.SelectedTabPage.Name) ? "0":"1");
-               
+
             }
 
             catch (Exception ex)
@@ -1437,7 +1437,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 default:
-                  
+
 
                     break;
             }
@@ -1455,7 +1455,7 @@ namespace WindowsFormsApplication1
 
         private void CreateMenuType1()
         {
-           
+
             _ribbonControl.Minimized = true;
         }
 
@@ -1490,11 +1490,11 @@ namespace WindowsFormsApplication1
         }
         private void RemoveTab()
         {
-            foreach(XtraTabPage page in xtraTabControl1.TabPages)
+            foreach (XtraTabPage page in xtraTabControl1.TabPages)
             {
-                if(page.Controls.Count>0)
+                if (page.Controls.Count > 0)
                 {
-                    
+
                 }
                 else
                 {
@@ -1504,7 +1504,7 @@ namespace WindowsFormsApplication1
         }
         private void XtraForm1_ControlRemoved(object sender, ControlEventArgs e)
         {
-            
+
         }
 
         private void XtraForm1_Validating(object sender, System.ComponentModel.CancelEventArgs e)

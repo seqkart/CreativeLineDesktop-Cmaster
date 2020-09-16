@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1
     {
         public static String BarCodePreFix = "V";
 
-       
+
 
         public static int GlobalCustWindowCount = 0;
 

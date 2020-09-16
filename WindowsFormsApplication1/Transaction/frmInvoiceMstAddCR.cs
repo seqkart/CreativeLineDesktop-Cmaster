@@ -417,7 +417,7 @@ namespace WindowsFormsApplication1
 
         private void LoadDocs()
         {
-            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='" + txtserial.Text + "' And DocNo='" + txtSerialNo.Text + "' And DocDate='" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "'",ProjectFunctions.ImageConnectionString);
+            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='" + txtserial.Text + "' And DocNo='" + txtSerialNo.Text + "' And DocDate='" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "'", ProjectFunctions.ImageConnectionString);
             if (dsDocs.Tables[0].Rows.Count > 0)
             {
                 DocsGrid.DataSource = dsDocs.Tables[0];
@@ -1188,7 +1188,7 @@ namespace WindowsFormsApplication1
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
                 {
                     sqlcon.Open();
-                    String str = "";
+                    String str = string.Empty;
 
                     str = "insert into ImagesData(DocType,DocNo,DocDate,DocImage) values(@DocType,@DocNo,@DocDate,@DocImage)";
                     var sqlcom = new SqlCommand(str, sqlcon);
@@ -1214,7 +1214,7 @@ namespace WindowsFormsApplication1
         private void DocsGrid_DoubleClick(object sender, EventArgs e)
         {
             DataRow currentrow = DocsGridView.GetDataRow(DocsGridView.FocusedRowHandle);
-            DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'",ProjectFunctions.ImageConnectionString);
+            DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
             if (ds.Tables[0].Rows.Count > 0)
             {
                 Byte[] MyData = new byte[0];

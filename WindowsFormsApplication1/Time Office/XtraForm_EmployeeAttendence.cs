@@ -474,7 +474,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-    
+
         private void LoadControls()
         {
             txtFName.Properties.ReadOnly = true;

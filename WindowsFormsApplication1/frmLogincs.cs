@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
 
                     this.Hide();
-                    ProjectFunctions.Speak("WELCOME TO "+ dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
+                    ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
                     frm.ShowDialog(this.Parent);
                     frm.BringToFront();
 
@@ -310,7 +310,7 @@ namespace WindowsFormsApplication1
             Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
             SplashScreenManager.CloseForm();
 
-            ProjectFunctions.Speak ("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
+            ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
 
         }
 
