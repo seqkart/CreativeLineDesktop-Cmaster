@@ -1170,12 +1170,6 @@
     <Compile Include="Prints\GSTTAXDETAILS.designer.cs">
       <DependentUpon>GSTTAXDETAILS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prints\InvoicePrint.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Prints\InvoicePrint.Designer.cs">
-      <DependentUpon>InvoicePrint.cs</DependentUpon>
-    </Compile>
     <Compile Include="Prints\InvoicePrintBT.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1818,9 +1812,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\GSTTAXDETAILS.resx">
       <DependentUpon>GSTTAXDETAILS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prints\InvoicePrint.resx">
-      <DependentUpon>InvoicePrint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\InvoicePrintBT.resx">
       <DependentUpon>InvoicePrintBT.cs</DependentUpon>
