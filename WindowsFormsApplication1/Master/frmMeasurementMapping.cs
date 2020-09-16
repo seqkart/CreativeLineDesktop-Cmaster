@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Master
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             txtMCode.Properties.MaxLength = 4;
             txtMDesc.Properties.MaxLength = 50;
 

@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1.Master
         }
         private void frmMeasurementMappingWithArt_Load(object sender, EventArgs e)
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
             LoadSizeAndMeasurements();
         }

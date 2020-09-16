@@ -719,7 +719,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.GirdViewVisualize(BarCodeGridView);
                 ProjectFunctions.GirdViewVisualize(HelpGridView);
                 RBDIRECT.Checked = true;

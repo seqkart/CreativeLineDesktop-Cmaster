@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1
             try
             {
                 ProjectFunctions.TextBoxVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(this);
             }

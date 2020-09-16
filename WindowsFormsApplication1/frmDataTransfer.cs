@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
 
         private void FrmDataTransfer_Load(object sender, EventArgs e)
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
         }
 
 

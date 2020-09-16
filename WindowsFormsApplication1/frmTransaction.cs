@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
         {
             PrintLogWin.PrintLog("frmTransaction_Load ********** " + GlobalVariables.ProgCode);
 
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.GirdViewVisualize(InvoiceGridView);
 
             FillGrid();
@@ -987,7 +987,7 @@ namespace WindowsFormsApplication1
 
 
                                         dt.WriteXmlSchema("C://Temp//abc.xml");
-                                        using (var pt = new ReportPrintTool(new Prints.Mufflerprint() { DataSource = dt }))
+                                        using (var pt = new ReportPrintTool(new Prints.Mufflerprint1() { DataSource = dt }))
                                         {
                                             pt.ShowRibbonPreviewDialog();
                                             FillGrid();
@@ -1027,7 +1027,7 @@ namespace WindowsFormsApplication1
                                     if (dtFinal.Rows.Count > 0)
                                     {
                                         dtFinal.WriteXmlSchema("C://Temp//abc.xml");
-                                        using (var pt = new ReportPrintTool(new Prints.Mufflerprint() { DataSource = dtFinal }))
+                                        using (var pt = new ReportPrintTool(new Prints.Mufflerprint1() { DataSource = dtFinal }))
                                         {
                                             pt.ShowRibbonPreviewDialog();
                                             FillGrid();

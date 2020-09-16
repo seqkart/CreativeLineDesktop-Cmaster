@@ -500,7 +500,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             try
             {
                 panelControl1.Visible = false;
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(groupControl1);
                 //ProjectFunctions.GirdViewVisualize(HelpGridView);
 

@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
             try
             {
                 ProjectFunctions.TextBoxVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 txtGroupDesc.Properties.MaxLength = 100;
 
                 txtGroupCode.Enabled = false;

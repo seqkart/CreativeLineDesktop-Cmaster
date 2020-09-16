@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1
 
         private void FrmSaleReportF2_Load(object sender, EventArgs e)
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
             DataSet dsCmp = ProjectFunctions.GetDataSet("select COMNAME from COMCONF ");
             if (dsCmp.Tables[0].Rows.Count > 0)

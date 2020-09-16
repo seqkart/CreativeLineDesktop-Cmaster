@@ -205,7 +205,7 @@ namespace WindowsFormsApplication1.Forms_Master
             ProjectFunctions.TextBoxVisualize(panelControl5);
             ProjectFunctions.DatePickerVisualize(panelControl5);
             ProjectFunctions.TextBoxVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.ButtonVisualize(this);
         }
 

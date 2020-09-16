@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             //panelControl1.Location = new Point(ClientSize.Width / 2 - panelControl1.Size.Width / 2, ClientSize.Height / 2 - panelControl1.Size.Height / 2);
             //ProjectFunctions.TextBoxVisualize(panelControl1);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             // ProjectFunctions.ButtonVisualize(panelControl1);
             //ProjectFunctions.GroupCtrlVisualize(panelControl1);
             ProjectFunctions.XtraFormVisualize(this);

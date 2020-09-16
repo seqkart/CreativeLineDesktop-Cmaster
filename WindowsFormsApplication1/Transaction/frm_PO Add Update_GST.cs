@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
             HelpGrid.OptionsBehavior.Editable = false;
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
             (TextAuthenticate.Control as TextBox).UseSystemPasswordChar = true;
 

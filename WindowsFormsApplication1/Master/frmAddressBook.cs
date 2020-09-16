@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.DatePickerVisualize(this);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 txtAddress.Properties.MaxLength = 150;
                 txtAddress1.Properties.MaxLength = 150;
                 txtAddress2.Properties.MaxLength = 150;

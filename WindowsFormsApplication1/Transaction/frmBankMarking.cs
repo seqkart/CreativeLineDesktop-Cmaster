@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void frmBankMarking_Load(object sender, EventArgs e)
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             fillGrid();
         }
     }

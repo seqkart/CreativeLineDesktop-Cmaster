@@ -5,16 +5,13 @@ namespace WindowsFormsApplication1
     {
         public static String BarCodePreFix = "V";
 
-        //public static String MasterCode;
-        //public static String MainProgCode = "ACCOUNTS";
+       
 
         public static int GlobalCustWindowCount = 0;
 
         public static String ProgCode = "MIS1";
         public static String ProgDesc = "Test";
-#pragma warning disable CS0649 // Field 'GlobalVariables.s1' is never assigned to, and will always have its default value null
-        public static String s1;
-#pragma warning restore CS0649 // Field 'GlobalVariables.s1' is never assigned to, and will always have its default value null
+
         public static DateTime FinYearStartDate = Convert.ToDateTime("2020-04-01");
         public static DateTime FinYearEndDate = Convert.ToDateTime("2021-03-31");
         public static String CurrentUser = "000130";

@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
             // ProjectFunctions.ButtonVisualize(Basic_Info_GrpCtrl);
             ProjectFunctions.ButtonVisualize(panelControl2);
             ProjectFunctions.ButtonVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             (TextAuthenticate.Control as TextBox).UseSystemPasswordChar = true;
             // ProjectFunctions.GroupCtrlVisualize(Basic_Info_GrpCtrl);
 

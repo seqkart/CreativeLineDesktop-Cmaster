@@ -1,8 +1,8 @@
 ﻿namespace WindowsFormsApplication1.Prints
 {
-    public partial class Mufflerprint : DevExpress.XtraReports.UI.XtraReport
+    public partial class Mufflerprint1 : DevExpress.XtraReports.UI.XtraReport
     {
-        public Mufflerprint()
+        public Mufflerprint1()
         {
             InitializeComponent();
         }

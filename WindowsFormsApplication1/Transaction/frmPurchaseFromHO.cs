@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 ProjectFunctions.GirdViewVisualize(BarCodeGridView);
                 ProjectFunctions.GirdViewVisualize(HelpGridView);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(this);
                 if (s1 == "&Add")
                 {

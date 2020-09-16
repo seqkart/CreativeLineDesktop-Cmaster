@@ -513,8 +513,8 @@ namespace WindowsFormsApplication1
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.DatePickerVisualize(panelControl4);
             ProjectFunctions.DatePickerVisualize(panelControl5);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
-            ProjectFunctions.ToolstripVisualize(AttachmentToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(AttachmentToolStrip);
 
             ProjectFunctions.TextBoxVisualize(xtraTabPage6);
             ProjectFunctions.DatePickerVisualize(xtraTabPage6);

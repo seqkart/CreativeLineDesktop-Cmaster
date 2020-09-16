@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
             {
 
                 ProgressBarControl progressBar = new ProgressBarControl();
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
                 lbl.Text = Title;
 

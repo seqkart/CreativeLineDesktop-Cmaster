@@ -37,6 +37,7 @@
             DevExpress.Utils.Animation.CombTransition combTransition1 = new DevExpress.Utils.Animation.CombTransition();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this._ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
+            this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.barSubItemNavigation = new DevExpress.XtraBars.BarSubItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
@@ -79,9 +80,11 @@
             this._ribbonControl.AutoHideEmptyItems = true;
             this._ribbonControl.AutoSaveLayoutToXml = true;
             this._ribbonControl.AutoSizeItems = true;
+            this._ribbonControl.CaptionBarItemLinks.Add(this.skinDropDownButtonItem1);
             this._ribbonControl.ExpandCollapseItem.CloseRadialMenuOnItemClick = true;
             this._ribbonControl.ExpandCollapseItem.Id = 0;
             this._ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.skinDropDownButtonItem1,
             this._ribbonControl.ExpandCollapseItem,
             this._ribbonControl.SearchEditItem,
             this.skinRibbonGalleryBarItem,
@@ -96,7 +99,7 @@
             this.barButtonItem3,
             this.barButtonItem6});
             this._ribbonControl.Location = new System.Drawing.Point(0, 0);
-            this._ribbonControl.MaxItemId = 89;
+            this._ribbonControl.MaxItemId = 90;
             this._ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this._ribbonControl.Name = "_ribbonControl";
             this._ribbonControl.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.True;
@@ -108,6 +111,13 @@
             this._ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this._ribbonControl.Size = new System.Drawing.Size(993, 160);
             this._ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            // 
+            // skinDropDownButtonItem1
+            // 
+            this.radialMenu1.SetAutoSize(this.skinDropDownButtonItem1, DevExpress.XtraBars.Ribbon.RadialMenuContainerItemAutoSize.Spring);
+            this.skinDropDownButtonItem1.Hint = "SKIN";
+            this.skinDropDownButtonItem1.Id = 89;
+            this.skinDropDownButtonItem1.Name = "skinDropDownButtonItem1";
             // 
             // skinRibbonGalleryBarItem
             // 
@@ -255,12 +265,13 @@
             this.accordionControl1.OptionsFooter.ActiveGroupDisplayMode = DevExpress.XtraBars.Navigation.ActiveGroupDisplayMode.GroupHeaderAndContent;
             this._ribbonControl.SetPopupContextMenu(this.accordionControl1, this.galleryDropDown1);
             this.accordionControl1.ResizeMode = DevExpress.XtraBars.Navigation.AccordionControlResizeMode.OuterResizeZone;
-            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Fluent;
+            this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
             this.accordionControl1.Size = new System.Drawing.Size(181, 620);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
+           // this.accordionControl1.OptionsHamburgerMenu.DisplayMode = DevExpress.XtraBars.Navigation.AccordionControlDisplayMode.Inline;
             // 
             // xtraTabControl1
             // 
@@ -268,6 +279,7 @@
             this.xtraTabControl1.AppearancePage.Header.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.HeaderHotTracked.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.PageClient.Options.UseImage = true;
+           // this.xtraTabControl1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.fm1;
             this.xtraTabControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -378,5 +390,6 @@
         private DevExpress.XtraBars.Ribbon.RadialMenu radialMenu1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
     }
 }

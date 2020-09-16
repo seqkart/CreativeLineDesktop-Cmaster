@@ -37,7 +37,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void SetMyControls()
         {
             ProjectFunctions.XtraFormVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }

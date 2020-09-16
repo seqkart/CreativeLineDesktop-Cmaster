@@ -380,7 +380,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 
             {
                 ProjectFunctions.TextBoxVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 if (s1 == "&Add")
                 {
                     txtApprovalDate.EditValue = DateTime.Now.ToString("dd-MM-yyyy");

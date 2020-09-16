@@ -175,7 +175,7 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.GirdViewVisualize(BarCodeGridView);
                 ProjectFunctions.GirdViewVisualize(BarCodeGridView);
                 ProjectFunctions.GirdViewVisualize(HelpGridView);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(Panel1);
                 ProjectFunctions.TextBoxVisualize(Panel2);
                 ProjectFunctions.TextBoxVisualize(this);

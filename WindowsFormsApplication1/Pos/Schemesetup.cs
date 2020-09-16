@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {

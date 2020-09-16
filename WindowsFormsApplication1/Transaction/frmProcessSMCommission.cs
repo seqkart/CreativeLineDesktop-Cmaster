@@ -38,7 +38,7 @@ namespace WindowsFormsApplication1
             var Query4Controls = string.Empty;
             panelControl1.Location = new Point(ClientSize.Width / 2 - panelControl1.Size.Width / 2, ClientSize.Height / 2 - panelControl1.Size.Height / 2);
             ProjectFunctions.XtraFormVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
             ProjectFunctions.GroupCtrlVisualize(panelControl1);
             ProjectFunctions.GirdViewVisualize(ReplGridView);

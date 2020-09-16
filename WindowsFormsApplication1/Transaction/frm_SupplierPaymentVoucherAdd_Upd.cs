@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.GirdViewVisualize(HelpGrid);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 BtnDelete.Enabled = false;
                 BnkChgsCode = "0044";
 

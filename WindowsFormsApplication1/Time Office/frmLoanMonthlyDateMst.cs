@@ -103,14 +103,14 @@ namespace WindowsFormsApplication1.Forms_Master
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.DatePickerVisualize(panelControl1);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.GroupCtrlVisualize(panelControl1);
             ProjectFunctions.XtraFormVisualize(this);
             ProjectFunctions.TextBoxVisualize(panelControl1);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.DatePickerVisualize(panelControl1);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.ButtonVisualize(panelControl1);
             DtStartDate.EditValue = DateTime.Now;
             panelControl1.Location = new Point(ClientSize.Width / 2 - panelControl1.Width / 2, ClientSize.Height / 2 - panelControl1.Height / 2);

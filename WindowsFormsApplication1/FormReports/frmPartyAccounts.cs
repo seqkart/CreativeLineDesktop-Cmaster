@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1.FormReports
             try
             {
                 _SelectRange = new RangeSelectorLedger() { StartDate = GlobalVariables.FinYearStartDate, EndDate = GlobalVariables.FinYearEndDate };
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 _SelectRange.BtnLoad.Click += BtnLoad_Click;
                 this.Controls.Add(_SelectRange);
                 _SelectRange.BringToFront();

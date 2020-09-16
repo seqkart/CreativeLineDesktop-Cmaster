@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         }
         private void SetMyControls()
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
 

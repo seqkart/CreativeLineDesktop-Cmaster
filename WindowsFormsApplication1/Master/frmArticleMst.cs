@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.TextBoxVisualize(GroupBox4);
                 ProjectFunctions.TextBoxVisualize(GroupBox6);
                 ProjectFunctions.TextBoxVisualize(GroupBox7);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
 
                 txtAlias.Properties.MaxLength = 100;

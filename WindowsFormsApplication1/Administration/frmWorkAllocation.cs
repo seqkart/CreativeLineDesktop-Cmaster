@@ -151,7 +151,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.GirdViewVisualize(UserGridView);
                 ProjectFunctions.DatePickerVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(panelControl1);
                 ProjectFunctions.GroupCtrlVisualize(panelControl1);

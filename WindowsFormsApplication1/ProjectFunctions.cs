@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-
+using System.IO.Compression;
 using System.Linq;
 
 using System.Net;
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
     {
 
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
-       // public static String ImageConnectionString = "Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
+        // public static String ImageConnectionString = "Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
 
 
         public static String ConnectionString = ProjectFunctionsUtils.ConnectionString;
@@ -86,6 +86,17 @@ namespace WindowsFormsApplication1
             XtraMessageBox.Show(Error);
 
         }
+
+        public static void Speak(String MSG)
+        {
+
+            Task.Run(() => _synthesizer.Speak(MSG));
+
+        }
+
+
+
+
         public static String CheckNull(String Value)
         {
             if (Value.Trim().Length == 0)
@@ -211,7 +222,7 @@ namespace WindowsFormsApplication1
             return (finyear.Substring(2, 2));
         }
 
-        public static Tuple<Decimal, Decimal, Decimal, Decimal> TaxCalculatioData(Decimal CGSTRate, Decimal SGSTRate, Decimal IGSTRate, Decimal RATE, Decimal RDC, Decimal Quantity)
+        public static Tuple<Decimal, Decimal, Decimal, Decimal> TaxCalculationData(Decimal CGSTRate, Decimal SGSTRate, Decimal IGSTRate, Decimal RATE, Decimal RDC, Decimal Quantity)
         {
             var disc = Convert.ToDecimal(RDC); ;
             var AmountATRDC = Math.Round((Quantity * RATE * disc) / 100, 2);
@@ -279,7 +290,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static DataSet GetDataSet(string Query,String ConnectionString)
+        public static DataSet GetDataSet(string Query, String ConnectionString)
         {
             using (var _VarDataSet = new DataSet())
             {
@@ -683,7 +694,7 @@ namespace WindowsFormsApplication1
             (C as XtraForm).FormBorderStyle = FormBorderStyle.FixedToolWindow;
             (C as XtraForm).StartPosition = FormStartPosition.CenterParent;
         }
-        public static void ToolstripVisualize(ToolStrip C)
+        public static void ToolStripVisualize(ToolStrip C)
         {
             C.BackColor = Color.FromArgb(0x15, 0x60, 0xA9);
             C.CanOverflow = false;
@@ -791,7 +802,7 @@ namespace WindowsFormsApplication1
             DatePickerVisualize(FormName);
             ButtonVisualize(FormName);
             XtraFormVisualize(FormName);
-            ToolstripVisualize(T);
+            ToolStripVisualize(T);
 
             foreach (PanelControl P in FormName.Controls)
             {
@@ -1665,6 +1676,92 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+        private static void zIpDatabseFile(string srcPath, string destPath)
+
+        {//This is for  Zip a File
+
+            byte[] bufferWrite;
+
+            FileStream fsSource;
+
+            FileStream fsDest;
+
+            GZipStream gzCompressed;
+
+            fsSource = new FileStream(srcPath, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+            bufferWrite = new byte[fsSource.Length];
+
+            fsSource.Read(bufferWrite, 0, bufferWrite.Length);
+
+            fsDest = new FileStream(destPath, FileMode.OpenOrCreate, FileAccess.Write);
+
+            gzCompressed = new GZipStream(fsDest, CompressionMode.Compress, true);
+
+            gzCompressed.Write(bufferWrite, 0, bufferWrite.Length);
+
+            fsSource.Close();
+
+            gzCompressed.Close();
+
+            fsDest.Close();
+
+        }
+
+        private static void uNzIpDatabaseFile(string SrcPath, string DestPath)
+
+        {// This is for unzip a files.
+
+            byte[] bufferWrite;
+
+            FileStream fsSource;
+
+            FileStream fsDest;
+
+            GZipStream gzDecompressed;
+
+            fsSource = new FileStream(SrcPath, FileMode.Open, FileAccess.Read, FileShare.Read);
+
+            gzDecompressed = new GZipStream(fsSource, CompressionMode.Decompress, true);
+
+            bufferWrite = new byte[4];
+
+            fsSource.Position = (int)fsSource.Length - 4;
+
+            fsSource.Read(bufferWrite, 0, 4);
+
+            fsSource.Position = 0;
+
+            int bufferLength = BitConverter.ToInt32(bufferWrite, 0);
+
+            byte[] buffer = new byte[bufferLength + 100];
+
+            int readOffset = 0;
+
+            int totalBytes = 0;
+
+            while (true)
+
+            {
+
+                int bytesRead = gzDecompressed.Read(buffer, readOffset, 100);
+                if (bytesRead == 0)
+                    break;
+
+                readOffset += bytesRead;
+                totalBytes += bytesRead;
+
+            }
+
+            fsDest = new FileStream(DestPath, FileMode.Create);
+            fsDest.Write(buffer, 0, totalBytes);
+            fsSource.Close();
+            gzDecompressed.Close();
+            fsDest.Close();
+
+        }
+
 
 
         public static void TimePickerVisualize(Control C)

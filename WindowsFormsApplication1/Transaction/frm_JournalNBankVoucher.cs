@@ -99,7 +99,7 @@ namespace WindowsFormsApplication1
 
         private void SetMyControls()
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(panelControl2);
             ProjectFunctions.ButtonVisualize(panelControl2);
             //ProjectFunctions.TextBoxVisualize(SubPanel);

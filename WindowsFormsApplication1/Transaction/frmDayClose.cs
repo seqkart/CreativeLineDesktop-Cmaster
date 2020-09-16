@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
         }
 

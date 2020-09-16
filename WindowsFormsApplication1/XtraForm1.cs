@@ -3,6 +3,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using System;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -19,12 +20,15 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+       
+        [System.ComponentModel.Browsable(false)]
+        public override Image BackgroundImage { get; set; }
 
         private void XtraForm1_Load(object sender, EventArgs e)
         {
 
             // DevExpress.Utils.AppearanceObject.DefaultFont = new Font(DevExpress.Utils.AppearanceObject.DefaultFont.FontFamily.Name, 10);
-            this.Text = GlobalVariables.CurrentUser + " has Logged In ";
+            this.Text = GlobalVariables.CompanyName +" - "+ GlobalVariables.FinancialYear;
             CreateMenuType1();
 
 
@@ -64,7 +68,7 @@ namespace WindowsFormsApplication1
                                 };
                                 InnerElement.Elements.Add(InnerMostElement);
                                 InnerMostElement.Click += InnerMostElement_Click;
-
+                                
                             }
                         }
                     }

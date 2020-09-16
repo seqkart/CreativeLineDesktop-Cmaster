@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
                 txtAcCode.Enabled = false;
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.DatePickerVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.TextBoxVisualize(panelControl2);
                 ProjectFunctions.TextBoxVisualize(panelControl3);

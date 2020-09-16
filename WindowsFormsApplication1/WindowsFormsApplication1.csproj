@@ -288,6 +288,9 @@
     <Reference Include="ExtentReports, Version=4.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ExtentReports.4.1.0\lib\netstandard2.0\ExtentReports.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
@@ -1179,11 +1182,11 @@
     <Compile Include="Prints\InvoicePrintBT.Designer.cs">
       <DependentUpon>InvoicePrintBT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prints\Mufflerprint.cs">
+    <Compile Include="Prints\Mufflerprint1.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Prints\Mufflerprint.Designer.cs">
-      <DependentUpon>Mufflerprint.cs</DependentUpon>
+    <Compile Include="Prints\Mufflerprint1.Designer.cs">
+      <DependentUpon>Mufflerprint1.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\Packingslip.cs">
       <SubType>Component</SubType>
@@ -1822,8 +1825,8 @@
     <EmbeddedResource Include="Prints\InvoicePrintBT.resx">
       <DependentUpon>InvoicePrintBT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prints\Mufflerprint.resx">
-      <DependentUpon>Mufflerprint.cs</DependentUpon>
+    <EmbeddedResource Include="Prints\Mufflerprint1.resx">
+      <DependentUpon>Mufflerprint1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\Packingslip.resx">
       <DependentUpon>Packingslip.cs</DependentUpon>
@@ -2078,6 +2081,7 @@
     <None Include="Resources\AddFile_32x32.png" />
     <None Include="Resources\AddItem_16x16.png" />
     <None Include="Resources\AddItem_32x32.png" />
+    <Content Include="background\fm.jpg" />
     <Content Include="Resources\AMExpress.png" />
     <EmbeddedResource Include="Resources\close_button.png" />
     <None Include="Resources\Anchor.png" />
@@ -2182,6 +2186,7 @@
     <None Include="Resources\Load.png" />
     <None Include="Resources\Lock.png" />
     <None Include="Resources\Low rating.png" />
+    <None Include="Resources\fm2.jpg" />
     <Content Include="Resources\Maestro.png" />
     <None Include="Resources\Mail.png" />
     <None Include="Resources\Male.png" />

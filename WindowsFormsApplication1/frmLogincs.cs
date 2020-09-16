@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraSplashScreen;
+using ICSharpCode.SharpZipLib.Zip;
 using SeqKartLibrary;
 using System;
 using System.Data;
@@ -6,6 +7,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 
 namespace WindowsFormsApplication1
@@ -124,6 +126,7 @@ namespace WindowsFormsApplication1
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
 
                     this.Hide();
+                    ProjectFunctions.Speak("WELCOME TO "+ dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
                     frm.ShowDialog(this.Parent);
                     frm.BringToFront();
 
@@ -288,10 +291,9 @@ namespace WindowsFormsApplication1
 
             }
             else
-                ProjectFunctions.SpeakError("Creating Folder on Server");
-            // System.IO.Directory.CreateDirectory(Application.StartupPath + "\\Backup" + DateTime.Now.DayOfWeek.ToString());
-            System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
 
+                System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
+            ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
             string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
             string[] bakList = Directory.GetFiles(srcDir, "*.bak");
 
@@ -304,18 +306,53 @@ namespace WindowsFormsApplication1
 
             }
 
-
             Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
             Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
-
-
             SplashScreenManager.CloseForm();
 
-
-
-            ProjectFunctions.SpeakError("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
+            ProjectFunctions.Speak ("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
 
         }
+
+        public static void Zip(string sourceFile, string destinationFile, int BufferSize)
+        {
+            FileStream fileStreamIn = new FileStream(sourceFile, FileMode.Open, FileAccess.Read);
+            FileStream fileStreamOut = new FileStream(destinationFile, FileMode.Create, FileAccess.Write);
+            ZipOutputStream zipOutputStream = new ZipOutputStream(fileStreamOut);
+
+            byte[] buffer = new byte[BufferSize];
+
+            ZipEntry entry = new ZipEntry(Path.GetFileName(sourceFile));
+            zipOutputStream.PutNextEntry(entry);
+
+            int size;
+            do
+            {
+                size = fileStreamIn.Read(buffer, 0, buffer.Length);
+                zipOutputStream.Write(buffer, 0, size);
+            } while (size > 0);
+
+            zipOutputStream.Close();
+            fileStreamOut.Close();
+            fileStreamIn.Close();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

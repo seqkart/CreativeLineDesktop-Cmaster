@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1.Master
             try
             {
                 ProjectFunctions.TextBoxVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
                 txtBSDesc.Properties.MaxLength = 60;
                 txtBSCode.Enabled = false;

@@ -444,7 +444,7 @@ namespace WindowsFormsApplication1.Transaction
             try
             {
                 panelControl1.Visible = false;
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(groupControl1);
                 ProjectFunctions.TextBoxVisualize(groupControl2);
                 ProjectFunctions.GirdViewVisualize(HelpGridView);

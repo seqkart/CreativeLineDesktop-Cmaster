@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         private void SetMyControls()
         {
             ProjectFunctions.TextBoxVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.ButtonVisualize(this);
             ProjectFunctions.DatePickerVisualize(this);
         }

@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.DatePickerVisualize(this);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             }
             catch (Exception ex)
             {

@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         private void SetMyControls()
         {
             ProjectFunctions.TextBoxVisualize(this);
-            ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
             txtUnitDesc.Properties.MaxLength = 20;
             txtUnitCode.Enabled = false;

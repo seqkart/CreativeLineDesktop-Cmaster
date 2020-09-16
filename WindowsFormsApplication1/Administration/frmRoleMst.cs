@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.Administration
             try
             {
                 ProjectFunctions.TextBoxVisualize(this);
-                ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 txtRoleDesc.Properties.MaxLength = 40;
 
                 txtRoleCode.Enabled = false;
