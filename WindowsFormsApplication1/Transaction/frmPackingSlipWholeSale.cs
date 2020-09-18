@@ -3,8 +3,6 @@ using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-
-using System.IO;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
@@ -42,36 +40,6 @@ namespace WindowsFormsApplication1.Transaction
         }
 
         private void BtnQuit_Click(object sender, EventArgs e) { this.Close(); }
-
-
-        private void ShowImage(String ArticleID)
-        {
-            try
-            {
-                DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" +
-                    ArticleID +
-                    "'");
-                if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
-                {
-                    Byte[] MyData = new byte[0];
-                    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
-                    MemoryStream stream = new MemoryStream(MyData)
-                    {
-                        Position = 0
-                    };
-
-                    ArticleImageBox.Image = System.Drawing.Image.FromStream(stream);
-                }
-                else
-                {
-                    ArticleImageBox.Image = null;
-                }
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
-        }
 
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
         {
@@ -979,8 +947,6 @@ namespace WindowsFormsApplication1.Transaction
 
         private void FrmPackingSlipWholeSale_KeyDown(object sender, KeyEventArgs e)
         { ProjectFunctions.SalePopUPForAllWindows(this, e); }
-
-        private void label5_Click(object sender, EventArgs e) { }
 
         private void labelControl4_Click(object sender, EventArgs e) { }
 

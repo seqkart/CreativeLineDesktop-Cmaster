@@ -464,13 +464,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 519);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtRemarks);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.ArticleImageBox);
             this.Controls.Add(this.lblTotQty);
             this.Controls.Add(this.labelControl2);

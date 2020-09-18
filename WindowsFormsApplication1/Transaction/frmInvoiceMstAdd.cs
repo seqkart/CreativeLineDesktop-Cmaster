@@ -2122,8 +2122,10 @@ namespace WindowsFormsApplication1
             {
                 Byte[] MyData = new byte[0];
                 MyData = (Byte[])ds.Tables[0].Rows[0]["DocImage"];
-                MemoryStream stream = new MemoryStream(MyData);
-                stream.Position = 0;
+                MemoryStream stream = new MemoryStream(MyData)
+                {
+                    Position = 0
+                };
 
                 pictureEdit1.Image = Image.FromStream(stream);
                 pictureEdit1.Image.Save("C:\\Temp\\A.jpg");

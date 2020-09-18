@@ -11,7 +11,6 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
-using System.IO.Compression;
 using System.Linq;
 
 using System.Net;
@@ -1674,91 +1673,6 @@ namespace WindowsFormsApplication1
             {
                 MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private static void zIpDatabseFile(string srcPath, string destPath)
-
-        {//This is for  Zip a File
-
-            byte[] bufferWrite;
-
-            FileStream fsSource;
-
-            FileStream fsDest;
-
-            GZipStream gzCompressed;
-
-            fsSource = new FileStream(srcPath, FileMode.Open, FileAccess.Read, FileShare.Read);
-
-            bufferWrite = new byte[fsSource.Length];
-
-            fsSource.Read(bufferWrite, 0, bufferWrite.Length);
-
-            fsDest = new FileStream(destPath, FileMode.OpenOrCreate, FileAccess.Write);
-
-            gzCompressed = new GZipStream(fsDest, CompressionMode.Compress, true);
-
-            gzCompressed.Write(bufferWrite, 0, bufferWrite.Length);
-
-            fsSource.Close();
-
-            gzCompressed.Close();
-
-            fsDest.Close();
-
-        }
-
-        private static void uNzIpDatabaseFile(string SrcPath, string DestPath)
-
-        {// This is for unzip a files.
-
-            byte[] bufferWrite;
-
-            FileStream fsSource;
-
-            FileStream fsDest;
-
-            GZipStream gzDecompressed;
-
-            fsSource = new FileStream(SrcPath, FileMode.Open, FileAccess.Read, FileShare.Read);
-
-            gzDecompressed = new GZipStream(fsSource, CompressionMode.Decompress, true);
-
-            bufferWrite = new byte[4];
-
-            fsSource.Position = (int)fsSource.Length - 4;
-
-            fsSource.Read(bufferWrite, 0, 4);
-
-            fsSource.Position = 0;
-
-            int bufferLength = BitConverter.ToInt32(bufferWrite, 0);
-
-            byte[] buffer = new byte[bufferLength + 100];
-
-            int readOffset = 0;
-
-            int totalBytes = 0;
-
-            while (true)
-
-            {
-
-                int bytesRead = gzDecompressed.Read(buffer, readOffset, 100);
-                if (bytesRead == 0)
-                    break;
-
-                readOffset += bytesRead;
-                totalBytes += bytesRead;
-
-            }
-
-            fsDest = new FileStream(DestPath, FileMode.Create);
-            fsDest.Write(buffer, 0, totalBytes);
-            fsSource.Close();
-            gzDecompressed.Close();
-            fsDest.Close();
 
         }
 

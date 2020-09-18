@@ -39,14 +39,15 @@
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPictureBox1});
-            this.TopMargin.HeightF = 623.0417F;
+            this.TopMargin.HeightF = 1048F;
             this.TopMargin.Name = "TopMargin";
             // 
             // xrPictureBox1
             // 
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 38.54167F);
+            this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(815.9583F, 584.5F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(815.9583F, 1048F);
             // 
             // BottomMargin
             // 
@@ -66,8 +67,15 @@
             this.Detail});
             this.DataSourceSchema = resources.GetString("$this.DataSourceSchema");
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(5, 3, 623, 1);
+            this.Margins = new System.Drawing.Printing.Margins(5, 3, 1048, 1);
+            this.PageHeight = 1169;
+            this.PageWidth = 827;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.ShowPreviewMarginLines = false;
+            this.ShowPrintMarginsWarning = false;
+            this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
             this.Version = "20.1";
+            this.VerticalContentSplitting = DevExpress.XtraPrinting.VerticalContentSplitting.Smart;
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

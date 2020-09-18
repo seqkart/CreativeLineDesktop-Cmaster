@@ -334,7 +334,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 41);
+            this.label3.Location = new System.Drawing.Point(68, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 203;
@@ -612,7 +612,7 @@
             this.lblTotalRecordsToTransfer.AutoSize = true;
             this.lblTotalRecordsToTransfer.Location = new System.Drawing.Point(831, 360);
             this.lblTotalRecordsToTransfer.Name = "lblTotalRecordsToTransfer";
-            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(75, 13);
+            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(76, 13);
             this.lblTotalRecordsToTransfer.TabIndex = 210;
             this.lblTotalRecordsToTransfer.Text = "Total Records";
             // 

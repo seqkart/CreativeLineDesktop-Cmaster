@@ -13,13 +13,6 @@ namespace WindowsFormsApplication1
         {
             Application.EnableVisualStyles();
 
-            //  //Application.SetCompatibleTextRenderingDefault(false);
-
-            //DevExpress.LookAndFeel.DefaultLookAndFeel = false
-            //  DevExpress.Skins.SkinManager.EnableFormSkins();
-
-            //  //System.Diagnostics.Process.Start(@"D:\New folder\Foxit Reader 720\FoxitReader720.0722_enu_Setup.exe");
-
             DevExpress.LookAndFeel.UserLookAndFeel.Default.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Skin;
 
             DevExpress.UserSkins.BonusSkins.Register();
@@ -28,25 +21,9 @@ namespace WindowsFormsApplication1
             DevExpress.Skins.SkinManager.EnableFormSkins();
 
 
-            //
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Sharp");
 
-            //System.Diagnostics.Process.Start(@"D:\New folder\IsoBuster 2.8.5\isobuster_all_lang.exe");
-
-
-
-
-
-            Application.Run(new frmLogins()); ;
-
-            //var PROG153 = new WindowsFormsApplication1.Forms_Master.frmAttendenceLaoding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-            //PROG153.Show();
-            //PROG153.BringToFront();
-
-            //Application.Run(new frmAttendenceLaoding());
-
-            //Application.Run(new XtraForm_EmployeeAttendence());
-            /**/
+           Application.Run(new frmLogins()); ;
         }
     }
 }

@@ -14,14 +14,9 @@ namespace WindowsFormsApplication1.Transaction
         public DateTime VoucherDate { get; set; }
 
         Decimal VoucherAmount = 0;
-#pragma warning disable CS0169 // The field 'frmVoucherMstAddEdit.HelpWindowText' is never used
-        String HelpWindowText;
 #pragma warning restore CS0169 // The field 'frmVoucherMstAddEdit.HelpWindowText' is never used
 
         DataTable dt = new DataTable();
-
-#pragma warning disable CS0414 // The field 'frmVoucherMstAddEdit.PSplInfo' is assigned but its value is never used
-        String PSplInfo = string.Empty;
 #pragma warning restore CS0414 // The field 'frmVoucherMstAddEdit.PSplInfo' is assigned but its value is never used
 
         public frmVoucherMstAddEdit()

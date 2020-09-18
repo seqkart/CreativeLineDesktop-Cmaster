@@ -20,7 +20,6 @@ using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Prints;
 using WindowsFormsApplication1.Time_Office;

@@ -1251,6 +1251,7 @@
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PrinterName = "Brother HL-2130 series";
+            this.ShowPrintMarginsWarning = false;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
             this.Version = "20.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
