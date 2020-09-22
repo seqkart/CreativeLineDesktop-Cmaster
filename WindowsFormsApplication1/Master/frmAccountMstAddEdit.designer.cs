@@ -1162,7 +1162,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(165, 12);
+            this.HelpGrid.Location = new System.Drawing.Point(132, 28);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(538, 391);
@@ -1207,7 +1207,7 @@
             // StockTransfer1111
             // 
             this.StockTransfer1111.AutoSize = true;
-            this.StockTransfer1111.Location = new System.Drawing.Point(156, 32);
+            this.StockTransfer1111.Location = new System.Drawing.Point(156, 33);
             this.StockTransfer1111.Name = "StockTransfer1111";
             this.StockTransfer1111.Size = new System.Drawing.Size(79, 13);
             this.StockTransfer1111.TabIndex = 443;
@@ -1216,7 +1216,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(317, 32);
+            this.label26.Location = new System.Drawing.Point(317, 33);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(37, 13);
             this.label26.TabIndex = 275;
@@ -1283,7 +1283,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(426, 32);
+            this.label7.Location = new System.Drawing.Point(426, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
             this.label7.TabIndex = 410;
@@ -1292,7 +1292,7 @@
             // 
             // txtStatusTag
             // 
-            this.txtStatusTag.Location = new System.Drawing.Point(360, 28);
+            this.txtStatusTag.Location = new System.Drawing.Point(360, 29);
             this.txtStatusTag.Name = "txtStatusTag";
             this.txtStatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1304,7 +1304,7 @@
             // 
             // txtLCTag
             // 
-            this.txtLCTag.Location = new System.Drawing.Point(512, 28);
+            this.txtLCTag.Location = new System.Drawing.Point(512, 29);
             this.txtLCTag.Name = "txtLCTag";
             this.txtLCTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1317,7 +1317,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(15, 32);
+            this.label25.Location = new System.Drawing.Point(15, 33);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(65, 13);
             this.label25.TabIndex = 412;
@@ -1325,19 +1325,19 @@
             // 
             // txtFixBArCodeTag
             // 
-            this.txtFixBArCodeTag.Location = new System.Drawing.Point(85, 28);
+            this.txtFixBArCodeTag.Location = new System.Drawing.Point(84, 29);
             this.txtFixBArCodeTag.Name = "txtFixBArCodeTag";
             this.txtFixBArCodeTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtFixBArCodeTag.Properties.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.txtFixBArCodeTag.Size = new System.Drawing.Size(41, 20);
+            this.txtFixBArCodeTag.Size = new System.Drawing.Size(42, 20);
             this.txtFixBArCodeTag.TabIndex = 444;
             // 
             // txtStockTransferTag
             // 
-            this.txtStockTransferTag.Location = new System.Drawing.Point(238, 28);
+            this.txtStockTransferTag.Location = new System.Drawing.Point(238, 29);
             this.txtStockTransferTag.Name = "txtStockTransferTag";
             this.txtStockTransferTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1349,25 +1349,25 @@
             // 
             // cmbTaxType
             // 
-            this.cmbTaxType.Location = new System.Drawing.Point(615, 24);
+            this.cmbTaxType.Location = new System.Drawing.Point(615, 29);
             this.cmbTaxType.Name = "cmbTaxType";
             this.cmbTaxType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTaxType.Properties.Items.AddRange(new object[] {
             "IN",
             "EX"});
-            this.cmbTaxType.Size = new System.Drawing.Size(75, 20);
+            this.cmbTaxType.Size = new System.Drawing.Size(62, 20);
             this.cmbTaxType.TabIndex = 446;
             // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(529, 28);
+            this.label28.Location = new System.Drawing.Point(560, 33);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(80, 13);
+            this.label28.Size = new System.Drawing.Size(49, 13);
             this.label28.TabIndex = 447;
             this.label28.Tag = "";
-            this.label28.Text = "Local / Central";
+            this.label28.Text = "Tax Type";
             // 
             // frmAccountMstAddEdit
             // 

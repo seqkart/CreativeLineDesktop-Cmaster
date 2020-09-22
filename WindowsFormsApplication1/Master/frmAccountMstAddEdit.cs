@@ -8,18 +8,17 @@ namespace WindowsFormsApplication1
 {
     public partial class frmAccountMstAddEdit : XtraForm
     {
-        DataTable dt = new DataTable();
         public String s1 { get; set; }
         public String AccCode { get; set; }
         public frmAccountMstAddEdit()
         {
             InitializeComponent();
-            
+
         }
         private void LoadDelAddresses()
         {
             DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActDelAddresses '" + txtAcCode.Text + "'");
-            if(ds.Tables[0].Rows.Count>0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 InfoGrid.DataSource = ds.Tables[0];
                 InfoGridView.BestFitColumns();
@@ -481,7 +480,7 @@ namespace WindowsFormsApplication1
                     HelpGrid.Visible = false;
                     txtDelGSTNo.Focus();
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -601,11 +600,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtFixBArCodeTag_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtAcName_EditValueChanged(object sender, EventArgs e)
         {
             txtChequeName.Text = txtAcName.Text;
@@ -629,7 +623,7 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.SpeakError("Invalid Del Address1 ");
                 txtDelAddress1.Focus();
-                return ;
+                return;
             }
             if (txtDelCitycode.Text.Trim().Length == 0)
             {
