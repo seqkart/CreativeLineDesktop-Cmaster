@@ -931,7 +931,7 @@
             this.comboBox_Status.Name = "comboBox_Status";
             this.comboBox_Status.Size = new System.Drawing.Size(140, 21);
             this.comboBox_Status.TabIndex = 10;
-            this.comboBox_Status.SelectedValueChanged += new System.EventHandler(this.comboBox_Status_SelectedValueChanged);
+            this.comboBox_Status.SelectedValueChanged += new System.EventHandler(this.ComboBox_Status_SelectedValueChanged);
             // 
             // timeEdit_Time_In_First_Main
             // 

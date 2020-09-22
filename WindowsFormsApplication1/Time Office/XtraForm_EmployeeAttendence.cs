@@ -256,13 +256,13 @@ namespace WindowsFormsApplication1.Time_Office
 
             if (ComparisonUtils.IsNotNull_List(attendanceStatu_List))
             {
-                comboBox_Status.SelectedValueChanged -= comboBox_Status_SelectedValueChanged;
+                comboBox_Status.SelectedValueChanged -= ComboBox_Status_SelectedValueChanged;
 
                 comboBox_Status.DataSource = attendanceStatu_List;
                 comboBox_Status.ValueMember = SQL_COLUMNS._AttendanceStatus._status_id;
                 comboBox_Status.DisplayMember = SQL_COLUMNS._AttendanceStatus._status;
 
-                comboBox_Status.SelectedValueChanged += comboBox_Status_SelectedValueChanged;
+                comboBox_Status.SelectedValueChanged += ComboBox_Status_SelectedValueChanged;
             }
 
             List<DailyShift> dailyShifts_List = new List<DailyShift>();
@@ -1625,7 +1625,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void comboBox_Status_SelectedValueChanged(object sender, EventArgs e)
+        private void ComboBox_Status_SelectedValueChanged(object sender, EventArgs e)
         {
             PrintLogWin.PrintLog("--------------- comboBox_Status : " + comboBox_Status.SelectedValue);
 

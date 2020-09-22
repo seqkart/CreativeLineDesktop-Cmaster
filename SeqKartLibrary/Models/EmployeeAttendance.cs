@@ -10,7 +10,8 @@
 namespace SeqKartLibrary.Models
 {
     using System;
-
+    using System.Collections.Generic;
+    
     public partial class EmployeeAttendance
     {
         public int serial_id { get; set; }
@@ -26,5 +27,13 @@ namespace SeqKartLibrary.Models
         public Nullable<System.TimeSpan> attendance_out_first { get; set; }
         public Nullable<System.TimeSpan> attendance_in_last { get; set; }
         public Nullable<System.TimeSpan> attendance_out_last { get; set; }
+        public Nullable<int> working_hours { get; set; }
+
+        public bool DailyWage { get; set; }
+
+        public int LunchBreak { get; set; }
+        public int OT_Extra { get; set; }
+
+        public string status_type { get; set; }
     }
 }
