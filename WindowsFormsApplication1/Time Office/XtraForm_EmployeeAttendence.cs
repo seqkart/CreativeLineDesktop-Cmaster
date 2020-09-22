@@ -85,14 +85,6 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void editor_EditValueChanged(object sender, EventArgs e)
-        {
-            if ((sender as BaseEdit).Tag == null)
-            {
-
-            }
-        }
-
         public object GetEditValue(BaseEdit editor)
         {
             try
@@ -1257,20 +1249,6 @@ namespace WindowsFormsApplication1.Time_Office
                 CalculateDUtyHours("last_out");
             }
         }
-
-        private bool hasInputTime(object input)
-        {
-            if ((input + string.Empty).Equals(string.Empty))
-            {
-
-            }
-            return false;
-        }
-
-        bool first_in = false;
-        bool first_out = false;
-        bool last_in = false;
-        bool last_out = false;
 
         private void CalculateDutyHours_DailyWager()
         {

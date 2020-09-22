@@ -21,13 +21,13 @@ namespace WindowsFormsApplication1.Master
 
         private void txtStateCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtStateName.Text = String.Empty;
+
         }
 
-        private void txtCityCode_EditValueChanged(object sender, EventArgs e)
-        {
-            txtCityName.Text = String.Empty;
-        }
+        //private void txtCityCode_EditValueChanged(object sender, EventArgs e)
+        //{
+        //    txtCityName.Text = String.Empty;
+        //}
 
         private void txtAccCode_EditValueChanged(object sender, EventArgs e)
         {
@@ -81,24 +81,13 @@ namespace WindowsFormsApplication1.Master
                 //    txtAddress3.Focus();
                 //    return false;
                 //}
-                if (txtStateCode.Text.Trim().Length == 0)
-                {
-                    ProjectFunctions.SpeakError("Invalid State Name");
-                    txtStateCode.Focus();
-                    return false;
-                }
-                if (txtStateName.Text.Trim().Length == 0)
-                {
-                    ProjectFunctions.SpeakError("Invalid State Name");
-                    txtStateCode.Focus();
-                    return false;
-                }
-                if (txtCityCode.Text.Trim().Length == 0)
-                {
-                    ProjectFunctions.SpeakError("Invalid City Name");
-                    txtCityCode.Focus();
-                    return false;
-                }
+
+                //if (txtCityCode.Text.Trim().Length == 0)
+                //{
+                //    ProjectFunctions.SpeakError("Invalid City Name");
+                //    txtCityCode.Focus();
+                //    return false;
+                //}
                 if (txtCityName.Text.Trim().Length == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid City Name");
@@ -114,7 +103,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmBranchMst_KeyDown(object sender, KeyEventArgs e)
+        private void FrmBranchMst_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -138,11 +127,23 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtStateCode_KeyDown(object sender, KeyEventArgs e)
+        //private void txtStateCode_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    try
+        //    {
+        //        ProjectFunctions.CreatePopUpForTwoBoxes("Select STSYSID,STNAME from STATEMASTER", " Where STSYSID", txtStateCode, txtStateName, txtCityCode, HelpGrid, HelpGridView, e);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        ProjectFunctions.SpeakError(ex.Message);
+        //    }
+        //}
+
+        private void TxtCityCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
-                ProjectFunctions.CreatePopUpForTwoBoxes("Select STSYSID,STNAME from STATEMASTER", " Where STSYSID", txtStateCode, txtStateName, txtCityCode, HelpGrid, HelpGridView, e);
+                ProjectFunctions.CreatePopUpForTwoBoxes("SELECT CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID", " Where CTSYSID", txtCityCode, txtCityName, txtState, HelpGrid, HelpGridView, e);
             }
             catch (Exception ex)
             {
@@ -150,19 +151,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtCityCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                ProjectFunctions.CreatePopUpForTwoBoxes("Select CTSYSID,CTNAME from CITYMASTER", " Where CTSYSID", txtCityCode, txtCityName, txtAccName, HelpGrid, HelpGridView, e);
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
-        }
-
-        private void txtAccCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtAccCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -179,19 +168,33 @@ namespace WindowsFormsApplication1.Master
             try
             {
                 DataRow row = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
-                if (HelpGrid.Text == "txtStateCode")
-                {
-                    txtStateCode.Text = row["STSYSID"].ToString();
-                    txtStateName.Text = row["STNAME"].ToString();
-                    HelpGrid.Visible = false;
-                    txtCityCode.Focus();
-                }
+                //if (HelpGrid.Text == "txtStateCode")
+                //{
+                //    txtStateCode.Text = row["STSYSID"].ToString();
+                //    txtStateName.Text = row["STNAME"].ToString();
+                //    HelpGrid.Visible = false;
+                //    txtCityCode.Focus();
+                //}
+
+
+                //if (HelpGrid.Text == "txtCityCode")
+                //{
+                //    txtCityCode.Text = row["CTSYSID"].ToString();
+                //    txtCityName.Text = row["CTNAME"].ToString();
+                //    txtState.Text = row["STNAME"].ToString();
+
+                //    HelpGrid.Visible = false;
+
+                //}
+
                 if (HelpGrid.Text == "txtCityCode")
                 {
                     txtCityCode.Text = row["CTSYSID"].ToString();
                     txtCityName.Text = row["CTNAME"].ToString();
+                    txtState.Text = row["STNAME"].ToString();
+                    // txtCountry.Text = row["UNDERRG"].ToString();
                     HelpGrid.Visible = false;
-                    txtAccName.Focus();
+                    //txtContactPerson.Focus();
                 }
                 if (HelpGrid.Text == "txtAccCode")
                 {
@@ -208,7 +211,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -225,19 +228,19 @@ namespace WindowsFormsApplication1.Master
                         if (s1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into UNITS"
-                                                    + " (UNITNAME,UNITStateID,UNITCityID,UNITADDRESS,UNITADDRESS2,UNITADDRESS3,UNITLEDGCODE,UnitGSTNo)values(@UNITNAME,@UNITStateID,@UNITCityID,@UNITADDRESS,@UNITADDRESS2,@UNITADDRESS3,@UNITLEDGCODE,@UnitGSTNo)";
+                                                    + " (UNITNAME,UNITCityID,UNITADDRESS,UNITADDRESS2,UNITADDRESS3,UNITLEDGCODE,UnitGSTNo)values(@UNITNAME,@UNITCityID,@UNITADDRESS,@UNITADDRESS2,@UNITADDRESS3,@UNITLEDGCODE,@UnitGSTNo)";
 
                         }
                         if (s1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE UNITS SET "
-                                                + " UNITNAME=@UNITNAME,UNITStateID=@UNITStateID,UNITCityID=@UNITCityID,UNITADDRESS=@UNITADDRESS,UNITADDRESS2=@UNITADDRESS2,UNITADDRESS3=@UNITADDRESS3,UNITLEDGCODE=@UNITLEDGCODE,UnitGSTNo=@UnitGSTNo "
+                                                + " UNITNAME=@UNITNAME,UNITCityID=@UNITCityID,UNITADDRESS=@UNITADDRESS,UNITADDRESS2=@UNITADDRESS2,UNITADDRESS3=@UNITADDRESS3,UNITLEDGCODE=@UNITLEDGCODE,UnitGSTNo=@UnitGSTNo "
                                                 + " Where UNITID=@UNITID";
                             sqlcom.Parameters.AddWithValue("@UNITID", txtBranchCode.Text.Trim());
 
                         }
                         sqlcom.Parameters.AddWithValue("@UNITNAME", txtBranchName.Text.Trim());
-                        sqlcom.Parameters.AddWithValue("@UNITStateID", txtStateCode.Text.Trim());
+                        //sqlcom.Parameters.AddWithValue("@UNITStateID", STSYSID.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@UNITCityID", txtCityCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@UNITADDRESS", txtAddress1.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@UNITADDRESS2", txtAddress2.Text.Trim());
@@ -265,7 +268,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmBranchMst_Load(object sender, EventArgs e)
+        private void FrmBranchMst_Load(object sender, EventArgs e)
         {
             try
             {
@@ -283,8 +286,8 @@ namespace WindowsFormsApplication1.Master
                         txtBranchName.Text = ds.Tables[0].Rows[0]["UNITNAME"].ToString();
                         txtCityCode.Text = ds.Tables[0].Rows[0]["UNITCityID"].ToString();
                         txtCityName.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-                        txtStateCode.Text = ds.Tables[0].Rows[0]["UNITStateID"].ToString();
-                        txtStateName.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
+                        //txtStateCode.Text = ds.Tables[0].Rows[0]["UNITStateID"].ToString();
+                        txtState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
                         txtAccCode.Text = ds.Tables[0].Rows[0]["UNITLEDGCODE"].ToString();
                         txtAccName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
                         txtAddress1.Text = ds.Tables[0].Rows[0]["UNITADDRESS"].ToString();

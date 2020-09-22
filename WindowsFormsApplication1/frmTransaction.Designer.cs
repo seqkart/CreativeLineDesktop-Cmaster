@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransaction));
             this.InvoiceGrid = new DevExpress.XtraGrid.GridControl();
             this.InvoiceGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -40,12 +41,14 @@
             this.PrintOutGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrintOutGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintOutGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // InvoiceGrid
@@ -174,7 +177,7 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
             // 
-            // frmTransaction
+            // FrmTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,8 +186,9 @@
             this.Controls.Add(this.PrintOutGrid);
             this.Controls.Add(this.InvoiceGrid);
             this.Controls.Add(this.Menu_ToolStrip);
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmTransaction";
+            this.Name = "FrmTransaction";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).EndInit();
@@ -194,6 +198,7 @@
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PrintOutGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PrintOutGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +217,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView PrintOutGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

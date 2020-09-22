@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBranchMst));
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtStateCode = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtStateName = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -55,10 +52,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtGSTNo = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtStatusTag = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtState = new DevExpress.XtraEditors.TextEdit();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStateCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStateName.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranchName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranchCode.Properties)).BeginInit();
@@ -70,11 +73,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatusTag.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(486, 42);
+            this.HelpGrid.Location = new System.Drawing.Point(183, 46);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(350, 221);
@@ -96,39 +103,6 @@
             this.HelpGridView.OptionsView.ShowGroupPanel = false;
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // txtStateCode
-            // 
-            this.txtStateCode.EnterMoveNextControl = true;
-            this.txtStateCode.Location = new System.Drawing.Point(91, 195);
-            this.txtStateCode.Name = "txtStateCode";
-            this.txtStateCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
-            this.txtStateCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.txtStateCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtStateCode.Properties.MaxLength = 4;
-            this.txtStateCode.Size = new System.Drawing.Size(69, 20);
-            this.txtStateCode.TabIndex = 419;
-            this.txtStateCode.EditValueChanged += new System.EventHandler(this.txtStateCode_EditValueChanged);
-            this.txtStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStateCode_KeyDown);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(22, 199);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 13);
-            this.label13.TabIndex = 421;
-            this.label13.Text = "Under State";
-            // 
-            // txtStateName
-            // 
-            this.txtStateName.Location = new System.Drawing.Point(167, 195);
-            this.txtStateName.Name = "txtStateName";
-            this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtStateName.Properties.ReadOnly = true;
-            this.txtStateName.Size = new System.Drawing.Size(247, 20);
-            this.txtStateName.TabIndex = 420;
-            this.txtStateName.TabStop = false;
             // 
             // Menu_ToolStrip
             // 
@@ -165,7 +139,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 22);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtBranchName
             // 
@@ -189,7 +163,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 94);
+            this.label3.Location = new System.Drawing.Point(10, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 13);
             this.label3.TabIndex = 416;
@@ -207,7 +181,7 @@
             // txtCityCode
             // 
             this.txtCityCode.EnterMoveNextControl = true;
-            this.txtCityCode.Location = new System.Drawing.Point(91, 221);
+            this.txtCityCode.Location = new System.Drawing.Point(89, 195);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
             this.txtCityCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -215,13 +189,12 @@
             this.txtCityCode.Properties.MaxLength = 4;
             this.txtCityCode.Size = new System.Drawing.Size(69, 20);
             this.txtCityCode.TabIndex = 422;
-            this.txtCityCode.EditValueChanged += new System.EventHandler(this.txtCityCode_EditValueChanged);
-            this.txtCityCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCityCode_KeyDown);
+            this.txtCityCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCityCode_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 225);
+            this.label2.Location = new System.Drawing.Point(23, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 424;
@@ -229,7 +202,8 @@
             // 
             // txtCityName
             // 
-            this.txtCityName.Location = new System.Drawing.Point(167, 221);
+            this.txtCityName.Enabled = false;
+            this.txtCityName.Location = new System.Drawing.Point(167, 195);
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityName.Properties.ReadOnly = true;
@@ -240,7 +214,7 @@
             // txtAccCode
             // 
             this.txtAccCode.EnterMoveNextControl = true;
-            this.txtAccCode.Location = new System.Drawing.Point(91, 247);
+            this.txtAccCode.Location = new System.Drawing.Point(89, 247);
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
             this.txtAccCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -249,12 +223,12 @@
             this.txtAccCode.Size = new System.Drawing.Size(69, 20);
             this.txtAccCode.TabIndex = 425;
             this.txtAccCode.EditValueChanged += new System.EventHandler(this.txtAccCode_EditValueChanged);
-            this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccCode_KeyDown);
+            this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(32, 250);
+            this.label4.Location = new System.Drawing.Point(33, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 427;
@@ -273,7 +247,7 @@
             // txtAddress1
             // 
             this.txtAddress1.EnterMoveNextControl = true;
-            this.txtAddress1.Location = new System.Drawing.Point(91, 117);
+            this.txtAddress1.Location = new System.Drawing.Point(89, 117);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 30;
@@ -283,7 +257,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 120);
+            this.label5.Location = new System.Drawing.Point(30, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 13);
             this.label5.TabIndex = 429;
@@ -292,7 +266,7 @@
             // txtAddress2
             // 
             this.txtAddress2.EnterMoveNextControl = true;
-            this.txtAddress2.Location = new System.Drawing.Point(91, 143);
+            this.txtAddress2.Location = new System.Drawing.Point(89, 143);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 30;
@@ -302,7 +276,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 146);
+            this.label6.Location = new System.Drawing.Point(30, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(54, 13);
             this.label6.TabIndex = 431;
@@ -311,7 +285,7 @@
             // txtAddress3
             // 
             this.txtAddress3.EnterMoveNextControl = true;
-            this.txtAddress3.Location = new System.Drawing.Point(91, 169);
+            this.txtAddress3.Location = new System.Drawing.Point(89, 169);
             this.txtAddress3.Name = "txtAddress3";
             this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress3.Properties.MaxLength = 30;
@@ -321,7 +295,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 172);
+            this.label7.Location = new System.Drawing.Point(30, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 13);
             this.label7.TabIndex = 433;
@@ -340,11 +314,87 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 276);
+            this.label8.Location = new System.Drawing.Point(39, 276);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 13);
             this.label8.TabIndex = 435;
             this.label8.Text = "GST No";
+            // 
+            // comboBoxEdit1
+            // 
+            this.comboBoxEdit1.Location = new System.Drawing.Point(580, 87);
+            this.comboBoxEdit1.Name = "comboBoxEdit1";
+            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.comboBoxEdit1.Size = new System.Drawing.Size(41, 20);
+            this.comboBoxEdit1.TabIndex = 466;
+            // 
+            // txtStatusTag
+            // 
+            this.txtStatusTag.Location = new System.Drawing.Point(482, 87);
+            this.txtStatusTag.Name = "txtStatusTag";
+            this.txtStatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtStatusTag.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.txtStatusTag.Size = new System.Drawing.Size(41, 20);
+            this.txtStatusTag.TabIndex = 467;
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(539, 91);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(35, 13);
+            this.labelControl10.TabIndex = 462;
+            this.labelControl10.Text = "IS \'HO\'";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(425, 91);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(51, 13);
+            this.labelControl7.TabIndex = 463;
+            this.labelControl7.Text = "THIS UNIT";
+            // 
+            // textEdit7
+            // 
+            this.textEdit7.Location = new System.Drawing.Point(520, 110);
+            this.textEdit7.Name = "textEdit7";
+            this.textEdit7.Size = new System.Drawing.Size(44, 20);
+            this.textEdit7.TabIndex = 465;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(427, 114);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(87, 13);
+            this.labelControl8.TabIndex = 464;
+            this.labelControl8.Text = "BARCODE PREFIX";
+            // 
+            // txtState
+            // 
+            this.txtState.Enabled = false;
+            this.txtState.Location = new System.Drawing.Point(89, 221);
+            this.txtState.Name = "txtState";
+            this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtState.Properties.MaxLength = 100;
+            this.txtState.Size = new System.Drawing.Size(241, 20);
+            this.txtState.TabIndex = 469;
+            this.txtState.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.label9.Location = new System.Drawing.Point(51, 225);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(33, 13);
+            this.label9.TabIndex = 468;
+            this.label9.Text = "State";
             // 
             // frmBranchMst
             // 
@@ -352,6 +402,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(635, 322);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
+            this.Controls.Add(this.txtState);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.comboBoxEdit1);
+            this.Controls.Add(this.txtStatusTag);
+            this.Controls.Add(this.labelControl10);
+            this.Controls.Add(this.labelControl7);
+            this.Controls.Add(this.textEdit7);
+            this.Controls.Add(this.labelControl8);
             this.Controls.Add(this.txtGSTNo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAddress3);
@@ -366,10 +425,6 @@
             this.Controls.Add(this.txtCityCode);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCityName);
-            this.Controls.Add(this.HelpGrid);
-            this.Controls.Add(this.txtStateCode);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtStateName);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtBranchName);
             this.Controls.Add(this.txtBranchCode);
@@ -379,12 +434,10 @@
             this.KeyPreview = true;
             this.Name = "frmBranchMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmBranchMst_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBranchMst_KeyDown);
+            this.Load += new System.EventHandler(this.FrmBranchMst_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBranchMst_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStateCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStateName.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBranchName.Properties)).EndInit();
@@ -397,6 +450,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatusTag.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -406,9 +463,6 @@
 
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
-        private DevExpress.XtraEditors.TextEdit txtStateCode;
-        private System.Windows.Forms.Label label13;
-        private DevExpress.XtraEditors.TextEdit txtStateName;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
@@ -430,5 +484,13 @@
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit txtGSTNo;
         private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit txtStatusTag;
+        private DevExpress.XtraEditors.LabelControl labelControl10;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
+        private DevExpress.XtraEditors.TextEdit textEdit7;
+        private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraEditors.TextEdit txtState;
+        internal System.Windows.Forms.Label label9;
     }
 }

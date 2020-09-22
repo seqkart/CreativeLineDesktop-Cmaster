@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Menu;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
@@ -139,6 +140,12 @@ namespace WindowsFormsApplication1
         {
             return dateToCheck.Date >= startDate.Date && dateToCheck.Date <= endDate.Date;
         }
+
+        internal static void CreatePopUpForFourBoxes(string v1, string v2, TextEdit txtCityCode, TextEdit txtCityName, TextEdit txtState, GridControl helpGrid, GridView helpGridView, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         //public static void SendSMS(String sms,String MobileNo)
         //{
         //    try

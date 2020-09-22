@@ -34,10 +34,10 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtStateName = new DevExpress.XtraEditors.TextEdit();
             this.txtStateCode = new DevExpress.XtraEditors.TextEdit();
-            this.Label17 = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.Label15 = new System.Windows.Forms.Label();
             this.txtCountry = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStateName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStateCode.Properties)).BeginInit();
@@ -57,7 +57,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(552, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(372, 26);
             this.Menu_ToolStrip.TabIndex = 376;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -87,72 +87,66 @@
             // 
             // txtStateName
             // 
-            this.txtStateName.Location = new System.Drawing.Point(140, 91);
+            this.txtStateName.Location = new System.Drawing.Point(98, 85);
             this.txtStateName.Name = "txtStateName";
             this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateName.Properties.MaxLength = 100;
-            this.txtStateName.Size = new System.Drawing.Size(351, 20);
+            this.txtStateName.Size = new System.Drawing.Size(211, 20);
             this.txtStateName.TabIndex = 388;
             // 
             // txtStateCode
             // 
-            this.txtStateCode.Location = new System.Drawing.Point(140, 57);
+            this.txtStateCode.Location = new System.Drawing.Point(98, 51);
             this.txtStateCode.Name = "txtStateCode";
             this.txtStateCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateCode.Size = new System.Drawing.Size(83, 20);
             this.txtStateCode.TabIndex = 387;
             // 
-            // Label17
-            // 
-            this.Label17.AutoSize = true;
-            this.Label17.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Label17.Location = new System.Drawing.Point(37, 91);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(85, 18);
-            this.Label17.TabIndex = 385;
-            this.Label17.Text = "STATE NAME";
-            // 
-            // Label16
-            // 
-            this.Label16.AutoSize = true;
-            this.Label16.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(37, 123);
-            this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(76, 18);
-            this.Label16.TabIndex = 386;
-            this.Label16.Text = "COUNTRY :";
-            // 
-            // Label15
-            // 
-            this.Label15.AutoSize = true;
-            this.Label15.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Label15.Location = new System.Drawing.Point(81, 57);
-            this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(53, 18);
-            this.Label15.TabIndex = 384;
-            this.Label15.Text = "SYS ID :";
-            // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(140, 123);
+            this.txtCountry.Location = new System.Drawing.Point(98, 117);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtCountry.Size = new System.Drawing.Size(351, 20);
+            this.txtCountry.Size = new System.Drawing.Size(211, 20);
             this.txtCountry.TabIndex = 389;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(55, 55);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(37, 13);
+            this.labelControl1.TabIndex = 390;
+            this.labelControl1.Text = "SYS ID :";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(21, 89);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(71, 13);
+            this.labelControl2.TabIndex = 390;
+            this.labelControl2.Text = "STATE NAME :";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(36, 121);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(56, 13);
+            this.labelControl3.TabIndex = 390;
+            this.labelControl3.Text = "COUNTRY :";
             // 
             // frmStateMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 197);
+            this.ClientSize = new System.Drawing.Size(372, 184);
             this.ControlBox = false;
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtStateName);
             this.Controls.Add(this.txtStateCode);
-            this.Controls.Add(this.Label17);
-            this.Controls.Add(this.Label16);
-            this.Controls.Add(this.Label15);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
@@ -177,9 +171,9 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtStateName;
         private DevExpress.XtraEditors.TextEdit txtStateCode;
-        internal System.Windows.Forms.Label Label17;
-        internal System.Windows.Forms.Label Label16;
-        internal System.Windows.Forms.Label Label15;
         private DevExpress.XtraEditors.ComboBoxEdit txtCountry;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

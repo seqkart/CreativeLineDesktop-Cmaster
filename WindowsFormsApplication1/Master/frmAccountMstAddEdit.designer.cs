@@ -38,6 +38,8 @@
             this.ProductTabCtrl = new DevExpress.XtraTab.XtraTabControl();
             this.AInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtAgentName = new DevExpress.XtraEditors.TextEdit();
             this.txtAgentCode = new DevExpress.XtraEditors.TextEdit();
             this.label17 = new System.Windows.Forms.Label();
@@ -116,8 +118,6 @@
             this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
             this.txtDelCityName = new DevExpress.XtraEditors.TextEdit();
             this.txtDelCitycode = new DevExpress.XtraEditors.TextEdit();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtMRPMarkDown = new DevExpress.XtraEditors.TextEdit();
             this.label23 = new System.Windows.Forms.Label();
             this.StockTransfer1111 = new System.Windows.Forms.Label();
@@ -144,6 +144,8 @@
             this.AInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameAsOnBankAcc.Properties)).BeginInit();
@@ -194,8 +196,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -291,6 +291,7 @@
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.HelpGrid);
             this.panelControl3.Controls.Add(this.txtAgentName);
             this.panelControl3.Controls.Add(this.txtAgentCode);
             this.panelControl3.Controls.Add(this.label17);
@@ -318,6 +319,31 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(680, 380);
             this.panelControl3.TabIndex = 0;
+            // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(86, 14);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
+            this.HelpGrid.TabIndex = 408;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // txtAgentName
             // 
@@ -1160,31 +1186,6 @@
             this.txtDelCitycode.EditValueChanged += new System.EventHandler(this.txtDelCitycode_EditValueChanged);
             this.txtDelCitycode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelCitycode_KeyDown);
             // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(132, 28);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
-            this.HelpGrid.TabIndex = 408;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
             // txtMRPMarkDown
             // 
             this.txtMRPMarkDown.EnterMoveNextControl = true;
@@ -1375,7 +1376,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 521);
             this.ControlBox = false;
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.cmbTaxType);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.txtStockTransferTag);
@@ -1417,6 +1417,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameAsOnBankAcc.Properties)).EndInit();
@@ -1468,8 +1470,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
