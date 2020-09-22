@@ -1,4 +1,10 @@
-﻿using DevExpress.XtraBars.Ribbon;
+﻿//-----------------------------------------------------------------------
+// <copyright file="D:\SeqkartnewHar\WindowsFormsApplication1\XtraForm1.cs" company="">
+//     Author:  
+//     Copyright (c) . All rights reserved.
+// </copyright>
+//-----------------------------------------------------------------------
+using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
 using System;
@@ -119,19 +125,19 @@ namespace WindowsFormsApplication1
             Application.Exit();
         }
 
-        private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        private void XtraTabControl1_CloseButtonClick(object sender, EventArgs e)
         {
             xtraTabControl1.TabPages.Remove(xtraTabControl1.SelectedTabPage);
         }
 
 
 
-        private void xtraTabControl1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void XtraTabControl1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
         }
 
-        private void xtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        private void XtraTabControl1_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             try
             {
@@ -230,7 +236,7 @@ namespace WindowsFormsApplication1
                     break;
                 case WIN_APP_TABS._frmGatePassLaoding:
                     ////var PROG3 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //var PROG172 = new frmGatePassLaoding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    //var PROG172 = new frmGatePassLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     //PROG172.Show();
                     //PROG172.BringToFront();
                     //PROG172.Parent = Page;
@@ -279,7 +285,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG7":
-                    var PROG7 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG7 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG7";
 
                     PROG7.Show();
@@ -423,7 +429,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG21":
-                    var PROG21 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG21 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG21";
 
                     PROG21.Show();
@@ -433,7 +439,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG22":
-                    var PROG22 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG22 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG22";
 
                     PROG22.Show();
@@ -443,7 +449,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG23":
-                    var PROG23 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG23 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG23";
 
                     PROG23.Show();
@@ -473,7 +479,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG26":
-                    var PROG26 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG26 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG26";
 
                     PROG26.Show();
@@ -483,7 +489,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG27":
-                    var PROG27 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG27 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG27";
 
                     PROG27.Show();
@@ -493,7 +499,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG28":
-                    var PROG28 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG28 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG28";
 
                     PROG28.Show();
@@ -522,7 +528,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG31":
-                    var PROG31 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG31 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG31";
 
                     PROG31.Show();
@@ -532,7 +538,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG32":
-                    var PROG32 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG32 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG32";
 
                     PROG32.Show();
@@ -541,7 +547,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG33":
-                    var PROG33 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG33 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG33";
 
                     PROG33.Show();
@@ -667,7 +673,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG58":
-                    var PROG58 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG58 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG58";
 
                     PROG58.Show();
@@ -720,7 +726,7 @@ namespace WindowsFormsApplication1
                     //xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG55":
-                    var PROG55 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG55 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG55";
 
                     PROG55.Show();
@@ -729,7 +735,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG87":
-                    var PROG87 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG87 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG87";
 
                     PROG87.Show();
@@ -738,7 +744,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG89":
-                    var PROG89 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG89 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG89";
 
                     PROG89.Show();
@@ -747,7 +753,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG91":
-                    var PROG91 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG91 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG91";
 
                     PROG91.Show();
@@ -757,7 +763,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG56":
-                    var PROG56 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG56 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG56";
 
                     PROG56.Show();
@@ -767,7 +773,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG65":
-                    var PROG65 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG65 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG65";
 
                     PROG65.Show();
@@ -776,7 +782,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG37":
-                    var PROG37 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG37 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG37";
 
                     PROG37.Show();
@@ -848,7 +854,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG73":
-                    var PROG73 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG73 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG73";
 
                     PROG73.Show();
@@ -857,7 +863,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG74":
-                    var PROG74 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG74 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG74";
 
                     PROG74.Show();
@@ -911,7 +917,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG57":
-                    var PROG57 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG57 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG57";
 
                     PROG57.Show();
@@ -920,7 +926,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG46":
-                    var PROG46 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG46 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG46";
 
                     PROG46.Show();
@@ -974,7 +980,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG90":
-                    var PROG90 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG90 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG90";
 
                     PROG90.Show();
@@ -983,7 +989,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG101":
-                    var PROG101 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG101 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG101";
 
                     PROG101.Show();
@@ -1074,7 +1080,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG116":
-                    var PROG116 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG116 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG116.Show();
                     PROG116.BringToFront();
                     PROG116.Parent = Page;
@@ -1158,28 +1164,28 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG128":
-                    var PROG128 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG128 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG128.Show();
                     PROG128.BringToFront();
                     PROG128.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG129":
-                    var PROG129 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG129 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG129.Show();
                     PROG129.BringToFront();
                     PROG129.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG130":
-                    var PROG130 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG130 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG130.Show();
                     PROG130.BringToFront();
                     PROG130.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG131":
-                    var PROG131 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG131 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
 
                     PROG131.Show();
                     PROG131.BringToFront();
@@ -1187,21 +1193,21 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG132":
-                    var PROG132 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG132 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG132.Show();
                     PROG132.BringToFront();
                     PROG132.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG133":
-                    var PROG133 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG133 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG133.Show();
                     PROG133.BringToFront();
                     PROG133.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG134":
-                    var PROG134 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG134 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG134.Show();
                     PROG134.BringToFront();
                     PROG134.Parent = Page;
@@ -1229,7 +1235,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG138":
-                    var PROG138 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG138 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG138.Show();
                     PROG138.BringToFront();
                     PROG138.Parent = Page;
@@ -1250,14 +1256,14 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG141":
-                    var PROG141 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG141 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG141.Show();
                     PROG141.BringToFront();
                     PROG141.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG142":
-                    var PROG142 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG142 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG142.Show();
                     PROG142.BringToFront();
                     PROG142.Parent = Page;
@@ -1285,28 +1291,28 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG147":
-                    var PROG147 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG147 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG147.Show();
                     PROG147.BringToFront();
                     PROG147.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG148":
-                    var PROG148 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG148 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG148.Show();
                     PROG148.BringToFront();
                     PROG148.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG149":
-                    var PROG149 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG149 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG149.Show();
                     PROG149.BringToFront();
                     PROG149.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG150":
-                    var PROG150 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG150 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG150.Show();
                     PROG150.BringToFront();
                     PROG150.Parent = Page;
@@ -1416,7 +1422,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG166":
-                    var PROG166 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG166 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG166.Show();
                     PROG166.BringToFront();
                     PROG166.Parent = Page;
@@ -1430,7 +1436,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG168":
-                    var PROG168 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG168 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG168.Show();
                     PROG168.BringToFront();
                     PROG168.Parent = Page;
@@ -1469,7 +1475,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void skinRibbonGalleryBarItem_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
+        private void SkinRibbonGalleryBarItem_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
         {
             ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
         }
@@ -1505,7 +1511,7 @@ namespace WindowsFormsApplication1
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
-        private void barButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BarButtonItem6_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             radialMenu1.ShowPopup(new System.Drawing.Point(200, 200));
         }

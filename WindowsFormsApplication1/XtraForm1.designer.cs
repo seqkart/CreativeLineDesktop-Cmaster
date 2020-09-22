@@ -123,7 +123,7 @@
             // 
             this.skinRibbonGalleryBarItem.Id = 14;
             this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
-            this.skinRibbonGalleryBarItem.GalleryItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.skinRibbonGalleryBarItem_GalleryItemClick);
+            this.skinRibbonGalleryBarItem.GalleryItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.SkinRibbonGalleryBarItem_GalleryItemClick);
             // 
             // barSubItemNavigation
             // 
@@ -139,7 +139,7 @@
             this.barButtonItem6.Caption = "Show Radial Menu";
             this.barButtonItem6.Id = 88;
             this.barButtonItem6.Name = "barButtonItem6";
-            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick);
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem6_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -290,9 +290,9 @@
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
             this.xtraTabControl1.Transition.TransitionType = combTransition1;
-            this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTabControl1_SelectedPageChanged);
-            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
-            this.xtraTabControl1.Validating += new System.ComponentModel.CancelEventHandler(this.xtraTabControl1_Validating);
+            this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_SelectedPageChanged);
+            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.XtraTabControl1_CloseButtonClick);
+            this.xtraTabControl1.Validating += new System.ComponentModel.CancelEventHandler(this.XtraTabControl1_Validating);
             // 
             // defaultLookAndFeel1
             // 

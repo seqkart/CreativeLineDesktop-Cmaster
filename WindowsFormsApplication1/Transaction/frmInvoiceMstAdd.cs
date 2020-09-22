@@ -1301,7 +1301,7 @@ namespace WindowsFormsApplication1
                             txtTempInvoiceSeries.Text = txtserial.Text;
                         }
 
-                        if(ds.Tables[0].Rows[0]["AccTaxType"].ToString()=="IN")
+                        if (ds.Tables[0].Rows[0]["AccTaxType"].ToString() == "IN")
                         {
                             chInclusive.Checked = true;
                             chExclusive.Checked = false;

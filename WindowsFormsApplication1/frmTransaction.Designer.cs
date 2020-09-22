@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmTransaction
+    partial class FrmTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransaction));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransaction));
             this.InvoiceGrid = new DevExpress.XtraGrid.GridControl();
             this.InvoiceGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -113,7 +113,7 @@
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnEdit.Size = new System.Drawing.Size(42, 23);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -145,7 +145,7 @@
             this.PrintOutGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.PrintOutGridView});
             this.PrintOutGrid.Visible = false;
-            this.PrintOutGrid.DoubleClick += new System.EventHandler(this.gridControl1_DoubleClick);
+            this.PrintOutGrid.DoubleClick += new System.EventHandler(this.GridControl1_DoubleClick);
             this.PrintOutGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PrintOutGrid_KeyDown);
             // 
             // PrintOutGridView

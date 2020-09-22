@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmTransaction : DevExpress.XtraEditors.XtraForm
+    public partial class FrmTransaction : DevExpress.XtraEditors.XtraForm
     {
         RangeSelector _RangeSelector = new RangeSelector() { StartDate = DateTime.Now.AddDays(-1), EndDate = DateTime.Now };
 
-        public frmTransaction()
+        public FrmTransaction()
         {
             InitializeComponent();
         }
@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1
             FillGrid();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
@@ -349,7 +349,7 @@ namespace WindowsFormsApplication1
                     DataSet dsChkInv = ProjectFunctions.GetDataSet("select * from SALEINVDET  where SIDPSNO='" + CurrentRow["PSWSNO"].ToString() + "' And SIDFNYR='" + GlobalVariables.FinancialYear + "'");
                     if (dsChkInv.Tables[0].Rows.Count > 0)
                     {
-                        ProjectFunctions.SpeakError("Already Used In Billing - Bill No("+ dsChkInv.Tables[0].Rows[0]["SIDSERIES"].ToString()+"-"+dsChkInv.Tables[0].Rows[0]["SIDNO"].ToString() + ")");
+                        ProjectFunctions.SpeakError("Already Used In Billing - Bill No(" + dsChkInv.Tables[0].Rows[0]["SIDSERIES"].ToString() + "-" + dsChkInv.Tables[0].Rows[0]["SIDNO"].ToString() + ")");
                         Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale() { s1 = btnEdit.Text, Text = "Packing Slip Edition", PSWSNO = CurrentRow["PSWSNO"].ToString(), PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(), UpdateTag = "N" };
                         frm.StartPosition = FormStartPosition.CenterScreen;
                         frm.ShowDialog(Parent);
@@ -357,7 +357,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale() { s1 = btnEdit.Text, Text = "Packing Slip Edition", PSWSNO = CurrentRow["PSWSNO"].ToString(), PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(),UpdateTag="Y" };
+                        Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale() { s1 = btnEdit.Text, Text = "Packing Slip Edition", PSWSNO = CurrentRow["PSWSNO"].ToString(), PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(), UpdateTag = "Y" };
                         frm.StartPosition = FormStartPosition.CenterScreen;
                         frm.ShowDialog(Parent);
                     }
@@ -422,13 +422,11 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from IndData Where IndDDate='" + Convert.ToDateTime(CurrentRow["IndentDate"]).ToString("yyyy-MM-dd") + "' And InddNO='" + CurrentRow["IndentNo"].ToString() + "'");
                     foreach (DataRow dr in dsCheck.Tables[0].Rows)
-                    {
                         if (dr["IndPassTag"].ToString().ToUpper() == "Y")
                         {
                             ProjectFunctions.SpeakError("This Indent Has Already Been Passed");
                             return;
                         }
-                    }
                     Transaction.frmIndentMst frm = new Transaction.frmIndentMst() { s1 = btnEdit.Text, Text = "indent Editing", ImNo = CurrentRow["IndentNo"].ToString(), ImDate = Convert.ToDateTime(CurrentRow["IndentDate"]) };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -543,9 +541,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select CPassTag from CRData Where CDate='" + Convert.ToDateTime(CurrentRow["CDate"]).ToString("yyyy-MM-dd") + "' And CNo='" + CurrentRow["CNo"].ToString() + "'");
                     if (dsCheck.Tables[0].Rows[0]["CPassTag"].ToString() == "Y")
-                    {
                         ProjectFunctions.SpeakError("Please Unpass First");
-                    }
                     else
                     {
                         //  Transaction.frmCRDataData frm = new Transaction.frmCRDataData() { s1 = btnEdit.Text, Text = "Cash Receiving ", CNo = CurrentRow["CNo"].ToString(), CDate = Convert.ToDateTime(CurrentRow["CDate"]) };
@@ -559,14 +555,14 @@ namespace WindowsFormsApplication1
 
         private void InvoiceGrid_DoubleClick(object sender, EventArgs e)
         {
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
         }
 
         private void InvoiceGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnEdit_Click(null, e);
+                BtnEdit_Click(null, e);
             }
         }
         private void InvoiceGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
@@ -1183,16 +1179,14 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void gridControl1_DoubleClick(object sender, EventArgs e)
+        private void GridControl1_DoubleClick(object sender, EventArgs e)
         {
             PrintOutGridView.CloseEditor();
             PrintOutGridView.UpdateCurrentRow();
             if (GlobalVariables.ProgCode == "PROG142")
-            {
                 foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                 {
                     if (dr["Select"].ToString().ToUpper() == "TRUE")
-                    {
 
                         for (int i = 0; i < 3; i++)
                         {
@@ -1201,17 +1195,11 @@ namespace WindowsFormsApplication1
                             if (CurrentRow["Select"].ToString().ToUpper() == "TRUE")
                             {
                                 if (i == 0)
-                                {
                                     CopyText = "Party Copy";
-                                }
                                 if (i == 1)
-                                {
                                     CopyText = "Gate Copy";
-                                }
                                 if (i == 2)
-                                {
                                     CopyText = "Extra Copy";
-                                }
 
                                 DataTable dt = new DataTable();
                                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanOutPrint '" + dr["CHONO"].ToString() + "','" + Convert.ToDateTime(dr["CHODATE"]).ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "'");
@@ -1224,24 +1212,15 @@ namespace WindowsFormsApplication1
                                 rpt.lblGrossWeight.Text = ds.Tables[1].Rows[0]["GrossWeight"].ToString();
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();
                                 using (var pt = new ReportPrintTool(rpt))
-                                {
                                     pt.ShowRibbonPreviewDialog();
-                                }
 
 
                             }
                         }
-
-                    }
                 }
-            }
             else
-
-            {
                 foreach (DataRow drBills in (InvoiceGrid.DataSource as DataTable).Rows)
-                {
                     if (drBills["Select"].ToString().ToUpper() == "TRUE")
-                    {
                         for (int i = 0; i < 4; i++)
                         {
                             String CopyText = String.Empty;
@@ -1249,21 +1228,13 @@ namespace WindowsFormsApplication1
                             if (CurrentRow["Select"].ToString().ToUpper() == "TRUE")
                             {
                                 if (i == 0)
-                                {
                                     CopyText = "Original For Buyer";
-                                }
                                 if (i == 1)
-                                {
                                     CopyText = "Office Copy";
-                                }
                                 if (i == 2)
-                                {
                                     CopyText = "Transporter Copy";
-                                }
                                 if (i == 3)
-                                {
                                     CopyText = "Extra Copy";
-                                }
                                 if (GlobalVariables.ProgCode == "PROG131")
                                 {
                                     if (drBills["BillSeries"].ToString().ToUpper() == "GST")
@@ -1282,20 +1253,15 @@ namespace WindowsFormsApplication1
                                     }
                                 }
                                 if (GlobalVariables.ProgCode == "PROG141")
-                                {
                                     if (drBills["CRSeries"].ToString().ToUpper() == "RG")
                                     {
                                         Prints.GSTCRINVOICE rpt = new Prints.GSTCRINVOICE();
                                         rpt.lblCopy.Text = CopyText;
                                         ProjectFunctions.CRPrintDocument(drBills["CRNo"].ToString(), Convert.ToDateTime(drBills["CRDate"]), drBills["CRSeries"].ToString(), rpt);
                                     }
-                                }
                             }
 
                         }
-                    }
-                }
-            }
             PrintOutGrid.Visible = false;
         }
 

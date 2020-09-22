@@ -193,7 +193,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG7":
-                    var PROG7 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG7 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG7";
                     _WorkAreaPanel.Controls.Add(PROG7);
                     PROG7.Show();
@@ -301,7 +301,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG21":
-                    var PROG21 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG21 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG21";
                     _WorkAreaPanel.Controls.Add(PROG21);
                     PROG21.Show();
@@ -309,7 +309,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG22":
-                    var PROG22 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG22 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG22";
                     _WorkAreaPanel.Controls.Add(PROG22);
                     PROG22.Show();
@@ -317,7 +317,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG23":
-                    var PROG23 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG23 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG23";
                     _WorkAreaPanel.Controls.Add(PROG23);
                     PROG23.Show();
@@ -340,21 +340,21 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG26":
-                    var PROG26 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG26 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG26";
                     _WorkAreaPanel.Controls.Add(PROG26);
                     PROG26.Show();
                     PROG26.BringToFront();
                     break;
                 case "PROG27":
-                    var PROG27 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG27 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG27";
                     _WorkAreaPanel.Controls.Add(PROG27);
                     PROG27.Show();
                     PROG27.BringToFront();
                     break;
                 case "PROG28":
-                    var PROG28 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG28 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG28";
                     _WorkAreaPanel.Controls.Add(PROG28);
                     PROG28.Show();
@@ -375,21 +375,21 @@ namespace WindowsFormsApplication1
                     PROG30.BringToFront();
                     break;
                 case "PROG31":
-                    var PROG31 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG31 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG31";
                     _WorkAreaPanel.Controls.Add(PROG31);
                     PROG31.Show();
                     PROG31.BringToFront();
                     break;
                 case "PROG32":
-                    var PROG32 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG32 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG32";
                     _WorkAreaPanel.Controls.Add(PROG32);
                     PROG32.Show();
                     PROG32.BringToFront();
                     break;
                 case "PROG33":
-                    var PROG33 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG33 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG33";
                     _WorkAreaPanel.Controls.Add(PROG33);
                     PROG33.Show();
@@ -487,7 +487,7 @@ namespace WindowsFormsApplication1
                     PROG54.BringToFront();
                     break;
                 case "PROG58":
-                    var PROG58 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG58 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG58";
                     _WorkAreaPanel.Controls.Add(PROG58);
                     PROG58.Show();
@@ -529,7 +529,7 @@ namespace WindowsFormsApplication1
                     //PROG64.BringToFront();
                     break;
                 case "PROG55":
-                    var PROG55 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG55 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG55";
                     _WorkAreaPanel.Controls.Add(PROG55);
                     PROG55.Show();
@@ -537,7 +537,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG87":
-                    var PROG87 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG87 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG87";
                     _WorkAreaPanel.Controls.Add(PROG87);
                     PROG87.Show();
@@ -545,7 +545,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG89":
-                    var PROG89 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG89 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG89";
                     _WorkAreaPanel.Controls.Add(PROG89);
                     PROG89.Show();
@@ -553,7 +553,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG91":
-                    var PROG91 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG91 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG91";
                     _WorkAreaPanel.Controls.Add(PROG91);
                     PROG91.Show();
@@ -561,7 +561,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG56":
-                    var PROG56 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG56 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG56";
                     _WorkAreaPanel.Controls.Add(PROG56);
                     PROG56.Show();
@@ -569,14 +569,14 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG65":
-                    var PROG65 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG65 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG65";
                     _WorkAreaPanel.Controls.Add(PROG65);
                     PROG65.Show();
                     PROG65.BringToFront();
                     break;
                 case "PROG37":
-                    var PROG37 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG37 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG37";
                     _WorkAreaPanel.Controls.Add(PROG37);
                     PROG37.Show();
@@ -632,14 +632,14 @@ namespace WindowsFormsApplication1
                     PROG70.BringToFront();
                     break;
                 case "PROG73":
-                    var PROG73 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG73 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG73";
                     _WorkAreaPanel.Controls.Add(PROG73);
                     PROG73.Show();
                     PROG73.BringToFront();
                     break;
                 case "PROG74":
-                    var PROG74 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG74 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG74";
                     _WorkAreaPanel.Controls.Add(PROG74);
                     PROG74.Show();
@@ -681,14 +681,14 @@ namespace WindowsFormsApplication1
                     PROG79.BringToFront();
                     break;
                 case "PROG57":
-                    var PROG57 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG57 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG57";
                     _WorkAreaPanel.Controls.Add(PROG57);
                     PROG57.Show();
                     PROG57.BringToFront();
                     break;
                 case "PROG46":
-                    var PROG46 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG46 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG46";
                     _WorkAreaPanel.Controls.Add(PROG46);
                     PROG46.Show();
@@ -730,14 +730,14 @@ namespace WindowsFormsApplication1
                     PROG103.BringToFront();
                     break;
                 case "PROG90":
-                    var PROG90 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG90 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG90";
                     _WorkAreaPanel.Controls.Add(PROG90);
                     PROG90.Show();
                     PROG90.BringToFront();
                     break;
                 case "PROG101":
-                    var PROG101 = new frmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG101 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG101";
                     _WorkAreaPanel.Controls.Add(PROG101);
                     PROG101.Show();
