@@ -38,8 +38,6 @@
             this.ProductTabCtrl = new DevExpress.XtraTab.XtraTabControl();
             this.AInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtAgentName = new DevExpress.XtraEditors.TextEdit();
             this.txtAgentCode = new DevExpress.XtraEditors.TextEdit();
             this.label17 = new System.Windows.Forms.Label();
@@ -74,8 +72,6 @@
             this.txtUnitCode = new DevExpress.XtraEditors.TextEdit();
             this.label24 = new System.Windows.Forms.Label();
             this.txtUnitName = new DevExpress.XtraEditors.TextEdit();
-            this.txtMRPMarkDown = new DevExpress.XtraEditors.TextEdit();
-            this.label23 = new System.Windows.Forms.Label();
             this.txtEnableTDS = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label21 = new System.Windows.Forms.Label();
             this.txtAccDCCode = new DevExpress.XtraEditors.TextEdit();
@@ -109,6 +105,21 @@
             this.txtAddress3 = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.txtDelGSTNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtDelAddress3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDelAddress1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtDelAddress2 = new DevExpress.XtraEditors.TextEdit();
+            this.InfoGrid = new DevExpress.XtraGrid.GridControl();
+            this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
+            this.txtDelCityName = new DevExpress.XtraEditors.TextEdit();
+            this.txtDelCitycode = new DevExpress.XtraEditors.TextEdit();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtMRPMarkDown = new DevExpress.XtraEditors.TextEdit();
+            this.label23 = new System.Windows.Forms.Label();
             this.StockTransfer1111 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.txtOBalance = new DevExpress.XtraEditors.TextEdit();
@@ -123,6 +134,8 @@
             this.label25 = new System.Windows.Forms.Label();
             this.txtFixBArCodeTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtStockTransferTag = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.cmbTaxType = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label28 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCode.Properties)).BeginInit();
@@ -131,8 +144,6 @@
             this.AInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameAsOnBankAcc.Properties)).BeginInit();
@@ -155,7 +166,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCityCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEnableTDS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccDCCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtZipCode.Properties)).BeginInit();
@@ -174,12 +184,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).BeginInit();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelGSTNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatusTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLCTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFixBArCodeTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockTransferTag.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTaxType.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAcCategory
@@ -254,14 +278,15 @@
             this.ProductTabCtrl.TabIndex = 264;
             this.ProductTabCtrl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.AInfoTab,
-            this.BInfoTab});
+            this.BInfoTab,
+            this.xtraTabPage1});
             // 
             // AInfoTab
             // 
             this.AInfoTab.Controls.Add(this.panelControl3);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(10);
-            this.AInfoTab.Size = new System.Drawing.Size(698, 398);
+            this.AInfoTab.Size = new System.Drawing.Size(700, 400);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
@@ -291,33 +316,8 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(10, 10);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(678, 378);
+            this.panelControl3.Size = new System.Drawing.Size(680, 380);
             this.panelControl3.TabIndex = 0;
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(126, 75);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
-            this.HelpGrid.TabIndex = 408;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // txtAgentName
             // 
@@ -552,7 +552,7 @@
             this.BInfoTab.Controls.Add(this.panelControl2);
             this.BInfoTab.Name = "BInfoTab";
             this.BInfoTab.Padding = new System.Windows.Forms.Padding(10);
-            this.BInfoTab.Size = new System.Drawing.Size(698, 398);
+            this.BInfoTab.Size = new System.Drawing.Size(700, 400);
             this.BInfoTab.Text = "&Billing Info";
             // 
             // panelControl2
@@ -603,7 +603,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(10, 10);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(678, 378);
+            this.panelControl2.Size = new System.Drawing.Size(680, 380);
             this.panelControl2.TabIndex = 0;
             // 
             // txtCountry
@@ -710,25 +710,6 @@
             this.txtUnitName.Size = new System.Drawing.Size(206, 20);
             this.txtUnitName.TabIndex = 445;
             this.txtUnitName.TabStop = false;
-            // 
-            // txtMRPMarkDown
-            // 
-            this.txtMRPMarkDown.EnterMoveNextControl = true;
-            this.txtMRPMarkDown.Location = new System.Drawing.Point(615, 50);
-            this.txtMRPMarkDown.Name = "txtMRPMarkDown";
-            this.txtMRPMarkDown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMRPMarkDown.Properties.MaxLength = 4;
-            this.txtMRPMarkDown.Size = new System.Drawing.Size(62, 20);
-            this.txtMRPMarkDown.TabIndex = 440;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(542, 54);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(67, 13);
-            this.label23.TabIndex = 441;
-            this.label23.Text = "Mark Down";
             // 
             // txtEnableTDS
             // 
@@ -1054,6 +1035,175 @@
             this.label9.TabIndex = 387;
             this.label9.Text = "Address";
             // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.txtDelGSTNo);
+            this.xtraTabPage1.Controls.Add(this.txtDelAddress3);
+            this.xtraTabPage1.Controls.Add(this.txtDelAddress1);
+            this.xtraTabPage1.Controls.Add(this.txtDelAddress2);
+            this.xtraTabPage1.Controls.Add(this.InfoGrid);
+            this.xtraTabPage1.Controls.Add(this.BtnOK);
+            this.xtraTabPage1.Controls.Add(this.txtDelCityName);
+            this.xtraTabPage1.Controls.Add(this.txtDelCitycode);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(700, 400);
+            this.xtraTabPage1.Text = "Addresses";
+            // 
+            // txtDelGSTNo
+            // 
+            this.txtDelGSTNo.EnterMoveNextControl = true;
+            this.txtDelGSTNo.Location = new System.Drawing.Point(74, 117);
+            this.txtDelGSTNo.Name = "txtDelGSTNo";
+            this.txtDelGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelGSTNo.Properties.MaxLength = 60;
+            this.txtDelGSTNo.Size = new System.Drawing.Size(431, 20);
+            this.txtDelGSTNo.TabIndex = 449;
+            // 
+            // txtDelAddress3
+            // 
+            this.txtDelAddress3.EnterMoveNextControl = true;
+            this.txtDelAddress3.Location = new System.Drawing.Point(73, 64);
+            this.txtDelAddress3.Name = "txtDelAddress3";
+            this.txtDelAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelAddress3.Properties.MaxLength = 60;
+            this.txtDelAddress3.Size = new System.Drawing.Size(431, 20);
+            this.txtDelAddress3.TabIndex = 448;
+            // 
+            // txtDelAddress1
+            // 
+            this.txtDelAddress1.EnterMoveNextControl = true;
+            this.txtDelAddress1.Location = new System.Drawing.Point(73, 15);
+            this.txtDelAddress1.Name = "txtDelAddress1";
+            this.txtDelAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelAddress1.Properties.MaxLength = 60;
+            this.txtDelAddress1.Size = new System.Drawing.Size(431, 20);
+            this.txtDelAddress1.TabIndex = 447;
+            // 
+            // txtDelAddress2
+            // 
+            this.txtDelAddress2.EnterMoveNextControl = true;
+            this.txtDelAddress2.Location = new System.Drawing.Point(74, 38);
+            this.txtDelAddress2.Name = "txtDelAddress2";
+            this.txtDelAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelAddress2.Properties.MaxLength = 60;
+            this.txtDelAddress2.Size = new System.Drawing.Size(431, 20);
+            this.txtDelAddress2.TabIndex = 446;
+            // 
+            // InfoGrid
+            // 
+            this.InfoGrid.Location = new System.Drawing.Point(17, 177);
+            this.InfoGrid.MainView = this.InfoGridView;
+            this.InfoGrid.Name = "InfoGrid";
+            this.InfoGrid.Size = new System.Drawing.Size(669, 212);
+            this.InfoGrid.TabIndex = 419;
+            this.InfoGrid.TabStop = false;
+            this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.InfoGridView,
+            this.gridView4});
+            // 
+            // InfoGridView
+            // 
+            this.InfoGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 216, 178);
+            this.InfoGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.InfoGridView.GridControl = this.InfoGrid;
+            this.InfoGridView.Name = "InfoGridView";
+            this.InfoGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.InfoGridView.OptionsBehavior.Editable = false;
+            this.InfoGridView.OptionsPrint.PrintFooter = false;
+            this.InfoGridView.OptionsPrint.PrintGroupFooter = false;
+            this.InfoGridView.OptionsView.ColumnAutoWidth = false;
+            this.InfoGridView.OptionsView.ShowFooter = true;
+            this.InfoGridView.OptionsView.ShowGroupPanel = false;
+            this.InfoGridView.OptionsView.ShowIndicator = false;
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.InfoGrid;
+            this.gridView4.Name = "gridView4";
+            // 
+            // BtnOK
+            // 
+            this.BtnOK.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BtnOK.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.BtnOK.Appearance.ForeColor = System.Drawing.Color.White;
+            this.BtnOK.Appearance.Options.UseBackColor = true;
+            this.BtnOK.Appearance.Options.UseFont = true;
+            this.BtnOK.Appearance.Options.UseForeColor = true;
+            this.BtnOK.Location = new System.Drawing.Point(534, 15);
+            this.BtnOK.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.BtnOK.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.BtnOK.Name = "BtnOK";
+            this.BtnOK.Size = new System.Drawing.Size(85, 23);
+            this.BtnOK.TabIndex = 416;
+            this.BtnOK.Text = "&Ok";
+            this.BtnOK.Click += new System.EventHandler(this.BtnOK_Click);
+            // 
+            // txtDelCityName
+            // 
+            this.txtDelCityName.EnterMoveNextControl = true;
+            this.txtDelCityName.Location = new System.Drawing.Point(174, 91);
+            this.txtDelCityName.Name = "txtDelCityName";
+            this.txtDelCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelCityName.Properties.ReadOnly = true;
+            this.txtDelCityName.Size = new System.Drawing.Size(331, 20);
+            this.txtDelCityName.TabIndex = 413;
+            this.txtDelCityName.TabStop = false;
+            // 
+            // txtDelCitycode
+            // 
+            this.txtDelCitycode.Location = new System.Drawing.Point(73, 91);
+            this.txtDelCitycode.Name = "txtDelCitycode";
+            this.txtDelCitycode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelCitycode.Properties.MaxLength = 8;
+            this.txtDelCitycode.Size = new System.Drawing.Size(78, 20);
+            this.txtDelCitycode.TabIndex = 414;
+            this.txtDelCitycode.EditValueChanged += new System.EventHandler(this.txtDelCitycode_EditValueChanged);
+            this.txtDelCitycode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelCitycode_KeyDown);
+            // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(165, 12);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
+            this.HelpGrid.TabIndex = 408;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // txtMRPMarkDown
+            // 
+            this.txtMRPMarkDown.EnterMoveNextControl = true;
+            this.txtMRPMarkDown.Location = new System.Drawing.Point(615, 50);
+            this.txtMRPMarkDown.Name = "txtMRPMarkDown";
+            this.txtMRPMarkDown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMRPMarkDown.Properties.MaxLength = 4;
+            this.txtMRPMarkDown.Size = new System.Drawing.Size(62, 20);
+            this.txtMRPMarkDown.TabIndex = 440;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(542, 54);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(67, 13);
+            this.label23.TabIndex = 441;
+            this.label23.Text = "Mark Down";
+            // 
             // StockTransfer1111
             // 
             this.StockTransfer1111.AutoSize = true;
@@ -1197,6 +1347,28 @@
             this.txtStockTransferTag.Size = new System.Drawing.Size(41, 20);
             this.txtStockTransferTag.TabIndex = 445;
             // 
+            // cmbTaxType
+            // 
+            this.cmbTaxType.Location = new System.Drawing.Point(615, 24);
+            this.cmbTaxType.Name = "cmbTaxType";
+            this.cmbTaxType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cmbTaxType.Properties.Items.AddRange(new object[] {
+            "IN",
+            "EX"});
+            this.cmbTaxType.Size = new System.Drawing.Size(75, 20);
+            this.cmbTaxType.TabIndex = 446;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(529, 28);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(80, 13);
+            this.label28.TabIndex = 447;
+            this.label28.Tag = "";
+            this.label28.Text = "Local / Central";
+            // 
             // frmAccountMstAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1204,6 +1376,8 @@
             this.ClientSize = new System.Drawing.Size(702, 521);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
+            this.Controls.Add(this.cmbTaxType);
+            this.Controls.Add(this.label28);
             this.Controls.Add(this.txtStockTransferTag);
             this.Controls.Add(this.txtFixBArCodeTag);
             this.Controls.Add(this.label25);
@@ -1243,8 +1417,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameAsOnBankAcc.Properties)).EndInit();
@@ -1268,7 +1440,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCityCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEnableTDS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccDCCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtZipCode.Properties)).EndInit();
@@ -1287,6 +1458,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).EndInit();
+            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelGSTNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
@@ -1294,6 +1478,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtLCTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFixBArCodeTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockTransferTag.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTaxType.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1396,5 +1581,18 @@
         internal System.Windows.Forms.Label label8;
         private DevExpress.XtraEditors.ComboBoxEdit txtFixBArCodeTag;
         private DevExpress.XtraEditors.ComboBoxEdit txtStockTransferTag;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraEditors.TextEdit txtDelGSTNo;
+        private DevExpress.XtraEditors.TextEdit txtDelAddress3;
+        private DevExpress.XtraEditors.TextEdit txtDelAddress1;
+        private DevExpress.XtraEditors.TextEdit txtDelAddress2;
+        private DevExpress.XtraGrid.GridControl InfoGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView InfoGridView;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraEditors.SimpleButton BtnOK;
+        private DevExpress.XtraEditors.TextEdit txtDelCityName;
+        private DevExpress.XtraEditors.TextEdit txtDelCitycode;
+        private DevExpress.XtraEditors.ComboBoxEdit cmbTaxType;
+        private System.Windows.Forms.Label label28;
     }
 }

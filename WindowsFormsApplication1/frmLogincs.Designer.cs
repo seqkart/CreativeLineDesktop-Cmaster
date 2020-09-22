@@ -308,7 +308,7 @@
             this.simpleButton1.TabIndex = 60;
             this.simpleButton1.Text = "Send OTP";
             // 
-            // frmLogincs
+            // frmLogins
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
@@ -338,7 +338,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmLogincs";
+            this.Name = "frmLogins";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmLogincs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();

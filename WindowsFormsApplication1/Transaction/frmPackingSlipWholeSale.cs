@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.Transaction
         public String PSWSTOTBOXES { get; set; }
 
         public String StkTransfer { get; set; }
-
+        public String UpdateTag { get; set; }
         public String FixBarPartyTag { get; set; }
 
         public frmPackingSlipWholeSale()
@@ -197,6 +197,16 @@ namespace WindowsFormsApplication1.Transaction
                             lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) +
                                 Convert.ToDecimal(lblTotQty.Text)).ToString();
                         }
+                    }
+
+
+                    if (UpdateTag.ToUpper() == "Y")
+                    {
+                        btnSave.Enabled = true;
+                    }
+                    else
+                    {
+                        btnSave.Enabled = false;
                     }
                 }
             }

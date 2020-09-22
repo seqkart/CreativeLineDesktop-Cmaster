@@ -52,6 +52,33 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG176")
+                {
+                    WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst() { s1 = btnAdd.Text, Text = "Branch Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    //var P = ProjectFunctions.GetPositionInForm(this);
+                    //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG175")
+                {
+                    WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst() { s1 = btnAdd.Text, Text = "City Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    //var P = ProjectFunctions.GetPositionInForm(this);
+                    //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG174")
+                {
+                    WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst() { s1 = btnAdd.Text, Text = "State Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    //var P = ProjectFunctions.GetPositionInForm(this);
+                    //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG200")
                 {
                     WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation() { s1 = btnAdd.Text, Text = "Financial Year Creation" };
@@ -425,6 +452,33 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG176")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst() { s1 = btnEdit.Text, Text = "Branch Editing", BranchCode = CurrentRow["UNITID"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG175")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst() { s1 = btnEdit.Text, Text = "City Editing" ,CityCode=CurrentRow["CTSYSID"].ToString()};
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG174")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst() { s1 = btnEdit.Text, Text = "State Editing", StateCode = CurrentRow["STSYSID"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG200")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

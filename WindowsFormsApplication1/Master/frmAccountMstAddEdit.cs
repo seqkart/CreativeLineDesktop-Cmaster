@@ -8,13 +8,35 @@ namespace WindowsFormsApplication1
 {
     public partial class frmAccountMstAddEdit : XtraForm
     {
+        DataTable dt = new DataTable();
         public String s1 { get; set; }
         public String AccCode { get; set; }
         public frmAccountMstAddEdit()
         {
             InitializeComponent();
+            
         }
+        private void LoadDelAddresses()
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActDelAddresses '" + txtAcCode.Text + "'");
+            if(ds.Tables[0].Rows.Count>0)
+            {
+                InfoGrid.DataSource = ds.Tables[0];
+                InfoGridView.BestFitColumns();
+            }
+            else
+            {
+                InfoGrid.DataSource = null;
+                InfoGridView.BestFitColumns();
+            }
 
+            txtDelAddress1.Text = "";
+            txtDelAddress2.Text = "";
+            txtDelAddress3.Text = "";
+            txtDelCitycode.Text = "";
+            txtDelCityName.Text = "";
+            txtDelGSTNo.Text = "";
+        }
         private void txtSLCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSLDesc.Text = string.Empty;
@@ -114,7 +136,9 @@ namespace WindowsFormsApplication1
 
                     txtUnitCode.Text = ds.Tables[0].Rows[0]["AccUnitCode"].ToString();
                     txtUnitName.Text = ds.Tables[0].Rows[0]["UNITNAME"].ToString();
+                    cmbTaxType.SelectedItem = ds.Tables[0].Rows[0]["AccTaxType"].ToString();
                     txtAcCategory.Focus();
+                    LoadDelAddresses();
                 }
             }
             catch (Exception ex)
@@ -264,19 +288,20 @@ namespace WindowsFormsApplication1
                         if (s1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ActMst"
-                            + " (AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag)"
-                            + " values(@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag)";
+                            + " (AccTaxType,AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag)"
+                            + " values(@AccTaxType,@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag)";
                             txtAcCode.Text = ProjectFunctions.GetNewTransactionCode("select max(Cast(AccCode as int)) from ActMst");
                         }
                         if (s1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE    ActMst SET "
-                                                     + " AccActive=@AccActive, AccType=@AccType,AccName=@AccName,AccLedger=@AccLedger,ActOpBal=@ActOpBal,"
+                                                     + " AccTaxType=@AccTaxType,AccActive=@AccActive, AccType=@AccType,AccName=@AccName,AccLedger=@AccLedger,ActOpBal=@ActOpBal,"
                                                      + " AccEmpCode=@AccEmpCode,AccBSHcode=@AccBSHcode,AccGSTNo=@AccGSTNo,AccGSTStateCode=@AccGSTStateCode,AccLCTag=@AccLCTag,AccGSTType=@AccGSTType,AccStkTrf=@AccStkTrf,AccUnitCode=@AccUnitCode,AccFixBarCodeTag=@AccFixBarCodeTag"
                                                      + " Where AccCode=@AccCode";
 
 
                         }
+                        sqlcom.Parameters.AddWithValue("@AccTaxType", cmbTaxType.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccActive", txtStatusTag.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccCode", txtAcCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccType", txtAcCategory.Text.Trim());
@@ -449,6 +474,14 @@ namespace WindowsFormsApplication1
                     HelpGrid.Visible = false;
                     txtUnitCode.Focus();
                 }
+                if (HelpGrid.Text == "txtDelCitycode")
+                {
+                    txtDelCitycode.Text = row["CTSYSID"].ToString();
+                    txtDelCityName.Text = row["CTNAME"].ToString();
+                    HelpGrid.Visible = false;
+                    txtDelGSTNo.Focus();
+                }
+               
             }
             catch (Exception ex)
             {
@@ -578,6 +611,42 @@ namespace WindowsFormsApplication1
             txtChequeName.Text = txtAcName.Text;
             txtBillingName.Text = txtAcName.Text;
             txtNameAsOnBankAcc.Text = txtAcName.Text;
+        }
+
+        private void txtDelCitycode_EditValueChanged(object sender, EventArgs e)
+        {
+            txtDelCityName.Text = string.Empty;
+        }
+
+        private void txtDelCitycode_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProjectFunctions.CreatePopUpForTwoBoxes("Select CTSYSID,CTNAME from CITYMASTER", " Where CTSYSID", txtDelCitycode, txtDelCityName, txtDelGSTNo, HelpGrid, HelpGridView, e);
+        }
+
+        private void BtnOK_Click(object sender, EventArgs e)
+        {
+            if (txtDelAddress1.Text.Trim().Length == 0)
+            {
+                ProjectFunctions.SpeakError("Invalid Del Address1 ");
+                txtDelAddress1.Focus();
+                return ;
+            }
+            if (txtDelCitycode.Text.Trim().Length == 0)
+            {
+                ProjectFunctions.SpeakError("Invalid Del City Name ");
+                txtDelCitycode.Focus();
+                return;
+            }
+            if (txtDelCityName.Text.Trim().Length == 0)
+            {
+                ProjectFunctions.SpeakError("Invalid Del City Name");
+                txtDelCitycode.Focus();
+                return;
+            }
+
+            ProjectFunctions.GetDataSet("Insert into ActDelAddresses(AccCode,AccAddress1,AccAddress2,AccAddress3,CityCode,AccGSTNo)values('" + txtAcCode.Text + "','" + txtDelAddress1.Text + "','" + txtDelAddress2.Text + "','" + txtDelAddress3.Text + "','" + txtDelCitycode.Text + "','" + txtDelGSTNo.Text + "')");
+            LoadDelAddresses();
+
         }
     }
 }

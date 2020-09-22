@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1.Transaction
         DataTable dt = new DataTable();
         public String s1 { get; set; }
         public String SFMTOTBOX { get; set; }
-
+        public String UpdateTag { get; set; }
         public String SFDVNO { get; set; }
         public frmBoxAddEdit()
         {
@@ -100,6 +100,8 @@ namespace WindowsFormsApplication1.Transaction
                         }
                         lblTotQty.Text = QtySum.ToString("0");
                     }
+
+                   
                 }
             }
             catch (Exception ex)

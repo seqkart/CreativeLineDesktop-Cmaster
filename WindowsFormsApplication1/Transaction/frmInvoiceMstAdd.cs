@@ -1300,6 +1300,17 @@ namespace WindowsFormsApplication1
                             txtserial.Text = "GST";
                             txtTempInvoiceSeries.Text = txtserial.Text;
                         }
+
+                        if(ds.Tables[0].Rows[0]["AccTaxType"].ToString()=="IN")
+                        {
+                            chInclusive.Checked = true;
+                            chExclusive.Checked = false;
+                        }
+                        else
+                        {
+                            chInclusive.Checked = false;
+                            chExclusive.Checked = true;
+                        }
                     }
 
                     else
@@ -1412,7 +1423,16 @@ namespace WindowsFormsApplication1
                     txtTempInvoiceSeries.Text = txtserial.Text;
                 }
 
-
+                if (row["AccTaxType"].ToString() == "IN")
+                {
+                    chInclusive.Checked = true;
+                    chExclusive.Checked = false;
+                }
+                else
+                {
+                    chInclusive.Checked = false;
+                    chExclusive.Checked = true;
+                }
 
 
                 ShowPendingPSlips();

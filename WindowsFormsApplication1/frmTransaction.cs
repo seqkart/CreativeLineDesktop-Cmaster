@@ -346,16 +346,34 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG130")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale() { s1 = btnEdit.Text, Text = "Packing Slip Edition", PSWSNO = CurrentRow["PSWSNO"].ToString(), PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString() };
-                    frm.StartPosition = FormStartPosition.CenterScreen;
-                    frm.ShowDialog(Parent);
+                    DataSet dsChkInv = ProjectFunctions.GetDataSet("select * from SALEINVDET  where SIDPSNO='" + CurrentRow["PSWSNO"].ToString() + "' And SIDFNYR='" + GlobalVariables.FinancialYear + "'");
+                    if (dsChkInv.Tables[0].Rows.Count > 0)
+                    {
+                        ProjectFunctions.SpeakError("Already Used In Billing - Bill No("+ dsChkInv.Tables[0].Rows[0]["SIDSERIES"].ToString()+"-"+dsChkInv.Tables[0].Rows[0]["SIDNO"].ToString() + ")");
+                        Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale() { s1 = btnEdit.Text, Text = "Packing Slip Edition", PSWSNO = CurrentRow["PSWSNO"].ToString(), PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(), UpdateTag = "N" };
+                        frm.StartPosition = FormStartPosition.CenterScreen;
+                        frm.ShowDialog(Parent);
+
+                    }
+                    else
+                    {
+                        Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale() { s1 = btnEdit.Text, Text = "Packing Slip Edition", PSWSNO = CurrentRow["PSWSNO"].ToString(), PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(),UpdateTag="Y" };
+                        frm.StartPosition = FormStartPosition.CenterScreen;
+                        frm.ShowDialog(Parent);
+                    }
                 }
                 if (GlobalVariables.ProgCode == "PROG129")
                 {
+
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
                     Transaction.frmBoxAddEdit frm = new Transaction.frmBoxAddEdit() { s1 = btnEdit.Text, Text = "Finware House Edition", SFDVNO = CurrentRow["SFDVNO"].ToString(), SFMTOTBOX = CurrentRow["SFDBOXNO"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
+
+
+
+
                 }
                 if (GlobalVariables.ProgCode == "PROG128")
                 {

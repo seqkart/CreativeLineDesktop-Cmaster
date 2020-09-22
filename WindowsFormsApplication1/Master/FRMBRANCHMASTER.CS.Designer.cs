@@ -110,6 +110,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 22);
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // labelControl1
             // 
@@ -198,7 +199,7 @@
             // 
             this.textEdit6.Location = new System.Drawing.Point(497, 136);
             this.textEdit6.Name = "textEdit6";
-            this.textEdit6.Size = new System.Drawing.Size(215, 20);
+            this.textEdit6.Size = new System.Drawing.Size(53, 20);
             this.textEdit6.TabIndex = 203;
             // 
             // txtCountry

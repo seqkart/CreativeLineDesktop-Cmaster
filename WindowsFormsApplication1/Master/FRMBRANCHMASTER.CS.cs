@@ -13,5 +13,10 @@ namespace WindowsFormsApplication1.Master
         {
 
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

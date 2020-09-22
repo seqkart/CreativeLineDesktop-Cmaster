@@ -806,17 +806,29 @@
       <DependentUpon>frmFYCreation.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperClass\CustomArguments.cs" />
-    <Compile Include="Master\CITYMASTER.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\CITYMASTER.Designer.cs">
-      <DependentUpon>CITYMASTER.cs</DependentUpon>
-    </Compile>
     <Compile Include="Master\FRMBRANCHMASTER.CS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Master\FRMBRANCHMASTER.CS.Designer.cs">
       <DependentUpon>FRMBRANCHMASTER.CS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmBranchMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmBranchMst.Designer.cs">
+      <DependentUpon>frmBranchMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmCityMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmCityMst.Designer.cs">
+      <DependentUpon>frmCityMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmStateMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmStateMst.Designer.cs">
+      <DependentUpon>frmStateMst.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\EmployeeSalaryDetails.cs">
       <SubType>Component</SubType>
@@ -1624,11 +1636,17 @@
     <EmbeddedResource Include="Administration\frmFYCreation.resx">
       <DependentUpon>frmFYCreation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\CITYMASTER.resx">
-      <DependentUpon>CITYMASTER.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Master\FRMBRANCHMASTER.CS.resx">
       <DependentUpon>FRMBRANCHMASTER.CS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmBranchMst.resx">
+      <DependentUpon>frmBranchMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmCityMst.resx">
+      <DependentUpon>frmCityMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmStateMst.resx">
+      <DependentUpon>frmStateMst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\EmployeeSalaryDetails.resx">
       <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>
