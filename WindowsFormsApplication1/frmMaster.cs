@@ -12,11 +12,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         private void FillGrid()
         {
             PrintLogWin.PrintLog("FillGrid ******************** " + GlobalVariables.ProgCode);
@@ -465,7 +460,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst() { s1 = btnEdit.Text, Text = "City Editing" ,CityCode=CurrentRow["CTSYSID"].ToString()};
+                    WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst() { s1 = btnEdit.Text, Text = "City Editing", CityCode = CurrentRow["CTSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
