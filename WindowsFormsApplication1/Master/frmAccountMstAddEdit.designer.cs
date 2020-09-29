@@ -136,6 +136,7 @@
             this.txtStockTransferTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbTaxType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label28 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCode.Properties)).BeginInit();
@@ -392,7 +393,7 @@
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(33, 218);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(115, 13);
+            this.label48.Size = new System.Drawing.Size(116, 13);
             this.label48.TabIndex = 425;
             this.label48.Text = "Name as on Bank Acc";
             // 
@@ -430,7 +431,7 @@
             this.label43.AutoSize = true;
             this.label43.Location = new System.Drawing.Point(84, 193);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(64, 13);
+            this.label43.Size = new System.Drawing.Size(65, 13);
             this.label43.TabIndex = 423;
             this.label43.Text = "Bank Name";
             // 
@@ -449,7 +450,7 @@
             this.label41.AutoSize = true;
             this.label41.Location = new System.Drawing.Point(79, 168);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(69, 13);
+            this.label41.Size = new System.Drawing.Size(70, 13);
             this.label41.TabIndex = 422;
             this.label41.Text = "Bank A/c No";
             // 
@@ -477,7 +478,7 @@
             this.label46.AutoSize = true;
             this.label46.Location = new System.Drawing.Point(40, 71);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(108, 13);
+            this.label46.Size = new System.Drawing.Size(109, 13);
             this.label46.TabIndex = 409;
             this.label46.Text = "Balance Sheet Code";
             // 
@@ -754,7 +755,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(44, 311);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 13);
+            this.label21.Size = new System.Drawing.Size(64, 13);
             this.label21.TabIndex = 412;
             this.label21.Text = "TDS Enable";
             // 
@@ -816,7 +817,7 @@
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(399, 264);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 13);
+            this.label16.Size = new System.Drawing.Size(51, 13);
             this.label16.TabIndex = 435;
             this.label16.Text = "GST Type";
             // 
@@ -875,7 +876,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(53, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 428;
             this.label4.Text = "GST State";
             // 
@@ -904,7 +905,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(64, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 425;
             this.label2.Text = "GST No";
             // 
@@ -923,7 +924,7 @@
             this.label51.AutoSize = true;
             this.label51.Location = new System.Drawing.Point(38, 11);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(71, 13);
+            this.label51.Size = new System.Drawing.Size(72, 13);
             this.label51.TabIndex = 423;
             this.label51.Text = "Billing Name";
             // 
@@ -942,7 +943,7 @@
             this.label45.AutoSize = true;
             this.label45.Location = new System.Drawing.Point(411, 241);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(41, 13);
+            this.label45.Size = new System.Drawing.Size(40, 13);
             this.label45.TabIndex = 401;
             this.label45.Text = "Tin No";
             // 
@@ -961,7 +962,7 @@
             this.label34.AutoSize = true;
             this.label34.Location = new System.Drawing.Point(61, 241);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(48, 13);
+            this.label34.Size = new System.Drawing.Size(46, 13);
             this.label34.TabIndex = 393;
             this.label34.Text = "CST/PST";
             // 
@@ -1018,7 +1019,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(67, 172);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 13);
+            this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 388;
             this.label10.Text = "Tel/Fax";
             // 
@@ -1063,6 +1064,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.label31);
             this.xtraTabPage1.Controls.Add(this.txtDelGSTNo);
             this.xtraTabPage1.Controls.Add(this.txtDelAddress3);
             this.xtraTabPage1.Controls.Add(this.txtDelAddress1);
@@ -1078,7 +1080,7 @@
             // txtDelGSTNo
             // 
             this.txtDelGSTNo.EnterMoveNextControl = true;
-            this.txtDelGSTNo.Location = new System.Drawing.Point(74, 117);
+            this.txtDelGSTNo.Location = new System.Drawing.Point(98, 133);
             this.txtDelGSTNo.Name = "txtDelGSTNo";
             this.txtDelGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelGSTNo.Properties.MaxLength = 60;
@@ -1088,7 +1090,7 @@
             // txtDelAddress3
             // 
             this.txtDelAddress3.EnterMoveNextControl = true;
-            this.txtDelAddress3.Location = new System.Drawing.Point(73, 64);
+            this.txtDelAddress3.Location = new System.Drawing.Point(97, 80);
             this.txtDelAddress3.Name = "txtDelAddress3";
             this.txtDelAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelAddress3.Properties.MaxLength = 60;
@@ -1098,7 +1100,7 @@
             // txtDelAddress1
             // 
             this.txtDelAddress1.EnterMoveNextControl = true;
-            this.txtDelAddress1.Location = new System.Drawing.Point(73, 15);
+            this.txtDelAddress1.Location = new System.Drawing.Point(97, 31);
             this.txtDelAddress1.Name = "txtDelAddress1";
             this.txtDelAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelAddress1.Properties.MaxLength = 60;
@@ -1108,7 +1110,7 @@
             // txtDelAddress2
             // 
             this.txtDelAddress2.EnterMoveNextControl = true;
-            this.txtDelAddress2.Location = new System.Drawing.Point(74, 38);
+            this.txtDelAddress2.Location = new System.Drawing.Point(98, 54);
             this.txtDelAddress2.Name = "txtDelAddress2";
             this.txtDelAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelAddress2.Properties.MaxLength = 60;
@@ -1155,7 +1157,7 @@
             this.BtnOK.Appearance.Options.UseBackColor = true;
             this.BtnOK.Appearance.Options.UseFont = true;
             this.BtnOK.Appearance.Options.UseForeColor = true;
-            this.BtnOK.Location = new System.Drawing.Point(534, 15);
+            this.BtnOK.Location = new System.Drawing.Point(547, 29);
             this.BtnOK.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.BtnOK.LookAndFeel.UseDefaultLookAndFeel = false;
             this.BtnOK.Name = "BtnOK";
@@ -1167,7 +1169,7 @@
             // txtDelCityName
             // 
             this.txtDelCityName.EnterMoveNextControl = true;
-            this.txtDelCityName.Location = new System.Drawing.Point(174, 91);
+            this.txtDelCityName.Location = new System.Drawing.Point(198, 107);
             this.txtDelCityName.Name = "txtDelCityName";
             this.txtDelCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelCityName.Properties.ReadOnly = true;
@@ -1177,7 +1179,7 @@
             // 
             // txtDelCitycode
             // 
-            this.txtDelCitycode.Location = new System.Drawing.Point(73, 91);
+            this.txtDelCitycode.Location = new System.Drawing.Point(97, 107);
             this.txtDelCitycode.Name = "txtDelCitycode";
             this.txtDelCitycode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelCitycode.Properties.MaxLength = 8;
@@ -1210,7 +1212,7 @@
             this.StockTransfer1111.AutoSize = true;
             this.StockTransfer1111.Location = new System.Drawing.Point(156, 33);
             this.StockTransfer1111.Name = "StockTransfer1111";
-            this.StockTransfer1111.Size = new System.Drawing.Size(79, 13);
+            this.StockTransfer1111.Size = new System.Drawing.Size(78, 13);
             this.StockTransfer1111.TabIndex = 443;
             this.StockTransfer1111.Text = "Stock Transfer";
             // 
@@ -1238,7 +1240,7 @@
             this.label29.AutoSize = true;
             this.label29.Location = new System.Drawing.Point(327, 54);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(95, 13);
+            this.label29.Size = new System.Drawing.Size(96, 13);
             this.label29.TabIndex = 311;
             this.label29.Text = "Opening Balance";
             // 
@@ -1320,7 +1322,7 @@
             this.label25.AutoSize = true;
             this.label25.Location = new System.Drawing.Point(15, 33);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(65, 13);
+            this.label25.Size = new System.Drawing.Size(66, 13);
             this.label25.TabIndex = 412;
             this.label25.Text = "Fix Barcode";
             // 
@@ -1365,10 +1367,19 @@
             this.label28.AutoSize = true;
             this.label28.Location = new System.Drawing.Point(560, 33);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(49, 13);
+            this.label28.Size = new System.Drawing.Size(47, 13);
             this.label28.TabIndex = 447;
             this.label28.Tag = "";
             this.label28.Text = "Tax Type";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(323, 194);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(54, 13);
+            this.label31.TabIndex = 450;
+            this.label31.Text = "Address1";
             // 
             // frmAccountMstAddEdit
             // 
@@ -1461,6 +1472,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
+            this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelGSTNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).EndInit();
@@ -1594,5 +1606,6 @@
         private DevExpress.XtraEditors.TextEdit txtDelCitycode;
         private DevExpress.XtraEditors.ComboBoxEdit cmbTaxType;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label31;
     }
 }
