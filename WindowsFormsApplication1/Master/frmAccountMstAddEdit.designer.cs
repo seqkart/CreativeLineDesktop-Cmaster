@@ -108,6 +108,7 @@
             this.txtAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new System.Windows.Forms.Label();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.label31 = new System.Windows.Forms.Label();
             this.txtDelGSTNo = new DevExpress.XtraEditors.TextEdit();
             this.txtDelAddress3 = new DevExpress.XtraEditors.TextEdit();
             this.txtDelAddress1 = new DevExpress.XtraEditors.TextEdit();
@@ -136,7 +137,6 @@
             this.txtStockTransferTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbTaxType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label28 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCode.Properties)).BeginInit();
@@ -292,7 +292,6 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.HelpGrid);
             this.panelControl3.Controls.Add(this.txtAgentName);
             this.panelControl3.Controls.Add(this.txtAgentCode);
             this.panelControl3.Controls.Add(this.label17);
@@ -323,7 +322,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(86, 14);
+            this.HelpGrid.Location = new System.Drawing.Point(86, 70);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(538, 391);
@@ -1077,6 +1076,15 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(700, 400);
             this.xtraTabPage1.Text = "Addresses";
             // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(323, 194);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(54, 13);
+            this.label31.TabIndex = 450;
+            this.label31.Text = "Address1";
+            // 
             // txtDelGSTNo
             // 
             this.txtDelGSTNo.EnterMoveNextControl = true;
@@ -1372,21 +1380,13 @@
             this.label28.Tag = "";
             this.label28.Text = "Tax Type";
             // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(323, 194);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(54, 13);
-            this.label31.TabIndex = 450;
-            this.label31.Text = "Address1";
-            // 
             // frmAccountMstAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.cmbTaxType);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.txtStockTransferTag);
