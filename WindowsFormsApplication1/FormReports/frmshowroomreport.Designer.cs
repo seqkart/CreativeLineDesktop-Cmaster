@@ -32,8 +32,8 @@
             this.chSale2 = new DevExpress.XtraEditors.CheckEdit();
             this.chSale1 = new DevExpress.XtraEditors.CheckEdit();
             this.btnProcess = new DevExpress.XtraEditors.SimpleButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtEndDate = new DevExpress.XtraEditors.TextEdit();
             this.txtStartDate = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -169,8 +169,8 @@
 
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
         private DevExpress.XtraEditors.SimpleButton btnProcess;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtEndDate;
         private DevExpress.XtraEditors.TextEdit txtStartDate;
         private DevExpress.XtraGrid.GridControl gridControl1;

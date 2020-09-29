@@ -191,7 +191,7 @@
             this.xtraTabPage4.Controls.Add(this.labelControl13);
             this.xtraTabPage4.Controls.Add(this.labelControl14);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(553, 351);
+            this.xtraTabPage4.Size = new System.Drawing.Size(555, 353);
             this.xtraTabPage4.Text = "Power Scheme";
             // 
             // PowerSchemeGrid
@@ -434,7 +434,7 @@
             this.xtraTabPage3.Controls.Add(this.labelControl8);
             this.xtraTabPage3.Controls.Add(this.labelControl7);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(553, 351);
+            this.xtraTabPage3.Size = new System.Drawing.Size(555, 353);
             this.xtraTabPage3.Text = "Flat Scheme";
             // 
             // FlatSchemeGrid
@@ -578,7 +578,7 @@
             this.xtraTabPage2.Controls.Add(this.cmbSchmType);
             this.xtraTabPage2.Controls.Add(this.labelControl6);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(553, 351);
+            this.xtraTabPage2.Size = new System.Drawing.Size(555, 353);
             this.xtraTabPage2.Text = "Scheme Type";
             // 
             // textEdit3
@@ -638,7 +638,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl2);
             this.xtraTabPage1.Controls.Add(this.labelControl1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(553, 351);
+            this.xtraTabPage1.Size = new System.Drawing.Size(555, 353);
             this.xtraTabPage1.Text = "New Scheme";
             // 
             // groupControl1
@@ -661,7 +661,7 @@
             this.chSelectLocation.Location = new System.Drawing.Point(142, 27);
             this.chSelectLocation.Name = "chSelectLocation";
             this.chSelectLocation.Properties.Caption = "Selected Location";
-            this.chSelectLocation.Size = new System.Drawing.Size(113, 19);
+            this.chSelectLocation.Size = new System.Drawing.Size(113, 18);
             this.chSelectLocation.TabIndex = 0;
             // 
             // chAllLocations
@@ -669,7 +669,7 @@
             this.chAllLocations.Location = new System.Drawing.Point(49, 27);
             this.chAllLocations.Name = "chAllLocations";
             this.chAllLocations.Properties.Caption = "All Locations";
-            this.chAllLocations.Size = new System.Drawing.Size(87, 19);
+            this.chAllLocations.Size = new System.Drawing.Size(87, 18);
             this.chAllLocations.TabIndex = 0;
             // 
             // txtToDate

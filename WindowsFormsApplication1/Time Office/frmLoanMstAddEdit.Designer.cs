@@ -33,23 +33,23 @@
             this.txtEmpCode = new DevExpress.XtraEditors.TextEdit();
             this.txtEmpName = new DevExpress.XtraEditors.TextEdit();
             this.txtDept = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtLoanAmount = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtLoanInstlmnt = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtMonthYear = new DevExpress.XtraEditors.TextEdit();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.txtLoanNo = new DevExpress.XtraEditors.TextEdit();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label10 = new DevExpress.XtraEditors.LabelControl();
             this.txtLoanDate = new DevExpress.XtraEditors.TextEdit();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label11 = new DevExpress.XtraEditors.LabelControl();
             this.txtPreviousInstlmnt = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).BeginInit();
@@ -127,10 +127,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(20, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 253;
             this.label2.Text = "EmpName";
             // 
@@ -147,10 +146,9 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(26, 125);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 259;
             this.label4.Text = "LoanAmt";
             // 
@@ -167,19 +165,17 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(1, 156);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 263;
             this.label1.Text = "Loan Instlmnt";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(46, 100);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(32, 13);
+            this.label8.Size = new System.Drawing.Size(25, 13);
             this.label8.TabIndex = 268;
             this.label8.Text = "Dept";
             // 
@@ -240,10 +236,9 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(16, 44);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
+            this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 271;
             this.label9.Text = "MonthYear";
             // 
@@ -260,13 +255,11 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(285, 44);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(50, 13);
+            this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 273;
             this.label10.Text = "Loan No";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtLoanDate
             // 
@@ -287,10 +280,9 @@
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(155, 44);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 13);
+            this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 275;
             this.label11.Text = "Loan Date";
             // 
@@ -307,10 +299,9 @@
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(236, 156);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 13);
+            this.label13.Size = new System.Drawing.Size(88, 13);
             this.label13.TabIndex = 391;
             this.label13.Text = "Previous Instlmnt";
             // 
@@ -368,22 +359,22 @@
         private DevExpress.XtraEditors.TextEdit txtEmpCode;
         private DevExpress.XtraEditors.TextEdit txtEmpName;
         private DevExpress.XtraEditors.TextEdit txtDept;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtLoanAmount;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtLoanInstlmnt;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label1;
+        private DevExpress.XtraEditors.LabelControl label8;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtMonthYear;
-        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.LabelControl label9;
         private DevExpress.XtraEditors.TextEdit txtLoanNo;
-        private System.Windows.Forms.Label label10;
+        private DevExpress.XtraEditors.LabelControl label10;
         private DevExpress.XtraEditors.TextEdit txtLoanDate;
-        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.LabelControl label11;
         private DevExpress.XtraEditors.TextEdit txtPreviousInstlmnt;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
     }
 }

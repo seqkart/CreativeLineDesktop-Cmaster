@@ -31,27 +31,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerMst));
             this.GroupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDuringEOSS = new DevExpress.XtraEditors.TextEdit();
-            this.Label21 = new System.Windows.Forms.Label();
-            this.Label20 = new System.Windows.Forms.Label();
-            this.Label19 = new System.Windows.Forms.Label();
+            this.Label21 = new DevExpress.XtraEditors.LabelControl();
+            this.Label20 = new DevExpress.XtraEditors.LabelControl();
+            this.Label19 = new DevExpress.XtraEditors.LabelControl();
             this.txtDuringNormalSale = new DevExpress.XtraEditors.TextEdit();
             this.txtDiscountType = new DevExpress.XtraEditors.TextEdit();
-            this.Label18 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
+            this.Label18 = new DevExpress.XtraEditors.LabelControl();
+            this.Label8 = new DevExpress.XtraEditors.LabelControl();
+            this.Label2 = new DevExpress.XtraEditors.LabelControl();
+            this.Label11 = new DevExpress.XtraEditors.LabelControl();
+            this.Label10 = new DevExpress.XtraEditors.LabelControl();
+            this.Label9 = new DevExpress.XtraEditors.LabelControl();
+            this.label33 = new DevExpress.XtraEditors.LabelControl();
+            this.label34 = new DevExpress.XtraEditors.LabelControl();
+            this.label35 = new DevExpress.XtraEditors.LabelControl();
+            this.label36 = new DevExpress.XtraEditors.LabelControl();
+            this.label37 = new DevExpress.XtraEditors.LabelControl();
+            this.label38 = new DevExpress.XtraEditors.LabelControl();
+            this.label39 = new DevExpress.XtraEditors.LabelControl();
+            this.label40 = new DevExpress.XtraEditors.LabelControl();
+            this.label43 = new DevExpress.XtraEditors.LabelControl();
+            this.label44 = new DevExpress.XtraEditors.LabelControl();
             this.txtDatefBirth = new DevExpress.XtraEditors.TextEdit();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtState = new DevExpress.XtraEditors.TextEdit();
@@ -60,7 +60,7 @@
             this.txtAddress2 = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.txtRefBy = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtLoyaltyCardNo = new DevExpress.XtraEditors.TextEdit();
             this.txtCardExpiryDate = new DevExpress.XtraEditors.TextEdit();
             this.txtCardIssueDate = new DevExpress.XtraEditors.TextEdit();
@@ -121,28 +121,25 @@
             // 
             // Label21
             // 
-            this.Label21.AutoSize = true;
             this.Label21.Location = new System.Drawing.Point(232, 53);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(91, 13);
+            this.Label21.Size = new System.Drawing.Size(84, 13);
             this.Label21.TabIndex = 35;
             this.Label21.Text = "DISCOUNT TYPE:";
             // 
             // Label20
             // 
-            this.Label20.AutoSize = true;
             this.Label20.Location = new System.Drawing.Point(53, 53);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(82, 13);
+            this.Label20.Size = new System.Drawing.Size(75, 13);
             this.Label20.TabIndex = 35;
             this.Label20.Text = "DURING EOSS:";
             // 
             // Label19
             // 
-            this.Label19.AutoSize = true;
             this.Label19.Location = new System.Drawing.Point(7, 25);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(128, 13);
+            this.Label19.Size = new System.Drawing.Size(121, 13);
             this.Label19.TabIndex = 35;
             this.Label19.Text = "DURING NORMAL SALE:";
             // 
@@ -166,145 +163,129 @@
             // 
             // Label18
             // 
-            this.Label18.AutoSize = true;
-            this.Label18.Location = new System.Drawing.Point(330, 318);
+            this.Label18.Location = new System.Drawing.Point(339, 318);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(104, 13);
+            this.Label18.Size = new System.Drawing.Size(98, 13);
             this.Label18.TabIndex = 14;
             this.Label18.Text = "CARD EXPIRY DATE:";
             // 
             // Label8
             // 
-            this.Label8.AutoSize = true;
-            this.Label8.Location = new System.Drawing.Point(55, 344);
+            this.Label8.Location = new System.Drawing.Point(54, 344);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(133, 13);
+            this.Label8.Size = new System.Drawing.Size(127, 13);
             this.Label8.TabIndex = 8;
             this.Label8.Text = "CUSTOMER MOBILE NO.:";
             // 
             // Label2
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Location = new System.Drawing.Point(103, 57);
+            this.Label2.Location = new System.Drawing.Point(105, 57);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(82, 13);
+            this.Label2.Size = new System.Drawing.Size(76, 13);
             this.Label2.TabIndex = 10;
             this.Label2.Text = "CUSTOMER ID:";
             // 
             // Label11
             // 
-            this.Label11.AutoSize = true;
             this.Label11.Location = new System.Drawing.Point(500, 82);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(59, 13);
+            this.Label11.Size = new System.Drawing.Size(52, 13);
             this.Label11.TabIndex = 3;
             this.Label11.Text = "SURNAME";
             // 
             // Label10
             // 
-            this.Label10.AutoSize = true;
-            this.Label10.Location = new System.Drawing.Point(368, 82);
+            this.Label10.Location = new System.Drawing.Point(374, 82);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(47, 13);
+            this.Label10.Size = new System.Drawing.Size(40, 13);
             this.Label10.TabIndex = 5;
             this.Label10.Text = "MIDDLE";
             // 
             // Label9
             // 
-            this.Label9.AutoSize = true;
             this.Label9.Location = new System.Drawing.Point(243, 82);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(35, 13);
+            this.Label9.Size = new System.Drawing.Size(28, 13);
             this.Label9.TabIndex = 11;
             this.Label9.Text = "FIRST";
             // 
             // label33
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(85, 318);
+            this.label33.Location = new System.Drawing.Point(87, 318);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(100, 13);
+            this.label33.Size = new System.Drawing.Size(94, 13);
             this.label33.TabIndex = 24;
             this.label33.Text = "CARD ISSUE DATE:";
             // 
             // label34
             // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(333, 294);
+            this.label34.Location = new System.Drawing.Point(340, 294);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(102, 13);
+            this.label34.Size = new System.Drawing.Size(97, 13);
             this.label34.TabIndex = 25;
             this.label34.Text = "LOYALTY CARD NO:";
             // 
             // label35
             // 
-            this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(98, 290);
+            this.label35.Location = new System.Drawing.Point(100, 290);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(87, 13);
+            this.label35.Size = new System.Drawing.Size(81, 13);
             this.label35.TabIndex = 26;
             this.label35.Text = "DATE OF BIRTH:";
             // 
             // label36
             // 
-            this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(118, 212);
+            this.label36.Location = new System.Drawing.Point(121, 212);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(67, 13);
+            this.label36.Size = new System.Drawing.Size(60, 13);
             this.label36.TabIndex = 20;
             this.label36.Text = "ADDRESS 3:";
             // 
             // label37
             // 
-            this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(118, 186);
+            this.label37.Location = new System.Drawing.Point(121, 186);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(67, 13);
+            this.label37.Size = new System.Drawing.Size(60, 13);
             this.label37.TabIndex = 19;
             this.label37.Text = "ADDRESS 2:";
             // 
             // label38
             // 
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(118, 160);
+            this.label38.Location = new System.Drawing.Point(121, 160);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(67, 13);
+            this.label38.Size = new System.Drawing.Size(60, 13);
             this.label38.TabIndex = 21;
             this.label38.Text = "ADDRESS 1:";
             // 
             // label39
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(109, 134);
+            this.label39.Location = new System.Drawing.Point(112, 134);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(76, 13);
+            this.label39.Size = new System.Drawing.Size(69, 13);
             this.label39.TabIndex = 22;
             this.label39.Text = "REFFERED BY:";
             // 
             // label40
             // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(83, 106);
+            this.label40.Location = new System.Drawing.Point(85, 106);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(102, 13);
+            this.label40.Size = new System.Drawing.Size(96, 13);
             this.label40.TabIndex = 23;
             this.label40.Text = "CUSTOMER NAME:";
             // 
             // label43
             // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(154, 238);
+            this.label43.Location = new System.Drawing.Point(157, 238);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(31, 13);
+            this.label43.Size = new System.Drawing.Size(24, 13);
             this.label43.TabIndex = 28;
             this.label43.Text = "CITY:";
             // 
             // label44
             // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(144, 263);
+            this.label44.Location = new System.Drawing.Point(147, 263);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(41, 13);
+            this.label44.Size = new System.Drawing.Size(34, 13);
             this.label44.TabIndex = 27;
             this.label44.Text = "EMAIL:";
             // 
@@ -344,7 +325,7 @@
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(196, 235);
+            this.txtCity.Location = new System.Drawing.Point(194, 235);
             this.txtCity.Name = "txtCity";
             this.txtCity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCity.Properties.MaxLength = 100;
@@ -389,10 +370,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(391, 238);
+            this.label1.Location = new System.Drawing.Point(400, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 652;
             this.label1.Text = "STATE :";
             // 
@@ -599,25 +579,25 @@
 
         #endregion
         internal System.Windows.Forms.GroupBox GroupBox1;
-        internal System.Windows.Forms.Label Label21;
-        internal System.Windows.Forms.Label Label20;
-        internal System.Windows.Forms.Label Label19;
-        internal System.Windows.Forms.Label Label18;
-        internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.Label label33;
-        internal System.Windows.Forms.Label label34;
-        internal System.Windows.Forms.Label label35;
-        internal System.Windows.Forms.Label label36;
-        internal System.Windows.Forms.Label label37;
-        internal System.Windows.Forms.Label label38;
-        internal System.Windows.Forms.Label label39;
-        internal System.Windows.Forms.Label label40;
-        internal System.Windows.Forms.Label label43;
-        internal System.Windows.Forms.Label label44;
+        internal DevExpress.XtraEditors.LabelControl Label21;
+        internal DevExpress.XtraEditors.LabelControl Label20;
+        internal DevExpress.XtraEditors.LabelControl Label19;
+        internal DevExpress.XtraEditors.LabelControl Label18;
+        internal DevExpress.XtraEditors.LabelControl Label8;
+        internal DevExpress.XtraEditors.LabelControl Label2;
+        internal DevExpress.XtraEditors.LabelControl Label11;
+        internal DevExpress.XtraEditors.LabelControl Label10;
+        internal DevExpress.XtraEditors.LabelControl Label9;
+        internal DevExpress.XtraEditors.LabelControl label33;
+        internal DevExpress.XtraEditors.LabelControl label34;
+        internal DevExpress.XtraEditors.LabelControl label35;
+        internal DevExpress.XtraEditors.LabelControl label36;
+        internal DevExpress.XtraEditors.LabelControl label37;
+        internal DevExpress.XtraEditors.LabelControl label38;
+        internal DevExpress.XtraEditors.LabelControl label39;
+        internal DevExpress.XtraEditors.LabelControl label40;
+        internal DevExpress.XtraEditors.LabelControl label43;
+        internal DevExpress.XtraEditors.LabelControl label44;
         private DevExpress.XtraEditors.TextEdit txtDuringEOSS;
         private DevExpress.XtraEditors.TextEdit txtDuringNormalSale;
         private DevExpress.XtraEditors.TextEdit txtDiscountType;
@@ -629,7 +609,7 @@
         private DevExpress.XtraEditors.TextEdit txtAddress2;
         private DevExpress.XtraEditors.TextEdit txtAddress1;
         private DevExpress.XtraEditors.TextEdit txtRefBy;
-        internal System.Windows.Forms.Label label1;
+        internal DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtLoyaltyCardNo;
         private DevExpress.XtraEditors.TextEdit txtCardExpiryDate;
         private DevExpress.XtraEditors.TextEdit txtCardIssueDate;

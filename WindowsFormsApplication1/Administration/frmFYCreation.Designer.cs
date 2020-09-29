@@ -32,13 +32,13 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.cmbFY = new System.Windows.Forms.ComboBox();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.DtEnd = new DevExpress.XtraEditors.DateEdit();
             this.DtFrom = new DevExpress.XtraEditors.DateEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.txtStatusTag = new System.Windows.Forms.ComboBox();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties.CalendarTimeProperties)).BeginInit();
@@ -86,10 +86,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 63);
+            this.label1.Location = new System.Drawing.Point(59, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 318;
             this.label1.Text = "Financial Year";
             // 
@@ -103,7 +102,7 @@
             "2023-2024",
             "2024-2025",
             "2025-2026"});
-            this.cmbFY.Location = new System.Drawing.Point(145, 60);
+            this.cmbFY.Location = new System.Drawing.Point(140, 60);
             this.cmbFY.Name = "cmbFY";
             this.cmbFY.Size = new System.Drawing.Size(121, 21);
             this.cmbFY.TabIndex = 316;
@@ -111,7 +110,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(97, 120);
+            this.labelControl3.Location = new System.Drawing.Point(89, 120);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(40, 13);
             this.labelControl3.TabIndex = 320;
@@ -119,7 +118,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(84, 94);
+            this.labelControl2.Location = new System.Drawing.Point(76, 94);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(53, 13);
             this.labelControl2.TabIndex = 321;
@@ -129,34 +128,33 @@
             // 
             this.DtEnd.EditValue = null;
             this.DtEnd.EnterMoveNextControl = true;
-            this.DtEnd.Location = new System.Drawing.Point(143, 117);
+            this.DtEnd.Location = new System.Drawing.Point(140, 117);
             this.DtEnd.Name = "DtEnd";
             this.DtEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtEnd.Size = new System.Drawing.Size(123, 20);
+            this.DtEnd.Size = new System.Drawing.Size(121, 20);
             this.DtEnd.TabIndex = 322;
             // 
             // DtFrom
             // 
             this.DtFrom.EditValue = null;
             this.DtFrom.EnterMoveNextControl = true;
-            this.DtFrom.Location = new System.Drawing.Point(143, 91);
+            this.DtFrom.Location = new System.Drawing.Point(140, 91);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtFrom.Size = new System.Drawing.Size(123, 20);
+            this.DtFrom.Size = new System.Drawing.Size(121, 20);
             this.DtFrom.TabIndex = 319;
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(90, 147);
+            this.label12.Location = new System.Drawing.Point(99, 147);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 331;
             this.label12.Text = "Active";
             // 
@@ -166,7 +164,7 @@
             this.txtStatusTag.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.txtStatusTag.Location = new System.Drawing.Point(145, 147);
+            this.txtStatusTag.Location = new System.Drawing.Point(140, 147);
             this.txtStatusTag.Name = "txtStatusTag";
             this.txtStatusTag.Size = new System.Drawing.Size(121, 21);
             this.txtStatusTag.TabIndex = 332;
@@ -205,13 +203,13 @@
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private System.Windows.Forms.ComboBox cmbFY;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         public DevExpress.XtraEditors.DateEdit DtEnd;
         public DevExpress.XtraEditors.DateEdit DtFrom;
-        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.LabelControl label12;
         private System.Windows.Forms.ComboBox txtStatusTag;
     }
 }

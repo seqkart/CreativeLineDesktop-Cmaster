@@ -29,20 +29,20 @@
         ///
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions31 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions32 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions33 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions34 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions35 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions36 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions7 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions8 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions9 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions10 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions11 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions12 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblDayName = new System.Windows.Forms.Label();
+            this.lblDayName = new DevExpress.XtraEditors.LabelControl();
             this.textEmpType = new DevExpress.XtraEditors.TextEdit();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.label20 = new DevExpress.XtraEditors.LabelControl();
+            this.label29 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbEmpID = new System.Windows.Forms.ComboBox();
             this.textUnit = new DevExpress.XtraEditors.TextEdit();
@@ -51,25 +51,25 @@
             this.txtFName = new DevExpress.XtraEditors.TextEdit();
             this.txtEmpID = new DevExpress.XtraEditors.TextEdit();
             this.dateAttendance = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new DevExpress.XtraEditors.LabelControl();
+            this.label6 = new DevExpress.XtraEditors.LabelControl();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label25 = new System.Windows.Forms.Label();
+            this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxEmployee = new System.Windows.Forms.GroupBox();
             this.timeEdit_Time_Out_Last = new DevExpress.XtraEditors.TimeSpanEdit();
             this.timeEdit_Time_In_Last = new DevExpress.XtraEditors.TimeSpanEdit();
             this.timeEdit_Time_Out_First = new DevExpress.XtraEditors.TimeSpanEdit();
             this.timeEdit_Time_In_First = new DevExpress.XtraEditors.TimeSpanEdit();
             this.timeEdit_Time_In_First_Testing = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.totalWorkingHours_Label = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
+            this.totalWorkingHours_Label = new DevExpress.XtraEditors.LabelControl();
+            this.label18 = new DevExpress.XtraEditors.LabelControl();
             this.totalWorkingHours_Text_Main = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
@@ -94,35 +94,35 @@
             this.timeEdit_Time_Out_Last_Main = new DevExpress.XtraEditors.TextEdit();
             this.comboBox_Shift = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label19 = new DevExpress.XtraEditors.LabelControl();
             this.txtTeaBreakTime = new DevExpress.XtraEditors.TextEdit();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label21 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.txtStatusType = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.lblOvertimeHours = new System.Windows.Forms.Label();
+            this.lblOvertimeHours = new DevExpress.XtraEditors.LabelControl();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.txtSerial_ID = new DevExpress.XtraEditors.TextEdit();
             this.textEdit_ForTime = new DevExpress.XtraEditors.TextEdit();
             this.txtLunchBreak = new DevExpress.XtraEditors.TextEdit();
             this.txtOvertimeHours = new DevExpress.XtraEditors.TextEdit();
             this.txtDailyWager = new DevExpress.XtraEditors.TextEdit();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new DevExpress.XtraEditors.LabelControl();
+            this.label26 = new DevExpress.XtraEditors.LabelControl();
             this.timeEdit_GatePassTime = new DevExpress.XtraEditors.TextEdit();
-            this.label19 = new System.Windows.Forms.Label();
             this.radioButtonManual = new System.Windows.Forms.RadioButton();
             this.panelControlManual = new DevExpress.XtraEditors.PanelControl();
             this.panelControl_Manual_In = new DevExpress.XtraEditors.PanelControl();
             this.panelControlMachine = new DevExpress.XtraEditors.PanelControl();
             this.panelControl_Machine_In = new DevExpress.XtraEditors.PanelControl();
             this.radioButtonMachine = new System.Windows.Forms.RadioButton();
-            this.labelDate_Current = new System.Windows.Forms.Label();
+            this.labelDate_Current = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxDailyWager = new System.Windows.Forms.GroupBox();
-            this.txtDutyHours_Label_DW = new System.Windows.Forms.Label();
+            this.txtDutyHours_Label_DW = new DevExpress.XtraEditors.LabelControl();
             this.txtDutyHours_DW = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.totalWorkingHours_Label_DW = new System.Windows.Forms.Label();
+            this.totalWorkingHours_Label_DW = new DevExpress.XtraEditors.LabelControl();
             this.totalWorkingHours_Text_DW = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.timeEdit_Time_Out_DW = new DevExpress.XtraEditors.TimeSpanEdit();
@@ -180,9 +180,9 @@
             // windowsUIButtonPanelCloseButton
             // 
             this.windowsUIButtonPanelCloseButton.ButtonInterval = 0;
-            windowsUIButtonImageOptions31.ImageUri.Uri = "Backward;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions7.ImageUri.Uri = "Backward;Size32x32;GrayScaled";
             this.windowsUIButtonPanelCloseButton.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions31, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "back_arrow_exit", -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions7, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "back_arrow_exit", -1, false)});
             this.windowsUIButtonPanelCloseButton.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.windowsUIButtonPanelCloseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.windowsUIButtonPanelCloseButton.ForeColor = System.Drawing.Color.Gray;
@@ -215,21 +215,21 @@
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
             this.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            windowsUIButtonImageOptions32.ImageUri.Uri = "Save";
-            windowsUIButtonImageOptions33.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions34.ImageUri.Uri = "icon%20builder/actions_trash";
-            windowsUIButtonImageOptions35.ImageUri.Uri = "icon%20builder/actions_add";
-            windowsUIButtonImageOptions36.ImageUri.Uri = "Close";
+            windowsUIButtonImageOptions8.ImageUri.Uri = "Save";
+            windowsUIButtonImageOptions9.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions10.ImageUri.Uri = "icon%20builder/actions_trash";
+            windowsUIButtonImageOptions11.ImageUri.Uri = "icon%20builder/actions_add";
+            windowsUIButtonImageOptions12.ImageUri.Uri = "Close";
             this.windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", true, windowsUIButtonImageOptions32, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "save", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", true, windowsUIButtonImageOptions8, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "save", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", true, windowsUIButtonImageOptions33, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "reset", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", true, windowsUIButtonImageOptions9, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "reset", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions34, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "delete", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions10, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "delete", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add New", true, windowsUIButtonImageOptions35, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "add_new", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add New", true, windowsUIButtonImageOptions11, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "add_new", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", true, windowsUIButtonImageOptions36, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "close", -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", true, windowsUIButtonImageOptions12, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "close", -1, false)});
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
@@ -290,13 +290,14 @@
             // 
             // lblDayName
             // 
-            this.lblDayName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDayName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDayName.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDayName.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDayName.Appearance.Options.UseFont = true;
+            this.lblDayName.Appearance.Options.UseForeColor = true;
             this.lblDayName.Location = new System.Drawing.Point(91, 12);
             this.lblDayName.Name = "lblDayName";
-            this.lblDayName.Size = new System.Drawing.Size(201, 28);
+            this.lblDayName.Size = new System.Drawing.Size(0, 21);
             this.lblDayName.TabIndex = 372;
-            this.lblDayName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textEmpType
             // 
@@ -314,23 +315,25 @@
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Location = new System.Drawing.Point(8, 217);
+            this.label20.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Appearance.Options.UseFont = true;
+            this.label20.Appearance.Options.UseForeColor = true;
+            this.label20.Location = new System.Drawing.Point(27, 217);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(61, 13);
+            this.label20.Size = new System.Drawing.Size(54, 13);
             this.label20.TabIndex = 370;
             this.label20.Text = "Emp Type:";
             // 
             // label29
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label29.Location = new System.Drawing.Point(5, 22);
+            this.label29.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label29.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label29.Appearance.Options.UseFont = true;
+            this.label29.Appearance.Options.UseForeColor = true;
+            this.label29.Location = new System.Drawing.Point(13, 22);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(75, 13);
+            this.label29.Size = new System.Drawing.Size(68, 13);
             this.label29.TabIndex = 212;
             this.label29.Text = "Employee ID:";
             this.label29.Visible = false;
@@ -434,67 +437,73 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(7, 190);
+            this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Appearance.Options.UseFont = true;
+            this.label7.Appearance.Options.UseForeColor = true;
+            this.label7.Location = new System.Drawing.Point(56, 190);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.Size = new System.Drawing.Size(25, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Unit:";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(6, 162);
+            this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Appearance.Options.UseFont = true;
+            this.label6.Appearance.Options.UseForeColor = true;
+            this.label6.Location = new System.Drawing.Point(15, 162);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 13);
+            this.label6.Size = new System.Drawing.Size(66, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Designation:";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(7, 134);
+            this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Appearance.Options.UseFont = true;
+            this.label5.Appearance.Options.UseForeColor = true;
+            this.label5.Location = new System.Drawing.Point(16, 134);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 4;
             this.label5.Text = "Department:";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(7, 106);
+            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Appearance.Options.UseFont = true;
+            this.label4.Appearance.Options.UseForeColor = true;
+            this.label4.Location = new System.Drawing.Point(21, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Emp Name:";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(7, 78);
+            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Appearance.Options.UseFont = true;
+            this.label3.Appearance.Options.UseForeColor = true;
+            this.label3.Location = new System.Drawing.Point(25, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Emp Code:";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(7, 49);
+            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Appearance.Options.UseFont = true;
+            this.label2.Appearance.Options.UseForeColor = true;
+            this.label2.Location = new System.Drawing.Point(35, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Att Date:";
             // 
@@ -545,11 +554,11 @@
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label25.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label25.Appearance.Options.UseFont = true;
             this.label25.Location = new System.Drawing.Point(71, 80);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(45, 13);
+            this.label25.Size = new System.Drawing.Size(40, 13);
             this.label25.TabIndex = 1;
             this.label25.Text = "STATUS";
             // 
@@ -699,22 +708,23 @@
             // 
             // totalWorkingHours_Label
             // 
-            this.totalWorkingHours_Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Label.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Label.Appearance.Options.UseBackColor = true;
             this.totalWorkingHours_Label.Location = new System.Drawing.Point(520, 102);
             this.totalWorkingHours_Label.Name = "totalWorkingHours_Label";
             this.totalWorkingHours_Label.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.totalWorkingHours_Label.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.totalWorkingHours_Label.Size = new System.Drawing.Size(63, 18);
+            this.totalWorkingHours_Label.Size = new System.Drawing.Size(0, 15);
             this.totalWorkingHours_Label.TabIndex = 252;
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label18.ForeColor = System.Drawing.Color.Silver;
+            this.label18.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label18.Appearance.ForeColor = System.Drawing.Color.Silver;
+            this.label18.Appearance.Options.UseFont = true;
+            this.label18.Appearance.Options.UseForeColor = true;
             this.label18.Location = new System.Drawing.Point(49, 38);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(114, 13);
+            this.label18.Size = new System.Drawing.Size(107, 13);
             this.label18.TabIndex = 251;
             this.label18.Text = "Employee Duty Time";
             // 
@@ -1065,6 +1075,15 @@
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
             // 
+            // label19
+            // 
+            this.label19.Appearance.BackColor = System.Drawing.Color.White;
+            this.label19.Appearance.Options.UseBackColor = true;
+            this.label19.Location = new System.Drawing.Point(313, 19);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 13);
+            this.label19.TabIndex = 1;
+            // 
             // txtTeaBreakTime
             // 
             this.txtTeaBreakTime.Location = new System.Drawing.Point(525, 64);
@@ -1081,13 +1100,15 @@
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.White;
-            this.label21.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label21.Appearance.BackColor = System.Drawing.Color.White;
+            this.label21.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label21.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label21.Appearance.Options.UseBackColor = true;
+            this.label21.Appearance.Options.UseFont = true;
+            this.label21.Appearance.Options.UseForeColor = true;
             this.label21.Location = new System.Drawing.Point(515, 92);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(84, 13);
+            this.label21.Size = new System.Drawing.Size(78, 13);
             this.label21.TabIndex = 236;
             this.label21.Text = "Tea Break Time";
             // 
@@ -1131,10 +1152,11 @@
             // 
             // lblOvertimeHours
             // 
-            this.lblOvertimeHours.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblOvertimeHours.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblOvertimeHours.Appearance.Options.UseBackColor = true;
             this.lblOvertimeHours.Location = new System.Drawing.Point(174, 69);
             this.lblOvertimeHours.Name = "lblOvertimeHours";
-            this.lblOvertimeHours.Size = new System.Drawing.Size(53, 13);
+            this.lblOvertimeHours.Size = new System.Drawing.Size(6, 13);
             this.lblOvertimeHours.TabIndex = 25;
             this.lblOvertimeHours.Text = "0";
             // 
@@ -1230,23 +1252,25 @@
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label27.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label27.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label27.Appearance.Options.UseFont = true;
+            this.label27.Appearance.Options.UseForeColor = true;
             this.label27.Location = new System.Drawing.Point(9, 68);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(111, 13);
+            this.label27.Size = new System.Drawing.Size(104, 13);
             this.label27.TabIndex = 1;
             this.label27.Text = "OT/Deduction Time:";
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label26.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label26.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label26.Appearance.Options.UseFont = true;
+            this.label26.Appearance.Options.UseForeColor = true;
             this.label26.Location = new System.Drawing.Point(9, 42);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(88, 13);
+            this.label26.Size = new System.Drawing.Size(81, 13);
             this.label26.TabIndex = 0;
             this.label26.Text = "Gate Pass Time:";
             // 
@@ -1265,14 +1289,6 @@
             this.timeEdit_GatePassTime.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.timeEdit_GatePassTime.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_GatePassTime.TabIndex = 21;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(313, 19);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(291, 86);
-            this.label19.TabIndex = 1;
             // 
             // radioButtonManual
             // 
@@ -1350,15 +1366,11 @@
             // labelDate_Current
             // 
             this.labelDate_Current.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelDate_Current.AutoSize = true;
             this.labelDate_Current.Location = new System.Drawing.Point(486, 39);
             this.labelDate_Current.Name = "labelDate_Current";
-            this.labelDate_Current.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelDate_Current.Size = new System.Drawing.Size(176, 20);
+            this.labelDate_Current.Size = new System.Drawing.Size(175, 13);
             this.labelDate_Current.TabIndex = 19;
             this.labelDate_Current.Text = "Wednesday, June17, 2020 1:42 PM";
-            this.labelDate_Current.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelDate_Current.UseCompatibleTextRendering = true;
             // 
             // grpBoxDailyWager
             // 
@@ -1381,12 +1393,12 @@
             // 
             // txtDutyHours_Label_DW
             // 
-            this.txtDutyHours_Label_DW.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDutyHours_Label_DW.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDutyHours_Label_DW.Appearance.Options.UseBackColor = true;
             this.txtDutyHours_Label_DW.Location = new System.Drawing.Point(526, 51);
             this.txtDutyHours_Label_DW.Name = "txtDutyHours_Label_DW";
             this.txtDutyHours_Label_DW.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.txtDutyHours_Label_DW.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtDutyHours_Label_DW.Size = new System.Drawing.Size(63, 18);
+            this.txtDutyHours_Label_DW.Size = new System.Drawing.Size(0, 15);
             this.txtDutyHours_Label_DW.TabIndex = 258;
             // 
             // txtDutyHours_DW
@@ -1424,12 +1436,12 @@
             // 
             // totalWorkingHours_Label_DW
             // 
-            this.totalWorkingHours_Label_DW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Label_DW.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Label_DW.Appearance.Options.UseBackColor = true;
             this.totalWorkingHours_Label_DW.Location = new System.Drawing.Point(386, 51);
             this.totalWorkingHours_Label_DW.Name = "totalWorkingHours_Label_DW";
             this.totalWorkingHours_Label_DW.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            this.totalWorkingHours_Label_DW.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.totalWorkingHours_Label_DW.Size = new System.Drawing.Size(63, 18);
+            this.totalWorkingHours_Label_DW.Size = new System.Drawing.Size(0, 15);
             this.totalWorkingHours_Label_DW.TabIndex = 255;
             // 
             // totalWorkingHours_Text_DW
@@ -1528,7 +1540,7 @@
             this.labelControl4.TabIndex = 236;
             this.labelControl4.Text = "TIME IN";
             // 
-            // XtraForm_EmployeeAttendence
+            // XtraForm_EmployeeAttendance
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -1549,7 +1561,7 @@
             this.Controls.Add(this.windowsUIButtonPanelMain);
             this.Controls.Add(this.grpBoxEmployee);
             this.Controls.Add(this.grpBoxDailyWager);
-            this.Name = "XtraForm_EmployeeAttendence";
+            this.Name = "XtraForm_EmployeeAttendance";
             this.Load += new System.EventHandler(this.XtraForm_EmployeeAttendence_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1613,13 +1625,13 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
         private DevExpress.XtraEditors.LabelControl labelControl;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label7;
+        private DevExpress.XtraEditors.LabelControl label6;
+        private DevExpress.XtraEditors.LabelControl label5;
+        private DevExpress.XtraEditors.LabelControl label4;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit textUnit;
         private DevExpress.XtraEditors.TextEdit txtDesignation;
         private DevExpress.XtraEditors.TextEdit txtDepartment;
@@ -1627,40 +1639,40 @@
         private DevExpress.XtraEditors.TextEdit txtEmpID;
         private System.Windows.Forms.DateTimePicker dateAttendance;
         private DevExpress.XtraEditors.TextEdit textSysID;
-        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.LabelControl label9;
         private DevExpress.XtraEditors.TextEdit textGNo;
         private DevExpress.XtraEditors.TextEdit textDate;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label8;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label10;
+        private DevExpress.XtraEditors.LabelControl label10;
         private DevExpress.XtraEditors.TextEdit textAttStatus_Machine;
         private DevExpress.XtraEditors.TimeEdit timeAttIn_First_Machine;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
+        private DevExpress.XtraEditors.LabelControl label12;
+        private DevExpress.XtraEditors.LabelControl label11;
+        private DevExpress.XtraEditors.LabelControl label14;
         private DevExpress.XtraEditors.TimeEdit timeAttIn_Last_Machine;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TimeEdit timeAttOut_First_Machine;
-        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraEditors.LabelControl label15;
         private DevExpress.XtraEditors.TimeEdit timeAttOut_Last_Machine;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label25;
+        private DevExpress.XtraEditors.LabelControl label17;
+        private DevExpress.XtraEditors.LabelControl label16;
+        private DevExpress.XtraEditors.LabelControl label25;
         private System.Windows.Forms.GroupBox grpBoxEmployee;
         private System.Windows.Forms.GroupBox groupBox4;
         private DevExpress.XtraEditors.TextEdit txtOvertimeHours;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
+        private DevExpress.XtraEditors.LabelControl label27;
+        private DevExpress.XtraEditors.LabelControl label26;
         private System.Windows.Forms.ComboBox cbEmpID;
-        private System.Windows.Forms.Label label29;
+        private DevExpress.XtraEditors.LabelControl label29;
         private System.Windows.Forms.RadioButton radioButtonManual;
         private DevExpress.XtraEditors.PanelControl panelControlManual;
         private DevExpress.XtraEditors.PanelControl panelControlMachine;
         private System.Windows.Forms.RadioButton radioButtonMachine;
         private DevExpress.XtraEditors.PanelControl panelControl_Manual_In;
         private DevExpress.XtraEditors.PanelControl panelControl_Machine_In;
-        private System.Windows.Forms.Label labelDate_Current;
+        private DevExpress.XtraEditors.LabelControl labelDate_Current;
         private System.Windows.Forms.ComboBox comboBox_Status;
         private System.Windows.Forms.ComboBox comboBox_Shift;
         private DevExpress.XtraEditors.LabelControl labelControl22;
@@ -1682,7 +1694,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl9;
         private DevExpress.XtraEditors.LabelControl labelControl11;
-        private System.Windows.Forms.Label label18;
+        private DevExpress.XtraEditors.LabelControl label18;
         private DevExpress.XtraEditors.TextEdit timeEdit_Time_In_First_Main;
         private DevExpress.XtraEditors.TextEdit timeEdit_Time_Out_First_Main;
         private DevExpress.XtraEditors.TextEdit timeEdit_Time_In_Last_Main;
@@ -1691,19 +1703,19 @@
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
-        private System.Windows.Forms.Label totalWorkingHours_Label;
+        private DevExpress.XtraEditors.LabelControl totalWorkingHours_Label;
         private DevExpress.XtraEditors.TextEdit txtStatusType;
-        private System.Windows.Forms.Label lblOvertimeHours;
-        private System.Windows.Forms.Label label19;
+        private DevExpress.XtraEditors.LabelControl lblOvertimeHours;
+        private DevExpress.XtraEditors.LabelControl label19;
         private DevExpress.XtraEditors.TimeSpanEdit timeEdit_Time_In_First_Testing;
         private DevExpress.XtraEditors.TimeSpanEdit timeEdit_Time_In_First;
         private DevExpress.XtraEditors.TimeSpanEdit timeEdit_Time_Out_First;
         private DevExpress.XtraEditors.TimeSpanEdit timeEdit_Time_Out_Last;
         private DevExpress.XtraEditors.TimeSpanEdit timeEdit_Time_In_Last;
         private DevExpress.XtraEditors.TextEdit textEmpType;
-        private System.Windows.Forms.Label label20;
+        private DevExpress.XtraEditors.LabelControl label20;
         private System.Windows.Forms.GroupBox grpBoxDailyWager;
-        private System.Windows.Forms.Label totalWorkingHours_Label_DW;
+        private DevExpress.XtraEditors.LabelControl totalWorkingHours_Label_DW;
         private DevExpress.XtraEditors.TextEdit totalWorkingHours_Text_DW;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TimeSpanEdit timeEdit_Time_Out_DW;
@@ -1719,10 +1731,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl21;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private System.Windows.Forms.Label txtDutyHours_Label_DW;
+        private DevExpress.XtraEditors.LabelControl txtDutyHours_Label_DW;
         private DevExpress.XtraEditors.TextEdit txtTeaBreakTime;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label lblDayName;
+        private DevExpress.XtraEditors.LabelControl label21;
+        private DevExpress.XtraEditors.LabelControl lblDayName;
     }
 
 }

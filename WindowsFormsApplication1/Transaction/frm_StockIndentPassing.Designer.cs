@@ -148,6 +148,7 @@
             // 
             this.TextAuthenticate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TextAuthenticate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TextAuthenticate.Size = new System.Drawing.Size(100, 26);
@@ -380,7 +381,7 @@
             this.ChoiceSelectAll.Location = new System.Drawing.Point(864, 34);
             this.ChoiceSelectAll.Name = "ChoiceSelectAll";
             this.ChoiceSelectAll.Properties.Caption = "Select All";
-            this.ChoiceSelectAll.Size = new System.Drawing.Size(75, 19);
+            this.ChoiceSelectAll.Size = new System.Drawing.Size(75, 18);
             this.ChoiceSelectAll.TabIndex = 200;
             this.ChoiceSelectAll.CheckedChanged += new System.EventHandler(this.ChoiceSelectAll_CheckedChanged);
             // 
@@ -402,7 +403,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(630, 33);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(97, 13);
+            this.labelControl3.Size = new System.Drawing.Size(103, 13);
             this.labelControl3.TabIndex = 197;
             this.labelControl3.Text = "Indent Passing Date";
             // 
@@ -410,7 +411,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(7, 33);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(24, 13);
+            this.labelControl1.Size = new System.Drawing.Size(26, 13);
             this.labelControl1.TabIndex = 205;
             this.labelControl1.Text = "From";
             // 
@@ -418,7 +419,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(165, 33);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(12, 13);
+            this.labelControl2.Size = new System.Drawing.Size(13, 13);
             this.labelControl2.TabIndex = 204;
             this.labelControl2.Text = "To";
             // 

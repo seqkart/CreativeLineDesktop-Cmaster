@@ -34,7 +34,7 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtBarCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtApprovalDate = new DevExpress.XtraEditors.DateEdit();
             this.txtApprovalNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -155,11 +155,11 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Appearance.Options.UseFont = true;
             this.label3.Location = new System.Drawing.Point(43, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 715;
             this.label3.Text = "Bar Code";
             // 
@@ -214,7 +214,7 @@
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Location = new System.Drawing.Point(40, 67);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(64, 15);
+            this.labelControl1.Size = new System.Drawing.Size(65, 15);
             this.labelControl1.TabIndex = 723;
             this.labelControl1.Text = "Customer Id";
             // 
@@ -793,7 +793,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit txtBarCode;
-        internal System.Windows.Forms.Label label3;
+        internal DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.DateEdit txtApprovalDate;
         private DevExpress.XtraEditors.TextEdit txtApprovalNo;
         private DevExpress.XtraEditors.LabelControl labelControl3;

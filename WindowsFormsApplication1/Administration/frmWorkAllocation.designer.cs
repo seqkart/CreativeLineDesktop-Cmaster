@@ -32,7 +32,7 @@
             this.cmbSelectUser = new System.Windows.Forms.ComboBox();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSaveOpts = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancle = new DevExpress.XtraEditors.SimpleButton();
@@ -503,7 +503,7 @@
         private System.Windows.Forms.ComboBox cmbSelectUser;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnSave;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.GroupControl panelControl1;
         private DevExpress.XtraGrid.GridControl WorkAllocationGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView UserGridView;

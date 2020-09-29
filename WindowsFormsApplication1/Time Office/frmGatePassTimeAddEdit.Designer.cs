@@ -51,7 +51,7 @@
             this.txtStatusCodeDesc = new DevExpress.XtraEditors.TextEdit();
             this.gridControl_GatePassData = new DevExpress.XtraGrid.GridControl();
             this.gridView_GatePassData = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PrintPrivewButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
@@ -119,6 +119,7 @@
             // txtPassword
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(100, 25);
@@ -343,7 +344,6 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 203);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 13);
@@ -479,7 +479,7 @@
         private DevExpress.XtraEditors.TextEdit txtStatusCodeDesc;
         private DevExpress.XtraGrid.GridControl gridControl_GatePassData;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView_GatePassData;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button PrintPrivewButton;
         private System.Windows.Forms.Button PrintButton;

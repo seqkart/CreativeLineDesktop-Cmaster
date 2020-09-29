@@ -218,5 +218,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+
     }
 }

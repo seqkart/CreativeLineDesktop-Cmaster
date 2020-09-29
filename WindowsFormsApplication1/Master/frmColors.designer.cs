@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmColors));
             this.txtColorName = new DevExpress.XtraEditors.TextEdit();
             this.txtSysColorID = new DevExpress.XtraEditors.TextEdit();
-            this.Label3 = new System.Windows.Forms.Label();
+            this.Label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtColorCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.LBDEPCODE = new System.Windows.Forms.Label();
+            this.Label7 = new DevExpress.XtraEditors.LabelControl();
+            this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSysColorID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorCode.Properties)).BeginInit();
@@ -67,11 +67,11 @@
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Options.UseFont = true;
             this.Label3.Location = new System.Drawing.Point(53, 115);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(74, 15);
+            this.Label3.Size = new System.Drawing.Size(67, 15);
             this.Label3.TabIndex = 757;
             this.Label3.Text = "Color Code :";
             // 
@@ -127,21 +127,21 @@
             // 
             // Label7
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label7.Location = new System.Drawing.Point(46, 141);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Options.UseFont = true;
+            this.Label7.Location = new System.Drawing.Point(48, 141);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(79, 15);
+            this.Label7.Size = new System.Drawing.Size(72, 15);
             this.Label7.TabIndex = 754;
             this.Label7.Text = "Color Name :";
             // 
             // LBDEPCODE
             // 
-            this.LBDEPCODE.AutoSize = true;
-            this.LBDEPCODE.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.LBDEPCODE.Location = new System.Drawing.Point(36, 89);
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Options.UseFont = true;
+            this.LBDEPCODE.Location = new System.Drawing.Point(33, 89);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(94, 15);
+            this.LBDEPCODE.Size = new System.Drawing.Size(87, 15);
             this.LBDEPCODE.TabIndex = 756;
             this.LBDEPCODE.Text = "Sys Color Code :";
             // 
@@ -178,12 +178,12 @@
 
         private DevExpress.XtraEditors.TextEdit txtColorName;
         private DevExpress.XtraEditors.TextEdit txtSysColorID;
-        internal System.Windows.Forms.Label Label3;
+        internal DevExpress.XtraEditors.LabelControl Label3;
         private DevExpress.XtraEditors.TextEdit txtColorCode;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label LBDEPCODE;
+        internal DevExpress.XtraEditors.LabelControl Label7;
+        internal DevExpress.XtraEditors.LabelControl LBDEPCODE;
     }
 }

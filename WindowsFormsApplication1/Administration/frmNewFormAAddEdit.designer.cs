@@ -30,30 +30,30 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewFormAAddEdit));
             this.txtstatusTag = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.txtNfaTag = new DevExpress.XtraEditors.TextEdit();
             this.txtFormName = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtMenuName = new DevExpress.XtraEditors.TextEdit();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.txtFormDesc = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.txtFormCode = new DevExpress.XtraEditors.TextEdit();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new DevExpress.XtraEditors.LabelControl();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtSMenuName = new DevExpress.XtraEditors.TextEdit();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label11 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtProcName = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtRoleCode = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.txtRoleDesc = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtOrderBy = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).BeginInit();
@@ -73,7 +73,7 @@
             // 
             // txtstatusTag
             // 
-            this.txtstatusTag.Location = new System.Drawing.Point(545, 89);
+            this.txtstatusTag.Location = new System.Drawing.Point(539, 89);
             this.txtstatusTag.Name = "txtstatusTag";
             this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtstatusTag.Properties.MaxLength = 1;
@@ -83,16 +83,15 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(40, 66);
+            this.label12.Location = new System.Drawing.Point(51, 66);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 13);
+            this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 332;
             this.label12.Text = "Form Name";
             // 
             // txtNfaTag
             // 
-            this.txtNfaTag.Location = new System.Drawing.Point(125, 206);
+            this.txtNfaTag.Location = new System.Drawing.Point(117, 206);
             this.txtNfaTag.Name = "txtNfaTag";
             this.txtNfaTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNfaTag.Properties.MaxLength = 1;
@@ -103,7 +102,7 @@
             // txtFormName
             // 
             this.txtFormName.EnterMoveNextControl = true;
-            this.txtFormName.Location = new System.Drawing.Point(123, 63);
+            this.txtFormName.Location = new System.Drawing.Point(117, 63);
             this.txtFormName.Name = "txtFormName";
             this.txtFormName.Properties.MaxLength = 50;
             this.txtFormName.Size = new System.Drawing.Size(463, 20);
@@ -111,16 +110,15 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(62, 209);
+            this.label4.Location = new System.Drawing.Point(69, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 343;
             this.label4.Text = "NFATag";
             // 
             // txtMenuName
             // 
-            this.txtMenuName.Location = new System.Drawing.Point(123, 153);
+            this.txtMenuName.Location = new System.Drawing.Point(117, 153);
             this.txtMenuName.Name = "txtMenuName";
             this.txtMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMenuName.Size = new System.Drawing.Size(463, 20);
@@ -130,17 +128,16 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(36, 156);
+            this.label7.Location = new System.Drawing.Point(47, 156);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 13);
+            this.label7.Size = new System.Drawing.Size(62, 13);
             this.label7.TabIndex = 347;
             this.label7.Text = "Menu Name";
             // 
             // txtFormDesc
             // 
             this.txtFormDesc.EnterMoveNextControl = true;
-            this.txtFormDesc.Location = new System.Drawing.Point(123, 120);
+            this.txtFormDesc.Location = new System.Drawing.Point(117, 120);
             this.txtFormDesc.Name = "txtFormDesc";
             this.txtFormDesc.Properties.MaxLength = 150;
             this.txtFormDesc.Size = new System.Drawing.Size(463, 20);
@@ -148,17 +145,16 @@
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(45, 123);
+            this.label8.Location = new System.Drawing.Point(56, 123);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 13);
+            this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 349;
             this.label8.Text = "Form Desc";
             // 
             // txtFormCode
             // 
             this.txtFormCode.EnterMoveNextControl = true;
-            this.txtFormCode.Location = new System.Drawing.Point(123, 89);
+            this.txtFormCode.Location = new System.Drawing.Point(117, 89);
             this.txtFormCode.Name = "txtFormCode";
             this.txtFormCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFormCode.Properties.MaxLength = 8;
@@ -167,43 +163,40 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(42, 92);
+            this.label9.Location = new System.Drawing.Point(53, 92);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 13);
+            this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 351;
             this.label9.Text = "Form Code";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(501, 92);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 353;
             this.label5.Text = "Status";
             // 
             // txtSMenuName
             // 
-            this.txtSMenuName.Location = new System.Drawing.Point(125, 180);
+            this.txtSMenuName.Location = new System.Drawing.Point(117, 180);
             this.txtSMenuName.Name = "txtSMenuName";
             this.txtSMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSMenuName.Size = new System.Drawing.Size(461, 20);
+            this.txtSMenuName.Size = new System.Drawing.Size(463, 20);
             this.txtSMenuName.TabIndex = 6;
             this.txtSMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSMenuName_KeyDown);
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 183);
+            this.label11.Location = new System.Drawing.Point(24, 183);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
+            this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 356;
             this.label11.Text = "Sub Menu Name";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(167, 29);
+            this.HelpGrid.Location = new System.Drawing.Point(110, 51);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(470, 269);
@@ -270,7 +263,7 @@
             // txtProcName
             // 
             this.txtProcName.EnterMoveNextControl = true;
-            this.txtProcName.Location = new System.Drawing.Point(262, 206);
+            this.txtProcName.Location = new System.Drawing.Point(256, 206);
             this.txtProcName.Name = "txtProcName";
             this.txtProcName.Properties.MaxLength = 150;
             this.txtProcName.Size = new System.Drawing.Size(324, 20);
@@ -278,17 +271,16 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(195, 209);
+            this.label1.Location = new System.Drawing.Point(195, 210);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 367;
             this.label1.Text = "Proc Name";
             // 
             // txtRoleCode
             // 
             this.txtRoleCode.EnterMoveNextControl = true;
-            this.txtRoleCode.Location = new System.Drawing.Point(125, 232);
+            this.txtRoleCode.Location = new System.Drawing.Point(117, 232);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
             this.txtRoleCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -301,16 +293,15 @@
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(40, 235);
+            this.label13.Location = new System.Drawing.Point(51, 235);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 13);
+            this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 396;
             this.label13.Text = "Under Role";
             // 
             // txtRoleDesc
             // 
-            this.txtRoleDesc.Location = new System.Drawing.Point(198, 232);
+            this.txtRoleDesc.Location = new System.Drawing.Point(192, 232);
             this.txtRoleDesc.Name = "txtRoleDesc";
             this.txtRoleDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoleDesc.Properties.ReadOnly = true;
@@ -320,16 +311,15 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 261);
+            this.label2.Location = new System.Drawing.Point(65, 261);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 398;
             this.label2.Text = "Order By";
             // 
             // txtOrderBy
             // 
-            this.txtOrderBy.Location = new System.Drawing.Point(125, 258);
+            this.txtOrderBy.Location = new System.Drawing.Point(117, 258);
             this.txtOrderBy.Name = "txtOrderBy";
             this.txtOrderBy.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderBy.Properties.MaxLength = 1;
@@ -396,30 +386,30 @@
         #endregion
 
         private DevExpress.XtraEditors.TextEdit txtstatusTag;
-        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.LabelControl label12;
         private DevExpress.XtraEditors.TextEdit txtNfaTag;
         private DevExpress.XtraEditors.TextEdit txtFormName;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtMenuName;
-        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.LabelControl label7;
         private DevExpress.XtraEditors.TextEdit txtFormDesc;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label8;
         private DevExpress.XtraEditors.TextEdit txtFormCode;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl label9;
+        private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraEditors.TextEdit txtSMenuName;
-        private System.Windows.Forms.Label label11;
+        private DevExpress.XtraEditors.LabelControl label11;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtProcName;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtRoleCode;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TextEdit txtRoleDesc;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtOrderBy;
     }
 }

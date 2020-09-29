@@ -33,9 +33,9 @@
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnLoadDataFPackingSlip = new System.Windows.Forms.ToolStripButton();
-            this.lblTotQty = new System.Windows.Forms.Label();
-            this.lblBox = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTotQty = new DevExpress.XtraEditors.LabelControl();
+            this.lblBox = new DevExpress.XtraEditors.LabelControl();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtRemarks = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -57,9 +57,9 @@
             this.Panel2 = new System.Windows.Forms.Panel();
             this.txtPackingSlipNO = new DevExpress.XtraEditors.TextEdit();
             this.txtPackingSLipDate = new DevExpress.XtraEditors.DateEdit();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.lblPackingSLipTot = new System.Windows.Forms.Label();
+            this.Label8 = new DevExpress.XtraEditors.LabelControl();
+            this.Label7 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPackingSLipTot = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -167,33 +167,35 @@
             // 
             // lblTotQty
             // 
-            this.lblTotQty.AutoSize = true;
-            this.lblTotQty.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotQty.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotQty.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotQty.Appearance.Options.UseBackColor = true;
+            this.lblTotQty.Appearance.Options.UseFont = true;
             this.lblTotQty.Location = new System.Drawing.Point(385, 37);
             this.lblTotQty.Name = "lblTotQty";
-            this.lblTotQty.Size = new System.Drawing.Size(104, 112);
+            this.lblTotQty.Size = new System.Drawing.Size(57, 112);
             this.lblTotQty.TabIndex = 723;
             this.lblTotQty.Text = "0";
             // 
             // lblBox
             // 
-            this.lblBox.AutoSize = true;
-            this.lblBox.BackColor = System.Drawing.Color.Transparent;
-            this.lblBox.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBox.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBox.Appearance.Options.UseBackColor = true;
+            this.lblBox.Appearance.Options.UseFont = true;
             this.lblBox.Location = new System.Drawing.Point(145, 37);
             this.lblBox.Name = "lblBox";
-            this.lblBox.Size = new System.Drawing.Size(104, 112);
+            this.lblBox.Size = new System.Drawing.Size(57, 112);
             this.lblBox.TabIndex = 716;
             this.lblBox.Text = "0";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label4.Appearance.Options.UseFont = true;
             this.label4.Location = new System.Drawing.Point(12, 583);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 15);
+            this.label4.Size = new System.Drawing.Size(47, 15);
             this.label4.TabIndex = 717;
             this.label4.Text = "Remarks";
             // 
@@ -438,30 +440,29 @@
             // 
             // Label8
             // 
-            this.Label8.AutoSize = true;
             this.Label8.Location = new System.Drawing.Point(239, 11);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(47, 13);
+            this.Label8.Size = new System.Drawing.Size(41, 13);
             this.Label8.TabIndex = 0;
             this.Label8.Text = "DATED :";
             // 
             // Label7
             // 
-            this.Label7.AutoSize = true;
             this.Label7.Location = new System.Drawing.Point(15, 11);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(100, 13);
+            this.Label7.Size = new System.Drawing.Size(94, 13);
             this.Label7.TabIndex = 0;
             this.Label7.Text = "PACKING SLIP NO :";
             // 
             // lblPackingSLipTot
             // 
-            this.lblPackingSLipTot.AutoSize = true;
-            this.lblPackingSLipTot.BackColor = System.Drawing.Color.Transparent;
-            this.lblPackingSLipTot.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackingSLipTot.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblPackingSLipTot.Appearance.Font = new System.Drawing.Font("Cambria", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPackingSLipTot.Appearance.Options.UseBackColor = true;
+            this.lblPackingSLipTot.Appearance.Options.UseFont = true;
             this.lblPackingSLipTot.Location = new System.Drawing.Point(985, 176);
             this.lblPackingSLipTot.Name = "lblPackingSLipTot";
-            this.lblPackingSLipTot.Size = new System.Drawing.Size(53, 57);
+            this.lblPackingSLipTot.Size = new System.Drawing.Size(28, 57);
             this.lblPackingSLipTot.TabIndex = 725;
             this.lblPackingSLipTot.Text = "0";
             // 
@@ -755,9 +756,9 @@
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        internal System.Windows.Forms.Label lblTotQty;
-        internal System.Windows.Forms.Label lblBox;
-        internal System.Windows.Forms.Label label4;
+        internal DevExpress.XtraEditors.LabelControl lblTotQty;
+        internal DevExpress.XtraEditors.LabelControl lblBox;
+        internal DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtRemarks;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl2;
@@ -777,8 +778,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.GridControl BarCodeGrid;
         internal System.Windows.Forms.Panel Panel2;
-        internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Label Label7;
+        internal DevExpress.XtraEditors.LabelControl Label8;
+        internal DevExpress.XtraEditors.LabelControl Label7;
         internal System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.ToolStripButton btnLoadDataFPackingSlip;
         private DevExpress.XtraGrid.GridControl HelpGrid;
@@ -799,7 +800,7 @@
         private DevExpress.XtraEditors.TextEdit txtAddress2;
         private DevExpress.XtraEditors.PictureEdit ArticleImageBox;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        internal System.Windows.Forms.Label lblPackingSLipTot;
+        internal DevExpress.XtraEditors.LabelControl lblPackingSLipTot;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl10;

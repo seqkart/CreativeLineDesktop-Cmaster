@@ -33,8 +33,8 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtCatgDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtCatgCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCatgDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCatgCode.Properties)).BeginInit();
@@ -95,19 +95,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(47, 98);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 199;
             this.label3.Text = "Description";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(75, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 198;
             this.label1.Text = "Code";
             // 
@@ -146,7 +144,7 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtCatgDesc;
         private DevExpress.XtraEditors.TextEdit txtCatgCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

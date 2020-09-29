@@ -178,7 +178,7 @@
             // 
             this.labelControl18.Location = new System.Drawing.Point(424, 103);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(71, 13);
+            this.labelControl18.Size = new System.Drawing.Size(70, 13);
             this.labelControl18.TabIndex = 25;
             this.labelControl18.Text = "Bank Charges";
             // 
@@ -303,7 +303,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(254, 48);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(23, 13);
+            this.labelControl2.Size = new System.Drawing.Size(24, 13);
             this.labelControl2.TabIndex = 17;
             this.labelControl2.Text = "Type";
             // 
@@ -357,7 +357,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(17, 104);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(82, 13);
+            this.labelControl4.Size = new System.Drawing.Size(83, 13);
             this.labelControl4.TabIndex = 17;
             this.labelControl4.Text = "Instrument Type";
             // 
@@ -508,7 +508,7 @@
             this.labelControl8.Appearance.Options.UseForeColor = true;
             this.labelControl8.Location = new System.Drawing.Point(232, 189);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(84, 13);
+            this.labelControl8.Size = new System.Drawing.Size(83, 13);
             this.labelControl8.TabIndex = 20;
             this.labelControl8.Text = "Bill/Ref  Amount";
             // 
@@ -615,7 +615,7 @@
             this.labelControl13.Appearance.Options.UseForeColor = true;
             this.labelControl13.Location = new System.Drawing.Point(36, 189);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(64, 13);
+            this.labelControl13.Size = new System.Drawing.Size(63, 13);
             this.labelControl13.TabIndex = 17;
             this.labelControl13.Text = "Bill/Ref Date";
             // 
@@ -625,7 +625,7 @@
             this.labelControl11.Appearance.Options.UseForeColor = true;
             this.labelControl11.Location = new System.Drawing.Point(259, 158);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(55, 13);
+            this.labelControl11.Size = new System.Drawing.Size(54, 13);
             this.labelControl11.TabIndex = 17;
             this.labelControl11.Text = "Bill/Ref No";
             // 
@@ -691,7 +691,7 @@
             this.labelControl12.Appearance.Options.UseForeColor = true;
             this.labelControl12.Location = new System.Drawing.Point(400, 220);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(128, 13);
+            this.labelControl12.Size = new System.Drawing.Size(127, 13);
             this.labelControl12.TabIndex = 17;
             this.labelControl12.Text = "Payment to Load Balance";
             // 
@@ -1159,7 +1159,7 @@
             this.Validate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Validate.Name = "Validate";
             this.Validate.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.Validate.Size = new System.Drawing.Size(66, 23);
+            this.Validate.Size = new System.Drawing.Size(65, 23);
             this.Validate.Text = "&Validate";
             this.Validate.Click += new System.EventHandler(this.Validate_Click);
             // 
@@ -1167,6 +1167,7 @@
             // 
             this.TextAuthenticate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TextAuthenticate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TextAuthenticate.Size = new System.Drawing.Size(100, 26);
@@ -1204,7 +1205,7 @@
             this.labelControl21.Enabled = false;
             this.labelControl21.Location = new System.Drawing.Point(649, 47);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(36, 13);
+            this.labelControl21.Size = new System.Drawing.Size(35, 13);
             this.labelControl21.TabIndex = 17;
             this.labelControl21.Text = "Branch";
             // 

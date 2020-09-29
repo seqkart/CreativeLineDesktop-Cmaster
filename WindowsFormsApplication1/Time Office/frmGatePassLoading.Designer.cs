@@ -55,10 +55,10 @@ namespace WindowsFormsApplication1.Forms_Master
             this.gridControl_AttendanceData = new DevExpress.XtraGrid.GridControl();
             this.btnLoad_Data = new DevExpress.XtraEditors.SimpleButton();
             this.DtStartDate = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.txtEmpCode = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip.SuspendLayout();
@@ -328,10 +328,9 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(4, 56);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 13);
+            this.label13.Size = new System.Drawing.Size(93, 13);
             this.label13.TabIndex = 357;
             this.label13.Text = "Select Month/Year";
             // 
@@ -358,10 +357,9 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(223, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 359;
             this.label1.Text = "EmpCode";
             // 
@@ -391,7 +389,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
-            // frmGatePassLaoding
+            // FrmGatePassLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -408,7 +406,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.Controls.Add(this.SFeedingGrid);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmGatePassLaoding";
+            this.Name = "FrmGatePassLoading";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmGatePassLaoding_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
@@ -454,10 +452,10 @@ namespace WindowsFormsApplication1.Forms_Master
         private DevExpress.XtraGrid.GridControl gridControl_AttendanceData;
         private DevExpress.XtraEditors.SimpleButton btnLoad_Data;
         private DevExpress.XtraEditors.TextEdit DtStartDate;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private System.Windows.Forms.Splitter splitter1;
         private DevExpress.XtraEditors.TextEdit txtEmpCode;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
     }

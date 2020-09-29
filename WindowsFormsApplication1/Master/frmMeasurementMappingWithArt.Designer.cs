@@ -47,14 +47,14 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.LBDEPCODE = new System.Windows.Forms.Label();
+            this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
             this.txtARTID = new DevExpress.XtraEditors.TextEdit();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtMeasurement = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.txtSize = new DevExpress.XtraEditors.CheckedComboBoxEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
@@ -205,11 +205,11 @@
             // 
             // LBDEPCODE
             // 
-            this.LBDEPCODE.AutoSize = true;
-            this.LBDEPCODE.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Options.UseFont = true;
             this.LBDEPCODE.Location = new System.Drawing.Point(37, 57);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(66, 15);
+            this.LBDEPCODE.Size = new System.Drawing.Size(59, 15);
             this.LBDEPCODE.TabIndex = 774;
             this.LBDEPCODE.Text = "ART Code :";
             // 
@@ -252,11 +252,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Appearance.Options.UseFont = true;
             this.label1.Location = new System.Drawing.Point(11, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 15);
+            this.label1.Size = new System.Drawing.Size(85, 15);
             this.label1.TabIndex = 782;
             this.label1.Text = "Measurement :";
             // 
@@ -300,11 +300,11 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.Appearance.Options.UseFont = true;
             this.label3.Location = new System.Drawing.Point(68, 110);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 15);
+            this.label3.Size = new System.Drawing.Size(28, 15);
             this.label3.TabIndex = 786;
             this.label3.Text = "Size :";
             // 
@@ -371,14 +371,14 @@
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        internal System.Windows.Forms.Label LBDEPCODE;
+        internal DevExpress.XtraEditors.LabelControl LBDEPCODE;
         private DevExpress.XtraEditors.TextEdit txtARTID;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
-        internal System.Windows.Forms.Label label1;
+        internal DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.CheckedComboBoxEdit txtMeasurement;
         private DevExpress.XtraEditors.CheckedComboBoxEdit txtSize;
-        internal System.Windows.Forms.Label label3;
+        internal DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
     }
 }
