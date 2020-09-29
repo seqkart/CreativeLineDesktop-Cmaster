@@ -34,9 +34,9 @@
             this.txtDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtDeptCode = new DevExpress.XtraEditors.TextEdit();
             this.txtRemarks = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDeptCode.Properties)).BeginInit();
@@ -108,28 +108,25 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 63);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 202;
             this.label3.Text = "Description";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(30, 90);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 201;
             this.label2.Text = "Remarks";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(46, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 200;
             this.label1.Text = "Code";
             // 
@@ -169,8 +166,8 @@
         private DevExpress.XtraEditors.TextEdit txtDesc;
         private DevExpress.XtraEditors.TextEdit txtDeptCode;
         private System.Windows.Forms.RichTextBox txtRemarks;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

@@ -36,7 +36,7 @@
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label10 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.txtGRDate = new DevExpress.XtraEditors.DateEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -328,10 +328,9 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(-53, 271);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 13);
+            this.label10.Size = new System.Drawing.Size(14, 13);
             this.label10.TabIndex = 454;
             this.label10.Text = "cla";
             // 
@@ -484,7 +483,7 @@
             // 
             this.labelControl24.Location = new System.Drawing.Point(28, 131);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(59, 13);
+            this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 540;
             this.labelControl24.Text = "Transporter";
             // 
@@ -602,7 +601,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(39, 176);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(37, 13);
+            this.labelControl10.Size = new System.Drawing.Size(38, 13);
             this.labelControl10.TabIndex = 546;
             this.labelControl10.Text = "GST No";
             // 
@@ -732,7 +731,7 @@
             // 
             this.labelControl19.Location = new System.Drawing.Point(19, 264);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(44, 13);
+            this.labelControl19.Size = new System.Drawing.Size(43, 13);
             this.labelControl19.TabIndex = 549;
             this.labelControl19.Text = "BarCode";
             // 
@@ -1387,7 +1386,7 @@
             // 
             this.labelControl40.Location = new System.Drawing.Point(150, 32);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(72, 13);
+            this.labelControl40.Size = new System.Drawing.Size(73, 13);
             this.labelControl40.TabIndex = 542;
             this.labelControl40.Text = "Discount Type";
             // 
@@ -1403,7 +1402,7 @@
             // 
             this.labelControl43.Location = new System.Drawing.Point(9, 54);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(88, 13);
+            this.labelControl43.Size = new System.Drawing.Size(90, 13);
             this.labelControl43.TabIndex = 542;
             this.labelControl43.Text = "Total Tax Amount";
             // 
@@ -1419,7 +1418,7 @@
             // 
             this.labelControl38.Location = new System.Drawing.Point(28, 10);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(70, 13);
+            this.labelControl38.Size = new System.Drawing.Size(71, 13);
             this.labelControl38.TabIndex = 542;
             this.labelControl38.Text = "Taxable Value";
             // 
@@ -2110,7 +2109,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private System.Windows.Forms.Label label10;
+        private DevExpress.XtraEditors.LabelControl label10;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit dtInvoiceDate;

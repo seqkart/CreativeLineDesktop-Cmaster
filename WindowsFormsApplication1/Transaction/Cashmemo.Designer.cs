@@ -628,7 +628,7 @@
             this.labelControl28.Appearance.Options.UseFont = true;
             this.labelControl28.Location = new System.Drawing.Point(20, 105);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(100, 15);
+            this.labelControl28.Size = new System.Drawing.Size(99, 15);
             this.labelControl28.TabIndex = 1;
             this.labelControl28.Text = "Total Val After Disc";
             // 
@@ -1227,7 +1227,7 @@
             this.label47.Appearance.Options.UseFont = true;
             this.label47.Location = new System.Drawing.Point(25, 89);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(59, 15);
+            this.label47.Size = new System.Drawing.Size(58, 15);
             this.label47.TabIndex = 1;
             this.label47.Text = "Total CGST";
             // 
@@ -1307,7 +1307,7 @@
             this.labelControl30.Appearance.Options.UseFont = true;
             this.labelControl30.Location = new System.Drawing.Point(30, 109);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(54, 15);
+            this.labelControl30.Size = new System.Drawing.Size(53, 15);
             this.labelControl30.TabIndex = 1;
             this.labelControl30.Text = "Total IGST";
             // 
@@ -1317,7 +1317,7 @@
             this.label46.Appearance.Options.UseFont = true;
             this.label46.Location = new System.Drawing.Point(27, 69);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(57, 15);
+            this.label46.Size = new System.Drawing.Size(56, 15);
             this.label46.TabIndex = 1;
             this.label46.Text = "Total SGST";
             // 
@@ -1337,7 +1337,7 @@
             this.labelControl33.Appearance.Options.UseFont = true;
             this.labelControl33.Location = new System.Drawing.Point(14, 29);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(70, 15);
+            this.labelControl33.Size = new System.Drawing.Size(69, 15);
             this.labelControl33.TabIndex = 1;
             this.labelControl33.Text = "Total Tax Incl";
             // 
@@ -1410,7 +1410,7 @@
             this.labelControl13.Appearance.Options.UseFont = true;
             this.labelControl13.Location = new System.Drawing.Point(20, 126);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(98, 15);
+            this.labelControl13.Size = new System.Drawing.Size(97, 15);
             this.labelControl13.TabIndex = 724;
             this.labelControl13.Text = "Total Item Disc Val";
             // 
@@ -1432,7 +1432,7 @@
             this.labelControl26.Appearance.Options.UseFont = true;
             this.labelControl26.Location = new System.Drawing.Point(24, 85);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(96, 15);
+            this.labelControl26.Size = new System.Drawing.Size(95, 15);
             this.labelControl26.TabIndex = 1;
             this.labelControl26.Text = "Total Val Discount";
             // 
@@ -1548,7 +1548,7 @@
             this.labelControl25.Appearance.Options.UseFont = true;
             this.labelControl25.Location = new System.Drawing.Point(12, 65);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(108, 15);
+            this.labelControl25.Size = new System.Drawing.Size(107, 15);
             this.labelControl25.TabIndex = 1;
             this.labelControl25.Text = "Total Val Before Disc";
             // 
@@ -1558,7 +1558,7 @@
             this.labelControl24.Appearance.Options.UseFont = true;
             this.labelControl24.Location = new System.Drawing.Point(20, 45);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(100, 15);
+            this.labelControl24.Size = new System.Drawing.Size(99, 15);
             this.labelControl24.TabIndex = 1;
             this.labelControl24.Text = "Total Qty Returned";
             // 
@@ -1568,7 +1568,7 @@
             this.labelControl23.Appearance.Options.UseFont = true;
             this.labelControl23.Location = new System.Drawing.Point(45, 25);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(75, 15);
+            this.labelControl23.Size = new System.Drawing.Size(74, 15);
             this.labelControl23.TabIndex = 1;
             this.labelControl23.Text = "Total Qty Sold";
             // 
@@ -2043,7 +2043,7 @@
             this.ActiveGlowColor = System.Drawing.Color.Lime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1440, 797);
+            this.ClientSize = new System.Drawing.Size(1454, 811);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupControl4);

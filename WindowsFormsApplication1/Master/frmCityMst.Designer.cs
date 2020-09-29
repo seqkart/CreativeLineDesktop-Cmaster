@@ -34,12 +34,12 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtCItyName = new DevExpress.XtraEditors.TextEdit();
             this.txtCityCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtStateCode = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.txtStateName = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCItyName.Properties)).BeginInit();
@@ -108,19 +108,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(18, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 203;
             this.label3.Text = "City Name";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(20, 62);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 202;
             this.label1.Text = "City Code";
             // 
@@ -165,10 +163,9 @@
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(8, 115);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 13);
+            this.label13.Size = new System.Drawing.Size(61, 13);
             this.label13.TabIndex = 412;
             this.label13.Text = "Under State";
             // 
@@ -223,12 +220,12 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtCItyName;
         private DevExpress.XtraEditors.TextEdit txtCityCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraEditors.TextEdit txtStateCode;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TextEdit txtStateName;
     }
 }

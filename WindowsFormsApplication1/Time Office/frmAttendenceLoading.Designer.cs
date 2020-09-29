@@ -56,13 +56,13 @@ namespace WindowsFormsApplication1.Forms_Master
             this.gridControl_AttendanceData = new DevExpress.XtraGrid.GridControl();
             this.btnLoad_Data = new DevExpress.XtraEditors.SimpleButton();
             this.DtStartDate = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.txtEmpCode = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmpName = new DevExpress.XtraEditors.TextEdit();
             this.attendanceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnPrintPreview = new DevExpress.XtraEditors.SimpleButton();
@@ -347,12 +347,13 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Appearance.BackColor = System.Drawing.Color.White;
+            this.label13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Appearance.Options.UseBackColor = true;
+            this.label13.Appearance.Options.UseFont = true;
             this.label13.Location = new System.Drawing.Point(4, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 17);
+            this.label13.Size = new System.Drawing.Size(112, 17);
             this.label13.TabIndex = 357;
             this.label13.Text = "Select Month/Year";
             // 
@@ -383,12 +384,13 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.BackColor = System.Drawing.Color.White;
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.Options.UseBackColor = true;
+            this.label1.Appearance.Options.UseFont = true;
             this.label1.Location = new System.Drawing.Point(57, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 17);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 359;
             this.label1.Text = "EmpCode";
             // 
@@ -420,10 +422,9 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(59, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 362;
             this.label2.Text = "Emp Name";
             this.label2.Visible = false;
@@ -484,7 +485,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.lblemp.ToolTip = "EMPLOYEE NAME";
             this.lblemp.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // frmAttendenceLaoding
+            // frmAttendanceLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -507,7 +508,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEmpName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmAttendenceLaoding";
+            this.Name = "frmAttendanceLoading";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmExcelDataLoading_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
@@ -555,13 +556,13 @@ namespace WindowsFormsApplication1.Forms_Master
         private DevExpress.XtraGrid.GridControl gridControl_AttendanceData;
         private DevExpress.XtraEditors.SimpleButton btnLoad_Data;
         private DevExpress.XtraEditors.TextEdit DtStartDate;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private System.Windows.Forms.Splitter splitter1;
         private DevExpress.XtraEditors.TextEdit txtEmpCode;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtEmpName;
         private System.Windows.Forms.BindingSource attendanceBindingSource;
         private DevExpress.XtraEditors.SimpleButton btnPrintPreview;

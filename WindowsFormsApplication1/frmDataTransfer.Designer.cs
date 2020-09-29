@@ -44,13 +44,13 @@
             this.STableGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtSourceDataBase = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtSourcePassword = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtSourceUserName = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtSourceServer = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnDestination = new DevExpress.XtraEditors.SimpleButton();
             this.DColumnGrid = new DevExpress.XtraGrid.GridControl();
@@ -64,20 +64,20 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtDestinationUserName = new DevExpress.XtraEditors.TextEdit();
             this.txtDestinationDataBase = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.txtDestinationServer = new DevExpress.XtraEditors.TextEdit();
             this.txtDestinationPassword = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new DevExpress.XtraEditors.LabelControl();
+            this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.marqueeProgressBarControl1 = new DevExpress.XtraEditors.MarqueeProgressBarControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.txtSourceConnection = new System.Windows.Forms.RichTextBox();
             this.txtDestinationConnection = new System.Windows.Forms.RichTextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblTotalRecordsToTransfer = new System.Windows.Forms.Label();
+            this.label10 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalRecordsToTransfer = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -272,10 +272,9 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(51, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.Size = new System.Drawing.Size(48, 13);
             this.label5.TabIndex = 203;
             this.label5.Text = "Database";
             // 
@@ -293,10 +292,9 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(50, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 203;
             this.label4.Text = "Password";
             // 
@@ -313,10 +311,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(44, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 203;
             this.label2.Text = "User Name";
             // 
@@ -333,10 +330,9 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(68, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 13);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 203;
             this.label3.Text = "Server";
             // 
@@ -486,19 +482,17 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(48, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(31, 13);
             this.label1.TabIndex = 203;
             this.label1.Text = "Server";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(31, 116);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.Size = new System.Drawing.Size(48, 13);
             this.label8.TabIndex = 203;
             this.label8.Text = "Database";
             // 
@@ -527,19 +521,17 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(24, 64);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 13);
+            this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 203;
             this.label6.Text = "User Name";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(30, 90);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 203;
             this.label7.Text = "Password";
             // 
@@ -573,10 +565,9 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(988, 387);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 210;
             this.label9.Text = "Source";
             // 
@@ -600,19 +591,17 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(977, 462);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 13);
+            this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 216;
             this.label10.Text = "Destination";
             // 
             // lblTotalRecordsToTransfer
             // 
-            this.lblTotalRecordsToTransfer.AutoSize = true;
             this.lblTotalRecordsToTransfer.Location = new System.Drawing.Point(831, 360);
             this.lblTotalRecordsToTransfer.Name = "lblTotalRecordsToTransfer";
-            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(76, 13);
+            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(70, 13);
             this.lblTotalRecordsToTransfer.TabIndex = 210;
             this.lblTotalRecordsToTransfer.Text = "Total Records";
             // 
@@ -685,13 +674,13 @@
         private DevExpress.XtraGrid.Views.Grid.GridView STableGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraEditors.TextEdit txtSourceDataBase;
-        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraEditors.TextEdit txtSourcePassword;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtSourceUserName;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtSourceServer;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton btnDestination;
         private DevExpress.XtraGrid.GridControl DColumnGrid;
@@ -705,19 +694,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.TextEdit txtDestinationUserName;
         private DevExpress.XtraEditors.TextEdit txtDestinationDataBase;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label1;
+        private DevExpress.XtraEditors.LabelControl label8;
         private DevExpress.XtraEditors.TextEdit txtDestinationServer;
         private DevExpress.XtraEditors.TextEdit txtDestinationPassword;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.LabelControl label6;
+        private DevExpress.XtraEditors.LabelControl label7;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.MarqueeProgressBarControl marqueeProgressBarControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.LabelControl label9;
         private System.Windows.Forms.RichTextBox txtSourceConnection;
         private System.Windows.Forms.RichTextBox txtDestinationConnection;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblTotalRecordsToTransfer;
+        private DevExpress.XtraEditors.LabelControl label10;
+        private DevExpress.XtraEditors.LabelControl lblTotalRecordsToTransfer;
     }
 }

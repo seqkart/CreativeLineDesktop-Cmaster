@@ -52,6 +52,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnPrint = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
@@ -59,7 +60,6 @@
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.btnView = new System.Windows.Forms.ToolStripButton();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DtEndDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEndDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -244,6 +244,14 @@
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 5;
             // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "LoanInstlmnt";
+            this.gridColumn6.FieldName = "LoanInstlmnt";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 6;
+            // 
             // Menu_ToolStrip
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
@@ -322,14 +330,6 @@
             this.splitter1.Size = new System.Drawing.Size(804, 82);
             this.splitter1.TabIndex = 196;
             this.splitter1.TabStop = false;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "LoanInstlmnt";
-            this.gridColumn6.FieldName = "LoanInstlmnt";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 6;
             // 
             // frmLoanMst
             // 

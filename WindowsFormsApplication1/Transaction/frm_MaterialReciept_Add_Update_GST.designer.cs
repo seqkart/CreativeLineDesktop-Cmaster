@@ -420,7 +420,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(32, 37);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(46, 13);
+            this.labelControl2.Size = new System.Drawing.Size(47, 13);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Doc Type";
             // 
@@ -436,7 +436,7 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(682, 39);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(49, 13);
+            this.labelControl6.Size = new System.Drawing.Size(48, 13);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Behalf Of";
             // 
@@ -535,7 +535,7 @@
             this.Validate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Validate.Name = "Validate";
             this.Validate.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.Validate.Size = new System.Drawing.Size(66, 23);
+            this.Validate.Size = new System.Drawing.Size(65, 23);
             this.Validate.Text = "&Validate";
             this.Validate.Click += new System.EventHandler(this.Validate_Click);
             // 
@@ -543,6 +543,7 @@
             // 
             this.TextAuthenticate.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.TextAuthenticate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TextAuthenticate.Size = new System.Drawing.Size(100, 26);
@@ -1022,7 +1023,7 @@
             // 
             this.labelControl46.Location = new System.Drawing.Point(986, 176);
             this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(42, 13);
+            this.labelControl46.Size = new System.Drawing.Size(43, 13);
             this.labelControl46.TabIndex = 14;
             this.labelControl46.Text = "IGSTAmt";
             // 
@@ -1030,7 +1031,7 @@
             // 
             this.labelControl16.Location = new System.Drawing.Point(962, 153);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(70, 13);
+            this.labelControl16.Size = new System.Drawing.Size(71, 13);
             this.labelControl16.TabIndex = 14;
             this.labelControl16.Text = "CGST Amount";
             // 
@@ -1038,7 +1039,7 @@
             // 
             this.labelControl29.Location = new System.Drawing.Point(964, 199);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(69, 13);
+            this.labelControl29.Size = new System.Drawing.Size(70, 13);
             this.labelControl29.TabIndex = 23;
             this.labelControl29.Text = "Total Amount";
             // 
@@ -1046,7 +1047,7 @@
             // 
             this.labelControl22.Location = new System.Drawing.Point(963, 130);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(69, 13);
+            this.labelControl22.Size = new System.Drawing.Size(70, 13);
             this.labelControl22.TabIndex = 15;
             this.labelControl22.Text = "SGST Amount";
             // 
@@ -1054,7 +1055,7 @@
             // 
             this.labelControl37.Location = new System.Drawing.Point(964, 107);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(64, 13);
+            this.labelControl37.Size = new System.Drawing.Size(65, 13);
             this.labelControl37.TabIndex = 23;
             this.labelControl37.Text = "Taxable Amt.";
             // 
@@ -1078,7 +1079,7 @@
             // 
             this.labelControl36.Location = new System.Drawing.Point(48, 196);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(62, 13);
+            this.labelControl36.Size = new System.Drawing.Size(63, 13);
             this.labelControl36.TabIndex = 21;
             this.labelControl36.Text = "Trans. Name";
             // 
@@ -1110,7 +1111,7 @@
             // 
             this.labelControl30.Location = new System.Drawing.Point(586, 143);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(77, 13);
+            this.labelControl30.Size = new System.Drawing.Size(76, 13);
             this.labelControl30.TabIndex = 21;
             this.labelControl30.Text = "Amount on Bill";
             // 
@@ -1118,7 +1119,7 @@
             // 
             this.labelControl18.Location = new System.Drawing.Point(176, 143);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(133, 13);
+            this.labelControl18.Size = new System.Drawing.Size(132, 13);
             this.labelControl18.TabIndex = 1;
             this.labelControl18.Text = "Invoice Number as  on Bill";
             // 
@@ -1126,7 +1127,7 @@
             // 
             this.labelControl14.Location = new System.Drawing.Point(51, 143);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(46, 13);
+            this.labelControl14.Size = new System.Drawing.Size(47, 13);
             this.labelControl14.TabIndex = 22;
             this.labelControl14.Text = "Doc.Type";
             // 
@@ -1375,7 +1376,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(31, 100);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(41, 13);
+            this.labelControl8.Size = new System.Drawing.Size(40, 13);
             this.labelControl8.TabIndex = 23;
             this.labelControl8.Text = "Doc Qty";
             // 
@@ -1463,7 +1464,7 @@
             // 
             this.labelControl51.Location = new System.Drawing.Point(473, 155);
             this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(48, 13);
+            this.labelControl51.Size = new System.Drawing.Size(49, 13);
             this.labelControl51.TabIndex = 17;
             this.labelControl51.Text = "Total Amt";
             // 
@@ -1471,7 +1472,7 @@
             // 
             this.labelControl43.Location = new System.Drawing.Point(278, 100);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(82, 13);
+            this.labelControl43.Size = new System.Drawing.Size(83, 13);
             this.labelControl43.TabIndex = 17;
             this.labelControl43.Text = "Taxable Amount";
             // 
@@ -2147,7 +2148,7 @@
             // 
             this.labelControl49.Location = new System.Drawing.Point(308, 22);
             this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(49, 13);
+            this.labelControl49.Size = new System.Drawing.Size(48, 13);
             this.labelControl49.TabIndex = 40;
             this.labelControl49.Text = "Stock Qty";
             // 
@@ -2739,7 +2740,7 @@
             // 
             this.labelControl19.Location = new System.Drawing.Point(400, 116);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(69, 13);
+            this.labelControl19.Size = new System.Drawing.Size(70, 13);
             this.labelControl19.TabIndex = 25;
             this.labelControl19.Text = "Supplier Type";
             // 
@@ -2810,7 +2811,7 @@
             // 
             this.labelControl23.Location = new System.Drawing.Point(32, 118);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(30, 13);
+            this.labelControl23.Size = new System.Drawing.Size(31, 13);
             this.labelControl23.TabIndex = 0;
             this.labelControl23.Text = "GSTIN";
             // 

@@ -37,11 +37,11 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
-            this.lblTotQty = new System.Windows.Forms.Label();
+            this.lblTotQty = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtLocation = new DevExpress.XtraEditors.TextEdit();
-            this.lblBox = new System.Windows.Forms.Label();
+            this.lblBox = new DevExpress.XtraEditors.LabelControl();
             this.txtBarCode = new DevExpress.XtraEditors.TextEdit();
             this.txtMemoDate = new DevExpress.XtraEditors.DateEdit();
             this.txtMemoNo = new DevExpress.XtraEditors.TextEdit();
@@ -163,12 +163,13 @@
             // 
             // lblTotQty
             // 
-            this.lblTotQty.AutoSize = true;
-            this.lblTotQty.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotQty.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotQty.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotQty.Appearance.Options.UseBackColor = true;
+            this.lblTotQty.Appearance.Options.UseFont = true;
             this.lblTotQty.Location = new System.Drawing.Point(597, 68);
             this.lblTotQty.Name = "lblTotQty";
-            this.lblTotQty.Size = new System.Drawing.Size(104, 112);
+            this.lblTotQty.Size = new System.Drawing.Size(57, 112);
             this.lblTotQty.TabIndex = 740;
             this.lblTotQty.Text = "0";
             // 
@@ -202,12 +203,13 @@
             // 
             // lblBox
             // 
-            this.lblBox.AutoSize = true;
-            this.lblBox.BackColor = System.Drawing.Color.Transparent;
-            this.lblBox.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBox.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBox.Appearance.Options.UseBackColor = true;
+            this.lblBox.Appearance.Options.UseFont = true;
             this.lblBox.Location = new System.Drawing.Point(392, 68);
             this.lblBox.Name = "lblBox";
-            this.lblBox.Size = new System.Drawing.Size(104, 112);
+            this.lblBox.Size = new System.Drawing.Size(57, 112);
             this.lblBox.TabIndex = 736;
             this.lblBox.Text = "0";
             // 
@@ -516,11 +518,11 @@
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.PictureEdit ArticleImageBox;
-        internal System.Windows.Forms.Label lblTotQty;
+        internal DevExpress.XtraEditors.LabelControl lblTotQty;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtLocation;
-        internal System.Windows.Forms.Label lblBox;
+        internal DevExpress.XtraEditors.LabelControl lblBox;
         private DevExpress.XtraEditors.TextEdit txtBarCode;
         private DevExpress.XtraEditors.DateEdit txtMemoDate;
         private DevExpress.XtraEditors.TextEdit txtMemoNo;

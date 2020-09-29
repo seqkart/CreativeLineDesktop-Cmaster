@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddressBook));
-            this.label6 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.label6 = new DevExpress.XtraEditors.LabelControl();
+            this.label16 = new DevExpress.XtraEditors.LabelControl();
+            this.label17 = new DevExpress.XtraEditors.LabelControl();
+            this.label18 = new DevExpress.XtraEditors.LabelControl();
+            this.label19 = new DevExpress.XtraEditors.LabelControl();
+            this.label22 = new DevExpress.XtraEditors.LabelControl();
+            this.label23 = new DevExpress.XtraEditors.LabelControl();
+            this.label24 = new DevExpress.XtraEditors.LabelControl();
+            this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
@@ -54,18 +54,18 @@
             this.txtCompany = new DevExpress.XtraEditors.TextEdit();
             this.txtEmailId = new DevExpress.XtraEditors.TextEdit();
             this.txtContactNo = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddressBookCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtTitle = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtCountry = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.txtCityName = new DevExpress.XtraEditors.TextEdit();
             this.txtState = new DevExpress.XtraEditors.TextEdit();
             this.txtCityCode = new DevExpress.XtraEditors.TextEdit();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
+            this.Label5 = new DevExpress.XtraEditors.LabelControl();
+            this.Label4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -90,100 +90,109 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label6.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label6.Location = new System.Drawing.Point(60, 255);
+            this.label6.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label6.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label6.Appearance.Options.UseFont = true;
+            this.label6.Appearance.Options.UseForeColor = true;
+            this.label6.Location = new System.Drawing.Point(65, 255);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 14);
+            this.label6.Size = new System.Drawing.Size(58, 14);
             this.label6.TabIndex = 27;
             this.label6.Text = "Land Mark :";
             // 
             // label16
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label16.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label16.Location = new System.Drawing.Point(66, 360);
+            this.label16.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label16.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label16.Appearance.Options.UseFont = true;
+            this.label16.Appearance.Options.UseForeColor = true;
+            this.label16.Location = new System.Drawing.Point(71, 360);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 14);
+            this.label16.Size = new System.Drawing.Size(52, 14);
             this.label16.TabIndex = 26;
             this.label16.Text = "Company :";
             // 
             // label17
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label17.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label17.Location = new System.Drawing.Point(64, 229);
+            this.label17.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label17.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label17.Appearance.Options.UseFont = true;
+            this.label17.Appearance.Options.UseForeColor = true;
+            this.label17.Location = new System.Drawing.Point(69, 229);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 14);
+            this.label17.Size = new System.Drawing.Size(54, 14);
             this.label17.TabIndex = 25;
             this.label17.Text = "Address 2 :";
             // 
             // label18
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label18.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label18.Location = new System.Drawing.Point(64, 203);
+            this.label18.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label18.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label18.Appearance.Options.UseFont = true;
+            this.label18.Appearance.Options.UseForeColor = true;
+            this.label18.Location = new System.Drawing.Point(69, 203);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 14);
+            this.label18.Size = new System.Drawing.Size(54, 14);
             this.label18.TabIndex = 24;
             this.label18.Text = "Address 1 :";
             // 
             // label19
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label19.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label19.Location = new System.Drawing.Point(71, 177);
+            this.label19.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label19.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label19.Appearance.Options.UseFont = true;
+            this.label19.Appearance.Options.UseForeColor = true;
+            this.label19.Location = new System.Drawing.Point(78, 177);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 14);
+            this.label19.Size = new System.Drawing.Size(45, 14);
             this.label19.TabIndex = 29;
             this.label19.Text = "Address :";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label22.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label22.Location = new System.Drawing.Point(47, 101);
+            this.label22.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label22.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label22.Appearance.Options.UseFont = true;
+            this.label22.Appearance.Options.UseForeColor = true;
+            this.label22.Location = new System.Drawing.Point(54, 101);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(76, 14);
+            this.label22.Size = new System.Drawing.Size(69, 14);
             this.label22.TabIndex = 18;
             this.label22.Text = "Select Group :";
             // 
             // label23
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label23.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label23.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label23.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label23.Appearance.Options.UseFont = true;
+            this.label23.Appearance.Options.UseForeColor = true;
             this.label23.Location = new System.Drawing.Point(428, 125);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 14);
+            this.label23.Size = new System.Drawing.Size(53, 14);
             this.label23.TabIndex = 17;
             this.label23.Text = "Last Name";
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label24.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label24.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label24.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label24.Appearance.Options.UseFont = true;
+            this.label24.Appearance.Options.UseForeColor = true;
             this.label24.Location = new System.Drawing.Point(157, 130);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(29, 14);
+            this.label24.Size = new System.Drawing.Size(22, 14);
             this.label24.TabIndex = 20;
             this.label24.Text = "Title";
             // 
             // label25
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label25.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label25.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label25.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label25.Appearance.Options.UseFont = true;
+            this.label25.Appearance.Options.UseForeColor = true;
             this.label25.Location = new System.Drawing.Point(275, 130);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(62, 14);
+            this.label25.Size = new System.Drawing.Size(55, 14);
             this.label25.TabIndex = 23;
             this.label25.Text = "First Name";
             // 
@@ -365,23 +374,25 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label1.Location = new System.Drawing.Point(75, 418);
+            this.label1.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Appearance.Options.UseForeColor = true;
+            this.label1.Location = new System.Drawing.Point(80, 418);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 14);
+            this.label1.Size = new System.Drawing.Size(43, 14);
             this.label1.TabIndex = 389;
             this.label1.Text = "EmailId :";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label2.Location = new System.Drawing.Point(60, 392);
+            this.label2.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label2.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Appearance.Options.UseFont = true;
+            this.label2.Appearance.Options.UseForeColor = true;
+            this.label2.Location = new System.Drawing.Point(63, 392);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 14);
+            this.label2.Size = new System.Drawing.Size(60, 14);
             this.label2.TabIndex = 392;
             this.label2.Text = "Contact No :";
             // 
@@ -399,12 +410,13 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label3.Location = new System.Drawing.Point(16, 75);
+            this.label3.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Appearance.Options.UseFont = true;
+            this.label3.Appearance.Options.UseForeColor = true;
+            this.label3.Location = new System.Drawing.Point(23, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 14);
+            this.label3.Size = new System.Drawing.Size(100, 14);
             this.label3.TabIndex = 393;
             this.label3.Text = "Address Book Code :";
             // 
@@ -436,11 +448,11 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.Appearance.Options.UseFont = true;
             this.label12.Location = new System.Drawing.Point(63, 332);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 15);
+            this.label12.Size = new System.Drawing.Size(60, 15);
             this.label12.TabIndex = 399;
             this.label12.Text = "COUNTRY :";
             // 
@@ -479,21 +491,21 @@
             // 
             // Label5
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label5.Location = new System.Drawing.Point(88, 306);
+            this.Label5.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label5.Appearance.Options.UseFont = true;
+            this.Label5.Location = new System.Drawing.Point(84, 306);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(44, 15);
+            this.Label5.Size = new System.Drawing.Size(39, 15);
             this.Label5.TabIndex = 395;
             this.Label5.Text = "STATE :";
             // 
             // Label4
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label4.Location = new System.Drawing.Point(92, 282);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Options.UseFont = true;
+            this.Label4.Location = new System.Drawing.Point(96, 282);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(33, 15);
+            this.Label4.Size = new System.Drawing.Size(27, 15);
             this.Label4.TabIndex = 394;
             this.Label4.Text = "CITY:";
             // 
@@ -570,15 +582,15 @@
         }
 
         #endregion
-        internal System.Windows.Forms.Label label6;
-        internal System.Windows.Forms.Label label16;
-        internal System.Windows.Forms.Label label17;
-        internal System.Windows.Forms.Label label18;
-        internal System.Windows.Forms.Label label19;
-        internal System.Windows.Forms.Label label22;
-        internal System.Windows.Forms.Label label23;
-        internal System.Windows.Forms.Label label24;
-        internal System.Windows.Forms.Label label25;
+        internal DevExpress.XtraEditors.LabelControl label6;
+        internal DevExpress.XtraEditors.LabelControl label16;
+        internal DevExpress.XtraEditors.LabelControl label17;
+        internal DevExpress.XtraEditors.LabelControl label18;
+        internal DevExpress.XtraEditors.LabelControl label19;
+        internal DevExpress.XtraEditors.LabelControl label22;
+        internal DevExpress.XtraEditors.LabelControl label23;
+        internal DevExpress.XtraEditors.LabelControl label24;
+        internal DevExpress.XtraEditors.LabelControl label25;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
@@ -595,17 +607,17 @@
         private DevExpress.XtraEditors.TextEdit txtCompany;
         private DevExpress.XtraEditors.TextEdit txtEmailId;
         private DevExpress.XtraEditors.TextEdit txtContactNo;
-        internal System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.Label label2;
+        internal DevExpress.XtraEditors.LabelControl label1;
+        internal DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtAddressBookCode;
-        internal System.Windows.Forms.Label label3;
+        internal DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.ComboBoxEdit txtTitle;
         private DevExpress.XtraEditors.TextEdit txtCountry;
-        internal System.Windows.Forms.Label label12;
+        internal DevExpress.XtraEditors.LabelControl label12;
         private DevExpress.XtraEditors.TextEdit txtCityName;
         private DevExpress.XtraEditors.TextEdit txtState;
         private DevExpress.XtraEditors.TextEdit txtCityCode;
-        internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.Label Label4;
+        internal DevExpress.XtraEditors.LabelControl Label5;
+        internal DevExpress.XtraEditors.LabelControl Label4;
     }
 }

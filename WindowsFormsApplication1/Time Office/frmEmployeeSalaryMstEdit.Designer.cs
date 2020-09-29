@@ -30,7 +30,7 @@
         {
             this.txtEmpCode = new DevExpress.XtraEditors.TextEdit();
             this.txtEmpName = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtPetrol1 = new DevExpress.XtraEditors.TextEdit();
             this.txtPetrol = new DevExpress.XtraEditors.TextEdit();
             this.txtConvenyance1 = new DevExpress.XtraEditors.TextEdit();
@@ -42,9 +42,9 @@
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.txtBasicPay = new DevExpress.XtraEditors.TextEdit();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtFHName = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -53,7 +53,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtTotal2 = new DevExpress.XtraEditors.TextEdit();
             this.txtTotal1 = new DevExpress.XtraEditors.TextEdit();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label15 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmpSplAlw = new DevExpress.XtraEditors.TextEdit();
             this.txtEmpSplAlw1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).BeginInit();
@@ -102,10 +102,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 202);
+            this.label2.Location = new System.Drawing.Point(58, 202);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 228;
             this.label2.Text = "Petrol";
             // 
@@ -224,7 +223,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(55, 71);
+            this.labelControl1.Location = new System.Drawing.Point(61, 71);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(27, 13);
             this.labelControl1.TabIndex = 233;
@@ -250,7 +249,7 @@
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(51, 150);
+            this.labelControl22.Location = new System.Drawing.Point(57, 150);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(31, 13);
             this.labelControl22.TabIndex = 227;
@@ -276,7 +275,7 @@
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(37, 122);
+            this.labelControl23.Location = new System.Drawing.Point(43, 122);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(45, 13);
             this.labelControl23.TabIndex = 226;
@@ -284,10 +283,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 180);
+            this.label1.Location = new System.Drawing.Point(33, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 13);
+            this.label1.Size = new System.Drawing.Size(55, 13);
             this.label1.TabIndex = 225;
             this.label1.Text = "Convyance";
             // 
@@ -305,10 +303,9 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 99);
+            this.label3.Location = new System.Drawing.Point(38, 99);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 236;
             this.label3.Text = "F/H Name";
             // 
@@ -382,7 +379,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(22, 45);
+            this.labelControl3.Location = new System.Drawing.Point(28, 45);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(60, 13);
             this.labelControl3.TabIndex = 239;
@@ -390,7 +387,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(56, 256);
+            this.labelControl4.Location = new System.Drawing.Point(62, 256);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(26, 13);
             this.labelControl4.TabIndex = 351;
@@ -438,10 +435,9 @@
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(3, 234);
+            this.label15.Location = new System.Drawing.Point(16, 234);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 13);
+            this.label15.Size = new System.Drawing.Size(72, 13);
             this.label15.TabIndex = 364;
             this.label15.Text = "Spl Allowance";
             // 
@@ -545,7 +541,7 @@
         #endregion
         private DevExpress.XtraEditors.TextEdit txtEmpCode;
         private DevExpress.XtraEditors.TextEdit txtEmpName;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtPetrol1;
         private DevExpress.XtraEditors.TextEdit txtPetrol;
         private DevExpress.XtraEditors.TextEdit txtConvenyance1;
@@ -557,9 +553,9 @@
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.TextEdit txtBasicPay;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtFHName;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.LabelControl label3;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
@@ -568,7 +564,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtTotal2;
         private DevExpress.XtraEditors.TextEdit txtTotal1;
-        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraEditors.LabelControl label15;
         private DevExpress.XtraEditors.TextEdit txtEmpSplAlw;
         private DevExpress.XtraEditors.TextEdit txtEmpSplAlw1;
     }

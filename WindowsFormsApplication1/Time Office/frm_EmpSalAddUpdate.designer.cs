@@ -37,7 +37,7 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.lblDocCode = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.label27 = new System.Windows.Forms.Label();
+            this.label27 = new DevExpress.XtraEditors.LabelControl();
             this.txtPaymentMode = new DevExpress.XtraEditors.ComboBoxEdit();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.TextCodeDesc = new DevExpress.XtraEditors.TextEdit();
@@ -210,10 +210,9 @@
             // 
             // label27
             // 
-            this.label27.AutoSize = true;
             this.label27.Location = new System.Drawing.Point(121, 89);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(83, 13);
+            this.label27.Size = new System.Drawing.Size(76, 13);
             this.label27.TabIndex = 253;
             this.label27.Text = "Payment Mode";
             // 
@@ -1025,7 +1024,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.TextEdit txtMiscDedNew;
         private DevExpress.XtraEditors.LabelControl labelControl30;
-        private System.Windows.Forms.Label label27;
+        private DevExpress.XtraEditors.LabelControl label27;
         private DevExpress.XtraEditors.ComboBoxEdit txtPaymentMode;
         private DevExpress.XtraEditors.TextEdit TextFlexiAlw;
         private DevExpress.XtraEditors.LabelControl labelControl35;

@@ -36,12 +36,12 @@
             this.txtSGrpCode = new DevExpress.XtraEditors.TextEdit();
             this.txtSGrpDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtGrpCode = new DevExpress.XtraEditors.TextEdit();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new DevExpress.XtraEditors.LabelControl();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtHSNCode = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrpDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGrpCode.Properties)).BeginInit();
@@ -129,37 +129,33 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(63, 107);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.Size = new System.Drawing.Size(60, 13);
             this.label9.TabIndex = 240;
             this.label9.Text = "Group Desc";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(40, 133);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 13);
+            this.label8.Size = new System.Drawing.Size(83, 13);
             this.label8.TabIndex = 239;
             this.label8.Text = "Sub Group Desc";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(37, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 237;
             this.label3.Text = "Sub Group Code";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(60, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 236;
             this.label1.Text = "Group Code";
             // 
@@ -174,10 +170,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(74, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 243;
             this.label2.Text = "HSNCode";
             // 
@@ -227,11 +222,11 @@
         private DevExpress.XtraEditors.TextEdit txtSGrpCode;
         private DevExpress.XtraEditors.TextEdit txtSGrpDesc;
         private DevExpress.XtraEditors.TextEdit txtGrpCode;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label9;
+        private DevExpress.XtraEditors.LabelControl label8;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtHSNCode;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
     }
 }

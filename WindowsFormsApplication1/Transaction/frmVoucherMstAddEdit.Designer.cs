@@ -48,25 +48,25 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.dtInvoiceDate = new DevExpress.XtraEditors.DateEdit();
             this.txtAmount = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtSerialNo = new DevExpress.XtraEditors.TextEdit();
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtVuDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtAccName = new DevExpress.XtraEditors.TextEdit();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.txtAccCode = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6 = new DevExpress.XtraEditors.LabelControl();
             this.BtnUndo = new DevExpress.XtraEditors.SimpleButton();
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
             this.txtVuType = new DevExpress.XtraEditors.TextEdit();
             this.txtDrCr = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtNarration = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.txtChqNo = new DevExpress.XtraEditors.TextEdit();
             this.txtChqDate = new DevExpress.XtraEditors.DateEdit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
@@ -300,20 +300,18 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(48, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 420;
             this.label2.Text = "Date";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(56, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 438;
             this.label4.Text = "Amount";
             // 
@@ -337,10 +335,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(476, 51);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 418;
             this.label1.Text = "CCI No";
             // 
@@ -368,10 +365,9 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(56, 106);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 13);
+            this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 439;
             this.label7.Text = "Account";
             // 
@@ -387,10 +383,9 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(57, 77);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 436;
             this.label6.Text = "Vu Type";
             // 
@@ -469,10 +464,9 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(208, 132);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 453;
             this.label3.Text = "DR/CR";
             // 
@@ -489,19 +483,17 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(58, 158);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
+            this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 455;
             this.label5.Text = "Narration";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(476, 132);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.Size = new System.Drawing.Size(45, 13);
             this.label8.TabIndex = 456;
             this.label8.Text = "Chq Info";
             // 
@@ -611,25 +603,25 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.DateEdit dtInvoiceDate;
         private DevExpress.XtraEditors.TextEdit txtAmount;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtSerialNo;
         private DevExpress.XtraEditors.TextEdit txtserial;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtVuDesc;
         private DevExpress.XtraEditors.TextEdit txtAccName;
-        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.LabelControl label7;
         private DevExpress.XtraEditors.TextEdit txtAccCode;
-        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.LabelControl label6;
         private DevExpress.XtraEditors.SimpleButton BtnUndo;
         private DevExpress.XtraEditors.SimpleButton BtnDelete;
         private DevExpress.XtraEditors.SimpleButton BtnOK;
         private DevExpress.XtraEditors.TextEdit txtVuType;
         private DevExpress.XtraEditors.TextEdit txtDrCr;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.TextEdit txtNarration;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label5;
+        private DevExpress.XtraEditors.LabelControl label8;
         private DevExpress.XtraEditors.TextEdit txtChqNo;
         private DevExpress.XtraEditors.DateEdit txtChqDate;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;

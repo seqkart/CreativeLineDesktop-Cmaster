@@ -45,28 +45,28 @@
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView6 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtReqQuantity = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtProductCode2 = new DevExpress.XtraEditors.TextEdit();
             this.txtProductName2 = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrdAsgnCode2 = new DevExpress.XtraEditors.TextEdit();
             this.BtnUndo = new DevExpress.XtraEditors.SimpleButton();
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
-            this.label30 = new System.Windows.Forms.Label();
+            this.label30 = new DevExpress.XtraEditors.LabelControl();
             this.txtProductCode1 = new DevExpress.XtraEditors.TextEdit();
             this.txtProductName1 = new DevExpress.XtraEditors.TextEdit();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrdAsgnCode1 = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBomNo = new DevExpress.XtraEditors.TextEdit();
             this.txtProductionBag = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtRemarks = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new DevExpress.XtraEditors.LabelControl();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.txtActive = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -257,10 +257,9 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(32, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 13);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 400;
             this.label4.Text = "Req Quantity";
             // 
@@ -275,10 +274,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(553, 118);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 13);
+            this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 399;
             this.label2.Text = "Product Code";
             // 
@@ -306,10 +304,9 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(54, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
+            this.label3.Size = new System.Drawing.Size(40, 13);
             this.label3.TabIndex = 397;
             this.label3.Text = "Product";
             // 
@@ -377,10 +374,9 @@
             // 
             // label30
             // 
-            this.label30.AutoSize = true;
             this.label30.Location = new System.Drawing.Point(553, 67);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(77, 13);
+            this.label30.Size = new System.Drawing.Size(70, 13);
             this.label30.TabIndex = 382;
             this.label30.Text = "Product Code";
             // 
@@ -408,10 +404,9 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(54, 67);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.Size = new System.Drawing.Size(40, 13);
             this.label7.TabIndex = 380;
             this.label7.Text = "Product";
             // 
@@ -429,10 +424,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(54, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 384;
             this.label1.Text = "Bomm No";
             // 
@@ -458,10 +452,9 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(546, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 13);
+            this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 386;
             this.label5.Text = "Production Bag";
             // 
@@ -477,19 +470,17 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(54, 93);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 388;
             this.label6.Text = "Remarks";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(588, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 13);
+            this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 390;
             this.label8.Text = "Active";
             // 
@@ -576,35 +567,35 @@
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private System.Windows.Forms.Label label30;
+        private DevExpress.XtraEditors.LabelControl label30;
         private DevExpress.XtraEditors.TextEdit txtProductCode1;
         private DevExpress.XtraEditors.TextEdit txtProductName1;
-        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.LabelControl label7;
         private DevExpress.XtraEditors.TextEdit txtPrdAsgnCode1;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtBomNo;
         private DevExpress.XtraGrid.GridControl InfoGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView InfoGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtProductCode2;
         private DevExpress.XtraEditors.TextEdit txtProductName2;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.TextEdit txtPrdAsgnCode2;
         private DevExpress.XtraEditors.SimpleButton BtnUndo;
         private DevExpress.XtraEditors.SimpleButton BtnDelete;
         private DevExpress.XtraEditors.SimpleButton BtnOK;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtReqQuantity;
         private DevExpress.XtraEditors.TextEdit txtProductionBag;
-        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.TextEdit txtRemarks;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label6;
+        private DevExpress.XtraEditors.LabelControl label8;
         private DevExpress.XtraEditors.TextEdit txtActive;
     }
 }

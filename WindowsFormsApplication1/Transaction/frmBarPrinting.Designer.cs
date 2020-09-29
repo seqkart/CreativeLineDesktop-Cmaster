@@ -74,7 +74,7 @@
             this.txtDeptCode = new DevExpress.XtraEditors.TextEdit();
             this.txtDeptDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtSysID = new DevExpress.XtraEditors.TextEdit();
-            this.Label15 = new System.Windows.Forms.Label();
+            this.Label15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.RBPUR = new System.Windows.Forms.RadioButton();
             this.ChkFixedBarCode = new System.Windows.Forms.CheckBox();
@@ -617,11 +617,11 @@
             // 
             // Label15
             // 
-            this.Label15.AutoSize = true;
-            this.Label15.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label15.Appearance.Options.UseFont = true;
             this.Label15.Location = new System.Drawing.Point(45, 39);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(53, 18);
+            this.Label15.Size = new System.Drawing.Size(45, 18);
             this.Label15.TabIndex = 698;
             this.Label15.Text = "SYS ID :";
             this.Label15.Visible = false;
@@ -778,7 +778,7 @@
         private DevExpress.XtraEditors.TextEdit txtDeptCode;
         private DevExpress.XtraEditors.TextEdit txtDeptDesc;
         private DevExpress.XtraEditors.TextEdit txtSysID;
-        internal System.Windows.Forms.Label Label15;
+        internal DevExpress.XtraEditors.LabelControl Label15;
         private DevExpress.XtraEditors.LabelControl labelControl6;
         internal System.Windows.Forms.RadioButton RBPUR;
         internal System.Windows.Forms.CheckBox ChkFixedBarCode;

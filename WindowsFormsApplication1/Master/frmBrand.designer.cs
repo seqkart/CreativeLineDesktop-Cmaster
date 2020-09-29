@@ -35,9 +35,9 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtBrandName = new DevExpress.XtraEditors.TextEdit();
             this.txtSysID = new DevExpress.XtraEditors.TextEdit();
-            this.Label17 = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.Label15 = new System.Windows.Forms.Label();
+            this.Label17 = new DevExpress.XtraEditors.LabelControl();
+            this.Label16 = new DevExpress.XtraEditors.LabelControl();
+            this.Label15 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandAlias.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandName.Properties)).BeginInit();
@@ -109,31 +109,31 @@
             // 
             // Label17
             // 
-            this.Label17.AutoSize = true;
-            this.Label17.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label17.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label17.Appearance.Options.UseFont = true;
             this.Label17.Location = new System.Drawing.Point(13, 87);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(101, 18);
+            this.Label17.Size = new System.Drawing.Size(93, 18);
             this.Label17.TabIndex = 377;
             this.Label17.Text = "BRAND NAME :";
             // 
             // Label16
             // 
-            this.Label16.AutoSize = true;
-            this.Label16.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Label16.Location = new System.Drawing.Point(13, 119);
+            this.Label16.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label16.Appearance.Options.UseFont = true;
+            this.Label16.Location = new System.Drawing.Point(17, 119);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(97, 18);
+            this.Label16.Size = new System.Drawing.Size(89, 18);
             this.Label16.TabIndex = 378;
             this.Label16.Text = "BRAND ALIAS :";
             // 
             // Label15
             // 
-            this.Label15.AutoSize = true;
-            this.Label15.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.Label15.Location = new System.Drawing.Point(57, 53);
+            this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label15.Appearance.Options.UseFont = true;
+            this.Label15.Location = new System.Drawing.Point(61, 53);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(53, 18);
+            this.Label15.Size = new System.Drawing.Size(45, 18);
             this.Label15.TabIndex = 376;
             this.Label15.Text = "SYS ID :";
             // 
@@ -174,8 +174,8 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtBrandName;
         private DevExpress.XtraEditors.TextEdit txtSysID;
-        internal System.Windows.Forms.Label Label17;
-        internal System.Windows.Forms.Label Label16;
-        internal System.Windows.Forms.Label Label15;
+        internal DevExpress.XtraEditors.LabelControl Label17;
+        internal DevExpress.XtraEditors.LabelControl Label16;
+        internal DevExpress.XtraEditors.LabelControl Label15;
     }
 }

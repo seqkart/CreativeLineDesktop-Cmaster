@@ -45,6 +45,8 @@
             this.txtEmpCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtOT = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtPH = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtDW = new DevExpress.XtraEditors.TextEdit();
@@ -57,6 +59,8 @@
             this.txtMisc1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.panelControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.txtMiscDed = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.txtTDS = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtLWF = new DevExpress.XtraEditors.TextEdit();
@@ -77,10 +81,6 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtMiscDed = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtOT = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -90,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDW.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
@@ -99,6 +100,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMisc1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
             this.panelControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMiscDed.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTDS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLWF.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
@@ -114,8 +116,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMiscDed.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOT.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -148,6 +148,7 @@
             // TextAuthenticate
             // 
             this.TextAuthenticate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TextAuthenticate.Size = new System.Drawing.Size(100, 25);
@@ -169,7 +170,7 @@
             // 
             this.lblDocCode.Location = new System.Drawing.Point(12, 42);
             this.lblDocCode.Name = "lblDocCode";
-            this.lblDocCode.Size = new System.Drawing.Size(30, 13);
+            this.lblDocCode.Size = new System.Drawing.Size(35, 13);
             this.lblDocCode.TabIndex = 29;
             this.lblDocCode.Text = "Month";
             // 
@@ -210,7 +211,8 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Options.UseFont = true;
             this.labelControl3.Location = new System.Drawing.Point(367, 90);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(70, 13);
@@ -231,7 +233,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(5, 64);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 13);
+            this.labelControl2.Size = new System.Drawing.Size(61, 13);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "Department";
             // 
@@ -252,7 +254,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(5, 36);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(25, 13);
+            this.labelControl1.Size = new System.Drawing.Size(27, 13);
             this.labelControl1.TabIndex = 31;
             this.labelControl1.Text = "Code";
             // 
@@ -269,6 +271,31 @@
             this.panelControl1.Size = new System.Drawing.Size(141, 175);
             this.panelControl1.TabIndex = 2;
             this.panelControl1.Text = "Working Inf.";
+            // 
+            // txtOT
+            // 
+            this.txtOT.EnterMoveNextControl = true;
+            this.txtOT.Location = new System.Drawing.Point(12, 139);
+            this.txtOT.Name = "txtOT";
+            this.txtOT.Properties.EditFormat.FormatString = "N2";
+            this.txtOT.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtOT.Properties.Mask.EditMask = "N2";
+            this.txtOT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtOT.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtOT.Properties.MaxLength = 5;
+            this.txtOT.Properties.NullText = "0";
+            this.txtOT.Properties.NullValuePrompt = "0";
+            this.txtOT.Size = new System.Drawing.Size(45, 20);
+            this.txtOT.TabIndex = 34;
+            this.txtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(12, 123);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(51, 13);
+            this.labelControl7.TabIndex = 35;
+            this.labelControl7.Text = "Over Time";
             // 
             // txtPH
             // 
@@ -291,7 +318,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(12, 79);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(63, 13);
+            this.labelControl5.Size = new System.Drawing.Size(69, 13);
             this.labelControl5.TabIndex = 33;
             this.labelControl5.Text = "Paid Holidays";
             // 
@@ -316,7 +343,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(12, 34);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(52, 13);
+            this.labelControl4.Size = new System.Drawing.Size(55, 13);
             this.labelControl4.TabIndex = 31;
             this.labelControl4.Text = "Worked(D)";
             // 
@@ -357,7 +384,7 @@
             // 
             this.labelControl12.Location = new System.Drawing.Point(9, 124);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(30, 13);
+            this.labelControl12.Size = new System.Drawing.Size(32, 13);
             this.labelControl12.TabIndex = 37;
             this.labelControl12.Text = "Misc.3";
             // 
@@ -382,7 +409,7 @@
             // 
             this.labelControl11.Location = new System.Drawing.Point(9, 79);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(30, 13);
+            this.labelControl11.Size = new System.Drawing.Size(32, 13);
             this.labelControl11.TabIndex = 35;
             this.labelControl11.Text = "Misc.2";
             // 
@@ -407,7 +434,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(9, 34);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(30, 13);
+            this.labelControl10.Size = new System.Drawing.Size(32, 13);
             this.labelControl10.TabIndex = 33;
             this.labelControl10.Text = "Misc.1";
             // 
@@ -424,6 +451,31 @@
             this.panelControl5.Size = new System.Drawing.Size(108, 175);
             this.panelControl5.TabIndex = 5;
             this.panelControl5.Text = "Deductions";
+            // 
+            // txtMiscDed
+            // 
+            this.txtMiscDed.EnterMoveNextControl = true;
+            this.txtMiscDed.Location = new System.Drawing.Point(12, 139);
+            this.txtMiscDed.Name = "txtMiscDed";
+            this.txtMiscDed.Properties.EditFormat.FormatString = "N2";
+            this.txtMiscDed.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtMiscDed.Properties.Mask.EditMask = "N2";
+            this.txtMiscDed.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtMiscDed.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtMiscDed.Properties.MaxLength = 10;
+            this.txtMiscDed.Properties.NullText = "0";
+            this.txtMiscDed.Properties.NullValuePrompt = "0";
+            this.txtMiscDed.Size = new System.Drawing.Size(77, 20);
+            this.txtMiscDed.TabIndex = 40;
+            this.txtMiscDed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(12, 124);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(21, 13);
+            this.labelControl6.TabIndex = 41;
+            this.labelControl6.Text = "Ded";
             // 
             // txtTDS
             // 
@@ -446,7 +498,7 @@
             // 
             this.labelControl16.Location = new System.Drawing.Point(12, 80);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(43, 13);
+            this.labelControl16.Size = new System.Drawing.Size(44, 13);
             this.labelControl16.TabIndex = 39;
             this.labelControl16.Text = "Tds Amt.";
             // 
@@ -472,7 +524,7 @@
             // 
             this.labelControl15.Location = new System.Drawing.Point(12, 34);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(21, 13);
+            this.labelControl15.Size = new System.Drawing.Size(22, 13);
             this.labelControl15.TabIndex = 37;
             this.labelControl15.Text = "LWF";
             // 
@@ -538,7 +590,7 @@
             // 
             this.labelControl19.Location = new System.Drawing.Point(12, 124);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(18, 13);
+            this.labelControl19.Size = new System.Drawing.Size(20, 13);
             this.labelControl19.TabIndex = 37;
             this.labelControl19.Text = "Sick";
             // 
@@ -563,7 +615,7 @@
             // 
             this.labelControl20.Location = new System.Drawing.Point(12, 79);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(32, 13);
+            this.labelControl20.Size = new System.Drawing.Size(34, 13);
             this.labelControl20.TabIndex = 35;
             this.labelControl20.Text = "Casual";
             // 
@@ -588,7 +640,7 @@
             // 
             this.labelControl21.Location = new System.Drawing.Point(12, 34);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(34, 13);
+            this.labelControl21.Size = new System.Drawing.Size(36, 13);
             this.labelControl21.TabIndex = 33;
             this.labelControl21.Text = "Earned";
             // 
@@ -661,56 +713,6 @@
             this.gridView5.OptionsView.ShowIndicator = false;
             this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
-            // txtMiscDed
-            // 
-            this.txtMiscDed.EnterMoveNextControl = true;
-            this.txtMiscDed.Location = new System.Drawing.Point(12, 139);
-            this.txtMiscDed.Name = "txtMiscDed";
-            this.txtMiscDed.Properties.EditFormat.FormatString = "N2";
-            this.txtMiscDed.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtMiscDed.Properties.Mask.EditMask = "N2";
-            this.txtMiscDed.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtMiscDed.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtMiscDed.Properties.MaxLength = 10;
-            this.txtMiscDed.Properties.NullText = "0";
-            this.txtMiscDed.Properties.NullValuePrompt = "0";
-            this.txtMiscDed.Size = new System.Drawing.Size(77, 20);
-            this.txtMiscDed.TabIndex = 40;
-            this.txtMiscDed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(12, 124);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(19, 13);
-            this.labelControl6.TabIndex = 41;
-            this.labelControl6.Text = "Ded";
-            // 
-            // txtOT
-            // 
-            this.txtOT.EnterMoveNextControl = true;
-            this.txtOT.Location = new System.Drawing.Point(12, 139);
-            this.txtOT.Name = "txtOT";
-            this.txtOT.Properties.EditFormat.FormatString = "N2";
-            this.txtOT.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtOT.Properties.Mask.EditMask = "N2";
-            this.txtOT.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtOT.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtOT.Properties.MaxLength = 5;
-            this.txtOT.Properties.NullText = "0";
-            this.txtOT.Properties.NullValuePrompt = "0";
-            this.txtOT.Size = new System.Drawing.Size(45, 20);
-            this.txtOT.TabIndex = 34;
-            this.txtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Location = new System.Drawing.Point(12, 123);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(49, 13);
-            this.labelControl7.TabIndex = 35;
-            this.labelControl7.Text = "Over Time";
-            // 
             // frm_EmpSalAddUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,6 +745,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDW.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
@@ -754,6 +757,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
             this.panelControl5.ResumeLayout(false);
             this.panelControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMiscDed.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTDS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLWF.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
@@ -770,8 +774,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMiscDed.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOT.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

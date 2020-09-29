@@ -34,8 +34,8 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtBSDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtBSCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBSDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBSCode.Properties)).BeginInit();
@@ -150,7 +150,7 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtBSDesc;
         private DevExpress.XtraEditors.TextEdit txtBSCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

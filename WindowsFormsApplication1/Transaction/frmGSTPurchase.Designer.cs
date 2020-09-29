@@ -99,7 +99,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDebitPartyName = new DevExpress.XtraEditors.TextEdit();
             this.txtDebitPartyCode = new DevExpress.XtraEditors.TextEdit();
-            this.label10 = new System.Windows.Forms.Label();
+            this.label10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtPurchaseDate = new DevExpress.XtraEditors.DateEdit();
@@ -175,11 +175,11 @@
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
@@ -1007,10 +1007,9 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(-23, 284);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(21, 13);
+            this.label10.Size = new System.Drawing.Size(14, 13);
             this.label10.TabIndex = 558;
             this.label10.Text = "cla";
             // 
@@ -1152,7 +1151,7 @@
             this.xtraTabPage5.Controls.Add(this.txtInsuranceAmount);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(517, 154);
+            this.xtraTabPage5.Size = new System.Drawing.Size(517, 156);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -1438,7 +1437,7 @@
             this.xtraTabPage6.Controls.Add(this.TaxCodeGrid);
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(517, 154);
+            this.xtraTabPage6.Size = new System.Drawing.Size(517, 156);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -1447,7 +1446,7 @@
             this.TaxCodeGrid.Location = new System.Drawing.Point(0, 0);
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(517, 154);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(517, 156);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1557,7 +1556,7 @@
             // 
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(517, 154);
+            this.xtraTabPage9.Size = new System.Drawing.Size(517, 156);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -1566,7 +1565,7 @@
             this.HSNGrid.Location = new System.Drawing.Point(0, 0);
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(517, 154);
+            this.HSNGrid.Size = new System.Drawing.Size(517, 156);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1679,7 +1678,7 @@
             this.xtraTabPage7.Controls.Add(this.TXMAINREMARKS);
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(517, 154);
+            this.xtraTabPage7.Size = new System.Drawing.Size(517, 156);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -1747,14 +1746,14 @@
             this.xtraTabPage8.Controls.Add(this.labelControl43);
             this.xtraTabPage8.Controls.Add(this.labelControl38);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(407, 157);
+            this.xtraTabPage8.Size = new System.Drawing.Size(407, 159);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.pictureEdit1);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(407, 157);
+            this.xtraTabPage1.Size = new System.Drawing.Size(407, 159);
             this.xtraTabPage1.Text = "Attach Docs";
             // 
             // pictureEdit1
@@ -1764,7 +1763,7 @@
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(407, 157);
+            this.pictureEdit1.Size = new System.Drawing.Size(407, 159);
             this.pictureEdit1.TabIndex = 0;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
@@ -1772,7 +1771,7 @@
             // 
             this.xtraTabPage2.Controls.Add(this.DocsGrid);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(407, 157);
+            this.xtraTabPage2.Size = new System.Drawing.Size(407, 159);
             this.xtraTabPage2.Text = "View Docs";
             this.xtraTabPage2.Paint += new System.Windows.Forms.PaintEventHandler(this.XtraTabPage2_Paint);
             // 
@@ -1782,7 +1781,7 @@
             this.DocsGrid.Location = new System.Drawing.Point(0, 0);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(407, 157);
+            this.DocsGrid.Size = new System.Drawing.Size(407, 159);
             this.DocsGrid.TabIndex = 477;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1823,6 +1822,17 @@
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 1;
             // 
+            // gridColumn14
+            // 
+            stubGlyphOptions1.CaseMode = DevExpress.Utils.Drawing.GlyphTextCaseMode.UpperCase;
+            this.behaviorManager1.SetBehaviors(this.gridColumn14, new DevExpress.Utils.Behaviors.Behavior[] {
+            ((DevExpress.Utils.Behaviors.Behavior)(DevExpress.Utils.Behaviors.Common.StubGlyphBehavior.Create(typeof(DevExpress.XtraGrid.Views.Grid.BehaviorSource.StubGlyphBehaviorSourceForGridColumn), stubGlyphOptions1, new System.Drawing.Size(16, 16))))});
+            this.gridColumn14.Caption = "Attach";
+            this.gridColumn14.CustomizationCaption = "Attach";
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 2;
+            // 
             // gridView2
             // 
             this.gridView2.GridControl = this.DocsGrid;
@@ -1847,17 +1857,6 @@
             this.comboBoxEdit1.Properties.Sorted = true;
             this.comboBoxEdit1.Size = new System.Drawing.Size(254, 20);
             this.comboBoxEdit1.TabIndex = 731;
-            // 
-            // gridColumn14
-            // 
-            stubGlyphOptions1.CaseMode = DevExpress.Utils.Drawing.GlyphTextCaseMode.UpperCase;
-            this.behaviorManager1.SetBehaviors(this.gridColumn14, new DevExpress.Utils.Behaviors.Behavior[] {
-            ((DevExpress.Utils.Behaviors.Behavior)(DevExpress.Utils.Behaviors.Common.StubGlyphBehavior.Create(typeof(DevExpress.XtraGrid.Views.Grid.BehaviorSource.StubGlyphBehaviorSourceForGridColumn), stubGlyphOptions1, new System.Drawing.Size(16, 16))))});
-            this.gridColumn14.Caption = "Attach";
-            this.gridColumn14.CustomizationCaption = "Attach";
-            this.gridColumn14.Name = "gridColumn14";
-            this.gridColumn14.Visible = true;
-            this.gridColumn14.VisibleIndex = 2;
             // 
             // frmGSTPurchase
             // 
@@ -2026,7 +2025,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtDebitPartyName;
         private DevExpress.XtraEditors.TextEdit txtDebitPartyCode;
-        private System.Windows.Forms.Label label10;
+        private DevExpress.XtraEditors.LabelControl label10;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.DateEdit txtPurchaseDate;

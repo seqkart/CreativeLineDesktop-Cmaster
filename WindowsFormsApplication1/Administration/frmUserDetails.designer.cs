@@ -30,21 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserDetails));
             this.txtstatusTag = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.txtConfirmPassword = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.cmbLoginAs = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtRoleCode = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmPassword.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -64,10 +64,9 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(258, 54);
+            this.label12.Location = new System.Drawing.Point(275, 54);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 329;
             this.label12.Text = "Active";
             // 
@@ -82,10 +81,9 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(29, 132);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 13);
+            this.label4.Size = new System.Drawing.Size(93, 13);
             this.label4.TabIndex = 313;
             this.label4.Text = "Confirm Password";
             // 
@@ -146,28 +144,25 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(70, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 310;
             this.label3.Text = "UserName";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(73, 106);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 308;
             this.label2.Text = "Password";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(78, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 307;
             this.label1.Text = "LogInAs ";
             // 
@@ -189,10 +184,9 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(94, 159);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(28, 13);
             this.label5.TabIndex = 331;
             this.label5.Text = "Roles";
             // 
@@ -239,20 +233,20 @@
         #endregion
 
         private DevExpress.XtraEditors.TextEdit txtstatusTag;
-        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.LabelControl label12;
         private DevExpress.XtraEditors.TextEdit txtConfirmPassword;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtUserName;
         private DevExpress.XtraEditors.TextEdit txtPassword;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl label1;
         private System.Windows.Forms.ComboBox cmbLoginAs;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraEditors.TextEdit txtRoleCode;
-        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl label5;
     }
 }

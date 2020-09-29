@@ -141,7 +141,7 @@
             // 
             this.labelControl35.Location = new System.Drawing.Point(79, 168);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(23, 13);
+            this.labelControl35.Size = new System.Drawing.Size(24, 13);
             this.labelControl35.TabIndex = 29;
             this.labelControl35.Text = "Type";
             // 

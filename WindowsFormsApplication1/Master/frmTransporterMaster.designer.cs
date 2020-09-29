@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransporterMaster));
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.Label8 = new DevExpress.XtraEditors.LabelControl();
+            this.Label5 = new DevExpress.XtraEditors.LabelControl();
+            this.Label10 = new DevExpress.XtraEditors.LabelControl();
+            this.Label9 = new DevExpress.XtraEditors.LabelControl();
+            this.Label7 = new DevExpress.XtraEditors.LabelControl();
+            this.Label6 = new DevExpress.XtraEditors.LabelControl();
+            this.Label4 = new DevExpress.XtraEditors.LabelControl();
+            this.Label3 = new DevExpress.XtraEditors.LabelControl();
+            this.Label2 = new DevExpress.XtraEditors.LabelControl();
+            this.Label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -53,10 +53,10 @@
             this.txtLandlineNo = new DevExpress.XtraEditors.TextEdit();
             this.txtWebSite = new DevExpress.XtraEditors.TextEdit();
             this.txtEmailId = new DevExpress.XtraEditors.TextEdit();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label11 = new DevExpress.XtraEditors.LabelControl();
             this.txtCityName = new DevExpress.XtraEditors.TextEdit();
             this.txtCountry = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip.SuspendLayout();
@@ -79,102 +79,102 @@
             // 
             // Label8
             // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label8.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label8.Appearance.Options.UseFont = true;
             this.Label8.Location = new System.Drawing.Point(332, 305);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(80, 15);
+            this.Label8.Size = new System.Drawing.Size(73, 15);
             this.Label8.TabIndex = 141;
             this.Label8.Text = "MOBILE NO. :";
             // 
             // Label5
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label5.Location = new System.Drawing.Point(139, 225);
+            this.Label5.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label5.Appearance.Options.UseFont = true;
+            this.Label5.Location = new System.Drawing.Point(137, 225);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(44, 15);
+            this.Label5.Size = new System.Drawing.Size(39, 15);
             this.Label5.TabIndex = 148;
             this.Label5.Text = "STATE :";
             // 
             // Label10
             // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label10.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label10.Appearance.Options.UseFont = true;
             this.Label10.Location = new System.Drawing.Point(126, 356);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(57, 15);
+            this.Label10.Size = new System.Drawing.Size(50, 15);
             this.Label10.TabIndex = 147;
             this.Label10.Text = "WEBSITE:";
             // 
             // Label9
             // 
-            this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label9.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label9.Appearance.Options.UseFont = true;
             this.Label9.Location = new System.Drawing.Point(124, 330);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(59, 15);
+            this.Label9.Size = new System.Drawing.Size(52, 15);
             this.Label9.TabIndex = 146;
             this.Label9.Text = "EMAIL ID:";
             // 
             // Label7
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Options.UseFont = true;
             this.Label7.Location = new System.Drawing.Point(93, 304);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(90, 15);
+            this.Label7.Size = new System.Drawing.Size(83, 15);
             this.Label7.TabIndex = 145;
             this.Label7.Text = "LANDLINE NO.:";
             // 
             // Label6
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label6.Location = new System.Drawing.Point(74, 277);
+            this.Label6.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Options.UseFont = true;
+            this.Label6.Location = new System.Drawing.Point(73, 277);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(109, 15);
+            this.Label6.Size = new System.Drawing.Size(103, 15);
             this.Label6.TabIndex = 144;
             this.Label6.Text = "CONTACT PERSON:";
             // 
             // Label4
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label4.Location = new System.Drawing.Point(150, 200);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Options.UseFont = true;
+            this.Label4.Location = new System.Drawing.Point(149, 200);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(33, 15);
+            this.Label4.Size = new System.Drawing.Size(27, 15);
             this.Label4.TabIndex = 143;
             this.Label4.Text = "CITY:";
             this.Label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Options.UseFont = true;
             this.Label3.Location = new System.Drawing.Point(32, 174);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(151, 15);
+            this.Label3.Size = new System.Drawing.Size(144, 15);
             this.Label3.TabIndex = 142;
             this.Label3.Text = "TRANSPORTER ADDRESS 2:";
             // 
             // Label2
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Options.UseFont = true;
             this.Label2.Location = new System.Drawing.Point(32, 148);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(151, 15);
+            this.Label2.Size = new System.Drawing.Size(144, 15);
             this.Label2.TabIndex = 149;
             this.Label2.Text = "TRANSPORTER ADDRESS 1:";
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label1.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label1.Appearance.Options.UseFont = true;
             this.Label1.Location = new System.Drawing.Point(57, 120);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(126, 15);
+            this.Label1.Size = new System.Drawing.Size(119, 15);
             this.Label1.TabIndex = 150;
             this.Label1.Text = "TRANSPORTER NAME:";
             // 
@@ -320,11 +320,11 @@
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label11.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label11.Appearance.Options.UseFont = true;
             this.label11.Location = new System.Drawing.Point(61, 96);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 15);
+            this.label11.Size = new System.Drawing.Size(115, 15);
             this.label11.TabIndex = 221;
             this.label11.Text = "TRANSPORTER CODE:";
             // 
@@ -352,11 +352,11 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.Appearance.Options.UseFont = true;
             this.label12.Location = new System.Drawing.Point(116, 251);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 15);
+            this.label12.Size = new System.Drawing.Size(60, 15);
             this.label12.TabIndex = 223;
             this.label12.Text = "COUNTRY :";
             this.label12.Click += new System.EventHandler(this.Label12_Click);
@@ -449,16 +449,16 @@
         }
 
         #endregion
-        internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label1;
+        internal DevExpress.XtraEditors.LabelControl Label8;
+        internal DevExpress.XtraEditors.LabelControl Label5;
+        internal DevExpress.XtraEditors.LabelControl Label10;
+        internal DevExpress.XtraEditors.LabelControl Label9;
+        internal DevExpress.XtraEditors.LabelControl Label7;
+        internal DevExpress.XtraEditors.LabelControl Label6;
+        internal DevExpress.XtraEditors.LabelControl Label4;
+        internal DevExpress.XtraEditors.LabelControl Label3;
+        internal DevExpress.XtraEditors.LabelControl Label2;
+        internal DevExpress.XtraEditors.LabelControl Label1;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
@@ -473,10 +473,10 @@
         private DevExpress.XtraEditors.TextEdit txtLandlineNo;
         private DevExpress.XtraEditors.TextEdit txtWebSite;
         private DevExpress.XtraEditors.TextEdit txtEmailId;
-        internal System.Windows.Forms.Label label11;
+        internal DevExpress.XtraEditors.LabelControl label11;
         private DevExpress.XtraEditors.TextEdit txtCityName;
         private DevExpress.XtraEditors.TextEdit txtCountry;
-        internal System.Windows.Forms.Label label12;
+        internal DevExpress.XtraEditors.LabelControl label12;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
     }

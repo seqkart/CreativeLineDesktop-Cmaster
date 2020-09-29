@@ -29,45 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaxMasterAddEdit));
-            this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new DevExpress.XtraEditors.LabelControl();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtCGSTRate = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtTaxDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtTaxCode = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtSGSTRate = new DevExpress.XtraEditors.TextEdit();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtCGSTPostingCode = new DevExpress.XtraEditors.TextEdit();
             this.txtCGSTPostingDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtSGSTPostingDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtSGSTPostingCode = new DevExpress.XtraEditors.TextEdit();
             this.txtIGSTPostingDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtIGSTPostingCode = new DevExpress.XtraEditors.TextEdit();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new DevExpress.XtraEditors.LabelControl();
+            this.label11 = new DevExpress.XtraEditors.LabelControl();
+            this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.txtMessage = new DevExpress.XtraEditors.TextEdit();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtIGSTRate = new DevExpress.XtraEditors.TextEdit();
-            this.label6 = new System.Windows.Forms.Label();
+            this.label6 = new DevExpress.XtraEditors.LabelControl();
             this.txtSalePostDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtSalePostCode = new DevExpress.XtraEditors.TextEdit();
             this.txtLCType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtAboveAmount = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.txtAboveIGSTRate = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.txtAboveSGSTRate = new DevExpress.XtraEditors.TextEdit();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label14 = new DevExpress.XtraEditors.LabelControl();
             this.txtAboveCGSTRate = new DevExpress.XtraEditors.TextEdit();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label15 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtCGSTRate.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxDesc.Properties)).BeginInit();
@@ -94,21 +94,21 @@
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(118, 284);
+            this.label7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Appearance.Options.UseFont = true;
+            this.label7.Location = new System.Drawing.Point(126, 284);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 13);
+            this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 222;
             this.label7.Text = "Message";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Appearance.Options.UseFont = true;
             this.label5.Location = new System.Drawing.Point(284, 128);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 221;
             this.label5.Text = "SGST Rate";
             // 
@@ -123,21 +123,21 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(109, 128);
+            this.label3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Appearance.Options.UseFont = true;
+            this.label3.Location = new System.Drawing.Point(117, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 220;
             this.label3.Text = "CGST Rate";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(141, 102);
+            this.label2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Appearance.Options.UseFont = true;
+            this.label2.Location = new System.Drawing.Point(149, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 13);
+            this.label2.Size = new System.Drawing.Size(27, 13);
             this.label2.TabIndex = 219;
             this.label2.Text = "Desc";
             // 
@@ -199,11 +199,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(140, 76);
+            this.label1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Location = new System.Drawing.Point(148, 76);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(28, 13);
             this.label1.TabIndex = 217;
             this.label1.Text = "Code";
             // 
@@ -218,11 +218,11 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Appearance.Options.UseFont = true;
             this.label4.Location = new System.Drawing.Point(452, 128);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 225;
             this.label4.Text = "IGST Rate";
             // 
@@ -294,31 +294,31 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label10.Location = new System.Drawing.Point(63, 232);
+            this.label10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Appearance.Options.UseFont = true;
+            this.label10.Location = new System.Drawing.Point(71, 232);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 13);
+            this.label10.Size = new System.Drawing.Size(105, 13);
             this.label10.TabIndex = 235;
             this.label10.Text = "SGST Posting Code";
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(63, 206);
+            this.label11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Appearance.Options.UseFont = true;
+            this.label11.Location = new System.Drawing.Point(71, 206);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 13);
+            this.label11.Size = new System.Drawing.Size(105, 13);
             this.label11.TabIndex = 236;
             this.label11.Text = "CGST Posting Code";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(65, 258);
+            this.label9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Appearance.Options.UseFont = true;
+            this.label9.Location = new System.Drawing.Point(73, 258);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
+            this.label9.Size = new System.Drawing.Size(103, 13);
             this.label9.TabIndex = 237;
             this.label9.Text = "IGST Posting Code";
             // 
@@ -333,17 +333,17 @@
             // 
             // label12
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label12.Location = new System.Drawing.Point(149, 310);
+            this.label12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Appearance.Options.UseFont = true;
+            this.label12.Location = new System.Drawing.Point(157, 310);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(26, 13);
+            this.label12.Size = new System.Drawing.Size(19, 13);
             this.label12.TabIndex = 240;
             this.label12.Text = "L/C";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(501, 75);
+            this.HelpGrid.Location = new System.Drawing.Point(103, 43);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(414, 283);
@@ -376,11 +376,11 @@
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(10, 336);
+            this.label6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Appearance.Options.UseFont = true;
+            this.label6.Location = new System.Drawing.Point(18, 336);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 13);
+            this.label6.Size = new System.Drawing.Size(158, 13);
             this.label6.TabIndex = 247;
             this.label6.Text = "Sale/Purchase Posting Code";
             // 
@@ -429,11 +429,11 @@
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(84, 157);
+            this.label8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Appearance.Options.UseFont = true;
+            this.label8.Location = new System.Drawing.Point(92, 157);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 13);
+            this.label8.Size = new System.Drawing.Size(84, 13);
             this.label8.TabIndex = 249;
             this.label8.Text = "Above Amount";
             // 
@@ -448,11 +448,11 @@
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label13.Appearance.Options.UseFont = true;
             this.label13.Location = new System.Drawing.Point(452, 180);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
+            this.label13.Size = new System.Drawing.Size(57, 13);
             this.label13.TabIndex = 255;
             this.label13.Text = "IGST Rate";
             // 
@@ -467,11 +467,11 @@
             // 
             // label14
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Appearance.Options.UseFont = true;
             this.label14.Location = new System.Drawing.Point(284, 180);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
+            this.label14.Size = new System.Drawing.Size(59, 13);
             this.label14.TabIndex = 254;
             this.label14.Text = "SGST Rate";
             // 
@@ -486,11 +486,11 @@
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(109, 180);
+            this.label15.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.Appearance.Options.UseFont = true;
+            this.label15.Location = new System.Drawing.Point(117, 180);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.Size = new System.Drawing.Size(59, 13);
             this.label15.TabIndex = 253;
             this.label15.Text = "CGST Rate";
             // 
@@ -574,44 +574,44 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl label7;
+        private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraEditors.TextEdit txtCGSTRate;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label2;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtTaxDesc;
         private DevExpress.XtraEditors.TextEdit txtTaxCode;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label1;
         private DevExpress.XtraEditors.TextEdit txtSGSTRate;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtCGSTPostingCode;
         private DevExpress.XtraEditors.TextEdit txtCGSTPostingDesc;
         private DevExpress.XtraEditors.TextEdit txtSGSTPostingDesc;
         private DevExpress.XtraEditors.TextEdit txtSGSTPostingCode;
         private DevExpress.XtraEditors.TextEdit txtIGSTPostingDesc;
         private DevExpress.XtraEditors.TextEdit txtIGSTPostingCode;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.LabelControl label10;
+        private DevExpress.XtraEditors.LabelControl label11;
+        private DevExpress.XtraEditors.LabelControl label9;
         private DevExpress.XtraEditors.TextEdit txtMessage;
-        private System.Windows.Forms.Label label12;
+        private DevExpress.XtraEditors.LabelControl label12;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraEditors.TextEdit txtIGSTRate;
-        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.LabelControl label6;
         private DevExpress.XtraEditors.TextEdit txtSalePostDesc;
         private DevExpress.XtraEditors.TextEdit txtSalePostCode;
         private DevExpress.XtraEditors.ComboBoxEdit txtLCType;
         private DevExpress.XtraEditors.TextEdit txtAboveAmount;
-        private System.Windows.Forms.Label label8;
+        private DevExpress.XtraEditors.LabelControl label8;
         private DevExpress.XtraEditors.TextEdit txtAboveIGSTRate;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TextEdit txtAboveSGSTRate;
-        private System.Windows.Forms.Label label14;
+        private DevExpress.XtraEditors.LabelControl label14;
         private DevExpress.XtraEditors.TextEdit txtAboveCGSTRate;
-        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraEditors.LabelControl label15;
     }
 }

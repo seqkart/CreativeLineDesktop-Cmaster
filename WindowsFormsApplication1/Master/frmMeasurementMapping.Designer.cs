@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeasurementMapping));
             this.txtMCode = new DevExpress.XtraEditors.TextEdit();
-            this.Label3 = new System.Windows.Forms.Label();
+            this.Label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtMDesc = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.LBDEPCODE = new System.Windows.Forms.Label();
+            this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtMCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMDesc.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -66,11 +66,11 @@
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Options.UseFont = true;
             this.Label3.Location = new System.Drawing.Point(9, 89);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(120, 15);
+            this.Label3.Size = new System.Drawing.Size(113, 15);
             this.Label3.TabIndex = 769;
             this.Label3.Text = "Measurement Desc :";
             // 
@@ -126,11 +126,11 @@
             // 
             // LBDEPCODE
             // 
-            this.LBDEPCODE.AutoSize = true;
-            this.LBDEPCODE.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Options.UseFont = true;
             this.LBDEPCODE.Location = new System.Drawing.Point(9, 63);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(123, 15);
+            this.LBDEPCODE.Size = new System.Drawing.Size(116, 15);
             this.LBDEPCODE.TabIndex = 768;
             this.LBDEPCODE.Text = "Measurement Code :";
             // 
@@ -162,24 +162,6 @@
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.HelpGrid;
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridView5
-            // 
-            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView5.GridControl = this.HelpGrid;
-            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
-            this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ColumnAutoWidth = false;
-            this.gridView5.OptionsView.ShowGroupPanel = false;
-            this.gridView5.OptionsView.ShowIndicator = false;
-            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "SZNAME";
@@ -205,6 +187,24 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 0;
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.HelpGrid;
+            this.gridView4.Name = "gridView4";
+            // 
+            // gridView5
+            // 
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.GridControl = this.HelpGrid;
+            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
+            this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gridView5.OptionsView.ShowIndicator = false;
+            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // frmMeasurementMapping
             // 
@@ -240,12 +240,12 @@
         #endregion
 
         private DevExpress.XtraEditors.TextEdit txtMCode;
-        internal System.Windows.Forms.Label Label3;
+        internal DevExpress.XtraEditors.LabelControl Label3;
         private DevExpress.XtraEditors.TextEdit txtMDesc;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        internal System.Windows.Forms.Label LBDEPCODE;
+        internal DevExpress.XtraEditors.LabelControl LBDEPCODE;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;

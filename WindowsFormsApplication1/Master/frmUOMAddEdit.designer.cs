@@ -34,8 +34,8 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtUnitDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtUnitCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnitCode.Properties)).BeginInit();
@@ -96,19 +96,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(47, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 196;
             this.label3.Text = "Desc";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(47, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 195;
             this.label1.Text = "Code";
             // 
@@ -145,7 +143,7 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtUnitDesc;
         private DevExpress.XtraEditors.TextEdit txtUnitCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

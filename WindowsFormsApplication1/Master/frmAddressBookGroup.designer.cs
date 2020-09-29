@@ -34,8 +34,8 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtGroupDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtGroupCode = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGroupCode.Properties)).BeginInit();
@@ -97,19 +97,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(27, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 13);
+            this.label3.Size = new System.Drawing.Size(133, 13);
             this.label3.TabIndex = 199;
             this.label3.Text = "Address Book Group Desc";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(24, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 13);
+            this.label1.Size = new System.Drawing.Size(136, 13);
             this.label1.TabIndex = 198;
             this.label1.Text = "Address Book Group Code";
             // 
@@ -146,7 +144,7 @@
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtGroupDesc;
         private DevExpress.XtraEditors.TextEdit txtGroupCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

@@ -41,16 +41,16 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.dtOrderDate = new DevExpress.XtraEditors.DateEdit();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtOrderNo = new DevExpress.XtraEditors.TextEdit();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtDealerName = new DevExpress.XtraEditors.TextEdit();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label15 = new DevExpress.XtraEditors.LabelControl();
             this.txtDealerCode = new DevExpress.XtraEditors.TextEdit();
             this.dtOrderForDate = new DevExpress.XtraEditors.DateEdit();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
@@ -208,10 +208,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(-19, -22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 13);
+            this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 410;
             this.label2.Text = "Date";
             // 
@@ -233,10 +232,9 @@
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(17, 40);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 423;
             this.label4.Text = "OrderDate";
             // 
@@ -251,10 +249,9 @@
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(189, 41);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.Size = new System.Drawing.Size(45, 13);
             this.label5.TabIndex = 420;
             this.label5.Text = "OrderNo";
             // 
@@ -271,10 +268,9 @@
             // 
             // label15
             // 
-            this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(38, 68);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 13);
+            this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 428;
             this.label15.Text = "Dealer";
             // 
@@ -310,10 +306,9 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(660, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 13);
+            this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 430;
             this.label3.Text = "Order For Date";
             // 
@@ -400,16 +395,16 @@
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.DateEdit dtOrderDate;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtOrderNo;
-        private System.Windows.Forms.Label label5;
+        private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraEditors.TextEdit txtDealerName;
-        private System.Windows.Forms.Label label15;
+        private DevExpress.XtraEditors.LabelControl label15;
         private DevExpress.XtraEditors.TextEdit txtDealerCode;
         private DevExpress.XtraEditors.DateEdit dtOrderForDate;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;

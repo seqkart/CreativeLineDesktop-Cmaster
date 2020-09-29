@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkerMaster));
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.LBDEPNAME = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.LBDEPCODE = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
+            this.Label2 = new DevExpress.XtraEditors.LabelControl();
+            this.Label4 = new DevExpress.XtraEditors.LabelControl();
+            this.Label3 = new DevExpress.XtraEditors.LabelControl();
+            this.LBDEPNAME = new DevExpress.XtraEditors.LabelControl();
+            this.Label7 = new DevExpress.XtraEditors.LabelControl();
+            this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
+            this.Label6 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtWorkerCode = new DevExpress.XtraEditors.TextEdit();
@@ -68,71 +68,71 @@
             // 
             // Label2
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Options.UseFont = true;
             this.Label2.Location = new System.Drawing.Point(45, 104);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(89, 15);
+            this.Label2.Size = new System.Drawing.Size(82, 15);
             this.Label2.TabIndex = 628;
             this.Label2.Text = "CONTRACTOR :";
             // 
             // Label4
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Options.UseFont = true;
             this.Label4.Location = new System.Drawing.Point(321, 154);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(71, 15);
+            this.Label4.Size = new System.Drawing.Size(64, 15);
             this.Label4.TabIndex = 605;
             this.Label4.Text = "OTHER NO :";
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Options.UseFont = true;
             this.Label3.Location = new System.Drawing.Point(72, 181);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(62, 15);
+            this.Label3.Size = new System.Drawing.Size(55, 15);
             this.Label3.TabIndex = 597;
             this.Label3.Text = "EMAIL ID :";
             // 
             // LBDEPNAME
             // 
-            this.LBDEPNAME.AutoSize = true;
-            this.LBDEPNAME.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPNAME.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPNAME.Appearance.Options.UseFont = true;
             this.LBDEPNAME.Location = new System.Drawing.Point(86, 131);
             this.LBDEPNAME.Name = "LBDEPNAME";
-            this.LBDEPNAME.Size = new System.Drawing.Size(48, 15);
+            this.LBDEPNAME.Size = new System.Drawing.Size(41, 15);
             this.LBDEPNAME.TabIndex = 32;
             this.LBDEPNAME.Text = "NAME :";
             // 
             // Label7
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Options.UseFont = true;
             this.Label7.Location = new System.Drawing.Point(44, 209);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(90, 15);
+            this.Label7.Size = new System.Drawing.Size(83, 15);
             this.Label7.TabIndex = 32;
             this.Label7.Text = "ID TYPE && NO. :";
             // 
             // LBDEPCODE
             // 
-            this.LBDEPCODE.AutoSize = true;
-            this.LBDEPCODE.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Options.UseFont = true;
             this.LBDEPCODE.Location = new System.Drawing.Point(90, 79);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(44, 15);
+            this.LBDEPCODE.Size = new System.Drawing.Size(37, 15);
             this.LBDEPCODE.TabIndex = 32;
             this.LBDEPCODE.Text = "CODE :";
             // 
             // Label6
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Options.UseFont = true;
             this.Label6.Location = new System.Drawing.Point(57, 156);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(77, 15);
+            this.Label6.Size = new System.Drawing.Size(70, 15);
             this.Label6.TabIndex = 32;
             this.Label6.Text = "MOBILE NO :";
             // 
@@ -359,13 +359,13 @@
         }
 
         #endregion
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label LBDEPNAME;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label LBDEPCODE;
-        internal System.Windows.Forms.Label Label6;
+        internal DevExpress.XtraEditors.LabelControl Label2;
+        internal DevExpress.XtraEditors.LabelControl Label4;
+        internal DevExpress.XtraEditors.LabelControl Label3;
+        internal DevExpress.XtraEditors.LabelControl LBDEPNAME;
+        internal DevExpress.XtraEditors.LabelControl Label7;
+        internal DevExpress.XtraEditors.LabelControl LBDEPCODE;
+        internal DevExpress.XtraEditors.LabelControl Label6;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraEditors.TextEdit txtWorkerCode;

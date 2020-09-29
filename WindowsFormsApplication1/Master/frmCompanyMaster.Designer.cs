@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCompanyMaster));
-            this.Label28 = new System.Windows.Forms.Label();
-            this.Label25 = new System.Windows.Forms.Label();
-            this.Label29 = new System.Windows.Forms.Label();
-            this.Label30 = new System.Windows.Forms.Label();
-            this.Label31 = new System.Windows.Forms.Label();
-            this.Label32 = new System.Windows.Forms.Label();
-            this.Label16 = new System.Windows.Forms.Label();
-            this.Label24 = new System.Windows.Forms.Label();
-            this.TXCTAN = new System.Windows.Forms.Label();
-            this.Label22 = new System.Windows.Forms.Label();
-            this.Label21 = new System.Windows.Forms.Label();
-            this.Label12 = new System.Windows.Forms.Label();
-            this.Label11 = new System.Windows.Forms.Label();
-            this.Label10 = new System.Windows.Forms.Label();
-            this.Label15 = new System.Windows.Forms.Label();
+            this.Label28 = new DevExpress.XtraEditors.LabelControl();
+            this.Label25 = new DevExpress.XtraEditors.LabelControl();
+            this.Label29 = new DevExpress.XtraEditors.LabelControl();
+            this.Label30 = new DevExpress.XtraEditors.LabelControl();
+            this.Label31 = new DevExpress.XtraEditors.LabelControl();
+            this.Label32 = new DevExpress.XtraEditors.LabelControl();
+            this.Label16 = new DevExpress.XtraEditors.LabelControl();
+            this.Label24 = new DevExpress.XtraEditors.LabelControl();
+            this.TXCTAN = new DevExpress.XtraEditors.LabelControl();
+            this.Label22 = new DevExpress.XtraEditors.LabelControl();
+            this.Label21 = new DevExpress.XtraEditors.LabelControl();
+            this.Label12 = new DevExpress.XtraEditors.LabelControl();
+            this.Label11 = new DevExpress.XtraEditors.LabelControl();
+            this.Label10 = new DevExpress.XtraEditors.LabelControl();
+            this.Label15 = new DevExpress.XtraEditors.LabelControl();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.txtCurrencyCharacter = new DevExpress.XtraEditors.TextEdit();
             this.txtFont = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrencySubstring = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrencyString = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrencySymbol = new DevExpress.XtraEditors.TextEdit();
-            this.Label40 = new System.Windows.Forms.Label();
-            this.Label39 = new System.Windows.Forms.Label();
-            this.Label38 = new System.Windows.Forms.Label();
-            this.Label37 = new System.Windows.Forms.Label();
-            this.Label26 = new System.Windows.Forms.Label();
-            this.Label27 = new System.Windows.Forms.Label();
-            this.Label33 = new System.Windows.Forms.Label();
-            this.Label34 = new System.Windows.Forms.Label();
-            this.Label35 = new System.Windows.Forms.Label();
-            this.Label36 = new System.Windows.Forms.Label();
+            this.Label40 = new DevExpress.XtraEditors.LabelControl();
+            this.Label39 = new DevExpress.XtraEditors.LabelControl();
+            this.Label38 = new DevExpress.XtraEditors.LabelControl();
+            this.Label37 = new DevExpress.XtraEditors.LabelControl();
+            this.Label26 = new DevExpress.XtraEditors.LabelControl();
+            this.Label27 = new DevExpress.XtraEditors.LabelControl();
+            this.Label33 = new DevExpress.XtraEditors.LabelControl();
+            this.Label34 = new DevExpress.XtraEditors.LabelControl();
+            this.Label35 = new DevExpress.XtraEditors.LabelControl();
+            this.Label36 = new DevExpress.XtraEditors.LabelControl();
             this.chNonExciseUnit = new System.Windows.Forms.RadioButton();
             this.chExciseUnit = new System.Windows.Forms.RadioButton();
-            this.Label19 = new System.Windows.Forms.Label();
-            this.Label18 = new System.Windows.Forms.Label();
-            this.Label9 = new System.Windows.Forms.Label();
-            this.Label14 = new System.Windows.Forms.Label();
-            this.Label8 = new System.Windows.Forms.Label();
-            this.Label7 = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.Label5 = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.Label3 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.Label17 = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.Label19 = new DevExpress.XtraEditors.LabelControl();
+            this.Label18 = new DevExpress.XtraEditors.LabelControl();
+            this.Label9 = new DevExpress.XtraEditors.LabelControl();
+            this.Label14 = new DevExpress.XtraEditors.LabelControl();
+            this.Label8 = new DevExpress.XtraEditors.LabelControl();
+            this.Label7 = new DevExpress.XtraEditors.LabelControl();
+            this.Label6 = new DevExpress.XtraEditors.LabelControl();
+            this.Label5 = new DevExpress.XtraEditors.LabelControl();
+            this.Label4 = new DevExpress.XtraEditors.LabelControl();
+            this.Label3 = new DevExpress.XtraEditors.LabelControl();
+            this.Label2 = new DevExpress.XtraEditors.LabelControl();
+            this.Label17 = new DevExpress.XtraEditors.LabelControl();
+            this.Label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtCmpCode = new DevExpress.XtraEditors.TextEdit();
             this.txtCmpType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtCmpName = new DevExpress.XtraEditors.TextEdit();
@@ -97,7 +97,7 @@
             this.txtTanNo = new DevExpress.XtraEditors.TextEdit();
             this.txtGSTNo = new DevExpress.XtraEditors.TextEdit();
             this.txtGSTIssueDate = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.txtWard = new DevExpress.XtraEditors.TextEdit();
             this.txtExxiseNo = new DevExpress.XtraEditors.TextEdit();
             this.txtDivission = new DevExpress.XtraEditors.TextEdit();
@@ -150,174 +150,174 @@
             // 
             // Label28
             // 
-            this.Label28.AutoSize = true;
-            this.Label28.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label28.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label28.Appearance.Options.UseFont = true;
             this.Label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label28.Location = new System.Drawing.Point(248, 169);
             this.Label28.Name = "Label28";
-            this.Label28.Size = new System.Drawing.Size(36, 14);
+            this.Label28.Size = new System.Drawing.Size(31, 14);
             this.Label28.TabIndex = 54;
             this.Label28.Text = "STATE";
             // 
             // Label25
             // 
-            this.Label25.AutoSize = true;
-            this.Label25.BackColor = System.Drawing.Color.Transparent;
-            this.Label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline);
-            this.Label25.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Label25.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Label25.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline);
+            this.Label25.Appearance.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Label25.Appearance.Options.UseBackColor = true;
+            this.Label25.Appearance.Options.UseFont = true;
+            this.Label25.Appearance.Options.UseForeColor = true;
             this.Label25.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label25.Location = new System.Drawing.Point(32, 24);
             this.Label25.Name = "Label25";
-            this.Label25.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Label25.Size = new System.Drawing.Size(126, 18);
+            this.Label25.Size = new System.Drawing.Size(118, 18);
             this.Label25.TabIndex = 52;
             this.Label25.Text = "EXCISE DETAILS";
-            this.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label29
             // 
-            this.Label29.AutoSize = true;
-            this.Label29.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label29.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label29.Appearance.Options.UseFont = true;
             this.Label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label29.Location = new System.Drawing.Point(59, 169);
             this.Label29.Name = "Label29";
-            this.Label29.Size = new System.Drawing.Size(28, 14);
+            this.Label29.Size = new System.Drawing.Size(21, 14);
             this.Label29.TabIndex = 45;
             this.Label29.Text = "CITY";
             // 
             // Label30
             // 
-            this.Label30.AutoSize = true;
-            this.Label30.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label30.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label30.Appearance.Options.UseFont = true;
             this.Label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label30.Location = new System.Drawing.Point(9, 141);
             this.Label30.Name = "Label30";
-            this.Label30.Size = new System.Drawing.Size(78, 14);
+            this.Label30.Size = new System.Drawing.Size(72, 14);
             this.Label30.TabIndex = 43;
             this.Label30.Text = "DIV. ADDRESS";
             // 
             // Label31
             // 
-            this.Label31.AutoSize = true;
-            this.Label31.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label31.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label31.Appearance.Options.UseFont = true;
             this.Label31.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label31.Location = new System.Drawing.Point(28, 113);
             this.Label31.Name = "Label31";
-            this.Label31.Size = new System.Drawing.Size(59, 14);
+            this.Label31.Size = new System.Drawing.Size(52, 14);
             this.Label31.TabIndex = 43;
             this.Label31.Text = "DIVISSION";
             // 
             // Label32
             // 
-            this.Label32.AutoSize = true;
-            this.Label32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label32.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label32.Appearance.Options.UseFont = true;
             this.Label32.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label32.Location = new System.Drawing.Point(27, 87);
             this.Label32.Name = "Label32";
-            this.Label32.Size = new System.Drawing.Size(60, 14);
+            this.Label32.Size = new System.Drawing.Size(53, 14);
             this.Label32.TabIndex = 43;
             this.Label32.Text = "EXCISE NO";
             // 
             // Label16
             // 
-            this.Label16.AutoSize = true;
-            this.Label16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label16.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label16.Appearance.Options.UseFont = true;
             this.Label16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label16.Location = new System.Drawing.Point(17, 187);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(46, 14);
+            this.Label16.Size = new System.Drawing.Size(39, 14);
             this.Label16.TabIndex = 592;
             this.Label16.Text = "GST NO";
             // 
             // Label24
             // 
-            this.Label24.AutoSize = true;
-            this.Label24.BackColor = System.Drawing.Color.Transparent;
-            this.Label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline);
-            this.Label24.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Label24.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Label24.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline);
+            this.Label24.Appearance.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Label24.Appearance.Options.UseBackColor = true;
+            this.Label24.Appearance.Options.UseFont = true;
+            this.Label24.Appearance.Options.UseForeColor = true;
             this.Label24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label24.Location = new System.Drawing.Point(17, 18);
             this.Label24.Name = "Label24";
-            this.Label24.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Label24.Size = new System.Drawing.Size(144, 18);
+            this.Label24.Size = new System.Drawing.Size(136, 18);
             this.Label24.TabIndex = 52;
             this.Label24.Text = "TAXATION DETAILS";
-            this.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TXCTAN
             // 
-            this.TXCTAN.AutoSize = true;
-            this.TXCTAN.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.TXCTAN.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.TXCTAN.Appearance.Options.UseFont = true;
             this.TXCTAN.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.TXCTAN.Location = new System.Drawing.Point(17, 163);
             this.TXCTAN.Name = "TXCTAN";
-            this.TXCTAN.Size = new System.Drawing.Size(46, 14);
+            this.TXCTAN.Size = new System.Drawing.Size(40, 14);
             this.TXCTAN.TabIndex = 49;
             this.TXCTAN.Text = "TAN NO";
             // 
             // Label22
             // 
-            this.Label22.AutoSize = true;
-            this.Label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label22.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label22.Appearance.Options.UseFont = true;
             this.Label22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label22.Location = new System.Drawing.Point(261, 111);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(39, 14);
+            this.Label22.Size = new System.Drawing.Size(33, 14);
             this.Label22.TabIndex = 47;
             this.Label22.Text = "WARD";
             // 
             // Label21
             // 
-            this.Label21.AutoSize = true;
-            this.Label21.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label21.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label21.Appearance.Options.UseFont = true;
             this.Label21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label21.Location = new System.Drawing.Point(17, 137);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(46, 14);
+            this.Label21.Size = new System.Drawing.Size(40, 14);
             this.Label21.TabIndex = 45;
             this.Label21.Text = "PAN NO";
             // 
             // Label12
             // 
-            this.Label12.AutoSize = true;
-            this.Label12.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label12.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label12.Appearance.Options.UseFont = true;
             this.Label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label12.Location = new System.Drawing.Point(20, 111);
             this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(43, 14);
+            this.Label12.Size = new System.Drawing.Size(36, 14);
             this.Label12.TabIndex = 43;
             this.Label12.Text = "CIN NO";
             // 
             // Label11
             // 
-            this.Label11.AutoSize = true;
-            this.Label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label11.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label11.Appearance.Options.UseFont = true;
             this.Label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label11.Location = new System.Drawing.Point(19, 84);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(44, 14);
+            this.Label11.Size = new System.Drawing.Size(37, 14);
             this.Label11.TabIndex = 43;
             this.Label11.Text = "CST NO";
             // 
             // Label10
             // 
-            this.Label10.AutoSize = true;
-            this.Label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label10.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label10.Appearance.Options.UseFont = true;
             this.Label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label10.Location = new System.Drawing.Point(20, 60);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(43, 14);
+            this.Label10.Size = new System.Drawing.Size(36, 14);
             this.Label10.TabIndex = 43;
             this.Label10.Text = "TIN NO";
             // 
             // Label15
             // 
-            this.Label15.AutoSize = true;
-            this.Label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label15.Appearance.Options.UseFont = true;
             this.Label15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label15.Location = new System.Drawing.Point(227, 85);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(73, 14);
+            this.Label15.Size = new System.Drawing.Size(67, 14);
             this.Label15.TabIndex = 43;
             this.Label15.Text = "ISSUED DATE";
             // 
@@ -393,116 +393,116 @@
             // 
             // Label40
             // 
-            this.Label40.AutoSize = true;
-            this.Label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Label40.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.Label40.Appearance.Options.UseFont = true;
             this.Label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label40.Location = new System.Drawing.Point(253, 155);
             this.Label40.Name = "Label40";
-            this.Label40.Size = new System.Drawing.Size(40, 15);
+            this.Label40.Size = new System.Drawing.Size(33, 15);
             this.Label40.TabIndex = 58;
             this.Label40.Text = "(   `    )";
             // 
             // Label39
             // 
-            this.Label39.AutoSize = true;
-            this.Label39.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Label39.Appearance.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Label39.Appearance.Options.UseFont = true;
             this.Label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label39.Location = new System.Drawing.Point(252, 97);
             this.Label39.Name = "Label39";
-            this.Label39.Size = new System.Drawing.Size(97, 14);
+            this.Label39.Size = new System.Drawing.Size(90, 14);
             this.Label39.TabIndex = 57;
             this.Label39.Text = "(Paisa, Cent etc.)";
             // 
             // Label38
             // 
-            this.Label38.AutoSize = true;
-            this.Label38.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Label38.Appearance.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Label38.Appearance.Options.UseFont = true;
             this.Label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label38.Location = new System.Drawing.Point(252, 68);
             this.Label38.Name = "Label38";
-            this.Label38.Size = new System.Drawing.Size(117, 14);
+            this.Label38.Size = new System.Drawing.Size(110, 14);
             this.Label38.TabIndex = 56;
             this.Label38.Text = "(Rupees, dollar etc.)";
             // 
             // Label37
             // 
-            this.Label37.AutoSize = true;
-            this.Label37.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Label37.Appearance.Font = new System.Drawing.Font("Calibri", 9F);
+            this.Label37.Appearance.Options.UseFont = true;
             this.Label37.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label37.Location = new System.Drawing.Point(252, 40);
             this.Label37.Name = "Label37";
-            this.Label37.Size = new System.Drawing.Size(65, 14);
+            this.Label37.Size = new System.Drawing.Size(58, 14);
             this.Label37.TabIndex = 55;
             this.Label37.Text = "(Rs., $ etc.)";
             // 
             // Label26
             // 
-            this.Label26.AutoSize = true;
+            this.Label26.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label26.Appearance.Options.UseFont = true;
             this.Label26.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Label26.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label26.Location = new System.Drawing.Point(10, 155);
             this.Label26.Name = "Label26";
-            this.Label26.Size = new System.Drawing.Size(124, 14);
+            this.Label26.Size = new System.Drawing.Size(117, 14);
             this.Label26.TabIndex = 54;
             this.Label26.Text = "CURRENCY CHARACTER";
             // 
             // Label27
             // 
-            this.Label27.AutoSize = true;
-            this.Label27.BackColor = System.Drawing.Color.Transparent;
-            this.Label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline);
-            this.Label27.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Label27.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.Label27.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline);
+            this.Label27.Appearance.ForeColor = System.Drawing.Color.LightSeaGreen;
+            this.Label27.Appearance.Options.UseBackColor = true;
+            this.Label27.Appearance.Options.UseFont = true;
+            this.Label27.Appearance.Options.UseForeColor = true;
             this.Label27.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label27.Location = new System.Drawing.Point(16, 5);
             this.Label27.Name = "Label27";
-            this.Label27.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Label27.Size = new System.Drawing.Size(201, 18);
+            this.Label27.Size = new System.Drawing.Size(193, 18);
             this.Label27.TabIndex = 52;
             this.Label27.Text = "ADDITIONAL INFORMATION";
-            this.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Label33
             // 
-            this.Label33.AutoSize = true;
-            this.Label33.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label33.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label33.Appearance.Options.UseFont = true;
             this.Label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label33.Location = new System.Drawing.Point(42, 126);
             this.Label33.Name = "Label33";
-            this.Label33.Size = new System.Drawing.Size(92, 14);
+            this.Label33.Size = new System.Drawing.Size(85, 14);
             this.Label33.TabIndex = 45;
             this.Label33.Text = "CURRENCY FONT";
             // 
             // Label34
             // 
-            this.Label34.AutoSize = true;
-            this.Label34.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label34.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label34.Appearance.Options.UseFont = true;
             this.Label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label34.Location = new System.Drawing.Point(8, 97);
             this.Label34.Name = "Label34";
-            this.Label34.Size = new System.Drawing.Size(126, 14);
+            this.Label34.Size = new System.Drawing.Size(119, 14);
             this.Label34.TabIndex = 43;
             this.Label34.Text = "CURRENCY SUB STRING";
             // 
             // Label35
             // 
-            this.Label35.AutoSize = true;
-            this.Label35.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label35.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label35.Appearance.Options.UseFont = true;
             this.Label35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label35.Location = new System.Drawing.Point(32, 68);
             this.Label35.Name = "Label35";
-            this.Label35.Size = new System.Drawing.Size(102, 14);
+            this.Label35.Size = new System.Drawing.Size(95, 14);
             this.Label35.TabIndex = 43;
             this.Label35.Text = "CURRENCY STRING";
             // 
             // Label36
             // 
-            this.Label36.AutoSize = true;
-            this.Label36.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label36.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label36.Appearance.Options.UseFont = true;
             this.Label36.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label36.Location = new System.Drawing.Point(28, 40);
             this.Label36.Name = "Label36";
-            this.Label36.Size = new System.Drawing.Size(106, 14);
+            this.Label36.Size = new System.Drawing.Size(99, 14);
             this.Label36.TabIndex = 43;
             this.Label36.Text = "CURRENCY SYMBOL";
             // 
@@ -536,145 +536,145 @@
             // 
             // Label19
             // 
-            this.Label19.AutoSize = true;
-            this.Label19.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label19.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label19.Appearance.Options.UseFont = true;
             this.Label19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label19.Location = new System.Drawing.Point(76, 298);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(52, 14);
+            this.Label19.Size = new System.Drawing.Size(45, 14);
             this.Label19.TabIndex = 614;
             this.Label19.Text = "WEBSITE";
             // 
             // Label18
             // 
-            this.Label18.AutoSize = true;
-            this.Label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label18.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label18.Appearance.Options.UseFont = true;
             this.Label18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label18.Location = new System.Drawing.Point(14, 164);
+            this.Label18.Location = new System.Drawing.Point(13, 164);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(114, 14);
+            this.Label18.Size = new System.Drawing.Size(108, 14);
             this.Label18.TabIndex = 612;
             this.Label18.Text = "COMPANY ADDRESS2";
             this.Label18.Click += new System.EventHandler(this.Label18_Click);
             // 
             // Label9
             // 
-            this.Label9.AutoSize = true;
-            this.Label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label9.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label9.Appearance.Options.UseFont = true;
             this.Label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label9.Location = new System.Drawing.Point(76, 275);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(52, 14);
+            this.Label9.Size = new System.Drawing.Size(45, 14);
             this.Label9.TabIndex = 608;
             this.Label9.Text = "EMAIL ID";
             // 
             // Label14
             // 
-            this.Label14.AutoSize = true;
-            this.Label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label14.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label14.Appearance.Options.UseFont = true;
             this.Label14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label14.Location = new System.Drawing.Point(272, 244);
             this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(105, 14);
+            this.Label14.Size = new System.Drawing.Size(100, 14);
             this.Label14.TabIndex = 607;
             this.Label14.Text = "ALTERNATE MOBILE";
             // 
             // Label8
             // 
-            this.Label8.AutoSize = true;
-            this.Label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label8.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label8.Appearance.Options.UseFont = true;
             this.Label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label8.Location = new System.Drawing.Point(82, 244);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(46, 14);
+            this.Label8.Size = new System.Drawing.Size(39, 14);
             this.Label8.TabIndex = 609;
             this.Label8.Text = "MOBILE";
             // 
             // Label7
             // 
-            this.Label7.AutoSize = true;
-            this.Label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Options.UseFont = true;
             this.Label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label7.Location = new System.Drawing.Point(315, 218);
+            this.Label7.Location = new System.Drawing.Point(317, 218);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(62, 14);
+            this.Label7.Size = new System.Drawing.Size(55, 14);
             this.Label7.TabIndex = 606;
             this.Label7.Text = "PHONE NO";
             // 
             // Label6
             // 
-            this.Label6.AutoSize = true;
-            this.Label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Options.UseFont = true;
             this.Label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label6.Location = new System.Drawing.Point(106, 218);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(22, 14);
+            this.Label6.Size = new System.Drawing.Size(15, 14);
             this.Label6.TabIndex = 599;
             this.Label6.Text = "ZIP";
             // 
             // Label5
             // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label5.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label5.Appearance.Options.UseFont = true;
             this.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label5.Location = new System.Drawing.Point(338, 190);
+            this.Label5.Location = new System.Drawing.Point(341, 190);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(36, 14);
+            this.Label5.Size = new System.Drawing.Size(31, 14);
             this.Label5.TabIndex = 605;
             this.Label5.Text = "STATE";
             // 
             // Label4
             // 
-            this.Label4.AutoSize = true;
-            this.Label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Options.UseFont = true;
             this.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Label4.Location = new System.Drawing.Point(100, 190);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(28, 14);
+            this.Label4.Size = new System.Drawing.Size(21, 14);
             this.Label4.TabIndex = 604;
             this.Label4.Text = "CITY";
             // 
             // Label3
             // 
-            this.Label3.AutoSize = true;
-            this.Label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Options.UseFont = true;
             this.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label3.Location = new System.Drawing.Point(14, 141);
+            this.Label3.Location = new System.Drawing.Point(13, 141);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(114, 14);
+            this.Label3.Size = new System.Drawing.Size(108, 14);
             this.Label3.TabIndex = 603;
             this.Label3.Text = "COMPANY ADDRESS1";
             // 
             // Label2
             // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Options.UseFont = true;
             this.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label2.Location = new System.Drawing.Point(20, 112);
+            this.Label2.Location = new System.Drawing.Point(19, 112);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(108, 14);
+            this.Label2.Size = new System.Drawing.Size(102, 14);
             this.Label2.TabIndex = 602;
             this.Label2.Text = "COMPANY ADDRESS";
             // 
             // Label17
             // 
-            this.Label17.AutoSize = true;
-            this.Label17.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label17.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label17.Appearance.Options.UseFont = true;
             this.Label17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label17.Location = new System.Drawing.Point(22, 60);
+            this.Label17.Location = new System.Drawing.Point(21, 60);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(106, 14);
+            this.Label17.Size = new System.Drawing.Size(100, 14);
             this.Label17.TabIndex = 601;
             this.Label17.Text = "COMPANY ID / TYPE";
             // 
             // Label1
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label1.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label1.Appearance.Options.UseFont = true;
             this.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Label1.Location = new System.Drawing.Point(37, 86);
+            this.Label1.Location = new System.Drawing.Point(36, 86);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(91, 14);
+            this.Label1.Size = new System.Drawing.Size(85, 14);
             this.Label1.TabIndex = 600;
             this.Label1.Text = "COMPANY NAME";
             // 
@@ -900,12 +900,12 @@
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label13.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label13.Appearance.Options.UseFont = true;
             this.label13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label13.Location = new System.Drawing.Point(227, 187);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 14);
+            this.label13.Size = new System.Drawing.Size(67, 14);
             this.label13.TabIndex = 644;
             this.label13.Text = "ISSUED DATE";
             // 
@@ -1142,47 +1142,47 @@
         }
 
         #endregion
-        internal System.Windows.Forms.Label Label28;
-        internal System.Windows.Forms.Label Label25;
-        internal System.Windows.Forms.Label Label29;
-        internal System.Windows.Forms.Label Label30;
-        internal System.Windows.Forms.Label Label31;
-        internal System.Windows.Forms.Label Label32;
-        internal System.Windows.Forms.Label Label16;
-        internal System.Windows.Forms.Label Label24;
-        internal System.Windows.Forms.Label TXCTAN;
-        internal System.Windows.Forms.Label Label22;
-        internal System.Windows.Forms.Label Label21;
-        internal System.Windows.Forms.Label Label12;
-        internal System.Windows.Forms.Label Label11;
-        internal System.Windows.Forms.Label Label10;
-        internal System.Windows.Forms.Label Label15;
+        internal DevExpress.XtraEditors.LabelControl Label28;
+        internal DevExpress.XtraEditors.LabelControl Label25;
+        internal DevExpress.XtraEditors.LabelControl Label29;
+        internal DevExpress.XtraEditors.LabelControl Label30;
+        internal DevExpress.XtraEditors.LabelControl Label31;
+        internal DevExpress.XtraEditors.LabelControl Label32;
+        internal DevExpress.XtraEditors.LabelControl Label16;
+        internal DevExpress.XtraEditors.LabelControl Label24;
+        internal DevExpress.XtraEditors.LabelControl TXCTAN;
+        internal DevExpress.XtraEditors.LabelControl Label22;
+        internal DevExpress.XtraEditors.LabelControl Label21;
+        internal DevExpress.XtraEditors.LabelControl Label12;
+        internal DevExpress.XtraEditors.LabelControl Label11;
+        internal DevExpress.XtraEditors.LabelControl Label10;
+        internal DevExpress.XtraEditors.LabelControl Label15;
         internal System.Windows.Forms.Panel Panel3;
-        internal System.Windows.Forms.Label Label40;
-        internal System.Windows.Forms.Label Label39;
-        internal System.Windows.Forms.Label Label38;
-        internal System.Windows.Forms.Label Label37;
-        internal System.Windows.Forms.Label Label26;
-        internal System.Windows.Forms.Label Label27;
-        internal System.Windows.Forms.Label Label33;
-        internal System.Windows.Forms.Label Label34;
-        internal System.Windows.Forms.Label Label35;
-        internal System.Windows.Forms.Label Label36;
+        internal DevExpress.XtraEditors.LabelControl Label40;
+        internal DevExpress.XtraEditors.LabelControl Label39;
+        internal DevExpress.XtraEditors.LabelControl Label38;
+        internal DevExpress.XtraEditors.LabelControl Label37;
+        internal DevExpress.XtraEditors.LabelControl Label26;
+        internal DevExpress.XtraEditors.LabelControl Label27;
+        internal DevExpress.XtraEditors.LabelControl Label33;
+        internal DevExpress.XtraEditors.LabelControl Label34;
+        internal DevExpress.XtraEditors.LabelControl Label35;
+        internal DevExpress.XtraEditors.LabelControl Label36;
         internal System.Windows.Forms.RadioButton chNonExciseUnit;
         internal System.Windows.Forms.RadioButton chExciseUnit;
-        internal System.Windows.Forms.Label Label19;
-        internal System.Windows.Forms.Label Label18;
-        internal System.Windows.Forms.Label Label9;
-        internal System.Windows.Forms.Label Label14;
-        internal System.Windows.Forms.Label Label8;
-        internal System.Windows.Forms.Label Label7;
-        internal System.Windows.Forms.Label Label6;
-        internal System.Windows.Forms.Label Label5;
-        internal System.Windows.Forms.Label Label4;
-        internal System.Windows.Forms.Label Label3;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.Label Label17;
-        internal System.Windows.Forms.Label Label1;
+        internal DevExpress.XtraEditors.LabelControl Label19;
+        internal DevExpress.XtraEditors.LabelControl Label18;
+        internal DevExpress.XtraEditors.LabelControl Label9;
+        internal DevExpress.XtraEditors.LabelControl Label14;
+        internal DevExpress.XtraEditors.LabelControl Label8;
+        internal DevExpress.XtraEditors.LabelControl Label7;
+        internal DevExpress.XtraEditors.LabelControl Label6;
+        internal DevExpress.XtraEditors.LabelControl Label5;
+        internal DevExpress.XtraEditors.LabelControl Label4;
+        internal DevExpress.XtraEditors.LabelControl Label3;
+        internal DevExpress.XtraEditors.LabelControl Label2;
+        internal DevExpress.XtraEditors.LabelControl Label17;
+        internal DevExpress.XtraEditors.LabelControl Label1;
         private DevExpress.XtraEditors.TextEdit txtCmpCode;
         private DevExpress.XtraEditors.ComboBoxEdit txtCmpType;
         private DevExpress.XtraEditors.TextEdit txtCmpName;
@@ -1210,7 +1210,7 @@
         private DevExpress.XtraEditors.TextEdit txtTanNo;
         private DevExpress.XtraEditors.TextEdit txtGSTNo;
         private DevExpress.XtraEditors.TextEdit txtGSTIssueDate;
-        internal System.Windows.Forms.Label label13;
+        internal DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TextEdit txtWard;
         private DevExpress.XtraEditors.TextEdit txtExxiseNo;
         private DevExpress.XtraEditors.TextEdit txtDivission;

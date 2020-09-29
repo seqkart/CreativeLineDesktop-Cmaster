@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSaleReportF2));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.CmpGrid = new DevExpress.XtraGrid.GridControl();
             this.CmpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.CmpUnitGrid = new DevExpress.XtraGrid.GridControl();
@@ -44,10 +44,10 @@
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.InfoGrid = new DevExpress.XtraGrid.GridControl();
             this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblAverageBillSale = new System.Windows.Forms.Label();
-            this.lblNoOfBills = new System.Windows.Forms.Label();
-            this.lblTotalSaleQty = new System.Windows.Forms.Label();
-            this.lblTotalSale = new System.Windows.Forms.Label();
+            this.lblAverageBillSale = new DevExpress.XtraEditors.LabelControl();
+            this.lblNoOfBills = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalSaleQty = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalSale = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CmpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CmpGridView)).BeginInit();
@@ -88,41 +88,41 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.Options.UseFont = true;
             this.label1.Location = new System.Drawing.Point(512, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 23);
+            this.label1.Size = new System.Drawing.Size(104, 23);
             this.label1.TabIndex = 692;
             this.label1.Text = "TOTAL SALE";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Appearance.Options.UseFont = true;
             this.label2.Location = new System.Drawing.Point(512, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 23);
+            this.label2.Size = new System.Drawing.Size(141, 23);
             this.label2.TabIndex = 693;
             this.label2.Text = "TOTAL QTY SOLD";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Appearance.Options.UseFont = true;
             this.label3.Location = new System.Drawing.Point(512, 207);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 23);
+            this.label3.Size = new System.Drawing.Size(132, 23);
             this.label3.TabIndex = 694;
             this.label3.Text = "AVERAGE SALE";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Appearance.Options.UseFont = true;
             this.label4.Location = new System.Drawing.Point(512, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(119, 23);
+            this.label4.Size = new System.Drawing.Size(109, 23);
             this.label4.TabIndex = 695;
             this.label4.Text = "TOTAL BILLS";
             // 
@@ -209,55 +209,51 @@
             // 
             // lblAverageBillSale
             // 
-            this.lblAverageBillSale.AutoSize = true;
-            this.lblAverageBillSale.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
-            this.lblAverageBillSale.ForeColor = System.Drawing.Color.Green;
+            this.lblAverageBillSale.Appearance.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
+            this.lblAverageBillSale.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lblAverageBillSale.Appearance.Options.UseFont = true;
+            this.lblAverageBillSale.Appearance.Options.UseForeColor = true;
             this.lblAverageBillSale.Location = new System.Drawing.Point(512, 230);
             this.lblAverageBillSale.Name = "lblAverageBillSale";
-            this.lblAverageBillSale.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblAverageBillSale.Size = new System.Drawing.Size(30, 33);
+            this.lblAverageBillSale.Size = new System.Drawing.Size(15, 33);
             this.lblAverageBillSale.TabIndex = 698;
             this.lblAverageBillSale.Text = "0";
-            this.lblAverageBillSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblNoOfBills
             // 
-            this.lblNoOfBills.AutoSize = true;
-            this.lblNoOfBills.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
-            this.lblNoOfBills.ForeColor = System.Drawing.Color.Green;
+            this.lblNoOfBills.Appearance.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
+            this.lblNoOfBills.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lblNoOfBills.Appearance.Options.UseFont = true;
+            this.lblNoOfBills.Appearance.Options.UseForeColor = true;
             this.lblNoOfBills.Location = new System.Drawing.Point(512, 173);
             this.lblNoOfBills.Name = "lblNoOfBills";
-            this.lblNoOfBills.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblNoOfBills.Size = new System.Drawing.Size(30, 33);
+            this.lblNoOfBills.Size = new System.Drawing.Size(15, 33);
             this.lblNoOfBills.TabIndex = 698;
             this.lblNoOfBills.Text = "0";
-            this.lblNoOfBills.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTotalSaleQty
             // 
-            this.lblTotalSaleQty.AutoSize = true;
-            this.lblTotalSaleQty.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTotalSaleQty.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalSaleQty.Appearance.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSaleQty.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalSaleQty.Appearance.Options.UseFont = true;
+            this.lblTotalSaleQty.Appearance.Options.UseForeColor = true;
             this.lblTotalSaleQty.Location = new System.Drawing.Point(512, 117);
             this.lblTotalSaleQty.Name = "lblTotalSaleQty";
-            this.lblTotalSaleQty.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTotalSaleQty.Size = new System.Drawing.Size(30, 33);
+            this.lblTotalSaleQty.Size = new System.Drawing.Size(15, 33);
             this.lblTotalSaleQty.TabIndex = 698;
             this.lblTotalSaleQty.Text = "0";
-            this.lblTotalSaleQty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTotalSale
             // 
-            this.lblTotalSale.AutoSize = true;
-            this.lblTotalSale.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
-            this.lblTotalSale.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalSale.Appearance.Font = new System.Drawing.Font("Bahnschrift", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSale.Appearance.ForeColor = System.Drawing.Color.Green;
+            this.lblTotalSale.Appearance.Options.UseFont = true;
+            this.lblTotalSale.Appearance.Options.UseForeColor = true;
             this.lblTotalSale.Location = new System.Drawing.Point(512, 61);
             this.lblTotalSale.Name = "lblTotalSale";
-            this.lblTotalSale.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblTotalSale.Size = new System.Drawing.Size(30, 33);
+            this.lblTotalSale.Size = new System.Drawing.Size(15, 33);
             this.lblTotalSale.TabIndex = 698;
             this.lblTotalSale.Text = "0";
-            this.lblTotalSale.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmSaleReportF2
             // 
@@ -300,10 +296,10 @@
 
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private DevExpress.XtraEditors.LabelControl label1;
+        private DevExpress.XtraEditors.LabelControl label2;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraGrid.GridControl CmpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView CmpGridView;
         private DevExpress.XtraGrid.GridControl CmpUnitGrid;
@@ -313,9 +309,9 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private System.Windows.Forms.Label lblAverageBillSale;
-        private System.Windows.Forms.Label lblNoOfBills;
-        private System.Windows.Forms.Label lblTotalSaleQty;
-        private System.Windows.Forms.Label lblTotalSale;
+        private DevExpress.XtraEditors.LabelControl lblAverageBillSale;
+        private DevExpress.XtraEditors.LabelControl lblNoOfBills;
+        private DevExpress.XtraEditors.LabelControl lblTotalSaleQty;
+        private DevExpress.XtraEditors.LabelControl lblTotalSale;
     }
 }

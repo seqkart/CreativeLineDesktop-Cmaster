@@ -33,7 +33,7 @@
             this.btnLock = new DevExpress.XtraEditors.SimpleButton();
             this.ChoiceSelect = new DevExpress.XtraEditors.CheckEdit();
             this.DtStartDate = new DevExpress.XtraEditors.TextEdit();
-            this.label13 = new System.Windows.Forms.Label();
+            this.label13 = new DevExpress.XtraEditors.LabelControl();
             this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.SalaryGrid = new DevExpress.XtraGrid.GridControl();
             this.SalaryGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -109,11 +109,11 @@
             // 
             // label13
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.White;
+            this.label13.Appearance.BackColor = System.Drawing.Color.White;
+            this.label13.Appearance.Options.UseBackColor = true;
             this.label13.Location = new System.Drawing.Point(4, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(99, 13);
+            this.label13.Size = new System.Drawing.Size(93, 13);
             this.label13.TabIndex = 347;
             this.label13.Text = "Select Month/Year";
             // 
@@ -437,7 +437,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView SalaryGridView;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private DevExpress.XtraEditors.SimpleButton btnLoad;
-        private System.Windows.Forms.Label label13;
+        private DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TextEdit DtStartDate;
         private DevExpress.XtraEditors.CheckEdit ChoiceSelect;
         private System.Windows.Forms.ToolStripButton btnAdd;

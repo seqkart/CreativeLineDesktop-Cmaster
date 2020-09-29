@@ -34,17 +34,17 @@
             this.txtRate = new DevExpress.XtraEditors.TextEdit();
             this.txtTdsDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtTdsCode = new DevExpress.XtraEditors.TextEdit();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new DevExpress.XtraEditors.LabelControl();
+            this.label8 = new DevExpress.XtraEditors.LabelControl();
+            this.label5 = new DevExpress.XtraEditors.LabelControl();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtAcPostingCode = new DevExpress.XtraEditors.TextEdit();
             this.txtAcPostingdesc = new DevExpress.XtraEditors.TextEdit();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.txtSurcRate.Properties)).BeginInit();
@@ -106,46 +106,41 @@
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(53, 103);
+            this.label9.Location = new System.Drawing.Point(59, 103);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 13);
+            this.label9.Size = new System.Drawing.Size(73, 13);
             this.label9.TabIndex = 229;
             this.label9.Text = "Under Section";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(95, 155);
+            this.label8.Location = new System.Drawing.Point(109, 155);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(30, 13);
+            this.label8.Size = new System.Drawing.Size(23, 13);
             this.label8.TabIndex = 228;
             this.label8.Text = "Rate";
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(45, 178);
+            this.label5.Location = new System.Drawing.Point(54, 182);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.Size = new System.Drawing.Size(78, 13);
             this.label5.TabIndex = 227;
             this.label5.Text = "Surcharge Rate";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(97, 81);
+            this.label3.Location = new System.Drawing.Point(108, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 226;
             this.label3.Text = "Desc";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(95, 50);
+            this.label1.Location = new System.Drawing.Point(105, 50);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 225;
             this.label1.Text = "Code";
             // 
@@ -210,10 +205,9 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(64, 129);
+            this.label2.Location = new System.Drawing.Point(72, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 13);
+            this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 233;
             this.label2.Text = "A/C Posting";
             // 
@@ -294,17 +288,17 @@
         private DevExpress.XtraEditors.TextEdit txtRate;
         private DevExpress.XtraEditors.TextEdit txtTdsDesc;
         private DevExpress.XtraEditors.TextEdit txtTdsCode;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LabelControl label9;
+        private DevExpress.XtraEditors.LabelControl label8;
+        private DevExpress.XtraEditors.LabelControl label5;
+        private DevExpress.XtraEditors.LabelControl label3;
+        private DevExpress.XtraEditors.LabelControl label1;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
         private DevExpress.XtraEditors.TextEdit txtAcPostingCode;
         private DevExpress.XtraEditors.TextEdit txtAcPostingdesc;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
     }
