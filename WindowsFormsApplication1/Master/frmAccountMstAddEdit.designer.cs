@@ -291,7 +291,6 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Controls.Add(this.HelpGrid);
             this.panelControl3.Controls.Add(this.txtAgentName);
             this.panelControl3.Controls.Add(this.txtAgentCode);
             this.panelControl3.Controls.Add(this.label17);
@@ -322,7 +321,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(87, -4);
+            this.HelpGrid.Location = new System.Drawing.Point(97, 49);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(538, 391);
@@ -1376,6 +1375,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(702, 521);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.cmbTaxType);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.txtStockTransferTag);
