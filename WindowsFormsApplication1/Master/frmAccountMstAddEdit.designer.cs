@@ -322,7 +322,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(86, 14);
+            this.HelpGrid.Location = new System.Drawing.Point(87, -4);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(538, 391);
