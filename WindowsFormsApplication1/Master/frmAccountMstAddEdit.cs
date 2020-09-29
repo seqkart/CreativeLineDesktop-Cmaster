@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,6 +9,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmAccountMstAddEdit : XtraForm
     {
+        String TransID;
         public String s1 { get; set; }
         public String AccCode { get; set; }
         public frmAccountMstAddEdit()
@@ -50,6 +52,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.TextBoxVisualize(panelControl2);
+                ProjectFunctions.TextBoxVisualize(xtraTabPage1);
                 ProjectFunctions.TextBoxVisualize(panelControl3);
                 ProjectFunctions.ButtonVisualize(this);
                 ProjectFunctions.XtraFormVisualize(this);
@@ -637,10 +640,73 @@ namespace WindowsFormsApplication1
                 txtDelCitycode.Focus();
                 return;
             }
+            if (BtnOK.Text.ToUpper() == "&OK")
+            {
+                ProjectFunctions.GetDataSet("Insert into ActDelAddresses(AccCode,AccAddress1,AccAddress2,AccAddress3,CityCode,AccGSTNo)values('" + txtAcCode.Text + "','" + txtDelAddress1.Text + "','" + txtDelAddress2.Text + "','" + txtDelAddress3.Text + "','" + txtDelCitycode.Text + "','" + txtDelGSTNo.Text + "')");
+                LoadDelAddresses();
+            }
+            else
+            {
+                String Query = "update ActDelAddresses Set ";
+                Query= Query+ " AccAddress1='"+ txtDelAddress1.Text+"',";
+                Query = Query + " AccAddress2='"+ txtDelAddress2.Text + "',";
+                Query = Query + " AccAddress3='"+ txtDelAddress3.Text + "',";
+                Query = Query + " CityCode='"+ txtDelCitycode.Text + "',";
+                Query = Query + " AccGSTNo='" + txtDelGSTNo.Text + "' Where TransID='" + TransID + "'";
 
-            ProjectFunctions.GetDataSet("Insert into ActDelAddresses(AccCode,AccAddress1,AccAddress2,AccAddress3,CityCode,AccGSTNo)values('" + txtAcCode.Text + "','" + txtDelAddress1.Text + "','" + txtDelAddress2.Text + "','" + txtDelAddress3.Text + "','" + txtDelCitycode.Text + "','" + txtDelGSTNo.Text + "')");
+                ProjectFunctions.GetDataSet(Query);
+                LoadDelAddresses();
+            }
+
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.GetDataSet("Delete from ActDelAddresses Where TransID='" + TransID + "'");
             LoadDelAddresses();
+        }
 
+        private void InfoGrid_DoubleClick(object sender, EventArgs e)
+        {
+            var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+            if (MaxRow == 0)
+            {
+                ProjectFunctions.SpeakError("Invalid Operation");
+            }
+            else
+            {
+                BtnOK.Text = "&Update";
+                DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
+                TransID = currentrow["TransId"].ToString();
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadDelAddress '" + TransID + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    txtDelAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
+                    txtDelAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
+                    txtDelAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
+                    txtDelCitycode.Text = ds.Tables[0].Rows[0]["CityCode"].ToString();
+                    txtDelCityName.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
+                    txtDelGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+                    txtDelAddress1.Focus();
+                }
+            }
+        }
+        private void clear()
+        {
+            BtnOK.Text = "&OK";
+            txtDelAddress1.Text = string.Empty;
+            txtDelAddress2.Text = string.Empty;
+            txtDelAddress3.Text = string.Empty;
+            txtDelCitycode.Text = string.Empty;
+            txtDelCityName.Text = string.Empty;
+            txtDelGSTNo.Text = string.Empty;
+
+            txtDelAddress1.Focus();
+        }
+
+        private void BtnUndo_Click(object sender, EventArgs e)
+        {
+            clear();
         }
     }
 }
