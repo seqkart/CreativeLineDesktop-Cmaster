@@ -74,7 +74,7 @@
             this.txtUnderSec.Name = "txtUnderSec";
             this.txtUnderSec.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnderSec.Properties.MaxLength = 40;
-            this.txtUnderSec.Size = new System.Drawing.Size(441, 20);
+            this.txtUnderSec.Size = new System.Drawing.Size(333, 20);
             this.txtUnderSec.TabIndex = 220;
             // 
             // txtRate
@@ -92,7 +92,7 @@
             this.txtTdsDesc.Name = "txtTdsDesc";
             this.txtTdsDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTdsDesc.Properties.MaxLength = 50;
-            this.txtTdsDesc.Size = new System.Drawing.Size(441, 20);
+            this.txtTdsDesc.Size = new System.Drawing.Size(333, 20);
             this.txtTdsDesc.TabIndex = 219;
             // 
             // txtTdsCode
@@ -157,7 +157,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(634, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(516, 25);
             this.Menu_ToolStrip.TabIndex = 230;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -199,7 +199,7 @@
             this.txtAcPostingdesc.Name = "txtAcPostingdesc";
             this.txtAcPostingdesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAcPostingdesc.Properties.ReadOnly = true;
-            this.txtAcPostingdesc.Size = new System.Drawing.Size(364, 20);
+            this.txtAcPostingdesc.Size = new System.Drawing.Size(256, 20);
             this.txtAcPostingdesc.TabIndex = 232;
             this.txtAcPostingdesc.TabStop = false;
             // 
@@ -213,7 +213,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(186, 28);
+            this.HelpGrid.Location = new System.Drawing.Point(34, 28);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(448, 188);
@@ -240,7 +240,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 228);
+            this.ClientSize = new System.Drawing.Size(516, 228);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.label2);

@@ -140,19 +140,19 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(55, 125);
+            this.labelControl1.Location = new System.Drawing.Point(54, 125);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(70, 20);
+            this.labelControl1.Size = new System.Drawing.Size(69, 20);
             this.labelControl1.TabIndex = 4;
             this.labelControl1.Text = "Card Type";
             // 
             // labelControl2
             // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(64, 190);
+            this.labelControl2.Location = new System.Drawing.Point(62, 187);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 20);
             this.labelControl2.TabIndex = 4;
@@ -160,7 +160,7 @@
             // 
             // txtCardNo
             // 
-            this.txtCardNo.Location = new System.Drawing.Point(128, 188);
+            this.txtCardNo.Location = new System.Drawing.Point(128, 185);
             this.txtCardNo.Name = "txtCardNo";
             this.txtCardNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardNo.Properties.Appearance.Options.UseFont = true;
@@ -170,17 +170,17 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(25, 220);
+            this.labelControl3.Location = new System.Drawing.Point(24, 218);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(100, 20);
+            this.labelControl3.Size = new System.Drawing.Size(99, 20);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Name on Card";
             // 
             // txtNameOnCard
             // 
-            this.txtNameOnCard.Location = new System.Drawing.Point(128, 218);
+            this.txtNameOnCard.Location = new System.Drawing.Point(128, 216);
             this.txtNameOnCard.Name = "txtNameOnCard";
             this.txtNameOnCard.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameOnCard.Properties.Appearance.Options.UseFont = true;
@@ -375,7 +375,7 @@
             // 
             // txtCardDigits
             // 
-            this.txtCardDigits.Location = new System.Drawing.Point(128, 153);
+            this.txtCardDigits.Location = new System.Drawing.Point(128, 154);
             this.txtCardDigits.Name = "txtCardDigits";
             this.txtCardDigits.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardDigits.Properties.Appearance.Options.UseFont = true;
@@ -385,11 +385,11 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(48, 154);
+            this.labelControl4.Location = new System.Drawing.Point(48, 156);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(77, 20);
+            this.labelControl4.Size = new System.Drawing.Size(75, 20);
             this.labelControl4.TabIndex = 12;
             this.labelControl4.Text = "Card Digits";
             // 

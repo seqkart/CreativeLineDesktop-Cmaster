@@ -92,7 +92,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(43, 145);
+            this.label2.Location = new System.Drawing.Point(43, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 340;
@@ -101,7 +101,7 @@
             // txtHSNNo
             // 
             this.txtHSNNo.EnterMoveNextControl = true;
-            this.txtHSNNo.Location = new System.Drawing.Point(109, 142);
+            this.txtHSNNo.Location = new System.Drawing.Point(109, 136);
             this.txtHSNNo.Name = "txtHSNNo";
             this.txtHSNNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtHSNNo.Properties.MaxLength = 8;
@@ -111,7 +111,7 @@
             // txtTaxCodePLDesc
             // 
             this.txtTaxCodePLDesc.Enabled = false;
-            this.txtTaxCodePLDesc.Location = new System.Drawing.Point(190, 195);
+            this.txtTaxCodePLDesc.Location = new System.Drawing.Point(190, 190);
             this.txtTaxCodePLDesc.Name = "txtTaxCodePLDesc";
             this.txtTaxCodePLDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodePLDesc.Properties.ReadOnly = true;
@@ -122,7 +122,7 @@
             // txtTaxCodePCDesc
             // 
             this.txtTaxCodePCDesc.Enabled = false;
-            this.txtTaxCodePCDesc.Location = new System.Drawing.Point(190, 168);
+            this.txtTaxCodePCDesc.Location = new System.Drawing.Point(190, 163);
             this.txtTaxCodePCDesc.Name = "txtTaxCodePCDesc";
             this.txtTaxCodePCDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodePCDesc.Properties.ReadOnly = true;
@@ -133,7 +133,7 @@
             // txtTaxCodePL
             // 
             this.txtTaxCodePL.EnterMoveNextControl = true;
-            this.txtTaxCodePL.Location = new System.Drawing.Point(109, 195);
+            this.txtTaxCodePL.Location = new System.Drawing.Point(109, 190);
             this.txtTaxCodePL.Name = "txtTaxCodePL";
             this.txtTaxCodePL.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodePL.Properties.MaxLength = 6;
@@ -145,7 +145,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(25, 198);
+            this.label6.Location = new System.Drawing.Point(25, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 328;
@@ -154,7 +154,7 @@
             // txtTaxCodePC
             // 
             this.txtTaxCodePC.EnterMoveNextControl = true;
-            this.txtTaxCodePC.Location = new System.Drawing.Point(109, 168);
+            this.txtTaxCodePC.Location = new System.Drawing.Point(109, 163);
             this.txtTaxCodePC.Name = "txtTaxCodePC";
             this.txtTaxCodePC.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodePC.Properties.MaxLength = 6;
@@ -166,7 +166,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(14, 171);
+            this.label7.Location = new System.Drawing.Point(14, 167);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 13);
             this.label7.TabIndex = 327;
@@ -209,7 +209,7 @@
             // txtUMDesc
             // 
             this.txtUMDesc.Enabled = false;
-            this.txtUMDesc.Location = new System.Drawing.Point(190, 54);
+            this.txtUMDesc.Location = new System.Drawing.Point(190, 55);
             this.txtUMDesc.Name = "txtUMDesc";
             this.txtUMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUMDesc.Properties.ReadOnly = true;
@@ -220,7 +220,7 @@
             // txtUMCode
             // 
             this.txtUMCode.EnterMoveNextControl = true;
-            this.txtUMCode.Location = new System.Drawing.Point(109, 54);
+            this.txtUMCode.Location = new System.Drawing.Point(109, 55);
             this.txtUMCode.Name = "txtUMCode";
             this.txtUMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUMCode.Properties.MaxLength = 3;
@@ -232,7 +232,7 @@
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(15, 57);
+            this.label13.Location = new System.Drawing.Point(15, 59);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(85, 13);
             this.label13.TabIndex = 339;
@@ -241,7 +241,7 @@
             // txtGrpDesc
             // 
             this.txtGrpDesc.Enabled = false;
-            this.txtGrpDesc.Location = new System.Drawing.Point(190, 83);
+            this.txtGrpDesc.Location = new System.Drawing.Point(190, 82);
             this.txtGrpDesc.Name = "txtGrpDesc";
             this.txtGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpDesc.Properties.ReadOnly = true;
@@ -253,7 +253,7 @@
             // 
             this.txtGrpCode.Enabled = false;
             this.txtGrpCode.EnterMoveNextControl = true;
-            this.txtGrpCode.Location = new System.Drawing.Point(109, 87);
+            this.txtGrpCode.Location = new System.Drawing.Point(109, 82);
             this.txtGrpCode.Name = "txtGrpCode";
             this.txtGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpCode.Properties.MaxLength = 4;
@@ -264,7 +264,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(67, 90);
+            this.label15.Location = new System.Drawing.Point(67, 86);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 337;
@@ -273,7 +273,7 @@
             // txtSGrpDesc
             // 
             this.txtSGrpDesc.Enabled = false;
-            this.txtSGrpDesc.Location = new System.Drawing.Point(190, 113);
+            this.txtSGrpDesc.Location = new System.Drawing.Point(190, 109);
             this.txtSGrpDesc.Name = "txtSGrpDesc";
             this.txtSGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGrpDesc.Properties.ReadOnly = true;
@@ -284,7 +284,7 @@
             // txtSGrpCode
             // 
             this.txtSGrpCode.EnterMoveNextControl = true;
-            this.txtSGrpCode.Location = new System.Drawing.Point(109, 113);
+            this.txtSGrpCode.Location = new System.Drawing.Point(109, 109);
             this.txtSGrpCode.Name = "txtSGrpCode";
             this.txtSGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGrpCode.Properties.MaxLength = 4;
@@ -296,7 +296,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(44, 116);
+            this.label14.Location = new System.Drawing.Point(44, 113);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 13);
             this.label14.TabIndex = 335;
@@ -313,7 +313,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(30, 29);
+            this.label8.Location = new System.Drawing.Point(30, 32);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(69, 13);
             this.label8.TabIndex = 326;
@@ -331,7 +331,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(175, 44);
+            this.label5.Location = new System.Drawing.Point(175, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 13);
             this.label5.TabIndex = 262;
@@ -339,7 +339,7 @@
             // 
             // label27
             // 
-            this.label27.Location = new System.Drawing.Point(553, 47);
+            this.label27.Location = new System.Drawing.Point(553, 48);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(54, 13);
             this.label27.TabIndex = 260;
@@ -357,7 +357,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(25, 73);
+            this.label3.Location = new System.Drawing.Point(25, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 258;
@@ -365,7 +365,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(53, 44);
+            this.label1.Location = new System.Drawing.Point(53, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 257;
@@ -411,7 +411,7 @@
             // txtProductAsgnCode
             // 
             this.txtProductAsgnCode.EnterMoveNextControl = true;
-            this.txtProductAsgnCode.Location = new System.Drawing.Point(245, 41);
+            this.txtProductAsgnCode.Location = new System.Drawing.Point(245, 44);
             this.txtProductAsgnCode.Name = "txtProductAsgnCode";
             this.txtProductAsgnCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductAsgnCode.Properties.MaxLength = 15;
@@ -423,7 +423,7 @@
             // 
             this.txtPrdCode.Enabled = false;
             this.txtPrdCode.EnterMoveNextControl = true;
-            this.txtPrdCode.Location = new System.Drawing.Point(96, 41);
+            this.txtPrdCode.Location = new System.Drawing.Point(96, 44);
             this.txtPrdCode.Name = "txtPrdCode";
             this.txtPrdCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrdCode.Size = new System.Drawing.Size(73, 20);
@@ -432,7 +432,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(244, 28);
+            this.HelpGrid.Location = new System.Drawing.Point(149, 28);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(458, 374);

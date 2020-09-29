@@ -81,7 +81,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(183, 46);
+            this.HelpGrid.Location = new System.Drawing.Point(106, 68);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(350, 221);
@@ -117,7 +117,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(635, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(550, 25);
             this.Menu_ToolStrip.TabIndex = 417;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -162,7 +162,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(10, 94);
+            this.label3.Location = new System.Drawing.Point(16, 94);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 13);
             this.label3.TabIndex = 416;
@@ -170,7 +170,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 68);
+            this.label1.Location = new System.Drawing.Point(18, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 415;
@@ -182,7 +182,6 @@
             this.txtCityCode.Location = new System.Drawing.Point(89, 195);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
-            this.txtCityCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 4;
             this.txtCityCode.Size = new System.Drawing.Size(69, 20);
@@ -191,7 +190,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(23, 199);
+            this.label2.Location = new System.Drawing.Point(29, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 13);
             this.label2.TabIndex = 424;
@@ -214,7 +213,6 @@
             this.txtAccCode.Location = new System.Drawing.Point(89, 247);
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
-            this.txtAccCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtAccCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccCode.Properties.MaxLength = 4;
             this.txtAccCode.Size = new System.Drawing.Size(69, 20);
@@ -224,7 +222,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(33, 250);
+            this.label4.Location = new System.Drawing.Point(39, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 427;
@@ -252,7 +250,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(30, 120);
+            this.label5.Location = new System.Drawing.Point(36, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 429;
@@ -270,7 +268,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(30, 146);
+            this.label6.Location = new System.Drawing.Point(36, 146);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 13);
             this.label6.TabIndex = 431;
@@ -288,7 +286,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(30, 172);
+            this.label7.Location = new System.Drawing.Point(36, 172);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 433;
@@ -306,7 +304,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(39, 276);
+            this.label8.Location = new System.Drawing.Point(45, 276);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 13);
             this.label8.TabIndex = 435;
@@ -314,7 +312,7 @@
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(580, 87);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(311, 65);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -326,7 +324,7 @@
             // 
             // txtStatusTag
             // 
-            this.txtStatusTag.Location = new System.Drawing.Point(482, 87);
+            this.txtStatusTag.Location = new System.Drawing.Point(213, 65);
             this.txtStatusTag.Name = "txtStatusTag";
             this.txtStatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -338,7 +336,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(539, 91);
+            this.labelControl10.Location = new System.Drawing.Point(270, 69);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(35, 13);
             this.labelControl10.TabIndex = 462;
@@ -346,7 +344,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(425, 91);
+            this.labelControl7.Location = new System.Drawing.Point(156, 69);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(51, 13);
             this.labelControl7.TabIndex = 463;
@@ -354,14 +352,14 @@
             // 
             // textEdit7
             // 
-            this.textEdit7.Location = new System.Drawing.Point(520, 110);
+            this.textEdit7.Location = new System.Drawing.Point(462, 65);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Size = new System.Drawing.Size(44, 20);
             this.textEdit7.TabIndex = 465;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(427, 114);
+            this.labelControl8.Location = new System.Drawing.Point(369, 69);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(87, 13);
             this.labelControl8.TabIndex = 464;
@@ -380,7 +378,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(51, 225);
+            this.label9.Location = new System.Drawing.Point(57, 225);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 468;
@@ -390,7 +388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(635, 322);
+            this.ClientSize = new System.Drawing.Size(550, 322);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtState);

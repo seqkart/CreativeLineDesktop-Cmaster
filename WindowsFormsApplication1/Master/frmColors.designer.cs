@@ -47,7 +47,7 @@
             // txtColorName
             // 
             this.txtColorName.EnterMoveNextControl = true;
-            this.txtColorName.Location = new System.Drawing.Point(136, 139);
+            this.txtColorName.Location = new System.Drawing.Point(140, 87);
             this.txtColorName.Name = "txtColorName";
             this.txtColorName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColorName.Size = new System.Drawing.Size(271, 20);
@@ -57,7 +57,7 @@
             // 
             this.txtSysColorID.Enabled = false;
             this.txtSysColorID.EnterMoveNextControl = true;
-            this.txtSysColorID.Location = new System.Drawing.Point(136, 86);
+            this.txtSysColorID.Location = new System.Drawing.Point(140, 35);
             this.txtSysColorID.Name = "txtSysColorID";
             this.txtSysColorID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysColorID.Properties.MaxLength = 8;
@@ -67,18 +67,18 @@
             // 
             // Label3
             // 
-            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(53, 115);
+            this.Label3.Location = new System.Drawing.Point(72, 65);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(67, 15);
+            this.Label3.Size = new System.Drawing.Size(64, 13);
             this.Label3.TabIndex = 757;
             this.Label3.Text = "Color Code :";
             // 
             // txtColorCode
             // 
             this.txtColorCode.EnterMoveNextControl = true;
-            this.txtColorCode.Location = new System.Drawing.Point(136, 112);
+            this.txtColorCode.Location = new System.Drawing.Point(140, 61);
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtColorCode.Size = new System.Drawing.Size(271, 20);
@@ -127,21 +127,21 @@
             // 
             // Label7
             // 
-            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(48, 141);
+            this.Label7.Location = new System.Drawing.Point(69, 91);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(72, 15);
+            this.Label7.Size = new System.Drawing.Size(67, 13);
             this.Label7.TabIndex = 754;
             this.Label7.Text = "Color Name :";
             // 
             // LBDEPCODE
             // 
-            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(33, 89);
+            this.LBDEPCODE.Location = new System.Drawing.Point(52, 39);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(87, 15);
+            this.LBDEPCODE.Size = new System.Drawing.Size(84, 13);
             this.LBDEPCODE.TabIndex = 756;
             this.LBDEPCODE.Text = "Sys Color Code :";
             // 
@@ -149,7 +149,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 204);
+            this.ClientSize = new System.Drawing.Size(460, 123);
             this.ControlBox = false;
             this.Controls.Add(this.txtColorName);
             this.Controls.Add(this.txtSysColorID);

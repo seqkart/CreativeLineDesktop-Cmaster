@@ -92,7 +92,7 @@
             // 
             // txtBrandName
             // 
-            this.txtBrandName.Location = new System.Drawing.Point(116, 87);
+            this.txtBrandName.Location = new System.Drawing.Point(116, 86);
             this.txtBrandName.Name = "txtBrandName";
             this.txtBrandName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandName.Properties.MaxLength = 100;
@@ -109,31 +109,31 @@
             // 
             // Label17
             // 
-            this.Label17.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(13, 87);
+            this.Label17.Location = new System.Drawing.Point(32, 90);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(93, 18);
+            this.Label17.Size = new System.Drawing.Size(77, 13);
             this.Label17.TabIndex = 377;
             this.Label17.Text = "BRAND NAME :";
             // 
             // Label16
             // 
-            this.Label16.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label16.Appearance.Options.UseFont = true;
-            this.Label16.Location = new System.Drawing.Point(17, 119);
+            this.Label16.Location = new System.Drawing.Point(35, 123);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(89, 18);
+            this.Label16.Size = new System.Drawing.Size(74, 13);
             this.Label16.TabIndex = 378;
             this.Label16.Text = "BRAND ALIAS :";
             // 
             // Label15
             // 
-            this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(61, 53);
+            this.Label15.Location = new System.Drawing.Point(71, 57);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(45, 18);
+            this.Label15.Size = new System.Drawing.Size(38, 13);
             this.Label15.TabIndex = 376;
             this.Label15.Text = "SYS ID :";
             // 

@@ -236,7 +236,7 @@
             // txtTaxCodeCDesc
             // 
             this.txtTaxCodeCDesc.Enabled = false;
-            this.txtTaxCodeCDesc.Location = new System.Drawing.Point(161, 125);
+            this.txtTaxCodeCDesc.Location = new System.Drawing.Point(161, 124);
             this.txtTaxCodeCDesc.Name = "txtTaxCodeCDesc";
             this.txtTaxCodeCDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeCDesc.Properties.ReadOnly = true;
@@ -247,7 +247,7 @@
             // txtTaxCodeC
             // 
             this.txtTaxCodeC.EnterMoveNextControl = true;
-            this.txtTaxCodeC.Location = new System.Drawing.Point(72, 125);
+            this.txtTaxCodeC.Location = new System.Drawing.Point(67, 124);
             this.txtTaxCodeC.Name = "txtTaxCodeC";
             this.txtTaxCodeC.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeC.Properties.MaxLength = 4;
@@ -259,7 +259,7 @@
             // txtTaxCodeLDesc
             // 
             this.txtTaxCodeLDesc.Enabled = false;
-            this.txtTaxCodeLDesc.Location = new System.Drawing.Point(161, 99);
+            this.txtTaxCodeLDesc.Location = new System.Drawing.Point(161, 98);
             this.txtTaxCodeLDesc.Name = "txtTaxCodeLDesc";
             this.txtTaxCodeLDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeLDesc.Properties.ReadOnly = true;
@@ -270,7 +270,7 @@
             // txtTaxCodeL
             // 
             this.txtTaxCodeL.EnterMoveNextControl = true;
-            this.txtTaxCodeL.Location = new System.Drawing.Point(72, 99);
+            this.txtTaxCodeL.Location = new System.Drawing.Point(67, 98);
             this.txtTaxCodeL.Name = "txtTaxCodeL";
             this.txtTaxCodeL.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeL.Properties.MaxLength = 4;
@@ -299,7 +299,7 @@
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(15, 102);
+            this.label17.Location = new System.Drawing.Point(16, 102);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(46, 13);
             this.label17.TabIndex = 708;
@@ -308,7 +308,7 @@
             // txtMRP
             // 
             this.txtMRP.EnterMoveNextControl = true;
-            this.txtMRP.Location = new System.Drawing.Point(65, 50);
+            this.txtMRP.Location = new System.Drawing.Point(67, 50);
             this.txtMRP.Name = "txtMRP";
             this.txtMRP.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMRP.Properties.DisplayFormat.FormatString = "n2";
@@ -328,7 +328,7 @@
             // txtRSP
             // 
             this.txtRSP.EnterMoveNextControl = true;
-            this.txtRSP.Location = new System.Drawing.Point(321, 24);
+            this.txtRSP.Location = new System.Drawing.Point(321, 23);
             this.txtRSP.Name = "txtRSP";
             this.txtRSP.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRSP.Properties.DisplayFormat.FormatString = "n2";
@@ -364,7 +364,7 @@
             // txtPurPrice
             // 
             this.txtPurPrice.EnterMoveNextControl = true;
-            this.txtPurPrice.Location = new System.Drawing.Point(65, 24);
+            this.txtPurPrice.Location = new System.Drawing.Point(67, 23);
             this.txtPurPrice.Name = "txtPurPrice";
             this.txtPurPrice.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPurPrice.Properties.DisplayFormat.FormatString = "n2";
@@ -382,12 +382,12 @@
             // Label11
             // 
             this.Label11.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label11.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label11.Appearance.Options.UseBackColor = true;
             this.Label11.Appearance.Options.UseFont = true;
             this.Label11.Location = new System.Drawing.Point(289, 27);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(19, 14);
+            this.Label11.Size = new System.Drawing.Size(19, 13);
             this.Label11.TabIndex = 82;
             this.Label11.Text = "RSP";
             // 
@@ -405,48 +405,48 @@
             // Label2
             // 
             this.Label2.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label2.Appearance.Options.UseBackColor = true;
             this.Label2.Appearance.Options.UseFont = true;
-            this.Label2.Location = new System.Drawing.Point(5, 27);
+            this.Label2.Location = new System.Drawing.Point(9, 27);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(52, 14);
+            this.Label2.Size = new System.Drawing.Size(53, 13);
             this.Label2.TabIndex = 74;
             this.Label2.Text = "PUR PRICE";
             // 
             // Label15
             // 
             this.Label15.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseBackColor = true;
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(289, 53);
+            this.Label15.Location = new System.Drawing.Point(289, 54);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(23, 14);
+            this.Label15.Size = new System.Drawing.Size(23, 13);
             this.Label15.TabIndex = 2;
             this.Label15.Text = "WSP";
             // 
             // Label14
             // 
             this.Label14.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label14.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label14.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label14.Appearance.Options.UseBackColor = true;
             this.Label14.Appearance.Options.UseFont = true;
-            this.Label14.Location = new System.Drawing.Point(34, 53);
+            this.Label14.Location = new System.Drawing.Point(39, 54);
             this.Label14.Name = "Label14";
-            this.Label14.Size = new System.Drawing.Size(23, 14);
+            this.Label14.Size = new System.Drawing.Size(23, 13);
             this.Label14.TabIndex = 70;
             this.Label14.Text = "MRP";
             // 
             // Label12
             // 
             this.Label12.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label12.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label12.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label12.Appearance.Options.UseBackColor = true;
             this.Label12.Appearance.Options.UseFont = true;
-            this.Label12.Location = new System.Drawing.Point(153, 53);
+            this.Label12.Location = new System.Drawing.Point(153, 54);
             this.Label12.Name = "Label12";
-            this.Label12.Size = new System.Drawing.Size(43, 14);
+            this.Label12.Size = new System.Drawing.Size(43, 13);
             this.Label12.TabIndex = 69;
             this.Label12.Text = "MARGIN";
             this.Label12.Click += new System.EventHandler(this.Label12_Click);
@@ -531,7 +531,7 @@
             this.GroupBox4.Controls.Add(this.Label20);
             this.GroupBox4.Controls.Add(this.Label19);
             this.GroupBox4.Controls.Add(this.Label3);
-            this.GroupBox4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.GroupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.GroupBox4.Location = new System.Drawing.Point(33, 137);
             this.GroupBox4.Name = "GroupBox4";
             this.GroupBox4.Size = new System.Drawing.Size(392, 271);
@@ -542,12 +542,12 @@
             // label16
             // 
             this.label16.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label16.Appearance.Options.UseBackColor = true;
             this.label16.Appearance.Options.UseFont = true;
-            this.label16.Location = new System.Drawing.Point(55, 131);
+            this.label16.Location = new System.Drawing.Point(58, 131);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(29, 14);
+            this.label16.Size = new System.Drawing.Size(29, 13);
             this.label16.TabIndex = 705;
             this.label16.Text = "Prefix";
             this.label16.Visible = false;
@@ -704,11 +704,11 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(51, 31);
+            this.label1.Location = new System.Drawing.Point(49, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 693;
-            this.label1.Text = "Group";
+            this.label1.Text = "GROUP";
             // 
             // txtSGrpDesc
             // 
@@ -724,12 +724,12 @@
             // Label7
             // 
             this.Label7.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseBackColor = true;
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(47, 231);
+            this.Label7.Location = new System.Drawing.Point(50, 231);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(37, 14);
+            this.Label7.Size = new System.Drawing.Size(37, 13);
             this.Label7.TabIndex = 624;
             this.Label7.Text = "BRAND";
             // 
@@ -747,71 +747,73 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(28, 56);
+            this.label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Appearance.Options.UseFont = true;
+            this.label9.Location = new System.Drawing.Point(26, 56);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 691;
-            this.label9.Text = "Sub Group";
+            this.label9.Text = "SUB GROUP";
             // 
             // Label22
             // 
             this.Label22.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label22.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label22.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label22.Appearance.Options.UseBackColor = true;
             this.Label22.Appearance.Options.UseFont = true;
-            this.Label22.Location = new System.Drawing.Point(20, 206);
+            this.Label22.Location = new System.Drawing.Point(22, 206);
             this.Label22.Name = "Label22";
-            this.Label22.Size = new System.Drawing.Size(64, 14);
+            this.Label22.Size = new System.Drawing.Size(65, 13);
             this.Label22.TabIndex = 622;
             this.Label22.Text = "DISCRIPTION";
             // 
             // Label21
             // 
             this.Label21.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label21.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label21.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label21.Appearance.Options.UseBackColor = true;
             this.Label21.Appearance.Options.UseFont = true;
-            this.Label21.Location = new System.Drawing.Point(10, 181);
+            this.Label21.Location = new System.Drawing.Point(12, 181);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(74, 14);
+            this.Label21.Size = new System.Drawing.Size(75, 13);
             this.Label21.TabIndex = 620;
             this.Label21.Text = "ARTICLE NAME";
             // 
             // Label20
             // 
             this.Label20.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label20.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label20.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label20.Appearance.Options.UseBackColor = true;
             this.Label20.Appearance.Options.UseFont = true;
-            this.Label20.Location = new System.Drawing.Point(56, 156);
+            this.Label20.Location = new System.Drawing.Point(59, 156);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(28, 14);
+            this.Label20.Size = new System.Drawing.Size(28, 13);
             this.Label20.TabIndex = 618;
             this.Label20.Text = "ALIAS";
             // 
             // Label19
             // 
             this.Label19.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label19.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label19.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label19.Appearance.ForeColor = System.Drawing.Color.Red;
             this.Label19.Appearance.Options.UseBackColor = true;
             this.Label19.Appearance.Options.UseFont = true;
             this.Label19.Appearance.Options.UseForeColor = true;
-            this.Label19.Location = new System.Drawing.Point(31, 81);
+            this.Label19.Location = new System.Drawing.Point(33, 81);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(53, 14);
+            this.Label19.Size = new System.Drawing.Size(54, 13);
             this.Label19.TabIndex = 616;
             this.Label19.Text = "HSN CODE";
             // 
             // Label3
             // 
             this.Label3.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseBackColor = true;
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(24, 106);
+            this.Label3.Location = new System.Drawing.Point(25, 106);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(60, 14);
+            this.Label3.Size = new System.Drawing.Size(62, 13);
             this.Label3.TabIndex = 36;
             this.Label3.Text = "ARTICLE No.";
             // 
@@ -895,7 +897,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(214, 38);
+            this.HelpGrid.Location = new System.Drawing.Point(84, 470);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(591, 296);
@@ -1023,12 +1025,12 @@
             // label4
             // 
             this.label4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label4.Appearance.Options.UseBackColor = true;
             this.label4.Appearance.Options.UseFont = true;
             this.label4.Location = new System.Drawing.Point(438, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 14);
+            this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 74;
             this.label4.Text = "UOM";
             // 

@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewFormAAddEdit));
-            this.txtstatusTag = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNfaTag = new DevExpress.XtraEditors.TextEdit();
             this.txtFormName = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtMenuName = new DevExpress.XtraEditors.TextEdit();
@@ -55,8 +53,8 @@
             this.txtRoleDesc = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtOrderBy = new DevExpress.XtraEditors.TextEdit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).BeginInit();
+            this.txtstatusTag = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtNfaTag = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).BeginInit();
@@ -69,35 +67,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRoleCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRoleDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderBy.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtstatusTag
-            // 
-            this.txtstatusTag.Location = new System.Drawing.Point(539, 89);
-            this.txtstatusTag.Name = "txtstatusTag";
-            this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtstatusTag.Properties.MaxLength = 1;
-            this.txtstatusTag.Size = new System.Drawing.Size(41, 20);
-            this.txtstatusTag.TabIndex = 3;
-            this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtstatusTag_Validating);
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(51, 66);
+            this.label12.Location = new System.Drawing.Point(51, 67);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 332;
             this.label12.Text = "Form Name";
-            // 
-            // txtNfaTag
-            // 
-            this.txtNfaTag.Location = new System.Drawing.Point(117, 206);
-            this.txtNfaTag.Name = "txtNfaTag";
-            this.txtNfaTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNfaTag.Properties.MaxLength = 1;
-            this.txtNfaTag.Size = new System.Drawing.Size(45, 20);
-            this.txtNfaTag.TabIndex = 7;
-            this.txtNfaTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtNfaTag_Validating);
             // 
             // txtFormName
             // 
@@ -110,7 +90,9 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(69, 210);
+            this.label4.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.label4.Appearance.Options.UseForeColor = true;
+            this.label4.Location = new System.Drawing.Point(69, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 13);
             this.label4.TabIndex = 343;
@@ -118,7 +100,7 @@
             // 
             // txtMenuName
             // 
-            this.txtMenuName.Location = new System.Drawing.Point(117, 153);
+            this.txtMenuName.Location = new System.Drawing.Point(117, 144);
             this.txtMenuName.Name = "txtMenuName";
             this.txtMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMenuName.Size = new System.Drawing.Size(463, 20);
@@ -128,7 +110,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(47, 156);
+            this.label7.Location = new System.Drawing.Point(47, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 13);
             this.label7.TabIndex = 347;
@@ -137,7 +119,7 @@
             // txtFormDesc
             // 
             this.txtFormDesc.EnterMoveNextControl = true;
-            this.txtFormDesc.Location = new System.Drawing.Point(117, 120);
+            this.txtFormDesc.Location = new System.Drawing.Point(117, 117);
             this.txtFormDesc.Name = "txtFormDesc";
             this.txtFormDesc.Properties.MaxLength = 150;
             this.txtFormDesc.Size = new System.Drawing.Size(463, 20);
@@ -145,7 +127,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(56, 123);
+            this.label8.Location = new System.Drawing.Point(56, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 349;
@@ -154,7 +136,7 @@
             // txtFormCode
             // 
             this.txtFormCode.EnterMoveNextControl = true;
-            this.txtFormCode.Location = new System.Drawing.Point(117, 89);
+            this.txtFormCode.Location = new System.Drawing.Point(117, 90);
             this.txtFormCode.Name = "txtFormCode";
             this.txtFormCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFormCode.Properties.MaxLength = 8;
@@ -163,7 +145,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(53, 92);
+            this.label9.Location = new System.Drawing.Point(53, 94);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 13);
             this.label9.TabIndex = 351;
@@ -171,7 +153,9 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(501, 92);
+            this.label5.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.label5.Appearance.Options.UseForeColor = true;
+            this.label5.Location = new System.Drawing.Point(501, 94);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 13);
             this.label5.TabIndex = 353;
@@ -179,7 +163,7 @@
             // 
             // txtSMenuName
             // 
-            this.txtSMenuName.Location = new System.Drawing.Point(117, 180);
+            this.txtSMenuName.Location = new System.Drawing.Point(117, 171);
             this.txtSMenuName.Name = "txtSMenuName";
             this.txtSMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSMenuName.Size = new System.Drawing.Size(463, 20);
@@ -188,7 +172,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(24, 183);
+            this.label11.Location = new System.Drawing.Point(24, 175);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(85, 13);
             this.label11.TabIndex = 356;
@@ -196,7 +180,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(110, 51);
+            this.HelpGrid.Location = new System.Drawing.Point(101, 41);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(470, 269);
@@ -263,7 +247,7 @@
             // txtProcName
             // 
             this.txtProcName.EnterMoveNextControl = true;
-            this.txtProcName.Location = new System.Drawing.Point(256, 206);
+            this.txtProcName.Location = new System.Drawing.Point(256, 198);
             this.txtProcName.Name = "txtProcName";
             this.txtProcName.Properties.MaxLength = 150;
             this.txtProcName.Size = new System.Drawing.Size(324, 20);
@@ -271,7 +255,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(195, 210);
+            this.label1.Location = new System.Drawing.Point(195, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 367;
@@ -280,10 +264,9 @@
             // txtRoleCode
             // 
             this.txtRoleCode.EnterMoveNextControl = true;
-            this.txtRoleCode.Location = new System.Drawing.Point(117, 232);
+            this.txtRoleCode.Location = new System.Drawing.Point(117, 225);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
-            this.txtRoleCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtRoleCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoleCode.Properties.MaxLength = 4;
             this.txtRoleCode.Size = new System.Drawing.Size(69, 20);
@@ -293,7 +276,7 @@
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(51, 235);
+            this.label13.Location = new System.Drawing.Point(51, 229);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 396;
@@ -301,7 +284,7 @@
             // 
             // txtRoleDesc
             // 
-            this.txtRoleDesc.Location = new System.Drawing.Point(192, 232);
+            this.txtRoleDesc.Location = new System.Drawing.Point(192, 225);
             this.txtRoleDesc.Name = "txtRoleDesc";
             this.txtRoleDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoleDesc.Properties.ReadOnly = true;
@@ -311,7 +294,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(65, 261);
+            this.label2.Location = new System.Drawing.Point(65, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 398;
@@ -319,12 +302,44 @@
             // 
             // txtOrderBy
             // 
-            this.txtOrderBy.Location = new System.Drawing.Point(117, 258);
+            this.txtOrderBy.Location = new System.Drawing.Point(117, 252);
             this.txtOrderBy.Name = "txtOrderBy";
             this.txtOrderBy.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderBy.Properties.MaxLength = 1;
             this.txtOrderBy.Size = new System.Drawing.Size(69, 20);
             this.txtOrderBy.TabIndex = 397;
+            // 
+            // txtstatusTag
+            // 
+            this.txtstatusTag.Location = new System.Drawing.Point(539, 90);
+            this.txtstatusTag.Name = "txtstatusTag";
+            this.txtstatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtstatusTag.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.txtstatusTag.Properties.MaxLength = 1;
+            this.txtstatusTag.Size = new System.Drawing.Size(41, 20);
+            this.txtstatusTag.TabIndex = 3;
+            this.txtstatusTag.Enter += new System.EventHandler(this.txtstatusTag_Enter);
+            this.txtstatusTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtstatusTag_KeyDown);
+            this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtstatusTag_Validating);
+            // 
+            // txtNfaTag
+            // 
+            this.txtNfaTag.Location = new System.Drawing.Point(117, 198);
+            this.txtNfaTag.Name = "txtNfaTag";
+            this.txtNfaTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtNfaTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNfaTag.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.txtNfaTag.Properties.MaxLength = 1;
+            this.txtNfaTag.Size = new System.Drawing.Size(45, 20);
+            this.txtNfaTag.TabIndex = 7;
+            this.txtNfaTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtNfaTag_Validating);
             // 
             // frmNewFormAAddEdit
             // 
@@ -354,17 +369,15 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtFormName);
-            this.Controls.Add(this.txtNfaTag);
-            this.Controls.Add(this.txtstatusTag);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.txtstatusTag);
+            this.Controls.Add(this.txtNfaTag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "frmNewFormAAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmNewFormAAddEdit_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmNewFormAAddEdit_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).EndInit();
@@ -378,16 +391,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRoleCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRoleDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderBy.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private DevExpress.XtraEditors.TextEdit txtstatusTag;
         private DevExpress.XtraEditors.LabelControl label12;
-        private DevExpress.XtraEditors.TextEdit txtNfaTag;
         private DevExpress.XtraEditors.TextEdit txtFormName;
         private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtMenuName;
@@ -411,5 +423,7 @@
         private DevExpress.XtraEditors.TextEdit txtRoleDesc;
         private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtOrderBy;
+        private DevExpress.XtraEditors.ComboBoxEdit txtstatusTag;
+        private DevExpress.XtraEditors.ComboBoxEdit txtNfaTag;
     }
 }

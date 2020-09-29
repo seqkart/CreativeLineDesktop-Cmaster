@@ -124,7 +124,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(52, 28);
+            this.HelpGrid.Location = new System.Drawing.Point(35, 28);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(350, 146);
@@ -153,7 +153,6 @@
             this.txtStateCode.Location = new System.Drawing.Point(77, 111);
             this.txtStateCode.Name = "txtStateCode";
             this.txtStateCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
-            this.txtStateCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.txtStateCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateCode.Properties.MaxLength = 4;
             this.txtStateCode.Size = new System.Drawing.Size(56, 20);
@@ -171,11 +170,11 @@
             // 
             // txtStateName
             // 
-            this.txtStateName.Location = new System.Drawing.Point(133, 111);
+            this.txtStateName.Location = new System.Drawing.Point(139, 111);
             this.txtStateName.Name = "txtStateName";
             this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateName.Properties.ReadOnly = true;
-            this.txtStateName.Size = new System.Drawing.Size(269, 20);
+            this.txtStateName.Size = new System.Drawing.Size(263, 20);
             this.txtStateName.TabIndex = 411;
             this.txtStateName.TabStop = false;
             // 

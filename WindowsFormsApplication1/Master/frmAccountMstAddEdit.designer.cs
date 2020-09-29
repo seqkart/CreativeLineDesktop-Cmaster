@@ -106,6 +106,8 @@
             this.txtAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.BtnUndo = new DevExpress.XtraEditors.SimpleButton();
             this.BtnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.label35 = new DevExpress.XtraEditors.LabelControl();
@@ -123,8 +125,6 @@
             this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
             this.txtDelCityName = new DevExpress.XtraEditors.TextEdit();
             this.txtDelCitycode = new DevExpress.XtraEditors.TextEdit();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtMRPMarkDown = new DevExpress.XtraEditors.TextEdit();
             this.label23 = new DevExpress.XtraEditors.LabelControl();
             this.StockTransfer1111 = new DevExpress.XtraEditors.LabelControl();
@@ -192,6 +192,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelGSTNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).BeginInit();
@@ -201,8 +203,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -228,7 +228,7 @@
             // 
             // label27
             // 
-            this.label27.Location = new System.Drawing.Point(180, 54);
+            this.label27.Location = new System.Drawing.Point(186, 54);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(46, 13);
             this.label27.TabIndex = 270;
@@ -258,7 +258,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(23, 76);
+            this.label3.Location = new System.Drawing.Point(28, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 269;
@@ -266,7 +266,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(25, 54);
+            this.label1.Location = new System.Drawing.Point(30, 54);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 13);
             this.label1.TabIndex = 268;
@@ -326,8 +326,10 @@
             // txtAgentName
             // 
             this.txtAgentName.Enabled = false;
-            this.txtAgentName.Location = new System.Drawing.Point(228, 239);
+            this.txtAgentName.Location = new System.Drawing.Point(228, 236);
             this.txtAgentName.Name = "txtAgentName";
+            this.txtAgentName.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.txtAgentName.Properties.Appearance.Options.UseBackColor = true;
             this.txtAgentName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAgentName.Properties.MaxLength = 100;
             this.txtAgentName.Size = new System.Drawing.Size(438, 20);
@@ -336,7 +338,7 @@
             // 
             // txtAgentCode
             // 
-            this.txtAgentCode.Location = new System.Drawing.Point(152, 239);
+            this.txtAgentCode.Location = new System.Drawing.Point(152, 236);
             this.txtAgentCode.Name = "txtAgentCode";
             this.txtAgentCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAgentCode.Properties.MaxLength = 100;
@@ -347,7 +349,7 @@
             // 
             // label17
             // 
-            this.label17.Location = new System.Drawing.Point(110, 242);
+            this.label17.Location = new System.Drawing.Point(110, 240);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(31, 13);
             this.label17.TabIndex = 433;
@@ -356,16 +358,16 @@
             // txtNameAsOnBankAcc
             // 
             this.txtNameAsOnBankAcc.EnterMoveNextControl = true;
-            this.txtNameAsOnBankAcc.Location = new System.Drawing.Point(152, 214);
+            this.txtNameAsOnBankAcc.Location = new System.Drawing.Point(152, 212);
             this.txtNameAsOnBankAcc.Name = "txtNameAsOnBankAcc";
             this.txtNameAsOnBankAcc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNameAsOnBankAcc.Properties.MaxLength = 40;
-            this.txtNameAsOnBankAcc.Size = new System.Drawing.Size(513, 20);
+            this.txtNameAsOnBankAcc.Size = new System.Drawing.Size(514, 20);
             this.txtNameAsOnBankAcc.TabIndex = 19;
             // 
             // label48
             // 
-            this.label48.Location = new System.Drawing.Point(33, 218);
+            this.label48.Location = new System.Drawing.Point(33, 216);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(108, 13);
             this.label48.TabIndex = 425;
@@ -374,7 +376,7 @@
             // txtChequeName
             // 
             this.txtChequeName.EnterMoveNextControl = true;
-            this.txtChequeName.Location = new System.Drawing.Point(152, 115);
+            this.txtChequeName.Location = new System.Drawing.Point(152, 116);
             this.txtChequeName.Name = "txtChequeName";
             this.txtChequeName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtChequeName.Properties.MaxLength = 60;
@@ -383,7 +385,7 @@
             // 
             // label44
             // 
-            this.label44.Location = new System.Drawing.Point(35, 119);
+            this.label44.Location = new System.Drawing.Point(35, 120);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(106, 13);
             this.label44.TabIndex = 424;
@@ -392,16 +394,16 @@
             // txtBankName
             // 
             this.txtBankName.EnterMoveNextControl = true;
-            this.txtBankName.Location = new System.Drawing.Point(152, 189);
+            this.txtBankName.Location = new System.Drawing.Point(152, 188);
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBankName.Properties.MaxLength = 100;
-            this.txtBankName.Size = new System.Drawing.Size(513, 20);
+            this.txtBankName.Size = new System.Drawing.Size(514, 20);
             this.txtBankName.TabIndex = 18;
             // 
             // label43
             // 
-            this.label43.Location = new System.Drawing.Point(84, 193);
+            this.label43.Location = new System.Drawing.Point(84, 192);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(57, 13);
             this.label43.TabIndex = 423;
@@ -428,7 +430,7 @@
             // txtPanNo
             // 
             this.txtPanNo.EnterMoveNextControl = true;
-            this.txtPanNo.Location = new System.Drawing.Point(152, 139);
+            this.txtPanNo.Location = new System.Drawing.Point(152, 140);
             this.txtPanNo.Name = "txtPanNo";
             this.txtPanNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPanNo.Properties.MaxLength = 12;
@@ -437,7 +439,7 @@
             // 
             // label19
             // 
-            this.label19.Location = new System.Drawing.Point(104, 143);
+            this.label19.Location = new System.Drawing.Point(104, 144);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(37, 13);
             this.label19.TabIndex = 419;
@@ -445,7 +447,7 @@
             // 
             // label46
             // 
-            this.label46.Location = new System.Drawing.Point(40, 71);
+            this.label46.Location = new System.Drawing.Point(40, 72);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(101, 13);
             this.label46.TabIndex = 409;
@@ -454,7 +456,7 @@
             // txtBSCode
             // 
             this.txtBSCode.EnterMoveNextControl = true;
-            this.txtBSCode.Location = new System.Drawing.Point(152, 67);
+            this.txtBSCode.Location = new System.Drawing.Point(152, 68);
             this.txtBSCode.Name = "txtBSCode";
             this.txtBSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSCode.Properties.MaxLength = 4;
@@ -466,7 +468,7 @@
             // 
             // txtBSDesc
             // 
-            this.txtBSDesc.Location = new System.Drawing.Point(228, 67);
+            this.txtBSDesc.Location = new System.Drawing.Point(228, 68);
             this.txtBSDesc.Name = "txtBSDesc";
             this.txtBSDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSDesc.Properties.ReadOnly = true;
@@ -477,7 +479,7 @@
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(152, 91);
+            this.txtEmpCode.Location = new System.Drawing.Point(152, 92);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpCode.Properties.MaxLength = 6;
@@ -490,7 +492,7 @@
             // 
             // label22
             // 
-            this.label22.Location = new System.Drawing.Point(62, 95);
+            this.label22.Location = new System.Drawing.Point(62, 96);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(79, 13);
             this.label22.TabIndex = 406;
@@ -499,7 +501,7 @@
             // 
             // txtEmpName
             // 
-            this.txtEmpName.Location = new System.Drawing.Point(228, 91);
+            this.txtEmpName.Location = new System.Drawing.Point(228, 92);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpName.Properties.ReadOnly = true;
@@ -605,6 +607,8 @@
             this.txtCountry.Enabled = false;
             this.txtCountry.Location = new System.Drawing.Point(412, 122);
             this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.txtCountry.Properties.Appearance.Options.UseBackColor = true;
             this.txtCountry.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCountry.Properties.MaxLength = 100;
             this.txtCountry.Size = new System.Drawing.Size(254, 20);
@@ -613,7 +617,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(363, 126);
+            this.label5.Location = new System.Drawing.Point(366, 126);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(41, 13);
             this.label5.TabIndex = 452;
@@ -624,6 +628,8 @@
             this.txtCityName.Enabled = false;
             this.txtCityName.Location = new System.Drawing.Point(188, 99);
             this.txtCityName.Name = "txtCityName";
+            this.txtCityName.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.txtCityName.Properties.Appearance.Options.UseBackColor = true;
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityName.Properties.MaxLength = 100;
             this.txtCityName.Size = new System.Drawing.Size(478, 20);
@@ -635,6 +641,8 @@
             this.txtState.Enabled = false;
             this.txtState.Location = new System.Drawing.Point(114, 122);
             this.txtState.Name = "txtState";
+            this.txtState.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.txtState.Properties.Appearance.Options.UseBackColor = true;
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
             this.txtState.Size = new System.Drawing.Size(241, 20);
@@ -653,7 +661,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(76, 126);
+            this.label6.Location = new System.Drawing.Point(82, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 448;
@@ -661,7 +669,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(83, 103);
+            this.label8.Location = new System.Drawing.Point(89, 103);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(19, 13);
             this.label8.TabIndex = 447;
@@ -670,7 +678,7 @@
             // txtUnitCode
             // 
             this.txtUnitCode.EnterMoveNextControl = true;
-            this.txtUnitCode.Location = new System.Drawing.Point(114, 331);
+            this.txtUnitCode.Location = new System.Drawing.Point(114, 329);
             this.txtUnitCode.Name = "txtUnitCode";
             this.txtUnitCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnitCode.Properties.MaxLength = 4;
@@ -681,7 +689,7 @@
             // 
             // label24
             // 
-            this.label24.Location = new System.Drawing.Point(50, 335);
+            this.label24.Location = new System.Drawing.Point(56, 333);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(52, 13);
             this.label24.TabIndex = 446;
@@ -689,7 +697,7 @@
             // 
             // txtUnitName
             // 
-            this.txtUnitName.Location = new System.Drawing.Point(188, 331);
+            this.txtUnitName.Location = new System.Drawing.Point(188, 329);
             this.txtUnitName.Name = "txtUnitName";
             this.txtUnitName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnitName.Properties.ReadOnly = true;
@@ -699,7 +707,7 @@
             // 
             // txtEnableTDS
             // 
-            this.txtEnableTDS.Location = new System.Drawing.Point(114, 307);
+            this.txtEnableTDS.Location = new System.Drawing.Point(114, 306);
             this.txtEnableTDS.Name = "txtEnableTDS";
             this.txtEnableTDS.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -711,7 +719,7 @@
             // 
             // label21
             // 
-            this.label21.Location = new System.Drawing.Point(44, 311);
+            this.label21.Location = new System.Drawing.Point(50, 310);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 13);
             this.label21.TabIndex = 412;
@@ -729,7 +737,7 @@
             // 
             // label20
             // 
-            this.label20.Location = new System.Drawing.Point(509, 149);
+            this.label20.Location = new System.Drawing.Point(516, 149);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(45, 13);
             this.label20.TabIndex = 439;
@@ -747,7 +755,7 @@
             // 
             // label18
             // 
-            this.label18.Location = new System.Drawing.Point(59, 149);
+            this.label18.Location = new System.Drawing.Point(65, 149);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(43, 13);
             this.label18.TabIndex = 437;
@@ -770,7 +778,7 @@
             // 
             // label16
             // 
-            this.label16.Location = new System.Drawing.Point(399, 264);
+            this.label16.Location = new System.Drawing.Point(405, 264);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(47, 13);
             this.label16.TabIndex = 435;
@@ -788,7 +796,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(441, 172);
+            this.label15.Location = new System.Drawing.Point(446, 172);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 434;
@@ -806,7 +814,7 @@
             // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(239, 172);
+            this.label14.Location = new System.Drawing.Point(243, 172);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 13);
             this.label14.TabIndex = 432;
@@ -826,7 +834,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(53, 287);
+            this.label4.Location = new System.Drawing.Point(59, 287);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 428;
@@ -854,7 +862,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(64, 264);
+            this.label2.Location = new System.Drawing.Point(70, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 425;
@@ -872,7 +880,7 @@
             // 
             // label51
             // 
-            this.label51.Location = new System.Drawing.Point(38, 11);
+            this.label51.Location = new System.Drawing.Point(44, 11);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(64, 13);
             this.label51.TabIndex = 423;
@@ -890,7 +898,7 @@
             // 
             // label45
             // 
-            this.label45.Location = new System.Drawing.Point(411, 241);
+            this.label45.Location = new System.Drawing.Point(418, 241);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(34, 13);
             this.label45.TabIndex = 401;
@@ -908,7 +916,7 @@
             // 
             // label34
             // 
-            this.label34.Location = new System.Drawing.Point(61, 241);
+            this.label34.Location = new System.Drawing.Point(67, 241);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(41, 13);
             this.label34.TabIndex = 393;
@@ -921,12 +929,12 @@
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContactPerson.Properties.MaxLength = 30;
-            this.txtContactPerson.Size = new System.Drawing.Size(334, 20);
+            this.txtContactPerson.Size = new System.Drawing.Size(280, 20);
             this.txtContactPerson.TabIndex = 25;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(24, 218);
+            this.label12.Location = new System.Drawing.Point(30, 218);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(78, 13);
             this.label12.TabIndex = 390;
@@ -944,7 +952,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(75, 195);
+            this.label11.Location = new System.Drawing.Point(81, 195);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 389;
@@ -962,7 +970,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(67, 172);
+            this.label10.Location = new System.Drawing.Point(73, 172);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 388;
@@ -1000,7 +1008,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(61, 34);
+            this.label9.Location = new System.Drawing.Point(67, 34);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 387;
@@ -1027,6 +1035,31 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(700, 400);
             this.xtraTabPage1.Text = "Addresses";
             // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(99, 33);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
+            this.HelpGrid.TabIndex = 408;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
             // BtnUndo
             // 
             this.BtnUndo.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
@@ -1035,7 +1068,8 @@
             this.BtnUndo.Appearance.Options.UseBackColor = true;
             this.BtnUndo.Appearance.Options.UseFont = true;
             this.BtnUndo.Appearance.Options.UseForeColor = true;
-            this.BtnUndo.Location = new System.Drawing.Point(547, 58);
+            this.BtnUndo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnUndo.ImageOptions.Image")));
+            this.BtnUndo.Location = new System.Drawing.Point(547, 56);
             this.BtnUndo.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.BtnUndo.LookAndFeel.UseDefaultLookAndFeel = false;
             this.BtnUndo.Name = "BtnUndo";
@@ -1052,6 +1086,7 @@
             this.BtnDelete.Appearance.Options.UseBackColor = true;
             this.BtnDelete.Appearance.Options.UseFont = true;
             this.BtnDelete.Appearance.Options.UseForeColor = true;
+            this.BtnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnDelete.ImageOptions.Image")));
             this.BtnDelete.Location = new System.Drawing.Point(547, 83);
             this.BtnDelete.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.BtnDelete.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -1063,7 +1098,7 @@
             // 
             // label35
             // 
-            this.label35.Location = new System.Drawing.Point(43, 136);
+            this.label35.Location = new System.Drawing.Point(52, 135);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(40, 13);
             this.label35.TabIndex = 454;
@@ -1071,7 +1106,7 @@
             // 
             // label33
             // 
-            this.label33.Location = new System.Drawing.Point(64, 110);
+            this.label33.Location = new System.Drawing.Point(73, 110);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(19, 13);
             this.label33.TabIndex = 453;
@@ -1079,7 +1114,7 @@
             // 
             // label32
             // 
-            this.label32.Location = new System.Drawing.Point(36, 57);
+            this.label32.Location = new System.Drawing.Point(45, 60);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(47, 13);
             this.label32.TabIndex = 452;
@@ -1087,7 +1122,7 @@
             // 
             // label30
             // 
-            this.label30.Location = new System.Drawing.Point(36, 83);
+            this.label30.Location = new System.Drawing.Point(45, 85);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(47, 13);
             this.label30.TabIndex = 451;
@@ -1095,7 +1130,7 @@
             // 
             // label31
             // 
-            this.label31.Location = new System.Drawing.Point(36, 34);
+            this.label31.Location = new System.Drawing.Point(45, 35);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(47, 13);
             this.label31.TabIndex = 450;
@@ -1104,7 +1139,7 @@
             // txtDelGSTNo
             // 
             this.txtDelGSTNo.EnterMoveNextControl = true;
-            this.txtDelGSTNo.Location = new System.Drawing.Point(98, 133);
+            this.txtDelGSTNo.Location = new System.Drawing.Point(98, 131);
             this.txtDelGSTNo.Name = "txtDelGSTNo";
             this.txtDelGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelGSTNo.Properties.MaxLength = 60;
@@ -1114,7 +1149,7 @@
             // txtDelAddress3
             // 
             this.txtDelAddress3.EnterMoveNextControl = true;
-            this.txtDelAddress3.Location = new System.Drawing.Point(97, 80);
+            this.txtDelAddress3.Location = new System.Drawing.Point(98, 81);
             this.txtDelAddress3.Name = "txtDelAddress3";
             this.txtDelAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelAddress3.Properties.MaxLength = 60;
@@ -1124,7 +1159,7 @@
             // txtDelAddress1
             // 
             this.txtDelAddress1.EnterMoveNextControl = true;
-            this.txtDelAddress1.Location = new System.Drawing.Point(97, 31);
+            this.txtDelAddress1.Location = new System.Drawing.Point(98, 31);
             this.txtDelAddress1.Name = "txtDelAddress1";
             this.txtDelAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelAddress1.Properties.MaxLength = 60;
@@ -1134,7 +1169,7 @@
             // txtDelAddress2
             // 
             this.txtDelAddress2.EnterMoveNextControl = true;
-            this.txtDelAddress2.Location = new System.Drawing.Point(98, 54);
+            this.txtDelAddress2.Location = new System.Drawing.Point(98, 56);
             this.txtDelAddress2.Name = "txtDelAddress2";
             this.txtDelAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelAddress2.Properties.MaxLength = 60;
@@ -1182,6 +1217,7 @@
             this.BtnOK.Appearance.Options.UseBackColor = true;
             this.BtnOK.Appearance.Options.UseFont = true;
             this.BtnOK.Appearance.Options.UseForeColor = true;
+            this.BtnOK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnOK.ImageOptions.Image")));
             this.BtnOK.Location = new System.Drawing.Point(547, 29);
             this.BtnOK.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.BtnOK.LookAndFeel.UseDefaultLookAndFeel = false;
@@ -1194,17 +1230,17 @@
             // txtDelCityName
             // 
             this.txtDelCityName.EnterMoveNextControl = true;
-            this.txtDelCityName.Location = new System.Drawing.Point(198, 107);
+            this.txtDelCityName.Location = new System.Drawing.Point(182, 106);
             this.txtDelCityName.Name = "txtDelCityName";
             this.txtDelCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelCityName.Properties.ReadOnly = true;
-            this.txtDelCityName.Size = new System.Drawing.Size(331, 20);
+            this.txtDelCityName.Size = new System.Drawing.Size(347, 20);
             this.txtDelCityName.TabIndex = 451;
             this.txtDelCityName.TabStop = false;
             // 
             // txtDelCitycode
             // 
-            this.txtDelCitycode.Location = new System.Drawing.Point(97, 107);
+            this.txtDelCitycode.Location = new System.Drawing.Point(98, 106);
             this.txtDelCitycode.Name = "txtDelCitycode";
             this.txtDelCitycode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelCitycode.Properties.MaxLength = 8;
@@ -1212,31 +1248,6 @@
             this.txtDelCitycode.TabIndex = 450;
             this.txtDelCitycode.EditValueChanged += new System.EventHandler(this.txtDelCitycode_EditValueChanged);
             this.txtDelCitycode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelCitycode_KeyDown);
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(79, 32);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
-            this.HelpGrid.TabIndex = 408;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // txtMRPMarkDown
             // 
@@ -1250,7 +1261,7 @@
             // 
             // label23
             // 
-            this.label23.Location = new System.Drawing.Point(542, 54);
+            this.label23.Location = new System.Drawing.Point(549, 54);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(60, 13);
             this.label23.TabIndex = 441;
@@ -1258,7 +1269,7 @@
             // 
             // StockTransfer1111
             // 
-            this.StockTransfer1111.Location = new System.Drawing.Point(156, 33);
+            this.StockTransfer1111.Location = new System.Drawing.Point(159, 33);
             this.StockTransfer1111.Name = "StockTransfer1111";
             this.StockTransfer1111.Size = new System.Drawing.Size(73, 13);
             this.StockTransfer1111.TabIndex = 443;
@@ -1364,7 +1375,7 @@
             // 
             // label25
             // 
-            this.label25.Location = new System.Drawing.Point(15, 33);
+            this.label25.Location = new System.Drawing.Point(20, 32);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(58, 13);
             this.label25.TabIndex = 412;
@@ -1408,7 +1419,7 @@
             // 
             // label28
             // 
-            this.label28.Location = new System.Drawing.Point(560, 33);
+            this.label28.Location = new System.Drawing.Point(565, 33);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(44, 13);
             this.label28.TabIndex = 447;
@@ -1506,6 +1517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelGSTNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).EndInit();
@@ -1515,8 +1528,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
