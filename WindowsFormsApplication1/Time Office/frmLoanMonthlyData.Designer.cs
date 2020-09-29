@@ -61,7 +61,7 @@
             // HelpGridCtrl
             // 
             this.HelpGridCtrl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.HelpGridCtrl.Location = new System.Drawing.Point(86, 30);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(50, 28);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Name = "HelpGridCtrl";
             this.HelpGridCtrl.Size = new System.Drawing.Size(313, 119);
@@ -172,7 +172,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(13, 109);
+            this.labelControl3.Location = new System.Drawing.Point(17, 109);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(67, 13);
             this.labelControl3.TabIndex = 38;

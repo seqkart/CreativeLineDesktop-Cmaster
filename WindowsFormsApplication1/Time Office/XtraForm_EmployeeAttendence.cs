@@ -37,12 +37,12 @@ namespace WindowsFormsApplication1.Time_Office
         {
             InitializeComponent();
 
-            this._frmAttendenceLaoding = parent;
-            this.selected_serial_id = _selected_serial_id;
-            this.selected_employee_code = _selected_employee_code;
-            this.selected_attendance_date = _selected_attendance_date;
+            _frmAttendenceLaoding = parent;
+            selected_serial_id = _selected_serial_id;
+            selected_employee_code = _selected_employee_code;
+            selected_attendance_date = _selected_attendance_date;
 
-            this.come_from = _come_from;
+            come_from = _come_from;
 
 
             PrintLogWin.PrintLog("selected_serial_id 1 => " + selected_serial_id);
@@ -166,7 +166,7 @@ namespace WindowsFormsApplication1.Time_Office
                     pictureBox1.Image = ImageUtils.ConvertBinaryToImage(data);
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
@@ -533,7 +533,7 @@ namespace WindowsFormsApplication1.Time_Office
                     await CallAsyn_SaveEmployeeAttendanceDetails();
                     _frmAttendenceLaoding.LoadAttendanceDataGrid();
 
-                    this.Close();
+                    Close();
                     break;
                 case "save_new":
 
@@ -571,7 +571,7 @@ namespace WindowsFormsApplication1.Time_Office
                     break;
                 case "close":
 
-                    this.Close();
+                    Close();
 
                     break;
 
@@ -1125,7 +1125,7 @@ namespace WindowsFormsApplication1.Time_Office
         {
             string tag = ((WindowsUIButton)e.Button).Tag.ToString();
 
-            this.Close();
+            Close();
 
         }
 
@@ -2104,7 +2104,9 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-
-
+        private void dateAttendance_Enter(object sender, EventArgs e)
+        {
+            txtEmpID.Focus();
+        }
     }
 }

@@ -326,7 +326,7 @@ namespace WindowsFormsApplication1
 
         private void txtstatusTag_KeyDown(object sender, KeyEventArgs e)
         {
-          
+
         }
 
         private void txtstatusTag_Enter(object sender, EventArgs e)

@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.Master
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 txtCItyName.Properties.MaxLength = 55;
-               
+
                 txtCityCode.Enabled = false;
             }
             catch (Exception ex)
@@ -185,7 +185,7 @@ namespace WindowsFormsApplication1.Master
                     HelpGrid.Visible = false;
                     txtStateCode.Focus();
                 }
-               
+
             }
             catch (Exception ex)
             {

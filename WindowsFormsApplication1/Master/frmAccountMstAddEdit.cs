@@ -31,12 +31,12 @@ namespace WindowsFormsApplication1
                 InfoGridView.BestFitColumns();
             }
 
-            txtDelAddress1.Text = "";
-            txtDelAddress2.Text = "";
-            txtDelAddress3.Text = "";
-            txtDelCitycode.Text = "";
-            txtDelCityName.Text = "";
-            txtDelGSTNo.Text = "";
+            txtDelAddress1.Text = string.Empty;
+            txtDelAddress2.Text = string.Empty;
+            txtDelAddress3.Text = string.Empty;
+            txtDelCitycode.Text = string.Empty;
+            txtDelCityName.Text = string.Empty;
+            txtDelGSTNo.Text = string.Empty;
         }
         private void txtSLCode_EditValueChanged(object sender, EventArgs e)
         {
@@ -648,10 +648,10 @@ namespace WindowsFormsApplication1
             else
             {
                 String Query = "update ActDelAddresses Set ";
-                Query= Query+ " AccAddress1='"+ txtDelAddress1.Text+"',";
-                Query = Query + " AccAddress2='"+ txtDelAddress2.Text + "',";
-                Query = Query + " AccAddress3='"+ txtDelAddress3.Text + "',";
-                Query = Query + " CityCode='"+ txtDelCitycode.Text + "',";
+                Query = Query + " AccAddress1='" + txtDelAddress1.Text + "',";
+                Query = Query + " AccAddress2='" + txtDelAddress2.Text + "',";
+                Query = Query + " AccAddress3='" + txtDelAddress3.Text + "',";
+                Query = Query + " CityCode='" + txtDelCitycode.Text + "',";
                 Query = Query + " AccGSTNo='" + txtDelGSTNo.Text + "' Where TransID='" + TransID + "'";
 
                 ProjectFunctions.GetDataSet(Query);

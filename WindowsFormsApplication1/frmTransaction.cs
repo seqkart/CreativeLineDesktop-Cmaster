@@ -582,11 +582,14 @@ namespace WindowsFormsApplication1
                         CurrentRow["IndentNo"].ToString() +
                         "'");
                     foreach (DataRow dr in dsCheck.Tables[0].Rows)
+                    {
                         if (dr["IndPassTag"].ToString().ToUpper() == "Y")
                         {
                             ProjectFunctions.SpeakError("This Indent Has Already Been Passed");
                             return;
                         }
+                    }
+
                     Transaction.frmIndentMst frm = new Transaction.frmIndentMst()
                     {
                         s1 = btnEdit.Text,
@@ -749,7 +752,9 @@ namespace WindowsFormsApplication1
                         CurrentRow["CNo"].ToString() +
                         "'");
                     if (dsCheck.Tables[0].Rows[0]["CPassTag"].ToString() == "Y")
+                    {
                         ProjectFunctions.SpeakError("Please Unpass First");
+                    }
                     else
                     {
                         //  Transaction.frmCRDataData frm = new Transaction.frmCRDataData() { s1 = btnEdit.Text, Text = "Cash Receiving ", CNo = CurrentRow["CNo"].ToString(), CDate = Convert.ToDateTime(CurrentRow["CDate"]) };
@@ -783,7 +788,7 @@ namespace WindowsFormsApplication1
                                                                   (o1, e1) =>
                                                                   {
                                                                       DataTable dt = new DataTable();
-                                                                      dt.Columns.Add("CopyText", typeof(String));
+                                                                      dt.Columns.Add("CopyText", typeof(string));
                                                                       dt.Columns.Add("Select", typeof(bool));
                                                                       dt.Rows.Add("Party Copy", false);
                                                                       dt.Rows.Add("Gate Copy", false);
@@ -805,7 +810,7 @@ namespace WindowsFormsApplication1
                                                                       {
                                                                           if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                           {
-                                                                              using (var Ds = ProjectFunctions.GetDataSet(String.Format("Select * From V_PrintCMN WHERE (((VutDate)='{0:yyyy-MM-dd}') AND ((VutType)='{1}')  AND ((VutNo)='{2}')) {3}",
+                                                                              using (var Ds = ProjectFunctions.GetDataSet(string.Format("Select * From V_PrintCMN WHERE (((VutDate)='{0:yyyy-MM-dd}') AND ((VutType)='{1}')  AND ((VutNo)='{2}')) {3}",
                                                                                                                                        Convert.ToDateTime(dr["Voucher Date"]),
                                                                                                                                        dr["Type"].ToString(),
                                                                                                                                        dr["Voucher No."].ToString(),
@@ -1045,7 +1050,7 @@ namespace WindowsFormsApplication1
                                                                   (o1, e1) =>
                                                                   {
                                                                       DataTable dt = new DataTable();
-                                                                      dt.Columns.Add("CopyText", typeof(String));
+                                                                      dt.Columns.Add("CopyText", typeof(string));
                                                                       dt.Columns.Add("Select", typeof(bool));
 
                                                                       dt.Rows.Add("Original For Buyer", false);
@@ -1079,7 +1084,7 @@ namespace WindowsFormsApplication1
                                                                               row["BillNo"].ToString() +
                                                                               ".csv");
                                                                           ProjectFunctions.SpeakError("PT File Generated Successfully ");
-                                                                          this.Close();
+                                                                          Close();
                                                                       }
                                                                       else
                                                                       {
@@ -1152,7 +1157,7 @@ namespace WindowsFormsApplication1
                                                                                   @"\\bhupinder-pc\EPSON L210 Series"
                                                                               };
                                                                               frm.documentViewer1.DocumentSource = rpt;
-                                                                              frm.ShowDialog(this.Parent);
+                                                                              frm.ShowDialog(Parent);
                                                                           }
                                                                       }
                                                                   }));
@@ -1597,22 +1602,31 @@ namespace WindowsFormsApplication1
             PrintOutGridView.CloseEditor();
             PrintOutGridView.UpdateCurrentRow();
             if (GlobalVariables.ProgCode == "PROG142")
+            {
                 foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                 {
                     if (dr["Select"].ToString().ToUpper() == "TRUE")
-
+                    {
                         for (int i = 0; i < 3; i++)
                         {
-                            String CopyText = String.Empty;
+                            string CopyText = string.Empty;
                             DataRow CurrentRow = PrintOutGridView.GetDataRow(i);
                             if (CurrentRow["Select"].ToString().ToUpper() == "TRUE")
                             {
                                 if (i == 0)
+                                {
                                     CopyText = "Party Copy";
+                                }
+
                                 if (i == 1)
+                                {
                                     CopyText = "Gate Copy";
+                                }
+
                                 if (i == 2)
+                                {
                                     CopyText = "Extra Copy";
+                                }
 
                                 DataTable dt = new DataTable();
                                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanOutPrint '" +
@@ -1628,27 +1642,46 @@ namespace WindowsFormsApplication1
                                 rpt.lblGrossWeight.Text = ds.Tables[1].Rows[0]["GrossWeight"].ToString();
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();
                                 using (var pt = new ReportPrintTool(rpt))
+                                {
                                     pt.ShowRibbonPreviewDialog();
+                                }
                             }
                         }
+                    }
                 }
+            }
             else
+            {
                 foreach (DataRow drBills in (InvoiceGrid.DataSource as DataTable).Rows)
+                {
                     if (drBills["Select"].ToString().ToUpper() == "TRUE")
+                    {
                         for (int i = 0; i < 4; i++)
                         {
-                            String CopyText = String.Empty;
+                            string CopyText = string.Empty;
                             DataRow CurrentRow = PrintOutGridView.GetDataRow(i);
                             if (CurrentRow["Select"].ToString().ToUpper() == "TRUE")
                             {
                                 if (i == 0)
+                                {
                                     CopyText = "Original For Buyer";
+                                }
+
                                 if (i == 1)
+                                {
                                     CopyText = "Office Copy";
+                                }
+
                                 if (i == 2)
+                                {
                                     CopyText = "Transporter Copy";
+                                }
+
                                 if (i == 3)
+                                {
                                     CopyText = "Extra Copy";
+                                }
+
                                 if (GlobalVariables.ProgCode == "PROG131")
                                 {
                                     if (drBills["BillSeries"].ToString().ToUpper() == "GST")
@@ -1672,6 +1705,7 @@ namespace WindowsFormsApplication1
                                     }
                                 }
                                 if (GlobalVariables.ProgCode == "PROG141")
+                                {
                                     if (drBills["CRSeries"].ToString().ToUpper() == "RG")
                                     {
                                         Prints.GSTCRINVOICE rpt = new Prints.GSTCRINVOICE();
@@ -1681,8 +1715,13 @@ namespace WindowsFormsApplication1
                                                                          drBills["CRSeries"].ToString(),
                                                                          rpt);
                                     }
+                                }
                             }
                         }
+                    }
+                }
+            }
+
             PrintOutGrid.Visible = false;
         }
 

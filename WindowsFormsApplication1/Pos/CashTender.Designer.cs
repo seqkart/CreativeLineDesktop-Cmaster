@@ -412,6 +412,7 @@
             this.txtTotTotal.Properties.Mask.EditMask = "n0";
             this.txtTotTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTotTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTotTotal.Size = new System.Drawing.Size(98, 24);
             this.txtTotTotal.TabIndex = 3;
             // 
@@ -430,6 +431,7 @@
             this.txtTot1.Properties.Mask.EditMask = "n0";
             this.txtTot1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot1.Size = new System.Drawing.Size(57, 22);
             this.txtTot1.TabIndex = 3;
             // 
@@ -448,6 +450,7 @@
             this.txtTot2.Properties.Mask.EditMask = "n0";
             this.txtTot2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot2.Size = new System.Drawing.Size(57, 22);
             this.txtTot2.TabIndex = 3;
             // 
@@ -466,6 +469,7 @@
             this.txtTot5.Properties.Mask.EditMask = "n0";
             this.txtTot5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot5.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot5.Size = new System.Drawing.Size(57, 22);
             this.txtTot5.TabIndex = 3;
             // 
@@ -484,6 +488,7 @@
             this.txtTot10.Properties.Mask.EditMask = "n0";
             this.txtTot10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot10.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot10.Size = new System.Drawing.Size(57, 22);
             this.txtTot10.TabIndex = 3;
             // 
@@ -502,6 +507,7 @@
             this.txtTot20.Properties.Mask.EditMask = "n0";
             this.txtTot20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot20.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot20.Size = new System.Drawing.Size(57, 22);
             this.txtTot20.TabIndex = 3;
             // 
@@ -520,6 +526,7 @@
             this.txtTot50.Properties.Mask.EditMask = "n0";
             this.txtTot50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot50.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot50.Size = new System.Drawing.Size(57, 22);
             this.txtTot50.TabIndex = 3;
             // 
@@ -538,6 +545,7 @@
             this.txtTot100.Properties.Mask.EditMask = "n0";
             this.txtTot100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot100.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot100.Size = new System.Drawing.Size(57, 22);
             this.txtTot100.TabIndex = 3;
             // 
@@ -556,6 +564,7 @@
             this.txtTot200.Properties.Mask.EditMask = "n0";
             this.txtTot200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot200.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot200.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot200.Size = new System.Drawing.Size(57, 22);
             this.txtTot200.TabIndex = 3;
             // 
@@ -574,6 +583,7 @@
             this.txtTot500.Properties.Mask.EditMask = "n0";
             this.txtTot500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot500.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot500.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot500.Size = new System.Drawing.Size(57, 22);
             this.txtTot500.TabIndex = 3;
             // 
@@ -592,6 +602,7 @@
             this.txtTot1000.Properties.Mask.EditMask = "n0";
             this.txtTot1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot1000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot1000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot1000.Size = new System.Drawing.Size(57, 22);
             this.txtTot1000.TabIndex = 3;
             // 
@@ -610,6 +621,7 @@
             this.txtTot2000.Properties.Mask.EditMask = "n0";
             this.txtTot2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot2000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTot2000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTot2000.Size = new System.Drawing.Size(57, 22);
             this.txtTot2000.TabIndex = 3;
             // 
@@ -686,6 +698,7 @@
             this.txtCashInTotal.Properties.Mask.EditMask = "n0";
             this.txtCashInTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInTotal.Size = new System.Drawing.Size(104, 24);
             this.txtCashInTotal.TabIndex = 3;
             // 
@@ -704,6 +717,7 @@
             this.txtCashInAmount1.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount1.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount1.TabIndex = 3;
             // 
@@ -722,6 +736,7 @@
             this.txtCashInCount1.Properties.Mask.EditMask = "n0";
             this.txtCashInCount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount1.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount1.TabIndex = 13;
             this.txtCashInCount1.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -851,6 +866,7 @@
             this.txtCashInAmount2.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount2.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount2.TabIndex = 3;
             // 
@@ -869,6 +885,7 @@
             this.txtCashInCount2.Properties.Mask.EditMask = "n0";
             this.txtCashInCount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount2.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount2.TabIndex = 12;
             this.txtCashInCount2.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -888,6 +905,7 @@
             this.txtCashInAmount5.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount5.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount5.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount5.TabIndex = 3;
             // 
@@ -906,6 +924,7 @@
             this.txtCashInCount5.Properties.Mask.EditMask = "n0";
             this.txtCashInCount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount5.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount5.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount5.TabIndex = 11;
             this.txtCashInCount5.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -925,6 +944,7 @@
             this.txtCashInAmount10.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount10.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount10.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount10.TabIndex = 3;
             // 
@@ -943,6 +963,7 @@
             this.txtCashInCount10.Properties.Mask.EditMask = "n0";
             this.txtCashInCount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount10.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount10.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount10.TabIndex = 10;
             this.txtCashInCount10.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -963,6 +984,7 @@
             this.txtCashInAmount20.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount20.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount20.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount20.TabIndex = 3;
             // 
@@ -981,6 +1003,7 @@
             this.txtCashInCount20.Properties.Mask.EditMask = "n0";
             this.txtCashInCount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount20.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount20.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount20.TabIndex = 9;
             this.txtCashInCount20.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1000,6 +1023,7 @@
             this.txtCashInAmount50.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount50.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount50.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount50.TabIndex = 3;
             // 
@@ -1018,6 +1042,7 @@
             this.txtCashInCount50.Properties.Mask.EditMask = "n0";
             this.txtCashInCount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount50.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount50.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount50.TabIndex = 8;
             this.txtCashInCount50.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1037,6 +1062,7 @@
             this.txtCashInAmount100.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount100.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount100.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount100.TabIndex = 3;
             // 
@@ -1055,6 +1081,7 @@
             this.txtCashInCount100.Properties.Mask.EditMask = "n0";
             this.txtCashInCount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount100.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount100.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount100.TabIndex = 7;
             this.txtCashInCount100.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1074,6 +1101,7 @@
             this.txtCashInAmount200.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount200.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount200.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount200.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount200.TabIndex = 3;
             // 
@@ -1092,6 +1120,7 @@
             this.txtCashInCount200.Properties.Mask.EditMask = "n0";
             this.txtCashInCount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount200.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount200.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount200.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount200.TabIndex = 6;
             this.txtCashInCount200.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1111,6 +1140,7 @@
             this.txtCashInAmount500.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount500.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount500.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount500.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount500.TabIndex = 3;
             // 
@@ -1129,6 +1159,7 @@
             this.txtCashInCount500.Properties.Mask.EditMask = "n0";
             this.txtCashInCount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount500.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount500.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount500.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount500.TabIndex = 5;
             this.txtCashInCount500.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1148,6 +1179,7 @@
             this.txtCashInAmount1000.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount1000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount1000.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount1000.TabIndex = 3;
             // 
@@ -1166,6 +1198,7 @@
             this.txtCashInCount1000.Properties.Mask.EditMask = "n0";
             this.txtCashInCount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount1000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount1000.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount1000.TabIndex = 4;
             this.txtCashInCount1000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1185,6 +1218,7 @@
             this.txtCashInAmount2000.Properties.Mask.EditMask = "n0";
             this.txtCashInAmount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInAmount2000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInAmount2000.Size = new System.Drawing.Size(64, 24);
             this.txtCashInAmount2000.TabIndex = 3;
             // 
@@ -1203,6 +1237,7 @@
             this.txtCashInCount2000.Properties.Mask.EditMask = "n0";
             this.txtCashInCount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashInCount2000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashInCount2000.Size = new System.Drawing.Size(51, 24);
             this.txtCashInCount2000.TabIndex = 3;
             this.txtCashInCount2000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1448,6 +1483,7 @@
             this.txtTotalPayBack.Properties.Mask.EditMask = "n0";
             this.txtTotalPayBack.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalPayBack.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTotalPayBack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTotalPayBack.Size = new System.Drawing.Size(95, 24);
             this.txtTotalPayBack.TabIndex = 3;
             // 
@@ -1465,6 +1501,7 @@
             this.txtTotalReceived.Properties.Mask.EditMask = "n0";
             this.txtTotalReceived.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalReceived.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTotalReceived.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTotalReceived.Size = new System.Drawing.Size(95, 24);
             this.txtTotalReceived.TabIndex = 3;
             // 
@@ -1482,6 +1519,7 @@
             this.txtBillBalanceAmount.Properties.Mask.EditMask = "n0";
             this.txtBillBalanceAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBillBalanceAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtBillBalanceAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBillBalanceAmount.Size = new System.Drawing.Size(95, 24);
             this.txtBillBalanceAmount.TabIndex = 3;
             // 
@@ -1499,6 +1537,7 @@
             this.txtPGPayment.Properties.Mask.EditMask = "n0";
             this.txtPGPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPGPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtPGPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPGPayment.Size = new System.Drawing.Size(95, 24);
             this.txtPGPayment.TabIndex = 3;
             // 
@@ -1516,6 +1555,7 @@
             this.txtCardPayment.Properties.Mask.EditMask = "n0";
             this.txtCardPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCardPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCardPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCardPayment.Size = new System.Drawing.Size(95, 24);
             this.txtCardPayment.TabIndex = 3;
             // 
@@ -1533,6 +1573,7 @@
             this.txtCashMemoAmount.Properties.Mask.EditMask = "n0";
             this.txtCashMemoAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashMemoAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashMemoAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashMemoAmount.Size = new System.Drawing.Size(95, 24);
             this.txtCashMemoAmount.TabIndex = 3;
             // 
@@ -1626,6 +1667,7 @@
             this.txtCashOutCount50.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount50.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount50.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount50.TabIndex = 19;
             this.txtCashOutCount50.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1645,6 +1687,7 @@
             this.txtCashOutTotal.Properties.Mask.EditMask = "n0";
             this.txtCashOutTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutTotal.Size = new System.Drawing.Size(104, 24);
             this.txtCashOutTotal.TabIndex = 3;
             // 
@@ -1663,6 +1706,7 @@
             this.txtCashOutAmount1.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount1.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount1.TabIndex = 3;
             // 
@@ -1681,6 +1725,7 @@
             this.txtCashOutCount1.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount1.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount1.TabIndex = 24;
             this.txtCashOutCount1.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1810,6 +1855,7 @@
             this.txtCashOutAmount2.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount2.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount2.TabIndex = 3;
             // 
@@ -1828,6 +1874,7 @@
             this.txtCashOutCount2.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount2.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount2.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount2.TabIndex = 23;
             this.txtCashOutCount2.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1847,6 +1894,7 @@
             this.txtCashOutAmount5.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount5.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount5.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount5.TabIndex = 3;
             // 
@@ -1865,6 +1913,7 @@
             this.txtCashOutCount5.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount5.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount5.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount5.TabIndex = 22;
             this.txtCashOutCount5.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1884,6 +1933,7 @@
             this.txtCashOutAmount10.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount10.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount10.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount10.TabIndex = 3;
             // 
@@ -1902,6 +1952,7 @@
             this.txtCashOutCount10.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount10.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount10.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount10.TabIndex = 21;
             this.txtCashOutCount10.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1921,6 +1972,7 @@
             this.txtCashOutAmount20.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount20.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount20.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount20.TabIndex = 3;
             // 
@@ -1939,6 +1991,7 @@
             this.txtCashOutCount20.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount20.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount20.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount20.TabIndex = 20;
             this.txtCashOutCount20.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -1958,6 +2011,7 @@
             this.txtCashOutAmount50.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount50.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount50.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount50.TabIndex = 3;
             // 
@@ -1976,6 +2030,7 @@
             this.txtCashOutAmount100.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount100.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount100.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount100.TabIndex = 3;
             // 
@@ -1994,6 +2049,7 @@
             this.txtCashOutCount100.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount100.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount100.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount100.TabIndex = 18;
             this.txtCashOutCount100.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -2013,6 +2069,7 @@
             this.txtCashOutAmount200.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount200.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount200.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount200.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount200.TabIndex = 3;
             // 
@@ -2031,6 +2088,7 @@
             this.txtCashOutCount200.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount200.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount200.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount200.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount200.TabIndex = 17;
             this.txtCashOutCount200.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -2050,6 +2108,7 @@
             this.txtCashOutAmount500.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount500.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount500.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount500.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount500.TabIndex = 3;
             // 
@@ -2068,6 +2127,7 @@
             this.txtCashOutCount500.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount500.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount500.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount500.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount500.TabIndex = 16;
             this.txtCashOutCount500.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -2087,6 +2147,7 @@
             this.txtCashOutAmount1000.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount1000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount1000.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount1000.TabIndex = 3;
             // 
@@ -2105,6 +2166,7 @@
             this.txtCashOutCount1000.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount1000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount1000.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount1000.TabIndex = 15;
             this.txtCashOutCount1000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
@@ -2124,6 +2186,7 @@
             this.txtCashOutAmount2000.Properties.Mask.EditMask = "n0";
             this.txtCashOutAmount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutAmount2000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutAmount2000.Size = new System.Drawing.Size(64, 24);
             this.txtCashOutAmount2000.TabIndex = 3;
             // 
@@ -2142,6 +2205,7 @@
             this.txtCashOutCount2000.Properties.Mask.EditMask = "n0";
             this.txtCashOutCount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashOutCount2000.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashOutCount2000.Size = new System.Drawing.Size(51, 24);
             this.txtCashOutCount2000.TabIndex = 14;
             this.txtCashOutCount2000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);

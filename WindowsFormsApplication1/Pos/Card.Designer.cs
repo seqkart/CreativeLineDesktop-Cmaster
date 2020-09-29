@@ -200,25 +200,25 @@
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl1.Location = new System.Drawing.Point(348, 106);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(257, 164);
+            this.groupControl1.Size = new System.Drawing.Size(257, 150);
             this.groupControl1.TabIndex = 6;
             this.groupControl1.Text = "Memo Info";
             // 
             // labelControl50
             // 
-            this.labelControl50.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl50.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl50.Appearance.Options.UseFont = true;
-            this.labelControl50.Location = new System.Drawing.Point(14, 130);
+            this.labelControl50.Location = new System.Drawing.Point(20, 118);
             this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(116, 20);
+            this.labelControl50.Size = new System.Drawing.Size(112, 20);
             this.labelControl50.TabIndex = 4;
             this.labelControl50.Text = "Balance Amount";
             // 
             // labelControl49
             // 
-            this.labelControl49.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl49.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl49.Appearance.Options.UseFont = true;
-            this.labelControl49.Location = new System.Drawing.Point(71, 100);
+            this.labelControl49.Location = new System.Drawing.Point(78, 88);
             this.labelControl49.Name = "labelControl49";
             this.labelControl49.Size = new System.Drawing.Size(54, 20);
             this.labelControl49.TabIndex = 5;
@@ -226,28 +226,28 @@
             // 
             // labelControl48
             // 
-            this.labelControl48.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl48.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl48.Appearance.Options.UseFont = true;
-            this.labelControl48.Location = new System.Drawing.Point(33, 70);
+            this.labelControl48.Location = new System.Drawing.Point(43, 58);
             this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(92, 20);
+            this.labelControl48.Size = new System.Drawing.Size(89, 20);
             this.labelControl48.TabIndex = 6;
             this.labelControl48.Text = "Amount Paid";
             // 
             // labelControl47
             // 
-            this.labelControl47.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl47.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl47.Appearance.Options.UseFont = true;
-            this.labelControl47.Location = new System.Drawing.Point(18, 40);
+            this.labelControl47.Location = new System.Drawing.Point(29, 28);
             this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(107, 20);
+            this.labelControl47.Size = new System.Drawing.Size(103, 20);
             this.labelControl47.TabIndex = 9;
             this.labelControl47.Text = "Memo Amount";
             // 
             // txtBalanceAmount
             // 
             this.txtBalanceAmount.EditValue = "0";
-            this.txtBalanceAmount.Location = new System.Drawing.Point(138, 128);
+            this.txtBalanceAmount.Location = new System.Drawing.Point(138, 116);
             this.txtBalanceAmount.Name = "txtBalanceAmount";
             this.txtBalanceAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBalanceAmount.Properties.Appearance.Options.UseFont = true;
@@ -258,22 +258,24 @@
             this.txtBalanceAmount.Properties.Mask.EditMask = "n2";
             this.txtBalanceAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBalanceAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtBalanceAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBalanceAmount.Size = new System.Drawing.Size(114, 24);
             this.txtBalanceAmount.TabIndex = 10;
             // 
             // txtSLipNo
             // 
-            this.txtSLipNo.Location = new System.Drawing.Point(138, 98);
+            this.txtSLipNo.Location = new System.Drawing.Point(138, 86);
             this.txtSLipNo.Name = "txtSLipNo";
             this.txtSLipNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLipNo.Properties.Appearance.Options.UseFont = true;
+            this.txtSLipNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSLipNo.Size = new System.Drawing.Size(114, 24);
             this.txtSLipNo.TabIndex = 11;
             // 
             // txtAmountPaid
             // 
             this.txtAmountPaid.EditValue = "0";
-            this.txtAmountPaid.Location = new System.Drawing.Point(138, 68);
+            this.txtAmountPaid.Location = new System.Drawing.Point(138, 56);
             this.txtAmountPaid.Name = "txtAmountPaid";
             this.txtAmountPaid.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmountPaid.Properties.Appearance.Options.UseFont = true;
@@ -284,6 +286,7 @@
             this.txtAmountPaid.Properties.Mask.EditMask = "n2";
             this.txtAmountPaid.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAmountPaid.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtAmountPaid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAmountPaid.Size = new System.Drawing.Size(114, 24);
             this.txtAmountPaid.TabIndex = 12;
             this.txtAmountPaid.EditValueChanged += new System.EventHandler(this.TxtAmountPaid_EditValueChanged);
@@ -291,7 +294,7 @@
             // txtMemoAmount
             // 
             this.txtMemoAmount.EditValue = "0";
-            this.txtMemoAmount.Location = new System.Drawing.Point(138, 38);
+            this.txtMemoAmount.Location = new System.Drawing.Point(138, 26);
             this.txtMemoAmount.Name = "txtMemoAmount";
             this.txtMemoAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemoAmount.Properties.Appearance.Options.UseFont = true;
@@ -302,6 +305,7 @@
             this.txtMemoAmount.Properties.Mask.EditMask = "n2";
             this.txtMemoAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMemoAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtMemoAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMemoAmount.Size = new System.Drawing.Size(114, 24);
             this.txtMemoAmount.TabIndex = 13;
             // 
@@ -348,7 +352,7 @@
             // btnRevert
             // 
             this.btnRevert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRevert.ImageOptions.SvgImage")));
-            this.btnRevert.Location = new System.Drawing.Point(167, 287);
+            this.btnRevert.Location = new System.Drawing.Point(165, 263);
             this.btnRevert.Name = "btnRevert";
             this.btnRevert.Size = new System.Drawing.Size(127, 36);
             this.btnRevert.TabIndex = 9;
@@ -358,7 +362,7 @@
             // btnSave
             // 
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(38, 287);
+            this.btnSave.Location = new System.Drawing.Point(36, 263);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 36);
             this.btnSave.TabIndex = 10;
@@ -395,7 +399,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(348, 292);
+            this.textEdit1.Location = new System.Drawing.Point(346, 268);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
@@ -407,7 +411,7 @@
             // btnSaveOnly
             // 
             this.btnSaveOnly.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveOnly.ImageOptions.SvgImage")));
-            this.btnSaveOnly.Location = new System.Drawing.Point(300, 287);
+            this.btnSaveOnly.Location = new System.Drawing.Point(298, 263);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(72, 36);
             this.btnSaveOnly.TabIndex = 15;
@@ -418,7 +422,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 346);
+            this.ClientSize = new System.Drawing.Size(625, 314);
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.txtCardDigits);

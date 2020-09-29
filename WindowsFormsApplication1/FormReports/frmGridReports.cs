@@ -33,24 +33,24 @@ namespace WindowsFormsApplication1.FormReports
 
 
 
-           
+
                 var formatRulesMenu = new DXPopupMenu();
                 var view = sender as GridView;
 
                 DXMenuItem Copy;
 
-               
+
                 DXMenuItem SAR;
 
-             
+
 
                 DXMenuItem Collapse;
                 DXMenuItem Expand;
                 DXMenuItem FixLeft;
                 DXMenuItem FixRight;
                 DXMenuItem UnFix;
-              
-                
+
+
                 Copy = new DXMenuItem("Copy", (o1, e1) =>
                 {
                     view.OptionsSelection.MultiSelect = true;
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1.FormReports
                 e.Menu.Items.Add(FixLeft);
                 e.Menu.Items.Add(FixRight);
                 e.Menu.Items.Add(UnFix);
-             
+
             }
 
             catch (Exception ex)

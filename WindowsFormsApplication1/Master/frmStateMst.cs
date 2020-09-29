@@ -25,14 +25,14 @@ namespace WindowsFormsApplication1.Master
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 txtStateName.Properties.MaxLength = 55;
-               
+
                 txtStateCode.Enabled = false;
 
 
                 try
                 {
                     DataSet dsCountry = ProjectFunctions.GetDataSet("Select Distinct UNDERRG from STATEMASTER");
-                    if(dsCountry.Tables[0].Rows.Count>0)
+                    if (dsCountry.Tables[0].Rows.Count > 0)
                     {
                         txtCountry.Properties.Items.Clear();
                         foreach (DataRow dr in dsCountry.Tables[0].Rows)
@@ -40,11 +40,11 @@ namespace WindowsFormsApplication1.Master
                             txtCountry.Properties.Items.Add(dr["UNDERRG"]);
                         }
 
-                       
+
                     }
 
 
-                   
+
                 }
                 catch (Exception ex)
                 {

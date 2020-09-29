@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmWorkAllocation
+    partial class FrmWorkAllocation
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWorkAllocation));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmWorkAllocation));
             this.cmbSelectUser = new System.Windows.Forms.ComboBox();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -84,7 +84,7 @@
             this.cmbSelectUser.Name = "cmbSelectUser";
             this.cmbSelectUser.Size = new System.Drawing.Size(121, 21);
             this.cmbSelectUser.TabIndex = 313;
-            this.cmbSelectUser.SelectedIndexChanged += new System.EventHandler(this.cmbSelectUser_SelectedIndexChanged);
+            this.cmbSelectUser.SelectedIndexChanged += new System.EventHandler(this.CmbSelectUser_SelectedIndexChanged);
             // 
             // Menu_ToolStrip
             // 
@@ -110,7 +110,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 22);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label1
             // 
@@ -148,7 +148,7 @@
             this.btnSaveOpts.Size = new System.Drawing.Size(75, 23);
             this.btnSaveOpts.TabIndex = 319;
             this.btnSaveOpts.Text = "Save";
-            this.btnSaveOpts.Click += new System.EventHandler(this.btnSaveOpts_Click);
+            this.btnSaveOpts.Click += new System.EventHandler(this.BtnSaveOpts_Click);
             // 
             // btnCancle
             // 
@@ -157,7 +157,7 @@
             this.btnCancle.Size = new System.Drawing.Size(75, 23);
             this.btnCancle.TabIndex = 318;
             this.btnCancle.Text = "Cancel";
-            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
+            this.btnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
             // OptionsGrid
             // 
@@ -481,7 +481,7 @@
             this.Name = "frmWorkAllocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmWorkAllocation_Load);
+            this.Load += new System.EventHandler(this.FrmWorkAllocation_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

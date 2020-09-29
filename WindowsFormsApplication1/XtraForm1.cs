@@ -228,7 +228,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case WIN_APP_TABS._frm_Chng_Pswd:
-                    var PROG2 = new frm_Chng_Pswd() { Dock = DockStyle.Fill };
+                    var PROG2 = new Frm_Chng_Pswd() { Dock = DockStyle.Fill };
                     PROG2.Show();
                     PROG2.BringToFront();
                     PROG2.Parent = Page;
@@ -267,7 +267,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case WIN_APP_TABS._frmWorkAllocation:
-                    var PROG5 = new frmWorkAllocation() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG5 = new FrmWorkAllocation() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
 
                     PROG5.Show();
                     PROG5.BringToFront();

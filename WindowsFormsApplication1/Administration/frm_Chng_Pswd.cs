@@ -3,9 +3,9 @@ using SeqKartLibrary;
 using System;
 namespace WindowsFormsApplication1
 {
-    public partial class frm_Chng_Pswd : XtraUserControl
+    public partial class Frm_Chng_Pswd : XtraUserControl
     {
-        public frm_Chng_Pswd()
+        public Frm_Chng_Pswd()
         {
             InitializeComponent();
         }
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frm_Chng_Pswd_Load(object sender, EventArgs e)
+        private void Frm_Chng_Pswd_Load(object sender, EventArgs e)
         {
             //projectFunctionsUtils = new ProjectFunctionsUtils();
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }

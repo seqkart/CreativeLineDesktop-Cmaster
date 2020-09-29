@@ -2056,12 +2056,6 @@
     <EmbeddedResource Include="XtraForm1.resx">
       <DependentUpon>XtraForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Administration\BreadDataSet.xsc">
-      <DependentUpon>BreadDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="Administration\BreadDataSet.xss">
-      <DependentUpon>BreadDataSet.xsd</DependentUpon>
-    </None>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DataBindings.UserMaster_Data.datasource" />
