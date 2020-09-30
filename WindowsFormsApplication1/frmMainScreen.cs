@@ -162,7 +162,7 @@ namespace WindowsFormsApplication1
                     PROG1.BringToFront();
                     break;
                 case "PROG2":
-                    var PROG2 = new frm_Chng_Pswd();
+                    var PROG2 = new Frm_Chng_Pswd();
                     _WorkAreaPanel.Controls.Add(PROG2);
                     PROG2.Show();
                     PROG2.BringToFront();
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
                     PROG4.BringToFront();
                     break;
                 case "PROG5":
-                    var PROG5 = new frmWorkAllocation() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG5 = new FrmWorkAllocation() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG5);
                     PROG5.Show();
                     PROG5.BringToFront();

@@ -49,27 +49,27 @@
             // 
             // Label1
             // 
-            this.Label1.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label1.Appearance.Options.UseFont = true;
-            this.Label1.Location = new System.Drawing.Point(21, 130);
+            this.Label1.Location = new System.Drawing.Point(38, 99);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(82, 17);
+            this.Label1.Size = new System.Drawing.Size(71, 13);
             this.Label1.TabIndex = 32;
             this.Label1.Text = "DESCRIPTION:";
             // 
             // LABEL4
             // 
-            this.LABEL4.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LABEL4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LABEL4.Appearance.Options.UseFont = true;
-            this.LABEL4.Location = new System.Drawing.Point(35, 105);
+            this.LABEL4.Location = new System.Drawing.Point(51, 73);
             this.LABEL4.Name = "LABEL4";
-            this.LABEL4.Size = new System.Drawing.Size(68, 17);
+            this.LABEL4.Size = new System.Drawing.Size(58, 13);
             this.LABEL4.TabIndex = 32;
             this.LABEL4.Text = "SIZE NAME:";
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(111, 129);
+            this.txtDescription.Location = new System.Drawing.Point(115, 95);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescription.Properties.MaxLength = 100;
@@ -115,7 +115,7 @@
             // 
             // txtSizeName
             // 
-            this.txtSizeName.Location = new System.Drawing.Point(111, 103);
+            this.txtSizeName.Location = new System.Drawing.Point(115, 69);
             this.txtSizeName.Name = "txtSizeName";
             this.txtSizeName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSizeName.Properties.MaxLength = 100;
@@ -124,7 +124,7 @@
             // 
             // txtSysID
             // 
-            this.txtSysID.Location = new System.Drawing.Point(111, 77);
+            this.txtSysID.Location = new System.Drawing.Point(115, 43);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysID.Size = new System.Drawing.Size(83, 20);
@@ -132,27 +132,27 @@
             // 
             // Label15
             // 
-            this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(58, 76);
+            this.Label15.Location = new System.Drawing.Point(71, 47);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(45, 18);
+            this.Label15.Size = new System.Drawing.Size(38, 13);
             this.Label15.TabIndex = 593;
             this.Label15.Text = "SYS ID :";
             // 
             // label2
             // 
-            this.label2.Appearance.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(342, 105);
+            this.label2.Location = new System.Drawing.Point(346, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 17);
+            this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 602;
             this.label2.Text = "INDEX";
             // 
             // txtIndex
             // 
-            this.txtIndex.Location = new System.Drawing.Point(386, 103);
+            this.txtIndex.Location = new System.Drawing.Point(390, 69);
             this.txtIndex.Name = "txtIndex";
             this.txtIndex.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIndex.Properties.MaxLength = 100;
@@ -163,7 +163,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 211);
+            this.ClientSize = new System.Drawing.Size(504, 134);
             this.ControlBox = false;
             this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.label2);

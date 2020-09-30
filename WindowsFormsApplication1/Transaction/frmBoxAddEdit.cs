@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1.Transaction
                         lblTotQty.Text = QtySum.ToString("0");
                     }
 
-                   
+
                 }
             }
             catch (Exception ex)

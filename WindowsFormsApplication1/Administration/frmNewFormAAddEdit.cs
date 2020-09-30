@@ -289,7 +289,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                ProjectFunctions.SpeakError("Valid Value Are Y/N");
+                ProjectFunctions.SpeakError("Valid Values Are Y/N");
                 txtNfaTag.Focus();
             }
         }
@@ -322,6 +322,16 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
+        }
+
+        private void txtstatusTag_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtstatusTag_Enter(object sender, EventArgs e)
+        {
+            txtstatusTag.Text = txtNfaTag.Text;
         }
     }
 }

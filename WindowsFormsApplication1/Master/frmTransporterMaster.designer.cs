@@ -79,102 +79,102 @@
             // 
             // Label8
             // 
-            this.Label8.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label8.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label8.Appearance.Options.UseFont = true;
-            this.Label8.Location = new System.Drawing.Point(332, 305);
+            this.Label8.Location = new System.Drawing.Point(331, 254);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(73, 15);
+            this.Label8.Size = new System.Drawing.Size(67, 13);
             this.Label8.TabIndex = 141;
             this.Label8.Text = "MOBILE NO. :";
             // 
             // Label5
             // 
-            this.Label5.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label5.Appearance.Options.UseFont = true;
-            this.Label5.Location = new System.Drawing.Point(137, 225);
+            this.Label5.Location = new System.Drawing.Point(131, 176);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(39, 15);
+            this.Label5.Size = new System.Drawing.Size(37, 13);
             this.Label5.TabIndex = 148;
             this.Label5.Text = "STATE :";
             // 
             // Label10
             // 
-            this.Label10.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label10.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label10.Appearance.Options.UseFont = true;
-            this.Label10.Location = new System.Drawing.Point(126, 356);
+            this.Label10.Location = new System.Drawing.Point(120, 306);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(50, 15);
+            this.Label10.Size = new System.Drawing.Size(48, 13);
             this.Label10.TabIndex = 147;
             this.Label10.Text = "WEBSITE:";
             // 
             // Label9
             // 
-            this.Label9.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label9.Appearance.Options.UseFont = true;
-            this.Label9.Location = new System.Drawing.Point(124, 330);
+            this.Label9.Location = new System.Drawing.Point(120, 280);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(52, 15);
+            this.Label9.Size = new System.Drawing.Size(48, 13);
             this.Label9.TabIndex = 146;
             this.Label9.Text = "EMAIL ID:";
             // 
             // Label7
             // 
-            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(93, 304);
+            this.Label7.Location = new System.Drawing.Point(93, 254);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(83, 15);
+            this.Label7.Size = new System.Drawing.Size(75, 13);
             this.Label7.TabIndex = 145;
             this.Label7.Text = "LANDLINE NO.:";
             // 
             // Label6
             // 
-            this.Label6.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label6.Appearance.Options.UseFont = true;
-            this.Label6.Location = new System.Drawing.Point(73, 277);
+            this.Label6.Location = new System.Drawing.Point(72, 228);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(103, 15);
+            this.Label6.Size = new System.Drawing.Size(96, 13);
             this.Label6.TabIndex = 144;
             this.Label6.Text = "CONTACT PERSON:";
             // 
             // Label4
             // 
-            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(149, 200);
+            this.Label4.Location = new System.Drawing.Point(143, 150);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(27, 15);
+            this.Label4.Size = new System.Drawing.Size(25, 13);
             this.Label4.TabIndex = 143;
             this.Label4.Text = "CITY:";
             this.Label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // Label3
             // 
-            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(32, 174);
+            this.Label3.Location = new System.Drawing.Point(31, 124);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(144, 15);
+            this.Label3.Size = new System.Drawing.Size(137, 13);
             this.Label3.TabIndex = 142;
             this.Label3.Text = "TRANSPORTER ADDRESS 2:";
             // 
             // Label2
             // 
-            this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label2.Appearance.Options.UseFont = true;
-            this.Label2.Location = new System.Drawing.Point(32, 148);
+            this.Label2.Location = new System.Drawing.Point(33, 98);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(144, 15);
+            this.Label2.Size = new System.Drawing.Size(135, 13);
             this.Label2.TabIndex = 149;
             this.Label2.Text = "TRANSPORTER ADDRESS 1:";
             // 
             // Label1
             // 
-            this.Label1.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label1.Appearance.Options.UseFont = true;
-            this.Label1.Location = new System.Drawing.Point(57, 120);
+            this.Label1.Location = new System.Drawing.Point(57, 72);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(119, 15);
+            this.Label1.Size = new System.Drawing.Size(111, 13);
             this.Label1.TabIndex = 150;
             this.Label1.Text = "TRANSPORTER NAME:";
             // 
@@ -191,7 +191,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(654, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(589, 25);
             this.Menu_ToolStrip.TabIndex = 209;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -217,16 +217,16 @@
             // 
             // txtTransporterName
             // 
-            this.txtTransporterName.Location = new System.Drawing.Point(190, 120);
+            this.txtTransporterName.Location = new System.Drawing.Point(176, 68);
             this.txtTransporterName.Name = "txtTransporterName";
             this.txtTransporterName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterName.Properties.MaxLength = 100;
-            this.txtTransporterName.Size = new System.Drawing.Size(390, 20);
+            this.txtTransporterName.Size = new System.Drawing.Size(387, 20);
             this.txtTransporterName.TabIndex = 211;
             // 
             // txtTransporterCode
             // 
-            this.txtTransporterCode.Location = new System.Drawing.Point(190, 94);
+            this.txtTransporterCode.Location = new System.Drawing.Point(176, 42);
             this.txtTransporterCode.Name = "txtTransporterCode";
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterCode.Size = new System.Drawing.Size(83, 20);
@@ -234,25 +234,25 @@
             // 
             // txtAddress1
             // 
-            this.txtAddress1.Location = new System.Drawing.Point(190, 146);
+            this.txtAddress1.Location = new System.Drawing.Point(176, 94);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 100;
-            this.txtAddress1.Size = new System.Drawing.Size(390, 20);
+            this.txtAddress1.Size = new System.Drawing.Size(387, 20);
             this.txtAddress1.TabIndex = 212;
             // 
             // txtAddress2
             // 
-            this.txtAddress2.Location = new System.Drawing.Point(190, 172);
+            this.txtAddress2.Location = new System.Drawing.Point(176, 120);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 100;
-            this.txtAddress2.Size = new System.Drawing.Size(390, 20);
+            this.txtAddress2.Size = new System.Drawing.Size(387, 20);
             this.txtAddress2.TabIndex = 213;
             // 
             // txtCityCode
             // 
-            this.txtCityCode.Location = new System.Drawing.Point(190, 198);
+            this.txtCityCode.Location = new System.Drawing.Point(176, 146);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 100;
@@ -264,7 +264,7 @@
             // txtState
             // 
             this.txtState.Enabled = false;
-            this.txtState.Location = new System.Drawing.Point(190, 223);
+            this.txtState.Location = new System.Drawing.Point(176, 172);
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
@@ -274,26 +274,26 @@
             // 
             // txtContactPerson
             // 
-            this.txtContactPerson.Location = new System.Drawing.Point(190, 276);
+            this.txtContactPerson.Location = new System.Drawing.Point(176, 224);
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContactPerson.Properties.MaxLength = 100;
-            this.txtContactPerson.Size = new System.Drawing.Size(391, 20);
+            this.txtContactPerson.Size = new System.Drawing.Size(387, 20);
             this.txtContactPerson.TabIndex = 216;
             this.txtContactPerson.EditValueChanged += new System.EventHandler(this.TxtContactPerson_EditValueChanged);
             // 
             // txtMobileNo
             // 
-            this.txtMobileNo.Location = new System.Drawing.Point(418, 302);
+            this.txtMobileNo.Location = new System.Drawing.Point(404, 250);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobileNo.Properties.MaxLength = 100;
-            this.txtMobileNo.Size = new System.Drawing.Size(163, 20);
+            this.txtMobileNo.Size = new System.Drawing.Size(159, 20);
             this.txtMobileNo.TabIndex = 218;
             // 
             // txtLandlineNo
             // 
-            this.txtLandlineNo.Location = new System.Drawing.Point(190, 302);
+            this.txtLandlineNo.Location = new System.Drawing.Point(176, 250);
             this.txtLandlineNo.Name = "txtLandlineNo";
             this.txtLandlineNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLandlineNo.Properties.MaxLength = 100;
@@ -302,71 +302,71 @@
             // 
             // txtWebSite
             // 
-            this.txtWebSite.Location = new System.Drawing.Point(190, 354);
+            this.txtWebSite.Location = new System.Drawing.Point(176, 302);
             this.txtWebSite.Name = "txtWebSite";
             this.txtWebSite.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWebSite.Properties.MaxLength = 100;
-            this.txtWebSite.Size = new System.Drawing.Size(391, 20);
+            this.txtWebSite.Size = new System.Drawing.Size(387, 20);
             this.txtWebSite.TabIndex = 220;
             // 
             // txtEmailId
             // 
-            this.txtEmailId.Location = new System.Drawing.Point(190, 328);
+            this.txtEmailId.Location = new System.Drawing.Point(176, 276);
             this.txtEmailId.Name = "txtEmailId";
             this.txtEmailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmailId.Properties.MaxLength = 100;
-            this.txtEmailId.Size = new System.Drawing.Size(391, 20);
+            this.txtEmailId.Size = new System.Drawing.Size(387, 20);
             this.txtEmailId.TabIndex = 219;
             // 
             // label11
             // 
-            this.label11.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label11.Appearance.Options.UseFont = true;
-            this.label11.Location = new System.Drawing.Point(61, 96);
+            this.label11.Location = new System.Drawing.Point(59, 46);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(115, 15);
+            this.label11.Size = new System.Drawing.Size(109, 13);
             this.label11.TabIndex = 221;
             this.label11.Text = "TRANSPORTER CODE:";
             // 
             // txtCityName
             // 
             this.txtCityName.Enabled = false;
-            this.txtCityName.Location = new System.Drawing.Point(279, 198);
+            this.txtCityName.Location = new System.Drawing.Point(265, 146);
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityName.Properties.MaxLength = 100;
-            this.txtCityName.Size = new System.Drawing.Size(299, 20);
+            this.txtCityName.Size = new System.Drawing.Size(298, 20);
             this.txtCityName.TabIndex = 222;
             this.txtCityName.TabStop = false;
             // 
             // txtCountry
             // 
             this.txtCountry.Enabled = false;
-            this.txtCountry.Location = new System.Drawing.Point(190, 249);
+            this.txtCountry.Location = new System.Drawing.Point(176, 198);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCountry.Properties.MaxLength = 100;
-            this.txtCountry.Size = new System.Drawing.Size(388, 20);
+            this.txtCountry.Size = new System.Drawing.Size(387, 20);
             this.txtCountry.TabIndex = 224;
             this.txtCountry.TabStop = false;
             // 
             // label12
             // 
-            this.label12.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label12.Appearance.Options.UseFont = true;
-            this.label12.Location = new System.Drawing.Point(116, 251);
+            this.label12.Location = new System.Drawing.Point(112, 202);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 15);
+            this.label12.Size = new System.Drawing.Size(56, 13);
             this.label12.TabIndex = 223;
             this.label12.Text = "COUNTRY :";
             this.label12.Click += new System.EventHandler(this.Label12_Click);
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(418, 31);
+            this.HelpGrid.Location = new System.Drawing.Point(12, 28);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(556, 343);
+            this.HelpGrid.Size = new System.Drawing.Size(556, 294);
             this.HelpGrid.TabIndex = 375;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -391,7 +391,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 439);
+            this.ClientSize = new System.Drawing.Size(589, 334);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtCountry);

@@ -119,6 +119,7 @@
             this.gridColumn_Edit_Link});
             this.gridView_UserMaster.GridControl = this.gridControl_UserMaster;
             this.gridView_UserMaster.Name = "gridView_UserMaster";
+            this.gridView_UserMaster.OptionsView.ShowGroupPanel = false;
             this.gridView_UserMaster.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView_UserMaster_PopupMenuShowing);
             // 
             // gridColumn_UserName

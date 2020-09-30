@@ -68,80 +68,80 @@
             // 
             // Label2
             // 
-            this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label2.Appearance.Options.UseFont = true;
-            this.Label2.Location = new System.Drawing.Point(45, 104);
+            this.Label2.Location = new System.Drawing.Point(19, 67);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(82, 15);
+            this.Label2.Size = new System.Drawing.Size(77, 13);
             this.Label2.TabIndex = 628;
             this.Label2.Text = "CONTRACTOR :";
             // 
             // Label4
             // 
-            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(321, 154);
+            this.Label4.Location = new System.Drawing.Point(289, 119);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(64, 15);
+            this.Label4.Size = new System.Drawing.Size(60, 13);
             this.Label4.TabIndex = 605;
             this.Label4.Text = "OTHER NO :";
             // 
             // Label3
             // 
-            this.Label3.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(72, 181);
+            this.Label3.Location = new System.Drawing.Point(45, 145);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(55, 15);
+            this.Label3.Size = new System.Drawing.Size(51, 13);
             this.Label3.TabIndex = 597;
             this.Label3.Text = "EMAIL ID :";
             // 
             // LBDEPNAME
             // 
-            this.LBDEPNAME.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPNAME.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPNAME.Appearance.Options.UseFont = true;
-            this.LBDEPNAME.Location = new System.Drawing.Point(86, 131);
+            this.LBDEPNAME.Location = new System.Drawing.Point(59, 93);
             this.LBDEPNAME.Name = "LBDEPNAME";
-            this.LBDEPNAME.Size = new System.Drawing.Size(41, 15);
+            this.LBDEPNAME.Size = new System.Drawing.Size(37, 13);
             this.LBDEPNAME.TabIndex = 32;
             this.LBDEPNAME.Text = "NAME :";
             // 
             // Label7
             // 
-            this.Label7.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(44, 209);
+            this.Label7.Location = new System.Drawing.Point(19, 171);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(83, 15);
+            this.Label7.Size = new System.Drawing.Size(77, 13);
             this.Label7.TabIndex = 32;
             this.Label7.Text = "ID TYPE && NO. :";
             // 
             // LBDEPCODE
             // 
-            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(90, 79);
+            this.LBDEPCODE.Location = new System.Drawing.Point(61, 41);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(37, 15);
+            this.LBDEPCODE.Size = new System.Drawing.Size(35, 13);
             this.LBDEPCODE.TabIndex = 32;
             this.LBDEPCODE.Text = "CODE :";
             // 
             // Label6
             // 
-            this.Label6.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label6.Appearance.Options.UseFont = true;
-            this.Label6.Location = new System.Drawing.Point(57, 156);
+            this.Label6.Location = new System.Drawing.Point(32, 119);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(70, 15);
+            this.Label6.Size = new System.Drawing.Size(64, 13);
             this.Label6.TabIndex = 32;
             this.Label6.Text = "MOBILE NO :";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(144, 22);
+            this.HelpGrid.Location = new System.Drawing.Point(19, 29);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(470, 261);
+            this.HelpGrid.Size = new System.Drawing.Size(470, 173);
             this.HelpGrid.TabIndex = 744;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -165,7 +165,7 @@
             // 
             this.txtWorkerCode.Enabled = false;
             this.txtWorkerCode.EnterMoveNextControl = true;
-            this.txtWorkerCode.Location = new System.Drawing.Point(144, 77);
+            this.txtWorkerCode.Location = new System.Drawing.Point(101, 37);
             this.txtWorkerCode.Name = "txtWorkerCode";
             this.txtWorkerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWorkerCode.Properties.MaxLength = 8;
@@ -176,7 +176,7 @@
             // txtEMailId
             // 
             this.txtEMailId.EnterMoveNextControl = true;
-            this.txtEMailId.Location = new System.Drawing.Point(144, 180);
+            this.txtEMailId.Location = new System.Drawing.Point(101, 141);
             this.txtEMailId.Name = "txtEMailId";
             this.txtEMailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEMailId.Size = new System.Drawing.Size(410, 20);
@@ -185,7 +185,7 @@
             // txtMobileNo
             // 
             this.txtMobileNo.EnterMoveNextControl = true;
-            this.txtMobileNo.Location = new System.Drawing.Point(144, 154);
+            this.txtMobileNo.Location = new System.Drawing.Point(101, 115);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobileNo.Size = new System.Drawing.Size(171, 20);
@@ -195,7 +195,7 @@
             // 
             this.txtContractorDesc.Enabled = false;
             this.txtContractorDesc.EnterMoveNextControl = true;
-            this.txtContractorDesc.Location = new System.Drawing.Point(224, 103);
+            this.txtContractorDesc.Location = new System.Drawing.Point(181, 63);
             this.txtContractorDesc.Name = "txtContractorDesc";
             this.txtContractorDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorDesc.Properties.MaxLength = 8;
@@ -216,7 +216,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(614, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(526, 26);
             this.Menu_ToolStrip.TabIndex = 745;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -247,7 +247,7 @@
             // txtWorkerName
             // 
             this.txtWorkerName.EnterMoveNextControl = true;
-            this.txtWorkerName.Location = new System.Drawing.Point(144, 128);
+            this.txtWorkerName.Location = new System.Drawing.Point(101, 89);
             this.txtWorkerName.Name = "txtWorkerName";
             this.txtWorkerName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWorkerName.Size = new System.Drawing.Size(306, 20);
@@ -256,7 +256,7 @@
             // txtContractorCode
             // 
             this.txtContractorCode.EnterMoveNextControl = true;
-            this.txtContractorCode.Location = new System.Drawing.Point(144, 103);
+            this.txtContractorCode.Location = new System.Drawing.Point(101, 63);
             this.txtContractorCode.Name = "txtContractorCode";
             this.txtContractorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorCode.Properties.MaxLength = 8;
@@ -268,7 +268,7 @@
             // txtOtherNo
             // 
             this.txtOtherNo.EnterMoveNextControl = true;
-            this.txtOtherNo.Location = new System.Drawing.Point(397, 153);
+            this.txtOtherNo.Location = new System.Drawing.Point(354, 115);
             this.txtOtherNo.Name = "txtOtherNo";
             this.txtOtherNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOtherNo.Size = new System.Drawing.Size(157, 20);
@@ -277,7 +277,7 @@
             // txtFloorCode
             // 
             this.txtFloorCode.EnterMoveNextControl = true;
-            this.txtFloorCode.Location = new System.Drawing.Point(456, 129);
+            this.txtFloorCode.Location = new System.Drawing.Point(413, 89);
             this.txtFloorCode.Name = "txtFloorCode";
             this.txtFloorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFloorCode.Size = new System.Drawing.Size(98, 20);
@@ -285,7 +285,7 @@
             // 
             // txtIDType
             // 
-            this.txtIDType.Location = new System.Drawing.Point(144, 207);
+            this.txtIDType.Location = new System.Drawing.Point(101, 167);
             this.txtIDType.Name = "txtIDType";
             this.txtIDType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -302,7 +302,7 @@
             // txtIDNo
             // 
             this.txtIDNo.EnterMoveNextControl = true;
-            this.txtIDNo.Location = new System.Drawing.Point(397, 207);
+            this.txtIDNo.Location = new System.Drawing.Point(354, 167);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIDNo.Size = new System.Drawing.Size(157, 20);
@@ -312,7 +312,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(614, 286);
+            this.ClientSize = new System.Drawing.Size(526, 216);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtIDNo);

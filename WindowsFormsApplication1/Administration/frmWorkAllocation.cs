@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmWorkAllocation : XtraForm
+    public partial class FrmWorkAllocation : XtraForm
     {
-        public frmWorkAllocation()
+        public FrmWorkAllocation()
         {
             InitializeComponent();
         }
-        private void fillUserComboBox()
+        private void FillUserComboBox()
         {
             try
             {
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void fillGrid()
+        private void FillGrid()
         {
             try
             {
@@ -161,12 +161,12 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void frmWorkAllocation_Load(object sender, EventArgs e)
+        private void FrmWorkAllocation_Load(object sender, EventArgs e)
         {
             try
             {
                 SetMyControls();
-                fillUserComboBox();
+                FillUserComboBox();
                 OptionsGrid.Visible = false;
                 btnSaveOpts.Enabled = false;
                 btnCancle.Enabled = false;
@@ -176,13 +176,9 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void cmbSelectUser_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbSelectUser_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fillGrid();
-        }
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            FillGrid();
         }
         private void UserGridView_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
@@ -232,7 +228,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -496,7 +492,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnCancle_Click(object sender, EventArgs e)
+        private void BtnCancle_Click(object sender, EventArgs e)
         {
             OptionsGrid.Visible = false;
             OptionsGrid.DataSource = null;
@@ -504,7 +500,7 @@ namespace WindowsFormsApplication1
             btnCancle.Enabled = false;
         }
 
-        private void btnSaveOpts_Click(object sender, EventArgs e)
+        private void BtnSaveOpts_Click(object sender, EventArgs e)
         {
             try
             {
@@ -613,7 +609,7 @@ namespace WindowsFormsApplication1
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
                     }
-                    btnCancle_Click(null, e);
+                    BtnCancle_Click(null, e);
                 }
             }
             catch (Exception ex)

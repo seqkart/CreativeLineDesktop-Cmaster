@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frm_Chng_Pswd
+    partial class Frm_Chng_Pswd
     {
         /// <summary> 
         /// Required designer variable.
@@ -99,7 +99,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(20, 19);
             this.simpleButton1.TabIndex = 6;
             this.simpleButton1.Text = "X";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // Btn_Chnge
             // 
@@ -186,7 +186,7 @@
             this.Controls.Add(this.groupControl1);
             this.Name = "frm_Chng_Pswd";
             this.Size = new System.Drawing.Size(321, 199);
-            this.Load += new System.EventHandler(this.frm_Chng_Pswd_Load);
+            this.Load += new System.EventHandler(this.Frm_Chng_Pswd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNewPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmPass.Properties)).EndInit();

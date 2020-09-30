@@ -87,7 +87,7 @@
             // 
             // txtStateName
             // 
-            this.txtStateName.Location = new System.Drawing.Point(98, 85);
+            this.txtStateName.Location = new System.Drawing.Point(98, 84);
             this.txtStateName.Name = "txtStateName";
             this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateName.Properties.MaxLength = 100;
@@ -104,6 +104,7 @@
             // 
             // txtCountry
             // 
+            this.txtCountry.EditValue = "INDIA";
             this.txtCountry.Location = new System.Drawing.Point(98, 117);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -121,7 +122,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(21, 89);
+            this.labelControl2.Location = new System.Drawing.Point(21, 88);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(71, 13);
             this.labelControl2.TabIndex = 390;

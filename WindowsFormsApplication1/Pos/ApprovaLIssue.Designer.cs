@@ -113,7 +113,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(146, 99);
+            this.HelpGrid.Location = new System.Drawing.Point(139, 28);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(693, 362);
@@ -157,7 +157,7 @@
             // 
             this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(43, 193);
+            this.label3.Location = new System.Drawing.Point(48, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 17);
             this.label3.TabIndex = 715;
@@ -175,7 +175,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtApprovalDate.Properties.Mask.EditMask = "";
             this.txtApprovalDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtApprovalDate.Size = new System.Drawing.Size(98, 20);
+            this.txtApprovalDate.Size = new System.Drawing.Size(97, 20);
             this.txtApprovalDate.TabIndex = 714;
             this.txtApprovalDate.TabStop = false;
             // 
@@ -240,7 +240,7 @@
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(439, 50);
+            this.txtRemarks.Location = new System.Drawing.Point(439, 42);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRemarks.Properties.Appearance.Options.UseFont = true;
@@ -252,7 +252,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(388, 50);
+            this.labelControl6.Location = new System.Drawing.Point(388, 42);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(45, 15);
             this.labelControl6.TabIndex = 721;
@@ -349,7 +349,7 @@
             // 
             // txtCustMobileNo
             // 
-            this.txtCustMobileNo.Location = new System.Drawing.Point(216, 65);
+            this.txtCustMobileNo.Location = new System.Drawing.Point(216, 63);
             this.txtCustMobileNo.Name = "txtCustMobileNo";
             this.txtCustMobileNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustMobileNo.Properties.Appearance.Options.UseFont = true;
@@ -374,7 +374,7 @@
             // txtCustName
             // 
             this.txtCustName.Enabled = false;
-            this.txtCustName.Location = new System.Drawing.Point(108, 88);
+            this.txtCustName.Location = new System.Drawing.Point(108, 87);
             this.txtCustName.Name = "txtCustName";
             this.txtCustName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustName.Properties.Appearance.Options.UseFont = true;
@@ -385,7 +385,7 @@
             // txtCustCode
             // 
             this.txtCustCode.Enabled = false;
-            this.txtCustCode.Location = new System.Drawing.Point(108, 65);
+            this.txtCustCode.Location = new System.Drawing.Point(108, 63);
             this.txtCustCode.Name = "txtCustCode";
             this.txtCustCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustCode.Properties.Appearance.Options.UseFont = true;

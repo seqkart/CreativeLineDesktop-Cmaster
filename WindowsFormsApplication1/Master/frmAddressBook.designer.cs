@@ -90,73 +90,73 @@
             // 
             // label6
             // 
-            this.label6.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label6.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Appearance.Options.UseFont = true;
             this.label6.Appearance.Options.UseForeColor = true;
-            this.label6.Location = new System.Drawing.Point(65, 255);
+            this.label6.Location = new System.Drawing.Point(72, 255);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 14);
+            this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 27;
             this.label6.Text = "Land Mark :";
             // 
             // label16
             // 
-            this.label16.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label16.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label16.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Appearance.Options.UseFont = true;
             this.label16.Appearance.Options.UseForeColor = true;
-            this.label16.Location = new System.Drawing.Point(71, 360);
+            this.label16.Location = new System.Drawing.Point(78, 360);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 14);
+            this.label16.Size = new System.Drawing.Size(54, 13);
             this.label16.TabIndex = 26;
             this.label16.Text = "Company :";
             // 
             // label17
             // 
-            this.label17.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label17.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label17.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Appearance.Options.UseFont = true;
             this.label17.Appearance.Options.UseForeColor = true;
-            this.label17.Location = new System.Drawing.Point(69, 229);
+            this.label17.Location = new System.Drawing.Point(76, 229);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 14);
+            this.label17.Size = new System.Drawing.Size(56, 13);
             this.label17.TabIndex = 25;
             this.label17.Text = "Address 2 :";
             // 
             // label18
             // 
-            this.label18.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label18.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label18.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Appearance.Options.UseFont = true;
             this.label18.Appearance.Options.UseForeColor = true;
-            this.label18.Location = new System.Drawing.Point(69, 203);
+            this.label18.Location = new System.Drawing.Point(76, 203);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(54, 14);
+            this.label18.Size = new System.Drawing.Size(56, 13);
             this.label18.TabIndex = 24;
             this.label18.Text = "Address 1 :";
             // 
             // label19
             // 
-            this.label19.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label19.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label19.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Appearance.Options.UseFont = true;
             this.label19.Appearance.Options.UseForeColor = true;
-            this.label19.Location = new System.Drawing.Point(78, 177);
+            this.label19.Location = new System.Drawing.Point(85, 177);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 14);
+            this.label19.Size = new System.Drawing.Size(47, 13);
             this.label19.TabIndex = 29;
             this.label19.Text = "Address :";
             // 
             // label22
             // 
-            this.label22.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label22.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label22.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Appearance.Options.UseFont = true;
             this.label22.Appearance.Options.UseForeColor = true;
-            this.label22.Location = new System.Drawing.Point(54, 101);
+            this.label22.Location = new System.Drawing.Point(60, 101);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(69, 14);
+            this.label22.Size = new System.Drawing.Size(72, 13);
             this.label22.TabIndex = 18;
             this.label22.Text = "Select Group :";
             // 
@@ -198,7 +198,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(147, 29);
+            this.HelpGrid.Location = new System.Drawing.Point(72, 73);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(462, 362);
@@ -374,25 +374,25 @@
             // 
             // label1
             // 
-            this.label1.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label1.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Appearance.Options.UseFont = true;
             this.label1.Appearance.Options.UseForeColor = true;
-            this.label1.Location = new System.Drawing.Point(80, 418);
+            this.label1.Location = new System.Drawing.Point(89, 418);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 14);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 389;
             this.label1.Text = "EmailId :";
             // 
             // label2
             // 
-            this.label2.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label2.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Appearance.Options.UseFont = true;
             this.label2.Appearance.Options.UseForeColor = true;
-            this.label2.Location = new System.Drawing.Point(63, 392);
+            this.label2.Location = new System.Drawing.Point(68, 392);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 14);
+            this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 392;
             this.label2.Text = "Contact No :";
             // 
@@ -410,13 +410,13 @@
             // 
             // label3
             // 
-            this.label3.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.label3.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
+            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Appearance.Options.UseFont = true;
             this.label3.Appearance.Options.UseForeColor = true;
-            this.label3.Location = new System.Drawing.Point(23, 75);
+            this.label3.Location = new System.Drawing.Point(26, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 14);
+            this.label3.Size = new System.Drawing.Size(106, 13);
             this.label3.TabIndex = 393;
             this.label3.Text = "Address Book Code :";
             // 
@@ -448,13 +448,15 @@
             // 
             // label12
             // 
-            this.label12.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label12.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Appearance.Options.UseFont = true;
-            this.label12.Location = new System.Drawing.Point(63, 332);
+            this.label12.Appearance.Options.UseForeColor = true;
+            this.label12.Location = new System.Drawing.Point(85, 332);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 15);
+            this.label12.Size = new System.Drawing.Size(47, 13);
             this.label12.TabIndex = 399;
-            this.label12.Text = "COUNTRY :";
+            this.label12.Text = "Country :";
             // 
             // txtCityName
             // 
@@ -470,7 +472,7 @@
             // txtState
             // 
             this.txtState.Enabled = false;
-            this.txtState.Location = new System.Drawing.Point(138, 304);
+            this.txtState.Location = new System.Drawing.Point(137, 304);
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
@@ -480,7 +482,7 @@
             // 
             // txtCityCode
             // 
-            this.txtCityCode.Location = new System.Drawing.Point(138, 279);
+            this.txtCityCode.Location = new System.Drawing.Point(137, 279);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 100;
@@ -491,23 +493,27 @@
             // 
             // Label5
             // 
-            this.Label5.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label5.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label5.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Label5.Appearance.Options.UseFont = true;
-            this.Label5.Location = new System.Drawing.Point(84, 306);
+            this.Label5.Appearance.Options.UseForeColor = true;
+            this.Label5.Location = new System.Drawing.Point(100, 306);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(39, 15);
+            this.Label5.Size = new System.Drawing.Size(32, 13);
             this.Label5.TabIndex = 395;
-            this.Label5.Text = "STATE :";
+            this.Label5.Text = "State :";
             // 
             // Label4
             // 
-            this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.Label4.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label4.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(96, 282);
+            this.Label4.Appearance.Options.UseForeColor = true;
+            this.Label4.Location = new System.Drawing.Point(107, 282);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(27, 15);
+            this.Label4.Size = new System.Drawing.Size(25, 13);
             this.Label4.TabIndex = 394;
-            this.Label4.Text = "CITY:";
+            this.Label4.Text = "City :";
             // 
             // frmAddressBook
             // 

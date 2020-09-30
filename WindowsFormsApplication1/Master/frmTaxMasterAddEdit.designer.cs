@@ -94,27 +94,27 @@
             // 
             // label7
             // 
-            this.label7.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label7.Appearance.Options.UseFont = true;
-            this.label7.Location = new System.Drawing.Point(126, 284);
+            this.label7.Location = new System.Drawing.Point(112, 250);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.Size = new System.Drawing.Size(45, 13);
             this.label7.TabIndex = 222;
             this.label7.Text = "Message";
             // 
             // label5
             // 
-            this.label5.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label5.Appearance.Options.UseFont = true;
-            this.label5.Location = new System.Drawing.Point(284, 128);
+            this.label5.Location = new System.Drawing.Point(261, 94);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 221;
             this.label5.Text = "SGST Rate";
             // 
             // txtCGSTRate
             // 
-            this.txtCGSTRate.Location = new System.Drawing.Point(183, 124);
+            this.txtCGSTRate.Location = new System.Drawing.Point(165, 90);
             this.txtCGSTRate.Name = "txtCGSTRate";
             this.txtCGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCGSTRate.Size = new System.Drawing.Size(85, 20);
@@ -123,21 +123,21 @@
             // 
             // label3
             // 
-            this.label3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(117, 128);
+            this.label3.Location = new System.Drawing.Point(104, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(53, 13);
             this.label3.TabIndex = 220;
             this.label3.Text = "CGST Rate";
             // 
             // label2
             // 
-            this.label2.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(149, 102);
+            this.label2.Location = new System.Drawing.Point(133, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
+            this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 219;
             this.label2.Text = "Desc";
             // 
@@ -154,7 +154,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(638, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(586, 25);
             this.Menu_ToolStrip.TabIndex = 218;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -182,16 +182,16 @@
             // 
             // txtTaxDesc
             // 
-            this.txtTaxDesc.Location = new System.Drawing.Point(183, 98);
+            this.txtTaxDesc.Location = new System.Drawing.Point(165, 64);
             this.txtTaxDesc.Name = "txtTaxDesc";
             this.txtTaxDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxDesc.Properties.MaxLength = 50;
-            this.txtTaxDesc.Size = new System.Drawing.Size(425, 20);
+            this.txtTaxDesc.Size = new System.Drawing.Size(392, 20);
             this.txtTaxDesc.TabIndex = 2;
             // 
             // txtTaxCode
             // 
-            this.txtTaxCode.Location = new System.Drawing.Point(183, 72);
+            this.txtTaxCode.Location = new System.Drawing.Point(165, 38);
             this.txtTaxCode.Name = "txtTaxCode";
             this.txtTaxCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCode.Size = new System.Drawing.Size(84, 20);
@@ -199,17 +199,17 @@
             // 
             // label1
             // 
-            this.label1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(148, 76);
+            this.label1.Location = new System.Drawing.Point(130, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(28, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 217;
             this.label1.Text = "Code";
             // 
             // txtSGSTRate
             // 
-            this.txtSGSTRate.Location = new System.Drawing.Point(350, 124);
+            this.txtSGSTRate.Location = new System.Drawing.Point(319, 90);
             this.txtSGSTRate.Name = "txtSGSTRate";
             this.txtSGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGSTRate.Size = new System.Drawing.Size(85, 20);
@@ -218,17 +218,17 @@
             // 
             // label4
             // 
-            this.label4.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(452, 128);
+            this.label4.Location = new System.Drawing.Point(418, 94);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 225;
             this.label4.Text = "IGST Rate";
             // 
             // txtCGSTPostingCode
             // 
-            this.txtCGSTPostingCode.Location = new System.Drawing.Point(183, 202);
+            this.txtCGSTPostingCode.Location = new System.Drawing.Point(165, 168);
             this.txtCGSTPostingCode.Name = "txtCGSTPostingCode";
             this.txtCGSTPostingCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCGSTPostingCode.Properties.MaxLength = 6;
@@ -240,27 +240,27 @@
             // 
             // txtCGSTPostingDesc
             // 
-            this.txtCGSTPostingDesc.Location = new System.Drawing.Point(275, 202);
+            this.txtCGSTPostingDesc.Location = new System.Drawing.Point(257, 168);
             this.txtCGSTPostingDesc.Name = "txtCGSTPostingDesc";
             this.txtCGSTPostingDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCGSTPostingDesc.Properties.ReadOnly = true;
-            this.txtCGSTPostingDesc.Size = new System.Drawing.Size(333, 20);
+            this.txtCGSTPostingDesc.Size = new System.Drawing.Size(300, 20);
             this.txtCGSTPostingDesc.TabIndex = 229;
             this.txtCGSTPostingDesc.TabStop = false;
             // 
             // txtSGSTPostingDesc
             // 
-            this.txtSGSTPostingDesc.Location = new System.Drawing.Point(275, 228);
+            this.txtSGSTPostingDesc.Location = new System.Drawing.Point(257, 194);
             this.txtSGSTPostingDesc.Name = "txtSGSTPostingDesc";
             this.txtSGSTPostingDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGSTPostingDesc.Properties.ReadOnly = true;
-            this.txtSGSTPostingDesc.Size = new System.Drawing.Size(333, 20);
+            this.txtSGSTPostingDesc.Size = new System.Drawing.Size(300, 20);
             this.txtSGSTPostingDesc.TabIndex = 231;
             this.txtSGSTPostingDesc.TabStop = false;
             // 
             // txtSGSTPostingCode
             // 
-            this.txtSGSTPostingCode.Location = new System.Drawing.Point(183, 228);
+            this.txtSGSTPostingCode.Location = new System.Drawing.Point(165, 194);
             this.txtSGSTPostingCode.Name = "txtSGSTPostingCode";
             this.txtSGSTPostingCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGSTPostingCode.Properties.MaxLength = 6;
@@ -272,17 +272,17 @@
             // 
             // txtIGSTPostingDesc
             // 
-            this.txtIGSTPostingDesc.Location = new System.Drawing.Point(275, 254);
+            this.txtIGSTPostingDesc.Location = new System.Drawing.Point(257, 220);
             this.txtIGSTPostingDesc.Name = "txtIGSTPostingDesc";
             this.txtIGSTPostingDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIGSTPostingDesc.Properties.ReadOnly = true;
-            this.txtIGSTPostingDesc.Size = new System.Drawing.Size(333, 20);
+            this.txtIGSTPostingDesc.Size = new System.Drawing.Size(300, 20);
             this.txtIGSTPostingDesc.TabIndex = 233;
             this.txtIGSTPostingDesc.TabStop = false;
             // 
             // txtIGSTPostingCode
             // 
-            this.txtIGSTPostingCode.Location = new System.Drawing.Point(183, 254);
+            this.txtIGSTPostingCode.Location = new System.Drawing.Point(165, 220);
             this.txtIGSTPostingCode.Name = "txtIGSTPostingCode";
             this.txtIGSTPostingCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIGSTPostingCode.Properties.MaxLength = 6;
@@ -294,56 +294,56 @@
             // 
             // label10
             // 
-            this.label10.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label10.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label10.Appearance.Options.UseFont = true;
-            this.label10.Location = new System.Drawing.Point(71, 232);
+            this.label10.Location = new System.Drawing.Point(60, 198);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(105, 13);
+            this.label10.Size = new System.Drawing.Size(97, 13);
             this.label10.TabIndex = 235;
             this.label10.Text = "SGST Posting Code";
             // 
             // label11
             // 
-            this.label11.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label11.Appearance.Options.UseFont = true;
-            this.label11.Location = new System.Drawing.Point(71, 206);
+            this.label11.Location = new System.Drawing.Point(59, 172);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 13);
+            this.label11.Size = new System.Drawing.Size(98, 13);
             this.label11.TabIndex = 236;
             this.label11.Text = "CGST Posting Code";
             // 
             // label9
             // 
-            this.label9.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.Appearance.Options.UseFont = true;
-            this.label9.Location = new System.Drawing.Point(73, 258);
+            this.label9.Location = new System.Drawing.Point(63, 224);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(103, 13);
+            this.label9.Size = new System.Drawing.Size(94, 13);
             this.label9.TabIndex = 237;
             this.label9.Text = "IGST Posting Code";
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(183, 280);
+            this.txtMessage.Location = new System.Drawing.Point(165, 246);
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMessage.Properties.MaxLength = 40;
-            this.txtMessage.Size = new System.Drawing.Size(425, 20);
+            this.txtMessage.Size = new System.Drawing.Size(392, 20);
             this.txtMessage.TabIndex = 13;
             // 
             // label12
             // 
-            this.label12.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label12.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label12.Appearance.Options.UseFont = true;
-            this.label12.Location = new System.Drawing.Point(157, 310);
+            this.label12.Location = new System.Drawing.Point(140, 276);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(19, 13);
+            this.label12.Size = new System.Drawing.Size(17, 13);
             this.label12.TabIndex = 240;
             this.label12.Text = "L/C";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(103, 43);
+            this.HelpGrid.Location = new System.Drawing.Point(104, 42);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(414, 283);
@@ -368,7 +368,7 @@
             // 
             // txtIGSTRate
             // 
-            this.txtIGSTRate.Location = new System.Drawing.Point(523, 124);
+            this.txtIGSTRate.Location = new System.Drawing.Point(472, 90);
             this.txtIGSTRate.Name = "txtIGSTRate";
             this.txtIGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIGSTRate.Size = new System.Drawing.Size(85, 20);
@@ -376,27 +376,27 @@
             // 
             // label6
             // 
-            this.label6.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label6.Appearance.Options.UseFont = true;
-            this.label6.Location = new System.Drawing.Point(18, 336);
+            this.label6.Location = new System.Drawing.Point(16, 302);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 13);
+            this.label6.Size = new System.Drawing.Size(141, 13);
             this.label6.TabIndex = 247;
             this.label6.Text = "Sale/Purchase Posting Code";
             // 
             // txtSalePostDesc
             // 
-            this.txtSalePostDesc.Location = new System.Drawing.Point(275, 332);
+            this.txtSalePostDesc.Location = new System.Drawing.Point(257, 298);
             this.txtSalePostDesc.Name = "txtSalePostDesc";
             this.txtSalePostDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSalePostDesc.Properties.ReadOnly = true;
-            this.txtSalePostDesc.Size = new System.Drawing.Size(333, 20);
+            this.txtSalePostDesc.Size = new System.Drawing.Size(300, 20);
             this.txtSalePostDesc.TabIndex = 246;
             this.txtSalePostDesc.TabStop = false;
             // 
             // txtSalePostCode
             // 
-            this.txtSalePostCode.Location = new System.Drawing.Point(183, 332);
+            this.txtSalePostCode.Location = new System.Drawing.Point(165, 298);
             this.txtSalePostCode.Name = "txtSalePostCode";
             this.txtSalePostCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSalePostCode.Properties.MaxLength = 6;
@@ -408,7 +408,7 @@
             // txtLCType
             // 
             this.txtLCType.EnterMoveNextControl = true;
-            this.txtLCType.Location = new System.Drawing.Point(183, 306);
+            this.txtLCType.Location = new System.Drawing.Point(165, 272);
             this.txtLCType.Name = "txtLCType";
             this.txtLCType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -420,7 +420,7 @@
             // 
             // txtAboveAmount
             // 
-            this.txtAboveAmount.Location = new System.Drawing.Point(183, 150);
+            this.txtAboveAmount.Location = new System.Drawing.Point(165, 116);
             this.txtAboveAmount.Name = "txtAboveAmount";
             this.txtAboveAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveAmount.Size = new System.Drawing.Size(85, 20);
@@ -429,17 +429,17 @@
             // 
             // label8
             // 
-            this.label8.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label8.Appearance.Options.UseFont = true;
-            this.label8.Location = new System.Drawing.Point(92, 157);
+            this.label8.Location = new System.Drawing.Point(81, 123);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 13);
+            this.label8.Size = new System.Drawing.Size(76, 13);
             this.label8.TabIndex = 249;
             this.label8.Text = "Above Amount";
             // 
             // txtAboveIGSTRate
             // 
-            this.txtAboveIGSTRate.Location = new System.Drawing.Point(523, 176);
+            this.txtAboveIGSTRate.Location = new System.Drawing.Point(472, 142);
             this.txtAboveIGSTRate.Name = "txtAboveIGSTRate";
             this.txtAboveIGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveIGSTRate.Size = new System.Drawing.Size(85, 20);
@@ -448,17 +448,17 @@
             // 
             // label13
             // 
-            this.label13.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label13.Appearance.Options.UseFont = true;
-            this.label13.Location = new System.Drawing.Point(452, 180);
+            this.label13.Location = new System.Drawing.Point(418, 146);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(57, 13);
+            this.label13.Size = new System.Drawing.Size(49, 13);
             this.label13.TabIndex = 255;
             this.label13.Text = "IGST Rate";
             // 
             // txtAboveSGSTRate
             // 
-            this.txtAboveSGSTRate.Location = new System.Drawing.Point(350, 176);
+            this.txtAboveSGSTRate.Location = new System.Drawing.Point(319, 142);
             this.txtAboveSGSTRate.Name = "txtAboveSGSTRate";
             this.txtAboveSGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveSGSTRate.Size = new System.Drawing.Size(85, 20);
@@ -467,17 +467,17 @@
             // 
             // label14
             // 
-            this.label14.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label14.Appearance.Options.UseFont = true;
-            this.label14.Location = new System.Drawing.Point(284, 180);
+            this.label14.Location = new System.Drawing.Point(263, 146);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(59, 13);
+            this.label14.Size = new System.Drawing.Size(52, 13);
             this.label14.TabIndex = 254;
             this.label14.Text = "SGST Rate";
             // 
             // txtAboveCGSTRate
             // 
-            this.txtAboveCGSTRate.Location = new System.Drawing.Point(183, 176);
+            this.txtAboveCGSTRate.Location = new System.Drawing.Point(165, 142);
             this.txtAboveCGSTRate.Name = "txtAboveCGSTRate";
             this.txtAboveCGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveCGSTRate.Size = new System.Drawing.Size(85, 20);
@@ -486,11 +486,11 @@
             // 
             // label15
             // 
-            this.label15.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label15.Appearance.Options.UseFont = true;
-            this.label15.Location = new System.Drawing.Point(117, 180);
+            this.label15.Location = new System.Drawing.Point(104, 146);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 13);
+            this.label15.Size = new System.Drawing.Size(53, 13);
             this.label15.TabIndex = 253;
             this.label15.Text = "CGST Rate";
             // 
@@ -498,7 +498,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(638, 394);
+            this.ClientSize = new System.Drawing.Size(586, 334);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtAboveIGSTRate);

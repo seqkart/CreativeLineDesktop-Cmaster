@@ -93,10 +93,9 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 80);
+            this.label3.Location = new System.Drawing.Point(73, 80);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 336;
             this.label3.Text = "UserName";
             // 
@@ -111,10 +110,9 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 106);
+            this.label1.Location = new System.Drawing.Point(81, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 341;
             this.label1.Text = "Select FY";
             // 
