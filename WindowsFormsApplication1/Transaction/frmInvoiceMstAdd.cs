@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(groupControl9);
             ProjectFunctions.ButtonVisualize(this);
             ProjectFunctions.GirdViewVisualize(InfoGridView);
-            ProjectFunctions.GirdViewVisualize(HelpGridView);
+            //ProjectFunctions.GirdViewVisualize(HelpGridView);
             ProjectFunctions.GirdViewVisualize(PSGridView);
         }
         private void btnQuit_Click(object sender, EventArgs e)
@@ -689,14 +689,13 @@ namespace WindowsFormsApplication1
                 txtRoundOffAmount.Text = ds.Tables[0].Rows[0]["SIMROFFAMT"].ToString();
                 txtRNetAmount.Text = ds.Tables[0].Rows[0]["SIMGRANDTOT"].ToString();
                 txtCHGWeight.Text = ds.Tables[0].Rows[0]["SIMCHRGWEIGHT"].ToString();
-                txtDelieveryCode.Text = ds.Tables[0].Rows[0]["SIMDISPPCODE"].ToString();
+                txtDelieveryCode.Text = ds.Tables[0].Rows[0]["SIMPartyC"].ToString();
                 txtDelieveryName.Text = ds.Tables[0].Rows[0]["DelieveryPartyName"].ToString();
                 txtDelieveryAddress1.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
                 txtDelieveryAddress2.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
                 txtDelieveryAddress3.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress3"].ToString();
                 txtDelieveryCity.Text = ds.Tables[0].Rows[0]["DelieveryPartyCity"].ToString();
-                txtDelieveryState.Text = ds.Tables[0].Rows[0]["DelieveryPartyState"].ToString();
-                txtDelieveryZipCode.Text = ds.Tables[0].Rows[0]["DelieveryPartyZipCode"].ToString();
+                txtDelTransID.Text = ds.Tables[0].Rows[0]["TransId"].ToString();
                 txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
                 txtCreditLimit.Text = ds.Tables[0].Rows[0]["AccCrLimit"].ToString();
                 txtAgentBroker.Text = ds.Tables[0].Rows[0]["AgentName"].ToString();
@@ -788,12 +787,12 @@ namespace WindowsFormsApplication1
                                 "SIMPartyDANO,SIMPartyORDNO,SIMTRANSPORTERID,SIMPartyPONO,SIMTRANSPORTERKEY,SIMGRNRRNO,SIMGRNRRDATE," +
                                 "SIMBUILTYPAID,SIMBUILTYPAIDAMT,SIMGATENTRYNO,SIMGATENTRYDATE,SIMBANKN,SIMBANKADD,SIMINVDIRECT,SIMINVLOT," +
                                 "SIMINVTAXTYPE,SIMTOTBOXES,SIMSUBTOTVAL,SIMDISCTYPE,SIMDISCPRCN,SIMDISCAMT,SIMINSURPRCN,SIMINSURANCEAMT, " +
-                                "SIMFREIGHTAMT,SIMOCTORIAMT,SIMROFFAMT,SIMGRANDTOT,SIMTOTWEIGHT,SIMCHRGWEIGHT,SIMDISPPCODE,UnitCode ,SIMTRDPRMWYBLNO )values(" +
+                                "SIMFREIGHTAMT,SIMOCTORIAMT,SIMROFFAMT,SIMGRANDTOT,SIMTOTWEIGHT,SIMCHRGWEIGHT,SIMDISPPCODE,UnitCode ,SIMTRDPRMWYBLNO,SIMDISPCODE )values(" +
                                 "@SIMSYSDATE,@SIMFNYR,@SIMDATE,@SIMNO,@SIMSERIES,@SIMPartyC," +
                                 "@SIMPartyDANO,@SIMPartyORDNO,@SIMTRANSPORTERID,@SIMPartyPONO,@SIMTRANSPORTERKEY,@SIMGRNRRNO,@SIMGRNRRDATE," +
                                 "@SIMBUILTYPAID,@SIMBUILTYPAIDAMT,@SIMGATENTRYNO,@SIMGATENTRYDATE,@SIMBANKN,@SIMBANKADD,@SIMINVDIRECT,@SIMINVLOT," +
                                 "@SIMINVTAXTYPE,@SIMTOTBOXES,@SIMSUBTOTVAL,@SIMDISCTYPE,@SIMDISCPRCN,@SIMDISCAMT,@SIMINSURPRCN,@SIMINSURANCEAMT, " +
-                                "@SIMFREIGHTAMT,@SIMOCTORIAMT,@SIMROFFAMT,@SIMGRANDTOT,@SIMTOTWEIGHT,@SIMCHRGWEIGHT,@SIMDISPPCODE,@UnitCode,@SIMTRDPRMWYBLNO)";
+                                "@SIMFREIGHTAMT,@SIMOCTORIAMT,@SIMROFFAMT,@SIMGRANDTOT,@SIMTOTWEIGHT,@SIMCHRGWEIGHT,@SIMDISPPCODE,@UnitCode,@SIMTRDPRMWYBLNO,@SIMDISPCODE)";
                             sqlcom.Parameters.Add("@SIMSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@SIMFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
                             sqlcom.Parameters.Add("@SIMDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd");
@@ -881,6 +880,8 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMCHRGWEIGHT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCHGWeight.Text);
                             sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
+                            
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -890,7 +891,7 @@ namespace WindowsFormsApplication1
                                 "SIMPartyDANO=@SIMPartyDANO,SIMPartyORDNO=@SIMPartyORDNO,SIMPartyPONO=@SIMPartyPONO,SIMTRANSPORTERID=@SIMTRANSPORTERID,SIMTRANSPORTERKEY=@SIMTRANSPORTERKEY,SIMGRNRRNO=@SIMGRNRRNO,SIMGRNRRDATE=@SIMGRNRRDATE," +
                                 "SIMBUILTYPAID=@SIMBUILTYPAID,SIMBUILTYPAIDAMT=@SIMBUILTYPAIDAMT,SIMGATENTRYNO=@SIMGATENTRYNO,SIMGATENTRYDATE=@SIMGATENTRYDATE,SIMBANKN=@SIMBANKN,SIMBANKADD=@SIMBANKADD,SIMINVDIRECT=@SIMINVDIRECT,SIMINVLOT=@SIMINVLOT,SIMINVTAXTYPE=@SIMINVTAXTYPE," +
                                 "SIMTOTBOXES=@SIMTOTBOXES,SIMSUBTOTVAL=@SIMSUBTOTVAL,SIMDISCTYPE=@SIMDISCTYPE,SIMDISCPRCN=@SIMDISCPRCN,SIMDISCAMT=@SIMDISCAMT,SIMINSURPRCN=@SIMINSURPRCN,SIMINSURANCEAMT=@SIMINSURANCEAMT, " +
-                                "SIMFREIGHTAMT=@SIMFREIGHTAMT,SIMOCTORIAMT=@SIMOCTORIAMT,SIMROFFAMT=@SIMROFFAMT,SIMGRANDTOT=@SIMGRANDTOT,SIMTOTWEIGHT=@SIMTOTWEIGHT,SIMCHRGWEIGHT=@SIMCHRGWEIGHT,SIMDISPPCODE=@SIMDISPPCODE,UnitCode=@UnitCode,SIMTRDPRMWYBLNO=@SIMTRDPRMWYBLNO Where SIMDATE='" + Convert.ToDateTime(ImDate).ToString("yyyy-MM-dd") + "' And SIMNO='" + ImNo + "' And SIMSERIES='" + ImSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "'";
+                                "SIMFREIGHTAMT=@SIMFREIGHTAMT,SIMOCTORIAMT=@SIMOCTORIAMT,SIMROFFAMT=@SIMROFFAMT,SIMGRANDTOT=@SIMGRANDTOT,SIMTOTWEIGHT=@SIMTOTWEIGHT,SIMCHRGWEIGHT=@SIMCHRGWEIGHT,SIMDISPPCODE=@SIMDISPPCODE,UnitCode=@UnitCode,SIMTRDPRMWYBLNO=@SIMTRDPRMWYBLNO,SIMDISPCODE=@SIMDISPCODE Where SIMDATE='" + Convert.ToDateTime(ImDate).ToString("yyyy-MM-dd") + "' And SIMNO='" + ImNo + "' And SIMSERIES='" + ImSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "'";
 
                             sqlcom.Parameters.Add("@SIMSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@SIMFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
@@ -980,6 +981,7 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMCHRGWEIGHT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCHGWeight.Text);
                             sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
 
@@ -1161,6 +1163,7 @@ namespace WindowsFormsApplication1
             txtDelieveryState.Text = String.Empty;
             txtDelieveryCity.Text = String.Empty;
             txtDelieveryZipCode.Text = String.Empty;
+            txtDelTransID.Text = String.Empty;
             txtBankName.Text = String.Empty;
             txtBankAccNo.Text = String.Empty;
             txtGSTNo.Text = String.Empty;
@@ -1266,14 +1269,14 @@ namespace WindowsFormsApplication1
                         txtBillingState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
                         txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
                         txtBillingZip.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
-                        txtDelieveryCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
-                        txtDelieveryName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-                        txtDelieveryAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
-                        txtDelieveryAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
-                        txtDelieveryAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
-                        txtDelieveryState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
-                        txtDelieveryCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-                        txtDelieveryZipCode.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
+                        //txtDelieveryCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
+                        //txtDelieveryName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+                        //txtDelieveryAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
+                        //txtDelieveryAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
+                        //txtDelieveryAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
+                        //txtDelieveryState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
+                        //txtDelieveryCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
+                        //txtDelieveryZipCode.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
                         txtBankName.Text = ds.Tables[0].Rows[0]["AccAcinBankName"].ToString();
                         txtBankAccNo.Text = ds.Tables[0].Rows[0]["AccBankAccNo"].ToString();
                         txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
@@ -1369,14 +1372,14 @@ namespace WindowsFormsApplication1
             }
             if (HelpGrid.Text == "txtDelieveryCode")
             {
+                
                 txtDelieveryCode.Text = row["AccCode"].ToString();
                 txtDelieveryName.Text = row["AccName"].ToString();
                 txtDelieveryAddress1.Text = row["AccAddress1"].ToString();
                 txtDelieveryAddress2.Text = row["AccAddress2"].ToString();
                 txtDelieveryAddress3.Text = row["AccAddress3"].ToString();
-                txtDelieveryState.Text = row["STNAME"].ToString();
                 txtDelieveryCity.Text = row["CTNAME"].ToString();
-                txtDelieveryZipCode.Text = row["AccZipCode"].ToString();
+                txtDelTransID.Text = row["TransId"].ToString();
                 HelpGrid.Visible = false;
                 txtDANo.Focus();
             }
@@ -1392,12 +1395,12 @@ namespace WindowsFormsApplication1
                 txtBillingZip.Text = row["AccZipCode"].ToString();
                 txtDelieveryCode.Text = row["AccCode"].ToString();
                 txtDelieveryName.Text = row["AccName"].ToString();
-                txtDelieveryAddress1.Text = row["AccAddress1"].ToString();
-                txtDelieveryAddress2.Text = row["AccAddress2"].ToString();
-                txtDelieveryAddress3.Text = row["AccAddress3"].ToString();
-                txtDelieveryState.Text = row["STNAME"].ToString();
-                txtDelieveryCity.Text = row["CTNAME"].ToString();
-                txtDelieveryZipCode.Text = row["AccZipCode"].ToString();
+                //txtDelieveryAddress1.Text = row["AccAddress1"].ToString();
+                //txtDelieveryAddress2.Text = row["AccAddress2"].ToString();
+                //txtDelieveryAddress3.Text = row["AccAddress3"].ToString();
+                //txtDelieveryState.Text = row["STNAME"].ToString();
+                //txtDelieveryCity.Text = row["CTNAME"].ToString();
+                //txtDelieveryZipCode.Text = row["AccZipCode"].ToString();
                 txtBankName.Text = row["AccAcinBankName"].ToString();
                 txtBankAccNo.Text = row["AccBankAccNo"].ToString();
                 txtGSTNo.Text = row["AccGSTNo"].ToString();
@@ -1845,64 +1848,32 @@ namespace WindowsFormsApplication1
         private void TxtDelieveryCode_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if (e.KeyCode == Keys.Enter)
+           if (e.KeyCode == Keys.Enter)
             {
                 HelpGridView.Columns.Clear();
                 HelpGrid.Text = "txtDelieveryCode";
-                if (txtDelieveryCode.Text.Trim().Length == 0)
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet("SELECT        ActMst.AccCode, ActMst.AccName, ActMst.AccGSTNo, ActMstAddInf.AccBankAccNo, ActMstAddInf.AccAcinBankName, ActMstAddInf.AccAddress1, ActMstAddInf.AccAddress2, ActMstAddInf.AccAddress3, ActMstAddInf.AccZipCode,  CITYMASTER.CTNAME, STATEMASTER.STNAME,ActMst.AccCrLimit,ActMstAddInf.AccMrpMarkDown FROM  ActMst INNER JOIN ActMstAddInf ON ActMst.AccCode = ActMstAddInf.AccCode INNER JOIN CITYMASTER ON ActMstAddInf.AccCityCode = CITYMASTER.CTSYSID INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID");
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = ds.Tables[0];
-                        HelpGrid.Show();
-                        HelpGrid.Visible = true;
-                        HelpGrid.Focus();
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        ProjectFunctions.SpeakError("No Records To Display");
-                    }
-                }
-                else
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet("SELECT        ActMst.AccCode, ActMst.AccName, ActMst.AccGSTNo, ActMstAddInf.AccBankAccNo, ActMstAddInf.AccAcinBankName, ActMstAddInf.AccAddress1, ActMstAddInf.AccAddress2, ActMstAddInf.AccAddress3, ActMstAddInf.AccZipCode,  CITYMASTER.CTNAME, STATEMASTER.STNAME,ActMst.AccCrLimit,ActMstAddInf.AccMrpMarkDown FROM  ActMst INNER JOIN ActMstAddInf ON ActMst.AccCode = ActMstAddInf.AccCode INNER JOIN CITYMASTER ON ActMstAddInf.AccCityCode = CITYMASTER.CTSYSID INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID Where ActMst.AccCode='" + txtDelieveryCode.Text.Trim() + "'");
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-
-                        txtDelieveryCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
-                        txtDelieveryName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-                        txtDelieveryAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
-                        txtDelieveryAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
-                        txtDelieveryAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
-                        txtDelieveryState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
-                        txtDelieveryCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-                        txtDelieveryZipCode.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
-                        txtDANo.Focus();
-                    }
-
-                    else
-                    {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("SELECT        ActMst.AccCode, ActMst.AccName, ActMst.AccGSTNo, ActMstAddInf.AccBankAccNo, ActMstAddInf.AccAcinBankName, ActMstAddInf.AccAddress1, ActMstAddInf.AccAddress2, ActMstAddInf.AccAddress3, ActMstAddInf.AccZipCode,  CITYMASTER.CTNAME, STATEMASTER.STNAME,ActMst.AccCrLimit,ActMstAddInf.AccMrpMarkDown FROM  ActMst INNER JOIN ActMstAddInf ON ActMst.AccCode = ActMstAddInf.AccCode INNER JOIN CITYMASTER ON ActMstAddInf.AccCityCode = CITYMASTER.CTSYSID INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID");
-                        if (ds1.Tables[0].Rows.Count > 0)
-                        {
-                            HelpGrid.DataSource = ds.Tables[0];
-                            HelpGrid.Show();
-                            HelpGrid.Visible = true;
-                            HelpGrid.Focus();
-                            HelpGridView.BestFitColumns();
-                        }
-                        else
-                        {
-                            ProjectFunctions.SpeakError("No Records To Display");
-                        }
-                    }
-                }
+                LoadDelAddresses();
             }
             e.Handled = true;
         }
+        private void LoadDelAddresses()
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActDelAddresses '" + txtDebitPartyCode.Text + "'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                HelpGrid.DataSource = ds.Tables[0];
+                HelpGridView.BestFitColumns();
+                HelpGrid.Show();
+                HelpGrid.Focus();
+            }
+            else
+            {
+                HelpGrid.DataSource = null;
+                HelpGridView.BestFitColumns();
+            }
 
+            
+        }
         private void TxtDelieveryCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDelieveryName.Text = String.Empty;
@@ -1912,7 +1883,7 @@ namespace WindowsFormsApplication1
             txtDelieveryCity.Text = String.Empty;
             txtDelieveryZipCode.Text = String.Empty;
             txtDelieveryState.Text = String.Empty;
-
+            txtDelTransID.Text = String.Empty; 
         }
         private void GetPartyBalances()
         {

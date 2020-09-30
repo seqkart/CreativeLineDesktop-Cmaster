@@ -79,6 +79,7 @@
             this.txtLedgerBalance = new DevExpress.XtraEditors.TextEdit();
             this.txtGSTNo = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtDelTransID = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -309,6 +310,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelTransID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryZipCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryCity.Properties)).BeginInit();
@@ -545,7 +547,7 @@
             // 
             this.labelControl28.Location = new System.Drawing.Point(23, 88);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(80, 13);
+            this.labelControl28.Size = new System.Drawing.Size(79, 13);
             this.labelControl28.TabIndex = 540;
             this.labelControl28.Text = "Transporter Key";
             // 
@@ -553,7 +555,7 @@
             // 
             this.labelControl24.Location = new System.Drawing.Point(43, 65);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(60, 13);
+            this.labelControl24.Size = new System.Drawing.Size(59, 13);
             this.labelControl24.TabIndex = 540;
             this.labelControl24.Text = "Transporter";
             // 
@@ -815,7 +817,7 @@
             // 
             this.labelControl22.Location = new System.Drawing.Point(15, 107);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(74, 13);
+            this.labelControl22.Size = new System.Drawing.Size(75, 13);
             this.labelControl22.TabIndex = 540;
             this.labelControl22.Text = "Agent / Broker";
             // 
@@ -823,7 +825,7 @@
             // 
             this.labelControl20.Location = new System.Drawing.Point(12, 82);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(77, 13);
+            this.labelControl20.Size = new System.Drawing.Size(78, 13);
             this.labelControl20.TabIndex = 540;
             this.labelControl20.Text = "Ledger Balance";
             // 
@@ -838,7 +840,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(51, 56);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(38, 13);
+            this.labelControl10.Size = new System.Drawing.Size(37, 13);
             this.labelControl10.TabIndex = 524;
             this.labelControl10.Text = "GST No";
             // 
@@ -878,6 +880,7 @@
             // 
             this.groupControl2.AutoSize = true;
             this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
+            this.groupControl2.Controls.Add(this.txtDelTransID);
             this.groupControl2.Controls.Add(this.labelControl15);
             this.groupControl2.Controls.Add(this.labelControl16);
             this.groupControl2.Controls.Add(this.labelControl17);
@@ -896,6 +899,15 @@
             this.groupControl2.Size = new System.Drawing.Size(582, 173);
             this.groupControl2.TabIndex = 532;
             this.groupControl2.Text = "Delivery Address";
+            // 
+            // txtDelTransID
+            // 
+            this.txtDelTransID.Location = new System.Drawing.Point(496, 38);
+            this.txtDelTransID.Name = "txtDelTransID";
+            this.txtDelTransID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDelTransID.Properties.MaxLength = 6;
+            this.txtDelTransID.Size = new System.Drawing.Size(44, 20);
+            this.txtDelTransID.TabIndex = 545;
             // 
             // labelControl15
             // 
@@ -993,7 +1005,7 @@
             this.txtDelieveryName.Name = "txtDelieveryName";
             this.txtDelieveryName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelieveryName.Properties.ReadOnly = true;
-            this.txtDelieveryName.Size = new System.Drawing.Size(381, 20);
+            this.txtDelieveryName.Size = new System.Drawing.Size(331, 20);
             this.txtDelieveryName.TabIndex = 532;
             this.txtDelieveryName.TabStop = false;
             // 
@@ -1905,7 +1917,7 @@
             // 
             this.labelControl40.Location = new System.Drawing.Point(95, 32);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(73, 13);
+            this.labelControl40.Size = new System.Drawing.Size(72, 13);
             this.labelControl40.TabIndex = 542;
             this.labelControl40.Text = "Discount Type";
             // 
@@ -1921,7 +1933,7 @@
             // 
             this.labelControl43.Location = new System.Drawing.Point(2, 54);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(90, 13);
+            this.labelControl43.Size = new System.Drawing.Size(88, 13);
             this.labelControl43.TabIndex = 542;
             this.labelControl43.Text = "Total Tax Amount";
             // 
@@ -1937,7 +1949,7 @@
             // 
             this.labelControl38.Location = new System.Drawing.Point(21, 10);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(71, 13);
+            this.labelControl38.Size = new System.Drawing.Size(70, 13);
             this.labelControl38.TabIndex = 542;
             this.labelControl38.Text = "Taxable Value";
             // 
@@ -2521,7 +2533,7 @@
             // 
             this.labelControl37.Location = new System.Drawing.Point(207, 78);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(72, 13);
+            this.labelControl37.Size = new System.Drawing.Size(73, 13);
             this.labelControl37.TabIndex = 542;
             this.labelControl37.Text = "Builty Amount";
             // 
@@ -2672,7 +2684,7 @@
             // 
             this.labelControl30.Location = new System.Drawing.Point(17, 20);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(57, 13);
+            this.labelControl30.Size = new System.Drawing.Size(58, 13);
             this.labelControl30.TabIndex = 542;
             this.labelControl30.Text = "Bank Name";
             // 
@@ -2864,7 +2876,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(339, 11);
+            this.HelpGrid.Location = new System.Drawing.Point(203, 12);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(717, 167);
@@ -2956,6 +2968,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDelTransID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryZipCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryCity.Properties)).EndInit();
@@ -3308,5 +3321,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn57;
+        private DevExpress.XtraEditors.TextEdit txtDelTransID;
     }
 }
