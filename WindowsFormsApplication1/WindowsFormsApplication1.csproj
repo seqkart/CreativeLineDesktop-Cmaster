@@ -17,6 +17,8 @@
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -31,8 +33,6 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -863,12 +863,6 @@
     <Compile Include="Master\frmStateMst.Designer.cs">
       <DependentUpon>frmStateMst.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prints\EmployeeSalaryDetails.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Prints\EmployeeSalaryDetails.Designer.cs">
-      <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="Prints\XtraReport_EmployeesSalaryList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -880,12 +874,6 @@
     </Compile>
     <Compile Include="Prints\XtraReport_EmployeeAttendance.Designer.cs">
       <DependentUpon>XtraReport_EmployeeAttendance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Prints\salaryregister.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>salaryregister.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Prints\XtraReportGatePass.cs">
       <SubType>Component</SubType>
@@ -1158,12 +1146,6 @@
     </Compile>
     <Compile Include="Prints\BoxPrinting.Designer.cs">
       <DependentUpon>BoxPrinting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Prints\BTINVOICE.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Prints\BTINVOICE.Designer.cs">
-      <DependentUpon>BTINVOICE.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\CASHMEMO.cs">
       <SubType>Component</SubType>
@@ -1678,18 +1660,11 @@
     <EmbeddedResource Include="Master\frmStateMst.resx">
       <DependentUpon>frmStateMst.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Prints\EmployeeSalaryDetails.resx">
-      <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeesSalaryList.resx">
       <DependentUpon>XtraReport_EmployeesSalaryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeeAttendance.resx">
       <DependentUpon>XtraReport_EmployeeAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prints\salaryregister.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>salaryregister.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReportGatePass.resx">
       <DependentUpon>XtraReportGatePass.cs</DependentUpon>
@@ -1822,9 +1797,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\BoxPrinting.resx">
       <DependentUpon>BoxPrinting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prints\BTINVOICE.resx">
-      <DependentUpon>BTINVOICE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\CASHMEMO.resx">
       <DependentUpon>CASHMEMO.cs</DependentUpon>
