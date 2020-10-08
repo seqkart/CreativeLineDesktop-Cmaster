@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1
 
             DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Sharp");
 
-            Application.Run(new frmLogins()); ;
+            Application.Run(new FrmLogins()); ;
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmLogins
+    partial class FrmLogins
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogins));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogins));
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtPassword = new DevExpress.XtraEditors.TextEdit();
@@ -41,7 +41,7 @@
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.label6 = new DevExpress.XtraEditors.LabelControl();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dTP1 = new System.Windows.Forms.DateTimePicker();
             this.txtCompany = new System.Windows.Forms.ComboBox();
             this.txtUnit = new System.Windows.Forms.ComboBox();
             this.txtFNYear = new System.Windows.Forms.ComboBox();
@@ -68,7 +68,7 @@
             this.txtUserName.Size = new System.Drawing.Size(229, 22);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.DoubleClick += new System.EventHandler(this.TxtUserName_DoubleClick);
-            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUserName_KeyDown);
             // 
             // label3
             // 
@@ -122,7 +122,7 @@
             this.btnClose.Size = new System.Drawing.Size(85, 23);
             this.btnClose.TabIndex = 45;
             this.btnClose.Text = "Exit";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnLogin
             // 
@@ -139,7 +139,7 @@
             this.btnLogin.Size = new System.Drawing.Size(85, 23);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // defaultLookAndFeel1
             // 
@@ -193,17 +193,17 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Login Date";
             // 
-            // dateTimePicker1
+            // dTP1
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.dateTimePicker1.Location = new System.Drawing.Point(165, 206);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(0);
-            this.dateTimePicker1.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(229, 23);
-            this.dateTimePicker1.TabIndex = 55;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 9, 9, 17, 48, 0, 0);
+            this.dTP1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.dTP1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.dTP1.Location = new System.Drawing.Point(165, 206);
+            this.dTP1.Margin = new System.Windows.Forms.Padding(0);
+            this.dTP1.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
+            this.dTP1.Name = "dTP1";
+            this.dTP1.Size = new System.Drawing.Size(229, 23);
+            this.dTP1.TabIndex = 55;
+            this.dTP1.Value = new System.DateTime(2020, 9, 9, 17, 48, 0, 0);
             // 
             // txtCompany
             // 
@@ -214,7 +214,7 @@
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(229, 23);
             this.txtCompany.TabIndex = 2;
-            this.txtCompany.SelectedIndexChanged += new System.EventHandler(this.txtCompany_SelectedIndexChanged);
+     //       this.txtCompany.SelectedIndexChanged += new System.EventHandler(this.TxtCompany_SelectedIndexChanged);
             this.txtCompany.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCompany_KeyDown);
             // 
             // txtUnit
@@ -237,7 +237,7 @@
             this.txtFNYear.Name = "txtFNYear";
             this.txtFNYear.Size = new System.Drawing.Size(229, 23);
             this.txtFNYear.TabIndex = 4;
-            this.txtFNYear.SelectedIndexChanged += new System.EventHandler(this.txtFNYear_SelectedIndexChanged);
+          //  this.txtFNYear.SelectedIndexChanged += new System.EventHandler(this.TxtFNYear_SelectedIndexChanged);
             this.txtFNYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFNYear_KeyDown);
             // 
             // btnBackup
@@ -256,7 +256,7 @@
             this.btnBackup.Size = new System.Drawing.Size(83, 39);
             this.btnBackup.TabIndex = 56;
             this.btnBackup.Text = "BackUp";
-            this.btnBackup.Click += new System.EventHandler(this.btnBackup_Click);
+            this.btnBackup.Click += new System.EventHandler(this.BtnBackup_Click);
             // 
             // stepProgressBarItem1
             // 
@@ -334,7 +334,7 @@
             this.Controls.Add(this.txtFNYear);
             this.Controls.Add(this.txtUnit);
             this.Controls.Add(this.txtCompany);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dTP1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label6);
@@ -348,7 +348,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmLogins";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmLogincs_Load);
+            this.Load += new System.EventHandler(this.FrmLogincs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
@@ -370,7 +370,7 @@
         private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraEditors.LabelControl label6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dTP1;
         private System.Windows.Forms.ComboBox txtCompany;
         private System.Windows.Forms.ComboBox txtUnit;
         private System.Windows.Forms.ComboBox txtFNYear;

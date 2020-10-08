@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmLogins : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLogins : DevExpress.XtraEditors.XtraForm
     {
         [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
 
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1
 
 
         [DllImport("user32.dll")]
-        public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, IntPtr dwExtraInfo);
+        public static extern void Keybd_event(byte bVk, byte bScan, uint dwFlags, IntPtr dwExtraInfo);
 
 
 
@@ -33,17 +33,19 @@ namespace WindowsFormsApplication1
 
 
         private bool isDebug = false;
-        public frmLogins()
+        public FrmLogins()
         {
             InitializeComponent();
+            dTP1.Text = DateTime.Now.ToLongDateString();
+
         }
 
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-        private bool validateData()
+        private bool ValidateData()
         {
             if (txtUserName.Text.Trim().Length == 0)
             {
@@ -92,11 +94,11 @@ namespace WindowsFormsApplication1
 
             return true;
         }
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void BtnLogin_Click(object sender, EventArgs e)
         {
             try
             {
-                if (validateData())
+                if (ValidateData())
                 {
                     DataSet dsCompany = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_COMCONF_ALL());
                     DataRow dr = dsCompany.Tables[0].Rows[0];
@@ -126,6 +128,7 @@ namespace WindowsFormsApplication1
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
 
                     this.Hide();
+                    BtnBackup_Click(null, null);
                     ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
                     frm.ShowDialog(this.Parent);
                     frm.BringToFront();
@@ -139,7 +142,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frmLogincs_Load(object sender, EventArgs e)
+        private void FrmLogincs_Load(object sender, EventArgs e)
         {
             if (System.IO.Directory.Exists("C:\\Application"))
             {
@@ -199,15 +202,15 @@ namespace WindowsFormsApplication1
                 txtUserName.Focus();
 
 
-                txtUserName_KeyDown(null, null);
-                btnLogin_Click(null, null);
+                TxtUserName_KeyDown(null, null);
+                BtnLogin_Click(null, null);
             }
 
 
 
         }
 
-        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        private void TxtUserName_KeyDown(object sender, KeyEventArgs e)
         {
             //if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
@@ -276,11 +279,12 @@ namespace WindowsFormsApplication1
             txtUserName.Text = "HAPPY";
 
             SendKeys.Send("{Enter}");
+            dTP1.Text = DateTime.Now.ToLongDateString();
 
 
         }
 
-        private void btnBackup_Click(object sender, EventArgs e)
+        private void BtnBackup_Click(object sender, EventArgs e)
 
         {
             DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, true);
@@ -288,27 +292,44 @@ namespace WindowsFormsApplication1
 
             if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
             {
+                
+                string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+                string[] bakList = Directory.GetFiles(srcDir, "*.bak");
 
-            }
-            else
-
-                System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
-            ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
-            string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
-            string[] bakList = Directory.GetFiles(srcDir, "*.bak");
-
-            if (Directory.Exists(srcDir))
-            {
-                foreach (string f in bakList)
+                if (Directory.Exists(srcDir))
                 {
-                    File.Delete(f);
+                    foreach (string f in bakList)
+                    {
+                        File.Delete(f);
+                    }
+
                 }
 
+                Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                SplashScreenManager.CloseForm();
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
+                ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
+                string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+                string[] bakList = Directory.GetFiles(srcDir, "*.bak");
+                if (Directory.Exists(srcDir))
+                {
+                    foreach (string f in bakList)
+                    {
+                        File.Delete(f);
+                    }
+
+                }
+                Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                SplashScreenManager.CloseForm();
             }
 
-            Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-            Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
-            SplashScreenManager.CloseForm();
+           
+            
 
             ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
 
@@ -338,31 +359,5 @@ namespace WindowsFormsApplication1
         }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void txtCompany_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-        private void txtFNYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
