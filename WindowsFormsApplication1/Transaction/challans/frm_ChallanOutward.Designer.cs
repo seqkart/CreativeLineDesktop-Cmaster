@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ChallanOutward));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -88,6 +89,7 @@
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingZIP.Properties)).BeginInit();
@@ -118,10 +120,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
             // 
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
             this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Controls.Add(this.txtBillingZIP);
@@ -163,7 +168,7 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(18, 195);
+            this.labelControl13.Location = new System.Drawing.Point(18, 194);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(45, 13);
             this.labelControl13.TabIndex = 562;
@@ -171,7 +176,8 @@
             // 
             // txtBillingZIP
             // 
-            this.txtBillingZIP.Location = new System.Drawing.Point(67, 191);
+            this.txtBillingZIP.Enabled = false;
+            this.txtBillingZIP.Location = new System.Drawing.Point(67, 190);
             this.txtBillingZIP.Name = "txtBillingZIP";
             this.txtBillingZIP.Size = new System.Drawing.Size(120, 20);
             this.txtBillingZIP.TabIndex = 561;
@@ -179,7 +185,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(220, 169);
+            this.labelControl10.Location = new System.Drawing.Point(220, 168);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(26, 13);
             this.labelControl10.TabIndex = 560;
@@ -187,7 +193,7 @@
             // 
             // txtBillingState
             // 
-            this.txtBillingState.Location = new System.Drawing.Point(250, 165);
+            this.txtBillingState.Location = new System.Drawing.Point(250, 164);
             this.txtBillingState.Name = "txtBillingState";
             this.txtBillingState.Properties.ReadOnly = true;
             this.txtBillingState.Size = new System.Drawing.Size(120, 20);
@@ -196,26 +202,29 @@
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(454, 143);
+            this.labelControl24.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl24.Location = new System.Drawing.Point(454, 142);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(59, 13);
+            this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 558;
             this.labelControl24.Text = "Transporter";
             // 
             // txtTransporterName
             // 
+            this.txtTransporterName.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtTransporterName.EnterMoveNextControl = true;
-            this.txtTransporterName.Location = new System.Drawing.Point(572, 139);
+            this.txtTransporterName.Location = new System.Drawing.Point(575, 138);
             this.txtTransporterName.Name = "txtTransporterName";
             this.txtTransporterName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterName.Properties.ReadOnly = true;
-            this.txtTransporterName.Size = new System.Drawing.Size(252, 20);
+            this.txtTransporterName.Size = new System.Drawing.Size(247, 20);
             this.txtTransporterName.TabIndex = 11;
             this.txtTransporterName.TabStop = false;
             // 
             // txtTransporterCode
             // 
-            this.txtTransporterCode.Location = new System.Drawing.Point(520, 139);
+            this.txtTransporterCode.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtTransporterCode.Location = new System.Drawing.Point(520, 138);
             this.txtTransporterCode.Name = "txtTransporterCode";
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterCode.Properties.MaxLength = 6;
@@ -226,23 +235,26 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(450, 117);
+            this.labelControl7.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl7.Location = new System.Drawing.Point(450, 116);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(65, 13);
+            this.labelControl7.Size = new System.Drawing.Size(64, 13);
             this.labelControl7.TabIndex = 555;
             this.labelControl7.Text = "Approved By";
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(467, 91);
+            this.labelControl6.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl6.Location = new System.Drawing.Point(467, 90);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(48, 13);
+            this.labelControl6.Size = new System.Drawing.Size(47, 13);
             this.labelControl6.TabIndex = 555;
             this.labelControl6.Text = "Issued By";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(436, 65);
+            this.labelControl5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl5.Location = new System.Drawing.Point(436, 64);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(78, 13);
             this.labelControl5.TabIndex = 555;
@@ -250,7 +262,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(44, 169);
+            this.labelControl12.Location = new System.Drawing.Point(44, 168);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(19, 13);
             this.labelControl12.TabIndex = 555;
@@ -258,31 +270,36 @@
             // 
             // txtApprovedBy
             // 
+            this.txtApprovedBy.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtApprovedBy.EnterMoveNextControl = true;
-            this.txtApprovedBy.Location = new System.Drawing.Point(520, 113);
+            this.txtApprovedBy.Location = new System.Drawing.Point(520, 112);
             this.txtApprovedBy.Name = "txtApprovedBy";
+            this.txtApprovedBy.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Optimistic;
             this.txtApprovedBy.Size = new System.Drawing.Size(303, 20);
             this.txtApprovedBy.TabIndex = 10;
             // 
             // txtIssuedBy
             // 
+            this.txtIssuedBy.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtIssuedBy.EnterMoveNextControl = true;
-            this.txtIssuedBy.Location = new System.Drawing.Point(520, 87);
+            this.txtIssuedBy.Location = new System.Drawing.Point(520, 86);
             this.txtIssuedBy.Name = "txtIssuedBy";
+            this.txtIssuedBy.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.Optimistic;
             this.txtIssuedBy.Size = new System.Drawing.Size(303, 20);
             this.txtIssuedBy.TabIndex = 9;
             // 
             // txtContactDetails
             // 
+            this.txtContactDetails.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtContactDetails.EnterMoveNextControl = true;
-            this.txtContactDetails.Location = new System.Drawing.Point(520, 61);
+            this.txtContactDetails.Location = new System.Drawing.Point(520, 60);
             this.txtContactDetails.Name = "txtContactDetails";
             this.txtContactDetails.Size = new System.Drawing.Size(303, 20);
             this.txtContactDetails.TabIndex = 8;
             // 
             // txtBillingCity
             // 
-            this.txtBillingCity.Location = new System.Drawing.Point(67, 165);
+            this.txtBillingCity.Location = new System.Drawing.Point(67, 164);
             this.txtBillingCity.Name = "txtBillingCity";
             this.txtBillingCity.Properties.ReadOnly = true;
             this.txtBillingCity.Size = new System.Drawing.Size(120, 20);
@@ -291,7 +308,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(22, 91);
+            this.labelControl11.Location = new System.Drawing.Point(22, 90);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(41, 13);
             this.labelControl11.TabIndex = 551;
@@ -299,7 +316,8 @@
             // 
             // txtBillingAddress3
             // 
-            this.txtBillingAddress3.Location = new System.Drawing.Point(67, 139);
+            this.txtBillingAddress3.Enabled = false;
+            this.txtBillingAddress3.Location = new System.Drawing.Point(67, 138);
             this.txtBillingAddress3.Name = "txtBillingAddress3";
             this.txtBillingAddress3.Size = new System.Drawing.Size(303, 20);
             this.txtBillingAddress3.TabIndex = 6;
@@ -307,7 +325,8 @@
             // 
             // txtBillingAddress2
             // 
-            this.txtBillingAddress2.Location = new System.Drawing.Point(67, 113);
+            this.txtBillingAddress2.Enabled = false;
+            this.txtBillingAddress2.Location = new System.Drawing.Point(67, 112);
             this.txtBillingAddress2.Name = "txtBillingAddress2";
             this.txtBillingAddress2.Size = new System.Drawing.Size(303, 20);
             this.txtBillingAddress2.TabIndex = 5;
@@ -315,14 +334,15 @@
             // 
             // txtBillingAddress1
             // 
-            this.txtBillingAddress1.Location = new System.Drawing.Point(67, 87);
+            this.txtBillingAddress1.Enabled = false;
+            this.txtBillingAddress1.Location = new System.Drawing.Point(67, 86);
             this.txtBillingAddress1.Name = "txtBillingAddress1";
             this.txtBillingAddress1.Size = new System.Drawing.Size(303, 20);
             this.txtBillingAddress1.TabIndex = 4;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(6, 65);
+            this.labelControl4.Location = new System.Drawing.Point(6, 64);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(57, 13);
             this.labelControl4.TabIndex = 547;
@@ -330,8 +350,9 @@
             // 
             // txtDebitPartyName
             // 
+            this.txtDebitPartyName.Enabled = false;
             this.txtDebitPartyName.EnterMoveNextControl = true;
-            this.txtDebitPartyName.Location = new System.Drawing.Point(144, 61);
+            this.txtDebitPartyName.Location = new System.Drawing.Point(144, 60);
             this.txtDebitPartyName.Name = "txtDebitPartyName";
             this.txtDebitPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyName.Size = new System.Drawing.Size(226, 20);
@@ -340,11 +361,11 @@
             // 
             // txtDebitPartyCode
             // 
-            this.txtDebitPartyCode.Location = new System.Drawing.Point(67, 61);
+            this.txtDebitPartyCode.Location = new System.Drawing.Point(67, 60);
             this.txtDebitPartyCode.Name = "txtDebitPartyCode";
             this.txtDebitPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyCode.Properties.MaxLength = 6;
-            this.txtDebitPartyCode.Size = new System.Drawing.Size(77, 20);
+            this.txtDebitPartyCode.Size = new System.Drawing.Size(74, 20);
             this.txtDebitPartyCode.TabIndex = 2;
             this.txtDebitPartyCode.TabStop = false;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
@@ -352,15 +373,17 @@
             // 
             // labelControl8
             // 
+            this.labelControl8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelControl8.Location = new System.Drawing.Point(658, 21);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(118, 13);
+            this.labelControl8.Size = new System.Drawing.Size(119, 13);
             this.labelControl8.TabIndex = 1;
             this.labelControl8.Text = "Find Challan Thru Scan";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(406, 38);
+            this.labelControl3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelControl3.Location = new System.Drawing.Point(324, 38);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(60, 13);
             this.labelControl3.TabIndex = 1;
@@ -368,9 +391,9 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(198, 38);
+            this.labelControl1.Location = new System.Drawing.Point(173, 38);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(65, 13);
+            this.labelControl1.Size = new System.Drawing.Size(66, 13);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "Challan Type";
             // 
@@ -389,7 +412,7 @@
             // 
             // txtChallanType
             // 
-            this.txtChallanType.Location = new System.Drawing.Point(270, 34);
+            this.txtChallanType.Location = new System.Drawing.Point(245, 34);
             this.txtChallanType.Name = "txtChallanType";
             this.txtChallanType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -397,12 +420,13 @@
             "JWO",
             "NRGP",
             "RGP"});
-            this.txtChallanType.Size = new System.Drawing.Size(100, 20);
+            this.txtChallanType.Size = new System.Drawing.Size(73, 20);
             this.txtChallanType.TabIndex = 1;
             this.txtChallanType.TabStop = false;
             // 
             // txtChallanScan
             // 
+            this.txtChallanScan.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtChallanScan.Location = new System.Drawing.Point(602, 34);
             this.txtChallanScan.Name = "txtChallanScan";
             this.txtChallanScan.Size = new System.Drawing.Size(222, 20);
@@ -411,9 +435,10 @@
             // 
             // txtChallanNo
             // 
-            this.txtChallanNo.Location = new System.Drawing.Point(472, 34);
+            this.txtChallanNo.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtChallanNo.Location = new System.Drawing.Point(390, 34);
             this.txtChallanNo.Name = "txtChallanNo";
-            this.txtChallanNo.Size = new System.Drawing.Size(100, 20);
+            this.txtChallanNo.Size = new System.Drawing.Size(70, 20);
             this.txtChallanNo.TabIndex = 2;
             this.txtChallanNo.TabStop = false;
             this.txtChallanNo.EditValueChanged += new System.EventHandler(this.txtChallanNo_EditValueChanged);
@@ -429,6 +454,7 @@
             // 
             // txtMainRemarks
             // 
+            this.txtMainRemarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMainRemarks.Location = new System.Drawing.Point(101, 583);
             this.txtMainRemarks.Name = "txtMainRemarks";
             this.txtMainRemarks.Size = new System.Drawing.Size(693, 20);
@@ -436,6 +462,9 @@
             // 
             // BarCodeGrid
             // 
+            this.BarCodeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BarCodeGrid.Location = new System.Drawing.Point(8, 284);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
             this.BarCodeGrid.Name = "BarCodeGrid";
@@ -487,7 +516,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "CHOPrdName";
+            this.gridColumn2.Caption = "PRODUCT NAME";
             this.gridColumn2.FieldName = "CHOPrdName";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
@@ -496,7 +525,7 @@
             // 
             // gridColumn16
             // 
-            this.gridColumn16.Caption = "CHOManualDesc";
+            this.gridColumn16.Caption = "MANUAL DESCRIPTION";
             this.gridColumn16.FieldName = "CHOManualDesc";
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.True;
@@ -506,7 +535,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "CHOArtNo";
+            this.gridColumn3.Caption = "ART NO";
             this.gridColumn3.FieldName = "CHOArtNo";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -515,7 +544,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "CHOArtDesc";
+            this.gridColumn4.Caption = "DESCRIPTION";
             this.gridColumn4.FieldName = "CHOArtDesc";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
@@ -538,7 +567,7 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "CHOColName";
+            this.gridColumn7.Caption = "COLOUR";
             this.gridColumn7.FieldName = "CHOColName";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
@@ -554,7 +583,7 @@
             // 
             // gridColumn9
             // 
-            this.gridColumn9.Caption = "CHOSizeName";
+            this.gridColumn9.Caption = "SIZE";
             this.gridColumn9.FieldName = "CHOSizeName";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
@@ -563,7 +592,7 @@
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "CHOLotNo";
+            this.gridColumn10.Caption = "LOT NO";
             this.gridColumn10.FieldName = "CHOLotNo";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
@@ -571,16 +600,18 @@
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "CHOTotQtyKgs";
+            this.gridColumn11.Caption = "TOTAL WEIGHT";
             this.gridColumn11.FieldName = "CHOTotQtyKgs";
             this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHOTotQtyKgs", "{0:0.##}")});
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 9;
             this.gridColumn11.Width = 83;
             // 
             // gridColumn12
             // 
-            this.gridColumn12.Caption = "CHOUom";
+            this.gridColumn12.Caption = "UOM";
             this.gridColumn12.FieldName = "CHOUom";
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
@@ -588,7 +619,7 @@
             // 
             // gridColumn13
             // 
-            this.gridColumn13.Caption = "CHOKgsType";
+            this.gridColumn13.Caption = "WIEGHT TYPE";
             this.gridColumn13.ColumnEdit = this.repositoryItemComboBox1;
             this.gridColumn13.FieldName = "CHOKgsType";
             this.gridColumn13.Name = "gridColumn13";
@@ -607,15 +638,17 @@
             // 
             // gridColumn14
             // 
-            this.gridColumn14.Caption = "CHOTotQty";
+            this.gridColumn14.Caption = "TOTAL QTY";
             this.gridColumn14.FieldName = "CHOTotQty";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHOTotQty", "{0:0.##}")});
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 7;
             // 
             // gridColumn15
             // 
-            this.gridColumn15.Caption = "CHORemarks";
+            this.gridColumn15.Caption = "REMARKS";
             this.gridColumn15.FieldName = "CHORemarks";
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.Visible = true;
@@ -623,6 +656,7 @@
             // 
             // labelControl9
             // 
+            this.labelControl9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl9.Location = new System.Drawing.Point(25, 586);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(72, 13);
@@ -671,9 +705,9 @@
             // 
             this.panelControl1.Controls.Add(this.HelpGrid);
             this.panelControl1.Controls.Add(this.txtSearchBox);
-            this.panelControl1.Location = new System.Drawing.Point(188, 393);
+            this.panelControl1.Location = new System.Drawing.Point(140, 104);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(643, 235);
+            this.panelControl1.Size = new System.Drawing.Size(643, 324);
             this.panelControl1.TabIndex = 727;
             // 
             // HelpGrid
@@ -682,7 +716,7 @@
             this.HelpGrid.Location = new System.Drawing.Point(2, 22);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(639, 211);
+            this.HelpGrid.Size = new System.Drawing.Size(639, 300);
             this.HelpGrid.TabIndex = 245;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -724,9 +758,9 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.labelControl9);
-            this.Controls.Add(this.BarCodeGrid);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.txtMainRemarks);
+            this.Controls.Add(this.BarCodeGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frm_ChallanOutward";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -763,6 +797,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,5 +864,6 @@
         private DevExpress.XtraEditors.TextEdit txtBillingState;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit txtBillingZIP;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
     }
 }

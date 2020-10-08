@@ -17,7 +17,8 @@ namespace WindowsFormsApplication1
 
         private void printPreviewBarItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            //printPreviewBarItem8.PerformClick();
+            //this.Close();
         }
 
         private void frmXtraReportViewer_Load(object sender, EventArgs e)
@@ -29,6 +30,11 @@ namespace WindowsFormsApplication1
         private void frmXtraReportViewer_FormClosed(object sender, FormClosedEventArgs e)
         {
             //printPreviewBarItem8.PerformClick();
+        }
+
+        private void printPreviewBarItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            
         }
     }
 }

@@ -109,7 +109,7 @@
             this.ribbonPage2});
             this._ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this._ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this._ribbonControl.Size = new System.Drawing.Size(993, 160);
+            this._ribbonControl.Size = new System.Drawing.Size(993, 147);
             this._ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // skinDropDownButtonItem1
@@ -267,11 +267,10 @@
             this.accordionControl1.ResizeMode = DevExpress.XtraBars.Navigation.AccordionControlResizeMode.OuterResizeZone;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(181, 620);
+            this.accordionControl1.Size = new System.Drawing.Size(181, 633);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-           // this.accordionControl1.OptionsHamburgerMenu.DisplayMode = DevExpress.XtraBars.Navigation.AccordionControlDisplayMode.Inline;
             // 
             // xtraTabControl1
             // 
@@ -279,14 +278,13 @@
             this.xtraTabControl1.AppearancePage.Header.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.HeaderHotTracked.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.PageClient.Options.UseImage = true;
-           // this.xtraTabControl1.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.fm1;
             this.xtraTabControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Center;
-            this.xtraTabControl1.Size = new System.Drawing.Size(808, 620);
+            this.xtraTabControl1.Size = new System.Drawing.Size(808, 633);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
             this.xtraTabControl1.Transition.TransitionType = combTransition1;
@@ -296,12 +294,12 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2019 Colorful";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013 Dark Gray";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 160);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 147);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -312,7 +310,7 @@
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.xtraTabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(993, 620);
+            this.splitContainer1.Size = new System.Drawing.Size(993, 633);
             this.splitContainer1.SplitterDistance = 181;
             this.splitContainer1.TabIndex = 2;
             // 
