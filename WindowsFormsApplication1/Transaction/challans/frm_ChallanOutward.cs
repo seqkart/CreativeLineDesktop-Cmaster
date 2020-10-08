@@ -620,13 +620,16 @@ namespace WindowsFormsApplication1.Transaction.challans
 
                             foreach (DataRow dr in dt.Rows)
                             {
+
+
+                               
                                 dtCH_Out.Rows.Add(
                                     ConvertTo.StringVal(GlobalVariables.FinancialYear),
 
                                     ConvertTo.IntVal(txtChallanNo.Text),
                                     ConvertTo.StringVal(txtChallanType.Text),
                                     ConvertTo.DateFormatDb(txtChallanDate.Text),
-                                    ConvertTo.StringVal(txtMainRemarks.Text),
+                                    ConvertTo.StringVal(dr["CHOREMARKS"]),
                                     ConvertTo.StringVal(GlobalVariables.CUnitID),
                                     ConvertTo.IntVal(dr["CHOPrdCode"]),
                                     ConvertTo.StringVal(dr["CHOManualDesc"]),

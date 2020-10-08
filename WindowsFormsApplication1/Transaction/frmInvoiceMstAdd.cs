@@ -70,15 +70,15 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(groupControl4);
             ProjectFunctions.TextBoxVisualize(groupControl5);
             ProjectFunctions.TextBoxVisualize(groupControl6);
-            ProjectFunctions.TextBoxVisualize(groupControl7);
+            // ProjectFunctions.TextBoxVisualize(groupControl7);
             ProjectFunctions.TextBoxVisualize(groupControl8);
             ProjectFunctions.TextBoxVisualize(groupControl9);
             ProjectFunctions.ButtonVisualize(this);
             ProjectFunctions.GirdViewVisualize(InfoGridView);
-            //ProjectFunctions.GirdViewVisualize(HelpGridView);
+            // ProjectFunctions.GirdViewVisualize(HelpGridView);
             ProjectFunctions.GirdViewVisualize(PSGridView);
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -223,7 +223,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void calculation()
+        private void Calculation()
         {
             InfoGridView.CloseEditor();
             InfoGridView.UpdateCurrentRow();
@@ -235,12 +235,12 @@ namespace WindowsFormsApplication1
 
             String LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
 
-#pragma warning disable CS0219 // The variable 'i' is assigned but its value is never used
+
             int i = 0;
-#pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
+
 
             DataSet ds = new DataSet();
-            Decimal MainDiscAmount = 0;
+            Decimal MainDiscAmount = i;
             Decimal ValueOfGoods = 0;
             Decimal SumValueOfGoods = 0;
             Decimal SumRowDiscAmount = 0;
@@ -571,7 +571,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        private void frmInvoiceMstAdd_Load(object sender, EventArgs e)
+        private void FrmInvoiceMstAdd_Load(object sender, EventArgs e)
         {
             SetMyControls();
 
@@ -669,7 +669,7 @@ namespace WindowsFormsApplication1
                 }
                 if (ds.Tables[0].Rows[0]["SIMINVLOT"].ToString().ToUpper() == "Y")
                 {
-                    chLot.Checked = true;
+                    CHSOR.Checked = true;
 
                 }
                 else
@@ -691,9 +691,9 @@ namespace WindowsFormsApplication1
                 txtCHGWeight.Text = ds.Tables[0].Rows[0]["SIMCHRGWEIGHT"].ToString();
                 txtDelieveryCode.Text = ds.Tables[0].Rows[0]["SIMPartyC"].ToString();
                 txtDelieveryName.Text = ds.Tables[0].Rows[0]["DelieveryPartyName"].ToString();
-                txtDelieveryAddress1.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
-                txtDelieveryAddress2.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
-                txtDelieveryAddress3.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress3"].ToString();
+                txtDelAddress1.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
+                txtDelAddress2.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
+                txtDelAddress3.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress3"].ToString();
                 txtDelieveryCity.Text = ds.Tables[0].Rows[0]["DelieveryPartyCity"].ToString();
                 txtDelTransID.Text = ds.Tables[0].Rows[0]["TransId"].ToString();
                 txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
@@ -725,7 +725,7 @@ namespace WindowsFormsApplication1
 
 
 
-                btnRecalculate_Click(null, e);
+                BtnRecalculate_Click(null, e);
                 ShowPendingPSlips();
 
                 LoadDocs();
@@ -849,7 +849,7 @@ namespace WindowsFormsApplication1
                             {
                                 sqlcom.Parameters.Add("@SIMINVDIRECT", SqlDbType.NVarChar).Value = "N";
                             }
-                            if (chLot.Checked)
+                            if (CHSOR.Checked)
                             {
                                 sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "Y";
                             }
@@ -881,7 +881,7 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
-                            
+
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -950,7 +950,7 @@ namespace WindowsFormsApplication1
                             {
                                 sqlcom.Parameters.Add("@SIMINVDIRECT", SqlDbType.NVarChar).Value = "N";
                             }
-                            if (chLot.Checked)
+                            if (CHSOR.Checked)
                             {
                                 sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "Y";
                             }
@@ -1125,7 +1125,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.GetDataSet("Update PSWSLMAIN Set PSWEIGHT='" + Convert.ToDecimal(dr["Weight"]) + "' Where PSWSNO='" + dr["PSWSNO"].ToString() + "' And PSWSTOTBOXES='" + dr["BoxNo"].ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
             SaveInvoice();
@@ -1133,7 +1133,7 @@ namespace WindowsFormsApplication1
 
 
 
-        private void frmInvoiceMstAdd_KeyDown(object sender, KeyEventArgs e)
+        private void FrmInvoiceMstAdd_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.SalePopUPForAllWindows(this, e);
             if (e.KeyCode == Keys.Up)
@@ -1146,7 +1146,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDebitPartyName.Text = String.Empty;
             txtBillingAddress1.Text = String.Empty;
@@ -1157,9 +1157,9 @@ namespace WindowsFormsApplication1
             txtBillingZip.Text = String.Empty;
             txtDelieveryCode.Text = String.Empty;
             txtDelieveryName.Text = String.Empty;
-            txtDelieveryAddress1.Text = String.Empty;
-            txtDelieveryAddress2.Text = String.Empty;
-            txtDelieveryAddress3.Text = String.Empty;
+            txtDelAddress1.Text = String.Empty;
+            txtDelAddress2.Text = String.Empty;
+            txtDelAddress3.Text = String.Empty;
             txtDelieveryState.Text = String.Empty;
             txtDelieveryCity.Text = String.Empty;
             txtDelieveryZipCode.Text = String.Empty;
@@ -1227,7 +1227,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void txtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
 
 
@@ -1372,12 +1372,12 @@ namespace WindowsFormsApplication1
             }
             if (HelpGrid.Text == "txtDelieveryCode")
             {
-                
+
                 txtDelieveryCode.Text = row["AccCode"].ToString();
                 txtDelieveryName.Text = row["AccName"].ToString();
-                txtDelieveryAddress1.Text = row["AccAddress1"].ToString();
-                txtDelieveryAddress2.Text = row["AccAddress2"].ToString();
-                txtDelieveryAddress3.Text = row["AccAddress3"].ToString();
+                txtDelAddress1.Text = row["AccAddress1"].ToString();
+                txtDelAddress2.Text = row["AccAddress2"].ToString();
+                txtDelAddress3.Text = row["AccAddress3"].ToString();
                 txtDelieveryCity.Text = row["CTNAME"].ToString();
                 txtDelTransID.Text = row["TransId"].ToString();
                 HelpGrid.Visible = false;
@@ -1445,12 +1445,10 @@ namespace WindowsFormsApplication1
             }
             if (HelpGrid.Text == "txtProductACode")
             {
-                // txtArticlSysID.Text = row["ARTSYSID"].ToString();
-                //  txtProductName.Text = row["ARTDESC"].ToString();
-                //  txtArticleNo.Text = row["ARTNO"].ToString();
+
                 HelpGrid.Visible = false;
 
-                // txtProductQty.Focus();
+
             }
             if (HelpGrid.Text == "btnLoadOrder")
             {
@@ -1643,7 +1641,7 @@ namespace WindowsFormsApplication1
                         InfoGridView.MoveLast();
                         InfoGridView.FocusedColumn = InfoGridView.Columns["SIDSCANQTY"];
                         txtSearchBox.Text = String.Empty;
-                        btnRecalculate_Click(null, e);
+                        BtnRecalculate_Click(null, e);
 
                         //ShowImage(row["ARTSYSID"].ToString());
                     }
@@ -1718,7 +1716,7 @@ namespace WindowsFormsApplication1
         private void InfoGridView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
 
-            btnRecalculate_Click(null, e);
+            BtnRecalculate_Click(null, e);
 
         }
 
@@ -1842,13 +1840,13 @@ namespace WindowsFormsApplication1
                 InfoGrid.DataSource = null;
             }
 
-            calculation();
+            Calculation();
         }
 
         private void TxtDelieveryCode_KeyDown(object sender, KeyEventArgs e)
         {
 
-           if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 HelpGridView.Columns.Clear();
                 HelpGrid.Text = "txtDelieveryCode";
@@ -1872,18 +1870,18 @@ namespace WindowsFormsApplication1
                 HelpGridView.BestFitColumns();
             }
 
-            
+
         }
         private void TxtDelieveryCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDelieveryName.Text = String.Empty;
-            txtDelieveryAddress1.Text = String.Empty;
-            txtDelieveryAddress2.Text = String.Empty;
-            txtDelieveryAddress3.Text = String.Empty;
+            txtDelAddress1.Text = String.Empty;
+            txtDelAddress2.Text = String.Empty;
+            txtDelAddress3.Text = String.Empty;
             txtDelieveryCity.Text = String.Empty;
             txtDelieveryZipCode.Text = String.Empty;
             txtDelieveryState.Text = String.Empty;
-            txtDelTransID.Text = String.Empty; 
+            txtDelTransID.Text = String.Empty;
         }
         private void GetPartyBalances()
         {
@@ -1972,7 +1970,7 @@ namespace WindowsFormsApplication1
         {
             if (chRegular.Checked)
             {
-                chLot.Checked = false;
+                CHSOR.Checked = false;
                 dt.Clear();
             }
 
@@ -1983,11 +1981,12 @@ namespace WindowsFormsApplication1
             if (chLot.Checked)
             {
                 chRegular.Checked = false;
+                CHSOR.Checked = false;
                 dt.Clear();
             }
         }
 
-        private void btnRecalculate_Click(object sender, EventArgs e)
+        private void BtnRecalculate_Click(object sender, EventArgs e)
         {
             String LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
 
@@ -2004,22 +2003,22 @@ namespace WindowsFormsApplication1
                     dr["SIDIGSTPER"] = Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxIGSTRate"]);
                 }
             }
-            calculation();
+            Calculation();
         }
 
-        private void txtMainDisc_KeyDown(object sender, KeyEventArgs e)
+        private void TxtMainDisc_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnRecalculate_Click(null, e);
+                BtnRecalculate_Click(null, e);
             }
         }
 
-        private void txtInsurancePer_KeyDown(object sender, KeyEventArgs e)
+        private void TxtInsurancePer_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnRecalculate_Click(null, e);
+                BtnRecalculate_Click(null, e);
             }
         }
 
@@ -2033,7 +2032,7 @@ namespace WindowsFormsApplication1
                     {
                         InfoGridView.CloseEditor();
                         InfoGridView.UpdateCurrentRow();
-                        btnRecalculate_Click(null, e);
+                        BtnRecalculate_Click(null, e);
                     }
                 }
             }
@@ -2043,7 +2042,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void xtraTabControl1_Click(object sender, EventArgs e)
+        private void XtraTabControl1_Click(object sender, EventArgs e)
         {
 
         }
@@ -2128,6 +2127,11 @@ namespace WindowsFormsApplication1
                     pt.ShowRibbonPreviewDialog();
                 }
             }
+        }
+
+        private void txtAcCode_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

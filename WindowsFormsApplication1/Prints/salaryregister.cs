@@ -17,10 +17,10 @@ namespace WindowsFormsApplication1.Prints
     using System.ComponentModel;
 
 
-    public class rpt_CashBook : ReportClass
+    public class salaryregister : ReportClass
     {
 
-        public rpt_CashBook()
+        public salaryregister()
         {
         }
 
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1.Prints
         {
             get
             {
-                return "rpt_CashBook.rpt";
+                return "salaryregister.rpt";
             }
             set
             {
@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1.Prints
         {
             get
             {
-                return "WindowsFormsApplication1.Prints.rpt_CashBook.rpt";
+                return "WindowsFormsApplication1.Prints.salaryregister.rpt";
             }
             set
             {
@@ -109,33 +109,13 @@ namespace WindowsFormsApplication1.Prints
                 return this.ReportDefinition.Sections[4];
             }
         }
-
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section6
-        {
-            get
-            {
-                return this.ReportDefinition.Sections[5];
-            }
-        }
-
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section7
-        {
-            get
-            {
-                return this.ReportDefinition.Sections[6];
-            }
-        }
     }
 
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedrpt_CashBook : Component, ICachedReport
+    public class Cachedsalaryregister : Component, ICachedReport
     {
 
-        public Cachedrpt_CashBook()
+        public Cachedsalaryregister()
         {
         }
 
@@ -183,7 +163,7 @@ namespace WindowsFormsApplication1.Prints
 
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport()
         {
-            rpt_CashBook rpt = new rpt_CashBook();
+            salaryregister rpt = new salaryregister();
             rpt.Site = this.Site;
             return rpt;
         }
