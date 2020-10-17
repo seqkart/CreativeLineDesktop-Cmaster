@@ -132,7 +132,7 @@
               &lt;xs:element name="SIMDATE" type="xs:dateTime" minOccurs="0" /&gt;
               &lt;xs:element name="SIMNO" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="SIMSERIES" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIMPartyC" type="xs:long" minOccurs="0" /&gt;
+              &lt;xs:element name="SIMPARTYC" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="AccName" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="AccAddress1" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="AccAddress2" type="xs:string" minOccurs="0" /&gt;
@@ -145,10 +145,10 @@
               &lt;xs:element name="CTNAME" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="STNAME" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIMVIABROKAGENT" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIMPartyDANO" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIMPartyORDNO" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="SIMPARTYDANO" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="SIMPARTYORDNO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIMTRANSPORTER" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIMPartyPONO" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="SIMPARTYPONO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIMTRANSPORTERKEY" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIMGRNRRNO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIMGRNRRDATE" type="xs:dateTime" minOccurs="0" /&gt;
@@ -216,6 +216,7 @@
               &lt;xs:element name="CATCARDNO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="CATCARDNAME" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="CATCARDSLIPNO" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="TRPRNAME" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;
@@ -226,9 +227,6 @@
               &lt;xs:element name="SIDDATE" type="xs:dateTime" minOccurs="0" /&gt;
               &lt;xs:element name="SIDNO" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="SIDSERIES" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPSID" type="xs:long" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPSNO" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXNO" type="xs:int" minOccurs="0" /&gt;
               &lt;xs:element name="SIDARTID" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="ARTNO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="GrpDesc" type="xs:string" minOccurs="0" /&gt;
@@ -238,7 +236,6 @@
               &lt;xs:element name="SIDARTUOM" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIDARTMRP" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="SIDARTWSP" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXQTY" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="SIDBOXMRPVAL" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="SIDBOXWSPVAL" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="SIDSCHMAPP" type="xs:boolean" minOccurs="0" /&gt;
@@ -262,8 +259,6 @@
               &lt;xs:element name="SIDIGSTAMT" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="TAXCODE" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="CustCode" type="xs:long" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDRETURNDATE" type="xs:dateTime" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDTAXEXCL" type="xs:boolean" minOccurs="0" /&gt;
               &lt;xs:element name="UnitCode" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="GrpHSNCode" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
@@ -290,7 +285,7 @@
               &lt;xs:element name="SIMNO" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="SIMSERIES" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="UNITNAME" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="UNITCODE" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="UNITCODE" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="UNITADDRESS" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="UnitGSTNo" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;

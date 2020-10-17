@@ -47,11 +47,11 @@
             this.txtWSP = new DevExpress.XtraEditors.TextEdit();
             this.txtPurPrice = new DevExpress.XtraEditors.TextEdit();
             this.Label11 = new DevExpress.XtraEditors.LabelControl();
-            this.CHKARTFXPRICE = new System.Windows.Forms.CheckBox();
             this.Label2 = new DevExpress.XtraEditors.LabelControl();
             this.Label15 = new DevExpress.XtraEditors.LabelControl();
             this.Label14 = new DevExpress.XtraEditors.LabelControl();
             this.Label12 = new DevExpress.XtraEditors.LabelControl();
+            this.CHKARTFXPRICE = new System.Windows.Forms.CheckBox();
             this.GroupBox6 = new System.Windows.Forms.GroupBox();
             this.RBARTFIXD = new System.Windows.Forms.RadioButton();
             this.RBARTUNIQUE = new System.Windows.Forms.RadioButton();
@@ -62,10 +62,13 @@
             this.txtArtNo = new DevExpress.XtraEditors.TextEdit();
             this.txtTo = new DevExpress.XtraEditors.TextEdit();
             this.label13 = new DevExpress.XtraEditors.LabelControl();
+            this.txtUMDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtFrom = new DevExpress.XtraEditors.TextEdit();
+            this.txtUMCode = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new DevExpress.XtraEditors.LabelControl();
             this.txtBrandDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtBrandCode = new DevExpress.XtraEditors.TextEdit();
+            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
             this.txtArticleName = new DevExpress.XtraEditors.TextEdit();
             this.txtAlias = new DevExpress.XtraEditors.TextEdit();
@@ -90,8 +93,6 @@
             this.RBMANUART = new System.Windows.Forms.RadioButton();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.txtUMDesc = new DevExpress.XtraEditors.TextEdit();
-            this.txtUMCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSaveAll = new System.Windows.Forms.ToolStripButton();
@@ -99,7 +100,6 @@
             this.txtSysID = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
-            this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.GroupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSIZSET)).BeginInit();
             this.GroupBox7.SuspendLayout();
@@ -117,7 +117,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPreFIx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArtNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUMDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFrom.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUMCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).BeginInit();
@@ -132,8 +134,6 @@
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUMDesc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUMCode.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSysID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).BeginInit();
@@ -143,7 +143,7 @@
             // 
             this.CHKARTNONMAINT.AutoSize = true;
             this.CHKARTNONMAINT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.CHKARTNONMAINT.Location = new System.Drawing.Point(441, 71);
+            this.CHKARTNONMAINT.Location = new System.Drawing.Point(498, 67);
             this.CHKARTNONMAINT.Name = "CHKARTNONMAINT";
             this.CHKARTNONMAINT.Size = new System.Drawing.Size(149, 18);
             this.CHKARTNONMAINT.TabIndex = 30;
@@ -212,7 +212,6 @@
             this.GroupBox7.Controls.Add(this.txtWSP);
             this.GroupBox7.Controls.Add(this.txtPurPrice);
             this.GroupBox7.Controls.Add(this.Label11);
-            this.GroupBox7.Controls.Add(this.CHKARTFXPRICE);
             this.GroupBox7.Controls.Add(this.Label2);
             this.GroupBox7.Controls.Add(this.Label15);
             this.GroupBox7.Controls.Add(this.Label14);
@@ -227,6 +226,8 @@
             // 
             // label18
             // 
+            this.label18.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label18.Appearance.Options.UseFont = true;
             this.label18.Location = new System.Drawing.Point(5, 128);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(57, 13);
@@ -236,7 +237,7 @@
             // txtTaxCodeCDesc
             // 
             this.txtTaxCodeCDesc.Enabled = false;
-            this.txtTaxCodeCDesc.Location = new System.Drawing.Point(161, 124);
+            this.txtTaxCodeCDesc.Location = new System.Drawing.Point(154, 124);
             this.txtTaxCodeCDesc.Name = "txtTaxCodeCDesc";
             this.txtTaxCodeCDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeCDesc.Properties.ReadOnly = true;
@@ -251,15 +252,16 @@
             this.txtTaxCodeC.Name = "txtTaxCodeC";
             this.txtTaxCodeC.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeC.Properties.MaxLength = 4;
+            this.txtTaxCodeC.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTaxCodeC.Size = new System.Drawing.Size(83, 20);
-            this.txtTaxCodeC.TabIndex = 709;
-            this.txtTaxCodeC.EditValueChanged += new System.EventHandler(this.txtTaxCodeC_EditValueChanged);
-            this.txtTaxCodeC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTaxCodeC_KeyDown);
+            this.txtTaxCodeC.TabIndex = 2;
+            this.txtTaxCodeC.EditValueChanged += new System.EventHandler(this.TxtTaxCodeC_EditValueChanged);
+            this.txtTaxCodeC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTaxCodeC_KeyDown);
             // 
             // txtTaxCodeLDesc
             // 
             this.txtTaxCodeLDesc.Enabled = false;
-            this.txtTaxCodeLDesc.Location = new System.Drawing.Point(161, 98);
+            this.txtTaxCodeLDesc.Location = new System.Drawing.Point(154, 98);
             this.txtTaxCodeLDesc.Name = "txtTaxCodeLDesc";
             this.txtTaxCodeLDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeLDesc.Properties.ReadOnly = true;
@@ -274,10 +276,11 @@
             this.txtTaxCodeL.Name = "txtTaxCodeL";
             this.txtTaxCodeL.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTaxCodeL.Properties.MaxLength = 4;
+            this.txtTaxCodeL.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTaxCodeL.Size = new System.Drawing.Size(83, 20);
-            this.txtTaxCodeL.TabIndex = 706;
-            this.txtTaxCodeL.EditValueChanged += new System.EventHandler(this.txtTaxCodeL_EditValueChanged);
-            this.txtTaxCodeL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTaxCodeL_KeyDown);
+            this.txtTaxCodeL.TabIndex = 1;
+            this.txtTaxCodeL.EditValueChanged += new System.EventHandler(this.TxtTaxCodeL_EditValueChanged);
+            this.txtTaxCodeL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTaxCodeL_KeyDown);
             // 
             // txtMargin
             // 
@@ -293,15 +296,18 @@
             this.txtMargin.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMargin.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMargin.Properties.MaxLength = 4;
+            this.txtMargin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMargin.Size = new System.Drawing.Size(83, 20);
             this.txtMargin.TabIndex = 6;
             this.txtMargin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPurPrice_KeyPress);
             // 
             // label17
             // 
+            this.label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label17.Appearance.Options.UseFont = true;
             this.label17.Location = new System.Drawing.Point(16, 102);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(46, 13);
+            this.label17.Size = new System.Drawing.Size(47, 13);
             this.label17.TabIndex = 708;
             this.label17.Text = "Tax Local";
             // 
@@ -319,10 +325,11 @@
             this.txtMRP.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMRP.Properties.MaxLength = 4;
+            this.txtMRP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMRP.Size = new System.Drawing.Size(83, 20);
-            this.txtMRP.TabIndex = 3;
+            this.txtMRP.TabIndex = 0;
             this.txtMRP.EditValueChanged += new System.EventHandler(this.TxtMRP_EditValueChanged);
-            this.txtMRP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMRP_KeyDown);
+            this.txtMRP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMRP_KeyDown);
             this.txtMRP.Leave += new System.EventHandler(this.TxtMRP_Leave);
             // 
             // txtRSP
@@ -339,6 +346,7 @@
             this.txtRSP.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtRSP.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRSP.Properties.MaxLength = 4;
+            this.txtRSP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtRSP.Size = new System.Drawing.Size(83, 20);
             this.txtRSP.TabIndex = 5;
             // 
@@ -356,10 +364,11 @@
             this.txtWSP.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtWSP.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtWSP.Properties.MaxLength = 4;
+            this.txtWSP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtWSP.Size = new System.Drawing.Size(83, 20);
             this.txtWSP.TabIndex = 24;
             this.txtWSP.EditValueChanged += new System.EventHandler(this.TxtWSP_EditValueChanged);
-            this.txtWSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWSP_KeyDown);
+            this.txtWSP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtWSP_KeyDown);
             // 
             // txtPurPrice
             // 
@@ -375,8 +384,9 @@
             this.txtPurPrice.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPurPrice.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPurPrice.Properties.MaxLength = 4;
+            this.txtPurPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPurPrice.Size = new System.Drawing.Size(83, 20);
-            this.txtPurPrice.TabIndex = 0;
+            this.txtPurPrice.TabIndex = 50;
             this.txtPurPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPurPrice_KeyPress);
             // 
             // Label11
@@ -390,17 +400,6 @@
             this.Label11.Size = new System.Drawing.Size(19, 13);
             this.Label11.TabIndex = 82;
             this.Label11.Text = "RSP";
-            // 
-            // CHKARTFXPRICE
-            // 
-            this.CHKARTFXPRICE.AutoSize = true;
-            this.CHKARTFXPRICE.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.CHKARTFXPRICE.Location = new System.Drawing.Point(202, 77);
-            this.CHKARTFXPRICE.Name = "CHKARTFXPRICE";
-            this.CHKARTFXPRICE.Size = new System.Drawing.Size(180, 18);
-            this.CHKARTFXPRICE.TabIndex = 29;
-            this.CHKARTFXPRICE.Text = "MARK ARTICLE AS FIXED PRICE";
-            this.CHKARTFXPRICE.UseVisualStyleBackColor = true;
             // 
             // Label2
             // 
@@ -451,6 +450,17 @@
             this.Label12.Text = "MARGIN";
             this.Label12.Click += new System.EventHandler(this.Label12_Click);
             // 
+            // CHKARTFXPRICE
+            // 
+            this.CHKARTFXPRICE.AutoSize = true;
+            this.CHKARTFXPRICE.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.CHKARTFXPRICE.Location = new System.Drawing.Point(498, 83);
+            this.CHKARTFXPRICE.Name = "CHKARTFXPRICE";
+            this.CHKARTFXPRICE.Size = new System.Drawing.Size(180, 18);
+            this.CHKARTFXPRICE.TabIndex = 29;
+            this.CHKARTFXPRICE.Text = "MARK ARTICLE AS FIXED PRICE";
+            this.CHKARTFXPRICE.UseVisualStyleBackColor = true;
+            // 
             // GroupBox6
             // 
             this.GroupBox6.BackColor = System.Drawing.Color.Transparent;
@@ -458,7 +468,7 @@
             this.GroupBox6.Controls.Add(this.RBARTUNIQUE);
             this.GroupBox6.Controls.Add(this.RBARTLOT);
             this.GroupBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.GroupBox6.Location = new System.Drawing.Point(32, 414);
+            this.GroupBox6.Location = new System.Drawing.Point(33, 430);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(393, 40);
             this.GroupBox6.TabIndex = 678;
@@ -511,10 +521,13 @@
             this.GroupBox4.Controls.Add(this.txtArtNo);
             this.GroupBox4.Controls.Add(this.txtTo);
             this.GroupBox4.Controls.Add(this.label13);
+            this.GroupBox4.Controls.Add(this.txtUMDesc);
             this.GroupBox4.Controls.Add(this.txtFrom);
+            this.GroupBox4.Controls.Add(this.txtUMCode);
             this.GroupBox4.Controls.Add(this.label10);
             this.GroupBox4.Controls.Add(this.txtBrandDesc);
             this.GroupBox4.Controls.Add(this.txtBrandCode);
+            this.GroupBox4.Controls.Add(this.label4);
             this.GroupBox4.Controls.Add(this.txtDescription);
             this.GroupBox4.Controls.Add(this.txtArticleName);
             this.GroupBox4.Controls.Add(this.txtAlias);
@@ -534,7 +547,7 @@
             this.GroupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.GroupBox4.Location = new System.Drawing.Point(33, 137);
             this.GroupBox4.Name = "GroupBox4";
-            this.GroupBox4.Size = new System.Drawing.Size(392, 271);
+            this.GroupBox4.Size = new System.Drawing.Size(392, 287);
             this.GroupBox4.TabIndex = 677;
             this.GroupBox4.TabStop = false;
             this.GroupBox4.Text = "DETAILS";
@@ -545,7 +558,7 @@
             this.label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label16.Appearance.Options.UseBackColor = true;
             this.label16.Appearance.Options.UseFont = true;
-            this.label16.Location = new System.Drawing.Point(58, 131);
+            this.label16.Location = new System.Drawing.Point(57, 131);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(29, 13);
             this.label16.TabIndex = 705;
@@ -571,8 +584,8 @@
             this.txtArtNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtArtNo.Properties.MaxLength = 10;
             this.txtArtNo.Size = new System.Drawing.Size(284, 20);
-            this.txtArtNo.TabIndex = 2;
-            this.txtArtNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtArtNo_KeyDown);
+            this.txtArtNo.TabIndex = 1;
+            this.txtArtNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtArtNo_KeyDown);
             // 
             // txtTo
             // 
@@ -589,10 +602,22 @@
             // 
             this.label13.Location = new System.Drawing.Point(273, 131);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.Size = new System.Drawing.Size(12, 13);
             this.label13.TabIndex = 703;
             this.label13.Text = "To";
             this.label13.Visible = false;
+            // 
+            // txtUMDesc
+            // 
+            this.txtUMDesc.Enabled = false;
+            this.txtUMDesc.Location = new System.Drawing.Point(165, 253);
+            this.txtUMDesc.Name = "txtUMDesc";
+            this.txtUMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUMDesc.Properties.ReadOnly = true;
+            this.txtUMDesc.Size = new System.Drawing.Size(212, 20);
+            this.txtUMDesc.TabIndex = 18;
+            this.txtUMDesc.TabStop = false;
+            this.txtUMDesc.EditValueChanged += new System.EventHandler(this.txtUMDesc_EditValueChanged);
             // 
             // txtFrom
             // 
@@ -605,11 +630,26 @@
             this.txtFrom.TabIndex = 10;
             this.txtFrom.Visible = false;
             // 
+            // txtUMCode
+            // 
+            this.txtUMCode.EnterMoveNextControl = true;
+            this.txtUMCode.Location = new System.Drawing.Point(93, 253);
+            this.txtUMCode.Name = "txtUMCode";
+            this.txtUMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUMCode.Properties.MaxLength = 5;
+            this.txtUMCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUMCode.Size = new System.Drawing.Size(69, 20);
+            this.txtUMCode.TabIndex = 3;
+            this.txtUMCode.EditValueChanged += new System.EventHandler(this.TxtUMCode_EditValueChanged);
+            this.txtUMCode.TextChanged += new System.EventHandler(this.txtUMCode_TextChanged);
+            this.txtUMCode.Enter += new System.EventHandler(this.txtUMCode_Enter);
+            this.txtUMCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUMCode_KeyDown);
+            // 
             // label10
             // 
             this.label10.Location = new System.Drawing.Point(142, 131);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(26, 13);
+            this.label10.Size = new System.Drawing.Size(24, 13);
             this.label10.TabIndex = 701;
             this.label10.Text = "From";
             this.label10.Visible = false;
@@ -617,11 +657,11 @@
             // txtBrandDesc
             // 
             this.txtBrandDesc.Enabled = false;
-            this.txtBrandDesc.Location = new System.Drawing.Point(182, 228);
+            this.txtBrandDesc.Location = new System.Drawing.Point(165, 228);
             this.txtBrandDesc.Name = "txtBrandDesc";
             this.txtBrandDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandDesc.Properties.ReadOnly = true;
-            this.txtBrandDesc.Size = new System.Drawing.Size(195, 20);
+            this.txtBrandDesc.Size = new System.Drawing.Size(212, 20);
             this.txtBrandDesc.TabIndex = 16;
             this.txtBrandDesc.TabStop = false;
             // 
@@ -632,10 +672,22 @@
             this.txtBrandCode.Name = "txtBrandCode";
             this.txtBrandCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandCode.Properties.MaxLength = 4;
-            this.txtBrandCode.Size = new System.Drawing.Size(83, 20);
-            this.txtBrandCode.TabIndex = 3;
+            this.txtBrandCode.Size = new System.Drawing.Size(69, 20);
+            this.txtBrandCode.TabIndex = 2;
             this.txtBrandCode.EditValueChanged += new System.EventHandler(this.TxtBrandCode_EditValueChanged);
             this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBrandCode_KeyDown);
+            // 
+            // label4
+            // 
+            this.label4.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Appearance.Options.UseBackColor = true;
+            this.label4.Appearance.Options.UseFont = true;
+            this.label4.Location = new System.Drawing.Point(60, 256);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "UOM";
             // 
             // txtDescription
             // 
@@ -668,6 +720,7 @@
             this.txtAlias.Properties.MaxLength = 4;
             this.txtAlias.Size = new System.Drawing.Size(284, 20);
             this.txtAlias.TabIndex = 12;
+            this.txtAlias.EditValueChanged += new System.EventHandler(this.TxtAlias_EditValueChanged);
             // 
             // txtHSNCode
             // 
@@ -677,16 +730,16 @@
             this.txtHSNCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtHSNCode.Properties.MaxLength = 9;
             this.txtHSNCode.Size = new System.Drawing.Size(284, 20);
-            this.txtHSNCode.TabIndex = 1;
+            this.txtHSNCode.TabIndex = 7;
             // 
             // txtGrpDesc
             // 
             this.txtGrpDesc.Enabled = false;
-            this.txtGrpDesc.Location = new System.Drawing.Point(182, 28);
+            this.txtGrpDesc.Location = new System.Drawing.Point(165, 28);
             this.txtGrpDesc.Name = "txtGrpDesc";
             this.txtGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpDesc.Properties.ReadOnly = true;
-            this.txtGrpDesc.Size = new System.Drawing.Size(195, 20);
+            this.txtGrpDesc.Size = new System.Drawing.Size(212, 20);
             this.txtGrpDesc.TabIndex = 5;
             this.txtGrpDesc.TabStop = false;
             // 
@@ -698,26 +751,28 @@
             this.txtGrpCode.Name = "txtGrpCode";
             this.txtGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpCode.Properties.MaxLength = 4;
-            this.txtGrpCode.Size = new System.Drawing.Size(83, 20);
+            this.txtGrpCode.Size = new System.Drawing.Size(69, 20);
             this.txtGrpCode.TabIndex = 4;
             this.txtGrpCode.TabStop = false;
             // 
             // label1
             // 
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Appearance.Options.UseFont = true;
             this.label1.Location = new System.Drawing.Point(49, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(37, 13);
             this.label1.TabIndex = 693;
             this.label1.Text = "GROUP";
             // 
             // txtSGrpDesc
             // 
             this.txtSGrpDesc.Enabled = false;
-            this.txtSGrpDesc.Location = new System.Drawing.Point(182, 53);
+            this.txtSGrpDesc.Location = new System.Drawing.Point(165, 53);
             this.txtSGrpDesc.Name = "txtSGrpDesc";
             this.txtSGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGrpDesc.Properties.ReadOnly = true;
-            this.txtSGrpDesc.Size = new System.Drawing.Size(195, 20);
+            this.txtSGrpDesc.Size = new System.Drawing.Size(212, 20);
             this.txtSGrpDesc.TabIndex = 7;
             this.txtSGrpDesc.TabStop = false;
             // 
@@ -727,7 +782,7 @@
             this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseBackColor = true;
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(50, 231);
+            this.Label7.Location = new System.Drawing.Point(49, 231);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(37, 13);
             this.Label7.TabIndex = 624;
@@ -740,16 +795,16 @@
             this.txtSGrpCode.Name = "txtSGrpCode";
             this.txtSGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGrpCode.Properties.MaxLength = 4;
-            this.txtSGrpCode.Size = new System.Drawing.Size(83, 20);
+            this.txtSGrpCode.Size = new System.Drawing.Size(69, 20);
             this.txtSGrpCode.TabIndex = 0;
             this.txtSGrpCode.EditValueChanged += new System.EventHandler(this.TxtSGrpCode_EditValueChanged);
             this.txtSGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSGrpCode_KeyDown);
             // 
             // label9
             // 
-            this.label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.Appearance.Options.UseFont = true;
-            this.label9.Location = new System.Drawing.Point(26, 56);
+            this.label9.Location = new System.Drawing.Point(25, 56);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 13);
             this.label9.TabIndex = 691;
@@ -761,7 +816,7 @@
             this.Label22.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label22.Appearance.Options.UseBackColor = true;
             this.Label22.Appearance.Options.UseFont = true;
-            this.Label22.Location = new System.Drawing.Point(22, 206);
+            this.Label22.Location = new System.Drawing.Point(21, 206);
             this.Label22.Name = "Label22";
             this.Label22.Size = new System.Drawing.Size(65, 13);
             this.Label22.TabIndex = 622;
@@ -773,7 +828,7 @@
             this.Label21.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label21.Appearance.Options.UseBackColor = true;
             this.Label21.Appearance.Options.UseFont = true;
-            this.Label21.Location = new System.Drawing.Point(12, 181);
+            this.Label21.Location = new System.Drawing.Point(11, 181);
             this.Label21.Name = "Label21";
             this.Label21.Size = new System.Drawing.Size(75, 13);
             this.Label21.TabIndex = 620;
@@ -785,7 +840,7 @@
             this.Label20.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label20.Appearance.Options.UseBackColor = true;
             this.Label20.Appearance.Options.UseFont = true;
-            this.Label20.Location = new System.Drawing.Point(59, 156);
+            this.Label20.Location = new System.Drawing.Point(58, 156);
             this.Label20.Name = "Label20";
             this.Label20.Size = new System.Drawing.Size(28, 13);
             this.Label20.TabIndex = 618;
@@ -799,7 +854,7 @@
             this.Label19.Appearance.Options.UseBackColor = true;
             this.Label19.Appearance.Options.UseFont = true;
             this.Label19.Appearance.Options.UseForeColor = true;
-            this.Label19.Location = new System.Drawing.Point(33, 81);
+            this.Label19.Location = new System.Drawing.Point(32, 81);
             this.Label19.Name = "Label19";
             this.Label19.Size = new System.Drawing.Size(54, 13);
             this.Label19.TabIndex = 616;
@@ -811,7 +866,7 @@
             this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseBackColor = true;
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(25, 106);
+            this.Label3.Location = new System.Drawing.Point(24, 106);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(62, 13);
             this.Label3.TabIndex = 36;
@@ -897,11 +952,11 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(227, 78);
+            this.HelpGrid.Location = new System.Drawing.Point(685, 110);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(591, 296);
-            this.HelpGrid.TabIndex = 684;
+            this.HelpGrid.TabIndex = 2;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
             this.HelpGrid.Visible = false;
@@ -919,29 +974,6 @@
             this.HelpGridView.OptionsView.ShowGroupPanel = false;
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // txtUMDesc
-            // 
-            this.txtUMDesc.Enabled = false;
-            this.txtUMDesc.Location = new System.Drawing.Point(549, 107);
-            this.txtUMDesc.Name = "txtUMDesc";
-            this.txtUMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUMDesc.Properties.ReadOnly = true;
-            this.txtUMDesc.Size = new System.Drawing.Size(236, 20);
-            this.txtUMDesc.TabIndex = 18;
-            this.txtUMDesc.TabStop = false;
-            // 
-            // txtUMCode
-            // 
-            this.txtUMCode.EnterMoveNextControl = true;
-            this.txtUMCode.Location = new System.Drawing.Point(478, 107);
-            this.txtUMCode.Name = "txtUMCode";
-            this.txtUMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUMCode.Properties.MaxLength = 5;
-            this.txtUMCode.Size = new System.Drawing.Size(69, 20);
-            this.txtUMCode.TabIndex = 0;
-            this.txtUMCode.EditValueChanged += new System.EventHandler(this.TxtUMCode_EditValueChanged);
-            this.txtUMCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUMCode_KeyDown);
             // 
             // Menu_ToolStrip
             // 
@@ -980,7 +1012,7 @@
             this.btnSaveAll.Size = new System.Drawing.Size(87, 22);
             this.btnSaveAll.Text = "Save Multiple";
             this.btnSaveAll.Visible = false;
-            this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
+            this.btnSaveAll.Click += new System.EventHandler(this.BtnSaveAll_Click);
             // 
             // btnSave
             // 
@@ -1004,14 +1036,16 @@
             this.txtSysID.Size = new System.Drawing.Size(83, 20);
             this.txtSysID.TabIndex = 705;
             this.txtSysID.TabStop = false;
+            this.txtSysID.Visible = false;
             // 
             // label8
             // 
             this.label8.Location = new System.Drawing.Point(12, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 13);
+            this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 706;
             this.label8.Text = "ArticleSysID";
+            this.label8.Visible = false;
             // 
             // ArticleImageBox
             // 
@@ -1021,18 +1055,6 @@
             this.ArticleImageBox.Size = new System.Drawing.Size(259, 323);
             this.ArticleImageBox.TabIndex = 707;
             this.ArticleImageBox.EditValueChanged += new System.EventHandler(this.PictureEdit1_EditValueChanged);
-            // 
-            // label4
-            // 
-            this.label4.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Appearance.Options.UseBackColor = true;
-            this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(438, 110);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "UOM";
             // 
             // frmArticleMst
             // 
@@ -1045,13 +1067,11 @@
             this.Controls.Add(this.txtSysID);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.Menu_ToolStrip);
-            this.Controls.Add(this.txtUMDesc);
-            this.Controls.Add(this.txtUMCode);
             this.Controls.Add(this.CHKARTNONMAINT);
             this.Controls.Add(this.GroupBox16);
             this.Controls.Add(this.GroupBox7);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.GroupBox6);
+            this.Controls.Add(this.CHKARTFXPRICE);
             this.Controls.Add(this.GroupBox4);
             this.Controls.Add(this.GroupBox3);
             this.Controls.Add(this.GroupBox2);
@@ -1082,7 +1102,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPreFIx.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArtNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUMDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFrom.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUMCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();
@@ -1099,8 +1121,6 @@
             this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUMDesc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUMCode.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSysID.Properties)).EndInit();

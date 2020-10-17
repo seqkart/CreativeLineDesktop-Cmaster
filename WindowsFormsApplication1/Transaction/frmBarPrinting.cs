@@ -612,7 +612,7 @@ namespace WindowsFormsApplication1.Transaction
 
                                     String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     //String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                    String SKUPRODUCTCODE = "FX" + SKUCode.PadLeft(5, '0');
+                                    String SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
 
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
@@ -930,7 +930,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                //ArticleImageBox = null;
+                ArticleImageBox = null;
 
                 DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
                 ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
