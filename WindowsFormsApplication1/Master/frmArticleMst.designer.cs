@@ -448,7 +448,7 @@
             this.Label12.Size = new System.Drawing.Size(43, 13);
             this.Label12.TabIndex = 69;
             this.Label12.Text = "MARGIN";
-            this.Label12.Click += new System.EventHandler(this.Label12_Click);
+//            this.Label12.Click += new System.EventHandler(this.Label12_Click);
             // 
             // CHKARTFXPRICE
             // 
@@ -617,7 +617,7 @@
             this.txtUMDesc.Size = new System.Drawing.Size(212, 20);
             this.txtUMDesc.TabIndex = 18;
             this.txtUMDesc.TabStop = false;
-            this.txtUMDesc.EditValueChanged += new System.EventHandler(this.txtUMDesc_EditValueChanged);
+      //      this.txtUMDesc.EditValueChanged += new System.EventHandler(this.txtUMDesc_EditValueChanged);
             // 
             // txtFrom
             // 
@@ -641,8 +641,8 @@
             this.txtUMCode.Size = new System.Drawing.Size(69, 20);
             this.txtUMCode.TabIndex = 3;
             this.txtUMCode.EditValueChanged += new System.EventHandler(this.TxtUMCode_EditValueChanged);
-            this.txtUMCode.TextChanged += new System.EventHandler(this.txtUMCode_TextChanged);
-            this.txtUMCode.Enter += new System.EventHandler(this.txtUMCode_Enter);
+     //       this.txtUMCode.TextChanged += new System.EventHandler(this.txtUMCode_TextChanged);
+   //         this.txtUMCode.Enter += new System.EventHandler(this.txtUMCode_Enter);
             this.txtUMCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUMCode_KeyDown);
             // 
             // label10
@@ -709,7 +709,7 @@
             this.txtArticleName.Properties.MaxLength = 4;
             this.txtArticleName.Size = new System.Drawing.Size(284, 20);
             this.txtArticleName.TabIndex = 13;
-            this.txtArticleName.Enter += new System.EventHandler(this.TxtArticleName_Enter);
+    //        this.txtArticleName.Enter += new System.EventHandler(this.TxtArticleName_Enter);
             // 
             // txtAlias
             // 
@@ -720,7 +720,7 @@
             this.txtAlias.Properties.MaxLength = 4;
             this.txtAlias.Size = new System.Drawing.Size(284, 20);
             this.txtAlias.TabIndex = 12;
-            this.txtAlias.EditValueChanged += new System.EventHandler(this.TxtAlias_EditValueChanged);
+     //       this.txtAlias.EditValueChanged += new System.EventHandler(this.TxtAlias_EditValueChanged);
             // 
             // txtHSNCode
             // 
