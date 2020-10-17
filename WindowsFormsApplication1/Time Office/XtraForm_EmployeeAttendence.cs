@@ -16,6 +16,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Forms_Master;
 
+
+
 namespace WindowsFormsApplication1.Time_Office
 {
     public partial class XtraForm_EmployeeAttendance : DevExpress.XtraEditors.XtraForm
@@ -62,7 +64,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private CrudAction crudAction = new CrudAction();
+        private CrudAction CrudAction = new CrudAction();
 
         private bool form_loaded = false;
         private void XtraForm_EmployeeAttendence_Load(object sender, EventArgs e)
@@ -73,9 +75,9 @@ namespace WindowsFormsApplication1.Time_Office
             Load_Status_Shift_Data();
 
 
-            dateAttendance.ValueChanged -= dateAttendance_ValueChanged;
+            dateAttendance.ValueChanged -= DateAttendance_ValueChanged;
             dateAttendance.Value = ConvertTo.DateTimeVal(selected_attendance_date);
-            dateAttendance.ValueChanged += dateAttendance_ValueChanged;
+            dateAttendance.ValueChanged += DateAttendance_ValueChanged;
 
             DateTime today = dateAttendance.Value;
             lblDayName.Text = today.ToString("dddd");
@@ -508,11 +510,6 @@ namespace WindowsFormsApplication1.Time_Office
 
 
 
-        private void cbEmpID_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-
-        }
 
 
         async void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
@@ -650,7 +647,7 @@ namespace WindowsFormsApplication1.Time_Office
                         selected_serial_id = existing_serial_id;
                         SetEditValue(txtSerial_ID, existing_serial_id);
 
-                        crudAction = CrudAction.Update;
+                        CrudAction = CrudAction.Update;
 
 
                         await SaveEmployeeAttendanceDetails_OR_Update();
@@ -696,7 +693,7 @@ namespace WindowsFormsApplication1.Time_Office
 
                     EmployeeAttendance employeeAttendance = new EmployeeAttendance
                     {
-                        entry_date = DateTime.Now,
+                        entry_date = DateTime.Today,
                         attendance_date = dateAttendance.Value,
                         employee_code = txtEmpID.Text
                     };
@@ -1121,7 +1118,7 @@ namespace WindowsFormsApplication1.Time_Office
         }
 
 
-        private void windowsUIButtonPanelCloseButton_Click(object sender, ButtonEventArgs e)
+        private void WindowsUIButtonPanelCloseButton_Click(object sender, ButtonEventArgs e)
         {
             string tag = ((WindowsUIButton)e.Button).Tag.ToString();
 
@@ -1129,7 +1126,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void radioButtonManual_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonManual_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonManual.Checked)
             {
@@ -1162,7 +1159,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void radioButtonMachine_CheckedChanged(object sender, EventArgs e)
+        private void RadioButtonMachine_CheckedChanged(object sender, EventArgs e)
         {
             if (radioButtonMachine.Checked)
             {
@@ -1193,7 +1190,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_In_DW_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_In_DW_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1201,7 +1198,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_Out_DW_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_Out_DW_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1209,7 +1206,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_In_First_1_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_In_First_1_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1245,8 +1242,9 @@ namespace WindowsFormsApplication1.Time_Office
         {
             if ((sender as BaseEdit).Tag == null)
             {
-                PrintLogWin.PrintLog("--------------- X " + timeEdit_Time_Out_Last.EditValue);
+
                 CalculateDUtyHours("last_out");
+                PrintLogWin.PrintLog("--------------- X " + timeEdit_Time_Out_Last.EditValue);
             }
         }
 
@@ -1919,7 +1917,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void txtOvertimeHours_EditValueChanged(object sender, EventArgs e)
+        private void TxtOvertimeHours_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1948,20 +1946,20 @@ namespace WindowsFormsApplication1.Time_Office
             HelpGridView.Columns[2].OptionsColumn.AllowEdit = false;
         }
 
-        private void dateAttendance_Leave(object sender, EventArgs e)
+        private void DateAttendance_Leave(object sender, EventArgs e)
         {
 
         }
 
-        private void dateAttendance_ValueChanged(object sender, EventArgs e)
+        private void DateAttendance_ValueChanged(object sender, EventArgs e)
         {
             DateTime today = dateAttendance.Value;
             lblDayName.Text = today.ToString("dddd");
 
-            txtEmpCode_EditValueChanged(txtEmpID, EventArgs.Empty);
+            TxtEmpCode_EditValueChanged(txtEmpID, EventArgs.Empty);
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
 
             if ((sender as BaseEdit).Tag == null)
@@ -2104,9 +2102,14 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void dateAttendance_Enter(object sender, EventArgs e)
+       
+
+
+        private void DateAttendance_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             txtEmpID.Focus();
         }
     }
+
+
 }

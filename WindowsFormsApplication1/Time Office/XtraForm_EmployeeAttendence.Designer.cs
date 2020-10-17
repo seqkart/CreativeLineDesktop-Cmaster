@@ -39,6 +39,10 @@
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblDayName = new DevExpress.XtraEditors.LabelControl();
             this.textEmpType = new DevExpress.XtraEditors.TextEdit();
             this.label20 = new DevExpress.XtraEditors.LabelControl();
@@ -57,10 +61,6 @@
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxEmployee = new System.Windows.Forms.GroupBox();
             this.timeEdit_Time_Out_Last = new DevExpress.XtraEditors.TimeSpanEdit();
@@ -130,6 +130,10 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmpType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUnit.Properties)).BeginInit();
@@ -137,10 +141,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             this.grpBoxEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_Last.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_Last.Properties)).BeginInit();
@@ -196,7 +196,7 @@
             this.windowsUIButtonPanelCloseButton.TabIndex = 2;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
-            this.windowsUIButtonPanelCloseButton.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelCloseButton_Click);
+            this.windowsUIButtonPanelCloseButton.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelCloseButton_Click);
             // 
             // windowsUIButtonPanelMain
             // 
@@ -239,7 +239,7 @@
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(60, 60);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(710, 60);
-            this.windowsUIButtonPanelMain.TabIndex = 16;
+            this.windowsUIButtonPanelMain.TabIndex = 0;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelMain_ButtonClick);
@@ -264,7 +264,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.HelpGrid);
             this.groupBox1.Controls.Add(this.lblDayName);
             this.groupBox1.Controls.Add(this.textEmpType);
             this.groupBox1.Controls.Add(this.label20);
@@ -289,6 +288,51 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(247, 92);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(391, 197);
+            this.HelpGrid.TabIndex = 369;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView4,
+            this.gridView5});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.HelpGrid;
+            this.gridView4.Name = "gridView4";
+            // 
+            // gridView5
+            // 
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.GridControl = this.HelpGrid;
+            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
+            this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gridView5.OptionsView.ShowIndicator = false;
+            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
             // lblDayName
             // 
             this.lblDayName.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
@@ -302,6 +346,7 @@
             // 
             // textEmpType
             // 
+            this.textEmpType.Enabled = false;
             this.textEmpType.Location = new System.Drawing.Point(92, 213);
             this.textEmpType.Name = "textEmpType";
             this.textEmpType.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -363,10 +408,10 @@
             this.cbEmpID.Size = new System.Drawing.Size(120, 21);
             this.cbEmpID.TabIndex = 15;
             this.cbEmpID.Visible = false;
-            this.cbEmpID.SelectedIndexChanged += new System.EventHandler(this.cbEmpID_SelectedIndexChanged);
             // 
             // textUnit
             // 
+            this.textUnit.Enabled = false;
             this.textUnit.Location = new System.Drawing.Point(91, 186);
             this.textUnit.Name = "textUnit";
             this.textUnit.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -379,6 +424,7 @@
             // 
             // txtDesignation
             // 
+            this.txtDesignation.Enabled = false;
             this.txtDesignation.Location = new System.Drawing.Point(91, 158);
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -391,6 +437,7 @@
             // 
             // txtDepartment
             // 
+            this.txtDepartment.Enabled = false;
             this.txtDepartment.Location = new System.Drawing.Point(91, 130);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -403,6 +450,7 @@
             // 
             // txtFName
             // 
+            this.txtFName.Enabled = false;
             this.txtFName.Location = new System.Drawing.Point(91, 102);
             this.txtFName.Name = "txtFName";
             this.txtFName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -424,19 +472,19 @@
             this.txtEmpID.Properties.Appearance.Options.UseForeColor = true;
             this.txtEmpID.Properties.ReadOnly = true;
             this.txtEmpID.Size = new System.Drawing.Size(120, 20);
-            this.txtEmpID.TabIndex = 9;
-            this.txtEmpID.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
+            this.txtEmpID.TabIndex = 1;
+            this.txtEmpID.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
             this.txtEmpID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
             // 
             // dateAttendance
             // 
+            this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateAttendance.Location = new System.Drawing.Point(91, 44);
             this.dateAttendance.Name = "dateAttendance";
             this.dateAttendance.Size = new System.Drawing.Size(120, 22);
-            this.dateAttendance.TabIndex = 8;
-            this.dateAttendance.ValueChanged += new System.EventHandler(this.dateAttendance_ValueChanged);
-            this.dateAttendance.Enter += new System.EventHandler(this.dateAttendance_Enter);
-            this.dateAttendance.Leave += new System.EventHandler(this.dateAttendance_Leave);
+            this.dateAttendance.TabIndex = 0;
+            this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
+            this.dateAttendance.Leave += new System.EventHandler(this.DateAttendance_Leave);
             // 
             // label7
             // 
@@ -510,51 +558,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Att Date:";
             // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(314, 106);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(391, 197);
-            this.HelpGrid.TabIndex = 369;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView4,
-            this.gridView5});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridView4
-            // 
-            this.gridView4.GridControl = this.HelpGrid;
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridView5
-            // 
-            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView5.GridControl = this.HelpGrid;
-            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
-            this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ColumnAutoWidth = false;
-            this.gridView5.OptionsView.ShowGroupPanel = false;
-            this.gridView5.OptionsView.ShowIndicator = false;
-            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
             // label25
             // 
             this.label25.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
@@ -623,7 +626,7 @@
             this.timeEdit_Time_Out_Last.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_Out_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_Out_Last.Size = new System.Drawing.Size(65, 20);
-            this.timeEdit_Time_Out_Last.TabIndex = 14;
+            this.timeEdit_Time_Out_Last.TabIndex = 4;
             this.timeEdit_Time_Out_Last.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_Last_EditValueChanged);
             // 
             // timeEdit_Time_In_Last
@@ -643,7 +646,7 @@
             this.timeEdit_Time_In_Last.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_In_Last.Size = new System.Drawing.Size(65, 20);
-            this.timeEdit_Time_In_Last.TabIndex = 13;
+            this.timeEdit_Time_In_Last.TabIndex = 3;
             this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_Last_EditValueChanged);
             // 
             // timeEdit_Time_Out_First
@@ -663,7 +666,7 @@
             this.timeEdit_Time_Out_First.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_Out_First.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_Out_First.Size = new System.Drawing.Size(65, 20);
-            this.timeEdit_Time_Out_First.TabIndex = 12;
+            this.timeEdit_Time_Out_First.TabIndex = 2;
             this.timeEdit_Time_Out_First.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.timeEdit_Time_Out_First_InvalidValue);
             this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_First_EditValueChanged);
             this.timeEdit_Time_Out_First.Validating += new System.ComponentModel.CancelEventHandler(this.timeEdit_Time_Out_First_Validating);
@@ -685,7 +688,7 @@
             this.timeEdit_Time_In_First.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_First.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_In_First.Size = new System.Drawing.Size(65, 20);
-            this.timeEdit_Time_In_First.TabIndex = 11;
+            this.timeEdit_Time_In_First.TabIndex = 1;
             this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_First_EditValueChanged);
             // 
             // timeEdit_Time_In_First_Testing
@@ -707,7 +710,7 @@
             this.timeEdit_Time_In_First_Testing.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_In_First_Testing.TabIndex = 253;
             this.timeEdit_Time_In_First_Testing.Visible = false;
-            this.timeEdit_Time_In_First_Testing.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_First_1_EditValueChanged);
+            this.timeEdit_Time_In_First_Testing.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_1_EditValueChanged);
             // 
             // totalWorkingHours_Label
             // 
@@ -717,7 +720,7 @@
             this.totalWorkingHours_Label.Name = "totalWorkingHours_Label";
             this.totalWorkingHours_Label.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
             this.totalWorkingHours_Label.Size = new System.Drawing.Size(0, 15);
-            this.totalWorkingHours_Label.TabIndex = 252;
+            this.totalWorkingHours_Label.TabIndex = 5;
             // 
             // label18
             // 
@@ -943,7 +946,7 @@
             this.comboBox_Status.Location = new System.Drawing.Point(23, 100);
             this.comboBox_Status.Name = "comboBox_Status";
             this.comboBox_Status.Size = new System.Drawing.Size(140, 21);
-            this.comboBox_Status.TabIndex = 10;
+            this.comboBox_Status.TabIndex = 0;
             this.comboBox_Status.SelectedValueChanged += new System.EventHandler(this.ComboBox_Status_SelectedValueChanged);
             // 
             // timeEdit_Time_In_First_Main
@@ -1235,7 +1238,7 @@
             this.txtOvertimeHours.Properties.Appearance.Options.UseForeColor = true;
             this.txtOvertimeHours.Size = new System.Drawing.Size(65, 20);
             this.txtOvertimeHours.TabIndex = 4;
-            this.txtOvertimeHours.EditValueChanged += new System.EventHandler(this.txtOvertimeHours_EditValueChanged);
+            this.txtOvertimeHours.EditValueChanged += new System.EventHandler(this.TxtOvertimeHours_EditValueChanged);
             // 
             // txtDailyWager
             // 
@@ -1307,7 +1310,7 @@
             this.radioButtonManual.TabStop = true;
             this.radioButtonManual.Text = "Manual Attendance";
             this.radioButtonManual.UseVisualStyleBackColor = false;
-            this.radioButtonManual.CheckedChanged += new System.EventHandler(this.radioButtonManual_CheckedChanged);
+            this.radioButtonManual.CheckedChanged += new System.EventHandler(this.RadioButtonManual_CheckedChanged);
             // 
             // panelControlManual
             // 
@@ -1364,7 +1367,7 @@
             this.radioButtonMachine.TabStop = true;
             this.radioButtonMachine.Text = "Machine Attendance";
             this.radioButtonMachine.UseVisualStyleBackColor = true;
-            this.radioButtonMachine.CheckedChanged += new System.EventHandler(this.radioButtonMachine_CheckedChanged);
+            this.radioButtonMachine.CheckedChanged += new System.EventHandler(this.RadioButtonMachine_CheckedChanged);
             // 
             // labelDate_Current
             // 
@@ -1501,7 +1504,7 @@
             this.timeEdit_Time_Out_DW.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_Out_DW.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_Out_DW.TabIndex = 233;
-            this.timeEdit_Time_Out_DW.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_DW_EditValueChanged);
+            this.timeEdit_Time_Out_DW.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_DW_EditValueChanged);
             // 
             // timeEdit_Time_In_DW
             // 
@@ -1521,7 +1524,7 @@
             this.timeEdit_Time_In_DW.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_In_DW.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_In_DW.TabIndex = 232;
-            this.timeEdit_Time_In_DW.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_DW_EditValueChanged);
+            this.timeEdit_Time_In_DW.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_DW_EditValueChanged);
             // 
             // labelControl3
             // 
@@ -1553,6 +1556,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(710, 705);
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.labelDate_Current);
             this.Controls.Add(this.panelControlMachine);
             this.Controls.Add(this.panelControlManual);
@@ -1567,6 +1571,10 @@
             this.Load += new System.EventHandler(this.XtraForm_EmployeeAttendence_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmpType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUnit.Properties)).EndInit();
@@ -1574,10 +1582,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             this.grpBoxEmployee.ResumeLayout(false);
             this.grpBoxEmployee.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_Last.Properties)).EndInit();
@@ -1639,7 +1643,6 @@
         private DevExpress.XtraEditors.TextEdit txtDepartment;
         private DevExpress.XtraEditors.TextEdit txtFName;
         private DevExpress.XtraEditors.TextEdit txtEmpID;
-        private System.Windows.Forms.DateTimePicker dateAttendance;
         private DevExpress.XtraEditors.TextEdit textSysID;
         private DevExpress.XtraEditors.LabelControl label9;
         private DevExpress.XtraEditors.TextEdit textGNo;
@@ -1667,7 +1670,6 @@
         private DevExpress.XtraEditors.LabelControl label27;
         private DevExpress.XtraEditors.LabelControl label26;
         private System.Windows.Forms.ComboBox cbEmpID;
-        private DevExpress.XtraEditors.LabelControl label29;
         private System.Windows.Forms.RadioButton radioButtonManual;
         private DevExpress.XtraEditors.PanelControl panelControlManual;
         private DevExpress.XtraEditors.PanelControl panelControlMachine;
@@ -1737,6 +1739,8 @@
         private DevExpress.XtraEditors.TextEdit txtTeaBreakTime;
         private DevExpress.XtraEditors.LabelControl label21;
         private DevExpress.XtraEditors.LabelControl lblDayName;
+        private DevExpress.XtraEditors.LabelControl label29;
+        private System.Windows.Forms.DateTimePicker dateAttendance;
     }
 
 }

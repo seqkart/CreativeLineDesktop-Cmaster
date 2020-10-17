@@ -651,6 +651,7 @@
             this.gridColumn15.Caption = "REMARKS";
             this.gridColumn15.FieldName = "CHORemarks";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.OptionsEditForm.StartNewRow = true;
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 11;
             // 
@@ -705,7 +706,7 @@
             // 
             this.panelControl1.Controls.Add(this.HelpGrid);
             this.panelControl1.Controls.Add(this.txtSearchBox);
-            this.panelControl1.Location = new System.Drawing.Point(140, 104);
+            this.panelControl1.Location = new System.Drawing.Point(141, 98);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(643, 324);
             this.panelControl1.TabIndex = 727;

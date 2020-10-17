@@ -58,6 +58,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             txtBillingState.Text = String.Empty;
             txtBillingZIP.Text = String.Empty;
 
+
         }
 
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
@@ -509,6 +510,16 @@ namespace WindowsFormsApplication1.Transaction.challans
                 ProjectFunctions.TextBoxVisualize(this);
 
                 PrintLogWin.PrintLog(s1);
+
+
+                txtBillingAddress1.Enabled = false;
+                txtBillingAddress2.Enabled = false;
+                txtBillingAddress3.Enabled = false;
+                txtBillingCity.Enabled = false;
+                txtBillingState.Enabled = false;
+                txtTransporterName.Enabled = false;
+
+
 
                 if (s1 == "&Add")
                 {
