@@ -786,8 +786,6 @@ namespace WindowsFormsApplication1.Transaction
         }
 
 
-
-
         private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             try
