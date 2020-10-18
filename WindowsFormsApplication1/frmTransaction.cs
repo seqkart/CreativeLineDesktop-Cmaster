@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.Data.Helpers;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
@@ -1129,33 +1130,39 @@ namespace WindowsFormsApplication1
                                                                   (o1, e1) =>
                                                                   {
 
-#pragma warning disable CS0219 // The variable 'i' is assigned but its value is never used
                                                                       int i = 0;
-#pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
                                                                       foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
                                                                           if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                           {
-                                                                              DataTable dt = new DataTable();
-                                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
-                                                                                  dr["PSWSNO"].ToString() +
-                                                                                  "','" +
-                                                                                  dr["SIDBOXNO"].ToString() +
-                                                                                  "','" +
-                                                                                  GlobalVariables.FinancialYear +
-                                                                                  "','" +
-                                                                                  GlobalVariables.CUnitID +
-                                                                                  "'");
-                                                                              ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
-                                                                              Prints.Packingslip rpt = new Prints.Packingslip
-                                                                              { DataSource = ds.Tables[0] };
+                                                                              //DataTable dt = new DataTable();
+                                                                              //DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
+                                                                              //    dr["PSWSNO"].ToString() +
+                                                                              //    "','" +
+                                                                              //    dr["SIDBOXNO"].ToString() +
+                                                                              //    "','" +
+                                                                              //    GlobalVariables.FinancialYear +
+                                                                              //    "','" +
+                                                                              //    GlobalVariables.CUnitID +
+                                                                              //    "'");
+                                                                              //ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
+                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab();
+
+
+                                                                              rpt.Parameters["PSWSNO"].Visible = false;
+                                                                              rpt.Parameters["PSWSTOTBOXES"].Visible = false;
+                                                                              rpt.Parameters["FY"].Visible = false;
+                                                                              rpt.Parameters["UnitCode"].Visible = false;
+
+                                                                              rpt.Parameters["PSWSNO"].Value = dr["PSWSNO"].ToString();
+                                                                              rpt.Parameters["PSWSTOTBOXES"].Value = dr["SIDBOXNO"].ToString();
+                                                                              rpt.Parameters["FY"].Value = GlobalVariables.FinancialYear;
+                                                                              rpt.Parameters["UnitCode"].Value = GlobalVariables.CUnitID;
+                                                                              //{ DataSource = ds.Tables[0] };
                                                                               rpt.CreateDocument();
 
-                                                                              payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer()
-                                                                              {
-                                                                                  pkInstalledPrinters =
-                                                                                  @"\\bhupinder-pc\EPSON L210 Series"
-                                                                              };
+                                                                              payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                                                              
                                                                               frm.documentViewer1.DocumentSource = rpt;
                                                                               frm.ShowDialog(Parent);
                                                                           }

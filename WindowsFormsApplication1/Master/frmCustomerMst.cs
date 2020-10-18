@@ -245,5 +245,10 @@ namespace WindowsFormsApplication1
                 }
             }
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

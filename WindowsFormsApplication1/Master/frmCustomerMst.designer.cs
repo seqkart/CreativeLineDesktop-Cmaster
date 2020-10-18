@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerMst));
-            this.GroupBox1 = new System.Windows.Forms.GroupBox();
+            this.GroupBox1 = new DevExpress.XtraEditors.GroupControl();
             this.txtDuringEOSS = new DevExpress.XtraEditors.TextEdit();
             this.Label21 = new DevExpress.XtraEditors.LabelControl();
             this.Label20 = new DevExpress.XtraEditors.LabelControl();
@@ -72,6 +72,7 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).BeginInit();
             this.GroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDuringEOSS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDuringNormalSale.Properties)).BeginInit();
@@ -105,14 +106,13 @@
             this.GroupBox1.Controls.Add(this.txtDiscountType);
             this.GroupBox1.Location = new System.Drawing.Point(90, 391);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(517, 105);
+            this.GroupBox1.Size = new System.Drawing.Size(517, 95);
             this.GroupBox1.TabIndex = 34;
-            this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Customer Discount ";
             // 
             // txtDuringEOSS
             // 
-            this.txtDuringEOSS.Location = new System.Drawing.Point(138, 50);
+            this.txtDuringEOSS.Location = new System.Drawing.Point(138, 57);
             this.txtDuringEOSS.Name = "txtDuringEOSS";
             this.txtDuringEOSS.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDuringEOSS.Properties.MaxLength = 100;
@@ -121,31 +121,31 @@
             // 
             // Label21
             // 
-            this.Label21.Location = new System.Drawing.Point(232, 53);
+            this.Label21.Location = new System.Drawing.Point(232, 60);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(84, 13);
+            this.Label21.Size = new System.Drawing.Size(83, 13);
             this.Label21.TabIndex = 35;
             this.Label21.Text = "DISCOUNT TYPE:";
             // 
             // Label20
             // 
-            this.Label20.Location = new System.Drawing.Point(53, 53);
+            this.Label20.Location = new System.Drawing.Point(53, 60);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(75, 13);
+            this.Label20.Size = new System.Drawing.Size(72, 13);
             this.Label20.TabIndex = 35;
             this.Label20.Text = "DURING EOSS:";
             // 
             // Label19
             // 
-            this.Label19.Location = new System.Drawing.Point(7, 25);
+            this.Label19.Location = new System.Drawing.Point(7, 32);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(121, 13);
+            this.Label19.Size = new System.Drawing.Size(115, 13);
             this.Label19.TabIndex = 35;
             this.Label19.Text = "DURING NORMAL SALE:";
             // 
             // txtDuringNormalSale
             // 
-            this.txtDuringNormalSale.Location = new System.Drawing.Point(135, 22);
+            this.txtDuringNormalSale.Location = new System.Drawing.Point(135, 29);
             this.txtDuringNormalSale.Name = "txtDuringNormalSale";
             this.txtDuringNormalSale.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDuringNormalSale.Properties.MaxLength = 100;
@@ -154,7 +154,7 @@
             // 
             // txtDiscountType
             // 
-            this.txtDiscountType.Location = new System.Drawing.Point(328, 50);
+            this.txtDiscountType.Location = new System.Drawing.Point(328, 57);
             this.txtDiscountType.Name = "txtDiscountType";
             this.txtDiscountType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDiscountType.Properties.MaxLength = 100;
@@ -165,7 +165,7 @@
             // 
             this.Label18.Location = new System.Drawing.Point(339, 318);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(98, 13);
+            this.Label18.Size = new System.Drawing.Size(99, 13);
             this.Label18.TabIndex = 14;
             this.Label18.Text = "CARD EXPIRY DATE:";
             // 
@@ -183,7 +183,7 @@
             // 
             this.Label2.Location = new System.Drawing.Point(105, 57);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(76, 13);
+            this.Label2.Size = new System.Drawing.Size(73, 13);
             this.Label2.TabIndex = 10;
             this.Label2.Text = "CUSTOMER ID:";
             // 
@@ -191,7 +191,7 @@
             // 
             this.Label11.Location = new System.Drawing.Point(500, 82);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(52, 13);
+            this.Label11.Size = new System.Drawing.Size(48, 13);
             this.Label11.TabIndex = 3;
             this.Label11.Text = "SURNAME";
             // 
@@ -199,7 +199,7 @@
             // 
             this.Label10.Location = new System.Drawing.Point(374, 82);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(40, 13);
+            this.Label10.Size = new System.Drawing.Size(37, 13);
             this.Label10.TabIndex = 5;
             this.Label10.Text = "MIDDLE";
             // 
@@ -207,7 +207,7 @@
             // 
             this.Label9.Location = new System.Drawing.Point(243, 82);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(28, 13);
+            this.Label9.Size = new System.Drawing.Size(29, 13);
             this.Label9.TabIndex = 11;
             this.Label9.Text = "FIRST";
             // 
@@ -225,7 +225,7 @@
             // 
             this.label34.Location = new System.Drawing.Point(340, 294);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(97, 13);
+            this.label34.Size = new System.Drawing.Size(96, 13);
             this.label34.TabIndex = 25;
             this.label34.Text = "LOYALTY CARD NO:";
             // 
@@ -392,7 +392,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(400, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.Size = new System.Drawing.Size(38, 13);
             this.label1.TabIndex = 652;
             this.label1.Text = "STATE :";
             // 
@@ -569,6 +569,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmCustomerMst_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCustomerMst_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox1)).EndInit();
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDuringEOSS.Properties)).EndInit();
@@ -598,7 +599,7 @@
         }
 
         #endregion
-        internal System.Windows.Forms.GroupBox GroupBox1;
+        internal DevExpress.XtraEditors.GroupControl GroupBox1;
         internal DevExpress.XtraEditors.LabelControl Label21;
         internal DevExpress.XtraEditors.LabelControl Label20;
         internal DevExpress.XtraEditors.LabelControl Label19;

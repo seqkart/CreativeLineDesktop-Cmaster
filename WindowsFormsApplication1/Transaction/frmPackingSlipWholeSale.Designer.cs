@@ -417,7 +417,7 @@
             // txtPackingSlipNO
             // 
             this.txtPackingSlipNO.Enabled = false;
-            this.txtPackingSlipNO.Location = new System.Drawing.Point(121, 7);
+            this.txtPackingSlipNO.Location = new System.Drawing.Point(112, 7);
             this.txtPackingSlipNO.Name = "txtPackingSlipNO";
             this.txtPackingSlipNO.Size = new System.Drawing.Size(112, 20);
             this.txtPackingSlipNO.TabIndex = 15;
@@ -442,7 +442,7 @@
             // 
             this.Label8.Location = new System.Drawing.Point(239, 11);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(41, 13);
+            this.Label8.Size = new System.Drawing.Size(40, 13);
             this.Label8.TabIndex = 0;
             this.Label8.Text = "DATED :";
             // 
@@ -450,7 +450,7 @@
             // 
             this.Label7.Location = new System.Drawing.Point(15, 11);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(94, 13);
+            this.Label7.Size = new System.Drawing.Size(93, 13);
             this.Label7.TabIndex = 0;
             this.Label7.Text = "PACKING SLIP NO :";
             // 
@@ -528,7 +528,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(217, 136);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(44, 13);
+            this.labelControl10.Size = new System.Drawing.Size(43, 13);
             this.labelControl10.TabIndex = 725;
             this.labelControl10.Text = "PO NO. :";
             this.labelControl10.Click += new System.EventHandler(this.labelControl4_Click);
@@ -537,7 +537,7 @@
             // 
             this.labelControl9.Location = new System.Drawing.Point(15, 136);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(44, 13);
+            this.labelControl9.Size = new System.Drawing.Size(43, 13);
             this.labelControl9.TabIndex = 725;
             this.labelControl9.Text = "DA NO. :";
             this.labelControl9.Click += new System.EventHandler(this.labelControl4_Click);
@@ -546,34 +546,34 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(43, 116);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(49, 13);
+            this.labelControl8.Size = new System.Drawing.Size(48, 13);
             this.labelControl8.TabIndex = 725;
             this.labelControl8.Text = "GST NO. :";
             this.labelControl8.Click += new System.EventHandler(this.labelControl4_Click);
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(31, 95);
+            this.labelControl7.Location = new System.Drawing.Point(26, 95);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(62, 13);
+            this.labelControl7.Size = new System.Drawing.Size(65, 13);
             this.labelControl7.TabIndex = 725;
             this.labelControl7.Text = "CITY / SATE :";
             this.labelControl7.Click += new System.EventHandler(this.labelControl4_Click);
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(37, 32);
+            this.labelControl5.Location = new System.Drawing.Point(38, 32);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(54, 13);
+            this.labelControl5.Size = new System.Drawing.Size(53, 13);
             this.labelControl5.TabIndex = 725;
             this.labelControl5.Text = "ADDRESS :";
             this.labelControl5.Click += new System.EventHandler(this.labelControl4_Click);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(21, 11);
+            this.labelControl4.Location = new System.Drawing.Point(27, 11);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(65, 13);
+            this.labelControl4.Size = new System.Drawing.Size(64, 13);
             this.labelControl4.TabIndex = 725;
             this.labelControl4.Text = "Party NAME :";
             this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);

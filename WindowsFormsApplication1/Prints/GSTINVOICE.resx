@@ -217,6 +217,13 @@
               &lt;xs:element name="CATCARDNAME" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="CATCARDSLIPNO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="TRPRNAME" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="SIMDISPCODE" type="xs:long" minOccurs="0" /&gt;
+              &lt;xs:element name="DelAddress1" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DelAddress2" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DelAddress3" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DelGSTNo" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CityCode" type="xs:long" minOccurs="0" /&gt;
+              &lt;xs:element name="DelCity" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

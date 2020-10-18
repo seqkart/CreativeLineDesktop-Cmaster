@@ -375,7 +375,7 @@
             // 
             // labelControl37
             // 
-            this.labelControl37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl37.Appearance.Options.UseFont = true;
             this.labelControl37.Location = new System.Drawing.Point(836, 669);
@@ -634,7 +634,7 @@
             // 
             // labelControl38
             // 
-            this.labelControl38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl38.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl38.Appearance.Options.UseFont = true;
             this.labelControl38.Location = new System.Drawing.Point(860, 696);
@@ -778,7 +778,7 @@
             this.chExclusive.Location = new System.Drawing.Point(14, 13);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(68, 19);
+            this.chExclusive.Size = new System.Drawing.Size(68, 20);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -1190,7 +1190,7 @@
             this.groupControl6.Controls.Add(this.lblTotalTaxInclusive);
             this.groupControl6.Controls.Add(this.lblTotalTaxExclusive);
             this.groupControl6.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl6.Location = new System.Drawing.Point(620, 502);
+            this.groupControl6.Location = new System.Drawing.Point(633, 502);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(198, 159);
             this.groupControl6.TabIndex = 808;
@@ -1477,7 +1477,7 @@
             this.chInclusive.Location = new System.Drawing.Point(84, 13);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(78, 19);
+            this.chInclusive.Size = new System.Drawing.Size(78, 20);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -1500,7 +1500,7 @@
             this.groupControl5.Controls.Add(this.labelControl24);
             this.groupControl5.Controls.Add(this.labelControl23);
             this.groupControl5.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl5.Location = new System.Drawing.Point(390, 502);
+            this.groupControl5.Location = new System.Drawing.Point(403, 502);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(224, 186);
             this.groupControl5.TabIndex = 809;
@@ -1679,7 +1679,7 @@
             this.labelControl35.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl35.Appearance.Options.UseFont = true;
             this.labelControl35.Appearance.Options.UseForeColor = true;
-            this.labelControl35.Location = new System.Drawing.Point(1104, 177);
+            this.labelControl35.Location = new System.Drawing.Point(1104, 173);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(134, 20);
             this.labelControl35.TabIndex = 776;
@@ -1690,7 +1690,7 @@
             this.labelControl27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl27.Appearance.Options.UseFont = true;
-            this.labelControl27.Location = new System.Drawing.Point(620, 667);
+            this.labelControl27.Location = new System.Drawing.Point(642, 667);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(120, 20);
             this.labelControl27.TabIndex = 780;
@@ -1835,7 +1835,7 @@
             this.ArticleImageBox.Location = new System.Drawing.Point(1136, 199);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.ArticleImageBox.Size = new System.Drawing.Size(242, 291);
+            this.ArticleImageBox.Size = new System.Drawing.Size(227, 291);
             this.ArticleImageBox.TabIndex = 786;
             // 
             // labelControl20
@@ -2043,7 +2043,7 @@
             // 
             // lblPAyBack
             // 
-            this.lblPAyBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPAyBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPAyBack.EditValue = "0.00";
             this.lblPAyBack.Location = new System.Drawing.Point(920, 691);
             this.lblPAyBack.Name = "lblPAyBack";
@@ -2058,7 +2058,7 @@
             // 
             // lblCashTender
             // 
-            this.lblCashTender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblCashTender.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblCashTender.EditValue = "0.00";
             this.lblCashTender.Location = new System.Drawing.Point(920, 664);
             this.lblCashTender.Name = "lblCashTender";
@@ -2076,7 +2076,7 @@
             this.ActiveGlowColor = System.Drawing.Color.Lime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1444, 811);
+            this.ClientSize = new System.Drawing.Size(1384, 756);
             this.ControlBox = false;
             this.Controls.Add(this.lblPAyBack);
             this.Controls.Add(this.HelpGrid);

@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArticleMst));
             this.CHKARTNONMAINT = new System.Windows.Forms.CheckBox();
-            this.GroupBox16 = new System.Windows.Forms.GroupBox();
+            this.GroupBox16 = new DevExpress.XtraEditors.GroupControl();
             this.CHKSAMEMW = new System.Windows.Forms.CheckBox();
             this.CHKSIZSET = new System.Windows.Forms.CheckBox();
             this.DGVSIZSET = new System.Windows.Forms.DataGridView();
-            this.GroupBox7 = new System.Windows.Forms.GroupBox();
+            this.GroupBox7 = new DevExpress.XtraEditors.GroupControl();
             this.label18 = new DevExpress.XtraEditors.LabelControl();
             this.txtTaxCodeCDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtTaxCodeC = new DevExpress.XtraEditors.TextEdit();
@@ -52,11 +52,11 @@
             this.Label14 = new DevExpress.XtraEditors.LabelControl();
             this.Label12 = new DevExpress.XtraEditors.LabelControl();
             this.CHKARTFXPRICE = new System.Windows.Forms.CheckBox();
-            this.GroupBox6 = new System.Windows.Forms.GroupBox();
+            this.GroupBox6 = new DevExpress.XtraEditors.GroupControl();
             this.RBARTFIXD = new System.Windows.Forms.RadioButton();
             this.RBARTUNIQUE = new System.Windows.Forms.RadioButton();
             this.RBARTLOT = new System.Windows.Forms.RadioButton();
-            this.GroupBox4 = new System.Windows.Forms.GroupBox();
+            this.GroupBox4 = new DevExpress.XtraEditors.GroupControl();
             this.label16 = new DevExpress.XtraEditors.LabelControl();
             this.txtPreFIx = new DevExpress.XtraEditors.TextEdit();
             this.txtArtNo = new DevExpress.XtraEditors.TextEdit();
@@ -85,10 +85,10 @@
             this.Label20 = new DevExpress.XtraEditors.LabelControl();
             this.Label19 = new DevExpress.XtraEditors.LabelControl();
             this.Label3 = new DevExpress.XtraEditors.LabelControl();
-            this.GroupBox3 = new System.Windows.Forms.GroupBox();
+            this.GroupBox3 = new DevExpress.XtraEditors.GroupControl();
             this.RBARTSET = new System.Windows.Forms.RadioButton();
             this.RBARTINDVI = new System.Windows.Forms.RadioButton();
-            this.GroupBox2 = new System.Windows.Forms.GroupBox();
+            this.GroupBox2 = new DevExpress.XtraEditors.GroupControl();
             this.RBAUTOART = new System.Windows.Forms.RadioButton();
             this.RBMANUART = new System.Windows.Forms.RadioButton();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
@@ -100,8 +100,10 @@
             this.txtSysID = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox16)).BeginInit();
             this.GroupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSIZSET)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox7)).BeginInit();
             this.GroupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxCodeCDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxCodeC.Properties)).BeginInit();
@@ -112,7 +114,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRSP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWSP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurPrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox6)).BeginInit();
             this.GroupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox4)).BeginInit();
             this.GroupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreFIx.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArtNo.Properties)).BeginInit();
@@ -130,7 +134,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGrpCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGrpDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGrpCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox3)).BeginInit();
             this.GroupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).BeginInit();
             this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
@@ -152,16 +158,16 @@
             // 
             // GroupBox16
             // 
-            this.GroupBox16.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox16.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox16.Appearance.Options.UseBackColor = true;
             this.GroupBox16.Controls.Add(this.CHKSAMEMW);
             this.GroupBox16.Controls.Add(this.CHKSIZSET);
             this.GroupBox16.Controls.Add(this.DGVSIZSET);
-            this.GroupBox16.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.GroupBox16.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.GroupBox16.Location = new System.Drawing.Point(432, 303);
             this.GroupBox16.Name = "GroupBox16";
             this.GroupBox16.Size = new System.Drawing.Size(411, 205);
             this.GroupBox16.TabIndex = 683;
-            this.GroupBox16.TabStop = false;
             this.GroupBox16.Text = "SIZE SET";
             // 
             // CHKSAMEMW
@@ -200,6 +206,7 @@
             // 
             // GroupBox7
             // 
+            this.GroupBox7.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("GroupBox7.CaptionImageOptions.Image")));
             this.GroupBox7.Controls.Add(this.label18);
             this.GroupBox7.Controls.Add(this.txtTaxCodeCDesc);
             this.GroupBox7.Controls.Add(this.txtTaxCodeC);
@@ -216,12 +223,11 @@
             this.GroupBox7.Controls.Add(this.Label15);
             this.GroupBox7.Controls.Add(this.Label14);
             this.GroupBox7.Controls.Add(this.Label12);
-            this.GroupBox7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.GroupBox7.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.GroupBox7.Location = new System.Drawing.Point(432, 138);
             this.GroupBox7.Name = "GroupBox7";
             this.GroupBox7.Size = new System.Drawing.Size(410, 159);
             this.GroupBox7.TabIndex = 682;
-            this.GroupBox7.TabStop = false;
             this.GroupBox7.Text = "PRICE DETIALS";
             // 
             // label18
@@ -448,7 +454,6 @@
             this.Label12.Size = new System.Drawing.Size(43, 13);
             this.Label12.TabIndex = 69;
             this.Label12.Text = "MARGIN";
-//            this.Label12.Click += new System.EventHandler(this.Label12_Click);
             // 
             // CHKARTFXPRICE
             // 
@@ -463,16 +468,16 @@
             // 
             // GroupBox6
             // 
-            this.GroupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox6.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox6.Appearance.Options.UseBackColor = true;
             this.GroupBox6.Controls.Add(this.RBARTFIXD);
             this.GroupBox6.Controls.Add(this.RBARTUNIQUE);
             this.GroupBox6.Controls.Add(this.RBARTLOT);
-            this.GroupBox6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.GroupBox6.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.GroupBox6.Location = new System.Drawing.Point(33, 430);
             this.GroupBox6.Name = "GroupBox6";
             this.GroupBox6.Size = new System.Drawing.Size(393, 40);
             this.GroupBox6.TabIndex = 678;
-            this.GroupBox6.TabStop = false;
             this.GroupBox6.Text = "CODING SCHEME";
             // 
             // RBARTFIXD
@@ -480,7 +485,7 @@
             this.RBARTFIXD.AutoSize = true;
             this.RBARTFIXD.BackColor = System.Drawing.Color.Transparent;
             this.RBARTFIXD.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBARTFIXD.Location = new System.Drawing.Point(162, 16);
+            this.RBARTFIXD.Location = new System.Drawing.Point(162, 18);
             this.RBARTFIXD.Name = "RBARTFIXD";
             this.RBARTFIXD.Size = new System.Drawing.Size(55, 18);
             this.RBARTFIXD.TabIndex = 19;
@@ -493,7 +498,7 @@
             this.RBARTUNIQUE.AutoSize = true;
             this.RBARTUNIQUE.BackColor = System.Drawing.Color.Transparent;
             this.RBARTUNIQUE.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBARTUNIQUE.Location = new System.Drawing.Point(15, 16);
+            this.RBARTUNIQUE.Location = new System.Drawing.Point(15, 18);
             this.RBARTUNIQUE.Name = "RBARTUNIQUE";
             this.RBARTUNIQUE.Size = new System.Drawing.Size(66, 18);
             this.RBARTUNIQUE.TabIndex = 0;
@@ -506,7 +511,7 @@
             this.RBARTLOT.AutoSize = true;
             this.RBARTLOT.BackColor = System.Drawing.Color.Transparent;
             this.RBARTLOT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBARTLOT.Location = new System.Drawing.Point(298, 16);
+            this.RBARTLOT.Location = new System.Drawing.Point(298, 18);
             this.RBARTLOT.Name = "RBARTLOT";
             this.RBARTLOT.Size = new System.Drawing.Size(44, 18);
             this.RBARTLOT.TabIndex = 20;
@@ -516,6 +521,7 @@
             // 
             // GroupBox4
             // 
+            this.GroupBox4.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("GroupBox4.CaptionImageOptions.Image")));
             this.GroupBox4.Controls.Add(this.label16);
             this.GroupBox4.Controls.Add(this.txtPreFIx);
             this.GroupBox4.Controls.Add(this.txtArtNo);
@@ -544,12 +550,11 @@
             this.GroupBox4.Controls.Add(this.Label20);
             this.GroupBox4.Controls.Add(this.Label19);
             this.GroupBox4.Controls.Add(this.Label3);
-            this.GroupBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.GroupBox4.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.GroupBox4.Location = new System.Drawing.Point(33, 137);
             this.GroupBox4.Name = "GroupBox4";
             this.GroupBox4.Size = new System.Drawing.Size(392, 287);
             this.GroupBox4.TabIndex = 677;
-            this.GroupBox4.TabStop = false;
             this.GroupBox4.Text = "DETAILS";
             // 
             // label16
@@ -617,7 +622,6 @@
             this.txtUMDesc.Size = new System.Drawing.Size(212, 20);
             this.txtUMDesc.TabIndex = 18;
             this.txtUMDesc.TabStop = false;
-      //      this.txtUMDesc.EditValueChanged += new System.EventHandler(this.txtUMDesc_EditValueChanged);
             // 
             // txtFrom
             // 
@@ -641,8 +645,6 @@
             this.txtUMCode.Size = new System.Drawing.Size(69, 20);
             this.txtUMCode.TabIndex = 3;
             this.txtUMCode.EditValueChanged += new System.EventHandler(this.TxtUMCode_EditValueChanged);
-     //       this.txtUMCode.TextChanged += new System.EventHandler(this.txtUMCode_TextChanged);
-   //         this.txtUMCode.Enter += new System.EventHandler(this.txtUMCode_Enter);
             this.txtUMCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUMCode_KeyDown);
             // 
             // label10
@@ -709,7 +711,6 @@
             this.txtArticleName.Properties.MaxLength = 4;
             this.txtArticleName.Size = new System.Drawing.Size(284, 20);
             this.txtArticleName.TabIndex = 13;
-    //        this.txtArticleName.Enter += new System.EventHandler(this.TxtArticleName_Enter);
             // 
             // txtAlias
             // 
@@ -720,7 +721,6 @@
             this.txtAlias.Properties.MaxLength = 4;
             this.txtAlias.Size = new System.Drawing.Size(284, 20);
             this.txtAlias.TabIndex = 12;
-     //       this.txtAlias.EditValueChanged += new System.EventHandler(this.TxtAlias_EditValueChanged);
             // 
             // txtHSNCode
             // 
@@ -874,15 +874,15 @@
             // 
             // GroupBox3
             // 
-            this.GroupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox3.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox3.Appearance.Options.UseBackColor = true;
             this.GroupBox3.Controls.Add(this.RBARTSET);
             this.GroupBox3.Controls.Add(this.RBARTINDVI);
-            this.GroupBox3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.GroupBox3.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.GroupBox3.Location = new System.Drawing.Point(32, 97);
             this.GroupBox3.Name = "GroupBox3";
             this.GroupBox3.Size = new System.Drawing.Size(391, 40);
             this.GroupBox3.TabIndex = 676;
-            this.GroupBox3.TabStop = false;
             this.GroupBox3.Text = "IDENTIFICATION";
             // 
             // RBARTSET
@@ -890,7 +890,7 @@
             this.RBARTSET.AutoSize = true;
             this.RBARTSET.BackColor = System.Drawing.Color.Transparent;
             this.RBARTSET.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBARTSET.Location = new System.Drawing.Point(137, 13);
+            this.RBARTSET.Location = new System.Drawing.Point(137, 16);
             this.RBARTSET.Name = "RBARTSET";
             this.RBARTSET.Size = new System.Drawing.Size(43, 18);
             this.RBARTSET.TabIndex = 3;
@@ -902,7 +902,7 @@
             this.RBARTINDVI.AutoSize = true;
             this.RBARTINDVI.BackColor = System.Drawing.Color.Transparent;
             this.RBARTINDVI.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBARTINDVI.Location = new System.Drawing.Point(6, 13);
+            this.RBARTINDVI.Location = new System.Drawing.Point(6, 16);
             this.RBARTINDVI.Name = "RBARTINDVI";
             this.RBARTINDVI.Size = new System.Drawing.Size(85, 18);
             this.RBARTINDVI.TabIndex = 0;
@@ -911,15 +911,15 @@
             // 
             // GroupBox2
             // 
-            this.GroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.GroupBox2.Appearance.Options.UseBackColor = true;
             this.GroupBox2.Controls.Add(this.RBAUTOART);
             this.GroupBox2.Controls.Add(this.RBMANUART);
-            this.GroupBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.GroupBox2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.GroupBox2.Location = new System.Drawing.Point(33, 57);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(390, 40);
             this.GroupBox2.TabIndex = 674;
-            this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "GENERATION MODE";
             // 
             // RBAUTOART
@@ -927,7 +927,7 @@
             this.RBAUTOART.AutoSize = true;
             this.RBAUTOART.BackColor = System.Drawing.Color.Transparent;
             this.RBAUTOART.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBAUTOART.Location = new System.Drawing.Point(155, 14);
+            this.RBAUTOART.Location = new System.Drawing.Point(155, 18);
             this.RBAUTOART.Name = "RBAUTOART";
             this.RBAUTOART.Size = new System.Drawing.Size(77, 18);
             this.RBAUTOART.TabIndex = 1;
@@ -941,7 +941,7 @@
             this.RBMANUART.AutoSize = true;
             this.RBMANUART.BackColor = System.Drawing.Color.Transparent;
             this.RBMANUART.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBMANUART.Location = new System.Drawing.Point(5, 14);
+            this.RBMANUART.Location = new System.Drawing.Point(5, 18);
             this.RBMANUART.Name = "RBMANUART";
             this.RBMANUART.Size = new System.Drawing.Size(93, 18);
             this.RBMANUART.TabIndex = 0;
@@ -1081,9 +1081,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmArticleMst_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmArticleMst_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox16)).EndInit();
             this.GroupBox16.ResumeLayout(false);
             this.GroupBox16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVSIZSET)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox7)).EndInit();
             this.GroupBox7.ResumeLayout(false);
             this.GroupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxCodeCDesc.Properties)).EndInit();
@@ -1095,8 +1097,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRSP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWSP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPurPrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox6)).EndInit();
             this.GroupBox6.ResumeLayout(false);
             this.GroupBox6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox4)).EndInit();
             this.GroupBox4.ResumeLayout(false);
             this.GroupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPreFIx.Properties)).EndInit();
@@ -1115,8 +1119,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtGrpCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGrpDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSGrpCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox3)).EndInit();
             this.GroupBox3.ResumeLayout(false);
             this.GroupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GroupBox2)).EndInit();
             this.GroupBox2.ResumeLayout(false);
             this.GroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
@@ -1133,32 +1139,32 @@
         #endregion
 
         internal System.Windows.Forms.CheckBox CHKARTNONMAINT;
-        internal System.Windows.Forms.GroupBox GroupBox16;
+        internal DevExpress.XtraEditors.GroupControl GroupBox16;
         internal System.Windows.Forms.CheckBox CHKSAMEMW;
         internal System.Windows.Forms.CheckBox CHKSIZSET;
         internal System.Windows.Forms.DataGridView DGVSIZSET;
-        internal System.Windows.Forms.GroupBox GroupBox7;
+        internal DevExpress.XtraEditors.GroupControl GroupBox7;
         internal DevExpress.XtraEditors.LabelControl Label11;
         internal System.Windows.Forms.CheckBox CHKARTFXPRICE;
         internal DevExpress.XtraEditors.LabelControl Label2;
         internal DevExpress.XtraEditors.LabelControl Label15;
         internal DevExpress.XtraEditors.LabelControl Label14;
         internal DevExpress.XtraEditors.LabelControl Label12;
-        internal System.Windows.Forms.GroupBox GroupBox6;
+        internal DevExpress.XtraEditors.GroupControl GroupBox6;
         internal System.Windows.Forms.RadioButton RBARTFIXD;
         internal System.Windows.Forms.RadioButton RBARTUNIQUE;
         internal System.Windows.Forms.RadioButton RBARTLOT;
-        internal System.Windows.Forms.GroupBox GroupBox4;
+        internal DevExpress.XtraEditors.GroupControl GroupBox4;
         internal DevExpress.XtraEditors.LabelControl Label7;
         internal DevExpress.XtraEditors.LabelControl Label22;
         internal DevExpress.XtraEditors.LabelControl Label21;
         internal DevExpress.XtraEditors.LabelControl Label20;
         internal DevExpress.XtraEditors.LabelControl Label19;
         internal DevExpress.XtraEditors.LabelControl Label3;
-        internal System.Windows.Forms.GroupBox GroupBox3;
+        internal DevExpress.XtraEditors.GroupControl GroupBox3;
         internal System.Windows.Forms.RadioButton RBARTSET;
         internal System.Windows.Forms.RadioButton RBARTINDVI;
-        internal System.Windows.Forms.GroupBox GroupBox2;
+        internal DevExpress.XtraEditors.GroupControl GroupBox2;
         internal System.Windows.Forms.RadioButton RBAUTOART;
         internal System.Windows.Forms.RadioButton RBMANUART;
         private DevExpress.XtraEditors.TextEdit txtHSNCode;
