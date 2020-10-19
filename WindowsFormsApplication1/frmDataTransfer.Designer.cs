@@ -601,7 +601,7 @@
             // 
             this.lblTotalRecordsToTransfer.Location = new System.Drawing.Point(831, 360);
             this.lblTotalRecordsToTransfer.Name = "lblTotalRecordsToTransfer";
-            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(70, 13);
+            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(69, 13);
             this.lblTotalRecordsToTransfer.TabIndex = 210;
             this.lblTotalRecordsToTransfer.Text = "Total Records";
             // 
