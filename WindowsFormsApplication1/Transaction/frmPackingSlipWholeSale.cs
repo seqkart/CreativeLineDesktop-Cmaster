@@ -378,13 +378,11 @@ namespace WindowsFormsApplication1.Transaction
                                 " PSWSTOTBOXES,PSWSTOTPCS,PSWSMRPVAL,PSWSWSPVAL,PSWSREMARKS,PSWSDANO,UnitCode)" +
                                 " values(@PSWSSYSDATE,@PSWSFNYR,@PSWSID,@PSWSNO,@PSWSDATE,@PSWSPID,@PSWSPONO," +
                                 " @PSWSTOTBOXES,@PSWSTOTPCS,@PSWSMRPVAL,@PSWSWSPVAL,@PSWSREMARKS,@PSWSDANO,@UnitCode)";
-                            sqlcom.Parameters.Add("@PSWSSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now
-                                .ToString("yyyy-MM-dd HH:mm:ss");
+                            sqlcom.Parameters.Add("@PSWSSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@PSWSFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
                             sqlcom.Parameters.Add("@PSWSID", SqlDbType.NVarChar).Value = PSWSID;
                             sqlcom.Parameters.Add("@PSWSNO", SqlDbType.NVarChar).Value = txtPackingSlipNO.Text;
-                            sqlcom.Parameters.Add("@PSWSDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtPackingSLipDate.Text)
-                                .ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@PSWSDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtPackingSLipDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@PSWSPID", SqlDbType.NVarChar).Value = txtAccCode.Text;
                             sqlcom.Parameters.Add("@PSWSPONO", SqlDbType.NVarChar).Value = txtPONo.Text;
                             sqlcom.Parameters.Add("@PSWSTOTBOXES", SqlDbType.NVarChar).Value = Convert.ToDecimal(lblBox.Text);
@@ -427,8 +425,7 @@ namespace WindowsFormsApplication1.Transaction
                             if (FixBarPartyTag == "Y")
                             {
                                 ProjectFunctions.GetDataSet("Delete from PSWSLDET Where SIDPSNO='" +
-                                    txtPackingSlipNO.Text +
-                                    "' And SIDBOXNO='" +
+                                    txtPackingSlipNO.Text +"' And SIDBOXNO='" +
                                     lblBox.Text +
                                     "' And UnitCode='" +
                                     GlobalVariables.CUnitID +
