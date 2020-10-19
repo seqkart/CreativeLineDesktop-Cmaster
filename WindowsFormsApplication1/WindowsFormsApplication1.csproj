@@ -869,6 +869,12 @@
     <Compile Include="Prints\EmployeeSalaryDetails.Designer.cs">
       <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prints\PackingSlipCrossTab.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\PackingSlipCrossTab.Designer.cs">
+      <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\XtraReport_EmployeesSalaryList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1206,12 +1212,6 @@
     </Compile>
     <Compile Include="Prints\Mufflerprint1.Designer.cs">
       <DependentUpon>Mufflerprint1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Prints\Packingslip.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Prints\Packingslip.Designer.cs">
-      <DependentUpon>Packingslip.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\PartyLedger.cs">
       <AutoGen>True</AutoGen>
@@ -1687,6 +1687,9 @@
     <EmbeddedResource Include="Prints\EmployeeSalaryDetails.resx">
       <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prints\PackingSlipCrossTab.resx">
+      <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeesSalaryList.resx">
       <DependentUpon>XtraReport_EmployeesSalaryList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1852,9 +1855,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\Mufflerprint1.resx">
       <DependentUpon>Mufflerprint1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prints\Packingslip.resx">
-      <DependentUpon>Packingslip.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\PartyLedger.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

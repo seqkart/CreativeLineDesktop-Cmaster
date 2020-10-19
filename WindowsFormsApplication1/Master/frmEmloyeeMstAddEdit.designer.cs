@@ -166,7 +166,7 @@
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.txtUnitDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtUnitCode = new DevExpress.XtraEditors.TextEdit();
@@ -175,7 +175,7 @@
             this.chkDailyWage = new System.Windows.Forms.CheckBox();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.txtDailyWageHours = new DevExpress.XtraEditors.TextEdit();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new DevExpress.XtraEditors.GroupControl();
             this.txtDailyWageMinutes = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.RelationShipGrid123)).BeginInit();
             this.RelationShipGrid123.SuspendLayout();
@@ -2220,7 +2220,7 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelMain;
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanelCloseButton;
         private DevExpress.XtraEditors.LabelControl labelControl;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.GroupControl groupBox1;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOpen;
@@ -2234,7 +2234,7 @@
         private System.Windows.Forms.CheckBox chkDailyWage;
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private DevExpress.XtraEditors.TextEdit txtDailyWageHours;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private DevExpress.XtraEditors.GroupControl groupBox2;
         private DevExpress.XtraEditors.TextEdit txtDailyWageMinutes;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
         private System.Windows.Forms.CheckBox chkTeaBreak;

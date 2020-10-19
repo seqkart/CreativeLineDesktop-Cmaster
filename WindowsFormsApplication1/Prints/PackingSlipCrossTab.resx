@@ -117,73 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.DataSourceSchema" xml:space="preserve">
-    <value>&lt;?xml version="1.0"?&gt;
-&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
-  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
-    &lt;xs:complexType&gt;
-      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
-        &lt;xs:element name="Table"&gt;
-          &lt;xs:complexType&gt;
-            &lt;xs:sequence&gt;
-              &lt;xs:element name="SIDPSDATE" type="xs:dateTime" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPSFNYR" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPSNO" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXNO" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDARTNO" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDARTID" type="xs:long" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDARTDESC" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDCOLN" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDCOLID" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSIZN" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSIZID" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSCANQTY" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDARTUOM" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDARTMRP" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDARTWSP" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXMRPVAL" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXWSPVAL" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSCHMAPP" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSCHMID" type="xs:long" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDITMDISCPRCN" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDITMDISCAMT" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDITMNETAMT" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDWRONGMRP" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPSCAN" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDCAN" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDIDISTMP" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDINVCD" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDINVAPPRVD" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPONO" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDLOCODE" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSGSTPRCN" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDSGSTAMT" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDCGSTPRCN" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDCGSTAMT" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDIGSTPRCN" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDIGSTAMT" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDTAXEXCL" type="xs:boolean" minOccurs="0" /&gt;
-              &lt;xs:element name="UnitCode" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="ARTNO" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="ARTDESC" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SZNAME" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="COLNAME" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDPartyC" type="xs:long" minOccurs="0" /&gt;
-              &lt;xs:element name="AccName" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="AccAddress1" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="AccAddress2" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="AccAddress3" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="AccTeleFax" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="AccEmail" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="AccContactPerson" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="CTNAME" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="STNAME" type="xs:string" minOccurs="0" /&gt;
-            &lt;/xs:sequence&gt;
-          &lt;/xs:complexType&gt;
-        &lt;/xs:element&gt;
-      &lt;/xs:choice&gt;
-    &lt;/xs:complexType&gt;
-  &lt;/xs:element&gt;
-&lt;/xs:schema&gt;</value>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InNwX0xvYWRQYWNraW5nU0xpcFByaW50Ij48RmllbGQgTmFtZT0iU0lEUFNEQVRFIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iU0lEUFNGTllSIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNJRFBTTk8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0lEQk9YTk8iIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTSURBUlROTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTSURBUlRJRCIgVHlwZT0iSW50NjQiIC8+PEZpZWxkIE5hbWU9IlNJREFSVERFU0MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0lEQ09MTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTSURDT0xJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlNJRFNJWk4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0lEU0laSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTSURTQ0FOUVRZIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSURBUlRVT00iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU0lEQVJUTVJQIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSURBUlRXU1AiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNJREJPWE1SUFZBTCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0lEQk9YV1NQVkFMIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSURTQ0hNQVBQIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJTSURTQ0hNSUQiIFR5cGU9IkludDY0IiAvPjxGaWVsZCBOYW1lPSJTSURJVE1ESVNDUFJDTiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0lESVRNRElTQ0FNVCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0lESVRNTkVUQU1UIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSURXUk9OR01SUCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iU0lEUFNDQU4iIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlNJRENBTiIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iU0lESURJU1RNUCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iU0lESU5WQ0QiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlNJRElOVkFQUFJWRCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iU0lEUE9OTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTSURMT0NPREUiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTSURTR1NUUFJDTiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0lEU0dTVEFNVCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU0lEQ0dTVFBSQ04iIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNJRENHU1RBTVQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNJRElHU1RQUkNOIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSURJR1NUQU1UIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSURUQVhFWENMIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJVbml0Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBUlROTyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBUlRERVNDIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNaTkFNRSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDT0xOQU1FIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNaSU5ERVgiIFR5cGU9IkludDMyIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
   </data>
 </root>

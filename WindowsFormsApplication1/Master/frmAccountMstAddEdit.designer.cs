@@ -290,7 +290,7 @@
             this.AInfoTab.Controls.Add(this.panelControl3);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(10);
-            this.AInfoTab.Size = new System.Drawing.Size(700, 400);
+            this.AInfoTab.Size = new System.Drawing.Size(700, 398);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
@@ -320,7 +320,7 @@
             this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl3.Location = new System.Drawing.Point(10, 10);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(680, 380);
+            this.panelControl3.Size = new System.Drawing.Size(680, 378);
             this.panelControl3.TabIndex = 0;
             // 
             // txtAgentName
@@ -548,7 +548,7 @@
             this.BInfoTab.Controls.Add(this.panelControl2);
             this.BInfoTab.Name = "BInfoTab";
             this.BInfoTab.Padding = new System.Windows.Forms.Padding(10);
-            this.BInfoTab.Size = new System.Drawing.Size(700, 400);
+            this.BInfoTab.Size = new System.Drawing.Size(700, 398);
             this.BInfoTab.Text = "&Billing Info";
             // 
             // panelControl2
@@ -599,7 +599,7 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(10, 10);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(680, 380);
+            this.panelControl2.Size = new System.Drawing.Size(680, 378);
             this.panelControl2.TabIndex = 0;
             // 
             // txtCountry
@@ -1032,7 +1032,7 @@
             this.xtraTabPage1.Controls.Add(this.txtDelCityName);
             this.xtraTabPage1.Controls.Add(this.txtDelCitycode);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(700, 400);
+            this.xtraTabPage1.Size = new System.Drawing.Size(700, 398);
             this.xtraTabPage1.Text = "Addresses";
             // 
             // BtnUndo
@@ -1226,7 +1226,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(55, 33);
+            this.HelpGrid.Location = new System.Drawing.Point(148, 33);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(538, 391);

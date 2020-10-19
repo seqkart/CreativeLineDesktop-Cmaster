@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new DevExpress.XtraEditors.GroupControl();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label16 = new DevExpress.XtraEditors.LabelControl();
             this.txtOvertimeHours = new System.Windows.Forms.TextBox();
@@ -328,7 +328,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private DevExpress.XtraEditors.GroupControl groupBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private DevExpress.XtraEditors.LabelControl label16;
         private System.Windows.Forms.TextBox txtOvertimeHours;

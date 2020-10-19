@@ -169,8 +169,8 @@ namespace WindowsFormsApplication1
 
         private void MakeConnectionStrings()
         {
-            SourceConnectionString = "Data Source = " + txtSourceServer.Text + "; Initial Catalog = " + txtSourceDataBase.Text + "; User ID = " + txtSourceUserName.Text + "; pwd = " + txtSourcePassword.Text;
-            DestinationConnectionString = "Data Source = " + txtDestinationServer.Text + "; Initial Catalog = " + txtDestinationDataBase.Text + "; User ID = " + txtDestinationUserName.Text + "; pwd = " + txtDestinationPassword.Text;
+            SourceConnectionString = "Data Source = " + txtSourceServer.Text + "; Initial Catalog = " + txtSourceDataBase.Text + "; User ID = " + txtSourceUserName.Text + "; pwd = " + "Seq@2021";
+            DestinationConnectionString = "Data Source = " + txtDestinationServer.Text + "; Initial Catalog = " + txtDestinationDataBase.Text + "; User ID = " + txtDestinationUserName.Text + "; pwd = " + "Seq@2021";
             txtSourceConnection.Text = SourceConnectionString;
             txtDestinationConnection.Text = DestinationConnectionString;
         }

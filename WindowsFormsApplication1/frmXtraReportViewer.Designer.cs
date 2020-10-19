@@ -478,6 +478,7 @@
             superToolTip7.Items.Add(toolTipItem7);
             superToolTip7.MaxWidth = 210;
             this.printPreviewBarItem7.SuperTip = superToolTip7;
+            this.printPreviewBarItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.printPreviewBarItem7_ItemClick);
             // 
             // printPreviewBarItem8
             // 

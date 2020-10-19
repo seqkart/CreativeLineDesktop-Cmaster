@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
 
                     this.Hide();
-                    BtnBackup_Click(null, null);
+                  //  BtnBackup_Click(null, null);
                     ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
                     frm.ShowDialog(this.Parent);
                     frm.BringToFront();

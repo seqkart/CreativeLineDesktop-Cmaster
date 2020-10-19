@@ -651,6 +651,8 @@
             // ChkFixedBarCode
             // 
             this.ChkFixedBarCode.AutoSize = true;
+            this.ChkFixedBarCode.Checked = true;
+            this.ChkFixedBarCode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ChkFixedBarCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.ChkFixedBarCode.Location = new System.Drawing.Point(316, 125);
             this.ChkFixedBarCode.Name = "ChkFixedBarCode";

@@ -172,7 +172,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(110, 29);
+            this.HelpGrid.Location = new System.Drawing.Point(81, 46);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(590, 363);
@@ -337,7 +337,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(40, 69);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 13);
+            this.labelControl1.Size = new System.Drawing.Size(34, 13);
             this.labelControl1.TabIndex = 394;
             this.labelControl1.Text = "Dealer ";
             // 
@@ -396,7 +396,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(240, 140);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(13, 13);
+            this.labelControl2.Size = new System.Drawing.Size(12, 13);
             this.labelControl2.TabIndex = 398;
             this.labelControl2.Text = "To";
             this.labelControl2.Visible = false;
@@ -405,7 +405,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(41, 140);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(26, 13);
+            this.labelControl3.Size = new System.Drawing.Size(24, 13);
             this.labelControl3.TabIndex = 397;
             this.labelControl3.Text = "From";
             this.labelControl3.Visible = false;
@@ -563,7 +563,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(40, 95);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 13);
+            this.labelControl4.Size = new System.Drawing.Size(64, 13);
             this.labelControl4.TabIndex = 402;
             this.labelControl4.Text = "Adv Voucher ";
             // 
@@ -587,7 +587,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(40, 117);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(42, 13);
+            this.labelControl5.Size = new System.Drawing.Size(41, 13);
             this.labelControl5.TabIndex = 406;
             this.labelControl5.Text = "Adv Amt";
             // 

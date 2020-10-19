@@ -87,7 +87,7 @@
             this.ChoiceSelect.Location = new System.Drawing.Point(709, 69);
             this.ChoiceSelect.Name = "ChoiceSelect";
             this.ChoiceSelect.Properties.Caption = "Select &All";
-            this.ChoiceSelect.Size = new System.Drawing.Size(75, 18);
+            this.ChoiceSelect.Size = new System.Drawing.Size(75, 20);
             this.ChoiceSelect.TabIndex = 349;
             this.ChoiceSelect.Visible = false;
             this.ChoiceSelect.CheckedChanged += new System.EventHandler(this.ChoiceSelect_CheckedChanged);
@@ -113,7 +113,7 @@
             this.label13.Appearance.Options.UseBackColor = true;
             this.label13.Location = new System.Drawing.Point(4, 42);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 13);
+            this.label13.Size = new System.Drawing.Size(88, 13);
             this.label13.TabIndex = 347;
             this.label13.Text = "Select Month/Year";
             // 

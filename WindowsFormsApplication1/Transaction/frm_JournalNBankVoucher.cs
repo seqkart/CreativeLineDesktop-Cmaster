@@ -25,8 +25,6 @@ namespace WindowsFormsApplication1
         public string VoucherType { get; set; }
         public string BnkChgsCode { get; set; }
         public bool isupdate { get; set; }
-#pragma warning disable CS0169 // The field 'frm_JournalNBankVoucher.AccCode' is never used
-        private string AccCode;
 #pragma warning restore CS0169 // The field 'frm_JournalNBankVoucher.AccCode' is never used
 #pragma warning disable CS0414 // The field 'frm_JournalNBankVoucher.AuthenticateFlag' is assigned but its value is never used
         private bool AuthenticateFlag = false;
@@ -66,11 +64,6 @@ namespace WindowsFormsApplication1
             dt.Columns.Add("VutCostHeadID", typeof(Int64));
             dt.Columns.Add("vutChqClearDt", typeof(DateTime));
 
-        }
-
-        private void BtnCalc_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("Calc.exe");
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -2070,28 +2063,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void BtnLoadFrmXls_Click(object sender, EventArgs e)
-        {
-            //var Dt = ProjectFunctions.ImportExcelXLS(path, true).Tables[0];
-            //if (Dt.Rows.Count > 0)
-            //{
-            //    EntryInfo_GridCtrl.DataSource = null;
-
-            //    EntryInfo_GridCtrl.DataSource = Dt;
-            //    foreach (DataRow Dr in (EntryInfo_GridCtrl.DataSource as DataTable).Rows)
-            //    {
-            //        Dr.SetAdded();
-            //    }
-            //}
-            //EntryInfo_GridCtrl.Refresh();
-            //EntryInfo_Grid.UpdateTotalSummary();
-            //EntryInfo_Grid.UpdateCurrentRow();
-        }
-
-        private void TextAuthenticate_KeyDown(object sender, KeyEventArgs e)
-        {
-        }
-
         //protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         //{
         //    if (keyData == (Keys.P | Keys.Control))
@@ -2342,11 +2313,6 @@ namespace WindowsFormsApplication1
                     TextVoucherNo.Text = ds.Tables[0].Rows[0]["Value"].ToString();
                 }
             }
-        }
-
-        private void LoadSalary_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void HelpGridCtrl_Click(object sender, EventArgs e)

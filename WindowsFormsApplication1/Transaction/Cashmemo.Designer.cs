@@ -36,7 +36,6 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.lblTotalQtySold = new DevExpress.XtraEditors.LabelControl();
             this.lblCashMemoDate = new DevExpress.XtraEditors.LabelControl();
             this.btnCash = new DevExpress.XtraEditors.SimpleButton();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -84,12 +83,10 @@
             this.llabel3 = new DevExpress.XtraEditors.LabelControl();
             this.lblCashMemoNo = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalValueBeforDisc = new DevExpress.XtraEditors.LabelControl();
             this.txtRoundOff = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton13 = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.lblNetPayable = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalQtyReturned = new DevExpress.XtraEditors.LabelControl();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.InfoGrid = new DevExpress.XtraGrid.GridControl();
             this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -113,15 +110,15 @@
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl6 = new DevExpress.XtraEditors.GroupControl();
             this.label47 = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalIGST = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalCGST = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalSGST = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalTaxExclusive = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalTaxInclusive = new DevExpress.XtraEditors.LabelControl();
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.label46 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalIGST = new DevExpress.XtraEditors.TextEdit();
             this.label45 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalCGST = new DevExpress.XtraEditors.TextEdit();
             this.labelControl33 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalSGST = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalTaxInclusive = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalTaxExclusive = new DevExpress.XtraEditors.TextEdit();
             this.txtItemDiscPer = new DevExpress.XtraEditors.TextEdit();
             this.btnPreviousBill = new DevExpress.XtraEditors.SimpleButton();
             this.txtSMName = new DevExpress.XtraEditors.TextEdit();
@@ -131,28 +128,29 @@
             this.simpleButton9 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalDisc = new DevExpress.XtraEditors.LabelControl();
             this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl8 = new DevExpress.XtraEditors.GroupControl();
             this.chInclusive = new DevExpress.XtraEditors.CheckEdit();
             this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.lblTotalDisc = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalValueAterDisc = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalValueDisc = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalValueBeforDisc = new DevExpress.XtraEditors.TextEdit();
+            this.lblTotalQtyReturned = new DevExpress.XtraEditors.TextEdit();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalQtySold = new DevExpress.XtraEditors.TextEdit();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalValueAterDisc = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalValueDisc = new DevExpress.XtraEditors.LabelControl();
             this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton20 = new DevExpress.XtraEditors.SimpleButton();
-            this.lblPAyBack = new DevExpress.XtraEditors.LabelControl();
             this.btnInvoiceConfig = new DevExpress.XtraEditors.SimpleButton();
             this.btnPG = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl35 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.btnHold = new DevExpress.XtraEditors.SimpleButton();
             this.btnSavePrint = new DevExpress.XtraEditors.SimpleButton();
-            this.lblCashTender = new DevExpress.XtraEditors.LabelControl();
             this.labelControl36 = new DevExpress.XtraEditors.LabelControl();
             this.btnCard = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
@@ -176,6 +174,8 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.btnAddCashMemo = new DevExpress.XtraEditors.SimpleButton();
             this.btnUnhold = new DevExpress.XtraEditors.SimpleButton();
+            this.lblPAyBack = new DevExpress.XtraEditors.TextEdit();
+            this.lblCashTender = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
@@ -204,6 +204,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).BeginInit();
             this.groupControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalIGST.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalCGST.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalSGST.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalTaxInclusive.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalTaxExclusive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).BeginInit();
@@ -211,6 +216,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.chInclusive.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
             this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalDisc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalValueAterDisc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalValueDisc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalValueBeforDisc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalQtyReturned.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalQtySold.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).BeginInit();
@@ -221,6 +232,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblPAyBack.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCashTender.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -244,10 +257,10 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(166, 263);
+            this.HelpGrid.Location = new System.Drawing.Point(166, 87);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(865, 449);
+            this.HelpGrid.Size = new System.Drawing.Size(865, 384);
             this.HelpGrid.TabIndex = 810;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -272,23 +285,10 @@
             this.HelpGridView.OptionsFilter.ShowAllTableValuesInFilterPopup = true;
             this.HelpGridView.OptionsFilter.UseNewCustomFilterDialog = true;
             this.HelpGridView.OptionsView.ShowFooter = true;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.HelpGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.HelpGridView_PopupMenuShowing);
-            // 
-            // lblTotalQtySold
-            // 
-            this.lblTotalQtySold.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalQtySold.Appearance.Options.UseFont = true;
-            this.lblTotalQtySold.Appearance.Options.UseTextOptions = true;
-            this.lblTotalQtySold.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalQtySold.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalQtySold.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.Horizontal;
-            this.lblTotalQtySold.Location = new System.Drawing.Point(171, 20);
-            this.lblTotalQtySold.Name = "lblTotalQtySold";
-            this.lblTotalQtySold.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalQtySold.TabIndex = 723;
-            this.lblTotalQtySold.Text = "00.00";
             // 
             // lblCashMemoDate
             // 
@@ -375,10 +375,10 @@
             // 
             // labelControl37
             // 
-            this.labelControl37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl37.Appearance.Options.UseFont = true;
-            this.labelControl37.Location = new System.Drawing.Point(674, 655);
+            this.labelControl37.Location = new System.Drawing.Point(836, 669);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(78, 17);
             this.labelControl37.TabIndex = 777;
@@ -624,20 +624,20 @@
             // 
             // labelControl28
             // 
-            this.labelControl28.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl28.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl28.Appearance.Options.UseFont = true;
-            this.labelControl28.Location = new System.Drawing.Point(20, 105);
+            this.labelControl28.Location = new System.Drawing.Point(12, 135);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(99, 15);
+            this.labelControl28.Size = new System.Drawing.Size(102, 15);
             this.labelControl28.TabIndex = 1;
             this.labelControl28.Text = "Total Val After Disc";
             // 
             // labelControl38
             // 
-            this.labelControl38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelControl38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl38.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl38.Appearance.Options.UseFont = true;
-            this.labelControl38.Location = new System.Drawing.Point(698, 674);
+            this.labelControl38.Location = new System.Drawing.Point(860, 696);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(54, 17);
             this.labelControl38.TabIndex = 779;
@@ -778,7 +778,7 @@
             this.chExclusive.Location = new System.Drawing.Point(14, 13);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(68, 18);
+            this.chExclusive.Size = new System.Drawing.Size(68, 20);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -871,19 +871,6 @@
             this.labelControl12.TabIndex = 1;
             this.labelControl12.Text = "Memo No.";
             // 
-            // lblTotalValueBeforDisc
-            // 
-            this.lblTotalValueBeforDisc.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalValueBeforDisc.Appearance.Options.UseFont = true;
-            this.lblTotalValueBeforDisc.Appearance.Options.UseTextOptions = true;
-            this.lblTotalValueBeforDisc.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalValueBeforDisc.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalValueBeforDisc.Location = new System.Drawing.Point(171, 60);
-            this.lblTotalValueBeforDisc.Name = "lblTotalValueBeforDisc";
-            this.lblTotalValueBeforDisc.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalValueBeforDisc.TabIndex = 723;
-            this.lblTotalValueBeforDisc.Text = "00.00";
-            // 
             // txtRoundOff
             // 
             this.txtRoundOff.Location = new System.Drawing.Point(89, 140);
@@ -935,22 +922,9 @@
             this.lblNetPayable.Appearance.Options.UseFont = true;
             this.lblNetPayable.Location = new System.Drawing.Point(187, 63);
             this.lblNetPayable.Name = "lblNetPayable";
-            this.lblNetPayable.Size = new System.Drawing.Size(94, 50);
+            this.lblNetPayable.Size = new System.Drawing.Size(73, 50);
             this.lblNetPayable.TabIndex = 1;
-            this.lblNetPayable.Text = "00.00";
-            // 
-            // lblTotalQtyReturned
-            // 
-            this.lblTotalQtyReturned.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalQtyReturned.Appearance.Options.UseFont = true;
-            this.lblTotalQtyReturned.Appearance.Options.UseTextOptions = true;
-            this.lblTotalQtyReturned.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalQtyReturned.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalQtyReturned.Location = new System.Drawing.Point(171, 40);
-            this.lblTotalQtyReturned.Name = "lblTotalQtyReturned";
-            this.lblTotalQtyReturned.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalQtyReturned.TabIndex = 723;
-            this.lblTotalQtyReturned.Text = "00.00";
+            this.lblNetPayable.Text = "0.00";
             // 
             // gridColumn28
             // 
@@ -1203,143 +1177,144 @@
             // 
             // groupControl6
             // 
-            this.groupControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupControl6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.groupControl6.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl6.CaptionImageOptions.Image")));
             this.groupControl6.Controls.Add(this.label47);
-            this.groupControl6.Controls.Add(this.lblTotalIGST);
-            this.groupControl6.Controls.Add(this.lblTotalCGST);
-            this.groupControl6.Controls.Add(this.lblTotalSGST);
-            this.groupControl6.Controls.Add(this.lblTotalTaxExclusive);
-            this.groupControl6.Controls.Add(this.lblTotalTaxInclusive);
             this.groupControl6.Controls.Add(this.labelControl30);
             this.groupControl6.Controls.Add(this.label46);
+            this.groupControl6.Controls.Add(this.lblTotalIGST);
             this.groupControl6.Controls.Add(this.label45);
+            this.groupControl6.Controls.Add(this.lblTotalCGST);
             this.groupControl6.Controls.Add(this.labelControl33);
-            this.groupControl6.Location = new System.Drawing.Point(620, 502);
+            this.groupControl6.Controls.Add(this.lblTotalSGST);
+            this.groupControl6.Controls.Add(this.lblTotalTaxInclusive);
+            this.groupControl6.Controls.Add(this.lblTotalTaxExclusive);
+            this.groupControl6.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl6.Location = new System.Drawing.Point(633, 502);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(191, 127);
+            this.groupControl6.Size = new System.Drawing.Size(198, 159);
             this.groupControl6.TabIndex = 808;
             this.groupControl6.Text = "Tax Details";
             // 
             // label47
             // 
-            this.label47.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Appearance.Options.UseFont = true;
-            this.label47.Location = new System.Drawing.Point(25, 89);
+            this.label47.Location = new System.Drawing.Point(28, 109);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(58, 15);
+            this.label47.Size = new System.Drawing.Size(59, 15);
             this.label47.TabIndex = 1;
             this.label47.Text = "Total CGST";
             // 
-            // lblTotalIGST
-            // 
-            this.lblTotalIGST.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalIGST.Appearance.Options.UseFont = true;
-            this.lblTotalIGST.Appearance.Options.UseTextOptions = true;
-            this.lblTotalIGST.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalIGST.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalIGST.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.lblTotalIGST.Location = new System.Drawing.Point(133, 104);
-            this.lblTotalIGST.Name = "lblTotalIGST";
-            this.lblTotalIGST.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalIGST.TabIndex = 723;
-            this.lblTotalIGST.Text = "00.00";
-            // 
-            // lblTotalCGST
-            // 
-            this.lblTotalCGST.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalCGST.Appearance.Options.UseFont = true;
-            this.lblTotalCGST.Appearance.Options.UseTextOptions = true;
-            this.lblTotalCGST.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalCGST.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalCGST.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.lblTotalCGST.Location = new System.Drawing.Point(133, 84);
-            this.lblTotalCGST.Name = "lblTotalCGST";
-            this.lblTotalCGST.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalCGST.TabIndex = 723;
-            this.lblTotalCGST.Text = "00.00";
-            // 
-            // lblTotalSGST
-            // 
-            this.lblTotalSGST.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalSGST.Appearance.Options.UseFont = true;
-            this.lblTotalSGST.Appearance.Options.UseTextOptions = true;
-            this.lblTotalSGST.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalSGST.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalSGST.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.lblTotalSGST.Location = new System.Drawing.Point(133, 64);
-            this.lblTotalSGST.Name = "lblTotalSGST";
-            this.lblTotalSGST.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalSGST.TabIndex = 723;
-            this.lblTotalSGST.Text = "00.00";
-            // 
-            // lblTotalTaxExclusive
-            // 
-            this.lblTotalTaxExclusive.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTaxExclusive.Appearance.Options.UseFont = true;
-            this.lblTotalTaxExclusive.Appearance.Options.UseTextOptions = true;
-            this.lblTotalTaxExclusive.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalTaxExclusive.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalTaxExclusive.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.lblTotalTaxExclusive.Location = new System.Drawing.Point(133, 44);
-            this.lblTotalTaxExclusive.Name = "lblTotalTaxExclusive";
-            this.lblTotalTaxExclusive.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalTaxExclusive.TabIndex = 723;
-            this.lblTotalTaxExclusive.Text = "00.00";
-            // 
-            // lblTotalTaxInclusive
-            // 
-            this.lblTotalTaxInclusive.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalTaxInclusive.Appearance.Options.UseFont = true;
-            this.lblTotalTaxInclusive.Appearance.Options.UseTextOptions = true;
-            this.lblTotalTaxInclusive.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalTaxInclusive.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalTaxInclusive.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.NoWrap;
-            this.lblTotalTaxInclusive.Location = new System.Drawing.Point(133, 24);
-            this.lblTotalTaxInclusive.Name = "lblTotalTaxInclusive";
-            this.lblTotalTaxInclusive.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalTaxInclusive.TabIndex = 723;
-            this.lblTotalTaxInclusive.Text = "00.00";
-            // 
             // labelControl30
             // 
-            this.labelControl30.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl30.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl30.Appearance.Options.UseFont = true;
-            this.labelControl30.Location = new System.Drawing.Point(30, 109);
+            this.labelControl30.Location = new System.Drawing.Point(33, 135);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(53, 15);
+            this.labelControl30.Size = new System.Drawing.Size(56, 15);
             this.labelControl30.TabIndex = 1;
             this.labelControl30.Text = "Total IGST";
             // 
             // label46
             // 
-            this.label46.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label46.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Appearance.Options.UseFont = true;
-            this.label46.Location = new System.Drawing.Point(27, 69);
+            this.label46.Location = new System.Drawing.Point(30, 83);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(56, 15);
+            this.label46.Size = new System.Drawing.Size(59, 15);
             this.label46.TabIndex = 1;
             this.label46.Text = "Total SGST";
             // 
+            // lblTotalIGST
+            // 
+            this.lblTotalIGST.EditValue = "0.00";
+            this.lblTotalIGST.Location = new System.Drawing.Point(89, 130);
+            this.lblTotalIGST.Name = "lblTotalIGST";
+            this.lblTotalIGST.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalIGST.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalIGST.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalIGST.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalIGST.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalIGST.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalIGST.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalIGST.TabIndex = 814;
+            // 
             // label45
             // 
-            this.label45.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label45.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Appearance.Options.UseFont = true;
-            this.label45.Location = new System.Drawing.Point(12, 49);
+            this.label45.Location = new System.Drawing.Point(15, 57);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(71, 15);
+            this.label45.Size = new System.Drawing.Size(73, 15);
             this.label45.TabIndex = 1;
             this.label45.Text = "Total Tax Excl";
             // 
+            // lblTotalCGST
+            // 
+            this.lblTotalCGST.EditValue = "0.00";
+            this.lblTotalCGST.Location = new System.Drawing.Point(89, 104);
+            this.lblTotalCGST.Name = "lblTotalCGST";
+            this.lblTotalCGST.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalCGST.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalCGST.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalCGST.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalCGST.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalCGST.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalCGST.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalCGST.TabIndex = 814;
+            // 
             // labelControl33
             // 
-            this.labelControl33.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl33.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl33.Appearance.Options.UseFont = true;
-            this.labelControl33.Location = new System.Drawing.Point(14, 29);
+            this.labelControl33.Location = new System.Drawing.Point(17, 31);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(69, 15);
+            this.labelControl33.Size = new System.Drawing.Size(72, 15);
             this.labelControl33.TabIndex = 1;
             this.labelControl33.Text = "Total Tax Incl";
+            // 
+            // lblTotalSGST
+            // 
+            this.lblTotalSGST.EditValue = "0.00";
+            this.lblTotalSGST.Location = new System.Drawing.Point(89, 78);
+            this.lblTotalSGST.Name = "lblTotalSGST";
+            this.lblTotalSGST.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalSGST.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalSGST.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalSGST.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalSGST.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalSGST.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalSGST.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalSGST.TabIndex = 814;
+            // 
+            // lblTotalTaxInclusive
+            // 
+            this.lblTotalTaxInclusive.EditValue = "0.00";
+            this.lblTotalTaxInclusive.Location = new System.Drawing.Point(89, 26);
+            this.lblTotalTaxInclusive.Name = "lblTotalTaxInclusive";
+            this.lblTotalTaxInclusive.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalTaxInclusive.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalTaxInclusive.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalTaxInclusive.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalTaxInclusive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalTaxInclusive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalTaxInclusive.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalTaxInclusive.TabIndex = 814;
+            // 
+            // lblTotalTaxExclusive
+            // 
+            this.lblTotalTaxExclusive.EditValue = "0.00";
+            this.lblTotalTaxExclusive.Location = new System.Drawing.Point(89, 52);
+            this.lblTotalTaxExclusive.Name = "lblTotalTaxExclusive";
+            this.lblTotalTaxExclusive.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalTaxExclusive.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalTaxExclusive.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalTaxExclusive.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalTaxExclusive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalTaxExclusive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalTaxExclusive.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalTaxExclusive.TabIndex = 814;
             // 
             // txtItemDiscPer
             // 
@@ -1355,6 +1330,7 @@
             this.txtItemDiscPer.Properties.Mask.EditMask = "n2";
             this.txtItemDiscPer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtItemDiscPer.Size = new System.Drawing.Size(49, 24);
             this.txtItemDiscPer.TabIndex = 770;
             this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.txtItemDiscPer_EditValueChanged);
@@ -1406,11 +1382,11 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(20, 126);
+            this.labelControl13.Location = new System.Drawing.Point(14, 161);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(97, 15);
+            this.labelControl13.Size = new System.Drawing.Size(101, 15);
             this.labelControl13.TabIndex = 724;
             this.labelControl13.Text = "Total Item Disc Val";
             // 
@@ -1428,11 +1404,11 @@
             // 
             // labelControl26
             // 
-            this.labelControl26.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl26.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl26.Appearance.Options.UseFont = true;
-            this.labelControl26.Location = new System.Drawing.Point(24, 85);
+            this.labelControl26.Location = new System.Drawing.Point(16, 109);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(95, 15);
+            this.labelControl26.Size = new System.Drawing.Size(98, 15);
             this.labelControl26.TabIndex = 1;
             this.labelControl26.Text = "Total Val Discount";
             // 
@@ -1445,19 +1421,6 @@
             this.labelControl17.Size = new System.Drawing.Size(55, 18);
             this.labelControl17.TabIndex = 784;
             this.labelControl17.Text = "Barcode";
-            // 
-            // lblTotalDisc
-            // 
-            this.lblTotalDisc.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalDisc.Appearance.Options.UseFont = true;
-            this.lblTotalDisc.Appearance.Options.UseTextOptions = true;
-            this.lblTotalDisc.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalDisc.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalDisc.Location = new System.Drawing.Point(171, 121);
-            this.lblTotalDisc.Name = "lblTotalDisc";
-            this.lblTotalDisc.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalDisc.TabIndex = 725;
-            this.lblTotalDisc.Text = "00.00";
             // 
             // labelControl22
             // 
@@ -1514,96 +1477,155 @@
             this.chInclusive.Location = new System.Drawing.Point(84, 13);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(78, 18);
+            this.chInclusive.Size = new System.Drawing.Size(78, 20);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
             // groupControl5
             // 
-            this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupControl5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.groupControl5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupControl5.Appearance.Options.UseBackColor = true;
             this.groupControl5.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl5.CaptionImageOptions.Image")));
-            this.groupControl5.Controls.Add(this.labelControl13);
             this.groupControl5.Controls.Add(this.lblTotalDisc);
-            this.groupControl5.Controls.Add(this.labelControl26);
-            this.groupControl5.Controls.Add(this.labelControl28);
-            this.groupControl5.Controls.Add(this.labelControl25);
-            this.groupControl5.Controls.Add(this.labelControl24);
-            this.groupControl5.Controls.Add(this.labelControl23);
+            this.groupControl5.Controls.Add(this.labelControl13);
             this.groupControl5.Controls.Add(this.lblTotalValueAterDisc);
             this.groupControl5.Controls.Add(this.lblTotalValueDisc);
             this.groupControl5.Controls.Add(this.lblTotalValueBeforDisc);
+            this.groupControl5.Controls.Add(this.labelControl26);
+            this.groupControl5.Controls.Add(this.labelControl28);
             this.groupControl5.Controls.Add(this.lblTotalQtyReturned);
+            this.groupControl5.Controls.Add(this.labelControl25);
             this.groupControl5.Controls.Add(this.lblTotalQtySold);
-            this.groupControl5.Location = new System.Drawing.Point(390, 502);
+            this.groupControl5.Controls.Add(this.labelControl24);
+            this.groupControl5.Controls.Add(this.labelControl23);
+            this.groupControl5.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl5.Location = new System.Drawing.Point(403, 502);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(224, 148);
+            this.groupControl5.Size = new System.Drawing.Size(224, 186);
             this.groupControl5.TabIndex = 809;
             this.groupControl5.Text = "Invoice Details";
             // 
+            // lblTotalDisc
+            // 
+            this.lblTotalDisc.EditValue = "0.00";
+            this.lblTotalDisc.Location = new System.Drawing.Point(114, 156);
+            this.lblTotalDisc.Name = "lblTotalDisc";
+            this.lblTotalDisc.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalDisc.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalDisc.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalDisc.TabIndex = 814;
+            // 
+            // lblTotalValueAterDisc
+            // 
+            this.lblTotalValueAterDisc.EditValue = "0.00";
+            this.lblTotalValueAterDisc.Location = new System.Drawing.Point(114, 130);
+            this.lblTotalValueAterDisc.Name = "lblTotalValueAterDisc";
+            this.lblTotalValueAterDisc.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalValueAterDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalValueAterDisc.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalValueAterDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalValueAterDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalValueAterDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalValueAterDisc.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalValueAterDisc.TabIndex = 814;
+            // 
+            // lblTotalValueDisc
+            // 
+            this.lblTotalValueDisc.EditValue = "0.00";
+            this.lblTotalValueDisc.Location = new System.Drawing.Point(114, 104);
+            this.lblTotalValueDisc.Name = "lblTotalValueDisc";
+            this.lblTotalValueDisc.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalValueDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalValueDisc.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalValueDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalValueDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalValueDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalValueDisc.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalValueDisc.TabIndex = 814;
+            // 
+            // lblTotalValueBeforDisc
+            // 
+            this.lblTotalValueBeforDisc.EditValue = "0.00";
+            this.lblTotalValueBeforDisc.Location = new System.Drawing.Point(114, 78);
+            this.lblTotalValueBeforDisc.Name = "lblTotalValueBeforDisc";
+            this.lblTotalValueBeforDisc.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalValueBeforDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalValueBeforDisc.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalValueBeforDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalValueBeforDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalValueBeforDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalValueBeforDisc.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalValueBeforDisc.TabIndex = 814;
+            // 
+            // lblTotalQtyReturned
+            // 
+            this.lblTotalQtyReturned.EditValue = "0";
+            this.lblTotalQtyReturned.Location = new System.Drawing.Point(114, 52);
+            this.lblTotalQtyReturned.Name = "lblTotalQtyReturned";
+            this.lblTotalQtyReturned.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalQtyReturned.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalQtyReturned.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalQtyReturned.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalQtyReturned.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalQtyReturned.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalQtyReturned.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalQtyReturned.TabIndex = 814;
+            // 
             // labelControl25
             // 
-            this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(12, 65);
+            this.labelControl25.Location = new System.Drawing.Point(4, 83);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(107, 15);
+            this.labelControl25.Size = new System.Drawing.Size(110, 15);
             this.labelControl25.TabIndex = 1;
             this.labelControl25.Text = "Total Val Before Disc";
             // 
+            // lblTotalQtySold
+            // 
+            this.lblTotalQtySold.EditValue = "0";
+            this.lblTotalQtySold.Location = new System.Drawing.Point(114, 26);
+            this.lblTotalQtySold.Name = "lblTotalQtySold";
+            this.lblTotalQtySold.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblTotalQtySold.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblTotalQtySold.Properties.Appearance.Options.UseBackColor = true;
+            this.lblTotalQtySold.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalQtySold.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblTotalQtySold.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalQtySold.Size = new System.Drawing.Size(106, 24);
+            this.lblTotalQtySold.TabIndex = 814;
+            // 
             // labelControl24
             // 
-            this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(20, 45);
+            this.labelControl24.Location = new System.Drawing.Point(12, 57);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(99, 15);
+            this.labelControl24.Size = new System.Drawing.Size(100, 15);
             this.labelControl24.TabIndex = 1;
             this.labelControl24.Text = "Total Qty Returned";
             // 
             // labelControl23
             // 
-            this.labelControl23.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl23.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl23.Appearance.Options.UseFont = true;
-            this.labelControl23.Location = new System.Drawing.Point(45, 25);
+            this.labelControl23.Location = new System.Drawing.Point(37, 31);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(74, 15);
+            this.labelControl23.Size = new System.Drawing.Size(76, 15);
             this.labelControl23.TabIndex = 1;
             this.labelControl23.Text = "Total Qty Sold";
-            // 
-            // lblTotalValueAterDisc
-            // 
-            this.lblTotalValueAterDisc.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalValueAterDisc.Appearance.Options.UseFont = true;
-            this.lblTotalValueAterDisc.Appearance.Options.UseTextOptions = true;
-            this.lblTotalValueAterDisc.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalValueAterDisc.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalValueAterDisc.Location = new System.Drawing.Point(171, 100);
-            this.lblTotalValueAterDisc.Name = "lblTotalValueAterDisc";
-            this.lblTotalValueAterDisc.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalValueAterDisc.TabIndex = 723;
-            this.lblTotalValueAterDisc.Text = "00.00";
-            // 
-            // lblTotalValueDisc
-            // 
-            this.lblTotalValueDisc.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalValueDisc.Appearance.Options.UseFont = true;
-            this.lblTotalValueDisc.Appearance.Options.UseTextOptions = true;
-            this.lblTotalValueDisc.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.lblTotalValueDisc.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalValueDisc.Location = new System.Drawing.Point(171, 80);
-            this.lblTotalValueDisc.Name = "lblTotalValueDisc";
-            this.lblTotalValueDisc.Size = new System.Drawing.Size(40, 20);
-            this.lblTotalValueDisc.TabIndex = 723;
-            this.lblTotalValueDisc.Text = "00.00";
             // 
             // labelControl34
             // 
             this.labelControl34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl34.Appearance.Options.UseFont = true;
-            this.labelControl34.Location = new System.Drawing.Point(808, 632);
+            this.labelControl34.Location = new System.Drawing.Point(768, 667);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(44, 20);
             this.labelControl34.TabIndex = 774;
@@ -1621,17 +1643,6 @@
             this.simpleButton20.Size = new System.Drawing.Size(122, 68);
             this.simpleButton20.TabIndex = 792;
             this.simpleButton20.Text = "Credit \r\n&Note";
-            // 
-            // lblPAyBack
-            // 
-            this.lblPAyBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblPAyBack.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPAyBack.Appearance.Options.UseFont = true;
-            this.lblPAyBack.Location = new System.Drawing.Point(771, 672);
-            this.lblPAyBack.Name = "lblPAyBack";
-            this.lblPAyBack.Size = new System.Drawing.Size(40, 20);
-            this.lblPAyBack.TabIndex = 772;
-            this.lblPAyBack.Text = "00.00";
             // 
             // btnInvoiceConfig
             // 
@@ -1668,7 +1679,7 @@
             this.labelControl35.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl35.Appearance.Options.UseFont = true;
             this.labelControl35.Appearance.Options.UseForeColor = true;
-            this.labelControl35.Location = new System.Drawing.Point(1104, 177);
+            this.labelControl35.Location = new System.Drawing.Point(1104, 173);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(134, 20);
             this.labelControl35.TabIndex = 776;
@@ -1679,7 +1690,7 @@
             this.labelControl27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl27.Appearance.Options.UseFont = true;
-            this.labelControl27.Location = new System.Drawing.Point(660, 632);
+            this.labelControl27.Location = new System.Drawing.Point(642, 667);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(120, 20);
             this.labelControl27.TabIndex = 780;
@@ -1714,17 +1725,6 @@
             this.btnSavePrint.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             this.btnSavePrint.ToolTipTitle = "Save & Print";
             this.btnSavePrint.Click += new System.EventHandler(this.BtnSavePrint_Click);
-            // 
-            // lblCashTender
-            // 
-            this.lblCashTender.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblCashTender.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCashTender.Appearance.Options.UseFont = true;
-            this.lblCashTender.Location = new System.Drawing.Point(771, 653);
-            this.lblCashTender.Name = "lblCashTender";
-            this.lblCashTender.Size = new System.Drawing.Size(40, 20);
-            this.lblCashTender.TabIndex = 773;
-            this.lblCashTender.Text = "00.00";
             // 
             // labelControl36
             // 
@@ -1830,12 +1830,12 @@
             // 
             // ArticleImageBox
             // 
-            this.ArticleImageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ArticleImageBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ArticleImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ArticleImageBox.Location = new System.Drawing.Point(1136, 199);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.ArticleImageBox.Size = new System.Drawing.Size(242, 291);
+            this.ArticleImageBox.Size = new System.Drawing.Size(227, 291);
             this.ArticleImageBox.TabIndex = 786;
             // 
             // labelControl20
@@ -1954,6 +1954,7 @@
             this.txtItemFlatRate.Properties.Mask.EditMask = "n2";
             this.txtItemFlatRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemFlatRate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtItemFlatRate.Size = new System.Drawing.Size(72, 24);
             this.txtItemFlatRate.TabIndex = 771;
             this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.txtItemFlatRate_EditValueChanged);
@@ -1973,6 +1974,7 @@
             this.txtItemDiscAMount.Properties.Mask.EditMask = "n2";
             this.txtItemDiscAMount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemDiscAMount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtItemDiscAMount.Size = new System.Drawing.Size(69, 24);
             this.txtItemDiscAMount.TabIndex = 769;
             // 
@@ -1999,6 +2001,7 @@
             this.txtItemMRP.Properties.Mask.EditMask = "n2";
             this.txtItemMRP.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtItemMRP.Size = new System.Drawing.Size(72, 24);
             this.txtItemMRP.TabIndex = 771;
             // 
@@ -2038,15 +2041,47 @@
             this.btnUnhold.Text = "Unhold";
             this.btnUnhold.Click += new System.EventHandler(this.BtnUnhold_Click);
             // 
+            // lblPAyBack
+            // 
+            this.lblPAyBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPAyBack.EditValue = "0.00";
+            this.lblPAyBack.Location = new System.Drawing.Point(920, 691);
+            this.lblPAyBack.Name = "lblPAyBack";
+            this.lblPAyBack.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblPAyBack.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblPAyBack.Properties.Appearance.Options.UseBackColor = true;
+            this.lblPAyBack.Properties.Appearance.Options.UseFont = true;
+            this.lblPAyBack.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblPAyBack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblPAyBack.Size = new System.Drawing.Size(110, 24);
+            this.lblPAyBack.TabIndex = 814;
+            // 
+            // lblCashTender
+            // 
+            this.lblCashTender.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblCashTender.EditValue = "0.00";
+            this.lblCashTender.Location = new System.Drawing.Point(920, 664);
+            this.lblCashTender.Name = "lblCashTender";
+            this.lblCashTender.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCashTender.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblCashTender.Properties.Appearance.Options.UseBackColor = true;
+            this.lblCashTender.Properties.Appearance.Options.UseFont = true;
+            this.lblCashTender.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblCashTender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblCashTender.Size = new System.Drawing.Size(110, 24);
+            this.lblCashTender.TabIndex = 814;
+            // 
             // Cashmemo
             // 
             this.ActiveGlowColor = System.Drawing.Color.Lime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1454, 811);
+            this.ClientSize = new System.Drawing.Size(1384, 756);
             this.ControlBox = false;
+            this.Controls.Add(this.lblPAyBack);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupControl4);
+            this.Controls.Add(this.lblCashTender);
             this.Controls.Add(this.btnUnhold);
             this.Controls.Add(this.groupControl8);
             this.Controls.Add(this.btnCash);
@@ -2075,14 +2110,12 @@
             this.Controls.Add(this.groupControl5);
             this.Controls.Add(this.labelControl34);
             this.Controls.Add(this.simpleButton20);
-            this.Controls.Add(this.lblPAyBack);
             this.Controls.Add(this.btnInvoiceConfig);
             this.Controls.Add(this.btnPG);
             this.Controls.Add(this.labelControl35);
             this.Controls.Add(this.labelControl27);
             this.Controls.Add(this.btnHold);
             this.Controls.Add(this.btnSavePrint);
-            this.Controls.Add(this.lblCashTender);
             this.Controls.Add(this.labelControl36);
             this.Controls.Add(this.btnCard);
             this.Controls.Add(this.btnCancel);
@@ -2143,6 +2176,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl6)).EndInit();
             this.groupControl6.ResumeLayout(false);
             this.groupControl6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalIGST.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalCGST.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalSGST.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalTaxInclusive.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalTaxExclusive.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl8)).EndInit();
@@ -2151,6 +2189,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
             this.groupControl5.ResumeLayout(false);
             this.groupControl5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalDisc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalValueAterDisc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalValueDisc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalValueBeforDisc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalQtyReturned.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblTotalQtySold.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSubTotal.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).EndInit();
@@ -2162,6 +2206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblPAyBack.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCashTender.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2174,7 +2220,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
-        private DevExpress.XtraEditors.LabelControl lblTotalQtySold;
         private DevExpress.XtraEditors.LabelControl lblCashMemoDate;
         private DevExpress.XtraEditors.SimpleButton btnCash;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
@@ -2222,12 +2267,10 @@
         private DevExpress.XtraEditors.LabelControl llabel3;
         private DevExpress.XtraEditors.LabelControl lblCashMemoNo;
         private DevExpress.XtraEditors.LabelControl labelControl12;
-        private DevExpress.XtraEditors.LabelControl lblTotalValueBeforDisc;
         private DevExpress.XtraEditors.TextEdit txtRoundOff;
         private DevExpress.XtraEditors.SimpleButton simpleButton13;
         private DevExpress.XtraEditors.GroupControl groupControl4;
         private DevExpress.XtraEditors.LabelControl lblNetPayable;
-        private DevExpress.XtraEditors.LabelControl lblTotalQtyReturned;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
         private DevExpress.XtraGrid.GridControl InfoGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView InfoGridView;
@@ -2248,11 +2291,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private DevExpress.XtraEditors.GroupControl groupControl6;
         private DevExpress.XtraEditors.LabelControl label47;
-        private DevExpress.XtraEditors.LabelControl lblTotalIGST;
-        private DevExpress.XtraEditors.LabelControl lblTotalCGST;
-        private DevExpress.XtraEditors.LabelControl lblTotalSGST;
-        private DevExpress.XtraEditors.LabelControl lblTotalTaxExclusive;
-        private DevExpress.XtraEditors.LabelControl lblTotalTaxInclusive;
         private DevExpress.XtraEditors.LabelControl labelControl30;
         private DevExpress.XtraEditors.LabelControl label46;
         private DevExpress.XtraEditors.LabelControl label45;
@@ -2266,7 +2304,6 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton9;
         private DevExpress.XtraEditors.LabelControl labelControl26;
         private DevExpress.XtraEditors.LabelControl labelControl17;
-        private DevExpress.XtraEditors.LabelControl lblTotalDisc;
         private DevExpress.XtraEditors.LabelControl labelControl22;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
@@ -2276,18 +2313,14 @@
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.LabelControl lblTotalValueAterDisc;
-        private DevExpress.XtraEditors.LabelControl lblTotalValueDisc;
         private DevExpress.XtraEditors.LabelControl labelControl34;
         private DevExpress.XtraEditors.SimpleButton simpleButton20;
-        private DevExpress.XtraEditors.LabelControl lblPAyBack;
         private DevExpress.XtraEditors.SimpleButton btnInvoiceConfig;
         private DevExpress.XtraEditors.SimpleButton btnPG;
         private DevExpress.XtraEditors.LabelControl labelControl35;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.SimpleButton btnHold;
         private DevExpress.XtraEditors.SimpleButton btnSavePrint;
-        private DevExpress.XtraEditors.LabelControl lblCashTender;
         private DevExpress.XtraEditors.LabelControl labelControl36;
         private DevExpress.XtraEditors.SimpleButton btnCard;
         private DevExpress.XtraEditors.SimpleButton btnCancel;
@@ -2314,5 +2347,18 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
         private DevExpress.XtraEditors.SimpleButton btnAddCashMemo;
         private DevExpress.XtraEditors.SimpleButton btnUnhold;
+        private DevExpress.XtraEditors.TextEdit lblTotalIGST;
+        private DevExpress.XtraEditors.TextEdit lblTotalCGST;
+        private DevExpress.XtraEditors.TextEdit lblTotalSGST;
+        private DevExpress.XtraEditors.TextEdit lblTotalTaxInclusive;
+        private DevExpress.XtraEditors.TextEdit lblTotalTaxExclusive;
+        private DevExpress.XtraEditors.TextEdit lblTotalDisc;
+        private DevExpress.XtraEditors.TextEdit lblTotalValueAterDisc;
+        private DevExpress.XtraEditors.TextEdit lblTotalValueDisc;
+        private DevExpress.XtraEditors.TextEdit lblTotalValueBeforDisc;
+        private DevExpress.XtraEditors.TextEdit lblTotalQtyReturned;
+        private DevExpress.XtraEditors.TextEdit lblTotalQtySold;
+        private DevExpress.XtraEditors.TextEdit lblPAyBack;
+        private DevExpress.XtraEditors.TextEdit lblCashTender;
     }
 }

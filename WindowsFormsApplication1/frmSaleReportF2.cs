@@ -53,13 +53,13 @@ namespace WindowsFormsApplication1
             dt.Rows.Add(row2);
 
             DataRow row3 = dt.NewRow();
-            row3["Name"] = "PaymentGateAmount";
+            row3["Name"] = "PG. Amount";
             row3["Amount"] = 0.00;
 
             dt.Rows.Add(row3);
 
 
-            DataSet dsSale = ProjectFunctions.GetDataSet("sp_ShowRoomDashBoard '" + WorkingTag + "','" + GlobalVariables.CUnitID + "'");
+            DataSet dsSale = ProjectFunctions.GetDataSet("sp_ShowRoomDashBoard '" + WorkingTag + "','" + GlobalVariables.CUnitID + GlobalVariables.FinancialYear + "'");
             if (dsSale.Tables[0].Rows.Count > 0)
             {
                 lblTotalSale.Text = Convert.ToDecimal(dsSale.Tables[2].Rows[0][0]).ToString("0.00");
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1
                         }
                         if (j == 2)
                         {
-                            if (dr["Name"].ToString() == "PaymentGateAmount")
+                            if (dr["Name"].ToString() == "PG. Amount")
                             {
                                 dr["Amount"] = Convert.ToDecimal(dsSale.Tables[3].Rows[0][2]);
                                 j++;
