@@ -214,7 +214,6 @@
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(229, 23);
             this.txtCompany.TabIndex = 2;
-     //       this.txtCompany.SelectedIndexChanged += new System.EventHandler(this.TxtCompany_SelectedIndexChanged);
             this.txtCompany.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCompany_KeyDown);
             // 
             // txtUnit
@@ -237,7 +236,6 @@
             this.txtFNYear.Name = "txtFNYear";
             this.txtFNYear.Size = new System.Drawing.Size(229, 23);
             this.txtFNYear.TabIndex = 4;
-          //  this.txtFNYear.SelectedIndexChanged += new System.EventHandler(this.TxtFNYear_SelectedIndexChanged);
             this.txtFNYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFNYear_KeyDown);
             // 
             // btnBackup
@@ -316,7 +314,7 @@
             this.simpleButton1.TabIndex = 60;
             this.simpleButton1.Text = "Send OTP";
             // 
-            // frmLogins
+            // FrmLogins
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
@@ -346,7 +344,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmLogins";
+            this.Name = "FrmLogins";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmLogincs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();

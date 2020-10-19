@@ -45,6 +45,14 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG180")
+                {
+                    WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
+                    { Text = "Create Data Template" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG176")
                 {
                     WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
