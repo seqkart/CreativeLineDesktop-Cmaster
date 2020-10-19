@@ -1599,6 +1599,12 @@
     <Compile Include="Transaction\frm_SupplierPaymentVoucherAdd_Upd.designer.cs">
       <DependentUpon>frm_SupplierPaymentVoucherAdd_Upd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\SaleOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\SaleOrder.Designer.cs">
+      <DependentUpon>SaleOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\XtraReport1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2055,6 +2061,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frm_SupplierPaymentVoucherAdd_Upd.resx">
       <DependentUpon>frm_SupplierPaymentVoucherAdd_Upd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\SaleOrder.resx">
+      <DependentUpon>SaleOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\XtraReport1.resx">
       <DependentUpon>XtraReport1.cs</DependentUpon>
