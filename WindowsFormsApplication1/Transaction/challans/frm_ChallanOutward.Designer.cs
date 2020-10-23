@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ChallanOutward));
+            DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txtBillingZIP = new DevExpress.XtraEditors.TextEdit();
@@ -75,7 +76,6 @@
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
@@ -90,6 +90,7 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingZIP.Properties)).BeginInit();
@@ -490,7 +491,7 @@
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
-            this.gridColumn11,
+            gridColumn11,
             this.gridColumn12,
             this.gridColumn13,
             this.gridColumn14,
@@ -600,14 +601,16 @@
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "TOTAL WEIGHT";
-            this.gridColumn11.FieldName = "CHOTotQtyKgs";
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            gridColumn11.Caption = "TOTAL WEIGHT";
+            gridColumn11.DisplayFormat.FormatString = "0.000";
+            gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            gridColumn11.FieldName = "CHOTotQtyKgs";
+            gridColumn11.Name = "gridColumn11";
+            gridColumn11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CHOTotQtyKgs", "{0:0.##}")});
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 9;
-            this.gridColumn11.Width = 83;
+            gridColumn11.Visible = true;
+            gridColumn11.VisibleIndex = 9;
+            gridColumn11.Width = 83;
             // 
             // gridColumn12
             // 
@@ -706,7 +709,7 @@
             // 
             this.panelControl1.Controls.Add(this.HelpGrid);
             this.panelControl1.Controls.Add(this.txtSearchBox);
-            this.panelControl1.Location = new System.Drawing.Point(141, 98);
+            this.panelControl1.Location = new System.Drawing.Point(141, 29);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(643, 324);
             this.panelControl1.TabIndex = 727;
@@ -854,7 +857,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
