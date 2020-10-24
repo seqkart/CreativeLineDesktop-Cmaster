@@ -79,6 +79,13 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG181")
+                {
+                    WindowsFormsApplication1.Transaction.SaleOrder frm = new WindowsFormsApplication1.Transaction.SaleOrder
+                    { s1 = btnAdd.Text, Text = "Sale Order Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG168")
                 {
                     WindowsFormsApplication1.frm_Asset_AddUpd frm = new WindowsFormsApplication1.frm_Asset_AddUpd
@@ -292,6 +299,20 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG181")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Transaction.SaleOrder frm = new WindowsFormsApplication1.Transaction.SaleOrder
+                    {
+                        s1 = btnEdit.Text,
+                        Text = "Sale Order Edition",
+                        DocNo = CurrentRow["SIMNO"].ToString(),
+                        DocDate = Convert.ToDateTime(CurrentRow["SIMDATE"])
+                    };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG166")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

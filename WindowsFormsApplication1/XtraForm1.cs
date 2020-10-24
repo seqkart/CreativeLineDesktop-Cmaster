@@ -192,6 +192,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG181":
+                    var PROG181 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG181.Show();
+                    PROG181.BringToFront();
+                    PROG181.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG180":
                     var PROG180 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG180.Show();
