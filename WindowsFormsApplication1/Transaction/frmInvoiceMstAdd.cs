@@ -702,6 +702,9 @@ namespace WindowsFormsApplication1
                 txtEWayBillNO.Text = ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString();
                 txtActualWeight.Text = ds.Tables[0].Rows[0]["SIMTOTWEIGHT"].ToString();
 
+                txtDelAccName.Text = ds.Tables[0].Rows[0]["DelAccName"].ToString();
+                txtDelZipCode.Text = ds.Tables[0].Rows[0]["DelZipCode"].ToString();
+
                 AccMRPMarkDown = Convert.ToDecimal(ds.Tables[0].Rows[0]["AccMRPMarkDown"]);
                 groupControl8.Select();
 
@@ -1162,7 +1165,7 @@ namespace WindowsFormsApplication1
             txtDelAddress3.Text = String.Empty;
             txtDelieveryState.Text = String.Empty;
             txtDelieveryCity.Text = String.Empty;
-            txtDelieveryZipCode.Text = String.Empty;
+            txtDelZipCode.Text = String.Empty;
             txtDelTransID.Text = String.Empty;
             txtBankName.Text = String.Empty;
             txtBankAccNo.Text = String.Empty;
@@ -1380,6 +1383,8 @@ namespace WindowsFormsApplication1
                 txtDelAddress3.Text = row["AccAddress3"].ToString();
                 txtDelieveryCity.Text = row["CTNAME"].ToString();
                 txtDelTransID.Text = row["TransId"].ToString();
+                txtDelAccName.Text = row["DelAccName"].ToString();
+                txtDelZipCode.Text = row["DelZipCode"].ToString();
                 HelpGrid.Visible = false;
                 txtDANo.Focus();
             }
@@ -1554,7 +1559,6 @@ namespace WindowsFormsApplication1
                                                 }
                                             }
                                         }
-
                                         if (InfoGridView.FocusedColumn.FieldName == "SIDSCANQTY")
                                         {
                                             InfoGridView.Focus();
@@ -1565,7 +1569,6 @@ namespace WindowsFormsApplication1
                                 }
                             }
                         }
-
                     }
                 }
             }
@@ -1573,8 +1576,6 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
-
-
         }
 
         private void GridControl1_KeyDown(object sender, KeyEventArgs e)
@@ -1879,7 +1880,7 @@ namespace WindowsFormsApplication1
             txtDelAddress2.Text = String.Empty;
             txtDelAddress3.Text = String.Empty;
             txtDelieveryCity.Text = String.Empty;
-            txtDelieveryZipCode.Text = String.Empty;
+            txtDelZipCode.Text = String.Empty;
             txtDelieveryState.Text = String.Empty;
             txtDelTransID.Text = String.Empty;
         }
@@ -2130,6 +2131,11 @@ namespace WindowsFormsApplication1
         }
 
         private void txtAcCode_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDelieveryCode_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

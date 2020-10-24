@@ -57,15 +57,6 @@
             this.crossTabHeaderCell3 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabHeaderCell4 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabTotalCell1 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.PSWSNO = new DevExpress.XtraReports.Parameters.Parameter();
-            this.PSWSTOTBOXES = new DevExpress.XtraReports.Parameters.Parameter();
-            this.FY = new DevExpress.XtraReports.Parameters.Parameter();
-            this.UnitCode = new DevExpress.XtraReports.Parameters.Parameter();
-            this.crossTabGeneralStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.crossTabHeaderStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.crossTabDataStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.crossTabTotalStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.crossTabHeaderCell5 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabHeaderCell6 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabHeaderCell7 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
@@ -85,6 +76,15 @@
             this.crossTabTotalCell9 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabTotalCell10 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
             this.crossTabTotalCell11 = new DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.PSWSNO = new DevExpress.XtraReports.Parameters.Parameter();
+            this.PSWSTOTBOXES = new DevExpress.XtraReports.Parameters.Parameter();
+            this.FY = new DevExpress.XtraReports.Parameters.Parameter();
+            this.UnitCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.crossTabGeneralStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.crossTabHeaderStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.crossTabDataStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.crossTabTotalStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrCrossTab1)).BeginInit();
@@ -222,78 +222,6 @@
             this.crossTabTotalCell1.Name = "crossTabTotalCell1";
             this.crossTabTotalCell1.RowIndex = 5;
             // 
-            // sqlDataSource1
-            // 
-            this.sqlDataSource1.ConnectionName = "localhost_SEQKARTNew_Connection";
-            this.sqlDataSource1.Name = "sqlDataSource1";
-            storedProcQuery1.Name = "sp_LoadPackingSLipPrint";
-            queryParameter1.Name = "@PSWSNO";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?PSWSNO", typeof(string));
-            queryParameter2.Name = "@PSWSTOTBOXES";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?PSWSTOTBOXES", typeof(long));
-            queryParameter3.Name = "@FY";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?FY", typeof(string));
-            queryParameter4.Name = "@UnitCode";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?UnitCode", typeof(string));
-            storedProcQuery1.Parameters.Add(queryParameter1);
-            storedProcQuery1.Parameters.Add(queryParameter2);
-            storedProcQuery1.Parameters.Add(queryParameter3);
-            storedProcQuery1.Parameters.Add(queryParameter4);
-            storedProcQuery1.StoredProcName = "sp_LoadPackingSLipPrint";
-            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
-            // 
-            // PSWSNO
-            // 
-            this.PSWSNO.Name = "PSWSNO";
-            // 
-            // PSWSTOTBOXES
-            // 
-            this.PSWSTOTBOXES.Name = "PSWSTOTBOXES";
-            this.PSWSTOTBOXES.Type = typeof(long);
-            this.PSWSTOTBOXES.ValueInfo = "0";
-            // 
-            // FY
-            // 
-            this.FY.Name = "FY";
-            // 
-            // UnitCode
-            // 
-            this.UnitCode.Name = "UnitCode";
-            // 
-            // crossTabGeneralStyle1
-            // 
-            this.crossTabGeneralStyle1.BackColor = System.Drawing.Color.White;
-            this.crossTabGeneralStyle1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
-            this.crossTabGeneralStyle1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.crossTabGeneralStyle1.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.crossTabGeneralStyle1.ForeColor = System.Drawing.Color.Black;
-            this.crossTabGeneralStyle1.Name = "crossTabGeneralStyle1";
-            this.crossTabGeneralStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            // 
-            // crossTabHeaderStyle1
-            // 
-            this.crossTabHeaderStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.crossTabHeaderStyle1.Name = "crossTabHeaderStyle1";
-            this.crossTabHeaderStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            // 
-            // crossTabDataStyle1
-            // 
-            this.crossTabDataStyle1.Name = "crossTabDataStyle1";
-            this.crossTabDataStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
-            // crossTabTotalStyle1
-            // 
-            this.crossTabTotalStyle1.Name = "crossTabTotalStyle1";
-            this.crossTabTotalStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            // 
             // crossTabHeaderCell5
             // 
             this.crossTabHeaderCell5.ColumnIndex = 1;
@@ -419,6 +347,78 @@
             this.crossTabTotalCell11.ColumnIndex = 4;
             this.crossTabTotalCell11.Name = "crossTabTotalCell11";
             this.crossTabTotalCell11.RowIndex = 5;
+            // 
+            // sqlDataSource1
+            // 
+            this.sqlDataSource1.ConnectionName = "localhost_SEQKARTNew_Connection";
+            this.sqlDataSource1.Name = "sqlDataSource1";
+            storedProcQuery1.Name = "sp_LoadPackingSLipPrint";
+            queryParameter1.Name = "@PSWSNO";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?PSWSNO", typeof(string));
+            queryParameter2.Name = "@PSWSTOTBOXES";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?PSWSTOTBOXES", typeof(long));
+            queryParameter3.Name = "@FY";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?FY", typeof(string));
+            queryParameter4.Name = "@UnitCode";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?UnitCode", typeof(string));
+            storedProcQuery1.Parameters.Add(queryParameter1);
+            storedProcQuery1.Parameters.Add(queryParameter2);
+            storedProcQuery1.Parameters.Add(queryParameter3);
+            storedProcQuery1.Parameters.Add(queryParameter4);
+            storedProcQuery1.StoredProcName = "sp_LoadPackingSLipPrint";
+            this.sqlDataSource1.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable");
+            // 
+            // PSWSNO
+            // 
+            this.PSWSNO.Name = "PSWSNO";
+            // 
+            // PSWSTOTBOXES
+            // 
+            this.PSWSTOTBOXES.Name = "PSWSTOTBOXES";
+            this.PSWSTOTBOXES.Type = typeof(long);
+            this.PSWSTOTBOXES.ValueInfo = "0";
+            // 
+            // FY
+            // 
+            this.FY.Name = "FY";
+            // 
+            // UnitCode
+            // 
+            this.UnitCode.Name = "UnitCode";
+            // 
+            // crossTabGeneralStyle1
+            // 
+            this.crossTabGeneralStyle1.BackColor = System.Drawing.Color.White;
+            this.crossTabGeneralStyle1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(160)))), ((int)(((byte)(160)))));
+            this.crossTabGeneralStyle1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.crossTabGeneralStyle1.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.crossTabGeneralStyle1.ForeColor = System.Drawing.Color.Black;
+            this.crossTabGeneralStyle1.Name = "crossTabGeneralStyle1";
+            this.crossTabGeneralStyle1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            // 
+            // crossTabHeaderStyle1
+            // 
+            this.crossTabHeaderStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.crossTabHeaderStyle1.Name = "crossTabHeaderStyle1";
+            this.crossTabHeaderStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            // 
+            // crossTabDataStyle1
+            // 
+            this.crossTabDataStyle1.Name = "crossTabDataStyle1";
+            this.crossTabDataStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            // 
+            // crossTabTotalStyle1
+            // 
+            this.crossTabTotalStyle1.Name = "crossTabTotalStyle1";
+            this.crossTabTotalStyle1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             // 
             // xrLabel1
             // 

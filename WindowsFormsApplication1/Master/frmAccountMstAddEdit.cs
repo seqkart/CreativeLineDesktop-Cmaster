@@ -37,6 +37,8 @@ namespace WindowsFormsApplication1
             txtDelCitycode.Text = string.Empty;
             txtDelCityName.Text = string.Empty;
             txtDelGSTNo.Text = string.Empty;
+            txtDelAccName.Text = string.Empty;
+            txtDelZipCode.Text = string.Empty;
         }
         private void txtSLCode_EditValueChanged(object sender, EventArgs e)
         {
@@ -622,6 +624,12 @@ namespace WindowsFormsApplication1
 
         private void BtnOK_Click(object sender, EventArgs e)
         {
+            if (txtDelAccName.Text.Trim().Length == 0)
+            {
+                ProjectFunctions.SpeakError("Invalid Del Account Name ");
+                txtDelAccName.Focus();
+                return;
+            }
             if (txtDelAddress1.Text.Trim().Length == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Del Address1 ");
@@ -642,12 +650,14 @@ namespace WindowsFormsApplication1
             }
             if (BtnOK.Text.ToUpper() == "&OK")
             {
-                ProjectFunctions.GetDataSet("Insert into ActDelAddresses(AccCode,AccAddress1,AccAddress2,AccAddress3,CityCode,AccGSTNo)values('" + txtAcCode.Text + "','" + txtDelAddress1.Text + "','" + txtDelAddress2.Text + "','" + txtDelAddress3.Text + "','" + txtDelCitycode.Text + "','" + txtDelGSTNo.Text + "')");
+                ProjectFunctions.GetDataSet("Insert into ActDelAddresses(DelAccName,DelZipCode,AccCode,AccAddress1,AccAddress2,AccAddress3,CityCode,AccGSTNo)values('" + txtDelAccName.Text + "','" + txtDelZipCode.Text + "','" + txtAcCode.Text + "','" + txtDelAddress1.Text + "','" + txtDelAddress2.Text + "','" + txtDelAddress3.Text + "','" + txtDelCitycode.Text + "','" + txtDelGSTNo.Text + "')");
                 LoadDelAddresses();
             }
             else
             {
                 String Query = "update ActDelAddresses Set ";
+                Query = Query + " DelAccName='" + txtDelAccName.Text + "',";
+                Query = Query + " DelZipCode='" + txtDelZipCode.Text + "',";
                 Query = Query + " AccAddress1='" + txtDelAddress1.Text + "',";
                 Query = Query + " AccAddress2='" + txtDelAddress2.Text + "',";
                 Query = Query + " AccAddress3='" + txtDelAddress3.Text + "',";
@@ -681,6 +691,8 @@ namespace WindowsFormsApplication1
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadDelAddress '" + TransID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
+                    txtDelAccName.Text = ds.Tables[0].Rows[0]["DelAccName"].ToString();
+                    txtDelZipCode.Text = ds.Tables[0].Rows[0]["DelZipCode"].ToString();
                     txtDelAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
                     txtDelAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
                     txtDelAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
@@ -700,7 +712,8 @@ namespace WindowsFormsApplication1
             txtDelCitycode.Text = string.Empty;
             txtDelCityName.Text = string.Empty;
             txtDelGSTNo.Text = string.Empty;
-
+            txtDelAccName.Text = string.Empty;
+            txtDelZipCode.Text = string.Empty;
             txtDelAddress1.Focus();
         }
 
