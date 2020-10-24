@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition crossTabColumnDefinition1 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(100F);
             DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition crossTabColumnDefinition2 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(100F);
-            DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition crossTabColumnDefinition3 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(100F);
-            DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition crossTabColumnDefinition4 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(100F);
+            DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition crossTabColumnDefinition3 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(56.25001F);
+            DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition crossTabColumnDefinition4 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(32.29166F);
             DevExpress.XtraReports.UI.CrossTab.CrossTabColumnField crossTabColumnField1 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnField();
             DevExpress.XtraReports.UI.CrossTab.CrossTabColumnField crossTabColumnField2 = new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnField();
             DevExpress.XtraReports.UI.CrossTab.CrossTabDataField crossTabDataField1 = new DevExpress.XtraReports.UI.CrossTab.CrossTabDataField();
-            DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition crossTabRowDefinition1 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(25F);
-            DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition crossTabRowDefinition2 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(25F);
+            DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition crossTabRowDefinition1 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(18.75F);
+            DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition crossTabRowDefinition2 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(24.99999F);
             DevExpress.XtraReports.UI.CrossTab.CrossTabRowField crossTabRowField1 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowField();
             DevExpress.XtraReports.UI.CrossTab.CrossTabRowField crossTabRowField2 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowField();
             DevExpress.XtraReports.UI.CrossTab.CrossTabRowField crossTabRowField3 = new DevExpress.XtraReports.UI.CrossTab.CrossTabRowField();
@@ -87,12 +87,14 @@
             this.crossTabTotalStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrCharacterComb2 = new DevExpress.XtraReports.UI.XRCharacterComb();
+            this.xrCharacterComb1 = new DevExpress.XtraReports.UI.XRCharacterComb();
             ((System.ComponentModel.ISupportInitialize)(this.xrCrossTab1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 31F;
+            this.TopMargin.HeightF = 23F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
@@ -104,7 +106,7 @@
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrCrossTab1});
-            this.Detail.HeightF = 195.4167F;
+            this.Detail.HeightF = 173.9583F;
             this.Detail.Name = "Detail";
             // 
             // xrCrossTab1
@@ -137,7 +139,7 @@
             this.crossTabTotalCell11});
             crossTabColumnDefinition1.AutoWidthMode = DevExpress.XtraReports.UI.AutoSizeMode.ShrinkAndGrow;
             crossTabColumnDefinition2.AutoWidthMode = DevExpress.XtraReports.UI.AutoSizeMode.ShrinkAndGrow;
-            crossTabColumnDefinition3.AutoWidthMode = DevExpress.XtraReports.UI.AutoSizeMode.ShrinkAndGrow;
+            crossTabColumnDefinition3.AutoWidthMode = DevExpress.XtraReports.UI.AutoSizeMode.ShrinkOnly;
             crossTabColumnDefinition4.Visible = false;
             this.xrCrossTab1.ColumnDefinitions.AddRange(new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition[] {
             new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(100F),
@@ -145,7 +147,7 @@
             crossTabColumnDefinition2,
             crossTabColumnDefinition3,
             crossTabColumnDefinition4,
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(100F)});
+            new DevExpress.XtraReports.UI.CrossTab.CrossTabColumnDefinition(64.58332F)});
             crossTabColumnField1.FieldName = "SZINDEX";
             crossTabColumnField2.FieldName = "SZNAME";
             crossTabColumnField2.SortOrder = DevExpress.XtraReports.UI.XRColumnSortOrder.None;
@@ -166,11 +168,11 @@
             crossTabRowDefinition2.Visible = false;
             this.xrCrossTab1.RowDefinitions.AddRange(new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition[] {
             crossTabRowDefinition1,
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(25F),
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(25F),
+            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(55.20833F),
+            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(24.99999F),
             crossTabRowDefinition2,
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(25F),
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(25F)});
+            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(24.99999F),
+            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(24.99999F)});
             crossTabRowField1.FieldName = "ARTNO";
             crossTabRowField2.FieldName = "SIDARTDESC";
             crossTabRowField3.FieldName = "SIDCOLN";
@@ -178,32 +180,38 @@
             crossTabRowField1,
             crossTabRowField2,
             crossTabRowField3});
-            this.xrCrossTab1.SizeF = new System.Drawing.SizeF(600F, 150F);
+            this.xrCrossTab1.SizeF = new System.Drawing.SizeF(453.125F, 173.9583F);
             this.xrCrossTab1.TotalAreaStyleName = "crossTabTotalStyle1";
             // 
             // crossTabHeaderCell1
             // 
             this.crossTabHeaderCell1.ColumnIndex = 0;
+            this.crossTabHeaderCell1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabHeaderCell1.Name = "crossTabHeaderCell1";
             this.crossTabHeaderCell1.RowIndex = 0;
             this.crossTabHeaderCell1.RowSpan = 2;
-            this.crossTabHeaderCell1.Text = "ARTNO";
+            this.crossTabHeaderCell1.Text = "ART NO";
+            this.crossTabHeaderCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // crossTabDataCell1
             // 
             this.crossTabDataCell1.ColumnIndex = 3;
+            this.crossTabDataCell1.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.crossTabDataCell1.Name = "crossTabDataCell1";
             this.crossTabDataCell1.RowIndex = 2;
             // 
             // crossTabHeaderCell2
             // 
             this.crossTabHeaderCell2.ColumnIndex = 3;
+            this.crossTabHeaderCell2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabHeaderCell2.Name = "crossTabHeaderCell2";
             this.crossTabHeaderCell2.RowIndex = 1;
+            this.crossTabHeaderCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // crossTabHeaderCell3
             // 
             this.crossTabHeaderCell3.ColumnIndex = 0;
+            this.crossTabHeaderCell3.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crossTabHeaderCell3.Name = "crossTabHeaderCell3";
             this.crossTabHeaderCell3.RowIndex = 2;
             this.crossTabHeaderCell3.RowSpan = 2;
@@ -212,6 +220,7 @@
             // 
             this.crossTabHeaderCell4.ColumnIndex = 0;
             this.crossTabHeaderCell4.ColumnSpan = 3;
+            this.crossTabHeaderCell4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crossTabHeaderCell4.Name = "crossTabHeaderCell4";
             this.crossTabHeaderCell4.RowIndex = 5;
             this.crossTabHeaderCell4.Text = "Grand Total";
@@ -219,20 +228,24 @@
             // crossTabTotalCell1
             // 
             this.crossTabTotalCell1.ColumnIndex = 3;
+            this.crossTabTotalCell1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabTotalCell1.Name = "crossTabTotalCell1";
             this.crossTabTotalCell1.RowIndex = 5;
             // 
             // crossTabHeaderCell5
             // 
             this.crossTabHeaderCell5.ColumnIndex = 1;
+            this.crossTabHeaderCell5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabHeaderCell5.Name = "crossTabHeaderCell5";
             this.crossTabHeaderCell5.RowIndex = 0;
             this.crossTabHeaderCell5.RowSpan = 2;
-            this.crossTabHeaderCell5.Text = "SIDARTDESC";
+            this.crossTabHeaderCell5.Text = "DISCRIPTION";
+            this.crossTabHeaderCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // crossTabHeaderCell6
             // 
             this.crossTabHeaderCell6.ColumnIndex = 1;
+            this.crossTabHeaderCell6.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.crossTabHeaderCell6.Name = "crossTabHeaderCell6";
             this.crossTabHeaderCell6.RowIndex = 2;
             // 
@@ -240,6 +253,7 @@
             // 
             this.crossTabHeaderCell7.ColumnIndex = 0;
             this.crossTabHeaderCell7.ColumnSpan = 3;
+            this.crossTabHeaderCell7.Font = new System.Drawing.Font("Calibri", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crossTabHeaderCell7.Name = "crossTabHeaderCell7";
             this.crossTabHeaderCell7.RowIndex = 4;
             this.crossTabHeaderCell7.TextFormatString = "Total {0}";
@@ -247,20 +261,24 @@
             // crossTabTotalCell2
             // 
             this.crossTabTotalCell2.ColumnIndex = 3;
+            this.crossTabTotalCell2.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
             this.crossTabTotalCell2.Name = "crossTabTotalCell2";
             this.crossTabTotalCell2.RowIndex = 4;
             // 
             // crossTabHeaderCell8
             // 
             this.crossTabHeaderCell8.ColumnIndex = 2;
+            this.crossTabHeaderCell8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabHeaderCell8.Name = "crossTabHeaderCell8";
             this.crossTabHeaderCell8.RowIndex = 0;
             this.crossTabHeaderCell8.RowSpan = 2;
-            this.crossTabHeaderCell8.Text = "SIDCOLN";
+            this.crossTabHeaderCell8.Text = "COLOUR";
+            this.crossTabHeaderCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // crossTabHeaderCell9
             // 
             this.crossTabHeaderCell9.ColumnIndex = 2;
+            this.crossTabHeaderCell9.Font = new System.Drawing.Font("Calibri", 11.25F);
             this.crossTabHeaderCell9.Name = "crossTabHeaderCell9";
             this.crossTabHeaderCell9.RowIndex = 2;
             // 
@@ -281,6 +299,7 @@
             // crossTabHeaderCell11
             // 
             this.crossTabHeaderCell11.ColumnIndex = 5;
+            this.crossTabHeaderCell11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabHeaderCell11.Name = "crossTabHeaderCell11";
             this.crossTabHeaderCell11.RowIndex = 0;
             this.crossTabHeaderCell11.RowSpan = 2;
@@ -289,6 +308,7 @@
             // crossTabTotalCell4
             // 
             this.crossTabTotalCell4.ColumnIndex = 5;
+            this.crossTabTotalCell4.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.crossTabTotalCell4.Name = "crossTabTotalCell4";
             this.crossTabTotalCell4.RowIndex = 2;
             // 
@@ -301,12 +321,14 @@
             // crossTabTotalCell6
             // 
             this.crossTabTotalCell6.ColumnIndex = 5;
+            this.crossTabTotalCell6.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
             this.crossTabTotalCell6.Name = "crossTabTotalCell6";
             this.crossTabTotalCell6.RowIndex = 4;
             // 
             // crossTabTotalCell7
             // 
             this.crossTabTotalCell7.ColumnIndex = 5;
+            this.crossTabTotalCell7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.crossTabTotalCell7.Name = "crossTabTotalCell7";
             this.crossTabTotalCell7.RowIndex = 5;
             // 
@@ -322,7 +344,6 @@
             this.crossTabHeaderCell13.Name = "crossTabHeaderCell13";
             this.crossTabHeaderCell13.RowIndex = 0;
             this.crossTabHeaderCell13.RowSpan = 2;
-            this.crossTabHeaderCell13.TextFormatString = "Total {0}";
             // 
             // crossTabTotalCell8
             // 
@@ -422,18 +443,43 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 26.66667F);
+            this.xrLabel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(331.25F, 0F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(100F, 23F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(104.1667F, 24.04167F);
+            this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.Text = "PACKING SLIP";
             // 
             // PageHeader
             // 
             this.PageHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrCharacterComb2,
+            this.xrCharacterComb1,
             this.xrLabel1});
+            this.PageHeader.HeightF = 132.3333F;
             this.PageHeader.Name = "PageHeader";
+            // 
+            // xrCharacterComb2
+            // 
+            this.xrCharacterComb2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?PSWSTOTBOXES")});
+            this.xrCharacterComb2.LocationFloat = new DevExpress.Utils.PointFloat(465.375F, 53.20834F);
+            this.xrCharacterComb2.Multiline = true;
+            this.xrCharacterComb2.Name = "xrCharacterComb2";
+            this.xrCharacterComb2.SizeF = new System.Drawing.SizeF(200F, 28.29166F);
+            this.xrCharacterComb2.Text = "xrCharacterComb1";
+            // 
+            // xrCharacterComb1
+            // 
+            this.xrCharacterComb1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'PS: \'+?PSWSNO")});
+            this.xrCharacterComb1.LocationFloat = new DevExpress.Utils.PointFloat(463.2917F, 23F);
+            this.xrCharacterComb1.Multiline = true;
+            this.xrCharacterComb1.Name = "xrCharacterComb1";
+            this.xrCharacterComb1.SizeF = new System.Drawing.SizeF(200F, 28.29166F);
+            this.xrCharacterComb1.Text = "xrCharacterComb1";
             // 
             // PackingSlipCrossTab
             // 
@@ -446,7 +492,7 @@
             this.sqlDataSource1});
             this.DataSourceSchema = null;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.Margins = new System.Drawing.Printing.Margins(19, 16, 31, 31);
+            this.Margins = new System.Drawing.Printing.Margins(39, 16, 23, 31);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.PSWSNO,
             this.PSWSTOTBOXES,
@@ -505,5 +551,7 @@
         private DevExpress.XtraReports.UI.CrossTab.XRCrossTabCell crossTabTotalCell11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
+        private DevExpress.XtraReports.UI.XRCharacterComb xrCharacterComb1;
+        private DevExpress.XtraReports.UI.XRCharacterComb xrCharacterComb2;
     }
 }

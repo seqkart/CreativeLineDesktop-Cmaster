@@ -1,5 +1,4 @@
-﻿using DevExpress.Data.Helpers;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
@@ -1183,7 +1182,7 @@ namespace WindowsFormsApplication1
                                                                               rpt.CreateDocument();
 
                                                                               payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
-                                                                              
+
                                                                               frm.documentViewer1.DocumentSource = rpt;
                                                                               frm.ShowDialog(Parent);
                                                                           }

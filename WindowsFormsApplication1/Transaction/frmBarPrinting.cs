@@ -1,4 +1,6 @@
 ﻿using DevExpress.XtraSplashScreen;
+using DevExpress.XtraTab;
+using DevExpress.XtraTab.ViewInfo;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -52,6 +54,7 @@ namespace WindowsFormsApplication1.Transaction
         private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
+         
         }
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
@@ -994,7 +997,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     if (e.KeyCode == Keys.Enter)
                     {
-                        DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU Where SKUPRODUCTCODE='" + txtBarCode.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                        DataSet dsCheck = ProjectFunctions.GetDataSet(" SELECT top 1 * FROM ( SELECT * FROM sku UNION ALL SELECT * FROM sku_fix ) as tmp Where SKUPRODUCTCODE='" + txtBarCode.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
                         if (dsCheck.Tables[0].Rows.Count > 0)
                         {
 
@@ -1053,7 +1056,7 @@ namespace WindowsFormsApplication1.Transaction
             foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
             {
 
-                DataSet ds = ProjectFunctions.GetDataSet("[sp_PrintBarCodeDuplicate] '" + dr["SKUPRODUCTCODE"].ToString() + "','" + GlobalVariables.CUnitID + "'");
+                DataSet ds = ProjectFunctions.GetDataSet("[sp_PrintBarCodeDuplicate1] '" + dr["SKUPRODUCTCODE"].ToString() + "','" + GlobalVariables.CUnitID + "'");
                 if (i == 0)
                 {
                     dtNew = ds.Tables[0].Clone();
