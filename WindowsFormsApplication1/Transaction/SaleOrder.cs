@@ -5,6 +5,7 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using Telerik.JustMock.Helpers;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -254,14 +255,101 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
+
+        private void Calculation()
+        {
+            Decimal TotalSubValue = 0;
+            Decimal TotalDiscValue = 0;
+            Decimal TotalTaxValue = 0;
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                TotalSubValue = TotalSubValue + Convert.ToDecimal(dr["BaseCost"]);
+                TotalTaxValue = TotalTaxValue + Convert.ToDecimal(dr["CGSTAmount"]) + Convert.ToDecimal(dr["SGSTAmount"]) + Convert.ToDecimal(dr["IGSTAmount"]);
+            }
+
+            txtSubTotal.EditValue = TotalSubValue;
+            txtTotalTax.EditValue = TotalTaxValue;
+            txtTotalDiscount.EditValue = TotalDiscValue;
+
+            txtRoundOff.EditValue =Math.Round((Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text)),2)-(Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text));
+
+            txtNetAmount.EditValue = (Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text)+ Convert.ToDecimal(txtRoundOff.Text));
+
+        }
         private void SaleOrder_Load(object sender, EventArgs e)
         {
             ProjectFunctions.TextBoxVisualize(groupControl1);
             ProjectFunctions.TextBoxVisualize(groupControl2);
             ProjectFunctions.TextBoxVisualize(groupControl3);
+            ProjectFunctions.TextBoxVisualize(xtraTabPage3);
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
+            dtOrderDate.Enabled = false;
+            txtOrderNo.Enabled = false; 
+            if (s1 == "&Add")
+            {
+                txtDebitPartyCode.Select();
 
+                dtOrderDate.EditValue = DateTime.Now;
+                txtDelieveryDate.EditValue = DateTime.Now;
+            }
+            if (s1 == "Edit")
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadSaleOrderMstFEdit] '" + DocDate.Date.ToString("yyyy-MM-dd") + "','" + DocNo + "'");
+
+                dtOrderDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["DocDate"]).ToString("yyyy-MM-dd");
+                txtOrderNo.Text = ds.Tables[0].Rows[0]["DocNo"].ToString();
+                txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["BuyerCode"].ToString();
+                txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+                txtBillingAddress1.Text = ds.Tables[0].Rows[0]["BillingAddress1"].ToString();
+                txtBillingAddress2.Text = ds.Tables[0].Rows[0]["BillingAddress2"].ToString();
+                txtBillingAddress3.Text = ds.Tables[0].Rows[0]["BillingAddress3"].ToString();
+                txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
+                txtBillingZip.Text = ds.Tables[0].Rows[0]["BillingZipCode"].ToString();
+                txtBuyerDANo.Text = ds.Tables[0].Rows[0]["BuyerDANo"].ToString();
+                txtBuyerPONo.Text = ds.Tables[0].Rows[0]["BuyerPONo"].ToString();
+               
+
+
+                
+                txtDelAccName.Text = ds.Tables[0].Rows[0]["DelAccName"].ToString();
+               
+                txtDelieveryCode.Text = ds.Tables[0].Rows[0]["BuyerCode"].ToString();
+                txtDelieveryDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["DelieveryDate"]).ToString("yyyy-MM-dd");
+                txtDelieveryName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+                txtDelTransID.Text = ds.Tables[0].Rows[0]["DelieveryTransID"].ToString();
+                txtDelAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
+                txtDelAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
+                txtDelAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
+                txtDelieveryCity.Text = ds.Tables[0].Rows[0]["DeliveryCity"].ToString();
+                txtDelZipCode.Text = ds.Tables[0].Rows[0]["DelZipCode"].ToString();
+                txtFreight.Text = ds.Tables[0].Rows[0]["FreightValue"].ToString();
+                txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+                txtMargin.Text = ds.Tables[0].Rows[0]["Margin"].ToString();
+                txtNetAmount.Text = ds.Tables[0].Rows[0]["NetAmount"].ToString();
+                txtRoundOff.Text = ds.Tables[0].Rows[0]["RoundOff"].ToString();
+                txtSubTotal.Text = ds.Tables[0].Rows[0]["TaxableValue"].ToString();
+                txtTaxType.Text = ds.Tables[0].Rows[0]["TaxType"].ToString();
+                txtTC1.Text = ds.Tables[0].Rows[0]["Term1"].ToString();
+                txtTC2.Text = ds.Tables[0].Rows[0]["Term2"].ToString();
+                txtTC3.Text = ds.Tables[0].Rows[0]["Term3"].ToString();
+                txtTotalDiscount.Text = ds.Tables[0].Rows[0]["TotalDiscValue"].ToString();
+                txtTotalTax.Text = ds.Tables[0].Rows[0]["TotalTaxValue"].ToString();
+                txtTransporterCode.Text = ds.Tables[0].Rows[0]["TransporterCode"].ToString();
+                txtTransporterName.Text = ds.Tables[0].Rows[0]["TrpName"].ToString();
+                dt = ds.Tables[1];
+                if(dt.Rows.Count>0)
+                {
+                    InfoGrid.DataSource = dt;
+                    InfoGridView.BestFitColumns();
+                }
+                else
+                {
+                    InfoGrid.DataSource = null;
+                    InfoGridView.BestFitColumns();
+                }
+            }
         }
-
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
         {
             HelpGridView.CloseEditor();
@@ -346,7 +434,7 @@ namespace WindowsFormsApplication1.Transaction
 
                                 if (drTemplate["DFieldName"].ToString().ToUpper() == "ARTICLEID")
                                 {
-                                    dataRow["ArticleDesc"] = dr[drTemplate["SFieldName"].ToString()];
+                                    dataRow["ArtNo"] = dr[drTemplate["SFieldName"].ToString()];
                                 }
                                 else
                                 {
@@ -373,10 +461,37 @@ namespace WindowsFormsApplication1.Transaction
                 }
 
 
-                if(dt.Rows.Count>0)
+                if (dt.Rows.Count > 0)
                 {
-                    InfoGrid.DataSource = dt;
-                    InfoGridView.BestFitColumns();
+                    txtBuyerPONo.Text = System.IO.Path.GetFileNameWithoutExtension(openFileDialog1.FileName);
+
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        DataSet dsArticle = ProjectFunctions.GetDataSet("Select * from ARTICLE where ARTNO='" + dr["ArtNo"].ToString() + "'");
+                        if (dsArticle.Tables[0].Rows.Count > 0)
+                        {
+                            dr["ArticleID"] = dsArticle.Tables[0].Rows[0]["ARTSYSID"].ToString();
+                            dr["ArtNo"] = dsArticle.Tables[0].Rows[0]["ARTNO"].ToString();
+                            dr["ArticleDesc"] = dsArticle.Tables[0].Rows[0]["ARTDESC"].ToString();
+                        }
+
+                        DataSet dsColor = ProjectFunctions.GetDataSet("Select * from COLOURS where COLNAME='" + dr["ColorDesc"].ToString() + "'");
+                        if (dsColor.Tables[0].Rows.Count > 0)
+                        {
+                            dr["ColorId"] = dsColor.Tables[0].Rows[0]["COLSYSID"].ToString();
+                            dr["ColorDesc"] = dsColor.Tables[0].Rows[0]["COLNAME"].ToString();
+                        }
+                        DataSet dsSize = ProjectFunctions.GetDataSet("Select * from SIZEMAST where SZNAME='" +dr["SizeDesc"] + "' ");
+                        if (dsSize.Tables[0].Rows.Count > 0)
+                        {
+                            dr["SizeId"]= dsSize.Tables[0].Rows[0]["SZSYSID"].ToString();
+                            dr["SizeDesc"]= dsSize.Tables[0].Rows[0]["SZNAME"].ToString();
+
+                        }
+                        InfoGrid.DataSource = dt;
+                        InfoGridView.BestFitColumns();
+                        Calculation();
+                    }
                 }
                 else
                 {
@@ -402,7 +517,11 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     ProjectFunctions.SpeakError("No Data To Save");
                 }
+                if(txtMargin.Text.Trim().Length==0)
+                {
 
+                    txtMargin.Text = "0";
+                }
                 return true;
             }
             catch (Exception ex)
@@ -415,6 +534,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             if (ValidateDataForSaving())
             {
+                Calculation();
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
 
@@ -894,6 +1014,11 @@ namespace WindowsFormsApplication1.Transaction
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
+        }
+
+        private void txtFreight_EditValueChanged(object sender, EventArgs e)
+        {
+            Calculation();
         }
     }
 }

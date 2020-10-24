@@ -308,8 +308,8 @@ namespace WindowsFormsApplication1
                     {
                         s1 = btnEdit.Text,
                         Text = "Sale Order Edition",
-                        DocNo = CurrentRow["SIMNO"].ToString(),
-                        DocDate = Convert.ToDateTime(CurrentRow["SIMDATE"])
+                        DocNo = CurrentRow["DocNo"].ToString(),
+                        DocDate = Convert.ToDateTime(CurrentRow["DocDate"])
                     };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);

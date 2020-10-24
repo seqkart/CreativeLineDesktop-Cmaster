@@ -50,10 +50,6 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
-            this.GridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.GridControlView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl52 = new DevExpress.XtraEditors.LabelControl();
             this.txtDelAccName = new DevExpress.XtraEditors.TextEdit();
             this.txtDelTransID = new DevExpress.XtraEditors.TextEdit();
@@ -69,6 +65,10 @@
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.txtDelieveryName = new DevExpress.XtraEditors.TextEdit();
             this.txtDelieveryCode = new DevExpress.XtraEditors.TextEdit();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
+            this.GridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.GridControlView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtTaxType = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -154,11 +154,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridControlView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAccName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelTransID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelZipCode.Properties)).BeginInit();
@@ -169,6 +164,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridControlView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxType.Properties)).BeginInit();
@@ -423,54 +423,6 @@
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Delivery";
             // 
-            // panelControl1
-            // 
-            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
-            this.panelControl1.Controls.Add(this.txtSearchBox);
-            this.panelControl1.Controls.Add(this.GridControl1);
-            this.panelControl1.Location = new System.Drawing.Point(193, 46);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(569, 249);
-            this.panelControl1.TabIndex = 688;
-            this.panelControl1.Visible = false;
-            // 
-            // txtSearchBox
-            // 
-            this.txtSearchBox.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSearchBox.EnterMoveNextControl = true;
-            this.txtSearchBox.Location = new System.Drawing.Point(2, 2);
-            this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSearchBox.Properties.MaxLength = 400;
-            this.txtSearchBox.Size = new System.Drawing.Size(565, 20);
-            this.txtSearchBox.TabIndex = 246;
-            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
-            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
-            // 
-            // GridControl1
-            // 
-            this.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GridControl1.Location = new System.Drawing.Point(2, 2);
-            this.GridControl1.MainView = this.GridControlView1;
-            this.GridControl1.Name = "GridControl1";
-            this.GridControl1.Size = new System.Drawing.Size(565, 245);
-            this.GridControl1.TabIndex = 245;
-            this.GridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GridControlView1});
-            this.GridControl1.DoubleClick += new System.EventHandler(this.GridControl1_DoubleClick);
-            // 
-            // GridControlView1
-            // 
-            this.GridControlView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.GridControlView1.GridControl = this.GridControl1;
-            this.GridControlView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.GridControlView1.Name = "GridControlView1";
-            this.GridControlView1.OptionsBehavior.AllowIncrementalSearch = true;
-            this.GridControlView1.OptionsBehavior.Editable = false;
-            this.GridControlView1.OptionsView.ShowGroupPanel = false;
-            this.GridControlView1.OptionsView.ShowIndicator = false;
-            this.GridControlView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
             // labelControl52
             // 
             this.labelControl52.Location = new System.Drawing.Point(19, 54);
@@ -598,6 +550,54 @@
             this.txtDelieveryCode.TabIndex = 549;
             this.txtDelieveryCode.EditValueChanged += new System.EventHandler(this.txtDelieveryCode_EditValueChanged);
             this.txtDelieveryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelieveryCode_KeyDown);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
+            this.panelControl1.Controls.Add(this.txtSearchBox);
+            this.panelControl1.Controls.Add(this.GridControl1);
+            this.panelControl1.Location = new System.Drawing.Point(193, 46);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(569, 249);
+            this.panelControl1.TabIndex = 688;
+            this.panelControl1.Visible = false;
+            // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSearchBox.EnterMoveNextControl = true;
+            this.txtSearchBox.Location = new System.Drawing.Point(2, 2);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSearchBox.Properties.MaxLength = 400;
+            this.txtSearchBox.Size = new System.Drawing.Size(565, 20);
+            this.txtSearchBox.TabIndex = 246;
+            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
+            // 
+            // GridControl1
+            // 
+            this.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridControl1.Location = new System.Drawing.Point(2, 2);
+            this.GridControl1.MainView = this.GridControlView1;
+            this.GridControl1.Name = "GridControl1";
+            this.GridControl1.Size = new System.Drawing.Size(565, 245);
+            this.GridControl1.TabIndex = 245;
+            this.GridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.GridControlView1});
+            this.GridControl1.DoubleClick += new System.EventHandler(this.GridControl1_DoubleClick);
+            // 
+            // GridControlView1
+            // 
+            this.GridControlView1.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.GridControlView1.GridControl = this.GridControl1;
+            this.GridControlView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.GridControlView1.Name = "GridControlView1";
+            this.GridControlView1.OptionsBehavior.AllowIncrementalSearch = true;
+            this.GridControlView1.OptionsBehavior.Editable = false;
+            this.GridControlView1.OptionsView.ShowGroupPanel = false;
+            this.GridControlView1.OptionsView.ShowIndicator = false;
+            this.GridControlView1.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // groupControl3
             // 
@@ -883,6 +883,8 @@
             this.gridColumn7.Caption = "Quantity";
             this.gridColumn7.FieldName = "Quantity";
             this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Quantity", "{0:0.##}")});
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 8;
             // 
@@ -891,6 +893,8 @@
             this.gridColumn8.Caption = "MRP";
             this.gridColumn8.FieldName = "MRP";
             this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "MRP", "{0:0.##}")});
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 9;
             // 
@@ -899,6 +903,8 @@
             this.gridColumn9.Caption = "BaseCost";
             this.gridColumn9.FieldName = "BaseCost";
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "BaseCost", "{0:0.##}")});
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 10;
             // 
@@ -931,6 +937,8 @@
             this.gridColumn13.Caption = "CGSTAmount";
             this.gridColumn13.FieldName = "CGSTAmount";
             this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CGSTAmount", "{0:0.##}")});
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 14;
             // 
@@ -939,6 +947,8 @@
             this.gridColumn14.Caption = "SGSTAmount";
             this.gridColumn14.FieldName = "SGSTAmount";
             this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SGSTAmount", "{0:0.##}")});
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 15;
             // 
@@ -947,6 +957,8 @@
             this.gridColumn15.Caption = "IGATAmount";
             this.gridColumn15.FieldName = "IGSTAmount";
             this.gridColumn15.Name = "gridColumn15";
+            this.gridColumn15.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "IGSTAmount", "{0:0.##}")});
             this.gridColumn15.Visible = true;
             this.gridColumn15.VisibleIndex = 16;
             // 
@@ -989,8 +1001,17 @@
             // 
             // txtNetAmount
             // 
+            this.txtNetAmount.EditValue = "0";
+            this.txtNetAmount.Enabled = false;
             this.txtNetAmount.Location = new System.Drawing.Point(74, 110);
             this.txtNetAmount.Name = "txtNetAmount";
+            this.txtNetAmount.Properties.DisplayFormat.FormatString = "n2";
+            this.txtNetAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtNetAmount.Properties.EditFormat.FormatString = "n2";
+            this.txtNetAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtNetAmount.Properties.Mask.EditMask = "n2";
+            this.txtNetAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtNetAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtNetAmount.Size = new System.Drawing.Size(128, 20);
             this.txtNetAmount.TabIndex = 16;
             // 
@@ -1004,8 +1025,17 @@
             // 
             // txtRoundOff
             // 
+            this.txtRoundOff.EditValue = "0";
+            this.txtRoundOff.Enabled = false;
             this.txtRoundOff.Location = new System.Drawing.Point(74, 84);
             this.txtRoundOff.Name = "txtRoundOff";
+            this.txtRoundOff.Properties.DisplayFormat.FormatString = "n2";
+            this.txtRoundOff.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRoundOff.Properties.EditFormat.FormatString = "n2";
+            this.txtRoundOff.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtRoundOff.Properties.Mask.EditMask = "n2";
+            this.txtRoundOff.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtRoundOff.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtRoundOff.Size = new System.Drawing.Size(128, 20);
             this.txtRoundOff.TabIndex = 16;
             // 
@@ -1019,10 +1049,19 @@
             // 
             // txtFreight
             // 
+            this.txtFreight.EditValue = "0";
             this.txtFreight.Location = new System.Drawing.Point(74, 64);
             this.txtFreight.Name = "txtFreight";
+            this.txtFreight.Properties.DisplayFormat.FormatString = "n2";
+            this.txtFreight.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFreight.Properties.EditFormat.FormatString = "n2";
+            this.txtFreight.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtFreight.Properties.Mask.EditMask = "n2";
+            this.txtFreight.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtFreight.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtFreight.Size = new System.Drawing.Size(128, 20);
             this.txtFreight.TabIndex = 16;
+            this.txtFreight.EditValueChanged += new System.EventHandler(this.txtFreight_EditValueChanged);
             // 
             // labelControl27
             // 
@@ -1034,8 +1073,17 @@
             // 
             // txtTotalTax
             // 
+            this.txtTotalTax.EditValue = "0";
+            this.txtTotalTax.Enabled = false;
             this.txtTotalTax.Location = new System.Drawing.Point(74, 44);
             this.txtTotalTax.Name = "txtTotalTax";
+            this.txtTotalTax.Properties.DisplayFormat.FormatString = "n2";
+            this.txtTotalTax.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotalTax.Properties.EditFormat.FormatString = "n2";
+            this.txtTotalTax.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotalTax.Properties.Mask.EditMask = "n2";
+            this.txtTotalTax.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalTax.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotalTax.Size = new System.Drawing.Size(128, 20);
             this.txtTotalTax.TabIndex = 16;
             // 
@@ -1049,8 +1097,17 @@
             // 
             // txtTotalDiscount
             // 
+            this.txtTotalDiscount.EditValue = "0";
+            this.txtTotalDiscount.Enabled = false;
             this.txtTotalDiscount.Location = new System.Drawing.Point(74, 24);
             this.txtTotalDiscount.Name = "txtTotalDiscount";
+            this.txtTotalDiscount.Properties.DisplayFormat.FormatString = "n2";
+            this.txtTotalDiscount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotalDiscount.Properties.EditFormat.FormatString = "n2";
+            this.txtTotalDiscount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtTotalDiscount.Properties.Mask.EditMask = "n2";
+            this.txtTotalDiscount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtTotalDiscount.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotalDiscount.Size = new System.Drawing.Size(128, 20);
             this.txtTotalDiscount.TabIndex = 16;
             // 
@@ -1064,8 +1121,17 @@
             // 
             // txtSubTotal
             // 
+            this.txtSubTotal.EditValue = "0";
+            this.txtSubTotal.Enabled = false;
             this.txtSubTotal.Location = new System.Drawing.Point(74, 4);
             this.txtSubTotal.Name = "txtSubTotal";
+            this.txtSubTotal.Properties.DisplayFormat.FormatString = "n2";
+            this.txtSubTotal.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSubTotal.Properties.EditFormat.FormatString = "n2";
+            this.txtSubTotal.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtSubTotal.Properties.Mask.EditMask = "n2";
+            this.txtSubTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
+            this.txtSubTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtSubTotal.Size = new System.Drawing.Size(128, 20);
             this.txtSubTotal.TabIndex = 16;
             // 
@@ -1301,11 +1367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridControlView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAccName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelTransID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelZipCode.Properties)).EndInit();
@@ -1316,6 +1377,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridControlView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
