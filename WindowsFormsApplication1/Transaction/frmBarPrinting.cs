@@ -26,6 +26,8 @@ namespace WindowsFormsApplication1.Transaction
         {
             InitializeComponent();
             dt.Columns.Add("SKUPRODUCTCODE", typeof(String));
+            dt.Columns.Add("SKUPARTYBARCODE", typeof(String));
+            dt.Columns.Add("SKUFIXBARCODE", typeof(String));
             dt.Columns.Add("SKUARTNO", typeof(String));
             dt.Columns.Add("ARTDESC", typeof(String));
             dt.Columns.Add("SKUCOLN", typeof(String));
@@ -518,9 +520,6 @@ namespace WindowsFormsApplication1.Transaction
 
                             if (ChkFixedBarCode.Checked == false)
                             {
-
-
-
                                 txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU Where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
@@ -535,15 +534,38 @@ namespace WindowsFormsApplication1.Transaction
                                         String SKUPRODUCTCODE = ProjectFunctions.ClipFYearBarCode(GlobalVariables.FinancialYear) + GlobalVariables.CUnitID + GlobalVariables.BarCodePreFix + SKUCode;
 
 
+
+                                        String SKUFixCode = ProjectFunctions.GetDataSet("select     max(cast( isnull(SKUFIXPRODUCTCODE,0) as int))+1 from SKU where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                        String SKUFIXPRODUCTCODE = String.Empty; ;
+
+                                        DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "' And SKUFIXBARCODE is not null");
+                                        if (dsCheck.Tables[0].Rows.Count > 0)
+                                        {
+                                           
+                                                SKUFIXPRODUCTCODE = dsCheck.Tables[0].Rows[0]["SKUFIXBARCODE"].ToString();
+                                                SKUFixCode = dsCheck.Tables[0].Rows[0]["SKUFIXPRODUCTCODE"].ToString();
+                                        }
+                                        else
+                                        {
+                                            SKUFIXPRODUCTCODE = "X" + SKUFixCode.PadLeft(9, '0');
+                                        }
+
+                                        //SKUFIXPRODUCTCODE = dr["SKUFIXBARCODE"].ToString();
+
+
                                         sqlcom.CommandType = CommandType.Text;
 
                                         sqlcom.CommandText = " Insert into [SKU] "
-                                                                    + " (SKUSYSDATE,SKUFNYR,SKUCODE,SKUVOUCHNO,SKUPRODUCTCODE,SKUARTNO,"
+                                                                    + " (SKUFIXPRODUCTCODE,SKUPARTYBARCODE,SKUFIXBARCODE,SKUSYSDATE,SKUFNYR,SKUCODE,SKUVOUCHNO,SKUPRODUCTCODE,SKUARTNO,"
                                                                     + " SKUARTID,SKUCOLN,SKUCOLID,SKUSIZN,SKUSIZID,SKUFEDQTY,"
                                                                     + " SKUGENMODAUTO,SKUCODSCHEM,SKUWSP,SKUMRP,SKUWSPVAL,SKUMRPVAL,SKUASORDR,SKUNMAINTSTK,SKUARTCOLSET,SKUARTSIZSET,SKUSIZINDX,UnitCode)"
-                                                                    + " values(@SKUSYSDATE,@SKUFNYR,@SKUCODE,@SKUVOUCHNO,@SKUPRODUCTCODE,@SKUARTNO,"
+                                                                    + " values(@SKUFIXPRODUCTCODE,@SKUPARTYBARCODE,@SKUFIXBARCODE,@SKUSYSDATE,@SKUFNYR,@SKUCODE,@SKUVOUCHNO,@SKUPRODUCTCODE,@SKUARTNO,"
                                                                     + " @SKUARTID,@SKUCOLN,@SKUCOLID,@SKUSIZN,@SKUSIZID,@SKUFEDQTY,"
                                                                     + " @SKUGENMODAUTO,@SKUCODSCHEM,@SKUWSP,@SKUMRP,@SKUWSPVAL,@SKUMRPVAL,@SKUASORDR,@SKUNMAINTSTK,@SKUARTCOLSET,@SKUARTSIZSET,@SKUSIZINDX,@UnitCode)";
+                                        sqlcom.Parameters.Add("@SKUFIXPRODUCTCODE", SqlDbType.NVarChar).Value = SKUFixCode;
+
+                                        sqlcom.Parameters.Add("@SKUPARTYBARCODE", SqlDbType.NVarChar).Value = dr["SKUPARTYBARCODE"].ToString();
+                                        sqlcom.Parameters.Add("@SKUFIXBARCODE", SqlDbType.NVarChar).Value = SKUFIXPRODUCTCODE;
                                         sqlcom.Parameters.Add("@SKUSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                                         sqlcom.Parameters.Add("@SKUFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
@@ -774,8 +796,6 @@ namespace WindowsFormsApplication1.Transaction
                     BarCodeGrid.DataSource = dt;
                     BarCodeGridView.BestFitColumns();
 
-
-
                     if (Tag == "Fixed")
                     {
                         ChkFixedBarCode.Checked = true;
@@ -931,19 +951,19 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BarCodeGrid_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ArticleImageBox = null;
+//            try
+//            {
+//                ArticleImageBox = null;
 
-                DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
-                ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
-            }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
-            catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
-            {
-                //ProjectFunctions.SpeakError(ex.Message);
-            }
+//                DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
+//                ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
+//            }
+//#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+//            catch (Exception ex)
+//#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+//            {
+//                //ProjectFunctions.SpeakError(ex.Message);
+//            }
         }
 
 
@@ -1086,6 +1106,23 @@ namespace WindowsFormsApplication1.Transaction
         private void labelControl6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLoadPreviousBarCodes_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            ds = ProjectFunctions.GetDataSet("SP_Temp");
+            if(ds.Tables[0].Rows.Count>0)
+            {
+                dt = ds.Tables[0];
+                BarCodeGrid.DataSource = dt;
+                BarCodeGridView.BestFitColumns();
+            }
+            else
+            {
+                BarCodeGrid.DataSource = null;
+                BarCodeGridView.BestFitColumns();
+            }
         }
     }
 }
