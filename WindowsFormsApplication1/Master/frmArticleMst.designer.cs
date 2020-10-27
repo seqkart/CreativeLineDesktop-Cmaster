@@ -607,7 +607,7 @@
             // 
             this.label13.Location = new System.Drawing.Point(273, 131);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(12, 13);
+            this.label13.Size = new System.Drawing.Size(13, 13);
             this.label13.TabIndex = 703;
             this.label13.Text = "To";
             this.label13.Visible = false;
@@ -651,7 +651,7 @@
             // 
             this.label10.Location = new System.Drawing.Point(142, 131);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 13);
+            this.label10.Size = new System.Drawing.Size(26, 13);
             this.label10.TabIndex = 701;
             this.label10.Text = "From";
             this.label10.Visible = false;
@@ -952,7 +952,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(685, 110);
+            this.HelpGrid.Location = new System.Drawing.Point(268, 99);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(591, 296);
@@ -1042,7 +1042,7 @@
             // 
             this.label8.Location = new System.Drawing.Point(12, 31);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 706;
             this.label8.Text = "ArticleSysID";
             this.label8.Visible = false;
