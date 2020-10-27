@@ -600,22 +600,22 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
-                if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
-                {
-                    Byte[] MyData = new byte[0];
-                    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
-                    MemoryStream stream = new MemoryStream(MyData)
-                    {
-                        Position = 0
-                    };
+                //DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
+                //if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
+                //{
+                //    Byte[] MyData = new byte[0];
+                //    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
+                //    MemoryStream stream = new MemoryStream(MyData)
+                //    {
+                //        Position = 0
+                //    };
 
-                    PictureBox.Image = System.Drawing.Image.FromStream(stream);
-                }
-                else
-                {
-                    PictureBox.Image = null;
-                }
+                //    PictureBox.Image = System.Drawing.Image.FromStream(stream);
+                //}
+                //else
+                //{
+                //    PictureBox.Image = null;
+                //}
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
