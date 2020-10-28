@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using System.Data.OleDb;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -92,7 +86,7 @@ namespace WindowsFormsApplication1.Transaction
                         repositoryItemComboBox1.Items.Add(dr["ColumnName"].ToString());
                     }
 
-                    if(dtFinal.Rows.Count>0)
+                    if (dtFinal.Rows.Count > 0)
                     {
                         DColumnGrid.DataSource = dtFinal;
                         DColumnGridVIew.BestFitColumns();
@@ -103,7 +97,7 @@ namespace WindowsFormsApplication1.Transaction
                         DColumnGridVIew.BestFitColumns();
                     }
                 }
-               
+
             }
         }
 
@@ -239,8 +233,8 @@ namespace WindowsFormsApplication1.Transaction
                 txtDocType.Focus();
                 return false;
             }
-            
-            
+
+
             return true;
         }
 
@@ -257,7 +251,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(ValidateData())
+            if (ValidateData())
             {
                 String DocNo = GetTemplateCode().PadLeft(4, '0');
                 foreach (DataRow dr in (DColumnGrid.DataSource as DataTable).Rows)
@@ -265,7 +259,7 @@ namespace WindowsFormsApplication1.Transaction
                     if (dr["Source"].ToString().Length > 0)
                     {
                         String Query = "Insert into DataTemplates( TemplateCode,TemplateName,AccCode,DocType,DFieldName,SFieldName,DTableName)Values(";
-                        Query = Query + "'"+ DocNo + "',";
+                        Query = Query + "'" + DocNo + "',";
 
 
                         Query = Query + "'" + txtTemplateName.Text + "',";

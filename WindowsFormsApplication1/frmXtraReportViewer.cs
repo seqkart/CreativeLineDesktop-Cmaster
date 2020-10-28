@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1
 
         private void printPreviewBarItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+
         }
     }
 }

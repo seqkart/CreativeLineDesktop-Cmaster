@@ -425,7 +425,7 @@ namespace WindowsFormsApplication1.Transaction
                             if (FixBarPartyTag == "Y")
                             {
                                 ProjectFunctions.GetDataSet("Delete from PSWSLDET Where SIDPSNO='" +
-                                    txtPackingSlipNO.Text +"' And SIDBOXNO='" +
+                                    txtPackingSlipNO.Text + "' And SIDBOXNO='" +
                                     lblBox.Text +
                                     "' And UnitCode='" +
                                     GlobalVariables.CUnitID +
@@ -646,7 +646,7 @@ namespace WindowsFormsApplication1.Transaction
                     DataSet ds = new DataSet();
                     if (FixBarPartyTag != "Y")
                     {
-                        
+
                         ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
                             txtBarCode.Text +
                             "','" +

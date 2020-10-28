@@ -1,6 +1,4 @@
-﻿using AventStack.ExtentReports.Gherkin.Model;
-using DevExpress.XtraSplashScreen;
-using ICSharpCode.SharpZipLib.Zip;
+﻿using DevExpress.XtraSplashScreen;
 using SeqKartLibrary;
 using System;
 using System.Data;
