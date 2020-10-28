@@ -179,19 +179,21 @@ namespace WindowsFormsApplication1.Transaction
                         panelControl1.Visible = false;
                         BarCodeGridView.Focus();
 
+                        dt.AcceptChanges();
 
 
 
 
 
                         BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUFEDQTY"];
+                        BarCodeGridView.ShowEditor();
                         BarCodeGridView.FocusedRowHandle = RowIndex;
 
 
                         txtSearchBox.Text = String.Empty;
 
-                        dt.AcceptChanges();
-                        BarCodeGridView.ShowEditor();
+                      
+                        
                     }
                 }
 
@@ -1117,6 +1119,62 @@ namespace WindowsFormsApplication1.Transaction
             {
                 BarCodeGrid.DataSource = null;
                 BarCodeGridView.BestFitColumns();
+            }
+        }
+
+        private void BarCodeGridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            
+                BarCodeGridView.ShowEditor();
+            
+        }
+
+        private void BarCodeGridView_ColumnChanged(object sender, EventArgs e)
+        {
+            if(dt.Rows.Count>0)
+            {
+                if (BarCodeGridView.FocusedColumn.FieldName == "SKUFEDQTY")
+                {
+                    BarCodeGridView.ShowEditor();
+                }
+
+            }
+           
+        }
+
+        private void BarCodeGridView_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            if (dt.Rows.Count > 0)
+            {
+                if (BarCodeGridView.FocusedColumn.FieldName == "SKUFEDQTY")
+                {
+                    BarCodeGridView.ShowEditor();
+                }
+
+            }
+        }
+
+        private void BarCodeGridView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            if (dt.Rows.Count > 0)
+            {
+                if (BarCodeGridView.FocusedColumn.FieldName == "SKUFEDQTY")
+                {
+                    BarCodeGridView.ShowEditor();
+                }
+
+            }
+        }
+
+        private void BarCodeGridView_GotFocus(object sender, EventArgs e)
+        {
+            if (dt.Rows.Count > 0)
+            {
+                if (BarCodeGridView.FocusedColumn.FieldName == "SKUFEDQTY")
+                {
+                    BarCodeGridView.ShowEditor();
+                }
+
             }
         }
     }

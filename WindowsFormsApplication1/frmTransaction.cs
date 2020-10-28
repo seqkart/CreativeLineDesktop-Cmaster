@@ -1087,30 +1087,46 @@ namespace WindowsFormsApplication1
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Generate PT File",
                                                                   (o1, e1) =>
                                                                   {
-                                                                      DataRow row = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                                                                      DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
-                                                                          row["BillNo"].ToString() +
-                                                                          "','" +
-                                                                          GlobalVariables.FinancialYear +
-                                                                          "'");
-                                                                      if (ds.Tables[0].Rows.Count > 0)
+
+                                                                      int i = 0;
+                                                                      foreach(DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
-                                                                          PrintOutGridView.Columns.Clear();
-                                                                          PrintOutGrid.DataSource = ds.Tables[0];
-                                                                          PrintOutGridView.BestFitColumns();
-                                                                          PrintOutGridView.ExportToCsv(Application.StartupPath +
-                                                                              @"\PTFile\" +
-                                                                              row["DebitPartyName"].ToString() +
-                                                                              "_GST_" +
-                                                                              row["BillNo"].ToString() +
-                                                                              ".csv");
-                                                                          ProjectFunctions.SpeakError("PT File Generated Successfully ");
-                                                                          Close();
+                                                                         
+                                                                          if(dr["Select"].ToString().ToUpper()=="TRUE")
+                                                                          {
+                                                                              i++;
+                                                                              DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
+                                                                             dr["BillNo"].ToString() +
+                                                                             "','" +
+                                                                             GlobalVariables.FinancialYear +
+                                                                             "'");
+                                                                              if (ds.Tables[0].Rows.Count > 0)
+                                                                              {
+                                                                                  PrintOutGridView.Columns.Clear();
+                                                                                  PrintOutGrid.DataSource = ds.Tables[0];
+                                                                                  PrintOutGridView.BestFitColumns();
+                                                                                  PrintOutGridView.ExportToCsv(Application.StartupPath +
+                                                                                      @"\PTFile\" +
+                                                                                      dr["DebitPartyName"].ToString() +
+                                                                                      "_GST_" +
+                                                                                      dr
+                                                                                      ["BillNo"].ToString() +
+                                                                                      ".csv");
+                                                                                  
+                                                                                  //Close();
+                                                                              }
+                                                                              else
+                                                                              {
+                                                                                  ProjectFunctions.SpeakError("Some Error In PT File Generation");
+                                                                              }
+                                                                          }
+                                                                         
                                                                       }
-                                                                      else
+                                                                      if (i > 0)
                                                                       {
-                                                                          ProjectFunctions.SpeakError("Some Error In PT File Generation");
+                                                                          ProjectFunctions.SpeakError(i.ToString()+" PT File Generated Successfully ");
                                                                       }
+
                                                                   }));
                 }
 
@@ -1236,278 +1252,297 @@ namespace WindowsFormsApplication1
 
 
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                  
 
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To CSV", (o1, e1) =>
+                    PrintOutGridView.Columns.Clear();
+                    DataTable dt = new DataTable();
+                    dt.Columns.Add("SKUPRODUCTCODE", typeof(String));
+                    dt.Columns.Add("SKUPARTYBARCODE", typeof(String));
+                    dt.Columns.Add("SKUFIXBARCODE", typeof(String));
+                    dt.Columns.Add("SKUARTNO", typeof(String));
+
+                    dt.Columns.Add("ARTDESC", typeof(String));
+                    dt.Columns.Add("SKUCOLN", typeof(String));
+                    dt.Columns.Add("SKUSIZN", typeof(String));
+                    dt.Columns.Add("SKUFEDQTY", typeof(Decimal));
+                    dt.Columns.Add("SKUMRP", typeof(String));
+                    dt.Columns.Add("SKUWSP", typeof(String));
+                    dt.Columns.Add("SKUMRPVAL", typeof(Decimal));
+                    dt.Columns.Add("SKUWSPVAL", typeof(Decimal));
+                    dt.Columns.Add("SKUARTID", typeof(String));
+                    dt.Columns.Add("SKUCOLID", typeof(String));
+                    dt.Columns.Add("SKUSIZID", typeof(String));
+                    dt.Columns.Add("SKUSIZINDX", typeof(String));
+                    dt.Columns.Add("SKUCODE", typeof(String));
+                    dt.Columns.Add("SKUVOUCHNO", typeof(String));
+                    dt.Columns.Add("SKUFNYR", typeof(String));
+                    dt.Columns.Add("DISCPRCN", typeof(String));
+                    dt.Columns.Add("FLATMRP", typeof(String));
+                    dt.Columns.Add("SKUPPRICE", typeof(String));
+                    dt.Columns.Add("GrpHSNCode", typeof(String));
+
+
+                    DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersPrint] '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        PrintOutGridView.Columns.Clear();
-                        DataTable dt = new DataTable();
-                        dt.Columns.Add("SKUPRODUCTCODE", typeof(String));
-                        dt.Columns.Add("SKUPARTYBARCODE", typeof(String));
-                        dt.Columns.Add("SKUFIXBARCODE", typeof(String));
-                        dt.Columns.Add("SKUARTNO", typeof(String));
-                        dt.Columns.Add("ARTDESC", typeof(String));
-                        dt.Columns.Add("SKUCOLN", typeof(String));
-                        dt.Columns.Add("SKUSIZN", typeof(String));
-                        dt.Columns.Add("SKUFEDQTY", typeof(Decimal));
-                        dt.Columns.Add("SKUMRP", typeof(String));
-                        dt.Columns.Add("SKUWSP", typeof(String));
-                        dt.Columns.Add("SKUMRPVAL", typeof(Decimal));
-                        dt.Columns.Add("SKUWSPVAL", typeof(Decimal));
-                        dt.Columns.Add("SKUARTID", typeof(String));
-                        dt.Columns.Add("SKUCOLID", typeof(String));
-                        dt.Columns.Add("SKUSIZID", typeof(String));
-                        dt.Columns.Add("SKUARTCOLSET", typeof(String));
-                        dt.Columns.Add("SKUARTSIZSET", typeof(String));
-                        dt.Columns.Add("SKUSIZINDX", typeof(String));
-                        dt.Columns.Add("SKUCODE", typeof(String));
-                        dt.Columns.Add("SKUVOUCHNO", typeof(String));
-                        dt.Columns.Add("SKUFNYR", typeof(String));
-                        dt.Columns.Add("DISCPRCN", typeof(String));
-                        dt.Columns.Add("FLATMRP", typeof(String));
-                        dt.Columns.Add("SKUPPRICE", typeof(String));
-                        dt.Columns.Add("GrpHSNCode", typeof(String));
+
+                        dt = ds.Tables[0];
+                        PrintOutGrid.DataSource = dt;
+                        PrintOutGridView.BestFitColumns();
+
+                    }
 
 
-                        DataSet ds = ProjectFunctions.GetDataSet("sp_LoadBarCodeVouchersEdit '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
-                        if (ds.Tables[0].Rows.Count > 0)
-                        {
-                           
-                            dt = ds.Tables[0];
-                            PrintOutGrid.DataSource = dt;
-                            PrintOutGridView.BestFitColumns();
-
-                        }
-                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Muffler.btw");
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode", (o1, e1) =>
+                    {
+                        
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"Label\Sticker.btw");
                         PrintOutGrid.DataSource = null;
 
                     }));
 
-                    e.Menu.Items
-                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode",
-                                                                  (o1, e1) =>
-                                                                  {
-                                                                      int i = 0;
-                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
-                                                                      {
-                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE" &&
-                                                                              dr["SKUPrintTag"].ToString().ToUpper() ==
-                                                                              "N")
-                                                                          {
-                                                                              DataTable dt = new DataTable();
-                                                                              if (dr["BarCodeType"].ToString() ==
-                                                                                  "Unique")
-                                                                              {
-                                                                                  DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "','" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "','" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "','" +
-                                                                                      dr["BarCodeType"].ToString() +
-                                                                                      "'");
-                                                                                  if (i == 0)
-                                                                                  {
-                                                                                      dt = ds.Tables[0];
-                                                                                      i++;
-                                                                                  }
-                                                                                  else
-                                                                                  {
-                                                                                      dt.Merge(ds.Tables[0]);
-                                                                                  }
-                                                                                  if (dt.Rows.Count > 0)
-                                                                                  {
-                                                                                      dt.WriteXmlSchema("C://Temp//abc.xml");
-                                                                                      using (var pt = new ReportPrintTool(new Prints.BarPrinting()
-                                                                                      { DataSource = dt }))
-                                                                                      {
-                                                                                          pt.ShowRibbonPreviewDialog();
-                                                                                          FillGrid();
-                                                                                      }
-                                                                                  }
-                                                                                  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "' And UnitCode='" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "' And   SKUFNYR='" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "'");
-                                                                              }
-                                                                              else
-                                                                              {
-                                                                                  DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "','" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "','" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "','" +
-                                                                                      dr["BarCodeType"].ToString() +
-                                                                                      "'");
-                                                                                  if (i == 0)
-                                                                                  {
-                                                                                      dt = ds.Tables[0];
-                                                                                      i++;
-                                                                                  }
-                                                                                  else
-                                                                                  {
-                                                                                      dt.Merge(ds.Tables[0]);
-                                                                                  }
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
+                    {
+                      
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"Label\Tag.btw");
+                        PrintOutGrid.DataSource = null;
+
+                    }));
+
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler", (o1, e1) =>
+                    {
+
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"Label\Muffler.btw");
+                        PrintOutGrid.DataSource = null;
+
+                    }));
+
+                    //e.Menu.Items
+                    //    .Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode",
+                    //                                              (o1, e1) =>
+                    //                                              {
+                    //                                                  int i = 0;
+                    //                                                  foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                    //                                                  {
+                    //                                                      if (dr["Select"].ToString().ToUpper() == "TRUE" &&
+                    //                                                          dr["SKUPrintTag"].ToString().ToUpper() ==
+                    //                                                          "N")
+                    //                                                      {
+                    //                                                          DataTable dt = new DataTable();
+                    //                                                          if (dr["BarCodeType"].ToString() ==
+                    //                                                              "Unique")
+                    //                                                          {
+                    //                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "','" +
+                    //                                                                  dr["BarCodeType"].ToString() +
+                    //                                                                  "'");
+                    //                                                              if (i == 0)
+                    //                                                              {
+                    //                                                                  dt = ds.Tables[0];
+                    //                                                                  i++;
+                    //                                                              }
+                    //                                                              else
+                    //                                                              {
+                    //                                                                  dt.Merge(ds.Tables[0]);
+                    //                                                              }
+                    //                                                              if (dt.Rows.Count > 0)
+                    //                                                              {
+                    //                                                                  dt.WriteXmlSchema("C://Temp//abc.xml");
+                    //                                                                  using (var pt = new ReportPrintTool(new Prints.BarPrinting()
+                    //                                                                  { DataSource = dt }))
+                    //                                                                  {
+                    //                                                                      pt.ShowRibbonPreviewDialog();
+                    //                                                                      FillGrid();
+                    //                                                                  }
+                    //                                                              }
+                    //                                                              ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "' And UnitCode='" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "' And   SKUFNYR='" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "'");
+                    //                                                          }
+                    //                                                          else
+                    //                                                          {
+                    //                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "','" +
+                    //                                                                  dr["BarCodeType"].ToString() +
+                    //                                                                  "'");
+                    //                                                              if (i == 0)
+                    //                                                              {
+                    //                                                                  dt = ds.Tables[0];
+                    //                                                                  i++;
+                    //                                                              }
+                    //                                                              else
+                    //                                                              {
+                    //                                                                  dt.Merge(ds.Tables[0]);
+                    //                                                              }
 
 
-                                                                                  DataTable dtFinal = new DataTable();
-                                                                                  dtFinal = dt.Clone();
+                    //                                                              DataTable dtFinal = new DataTable();
+                    //                                                              dtFinal = dt.Clone();
 
-                                                                                  foreach (DataRow drFix in dt.Rows)
-                                                                                  {
-                                                                                      for (int j = 0; j <
-                                                                                          Convert.ToDecimal(drFix["SKUFEDQTY"]); j++)
-                                                                                      {
-                                                                                          dtFinal.ImportRow(drFix);
-                                                                                      }
-                                                                                  }
+                    //                                                              foreach (DataRow drFix in dt.Rows)
+                    //                                                              {
+                    //                                                                  for (int j = 0; j <
+                    //                                                                      Convert.ToDecimal(drFix["SKUFEDQTY"]); j++)
+                    //                                                                  {
+                    //                                                                      dtFinal.ImportRow(drFix);
+                    //                                                                  }
+                    //                                                              }
 
-                                                                                  foreach (DataRow drFinal in dtFinal.Rows)
-                                                                                  {
-                                                                                      drFinal["SKUFEDQTY"] = Convert.ToDecimal("1");
-                                                                                  }
-                                                                                  if (dtFinal.Rows.Count > 0)
-                                                                                  {
-                                                                                      dtFinal.WriteXmlSchema("C://Temp//abc.xml");
-                                                                                      using (var pt = new ReportPrintTool(new Prints.BarPrinting()
-                                                                                      { DataSource = dtFinal }))
-                                                                                      {
-                                                                                          pt.ShowRibbonPreviewDialog();
-                                                                                          FillGrid();
-                                                                                      }
-                                                                                  }
-                                                                                  ProjectFunctions.GetDataSet("Update sku_fix set SKUPrintTag='Y' Where skuvouchno='" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "' And UnitCode='" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "' And   SKUFNYR='" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "'");
-                                                                              }
-                                                                          }
-                                                                      }
-                                                                  }));
+                    //                                                              foreach (DataRow drFinal in dtFinal.Rows)
+                    //                                                              {
+                    //                                                                  drFinal["SKUFEDQTY"] = Convert.ToDecimal("1");
+                    //                                                              }
+                    //                                                              if (dtFinal.Rows.Count > 0)
+                    //                                                              {
+                    //                                                                  dtFinal.WriteXmlSchema("C://Temp//abc.xml");
+                    //                                                                  using (var pt = new ReportPrintTool(new Prints.BarPrinting()
+                    //                                                                  { DataSource = dtFinal }))
+                    //                                                                  {
+                    //                                                                      pt.ShowRibbonPreviewDialog();
+                    //                                                                      FillGrid();
+                    //                                                                  }
+                    //                                                              }
+                    //                                                              ProjectFunctions.GetDataSet("Update sku_fix set SKUPrintTag='Y' Where skuvouchno='" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "' And UnitCode='" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "' And   SKUFNYR='" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "'");
+                    //                                                          }
+                    //                                                      }
+                    //                                                  }
+                    //                                              }));
 
-                    e.Menu.Items
-                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler",
-                                                                  (o1, e1) =>
-                                                                  {
-                                                                      int i = 0;
-                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
-                                                                      {
-                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE" &&
-                                                                              dr["SKUPrintTag"].ToString().ToUpper() ==
-                                                                              "N")
-                                                                          {
-                                                                              DataTable dt = new DataTable();
-                                                                              if (dr["BarCodeType"].ToString() ==
-                                                                                  "Unique")
-                                                                              {
-                                                                                  DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "','" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "','" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "','" +
-                                                                                      dr["BarCodeType"].ToString() +
-                                                                                      "'");
-                                                                                  if (i == 0)
-                                                                                  {
-                                                                                      dt = ds.Tables[0];
-                                                                                      i++;
-                                                                                  }
-                                                                                  else
-                                                                                  {
-                                                                                      dt.Merge(ds.Tables[0]);
-                                                                                  }
-                                                                                  if (dt.Rows.Count > 0)
-                                                                                  {
-                                                                                      // dt.ExportXlsStyleSheet(Application.StartupPath + @"\Sticker.XLS"));
-
-
-                                                                                      dt.WriteXmlSchema("C://Temp//abc.xml");
-                                                                                      using (var pt = new ReportPrintTool(new Prints.Mufflerprint1()
-                                                                                      { DataSource = dt }))
-                                                                                      {
-                                                                                          pt.ShowRibbonPreviewDialog();
-                                                                                          FillGrid();
-                                                                                      }
-                                                                                  }
-                                                                                  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "' And UnitCode='" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "' And   SKUFNYR='" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "'");
-                                                                              }
-                                                                              else
-                                                                              {
-                                                                                  DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "','" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "','" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "','" +
-                                                                                      dr["BarCodeType"].ToString() +
-                                                                                      "'");
-                                                                                  if (i == 0)
-                                                                                  {
-                                                                                      dt = ds.Tables[0];
-                                                                                      i++;
-                                                                                  }
-                                                                                  else
-                                                                                  {
-                                                                                      dt.Merge(ds.Tables[0]);
-                                                                                  }
+                    //e.Menu.Items
+                    //    .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler",
+                    //                                              (o1, e1) =>
+                    //                                              {
+                    //                                                  int i = 0;
+                    //                                                  foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                    //                                                  {
+                    //                                                      if (dr["Select"].ToString().ToUpper() == "TRUE" &&
+                    //                                                          dr["SKUPrintTag"].ToString().ToUpper() ==
+                    //                                                          "N")
+                    //                                                      {
+                    //                                                          DataTable dt = new DataTable();
+                    //                                                          if (dr["BarCodeType"].ToString() ==
+                    //                                                              "Unique")
+                    //                                                          {
+                    //                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "','" +
+                    //                                                                  dr["BarCodeType"].ToString() +
+                    //                                                                  "'");
+                    //                                                              if (i == 0)
+                    //                                                              {
+                    //                                                                  dt = ds.Tables[0];
+                    //                                                                  i++;
+                    //                                                              }
+                    //                                                              else
+                    //                                                              {
+                    //                                                                  dt.Merge(ds.Tables[0]);
+                    //                                                              }
+                    //                                                              if (dt.Rows.Count > 0)
+                    //                                                              {
+                    //                                                                  // dt.ExportXlsStyleSheet(Application.StartupPath + @"\Sticker.XLS"));
 
 
-                                                                                  DataTable dtFinal = new DataTable();
-                                                                                  dtFinal = dt.Clone();
+                    //                                                                  dt.WriteXmlSchema("C://Temp//abc.xml");
+                    //                                                                  using (var pt = new ReportPrintTool(new Prints.Mufflerprint1()
+                    //                                                                  { DataSource = dt }))
+                    //                                                                  {
+                    //                                                                      pt.ShowRibbonPreviewDialog();
+                    //                                                                      FillGrid();
+                    //                                                                  }
+                    //                                                              }
+                    //                                                              ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "' And UnitCode='" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "' And   SKUFNYR='" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "'");
+                    //                                                          }
+                    //                                                          else
+                    //                                                          {
+                    //                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_PrintBarCode '" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "','" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "','" +
+                    //                                                                  dr["BarCodeType"].ToString() +
+                    //                                                                  "'");
+                    //                                                              if (i == 0)
+                    //                                                              {
+                    //                                                                  dt = ds.Tables[0];
+                    //                                                                  i++;
+                    //                                                              }
+                    //                                                              else
+                    //                                                              {
+                    //                                                                  dt.Merge(ds.Tables[0]);
+                    //                                                              }
 
-                                                                                  foreach (DataRow drFix in dt.Rows)
-                                                                                  {
-                                                                                      for (int j = 0; j <
-                                                                                          Convert.ToDecimal(drFix["SKUFEDQTY"]); j++)
-                                                                                      {
-                                                                                          dtFinal.ImportRow(drFix);
-                                                                                      }
-                                                                                  }
 
-                                                                                  foreach (DataRow drFinal in dtFinal.Rows)
-                                                                                  {
-                                                                                      drFinal["SKUFEDQTY"] = Convert.ToDecimal("1");
-                                                                                  }
-                                                                                  if (dtFinal.Rows.Count > 0)
-                                                                                  {
-                                                                                      dtFinal.WriteXmlSchema("C://Temp//abc.xml");
-                                                                                      using (var pt = new ReportPrintTool(new Prints.Mufflerprint1()
-                                                                                      { DataSource = dtFinal }))
-                                                                                      {
-                                                                                          pt.ShowRibbonPreviewDialog();
-                                                                                          FillGrid();
-                                                                                      }
-                                                                                  }
-                                                                                  ProjectFunctions.GetDataSet("Update sku_fix set SKUPrintTag='Y' Where skuvouchno='" +
-                                                                                      dr["SKUVOUCHNO"].ToString() +
-                                                                                      "' And UnitCode='" +
-                                                                                      GlobalVariables.CUnitID +
-                                                                                      "' And   SKUFNYR='" +
-                                                                                      GlobalVariables.FinancialYear +
-                                                                                      "'");
-                                                                              }
-                                                                          }
-                                                                      }
-                                                                  }));
+                    //                                                              DataTable dtFinal = new DataTable();
+                    //                                                              dtFinal = dt.Clone();
+
+                    //                                                              foreach (DataRow drFix in dt.Rows)
+                    //                                                              {
+                    //                                                                  for (int j = 0; j <
+                    //                                                                      Convert.ToDecimal(drFix["SKUFEDQTY"]); j++)
+                    //                                                                  {
+                    //                                                                      dtFinal.ImportRow(drFix);
+                    //                                                                  }
+                    //                                                              }
+
+                    //                                                              foreach (DataRow drFinal in dtFinal.Rows)
+                    //                                                              {
+                    //                                                                  drFinal["SKUFEDQTY"] = Convert.ToDecimal("1");
+                    //                                                              }
+                    //                                                              if (dtFinal.Rows.Count > 0)
+                    //                                                              {
+                    //                                                                  dtFinal.WriteXmlSchema("C://Temp//abc.xml");
+                    //                                                                  using (var pt = new ReportPrintTool(new Prints.Mufflerprint1()
+                    //                                                                  { DataSource = dtFinal }))
+                    //                                                                  {
+                    //                                                                      pt.ShowRibbonPreviewDialog();
+                    //                                                                      FillGrid();
+                    //                                                                  }
+                    //                                                              }
+                    //                                                              ProjectFunctions.GetDataSet("Update sku_fix set SKUPrintTag='Y' Where skuvouchno='" +
+                    //                                                                  dr["SKUVOUCHNO"].ToString() +
+                    //                                                                  "' And UnitCode='" +
+                    //                                                                  GlobalVariables.CUnitID +
+                    //                                                                  "' And   SKUFNYR='" +
+                    //                                                                  GlobalVariables.FinancialYear +
+                    //                                                                  "'");
+                    //                                                          }
+                    //                                                      }
+                    //                                                  }
+                    //                                              }));
                 }
 
 

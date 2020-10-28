@@ -39,9 +39,6 @@
             this.label10 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
@@ -268,15 +265,15 @@
             this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtEWayBillNO.Properties)).BeginInit();
@@ -406,6 +403,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -507,38 +507,6 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1220, 589);
             this.xtraTabPage1.Text = "Main Invoice Details";
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(279, 30);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(717, 205);
-            this.HelpGrid.TabIndex = 475;
-            this.HelpGrid.TabStop = false;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView1});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.HelpGrid;
-            this.gridView1.Name = "gridView1";
             // 
             // groupControl4
             // 
@@ -699,7 +667,7 @@
             this.chInclusive.Location = new System.Drawing.Point(23, 67);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(126, 19);
+            this.chInclusive.Size = new System.Drawing.Size(126, 18);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -708,7 +676,7 @@
             this.chExclusive.Location = new System.Drawing.Point(23, 46);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(126, 19);
+            this.chExclusive.Size = new System.Drawing.Size(126, 18);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -730,7 +698,7 @@
             this.chLot.Location = new System.Drawing.Point(25, 82);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "LOT";
-            this.chLot.Size = new System.Drawing.Size(126, 19);
+            this.chLot.Size = new System.Drawing.Size(126, 18);
             this.chLot.TabIndex = 534;
             // 
             // CHSOR
@@ -738,7 +706,7 @@
             this.CHSOR.Location = new System.Drawing.Point(25, 60);
             this.CHSOR.Name = "CHSOR";
             this.CHSOR.Properties.Caption = "SOR";
-            this.CHSOR.Size = new System.Drawing.Size(126, 19);
+            this.CHSOR.Size = new System.Drawing.Size(126, 18);
             this.CHSOR.TabIndex = 533;
             this.CHSOR.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
@@ -747,7 +715,7 @@
             this.chRegular.Location = new System.Drawing.Point(25, 38);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(126, 19);
+            this.chRegular.Size = new System.Drawing.Size(126, 18);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -768,7 +736,7 @@
             this.chDirect.Location = new System.Drawing.Point(19, 67);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(126, 19);
+            this.chDirect.Size = new System.Drawing.Size(126, 18);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
@@ -777,7 +745,7 @@
             this.chPackingSlip.Location = new System.Drawing.Point(19, 46);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(126, 19);
+            this.chPackingSlip.Size = new System.Drawing.Size(126, 18);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -1238,7 +1206,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 591);
             this.xtraTabPage2.Text = "Invoice Data";
             // 
             // panelControl1
@@ -1858,7 +1826,7 @@
             this.xtraTabPage5.Controls.Add(this.txtInsuranceAmount);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(517, 154);
+            this.xtraTabPage5.Size = new System.Drawing.Size(517, 156);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -2484,7 +2452,7 @@
             this.xtraTabPage3.Controls.Add(this.txtGRNo);
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(402, 154);
+            this.xtraTabPage3.Size = new System.Drawing.Size(402, 156);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -2508,7 +2476,7 @@
             this.chToPay.Location = new System.Drawing.Point(88, 76);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(61, 19);
+            this.chToPay.Size = new System.Drawing.Size(61, 18);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
@@ -2517,7 +2485,7 @@
             this.chPaid.Location = new System.Drawing.Point(35, 76);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(47, 19);
+            this.chPaid.Size = new System.Drawing.Size(47, 18);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 
@@ -2915,6 +2883,38 @@
             this.gridView8.GridControl = this.PSGrid;
             this.gridView8.Name = "gridView8";
             // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(279, 30);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(717, 205);
+            this.HelpGrid.TabIndex = 475;
+            this.HelpGrid.TabStop = false;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
+            // 
             // frmInvoiceMstAdd
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -2939,9 +2939,6 @@
             this.xtraTabControl1.ResumeLayout(false);
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.groupControl4.PerformLayout();
@@ -3081,6 +3078,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
