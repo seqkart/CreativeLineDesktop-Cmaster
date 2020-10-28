@@ -164,9 +164,14 @@
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.BarCodeGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.BarCodeGridView_PopupMenuShowing);
             this.BarCodeGridView.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.BarCodeGridView_InitNewRow);
+            this.BarCodeGridView.ColumnChanged += new System.EventHandler(this.BarCodeGridView_ColumnChanged);
             this.BarCodeGridView.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.BarCodeGridView_FocusedRowChanged);
             this.BarCodeGridView.FocusedColumnChanged += new DevExpress.XtraGrid.Views.Base.FocusedColumnChangedEventHandler(this.BarCodeGridView_FocusedColumnChanged);
             this.BarCodeGridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.BarCodeGridView_CellValueChanged);
+            this.BarCodeGridView.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.BarCodeGridView_ValidateRow);
+            this.BarCodeGridView.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.BarCodeGridView_RowUpdated);
+            this.BarCodeGridView.GotFocus += new System.EventHandler(this.BarCodeGridView_GotFocus);
+            this.BarCodeGridView.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.BarCodeGridView_ValidatingEditor);
             // 
             // gridColumn25
             // 

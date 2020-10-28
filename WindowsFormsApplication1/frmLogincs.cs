@@ -168,7 +168,14 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory(Application.StartupPath + "\\PTFile");
             }
+            if (System.IO.Directory.Exists(Application.StartupPath + "\\LABEL"))
+            {
 
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\LABEL");
+            }
 
 
             defaultLookAndFeel1.LookAndFeel.SkinName = "McSkin";
