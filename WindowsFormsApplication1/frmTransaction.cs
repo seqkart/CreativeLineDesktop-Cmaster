@@ -1232,6 +1232,58 @@ namespace WindowsFormsApplication1
                 {
                     InvoiceGridView.CloseEditor();
                     InvoiceGridView.UpdateCurrentRow();
+
+
+
+                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                  
+
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To CSV", (o1, e1) =>
+                    {
+                        PrintOutGridView.Columns.Clear();
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("SKUPRODUCTCODE", typeof(String));
+                        dt.Columns.Add("SKUPARTYBARCODE", typeof(String));
+                        dt.Columns.Add("SKUFIXBARCODE", typeof(String));
+                        dt.Columns.Add("SKUARTNO", typeof(String));
+                        dt.Columns.Add("ARTDESC", typeof(String));
+                        dt.Columns.Add("SKUCOLN", typeof(String));
+                        dt.Columns.Add("SKUSIZN", typeof(String));
+                        dt.Columns.Add("SKUFEDQTY", typeof(Decimal));
+                        dt.Columns.Add("SKUMRP", typeof(String));
+                        dt.Columns.Add("SKUWSP", typeof(String));
+                        dt.Columns.Add("SKUMRPVAL", typeof(Decimal));
+                        dt.Columns.Add("SKUWSPVAL", typeof(Decimal));
+                        dt.Columns.Add("SKUARTID", typeof(String));
+                        dt.Columns.Add("SKUCOLID", typeof(String));
+                        dt.Columns.Add("SKUSIZID", typeof(String));
+                        dt.Columns.Add("SKUARTCOLSET", typeof(String));
+                        dt.Columns.Add("SKUARTSIZSET", typeof(String));
+                        dt.Columns.Add("SKUSIZINDX", typeof(String));
+                        dt.Columns.Add("SKUCODE", typeof(String));
+                        dt.Columns.Add("SKUVOUCHNO", typeof(String));
+                        dt.Columns.Add("SKUFNYR", typeof(String));
+                        dt.Columns.Add("DISCPRCN", typeof(String));
+                        dt.Columns.Add("FLATMRP", typeof(String));
+                        dt.Columns.Add("SKUPPRICE", typeof(String));
+                        dt.Columns.Add("GrpHSNCode", typeof(String));
+
+
+                        DataSet ds = ProjectFunctions.GetDataSet("sp_LoadBarCodeVouchersEdit '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                           
+                            dt = ds.Tables[0];
+                            PrintOutGrid.DataSource = dt;
+                            PrintOutGridView.BestFitColumns();
+
+                        }
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Muffler.btw");
+                        PrintOutGrid.DataSource = null;
+
+                    }));
+
                     e.Menu.Items
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode",
                                                                   (o1, e1) =>

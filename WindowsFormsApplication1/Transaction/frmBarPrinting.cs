@@ -936,7 +936,7 @@ namespace WindowsFormsApplication1.Transaction
                 e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To CSV", (o1, e1) =>
                 {
                     BarCodeGridView.ExportToCsv(Application.StartupPath + @"\Sticker.csv");
-
+               
                     System.Diagnostics.Process.Start(Application.StartupPath + @"\Muffler.btw");
 
                 }));
