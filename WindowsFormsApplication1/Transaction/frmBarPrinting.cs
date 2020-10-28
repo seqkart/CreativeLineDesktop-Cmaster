@@ -796,10 +796,10 @@ namespace WindowsFormsApplication1.Transaction
                     BarCodeGrid.DataSource = dt;
                     BarCodeGridView.BestFitColumns();
 
-                    if (Tag == "Fixed")
-                    {
-                        ChkFixedBarCode.Checked = true;
-                    }
+                    //if (Tag == "Fixed")
+                    //{
+                    //    ChkFixedBarCode.Checked = true;
+                    //}
                 }
             }
             catch (Exception ex)
@@ -1098,10 +1098,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void ChkFixedBarCode_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void labelControl6_Click(object sender, EventArgs e)
         {

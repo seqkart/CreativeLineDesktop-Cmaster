@@ -537,15 +537,15 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(41, 158);
+            this.label2.Location = new System.Drawing.Point(43, 147);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 707;
             this.label2.Text = "BARCODE";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(31, 129);
+            this.labelControl1.Location = new System.Drawing.Point(33, 118);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(60, 13);
             this.labelControl1.TabIndex = 706;
@@ -554,7 +554,7 @@
             // btnPrint
             // 
             this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(316, 149);
+            this.btnPrint.Location = new System.Drawing.Point(318, 138);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(87, 27);
             this.btnPrint.TabIndex = 705;
@@ -564,7 +564,7 @@
             // txtBarCode
             // 
             this.txtBarCode.EnterMoveNextControl = true;
-            this.txtBarCode.Location = new System.Drawing.Point(93, 154);
+            this.txtBarCode.Location = new System.Drawing.Point(95, 143);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarCode.Properties.MaxLength = 40;
@@ -577,7 +577,7 @@
             this.RBBYFLTRT.AutoSize = true;
             this.RBBYFLTRT.Location = new System.Drawing.Point(642, 79);
             this.RBBYFLTRT.Name = "RBBYFLTRT";
-            this.RBBYFLTRT.Size = new System.Drawing.Size(89, 17);
+            this.RBBYFLTRT.Size = new System.Drawing.Size(90, 17);
             this.RBBYFLTRT.TabIndex = 702;
             this.RBBYFLTRT.TabStop = true;
             this.RBBYFLTRT.Text = "BY FLAT RATE";
@@ -589,7 +589,7 @@
             this.RBBYDSCPRCN.AutoSize = true;
             this.RBBYDSCPRCN.Location = new System.Drawing.Point(642, 57);
             this.RBBYDSCPRCN.Name = "RBBYDSCPRCN";
-            this.RBBYDSCPRCN.Size = new System.Drawing.Size(73, 17);
+            this.RBBYDSCPRCN.Size = new System.Drawing.Size(72, 17);
             this.RBBYDSCPRCN.TabIndex = 701;
             this.RBBYDSCPRCN.TabStop = true;
             this.RBBYDSCPRCN.Text = "BY DISC%";
@@ -609,7 +609,7 @@
             // txtOrderNo
             // 
             this.txtOrderNo.EnterMoveNextControl = true;
-            this.txtOrderNo.Location = new System.Drawing.Point(93, 125);
+            this.txtOrderNo.Location = new System.Drawing.Point(95, 114);
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderNo.Properties.MaxLength = 4;
@@ -619,21 +619,21 @@
             // txtDeptCode
             // 
             this.txtDeptCode.EnterMoveNextControl = true;
-            this.txtDeptCode.Location = new System.Drawing.Point(93, 98);
+            this.txtDeptCode.Location = new System.Drawing.Point(95, 87);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
-            this.txtDeptCode.Size = new System.Drawing.Size(79, 20);
+            this.txtDeptCode.Size = new System.Drawing.Size(53, 20);
             this.txtDeptCode.TabIndex = 694;
             // 
             // txtDeptDesc
             // 
             this.txtDeptDesc.EnterMoveNextControl = true;
-            this.txtDeptDesc.Location = new System.Drawing.Point(185, 98);
+            this.txtDeptDesc.Location = new System.Drawing.Point(154, 87);
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
-            this.txtDeptDesc.Size = new System.Drawing.Size(324, 20);
+            this.txtDeptDesc.Size = new System.Drawing.Size(208, 20);
             this.txtDeptDesc.TabIndex = 695;
             this.txtDeptDesc.TabStop = false;
             // 
@@ -660,9 +660,9 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(21, 102);
+            this.labelControl6.Location = new System.Drawing.Point(23, 91);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(69, 13);
+            this.labelControl6.Size = new System.Drawing.Size(70, 13);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "DEPARTMENT";
             this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
@@ -672,7 +672,7 @@
             this.RBPUR.AutoSize = true;
             this.RBPUR.Enabled = false;
             this.RBPUR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBPUR.Location = new System.Drawing.Point(249, 77);
+            this.RBPUR.Location = new System.Drawing.Point(251, 66);
             this.RBPUR.Name = "RBPUR";
             this.RBPUR.Size = new System.Drawing.Size(111, 18);
             this.RBPUR.TabIndex = 691;
@@ -683,22 +683,19 @@
             // ChkFixedBarCode
             // 
             this.ChkFixedBarCode.AutoSize = true;
-            this.ChkFixedBarCode.Checked = true;
-            this.ChkFixedBarCode.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ChkFixedBarCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ChkFixedBarCode.Location = new System.Drawing.Point(316, 125);
+            this.ChkFixedBarCode.Location = new System.Drawing.Point(318, 114);
             this.ChkFixedBarCode.Name = "ChkFixedBarCode";
             this.ChkFixedBarCode.Size = new System.Drawing.Size(108, 18);
             this.ChkFixedBarCode.TabIndex = 690;
             this.ChkFixedBarCode.Text = "FIXED BARCODE";
             this.ChkFixedBarCode.UseVisualStyleBackColor = true;
-            this.ChkFixedBarCode.CheckedChanged += new System.EventHandler(this.ChkFixedBarCode_CheckedChanged);
             // 
             // RBIMPORT
             // 
             this.RBIMPORT.AutoSize = true;
             this.RBIMPORT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBIMPORT.Location = new System.Drawing.Point(178, 77);
+            this.RBIMPORT.Location = new System.Drawing.Point(180, 66);
             this.RBIMPORT.Name = "RBIMPORT";
             this.RBIMPORT.Size = new System.Drawing.Size(65, 18);
             this.RBIMPORT.TabIndex = 686;
@@ -711,7 +708,7 @@
             this.RBBATCH.AutoSize = true;
             this.RBBATCH.Enabled = false;
             this.RBBATCH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBBATCH.Location = new System.Drawing.Point(104, 77);
+            this.RBBATCH.Location = new System.Drawing.Point(106, 66);
             this.RBBATCH.Name = "RBBATCH";
             this.RBBATCH.Size = new System.Drawing.Size(58, 18);
             this.RBBATCH.TabIndex = 687;
@@ -723,7 +720,7 @@
             // 
             this.RBDIRECT.AutoSize = true;
             this.RBDIRECT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBDIRECT.Location = new System.Drawing.Point(30, 77);
+            this.RBDIRECT.Location = new System.Drawing.Point(32, 66);
             this.RBDIRECT.Name = "RBDIRECT";
             this.RBDIRECT.Size = new System.Drawing.Size(61, 18);
             this.RBDIRECT.TabIndex = 688;
