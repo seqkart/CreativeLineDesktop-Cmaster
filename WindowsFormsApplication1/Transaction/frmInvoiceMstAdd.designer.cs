@@ -573,15 +573,15 @@
             // 
             // labelControl28
             // 
-            this.labelControl28.Location = new System.Drawing.Point(23, 89);
+            this.labelControl28.Location = new System.Drawing.Point(19, 89);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(80, 13);
+            this.labelControl28.Size = new System.Drawing.Size(83, 13);
             this.labelControl28.TabIndex = 540;
-            this.labelControl28.Text = "Transporter Key";
+            this.labelControl28.Text = "Transporter GST";
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(43, 65);
+            this.labelControl24.Location = new System.Drawing.Point(42, 65);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 540;
