@@ -5,7 +5,6 @@ using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
-using Telerik.JustMock.Helpers;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -272,9 +271,9 @@ namespace WindowsFormsApplication1.Transaction
             txtTotalTax.EditValue = TotalTaxValue;
             txtTotalDiscount.EditValue = TotalDiscValue;
 
-            txtRoundOff.EditValue =Math.Round((Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text)),2)-(Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text));
+            txtRoundOff.EditValue = Math.Round((Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text)), 2) - (Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text));
 
-            txtNetAmount.EditValue = (Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text)+ Convert.ToDecimal(txtRoundOff.Text));
+            txtNetAmount.EditValue = (Convert.ToDecimal(txtSubTotal.Text) + Convert.ToDecimal(txtTotalTax.Text) + Convert.ToDecimal(txtFreight.Text) + Convert.ToDecimal(txtRoundOff.Text));
 
         }
         private void SaleOrder_Load(object sender, EventArgs e)
@@ -285,7 +284,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.TextBoxVisualize(xtraTabPage3);
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             dtOrderDate.Enabled = false;
-            txtOrderNo.Enabled = false; 
+            txtOrderNo.Enabled = false;
             if (s1 == "&Add")
             {
                 txtDebitPartyCode.Select();
@@ -308,12 +307,12 @@ namespace WindowsFormsApplication1.Transaction
                 txtBillingZip.Text = ds.Tables[0].Rows[0]["BillingZipCode"].ToString();
                 txtBuyerDANo.Text = ds.Tables[0].Rows[0]["BuyerDANo"].ToString();
                 txtBuyerPONo.Text = ds.Tables[0].Rows[0]["BuyerPONo"].ToString();
-               
 
 
-                
+
+
                 txtDelAccName.Text = ds.Tables[0].Rows[0]["DelAccName"].ToString();
-               
+
                 txtDelieveryCode.Text = ds.Tables[0].Rows[0]["BuyerCode"].ToString();
                 txtDelieveryDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["DelieveryDate"]).ToString("yyyy-MM-dd");
                 txtDelieveryName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
@@ -338,7 +337,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtTransporterCode.Text = ds.Tables[0].Rows[0]["TransporterCode"].ToString();
                 txtTransporterName.Text = ds.Tables[0].Rows[0]["TrpName"].ToString();
                 dt = ds.Tables[1];
-                if(dt.Rows.Count>0)
+                if (dt.Rows.Count > 0)
                 {
                     InfoGrid.DataSource = dt;
                     InfoGridView.BestFitColumns();
@@ -420,12 +419,12 @@ namespace WindowsFormsApplication1.Transaction
             {
                 myCommand.Fill(ExcelTable);
 
-                if(ExcelTable.Rows.Count>0)
+                if (ExcelTable.Rows.Count > 0)
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("Select * from DataTemplates Where TemplateCode=(Select TemplateCode from ActMst Where AccCode='" + txtDebitPartyCode.Text + "')");
-                    if(ds.Tables[0].Rows.Count>0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        foreach(DataRow  dr in ExcelTable.Rows)
+                        foreach (DataRow dr in ExcelTable.Rows)
                         {
                             DataRow dataRow = dt.NewRow();
                             foreach (DataRow drTemplate in ds.Tables[0].Rows)
@@ -481,11 +480,11 @@ namespace WindowsFormsApplication1.Transaction
                             dr["ColorId"] = dsColor.Tables[0].Rows[0]["COLSYSID"].ToString();
                             dr["ColorDesc"] = dsColor.Tables[0].Rows[0]["COLNAME"].ToString();
                         }
-                        DataSet dsSize = ProjectFunctions.GetDataSet("Select * from SIZEMAST where SZNAME='" +dr["SizeDesc"] + "' ");
+                        DataSet dsSize = ProjectFunctions.GetDataSet("Select * from SIZEMAST where SZNAME='" + dr["SizeDesc"] + "' ");
                         if (dsSize.Tables[0].Rows.Count > 0)
                         {
-                            dr["SizeId"]= dsSize.Tables[0].Rows[0]["SZSYSID"].ToString();
-                            dr["SizeDesc"]= dsSize.Tables[0].Rows[0]["SZNAME"].ToString();
+                            dr["SizeId"] = dsSize.Tables[0].Rows[0]["SZSYSID"].ToString();
+                            dr["SizeDesc"] = dsSize.Tables[0].Rows[0]["SZNAME"].ToString();
 
                         }
                         InfoGrid.DataSource = dt;
@@ -498,7 +497,7 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGrid.DataSource = null;
                     InfoGridView.BestFitColumns();
                 }
-                
+
             }
         }
 
@@ -508,7 +507,7 @@ namespace WindowsFormsApplication1.Transaction
         }
 
 
-        private  bool ValidateDataForSaving()
+        private bool ValidateDataForSaving()
         {
             try
 
@@ -517,7 +516,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     ProjectFunctions.SpeakError("No Data To Save");
                 }
-                if(txtMargin.Text.Trim().Length==0)
+                if (txtMargin.Text.Trim().Length == 0)
                 {
 
                     txtMargin.Text = "0";
@@ -545,18 +544,18 @@ namespace WindowsFormsApplication1.Transaction
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                      
+
                         if (s1 == "&Add")
                         {
-                            
-                            
+
+
                             txtOrderNo.Text = ProjectFunctions.GetDataSet("select isnull(max(DocNo),0)+1 from SaleOrderMst ").Tables[0].Rows[0][0].ToString();
-                               
+
                             sqlcom.CommandText = "Insert into SaleOrderMst(DocNo,DocDate,BuyerCode,DelieveryTransID,BuyerPONo,BuyerDANo," +
                                 "Term1,Term2,Term3,Margin,TaxType,TransporterCode,DelieveryDate,TaxableValue,TotalTaxValue,TotalDiscValue,FreightValue,RoundOff,NetAmount)values(" +
                                 "@DocNo,@DocDate,@BuyerCode,@DelieveryTransID,@BuyerPONo,@BuyerDANo," +
                                 "@Term1,@Term2,@Term3,@Margin,@TaxType,@TransporterCode,@DelieveryDate,@TaxableValue,@TotalTaxValue,@TotalDiscValue,@FreightValue,@RoundOff,@NetAmount)";
-                            sqlcom.Parameters.Add("@DocNo", SqlDbType.NVarChar).Value = txtOrderNo.Text;  
+                            sqlcom.Parameters.Add("@DocNo", SqlDbType.NVarChar).Value = txtOrderNo.Text;
                             sqlcom.Parameters.Add("@DocDate", SqlDbType.NVarChar).Value = Convert.ToDateTime(dtOrderDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@BuyerCode", SqlDbType.NVarChar).Value = txtDebitPartyCode.Text.Trim();
                             sqlcom.Parameters.Add("@DelieveryTransID", SqlDbType.NVarChar).Value = txtDelTransID.Text.Trim();
@@ -571,7 +570,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@DelieveryDate", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtDelieveryDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@TaxableValue", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtSubTotal.Text);
                             sqlcom.Parameters.Add("@TotalTaxValue", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtTotalTax.Text);
-                            sqlcom.Parameters.Add("@TotalDiscValue", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtTotalDiscount.Text) ;
+                            sqlcom.Parameters.Add("@TotalDiscValue", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtTotalDiscount.Text);
                             sqlcom.Parameters.Add("@FreightValue", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtFreight.Text);
                             sqlcom.Parameters.Add("@RoundOff", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtRoundOff.Text);
                             sqlcom.Parameters.Add("@NetAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtNetAmount.Text);
@@ -638,7 +637,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                     
+
                         ProjectFunctions.SpeakError("Invoice Data Saved Successfully");
                         sqlcon.Close();
 
@@ -828,7 +827,7 @@ namespace WindowsFormsApplication1.Transaction
                 dt.AcceptChanges();
                 DataRow row = GridControlView1.GetDataRow(GridControlView1.FocusedRowHandle);
 
-                
+
                 if (GridControlView1.RowCount > 0)
                 {
                     if (GridControl1.Text == "ArtNo")
@@ -852,8 +851,8 @@ namespace WindowsFormsApplication1.Transaction
                     }
 
                     //InitializeComponent();
-                  
-                 
+
+
                     if (GridControl1.Text == "ColorId")
                     {
                         InfoGridView.UpdateCurrentRow();
@@ -887,7 +886,7 @@ namespace WindowsFormsApplication1.Transaction
                         txtSearchBox.Text = String.Empty;
 
                         dt.AcceptChanges();
-                       
+
                     }
                 }
 
@@ -904,7 +903,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-               
+
 
 
 
@@ -964,7 +963,7 @@ namespace WindowsFormsApplication1.Transaction
                         DataRow NewRow = dtNew.NewRow();
                         NewRow["SZNAME"] = dr["SZNAME"];
                         NewRow["SZSYSID"] = dr["SZSYSID"];
-                       
+
                         dtNew.Rows.Add(NewRow);
                     }
                     if (dtNew.Rows.Count > 0)
@@ -1019,6 +1018,11 @@ namespace WindowsFormsApplication1.Transaction
         private void txtFreight_EditValueChanged(object sender, EventArgs e)
         {
             Calculation();
+        }
+
+        private void HelpGrid_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

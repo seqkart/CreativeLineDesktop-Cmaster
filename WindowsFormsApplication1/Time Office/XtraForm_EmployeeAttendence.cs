@@ -2102,7 +2102,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-       
+
 
 
         private void DateAttendance_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)

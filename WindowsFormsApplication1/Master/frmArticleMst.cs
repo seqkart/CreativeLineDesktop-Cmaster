@@ -1,5 +1,4 @@
-﻿using AventStack.ExtentReports.Gherkin.Model;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,9 +19,9 @@ namespace WindowsFormsApplication1
 
         private void TxtUMCode_EditValueChanged(object sender, EventArgs e)
         {
-        
+
             txtUMDesc.Text = string.Empty;
-            
+
         }
 
         private void TxtUMCode_KeyDown(object sender, KeyEventArgs e)
@@ -38,12 +37,12 @@ namespace WindowsFormsApplication1
                                                         HelpGridView,
                                                         e);
             }
-            
+
             catch (Exception ex)
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
-            
+
         }
 
         private void TxtSGrpCode_EditValueChanged(object sender, EventArgs e)
@@ -381,19 +380,19 @@ namespace WindowsFormsApplication1
                     txtBrandCode.Focus();
                     return false;
                 }
-               
+
                 if (txtUMCode.Text.Trim().Length == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid Article Unit Of Measurment");
                     txtUMCode.Focus();
                     return false;
                 }
-                         
-               
+
+
                 if (txtHSNCode.Text.Trim().Length == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid Article HSN");
-                  //  txtHSNCode.Focus();
+                    //  txtHSNCode.Focus();
                     return false;
                 }
                 if (txtTaxCodeL.Text.Trim().Length == 0)
@@ -609,7 +608,7 @@ namespace WindowsFormsApplication1
         private void TxtPurPrice_KeyPress(object sender, KeyPressEventArgs e)
         { ProjectFunctions.NumericWithDecimal(e); }
 
-       
+
 
         private void TxtDescription_Enter(object sender, EventArgs e)
         { txtDescription.Text = txtGrpDesc.Text + " - " + txtSGrpDesc.Text; }
@@ -656,7 +655,7 @@ namespace WindowsFormsApplication1
             }
 
             txtMRP.EditValue = ProjectFunctions.RoundFive((Convert.ToDecimal(txtWSP.Text) /
-                (100 - Convert.ToDecimal(txtMargin.Text)) *100));
+                (100 - Convert.ToDecimal(txtMargin.Text)) * 100));
         }
 
         private void TxtMRP_Leave(object sender, EventArgs e)
@@ -942,6 +941,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-     
+
     }
 }

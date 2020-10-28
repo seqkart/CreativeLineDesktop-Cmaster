@@ -1,6 +1,4 @@
 ﻿using DevExpress.XtraSplashScreen;
-using DevExpress.XtraTab;
-using DevExpress.XtraTab.ViewInfo;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -56,7 +54,7 @@ namespace WindowsFormsApplication1.Transaction
         private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
-         
+
         }
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
@@ -541,9 +539,9 @@ namespace WindowsFormsApplication1.Transaction
                                         DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "' And SKUFIXBARCODE is not null");
                                         if (dsCheck.Tables[0].Rows.Count > 0)
                                         {
-                                           
-                                                SKUFIXPRODUCTCODE = dsCheck.Tables[0].Rows[0]["SKUFIXBARCODE"].ToString();
-                                                SKUFixCode = dsCheck.Tables[0].Rows[0]["SKUFIXPRODUCTCODE"].ToString();
+
+                                            SKUFIXPRODUCTCODE = dsCheck.Tables[0].Rows[0]["SKUFIXBARCODE"].ToString();
+                                            SKUFixCode = dsCheck.Tables[0].Rows[0]["SKUFIXPRODUCTCODE"].ToString();
                                         }
                                         else
                                         {
@@ -796,10 +794,10 @@ namespace WindowsFormsApplication1.Transaction
                     BarCodeGrid.DataSource = dt;
                     BarCodeGridView.BestFitColumns();
 
-                    if (Tag == "Fixed")
-                    {
-                        ChkFixedBarCode.Checked = true;
-                    }
+                    //if (Tag == "Fixed")
+                    //{
+                    //    ChkFixedBarCode.Checked = true;
+                    //}
                 }
             }
             catch (Exception ex)
@@ -951,19 +949,19 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BarCodeGrid_Click(object sender, EventArgs e)
         {
-//            try
-//            {
-//                ArticleImageBox = null;
+            //            try
+            //            {
+            //                ArticleImageBox = null;
 
-//                DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
-//                ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
-//            }
-//#pragma warning disable CS0168 // The variable 'ex' is declared but never used
-//            catch (Exception ex)
-//#pragma warning restore CS0168 // The variable 'ex' is declared but never used
-//            {
-//                //ProjectFunctions.SpeakError(ex.Message);
-//            }
+            //                DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
+            //                ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
+            //            }
+            //#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+            //            catch (Exception ex)
+            //#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+            //            {
+            //                //ProjectFunctions.SpeakError(ex.Message);
+            //            }
         }
 
 
@@ -1098,10 +1096,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void ChkFixedBarCode_CheckedChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void labelControl6_Click(object sender, EventArgs e)
         {
@@ -1112,7 +1107,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             DataSet ds = new DataSet();
             ds = ProjectFunctions.GetDataSet("SP_Temp");
-            if(ds.Tables[0].Rows.Count>0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 dt = ds.Tables[0];
                 BarCodeGrid.DataSource = dt;

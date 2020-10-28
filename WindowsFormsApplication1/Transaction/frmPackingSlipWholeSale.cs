@@ -425,7 +425,7 @@ namespace WindowsFormsApplication1.Transaction
                             if (FixBarPartyTag == "Y")
                             {
                                 ProjectFunctions.GetDataSet("Delete from PSWSLDET Where SIDPSNO='" +
-                                    txtPackingSlipNO.Text +"' And SIDBOXNO='" +
+                                    txtPackingSlipNO.Text + "' And SIDBOXNO='" +
                                     lblBox.Text +
                                     "' And UnitCode='" +
                                     GlobalVariables.CUnitID +
@@ -646,6 +646,7 @@ namespace WindowsFormsApplication1.Transaction
                     DataSet ds = new DataSet();
                     if (FixBarPartyTag != "Y")
                     {
+
                         ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
                             txtBarCode.Text +
                             "','" +
@@ -684,19 +685,21 @@ namespace WindowsFormsApplication1.Transaction
                                 }
                             }
                         }
-                        if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) !=
-                            Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
-                        {
-                            ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " +
-                                ds.Tables[0].Rows[0]["ARTMRP"].ToString() +
-                                ")");
-                            txtBarCode.Focus();
-                            txtBarCode.SelectAll();
-                            e.Handled = true;
-                            return;
-                        }
 
+                        //////////////////////////MRP
+                        //if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) !=
+                        //    Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
+                        //{
+                        //    ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " +
+                        //        ds.Tables[0].Rows[0]["ARTMRP"].ToString() +
+                        //        ")");
+                        //    txtBarCode.Focus();
+                        //    txtBarCode.SelectAll();
+                        //    e.Handled = true;
+                        //    return;
+                        //}
 
+                        //////////////////////////////
                         if (dt.Rows.Count == 0)
                         {
                             dt = ds.Tables[0];
