@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
         public static String ConnectionString = ProjectFunctionsUtils.ConnectionString;
         public static String ImageConnectionString = ProjectFunctionsUtils.ImageConnectionString;
         ////@"Data Source=cserver;Initial Catalog=SEQKART;User ID=sa;pwd=Seq@2021";
-        //public static String ConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\server.txt");
+        
 
         //public static void SendSMS(string uid, string password, string message, string no)
         //{

@@ -644,22 +644,34 @@ namespace WindowsFormsApplication1.Transaction
                 if (e.KeyCode == Keys.Enter)
                 {
                     DataSet ds = new DataSet();
-                    if (FixBarPartyTag != "Y")
-                    {
-
-                        ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
-                            txtBarCode.Text +
-                            "','" +
-                            GlobalVariables.CUnitID +
-                            "'");
-                    }
-                    else
+                    if (FixBarPartyTag == "Y")
                     {
                         ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUFixBarCode] '" +
                             txtBarCode.Text +
                             "','" +
                             GlobalVariables.CUnitID +
                             "'");
+                        
+                    }
+                    else
+                    {
+                        if (FixBarPartyTag == "N")
+                        {
+                            ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
+                            txtBarCode.Text +
+                            "','" +
+                            GlobalVariables.CUnitID +
+                            "'");
+                        }
+                        else
+                        {
+                            ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUdetUsingBarCode2] '" +
+                            txtBarCode.Text +
+                            "','" +
+                            GlobalVariables.CUnitID +
+                            "'");
+                        }
+                            
                     }
                     if (ds.Tables[0].Rows.Count > 0)
                     {
