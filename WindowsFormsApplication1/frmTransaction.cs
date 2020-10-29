@@ -1295,8 +1295,8 @@ namespace WindowsFormsApplication1
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode", (o1, e1) =>
                     {
                         
-                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"Label\Sticker.btw");
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Sticker.btw");
                         PrintOutGrid.DataSource = null;
 
                     }));
@@ -1304,8 +1304,8 @@ namespace WindowsFormsApplication1
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
                     {
                       
-                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"Label\Tag.btw");
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Tag.btw");
                         PrintOutGrid.DataSource = null;
 
                     }));
@@ -1313,8 +1313,8 @@ namespace WindowsFormsApplication1
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler", (o1, e1) =>
                     {
 
-                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"Label\Muffler.btw");
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Muffler.btw");
                         PrintOutGrid.DataSource = null;
 
                     }));
