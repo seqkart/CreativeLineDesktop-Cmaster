@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
@@ -26,9 +25,6 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("PTTaxPer", typeof(Decimal));
             dt.Columns.Add("PICoreFashion", typeof(String));
             dt.Columns.Add("Season", typeof(String));
-
-
-
             dtAll.Columns.Add("PIBrand", typeof(String));
             dtAll.Columns.Add("PIEANNo", typeof(String));
             dtAll.Columns.Add("PIArticle", typeof(String));
@@ -46,14 +42,14 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        private void frmProformaMst_Load(object sender, EventArgs e)
+        private void FrmProformaMst_Load(object sender, EventArgs e)
         {
-            
+
             SetMyControls();
             if (s1 == "&Add")
             {
                 txtPIDate.EditValue = DateTime.Now;
-                txtPINo.Text = getNewInvoiceDocumentNo().PadLeft(6, '0');
+                txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
             }
             if (s1 == "Edit")
             {
@@ -66,8 +62,8 @@ namespace WindowsFormsApplication1.Transaction
                     txtAccCode.Text = ds.Tables[0].Rows[0]["PIPartyCode"].ToString();
                     txtAccName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
                     dt = ds.Tables[1];
-                   
-                  
+
+
 
                     InvoiceGrid.DataSource = dt;
                     InvoiceGridView.BestFitColumns();
@@ -77,7 +73,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private string getNewInvoiceDocumentNo()
+        private string GetNewInvoiceDocumentNo()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(PINo as int)),000000) from PIMst ");
@@ -89,13 +85,13 @@ namespace WindowsFormsApplication1.Transaction
             return s2;
         }
 
-        private void txtAccCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtAccCode_EditValueChanged(object sender, EventArgs e)
         {
             txtAccName.Text = string.Empty;
             dt = null;
         }
 
-        private void frmProformaMst_KeyDown(object sender, KeyEventArgs e)
+        private void FrmProformaMst_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -103,7 +99,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
             if (e.KeyCode == Keys.Escape)
             {
@@ -139,7 +135,7 @@ namespace WindowsFormsApplication1.Transaction
                             dtAll.ImportRow(dr);
                         }
 
-                        if(dtAll.Rows.Count>0)
+                        if (dtAll.Rows.Count > 0)
                         {
                             InvoiceGrid.DataSource = dtAll;
                             InvoiceGridView.BestFitColumns();
@@ -170,7 +166,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             if (HelpGrid.Text == "Load")
             {
-                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadEANData '"+ row[0].ToString()+ "'");
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadEANData '" + row[0].ToString() + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     AddRowsToDatatable();
@@ -187,12 +183,12 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtAccCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtAccCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select AccCode,AccName from ActMst ", " Where  AccCode ", txtAccCode, txtAccName, txtAccCode, HelpGrid, HelpGridView, e);
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -232,7 +228,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtAccCode.Focus();
                 return false;
             }
-           
+
             return true;
         }
 
@@ -241,7 +237,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -260,7 +256,7 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         if (s1 == "&Add")
                         {
-                            txtPINo.Text = getNewInvoiceDocumentNo().PadLeft(6, '0');
+                            txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
 
                             sqlcom.CommandText = "Insert into PIMst(PINo,PIDate,PIPartyCode,PITaxableAmount,PITaxAmount,PITotalAmount)values(@PINo,@PIDate,@PIPartyCode,@PITaxableAmount,@PITaxAmount,@PITotalAmount)";
                             sqlcom.Parameters.AddWithValue("@PINo", txtPINo.Text.Trim());
@@ -300,7 +296,7 @@ namespace WindowsFormsApplication1.Transaction
                         foreach (DataRow dr in dtAll.Rows)
                         {
                             sqlcom.CommandType = CommandType.Text;
-                           
+
                             sqlcom.CommandText = " Insert into PIData"
                                                        + " (PINo,PIDate,PIBrand,PIEANNo,PIArticle,PIHSNCode,PIQyt,PIMrp,PTTaxPer,PICoreFashion,Season)"
                                                        + " values(@PINo,@PIDate,@PIBrand,@PIEANNo,@PIArticle,@PIHSNCode,@PIQyt,@PIMrp,@PTTaxPer,@PICoreFashion,@Season)";
@@ -343,7 +339,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             HelpGridView.Columns.Clear();
             HelpGrid.Text = "Load";

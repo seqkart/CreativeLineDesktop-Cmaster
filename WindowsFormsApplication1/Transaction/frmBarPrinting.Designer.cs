@@ -104,10 +104,10 @@
             // 
             // BarCodeGrid
             // 
-            this.BarCodeGrid.Location = new System.Drawing.Point(12, 215);
+            this.BarCodeGrid.Location = new System.Drawing.Point(12, 186);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
             this.BarCodeGrid.Name = "BarCodeGrid";
-            this.BarCodeGrid.Size = new System.Drawing.Size(880, 340);
+            this.BarCodeGrid.Size = new System.Drawing.Size(880, 366);
             this.BarCodeGrid.TabIndex = 682;
             this.BarCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BarCodeGridView});
@@ -498,7 +498,7 @@
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.ArticleImageBox.Size = new System.Drawing.Size(145, 180);
+            this.ArticleImageBox.Size = new System.Drawing.Size(114, 151);
             this.ArticleImageBox.TabIndex = 708;
             // 
             // groupControl1
@@ -526,7 +526,7 @@
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl1.Location = new System.Drawing.Point(12, 29);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(736, 180);
+            this.groupControl1.Size = new System.Drawing.Size(736, 151);
             this.groupControl1.TabIndex = 709;
             this.groupControl1.Text = "Generate Mode";
             // 
@@ -538,11 +538,12 @@
             this.btnLoadPreviousBarCodes.TabIndex = 708;
             this.btnLoadPreviousBarCodes.Text = "Load";
             this.btnLoadPreviousBarCodes.UseVisualStyleBackColor = true;
+            this.btnLoadPreviousBarCodes.Visible = false;
             this.btnLoadPreviousBarCodes.Click += new System.EventHandler(this.btnLoadPreviousBarCodes_Click);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(43, 147);
+            this.label2.Location = new System.Drawing.Point(44, 122);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 707;
@@ -550,7 +551,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(33, 118);
+            this.labelControl1.Location = new System.Drawing.Point(34, 93);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(60, 13);
             this.labelControl1.TabIndex = 706;
@@ -559,7 +560,7 @@
             // btnPrint
             // 
             this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(318, 138);
+            this.btnPrint.Location = new System.Drawing.Point(319, 115);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(87, 27);
             this.btnPrint.TabIndex = 705;
@@ -569,7 +570,7 @@
             // txtBarCode
             // 
             this.txtBarCode.EnterMoveNextControl = true;
-            this.txtBarCode.Location = new System.Drawing.Point(95, 143);
+            this.txtBarCode.Location = new System.Drawing.Point(96, 118);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarCode.Properties.MaxLength = 40;
@@ -614,7 +615,7 @@
             // txtOrderNo
             // 
             this.txtOrderNo.EnterMoveNextControl = true;
-            this.txtOrderNo.Location = new System.Drawing.Point(95, 114);
+            this.txtOrderNo.Location = new System.Drawing.Point(96, 89);
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderNo.Properties.MaxLength = 4;
@@ -624,7 +625,7 @@
             // txtDeptCode
             // 
             this.txtDeptCode.EnterMoveNextControl = true;
-            this.txtDeptCode.Location = new System.Drawing.Point(95, 87);
+            this.txtDeptCode.Location = new System.Drawing.Point(96, 62);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
@@ -634,7 +635,7 @@
             // txtDeptDesc
             // 
             this.txtDeptDesc.EnterMoveNextControl = true;
-            this.txtDeptDesc.Location = new System.Drawing.Point(154, 87);
+            this.txtDeptDesc.Location = new System.Drawing.Point(155, 62);
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
@@ -645,7 +646,7 @@
             // txtSysID
             // 
             this.txtSysID.Enabled = false;
-            this.txtSysID.Location = new System.Drawing.Point(104, 38);
+            this.txtSysID.Location = new System.Drawing.Point(553, 29);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysID.Size = new System.Drawing.Size(83, 20);
@@ -656,7 +657,7 @@
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(45, 39);
+            this.Label15.Location = new System.Drawing.Point(494, 30);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(45, 18);
             this.Label15.TabIndex = 698;
@@ -665,7 +666,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(23, 91);
+            this.labelControl6.Location = new System.Drawing.Point(24, 66);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(70, 13);
             this.labelControl6.TabIndex = 696;
@@ -677,7 +678,7 @@
             this.RBPUR.AutoSize = true;
             this.RBPUR.Enabled = false;
             this.RBPUR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBPUR.Location = new System.Drawing.Point(251, 66);
+            this.RBPUR.Location = new System.Drawing.Point(252, 41);
             this.RBPUR.Name = "RBPUR";
             this.RBPUR.Size = new System.Drawing.Size(111, 18);
             this.RBPUR.TabIndex = 691;
@@ -689,7 +690,7 @@
             // 
             this.ChkFixedBarCode.AutoSize = true;
             this.ChkFixedBarCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ChkFixedBarCode.Location = new System.Drawing.Point(318, 114);
+            this.ChkFixedBarCode.Location = new System.Drawing.Point(319, 90);
             this.ChkFixedBarCode.Name = "ChkFixedBarCode";
             this.ChkFixedBarCode.Size = new System.Drawing.Size(108, 18);
             this.ChkFixedBarCode.TabIndex = 690;
@@ -700,7 +701,7 @@
             // 
             this.RBIMPORT.AutoSize = true;
             this.RBIMPORT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBIMPORT.Location = new System.Drawing.Point(180, 66);
+            this.RBIMPORT.Location = new System.Drawing.Point(181, 41);
             this.RBIMPORT.Name = "RBIMPORT";
             this.RBIMPORT.Size = new System.Drawing.Size(65, 18);
             this.RBIMPORT.TabIndex = 686;
@@ -713,7 +714,7 @@
             this.RBBATCH.AutoSize = true;
             this.RBBATCH.Enabled = false;
             this.RBBATCH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBBATCH.Location = new System.Drawing.Point(106, 66);
+            this.RBBATCH.Location = new System.Drawing.Point(107, 41);
             this.RBBATCH.Name = "RBBATCH";
             this.RBBATCH.Size = new System.Drawing.Size(58, 18);
             this.RBBATCH.TabIndex = 687;
@@ -725,7 +726,7 @@
             // 
             this.RBDIRECT.AutoSize = true;
             this.RBDIRECT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBDIRECT.Location = new System.Drawing.Point(32, 66);
+            this.RBDIRECT.Location = new System.Drawing.Point(33, 41);
             this.RBDIRECT.Name = "RBDIRECT";
             this.RBDIRECT.Size = new System.Drawing.Size(61, 18);
             this.RBDIRECT.TabIndex = 688;
