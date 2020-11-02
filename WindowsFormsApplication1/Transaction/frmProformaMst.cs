@@ -124,18 +124,23 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                if (dt.Rows.Count > 0)
+                if (dt != null)
                 {
-                    foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
+
+
+                    if (dt.Rows.Count > 0)
                     {
+                        foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
+                        {
 
 
-                        dtAll.ImportRow(dr);
+                            dtAll.ImportRow(dr);
+                        }
                     }
                 }
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -155,7 +160,7 @@ namespace WindowsFormsApplication1.Transaction
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadEANData '"+ row[0].ToString()+ "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    
+                    AddRowsToDatatable();
                     dt = ds.Tables[0];
                     InfoGrid.DataSource = dt;
                     InfoGridView.BestFitColumns();
