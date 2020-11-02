@@ -675,28 +675,31 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        if (FixBarPartyTag != "Y")
-                        {
-                            if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
-                            {
-                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                txtBarCode.Focus();
-                                txtBarCode.SelectAll();
-                                e.Handled = true;
-                                return;
-                            }
-                            foreach (DataRow dr in dt.Rows)
-                            {
-                                if (dr["SIDBARCODE"].ToString().ToUpper() == txtBarCode.Text.Trim())
-                                {
-                                    ProjectFunctions.SpeakError("BarCode Already Loaded In This Document");
-                                    txtBarCode.Focus();
-                                    txtBarCode.SelectAll();
-                                    e.Handled = true;
-                                    return;
-                                }
-                            }
-                        }
+                        //if (FixBarPartyTag == "Y")
+                        //{
+
+                        //    if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                        //    {
+                        //        ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                        //        txtBarCode.Focus();
+                        //        txtBarCode.SelectAll();
+
+                        //        e.Handled = true;
+                        //        return;
+                        //    }
+                        //    foreach (DataRow dr in dt.Rows)
+                        //    {
+                        //        if (dr["SIDBARCODE"].ToString().ToUpper() == txtBarCode.Text.Trim())
+                        //        {
+                        //            ProjectFunctions.SpeakError("BarCode Already Loaded In This Document");
+                        //            txtBarCode.Focus();
+                        //            txtBarCode.SelectAll();
+                        //            e.Handled = true;
+                        //            return;
+                        //        }
+
+                        //    }
+                        //}
 
                         //////////////////////////MRP
                         //if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) !=
