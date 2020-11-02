@@ -1271,9 +1271,11 @@ namespace WindowsFormsApplication1
                     break;
                 case "PROG140":
 
+                    ProjectFunctions.GetDataSet("sp_DownloadDataFromOnline");
+                    XtraMessageBox.Show("Masters Updated");
 
                     ProjectFunctions.GetDataSet("sp_DownloadDCOFromOnline");
-                    XtraMessageBox.Show("Data Downloaded");
+                    XtraMessageBox.Show("Dco Downloaded");
 
                     break;
                 case "PROG141":

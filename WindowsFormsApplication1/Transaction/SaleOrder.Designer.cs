@@ -141,6 +141,8 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.TXTDC = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl31 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
@@ -206,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TXTDC.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl7
@@ -264,7 +267,7 @@
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(73, 154);
+            this.labelControl22.Location = new System.Drawing.Point(77, 154);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(16, 13);
             this.labelControl22.TabIndex = 550;
@@ -368,7 +371,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(11, 105);
+            this.labelControl4.Location = new System.Drawing.Point(12, 105);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(81, 13);
             this.labelControl4.TabIndex = 5;
@@ -376,7 +379,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(10, 79);
+            this.labelControl3.Location = new System.Drawing.Point(12, 79);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(81, 13);
             this.labelControl3.TabIndex = 6;
@@ -384,7 +387,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(11, 53);
+            this.labelControl1.Location = new System.Drawing.Point(12, 53);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(81, 13);
             this.labelControl1.TabIndex = 7;
@@ -392,7 +395,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(32, 28);
+            this.labelControl2.Location = new System.Drawing.Point(33, 28);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 13);
             this.labelControl2.TabIndex = 8;
@@ -1329,13 +1332,32 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // TXTDC
+            // 
+            this.TXTDC.Location = new System.Drawing.Point(438, 29);
+            this.TXTDC.Name = "TXTDC";
+            this.TXTDC.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TXTDC.Properties.MaxLength = 6;
+            this.TXTDC.Size = new System.Drawing.Size(73, 20);
+            this.TXTDC.TabIndex = 552;
+            // 
+            // labelControl31
+            // 
+            this.labelControl31.Location = new System.Drawing.Point(372, 33);
+            this.labelControl31.Name = "labelControl31";
+            this.labelControl31.Size = new System.Drawing.Size(62, 13);
+            this.labelControl31.TabIndex = 551;
+            this.labelControl31.Text = "DC / STORE:";
+            // 
             // SaleOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 624);
             this.ControlBox = false;
+            this.Controls.Add(this.TXTDC);
             this.Controls.Add(this.HelpGrid);
+            this.Controls.Add(this.labelControl31);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.dtOrderDate);
@@ -1424,6 +1446,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TXTDC.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1542,5 +1565,7 @@
         private DevExpress.XtraEditors.TextEdit txtSearchBox;
         private DevExpress.XtraGrid.GridControl GridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView GridControlView1;
+        private DevExpress.XtraEditors.TextEdit TXTDC;
+        private DevExpress.XtraEditors.LabelControl labelControl31;
     }
 }

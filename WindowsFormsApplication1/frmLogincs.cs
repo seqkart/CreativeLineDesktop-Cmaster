@@ -116,6 +116,7 @@ namespace WindowsFormsApplication1
                     DataRow drFY = dsFY.Tables[0].Rows[0];
 
                     GlobalVariables.CUnitID = txtUnit.SelectedValue.ToString().PadLeft(2, '0');
+                   
 
                     GlobalVariables.FinancialYear = drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString();
                     GlobalVariables.FinYearStartDate = Convert.ToDateTime(drFY[SQL_COLUMNS.FN_YEAR._FNStartDate]).Date;

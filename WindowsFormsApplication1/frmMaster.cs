@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG124")
                 {
-                    frmSizeMMaster frm = new frmSizeMMaster() { s1 = btnAdd.Text, Text = "M Size Addition" };
+                    frmSizeMMaster frm = new frmSizeMMaster() { s1 = btnAdd.Text, Text = "Size Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -546,7 +546,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmSizeMMaster frm = new frmSizeMMaster()
-                    { s1 = btnEdit.Text, Text = "M Size Edition", SZSYSID = CurrentRow["SZSYSID"].ToString() };
+                    { s1 = btnEdit.Text, Text = "Size Edition", SZSYSID = CurrentRow["SZSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 

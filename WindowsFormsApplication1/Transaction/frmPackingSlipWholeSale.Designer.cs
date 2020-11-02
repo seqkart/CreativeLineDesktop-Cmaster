@@ -84,6 +84,8 @@
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
@@ -108,6 +110,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -442,7 +445,7 @@
             // 
             this.Label8.Location = new System.Drawing.Point(239, 11);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(40, 13);
+            this.Label8.Size = new System.Drawing.Size(41, 13);
             this.Label8.TabIndex = 0;
             this.Label8.Text = "DATED :";
             // 
@@ -450,7 +453,7 @@
             // 
             this.Label7.Location = new System.Drawing.Point(15, 11);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(93, 13);
+            this.Label7.Size = new System.Drawing.Size(94, 13);
             this.Label7.TabIndex = 0;
             this.Label7.Text = "PACKING SLIP NO :";
             // 
@@ -468,7 +471,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(129, 118);
+            this.HelpGrid.Location = new System.Drawing.Point(150, 118);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(737, 368);
@@ -503,6 +506,8 @@
             // Panel1
             // 
             this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Panel1.Controls.Add(this.labelControl11);
+            this.Panel1.Controls.Add(this.textEdit1);
             this.Panel1.Controls.Add(this.labelControl10);
             this.Panel1.Controls.Add(this.labelControl9);
             this.Panel1.Controls.Add(this.labelControl8);
@@ -526,9 +531,9 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(217, 136);
+            this.labelControl10.Location = new System.Drawing.Point(162, 136);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(43, 13);
+            this.labelControl10.Size = new System.Drawing.Size(44, 13);
             this.labelControl10.TabIndex = 725;
             this.labelControl10.Text = "PO NO. :";
             this.labelControl10.Click += new System.EventHandler(this.labelControl4_Click);
@@ -537,7 +542,7 @@
             // 
             this.labelControl9.Location = new System.Drawing.Point(15, 136);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(43, 13);
+            this.labelControl9.Size = new System.Drawing.Size(44, 13);
             this.labelControl9.TabIndex = 725;
             this.labelControl9.Text = "DA NO. :";
             this.labelControl9.Click += new System.EventHandler(this.labelControl4_Click);
@@ -546,16 +551,16 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(43, 116);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(48, 13);
+            this.labelControl8.Size = new System.Drawing.Size(49, 13);
             this.labelControl8.TabIndex = 725;
             this.labelControl8.Text = "GST NO. :";
             this.labelControl8.Click += new System.EventHandler(this.labelControl4_Click);
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(26, 95);
+            this.labelControl7.Location = new System.Drawing.Point(30, 95);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(65, 13);
+            this.labelControl7.Size = new System.Drawing.Size(62, 13);
             this.labelControl7.TabIndex = 725;
             this.labelControl7.Text = "CITY / SATE :";
             this.labelControl7.Click += new System.EventHandler(this.labelControl4_Click);
@@ -564,7 +569,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(38, 32);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(53, 13);
+            this.labelControl5.Size = new System.Drawing.Size(54, 13);
             this.labelControl5.TabIndex = 725;
             this.labelControl5.Text = "ADDRESS :";
             this.labelControl5.Click += new System.EventHandler(this.labelControl4_Click);
@@ -573,7 +578,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(27, 11);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(64, 13);
+            this.labelControl4.Size = new System.Drawing.Size(65, 13);
             this.labelControl4.TabIndex = 725;
             this.labelControl4.Text = "Party NAME :";
             this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
@@ -622,14 +627,14 @@
             // 
             this.txtDANo.Location = new System.Drawing.Point(61, 132);
             this.txtDANo.Name = "txtDANo";
-            this.txtDANo.Size = new System.Drawing.Size(139, 20);
+            this.txtDANo.Size = new System.Drawing.Size(96, 20);
             this.txtDANo.TabIndex = 16;
             // 
             // txtPONo
             // 
-            this.txtPONo.Location = new System.Drawing.Point(267, 132);
+            this.txtPONo.Location = new System.Drawing.Point(212, 132);
             this.txtPONo.Name = "txtPONo";
-            this.txtPONo.Size = new System.Drawing.Size(139, 20);
+            this.txtPONo.Size = new System.Drawing.Size(86, 20);
             this.txtPONo.TabIndex = 17;
             // 
             // txtAddress
@@ -643,9 +648,9 @@
             // txtAccName
             // 
             this.txtAccName.Enabled = false;
-            this.txtAccName.Location = new System.Drawing.Point(161, 7);
+            this.txtAccName.Location = new System.Drawing.Point(159, 7);
             this.txtAccName.Name = "txtAccName";
-            this.txtAccName.Size = new System.Drawing.Size(245, 20);
+            this.txtAccName.Size = new System.Drawing.Size(247, 20);
             this.txtAccName.TabIndex = 11;
             // 
             // txtAccCode
@@ -695,6 +700,21 @@
             this.labelControl3.Size = new System.Drawing.Size(178, 45);
             this.labelControl3.TabIndex = 721;
             this.labelControl3.Text = "Total Ps Pcs";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(305, 136);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(21, 13);
+            this.labelControl11.TabIndex = 727;
+            this.labelControl11.Text = "DC :";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(329, 132);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(77, 20);
+            this.textEdit1.TabIndex = 726;
             // 
             // frmPackingSlipWholeSale
             // 
@@ -747,6 +767,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -808,5 +829,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.LabelControl labelControl7;
         private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl11;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

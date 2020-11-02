@@ -74,7 +74,7 @@
             this.txtDescription.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescription.Properties.MaxLength = 100;
             this.txtDescription.Size = new System.Drawing.Size(351, 20);
-            this.txtDescription.TabIndex = 601;
+            this.txtDescription.TabIndex = 1;
             // 
             // Menu_ToolStrip
             // 
@@ -115,12 +115,12 @@
             // 
             // txtSizeName
             // 
+            this.txtSizeName.EnterMoveNextControl = true;
             this.txtSizeName.Location = new System.Drawing.Point(115, 69);
             this.txtSizeName.Name = "txtSizeName";
-            this.txtSizeName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSizeName.Properties.MaxLength = 100;
             this.txtSizeName.Size = new System.Drawing.Size(225, 20);
-            this.txtSizeName.TabIndex = 598;
+            this.txtSizeName.TabIndex = 0;
             // 
             // txtSysID
             // 
@@ -157,7 +157,7 @@
             this.txtIndex.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIndex.Properties.MaxLength = 100;
             this.txtIndex.Size = new System.Drawing.Size(76, 20);
-            this.txtIndex.TabIndex = 603;
+            this.txtIndex.TabIndex = 2;
             // 
             // frmSizeMMaster
             // 

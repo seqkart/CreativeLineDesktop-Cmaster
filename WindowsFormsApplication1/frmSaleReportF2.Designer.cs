@@ -204,6 +204,7 @@
             // 
             this.InfoGridView.GridControl = this.InfoGrid;
             this.InfoGridView.Name = "InfoGridView";
+            this.InfoGridView.OptionsView.ShowFooter = true;
             this.InfoGridView.OptionsView.ShowGroupPanel = false;
             this.InfoGridView.OptionsView.ShowIndicator = false;
             // 
