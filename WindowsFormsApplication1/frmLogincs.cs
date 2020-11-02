@@ -177,7 +177,14 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory(Application.StartupPath + "\\LABEL");
             }
+            if (System.IO.Directory.Exists(Application.StartupPath + "\\PI"))
+            {
 
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\PI");
+            }
 
             defaultLookAndFeel1.LookAndFeel.SkinName = "McSkin";
             ProjectFunctions.TextBoxVisualize(this);

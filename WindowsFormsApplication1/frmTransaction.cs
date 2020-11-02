@@ -816,6 +816,59 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                if (GlobalVariables.ProgCode == "PROG210")
+                {
+                    e.Menu.Items
+                           .Add(new DevExpress.Utils.Menu.DXMenuItem("PI Excel",
+                                                                     (o1, e1) =>
+                                                                     {
+                                                                         DataTable dt = new DataTable();
+                                                                         DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                                                                         DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIMstFEDit '" + CurrentRow["PINo"].ToString() + "','" + Convert.ToDateTime(CurrentRow["PIDate"]).ToString("yyyy-MM-dd") + "'");
+                                                                         if (ds.Tables[0].Rows.Count > 0)
+                                                                         {
+                                                                             dt.Columns.Add("Brand", typeof(String));
+                                                                             dt.Columns.Add("Store Code", typeof(String));
+                                                                             dt.Columns.Add("EAN Code", typeof(String));
+                                                                             dt.Columns.Add("Article", typeof(String));
+                                                                             dt.Columns.Add("HSN Code", typeof(String));
+                                                                             dt.Columns.Add("PI Qty", typeof(String));
+                                                                             dt.Columns.Add("Mrp.", typeof(String));
+                                                                             dt.Columns.Add("Tax%", typeof(String));
+                                                                             dt.Columns.Add("Core/Fashion", typeof(String));
+                                                                             dt.Columns.Add("Season", typeof(String));
+
+                                                                             foreach (DataRow dr in ds.Tables[1].Rows)
+                                                                             {
+                                                                                 if (Convert.ToDecimal(dr["PIQyt"]) > 0)
+                                                                                 {
+                                                                                     DataRow newrow = dt.NewRow();
+                                                                                     newrow["Brand"] = dr["PIBrand"].ToString();
+                                                                                     newrow["Store Code"] = "0";
+                                                                                     newrow["EAN Code"] = dr["PIEANNo"].ToString();
+                                                                                     newrow["Article"] = dr["PIArticle"].ToString();
+                                                                                     newrow["HSN Code"] = dr["PIHSNCode"].ToString();
+                                                                                     newrow["PI Qty"] = dr["PIQyt"].ToString();
+                                                                                     newrow["Mrp."] = dr["PIMrp"].ToString();
+                                                                                     newrow["Tax%"] = dr["PTTaxPer"].ToString();
+                                                                                     newrow["Core/Fashion"] = dr["PICoreFashion"].ToString();
+                                                                                     newrow["Season"] = dr["Season"].ToString();
+                                                                                     dt.Rows.Add(newrow);
+                                                                                 }
+                                                                             }
+                                                                             if (dt.Rows.Count > 0)
+                                                                             {
+                                                                                 PrintOutGridView.Columns.Clear();
+                                                                                 PrintOutGrid.DataSource = dt;
+                                                                                 PrintOutGridView.BestFitColumns();
+
+                                                                                 PrintOutGridView.ExportToXlsx(Application.StartupPath + @"\PI\PI.xlsx");
+                                                                             }
+
+                                                                         }
+                                                                     }));
+                }
+            
                 if (GlobalVariables.ProgCode == "PROG142")
                 {
                     InvoiceGridView.CloseEditor();
