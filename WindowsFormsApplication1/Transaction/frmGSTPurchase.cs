@@ -1220,9 +1220,6 @@ namespace WindowsFormsApplication1.Transaction
                     pt.ShowRibbonPreviewDialog();
                 }
             }
-
-
-
         }
 
         private void DocsGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
