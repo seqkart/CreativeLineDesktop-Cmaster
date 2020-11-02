@@ -41,6 +41,7 @@
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnLoad = new System.Windows.Forms.ToolStripButton();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.InfoGrid = new DevExpress.XtraGrid.GridControl();
             this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -53,7 +54,11 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnLoad = new System.Windows.Forms.ToolStripButton();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.InvoiceGrid = new DevExpress.XtraGrid.GridControl();
+            this.InvoiceGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccName.Properties)).BeginInit();
@@ -65,6 +70,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
+            this.xtraTabControl1.SuspendLayout();
+            this.xtraTabPage2.SuspendLayout();
+            this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // HelpGridView
@@ -81,7 +92,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(332, 29);
+            this.HelpGrid.Location = new System.Drawing.Point(669, 3);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(670, 405);
@@ -95,7 +106,7 @@
             // txtAccName
             // 
             this.txtAccName.EnterMoveNextControl = true;
-            this.txtAccName.Location = new System.Drawing.Point(226, 143);
+            this.txtAccName.Location = new System.Drawing.Point(254, 50);
             this.txtAccName.Name = "txtAccName";
             this.txtAccName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccName.Properties.ReadOnly = true;
@@ -105,7 +116,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(77, 146);
+            this.label15.Location = new System.Drawing.Point(105, 53);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 443;
@@ -113,7 +124,7 @@
             // 
             // txtAccCode
             // 
-            this.txtAccCode.Location = new System.Drawing.Point(128, 143);
+            this.txtAccCode.Location = new System.Drawing.Point(156, 50);
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccCode.Properties.MaxLength = 6;
@@ -126,7 +137,7 @@
             // 
             this.txtPIDate.EditValue = null;
             this.txtPIDate.Enabled = false;
-            this.txtPIDate.Location = new System.Drawing.Point(127, 116);
+            this.txtPIDate.Location = new System.Drawing.Point(155, 23);
             this.txtPIDate.Name = "txtPIDate";
             this.txtPIDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -140,7 +151,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(56, 118);
+            this.label4.Location = new System.Drawing.Point(84, 25);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 440;
@@ -149,7 +160,7 @@
             // txtPINo
             // 
             this.txtPINo.Enabled = false;
-            this.txtPINo.Location = new System.Drawing.Point(286, 117);
+            this.txtPINo.Location = new System.Drawing.Point(314, 24);
             this.txtPINo.Name = "txtPINo";
             this.txtPINo.Size = new System.Drawing.Size(148, 20);
             this.txtPINo.TabIndex = 441;
@@ -157,7 +168,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(228, 119);
+            this.label5.Location = new System.Drawing.Point(256, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 438;
@@ -203,6 +214,18 @@
             this.Menu_ToolStrip.Text = "Options";
             this.Menu_ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ToolStrip_ItemClicked);
             // 
+            // btnLoad
+            // 
+            this.btnLoad.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnLoad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
+            this.btnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnLoad.Size = new System.Drawing.Size(47, 23);
+            this.btnLoad.Text = "Load";
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
             // gridView4
             // 
             this.gridView4.GridControl = this.InfoGrid;
@@ -210,7 +233,7 @@
             // 
             // InfoGrid
             // 
-            this.InfoGrid.Location = new System.Drawing.Point(56, 189);
+            this.InfoGrid.Location = new System.Drawing.Point(84, 96);
             this.InfoGrid.MainView = this.InfoGridView;
             this.InfoGrid.Name = "InfoGrid";
             this.InfoGrid.Size = new System.Drawing.Size(850, 337);
@@ -333,17 +356,62 @@
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
             // 
-            // btnLoad
+            // xtraTabControl1
             // 
-            this.btnLoad.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnLoad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
-            this.btnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnLoad.Size = new System.Drawing.Size(47, 23);
-            this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 26);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage2;
+            this.xtraTabControl1.Size = new System.Drawing.Size(1002, 581);
+            this.xtraTabControl1.TabIndex = 446;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage2,
+            this.xtraTabPage1});
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.label4);
+            this.xtraTabPage2.Controls.Add(this.HelpGrid);
+            this.xtraTabPage2.Controls.Add(this.InfoGrid);
+            this.xtraTabPage2.Controls.Add(this.txtAccName);
+            this.xtraTabPage2.Controls.Add(this.label5);
+            this.xtraTabPage2.Controls.Add(this.label15);
+            this.xtraTabPage2.Controls.Add(this.txtPINo);
+            this.xtraTabPage2.Controls.Add(this.txtAccCode);
+            this.xtraTabPage2.Controls.Add(this.txtPIDate);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(1000, 556);
+            this.xtraTabPage2.Text = "Entry Page";
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.InvoiceGrid);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(1000, 556);
+            this.xtraTabPage1.Text = "Data";
+            // 
+            // InvoiceGrid
+            // 
+            this.InvoiceGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.InvoiceGrid.Location = new System.Drawing.Point(0, 0);
+            this.InvoiceGrid.MainView = this.InvoiceGridView;
+            this.InvoiceGrid.Name = "InvoiceGrid";
+            this.InvoiceGrid.Size = new System.Drawing.Size(1000, 556);
+            this.InvoiceGrid.TabIndex = 446;
+            this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.InvoiceGridView});
+            // 
+            // InvoiceGridView
+            // 
+            this.InvoiceGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.InvoiceGridView.GridControl = this.InvoiceGrid;
+            this.InvoiceGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.InvoiceGridView.Name = "InvoiceGridView";
+            this.InvoiceGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.InvoiceGridView.OptionsBehavior.Editable = false;
+            this.InvoiceGridView.OptionsView.ShowGroupPanel = false;
+            this.InvoiceGridView.OptionsView.ShowIndicator = false;
+            this.InvoiceGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // frmProformaMst
             // 
@@ -351,16 +419,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1002, 607);
             this.ControlBox = false;
-            this.Controls.Add(this.HelpGrid);
-            this.Controls.Add(this.txtAccName);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.txtAccCode);
-            this.Controls.Add(this.txtPIDate);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtPINo);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.Menu_ToolStrip);
-            this.Controls.Add(this.InfoGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "frmProformaMst";
@@ -379,6 +439,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
+            this.xtraTabControl1.ResumeLayout(false);
+            this.xtraTabPage2.ResumeLayout(false);
+            this.xtraTabPage2.PerformLayout();
+            this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -411,5 +478,10 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private System.Windows.Forms.ToolStripButton btnLoad;
+        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
+        private DevExpress.XtraGrid.GridControl InvoiceGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView InvoiceGridView;
     }
 }

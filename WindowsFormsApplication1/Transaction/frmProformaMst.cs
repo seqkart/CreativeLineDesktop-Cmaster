@@ -66,7 +66,11 @@ namespace WindowsFormsApplication1.Transaction
                     txtAccCode.Text = ds.Tables[0].Rows[0]["PIPartyCode"].ToString();
                     txtAccName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
                     dt = ds.Tables[1];
-                    
+                   
+                  
+
+                    InvoiceGrid.DataSource = dt;
+                    InvoiceGridView.BestFitColumns();
                     InfoGrid.DataSource = dt;
                     InfoGridView.BestFitColumns();
                 }
@@ -132,9 +136,18 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
                         {
-
-
                             dtAll.ImportRow(dr);
+                        }
+
+                        if(dtAll.Rows.Count>0)
+                        {
+                            InvoiceGrid.DataSource = dtAll;
+                            InvoiceGridView.BestFitColumns();
+                        }
+                        else
+                        {
+                            InvoiceGrid.DataSource = null;
+                            InvoiceGridView.BestFitColumns();
                         }
                     }
                 }
