@@ -686,7 +686,7 @@ namespace WindowsFormsApplication1
                 return p;
             }
 
-            catch (Exception ex)
+            catch (Exception )
 
             {
                 return p;

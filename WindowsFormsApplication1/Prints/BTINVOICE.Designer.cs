@@ -31,6 +31,8 @@
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrCharacterComb1 = new DevExpress.XtraReports.UI.XRCharacterComb();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // TopMargin
@@ -43,7 +45,24 @@
             // 
             // Detail
             // 
+            this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrCharacterComb1,
+            this.xrSubreport1});
             this.Detail.Name = "Detail";
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(172F, 32.24999F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(100F, 23F);
+            // 
+            // xrCharacterComb1
+            // 
+            this.xrCharacterComb1.LocationFloat = new DevExpress.Utils.PointFloat(339.7083F, 19.79167F);
+            this.xrCharacterComb1.Multiline = true;
+            this.xrCharacterComb1.Name = "xrCharacterComb1";
+            this.xrCharacterComb1.SizeF = new System.Drawing.SizeF(200F, 80F);
+            this.xrCharacterComb1.Text = "xrCharacterComb1";
             // 
             // BTINVOICE
             // 
@@ -55,7 +74,7 @@
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margins = new System.Drawing.Printing.Margins(28, 36, 100, 100);
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "19.2";
+            this.Version = "20.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -65,5 +84,7 @@
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
         private DevExpress.XtraReports.UI.DetailBand Detail;
+        private DevExpress.XtraReports.UI.XRCharacterComb xrCharacterComb1;
+        private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
     }
 }

@@ -216,7 +216,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     gridView_SalaryProcess.Columns["DeductionSalary"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "DeductionSalary", string.Empty);
                     gridView_SalaryProcess.Columns["SalaryGenerateBasic"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "SalaryGenerateBasic", string.Empty);
                     gridView_SalaryProcess.Columns["AdvanceSalary"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "AdvanceSalary", string.Empty);
-                    gridView_SalaryProcess.Columns["Loan"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "Loan", string.Empty);
+                    object p = gridView_SalaryProcess.Columns["Loan"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "Loan", string.Empty);
                     gridView_SalaryProcess.Columns["SalaryCalculated"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "SalaryCalculated", string.Empty);
                     gridView_SalaryProcess.Columns["SalaryPaid"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "SalaryPaid", string.Empty);
                     gridView_SalaryProcess.Columns["Balance"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "Balance", string.Empty);

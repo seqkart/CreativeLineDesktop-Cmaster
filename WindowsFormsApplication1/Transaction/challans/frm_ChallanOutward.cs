@@ -1374,7 +1374,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception )
             {
 
             }

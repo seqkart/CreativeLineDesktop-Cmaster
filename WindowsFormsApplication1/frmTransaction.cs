@@ -1235,7 +1235,7 @@ namespace WindowsFormsApplication1
                                                                   (o1, e1) =>
                                                                   {
 
-                                                                      int i = 0;
+                                                                      //int i = 0;
                                                                       foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
                                                                           if (dr["Select"].ToString().ToUpper() == "TRUE")

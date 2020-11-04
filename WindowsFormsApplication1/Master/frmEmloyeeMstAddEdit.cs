@@ -890,7 +890,7 @@ string.Empty +
         private void CalculateDUtyHours()
         {
             //DateTime.ParseExact(Eval("aeStart").ToString(), "HH:mm:ss", System.Globalization.CultureInfo.InvariantCulture).ToShortTimeString()
-            int shift_id = 1;
+            //int shift_id = 1;
 
             PrintLogWin.PrintLog("************* CalculateDUtyHours => CalculateDUtyHours");
 
