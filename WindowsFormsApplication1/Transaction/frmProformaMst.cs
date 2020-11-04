@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1.Transaction
         private void txtAccCode_EditValueChanged(object sender, EventArgs e)
         {
             txtAccName.Text = string.Empty;
-            dt = null;
+            //dt = null;
         }
 
         private void frmProformaMst_KeyDown(object sender, KeyEventArgs e)
@@ -360,6 +360,88 @@ namespace WindowsFormsApplication1.Transaction
             else
             {
                 HelpGrid.DataSource = null;
+            }
+        }
+
+        private void btnSaveNew_Click(object sender, EventArgs e)
+        {
+            if (ValidateData())
+            {
+                s1 = "&Add";
+                AddRowsToDatatable();
+                InfoGridView.CloseEditor();
+                InfoGridView.UpdateCurrentRow();
+                using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
+                {
+                    sqlcon.Open();
+                    var sqlcom = sqlcon.CreateCommand();
+                    var transaction = sqlcon.BeginTransaction("SaveTransaction");
+                    sqlcom.Connection = sqlcon;
+                    sqlcom.Transaction = transaction;
+                    sqlcom.CommandType = CommandType.Text;
+                    try
+                    {
+                        if (s1 == "&Add")
+                        {
+                            txtPINo.Text = getNewInvoiceDocumentNo().PadLeft(6, '0');
+
+                            sqlcom.CommandText = "Insert into PIMst(PINo,PIDate,PIPartyCode,PITaxableAmount,PITaxAmount,PITotalAmount)values(@PINo,@PIDate,@PIPartyCode,@PITaxableAmount,@PITaxAmount,@PITotalAmount)";
+                            sqlcom.Parameters.AddWithValue("@PINo", txtPINo.Text.Trim());
+                            sqlcom.Parameters.AddWithValue("@PIDate", Convert.ToDateTime(txtPIDate.Text));
+                            sqlcom.Parameters.AddWithValue("@PIPartyCode", txtAccCode.Text.Trim());
+                            sqlcom.Parameters.AddWithValue("@PITaxableAmount", "0");
+                            sqlcom.Parameters.AddWithValue("@PITaxAmount", "0");
+                            sqlcom.Parameters.AddWithValue("@PITotalAmount", "0");
+                            sqlcom.ExecuteNonQuery();
+                            sqlcom.Parameters.Clear();
+                        }
+
+                        
+
+
+                        foreach (DataRow dr in dtAll.Rows)
+                        {
+                            sqlcom.CommandType = CommandType.Text;
+
+                            sqlcom.CommandText = " Insert into PIData"
+                                                       + " (PINo,PIDate,PIBrand,PIEANNo,PIArticle,PIHSNCode,PIQyt,PIMrp,PTTaxPer,PICoreFashion,Season)"
+                                                       + " values(@PINo,@PIDate,@PIBrand,@PIEANNo,@PIArticle,@PIHSNCode,@PIQyt,@PIMrp,@PTTaxPer,@PICoreFashion,@Season)";
+
+                            sqlcom.Parameters.AddWithValue("@PINo", txtPINo.Text.Trim());
+                            sqlcom.Parameters.AddWithValue("@PIDate", Convert.ToDateTime(txtPIDate.Text));
+                            sqlcom.Parameters.AddWithValue("@PIBrand", dr["PIBrand"].ToString());
+                            sqlcom.Parameters.AddWithValue("@PIEANNo", dr["PIEANNo"].ToString());
+                            sqlcom.Parameters.AddWithValue("@PIArticle", dr["PIArticle"].ToString());
+                            sqlcom.Parameters.AddWithValue("@PIHSNCode", dr["PIHSNCode"].ToString());
+                            sqlcom.Parameters.AddWithValue("@PIQyt", Convert.ToDecimal(dr["PIQyt"]));
+                            sqlcom.Parameters.AddWithValue("@PIMrp", Convert.ToDecimal(dr["PIMrp"]));
+                            sqlcom.Parameters.AddWithValue("@PTTaxPer", Convert.ToDecimal(dr["PTTaxPer"]));
+                            sqlcom.Parameters.AddWithValue("@PICoreFashion", dr["PICoreFashion"].ToString());
+                            sqlcom.Parameters.AddWithValue("@Season", dr["Season"].ToString());
+
+                            sqlcom.ExecuteNonQuery();
+                            sqlcom.Parameters.Clear();
+                        }
+                        transaction.Commit();
+                        ProjectFunctions.SpeakError("PI Data Saved Successfully");
+                        sqlcon.Close();
+
+                        this.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        ProjectFunctions.SpeakError("Something Wrong. \n I am going to Roll Back." + ex.Message);
+                        try
+                        {
+                            transaction.Rollback();
+                        }
+                        catch (Exception ex2)
+                        {
+                            ProjectFunctions.SpeakError("Something Wrong. \n Roll Back Failed." + ex2.Message);
+                        }
+                    }
+                }
+
             }
         }
     }
