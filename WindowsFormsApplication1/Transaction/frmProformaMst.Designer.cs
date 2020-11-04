@@ -93,10 +93,10 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(669, 3);
+            this.HelpGrid.Location = new System.Drawing.Point(136, 40);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(670, 405);
+            this.HelpGrid.Size = new System.Drawing.Size(699, 405);
             this.HelpGrid.TabIndex = 445;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -107,17 +107,17 @@
             // txtAccName
             // 
             this.txtAccName.EnterMoveNextControl = true;
-            this.txtAccName.Location = new System.Drawing.Point(254, 50);
+            this.txtAccName.Location = new System.Drawing.Point(199, 36);
             this.txtAccName.Name = "txtAccName";
             this.txtAccName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccName.Properties.ReadOnly = true;
-            this.txtAccName.Size = new System.Drawing.Size(651, 20);
+            this.txtAccName.Size = new System.Drawing.Size(292, 20);
             this.txtAccName.TabIndex = 442;
             this.txtAccName.TabStop = false;
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(105, 53);
+            this.label15.Location = new System.Drawing.Point(87, 40);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(33, 13);
             this.label15.TabIndex = 443;
@@ -125,20 +125,20 @@
             // 
             // txtAccCode
             // 
-            this.txtAccCode.Location = new System.Drawing.Point(156, 50);
+            this.txtAccCode.Location = new System.Drawing.Point(120, 36);
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccCode.Properties.MaxLength = 6;
             this.txtAccCode.Size = new System.Drawing.Size(79, 20);
             this.txtAccCode.TabIndex = 433;
-            this.txtAccCode.EditValueChanged += new System.EventHandler(this.txtAccCode_EditValueChanged);
-            this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccCode_KeyDown);
+            this.txtAccCode.EditValueChanged += new System.EventHandler(this.TxtAccCode_EditValueChanged);
+            this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown);
             // 
             // txtPIDate
             // 
             this.txtPIDate.EditValue = null;
             this.txtPIDate.Enabled = false;
-            this.txtPIDate.Location = new System.Drawing.Point(155, 23);
+            this.txtPIDate.Location = new System.Drawing.Point(120, 8);
             this.txtPIDate.Name = "txtPIDate";
             this.txtPIDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -152,7 +152,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(84, 25);
+            this.label4.Location = new System.Drawing.Point(84, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 440;
@@ -161,7 +161,7 @@
             // txtPINo
             // 
             this.txtPINo.Enabled = false;
-            this.txtPINo.Location = new System.Drawing.Point(314, 24);
+            this.txtPINo.Location = new System.Drawing.Point(226, 8);
             this.txtPINo.Name = "txtPINo";
             this.txtPINo.Size = new System.Drawing.Size(148, 20);
             this.txtPINo.TabIndex = 441;
@@ -169,7 +169,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(256, 26);
+            this.label5.Location = new System.Drawing.Point(199, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 438;
@@ -183,7 +183,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnQuit
             // 
@@ -194,7 +194,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // Menu_ToolStrip
             // 
@@ -226,7 +226,7 @@
             this.btnLoad.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnLoad.Size = new System.Drawing.Size(47, 23);
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // gridView4
             // 
@@ -235,10 +235,10 @@
             // 
             // InfoGrid
             // 
-            this.InfoGrid.Location = new System.Drawing.Point(84, 96);
+            this.InfoGrid.Location = new System.Drawing.Point(11, 62);
             this.InfoGrid.MainView = this.InfoGridView;
             this.InfoGrid.Name = "InfoGrid";
-            this.InfoGrid.Size = new System.Drawing.Size(850, 337);
+            this.InfoGrid.Size = new System.Drawing.Size(965, 468);
             this.InfoGrid.TabIndex = 437;
             this.InfoGrid.TabStop = false;
             this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -272,7 +272,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "PIBrand";
+            this.gridColumn5.Caption = "Brand";
             this.gridColumn5.FieldName = "PIBrand";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
@@ -281,7 +281,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "PIEANNo";
+            this.gridColumn1.Caption = "EAN No";
             this.gridColumn1.FieldName = "PIEANNo";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
@@ -290,7 +290,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "PIArticle";
+            this.gridColumn2.Caption = "Article";
             this.gridColumn2.FieldName = "PIArticle";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
@@ -299,7 +299,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "PIHSNCode";
+            this.gridColumn3.Caption = "HSN Code";
             this.gridColumn3.FieldName = "PIHSNCode";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
@@ -308,11 +308,13 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "PIQyt";
+            this.gridColumn4.Caption = "QTY";
             this.gridColumn4.DisplayFormat.FormatString = "n2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "PIQyt";
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "PIQyt", "{0:n2}")});
             this.gridColumn4.UnboundExpression = "n2";
             this.gridColumn4.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn4.Visible = true;
@@ -320,7 +322,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "PIMrp";
+            this.gridColumn6.Caption = "Mrp";
             this.gridColumn6.DisplayFormat.FormatString = "n2";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "PIMrp";
@@ -331,7 +333,7 @@
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "PTTaxPer";
+            this.gridColumn7.Caption = "Tax Per";
             this.gridColumn7.DisplayFormat.FormatString = "n2";
             this.gridColumn7.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn7.FieldName = "PTTaxPer";
@@ -342,7 +344,7 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "PICoreFashion";
+            this.gridColumn8.Caption = "Core/Fashion";
             this.gridColumn8.FieldName = "PICoreFashion";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
@@ -411,6 +413,7 @@
             this.InvoiceGridView.Name = "InvoiceGridView";
             this.InvoiceGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.InvoiceGridView.OptionsBehavior.Editable = false;
+            this.InvoiceGridView.OptionsView.ShowFooter = true;
             this.InvoiceGridView.OptionsView.ShowGroupPanel = false;
             this.InvoiceGridView.OptionsView.ShowIndicator = false;
             this.InvoiceGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -439,8 +442,8 @@
             this.KeyPreview = true;
             this.Name = "frmProformaMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmProformaMst_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmProformaMst_KeyDown);
+            this.Load += new System.EventHandler(this.FrmProformaMst_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmProformaMst_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccName.Properties)).EndInit();
