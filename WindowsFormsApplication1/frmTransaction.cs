@@ -868,7 +868,7 @@ namespace WindowsFormsApplication1
                                                                          }
                                                                      }));
                 }
-            
+
                 if (GlobalVariables.ProgCode == "PROG142")
                 {
                     InvoiceGridView.CloseEditor();
@@ -1158,10 +1158,10 @@ namespace WindowsFormsApplication1
                                                                   {
 
                                                                       int i = 0;
-                                                                      foreach(DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
-                                                                         
-                                                                          if(dr["Select"].ToString().ToUpper()=="TRUE")
+
+                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                           {
                                                                               i++;
                                                                               DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
@@ -1181,7 +1181,7 @@ namespace WindowsFormsApplication1
                                                                                       dr
                                                                                       ["BillNo"].ToString() +
                                                                                       ".csv");
-                                                                                  
+
                                                                                   //Close();
                                                                               }
                                                                               else
@@ -1189,11 +1189,11 @@ namespace WindowsFormsApplication1
                                                                                   ProjectFunctions.SpeakError("Some Error In PT File Generation");
                                                                               }
                                                                           }
-                                                                         
+
                                                                       }
                                                                       if (i > 0)
                                                                       {
-                                                                          ProjectFunctions.SpeakError(i.ToString()+" PT File Generated Successfully ");
+                                                                          ProjectFunctions.SpeakError(i.ToString() + " PT File Generated Successfully ");
                                                                       }
 
                                                                   }));
@@ -1352,26 +1352,26 @@ namespace WindowsFormsApplication1
                     {
                         dt = ds.Tables[0];
                         PrintOutGrid.DataSource = dt;
-                        PrintOutGridView.BestFitColumns();                         
+                        PrintOutGridView.BestFitColumns();
                     }
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode", (o1, e1) =>
                     {
-                        
+
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Sticker.btw");
                         PrintOutGrid.DataSource = null;
-                      //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
                     }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
                     {
-                      
+
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Tag.btw");
                         PrintOutGrid.DataSource = null;
-                       // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
                     }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler", (o1, e1) =>
@@ -1380,9 +1380,9 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Muffler.btw");
                         PrintOutGrid.DataSource = null;
-                      //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
                     }));
-                   
+
                     //e.Menu.Items
                     //    .Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode",
                     //                                              (o1, e1) =>

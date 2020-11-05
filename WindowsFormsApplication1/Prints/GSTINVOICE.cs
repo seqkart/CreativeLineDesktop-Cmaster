@@ -6,11 +6,6 @@
         {
             InitializeComponent();
         }
-
-        private void xrLabel25_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
-        {
-
-        }
     }
 }
 
