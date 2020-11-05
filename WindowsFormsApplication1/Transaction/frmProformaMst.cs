@@ -379,7 +379,7 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         if (s1 == "&Add")
                         {
-                            txtPINo.Text = getNewInvoiceDocumentNo().PadLeft(6, '0');
+                            txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
 
                             sqlcom.CommandText = "Insert into PIMst(PINo,PIDate,PIPartyCode,PITaxableAmount,PITaxAmount,PITotalAmount)values(@PINo,@PIDate,@PIPartyCode,@PITaxableAmount,@PITaxAmount,@PITotalAmount)";
                             sqlcom.Parameters.AddWithValue("@PINo", txtPINo.Text.Trim());
