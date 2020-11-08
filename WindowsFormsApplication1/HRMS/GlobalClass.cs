@@ -1,6 +1,6 @@
 ﻿using SeqKartLibrary;
 
-namespace HumanResourceManagementSystem
+namespace WindowsFormsApplication1.HRMS
 {
     class GlobalClass
     {

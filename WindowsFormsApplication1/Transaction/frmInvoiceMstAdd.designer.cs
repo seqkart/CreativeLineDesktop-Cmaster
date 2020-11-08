@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoiceMstAdd));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -667,7 +668,7 @@
             this.chInclusive.Location = new System.Drawing.Point(23, 67);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(126, 18);
+            this.chInclusive.Size = new System.Drawing.Size(126, 19);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -676,7 +677,7 @@
             this.chExclusive.Location = new System.Drawing.Point(23, 46);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(126, 18);
+            this.chExclusive.Size = new System.Drawing.Size(126, 19);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -698,7 +699,7 @@
             this.chLot.Location = new System.Drawing.Point(25, 82);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "LOT";
-            this.chLot.Size = new System.Drawing.Size(126, 18);
+            this.chLot.Size = new System.Drawing.Size(126, 19);
             this.chLot.TabIndex = 534;
             // 
             // CHSOR
@@ -706,7 +707,7 @@
             this.CHSOR.Location = new System.Drawing.Point(25, 60);
             this.CHSOR.Name = "CHSOR";
             this.CHSOR.Properties.Caption = "SOR";
-            this.CHSOR.Size = new System.Drawing.Size(126, 18);
+            this.CHSOR.Size = new System.Drawing.Size(126, 19);
             this.CHSOR.TabIndex = 533;
             this.CHSOR.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
@@ -715,7 +716,7 @@
             this.chRegular.Location = new System.Drawing.Point(25, 38);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(126, 18);
+            this.chRegular.Size = new System.Drawing.Size(126, 19);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -736,7 +737,7 @@
             this.chDirect.Location = new System.Drawing.Point(19, 67);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(126, 18);
+            this.chDirect.Size = new System.Drawing.Size(126, 19);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
@@ -745,7 +746,7 @@
             this.chPackingSlip.Location = new System.Drawing.Point(19, 46);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(126, 18);
+            this.chPackingSlip.Size = new System.Drawing.Size(126, 19);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -1206,7 +1207,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 591);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
             this.xtraTabPage2.Text = "Invoice Data";
             // 
             // panelControl1
@@ -1826,7 +1827,7 @@
             this.xtraTabPage5.Controls.Add(this.txtInsuranceAmount);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(517, 156);
+            this.xtraTabPage5.Size = new System.Drawing.Size(517, 154);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -2452,7 +2453,7 @@
             this.xtraTabPage3.Controls.Add(this.txtGRNo);
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(402, 156);
+            this.xtraTabPage3.Size = new System.Drawing.Size(402, 154);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -2476,7 +2477,7 @@
             this.chToPay.Location = new System.Drawing.Point(88, 76);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(61, 18);
+            this.chToPay.Size = new System.Drawing.Size(61, 19);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
@@ -2485,7 +2486,7 @@
             this.chPaid.Location = new System.Drawing.Point(35, 76);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(47, 18);
+            this.chPaid.Size = new System.Drawing.Size(47, 19);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 
@@ -2885,6 +2886,9 @@
             // 
             // HelpGrid
             // 
+            gridLevelNode1.RelationName = "Level1";
+            this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.HelpGrid.Location = new System.Drawing.Point(279, 30);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";

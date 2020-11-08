@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.DataProcessing.InMemoryDataProcessor;
+using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using System;
@@ -9,6 +10,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+
 
 namespace WindowsFormsApplication1
 {
@@ -1174,17 +1176,27 @@ namespace WindowsFormsApplication1
             txtCreditLimit.Text = String.Empty;
         }
 
+       
+
+
+
 
         private void PrepareActMstHelpGrid()
+             
         {
             HelpGridView.Columns.Clear();
             DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            
             {
                 FieldName = "AccName",
+         
                 Visible = true,
+                SortOrder= (DevExpress.Data.ColumnSortOrder.Ascending),
                 VisibleIndex = 0
             };
             HelpGridView.Columns.Add(col1);
+            
+           // HelpGridView.Columns.ColumnByName("'Acc Name'").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
 
             DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
             {
@@ -1228,6 +1240,26 @@ namespace WindowsFormsApplication1
             HelpGridView.Columns.Add(col6);
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
@@ -1479,7 +1511,7 @@ namespace WindowsFormsApplication1
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
-            ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterKey, HelpGrid, HelpGridView, e);
+            ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterKey, HelpGrid, HelpGridView, e);
         }
 
         private void ChDirect_CheckedChanged(object sender, EventArgs e)
