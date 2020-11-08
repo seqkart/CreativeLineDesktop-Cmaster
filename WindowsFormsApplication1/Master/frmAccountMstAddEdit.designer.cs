@@ -375,7 +375,7 @@
             // 
             this.label48.Location = new System.Drawing.Point(33, 216);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(109, 13);
+            this.label48.Size = new System.Drawing.Size(108, 13);
             this.label48.TabIndex = 425;
             this.label48.Text = "Name as on Bank Acc";
             // 
@@ -411,7 +411,7 @@
             // 
             this.label43.Location = new System.Drawing.Point(84, 192);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(58, 13);
+            this.label43.Size = new System.Drawing.Size(57, 13);
             this.label43.TabIndex = 423;
             this.label43.Text = "Bank Name";
             // 
@@ -429,7 +429,7 @@
             // 
             this.label41.Location = new System.Drawing.Point(79, 168);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(63, 13);
+            this.label41.Size = new System.Drawing.Size(62, 13);
             this.label41.TabIndex = 422;
             this.label41.Text = "Bank A/c No";
             // 
@@ -455,7 +455,7 @@
             // 
             this.label46.Location = new System.Drawing.Point(40, 72);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(102, 13);
+            this.label46.Size = new System.Drawing.Size(101, 13);
             this.label46.TabIndex = 409;
             this.label46.Text = "Balance Sheet Code";
             // 
@@ -727,7 +727,7 @@
             // 
             this.label21.Location = new System.Drawing.Point(50, 310);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(57, 13);
+            this.label21.Size = new System.Drawing.Size(58, 13);
             this.label21.TabIndex = 412;
             this.label21.Text = "TDS Enable";
             // 
@@ -786,7 +786,7 @@
             // 
             this.label16.Location = new System.Drawing.Point(405, 264);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(45, 13);
+            this.label16.Size = new System.Drawing.Size(47, 13);
             this.label16.TabIndex = 435;
             this.label16.Text = "GST Type";
             // 
@@ -842,7 +842,7 @@
             // 
             this.label4.Location = new System.Drawing.Point(59, 287);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 428;
             this.label4.Text = "GST State";
             // 
@@ -870,7 +870,7 @@
             // 
             this.label2.Location = new System.Drawing.Point(70, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 13);
+            this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 425;
             this.label2.Text = "GST No";
             // 
@@ -888,7 +888,7 @@
             // 
             this.label51.Location = new System.Drawing.Point(44, 11);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(65, 13);
+            this.label51.Size = new System.Drawing.Size(64, 13);
             this.label51.TabIndex = 423;
             this.label51.Text = "Billing Name";
             // 
@@ -906,7 +906,7 @@
             // 
             this.label45.Location = new System.Drawing.Point(418, 241);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(33, 13);
+            this.label45.Size = new System.Drawing.Size(34, 13);
             this.label45.TabIndex = 401;
             this.label45.Text = "Tin No";
             // 
@@ -924,7 +924,7 @@
             // 
             this.label34.Location = new System.Drawing.Point(67, 241);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(40, 13);
+            this.label34.Size = new System.Drawing.Size(41, 13);
             this.label34.TabIndex = 393;
             this.label34.Text = "CST/PST";
             // 
@@ -978,7 +978,7 @@
             // 
             this.label10.Location = new System.Drawing.Point(73, 172);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
+            this.label10.Size = new System.Drawing.Size(36, 13);
             this.label10.TabIndex = 388;
             this.label10.Text = "Tel/Fax";
             // 
@@ -1121,7 +1121,7 @@
             // 
             this.label35.Location = new System.Drawing.Point(52, 135);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(39, 13);
+            this.label35.Size = new System.Drawing.Size(40, 13);
             this.label35.TabIndex = 454;
             this.label35.Text = "GST NO";
             // 
@@ -1317,7 +1317,7 @@
             // 
             this.StockTransfer1111.Location = new System.Drawing.Point(159, 33);
             this.StockTransfer1111.Name = "StockTransfer1111";
-            this.StockTransfer1111.Size = new System.Drawing.Size(72, 13);
+            this.StockTransfer1111.Size = new System.Drawing.Size(73, 13);
             this.StockTransfer1111.TabIndex = 443;
             this.StockTransfer1111.Text = "Stock Transfer";
             // 
@@ -1343,7 +1343,7 @@
             // 
             this.label29.Location = new System.Drawing.Point(327, 54);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(89, 13);
+            this.label29.Size = new System.Drawing.Size(88, 13);
             this.label29.TabIndex = 311;
             this.label29.Text = "Opening Balance";
             // 
@@ -1423,7 +1423,7 @@
             // 
             this.label25.Location = new System.Drawing.Point(20, 32);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(59, 13);
+            this.label25.Size = new System.Drawing.Size(58, 13);
             this.label25.TabIndex = 412;
             this.label25.Text = "Fix Barcode";
             // 
@@ -1437,7 +1437,7 @@
             "Y",
             "N",
             "M",
-            "p"});
+            "P"});
             this.txtFixBArCodeTag.Size = new System.Drawing.Size(42, 20);
             this.txtFixBArCodeTag.TabIndex = 444;
             // 
@@ -1469,7 +1469,7 @@
             // 
             this.label28.Location = new System.Drawing.Point(565, 33);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(42, 13);
+            this.label28.Size = new System.Drawing.Size(44, 13);
             this.label28.TabIndex = 447;
             this.label28.Tag = "";
             this.label28.Text = "Tax Type";
