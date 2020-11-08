@@ -42,6 +42,7 @@
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnLoad = new System.Windows.Forms.ToolStripButton();
+            this.btnSaveNew = new System.Windows.Forms.ToolStripButton();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.InfoGrid = new DevExpress.XtraGrid.GridControl();
             this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -59,7 +60,6 @@
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
             this.InvoiceGrid = new DevExpress.XtraGrid.GridControl();
             this.InvoiceGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnSaveNew = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccName.Properties)).BeginInit();
@@ -93,7 +93,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(136, 40);
+            this.HelpGrid.Location = new System.Drawing.Point(378, 238);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(699, 405);
@@ -227,6 +227,18 @@
             this.btnLoad.Size = new System.Drawing.Size(47, 23);
             this.btnLoad.Text = "Load";
             this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
+            // 
+            // btnSaveNew
+            // 
+            this.btnSaveNew.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnSaveNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSaveNew.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNew.Image")));
+            this.btnSaveNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSaveNew.Name = "btnSaveNew";
+            this.btnSaveNew.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnSaveNew.Size = new System.Drawing.Size(77, 23);
+            this.btnSaveNew.Text = "Save New";
+            this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
             // 
             // gridView4
             // 
@@ -417,18 +429,6 @@
             this.InvoiceGridView.OptionsView.ShowGroupPanel = false;
             this.InvoiceGridView.OptionsView.ShowIndicator = false;
             this.InvoiceGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // btnSaveNew
-            // 
-            this.btnSaveNew.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnSaveNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnSaveNew.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveNew.Image")));
-            this.btnSaveNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSaveNew.Name = "btnSaveNew";
-            this.btnSaveNew.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSaveNew.Size = new System.Drawing.Size(77, 23);
-            this.btnSaveNew.Text = "Save New";
-            this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
             // 
             // frmProformaMst
             // 

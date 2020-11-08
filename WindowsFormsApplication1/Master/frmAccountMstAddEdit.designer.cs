@@ -1436,7 +1436,8 @@
             this.txtFixBArCodeTag.Properties.Items.AddRange(new object[] {
             "Y",
             "N",
-            "M"});
+            "M",
+            "p"});
             this.txtFixBArCodeTag.Size = new System.Drawing.Size(42, 20);
             this.txtFixBArCodeTag.TabIndex = 444;
             // 

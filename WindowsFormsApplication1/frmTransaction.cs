@@ -79,6 +79,13 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG211")
+                {
+                    WindowsFormsApplication1.Transaction.frmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.frmPIGeneration2
+                    { s1 = btnAdd.Text, Text = "Performa Invoice Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG210")
                 {
                     WindowsFormsApplication1.Transaction.frmProformaMst frm = new WindowsFormsApplication1.Transaction.frmProformaMst
@@ -306,6 +313,15 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG211")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Transaction.frmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.frmPIGeneration2
+                    { s1 = btnEdit.Text, Text = "Performa Invoice Edition", DocNo = CurrentRow["PINo"].ToString(), DocDate = Convert.ToDateTime(CurrentRow["PIDate"]) };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG210")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

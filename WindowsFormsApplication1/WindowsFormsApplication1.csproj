@@ -849,6 +849,12 @@
     <Compile Include="Master\frmCityMst.Designer.cs">
       <DependentUpon>frmCityMst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\frmSizeMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmSizeMapping.Designer.cs">
+      <DependentUpon>frmSizeMapping.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmStateMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1501,6 +1507,12 @@
     <Compile Include="Transaction\frmPackingSlipWholeSale.Designer.cs">
       <DependentUpon>frmPackingSlipWholeSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmPIGeneration2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmPIGeneration2.Designer.cs">
+      <DependentUpon>frmPIGeneration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmProcessSMCommission.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1684,6 +1696,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmCityMst.resx">
       <DependentUpon>frmCityMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmSizeMapping.resx">
+      <DependentUpon>frmSizeMapping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmStateMst.resx">
       <DependentUpon>frmStateMst.cs</DependentUpon>
@@ -2014,6 +2029,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmPackingSlipWholeSale.resx">
       <DependentUpon>frmPackingSlipWholeSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmPIGeneration2.resx">
+      <DependentUpon>frmPIGeneration2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmProcessSMCommission.resx">
       <DependentUpon>frmProcessSMCommission.cs</DependentUpon>

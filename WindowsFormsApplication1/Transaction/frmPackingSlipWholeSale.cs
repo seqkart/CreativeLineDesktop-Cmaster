@@ -644,34 +644,46 @@ namespace WindowsFormsApplication1.Transaction
                 if (e.KeyCode == Keys.Enter)
                 {
                     DataSet ds = new DataSet();
-                    if (FixBarPartyTag == "Y")
+                    if (FixBarPartyTag == "P")
                     {
-                        ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUFixBarCode] '" +
+                        ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUPartyBarCode] '" +
                             txtBarCode.Text +
                             "','" +
                             GlobalVariables.CUnitID +
                             "'");
-                        
+
                     }
                     else
                     {
-                        if (FixBarPartyTag == "N")
+                        if (FixBarPartyTag == "Y")
                         {
-                            ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
-                            txtBarCode.Text +
-                            "','" +
-                            GlobalVariables.CUnitID +
-                            "'");
+                            ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUFixBarCode] '" +
+                                txtBarCode.Text +
+                                "','" +
+                                GlobalVariables.CUnitID +
+                                "'");
+
                         }
                         else
                         {
-                            ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUdetUsingBarCode2] '" +
-                            txtBarCode.Text +
-                            "','" +
-                            GlobalVariables.CUnitID +
-                            "'");
+                            if (FixBarPartyTag == "N")
+                            {
+                                ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
+                                txtBarCode.Text +
+                                "','" +
+                                GlobalVariables.CUnitID +
+                                "'");
+                            }
+                            else
+                            {
+                                ds = ProjectFunctions.GetDataSet("[sp_LoadDataFromSKUdetUsingBarCode2] '" +
+                                txtBarCode.Text +
+                                "','" +
+                                GlobalVariables.CUnitID +
+                                "'");
+                            }
+
                         }
-                            
                     }
                     if (ds.Tables[0].Rows.Count > 0)
                     {

@@ -136,7 +136,7 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
                 
             }

@@ -65,7 +65,9 @@
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnLoadPreviousBarCodes = new System.Windows.Forms.Button();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnImport = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLoadEANs = new System.Windows.Forms.Button();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
@@ -84,6 +86,8 @@
             this.RBIMPORT = new System.Windows.Forms.RadioButton();
             this.RBBATCH = new System.Windows.Forms.RadioButton();
             this.RBDIRECT = new System.Windows.Forms.RadioButton();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -498,13 +502,15 @@
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.ArticleImageBox.Size = new System.Drawing.Size(114, 151);
+            this.ArticleImageBox.Size = new System.Drawing.Size(138, 151);
             this.ArticleImageBox.TabIndex = 708;
             // 
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
-            this.groupControl1.Controls.Add(this.btnLoadPreviousBarCodes);
+            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btnImport);
+            this.groupControl1.Controls.Add(this.btnLoadEANs);
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.btnPrint);
@@ -530,22 +536,41 @@
             this.groupControl1.TabIndex = 709;
             this.groupControl1.Text = "Generate Mode";
             // 
-            // btnLoadPreviousBarCodes
+            // simpleButton1
             // 
-            this.btnLoadPreviousBarCodes.Location = new System.Drawing.Point(642, 18);
-            this.btnLoadPreviousBarCodes.Name = "btnLoadPreviousBarCodes";
-            this.btnLoadPreviousBarCodes.Size = new System.Drawing.Size(90, 40);
-            this.btnLoadPreviousBarCodes.TabIndex = 708;
-            this.btnLoadPreviousBarCodes.Text = "Load";
-            this.btnLoadPreviousBarCodes.UseVisualStyleBackColor = true;
-            this.btnLoadPreviousBarCodes.Visible = false;
-            this.btnLoadPreviousBarCodes.Click += new System.EventHandler(this.btnLoadPreviousBarCodes_Click);
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(476, 107);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(101, 27);
+            this.simpleButton1.TabIndex = 710;
+            this.simpleButton1.Text = "Import EAN As BarCode";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnImport
+            // 
+            this.btnImport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.ImageOptions.Image")));
+            this.btnImport.Location = new System.Drawing.Point(476, 74);
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Size = new System.Drawing.Size(101, 27);
+            this.btnImport.TabIndex = 709;
+            this.btnImport.Text = "Import EAN As BarCode";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnLoadEANs
+            // 
+            this.btnLoadEANs.Location = new System.Drawing.Point(642, 18);
+            this.btnLoadEANs.Name = "btnLoadEANs";
+            this.btnLoadEANs.Size = new System.Drawing.Size(90, 40);
+            this.btnLoadEANs.TabIndex = 708;
+            this.btnLoadEANs.Text = "Load";
+            this.btnLoadEANs.UseVisualStyleBackColor = true;
+            this.btnLoadEANs.Click += new System.EventHandler(this.btnLoadPreviousBarCodes_Click);
             // 
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(44, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 707;
             this.label2.Text = "BARCODE";
             // 
@@ -583,7 +608,7 @@
             this.RBBYFLTRT.AutoSize = true;
             this.RBBYFLTRT.Location = new System.Drawing.Point(642, 79);
             this.RBBYFLTRT.Name = "RBBYFLTRT";
-            this.RBBYFLTRT.Size = new System.Drawing.Size(90, 17);
+            this.RBBYFLTRT.Size = new System.Drawing.Size(89, 17);
             this.RBBYFLTRT.TabIndex = 702;
             this.RBBYFLTRT.TabStop = true;
             this.RBBYFLTRT.Text = "BY FLAT RATE";
@@ -595,7 +620,7 @@
             this.RBBYDSCPRCN.AutoSize = true;
             this.RBBYDSCPRCN.Location = new System.Drawing.Point(642, 57);
             this.RBBYDSCPRCN.Name = "RBBYDSCPRCN";
-            this.RBBYDSCPRCN.Size = new System.Drawing.Size(72, 17);
+            this.RBBYDSCPRCN.Size = new System.Drawing.Size(73, 17);
             this.RBBYDSCPRCN.TabIndex = 701;
             this.RBBYDSCPRCN.TabStop = true;
             this.RBBYDSCPRCN.Text = "BY DISC%";
@@ -631,6 +656,7 @@
             this.txtDeptCode.Properties.MaxLength = 4;
             this.txtDeptCode.Size = new System.Drawing.Size(53, 20);
             this.txtDeptCode.TabIndex = 694;
+            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDeptCode_KeyDown);
             // 
             // txtDeptDesc
             // 
@@ -668,7 +694,7 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(24, 66);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(70, 13);
+            this.labelControl6.Size = new System.Drawing.Size(69, 13);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "DEPARTMENT";
             this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
@@ -733,6 +759,16 @@
             this.RBDIRECT.TabStop = true;
             this.RBDIRECT.Text = "DIRECT";
             this.RBDIRECT.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // openFileDialog2
+            // 
+            this.openFileDialog2.FileName = "openFileDialog1";
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
             // 
             // frmBarPrinting
             // 
@@ -829,6 +865,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
-        internal System.Windows.Forms.Button btnLoadPreviousBarCodes;
+        internal System.Windows.Forms.Button btnLoadEANs;
+        private DevExpress.XtraEditors.SimpleButton btnImport;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }

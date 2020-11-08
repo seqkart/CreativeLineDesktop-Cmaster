@@ -1,6 +1,9 @@
-﻿using DevExpress.XtraSplashScreen;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraRichEdit.Model;
+using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -8,6 +11,8 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class frmBarPrinting : DevExpress.XtraEditors.XtraForm
     {
+        DataTable dtGeneric = new DataTable();
+        DataTable dtVariants = new DataTable();
         public String s1 { get; set; }
 #pragma warning disable CS0108 // 'frmBarPrinting.Tag' hides inherited member 'Control.Tag'. Use the new keyword if hiding was intended.
         public String Tag { get; set; }
@@ -48,7 +53,8 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("FLATMRP", typeof(String));
             dt.Columns.Add("SKUPPRICE", typeof(String));
             dt.Columns.Add("GrpHSNCode", typeof(String));
-            dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
+
+            dsPopUps = ProjectFunctions.GetDataSet("[sp_LoadBarPrintPopUps2]");
 
         }
         private void BtnQuit_Click(object sender, EventArgs e)
@@ -75,13 +81,10 @@ namespace WindowsFormsApplication1.Transaction
 
                 if (HelpGridView.RowCount > 0)
                 {
-
                     if (HelpGrid.Text == "SKUARTNO")
                     {
-
                         if (UpdateTag == "N")
                         {
-
                             DataRow dtNewRow = dt.NewRow();
                             dtNewRow["SKUARTNO"] = row["ARTNO"].ToString();
                             dtNewRow["ARTDESC"] = row["ARTDESC"].ToString();
@@ -192,8 +195,8 @@ namespace WindowsFormsApplication1.Transaction
 
                         txtSearchBox.Text = String.Empty;
 
-                      
-                        
+
+
                     }
                 }
 
@@ -351,7 +354,7 @@ namespace WindowsFormsApplication1.Transaction
                                             }
                                             else
                                             {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SIZEMAST where SZSYSID='" + ProjectFunctions.CheckNull(currentrow["SKUSIZID"].ToString()) + "' ORDER BY SZINDEX,SZSYSID");
+                                                DataSet dsCheck = ProjectFunctions.GetDataSet("sp_LoadSizes '" + currentrow["SKUARTNO"].ToString() + "', '" + ProjectFunctions.CheckNull(currentrow["SKUSIZID"].ToString()) + "' ");
                                                 if (dsCheck.Tables[0].Rows.Count > 0)
                                                 {
                                                     UpdateTag = "Y";
@@ -395,7 +398,7 @@ namespace WindowsFormsApplication1.Transaction
                     BarCodeGridView.CloseEditor();
                     BarCodeGridView.UpdateCurrentRow();
                     DataRow row = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
-                    DataSet dsNewSize = ProjectFunctions.GetDataSet("SELECT        SZSYSID, SZNAME FROM SIZEMAST WHERE (SZINDEX =(SELECT        SZINDEX + 1 AS Expr1 FROM            SIZEMAST AS SIZEMAST_1 WHERE        (SZSYSID = '" + row["SKUSIZID"].ToString() + "')))");
+                    DataSet dsNewSize = ProjectFunctions.GetDataSet("sp_LoadSizes2  '" + row["SKUARTNO"].ToString() + "','" + row["SKUSIZID"].ToString() + "'");
                     if (dsNewSize.Tables[0].Rows.Count > 0)
                     {
                         DataRow dtNewRow = dt.NewRow();
@@ -721,7 +724,7 @@ namespace WindowsFormsApplication1.Transaction
                                 }
                             }
 
-                            SplashScreenManager.CloseForm(false);
+                                
 
                             ProjectFunctions.SpeakError("Barcode Generated Successfully");
                             sqlcon.Close();
@@ -788,7 +791,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadBarCodeVouchersEdit '" + SKUVOUCHNO + "','" + GlobalVariables.FinancialYear + "','" + Tag + "'");
+                DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersEdit2] '" + SKUVOUCHNO + "','" + GlobalVariables.FinancialYear + "','" + Tag + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     txtSysID.Text = SKUVOUCHNO;
@@ -813,6 +816,9 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
+
+                DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
+
 
                 HelpGrid.Show();
                 if (HelpGrid.Text == "SKUARTNO")
@@ -864,8 +870,14 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 if (HelpGrid.Text == "SKUSIZN")
                 {
+                    DataSet dsGroups = ProjectFunctions.GetDataSet("Select ARTSECTIONID,ARTSBSECTIONID from Article Where ARTNO='" + currentrow["SKUARTNO"].ToString() + "'");
+
+
+
                     DataTable dtNew = dsPopUps.Tables[2].Clone();
+                    //DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%' And GrpCode='" + dsGroups.Tables[0].Rows[0]["ARTSECTIONID"].ToString() + "' And GrpSubCode='" + dsGroups.Tables[0].Rows[0]["ARTSBSECTIONID"].ToString() + "'");
                     DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
+
                     foreach (DataRow dr in dtRow)
                     {
                         DataRow NewRow = dtNew.NewRow();
@@ -889,9 +901,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -936,14 +946,12 @@ namespace WindowsFormsApplication1.Transaction
                 e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To CSV", (o1, e1) =>
                 {
                     BarCodeGridView.ExportToCsv(Application.StartupPath + @"\Sticker.csv");
-               
+
                     System.Diagnostics.Process.Start(Application.StartupPath + @"\Muffler.btw");
 
                 }));
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
 
             }
@@ -1107,31 +1115,19 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnLoadPreviousBarCodes_Click(object sender, EventArgs e)
         {
-            DataSet ds = new DataSet();
-            ds = ProjectFunctions.GetDataSet("SP_Temp");
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                dt = ds.Tables[0];
-                BarCodeGrid.DataSource = dt;
-                BarCodeGridView.BestFitColumns();
-            }
-            else
-            {
-                BarCodeGrid.DataSource = null;
-                BarCodeGridView.BestFitColumns();
-            }
+            
         }
 
         private void BarCodeGridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            
-                BarCodeGridView.ShowEditor();
-            
+
+            BarCodeGridView.ShowEditor();
+
         }
 
         private void BarCodeGridView_ColumnChanged(object sender, EventArgs e)
         {
-            if(dt.Rows.Count>0)
+            if (dt.Rows.Count > 0)
             {
                 if (BarCodeGridView.FocusedColumn.FieldName == "SKUFEDQTY")
                 {
@@ -1139,7 +1135,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
 
             }
-           
+
         }
 
         private void BarCodeGridView_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
@@ -1175,6 +1171,149 @@ namespace WindowsFormsApplication1.Transaction
                     BarCodeGridView.ShowEditor();
                 }
 
+            }
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+           
+            var xlConn = string.Empty;
+            xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
+            using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] FROM [Sheet1$]", xlConn))
+            {
+                myCommand.Fill(dtGeneric);
+
+                foreach (DataRow dr in dtGeneric.Rows)
+                {
+                    DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
+                    if (dsCheckGroup.Tables[0].Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpDesc)values((Select max(isnull(GrpCode,0))+1 from GrpMst),'" + dr["SEGMENT"].ToString().Trim() + "')");
+
+                    }
+                    DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
+                    if (dsCheckSubGroup.Tables[0].Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpSubCode,GrpDesc,GrpSubDesc,GrpHSNCode)values((Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'),((Select max(isnull(GrpSubCode,0))+1 from GrpMst Where GrpCode=(Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'))),'" + dr["SEGMENT"].ToString().Trim() + "','" + dr["BRICK DESCRIPTION"].ToString().Trim() + "','" + dr["HSN CODE"].ToString() + "')");
+
+                    }
+                }
+            }
+
+            
+
+            XtraMessageBox.Show("Process Completed");
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            openFileDialog2.Filter = " .xlsx files(*.xlsx)|*.xlsx";
+            openFileDialog2.ShowDialog();
+        }
+
+        private void openFileDialog2_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+
+                var xlConn2 = string.Empty;
+                xlConn2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog2.FileName + ";Extended Properties=\"Excel 12.0;\";";
+                using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],[MRP], [SIZE],[COLOR]  FROM [Sheet1$]", xlConn2))
+                {
+                    myCommand.Fill(dtVariants);
+
+                    foreach (DataRow dr in dtVariants.Rows)
+                    {
+                        DataSet dsCheckSIZE = ProjectFunctions.GetDataSet("select SZNAME from SIZEMAST Where SZNAME='" + dr["SIZE"].ToString().Trim() + "'");
+                        if (dsCheckSIZE.Tables[0].Rows.Count > 0)
+                        {
+
+                        }
+                        else
+                        {
+                            ProjectFunctions.GetDataSet("  Insert into SIZEMAST (SZNAME,SZDESC)values('" + dr["SIZE"].ToString().Trim() + "','" + dr["SIZE"].ToString().Trim() + "')");
+
+                        }
+                        DataSet dsCheckColor = ProjectFunctions.GetDataSet("select COLNAME from COLOURS Where COLNAME='" + dr["COLOR"].ToString().Trim() + "'");
+                        if (dsCheckColor.Tables[0].Rows.Count > 0)
+                        {
+
+                        }
+                        else
+                        {
+                            ProjectFunctions.GetDataSet(" Insert into COLOURS(COLNAME)values('" + dr["COLOR"].ToString().Trim() + "')");
+                        }
+                    }
+                }
+
+
+                foreach (DataRow dr in dtGeneric.Rows)
+                {
+
+                    DataSet dsCheckArticle = ProjectFunctions.GetDataSet("select * from Article Where ARTNO='" + dr["GENERIC ARTICLE NAME"].ToString().Trim() + "'");
+                    if (dsCheckArticle.Tables[0].Rows.Count > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpCode,GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
+                        DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode,GrpSubCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
+
+                        Decimal MRP = 0;
+                        foreach (DataRow drMRP in dtVariants.Rows)
+                        {
+                            if (dr["GENERIC ART"].ToString() == drMRP["GENERIC ART"].ToString())
+                            {
+                                MRP = Convert.ToDecimal(drMRP["MRP"]);
+                                break;
+                            }
+                        }
+                        ProjectFunctions.GetDataSet("Insert into Article (ARTDATE,ARTNO,ARTSECTIONID,ARTSBSECTIONID,ARTMRP,ATaxCodeLocal,ATaxCodeCentral,ARTBRANDID,ARTUOM,ARTMARGIN)values(getdate(), '" + dr["GENERIC ARTICLE NAME"].ToString().Trim() + "','" + dsCheckGroup.Tables[0].Rows[0]["GrpCode"].ToString() + "','" + dsCheckSubGroup.Tables[0].Rows[0]["GrpSubCode"].ToString() + "','" + MRP + "','0001','0002','1','0002','37.50')");
+
+                    }
+
+                }
+
+                ProjectFunctions.GetDataSet("update ARTICLE Set ARTICLE.ARTALIAS=cast(PISourceData.[GENERIC ART] as bigint) from ARTICLE inner join PISourceData  on ARTICLE.ARTNO=PISourceData.[GENERIC ARTICLE NAME]");
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtDeptCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadEANDataFStore '" + txtDeptCode.Text + "'");
+                if(ds.Tables[0].Rows.Count>0)
+                {
+                    dt = ds.Tables[0];
+                    BarCodeGrid.DataSource = dt;
+                    BarCodeGridView.BestFitColumns();
+                }
+                else
+                {
+                    BarCodeGrid.DataSource = null ;
+                    BarCodeGridView.BestFitColumns();
+
+                }
             }
         }
     }
