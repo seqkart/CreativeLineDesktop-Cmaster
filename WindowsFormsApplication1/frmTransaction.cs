@@ -1380,6 +1380,15 @@ namespace WindowsFormsApplication1
                         //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
                     }));
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EAN Tag", (o1, e1) =>
+                    {
+
+                        PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\EAN.btw");
+                        PrintOutGrid.DataSource = null;
+                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+
+                    }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
                     {

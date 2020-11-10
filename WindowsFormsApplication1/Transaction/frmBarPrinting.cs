@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("FLATMRP", typeof(String));
             dt.Columns.Add("SKUPPRICE", typeof(String));
             dt.Columns.Add("GrpHSNCode", typeof(String));
+            dt.Columns.Add("VARIANTART", typeof(String));
 
             dsPopUps = ProjectFunctions.GetDataSet("[sp_LoadBarPrintPopUps2]");
 
@@ -945,9 +946,9 @@ namespace WindowsFormsApplication1.Transaction
                 }));
                 e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To CSV", (o1, e1) =>
                 {
-                    BarCodeGridView.ExportToCsv(Application.StartupPath + @"\Sticker.csv");
+                    BarCodeGridView.ExportToCsv(Application.StartupPath + @"\label\Stic.csv");
 
-                    System.Diagnostics.Process.Start(Application.StartupPath + @"\Muffler.btw");
+                    System.Diagnostics.Process.Start(Application.StartupPath + @"\label\EAN.btw");
 
                 }));
             }

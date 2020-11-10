@@ -88,6 +88,7 @@
             this.RBDIRECT = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -149,7 +150,8 @@
             this.gridColumn22,
             this.gridColumn20,
             this.gridColumn21,
-            this.gridColumn23});
+            this.gridColumn23,
+            this.gridColumn26});
             this.BarCodeGridView.GridControl = this.BarCodeGrid;
             this.BarCodeGridView.Name = "BarCodeGridView";
             this.BarCodeGridView.OptionsEditForm.ShowOnF2Key = DevExpress.Utils.DefaultBoolean.False;
@@ -570,7 +572,7 @@
             // 
             this.label2.Location = new System.Drawing.Point(44, 122);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(50, 13);
             this.label2.TabIndex = 707;
             this.label2.Text = "BARCODE";
             // 
@@ -608,7 +610,7 @@
             this.RBBYFLTRT.AutoSize = true;
             this.RBBYFLTRT.Location = new System.Drawing.Point(642, 79);
             this.RBBYFLTRT.Name = "RBBYFLTRT";
-            this.RBBYFLTRT.Size = new System.Drawing.Size(89, 17);
+            this.RBBYFLTRT.Size = new System.Drawing.Size(90, 17);
             this.RBBYFLTRT.TabIndex = 702;
             this.RBBYFLTRT.TabStop = true;
             this.RBBYFLTRT.Text = "BY FLAT RATE";
@@ -620,7 +622,7 @@
             this.RBBYDSCPRCN.AutoSize = true;
             this.RBBYDSCPRCN.Location = new System.Drawing.Point(642, 57);
             this.RBBYDSCPRCN.Name = "RBBYDSCPRCN";
-            this.RBBYDSCPRCN.Size = new System.Drawing.Size(73, 17);
+            this.RBBYDSCPRCN.Size = new System.Drawing.Size(72, 17);
             this.RBBYDSCPRCN.TabIndex = 701;
             this.RBBYDSCPRCN.TabStop = true;
             this.RBBYDSCPRCN.Text = "BY DISC%";
@@ -694,7 +696,7 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(24, 66);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(69, 13);
+            this.labelControl6.Size = new System.Drawing.Size(70, 13);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "DEPARTMENT";
             this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
@@ -769,6 +771,14 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "VARIANTART";
+            this.gridColumn26.FieldName = "VARIANTART";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 19;
             // 
             // frmBarPrinting
             // 
@@ -870,5 +880,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
     }
 }
