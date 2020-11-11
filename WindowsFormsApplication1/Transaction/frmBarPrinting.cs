@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraEditors;
-using DevExpress.XtraRichEdit.Model;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
@@ -53,6 +52,7 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("FLATMRP", typeof(String));
             dt.Columns.Add("SKUPPRICE", typeof(String));
             dt.Columns.Add("GrpHSNCode", typeof(String));
+            dt.Columns.Add("VARIANTART", typeof(String));
 
             dsPopUps = ProjectFunctions.GetDataSet("[sp_LoadBarPrintPopUps2]");
 
@@ -162,10 +162,6 @@ namespace WindowsFormsApplication1.Transaction
                         BarCodeGridView.Focus();
                         panelControl1.Visible = false;
 
-
-
-
-
                         BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUSIZN"];
                         BarCodeGridView.FocusedRowHandle = RowIndex;
                         txtSearchBox.Text = String.Empty;
@@ -184,23 +180,14 @@ namespace WindowsFormsApplication1.Transaction
 
                         dt.AcceptChanges();
 
-
-
-
-
                         BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUFEDQTY"];
                         BarCodeGridView.ShowEditor();
                         BarCodeGridView.FocusedRowHandle = RowIndex;
 
-
                         txtSearchBox.Text = String.Empty;
-
-
 
                     }
                 }
-
-
 
             }
             catch (Exception ex)
@@ -536,8 +523,6 @@ namespace WindowsFormsApplication1.Transaction
                                         String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                         String SKUPRODUCTCODE = ProjectFunctions.ClipFYearBarCode(GlobalVariables.FinancialYear) + GlobalVariables.CUnitID + GlobalVariables.BarCodePreFix + SKUCode;
 
-
-
                                         String SKUFixCode = ProjectFunctions.GetDataSet("select     max(cast( isnull(SKUFIXPRODUCTCODE,0) as int))+1 from SKU where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                         String SKUFIXPRODUCTCODE = String.Empty; ;
 
@@ -627,17 +612,14 @@ namespace WindowsFormsApplication1.Transaction
                             else
                             {
 
-
-
                                 i++;
+                                SplashScreenManager.Default.SetWaitFormDescription("Saving Item " + i.ToString() + " / " + (BarCodeGrid.DataSource as DataTable).Rows.Count);
                                 txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU_Fix Where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                 //txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU_Fix Where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
 
 
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
-                                    SplashScreenManager.Default.SetWaitFormDescription("Saving Item " + i.ToString() + " / " + (BarCodeGrid.DataSource as DataTable).Rows.Count);
-
                                     String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     //String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     String SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
@@ -645,9 +627,9 @@ namespace WindowsFormsApplication1.Transaction
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
                                     {
+                                        
                                         SKUPRODUCTCODE = dsCheck.Tables[0].Rows[0]["SKUPRODUCTCODE"].ToString();
                                         SKUCode = dsCheck.Tables[0].Rows[0]["SKUCODE"].ToString();
-
 
                                         //ProjectFunctions.GetDataSet("Update SKU_FIx set SKUFEDQTY=SKUFEDQTY +'" + dr["SKUFEDQTY"].ToString() + "' SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "' And SKUAccCode='" + txtAccCode.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
                                     }
@@ -724,7 +706,7 @@ namespace WindowsFormsApplication1.Transaction
                                 }
                             }
 
-                                
+
 
                             ProjectFunctions.SpeakError("Barcode Generated Successfully");
                             sqlcon.Close();
@@ -945,9 +927,9 @@ namespace WindowsFormsApplication1.Transaction
                 }));
                 e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To CSV", (o1, e1) =>
                 {
-                    BarCodeGridView.ExportToCsv(Application.StartupPath + @"\Sticker.csv");
+                    BarCodeGridView.ExportToCsv(Application.StartupPath + @"\label\Stic.csv");
 
-                    System.Diagnostics.Process.Start(Application.StartupPath + @"\Muffler.btw");
+                    System.Diagnostics.Process.Start(Application.StartupPath + @"\label\EAN.btw");
 
                 }));
             }
@@ -1115,7 +1097,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnLoadPreviousBarCodes_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void BarCodeGridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -1182,7 +1164,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
-           
+
             var xlConn = string.Empty;
             xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
             using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] FROM [Sheet1$]", xlConn))
@@ -1214,7 +1196,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
 
-            
+
 
             XtraMessageBox.Show("Process Completed");
         }
@@ -1299,10 +1281,10 @@ namespace WindowsFormsApplication1.Transaction
 
         private void txtDeptCode_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadEANDataFStore '" + txtDeptCode.Text + "'");
-                if(ds.Tables[0].Rows.Count>0)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
                     dt = ds.Tables[0];
                     BarCodeGrid.DataSource = dt;
@@ -1310,11 +1292,26 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 else
                 {
-                    BarCodeGrid.DataSource = null ;
+                    BarCodeGrid.DataSource = null;
                     BarCodeGridView.BestFitColumns();
 
                 }
             }
+        }
+
+        private void RBIMPORT_CheckedChanged(object sender, EventArgs e)
+        {
+            
+                btnImport.Visible = true;
+                BTNIMPORT2.Visible = true;
+
+            
+        }
+
+        private void RBDIRECT_CheckedChanged(object sender, EventArgs e)
+        {
+            btnImport.Visible = false;
+            BTNIMPORT2.Visible = false;
         }
     }
 }
