@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
@@ -687,6 +688,27 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     if (ds.Tables[0].Rows.Count > 0)
                     {
+
+
+                        if (txtStoreCode.Text.Length > 0)
+                        {
+                            if (dt.Rows.Count < Convert.ToDecimal(txtStoreQty.Text))
+                            {
+
+                            }
+                            else
+                            {
+                                XtraMessageBox.Show("Qty Cannot Be More Than PI Qty");
+                                return;
+                            }
+
+
+                        }
+                      
+
+
+
+
                         //if (FixBarPartyTag == "Y")
                         //{
 
@@ -990,6 +1012,23 @@ namespace WindowsFormsApplication1.Transaction
         private void BarCodeGrid_DoubleClick(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtStoreCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIQtyFPSlip '" + txtStoreCode.Text + "'");
+                if(ds.Tables[0].Rows.Count>0)
+                {
+                    txtStoreQty.Text = ds.Tables[0].Rows[0][0].ToString();
+                }
+                else
+                {
+                    txtStoreQty.Text = "0";
+                }
+            }
         }
     }
 }

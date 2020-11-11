@@ -14,8 +14,8 @@ namespace SeqKartSecurity.Connections
 
 
 
-        public static string DefaultConnectionString = @"Data Source=cserver;Initial Catalog=SEQKARTNEW;User ID=sa;pwd=Seq@2021";
-        public static string ImageConnectionString = @"Data Source = cserver; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
+        public static string DefaultConnectionString = @"Data Source=seqkart.ddns.net;Initial Catalog=SEQKARTNEW;User ID=sa;pwd=Seq@2021";
+        public static string ImageConnectionString = @"Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
     }
 
 }

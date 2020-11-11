@@ -64,6 +64,8 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
@@ -84,8 +86,9 @@
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtStoreCode = new DevExpress.XtraEditors.TextEdit();
+            this.txtStoreQty = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
@@ -98,6 +101,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).BeginInit();
@@ -110,7 +114,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -445,7 +450,7 @@
             // 
             this.Label8.Location = new System.Drawing.Point(239, 11);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(41, 13);
+            this.Label8.Size = new System.Drawing.Size(40, 13);
             this.Label8.TabIndex = 0;
             this.Label8.Text = "DATED :";
             // 
@@ -471,7 +476,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(150, 118);
+            this.HelpGrid.Location = new System.Drawing.Point(779, 233);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(737, 368);
@@ -529,6 +534,21 @@
             this.Panel1.Size = new System.Drawing.Size(413, 157);
             this.Panel1.TabIndex = 724;
             // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(305, 136);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(21, 13);
+            this.labelControl11.TabIndex = 727;
+            this.labelControl11.Text = "DC :";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(329, 132);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(77, 20);
+            this.textEdit1.TabIndex = 726;
+            // 
             // labelControl10
             // 
             this.labelControl10.Location = new System.Drawing.Point(162, 136);
@@ -551,7 +571,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(43, 116);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(49, 13);
+            this.labelControl8.Size = new System.Drawing.Size(48, 13);
             this.labelControl8.TabIndex = 725;
             this.labelControl8.Text = "GST NO. :";
             this.labelControl8.Click += new System.EventHandler(this.labelControl4_Click);
@@ -560,7 +580,7 @@
             // 
             this.labelControl7.Location = new System.Drawing.Point(30, 95);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(62, 13);
+            this.labelControl7.Size = new System.Drawing.Size(60, 13);
             this.labelControl7.TabIndex = 725;
             this.labelControl7.Text = "CITY / SATE :";
             this.labelControl7.Click += new System.EventHandler(this.labelControl4_Click);
@@ -701,20 +721,34 @@
             this.labelControl3.TabIndex = 721;
             this.labelControl3.Text = "Total Ps Pcs";
             // 
-            // labelControl11
+            // txtStoreCode
             // 
-            this.labelControl11.Location = new System.Drawing.Point(305, 136);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(21, 13);
-            this.labelControl11.TabIndex = 727;
-            this.labelControl11.Text = "DC :";
+            this.txtStoreCode.Location = new System.Drawing.Point(457, 191);
+            this.txtStoreCode.Name = "txtStoreCode";
+            this.txtStoreCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStoreCode.Properties.Appearance.Options.UseFont = true;
+            this.txtStoreCode.Size = new System.Drawing.Size(105, 28);
+            this.txtStoreCode.TabIndex = 732;
+            this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStoreCode_KeyDown);
             // 
-            // textEdit1
+            // txtStoreQty
             // 
-            this.textEdit1.Location = new System.Drawing.Point(329, 132);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(77, 20);
-            this.textEdit1.TabIndex = 726;
+            this.txtStoreQty.Location = new System.Drawing.Point(576, 191);
+            this.txtStoreQty.Name = "txtStoreQty";
+            this.txtStoreQty.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStoreQty.Properties.Appearance.Options.UseFont = true;
+            this.txtStoreQty.Size = new System.Drawing.Size(105, 28);
+            this.txtStoreQty.TabIndex = 733;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.labelControl12.Appearance.Options.UseFont = true;
+            this.labelControl12.Location = new System.Drawing.Point(368, 194);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(83, 21);
+            this.labelControl12.TabIndex = 734;
+            this.labelControl12.Text = "Store Code";
             // 
             // frmPackingSlipWholeSale
             // 
@@ -722,6 +756,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.labelControl12);
+            this.Controls.Add(this.txtStoreQty);
+            this.Controls.Add(this.txtStoreCode);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.ArticleImageBox);
             this.Controls.Add(this.BarCodeGrid);
@@ -755,6 +792,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCity.Properties)).EndInit();
@@ -767,7 +805,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -831,5 +870,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl11;
         private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtStoreCode;
+        private DevExpress.XtraEditors.TextEdit txtStoreQty;
+        private DevExpress.XtraEditors.LabelControl labelControl12;
     }
 }
