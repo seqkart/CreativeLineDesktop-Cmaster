@@ -56,6 +56,7 @@
             this.gridColumn20 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -65,7 +66,7 @@
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.BTNIMPORT2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnImport = new DevExpress.XtraEditors.SimpleButton();
             this.btnLoadEANs = new System.Windows.Forms.Button();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
@@ -88,7 +89,6 @@
             this.RBDIRECT = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
-            this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -410,6 +410,14 @@
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 18;
             // 
+            // gridColumn26
+            // 
+            this.gridColumn26.Caption = "VARIANTART";
+            this.gridColumn26.FieldName = "VARIANTART";
+            this.gridColumn26.Name = "gridColumn26";
+            this.gridColumn26.Visible = true;
+            this.gridColumn26.VisibleIndex = 19;
+            // 
             // Menu_ToolStrip
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
@@ -510,7 +518,7 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.BTNIMPORT2);
             this.groupControl1.Controls.Add(this.btnImport);
             this.groupControl1.Controls.Add(this.btnLoadEANs);
             this.groupControl1.Controls.Add(this.label2);
@@ -538,24 +546,26 @@
             this.groupControl1.TabIndex = 709;
             this.groupControl1.Text = "Generate Mode";
             // 
-            // simpleButton1
+            // BTNIMPORT2
             // 
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(476, 107);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(101, 27);
-            this.simpleButton1.TabIndex = 710;
-            this.simpleButton1.Text = "Import EAN As BarCode";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.BTNIMPORT2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.BTNIMPORT2.Location = new System.Drawing.Point(436, 88);
+            this.BTNIMPORT2.Name = "BTNIMPORT2";
+            this.BTNIMPORT2.Size = new System.Drawing.Size(180, 33);
+            this.BTNIMPORT2.TabIndex = 710;
+            this.BTNIMPORT2.Text = "IMPORT RELIANCE SHEET 2";
+            this.BTNIMPORT2.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnImport
             // 
-            this.btnImport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.ImageOptions.Image")));
-            this.btnImport.Location = new System.Drawing.Point(476, 74);
+            this.btnImport.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImport.Appearance.Options.UseFont = true;
+            this.btnImport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnImport.ImageOptions.SvgImage")));
+            this.btnImport.Location = new System.Drawing.Point(436, 55);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(101, 27);
+            this.btnImport.Size = new System.Drawing.Size(180, 33);
             this.btnImport.TabIndex = 709;
-            this.btnImport.Text = "Import EAN As BarCode";
+            this.btnImport.Text = "IMPORT RELIANCE SHEET 1";
             this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
             // 
             // btnLoadEANs
@@ -566,6 +576,7 @@
             this.btnLoadEANs.TabIndex = 708;
             this.btnLoadEANs.Text = "Load";
             this.btnLoadEANs.UseVisualStyleBackColor = true;
+            this.btnLoadEANs.Visible = false;
             this.btnLoadEANs.Click += new System.EventHandler(this.btnLoadPreviousBarCodes_Click);
             // 
             // label2
@@ -656,7 +667,7 @@
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
-            this.txtDeptCode.Size = new System.Drawing.Size(53, 20);
+            this.txtDeptCode.Size = new System.Drawing.Size(58, 20);
             this.txtDeptCode.TabIndex = 694;
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDeptCode_KeyDown);
             // 
@@ -667,7 +678,7 @@
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
-            this.txtDeptDesc.Size = new System.Drawing.Size(208, 20);
+            this.txtDeptDesc.Size = new System.Drawing.Size(158, 20);
             this.txtDeptDesc.TabIndex = 695;
             this.txtDeptDesc.TabStop = false;
             // 
@@ -694,11 +705,11 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(24, 66);
+            this.labelControl6.Location = new System.Drawing.Point(27, 66);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(70, 13);
+            this.labelControl6.Size = new System.Drawing.Size(67, 13);
             this.labelControl6.TabIndex = 696;
-            this.labelControl6.Text = "DEPARTMENT";
+            this.labelControl6.Text = "STORE CODE";
             this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
             // 
             // RBPUR
@@ -724,6 +735,7 @@
             this.ChkFixedBarCode.TabIndex = 690;
             this.ChkFixedBarCode.Text = "FIXED BARCODE";
             this.ChkFixedBarCode.UseVisualStyleBackColor = true;
+            this.ChkFixedBarCode.Visible = false;
             // 
             // RBIMPORT
             // 
@@ -736,6 +748,7 @@
             this.RBIMPORT.TabStop = true;
             this.RBIMPORT.Text = "IMPORT";
             this.RBIMPORT.UseVisualStyleBackColor = true;
+            this.RBIMPORT.CheckedChanged += new System.EventHandler(this.RBIMPORT_CheckedChanged);
             // 
             // RBBATCH
             // 
@@ -761,6 +774,7 @@
             this.RBDIRECT.TabStop = true;
             this.RBDIRECT.Text = "DIRECT";
             this.RBDIRECT.UseVisualStyleBackColor = true;
+            this.RBDIRECT.CheckedChanged += new System.EventHandler(this.RBDIRECT_CheckedChanged);
             // 
             // openFileDialog1
             // 
@@ -771,14 +785,6 @@
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
-            // 
-            // gridColumn26
-            // 
-            this.gridColumn26.Caption = "VARIANTART";
-            this.gridColumn26.FieldName = "VARIANTART";
-            this.gridColumn26.Name = "gridColumn26";
-            this.gridColumn26.Visible = true;
-            this.gridColumn26.VisibleIndex = 19;
             // 
             // frmBarPrinting
             // 
@@ -878,7 +884,7 @@
         internal System.Windows.Forms.Button btnLoadEANs;
         private DevExpress.XtraEditors.SimpleButton btnImport;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton BTNIMPORT2;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
     }
