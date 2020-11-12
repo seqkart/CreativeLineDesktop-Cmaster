@@ -17,6 +17,7 @@ using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Forms_Master;
+using WindowsFormsApplication1.Master;
 
 namespace WindowsFormsApplication1
 {
@@ -152,7 +153,7 @@ namespace WindowsFormsApplication1
 
             }
 
-            catch (Exception ex)
+            catch (Exception )
 
             {
 
@@ -192,6 +193,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG212":
+                    var PROG212 = new frmGroupSizeMapping() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG212.Show();
+                    PROG212.BringToFront();
+                    PROG212.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG211":
                     var PROG211 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG211.Show();

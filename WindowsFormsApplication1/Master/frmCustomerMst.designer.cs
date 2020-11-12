@@ -123,7 +123,7 @@
             // 
             this.Label21.Location = new System.Drawing.Point(232, 60);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(83, 13);
+            this.Label21.Size = new System.Drawing.Size(82, 13);
             this.Label21.TabIndex = 35;
             this.Label21.Text = "DISCOUNT TYPE:";
             // 
@@ -131,7 +131,7 @@
             // 
             this.Label20.Location = new System.Drawing.Point(53, 60);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(72, 13);
+            this.Label20.Size = new System.Drawing.Size(75, 13);
             this.Label20.TabIndex = 35;
             this.Label20.Text = "DURING EOSS:";
             // 
@@ -139,7 +139,7 @@
             // 
             this.Label19.Location = new System.Drawing.Point(7, 32);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(115, 13);
+            this.Label19.Size = new System.Drawing.Size(121, 13);
             this.Label19.TabIndex = 35;
             this.Label19.Text = "DURING NORMAL SALE:";
             // 
@@ -165,7 +165,7 @@
             // 
             this.Label18.Location = new System.Drawing.Point(339, 318);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(99, 13);
+            this.Label18.Size = new System.Drawing.Size(97, 13);
             this.Label18.TabIndex = 14;
             this.Label18.Text = "CARD EXPIRY DATE:";
             // 
@@ -183,7 +183,7 @@
             // 
             this.Label2.Location = new System.Drawing.Point(105, 57);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(73, 13);
+            this.Label2.Size = new System.Drawing.Size(75, 13);
             this.Label2.TabIndex = 10;
             this.Label2.Text = "CUSTOMER ID:";
             // 
@@ -191,7 +191,7 @@
             // 
             this.Label11.Location = new System.Drawing.Point(500, 82);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(48, 13);
+            this.Label11.Size = new System.Drawing.Size(52, 13);
             this.Label11.TabIndex = 3;
             this.Label11.Text = "SURNAME";
             // 
@@ -199,7 +199,7 @@
             // 
             this.Label10.Location = new System.Drawing.Point(374, 82);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(37, 13);
+            this.Label10.Size = new System.Drawing.Size(40, 13);
             this.Label10.TabIndex = 5;
             this.Label10.Text = "MIDDLE";
             // 
@@ -207,7 +207,7 @@
             // 
             this.Label9.Location = new System.Drawing.Point(243, 82);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(29, 13);
+            this.Label9.Size = new System.Drawing.Size(28, 13);
             this.Label9.TabIndex = 11;
             this.Label9.Text = "FIRST";
             // 
@@ -392,7 +392,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(400, 238);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 652;
             this.label1.Text = "STATE :";
             // 

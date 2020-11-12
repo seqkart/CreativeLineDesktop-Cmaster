@@ -99,7 +99,7 @@
             // 
             this.label3.Location = new System.Drawing.Point(27, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 13);
+            this.label3.Size = new System.Drawing.Size(134, 13);
             this.label3.TabIndex = 199;
             this.label3.Text = "Address Book Group Desc";
             // 
@@ -107,7 +107,7 @@
             // 
             this.label1.Location = new System.Drawing.Point(24, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.Size = new System.Drawing.Size(137, 13);
             this.label1.TabIndex = 198;
             this.label1.Text = "Address Book Group Code";
             // 

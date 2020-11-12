@@ -676,6 +676,7 @@ namespace WindowsFormsApplication1
             LoadDelAddresses();
         }
 
+        [Obsolete]
         private void InfoGrid_DoubleClick(object sender, EventArgs e)
         {
             var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
