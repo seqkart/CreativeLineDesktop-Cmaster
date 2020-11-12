@@ -1,5 +1,4 @@
-﻿using DevExpress.DataProcessing.InMemoryDataProcessor;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using System;
@@ -1176,27 +1175,27 @@ namespace WindowsFormsApplication1
             txtCreditLimit.Text = String.Empty;
         }
 
-       
+
 
 
 
 
         private void PrepareActMstHelpGrid()
-             
+
         {
             HelpGridView.Columns.Clear();
             DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
-            
+
             {
                 FieldName = "AccName",
-         
+
                 Visible = true,
-                SortOrder= (DevExpress.Data.ColumnSortOrder.Ascending),
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
                 VisibleIndex = 0
             };
             HelpGridView.Columns.Add(col1);
-            
-           // HelpGridView.Columns.ColumnByName("'Acc Name'").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+
+            // HelpGridView.Columns.ColumnByName("'Acc Name'").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
 
             DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
             {

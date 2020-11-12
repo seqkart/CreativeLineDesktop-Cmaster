@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
             dt.Rows.Add(row3);
 
 
-            DataSet dsSale = ProjectFunctions.GetDataSet("sp_ShowRoomDashBoard '" + WorkingTag + "','" +  GlobalVariables.CUnitID  +"'");
+            DataSet dsSale = ProjectFunctions.GetDataSet("sp_ShowRoomDashBoard '" + WorkingTag + "','" + GlobalVariables.CUnitID + "'");
             //DataSet dsSale = ProjectFunctions.GetDataSet("sp_ShowRoomDashBoard '" + WorkingTag + "','" + ('0' + (GlobalVariables.CUnitID)) + GlobalVariables.FinancialYear + "'");
             if (dsSale.Tables[0].Rows.Count > 0)
             {

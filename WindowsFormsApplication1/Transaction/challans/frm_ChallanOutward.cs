@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction.challans
 {
-    public partial class frm_ChallanOutward : DevExpress.XtraEditors.XtraForm
+    public partial class Frm_ChallanOutward : DevExpress.XtraEditors.XtraForm
     {
         public String s1 { get; set; }
         public String ImNo { get; set; }
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         String ProductFeedTag = "N";
 
-        public frm_ChallanOutward()
+        public Frm_ChallanOutward()
         {
             InitializeComponent();
             dt.Columns.Add("CHOPrdCode", typeof(String));
@@ -42,7 +42,25 @@ namespace WindowsFormsApplication1.Transaction.challans
             dt.Columns.Add("CHOKgsType", typeof(String));
             dt.Columns.Add("CHOTotQty", typeof(String));
 
+            AutoCompleteStringCollection collection = new AutoCompleteStringCollection
+            {
+                "ROHIT AGGARWAL",
+                "BHUPINDER WARAICH",
+                "RAJAT AGGARWAL"
+            };
+            txtIssuedBy.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtIssuedBy.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtIssuedBy.MaskBox.AutoCompleteCustomSource = collection;
 
+            AutoCompleteStringCollection collection1 = new AutoCompleteStringCollection
+            {
+                "ROHIT AGGARWAL",
+                "BHUPINDER WARAICH",
+                "RAJAT AGGARWAL"
+            };
+            txtApprovedBy.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtApprovedBy.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtApprovedBy.MaskBox.AutoCompleteCustomSource = collection;
 
 
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
@@ -127,7 +145,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             e.Handled = true;
         }
 
-        private void txtChallanNo_EditValueChanged(object sender, EventArgs e)
+        private void TxtChallanNo_EditValueChanged(object sender, EventArgs e)
         {
             txtContactDetails.Text = String.Empty;
             txtIssuedBy.Text = String.Empty;
@@ -138,7 +156,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         }
 
-        private void txtChallanNo_KeyDown(object sender, KeyEventArgs e)
+        private void TxtChallanNo_KeyDown(object sender, KeyEventArgs e)
         {
             PrintLogWin.PrintLog("txtChallanNo_KeyDown => A");
 
@@ -184,6 +202,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         txtBillingState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
                         txtBillingZIP.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
 
+                       // txtDebitPartyCode.Focus();
                         txtContactDetails.Focus();
                         panelControl1.Visible = false;
                     }
@@ -525,7 +544,8 @@ namespace WindowsFormsApplication1.Transaction.challans
                 {
                     groupControl1.Focus();
                     txtChallanType.Select();
-                    txtChallanDate.EditValue = DateTime.Now;
+                                        txtChallanDate.EditValue = DateTime.Now;
+                    txtChallanType.Focus();
                 }
                 if (s1 == "Edit")
                 {
@@ -569,7 +589,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -1023,7 +1043,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                             {
                                                 HelpGrid.Text = "CHOPrdName";
 
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -1051,7 +1071,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 else
                                                 {
                                                     HelpGrid.Text = "CHOPrdName";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -1067,7 +1087,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                             {
                                                 HelpGrid.Text = "CHOArtNo";
 
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -1084,7 +1104,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
 
                                                     HelpGrid.Text = "CHOArtNo";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -1374,10 +1394,20 @@ namespace WindowsFormsApplication1.Transaction.challans
                 }
             }
 
-            catch (Exception )
+            catch (Exception)
             {
 
             }
+        }
+
+        private void txtIssuedBy_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContactDetails_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

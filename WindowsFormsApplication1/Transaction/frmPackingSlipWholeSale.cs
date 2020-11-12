@@ -692,28 +692,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         if (txtStoreCode.Text.Length > 0)
                         {
-                            int count = 0;
-                            int qty = 0;
-                            foreach (DataRow dr in dt.Rows)
-                            {
-                                if (dr["SIDBARCODE"].ToString() == txtBarCode.Text)
-                                {
-                                    count++;
-                                    qty = qty + Convert.ToInt32(dr["SIDSCANQTY"]);
-                                }
-                            }
-
-                            DataSet dsQty = ProjectFunctions.GetDataSet("sp_LoadPIQtyFPSlip '" + txtStoreCode.Text + "','" + txtBarCode.Text + "'");
-                            if (dsQty.Tables[0].Rows.Count > 0)
-                            {
-                                txtStoreQty.Text = dsQty.Tables[0].Rows[0][0].ToString();
-                            }
-                            else
-                            {
-                                txtStoreQty.Text = "0";
-                            }
-
-                            if (qty < Convert.ToDecimal(txtStoreQty.Text))
+                            if (dt.Rows.Count < Convert.ToDecimal(txtStoreQty.Text))
                             {
 
                             }
@@ -722,8 +701,10 @@ namespace WindowsFormsApplication1.Transaction
                                 XtraMessageBox.Show("Qty Cannot Be More Than PI Qty");
                                 return;
                             }
+
+
                         }
-                      
+
 
 
 
@@ -1035,10 +1016,18 @@ namespace WindowsFormsApplication1.Transaction
 
         private void txtStoreCode_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
-                
-                
+
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIQtyFPSlip '" + txtStoreCode.Text + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    txtStoreQty.Text = ds.Tables[0].Rows[0][0].ToString();
+                }
+                else
+                {
+                    txtStoreQty.Text = "0";
+                }
             }
         }
     }

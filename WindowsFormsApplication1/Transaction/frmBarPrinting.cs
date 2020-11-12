@@ -627,7 +627,7 @@ namespace WindowsFormsApplication1.Transaction
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
                                     {
-                                        
+
                                         SKUPRODUCTCODE = dsCheck.Tables[0].Rows[0]["SKUPRODUCTCODE"].ToString();
                                         SKUCode = dsCheck.Tables[0].Rows[0]["SKUCODE"].ToString();
 
@@ -1301,11 +1301,11 @@ namespace WindowsFormsApplication1.Transaction
 
         private void RBIMPORT_CheckedChanged(object sender, EventArgs e)
         {
-            
-                btnImport.Visible = true;
-                BTNIMPORT2.Visible = true;
 
-            
+            btnImport.Visible = true;
+            BTNIMPORT2.Visible = true;
+
+
         }
 
         private void RBDIRECT_CheckedChanged(object sender, EventArgs e)

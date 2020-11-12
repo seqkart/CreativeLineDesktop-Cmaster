@@ -4,6 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApplication1", "WindowsFormsApplication1\WindowsFormsApplication1.csproj", "{9D4609C5-ACC0-4701-AD39-51597F4DDE3F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3AAED41C-013F-4F65-8376-4D221C32D390} = {3AAED41C-013F-4F65-8376-4D221C32D390}
+		{67A93BD3-F7F3-4560-B222-A2716585C508} = {67A93BD3-F7F3-4560-B222-A2716585C508}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeqKartLibrary", "SeqKartLibrary\SeqKartLibrary.csproj", "{3AAED41C-013F-4F65-8376-4D221C32D390}"
 EndProject

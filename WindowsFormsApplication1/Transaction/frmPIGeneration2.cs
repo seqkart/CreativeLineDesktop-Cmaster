@@ -1,12 +1,9 @@
-﻿using DevExpress.Charts.Native;
-using DevExpress.Emf;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 
 namespace WindowsFormsApplication1.Transaction
@@ -228,9 +225,9 @@ namespace WindowsFormsApplication1.Transaction
                         sqlcon.Close();
                         SplashScreenManager.Default.SetWaitFormDescription("Saving PI " + i.ToString());
                         i++;
-                        
 
-                        LoadSheet(); 
+
+                        LoadSheet();
                         DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
                         workbook.LoadDocument(openFileDialog1.FileName);
                         DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[i];
@@ -243,7 +240,7 @@ namespace WindowsFormsApplication1.Transaction
                             SplashScreenManager.CloseForm(false);
                             this.Close();
                         }
-                       
+
                     }
                     catch (Exception ex)
                     {

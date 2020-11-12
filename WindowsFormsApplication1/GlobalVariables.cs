@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
         public static String TelNo = string.Empty;
         public static String FSSAI = string.Empty;
         public static String CUnitID = string.Empty;
-      
+
 
         public static DateTime LicenseToExpireDate = Convert.ToDateTime("2022-03-31");
 

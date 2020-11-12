@@ -392,7 +392,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Clear();
                         }
 
-                        
+
 
 
                         foreach (DataRow dr in dtAll.Rows)

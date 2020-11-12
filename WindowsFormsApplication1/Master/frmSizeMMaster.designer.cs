@@ -144,7 +144,7 @@
             // 
             this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(346, 73);
+            this.label2.Location = new System.Drawing.Point(355, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 602;

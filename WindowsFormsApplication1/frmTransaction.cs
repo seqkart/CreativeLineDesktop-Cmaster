@@ -300,7 +300,7 @@ namespace WindowsFormsApplication1
                 //}
                 if (GlobalVariables.ProgCode == "PROG142")
                 {
-                    WindowsFormsApplication1.Transaction.challans.frm_ChallanOutward frm = new WindowsFormsApplication1.Transaction.challans.frm_ChallanOutward
+                    WindowsFormsApplication1.Transaction.challans.Frm_ChallanOutward frm = new WindowsFormsApplication1.Transaction.challans.Frm_ChallanOutward
                     { s1 = btnAdd.Text, Text = "Outward Challan Edition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -405,7 +405,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.challans.frm_ChallanOutward frm = new Transaction.challans.frm_ChallanOutward
+                    Transaction.challans.Frm_ChallanOutward frm = new Transaction.challans.Frm_ChallanOutward
                     {
                         s1 = btnEdit.Text,
                         Text = "Challan Outward Edition",

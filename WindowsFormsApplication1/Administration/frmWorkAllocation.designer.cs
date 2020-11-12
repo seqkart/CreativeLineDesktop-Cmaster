@@ -36,6 +36,7 @@
             this.panelControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSaveOpts = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancle = new DevExpress.XtraEditors.SimpleButton();
+            this.OptionsGrid = new DevExpress.XtraGrid.GridControl();
             this.OptionsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,6 +50,7 @@
             this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.WorkAllocationGrid = new DevExpress.XtraGrid.GridControl();
             this.UserGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -67,8 +69,10 @@
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OptionsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OptionsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkAllocationGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
             this.SuspendLayout();
@@ -110,9 +114,10 @@
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(57, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(63, 13);
             this.label1.TabIndex = 315;
             this.label1.Text = "Select User";
             // 
@@ -126,6 +131,8 @@
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Controls.Add(this.btnCancle);
             this.panelControl1.Controls.Add(this.cmbSelectUser);
+            this.panelControl1.Controls.Add(this.OptionsGrid);
+            this.panelControl1.Controls.Add(this.WorkAllocationGrid);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 25);
             this.panelControl1.Name = "panelControl1";
@@ -152,6 +159,21 @@
             this.btnCancle.Text = "Cancel";
             this.btnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
+            // OptionsGrid
+            // 
+            this.OptionsGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionsGrid.Location = new System.Drawing.Point(14, 72);
+            this.OptionsGrid.MainView = this.OptionsGridView;
+            this.OptionsGrid.Name = "OptionsGrid";
+            this.OptionsGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit2});
+            this.OptionsGrid.Size = new System.Drawing.Size(866, 389);
+            this.OptionsGrid.TabIndex = 318;
+            this.OptionsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.OptionsGridView});
+            this.OptionsGrid.Click += new System.EventHandler(this.OptionsGrid_Click);
+            this.OptionsGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OptionsGrid_KeyDown);
+            // 
             // OptionsGridView
             // 
             this.OptionsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -166,6 +188,7 @@
             this.gridColumn32,
             this.gridColumn33,
             this.gridColumn34});
+            this.OptionsGridView.GridControl = this.OptionsGrid;
             this.OptionsGridView.Name = "OptionsGridView";
             this.OptionsGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.OptionsGridView.OptionsBehavior.AutoUpdateTotalSummary = false;
@@ -287,6 +310,20 @@
             this.repositoryItemCheckEdit2.Caption = "Check";
             this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             // 
+            // WorkAllocationGrid
+            // 
+            this.WorkAllocationGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkAllocationGrid.Location = new System.Drawing.Point(14, 72);
+            this.WorkAllocationGrid.MainView = this.UserGridView;
+            this.WorkAllocationGrid.Name = "WorkAllocationGrid";
+            this.WorkAllocationGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit1});
+            this.WorkAllocationGrid.Size = new System.Drawing.Size(866, 418);
+            this.WorkAllocationGrid.TabIndex = 317;
+            this.WorkAllocationGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.UserGridView});
+            this.WorkAllocationGrid.DoubleClick += new System.EventHandler(this.WorkAllocationGrid_DoubleClick);
+            // 
             // UserGridView
             // 
             this.UserGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -301,6 +338,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11});
+            this.UserGridView.GridControl = this.WorkAllocationGrid;
             this.UserGridView.Name = "UserGridView";
             this.UserGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.UserGridView.OptionsBehavior.AutoUpdateTotalSummary = false;
@@ -429,7 +467,7 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // FrmWorkAllocation
+            // frmWorkAllocation
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
@@ -440,7 +478,7 @@
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FrmWorkAllocation";
+            this.Name = "frmWorkAllocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmWorkAllocation_Load);
@@ -449,8 +487,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OptionsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OptionsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WorkAllocationGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
             this.ResumeLayout(false);

@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
         public static String ConnectionString = ProjectFunctionsUtils.ConnectionString;
         public static String ImageConnectionString = ProjectFunctionsUtils.ImageConnectionString;
         ////@"Data Source=cserver;Initial Catalog=SEQKART;User ID=sa;pwd=Seq@2021";
-        
+
 
         //public static void SendSMS(string uid, string password, string message, string no)
         //{
@@ -686,7 +686,7 @@ namespace WindowsFormsApplication1
                 return p;
             }
 
-            catch (Exception )
+            catch (Exception)
 
             {
                 return p;
