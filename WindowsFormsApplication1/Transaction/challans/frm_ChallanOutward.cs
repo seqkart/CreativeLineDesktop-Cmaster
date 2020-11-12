@@ -12,35 +12,35 @@ namespace WindowsFormsApplication1.Transaction.challans
 {
     public partial class Frm_ChallanOutward : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String ImNo { get; set; }
+        public string s1 { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         DataTable dt = new DataTable();
         DataSet dsPopUps = new DataSet();
         int RowIndex = 0;
-        String UpdateTag = "N";
+        string UpdateTag = "N";
 
-        String ProductFeedTag = "N";
+        string ProductFeedTag = "N";
 
         public Frm_ChallanOutward()
         {
             InitializeComponent();
-            dt.Columns.Add("CHOPrdCode", typeof(String));
-            dt.Columns.Add("CHOPrdName", typeof(String));
-            dt.Columns.Add("CHOManualDesc", typeof(String));
-            dt.Columns.Add("CHOArtNo", typeof(String));
-            dt.Columns.Add("CHOArtDesc", typeof(String));
-            dt.Columns.Add("CHOArtID", typeof(String));
-            dt.Columns.Add("CHOColID", typeof(String));
-            dt.Columns.Add("CHOColName", typeof(String));
-            dt.Columns.Add("CHOSizeID", typeof(String));
-            dt.Columns.Add("CHOSizeName", typeof(String));
-            dt.Columns.Add("CHOLotNo", typeof(String));
-            dt.Columns.Add("CHOTotQtyKgs", typeof(String));
-            dt.Columns.Add("CHOUom", typeof(String));
-            dt.Columns.Add("CHORemarks", typeof(String));
-            dt.Columns.Add("CHOKgsType", typeof(String));
-            dt.Columns.Add("CHOTotQty", typeof(String));
+            dt.Columns.Add("CHOPrdCode", typeof(string));
+            dt.Columns.Add("CHOPrdName", typeof(string));
+            dt.Columns.Add("CHOManualDesc", typeof(string));
+            dt.Columns.Add("CHOArtNo", typeof(string));
+            dt.Columns.Add("CHOArtDesc", typeof(string));
+            dt.Columns.Add("CHOArtID", typeof(string));
+            dt.Columns.Add("CHOColID", typeof(string));
+            dt.Columns.Add("CHOColName", typeof(string));
+            dt.Columns.Add("CHOSizeID", typeof(string));
+            dt.Columns.Add("CHOSizeName", typeof(string));
+            dt.Columns.Add("CHOLotNo", typeof(string));
+            dt.Columns.Add("CHOTotQtyKgs", typeof(string));
+            dt.Columns.Add("CHOUom", typeof(string));
+            dt.Columns.Add("CHORemarks", typeof(string));
+            dt.Columns.Add("CHOKgsType", typeof(string));
+            dt.Columns.Add("CHOTotQty", typeof(string));
 
             AutoCompleteStringCollection collection = new AutoCompleteStringCollection
             {
@@ -68,13 +68,13 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDebitPartyName.Text = String.Empty;
-            txtBillingAddress1.Text = String.Empty;
-            txtBillingAddress2.Text = String.Empty;
-            txtBillingAddress3.Text = String.Empty;
-            txtBillingCity.Text = String.Empty;
-            txtBillingState.Text = String.Empty;
-            txtBillingZIP.Text = String.Empty;
+            txtDebitPartyName.Text = string.Empty;
+            txtBillingAddress1.Text = string.Empty;
+            txtBillingAddress2.Text = string.Empty;
+            txtBillingAddress3.Text = string.Empty;
+            txtBillingCity.Text = string.Empty;
+            txtBillingState.Text = string.Empty;
+            txtBillingZIP.Text = string.Empty;
 
 
         }
@@ -147,11 +147,11 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void TxtChallanNo_EditValueChanged(object sender, EventArgs e)
         {
-            txtContactDetails.Text = String.Empty;
-            txtIssuedBy.Text = String.Empty;
-            txtApprovedBy.Text = String.Empty;
-            txtTransporterCode.Text = String.Empty;
-            txtTransporterName.Text = String.Empty;
+            txtContactDetails.Text = string.Empty;
+            txtIssuedBy.Text = string.Empty;
+            txtApprovedBy.Text = string.Empty;
+            txtTransporterCode.Text = string.Empty;
+            txtTransporterName.Text = string.Empty;
 
 
         }
@@ -202,7 +202,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         txtBillingState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
                         txtBillingZIP.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
 
-                       // txtDebitPartyCode.Focus();
+                        // txtDebitPartyCode.Focus();
                         txtContactDetails.Focus();
                         panelControl1.Visible = false;
                     }
@@ -350,7 +350,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                     BarCodeGridView.Focus();
                     BarCodeGridView.MoveLast();
                     BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOManualDesc"];
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
 
                     if (BarCodeGridView.FocusedColumn.FieldName == "CHOManualDesc")
                     {
@@ -378,7 +378,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         BarCodeGridView.Focus();
                         BarCodeGridView.MoveLast();
                         BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
                     }
                     else
                     {
@@ -390,7 +390,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         panelControl1.Visible = false;
                         BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
                         BarCodeGridView.FocusedRowHandle = RowIndex;
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
                         dt.AcceptChanges();
                         ProductFeedTag = "N";
                     }
@@ -409,7 +409,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                     panelControl1.Visible = false;
                     BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOSizeName"];
                     BarCodeGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
                     dt.AcceptChanges();
                 }
                 if (HelpGrid.Text == "CHOSizeName")
@@ -422,7 +422,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                     BarCodeGridView.Focus();
                     BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOLotNo"];
                     BarCodeGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
                     dt.AcceptChanges();
                     BarCodeGridView.ShowEditor();
                 }
@@ -431,7 +431,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtTransporterName.Text = String.Empty;
+            txtTransporterName.Text = string.Empty;
         }
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
@@ -544,7 +544,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 {
                     groupControl1.Focus();
                     txtChallanType.Select();
-                                        txtChallanDate.EditValue = DateTime.Now;
+                    txtChallanDate.EditValue = DateTime.Now;
                     txtChallanType.Focus();
                 }
                 if (s1 == "Edit")
@@ -591,7 +591,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -618,11 +618,11 @@ namespace WindowsFormsApplication1.Transaction.challans
                             }
 
                             DataTable dt_ActMstAddInf = new DataTable();
-                            dt_ActMstAddInf.Columns.Add("AccCode", typeof(String));
-                            dt_ActMstAddInf.Columns.Add("AccAddress1", typeof(String));
-                            dt_ActMstAddInf.Columns.Add("AccAddress2", typeof(String));
-                            dt_ActMstAddInf.Columns.Add("AccAddress3", typeof(String));
-                            dt_ActMstAddInf.Columns.Add("AccZipCode", typeof(String));
+                            dt_ActMstAddInf.Columns.Add("AccCode", typeof(string));
+                            dt_ActMstAddInf.Columns.Add("AccAddress1", typeof(string));
+                            dt_ActMstAddInf.Columns.Add("AccAddress2", typeof(string));
+                            dt_ActMstAddInf.Columns.Add("AccAddress3", typeof(string));
+                            dt_ActMstAddInf.Columns.Add("AccZipCode", typeof(string));
 
                             dt_ActMstAddInf.Rows.Add(
                                 ConvertTo.StringVal(txtDebitPartyCode.Text),
@@ -632,22 +632,22 @@ namespace WindowsFormsApplication1.Transaction.challans
                                 ConvertTo.StringVal(txtBillingZIP.Text));
 
                             DataTable dtCH_Out = new DataTable();
-                            dtCH_Out.Columns.Add("CHOFYR", typeof(String));
-                            dtCH_Out.Columns.Add("CHONO", typeof(Int32));
-                            dtCH_Out.Columns.Add("CHOTYPE", typeof(String));
+                            dtCH_Out.Columns.Add("CHOFYR", typeof(string));
+                            dtCH_Out.Columns.Add("CHONO", typeof(int));
+                            dtCH_Out.Columns.Add("CHOTYPE", typeof(string));
                             dtCH_Out.Columns.Add("CHODATE", typeof(DateTime));
-                            dtCH_Out.Columns.Add("CHOREMARKS", typeof(String));
-                            dtCH_Out.Columns.Add("UnitCode", typeof(String));
-                            dtCH_Out.Columns.Add("CHOPrdCode", typeof(Int32));
-                            dtCH_Out.Columns.Add("CHOManualDesc", typeof(String));
-                            dtCH_Out.Columns.Add("CHOArtID", typeof(Int32));
-                            dtCH_Out.Columns.Add("CHOColID", typeof(Int32));
-                            dtCH_Out.Columns.Add("CHOSizeID", typeof(Int32));
-                            dtCH_Out.Columns.Add("CHOLotNo", typeof(String));
-                            dtCH_Out.Columns.Add("CHOTotQtyKgs", typeof(Decimal));
-                            dtCH_Out.Columns.Add("CHOUom", typeof(String));
-                            dtCH_Out.Columns.Add("CHOKgsType", typeof(String));
-                            dtCH_Out.Columns.Add("CHOTotQty", typeof(Decimal));
+                            dtCH_Out.Columns.Add("CHOREMARKS", typeof(string));
+                            dtCH_Out.Columns.Add("UnitCode", typeof(string));
+                            dtCH_Out.Columns.Add("CHOPrdCode", typeof(int));
+                            dtCH_Out.Columns.Add("CHOManualDesc", typeof(string));
+                            dtCH_Out.Columns.Add("CHOArtID", typeof(int));
+                            dtCH_Out.Columns.Add("CHOColID", typeof(int));
+                            dtCH_Out.Columns.Add("CHOSizeID", typeof(int));
+                            dtCH_Out.Columns.Add("CHOLotNo", typeof(string));
+                            dtCH_Out.Columns.Add("CHOTotQtyKgs", typeof(decimal));
+                            dtCH_Out.Columns.Add("CHOUom", typeof(string));
+                            dtCH_Out.Columns.Add("CHOKgsType", typeof(string));
+                            dtCH_Out.Columns.Add("CHOTotQty", typeof(decimal));
 
                             foreach (DataRow dr in dt.Rows)
                             {
@@ -850,7 +850,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         ProjectFunctions.SpeakError(" Challan Saved Successfully");
                         sqlcon.Close();
                         */
-                        this.Close();
+                        Close();
                     }
                 }
             }
