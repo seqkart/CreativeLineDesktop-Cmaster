@@ -733,7 +733,7 @@
             // 
             // txtStoreQty
             // 
-            this.txtStoreQty.Location = new System.Drawing.Point(576, 191);
+            this.txtStoreQty.Location = new System.Drawing.Point(577, 191);
             this.txtStoreQty.Name = "txtStoreQty";
             this.txtStoreQty.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStoreQty.Properties.Appearance.Options.UseFont = true;
