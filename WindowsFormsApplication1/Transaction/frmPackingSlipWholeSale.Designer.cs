@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmPackingSlipWholeSale
+    partial class FrmPackingSlipWholeSale
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPackingSlipWholeSale));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPackingSlipWholeSale));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -556,7 +556,7 @@
             this.labelControl10.Size = new System.Drawing.Size(44, 13);
             this.labelControl10.TabIndex = 725;
             this.labelControl10.Text = "PO NO. :";
-            this.labelControl10.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl10.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl9
             // 
@@ -565,7 +565,7 @@
             this.labelControl9.Size = new System.Drawing.Size(44, 13);
             this.labelControl9.TabIndex = 725;
             this.labelControl9.Text = "DA NO. :";
-            this.labelControl9.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl9.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl8
             // 
@@ -574,7 +574,7 @@
             this.labelControl8.Size = new System.Drawing.Size(48, 13);
             this.labelControl8.TabIndex = 725;
             this.labelControl8.Text = "GST NO. :";
-            this.labelControl8.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl8.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl7
             // 
@@ -583,7 +583,7 @@
             this.labelControl7.Size = new System.Drawing.Size(60, 13);
             this.labelControl7.TabIndex = 725;
             this.labelControl7.Text = "CITY / SATE :";
-            this.labelControl7.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl7.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl5
             // 
@@ -592,7 +592,7 @@
             this.labelControl5.Size = new System.Drawing.Size(54, 13);
             this.labelControl5.TabIndex = 725;
             this.labelControl5.Text = "ADDRESS :";
-            this.labelControl5.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl5.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl4
             // 
@@ -601,7 +601,7 @@
             this.labelControl4.Size = new System.Drawing.Size(65, 13);
             this.labelControl4.TabIndex = 725;
             this.labelControl4.Text = "Party NAME :";
-            this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
+            this.labelControl4.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // txtGSTNo
             // 
@@ -679,7 +679,7 @@
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Size = new System.Drawing.Size(62, 20);
             this.txtAccCode.TabIndex = 10;
-            this.txtAccCode.EditValueChanged += new System.EventHandler(this.txtAccCode_EditValueChanged);
+            this.txtAccCode.EditValueChanged += new System.EventHandler(this.TxtAccCode_EditValueChanged);
             this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown_1);
             // 
             // txtBarCode
@@ -729,7 +729,7 @@
             this.txtStoreCode.Properties.Appearance.Options.UseFont = true;
             this.txtStoreCode.Size = new System.Drawing.Size(105, 28);
             this.txtStoreCode.TabIndex = 732;
-            this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStoreCode_KeyDown);
+            this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStoreCode_KeyDown);
             // 
             // txtStoreQty
             // 

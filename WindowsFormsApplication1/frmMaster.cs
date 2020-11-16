@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG126")
                 {
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Item Master Addition" };
+                    { S1 = btnAdd.Text, Text = "Item Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -282,7 +282,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG10")
                 {
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnAdd.Text, Text = "Desgination Addition" };
+                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -336,7 +336,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG20")
                 {
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Product Master Addition" };
+                    { S1 = btnAdd.Text, Text = "Product Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -409,7 +409,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG157")
                 {
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnAdd.Text, Text = "Desgination Addition" };
+                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -513,7 +513,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnEdit.Text, Text = "Item Master Edition", PrdCode = CurrentRow["PrdCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Item Master Edition", PrdCode = CurrentRow["PrdCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -699,7 +699,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
 
 
                     frm.ShowDialog(Parent);
@@ -767,7 +767,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnEdit.Text, Text = "Dealer Master Editing", PrdCode = CurrentRow["PrdCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Dealer Master Editing", PrdCode = CurrentRow["PrdCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -836,7 +836,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 

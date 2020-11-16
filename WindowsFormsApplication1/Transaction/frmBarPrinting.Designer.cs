@@ -457,7 +457,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(48, 23);
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // HelpGrid
             // 
@@ -554,7 +554,7 @@
             this.BTNIMPORT2.Size = new System.Drawing.Size(180, 33);
             this.BTNIMPORT2.TabIndex = 710;
             this.BTNIMPORT2.Text = "IMPORT RELIANCE SHEET 2";
-            this.BTNIMPORT2.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.BTNIMPORT2.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // btnImport
             // 
@@ -566,7 +566,7 @@
             this.btnImport.Size = new System.Drawing.Size(180, 33);
             this.btnImport.TabIndex = 709;
             this.btnImport.Text = "IMPORT RELIANCE SHEET 1";
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnImport.Click += new System.EventHandler(this.BtnImport_Click);
             // 
             // btnLoadEANs
             // 
@@ -577,7 +577,7 @@
             this.btnLoadEANs.Text = "Load";
             this.btnLoadEANs.UseVisualStyleBackColor = true;
             this.btnLoadEANs.Visible = false;
-            this.btnLoadEANs.Click += new System.EventHandler(this.btnLoadPreviousBarCodes_Click);
+            this.btnLoadEANs.Click += new System.EventHandler(this.BtnLoadPreviousBarCodes_Click);
             // 
             // label2
             // 
@@ -603,7 +603,7 @@
             this.btnPrint.Size = new System.Drawing.Size(87, 27);
             this.btnPrint.TabIndex = 705;
             this.btnPrint.Text = "Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
             // 
             // txtBarCode
             // 
@@ -614,7 +614,7 @@
             this.txtBarCode.Properties.MaxLength = 40;
             this.txtBarCode.Size = new System.Drawing.Size(217, 20);
             this.txtBarCode.TabIndex = 704;
-            this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarCode_KeyDown);
+            this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
             // 
             // RBBYFLTRT
             // 
@@ -669,7 +669,7 @@
             this.txtDeptCode.Properties.MaxLength = 4;
             this.txtDeptCode.Size = new System.Drawing.Size(58, 20);
             this.txtDeptCode.TabIndex = 694;
-            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDeptCode_KeyDown);
+            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
             // txtDeptDesc
             // 
@@ -710,7 +710,7 @@
             this.labelControl6.Size = new System.Drawing.Size(67, 13);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "STORE CODE";
-            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
+            this.labelControl6.Click += new System.EventHandler(this.LabelControl6_Click);
             // 
             // RBPUR
             // 
@@ -779,12 +779,12 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
-            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog2_FileOk);
             // 
             // frmBarPrinting
             // 

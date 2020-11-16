@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1.Transaction
         DataTable dtAll = new DataTable();
 
         DataTable dt = new DataTable();
-        public String s1 { get; set; }
+        public string S1 { get; set; }
         public String DocNo { get; set; }
         public DateTime DocDate { get; set; }
         public frmProformaMst()
@@ -46,12 +46,12 @@ namespace WindowsFormsApplication1.Transaction
         {
 
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtPIDate.EditValue = DateTime.Now;
                 txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtPIDate.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIMstFEDit '" + DocNo + "','" + Convert.ToDateTime(DocDate).ToString("yyyy-MM-dd") + "'");
@@ -254,7 +254,7 @@ namespace WindowsFormsApplication1.Transaction
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
 
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Clear();
                         }
 
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
 
                             sqlcom.CommandType = CommandType.Text;
@@ -359,11 +359,11 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnSaveNew_Click(object sender, EventArgs e)
+        private void BtnSaveNew_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
-                s1 = "&Add";
+                S1 = "&Add";
                 AddRowsToDatatable();
                 InfoGridView.CloseEditor();
                 InfoGridView.UpdateCurrentRow();
@@ -377,7 +377,7 @@ namespace WindowsFormsApplication1.Transaction
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
 

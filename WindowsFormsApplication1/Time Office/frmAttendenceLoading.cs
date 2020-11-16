@@ -370,7 +370,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
 
         }
