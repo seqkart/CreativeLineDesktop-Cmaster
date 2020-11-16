@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class FrmTransaction : DevExpress.XtraEditors.XtraForm
     {
-        RangeSelector _RangeSelector = new RangeSelector()
+        readonly RangeSelector _RangeSelector = new RangeSelector()
         { StartDate = DateTime.Now.AddDays(-1), EndDate = DateTime.Now };
 
         public FrmTransaction() { InitializeComponent(); }
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
             PrintLogWin.PrintLog("ProcedureName : " + ProcedureName);
         }
 
-        private void frmTransaction_Load(object sender, EventArgs e)
+        private void FrmTransaction_Load(object sender, EventArgs e)
         {
             PrintLogWin.PrintLog("frmTransaction_Load ********** " + GlobalVariables.ProgCode);
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {

@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1
         static extern bool SetForegroundWindow(IntPtr hWnd);
 
 
-        private bool isDebug = false;
+        private readonly bool isDebug = false;
         public FrmLogins()
         {
             InitializeComponent();
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1
 
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 

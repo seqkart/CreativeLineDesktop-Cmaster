@@ -46,21 +46,18 @@ namespace WindowsFormsApplication1.Transaction.challans
             {
                 "ROHIT AGGARWAL",
                 "BHUPINDER WARAICH",
-                "RAJAT AGGARWAL"
+                "RAJAT AGGARWAL",
+                "LALIT KUMAR"
             };
             txtIssuedBy.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtIssuedBy.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtIssuedBy.MaskBox.AutoCompleteCustomSource = collection;
-
-            AutoCompleteStringCollection collection1 = new AutoCompleteStringCollection
-            {
-                "ROHIT AGGARWAL",
-                "BHUPINDER WARAICH",
-                "RAJAT AGGARWAL"
-            };
             txtApprovedBy.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtApprovedBy.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtApprovedBy.MaskBox.AutoCompleteCustomSource = collection;
+
+
+           
 
 
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");

@@ -873,7 +873,8 @@ namespace WindowsFormsApplication1.Transaction
                         HelpGrid.DataSource = dtNew;
                         HelpGridView.BestFitColumns();
 
-                        HelpGridView.Columns[2].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+                        HelpGridView.Columns[1].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+                        //HelpGridView.Columns[2].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
                         HelpGridView.FocusedRowHandle = 0;
                     }
                     else
