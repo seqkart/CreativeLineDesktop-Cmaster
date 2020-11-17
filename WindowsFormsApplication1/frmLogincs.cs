@@ -3,6 +3,7 @@ using SeqKartLibrary;
 using System;
 using System.Data;
 using System.IO;
+using System.Net;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -310,7 +311,7 @@ namespace WindowsFormsApplication1
 
 
             {
-
+                NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@123");
                 if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
                 {
 
@@ -332,6 +333,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
+                    NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@123");
                     System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
                     ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
                     string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
@@ -348,50 +350,7 @@ namespace WindowsFormsApplication1
                     Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
                     SplashScreenManager.CloseForm();
                 }
-                //}
-                //else
-
-                //{
-
-                //    if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
-                //    {
-
-                //        string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
-                //        string[] bakList = Directory.GetFiles(srcDir, "*.bak");
-
-                //        if (Directory.Exists(srcDir))
-                //        {
-                //            foreach (string f in bakList)
-                //            {
-                //                File.Delete(f);
-                //            }
-
-                //        }
-
-                //        Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                //        Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                //        SplashScreenManager.CloseForm();
-                //    }
-                //    else
-                //    {
-                //        System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
-                //        ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
-                //        string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
-                //        string[] bakList = Directory.GetFiles(srcDir, "*.bak");
-                //        if (Directory.Exists(srcDir))
-                //        {
-                //            foreach (string f in bakList)
-                //            {
-                //                File.Delete(f);
-                //            }
-
-                //        }
-                //        Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                //        Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                //        SplashScreenManager.CloseForm();
-                //    }
-                //}
-
+             
 
 
                 ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());

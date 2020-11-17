@@ -55,6 +55,8 @@
             this.txtOrderBy = new DevExpress.XtraEditors.TextEdit();
             this.txtstatusTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtNfaTag = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtPrinters = new DevExpress.XtraEditors.ComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).BeginInit();
@@ -69,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderBy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrinters.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -124,6 +127,7 @@
             this.txtFormDesc.Properties.MaxLength = 150;
             this.txtFormDesc.Size = new System.Drawing.Size(463, 20);
             this.txtFormDesc.TabIndex = 4;
+            this.txtFormDesc.EditValueChanged += new System.EventHandler(this.TxtFormDesc_EditValueChanged);
             // 
             // label8
             // 
@@ -180,7 +184,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(101, 41);
+            this.HelpGrid.Location = new System.Drawing.Point(81, 294);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(470, 269);
@@ -322,9 +326,9 @@
             this.txtstatusTag.Properties.MaxLength = 1;
             this.txtstatusTag.Size = new System.Drawing.Size(41, 20);
             this.txtstatusTag.TabIndex = 3;
-            this.txtstatusTag.Enter += new System.EventHandler(this.txtstatusTag_Enter);
-            this.txtstatusTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtstatusTag_KeyDown);
-            this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtstatusTag_Validating);
+            this.txtstatusTag.EditValueChanged += new System.EventHandler(this.TxtstatusTag_EditValueChanged);
+            this.txtstatusTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtstatusTag_KeyDown);
+            this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtstatusTag_Validating);
             // 
             // txtNfaTag
             // 
@@ -341,6 +345,23 @@
             this.txtNfaTag.TabIndex = 7;
             this.txtNfaTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtNfaTag_Validating);
             // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(213, 256);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(34, 13);
+            this.labelControl1.TabIndex = 332;
+            this.labelControl1.Text = "Printer";
+            // 
+            // txtPrinters
+            // 
+            this.txtPrinters.Location = new System.Drawing.Point(377, 268);
+            this.txtPrinters.Name = "txtPrinters";
+            this.txtPrinters.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtPrinters.Size = new System.Drawing.Size(100, 20);
+            this.txtPrinters.TabIndex = 399;
+            // 
             // frmNewFormAAddEdit
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
@@ -349,6 +370,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 332);
             this.ControlBox = false;
+            this.Controls.Add(this.txtPrinters);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOrderBy);
@@ -368,6 +390,7 @@
             this.Controls.Add(this.txtMenuName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtFormName);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtstatusTag);
@@ -393,6 +416,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderBy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPrinters.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -425,5 +449,7 @@
         private DevExpress.XtraEditors.TextEdit txtOrderBy;
         private DevExpress.XtraEditors.ComboBoxEdit txtstatusTag;
         private DevExpress.XtraEditors.ComboBoxEdit txtNfaTag;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.ComboBoxEdit txtPrinters;
     }
 }

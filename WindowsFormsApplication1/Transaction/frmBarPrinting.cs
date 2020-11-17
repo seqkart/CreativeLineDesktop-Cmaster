@@ -606,6 +606,7 @@ namespace WindowsFormsApplication1.Transaction
                                         sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                                         sqlcom.ExecuteNonQuery();
                                         sqlcom.Parameters.Clear();
+                                        SplashScreenManager.CloseForm();
                                     }
                                 }
                             }
@@ -703,6 +704,7 @@ namespace WindowsFormsApplication1.Transaction
 
                                     sqlcom.ExecuteNonQuery();
                                     sqlcom.Parameters.Clear();
+                                    SplashScreenManager.CloseForm();
                                 }
                             }
 
@@ -884,9 +886,9 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -936,7 +938,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1196,8 +1198,6 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }
             }
-
-
 
             XtraMessageBox.Show("Process Completed");
         }

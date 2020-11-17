@@ -2343,7 +2343,7 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(144, 443);
+            this.simpleButton2.Location = new System.Drawing.Point(146, 443);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(127, 36);
             this.simpleButton2.TabIndex = 2;

@@ -33,14 +33,24 @@ namespace WindowsFormsApplication1
             }
         }
 
+
+        private void LoadPrinters()
+        {
+            foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
+            {
+                txtPrinters.Properties.Items.Add(printer);
+            }
+        }
         private void frmNewFormAAddEdit_Load(object sender, EventArgs e)
         {
             try
             {
+                LoadPrinters();
                 SetMyControls();
                 if (s1 == "&Add")
                 {
                     txtFormCode.Focus();
+                   
                 }
                 if (s1 == "Edit")
                 {
@@ -61,6 +71,7 @@ namespace WindowsFormsApplication1
                         txtRoleCode.Text = ds.Tables[0].Rows[0]["RoleCode"].ToString();
                         txtRoleDesc.Text = ds.Tables[0].Rows[0]["RoleDesc"].ToString();
                         txtOrderBy.Text = ds.Tables[0].Rows[0]["OrderBy"].ToString();
+                        txtPrinters.SelectedItem= ds.Tables[0].Rows[0]["ProgPrinterName"].ToString();
                     }
                 }
             }
@@ -224,7 +235,7 @@ namespace WindowsFormsApplication1
                     {
                         if (ValidateData())
                         {
-                            var str = "Insert Into ProgramMaster(OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName)values(";
+                            var str = "Insert Into ProgramMaster(OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName,ProgPrinterName)values(";
                             str = str + "'" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtRoleCode.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtFormCode.Text.Trim()) + "',";
@@ -235,6 +246,7 @@ namespace WindowsFormsApplication1
                             str = str + "'" + ProjectFunctions.SqlString(txtstatusTag.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtNfaTag.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "')";
+                            str = str + "'" + ProjectFunctions.SqlString(txtPrinters.Text.Trim()) + "')";
                             ProjectFunctions.GetDataSet(str);
                             ProjectFunctions.SpeakError("Entry Added Successfully");
                         }
@@ -256,6 +268,7 @@ namespace WindowsFormsApplication1
                         str = str + "ProgActive ='" + ProjectFunctions.SqlString(txtstatusTag.Text.Trim()) + "',";
                         str = str + "ProgNFA ='" + ProjectFunctions.SqlString(txtNfaTag.Text.Trim()) + "',";
                         str = str + "ProgProcName ='" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "'";
+                        str = str + "ProgPrinterName ='" + ProjectFunctions.SqlString(txtPrinters.Text.Trim()) + "'";
                         str = str + " Where ProgCode='" + ProgCode + "'";
                         ProjectFunctions.GetDataSet(str);
                         ProjectFunctions.SpeakError("Entry Updated Successfully");
@@ -289,12 +302,12 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                ProjectFunctions.SpeakError("Valid Values Are Y/N");
+                ProjectFunctions.SpeakError("Valid Value Are Y/N");
                 txtNfaTag.Focus();
             }
         }
 
-        private void txtstatusTag_Validating(object sender, CancelEventArgs e)
+        private void TxtstatusTag_Validating(object sender, CancelEventArgs e)
         {
             if (txtstatusTag.Text.ToUpper() == "Y" || (txtstatusTag.Text.ToUpper() == "N"))
             {
@@ -324,14 +337,19 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtstatusTag_KeyDown(object sender, KeyEventArgs e)
+        private void TxtstatusTag_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
 
-        private void txtstatusTag_Enter(object sender, EventArgs e)
+        private void TxtstatusTag_EditValueChanged(object sender, EventArgs e)
         {
-            txtstatusTag.Text = txtNfaTag.Text;
+            
+        }
+
+        private void TxtFormDesc_EditValueChanged(object sender, EventArgs e)
+        {
+            txtFormDesc.Text = txtFormName.Text;
         }
     }
 }

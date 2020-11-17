@@ -45,6 +45,19 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                //DataSet dsFormName = ProjectFunctions.GetDataSet("Select ProgFormLink,ProgDesc from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'");
+                //if (dsFormName.Tables[0].Rows.Count > 0)
+                //{
+
+                //    string FormName = dsFormName.Tables[0].Rows[0]["ProgFormLink"].ToString();
+                //    Type t = Type.GetType(FormName);
+                //    DevExpress.XtraEditors.XtraForm f = Activator.CreateInstance(t) as DevExpress.XtraEditors.XtraForm;
+                //    f.Text = dsFormName.Tables[0].Rows[0]["ProgDesc"].ToString() + " Addition";
+                //    f.ShowDialog(this.Parent);
+                //}
+
+
+
                 if (GlobalVariables.ProgCode == "PROG180")
                 {
                     WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
