@@ -168,7 +168,7 @@
             crossTabRowDefinition2.Visible = false;
             this.xrCrossTab1.RowDefinitions.AddRange(new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition[] {
             crossTabRowDefinition1,
-            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(55.20833F),
+            new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(55.20834F),
             new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(24.99999F),
             crossTabRowDefinition2,
             new DevExpress.XtraReports.UI.CrossTab.CrossTabRowDefinition(24.99999F),
@@ -458,7 +458,7 @@
             this.xrCharacterComb2,
             this.xrCharacterComb1,
             this.xrLabel1});
-            this.PageHeader.HeightF = 132.3333F;
+            this.PageHeader.HeightF = 86.33329F;
             this.PageHeader.Name = "PageHeader";
             // 
             // xrCharacterComb2
@@ -503,7 +503,7 @@
             this.crossTabHeaderStyle1,
             this.crossTabDataStyle1,
             this.crossTabTotalStyle1});
-            this.Version = "20.1";
+            this.Version = "20.2";
             ((System.ComponentModel.ISupportInitialize)(this.xrCrossTab1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

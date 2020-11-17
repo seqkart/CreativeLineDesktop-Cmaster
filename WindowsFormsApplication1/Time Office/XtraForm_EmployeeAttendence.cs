@@ -512,7 +512,7 @@ namespace WindowsFormsApplication1.Time_Office
 
 
 
-        async void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
+        async void WindowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
         {
             string tag = ((WindowsUIButton)e.Button).Tag.ToString();
 
@@ -915,8 +915,13 @@ namespace WindowsFormsApplication1.Time_Office
             if (!disableDailyWagerCode)
             {
                 PrintLogWin.PrintLog("+++++++++++++ B");
-                if (ComparisonUtils.IsEmpty(timeEdit_Time_In_DW.EditValue) ||
-                        ComparisonUtils.IsEmpty(timeEdit_Time_Out_DW.EditValue))
+                if (ComparisonUtils.IsEmpty(timeEdit_Time_In_First.EditValue) ||
+                        ComparisonUtils.IsEmpty(timeEdit_Time_Out_First.EditValue) ||
+                        ComparisonUtils.IsEmpty(timeEdit_Time_In_Last.EditValue) ||
+                        ComparisonUtils.IsEmpty(timeEdit_Time_Out_Last.EditValue))
+
+                //if (ComparisonUtils.IsEmpty(timeEdit_Time_In_DW.EditValue) ||
+                //      ComparisonUtils.IsEmpty(timeEdit_Time_Out_DW.EditValue))
                 {
                     ProjectFunctionsUtils.SpeakError("Please Enter Time In and Time Out");
                     timeEdit_Time_In_DW.Focus();
@@ -935,7 +940,13 @@ namespace WindowsFormsApplication1.Time_Office
                     if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0)
                     {
                         if (ComparisonUtils.IsEmpty(timeEdit_Time_In_First.EditValue) ||
+                        ComparisonUtils.IsEmpty(timeEdit_Time_Out_First.EditValue) ||
+                        ComparisonUtils.IsEmpty(timeEdit_Time_In_Last.EditValue) ||
                         ComparisonUtils.IsEmpty(timeEdit_Time_Out_Last.EditValue))
+
+
+                        //if (ComparisonUtils.IsEmpty(timeEdit_Time_In_First.EditValue) ||
+                        //ComparisonUtils.IsEmpty(timeEdit_Time_Out_Last.EditValue))
                         {
                             ProjectFunctionsUtils.SpeakError("Please Enter Time In and Time Out Inputs");
                             timeEdit_Time_In_First.Focus();
@@ -1649,8 +1660,8 @@ namespace WindowsFormsApplication1.Time_Office
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0)
                             {
                                 timeEdit_Time_In_First.Enabled = true;
-                                timeEdit_Time_Out_First.Enabled = false;
-                                timeEdit_Time_In_Last.Enabled = false;
+                                timeEdit_Time_Out_First.Enabled = true;
+                                timeEdit_Time_In_Last.Enabled = true;
                                 timeEdit_Time_Out_Last.Enabled = true;
 
                                 timeEdit_Time_In_First.BackColor = Color.FromArgb(255, 255, 192);
@@ -1662,8 +1673,8 @@ namespace WindowsFormsApplication1.Time_Office
                             {
                                 timeEdit_Time_In_First.Enabled = true;
                                 timeEdit_Time_Out_First.Enabled = true;
-                                timeEdit_Time_In_Last.Enabled = false;
-                                timeEdit_Time_Out_Last.Enabled = false;
+                                timeEdit_Time_In_Last.Enabled = true;
+                                timeEdit_Time_Out_Last.Enabled = true;
 
                                 timeEdit_Time_In_First.BackColor = Color.FromArgb(255, 255, 192);
                                 timeEdit_Time_Out_First.BackColor = Color.FromArgb(255, 255, 192);
@@ -1675,8 +1686,8 @@ namespace WindowsFormsApplication1.Time_Office
                         {
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0)
                             {
-                                timeEdit_Time_Out_First.Enabled = false;
-                                timeEdit_Time_In_Last.Enabled = false;
+                                timeEdit_Time_Out_First.Enabled = true;
+                                timeEdit_Time_In_Last.Enabled = true;
                             }
                             else
                             {
@@ -1705,8 +1716,8 @@ namespace WindowsFormsApplication1.Time_Office
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0)
                             {
                                 timeEdit_Time_In_First.Enabled = true;
-                                timeEdit_Time_Out_First.Enabled = false;
-                                timeEdit_Time_In_Last.Enabled = false;
+                                timeEdit_Time_Out_First.Enabled = true;
+                                timeEdit_Time_In_Last.Enabled = true;
                                 timeEdit_Time_Out_Last.Enabled = true;
 
                                 timeEdit_Time_In_First.BackColor = Color.FromArgb(255, 255, 192);
@@ -1718,8 +1729,8 @@ namespace WindowsFormsApplication1.Time_Office
                             {
                                 timeEdit_Time_In_First.Enabled = true;
                                 timeEdit_Time_Out_First.Enabled = true;
-                                timeEdit_Time_In_Last.Enabled = false;
-                                timeEdit_Time_Out_Last.Enabled = false;
+                                timeEdit_Time_In_Last.Enabled = true;
+                                timeEdit_Time_Out_Last.Enabled = true;
 
                                 timeEdit_Time_In_First.BackColor = Color.FromArgb(255, 255, 192);
                                 timeEdit_Time_Out_First.BackColor = Color.FromArgb(255, 255, 192);
@@ -1731,8 +1742,8 @@ namespace WindowsFormsApplication1.Time_Office
                         {
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0)
                             {
-                                timeEdit_Time_Out_First.Enabled = false;
-                                timeEdit_Time_In_Last.Enabled = false;
+                                timeEdit_Time_Out_First.Enabled = true;
+                                timeEdit_Time_In_Last.Enabled = true;
                             }
                             else
                             {
@@ -1755,8 +1766,8 @@ namespace WindowsFormsApplication1.Time_Office
                     {
                         SetEditValue(timeEdit_Time_In_First, timeEdit_Time_In_First_Main.EditValue);
                         SetEditValue(timeEdit_Time_Out_First, timeEdit_Time_Out_First_Main.EditValue);
-                        SetEditValue(timeEdit_Time_In_Last, null);
-                        SetEditValue(timeEdit_Time_Out_Last, null);
+                        SetEditValue(timeEdit_Time_In_Last, timeEdit_Time_In_Last_Main.EditValue);
+                        SetEditValue(timeEdit_Time_Out_Last, timeEdit_Time_Out_Last_Main.EditValue);
 
                         timeEdit_Time_In_First.Enabled = true;
                         timeEdit_Time_Out_First.Enabled = true;
@@ -1791,8 +1802,8 @@ namespace WindowsFormsApplication1.Time_Office
                     }
                     if (IsString.IsEqualTo(clearStr, "0011"))
                     {
-                        SetEditValue(timeEdit_Time_In_First, null);
-                        SetEditValue(timeEdit_Time_Out_First, null);
+                        SetEditValue(timeEdit_Time_In_First, timeEdit_Time_In_First_Main.EditValue);
+                        SetEditValue(timeEdit_Time_Out_First, timeEdit_Time_Out_First_Main.EditValue);
                         SetEditValue(timeEdit_Time_In_Last, timeEdit_Time_In_Last_Main.EditValue);
                         SetEditValue(timeEdit_Time_Out_Last, timeEdit_Time_Out_Last_Main.EditValue);
 
@@ -2075,12 +2086,12 @@ namespace WindowsFormsApplication1.Time_Office
             totalWorkingHours_Label_DW.Text = ConvertTo.MinutesToHours(totalWorkingHours_Text_DW.EditValue);
         }
 
-        private void txtDutyHours_DW_EditValueChanged(object sender, EventArgs e)
+        private void TxtDutyHours_DW_EditValueChanged(object sender, EventArgs e)
         {
             txtDutyHours_Label_DW.Text = ConvertTo.MinutesToHours(txtDutyHours_DW.EditValue);
         }
 
-        private void txtTeaBreakTime_EditValueChanged(object sender, EventArgs e)
+        private void TxtTeaBreakTime_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -2088,7 +2099,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_Out_First_Validating(object sender, CancelEventArgs e)
+        private void TimeEdit_Time_Out_First_Validating(object sender, CancelEventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -2100,14 +2111,6 @@ namespace WindowsFormsApplication1.Time_Office
         private void timeEdit_Time_Out_First_InvalidValue(object sender, DevExpress.XtraEditors.Controls.InvalidValueExceptionEventArgs e)
         {
 
-        }
-
-
-
-
-        private void DateAttendance_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            txtEmpID.Focus();
         }
     }
 
