@@ -606,9 +606,10 @@ namespace WindowsFormsApplication1.Transaction
                                         sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                                         sqlcom.ExecuteNonQuery();
                                         sqlcom.Parameters.Clear();
-                                        SplashScreenManager.CloseForm();
+                                        
                                     }
                                 }
+                                SplashScreenManager.CloseForm();
                             }
                             else
                             {
@@ -704,10 +705,12 @@ namespace WindowsFormsApplication1.Transaction
 
                                     sqlcom.ExecuteNonQuery();
                                     sqlcom.Parameters.Clear();
-                                    SplashScreenManager.CloseForm();
+                                    
                                 }
-                            }
 
+                                SplashScreenManager.CloseForm();
+                            }
+                           
 
 
                             ProjectFunctions.SpeakError("Barcode Generated Successfully");
@@ -859,8 +862,8 @@ namespace WindowsFormsApplication1.Transaction
 
 
                     DataTable dtNew = dsPopUps.Tables[2].Clone();
-                    //DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%' And GrpCode='" + dsGroups.Tables[0].Rows[0]["ARTSECTIONID"].ToString() + "' And GrpSubCode='" + dsGroups.Tables[0].Rows[0]["ARTSBSECTIONID"].ToString() + "'");
-                    DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
+                    DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%' And GrpCode='" + dsGroups.Tables[0].Rows[0]["ARTSECTIONID"].ToString() + "' And GrpSubCode='" + dsGroups.Tables[0].Rows[0]["ARTSBSECTIONID"].ToString() + "'");
+                    //DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
 
                     foreach (DataRow dr in dtRow)
                     {
