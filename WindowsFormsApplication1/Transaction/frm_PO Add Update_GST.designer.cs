@@ -311,7 +311,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(43, 103);
+            this.labelControl3.Location = new System.Drawing.Point(51, 103);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(58, 13);
             this.labelControl3.TabIndex = 14;
@@ -354,7 +354,7 @@
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(54, 176);
+            this.labelControl23.Location = new System.Drawing.Point(66, 176);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(43, 13);
             this.labelControl23.TabIndex = 45;
@@ -914,7 +914,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(58, 227);
+            this.labelControl12.Location = new System.Drawing.Point(57, 227);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(52, 13);
             this.labelControl12.TabIndex = 18;
@@ -972,7 +972,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(56, 200);
+            this.labelControl8.Location = new System.Drawing.Point(65, 200);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(44, 13);
             this.labelControl8.TabIndex = 23;
@@ -980,7 +980,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(54, 129);
+            this.labelControl7.Location = new System.Drawing.Point(62, 129);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(47, 13);
             this.labelControl7.TabIndex = 21;
@@ -1568,7 +1568,7 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(47, 78);
+            this.labelControl13.Location = new System.Drawing.Point(54, 78);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(55, 13);
             this.labelControl13.TabIndex = 14;
@@ -1632,7 +1632,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1085, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1099, 26);
             this.Menu_ToolStrip.TabIndex = 24;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1719,7 +1719,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1085, 483);
+            this.ClientSize = new System.Drawing.Size(1099, 492);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.EntryInfo_GridCtrl);

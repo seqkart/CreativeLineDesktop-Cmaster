@@ -267,7 +267,7 @@ namespace WindowsFormsApplication1
                         str = str + "ProgInMenuGroup ='" + ProjectFunctions.SqlString(txtSMenuName.Text.Trim()) + "',";
                         str = str + "ProgActive ='" + ProjectFunctions.SqlString(txtstatusTag.Text.Trim()) + "',";
                         str = str + "ProgNFA ='" + ProjectFunctions.SqlString(txtNfaTag.Text.Trim()) + "',";
-                        str = str + "ProgProcName ='" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "'";
+                        str = str + "ProgProcName ='" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "',";
                         str = str + "ProgPrinterName ='" + ProjectFunctions.SqlString(txtPrinters.Text.Trim()) + "'";
                         str = str + " Where ProgCode='" + ProgCode + "'";
                         ProjectFunctions.GetDataSet(str);
@@ -349,7 +349,7 @@ namespace WindowsFormsApplication1
 
         private void TxtFormDesc_EditValueChanged(object sender, EventArgs e)
         {
-            txtFormDesc.Text = txtFormName.Text;
+          
         }
     }
 }

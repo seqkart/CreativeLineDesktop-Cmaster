@@ -76,7 +76,7 @@
             this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label3.Appearance.Options.UseBackColor = true;
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(128, 23);
+            this.label3.Location = new System.Drawing.Point(131, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 15);
             this.label3.TabIndex = 21;
@@ -101,7 +101,7 @@
             this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Appearance.Options.UseBackColor = true;
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(108, 50);
+            this.label1.Location = new System.Drawing.Point(111, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 15);
             this.label1.TabIndex = 23;
@@ -109,34 +109,38 @@
             // 
             // btnClose
             // 
-            this.btnClose.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.Appearance.BackColor = System.Drawing.Color.White;
             this.btnClose.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.btnClose.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnClose.Appearance.Options.UseBackColor = true;
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
+            this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
             this.btnClose.Location = new System.Drawing.Point(256, 237);
             this.btnClose.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnClose.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(85, 23);
+            this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnClose.Size = new System.Drawing.Size(85, 25);
             this.btnClose.TabIndex = 45;
             this.btnClose.Text = "Exit";
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnLogin
             // 
-            this.btnLogin.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnLogin.Appearance.BackColor = System.Drawing.Color.White;
             this.btnLogin.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnLogin.Appearance.Options.UseBackColor = true;
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.Appearance.Options.UseForeColor = true;
+            this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
             this.btnLogin.Location = new System.Drawing.Point(165, 237);
             this.btnLogin.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnLogin.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(85, 23);
+            this.btnLogin.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.btnLogin.Size = new System.Drawing.Size(85, 25);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
@@ -151,7 +155,7 @@
             this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseBackColor = true;
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(107, 126);
+            this.label2.Location = new System.Drawing.Point(110, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 15);
             this.label2.TabIndex = 23;
@@ -163,7 +167,7 @@
             this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Appearance.Options.UseBackColor = true;
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(136, 154);
+            this.label4.Location = new System.Drawing.Point(139, 154);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 15);
             this.label4.TabIndex = 23;
@@ -175,7 +179,7 @@
             this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Appearance.Options.UseBackColor = true;
             this.label5.Appearance.Options.UseFont = true;
-            this.label5.Location = new System.Drawing.Point(85, 182);
+            this.label5.Location = new System.Drawing.Point(88, 182);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 23;
@@ -187,7 +191,7 @@
             this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Appearance.Options.UseBackColor = true;
             this.label6.Appearance.Options.UseFont = true;
-            this.label6.Location = new System.Drawing.Point(100, 210);
+            this.label6.Location = new System.Drawing.Point(103, 210);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 15);
             this.label6.TabIndex = 23;
@@ -242,7 +246,7 @@
             // 
             this.btnBackup.Appearance.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnBackup.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnBackup.Appearance.ForeColor = System.Drawing.Color.White;
+            this.btnBackup.Appearance.ForeColor = System.Drawing.Color.Transparent;
             this.btnBackup.Appearance.Options.UseBackColor = true;
             this.btnBackup.Appearance.Options.UseFont = true;
             this.btnBackup.Appearance.Options.UseForeColor = true;
@@ -280,11 +284,11 @@
             this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.Appearance.Options.UseBackColor = true;
             this.label7.Appearance.Options.UseFont = true;
-            this.label7.Location = new System.Drawing.Point(135, 99);
+            this.label7.Location = new System.Drawing.Point(141, 99);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(23, 15);
+            this.label7.Size = new System.Drawing.Size(20, 15);
             this.label7.TabIndex = 58;
-            this.label7.Text = "OTP";
+            this.label7.Text = "Otp";
             // 
             // label8
             // 

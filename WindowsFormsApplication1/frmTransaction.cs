@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
-                    frmInvoiceMstAdd frm = new frmInvoiceMstAdd() { S1 = btnAdd.Text, Text = "Invoice Master Addition" };
+                    FrmInvoiceMstAdd frm = new FrmInvoiceMstAdd() { S1 = btnAdd.Text, Text = "Invoice Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -491,7 +491,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmInvoiceMstAdd frm = new frmInvoiceMstAdd()
+                    FrmInvoiceMstAdd frm = new FrmInvoiceMstAdd()
                     {
                         S1 = btnEdit.Text,
                         Text = "Invoice Master Edition",
