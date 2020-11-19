@@ -748,7 +748,7 @@ namespace WindowsFormsApplication1.Time_Office
                     param.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
                     param.Add("@Returnvalue", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
 
-                    string intResult = await reposGen.executeNonQuery_SP_Async(str, param);
+                    string intResult = await reposGen.ExecuteNonQuery_SP_Async(str, param);
                     if (intResult.Equals("0"))
                     {
                         int outputVal = param.Get<int>("@output");
@@ -843,7 +843,7 @@ namespace WindowsFormsApplication1.Time_Office
                     param.Add("@Returnvalue", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
 
 
-                    string intResult = await reposGen.executeNonQuery_SP_Async(str, param);
+                    string intResult = await reposGen.ExecuteNonQuery_SP_Async(str, param);
                     if (intResult.Equals("0"))
                     {
                         int outputVal = param.Get<int>("@output");

@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 param.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
                 param.Add("@Returnvalue", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
 
-                string intResult = reposGen.executeNonQuery_SP(str, param);
+                string intResult = reposGen.ExecuteNonQuery_SP(str, param);
                 if (intResult.Equals("0"))
                 {
                     int outputVal = param.Get<int>("@output");
@@ -397,7 +397,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             {
                 gridView_GatePassData.Columns.Clear();
 
-                string _storedProcedre = SQL_QUERIES.sp_GatePassData_Daily_List() + " '" + txtEmpCode.EditValue + "', '" + ConvertTo.DateFormatDb(DtDate.EditValue) + "'";
+                string _storedProcedre = SQL_QUERIES.Sp_GatePassData_Daily_List() + " '" + txtEmpCode.EditValue + "', '" + ConvertTo.DateFormatDb(DtDate.EditValue) + "'";
                 //DataSet ds = ProgramMasterData.GetData(GlobalVariables.ProgCode, _params);
                 DataSet _ds = ProjectFunctionsUtils.GetDataSet(_storedProcedre);
 

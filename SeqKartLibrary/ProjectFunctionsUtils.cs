@@ -4,11 +4,8 @@ using SeqKartSecurity.Connections;
 using System;
 using System.Collections.Generic;
 using System.Data;
-
 using System.Data.SqlClient;
-//using CrystalDecisions.;
 using System.Linq;
-//using CrystalDecisions.CrystalReports.Engine;
 using System.Net;
 using System.Speech.Synthesis;
 using System.Threading.Tasks;
@@ -250,9 +247,9 @@ namespace SeqKartLibrary
                     }
                     return _VarDataSet;
                 }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+
                 catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+
                 {
                     System.Diagnostics.Debug.WriteLine("ProjectFunctionUtils => GetDataSet => " + Query);
                     System.Diagnostics.Debug.WriteLine("ProjectFunctionUtils => GetDataSet => " + ex);
@@ -706,7 +703,7 @@ namespace SeqKartLibrary
         {
             RepGen repGen = new RepGen();
 
-            string pass = repGen.returnScalar("SELECT password FROM tbl_Passwords WHERE p_type='entry_date_edit'", new Dapper.DynamicParameters());
+            string pass = repGen.ReturnScalar("SELECT password FROM tbl_Passwords WHERE p_type='entry_date_edit'", new Dapper.DynamicParameters());
 
             return pass;
 
