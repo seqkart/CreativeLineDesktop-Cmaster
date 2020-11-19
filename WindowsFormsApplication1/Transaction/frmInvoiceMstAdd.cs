@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmInvoiceMstAdd : DevExpress.XtraEditors.XtraForm
+    public partial class FrmInvoiceMstAdd : DevExpress.XtraEditors.XtraForm
     {
         public String ProgCode { get; set; }
         public string S1 { get; set; }
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
         Decimal AccMRPMarkDown = 0;
 #pragma warning restore CS0169 // The field 'frmInvoiceMstAdd.SearchField' is never used
         DataSet dsPopUps = new DataSet();
-        public frmInvoiceMstAdd()
+        public FrmInvoiceMstAdd()
         {
             InitializeComponent();
             dt.Columns.Add("SIDBARCODE", typeof(String));
@@ -252,16 +252,35 @@ namespace WindowsFormsApplication1
             {
 
 
+                DataSet dsActMst = ProjectFunctions.GetDataSet("Select AccFixBarCodeTag,isnull(AccMrpMarkDown,0) as AccMrpMarkDown from ActMst where AccCode='" + txtDebitPartyCode.Text + "'");
+
+
+
                 Decimal WSP = 0;
                 if (chInclusive.Checked)
                 {
-                    Decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
-                    WSP = Convert.ToDecimal(dr["SIDARTMRP"]) - ((Convert.ToDecimal(dr["SIDARTMRP"]) * TaxRate) / (100 + TaxRate));
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" && Convert.ToDecimal(dsActMst.Tables[0].Rows[0]["AccMrpMarkDown"]) == 0)
+                    {
+                        WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
+                    }
+                    else
+                    {
+
+                        Decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
+                        WSP = Convert.ToDecimal(dr["SIDARTMRP"]) - ((Convert.ToDecimal(dr["SIDARTMRP"]) * TaxRate) / (100 + TaxRate));
+                    }
                 }
 
                 else
                 {
-                    WSP = (Convert.ToDecimal(dr["SIDARTMRP"]));
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" && Convert.ToDecimal(dsActMst.Tables[0].Rows[0]["AccMrpMarkDown"]) == 0)
+                    {
+                        WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
+                    }
+                    else
+                    {
+                        WSP = (Convert.ToDecimal(dr["SIDARTMRP"]));
+                    }
                 }
 
 
@@ -272,7 +291,15 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    WSP = WSP - ((WSP * Convert.ToDecimal(dr["ARTMARGIN"])) / 100);
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" && Convert.ToDecimal(dsActMst.Tables[0].Rows[0]["AccMrpMarkDown"]) == 0)
+                    {
+                        WSP = WSP;
+                    }
+                    else
+                    {
+                        WSP = WSP - ((WSP * Convert.ToDecimal(dr["ARTMARGIN"])) / 100);
+                    }
+
 
                 }
                 dr["SIDARTWSP"] = Math.Round(WSP, 2);
@@ -2159,11 +2186,6 @@ namespace WindowsFormsApplication1
                     pt.ShowRibbonPreviewDialog();
                 }
             }
-        }
-
-        private void TxtAcCode_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void TxtDelieveryCode_KeyPress(object sender, KeyPressEventArgs e)
