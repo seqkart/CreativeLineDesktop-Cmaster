@@ -126,6 +126,7 @@
             // 
             // xrLabel8
             // 
+            this.xrLabel8.CanGrow = false;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[CHOTotQtyKgs]")});
             this.xrLabel8.Font = new System.Drawing.Font("Calibri", 10F);
@@ -144,6 +145,7 @@
             this.xrLabel7.BorderColor = System.Drawing.Color.Black;
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel7.BorderWidth = 1F;
+            this.xrLabel7.CanGrow = false;
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[CHOLotNo]")});
             this.xrLabel7.Font = new System.Drawing.Font("Calibri", 10F);
@@ -157,6 +159,7 @@
             // 
             // xrLabel4
             // 
+            this.xrLabel4.CanGrow = false;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CHOTotQty]+\' \'+[Table].[CHOUom]")});
             this.xrLabel4.Font = new System.Drawing.Font("Calibri", 10F);
@@ -175,6 +178,7 @@
             this.CHODITEMN1.BorderColor = System.Drawing.Color.Black;
             this.CHODITEMN1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CHODITEMN1.BorderWidth = 1F;
+            this.CHODITEMN1.CanGrow = false;
             this.CHODITEMN1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[CHOPrdName]")});
             this.CHODITEMN1.Font = new System.Drawing.Font("Calibri", 10F);
@@ -193,6 +197,7 @@
             this.CHODDESC1.BorderColor = System.Drawing.Color.Black;
             this.CHODDESC1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CHODDESC1.BorderWidth = 1F;
+            this.CHODDESC1.CanGrow = false;
             this.CHODDESC1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CHOArtDesc]+\', \'+[Table].[CHOManualDesc]")});
             this.CHODDESC1.Font = new System.Drawing.Font("Calibri", 10F);
@@ -207,7 +212,6 @@
             // 
             // CHODKGSTYPE1
             // 
-            this.CHODKGSTYPE1.AutoWidth = true;
             this.CHODKGSTYPE1.BackColor = System.Drawing.Color.Transparent;
             this.CHODKGSTYPE1.BorderColor = System.Drawing.Color.Black;
             this.CHODKGSTYPE1.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -231,6 +235,7 @@
             this.CHODMAINREM1.BorderColor = System.Drawing.Color.Black;
             this.CHODMAINREM1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CHODMAINREM1.BorderWidth = 1F;
+            this.CHODMAINREM1.CanGrow = false;
             this.CHODMAINREM1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CHORemarks]")});
             this.CHODMAINREM1.Font = new System.Drawing.Font("Calibri", 10F);
@@ -323,6 +328,7 @@
             // 
             // xrLabel11
             // 
+            this.xrLabel11.CanGrow = false;
             this.xrLabel11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[COMADD2]")});
             this.xrLabel11.Font = new System.Drawing.Font("Calibri", 10F);
@@ -336,6 +342,7 @@
             // 
             // xrLabel10
             // 
+            this.xrLabel10.CanGrow = false;
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'NEW BAJWA NAGAR\'")});
             this.xrLabel10.Font = new System.Drawing.Font("Calibri", 10F);
@@ -349,6 +356,7 @@
             // 
             // xrLabel9
             // 
+            this.xrLabel9.CanGrow = false;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'131/16, CIRCULAR ROAD,\'")});
             this.xrLabel9.Font = new System.Drawing.Font("Calibri", 10F);
@@ -379,6 +387,7 @@
             // xrLabel5
             // 
             this.xrLabel5.BackColor = System.Drawing.Color.Silver;
+            this.xrLabel5.CanGrow = false;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[CHOTYPE]")});
             this.xrLabel5.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Bold);
@@ -404,7 +413,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[AccName]")});
             this.xrLabel2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.xrLabel2.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(54.5139F, 55.90278F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(54.5139F, 54.90278F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(329.1667F, 20.90277F);
@@ -456,7 +465,7 @@
             this.Text7.CanGrow = false;
             this.Text7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.Text7.ForeColor = System.Drawing.Color.Black;
-            this.Text7.LocationFloat = new DevExpress.Utils.PointFloat(25.34723F, 55.90278F);
+            this.Text7.LocationFloat = new DevExpress.Utils.PointFloat(25.34723F, 54.90278F);
             this.Text7.Name = "Text7";
             this.Text7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.Text7.SizeF = new System.Drawing.SizeF(23.95837F, 20.90277F);
@@ -474,7 +483,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccAddress1]+\', \'+[AccAddress2]+\', \'+[AccAddress3]+\',\'+[Table].[CTNAME]")});
             this.Text8.Font = new System.Drawing.Font("Calibri", 10F);
             this.Text8.ForeColor = System.Drawing.Color.Black;
-            this.Text8.LocationFloat = new DevExpress.Utils.PointFloat(28.125F, 76.04166F);
+            this.Text8.LocationFloat = new DevExpress.Utils.PointFloat(26.125F, 76.04166F);
             this.Text8.Name = "Text8";
             this.Text8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.Text8.SizeF = new System.Drawing.SizeF(369.7917F, 47.22222F);
@@ -493,7 +502,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", " \'Contact No.:\'+ [CHOCONTDETAILS]+\', \'+[Table].[AccContactPerson]")});
             this.Text9.Font = new System.Drawing.Font("Calibri", 10F);
             this.Text9.ForeColor = System.Drawing.Color.Black;
-            this.Text9.LocationFloat = new DevExpress.Utils.PointFloat(25.34722F, 125.6944F);
+            this.Text9.LocationFloat = new DevExpress.Utils.PointFloat(25.34722F, 123.6944F);
             this.Text9.Name = "Text9";
             this.Text9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.Text9.SizeF = new System.Drawing.SizeF(369.7917F, 16.73611F);
@@ -543,7 +552,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", " \'Transport : \'+[TRPRNAME]")});
             this.Text12.Font = new System.Drawing.Font("Calibri", 10F);
             this.Text12.ForeColor = System.Drawing.Color.Black;
-            this.Text12.LocationFloat = new DevExpress.Utils.PointFloat(25.34722F, 140.2778F);
+            this.Text12.LocationFloat = new DevExpress.Utils.PointFloat(25.34722F, 141.2778F);
             this.Text12.Name = "Text12";
             this.Text12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.Text12.SizeF = new System.Drawing.SizeF(369.7917F, 16.73611F);
@@ -658,7 +667,7 @@
             this.Text21.LocationFloat = new DevExpress.Utils.PointFloat(643.9583F, 163.4444F);
             this.Text21.Name = "Text21";
             this.Text21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.Text21.SizeF = new System.Drawing.SizeF(139.5035F, 19.51389F);
+            this.Text21.SizeF = new System.Drawing.SizeF(138.5035F, 19.51389F);
             this.Text21.Text = "Item Remarks";
             this.Text21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -740,6 +749,7 @@
             // 
             // lblNetWeight
             // 
+            this.lblNetWeight.CanGrow = false;
             this.lblNetWeight.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.lblNetWeight.LocationFloat = new DevExpress.Utils.PointFloat(522.0833F, 28.75002F);
             this.lblNetWeight.Multiline = true;
@@ -753,6 +763,7 @@
             // 
             // lblGrossWeight
             // 
+            this.lblGrossWeight.CanGrow = false;
             this.lblGrossWeight.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
             this.lblGrossWeight.LocationFloat = new DevExpress.Utils.PointFloat(522.4999F, 4.083347F);
             this.lblGrossWeight.Multiline = true;
@@ -766,6 +777,7 @@
             // 
             // xrLabel6
             // 
+            this.xrLabel6.CanGrow = false;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([CHOTotQty])")});
             this.xrLabel6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
@@ -1253,7 +1265,7 @@
             this.PrinterName = "Brother HL-2130 series";
             this.ShowPrintMarginsWarning = false;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "20.1";
+            this.Version = "20.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
