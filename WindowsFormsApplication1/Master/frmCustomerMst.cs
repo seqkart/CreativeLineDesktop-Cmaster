@@ -34,8 +34,26 @@ namespace WindowsFormsApplication1
             txtRefBy.Properties.MaxLength = 55;
             txtState.Properties.MaxLength = 32;
             txtSurName.Properties.MaxLength = 20;
-
+            TXTCUSTGSTNO.Properties.MaxLength = 15;
             txtCustId.Enabled = false;
+            AutoCompleteStringCollection CITY = new AutoCompleteStringCollection
+            {
+                "LUDHIANA"
+            };
+            txtCity.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtCity.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtCity.MaskBox.AutoCompleteCustomSource = CITY;
+
+            AutoCompleteStringCollection ST = new AutoCompleteStringCollection
+            {
+                "PUNJAB"
+            };
+            txtState.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtState.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtState.MaskBox.AutoCompleteCustomSource = ST;
+
+
+
         }
         private void FrmCustomerMst_Load(object sender, EventArgs e)
         {
@@ -70,6 +88,7 @@ namespace WindowsFormsApplication1
                     txtRefBy.Text = ds.Tables[0].Rows[0]["CAFREFERBY"].ToString();
                     txtState.Text = ds.Tables[0].Rows[0]["CAFSTATE"].ToString();
                     txtSurName.Text = ds.Tables[0].Rows[0]["CAFLNAME"].ToString();
+                    TXTCUSTGSTNO.Text = ds.Tables[0].Rows[0]["CAFGSTNO"].ToString();
                 }
                 txtFirstName.Focus();
             }
@@ -88,12 +107,7 @@ namespace WindowsFormsApplication1
                 txtSurName.Focus();
                 return false;
             }
-            //if (txtAddress1.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Customer Address");
-            //    txtAddress1.Focus();
-            //    return false;
-            //}
+            
             if (txtState.Text.Trim().Length == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Customer State");
@@ -106,12 +120,7 @@ namespace WindowsFormsApplication1
                 txtCity.Focus();
                 return false;
             }
-            //if (txtDatefBirth.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Customer Date Of Birth");
-            //    txtDatefBirth.Focus();
-            //    return false;
-            //}
+            
             if (txtDuringNormalSale.Text.Length == 0)
             {
                 txtDuringNormalSale.Text = "0";
@@ -160,11 +169,11 @@ namespace WindowsFormsApplication1
                             sqlcom.CommandText = " Insert into CAFINFO"
                                                  + " (CAFMOBILE, CAFFNAME, CAFMNAME, CAFLNAME, CAFREFERBY, CAFADD, CAFADD1, CAFADD2, CAFCITY, "
                                                + "CAFSTATE, CAFEMAILID, CAFDOB, CAFDOA, CAFCARDNO, CAFCARDISSUEDT, CAFCARDEXPIRYDT,CAFNORMSDISC, "
-                                              + "CAFEOSSDISC, CAFDISCTYPE)"
+                                              + "CAFEOSSDISC, CAFDISCTYPE, CAFGSTNO)"
 
                                                  + " values(@CAFMOBILE, @CAFFNAME, @CAFMNAME, @CAFLNAME, @CAFREFERBY, @CAFADD, @CAFADD1, @CAFADD2, @CAFCITY, "
                                                + "@CAFSTATE, @CAFEMAILID, @CAFDOB, @CAFDOA, @CAFCARDNO, @CAFCARDISSUEDT, @CAFCARDEXPIRYDT,@CAFNORMSDISC, "
-                                              + "@CAFEOSSDISC, @CAFDISCTYPE)";
+                                              + "@CAFEOSSDISC, @CAFDISCTYPE, @CAFGSTNO)";
 
 
                         }
@@ -174,7 +183,7 @@ namespace WindowsFormsApplication1
                                                 + " CAFMOBILE=@CAFMOBILE,CAFFNAME=@CAFFNAME,CAFMNAME=@CAFMNAME,CAFLNAME=@CAFLNAME, "
                                                 + " CAFREFERBY=@CAFREFERBY,CAFADD=@CAFADD,CAFADD1=@CAFADD1,CAFADD2=@CAFADD2, "
                                                 + " CAFCITY=@CAFCITY,CAFSTATE=@CAFSTATE,CAFEMAILID=@CAFEMAILID,CAFDOB=@CAFDOB,CAFDOA=@CAFDOA, "
-                                                + " CAFCARDNO=@CAFCARDNO,CAFCARDISSUEDT=@CAFCARDISSUEDT,CAFCARDEXPIRYDT=@CAFCARDEXPIRYDT,CAFNORMSDISC=@CAFNORMSDISC,CAFEOSSDISC=@CAFEOSSDISC,CAFDISCTYPE=@CAFDISCTYPE "
+                                                + " CAFCARDNO=@CAFCARDNO,CAFCARDISSUEDT=@CAFCARDISSUEDT,CAFCARDEXPIRYDT=@CAFCARDEXPIRYDT,CAFNORMSDISC=@CAFNORMSDISC,CAFEOSSDISC=@CAFEOSSDISC,CAFDISCTYPE=@CAFDISCTYPE,CAFGSTNO=@CAFGSTNO "
                                                 + " Where CAFSYSID=@CAFSYSID";
                             sqlcom.Parameters.AddWithValue("@CAFSYSID", txtCustId.Text.Trim());
                         }
@@ -190,6 +199,7 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@CAFCITY", txtAddress1.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFSTATE", txtState.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFEMAILID", txtEmail.Text.Trim());
+
                         if (txtDatefBirth.Text.Length == 0)
                         {
                             sqlcom.Parameters.AddWithValue("@CAFDOB", System.Data.SqlTypes.SqlDateTime.Null);
@@ -223,6 +233,7 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@CAFNORMSDISC", Convert.ToDecimal(txtDuringNormalSale.Text));
                         sqlcom.Parameters.AddWithValue("@CAFEOSSDISC", Convert.ToDecimal(txtDuringEOSS.Text));
                         sqlcom.Parameters.AddWithValue("@CAFDISCTYPE", txtDiscountType.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@CAFGSTNO", TXTCUSTGSTNO.Text.Trim());
 
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
@@ -244,11 +255,6 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-        }
-
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

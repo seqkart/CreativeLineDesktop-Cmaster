@@ -43,7 +43,7 @@
             // cmbSelectUser
             // 
             this.cmbSelectUser.FormattingEnabled = true;
-            this.cmbSelectUser.Location = new System.Drawing.Point(131, 77);
+            this.cmbSelectUser.Location = new System.Drawing.Point(75, 40);
             this.cmbSelectUser.Name = "cmbSelectUser";
             this.cmbSelectUser.Size = new System.Drawing.Size(262, 21);
             this.cmbSelectUser.TabIndex = 0;
@@ -61,7 +61,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(445, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(359, 25);
             this.Menu_ToolStrip.TabIndex = 7;
             this.Menu_ToolStrip.TabStop = true;
             this.Menu_ToolStrip.Text = "Options";
@@ -93,7 +93,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(73, 80);
+            this.label3.Location = new System.Drawing.Point(17, 43);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 336;
@@ -102,7 +102,7 @@
             // cmbSelectFY
             // 
             this.cmbSelectFY.FormattingEnabled = true;
-            this.cmbSelectFY.Location = new System.Drawing.Point(131, 103);
+            this.cmbSelectFY.Location = new System.Drawing.Point(75, 66);
             this.cmbSelectFY.Name = "cmbSelectFY";
             this.cmbSelectFY.Size = new System.Drawing.Size(262, 21);
             this.cmbSelectFY.TabIndex = 2;
@@ -110,7 +110,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(81, 106);
+            this.label1.Location = new System.Drawing.Point(25, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 341;
@@ -118,7 +118,7 @@
             // 
             // btnSaveFY
             // 
-            this.btnSaveFY.Location = new System.Drawing.Point(317, 143);
+            this.btnSaveFY.Location = new System.Drawing.Point(261, 106);
             this.btnSaveFY.Name = "btnSaveFY";
             this.btnSaveFY.Size = new System.Drawing.Size(75, 23);
             this.btnSaveFY.TabIndex = 342;
@@ -132,7 +132,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(445, 209);
+            this.ClientSize = new System.Drawing.Size(359, 143);
             this.ControlBox = false;
             this.Controls.Add(this.btnSaveFY);
             this.Controls.Add(this.label1);

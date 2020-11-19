@@ -1011,7 +1011,7 @@
             this.txtDelieveryCode.TabIndex = 533;
             this.txtDelieveryCode.EditValueChanged += new System.EventHandler(this.TxtDelieveryCode_EditValueChanged);
             this.txtDelieveryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDelieveryCode_KeyDown);
-            this.txtDelieveryCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDelieveryCode_KeyPress);
+            this.txtDelieveryCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDelieveryCode_KeyPress);
             // 
             // groupControl1
             // 

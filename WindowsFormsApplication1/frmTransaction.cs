@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
 {
     public partial class FrmTransaction : DevExpress.XtraEditors.XtraForm
     {
-        RangeSelector _RangeSelector = new RangeSelector()
+        readonly RangeSelector _RangeSelector = new RangeSelector()
         { StartDate = DateTime.Now.AddDays(-1), EndDate = DateTime.Now };
 
         public FrmTransaction() { InitializeComponent(); }
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
             PrintLogWin.PrintLog("ProcedureName : " + ProcedureName);
         }
 
-        private void frmTransaction_Load(object sender, EventArgs e)
+        private void FrmTransaction_Load(object sender, EventArgs e)
         {
             PrintLogWin.PrintLog("frmTransaction_Load ********** " + GlobalVariables.ProgCode);
 
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG210")
                 {
                     WindowsFormsApplication1.Transaction.frmProformaMst frm = new WindowsFormsApplication1.Transaction.frmProformaMst
-                    { s1 = btnAdd.Text, Text = "Performa Invoice Addition" };
+                    { S1 = btnAdd.Text, Text = "Performa Invoice Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -165,14 +165,14 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
-                    frmInvoiceMstAdd frm = new frmInvoiceMstAdd() { s1 = btnAdd.Text, Text = "Invoice Master Addition" };
+                    frmInvoiceMstAdd frm = new frmInvoiceMstAdd() { S1 = btnAdd.Text, Text = "Invoice Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG130")
                 {
-                    Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale()
-                    { s1 = btnAdd.Text, Text = "Packing Slip Addition" };
+                    Transaction.FrmPackingSlipWholeSale frm = new Transaction.FrmPackingSlipWholeSale()
+                    { S1 = btnAdd.Text, Text = "Packing Slip Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -186,7 +186,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG128")
                 {
                     Transaction.frmBarPrinting frm = new Transaction.frmBarPrinting()
-                    { s1 = btnAdd.Text, Text = "Bar Printing Addition" };
+                    { S1 = btnAdd.Text, Text = "Bar Printing Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -327,7 +327,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Transaction.frmProformaMst frm = new WindowsFormsApplication1.Transaction.frmProformaMst
-                    { s1 = btnEdit.Text, Text = "Performa Invoice Edition", DocNo = CurrentRow["PINo"].ToString(), DocDate = Convert.ToDateTime(CurrentRow["PIDate"]) };
+                    { S1 = btnEdit.Text, Text = "Performa Invoice Edition", DocNo = CurrentRow["PINo"].ToString(), DocDate = Convert.ToDateTime(CurrentRow["PIDate"]) };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -493,7 +493,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmInvoiceMstAdd frm = new frmInvoiceMstAdd()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Invoice Master Edition",
                         ImDate = Convert.ToDateTime(CurrentRow["BillDate"]),
                         ImNo = CurrentRow["BillNo"].ToString(),
@@ -517,9 +517,9 @@ namespace WindowsFormsApplication1
                             "-" +
                             dsChkInv.Tables[0].Rows[0]["SIDNO"].ToString() +
                             ")");
-                        Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale()
+                        Transaction.FrmPackingSlipWholeSale frm = new Transaction.FrmPackingSlipWholeSale()
                         {
-                            s1 = btnEdit.Text,
+                            S1 = btnEdit.Text,
                             Text = "Packing Slip Edition",
                             PSWSNO = CurrentRow["PSWSNO"].ToString(),
                             PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(),
@@ -530,9 +530,9 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        Transaction.frmPackingSlipWholeSale frm = new Transaction.frmPackingSlipWholeSale()
+                        Transaction.FrmPackingSlipWholeSale frm = new Transaction.FrmPackingSlipWholeSale()
                         {
-                            s1 = btnEdit.Text,
+                            S1 = btnEdit.Text,
                             Text = "Packing Slip Edition",
                             PSWSNO = CurrentRow["PSWSNO"].ToString(),
                             PSWSTOTBOXES = CurrentRow["SIDBOXNO"].ToString(),
@@ -561,7 +561,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     Transaction.frmBarPrinting frm = new Transaction.frmBarPrinting()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Bar Printing Edition",
                         SKUVOUCHNO = CurrentRow["SKUVOUCHNO"].ToString(),
                         Tag = CurrentRow["BarCodeType"].ToString()

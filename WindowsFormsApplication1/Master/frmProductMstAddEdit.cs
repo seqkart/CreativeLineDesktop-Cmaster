@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmProductMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public string S1 { get; set; }
         public String PrdCode { get; set; }
         public frmProductMstAddEdit()
         {
@@ -21,15 +21,15 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(panelControl1);
 
         }
-        private void frmProductMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmProductMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtProductAsgnCode.Focus();
                 txtPrdCode.Text = GetNewPrdCode();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtProductAsgnCode.Enabled = false;
                 //txtPrdName.Enabled = false;
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
                 txtstatusTag.Focus();
                 return false;
             }
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("Select PrdAsgnCode from PrdMst Where PrdAsgnCode='" + txtProductAsgnCode.Text.Trim() + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -123,12 +123,12 @@ namespace WindowsFormsApplication1
 
             return true;
         }
-        private void txtUMCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtUMCode_EditValueChanged(object sender, EventArgs e)
         {
             txtUMDesc.Text = string.Empty;
         }
 
-        private void txtSGrpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtSGrpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSGrpDesc.Text = string.Empty;
             txtGrpCode.Text = string.Empty;
@@ -137,12 +137,12 @@ namespace WindowsFormsApplication1
 
 
 
-        private void txtTaxST_EditValueChanged(object sender, EventArgs e)
+        private void TxtTaxST_EditValueChanged(object sender, EventArgs e)
         {
             txtTaxCodePCDesc.Text = string.Empty;
         }
 
-        private void txtSTL_EditValueChanged(object sender, EventArgs e)
+        private void TxtSTL_EditValueChanged(object sender, EventArgs e)
         {
             txtTaxCodePLDesc.Text = string.Empty;
         }
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frmProductMstAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmProductMstAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -177,16 +177,16 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -198,7 +198,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
 
                             sqlcom.CommandText = "  Insert into PrdMst"
@@ -208,7 +208,7 @@ namespace WindowsFormsApplication1
                                                      + " @PrdHSNNo,@PrdTaxCodePL,@PrdTaxCodePC)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE PrdMst SET "
                                                 + " PrdCode=@PrdCode,PrdAsgnCode=@PrdAsgnCode,PrdName=@PrdName,PrdUOM=@PrdUOM,PrdOpStock=@PrdOpStock,PrdActive=@PrdActive,PrdGrpCode=@PrdGrpCode,PrdSubGrpCode=@PrdSubGrpCode, "
@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1
                     }
                     catch (Exception ex)
                     {
-
+                        ProjectFunctions.SpeakError(ex.Message);
                     }
                 }
             }
@@ -286,7 +286,7 @@ namespace WindowsFormsApplication1
 
 
 
-        private void txtTaxST_KeyDown(object sender, KeyEventArgs e)
+        private void TxtTaxST_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Enter)
@@ -296,7 +296,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtSTL_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSTL_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Enter)
@@ -306,7 +306,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtUMCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtUMCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -315,20 +315,8 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtstatusTag_Validating(object sender, CancelEventArgs e)
-        {
-            if (txtstatusTag.Text == "Y" || txtstatusTag.Text == "N")
-            {
-            }
-            else
-            {
-                ProjectFunctions.SpeakError("Valid Values are Y,N");
-                txtstatusTag.Focus();
-            }
-        }
 
-
-        private void txtSGrpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSGrpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -350,9 +338,9 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtProductAsgnCode_Validating(object sender, CancelEventArgs e)
+        private void TxtProductAsgnCode_Validating(object sender, CancelEventArgs e)
         {
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("Select PrdAsgnCode from PrdMst Where PrdAsgnCode='" + txtProductAsgnCode.Text.Trim() + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -364,7 +352,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void txtUMCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtUMCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumberOnly(e);
         }

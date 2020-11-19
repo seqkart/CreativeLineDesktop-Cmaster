@@ -92,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(959, 484);
+            this.ClientSize = new System.Drawing.Size(401, 198);
             this.Controls.Add(this.txtMDNField);
             this.Controls.Add(this.txtMDNTable);
             this.Controls.Add(this.btnGetNewMasterDocNo);

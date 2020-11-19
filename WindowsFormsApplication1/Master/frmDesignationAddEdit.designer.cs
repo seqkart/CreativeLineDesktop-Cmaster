@@ -97,7 +97,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(56, 22);
             this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -107,7 +107,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(54, 22);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // frmDesignationAddEdit
             // 
@@ -124,8 +124,8 @@
             this.KeyPreview = true;
             this.Name = "frmDesignationAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmDesignationAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDesignationAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmDesignationAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDesignationAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);

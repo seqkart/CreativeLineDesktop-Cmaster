@@ -60,7 +60,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(391, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(274, 25);
             this.Menu_ToolStrip.TabIndex = 317;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -86,7 +86,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(59, 63);
+            this.label1.Location = new System.Drawing.Point(24, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 13);
             this.label1.TabIndex = 318;
@@ -102,7 +102,7 @@
             "2023-2024",
             "2024-2025",
             "2025-2026"});
-            this.cmbFY.Location = new System.Drawing.Point(140, 60);
+            this.cmbFY.Location = new System.Drawing.Point(105, 47);
             this.cmbFY.Name = "cmbFY";
             this.cmbFY.Size = new System.Drawing.Size(121, 21);
             this.cmbFY.TabIndex = 316;
@@ -110,7 +110,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(89, 120);
+            this.labelControl3.Location = new System.Drawing.Point(54, 108);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(40, 13);
             this.labelControl3.TabIndex = 320;
@@ -118,7 +118,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(76, 94);
+            this.labelControl2.Location = new System.Drawing.Point(41, 82);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(53, 13);
             this.labelControl2.TabIndex = 321;
@@ -128,7 +128,7 @@
             // 
             this.DtEnd.EditValue = null;
             this.DtEnd.EnterMoveNextControl = true;
-            this.DtEnd.Location = new System.Drawing.Point(140, 117);
+            this.DtEnd.Location = new System.Drawing.Point(105, 104);
             this.DtEnd.Name = "DtEnd";
             this.DtEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -141,7 +141,7 @@
             // 
             this.DtFrom.EditValue = null;
             this.DtFrom.EnterMoveNextControl = true;
-            this.DtFrom.Location = new System.Drawing.Point(140, 91);
+            this.DtFrom.Location = new System.Drawing.Point(105, 78);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -152,7 +152,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(99, 147);
+            this.label12.Location = new System.Drawing.Point(64, 138);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 13);
             this.label12.TabIndex = 331;
@@ -164,7 +164,7 @@
             this.txtStatusTag.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.txtStatusTag.Location = new System.Drawing.Point(140, 147);
+            this.txtStatusTag.Location = new System.Drawing.Point(105, 134);
             this.txtStatusTag.Name = "txtStatusTag";
             this.txtStatusTag.Size = new System.Drawing.Size(121, 21);
             this.txtStatusTag.TabIndex = 332;
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 209);
+            this.ClientSize = new System.Drawing.Size(274, 209);
             this.ControlBox = false;
             this.Controls.Add(this.txtStatusTag);
             this.Controls.Add(this.label12);

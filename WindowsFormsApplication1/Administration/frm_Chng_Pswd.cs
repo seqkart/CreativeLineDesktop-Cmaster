@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        //private ProjectFunctionsUtils projectFunctionsUtils;
+        //private  projectFunctionsUtils;
         private void Btn_Chnge_Click(object sender, EventArgs e)
         {
             try

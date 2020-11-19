@@ -24,17 +24,12 @@ namespace payroll.FormReports
             }
         }
 
-        private void btnPrint_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void PrintPreviewBarItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }
 
-        private void printPreviewBarItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-        }
-
-        private void btnPrint_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BtnPrint_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
@@ -48,6 +43,11 @@ namespace payroll.FormReports
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
+        }
+
+        private void PrintPreviewBarItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

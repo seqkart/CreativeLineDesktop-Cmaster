@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1
     public partial class frmInvoiceMstAdd : DevExpress.XtraEditors.XtraForm
     {
         public String ProgCode { get; set; }
-        public String s1 { get; set; }
+        public string S1 { get; set; }
         DataTable dt = new DataTable();
         DataTable dtWeight = new DataTable();
         public String ImNo { get; set; }
@@ -525,7 +525,7 @@ namespace WindowsFormsApplication1
                 }
 
 
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet dsPSEdit = ProjectFunctions.GetDataSet("sp_LoadPackingSlipMstFInvoiceEdit '" + txtSerialNo.Text + "','" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "','" + txtserial.Text + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
                     if (dsPSEdit.Tables[0].Rows.Count > 0)
@@ -544,7 +544,7 @@ namespace WindowsFormsApplication1
             else
             {
 
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
 
                     ProjectFunctions.SpeakError("No Packing Slips Pending");
@@ -552,7 +552,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    if (s1 == "Edit")
+                    if (S1 == "Edit")
                     {
                         DataSet dsPSEdit = ProjectFunctions.GetDataSet("sp_LoadPackingSlipMstFInvoiceEdit '" + txtSerialNo.Text + "','" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "','" + txtserial.Text + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
                         if (dsPSEdit.Tables[0].Rows.Count > 0)
@@ -576,7 +576,7 @@ namespace WindowsFormsApplication1
         {
             SetMyControls();
 
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtDebitPartyCode.Focus();
                 txtserial.Text = string.Empty;
@@ -590,7 +590,7 @@ namespace WindowsFormsApplication1
                 chExclusive.Checked = true;
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
 
                 DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceMstFEDit] '" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + ImNo + "','" + ImSeries + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
@@ -772,7 +772,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             String BillNo = String.Empty;
                             if (StkTransfer.ToUpper() == "Y")
@@ -889,7 +889,7 @@ namespace WindowsFormsApplication1
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = "Update SALEINVMAIN Set SIMSYSDATE=@SIMSYSDATE,SIMFNYR=@SIMFNYR,SIMDATE=@SIMDATE,SIMNO=@SIMNO,SIMSERIES=@SIMSERIES,SIMPartyC=@SIMPartyC," +
                                 "SIMPartyDANO=@SIMPartyDANO,SIMPartyORDNO=@SIMPartyORDNO,SIMPartyPONO=@SIMPartyPONO,SIMTRANSPORTERID=@SIMTRANSPORTERID,SIMTRANSPORTERKEY=@SIMTRANSPORTERKEY,SIMGRNRRNO=@SIMGRNRRNO,SIMGRNRRDATE=@SIMGRNRRDATE," +
@@ -2161,12 +2161,12 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtAcCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtAcCode_EditValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtDelieveryCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtDelieveryCode_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }

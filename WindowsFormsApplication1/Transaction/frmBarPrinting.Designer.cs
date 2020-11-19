@@ -109,6 +109,9 @@
             // 
             // BarCodeGrid
             // 
+            this.BarCodeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.BarCodeGrid.Location = new System.Drawing.Point(12, 186);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
             this.BarCodeGrid.Name = "BarCodeGrid";
@@ -123,8 +126,23 @@
             // 
             // BarCodeGridView
             // 
-            this.BarCodeGridView.Appearance.HorzLine.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.BarCodeGridView.Appearance.FixedLine.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BarCodeGridView.Appearance.FixedLine.Options.UseFont = true;
+            this.BarCodeGridView.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BarCodeGridView.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.BarCodeGridView.Appearance.FocusedRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.BarCodeGridView.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.BarCodeGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BarCodeGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.BarCodeGridView.Appearance.HorzLine.BackColor = System.Drawing.Color.DimGray;
+            this.BarCodeGridView.Appearance.HorzLine.Options.UseBackColor = true;
+            this.BarCodeGridView.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BarCodeGridView.Appearance.SelectedRow.Options.UseBackColor = true;
             this.BarCodeGridView.Appearance.TopNewRow.Options.UseBorderColor = true;
+            this.BarCodeGridView.Appearance.VertLine.BackColor = System.Drawing.Color.Gray;
+            this.BarCodeGridView.Appearance.VertLine.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.BarCodeGridView.Appearance.VertLine.Options.UseBackColor = true;
+            this.BarCodeGridView.Appearance.VertLine.Options.UseBorderColor = true;
             this.BarCodeGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn25,
             this.gridColumn24,
@@ -166,6 +184,7 @@
             this.BarCodeGridView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
             this.BarCodeGridView.OptionsView.ShowIndicator = false;
             this.BarCodeGridView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
+            this.BarCodeGridView.PaintStyleName = "Skin";
             this.BarCodeGridView.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.gridColumn1, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.BarCodeGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.BarCodeGridView_PopupMenuShowing);
@@ -181,7 +200,7 @@
             // 
             // gridColumn25
             // 
-            this.gridColumn25.Caption = "SKUPARTYBARCODE";
+            this.gridColumn25.Caption = "EAN CODE";
             this.gridColumn25.FieldName = "SKUPARTYBARCODE";
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
@@ -189,7 +208,7 @@
             // 
             // gridColumn24
             // 
-            this.gridColumn24.Caption = "SKUFIXBARCODE";
+            this.gridColumn24.Caption = "FIX CODE";
             this.gridColumn24.FieldName = "SKUFIXBARCODE";
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
@@ -197,7 +216,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "ITEM CODE";
+            this.gridColumn1.Caption = "UNIQUE CODE";
             this.gridColumn1.FieldName = "SKUPRODUCTCODE";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsEditForm.UseEditorColRowSpan = false;
@@ -457,7 +476,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(48, 23);
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // HelpGrid
             // 
@@ -508,6 +527,7 @@
             // 
             // ArticleImageBox
             // 
+            this.ArticleImageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ArticleImageBox.Location = new System.Drawing.Point(754, 29);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -548,13 +568,13 @@
             // 
             // BTNIMPORT2
             // 
-            this.BTNIMPORT2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.BTNIMPORT2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BTNIMPORT2.ImageOptions.SvgImage")));
             this.BTNIMPORT2.Location = new System.Drawing.Point(436, 88);
             this.BTNIMPORT2.Name = "BTNIMPORT2";
             this.BTNIMPORT2.Size = new System.Drawing.Size(180, 33);
             this.BTNIMPORT2.TabIndex = 710;
             this.BTNIMPORT2.Text = "IMPORT RELIANCE SHEET 2";
-            this.BTNIMPORT2.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.BTNIMPORT2.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // btnImport
             // 
@@ -566,7 +586,7 @@
             this.btnImport.Size = new System.Drawing.Size(180, 33);
             this.btnImport.TabIndex = 709;
             this.btnImport.Text = "IMPORT RELIANCE SHEET 1";
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnImport.Click += new System.EventHandler(this.BtnImport_Click);
             // 
             // btnLoadEANs
             // 
@@ -577,7 +597,7 @@
             this.btnLoadEANs.Text = "Load";
             this.btnLoadEANs.UseVisualStyleBackColor = true;
             this.btnLoadEANs.Visible = false;
-            this.btnLoadEANs.Click += new System.EventHandler(this.btnLoadPreviousBarCodes_Click);
+            this.btnLoadEANs.Click += new System.EventHandler(this.BtnLoadPreviousBarCodes_Click);
             // 
             // label2
             // 
@@ -603,7 +623,7 @@
             this.btnPrint.Size = new System.Drawing.Size(87, 27);
             this.btnPrint.TabIndex = 705;
             this.btnPrint.Text = "Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
             // 
             // txtBarCode
             // 
@@ -614,7 +634,7 @@
             this.txtBarCode.Properties.MaxLength = 40;
             this.txtBarCode.Size = new System.Drawing.Size(217, 20);
             this.txtBarCode.TabIndex = 704;
-            this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarCode_KeyDown);
+            this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
             // 
             // RBBYFLTRT
             // 
@@ -669,7 +689,7 @@
             this.txtDeptCode.Properties.MaxLength = 4;
             this.txtDeptCode.Size = new System.Drawing.Size(58, 20);
             this.txtDeptCode.TabIndex = 694;
-            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDeptCode_KeyDown);
+            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
             // txtDeptDesc
             // 
@@ -710,7 +730,7 @@
             this.labelControl6.Size = new System.Drawing.Size(67, 13);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "STORE CODE";
-            this.labelControl6.Click += new System.EventHandler(this.labelControl6_Click);
+            this.labelControl6.Click += new System.EventHandler(this.LabelControl6_Click);
             // 
             // RBPUR
             // 
@@ -779,12 +799,12 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // openFileDialog2
             // 
             this.openFileDialog2.FileName = "openFileDialog1";
-            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog2_FileOk);
+            this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog2_FileOk);
             // 
             // frmBarPrinting
             // 
@@ -800,7 +820,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "frmBarPrinting";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmBarPrinting_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBarPrinting_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).EndInit();

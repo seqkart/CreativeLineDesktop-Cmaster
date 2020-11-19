@@ -51,6 +51,7 @@
             this.MyValidationProvider = new DevExpress.XtraEditors.DXErrorProvider.DXValidationProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtNewPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOldPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyValidationProvider)).BeginInit();
@@ -60,10 +61,7 @@
             // 
             this.txtNewPass.EnterMoveNextControl = true;
             this.txtNewPass.Location = new System.Drawing.Point(128, 74);
-            this.txtNewPass.Name = "txtNew1";
-            // 
-            // 
-            // 
+            this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Properties.UseSystemPasswordChar = true;
             this.txtNewPass.Properties.ValidateOnEnterKey = true;
             this.txtNewPass.Size = new System.Drawing.Size(156, 20);
@@ -114,10 +112,7 @@
             // 
             this.txtConfirmPass.EnterMoveNextControl = true;
             this.txtConfirmPass.Location = new System.Drawing.Point(128, 110);
-            this.txtConfirmPass.Name = "txtnew2";
-            // 
-            // 
-            // 
+            this.txtConfirmPass.Name = "txtConfirmPass";
             this.txtConfirmPass.Properties.UseSystemPasswordChar = true;
             this.txtConfirmPass.Properties.ValidateOnEnterKey = true;
             this.txtConfirmPass.Size = new System.Drawing.Size(156, 20);
@@ -136,10 +131,7 @@
             // 
             this.txtOldPass.EnterMoveNextControl = true;
             this.txtOldPass.Location = new System.Drawing.Point(128, 38);
-            this.txtOldPass.Name = "txtoldPswd";
-            // 
-            // 
-            // 
+            this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.Properties.UseSystemPasswordChar = true;
             this.txtOldPass.Properties.ValidateOnEnterKey = true;
             this.txtOldPass.Size = new System.Drawing.Size(156, 20);
@@ -153,7 +145,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(20, 113);
+            this.labelControl3.Location = new System.Drawing.Point(26, 113);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(93, 13);
             this.labelControl3.TabIndex = 2;
@@ -161,7 +153,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(20, 77);
+            this.labelControl2.Location = new System.Drawing.Point(44, 77);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(75, 13);
             this.labelControl2.TabIndex = 1;
@@ -169,7 +161,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(20, 41);
+            this.labelControl1.Location = new System.Drawing.Point(48, 41);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(71, 13);
             this.labelControl1.TabIndex = 0;
@@ -179,16 +171,18 @@
             // 
             this.MyValidationProvider.ValidationMode = DevExpress.XtraEditors.DXErrorProvider.ValidationMode.Auto;
             // 
-            // frm_Chng_Pswd
+            // Frm_Chng_Pswd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl1);
-            this.Name = "frm_Chng_Pswd";
+            this.Name = "Frm_Chng_Pswd";
             this.Size = new System.Drawing.Size(321, 199);
             this.Load += new System.EventHandler(this.Frm_Chng_Pswd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNewPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOldPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MyValidationProvider)).EndInit();

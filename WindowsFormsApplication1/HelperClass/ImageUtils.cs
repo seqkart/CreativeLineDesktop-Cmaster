@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using WindowsFormsApplication1;
 
 public class ImageUtils
 {
@@ -18,7 +19,7 @@ public class ImageUtils
         }
         catch (Exception ex)
         {
-
+            ProjectFunctions.SpeakError(ex.Message);
         }
         return null;
     }

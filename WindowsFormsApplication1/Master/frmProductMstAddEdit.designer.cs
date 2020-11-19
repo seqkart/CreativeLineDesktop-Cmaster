@@ -139,9 +139,9 @@
             this.txtTaxCodePL.Properties.MaxLength = 6;
             this.txtTaxCodePL.Size = new System.Drawing.Size(69, 20);
             this.txtTaxCodePL.TabIndex = 38;
-            this.txtTaxCodePL.EditValueChanged += new System.EventHandler(this.txtSTL_EditValueChanged);
-            this.txtTaxCodePL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSTL_KeyDown);
-            this.txtTaxCodePL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUMCode_KeyPress);
+            this.txtTaxCodePL.EditValueChanged += new System.EventHandler(this.TxtSTL_EditValueChanged);
+            this.txtTaxCodePL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSTL_KeyDown);
+            this.txtTaxCodePL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUMCode_KeyPress);
             // 
             // label6
             // 
@@ -160,9 +160,9 @@
             this.txtTaxCodePC.Properties.MaxLength = 6;
             this.txtTaxCodePC.Size = new System.Drawing.Size(69, 20);
             this.txtTaxCodePC.TabIndex = 37;
-            this.txtTaxCodePC.EditValueChanged += new System.EventHandler(this.txtTaxST_EditValueChanged);
-            this.txtTaxCodePC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTaxST_KeyDown);
-            this.txtTaxCodePC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUMCode_KeyPress);
+            this.txtTaxCodePC.EditValueChanged += new System.EventHandler(this.TxtTaxST_EditValueChanged);
+            this.txtTaxCodePC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTaxST_KeyDown);
+            this.txtTaxCodePC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUMCode_KeyPress);
             // 
             // label7
             // 
@@ -226,9 +226,9 @@
             this.txtUMCode.Properties.MaxLength = 3;
             this.txtUMCode.Size = new System.Drawing.Size(69, 20);
             this.txtUMCode.TabIndex = 15;
-            this.txtUMCode.EditValueChanged += new System.EventHandler(this.txtUMCode_EditValueChanged);
-            this.txtUMCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUMCode_KeyDown);
-            this.txtUMCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUMCode_KeyPress);
+            this.txtUMCode.EditValueChanged += new System.EventHandler(this.TxtUMCode_EditValueChanged);
+            this.txtUMCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUMCode_KeyDown);
+            this.txtUMCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUMCode_KeyPress);
             // 
             // label13
             // 
@@ -260,7 +260,7 @@
             this.txtGrpCode.Size = new System.Drawing.Size(69, 20);
             this.txtGrpCode.TabIndex = 16;
             this.txtGrpCode.TabStop = false;
-            this.txtGrpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUMCode_KeyPress);
+            this.txtGrpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUMCode_KeyPress);
             // 
             // label15
             // 
@@ -290,9 +290,9 @@
             this.txtSGrpCode.Properties.MaxLength = 4;
             this.txtSGrpCode.Size = new System.Drawing.Size(69, 20);
             this.txtSGrpCode.TabIndex = 17;
-            this.txtSGrpCode.EditValueChanged += new System.EventHandler(this.txtSGrpCode_EditValueChanged);
-            this.txtSGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSGrpCode_KeyDown);
-            this.txtSGrpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUMCode_KeyPress);
+            this.txtSGrpCode.EditValueChanged += new System.EventHandler(this.TxtSGrpCode_EditValueChanged);
+            this.txtSGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSGrpCode_KeyDown);
+            this.txtSGrpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtUMCode_KeyPress);
             // 
             // label14
             // 
@@ -396,7 +396,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(35, 22);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -406,7 +406,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 22);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtProductAsgnCode
             // 
@@ -417,7 +417,7 @@
             this.txtProductAsgnCode.Properties.MaxLength = 15;
             this.txtProductAsgnCode.Size = new System.Drawing.Size(73, 20);
             this.txtProductAsgnCode.TabIndex = 1;
-            this.txtProductAsgnCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtProductAsgnCode_Validating);
+            this.txtProductAsgnCode.Validating += new System.ComponentModel.CancelEventHandler(this.TxtProductAsgnCode_Validating);
             // 
             // txtPrdCode
             // 
@@ -492,8 +492,8 @@
             this.Name = "frmProductMstAddEdit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmProductMstAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmProductMstAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmProductMstAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmProductMstAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtHSNNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxCodePLDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTaxCodePCDesc.Properties)).EndInit();

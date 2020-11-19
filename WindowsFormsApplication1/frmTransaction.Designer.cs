@@ -128,7 +128,7 @@
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd.Size = new System.Drawing.Size(43, 23);
             this.btnAdd.Text = "&Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lbl
             // 
@@ -190,7 +190,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmTransaction";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmTransaction_Load);
+            this.Load += new System.EventHandler(this.FrmTransaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();

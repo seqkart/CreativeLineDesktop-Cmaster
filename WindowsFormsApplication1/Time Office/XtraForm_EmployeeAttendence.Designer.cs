@@ -247,7 +247,7 @@
             this.windowsUIButtonPanelMain.TabIndex = 0;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
-            this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelMain_ButtonClick);
+            this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelMain_ButtonClick);
             // 
             // labelControl
             // 
@@ -441,7 +441,7 @@
             this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateAttendance.Location = new System.Drawing.Point(91, 44);
             this.dateAttendance.Name = "dateAttendance";
-            this.dateAttendance.Size = new System.Drawing.Size(120, 21);
+            this.dateAttendance.Size = new System.Drawing.Size(120, 22);
             this.dateAttendance.TabIndex = 0;
             this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
             this.dateAttendance.Leave += new System.EventHandler(this.DateAttendance_Leave);
@@ -675,7 +675,7 @@
             this.timeEdit_Time_Out_First.TabIndex = 2;
             this.timeEdit_Time_Out_First.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.timeEdit_Time_Out_First_InvalidValue);
             this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_First_EditValueChanged);
-            this.timeEdit_Time_Out_First.Validating += new System.ComponentModel.CancelEventHandler(this.timeEdit_Time_Out_First_Validating);
+            this.timeEdit_Time_Out_First.Validating += new System.ComponentModel.CancelEventHandler(this.TimeEdit_Time_Out_First_Validating);
             // 
             // timeEdit_Time_In_First
             // 
@@ -837,7 +837,7 @@
             this.labelControl22.Appearance.Options.UseForeColor = true;
             this.labelControl22.Location = new System.Drawing.Point(329, 153);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(261, 13);
+            this.labelControl22.Size = new System.Drawing.Size(275, 13);
             this.labelControl22.TabIndex = 238;
             this.labelControl22.Text = "Use Military Standard Time Format 0000 hrs - 2300 hrs";
             // 
@@ -873,6 +873,7 @@
             // 
             // totalWorkingHours_Text
             // 
+            this.totalWorkingHours_Text.EditValue = "0";
             this.totalWorkingHours_Text.EnterMoveNextControl = true;
             this.totalWorkingHours_Text.Location = new System.Drawing.Point(519, 101);
             this.totalWorkingHours_Text.Name = "totalWorkingHours_Text";
@@ -891,6 +892,7 @@
             this.totalWorkingHours_Text.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.totalWorkingHours_Text.Properties.MaxLength = 10;
             this.totalWorkingHours_Text.Properties.UseReadOnlyAppearance = false;
+            this.totalWorkingHours_Text.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.totalWorkingHours_Text.Size = new System.Drawing.Size(65, 20);
             this.totalWorkingHours_Text.TabIndex = 15;
             this.totalWorkingHours_Text.TabStop = false;
@@ -1108,7 +1110,7 @@
             this.txtTeaBreakTime.Properties.ReadOnly = true;
             this.txtTeaBreakTime.Size = new System.Drawing.Size(65, 20);
             this.txtTeaBreakTime.TabIndex = 237;
-            this.txtTeaBreakTime.EditValueChanged += new System.EventHandler(this.txtTeaBreakTime_EditValueChanged);
+            this.txtTeaBreakTime.EditValueChanged += new System.EventHandler(this.TxtTeaBreakTime_EditValueChanged);
             // 
             // label21
             // 
@@ -1380,7 +1382,7 @@
             this.labelDate_Current.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelDate_Current.Location = new System.Drawing.Point(486, 39);
             this.labelDate_Current.Name = "labelDate_Current";
-            this.labelDate_Current.Size = new System.Drawing.Size(172, 13);
+            this.labelDate_Current.Size = new System.Drawing.Size(175, 13);
             this.labelDate_Current.TabIndex = 19;
             this.labelDate_Current.Text = "Wednesday, June17, 2020 1:42 PM";
             // 
@@ -1431,7 +1433,7 @@
             this.txtDutyHours_DW.Properties.UseReadOnlyAppearance = false;
             this.txtDutyHours_DW.Size = new System.Drawing.Size(65, 20);
             this.txtDutyHours_DW.TabIndex = 256;
-            this.txtDutyHours_DW.EditValueChanged += new System.EventHandler(this.txtDutyHours_DW_EditValueChanged);
+            this.txtDutyHours_DW.EditValueChanged += new System.EventHandler(this.TxtDutyHours_DW_EditValueChanged);
             // 
             // labelControl5
             // 

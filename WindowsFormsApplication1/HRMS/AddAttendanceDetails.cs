@@ -74,7 +74,7 @@ namespace HumanResourceManagementSystem
 
             catch (Exception ex)
             {
-                MessageBox.Show("Record not found");
+                MessageBox.Show("Record not found "+ ex.Message);
             }
 
         }
@@ -174,7 +174,7 @@ namespace HumanResourceManagementSystem
                         }
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     MessageBox.Show("Time In or Time Out is not in proper format");
                     txtTimeIn.Text = string.Empty;
@@ -285,7 +285,7 @@ namespace HumanResourceManagementSystem
 
                         }
                     }
-                    catch (Exception exc)
+                    catch (Exception)
                     {
                         MessageBox.Show("Provided data not in a correct format");
                     }

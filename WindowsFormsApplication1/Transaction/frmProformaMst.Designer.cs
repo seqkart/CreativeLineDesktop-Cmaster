@@ -238,7 +238,7 @@
             this.btnSaveNew.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSaveNew.Size = new System.Drawing.Size(77, 23);
             this.btnSaveNew.Text = "Save New";
-            this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
+            this.btnSaveNew.Click += new System.EventHandler(this.BtnSaveNew_Click);
             // 
             // gridView4
             // 

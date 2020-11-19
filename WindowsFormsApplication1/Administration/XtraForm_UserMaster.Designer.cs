@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             // userMasterBindingSource
             // 
-            this.userMasterBindingSource.DataSource = typeof(UserMaster_Data);
+            this.userMasterBindingSource.CurrentChanged += new System.EventHandler(this.userMasterBindingSource_CurrentChanged);
             // 
             // gridView_UserMaster
             // 

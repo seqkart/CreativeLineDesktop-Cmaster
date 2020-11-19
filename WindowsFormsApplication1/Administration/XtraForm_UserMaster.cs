@@ -1,5 +1,4 @@
-﻿using DevExpress.Utils;
-using DevExpress.Utils.Menu;
+﻿using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Controls;
 using DevExpress.XtraEditors.Repository;
@@ -7,14 +6,11 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.ViewInfo;
 using SeqKartLibrary;
 using System;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Reflection;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Models;
 
@@ -125,18 +121,6 @@ namespace WindowsFormsApplication1.Administration
             actionColumn.OptionsColumn.AllowEdit = true;
         }
 
-        private void gridView_DoubleClick(object sender, EventArgs e)
-        {
-            DXMouseEventArgs ea = e as DXMouseEventArgs;
-            GridView view = sender as GridView;
-            GridHitInfo info = view.CalcHitInfo(ea.Location);
-            if (info.InRow || info.InRowCell)
-            {
-                string colCaption = info.Column == null ? "N/A" : info.Column.GetCaption();
-                MessageBox.Show(string.Format("DoubleClick on row: {0}, column: {1}.", info.RowHandle, colCaption));
-            }
-        }
-
         //https://supportcenter.devexpress.com/ticket/details/a2934/how-to-handle-a-double-click-on-a-grid-row-or-cell
         void gridView_UserMaster_ShowingEditor(object sender, CancelEventArgs e)
         {
@@ -154,34 +138,6 @@ namespace WindowsFormsApplication1.Administration
             {
                 PrintLogWin.PrintLog("********************* C ");
                 e.Cancel = true;
-            }
-        }
-
-        BaseEdit editor;
-        private void gridView_ShownEditor(object sender, EventArgs e)
-        {
-            GridView view = sender as GridView;
-            editor = view.ActiveEditor;
-            editor.DoubleClick += editor_DoubleClick;
-        }
-
-        void gridView_HiddenEditor(object sender, EventArgs e)
-        {
-            editor.DoubleClick -= editor_DoubleClick;
-            editor = null;
-        }
-
-        void editor_DoubleClick(object sender, EventArgs e)
-        {
-            BaseEdit editor = (BaseEdit)sender;
-            GridControl grid = editor.Parent as GridControl;
-            GridView view = grid.FocusedView as GridView;
-            Point pt = grid.PointToClient(Control.MousePosition);
-            GridHitInfo info = view.CalcHitInfo(pt);
-            if (info.InRow || info.InRowCell)
-            {
-                string colCaption = info.Column == null ? "N/A" : info.Column.GetCaption();
-                MessageBox.Show(string.Format("DoubleClick on row: {0}, column: {1}.", info.RowHandle, colCaption));
             }
         }
 
@@ -226,49 +182,6 @@ namespace WindowsFormsApplication1.Administration
             {
                 MessageBox_Debug.ShowBox("frmMaster => FillGrid() => " + ex);
             }
-        }
-
-        void gridView1_CustomUnboundColumnData(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDataEventArgs e)
-        {
-            if (e.Column.FieldName == "Edit")
-            {
-                //string gender = gridView_UserMaster.GetListSourceRowCellValue(e.ListSourceRowIndex, gridView_UserMaster.Columns["Edit"]).ToString();
-
-                e.Value = SystemIcons.Information.ToBitmap();
-            }
-        }
-
-        private DataTable CreateData(DataSet dsMaster)
-        {
-            DataTable dt = new DataTable();
-
-            dt.Columns.Add(SQL_COLUMNS.USER_MASTER._UserName, typeof(string
-                ));
-            dt.Columns.Add(SQL_COLUMNS.USER_MASTER._LoginAs, typeof(string));
-            dt.Columns.Add(SQL_COLUMNS.USER_MASTER._UserActive, typeof(char));
-            //dt.Columns.Add("Edit_Link" + "", typeof(Image));
-
-            Assembly myAssembly = Assembly.GetExecutingAssembly();
-            Stream myStream = myAssembly.GetManifestResourceStream("WindowsFormsApplication1.Resources.edit_icon.png" +
-string.Empty);
-            Bitmap bmp = new Bitmap(myStream)
-            {
-                Tag = "edit_link" +
-string.Empty
-            };
-
-            foreach (DataRow dr in dsMaster.Tables[0].Rows)
-            {
-
-
-
-                //pictureEdit.Click += gridControl_UserMaster_DoubleClick;
-
-                dt.Rows.Add(dr[SQL_COLUMNS.USER_MASTER._UserName], dr[SQL_COLUMNS.USER_MASTER._LoginAs], dr[SQL_COLUMNS.USER_MASTER._UserActive]);
-
-            }
-
-            return dt;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -330,32 +243,6 @@ string.Empty
             //ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
             //ProjectFunctions.GirdViewVisualize(gridView_UserMaster);
             FillDataToGrid();
-        }
-
-        private void gridControl_UserMaster_Click(object sender, EventArgs e)
-        {
-            int row = (gridControl_UserMaster.FocusedView as ColumnView).FocusedRowHandle;
-
-            ColumnView detailView = (ColumnView)gridControl_UserMaster.FocusedView;
-            Bitmap cellValue_Edit_Link = (Bitmap)detailView.GetFocusedRowCellValue("Edit_Link");//.GetRowCellValue(row, "Edit_Link").ToString();
-            PrintLogWin.PrintLog("%%%%%%%%%%%%%%%%" + cellValue_Edit_Link.Tag);
-            PrintLogWin.PrintLog("%%%%%%%%%%%%%%%%" + row
-                );
-
-            if (ComparisonUtils.IsEqualTo_String(cellValue_Edit_Link.Tag, "edit_link"))
-            {
-                btnEdit_Click(null, e);
-
-            }
-
-            //if (sender..Column.FieldName == "Edit_Link")
-            //{
-            //    //string gender = gridView_UserMaster.GetListSourceRowCellValue(e.ListSourceRowIndex, gridView_UserMaster.Columns["Edit"]).ToString();
-
-            //    e.Value = SystemIcons.Information.ToBitmap();
-            //}
-            //btnEdit_Click(null, e);
-
         }
 
         private void button_delete_ButtonClick(object sender, ButtonPressedEventArgs e)
@@ -488,7 +375,9 @@ string.Empty);
 
         }
 
+        private void userMasterBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

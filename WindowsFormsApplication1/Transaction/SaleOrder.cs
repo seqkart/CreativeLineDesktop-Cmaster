@@ -647,8 +647,10 @@ namespace WindowsFormsApplication1.Transaction
                     catch (Exception ex)
 
                     {
-                        this.Close();
+                        ProjectFunctions.SpeakError(ex.Message);
+                        
                     }
+                    this.Close();
                 }
             }
         }

@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmDesignationAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public string S1 { get; set; }
         public String DesgCode { get; set; }
         public frmDesignationAddEdit()
         {
@@ -22,15 +22,15 @@ namespace WindowsFormsApplication1
 
             txtDesgCode.Enabled = false;
         }
-        private void frmDesignationAddEdit_Load(object sender, EventArgs e)
+        private void FrmDesignationAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtDesc.Focus();
                 txtDesgCode.Text = ProjectFunctionsUtils.GetNewDesgCode();//.PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 //txtDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT DesgCode,DesgDesc FROM DesgMst Where DesgCode='" + DesgCode + "'");
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
         //    }
         //    return s2;
         //}
-        private void frmDesignationAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmDesignationAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Up)
@@ -79,29 +79,29 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            btnSave_Data();
+            BtnSave_Data();
         }
 
-        private void btnSave_Data()
+        private void BtnSave_Data()
         {
             if (ValidateData())
             {
                 PrintLogWin.PrintLog("btnSave_Data : " + txtDesgCode.Text.Trim());
                 PrintLogWin.PrintLog("btnSave_Data : " + txtDesc.Text.Trim());
-                PrintLogWin.PrintLog("btnSave_Data : " + s1);
+                PrintLogWin.PrintLog("btnSave_Data : " + S1);
 
                 DesignationData designationData = new DesignationData();
-                string intResult = designationData.InsertUpdate(txtDesgCode.Text.Trim(), txtDesc.Text.Trim(), s1);
+                string intResult = designationData.InsertUpdate(txtDesgCode.Text.Trim(), txtDesc.Text.Trim(), S1);
                 if (intResult.Equals("0"))
                 {
                     ProjectFunctions.SpeakError("Data Saved Successfully");

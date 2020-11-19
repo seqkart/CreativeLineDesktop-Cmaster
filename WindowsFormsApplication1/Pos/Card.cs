@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction.Pos
 {
     public partial class Card : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String MemoNo { get; set; }
+        public string s1 { get; set; }
+        public string MemoNo { get; set; }
         public DateTime MemoDate { get; set; }
-        public Decimal CardPayment { get; set; }
-        public Decimal PGPayment { get; set; }
+        public decimal CardPayment { get; set; }
+        public decimal PGPayment { get; set; }
 
-        public Decimal TotalMemoAmount { get; set; }
+        public decimal TotalMemoAmount { get; set; }
         public Card()
         {
             InitializeComponent();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void Btvisa_Click(object sender, EventArgs e)
         {
             txtCardType.Text = "VISA";
         }
@@ -83,19 +84,19 @@ namespace WindowsFormsApplication1.Transaction.Pos
                     //}
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
-            catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
-            {
 
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
             }
 
 
         }
 
-        private void btnRevert_Click(object sender, EventArgs e)
+        private void BtnRevert_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
         private bool ValidateDataForSaving()
         {
@@ -186,27 +187,22 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         }
                         sqlcon.Close();
 
-
-
-
-
-
                     }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
-                    catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
-                    {
 
+                    catch (Exception ex)
+
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             Save();
             Prints.CASHMEMO rpt = new Prints.CASHMEMO();
             ProjectFunctions.PrintDocument(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
-            this.Close();
+            Close();
             //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
             //var P = ProjectFunctions.GetPositionInForm(this);
             //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
@@ -215,7 +211,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 
         }
 
-        private void txtCardNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtCardNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
 
         }
@@ -229,37 +225,37 @@ namespace WindowsFormsApplication1.Transaction.Pos
 
 
 
-                    String MainValue = txtCardDigits.Text;
+                    string MainValue = txtCardDigits.Text;
                     MainValue = MainValue.Substring(0, MainValue.IndexOf("/"));
-                    MainValue = MainValue.Replace("\n", String.Empty);
-                    MainValue = MainValue.Replace("\r", String.Empty);
-                    MainValue = MainValue.Replace("\t", String.Empty);
+                    MainValue = MainValue.Replace("\n", string.Empty);
+                    MainValue = MainValue.Replace("\r", string.Empty);
+                    MainValue = MainValue.Replace("\t", string.Empty);
                     txtCardDigits.Text = MainValue;
-                    String Value = MainValue;
+                    string Value = MainValue;
 
                     Value = Value.Replace("%b".ToUpper(), string.Empty).Replace("%b", string.Empty);
                     Value = Value.Substring(0, Value.IndexOf("^"));
                     txtCardNo.Text = Value.Trim();
 
-                    String Value2 = MainValue;
+                    string Value2 = MainValue;
                     Value2 = Value2.Replace("%b".ToUpper(), string.Empty).Replace("%b", string.Empty);
                     Value2 = Value2.Replace(Value, string.Empty).Replace("^", string.Empty);
                     //Value2 = Value2.Substring(0, Value2.LastIndexOf("/"));
 
 
                     txtNameOnCard.Text = Value2.Trim().ToUpper();
-                    txtCardDigits.Text = String.Empty;
+                    txtCardDigits.Text = string.Empty;
 
                     textEdit1.Focus();
 
 
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+
             {
-                //ProjectFunctions.SpeakError(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             e.Handled = true;
         }
@@ -285,7 +281,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
         private void BtnSaveOnly_Click(object sender, EventArgs e)
         {
             Save();
-            this.Close();
+            Close();
             //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
             //var P = ProjectFunctions.GetPositionInForm(this);
             //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));

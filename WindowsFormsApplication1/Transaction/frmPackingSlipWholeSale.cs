@@ -8,11 +8,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmPackingSlipWholeSale : DevExpress.XtraEditors.XtraForm
+    public partial class FrmPackingSlipWholeSale : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
 
-        public String s1 { get; set; }
+        public string S1 { get; set; }
 
         public String PSWSNO { get; set; }
 
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Transaction
         public String UpdateTag { get; set; }
         public String FixBarPartyTag { get; set; }
 
-        public frmPackingSlipWholeSale()
+        public FrmPackingSlipWholeSale()
         {
             InitializeComponent();
             dt.Columns.Add("SIDBOXNO", typeof(String));
@@ -148,7 +148,7 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.TextBoxVisualize(Panel1);
                 ProjectFunctions.TextBoxVisualize(Panel2);
                 ProjectFunctions.TextBoxVisualize(this);
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtPackingSLipDate.EditValue = DateTime.Now;
                     lblBox.Text = "1";
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1.Transaction
                     Panel1.Focus();
                     txtAccCode.Select();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipMstFEDit '" +
                         PSWSNO +
@@ -344,7 +344,7 @@ namespace WindowsFormsApplication1.Transaction
                         sqlcom.Connection = sqlcon;
                         sqlcom.CommandType = CommandType.StoredProcedure;
                         sqlcom.CommandType = CommandType.Text;
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             if (txtPackingSlipNO.Text.Trim().Length == 0)
                             {
@@ -398,7 +398,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
 
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " update PSWSLMAIN Set  " +
                                 " PSWSPID=@PSWSPID,PSWSPONO=@PSWSPONO," +
@@ -527,7 +527,7 @@ namespace WindowsFormsApplication1.Transaction
                         //BarCodeGridView.ExportToCsv(AppDomain.CurrentDomain.BaseDirectory + @"\tempbarcode.txt");
                         ProjectFunctions.SpeakError(" Data Saved Successfully");
                         sqlcon.Close();
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             lblBox.Text = (Convert.ToInt32(lblBox.Text) + 1).ToString();
                             BarCodeGrid.DataSource = null;
@@ -563,7 +563,7 @@ namespace WindowsFormsApplication1.Transaction
                             BarCodeGrid.DataSource = null;
                             dt.Clear();
                             lblTotQty.Text = "0";
-                            s1 = "&Add";
+                            S1 = "&Add";
 
 
                             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
@@ -964,20 +964,20 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BarCodeGrid_Click(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 //DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
                 //ShowImage(currentrow["SIDARTID"].ToString());
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
-            catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+
+            //catch (Exception ex)
+
             {
                 //ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
-        private void txtAccCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtAccCode_EditValueChanged(object sender, EventArgs e)
         {
             txtAccName.Text = String.Empty;
             txtGSTNo.Text = String.Empty;
@@ -1007,14 +1007,14 @@ namespace WindowsFormsApplication1.Transaction
         private void FrmPackingSlipWholeSale_KeyDown(object sender, KeyEventArgs e)
         { ProjectFunctions.SalePopUPForAllWindows(this, e); }
 
-        private void labelControl4_Click(object sender, EventArgs e) { }
+        private void LabelControl4_Click(object sender, EventArgs e) { }
 
         private void BarCodeGrid_DoubleClick(object sender, EventArgs e)
         {
 
         }
 
-        private void txtStoreCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtStoreCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

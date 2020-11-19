@@ -261,6 +261,7 @@
             this.printPreviewRibbonPageGroup8 = new DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroup();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.documentViewerRibbonController1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar1)).BeginInit();
@@ -272,15 +273,14 @@
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.documentViewer1.IsMetric = false;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 148);
+            this.documentViewer1.Location = new System.Drawing.Point(0, 140);
             this.documentViewer1.Name = "documentViewer1";
             this.documentViewer1.ShowPageMargins = false;
-            this.documentViewer1.Size = new System.Drawing.Size(802, 209);
+            this.documentViewer1.Size = new System.Drawing.Size(802, 211);
             this.documentViewer1.TabIndex = 0;
             // 
             // cachedReportSource1
             // 
-            this.cachedReportSource1.Report = typeof(WindowsFormsApplication1.Report.Rpt_VoucherPrint);
             this.cachedReportSource1.Storage = memoryDocumentStorage1;
             // 
             // documentViewerRibbonController1
@@ -353,9 +353,10 @@
             this.printPreviewBarItem52,
             this.printPreviewStaticItem2,
             this.zoomTrackBarEditItem1,
-            this.btnPrint});
+            this.btnPrint,
+            this.barButtonItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 61;
+            this.ribbonControl1.MaxItemId = 62;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
@@ -363,7 +364,7 @@
             this.repositoryItemProgressBar1,
             this.repositoryItemZoomTrackBar1,
             this.repositoryItemComboBox1});
-            this.ribbonControl1.Size = new System.Drawing.Size(802, 148);
+            this.ribbonControl1.Size = new System.Drawing.Size(802, 140);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -493,6 +494,7 @@
             superToolTip7.Items.Add(toolTipItem7);
             superToolTip7.MaxWidth = 210;
             this.printPreviewBarItem7.SuperTip = superToolTip7;
+            this.printPreviewBarItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PrintPreviewBarItem7_ItemClick);
             // 
             // printPreviewBarItem8
             // 
@@ -510,7 +512,7 @@
             superToolTip8.Items.Add(toolTipItem8);
             superToolTip8.MaxWidth = 210;
             this.printPreviewBarItem8.SuperTip = superToolTip8;
-            this.printPreviewBarItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.printPreviewBarItem8_ItemClick);
+            this.printPreviewBarItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PrintPreviewBarItem8_ItemClick);
             // 
             // printPreviewBarItem9
             // 
@@ -1365,7 +1367,7 @@
             this.btnPrint.Caption = "Quick Print";
             this.btnPrint.Id = 60;
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPrint_ItemClick_1);
+            this.btnPrint.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnPrint_ItemClick_1);
             // 
             // ribbonPage1
             // 
@@ -1508,10 +1510,16 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewBarItem52);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 357);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 351);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(802, 22);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(802, 28);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "barButtonItem1";
+            this.barButtonItem1.Id = 61;
+            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // PrintReportViewer
             // 
@@ -1612,5 +1620,6 @@
         private DevExpress.XtraPrinting.Caching.CachedReportSource cachedReportSource1;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraBars.BarButtonItem btnPrint;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

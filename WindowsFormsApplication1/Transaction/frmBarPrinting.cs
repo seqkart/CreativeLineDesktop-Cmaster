@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Transaction
     {
         DataTable dtGeneric = new DataTable();
         DataTable dtVariants = new DataTable();
-        public String s1 { get; set; }
+        public string S1 { get; set; }
 #pragma warning disable CS0108 // 'frmBarPrinting.Tag' hides inherited member 'Control.Tag'. Use the new keyword if hiding was intended.
         public String Tag { get; set; }
 #pragma warning restore CS0108 // 'frmBarPrinting.Tag' hides inherited member 'Control.Tag'. Use the new keyword if hiding was intended.
@@ -488,11 +488,11 @@ namespace WindowsFormsApplication1.Transaction
                 return false;
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateDataForSaving())
             {
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                     {
@@ -606,8 +606,10 @@ namespace WindowsFormsApplication1.Transaction
                                         sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                                         sqlcom.ExecuteNonQuery();
                                         sqlcom.Parameters.Clear();
+                                        
                                     }
                                 }
+                                SplashScreenManager.CloseForm();
                             }
                             else
                             {
@@ -703,16 +705,19 @@ namespace WindowsFormsApplication1.Transaction
 
                                     sqlcom.ExecuteNonQuery();
                                     sqlcom.Parameters.Clear();
+                                    
                                 }
-                            }
 
+                                SplashScreenManager.CloseForm();
+                            }
+                           
 
 
                             ProjectFunctions.SpeakError("Barcode Generated Successfully");
                             sqlcon.Close();
                             btnSave.Enabled = false;
                             SKUVOUCHNO = txtSysID.Text;
-                            fillGrid();
+                            FillGrid();
 
                             this.Close();
                         }
@@ -752,15 +757,15 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     BarCodeGrid.Focus();
                     BarCodeGridView.MoveLast();
                     BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUARTNO"];
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
-                    fillGrid();
+                    FillGrid();
                     btnSave.Visible = false;
                 }
             }
@@ -769,7 +774,7 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void fillGrid()
+        private void FillGrid()
         {
             try
             {
@@ -857,8 +862,8 @@ namespace WindowsFormsApplication1.Transaction
 
 
                     DataTable dtNew = dsPopUps.Tables[2].Clone();
-                    //DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%' And GrpCode='" + dsGroups.Tables[0].Rows[0]["ARTSECTIONID"].ToString() + "' And GrpSubCode='" + dsGroups.Tables[0].Rows[0]["ARTSBSECTIONID"].ToString() + "'");
-                    DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
+                    DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%' And GrpCode='" + dsGroups.Tables[0].Rows[0]["ARTSECTIONID"].ToString() + "' And GrpSubCode='" + dsGroups.Tables[0].Rows[0]["ARTSBSECTIONID"].ToString() + "'");
+                    //DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
 
                     foreach (DataRow dr in dtRow)
                     {
@@ -873,7 +878,8 @@ namespace WindowsFormsApplication1.Transaction
                         HelpGrid.DataSource = dtNew;
                         HelpGridView.BestFitColumns();
 
-                        HelpGridView.Columns[2].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+                        HelpGridView.Columns[1].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+                        //HelpGridView.Columns[2].SortOrder = DevExpress.Data.ColumnSortOrder.Descending;
                         HelpGridView.FocusedRowHandle = 0;
                     }
                     else
@@ -885,7 +891,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -935,7 +941,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -999,7 +1005,7 @@ namespace WindowsFormsApplication1.Transaction
             BarCodeGrid_KeyDown(null, e);
         }
 
-        private void txtBarCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtBarCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -1058,7 +1064,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void BtnPrint_Click(object sender, EventArgs e)
         {
 
             int i = 0;
@@ -1090,12 +1096,12 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-        private void labelControl6_Click(object sender, EventArgs e)
+        private void LabelControl6_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnLoadPreviousBarCodes_Click(object sender, EventArgs e)
+        private void BtnLoadPreviousBarCodes_Click(object sender, EventArgs e)
         {
 
         }
@@ -1156,13 +1162,13 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
+        private void BtnImport_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
 
             var xlConn = string.Empty;
@@ -1196,18 +1202,16 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
 
-
-
             XtraMessageBox.Show("Process Completed");
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
             openFileDialog2.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog2.ShowDialog();
         }
 
-        private void openFileDialog2_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void OpenFileDialog2_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             try
             {
@@ -1279,7 +1283,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtDeptCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDeptCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

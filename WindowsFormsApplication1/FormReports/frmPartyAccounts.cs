@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1.FormReports
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            HelpGridView.ShowRibbonPrintPreview();
         }
     }
 }
