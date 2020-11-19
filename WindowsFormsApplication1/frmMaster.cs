@@ -45,6 +45,14 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG212")
+                {
+                    WindowsFormsApplication1.Master.frmSizeMapping frm = new WindowsFormsApplication1.Master.frmSizeMapping()
+                    { Text = "Size Mapping Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG180")
                 {
                     WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
@@ -135,7 +143,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG126")
                 {
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Item Master Addition" };
+                    { S1 = btnAdd.Text, Text = "Item Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -282,7 +290,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG10")
                 {
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnAdd.Text, Text = "Desgination Addition" };
+                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -336,7 +344,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG20")
                 {
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Product Master Addition" };
+                    { S1 = btnAdd.Text, Text = "Product Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -409,7 +417,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG157")
                 {
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnAdd.Text, Text = "Desgination Addition" };
+                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 

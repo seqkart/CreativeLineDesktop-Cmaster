@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1.Master
             }
 
 
-            DataSet dsSize = ProjectFunctions.GetDataSet("Select SZSYSID,SZNAME,SZDESC from SIZEMAST");
+            DataSet dsSize = ProjectFunctions.GetDataSet("Select SZSYSID,SZNAME,SZDESC,'' AS SizeDesc from SIZEMAST");
             if (dsSize.Tables[0].Rows.Count > 0)
             {
                 dsSize.Tables[0].Columns.Add("Select", typeof(bool));
@@ -60,14 +60,20 @@ namespace WindowsFormsApplication1.Master
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtDesc.Text.Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Desc");
-                txtDesc.Focus();
-                return;
-            }
+            //if (txtDesc.Text.Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Desc");
+            //    txtDesc.Focus();
+            //    return;
+            //}
 
-            foreach(DataRow drGroup in (GroupGrid.DataSource as DataTable).Rows)
+
+            SizeGridView.CloseEditor();
+            SizeGridView.UpdateCurrentRow();
+
+            GroupGridView.CloseEditor();
+            GroupGridView.UpdateCurrentRow();
+            foreach (DataRow drGroup in (GroupGrid.DataSource as DataTable).Rows)
             {
                 if(drGroup["Select"].ToString().ToUpper()=="TRUE")
                 {
@@ -75,7 +81,7 @@ namespace WindowsFormsApplication1.Master
                     {
                         if (drSize["Select"].ToString().ToUpper() == "TRUE")
                         {
-                            ProjectFunctions.GetDataSet("Insert into SizeMapping (GrpCode,GrpSubCode,SizeId,SizeDesc)values('" + drGroup["GrpCode"].ToString() + "','" + drGroup["GrpSubCode"].ToString() + "','" + drSize["SZSYSID"].ToString() + "','" + txtDesc.Text.Trim() + "')");
+                            ProjectFunctions.GetDataSet("Insert into SizeMapping (GrpCode,GrpSubCode,SizeId,SizeDesc)values('" + drGroup["GrpCode"].ToString() + "','" + drGroup["GrpSubCode"].ToString() + "','" + drSize["SZSYSID"].ToString() + "','" + drSize["SizeDesc"].ToString() + "')");
                         }
                     }
                 }

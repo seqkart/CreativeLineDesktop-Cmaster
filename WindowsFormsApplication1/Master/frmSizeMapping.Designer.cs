@@ -32,8 +32,6 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.txtDesc = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.GroupGrid = new DevExpress.XtraGrid.GridControl();
             this.GroupGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -47,8 +45,8 @@
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SizeGrid)).BeginInit();
@@ -68,7 +66,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(738, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(915, 25);
             this.Menu_ToolStrip.TabIndex = 204;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -91,24 +89,6 @@
             this.btnSave.Size = new System.Drawing.Size(38, 22);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.EnterMoveNextControl = true;
-            this.txtDesc.Location = new System.Drawing.Point(103, 48);
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDesc.Properties.MaxLength = 30;
-            this.txtDesc.Size = new System.Drawing.Size(229, 20);
-            this.txtDesc.TabIndex = 200;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(55, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(24, 13);
-            this.label3.TabIndex = 203;
-            this.label3.Text = "Desc";
             // 
             // GroupGrid
             // 
@@ -177,10 +157,10 @@
             // 
             // SizeGrid
             // 
-            this.SizeGrid.Location = new System.Drawing.Point(381, 89);
+            this.SizeGrid.Location = new System.Drawing.Point(398, 89);
             this.SizeGrid.MainView = this.SizeGridView;
             this.SizeGrid.Name = "SizeGrid";
-            this.SizeGrid.Size = new System.Drawing.Size(345, 292);
+            this.SizeGrid.Size = new System.Drawing.Size(505, 292);
             this.SizeGrid.TabIndex = 205;
             this.SizeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.SizeGridView});
@@ -191,6 +171,7 @@
             this.gridColumn6,
             this.gridColumn7,
             this.gridColumn8,
+            this.gridColumn10,
             this.gridColumn9});
             this.SizeGridView.GridControl = this.SizeGrid;
             this.SizeGridView.Name = "SizeGridView";
@@ -230,17 +211,23 @@
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 3;
             // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "SizeDesc";
+            this.gridColumn10.FieldName = "SizeDesc";
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 3;
+            // 
             // frmSizeMapping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 415);
+            this.ClientSize = new System.Drawing.Size(915, 415);
             this.ControlBox = false;
             this.Controls.Add(this.SizeGrid);
             this.Controls.Add(this.GroupGrid);
             this.Controls.Add(this.Menu_ToolStrip);
-            this.Controls.Add(this.txtDesc);
-            this.Controls.Add(this.label3);
             this.Cursor = System.Windows.Forms.Cursors.No;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmSizeMapping";
@@ -248,7 +235,6 @@
             this.Load += new System.EventHandler(this.frmSizeMapping_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SizeGrid)).EndInit();
@@ -263,8 +249,6 @@
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        private DevExpress.XtraEditors.TextEdit txtDesc;
-        private DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraGrid.GridControl GroupGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView GroupGridView;
         private DevExpress.XtraGrid.GridControl SizeGrid;
@@ -278,5 +262,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
     }
 }
