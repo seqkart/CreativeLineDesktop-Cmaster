@@ -450,7 +450,7 @@
             // 
             this.Label8.Location = new System.Drawing.Point(239, 11);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(40, 13);
+            this.Label8.Size = new System.Drawing.Size(41, 13);
             this.Label8.TabIndex = 0;
             this.Label8.Text = "DATED :";
             // 
@@ -476,7 +476,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(779, 233);
+            this.HelpGrid.Location = new System.Drawing.Point(108, 35);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(737, 368);
@@ -571,7 +571,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(43, 116);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(48, 13);
+            this.labelControl8.Size = new System.Drawing.Size(49, 13);
             this.labelControl8.TabIndex = 725;
             this.labelControl8.Text = "GST NO. :";
             this.labelControl8.Click += new System.EventHandler(this.LabelControl4_Click);
@@ -580,7 +580,7 @@
             // 
             this.labelControl7.Location = new System.Drawing.Point(30, 95);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(60, 13);
+            this.labelControl7.Size = new System.Drawing.Size(62, 13);
             this.labelControl7.TabIndex = 725;
             this.labelControl7.Text = "CITY / SATE :";
             this.labelControl7.Click += new System.EventHandler(this.LabelControl4_Click);
@@ -750,16 +750,16 @@
             this.labelControl12.TabIndex = 734;
             this.labelControl12.Text = "Store Code";
             // 
-            // frmPackingSlipWholeSale
+            // FrmPackingSlipWholeSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1122, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.labelControl12);
             this.Controls.Add(this.txtStoreQty);
             this.Controls.Add(this.txtStoreCode);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.ArticleImageBox);
             this.Controls.Add(this.BarCodeGrid);
             this.Controls.Add(this.Panel2);
@@ -773,7 +773,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmPackingSlipWholeSale";
+            this.Name = "FrmPackingSlipWholeSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmPackingSlipWholeSale_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPackingSlipWholeSale_KeyDown);

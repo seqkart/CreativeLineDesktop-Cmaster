@@ -184,7 +184,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(155, 42);
+            this.HelpGrid.Location = new System.Drawing.Point(110, 51);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(470, 269);
@@ -355,11 +355,11 @@
             // 
             // txtPrinters
             // 
-            this.txtPrinters.Location = new System.Drawing.Point(377, 268);
+            this.txtPrinters.Location = new System.Drawing.Point(256, 253);
             this.txtPrinters.Name = "txtPrinters";
             this.txtPrinters.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPrinters.Size = new System.Drawing.Size(100, 20);
+            this.txtPrinters.Size = new System.Drawing.Size(324, 20);
             this.txtPrinters.TabIndex = 399;
             // 
             // frmNewFormAAddEdit
@@ -370,8 +370,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(637, 332);
             this.ControlBox = false;
-            this.Controls.Add(this.txtPrinters);
             this.Controls.Add(this.HelpGrid);
+            this.Controls.Add(this.txtPrinters);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOrderBy);
             this.Controls.Add(this.txtRoleCode);
