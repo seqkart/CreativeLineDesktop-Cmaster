@@ -26,7 +26,7 @@ namespace SeqKartLibrary.CrudTask
             param.Add("@ot_deducton_time", attendanceModel.ot_deducton_time);
             param.Add("@AddEditTag", AddEditTag);
 
-            return await reposGen.executeNonQuery_Async("sp_EmployeeAttendance", param);
+            return await reposGen.ExecuteNonQuery_Async("sp_EmployeeAttendance", param);
         }
 
         public List<AttendanceStatus> GetAllAttendanceStatus()
@@ -55,7 +55,7 @@ namespace SeqKartLibrary.CrudTask
 
             PrintLogWinForms.PrintLog("Delete From EmployeeAttendance Where serial_id=" + _serial_id + "");
 
-            return reposGen.executeNonQuery_Query("Delete From EmployeeAttendance Where serial_id=" + _serial_id + "", param);
+            return reposGen.ExecuteNonQuery_Query("Delete From EmployeeAttendance Where serial_id=" + _serial_id + "", param);
         }
     }
 }

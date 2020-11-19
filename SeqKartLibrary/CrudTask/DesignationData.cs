@@ -14,7 +14,7 @@ namespace SeqKartLibrary.CrudTask
             param.Add("@DesgDesc", DesgDesc);
             param.Add("@AddEditTag", AddEditTag);
 
-            return reposGen.executeNonQuery_SP("sp_DesignationAddUpdate", param);
+            return reposGen.ExecuteNonQuery_SP("sp_DesignationAddUpdate", param);
         }
     }
 }

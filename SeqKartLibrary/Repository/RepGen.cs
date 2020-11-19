@@ -24,16 +24,16 @@ namespace SeqKartLibrary.Repository
     {
 
         public SqlConnection con;
-        private void connection()
+        private void Connection()
         {
             con = new SqlConnection(ProjectFunctionsUtils.ConnectionString);
         }
 
-        public async Task<string> executeNonQuery_Async(string query, DynamicParameters param)
+        public async Task<string> ExecuteNonQuery_Async(string query, DynamicParameters param)
         {
             try
             {
-                connection();
+                Connection();
                 con.Open();
                 await con.ExecuteAsync(query, param, commandType: CommandType.Text);
                 con.Close();
@@ -46,11 +46,11 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public async Task<string> executeNonQuery_SP_Async(string query, DynamicParameters param)
+        public async Task<string> ExecuteNonQuery_SP_Async(string query, DynamicParameters param)
         {
             try
             {
-                connection();
+                Connection();
                 con.Open();
                 await con.ExecuteAsync(query, param, commandType: CommandType.StoredProcedure);
                 con.Close();
@@ -63,11 +63,11 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public string executeNonQuery(string query, DynamicParameters param)
+        public string ExecuteNonQuery(string query, DynamicParameters param)
         {
             try
             {
-                connection();
+                Connection();
                 con.Open();
                 con.Execute(query, param, commandType: CommandType.StoredProcedure);
                 con.Close();
@@ -80,12 +80,12 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public ExecuteResult executeNonQuery_Query(string query, DynamicParameters param)
+        public ExecuteResult ExecuteNonQuery_Query(string query, DynamicParameters param)
         {
             ExecuteResult executeResult = new ExecuteResult();
             try
             {
-                connection();
+                Connection();
                 con.Open();
                 executeResult.Result = con.Execute(query, param, commandType: CommandType.Text);
                 con.Close();
@@ -102,12 +102,12 @@ namespace SeqKartLibrary.Repository
             return executeResult;
         }
 
-        public string executeNonQuery_SP(string query, DynamicParameters param)
+        public string ExecuteNonQuery_SP(string query, DynamicParameters param)
         {
             try
             {
 
-                connection();
+                Connection();
                 con.Open();
                 con.Execute(query, param, commandType: CommandType.StoredProcedure);
                 con.Close();
@@ -120,7 +120,7 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public int executeNonQuery_SP(string query, DynamicParameters param, bool hasOutput, out int outputVal)
+        public int ExecuteNonQuery_SP(string query, DynamicParameters param, bool hasOutput, out int outputVal)
         {
             outputVal = 0;
             try
@@ -128,7 +128,7 @@ namespace SeqKartLibrary.Repository
                 param.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
                 param.Add("@Returnvalue", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
 
-                connection();
+                Connection();
                 con.Open();
                 con.Execute(query, param, commandType: CommandType.StoredProcedure);
                 con.Close();
@@ -145,12 +145,12 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public string returnScalar(string query, DynamicParameters param)
+        public string ReturnScalar(string query, DynamicParameters param)
         {
             try
             {
                 string valor = "";
-                connection();
+                Connection();
                 con.Open();
                 valor = con.ExecuteScalar<string>(query, param, commandType: CommandType.Text);
                 con.Close();
@@ -163,12 +163,12 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public string returnScalar_SP(string query, DynamicParameters param)
+        public string ReturnScalar_SP(string query, DynamicParameters param)
         {
             try
             {
                 string valor = "";
-                connection();
+                Connection();
                 con.Open();
                 valor = con.ExecuteScalar<string>(query, param, commandType: CommandType.StoredProcedure);
                 con.Close();
@@ -181,7 +181,7 @@ namespace SeqKartLibrary.Repository
 
         }
 
-        public string returnNumericValue(string query, DynamicParameters param)
+        public string ReturnNumericValue(string query, DynamicParameters param)
         {
             try
             {
@@ -189,7 +189,7 @@ namespace SeqKartLibrary.Repository
                 param.Add("@output", dbType: DbType.Int32, direction: ParameterDirection.Output);
                 param.Add("@Returnvalue", dbType: DbType.Int32, direction: ParameterDirection.ReturnValue);
                 // Getting Return value   
-                connection();
+                Connection();
                 con.Open();
                 valor = con.ExecuteScalar<string>(query, param, commandType: CommandType.StoredProcedure);
                 con.Close();

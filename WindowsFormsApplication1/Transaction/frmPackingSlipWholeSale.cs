@@ -191,7 +191,7 @@ namespace WindowsFormsApplication1.Transaction
                         BarCodeGridView.BestFitColumns();
 
                         Count();
-
+//////////////////////////////////////////
 
                         if (ds.Tables[2].Rows.Count > 0)
                         {
@@ -543,9 +543,9 @@ namespace WindowsFormsApplication1.Transaction
                                 GlobalVariables.CUnitID +
                                 "'");
 
-                            if (ds.Tables[2].Rows.Count > 0)
+                            if (ds.Tables[0].Rows.Count > 0)
                             {
-                                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) +
+                                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
                                     Convert.ToDecimal(lblTotQty.Text)).ToString();
                             }
                         }
@@ -575,9 +575,9 @@ namespace WindowsFormsApplication1.Transaction
                                 GlobalVariables.CUnitID +
                                 "'");
 
-                            if (ds.Tables[2].Rows.Count > 0)
+                            if (ds.Tables[0].Rows.Count > 0)
                             {
-                                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
+                                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
                             }
                         }
                     }
@@ -849,9 +849,9 @@ namespace WindowsFormsApplication1.Transaction
                     GlobalVariables.CUnitID +
                     "'");
 
-                if (ds.Tables[2].Rows.Count > 0)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) +
+                    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
                         Convert.ToDecimal(lblTotQty.Text)).ToString();
                 }
             }
@@ -905,9 +905,9 @@ namespace WindowsFormsApplication1.Transaction
                         GlobalVariables.CUnitID +
                         "'");
 
-                    if (ds.Tables[2].Rows.Count > 0)
+                    if (ds.Tables[0].Rows.Count > 0)
                     {
-                        lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) +
+                        lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
                             Convert.ToDecimal(lblTotQty.Text)).ToString();
                     }
                 }));
