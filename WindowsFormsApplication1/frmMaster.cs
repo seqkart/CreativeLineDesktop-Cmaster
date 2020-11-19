@@ -45,114 +45,103 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
-                //DataSet ds = ProjectFunctions.GetDataSet("SELECT ProgDesc, ProgFormLink FROM ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'");
-                //if (ds.Tables[0].Rows.Count > 0)
-                //{
-                //    var type = Type.GetType(ds.Tables[0].Rows[0]["ProgFormLink"].ToString());
-                //    var form = Activator.CreateInstance(type) as DevExpress.XtraEditors.XtraForm;
-                //    form.Text = ds.Tables[0].Rows[0]["ProgDesc"].ToString() + " Addition";
-                //    form.ShowDialog(this.Parent);
-                //}
-                //else
-                //{
-                    if (GlobalVariables.ProgCode == "PROG212")
-                    {
-                        WindowsFormsApplication1.Master.frmSizeMapping frm = new WindowsFormsApplication1.Master.frmSizeMapping()
-                        { Text = "Group Size Mapping" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
+                if (GlobalVariables.ProgCode == "PROG180")
+                {
+                    WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
+                    { Text = "Create Data Template" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG176")
+                {
+                    WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
+                    { s1 = btnAdd.Text, Text = "Branch Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG175")
+                {
+                    WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst()
+                    { s1 = btnAdd.Text, Text = "City Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
 
-                    if (GlobalVariables.ProgCode == "PROG180")
-                    {
-                        WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
-                        { Text = "Create Data Template" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
 
-                    if (GlobalVariables.ProgCode == "PROG180")
-                    {
-                        WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
-                        { Text = "Create Data Template" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG176")
-                    {
-                        WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
-                        { s1 = btnAdd.Text, Text = "Branch Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG175")
-                    {
-                        WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst()
-                        { s1 = btnAdd.Text, Text = "City Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG174")
-                    {
-                        WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst()
-                        { s1 = btnAdd.Text, Text = "State Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG200")
-                    {
-                        WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
-                        { s1 = btnAdd.Text, Text = "Financial Year Creation" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG170")
-                    {
-                        Master.frmMeasurementMappingWithArt frm = new Master.frmMeasurementMappingWithArt()
-                        { s1 = btnAdd.Text, Text = "Measurement Mapping With Art Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG169")
-                    {
-                        Master.frmMeasurementMapping frm = new Master.frmMeasurementMapping()
-                        { s1 = btnAdd.Text, Text = "Measurement Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG135")
-                    {
-                        Transaction.Pos.Schemesetup frm = new Transaction.Pos.Schemesetup()
-                        { s1 = btnAdd.Text, Text = "Scheme Setup Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
-                    if (GlobalVariables.ProgCode == "PROG127")
-                    {
-                        frmWorkerMaster frm = new frmWorkerMaster() { s1 = btnAdd.Text, Text = "Worker Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG174")
+                {
+                    WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst()
+                    { s1 = btnAdd.Text, Text = "State Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
 
-                    if (GlobalVariables.ProgCode == "PROG126")
-                    {
-                        frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                        { s1 = btnAdd.Text, Text = "Item Master Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
-                        FillGrid();
-                    }
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG200")
+                {
+                    WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
+                    { s1 = btnAdd.Text, Text = "Financial Year Creation" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG170")
+                {
+                    Master.frmMeasurementMappingWithArt frm = new Master.frmMeasurementMappingWithArt()
+                    { s1 = btnAdd.Text, Text = "Measurement Mapping With Art Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG169")
+                {
+                    Master.frmMeasurementMapping frm = new Master.frmMeasurementMapping()
+                    { s1 = btnAdd.Text, Text = "Measurement Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG135")
+                {
+                    Transaction.Pos.Schemesetup frm = new Transaction.Pos.Schemesetup()
+                    { s1 = btnAdd.Text, Text = "Scheme Setup Addition" };
+
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG127")
+                {
+                    frmWorkerMaster frm = new frmWorkerMaster() { s1 = btnAdd.Text, Text = "Worker Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+                if (GlobalVariables.ProgCode == "PROG126")
+                {
+                    frmProductMstAddEdit frm = new frmProductMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Item Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
 
                     if (GlobalVariables.ProgCode == "PROG125")
                     {
@@ -288,13 +277,13 @@ namespace WindowsFormsApplication1
                         frm.StartPosition = FormStartPosition.CenterScreen;
 
 
-                        frm.ShowDialog(Parent);
-                    }
-                    if (GlobalVariables.ProgCode == "PROG10")
-                    {
-                        frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                        { s1 = btnAdd.Text, Text = "Desgination Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG10")
+                {
+                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    { s1 = btnAdd.Text, Text = "Desgination Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
 
 
                         frm.ShowDialog(Parent);
@@ -344,11 +333,11 @@ namespace WindowsFormsApplication1
                         frm.ShowDialog(Parent);
                     }
 
-                    if (GlobalVariables.ProgCode == "PROG20")
-                    {
-                        frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                        { s1 = btnAdd.Text, Text = "Product Master Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
+                if (GlobalVariables.ProgCode == "PROG20")
+                {
+                    frmProductMstAddEdit frm = new frmProductMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Product Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
 
 
                         frm.ShowDialog(Parent);
@@ -415,13 +404,13 @@ namespace WindowsFormsApplication1
                         frm.StartPosition = FormStartPosition.CenterScreen;
 
 
-                        frm.ShowDialog(Parent);
-                    }
-                    if (GlobalVariables.ProgCode == "PROG157")
-                    {
-                        frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                        { s1 = btnAdd.Text, Text = "Desgination Addition" };
-                        frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG157")
+                {
+                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    { s1 = btnAdd.Text, Text = "Desgination Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
 
 
                         frm.ShowDialog(Parent);
@@ -525,7 +514,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnEdit.Text, Text = "Item Master Edition", PrdCode = CurrentRow["PrdCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Item Master Edition", PrdCode = CurrentRow["PrdCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -711,7 +700,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
 
 
                     frm.ShowDialog(Parent);
@@ -779,7 +768,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmProductMstAddEdit frm = new frmProductMstAddEdit()
-                    { s1 = btnEdit.Text, Text = "Dealer Master Editing", PrdCode = CurrentRow["PrdCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Dealer Master Editing", PrdCode = CurrentRow["PrdCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -848,7 +837,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmDesignationAddEdit frm = new frmDesignationAddEdit()
-                    { s1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
