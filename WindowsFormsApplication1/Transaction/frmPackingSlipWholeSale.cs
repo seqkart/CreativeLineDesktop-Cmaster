@@ -148,6 +148,10 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.TextBoxVisualize(Panel1);
                 ProjectFunctions.TextBoxVisualize(Panel2);
                 ProjectFunctions.TextBoxVisualize(this);
+
+
+
+
                 if (S1 == "&Add")
                 {
                     txtPackingSLipDate.EditValue = DateTime.Now;
@@ -155,6 +159,18 @@ namespace WindowsFormsApplication1.Transaction
                     lblTotQty.Text = "0";
                     lblPackingSLipTot.Text = "0";
                     Panel1.Focus();
+                    if (FixBarPartyTag == "P")
+                    {
+                        txtStoreCode.Visible = true;
+                        labelControl12.Visible = true;
+                        txtStoreQty.Visible = true;
+                    }
+                    else
+                    {
+                        txtStoreCode.Visible = false;
+                        labelControl12.Visible = false;
+                        txtStoreQty.Visible = false;
+                    }
                     txtAccCode.Select();
                 }
                 if (S1 == "Edit")
@@ -186,9 +202,23 @@ namespace WindowsFormsApplication1.Transaction
 
                         FixBarPartyTag = ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
                         StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
+                        txtStoreCode.Text= ds.Tables[0].Rows[0]["PSWSTORECODE"].ToString();
                         dt = ds.Tables[1];
                         BarCodeGrid.DataSource = dt;
                         BarCodeGridView.BestFitColumns();
+
+                        if (FixBarPartyTag == "P")
+                        {
+                            txtStoreCode.Visible = true;
+                            labelControl12.Visible = true;
+                            txtStoreQty.Visible = true;
+                        }
+                        else
+                        {
+                            txtStoreCode.Visible = false;
+                            labelControl12.Visible = false;
+                            txtStoreQty.Visible = false;
+                        }
 
                         Count();
 //////////////////////////////////////////
@@ -241,9 +271,7 @@ namespace WindowsFormsApplication1.Transaction
                     else
 
                     {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelpActWise '" +
-                            txtAccCode.Text.Trim() +
-                            "'");
+                        DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelpActWise '" + txtAccCode.Text.Trim() +                            "'");
                         if (ds1.Tables[0].Rows.Count > 0)
                         {
                             txtAccCode.Text = ds1.Tables[0].Rows[0]["AccCode"].ToString();
@@ -375,9 +403,9 @@ namespace WindowsFormsApplication1.Transaction
                             }
                             sqlcom.CommandText = " Insert into PSWSLMAIN " +
                                 " (PSWSSYSDATE,PSWSFNYR,PSWSID,PSWSNO,PSWSDATE,PSWSPID,PSWSPONO," +
-                                " PSWSTOTBOXES,PSWSTOTPCS,PSWSMRPVAL,PSWSWSPVAL,PSWSREMARKS,PSWSDANO,UnitCode)" +
+                                " PSWSTOTBOXES,PSWSTOTPCS,PSWSMRPVAL,PSWSWSPVAL,PSWSREMARKS,PSWSDANO,UnitCode,PSWSTORECODE)" +
                                 " values(@PSWSSYSDATE,@PSWSFNYR,@PSWSID,@PSWSNO,@PSWSDATE,@PSWSPID,@PSWSPONO," +
-                                " @PSWSTOTBOXES,@PSWSTOTPCS,@PSWSMRPVAL,@PSWSWSPVAL,@PSWSREMARKS,@PSWSDANO,@UnitCode)";
+                                " @PSWSTOTBOXES,@PSWSTOTPCS,@PSWSMRPVAL,@PSWSWSPVAL,@PSWSREMARKS,@PSWSDANO,@UnitCode,@PSWSTORECODE)";
                             sqlcom.Parameters.Add("@PSWSSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@PSWSFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
                             sqlcom.Parameters.Add("@PSWSID", SqlDbType.NVarChar).Value = PSWSID;
@@ -392,6 +420,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@PSWSREMARKS", SqlDbType.NVarChar).Value = txtRemarks.Text.Trim();
                             sqlcom.Parameters.Add("@PSWSDANO", SqlDbType.NVarChar).Value = txtDANo.Text.Trim();
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.Parameters.Add("@PSWSTORECODE", SqlDbType.NVarChar).Value = txtStoreCode.Text;
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -401,7 +430,7 @@ namespace WindowsFormsApplication1.Transaction
                         {
                             sqlcom.CommandText = " update PSWSLMAIN Set  " +
                                 " PSWSPID=@PSWSPID,PSWSPONO=@PSWSPONO," +
-                                " PSWSTOTBOXES=@PSWSTOTBOXES,PSWSTOTPCS=@PSWSTOTPCS,PSWSMRPVAL=@PSWSMRPVAL,PSWSWSPVAL=@PSWSWSPVAL,PSWSREMARKS=@PSWSREMARKS,PSWSDANO=@PSWSDANO where PSWSNO='" +
+                                " PSWSTOTBOXES=@PSWSTOTBOXES,PSWSTOTPCS=@PSWSTOTPCS,PSWSMRPVAL=@PSWSMRPVAL,PSWSWSPVAL=@PSWSWSPVAL,PSWSREMARKS=@PSWSREMARKS,PSWSDANO=@PSWSDANO, PSWSTORECODE=@PSWSTORECODE where PSWSNO='" +
                                 txtPackingSlipNO.Text +
                                 "' And PSWSTOTBOXES='" +
                                 lblBox.Text +
@@ -418,6 +447,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@PSWSWSPVAL", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@PSWSREMARKS", SqlDbType.NVarChar).Value = txtRemarks.Text.Trim();
                             sqlcom.Parameters.Add("@PSWSDANO", SqlDbType.NVarChar).Value = txtDANo.Text.Trim();
+                            sqlcom.Parameters.Add("@PSWSTORECODE", SqlDbType.NVarChar).Value = txtStoreCode.Text.Trim();
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
 
@@ -696,7 +726,7 @@ namespace WindowsFormsApplication1.Transaction
                             }
                             else
                             {
-                                XtraMessageBox.Show("Qty Cannot Be More Than PI Qty");
+                               ProjectFunctions.SpeakError("Qty More Than PO Qty");
                                 return;
                             }
 
@@ -871,7 +901,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
 
                     DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
-                    DataSet ds = ProjectFunctions.GetDataSet("select top 1 * from sku_fix where SKUPRODUCTCODE='" + currentrow["SIDBARCODE"].ToString() + "'");
+                    DataSet ds = ProjectFunctions.GetDataSet("select top 1 * from SKU where SKUFIXBARCODE='" + currentrow["SIDBARCODE"].ToString() + "'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         gridColumn7.OptionsColumn.AllowEdit = true;
@@ -882,8 +912,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }));
 
-                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete Current Row",
-                                                              (o1, e1) =>
+                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete Current Row", (o1, e1) =>
                 {
                     BarCodeGridView.DeleteRow(BarCodeGridView.FocusedRowHandle);
                     dt.AcceptChanges();
@@ -913,8 +942,7 @@ namespace WindowsFormsApplication1.Transaction
                 }));
 
 
-                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Paste",
-                (o1, e1) =>
+                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Paste", (o1, e1) =>
                 {
                     dt.Clear();
                     String Text = Clipboard.GetText().Replace("\r", string.Empty);
@@ -987,8 +1015,7 @@ namespace WindowsFormsApplication1.Transaction
             txtState.Text = String.Empty;
         }
 
-        private void HelpGridView_PopupMenuShowing(object sender,
-                                                   DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        private void HelpGridView_PopupMenuShowing(object sender,DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
 
 

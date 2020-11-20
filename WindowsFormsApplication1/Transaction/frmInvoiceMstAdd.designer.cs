@@ -506,7 +506,7 @@
             this.xtraTabPage1.Controls.Add(this.txtserial);
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1220, 591);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1220, 589);
             this.xtraTabPage1.Text = "Main Invoice Details";
             // 
             // groupControl4
@@ -542,7 +542,7 @@
             // 
             // labelControl28
             // 
-            this.labelControl28.Location = new System.Drawing.Point(19, 89);
+            this.labelControl28.Location = new System.Drawing.Point(19, 86);
             this.labelControl28.Name = "labelControl28";
             this.labelControl28.Size = new System.Drawing.Size(83, 13);
             this.labelControl28.TabIndex = 540;
@@ -550,7 +550,7 @@
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(42, 65);
+            this.labelControl24.Location = new System.Drawing.Point(42, 61);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(60, 13);
             this.labelControl24.TabIndex = 540;
@@ -558,7 +558,7 @@
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(219, 43);
+            this.labelControl25.Location = new System.Drawing.Point(219, 35);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(48, 13);
             this.labelControl25.TabIndex = 540;
@@ -566,7 +566,7 @@
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(389, 42);
+            this.labelControl26.Location = new System.Drawing.Point(389, 35);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(31, 13);
             this.labelControl26.TabIndex = 540;
@@ -574,7 +574,7 @@
             // 
             // labelControl27
             // 
-            this.labelControl27.Location = new System.Drawing.Point(69, 43);
+            this.labelControl27.Location = new System.Drawing.Point(69, 35);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(33, 13);
             this.labelControl27.TabIndex = 540;
@@ -589,21 +589,21 @@
             // 
             // txtTransporterKey
             // 
-            this.txtTransporterKey.Location = new System.Drawing.Point(107, 85);
+            this.txtTransporterKey.Location = new System.Drawing.Point(107, 82);
             this.txtTransporterKey.Name = "txtTransporterKey";
             this.txtTransporterKey.Size = new System.Drawing.Size(427, 20);
             this.txtTransporterKey.TabIndex = 539;
             // 
             // txtPONo
             // 
-            this.txtPONo.Location = new System.Drawing.Point(428, 38);
+            this.txtPONo.Location = new System.Drawing.Point(428, 31);
             this.txtPONo.Name = "txtPONo";
             this.txtPONo.Size = new System.Drawing.Size(106, 20);
             this.txtPONo.TabIndex = 539;
             // 
             // txtDANo
             // 
-            this.txtDANo.Location = new System.Drawing.Point(107, 39);
+            this.txtDANo.Location = new System.Drawing.Point(107, 31);
             this.txtDANo.Name = "txtDANo";
             this.txtDANo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDANo.Properties.MaxLength = 6;
@@ -612,7 +612,7 @@
             // 
             // txtOrderNo
             // 
-            this.txtOrderNo.Location = new System.Drawing.Point(275, 39);
+            this.txtOrderNo.Location = new System.Drawing.Point(275, 31);
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderNo.Properties.MaxLength = 6;
@@ -622,7 +622,7 @@
             // txtTransporterName
             // 
             this.txtTransporterName.EnterMoveNextControl = true;
-            this.txtTransporterName.Location = new System.Drawing.Point(166, 62);
+            this.txtTransporterName.Location = new System.Drawing.Point(166, 57);
             this.txtTransporterName.Name = "txtTransporterName";
             this.txtTransporterName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterName.Properties.ReadOnly = true;
@@ -632,7 +632,7 @@
             // 
             // txtTransporterCode
             // 
-            this.txtTransporterCode.Location = new System.Drawing.Point(107, 62);
+            this.txtTransporterCode.Location = new System.Drawing.Point(107, 57);
             this.txtTransporterCode.Name = "txtTransporterCode";
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterCode.Properties.MaxLength = 6;
@@ -650,13 +650,13 @@
             this.groupControl8.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl8.Location = new System.Drawing.Point(338, 368);
             this.groupControl8.Name = "groupControl8";
-            this.groupControl8.Size = new System.Drawing.Size(159, 111);
+            this.groupControl8.Size = new System.Drawing.Size(125, 105);
             this.groupControl8.TabIndex = 534;
             this.groupControl8.Text = "Tax Type";
             // 
             // btnRecalculate
             // 
-            this.btnRecalculate.Location = new System.Drawing.Point(23, 86);
+            this.btnRecalculate.Location = new System.Drawing.Point(23, 74);
             this.btnRecalculate.Name = "btnRecalculate";
             this.btnRecalculate.Size = new System.Drawing.Size(79, 20);
             this.btnRecalculate.TabIndex = 557;
@@ -665,19 +665,19 @@
             // 
             // chInclusive
             // 
-            this.chInclusive.Location = new System.Drawing.Point(23, 67);
+            this.chInclusive.Location = new System.Drawing.Point(23, 55);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(126, 18);
+            this.chInclusive.Size = new System.Drawing.Size(126, 19);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
             // chExclusive
             // 
-            this.chExclusive.Location = new System.Drawing.Point(23, 46);
+            this.chExclusive.Location = new System.Drawing.Point(23, 34);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(126, 18);
+            this.chExclusive.Size = new System.Drawing.Size(126, 19);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -690,33 +690,33 @@
             this.groupControl6.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl6.Location = new System.Drawing.Point(177, 368);
             this.groupControl6.Name = "groupControl6";
-            this.groupControl6.Size = new System.Drawing.Size(159, 111);
+            this.groupControl6.Size = new System.Drawing.Size(125, 105);
             this.groupControl6.TabIndex = 534;
             this.groupControl6.Text = "Invoice By";
             // 
             // chLot
             // 
-            this.chLot.Location = new System.Drawing.Point(25, 82);
+            this.chLot.Location = new System.Drawing.Point(25, 76);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "LOT";
-            this.chLot.Size = new System.Drawing.Size(126, 18);
+            this.chLot.Size = new System.Drawing.Size(126, 19);
             this.chLot.TabIndex = 534;
             // 
             // CHSOR
             // 
-            this.CHSOR.Location = new System.Drawing.Point(25, 60);
+            this.CHSOR.Location = new System.Drawing.Point(25, 54);
             this.CHSOR.Name = "CHSOR";
             this.CHSOR.Properties.Caption = "SOR";
-            this.CHSOR.Size = new System.Drawing.Size(126, 18);
+            this.CHSOR.Size = new System.Drawing.Size(126, 19);
             this.CHSOR.TabIndex = 533;
             this.CHSOR.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
             // chRegular
             // 
-            this.chRegular.Location = new System.Drawing.Point(25, 38);
+            this.chRegular.Location = new System.Drawing.Point(25, 32);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(126, 18);
+            this.chRegular.Size = new System.Drawing.Size(126, 19);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -728,25 +728,25 @@
             this.groupControl5.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl5.Location = new System.Drawing.Point(16, 368);
             this.groupControl5.Name = "groupControl5";
-            this.groupControl5.Size = new System.Drawing.Size(159, 111);
+            this.groupControl5.Size = new System.Drawing.Size(125, 105);
             this.groupControl5.TabIndex = 534;
             this.groupControl5.Text = "Invoice By";
             // 
             // chDirect
             // 
-            this.chDirect.Location = new System.Drawing.Point(19, 67);
+            this.chDirect.Location = new System.Drawing.Point(19, 61);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(126, 18);
+            this.chDirect.Size = new System.Drawing.Size(126, 19);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
             // chPackingSlip
             // 
-            this.chPackingSlip.Location = new System.Drawing.Point(19, 46);
+            this.chPackingSlip.Location = new System.Drawing.Point(19, 36);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(126, 18);
+            this.chPackingSlip.Size = new System.Drawing.Size(126, 19);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -772,7 +772,7 @@
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(275, 107);
+            this.labelControl23.Location = new System.Drawing.Point(275, 86);
             this.labelControl23.Name = "labelControl23";
             this.labelControl23.Size = new System.Drawing.Size(65, 13);
             this.labelControl23.TabIndex = 540;
@@ -780,7 +780,7 @@
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(280, 82);
+            this.labelControl21.Location = new System.Drawing.Point(280, 61);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(58, 13);
             this.labelControl21.TabIndex = 540;
@@ -788,7 +788,7 @@
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(15, 107);
+            this.labelControl22.Location = new System.Drawing.Point(15, 86);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(74, 13);
             this.labelControl22.TabIndex = 540;
@@ -796,7 +796,7 @@
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(12, 82);
+            this.labelControl20.Location = new System.Drawing.Point(12, 61);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(77, 13);
             this.labelControl20.TabIndex = 540;
@@ -804,14 +804,14 @@
             // 
             // txtAmountDue
             // 
-            this.txtAmountDue.Location = new System.Drawing.Point(342, 102);
+            this.txtAmountDue.Location = new System.Drawing.Point(342, 82);
             this.txtAmountDue.Name = "txtAmountDue";
             this.txtAmountDue.Size = new System.Drawing.Size(174, 20);
             this.txtAmountDue.TabIndex = 539;
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(51, 56);
+            this.labelControl10.Location = new System.Drawing.Point(51, 35);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(38, 13);
             this.labelControl10.TabIndex = 524;
@@ -819,21 +819,21 @@
             // 
             // txtCreditLimit
             // 
-            this.txtCreditLimit.Location = new System.Drawing.Point(342, 77);
+            this.txtCreditLimit.Location = new System.Drawing.Point(342, 57);
             this.txtCreditLimit.Name = "txtCreditLimit";
             this.txtCreditLimit.Size = new System.Drawing.Size(174, 20);
             this.txtCreditLimit.TabIndex = 539;
             // 
             // txtAgentBroker
             // 
-            this.txtAgentBroker.Location = new System.Drawing.Point(95, 102);
+            this.txtAgentBroker.Location = new System.Drawing.Point(95, 82);
             this.txtAgentBroker.Name = "txtAgentBroker";
             this.txtAgentBroker.Size = new System.Drawing.Size(174, 20);
             this.txtAgentBroker.TabIndex = 539;
             // 
             // txtLedgerBalance
             // 
-            this.txtLedgerBalance.Location = new System.Drawing.Point(95, 77);
+            this.txtLedgerBalance.Location = new System.Drawing.Point(95, 57);
             this.txtLedgerBalance.Name = "txtLedgerBalance";
             this.txtLedgerBalance.Size = new System.Drawing.Size(174, 20);
             this.txtLedgerBalance.TabIndex = 539;
@@ -841,7 +841,7 @@
             // txtGSTNo
             // 
             this.txtGSTNo.EnterMoveNextControl = true;
-            this.txtGSTNo.Location = new System.Drawing.Point(95, 51);
+            this.txtGSTNo.Location = new System.Drawing.Point(95, 31);
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.ReadOnly = true;
@@ -1031,9 +1031,9 @@
             this.groupControl1.Controls.Add(this.txtDebitPartyName);
             this.groupControl1.Controls.Add(this.txtDebitPartyCode);
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(16, 43);
+            this.groupControl1.Location = new System.Drawing.Point(16, 32);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(582, 173);
+            this.groupControl1.Size = new System.Drawing.Size(582, 184);
             this.groupControl1.TabIndex = 532;
             this.groupControl1.Text = "Billing Address";
             // 
@@ -1150,7 +1150,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(196, 21);
+            this.labelControl2.Location = new System.Drawing.Point(196, 13);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(54, 13);
             this.labelControl2.TabIndex = 516;
@@ -1158,7 +1158,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(19, 21);
+            this.labelControl1.Location = new System.Drawing.Point(19, 13);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(63, 13);
             this.labelControl1.TabIndex = 515;
@@ -1167,21 +1167,20 @@
             // dtInvoiceDate
             // 
             this.dtInvoiceDate.EditValue = null;
-            this.dtInvoiceDate.Location = new System.Drawing.Point(88, 17);
+            this.dtInvoiceDate.Location = new System.Drawing.Point(88, 9);
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtInvoiceDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dtInvoiceDate.Properties.Mask.EditMask = "";
-            this.dtInvoiceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.dtInvoiceDate.Properties.MaskSettings.Set("mask", "");
             this.dtInvoiceDate.Size = new System.Drawing.Size(102, 20);
             this.dtInvoiceDate.TabIndex = 475;
             this.dtInvoiceDate.TabStop = false;
             // 
             // txtSerialNo
             // 
-            this.txtSerialNo.Location = new System.Drawing.Point(331, 17);
+            this.txtSerialNo.Location = new System.Drawing.Point(331, 9);
             this.txtSerialNo.Name = "txtSerialNo";
             this.txtSerialNo.Size = new System.Drawing.Size(136, 20);
             this.txtSerialNo.TabIndex = 478;
@@ -1190,7 +1189,7 @@
             // txtserial
             // 
             this.txtserial.Enabled = false;
-            this.txtserial.Location = new System.Drawing.Point(256, 17);
+            this.txtserial.Location = new System.Drawing.Point(256, 9);
             this.txtserial.Name = "txtserial";
             this.txtserial.Size = new System.Drawing.Size(69, 20);
             this.txtserial.TabIndex = 477;
@@ -1207,7 +1206,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 591);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
             this.xtraTabPage2.Text = "Invoice Data";
             // 
             // panelControl1
@@ -1827,7 +1826,7 @@
             this.xtraTabPage5.Controls.Add(this.txtInsuranceAmount);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(517, 156);
+            this.xtraTabPage5.Size = new System.Drawing.Size(517, 154);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -1935,9 +1934,9 @@
             // 
             this.labelControl39.Location = new System.Drawing.Point(235, 10);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(143, 13);
+            this.labelControl39.Size = new System.Drawing.Size(118, 13);
             this.labelControl39.TabIndex = 542;
-            this.labelControl39.Text = "Item Wise Discount Amount";
+            this.labelControl39.Text = "Item Wise Disc Amount";
             // 
             // labelControl38
             // 
@@ -2018,13 +2017,13 @@
             // 
             // txtTotalDisc
             // 
-            this.txtTotalDisc.Location = new System.Drawing.Point(384, 6);
+            this.txtTotalDisc.Location = new System.Drawing.Point(367, 6);
             this.txtTotalDisc.Name = "txtTotalDisc";
             this.txtTotalDisc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalDisc.Properties.MaxLength = 8;
             this.txtTotalDisc.Properties.ReadOnly = true;
             this.txtTotalDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotalDisc.Size = new System.Drawing.Size(118, 20);
+            this.txtTotalDisc.Size = new System.Drawing.Size(135, 20);
             this.txtTotalDisc.TabIndex = 489;
             this.txtTotalDisc.TabStop = false;
             // 
@@ -2130,7 +2129,7 @@
             this.xtraTabPage6.Controls.Add(this.TaxCodeGrid);
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(517, 156);
+            this.xtraTabPage6.Size = new System.Drawing.Size(517, 154);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -2139,7 +2138,7 @@
             this.TaxCodeGrid.Location = new System.Drawing.Point(0, 0);
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(517, 156);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(517, 154);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2249,7 +2248,7 @@
             // 
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(517, 156);
+            this.xtraTabPage9.Size = new System.Drawing.Size(517, 154);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -2258,7 +2257,7 @@
             this.HSNGrid.Location = new System.Drawing.Point(0, 0);
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(517, 156);
+            this.HSNGrid.Size = new System.Drawing.Size(517, 154);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2371,7 +2370,7 @@
             this.xtraTabPage7.Controls.Add(this.TXMAINREMARKS);
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(517, 156);
+            this.xtraTabPage7.Size = new System.Drawing.Size(517, 154);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -2453,7 +2452,7 @@
             this.xtraTabPage3.Controls.Add(this.txtGRNo);
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(402, 156);
+            this.xtraTabPage3.Size = new System.Drawing.Size(402, 154);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -2474,25 +2473,25 @@
             // 
             // chToPay
             // 
-            this.chToPay.Location = new System.Drawing.Point(88, 76);
+            this.chToPay.Location = new System.Drawing.Point(88, 77);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(61, 18);
+            this.chToPay.Size = new System.Drawing.Size(61, 19);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
             // chPaid
             // 
-            this.chPaid.Location = new System.Drawing.Point(35, 76);
+            this.chPaid.Location = new System.Drawing.Point(35, 77);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(47, 18);
+            this.chPaid.Size = new System.Drawing.Size(47, 19);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(34, 102);
+            this.labelControl35.Location = new System.Drawing.Point(18, 102);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(74, 13);
             this.labelControl35.TabIndex = 542;
@@ -2500,17 +2499,17 @@
             // 
             // txtGateEntryNo
             // 
-            this.txtGateEntryNo.Location = new System.Drawing.Point(127, 98);
+            this.txtGateEntryNo.Location = new System.Drawing.Point(99, 98);
             this.txtGateEntryNo.Name = "txtGateEntryNo";
             this.txtGateEntryNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGateEntryNo.Properties.MaxLength = 6;
             this.txtGateEntryNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtGateEntryNo.Size = new System.Drawing.Size(77, 20);
+            this.txtGateEntryNo.Size = new System.Drawing.Size(105, 20);
             this.txtGateEntryNo.TabIndex = 552;
             // 
             // txtBuiltyAmount
             // 
-            this.txtBuiltyAmount.Location = new System.Drawing.Point(282, 75);
+            this.txtBuiltyAmount.Location = new System.Drawing.Point(282, 76);
             this.txtBuiltyAmount.Name = "txtBuiltyAmount";
             this.txtBuiltyAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuiltyAmount.Properties.MaxLength = 6;
@@ -2520,27 +2519,27 @@
             // 
             // txtTotalBoxes
             // 
-            this.txtTotalBoxes.Location = new System.Drawing.Point(316, 54);
+            this.txtTotalBoxes.Location = new System.Drawing.Point(282, 54);
             this.txtTotalBoxes.Name = "txtTotalBoxes";
             this.txtTotalBoxes.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalBoxes.Properties.MaxLength = 6;
             this.txtTotalBoxes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotalBoxes.Size = new System.Drawing.Size(77, 20);
+            this.txtTotalBoxes.Size = new System.Drawing.Size(111, 20);
             this.txtTotalBoxes.TabIndex = 552;
             // 
             // txtCHGWeight
             // 
-            this.txtCHGWeight.Location = new System.Drawing.Point(127, 54);
+            this.txtCHGWeight.Location = new System.Drawing.Point(99, 54);
             this.txtCHGWeight.Name = "txtCHGWeight";
             this.txtCHGWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCHGWeight.Properties.MaxLength = 6;
             this.txtCHGWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCHGWeight.Size = new System.Drawing.Size(77, 20);
+            this.txtCHGWeight.Size = new System.Drawing.Size(105, 20);
             this.txtCHGWeight.TabIndex = 552;
             // 
             // labelControl37
             // 
-            this.labelControl37.Location = new System.Drawing.Point(207, 78);
+            this.labelControl37.Location = new System.Drawing.Point(207, 80);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(72, 13);
             this.labelControl37.TabIndex = 542;
@@ -2548,7 +2547,7 @@
             // 
             // labelControl45
             // 
-            this.labelControl45.Location = new System.Drawing.Point(251, 58);
+            this.labelControl45.Location = new System.Drawing.Point(221, 58);
             this.labelControl45.Name = "labelControl45";
             this.labelControl45.Size = new System.Drawing.Size(58, 13);
             this.labelControl45.TabIndex = 542;
@@ -2556,17 +2555,17 @@
             // 
             // txtActualWeight
             // 
-            this.txtActualWeight.Location = new System.Drawing.Point(127, 31);
+            this.txtActualWeight.Location = new System.Drawing.Point(99, 31);
             this.txtActualWeight.Name = "txtActualWeight";
             this.txtActualWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtActualWeight.Properties.MaxLength = 6;
             this.txtActualWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtActualWeight.Size = new System.Drawing.Size(77, 20);
+            this.txtActualWeight.Size = new System.Drawing.Size(105, 20);
             this.txtActualWeight.TabIndex = 552;
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(36, 58);
+            this.labelControl34.Location = new System.Drawing.Point(7, 58);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(85, 13);
             this.labelControl34.TabIndex = 542;
@@ -2585,7 +2584,7 @@
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(48, 35);
+            this.labelControl33.Location = new System.Drawing.Point(19, 35);
             this.labelControl33.Name = "labelControl33";
             this.labelControl33.Size = new System.Drawing.Size(73, 13);
             this.labelControl33.TabIndex = 542;
@@ -2609,7 +2608,7 @@
             // 
             // labelControl31
             // 
-            this.labelControl31.Location = new System.Drawing.Point(48, 12);
+            this.labelControl31.Location = new System.Drawing.Point(53, 12);
             this.labelControl31.Name = "labelControl31";
             this.labelControl31.Size = new System.Drawing.Size(39, 13);
             this.labelControl31.TabIndex = 542;
@@ -2667,7 +2666,7 @@
             this.xtraTabPage4.Controls.Add(this.labelControl3);
             this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(402, 156);
+            this.xtraTabPage4.Size = new System.Drawing.Size(402, 154);
             this.xtraTabPage4.Text = "Bank Details";
             // 
             // txtBankName
@@ -2712,7 +2711,7 @@
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage8.ImageOptions.Image")));
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(402, 156);
+            this.xtraTabPage8.Size = new System.Drawing.Size(402, 154);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // DocsGrid
@@ -2889,7 +2888,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.HelpGrid.Location = new System.Drawing.Point(279, 30);
+            this.HelpGrid.Location = new System.Drawing.Point(269, 21);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(717, 205);
@@ -2919,7 +2918,7 @@
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
             // 
-            // frmInvoiceMstAdd
+            // FrmInvoiceMstAdd
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -2932,7 +2931,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmInvoiceMstAdd";
+            this.Name = "FrmInvoiceMstAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmInvoiceMstAdd_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInvoiceMstAdd_KeyDown);

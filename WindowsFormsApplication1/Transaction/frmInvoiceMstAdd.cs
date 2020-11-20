@@ -259,7 +259,7 @@ namespace WindowsFormsApplication1
                 Decimal WSP = 0;
                 if (chInclusive.Checked)
                 {
-                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" && Convert.ToDecimal(dsActMst.Tables[0].Rows[0]["AccMrpMarkDown"]) == 0)
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P") 
                     {
                         WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
                     }
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
 
                 else
                 {
-                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" && Convert.ToDecimal(dsActMst.Tables[0].Rows[0]["AccMrpMarkDown"]) == 0)
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" )
                     {
                         WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
                     }

@@ -476,7 +476,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(108, 35);
+            this.HelpGrid.Location = new System.Drawing.Point(109, 84);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(737, 368);
@@ -596,11 +596,11 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(27, 11);
+            this.labelControl4.Location = new System.Drawing.Point(21, 11);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(65, 13);
+            this.labelControl4.Size = new System.Drawing.Size(71, 13);
             this.labelControl4.TabIndex = 725;
-            this.labelControl4.Text = "Party NAME :";
+            this.labelControl4.Text = "PARTY NAME :";
             this.labelControl4.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // txtGSTNo
