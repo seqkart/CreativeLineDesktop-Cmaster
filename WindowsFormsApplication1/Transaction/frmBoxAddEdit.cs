@@ -391,7 +391,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                        BarCodeGridView.ExportToCsv(AppDomain.CurrentDomain.BaseDirectory + @"\tempbarcode.txt");
+                       // BarCodeGridView.ExportToCsv(AppDomain.CurrentDomain.BaseDirectory + @"\tempbarcode.txt");
                         ProjectFunctions.SpeakError(" Box Saved Successfully");
                         sqlcon.Close();
                         if (s1 == "&Add")
