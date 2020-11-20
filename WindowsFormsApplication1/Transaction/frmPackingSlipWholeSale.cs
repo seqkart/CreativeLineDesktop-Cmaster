@@ -63,6 +63,43 @@ namespace WindowsFormsApplication1.Transaction
                 QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
             }
             lblTotQty.Text = QtySum.ToString("0");
+
+            DataSet ds = new DataSet();
+            if (S1 == "&Add")
+            {
+                 ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount2] '" +
+                   PSWSNO +
+                   "','" +
+                   PSWSTOTBOXES +
+                   "','" +
+                   GlobalVariables.FinancialYear +
+                   "','" +
+                   GlobalVariables.CUnitID +
+                   "'");
+            }
+            else
+            {
+                 ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                   PSWSNO +
+                   "','" +
+                   PSWSTOTBOXES +
+                   "','" +
+                   GlobalVariables.FinancialYear +
+                   "','" +
+                   GlobalVariables.CUnitID +
+                   "'");
+          
+            }
+
+
+
+               
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
+                    Convert.ToDecimal(lblTotQty.Text)).ToString();
+            }
         }
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
@@ -223,10 +260,10 @@ namespace WindowsFormsApplication1.Transaction
                         Count();
 //////////////////////////////////////////
 
-                        if (ds.Tables[2].Rows.Count > 0)
-                        {
-                            lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
-                        }
+                        //if (ds.Tables[2].Rows.Count > 0)
+                        //{
+                            //lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
+                       // }
                     }
 
 
@@ -560,24 +597,28 @@ namespace WindowsFormsApplication1.Transaction
                         {
                             lblBox.Text = (Convert.ToInt32(lblBox.Text) + 1).ToString();
                             BarCodeGrid.DataSource = null;
+
+
                             dt.Clear();
+                            Count();
+                            
                             lblTotQty.Text = "0";
+                            //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                            //    PSWSNO +
+                            //    "','" +
+                            //    PSWSTOTBOXES +
+                            //    "','" +
+                            //    GlobalVariables.FinancialYear +
+                            //    "','" +
+                            //    GlobalVariables.CUnitID +
+                            //    "'");
 
-                            DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                                PSWSNO +
-                                "','" +
-                                PSWSTOTBOXES +
-                                "','" +
-                                GlobalVariables.FinancialYear +
-                                "','" +
-                                GlobalVariables.CUnitID +
-                                "'");
-
-                            if (ds.Tables[0].Rows.Count > 0)
-                            {
-                                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
-                                    Convert.ToDecimal(lblTotQty.Text)).ToString();
-                            }
+                            //if (ds.Tables[0].Rows.Count > 0)
+                            //{
+                            //    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
+                            //        Convert.ToDecimal(lblTotQty.Text)).ToString();
+                            //    lblTotQty.Text = "0";
+                            //}
                         }
                         else
                         {
@@ -590,25 +631,28 @@ namespace WindowsFormsApplication1.Transaction
                                 "'")
                                 .Tables[0].Rows[0][0].ToString();
                             BarCodeGrid.DataSource = null;
-                            dt.Clear();
-                            lblTotQty.Text = "0";
+                           
+                            
                             S1 = "&Add";
+                            dt.Clear();
+                            Count();
+                           
+                            lblTotQty.Text = "0";
+                            //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                            //    PSWSNO +
+                            //    "','" +
+                            //    PSWSTOTBOXES +
+                            //    "','" +
+                            //    GlobalVariables.FinancialYear +
+                            //    "','" +
+                            //    GlobalVariables.CUnitID +
+                            //    "'");
 
-
-                            DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                                PSWSNO +
-                                "','" +
-                                PSWSTOTBOXES +
-                                "','" +
-                                GlobalVariables.FinancialYear +
-                                "','" +
-                                GlobalVariables.CUnitID +
-                                "'");
-
-                            if (ds.Tables[0].Rows.Count > 0)
-                            {
-                                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
-                            }
+                            //if (ds.Tables[0].Rows.Count > 0)
+                            //{
+                            //    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
+                            //    lblTotQty.Text = "0";
+                            //}
                         }
                     }
                 }
@@ -718,7 +762,7 @@ namespace WindowsFormsApplication1.Transaction
                     {
 
 
-                        if (txtStoreCode.Text.Length > 0)
+                        if (txtStoreCode.Text.Trim().Length > 0)
                         {
                             if (dt.Rows.Count < Convert.ToDecimal(txtStoreQty.Text))
                             {
@@ -836,7 +880,7 @@ namespace WindowsFormsApplication1.Transaction
                         {
                             dr["SIDBOXNO"] = lblBox.Text;
                         }
-                        Count();
+                      
                         BarCodeGrid.DataSource = dt;
                         BarCodeGridView.BestFitColumns();
                     }
@@ -846,7 +890,52 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     txtBarCode.Text = String.Empty;
                     txtBarCode.Focus();
+
+
+
+
+
+
+
                     lblTotQty.Text = Convert.ToDecimal(gridColumn7.SummaryItem.SummaryValue).ToString("0");
+
+
+
+
+                    Count();
+
+
+                    //dt.AcceptChanges();
+                    //Decimal QtySum = 0;
+                    //foreach (DataRow dr in dt.Rows)
+                    //{
+                    //    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                    //}
+                    //lblTotQty.Text = QtySum.ToString("0");
+
+                    //DataSet dsNew = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                    //    PSWSNO +
+                    //    "','" +
+                    //    PSWSTOTBOXES +
+                    //    "','" +
+                    //    GlobalVariables.FinancialYear +
+                    //    "','" +
+                    //    GlobalVariables.CUnitID +
+                    //    "'");
+
+                    //if (dsNew.Tables[0].Rows.Count > 0)
+                    //{
+                    //    lblPackingSLipTot.Text = (Convert.ToDecimal(dsNew.Tables[0].Rows[0][0]) +
+                    //        Convert.ToDecimal(lblTotQty.Text)).ToString();
+                    //}
+
+
+
+
+
+
+
+
                 }
             }
             catch (Exception ex)
@@ -862,28 +951,16 @@ namespace WindowsFormsApplication1.Transaction
             {
                 ProjectFunctions.DeleteCurrentRowOnKeyDown(BarCodeGrid, BarCodeGridView, e);
                 dt.AcceptChanges();
-                Decimal QtySum = 0;
-                foreach (DataRow dr in dt.Rows)
-                {
-                    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                }
-                lblTotQty.Text = QtySum.ToString("0");
+                //Decimal QtySum = 0;
+                //foreach (DataRow dr in dt.Rows)
+                //{
+                //    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                //}
+                //lblTotQty.Text = QtySum.ToString("0");
 
-                DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                    PSWSNO +
-                    "','" +
-                    PSWSTOTBOXES +
-                    "','" +
-                    GlobalVariables.FinancialYear +
-                    "','" +
-                    GlobalVariables.CUnitID +
-                    "'");
+                Count();
 
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
-                        Convert.ToDecimal(lblTotQty.Text)).ToString();
-                }
+                
             }
             catch (Exception ex)
             {
@@ -916,29 +993,31 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     BarCodeGridView.DeleteRow(BarCodeGridView.FocusedRowHandle);
                     dt.AcceptChanges();
-                    Decimal QtySum = 0;
-                    foreach (DataRow dr in dt.Rows)
-                    {
-                        QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                    }
-                    lblTotQty.Text = QtySum.ToString("0");
+                    //Decimal QtySum = 0;
+                    //foreach (DataRow dr in dt.Rows)
+                    //{
+                    //    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                    //}
+                    //lblTotQty.Text = QtySum.ToString("0");
 
 
-                    DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                        PSWSNO +
-                        "','" +
-                        PSWSTOTBOXES +
-                        "','" +
-                        GlobalVariables.FinancialYear +
-                        "','" +
-                        GlobalVariables.CUnitID +
-                        "'");
+                    //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                    //    PSWSNO +
+                    //    "','" +
+                    //    PSWSTOTBOXES +
+                    //    "','" +
+                    //    GlobalVariables.FinancialYear +
+                    //    "','" +
+                    //    GlobalVariables.CUnitID +
+                    //    "'");
 
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
-                            Convert.ToDecimal(lblTotQty.Text)).ToString();
-                    }
+                    //if (ds.Tables[0].Rows.Count > 0)
+                    //{
+                    //    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
+                    //        Convert.ToDecimal(lblTotQty.Text)).ToString();
+                    //}
+
+                    Count();
                 }));
 
 

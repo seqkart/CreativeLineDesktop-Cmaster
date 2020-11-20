@@ -252,7 +252,7 @@ namespace WindowsFormsApplication1
             {
 
 
-                DataSet dsActMst = ProjectFunctions.GetDataSet("Select AccFixBarCodeTag,isnull(AccMrpMarkDown,0) as AccMrpMarkDown from ActMst where AccCode='" + txtDebitPartyCode.Text + "'");
+                DataSet dsActMst = ProjectFunctions.GetDataSet("Select AccFixBarCodeTag,isnull(AccMrpMarkDown,0) as AccMrpMarkDown from ActMst inner join ActMstAddInf on ActMst.AccCode=ActMstAddInf.AccCode where ActMst.AccCode='" + txtDebitPartyCode.Text + "'");
 
 
 

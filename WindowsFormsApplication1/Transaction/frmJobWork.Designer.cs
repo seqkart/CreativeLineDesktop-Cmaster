@@ -159,6 +159,7 @@
             this.dtInvoiceDate = new DevExpress.XtraEditors.DateEdit();
             this.txtSerialNo = new DevExpress.XtraEditors.TextEdit();
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
@@ -193,6 +194,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView3
@@ -1343,7 +1345,7 @@
             // 
             this.labelControl15.Location = new System.Drawing.Point(548, 146);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(14, 13);
+            this.labelControl15.Size = new System.Drawing.Size(16, 13);
             this.labelControl15.TabIndex = 543;
             this.labelControl15.Text = "Zip";
             // 
@@ -1391,7 +1393,7 @@
             // 
             this.labelControl18.Location = new System.Drawing.Point(37, 66);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(39, 13);
+            this.labelControl18.Size = new System.Drawing.Size(41, 13);
             this.labelControl18.TabIndex = 538;
             this.labelControl18.Text = "Address";
             // 
@@ -1423,7 +1425,7 @@
             // 
             this.labelControl19.Location = new System.Drawing.Point(21, 40);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(56, 13);
+            this.labelControl19.Size = new System.Drawing.Size(57, 13);
             this.labelControl19.TabIndex = 534;
             this.labelControl19.Text = "Party Name";
             // 
@@ -1460,6 +1462,7 @@
             this.groupControl1.Controls.Add(this.txtBillingCity);
             this.groupControl1.Controls.Add(this.labelControl11);
             this.groupControl1.Controls.Add(this.txtBillingAddress3);
+            this.groupControl1.Controls.Add(this.textEdit1);
             this.groupControl1.Controls.Add(this.txtBillingAddress2);
             this.groupControl1.Controls.Add(this.labelControl4);
             this.groupControl1.Controls.Add(this.txtDebitPartyName);
@@ -1474,7 +1477,7 @@
             // 
             this.labelControl14.Location = new System.Drawing.Point(548, 146);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(14, 13);
+            this.labelControl14.Size = new System.Drawing.Size(16, 13);
             this.labelControl14.TabIndex = 543;
             this.labelControl14.Text = "Zip";
             // 
@@ -1522,7 +1525,7 @@
             // 
             this.labelControl11.Location = new System.Drawing.Point(37, 66);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(39, 13);
+            this.labelControl11.Size = new System.Drawing.Size(41, 13);
             this.labelControl11.TabIndex = 538;
             this.labelControl11.Text = "Address";
             // 
@@ -1546,7 +1549,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(21, 40);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(56, 13);
+            this.labelControl4.Size = new System.Drawing.Size(57, 13);
             this.labelControl4.TabIndex = 534;
             this.labelControl4.Text = "Party Name";
             // 
@@ -1573,24 +1576,24 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(214, 1);
+            this.labelControl2.Location = new System.Drawing.Point(214, 7);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(51, 13);
+            this.labelControl2.Size = new System.Drawing.Size(54, 13);
             this.labelControl2.TabIndex = 542;
             this.labelControl2.Text = "Invoice No";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(37, 1);
+            this.labelControl1.Location = new System.Drawing.Point(37, 7);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(61, 13);
+            this.labelControl1.Size = new System.Drawing.Size(63, 13);
             this.labelControl1.TabIndex = 541;
             this.labelControl1.Text = "Invoice Date";
             // 
             // dtInvoiceDate
             // 
             this.dtInvoiceDate.EditValue = null;
-            this.dtInvoiceDate.Location = new System.Drawing.Point(106, -3);
+            this.dtInvoiceDate.Location = new System.Drawing.Point(106, 3);
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1604,7 +1607,7 @@
             // 
             // txtSerialNo
             // 
-            this.txtSerialNo.Location = new System.Drawing.Point(349, -3);
+            this.txtSerialNo.Location = new System.Drawing.Point(349, 3);
             this.txtSerialNo.Name = "txtSerialNo";
             this.txtSerialNo.Size = new System.Drawing.Size(136, 20);
             this.txtSerialNo.TabIndex = 540;
@@ -1613,11 +1616,19 @@
             // txtserial
             // 
             this.txtserial.Enabled = false;
-            this.txtserial.Location = new System.Drawing.Point(274, -3);
+            this.txtserial.Location = new System.Drawing.Point(274, 3);
             this.txtserial.Name = "txtserial";
             this.txtserial.Size = new System.Drawing.Size(69, 20);
             this.txtserial.TabIndex = 539;
             this.txtserial.TabStop = false;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Enabled = false;
+            this.textEdit1.Location = new System.Drawing.Point(82, 63);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(458, 20);
+            this.textEdit1.TabIndex = 536;
             // 
             // frmJobWork
             // 
@@ -1673,6 +1684,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1810,5 +1822,6 @@
         private DevExpress.XtraEditors.DateEdit dtInvoiceDate;
         private DevExpress.XtraEditors.TextEdit txtSerialNo;
         private DevExpress.XtraEditors.TextEdit txtserial;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

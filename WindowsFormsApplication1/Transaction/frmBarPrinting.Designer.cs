@@ -202,6 +202,7 @@
             // 
             this.gridColumn25.Caption = "EAN CODE";
             this.gridColumn25.FieldName = "SKUPARTYBARCODE";
+            this.gridColumn25.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn25.ImageOptions.SvgImage")));
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 0;
@@ -210,6 +211,7 @@
             // 
             this.gridColumn24.Caption = "FIX CODE";
             this.gridColumn24.FieldName = "SKUFIXBARCODE";
+            this.gridColumn24.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn24.ImageOptions.SvgImage")));
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 1;
@@ -218,6 +220,7 @@
             // 
             this.gridColumn1.Caption = "UNIQUE CODE";
             this.gridColumn1.FieldName = "SKUPRODUCTCODE";
+            this.gridColumn1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn1.ImageOptions.SvgImage")));
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsEditForm.UseEditorColRowSpan = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
@@ -230,6 +233,7 @@
             // 
             this.gridColumn2.Caption = "ARTICLE NO";
             this.gridColumn2.FieldName = "SKUARTNO";
+            this.gridColumn2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn2.ImageOptions.SvgImage")));
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
@@ -240,6 +244,7 @@
             // 
             this.gridColumn3.Caption = "DESCRIPTION";
             this.gridColumn3.FieldName = "ARTDESC";
+            this.gridColumn3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn3.ImageOptions.SvgImage")));
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
@@ -250,6 +255,7 @@
             // 
             this.gridColumn4.Caption = "COLOUR";
             this.gridColumn4.FieldName = "SKUCOLN";
+            this.gridColumn4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn4.ImageOptions.SvgImage")));
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
@@ -260,6 +266,7 @@
             // 
             this.gridColumn5.Caption = "SIZE";
             this.gridColumn5.FieldName = "SKUSIZN";
+            this.gridColumn5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn5.ImageOptions.SvgImage")));
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
@@ -271,6 +278,7 @@
             this.gridColumn6.Caption = "QTY";
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "SKUFEDQTY";
+            this.gridColumn6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn6.ImageOptions.SvgImage")));
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SKUFEDQTY", "{0:0.##}")});
@@ -282,6 +290,7 @@
             // 
             this.gridColumn7.Caption = "MRP";
             this.gridColumn7.FieldName = "SKUMRP";
+            this.gridColumn7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn7.ImageOptions.SvgImage")));
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
@@ -292,6 +301,7 @@
             // 
             this.gridColumn8.Caption = "WSP";
             this.gridColumn8.FieldName = "SKUWSP";
+            this.gridColumn8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn8.ImageOptions.SvgImage")));
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
