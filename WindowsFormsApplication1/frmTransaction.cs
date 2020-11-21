@@ -1168,42 +1168,38 @@ namespace WindowsFormsApplication1
                                                                       PrintOutGrid.DataSource = dt;
                                                                       PrintOutGridView.BestFitColumns();
                                                                       PrintOutGrid.Visible = true;
+                                                                      //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                   }));
                     e.Menu.Items
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Generate PT File",
                                                                   (o1, e1) =>
                                                                   {
 
-                                                                      int i = 0;
-                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                  int i = 0;
+                                                                  foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                  {
+
+                                                                      if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                       {
-
-                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                          i++;
+                                                                          DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
+                                                                         dr["BillNo"].ToString() +
+                                                                         "','" +
+                                                                         GlobalVariables.FinancialYear +
+                                                                         "'");
+                                                                          if (ds.Tables[0].Rows.Count > 0)
                                                                           {
-                                                                              i++;
-                                                                              DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
-                                                                             dr["BillNo"].ToString() +
-                                                                             "','" +
-                                                                             GlobalVariables.FinancialYear +
-                                                                             "'");
-                                                                              if (ds.Tables[0].Rows.Count > 0)
-                                                                              {
-                                                                                  PrintOutGridView.Columns.Clear();
-                                                                                  PrintOutGrid.DataSource = ds.Tables[0];
-                                                                                  PrintOutGridView.BestFitColumns();
-                                                                                  PrintOutGridView.ExportToCsv(Application.StartupPath +
-                                                                                      @"\PTFile\" +
-                                                                                      dr["DebitPartyName"].ToString() +
-                                                                                      "_GST_" +
-                                                                                      dr
-                                                                                      ["BillNo"].ToString() +
-                                                                                      ".csv");
+                                                                              PrintOutGridView.Columns.Clear();
+                                                                              PrintOutGrid.DataSource = ds.Tables[0];
+                                                                              PrintOutGridView.BestFitColumns();
+                                                                              PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
+                                                                              PrintOutGridView.ExportToXlsx (Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".xlsx"); 
 
-                                                                                  //Close();
-                                                                              }
+                    //Close();
+                }
                                                                               else
                                                                               {
-                                                                                  ProjectFunctions.SpeakError("Some Error In PT File Generation");
+                                                                                  ProjectFunctions.SpeakError("Error In PT File Generation");
                                                                               }
                                                                           }
 
