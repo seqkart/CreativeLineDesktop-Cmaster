@@ -224,6 +224,7 @@
               &lt;xs:element name="DelGSTNo" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="CityCode" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="DelCity" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="AccDCCode" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

@@ -115,7 +115,7 @@
             this.BarCodeGrid.Location = new System.Drawing.Point(12, 186);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
             this.BarCodeGrid.Name = "BarCodeGrid";
-            this.BarCodeGrid.Size = new System.Drawing.Size(880, 366);
+            this.BarCodeGrid.Size = new System.Drawing.Size(1096, 387);
             this.BarCodeGrid.TabIndex = 682;
             this.BarCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BarCodeGridView});
@@ -460,7 +460,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(904, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1120, 26);
             this.Menu_ToolStrip.TabIndex = 685;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -538,7 +538,7 @@
             // ArticleImageBox
             // 
             this.ArticleImageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ArticleImageBox.Location = new System.Drawing.Point(754, 29);
+            this.ArticleImageBox.Location = new System.Drawing.Point(970, 29);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
@@ -820,7 +820,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 564);
+            this.ClientSize = new System.Drawing.Size(1120, 585);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);

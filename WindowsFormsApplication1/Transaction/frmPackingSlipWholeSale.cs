@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
@@ -67,33 +66,33 @@ namespace WindowsFormsApplication1.Transaction
             DataSet ds = new DataSet();
             if (S1 == "&Add")
             {
-                 ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount2] '" +
-                   PSWSNO +
-                   "','" +
-                   PSWSTOTBOXES +
-                   "','" +
-                   GlobalVariables.FinancialYear +
-                   "','" +
-                   GlobalVariables.CUnitID +
-                   "'");
+                ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount2] '" +
+                  PSWSNO +
+                  "','" +
+                  PSWSTOTBOXES +
+                  "','" +
+                  GlobalVariables.FinancialYear +
+                  "','" +
+                  GlobalVariables.CUnitID +
+                  "'");
             }
             else
             {
-                 ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                   PSWSNO +
-                   "','" +
-                   PSWSTOTBOXES +
-                   "','" +
-                   GlobalVariables.FinancialYear +
-                   "','" +
-                   GlobalVariables.CUnitID +
-                   "'");
-          
+                ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                  PSWSNO +
+                  "','" +
+                  PSWSTOTBOXES +
+                  "','" +
+                  GlobalVariables.FinancialYear +
+                  "','" +
+                  GlobalVariables.CUnitID +
+                  "'");
+
             }
 
 
 
-               
+
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -118,7 +117,7 @@ namespace WindowsFormsApplication1.Transaction
                     StkTransfer = row["AccStkTrf"].ToString();
                     txtCity.Text = row["CTNAME"].ToString();
                     txtState.Text = row["STNAME"].ToString();
-
+                    txtStoreCode.Text = row["AccDCCode"].ToString();
                     FixBarPartyTag = row["AccFixBarCodeTag"].ToString();
 
                     txtPONo.Focus();
@@ -196,18 +195,7 @@ namespace WindowsFormsApplication1.Transaction
                     lblTotQty.Text = "0";
                     lblPackingSLipTot.Text = "0";
                     Panel1.Focus();
-                    if (FixBarPartyTag == "P")
-                    {
-                        txtStoreCode.Visible = true;
-                        labelControl12.Visible = true;
-                        txtStoreQty.Visible = true;
-                    }
-                    else
-                    {
-                        txtStoreCode.Visible = false;
-                        labelControl12.Visible = false;
-                        txtStoreQty.Visible = false;
-                    }
+
                     txtAccCode.Select();
                 }
                 if (S1 == "Edit")
@@ -239,31 +227,20 @@ namespace WindowsFormsApplication1.Transaction
 
                         FixBarPartyTag = ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
                         StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
-                        txtStoreCode.Text= ds.Tables[0].Rows[0]["PSWSTORECODE"].ToString();
+                        txtStoreCode.Text = ds.Tables[0].Rows[0]["PSWSTORECODE"].ToString();
                         dt = ds.Tables[1];
                         BarCodeGrid.DataSource = dt;
                         BarCodeGridView.BestFitColumns();
 
-                        if (FixBarPartyTag == "P")
-                        {
-                            txtStoreCode.Visible = true;
-                            labelControl12.Visible = true;
-                            txtStoreQty.Visible = true;
-                        }
-                        else
-                        {
-                            txtStoreCode.Visible = false;
-                            labelControl12.Visible = false;
-                            txtStoreQty.Visible = false;
-                        }
+
 
                         Count();
-//////////////////////////////////////////
+                        //////////////////////////////////////////
 
                         //if (ds.Tables[2].Rows.Count > 0)
                         //{
-                            //lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
-                       // }
+                        //lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[2].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
+                        // }
                     }
 
 
@@ -308,7 +285,7 @@ namespace WindowsFormsApplication1.Transaction
                     else
 
                     {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelpActWise '" + txtAccCode.Text.Trim() +                            "'");
+                        DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelpActWise '" + txtAccCode.Text.Trim() + "'");
                         if (ds1.Tables[0].Rows.Count > 0)
                         {
                             txtAccCode.Text = ds1.Tables[0].Rows[0]["AccCode"].ToString();
@@ -320,7 +297,7 @@ namespace WindowsFormsApplication1.Transaction
                             StkTransfer = ds1.Tables[0].Rows[0]["AccStkTrf"].ToString();
                             txtCity.Text = ds1.Tables[0].Rows[0]["CTNAME"].ToString();
                             txtState.Text = ds1.Tables[0].Rows[0]["STNAME"].ToString();
-
+                            txtStoreCode.Text = ds1.Tables[0].Rows[0]["AccDCCode"].ToString();
                             FixBarPartyTag = ds1.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
                             txtDANo.Focus();
                         }
@@ -601,7 +578,7 @@ namespace WindowsFormsApplication1.Transaction
 
                             dt.Clear();
                             Count();
-                            
+
                             lblTotQty.Text = "0";
                             //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
                             //    PSWSNO +
@@ -631,12 +608,12 @@ namespace WindowsFormsApplication1.Transaction
                                 "'")
                                 .Tables[0].Rows[0][0].ToString();
                             BarCodeGrid.DataSource = null;
-                           
-                            
+
+
                             S1 = "&Add";
                             dt.Clear();
                             Count();
-                           
+
                             lblTotQty.Text = "0";
                             //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
                             //    PSWSNO +
@@ -764,13 +741,35 @@ namespace WindowsFormsApplication1.Transaction
 
                         if (txtStoreCode.Text.Trim().Length > 0)
                         {
-                            if (dt.Rows.Count < Convert.ToDecimal(txtStoreQty.Text))
+
+                            DataSet dsQTY = ProjectFunctions.GetDataSet("sp_LoadPIQtyFPSlip '" + txtStoreCode.Text + "','" + txtBarCode.Text + "'");
+                            if (dsQTY.Tables[0].Rows.Count > 0)
+                            {
+                                txtStoreQty.Text = dsQTY.Tables[0].Rows[0][0].ToString();
+                            }
+                            else
+                            {
+                                txtStoreQty.Text = "0";
+                            }
+                            int Qty = 0;
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                if (dr["SIDBARCODE"].ToString() == ds.Tables[0].Rows[0]["SIDBARCODE"].ToString())
+                                {
+                                    Qty = Qty + Convert.ToInt32(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                }
+                            }
+                            Qty = Qty + Convert.ToInt32(ProjectFunctions.GetDataSet("Select isnull(sum(SIDSCANQTY),0) from PSWSLDET where SIDPARTYC='" + txtAccCode.Text.Trim() + "' And SIDBARCODE='"+txtBarCode.Text+ "' ").Tables[0].Rows[0][0]);
+                            if (Qty < Convert.ToDecimal(txtStoreQty.Text))
                             {
 
                             }
                             else
                             {
-                               ProjectFunctions.SpeakError("Qty More Than PO Qty");
+                                ProjectFunctions.SpeakError("Qty More Than PO Qty");
+                                txtBarCode.Focus();
+                                txtBarCode.SelectAll();
+                                e.Handled = true;
                                 return;
                             }
 
@@ -781,31 +780,31 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                        //if (FixBarPartyTag == "Y")
-                        //{
+                        if (FixBarPartyTag == "N")
+                        {
 
-                        //    if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
-                        //    {
-                        //        ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                        //        txtBarCode.Focus();
-                        //        txtBarCode.SelectAll();
+                            if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                            {
+                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                txtBarCode.Focus();
+                                txtBarCode.SelectAll();
 
-                        //        e.Handled = true;
-                        //        return;
-                        //    }
-                        //    foreach (DataRow dr in dt.Rows)
-                        //    {
-                        //        if (dr["SIDBARCODE"].ToString().ToUpper() == txtBarCode.Text.Trim())
-                        //        {
-                        //            ProjectFunctions.SpeakError("BarCode Already Loaded In This Document");
-                        //            txtBarCode.Focus();
-                        //            txtBarCode.SelectAll();
-                        //            e.Handled = true;
-                        //            return;
-                        //        }
+                                e.Handled = true;
+                                return;
+                            }
 
-                        //    }
-                        //}
+
+                            DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
+                            if(dsCheck.Tables[0].Rows.Count>0)
+                            {
+                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                txtBarCode.Focus();
+                                txtBarCode.SelectAll();
+                                e.Handled = true;
+                                return;
+                            }
+                            
+                        }
 
                         //////////////////////////MRP
                         //if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) !=
@@ -880,7 +879,7 @@ namespace WindowsFormsApplication1.Transaction
                         {
                             dr["SIDBOXNO"] = lblBox.Text;
                         }
-                      
+
                         BarCodeGrid.DataSource = dt;
                         BarCodeGridView.BestFitColumns();
                     }
@@ -960,7 +959,7 @@ namespace WindowsFormsApplication1.Transaction
 
                 Count();
 
-                
+
             }
             catch (Exception ex)
             {
@@ -1094,7 +1093,7 @@ namespace WindowsFormsApplication1.Transaction
             txtState.Text = String.Empty;
         }
 
-        private void HelpGridView_PopupMenuShowing(object sender,DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        private void HelpGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
 
 
@@ -1123,15 +1122,15 @@ namespace WindowsFormsApplication1.Transaction
             if (e.KeyCode == Keys.Enter)
             {
 
-                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIQtyFPSlip '" + txtStoreCode.Text + "'");
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    txtStoreQty.Text = ds.Tables[0].Rows[0][0].ToString();
-                }
-                else
-                {
-                    txtStoreQty.Text = "0";
-                }
+                //DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIQtyFPSlip '" + txtStoreCode.Text + "'");
+                //if (ds.Tables[0].Rows.Count > 0)
+                //{
+                //    txtStoreQty.Text = ds.Tables[0].Rows[0][0].ToString();
+                //}
+                //else
+                //{
+                //    txtStoreQty.Text = "0";
+                //}
             }
         }
     }

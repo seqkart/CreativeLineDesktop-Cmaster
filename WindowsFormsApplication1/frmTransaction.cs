@@ -3,6 +3,7 @@ using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -1289,6 +1290,50 @@ namespace WindowsFormsApplication1
                                                                           }
                                                                       }
                                                                   }));
+
+                    e.Menu.Items
+                       .Add(new DevExpress.Utils.Menu.DXMenuItem("PRINT BOX LABEL",
+                                                                 (o1, e1) =>
+                                                                 {
+
+                                                                    // int i = 0;
+                                                                     foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                     {
+                                                                         if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                         {
+                                                                             //DataTable dt = new DataTable();
+                                                                             //DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
+                                                                             //    dr["PSWSNO"].ToString() +
+                                                                             //    "','" +
+                                                                             //    dr["SIDBOXNO"].ToString() +
+                                                                             //    "','" +
+                                                                             //    GlobalVariables.FinancialYear +
+                                                                             //    "','" +
+                                                                             //    GlobalVariables.CUnitID +
+                                                                             //    "'");
+                                                                             //ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
+                                                                             Prints.BOXLABEL rpt = new Prints.BOXLABEL();
+
+
+                                                                             rpt.Parameters["PSWSNO"].Visible = false;
+                                                                             rpt.Parameters["PSWSTOTBOXES"].Visible = false;
+                                                                             rpt.Parameters["FY"].Visible = false;
+                                                                             rpt.Parameters["UnitCode"].Visible = false;
+
+                                                                             rpt.Parameters["PSWSNO"].Value = dr["PSWSNO"].ToString();
+                                                                             rpt.Parameters["PSWSTOTBOXES"].Value = dr["SIDBOXNO"].ToString();
+                                                                             rpt.Parameters["FY"].Value = GlobalVariables.FinancialYear;
+                                                                             rpt.Parameters["UnitCode"].Value = GlobalVariables.CUnitID;
+                                                                             // { DataSource = ds.Tables[0] };
+                                                                             rpt.CreateDocument();
+
+                                                                             payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+
+                                                                             frm.documentViewer1.DocumentSource = rpt;
+                                                                             frm.ShowDialog(Parent);
+                                                                         }
+                                                                     }
+                                                                 }));
                 }
 
 
@@ -1848,6 +1893,23 @@ namespace WindowsFormsApplication1
                                 {
                                     pt.ShowRibbonPreviewDialog();
                                 }
+
+
+                                //System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+                                //List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
+                                //Dictionary<string, object> row;
+                                //foreach (DataRow drNew in dt.Rows)
+                                //{
+                                //    row = new Dictionary<string, object>();
+                                //    foreach (DataColumn col in dt.Columns)
+                                //    {
+                                //        row.Add(col.ColumnName, drNew[col]);
+                                //    }
+                                //    rows.Add(row);
+                                //}
+                                //String x = row;
+
+
                             }
                         }
                     }

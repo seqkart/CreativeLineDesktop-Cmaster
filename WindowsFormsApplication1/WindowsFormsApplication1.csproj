@@ -928,6 +928,12 @@
     <Compile Include="Master\frmStateMst.Designer.cs">
       <DependentUpon>frmStateMst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prints\BOXLABEL.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\BOXLABEL.Designer.cs">
+      <DependentUpon>BOXLABEL.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\EmployeeSalaryDetails.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1769,6 +1775,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmStateMst.resx">
       <DependentUpon>frmStateMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\BOXLABEL.resx">
+      <DependentUpon>BOXLABEL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\EmployeeSalaryDetails.resx">
       <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>

@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1
 
         public static String ProgCode = "MIS1";
         public static String ProgDesc = "Test";
-
+        public static String VendorCode = "30306879";
         public static DateTime FinYearStartDate = Convert.ToDateTime("2020-04-01");
         public static DateTime FinYearEndDate = Convert.ToDateTime("2021-03-31");
         public static String CurrentUser = "000130";
