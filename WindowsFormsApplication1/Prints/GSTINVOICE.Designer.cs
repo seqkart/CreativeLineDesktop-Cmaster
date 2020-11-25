@@ -85,6 +85,7 @@
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel6 = new DevExpress.XtraReports.UI.XRPanel();
+            this.txtVendorCode = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel117 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel116 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel115 = new DevExpress.XtraReports.UI.XRLabel();
@@ -204,8 +205,9 @@
             this.other = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX1 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.txtVendorCode = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel118 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrLabel119 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -380,18 +382,17 @@
             // 
             // xrLabel16
             // 
-            this.xrLabel16.AutoWidth = true;
             this.xrLabel16.CanGrow = false;
             this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table1].[ARTNO]")});
             this.xrLabel16.Font = new System.Drawing.Font("Calibri", 10F);
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(8.520865F, 0.3750122F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(3.520865F, 0.3750165F);
+            this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel16.SizeF = new System.Drawing.SizeF(81.96267F, 14.00002F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(102.671F, 14.00002F);
             this.xrLabel16.StylePriority.UseFont = false;
             this.xrLabel16.Text = "ARTICLE NO.";
-            this.xrLabel16.WordWrap = false;
             // 
             // xrLabel17
             // 
@@ -399,10 +400,10 @@
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[GrpHSNCode]")});
             this.xrLabel17.Font = new System.Drawing.Font("Calibri", 10F);
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(94.28575F, 0.3750122F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(106.2858F, 0.3750122F);
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(71.95833F, 14.00002F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(62.95833F, 14.00002F);
             this.xrLabel17.StylePriority.UseFont = false;
             this.xrLabel17.Text = "HSN CODE";
             this.xrLabel17.WordWrap = false;
@@ -539,7 +540,7 @@
             this.xrLabel3});
             this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(4.960511F, 23.82016F);
             this.xrPanel2.Name = "xrPanel2";
-            this.xrPanel2.SizeF = new System.Drawing.SizeF(1100.329F, 31.96071F);
+            this.xrPanel2.SizeF = new System.Drawing.SizeF(1100.329F, 31.96074F);
             // 
             // xrLabel37
             // 
@@ -929,10 +930,10 @@
             this.xrLabel11.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel11.CanGrow = false;
             this.xrLabel11.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(94.83508F, 10.41665F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(102.8351F, 10.41665F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(72.08336F, 15.00003F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(65.08336F, 15.00003F);
             this.xrLabel11.StylePriority.UseBorders = false;
             this.xrLabel11.StylePriority.UseFont = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
@@ -945,10 +946,10 @@
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel10.CanGrow = false;
             this.xrLabel10.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(2.489837F, 10.41665F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(2.489834F, 10.41666F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(87.15565F, 15.00003F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(99.65565F, 15.00003F);
             this.xrLabel10.StylePriority.UseBorders = false;
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
@@ -959,6 +960,8 @@
             // xrPanel6
             // 
             this.xrPanel6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel119,
+            this.xrLabel118,
             this.txtVendorCode,
             this.xrLabel117,
             this.xrLabel116,
@@ -988,6 +991,20 @@
             this.xrPanel6.LocationFloat = new DevExpress.Utils.PointFloat(0.9583422F, 56.08332F);
             this.xrPanel6.Name = "xrPanel6";
             this.xrPanel6.SizeF = new System.Drawing.SizeF(1105.208F, 116.8751F);
+            // 
+            // txtVendorCode
+            // 
+            this.txtVendorCode.CanGrow = false;
+            this.txtVendorCode.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([Table].[AccDCCode]>0,\'30306879\',\'\')")});
+            this.txtVendorCode.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.txtVendorCode.LocationFloat = new DevExpress.Utils.PointFloat(963.1251F, 93.33332F);
+            this.txtVendorCode.Name = "txtVendorCode";
+            this.txtVendorCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.txtVendorCode.SizeF = new System.Drawing.SizeF(128.125F, 17.00002F);
+            this.txtVendorCode.StylePriority.UseFont = false;
+            this.txtVendorCode.Text = "vendor code";
+            this.txtVendorCode.WordWrap = false;
             // 
             // xrLabel117
             // 
@@ -1366,7 +1383,7 @@
             this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(3.219721F, 82.62499F);
             this.xrLabel76.Name = "xrLabel76";
             this.xrLabel76.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel76.SizeF = new System.Drawing.SizeF(372.9167F, 15.00002F);
+            this.xrLabel76.SizeF = new System.Drawing.SizeF(220.8333F, 15.00002F);
             this.xrLabel76.StylePriority.UseFont = false;
             this.xrLabel76.Text = "TO:";
             this.xrLabel76.WordWrap = false;
@@ -2444,10 +2461,10 @@
             // 
             this.xrCrossBandLine1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
             this.xrCrossBandLine1.EndBand = this.ReportFooter;
-            this.xrCrossBandLine1.EndPointFloat = new DevExpress.Utils.PointFloat(92.70834F, 0.5833015F);
+            this.xrCrossBandLine1.EndPointFloat = new DevExpress.Utils.PointFloat(105.7083F, 0.5833015F);
             this.xrCrossBandLine1.Name = "xrCrossBandLine1";
             this.xrCrossBandLine1.StartBand = this.PageHeader;
-            this.xrCrossBandLine1.StartPointFloat = new DevExpress.Utils.PointFloat(92.70834F, 221.5269F);
+            this.xrCrossBandLine1.StartPointFloat = new DevExpress.Utils.PointFloat(105.7083F, 221.5269F);
             this.xrCrossBandLine1.WidthF = 1F;
             // 
             // xrCrossBandLine2
@@ -2614,19 +2631,18 @@
             this.TAX1.Expression = "Sum([SIDIGSTAMT]+[SIDCGSTAMT]+[SIDSGSTAMT])";
             this.TAX1.Name = "TAX1";
             // 
-            // txtVendorCode
+            // xrLabel118
             // 
-            this.txtVendorCode.CanGrow = false;
-            this.txtVendorCode.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([Table].[AccDCCode]>0,\'vendor code\',\'\')")});
-            this.txtVendorCode.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
-            this.txtVendorCode.LocationFloat = new DevExpress.Utils.PointFloat(963.1251F, 93.33332F);
-            this.txtVendorCode.Name = "txtVendorCode";
-            this.txtVendorCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtVendorCode.SizeF = new System.Drawing.SizeF(128.125F, 17.00002F);
-            this.txtVendorCode.StylePriority.UseFont = false;
-            this.txtVendorCode.Text = "vendor code";
-            this.txtVendorCode.WordWrap = false;
+            this.xrLabel118.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[AccZipCode]")});
+            this.xrLabel118.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel118.LocationFloat = new DevExpress.Utils.PointFloat(232.2917F, 82.62499F);
+            this.xrLabel118.Multiline = true;
+            this.xrLabel118.Name = "xrLabel118";
+            this.xrLabel118.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel118.SizeF = new System.Drawing.SizeF(143.75F, 15.00002F);
+            this.xrLabel118.StylePriority.UseFont = false;
+            this.xrLabel118.Text = "xrLabel118";
             // 
             // xrSubreport1
             // 
@@ -2634,6 +2650,20 @@
             this.xrSubreport1.Name = "xrSubreport1";
             this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
+            // 
+            // xrLabel119
+            // 
+            this.xrLabel119.CanGrow = false;
+            this.xrLabel119.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([Table].[AccDCCode]>0,\'Vendor Code\',\'\')")});
+            this.xrLabel119.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold);
+            this.xrLabel119.LocationFloat = new DevExpress.Utils.PointFloat(963.0417F, 77.74998F);
+            this.xrLabel119.Name = "xrLabel119";
+            this.xrLabel119.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel119.SizeF = new System.Drawing.SizeF(128.125F, 17.00002F);
+            this.xrLabel119.StylePriority.UseFont = false;
+            this.xrLabel119.Text = "vendor code";
+            this.xrLabel119.WordWrap = false;
             // 
             // GSTINVOICE
             // 
@@ -2857,5 +2887,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel115;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport1;
         private DevExpress.XtraReports.UI.XRLabel txtVendorCode;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel118;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel119;
     }
 }
