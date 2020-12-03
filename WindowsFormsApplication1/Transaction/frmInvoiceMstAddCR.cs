@@ -18,16 +18,11 @@ namespace WindowsFormsApplication1
         public String ProgCode { get; set; }
         public String s1 { get; set; }
         DataTable dt = new DataTable();
-        DataTable dtWeight = new DataTable();
         public String ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public String ImSeries { get; set; }
         String StkTransfer = String.Empty;
         Decimal AccMRPMarkDown = 0;
-#pragma warning disable CS0169 // The field 'frmInvoiceMstAddCR.SearchField' is never used
-        String SearchField;
-#pragma warning restore CS0169 // The field 'frmInvoiceMstAddCR.SearchField' is never used
-        DataSet dsPopUps = new DataSet();
         public frmInvoiceMstAddCR()
         {
             InitializeComponent();
@@ -315,26 +310,6 @@ namespace WindowsFormsApplication1
             {
                 txtbox.Text = "0";
             }
-            return true;
-        }
-
-        private bool ValidateData()
-        {
-
-            if (txtDebitPartyCode.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Debit Party");
-                txtDebitPartyCode.Focus();
-                return false;
-            }
-            if (txtDebitPartyName.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Debit Party");
-                txtDebitPartyCode.Focus();
-                return false;
-            }
-
-
             return true;
         }
 
@@ -928,30 +903,9 @@ namespace WindowsFormsApplication1
             ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterCode, HelpGrid, HelpGridView, e);
         }
 
-        private void TxtProductRate_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ProjectFunctions.NumericWithDecimal(e);
-        }
-
         private void btnRecalculate_Click(object sender, EventArgs e)
         {
             calculation();
-        }
-
-        private void txtMainDisc_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnRecalculate_Click(null, e);
-            }
-        }
-
-        private void txtInsurancePer_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnRecalculate_Click(null, e);
-            }
         }
 
         private void txtBarCode_KeyDown(object sender, KeyEventArgs e)

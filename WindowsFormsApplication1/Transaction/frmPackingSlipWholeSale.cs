@@ -783,41 +783,41 @@ namespace WindowsFormsApplication1.Transaction
                         if (FixBarPartyTag == "N")
                         {
 
-                            if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
-                            {
-                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                txtBarCode.Focus();
-                                txtBarCode.SelectAll();
+                            //if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                            //{
+                            //    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                            //    txtBarCode.Focus();
+                            //    txtBarCode.SelectAll();
 
-                                e.Handled = true;
-                                return;
-                            }
+                            //    e.Handled = true;
+                            //    return;
+                            //}
 
 
-                            DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
-                            if(dsCheck.Tables[0].Rows.Count>0)
-                            {
-                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                txtBarCode.Focus();
-                                txtBarCode.SelectAll();
-                                e.Handled = true;
-                                return;
-                            }
+                            //DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
+                            //if(dsCheck.Tables[0].Rows.Count>0)
+                            //{
+                            //    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                            //    txtBarCode.Focus();
+                            //    txtBarCode.SelectAll();
+                            //    e.Handled = true;
+                            //    return;
+                            //}
                             
                         }
 
-                        //////////////////////////MRP
-                        //if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) !=
-                        //    Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
-                        //{
-                        //    ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " +
-                        //        ds.Tables[0].Rows[0]["ARTMRP"].ToString() +
-                        //        ")");
-                        //    txtBarCode.Focus();
-                        //    txtBarCode.SelectAll();
-                        //    e.Handled = true;
-                        //    return;
-                        //}
+                        ////////////////////////MRP
+                        if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) !=
+                            Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
+                        {
+                            ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " +
+                                ds.Tables[0].Rows[0]["ARTMRP"].ToString() +
+                                ")");
+                            txtBarCode.Focus();
+                            txtBarCode.SelectAll();
+                            e.Handled = true;
+                            return;
+                        }
 
                         //////////////////////////////
                         if (dt.Rows.Count == 0)

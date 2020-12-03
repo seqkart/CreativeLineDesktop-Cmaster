@@ -1858,7 +1858,7 @@ namespace WindowsFormsApplication1
                             dtNewRow["ARTMARGIN"] = dr["ARTMARGIN"];
 
 
-
+                            
 
                             //if (i == 0)
                             //{
@@ -1887,6 +1887,9 @@ namespace WindowsFormsApplication1
                             dt.Rows.Add(dtNewRow);
                         }
                     }
+
+
+                    txtPONo.Text = dsData.Tables[0].Rows[0]["PSWSPONO"].ToString();
                 }
             }
             if (dt.Rows.Count > 0)

@@ -553,7 +553,7 @@ namespace WindowsFormsApplication1
 
         public static String ValidateKeysForSearchBox(KeyEventArgs e)
         {
-            String Value = String.Empty;
+            string Value = string.Empty;
             switch (e.KeyCode)
             {
                 case Keys.NumPad1:
@@ -595,7 +595,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static void ShowImage(String ArticleID, DevExpress.XtraEditors.PictureEdit PictureBox)
+        public static void ShowImage(string ArticleID, DevExpress.XtraEditors.PictureEdit PictureBox)
         {
             try
             {

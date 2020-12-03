@@ -131,7 +131,7 @@
             // 
             // txtCardType
             // 
-            this.txtCardType.Location = new System.Drawing.Point(128, 123);
+            this.txtCardType.Location = new System.Drawing.Point(114, 123);
             this.txtCardType.Name = "txtCardType";
             this.txtCardType.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardType.Properties.Appearance.Options.UseFont = true;
@@ -142,7 +142,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(54, 125);
+            this.labelControl1.Location = new System.Drawing.Point(40, 125);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(69, 20);
             this.labelControl1.TabIndex = 4;
@@ -152,7 +152,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(62, 178);
+            this.labelControl2.Location = new System.Drawing.Point(48, 178);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(61, 20);
             this.labelControl2.TabIndex = 4;
@@ -160,7 +160,7 @@
             // 
             // txtCardNo
             // 
-            this.txtCardNo.Location = new System.Drawing.Point(128, 176);
+            this.txtCardNo.Location = new System.Drawing.Point(114, 176);
             this.txtCardNo.Name = "txtCardNo";
             this.txtCardNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardNo.Properties.Appearance.Options.UseFont = true;
@@ -172,7 +172,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(24, 205);
+            this.labelControl3.Location = new System.Drawing.Point(10, 205);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(99, 20);
             this.labelControl3.TabIndex = 4;
@@ -180,7 +180,7 @@
             // 
             // txtNameOnCard
             // 
-            this.txtNameOnCard.Location = new System.Drawing.Point(128, 203);
+            this.txtNameOnCard.Location = new System.Drawing.Point(114, 203);
             this.txtNameOnCard.Name = "txtNameOnCard";
             this.txtNameOnCard.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameOnCard.Properties.Appearance.Options.UseFont = true;
@@ -353,7 +353,7 @@
             // btnRevert
             // 
             this.btnRevert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRevert.ImageOptions.SvgImage")));
-            this.btnRevert.Location = new System.Drawing.Point(165, 263);
+            this.btnRevert.Location = new System.Drawing.Point(165, 246);
             this.btnRevert.Name = "btnRevert";
             this.btnRevert.Size = new System.Drawing.Size(127, 36);
             this.btnRevert.TabIndex = 9;
@@ -363,7 +363,7 @@
             // btnSave
             // 
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(36, 263);
+            this.btnSave.Location = new System.Drawing.Point(36, 246);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(127, 36);
             this.btnSave.TabIndex = 10;
@@ -380,7 +380,7 @@
             // 
             // txtCardDigits
             // 
-            this.txtCardDigits.Location = new System.Drawing.Point(128, 149);
+            this.txtCardDigits.Location = new System.Drawing.Point(114, 149);
             this.txtCardDigits.Name = "txtCardDigits";
             this.txtCardDigits.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardDigits.Properties.Appearance.Options.UseFont = true;
@@ -392,7 +392,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(48, 151);
+            this.labelControl4.Location = new System.Drawing.Point(34, 151);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(75, 20);
             this.labelControl4.TabIndex = 12;
@@ -400,7 +400,7 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(346, 268);
+            this.textEdit1.Location = new System.Drawing.Point(346, 251);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
@@ -412,7 +412,7 @@
             // btnSaveOnly
             // 
             this.btnSaveOnly.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveOnly.ImageOptions.SvgImage")));
-            this.btnSaveOnly.Location = new System.Drawing.Point(298, 263);
+            this.btnSaveOnly.Location = new System.Drawing.Point(298, 246);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(72, 36);
             this.btnSaveOnly.TabIndex = 15;
@@ -423,7 +423,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 314);
+            this.ClientSize = new System.Drawing.Size(625, 293);
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.txtCardDigits);
