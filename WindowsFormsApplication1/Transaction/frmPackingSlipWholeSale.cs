@@ -640,6 +640,10 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
+
+
+       
+
         private void TxtBarCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
