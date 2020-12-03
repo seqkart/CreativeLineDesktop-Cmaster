@@ -16,7 +16,6 @@ namespace WindowsFormsApplication1.Transaction
 
         public frmPurchaseFromHO()
         {
-
             InitializeComponent();
             dt.Columns.Add("SFDBOXNO", typeof(String));
             dt.Columns.Add("SFDBARCODE", typeof(String));
