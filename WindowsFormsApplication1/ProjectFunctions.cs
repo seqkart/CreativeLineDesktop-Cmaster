@@ -1627,13 +1627,14 @@ namespace WindowsFormsApplication1
                         sub.ReportSource.DataSource = ds;
                     }
                     Report.CreateDocument();
-                    Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+                    //Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
 
 
                     if (GlobalVariables.ProgCode == "PROG132")
                     {
                         SendToDirectPrint("C:\\Application\\CashMemo.pdf");
                     }
+                
                     else
                     {
                         payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
@@ -1653,7 +1654,36 @@ namespace WindowsFormsApplication1
             }
 
         }
+        public static void PrintPDFDocument(String DocNo, DateTime DocDate, String DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        {
+            try
 
+            {
+                DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + DocNo + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    ds.WriteXmlSchema("C://Temp//abc.xml");
+                    Report.DataSource = ds;
+                    foreach (XRSubreport sub in Report.AllControls<XRSubreport>())
+                    {
+                        sub.ReportSource.DataSource = ds;
+                    }
+                    Report.CreateDocument();
+                    //Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+
+
+
+                    Report.ExportToPdf("C:\\Application\\" + ds.Tables[0].Rows[0]["FileName"].ToString() + ".pdf");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
         public static void CRPrintDocument(String DocNo, DateTime DocDate, String DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try

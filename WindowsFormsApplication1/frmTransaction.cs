@@ -3,7 +3,6 @@ using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
 using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -1170,33 +1169,84 @@ namespace WindowsFormsApplication1
                                                                       PrintOutGrid.Visible = true;
                                                                       //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                   }));
+                    //e.Menu.Items
+                    //   .Add(new DevExpress.Utils.Menu.DXMenuItem("Export PDF Invoice", (o1, e1) =>
+                    //                                             {
+                                                                 
+                    //                                                 DataTable dt = new DataTable();
+                    //                                                 dt.Columns.Add("CopyText", typeof(string));
+                    //                                                 dt.Columns.Add("Select", typeof(bool));
+
+                                                                    
+                    //                                                 dt.Rows.Add("Original For Buyer", false);
+                    //                                                 dt.Rows.Add("Office Copy", false);
+                    //                                                 dt.Rows.Add("Transporter Copy", false);
+                    //                                                 dt.Rows.Add("Extra Copy", false);
+
+                    //                                                 PrintOutGrid.DataSource = dt;
+                    //                                                    PrintOutGridView.BestFitColumns();
+                    //                                                    PrintOutGrid.Visible = true;
+                    //                                           //
+                    //                                                 //PrintOutGrid.ExportToPdf("C:\\APPLICATION\\GST_.pdf");
+
+
+
+                    //                                             //{
+                    //                                             //    DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + "BillNo".ToString() + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
+                    //                                             //    if (ds.Tables[0].Rows.Count > 0)
+                    //                                             //    {
+                    //                                             //        ds.WriteXmlSchema("C://Temp//abc.xml");
+                    //                                             //        Report.DataSource = ds;
+                    //                                             //        foreach (XRSubreport sub in Report.AllControls<XRSubreport>())
+                    //                                             //        {
+                    //                                             //            sub.ReportSource.DataSource = ds;
+                    //                                             //        }
+                    //                                             //        Report.CreateDocument();
+                    //                                             //        Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+
+
+                    //                                                     //foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                    //                                                     //{
+                    //                                                     //    if (dr["Select"].ToString().ToUpper() == "TRUE")
+                    //                                                     //    {
+                    //                                                     //        if (dr["BillSeries"].ToString().ToUpper() == "GST")
+                    //                                                     //        {
+                    //                                                     //            Prints.GSTINVOICE rpt = new Prints.GSTINVOICE();
+                    //                                                     //            ProjectFunctions.PrintDocument(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString(), rpt);
+                    //                                                     //            ProjectFunctions.SendToDirectPrint(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".pdf");
+                    //                                                     //            //ProjectFunctions.print(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".pdf");
+                    //                                                     //        }
+                    //                                                     //    }
+                    //                                                     //}
+                    //                                                 }
+                    //                                             ));
                     e.Menu.Items
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Generate PT File",
                                                                   (o1, e1) =>
                                                                   {
 
-                                                                  int i = 0;
-                                                                  foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
-                                                                  {
-
-                                                                      if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                      int i = 0;
+                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
-                                                                          i++;
-                                                                          DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
-                                                                         dr["BillNo"].ToString() +
-                                                                         "','" +
-                                                                         GlobalVariables.FinancialYear +
-                                                                         "'");
-                                                                          if (ds.Tables[0].Rows.Count > 0)
-                                                                          {
-                                                                              PrintOutGridView.Columns.Clear();
-                                                                              PrintOutGrid.DataSource = ds.Tables[0];
-                                                                              PrintOutGridView.BestFitColumns();
-                                                                              PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
-                                                                              PrintOutGridView.ExportToXlsx (Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".xlsx"); 
 
-                    //Close();
-                }
+                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                          {
+                                                                              i++;
+                                                                              DataSet ds = ProjectFunctions.GetDataSet("SP_PTFile '" +
+                                                                             dr["BillNo"].ToString() +
+                                                                             "','" +
+                                                                             GlobalVariables.FinancialYear +
+                                                                             "'");
+                                                                              if (ds.Tables[0].Rows.Count > 0)
+                                                                              {
+                                                                                  PrintOutGridView.Columns.Clear();
+                                                                                  PrintOutGrid.DataSource = ds.Tables[0];
+                                                                                  PrintOutGridView.BestFitColumns();
+                                                                                  PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
+                                                                                  PrintOutGridView.ExportToXlsx(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".xlsx");
+
+                                                                                  //Close();
+                                                                              }
                                                                               else
                                                                               {
                                                                                   ProjectFunctions.SpeakError("Error In PT File Generation");
@@ -1292,7 +1342,7 @@ namespace WindowsFormsApplication1
                                                                  (o1, e1) =>
                                                                  {
 
-                                                                    // int i = 0;
+                                                                     // int i = 0;
                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                      {
                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
@@ -1992,6 +2042,90 @@ namespace WindowsFormsApplication1
             {
                 PrintOutGrid.Visible = false;
             }
+        }
+
+        private void PrintOutGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        {
+            e.Menu.Items
+                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Export PDF",
+                                                                  (o1, e1) =>
+                                                                  {
+                                                                      
+                                                                      foreach (DataRow drBills in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                      {
+                                                                          if (drBills["Select"].ToString().ToUpper() == "TRUE")
+                                                                          {
+                                                                              for (int i = 0; i < 4; i++)
+                                                                              {
+                                                                                  string CopyText = string.Empty;
+                                                                                  DataRow CurrentRow = PrintOutGridView.GetDataRow(i);
+                                                                                  if (CurrentRow["Select"].ToString().ToUpper() == "TRUE")
+                                                                                  {
+                                                                                      if (i == 0)
+                                                                                      {
+                                                                                          CopyText = "Original For Buyer";
+                                                                                      }
+
+                                                                                      if (i == 1)
+                                                                                      {
+                                                                                          CopyText = "Office Copy";
+                                                                                      }
+
+                                                                                      if (i == 2)
+                                                                                      {
+                                                                                          CopyText = "Transporter Copy";
+                                                                                      }
+
+                                                                                      if (i == 3)
+                                                                                      {
+                                                                                          CopyText = "Extra Copy";
+                                                                                      }
+
+                                                                                      if (GlobalVariables.ProgCode == "PROG131")
+                                                                                      {
+                                                                                          if (drBills["BillSeries"].ToString().ToUpper() == "GST")
+                                                                                          {
+                                                                                              Prints.GSTINVOICE rpt = new Prints.GSTINVOICE();
+                                                                                              rpt.lblCopy.Text = CopyText;
+
+                                                                                              ProjectFunctions.PrintPDFDocument(drBills["BillNo"].ToString(),
+                                                                                                                             Convert.ToDateTime(drBills["BillDate"]),
+                                                                                                                             drBills["BillSeries"].ToString(),
+                                                                                                                             rpt);
+                                                                                          }
+                                                                                          if (drBills["BillSeries"].ToString().ToUpper() == "DCO")
+                                                                                          {
+                                                                                              Prints.InvoicePrintBT rpt = new Prints.InvoicePrintBT();
+                                                                                              rpt.lblCopy.Text = CopyText;
+                                                                                              ProjectFunctions.PrintPDFDocument(drBills["BillNo"].ToString(),
+                                                                                                                             Convert.ToDateTime(drBills["BillDate"]),
+                                                                                                                             drBills["BillSeries"].ToString(),
+                                                                                                                             rpt);
+                                                                                          }
+                                                                                      }
+                                                                                      if (GlobalVariables.ProgCode == "PROG141")
+                                                                                      {
+                                                                                          if (drBills["CRSeries"].ToString().ToUpper() == "RG")
+                                                                                          {
+                                                                                              Prints.GSTCRINVOICE rpt = new Prints.GSTCRINVOICE();
+                                                                                              rpt.lblCopy.Text = CopyText;
+                                                                                              ProjectFunctions.PrintPDFDocument(drBills["CRNo"].ToString(),
+                                                                                                                               Convert.ToDateTime(drBills["CRDate"]),
+                                                                                                                               drBills["CRSeries"].ToString(),
+                                                                                                                               rpt);
+                                                                                          }
+                                                                                      }
+                                                                                  }
+                                                                                 
+                                                                              }
+                                                                              
+                                                                          }
+                                                                          
+                                                                      }
+                                                                                                                                            
+                                                                          ProjectFunctions.SpeakError(" PDF Files Generated Successfully ");
+                                                                      
+                                                                  }));
         }
     }
 }

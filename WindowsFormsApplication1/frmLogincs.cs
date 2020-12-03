@@ -77,8 +77,9 @@ namespace WindowsFormsApplication1
                 if (DateTime.Now.Date >= Convert.ToDateTime("2020-04-1").Date && DateTime.Now.Date <= Convert.ToDateTime("2022-03-31").Date)
                 {
                     if (Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) < 30)
-
+                    {
                         ProjectFunctions.SpeakError("Only " + Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) + " Days Left For Liscense To Expire,Please Recharge Immediately");
+                    }
                 }
                 else
                 {
@@ -128,10 +129,10 @@ namespace WindowsFormsApplication1
 
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
 
-                    this.Hide();
+                    Hide();
                     //  BtnBackup_Click(null, null);
                     ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
-                    frm.ShowDialog(this.Parent);
+                    frm.ShowDialog(Parent);
                     frm.BringToFront();
 
                 }

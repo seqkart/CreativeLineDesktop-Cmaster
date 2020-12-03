@@ -140,7 +140,7 @@
             // 
             // PrintOutGrid
             // 
-            this.PrintOutGrid.Location = new System.Drawing.Point(111, 140);
+            this.PrintOutGrid.Location = new System.Drawing.Point(94, 189);
             this.PrintOutGrid.MainView = this.PrintOutGridView;
             this.PrintOutGrid.Name = "PrintOutGrid";
             this.PrintOutGrid.Size = new System.Drawing.Size(462, 227);
@@ -159,6 +159,7 @@
             this.PrintOutGridView.GridControl = this.PrintOutGrid;
             this.PrintOutGridView.Name = "PrintOutGridView";
             this.PrintOutGridView.OptionsView.ShowGroupPanel = false;
+            this.PrintOutGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.PrintOutGridView_PopupMenuShowing);
             // 
             // gridColumn1
             // 

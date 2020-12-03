@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1.FormReports
         {
             pdfExportOptions.PasswordSecurityOptions.OpenPassword = Password;
             pdfExportOptions.DocumentOptions.Title = SheetName;
-            pdfExportOptions.ImageQuality = PdfJpegImageQuality.Low;
+            pdfExportOptions.ImageQuality = PdfJpegImageQuality.High;
         }
 
         private void SetExportOption_GetUserAccess(PrintingSystemBase printingSystem, string User)

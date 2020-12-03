@@ -1317,5 +1317,10 @@ namespace WindowsFormsApplication1.Transaction
             btnImport.Visible = false;
             BTNIMPORT2.Visible = false;
         }
+
+        private void txtDeptCode_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
