@@ -43,406 +43,406 @@ namespace WindowsFormsApplication1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if(btnAdd.Enabled)
-            {
-                DataSet ds = ProjectFunctions.GetDataSet("Select * from ProgramMaster  Where ProgCode='" + GlobalVariables.ProgCode + "'");
-                if(ds.Tables[0].Rows.Count>0)
-                {
-                    string FormToCall = ds.Tables[0].Rows[0]["ProgFormLink"].ToString();
-                    //var type = Type.GetType("MyForms." + FormToCall);
-                    //var form = Activator.CreateInstance(type) as DevExpress.XtraEditors.XtraForm;
-
-                    //if (form != null)
-                    //    form.Show(this.Parent);
-
-                    var frm = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(FormToCall);
-                    (frm as DevExpress.XtraEditors.XtraForm).ShowDialog(this.Parent);
-
-                }
-            }
-
-            //if (btnAdd.Enabled)
+            //if(btnAdd.Enabled)
             //{
-            //    if (GlobalVariables.ProgCode == "PROG212")
+            //    DataSet ds = ProjectFunctions.GetDataSet("Select * from ProgramMaster  Where ProgCode='" + GlobalVariables.ProgCode + "'");
+            //    if(ds.Tables[0].Rows.Count>0)
             //    {
-            //        WindowsFormsApplication1.Master.frmSizeMapping frm = new WindowsFormsApplication1.Master.frmSizeMapping()
-            //        { Text = "Size Mapping Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
+            //        string FormToCall = ds.Tables[0].Rows[0]["ProgFormLink"].ToString();
+            //        //var type = Type.GetType("MyForms." + FormToCall);
+            //        //var form = Activator.CreateInstance(type) as DevExpress.XtraEditors.XtraForm;
+
+            //        //if (form != null)
+            //        //    form.Show(this.Parent);
+
+            //        var frm = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(FormToCall);
+            //        (frm as DevExpress.XtraEditors.XtraForm).ShowDialog(this.Parent);
+
             //    }
-            //    if (GlobalVariables.ProgCode == "PROG180")
-            //    {
-            //        WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
-            //        { Text = "Create Data Template" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG176")
-            //    {
-            //        WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
-            //        { s1 = btnAdd.Text, Text = "Branch Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG175")
-            //    {
-            //        WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst()
-            //        { s1 = btnAdd.Text, Text = "City Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG174")
-            //    {
-            //        WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst()
-            //        { s1 = btnAdd.Text, Text = "State Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG200")
-            //    {
-            //        WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
-            //        { s1 = btnAdd.Text, Text = "Financial Year Creation" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG170")
-            //    {
-            //        Master.frmMeasurementMappingWithArt frm = new Master.frmMeasurementMappingWithArt()
-            //        { s1 = btnAdd.Text, Text = "Measurement Mapping With Art Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG169")
-            //    {
-            //        Master.frmMeasurementMapping frm = new Master.frmMeasurementMapping()
-            //        { s1 = btnAdd.Text, Text = "Measurement Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG135")
-            //    {
-            //        Transaction.Pos.Schemesetup frm = new Transaction.Pos.Schemesetup()
-            //        { s1 = btnAdd.Text, Text = "Scheme Setup Addition" };
-
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG127")
-            //    {
-            //        frmWorkerMaster frm = new frmWorkerMaster() { s1 = btnAdd.Text, Text = "Worker Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG126")
-            //    {
-            //        frmProductMstAddEdit frm = new frmProductMstAddEdit()
-            //        { S1 = btnAdd.Text, Text = "Item Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG125")
-            //    {
-            //        frmArticleMst frm = new frmArticleMst() { S1 = btnAdd.Text, Text = "User Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG122")
-            //    {
-            //        frmBrand frm = new frmBrand() { s1 = btnAdd.Text, Text = "Brand Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG124")
-            //    {
-            //        frmSizeMMaster frm = new frmSizeMMaster() { s1 = btnAdd.Text, Text = "Size Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG123")
-            //    {
-            //        frmColors frm = new frmColors() { s1 = btnAdd.Text, Text = "Colors Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG121")
-            //    {
-            //        frmCustomerMst frm = new frmCustomerMst() { s1 = btnAdd.Text, Text = "Customer Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG120")
-            //    {
-            //        frmCompanyMaster frm = new frmCompanyMaster() { s1 = btnAdd.Text, Text = "Company Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG119")
-            //    {
-            //        frmTransporterMaster frm = new frmTransporterMaster()
-            //        { s1 = btnAdd.Text, Text = "Transporter Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //        FillGrid();
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG118")
-            //    {
-            //        frmAddressBook frm = new frmAddressBook() { s1 = btnAdd.Text, Text = "Address Book Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG117")
-            //    {
-            //        frmAddressBookGroup frm = new frmAddressBookGroup()
-            //        { s1 = btnAdd.Text, Text = "Address Book Groups Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG115")
-            //    {
-            //        Administration.frmRoleMst frm = new Administration.frmRoleMst()
-            //        { s1 = btnAdd.Text, Text = "Role Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG106")
-            //    {
-            //        frmBomMstAddEdit frm = new frmBomMstAddEdit()
-            //        { s1 = btnAdd.Text, Text = "Bill Of Material Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmNewFormAAddEdit))
-            //    {
-            //        frmNewFormAAddEdit frm = new frmNewFormAAddEdit() { s1 = btnAdd.Text, Text = "Program Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmUserDetails))
-            //    {
-            //        frmUserDetails frm = new frmUserDetails() { s1 = btnAdd.Text, Text = "User Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG8")
-            //    {
-            //        frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
-            //        { s1 = btnAdd.Text, Text = "Account Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG9")
-            //    {
-            //        frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
-            //        { s1 = btnAdd.Text, Text = "Department Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG10")
-            //    {
-            //        frmDesignationAddEdit frm = new frmDesignationAddEdit()
-            //        { S1 = btnAdd.Text, Text = "Desgination Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG12")
-            //    {
-            //        frmLedgerAddEdit frm = new frmLedgerAddEdit() { s1 = btnAdd.Text, Text = "Ledger Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG14")
-            //    {
-            //        frmUOMAddEdit frm = new frmUOMAddEdit() { s1 = btnAdd.Text, Text = "Unit Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG16")
-            //    {
-            //        frmGroupMstAddEdit frm = new frmGroupMstAddEdit() { s1 = btnAdd.Text, Text = "Group Head Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG17")
-            //    {
-            //        frmTdsAddEdit frm = new frmTdsAddEdit() { s1 = btnAdd.Text, Text = "TDS Group Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG18")
-            //    {
-            //        frmTaxMasterAddEdit frm = new frmTaxMasterAddEdit()
-            //        { s1 = btnAdd.Text, Text = "Tax Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG20")
-            //    {
-            //        frmProductMstAddEdit frm = new frmProductMstAddEdit()
-            //        { S1 = btnAdd.Text, Text = "Product Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG21")
-            //    {
-            //        frmEmloyeeMstAddEdit frm = new frmEmloyeeMstAddEdit()
-            //        { s1 = btnAdd.Text, Text = "Employee Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG29")
-            //    {
-            //        Master.frmCategoryMst frm = new Master.frmCategoryMst()
-            //        { s1 = btnAdd.Text, Text = "Category Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG30")
-            //    {
-            //        frmEmloyeeMstAddEdit frm = new frmEmloyeeMstAddEdit()
-            //        { s1 = btnAdd.Text, Text = "Employee Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG34")
-            //    {
-            //        Master.frmBalanceSheetHeads frm = new Master.frmBalanceSheetHeads()
-            //        { s1 = btnAdd.Text, Text = "Balance Sheet Head Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-
-            //    if (GlobalVariables.ProgCode == "PROG160")
-            //    {
-            //        frmEmloyeeMstAddEdit frm = new frmEmloyeeMstAddEdit()
-            //        { s1 = btnAdd.Text, Text = "Employee Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG155")
-            //    {
-            //        Master.frmCategoryMst frm = new Master.frmCategoryMst()
-            //        { s1 = btnAdd.Text, Text = "Category Master Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG156")
-            //    {
-            //        frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
-            //        { s1 = btnAdd.Text, Text = "Department Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            //    if (GlobalVariables.ProgCode == "PROG157")
-            //    {
-            //        frmDesignationAddEdit frm = new frmDesignationAddEdit()
-            //        { S1 = btnAdd.Text, Text = "Desgination Addition" };
-            //        frm.StartPosition = FormStartPosition.CenterScreen;
-
-
-            //        frm.ShowDialog(Parent);
-            //    }
-            
             //}
+
+            if (btnAdd.Enabled)
+            {
+                if (GlobalVariables.ProgCode == "PROG212")
+                {
+                    WindowsFormsApplication1.Master.frmSizeMapping frm = new WindowsFormsApplication1.Master.frmSizeMapping()
+                    { Text = "Size Mapping Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG180")
+                {
+                    WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
+                    { Text = "Create Data Template" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG176")
+                {
+                    WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
+                    { s1 = btnAdd.Text, Text = "Branch Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG175")
+                {
+                    WindowsFormsApplication1.Master.frmCityMst frm = new WindowsFormsApplication1.Master.frmCityMst()
+                    { s1 = btnAdd.Text, Text = "City Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG174")
+                {
+                    WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst()
+                    { s1 = btnAdd.Text, Text = "State Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG200")
+                {
+                    WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
+                    { s1 = btnAdd.Text, Text = "Financial Year Creation" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG170")
+                {
+                    Master.frmMeasurementMappingWithArt frm = new Master.frmMeasurementMappingWithArt()
+                    { s1 = btnAdd.Text, Text = "Measurement Mapping With Art Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG169")
+                {
+                    Master.frmMeasurementMapping frm = new Master.frmMeasurementMapping()
+                    { s1 = btnAdd.Text, Text = "Measurement Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG135")
+                {
+                    Transaction.Pos.Schemesetup frm = new Transaction.Pos.Schemesetup()
+                    { s1 = btnAdd.Text, Text = "Scheme Setup Addition" };
+
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG127")
+                {
+                    frmWorkerMaster frm = new frmWorkerMaster() { s1 = btnAdd.Text, Text = "Worker Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+                if (GlobalVariables.ProgCode == "PROG126")
+                {
+                    frmProductMstAddEdit frm = new frmProductMstAddEdit()
+                    { S1 = btnAdd.Text, Text = "Item Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+                if (GlobalVariables.ProgCode == "PROG125")
+                {
+                    frmArticleMst frm = new frmArticleMst() { S1 = btnAdd.Text, Text = "User Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+                if (GlobalVariables.ProgCode == "PROG122")
+                {
+                    frmBrand frm = new frmBrand() { s1 = btnAdd.Text, Text = "Brand Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG124")
+                {
+                    frmSizeMMaster frm = new frmSizeMMaster() { s1 = btnAdd.Text, Text = "Size Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+                if (GlobalVariables.ProgCode == "PROG123")
+                {
+                    frmColors frm = new frmColors() { s1 = btnAdd.Text, Text = "Colors Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG121")
+                {
+                    frmCustomerMst frm = new frmCustomerMst() { s1 = btnAdd.Text, Text = "Customer Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG120")
+                {
+                    frmCompanyMaster frm = new frmCompanyMaster() { s1 = btnAdd.Text, Text = "Company Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG119")
+                {
+                    frmTransporterMaster frm = new frmTransporterMaster()
+                    { s1 = btnAdd.Text, Text = "Transporter Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG118")
+                {
+                    frmAddressBook frm = new frmAddressBook() { s1 = btnAdd.Text, Text = "Address Book Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG117")
+                {
+                    frmAddressBookGroup frm = new frmAddressBookGroup()
+                    { s1 = btnAdd.Text, Text = "Address Book Groups Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG115")
+                {
+                    Administration.frmRoleMst frm = new Administration.frmRoleMst()
+                    { s1 = btnAdd.Text, Text = "Role Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG106")
+                {
+                    frmBomMstAddEdit frm = new frmBomMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Bill Of Material Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmNewFormAAddEdit))
+                {
+                    frmNewFormAAddEdit frm = new frmNewFormAAddEdit() { s1 = btnAdd.Text, Text = "Program Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmUserDetails))
+                {
+                    frmUserDetails frm = new frmUserDetails() { s1 = btnAdd.Text, Text = "User Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+                if (GlobalVariables.ProgCode == "PROG8")
+                {
+                    frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Account Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG9")
+                {
+                    frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
+                    { s1 = btnAdd.Text, Text = "Department Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG10")
+                {
+                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+                if (GlobalVariables.ProgCode == "PROG12")
+                {
+                    frmLedgerAddEdit frm = new frmLedgerAddEdit() { s1 = btnAdd.Text, Text = "Ledger Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+                if (GlobalVariables.ProgCode == "PROG14")
+                {
+                    frmUOMAddEdit frm = new frmUOMAddEdit() { s1 = btnAdd.Text, Text = "Unit Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+                if (GlobalVariables.ProgCode == "PROG16")
+                {
+                    frmGroupMstAddEdit frm = new frmGroupMstAddEdit() { s1 = btnAdd.Text, Text = "Group Head Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG17")
+                {
+                    frmTdsAddEdit frm = new frmTdsAddEdit() { s1 = btnAdd.Text, Text = "TDS Group Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG18")
+                {
+                    frmTaxMasterAddEdit frm = new frmTaxMasterAddEdit()
+                    { s1 = btnAdd.Text, Text = "Tax Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+                if (GlobalVariables.ProgCode == "PROG20")
+                {
+                    frmProductMstAddEdit frm = new frmProductMstAddEdit()
+                    { S1 = btnAdd.Text, Text = "Product Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG21")
+                {
+                    frmEmloyeeMstAddEdit frm = new frmEmloyeeMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Employee Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG29")
+                {
+                    Master.frmCategoryMst frm = new Master.frmCategoryMst()
+                    { s1 = btnAdd.Text, Text = "Category Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG30")
+                {
+                    frmEmloyeeMstAddEdit frm = new frmEmloyeeMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Employee Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG34")
+                {
+                    Master.frmBalanceSheetHeads frm = new Master.frmBalanceSheetHeads()
+                    { s1 = btnAdd.Text, Text = "Balance Sheet Head Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+                if (GlobalVariables.ProgCode == "PROG160")
+                {
+                    frmEmloyeeMstAddEdit frm = new frmEmloyeeMstAddEdit()
+                    { s1 = btnAdd.Text, Text = "Employee Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG155")
+                {
+                    Master.frmCategoryMst frm = new Master.frmCategoryMst()
+                    { s1 = btnAdd.Text, Text = "Category Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG156")
+                {
+                    frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
+                    { s1 = btnAdd.Text, Text = "Department Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG157")
+                {
+                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
+
+            }
             FillGrid();
         }
 

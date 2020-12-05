@@ -437,6 +437,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@PSWSTORECODE", SqlDbType.NVarChar).Value = txtStoreCode.Text;
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
+                            
                         }
 
 

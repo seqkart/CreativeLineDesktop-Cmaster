@@ -60,9 +60,6 @@
             this.Label8 = new DevExpress.XtraEditors.LabelControl();
             this.Label7 = new DevExpress.XtraEditors.LabelControl();
             this.lblPackingSLipTot = new DevExpress.XtraEditors.LabelControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
@@ -89,6 +86,9 @@
             this.txtStoreCode = new DevExpress.XtraEditors.TextEdit();
             this.txtStoreQty = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
@@ -97,9 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSlipNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
@@ -116,6 +113,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -410,8 +410,11 @@
             // 
             this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Panel2.Controls.Add(this.txtPackingSlipNO);
+            this.Panel2.Controls.Add(this.labelControl12);
             this.Panel2.Controls.Add(this.txtPackingSLipDate);
+            this.Panel2.Controls.Add(this.txtStoreQty);
             this.Panel2.Controls.Add(this.lblTotQty);
+            this.Panel2.Controls.Add(this.txtStoreCode);
             this.Panel2.Controls.Add(this.labelControl2);
             this.Panel2.Controls.Add(this.Label8);
             this.Panel2.Controls.Add(this.labelControl1);
@@ -427,7 +430,7 @@
             this.txtPackingSlipNO.Enabled = false;
             this.txtPackingSlipNO.Location = new System.Drawing.Point(112, 7);
             this.txtPackingSlipNO.Name = "txtPackingSlipNO";
-            this.txtPackingSlipNO.Size = new System.Drawing.Size(112, 20);
+            this.txtPackingSlipNO.Size = new System.Drawing.Size(113, 20);
             this.txtPackingSlipNO.TabIndex = 15;
             // 
             // txtPackingSLipDate
@@ -473,40 +476,6 @@
             this.lblPackingSLipTot.Size = new System.Drawing.Size(28, 57);
             this.lblPackingSLipTot.TabIndex = 725;
             this.lblPackingSLipTot.Text = "0";
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(109, 58);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(737, 368);
-            this.HelpGrid.TabIndex = 724;
-            this.HelpGrid.TabStop = false;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView1});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ColumnAutoWidth = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.HelpGridView_PopupMenuShowing);
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.HelpGrid;
-            this.gridView1.Name = "gridView1";
             // 
             // Panel1
             // 
@@ -723,32 +692,76 @@
             // 
             // txtStoreCode
             // 
-            this.txtStoreCode.Location = new System.Drawing.Point(457, 191);
+            this.txtStoreCode.Enabled = false;
+            this.txtStoreCode.Location = new System.Drawing.Point(112, 29);
             this.txtStoreCode.Name = "txtStoreCode";
-            this.txtStoreCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStoreCode.Properties.Appearance.Options.UseFont = true;
-            this.txtStoreCode.Size = new System.Drawing.Size(105, 28);
+            this.txtStoreCode.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreCode.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.txtStoreCode.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreCode.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtStoreCode.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreCode.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.txtStoreCode.Properties.UseReadOnlyAppearance = false;
+            this.txtStoreCode.Size = new System.Drawing.Size(62, 20);
             this.txtStoreCode.TabIndex = 732;
             this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStoreCode_KeyDown);
             // 
             // txtStoreQty
             // 
-            this.txtStoreQty.Location = new System.Drawing.Point(577, 191);
+            this.txtStoreQty.Enabled = false;
+            this.txtStoreQty.Location = new System.Drawing.Point(174, 29);
             this.txtStoreQty.Name = "txtStoreQty";
-            this.txtStoreQty.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStoreQty.Properties.Appearance.Options.UseFont = true;
-            this.txtStoreQty.Size = new System.Drawing.Size(105, 28);
+            this.txtStoreQty.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreQty.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.txtStoreQty.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreQty.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtStoreQty.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreQty.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.txtStoreQty.Properties.UseReadOnlyAppearance = false;
+            this.txtStoreQty.Size = new System.Drawing.Size(51, 20);
             this.txtStoreQty.TabIndex = 733;
             // 
             // labelControl12
             // 
-            this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(368, 194);
+            this.labelControl12.Location = new System.Drawing.Point(55, 33);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(83, 21);
+            this.labelControl12.Size = new System.Drawing.Size(57, 13);
             this.labelControl12.TabIndex = 734;
             this.labelControl12.Text = "Store Code";
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
+            // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(139, 60);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(737, 368);
+            this.HelpGrid.TabIndex = 724;
+            this.HelpGrid.TabStop = false;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ColumnAutoWidth = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.HelpGridView_PopupMenuShowing);
             // 
             // FrmPackingSlipWholeSale
             // 
@@ -757,9 +770,6 @@
             this.ClientSize = new System.Drawing.Size(1122, 604);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
-            this.Controls.Add(this.labelControl12);
-            this.Controls.Add(this.txtStoreQty);
-            this.Controls.Add(this.txtStoreCode);
             this.Controls.Add(this.ArticleImageBox);
             this.Controls.Add(this.BarCodeGrid);
             this.Controls.Add(this.Panel2);
@@ -787,9 +797,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSlipNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
@@ -807,6 +814,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -842,9 +852,6 @@
         internal DevExpress.XtraEditors.LabelControl Label7;
         internal System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.ToolStripButton btnLoadDataFPackingSlip;
-        private DevExpress.XtraGrid.GridControl HelpGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit txtPackingSlipNO;
         private DevExpress.XtraEditors.DateEdit txtPackingSLipDate;
         private DevExpress.XtraEditors.TextEdit txtPONo;
@@ -873,5 +880,8 @@
         private DevExpress.XtraEditors.TextEdit txtStoreCode;
         private DevExpress.XtraEditors.TextEdit txtStoreQty;
         private DevExpress.XtraEditors.LabelControl labelControl12;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl HelpGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
     }
 }

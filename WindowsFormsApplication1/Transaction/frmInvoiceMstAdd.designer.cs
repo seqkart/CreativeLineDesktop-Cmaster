@@ -113,9 +113,6 @@
             this.txtSerialNo = new DevExpress.XtraEditors.TextEdit();
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.GridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -269,6 +266,9 @@
             this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
@@ -331,9 +331,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
@@ -407,6 +404,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1197,7 +1197,6 @@
             // 
             // xtraTabPage2
             // 
-            this.xtraTabPage2.Controls.Add(this.HelpGrid);
             this.xtraTabPage2.Controls.Add(this.panelControl1);
             this.xtraTabPage2.Controls.Add(this.InfoGrid);
             this.xtraTabPage2.Controls.Add(this.groupControl9);
@@ -1209,41 +1208,6 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
             this.xtraTabPage2.Text = "Invoice Data";
-            // 
-            // HelpGrid
-            // 
-            gridLevelNode1.RelationName = "Level1";
-            this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
-            this.HelpGrid.Location = new System.Drawing.Point(556, 176);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(661, 205);
-            this.HelpGrid.TabIndex = 475;
-            this.HelpGrid.TabStop = false;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView1});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.HelpGrid;
-            this.gridView1.Name = "gridView1";
             // 
             // panelControl1
             // 
@@ -2919,6 +2883,41 @@
             this.gridView8.GridControl = this.PSGrid;
             this.gridView8.Name = "gridView8";
             // 
+            // HelpGrid
+            // 
+            gridLevelNode1.RelationName = "Level1";
+            this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
+            this.HelpGrid.Location = new System.Drawing.Point(265, 12);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(661, 205);
+            this.HelpGrid.TabIndex = 475;
+            this.HelpGrid.TabStop = false;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
+            // 
             // FrmInvoiceMstAdd
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -2927,6 +2926,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 643);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Menu_ToolStrip);
@@ -3003,9 +3003,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
@@ -3084,6 +3081,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

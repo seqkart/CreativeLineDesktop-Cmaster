@@ -1304,17 +1304,22 @@ namespace WindowsFormsApplication1
                                                                           if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                           {
                                                                               //DataTable dt = new DataTable();
-                                                                              //DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
-                                                                              //    dr["PSWSNO"].ToString() +
-                                                                              //    "','" +
-                                                                              //    dr["SIDBOXNO"].ToString() +
-                                                                              //    "','" +
-                                                                              //    GlobalVariables.FinancialYear +
-                                                                              //    "','" +
-                                                                              //    GlobalVariables.CUnitID +
-                                                                              //    "'");
+                                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
+                                                                                  dr["PSWSNO"].ToString() +
+                                                                                  "','" +
+                                                                                  dr["SIDBOXNO"].ToString() +
+                                                                                  "','" +
+                                                                                  GlobalVariables.FinancialYear +
+                                                                                  "','" +
+                                                                                  GlobalVariables.CUnitID +
+                                                                                  "'");
+
                                                                               //ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
-                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab();
+
+
+
+
+                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab() { ds = ds };
 
 
                                                                               rpt.Parameters["PSWSNO"].Visible = false;
@@ -1338,27 +1343,77 @@ namespace WindowsFormsApplication1
                                                                   }));
 
                     e.Menu.Items
+                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Combined",
+                                                                  (o1, e1) =>
+                                                                  {
+
+                                                                      //int i = 0;
+                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                      {
+                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                          {
+                                                                              //DataTable dt = new DataTable();
+                                                                              DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
+                                                                                  dr["PSWSNO"].ToString() +
+                                                                                  "','" +
+                                                                                  "0" +
+                                                                                  "','" +
+                                                                                  GlobalVariables.FinancialYear +
+                                                                                  "','" +
+                                                                                  GlobalVariables.CUnitID +
+                                                                                  "'");
+                                                                              //ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
+                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab() { ds = ds };
+
+
+                                                                              rpt.Parameters["PSWSNO"].Visible = false;
+                                                                              rpt.Parameters["PSWSTOTBOXES"].Visible = false;
+                                                                              rpt.Parameters["FY"].Visible = false;
+                                                                              rpt.Parameters["UnitCode"].Visible = false;
+
+                                                                              rpt.Parameters["PSWSNO"].Value = dr["PSWSNO"].ToString();
+                                                                              rpt.Parameters["PSWSTOTBOXES"].Value = "0";
+                                                                              rpt.Parameters["FY"].Value = GlobalVariables.FinancialYear;
+                                                                              rpt.Parameters["UnitCode"].Value = GlobalVariables.CUnitID;
+                                                                              //{ DataSource = ds.Tables[0] };
+                                                                              rpt.CreateDocument();
+
+                                                                              payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+
+                                                                              frm.documentViewer1.DocumentSource = rpt;
+                                                                              frm.ShowDialog(Parent);
+                                                                          }
+                                                                      }
+                                                                  }));
+
+                    e.Menu.Items
                        .Add(new DevExpress.Utils.Menu.DXMenuItem("PRINT BOX LABEL",
                                                                  (o1, e1) =>
                                                                  {
 
-                                                                     // int i = 0;
+
+                                                                     //int i = 0;
                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                      {
                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                          {
                                                                              //DataTable dt = new DataTable();
-                                                                             //DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
-                                                                             //    dr["PSWSNO"].ToString() +
-                                                                             //    "','" +
-                                                                             //    dr["SIDBOXNO"].ToString() +
-                                                                             //    "','" +
-                                                                             //    GlobalVariables.FinancialYear +
-                                                                             //    "','" +
-                                                                             //    GlobalVariables.CUnitID +
-                                                                             //    "'");
+                                                                             DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" +
+                                                                                 dr["PSWSNO"].ToString() +
+                                                                                 "','" +
+                                                                                 dr["SIDBOXNO"].ToString() +
+                                                                                 "','" +
+                                                                                 GlobalVariables.FinancialYear +
+                                                                                 "','" +
+                                                                                 GlobalVariables.CUnitID +
+                                                                                 "'");
+
                                                                              //ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
-                                                                             Prints.BOXLABEL rpt = new Prints.BOXLABEL();
+
+
+
+
+                                                                             Prints.BOXLABEL rpt = new Prints.BOXLABEL() { ds = ds };
 
 
                                                                              rpt.Parameters["PSWSNO"].Visible = false;
@@ -1370,7 +1425,7 @@ namespace WindowsFormsApplication1
                                                                              rpt.Parameters["PSWSTOTBOXES"].Value = dr["SIDBOXNO"].ToString();
                                                                              rpt.Parameters["FY"].Value = GlobalVariables.FinancialYear;
                                                                              rpt.Parameters["UnitCode"].Value = GlobalVariables.CUnitID;
-                                                                             // { DataSource = ds.Tables[0] };
+                                                                             //{ DataSource = ds.Tables[0] };
                                                                              rpt.CreateDocument();
 
                                                                              payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
