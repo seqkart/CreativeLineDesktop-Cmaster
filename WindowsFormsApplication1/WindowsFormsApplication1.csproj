@@ -2430,12 +2430,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="CrudTask\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Inventory\" />
-    <Folder Include="Promotion\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
