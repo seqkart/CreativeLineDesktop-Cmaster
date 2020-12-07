@@ -272,7 +272,7 @@ namespace WindowsFormsApplication1
                 }
                 if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmNewFormAAddEdit))
                 {
-                    frmNewFormAAddEdit frm = new frmNewFormAAddEdit() { s1 = btnAdd.Text, Text = "Program Addition" };
+                    frmNewFormAAddEdit frm = new frmNewFormAAddEdit() { S1 = btnAdd.Text, Text = "Program Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -307,7 +307,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG10")
                 {
-                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
                     { S1 = btnAdd.Text, Text = "Desgination Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -434,7 +434,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG157")
                 {
-                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
                     { S1 = btnAdd.Text, Text = "Desgination Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -682,7 +682,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmNewFormAAddEdit frm = new frmNewFormAAddEdit()
-                    { s1 = btnEdit.Text, Text = "Program Editing", ProgCode = CurrentRow["ProgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Program Editing", ProgCode = CurrentRow["ProgCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -725,7 +725,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG10")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
                     { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
 
 
@@ -862,7 +862,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG157")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmDesignationAddEdit frm = new frmDesignationAddEdit()
+                    FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
                     { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 

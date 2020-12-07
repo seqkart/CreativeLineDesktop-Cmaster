@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1.Crystals
     public partial class SalePrint : DevExpress.XtraReports.UI.XtraReport
     {
         public String InvType { get; set; }
-        public DataSet ds { get; set; }
+        public DataSet Ds { get; set; }
 
         public SalePrint()
         {
@@ -46,39 +46,39 @@ namespace WindowsFormsApplication1.Crystals
             }
 
             lblAddress.Text = GlobalVariables.CAddress1;
-            lblBillDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["IdDate"]).ToString("dd-MM-yyyy");
-            lblBillNo.Text = ds.Tables[0].Rows[0]["IdNo"].ToString();
-            lblBillToAddress.Text = ds.Tables[0].Rows[0]["Address"].ToString();
-            lblBillToGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            lblBillToName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-            lblBillToPlaceofSupply.Text = ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
-            lblBillToState.Text = ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
-            lblBillToStateCode.Text = ds.Tables[0].Rows[0]["AccGSTStateCode"].ToString();
+            lblBillDate.Text = Convert.ToDateTime(Ds.Tables[0].Rows[0]["IdDate"]).ToString("dd-MM-yyyy");
+            lblBillNo.Text = Ds.Tables[0].Rows[0]["IdNo"].ToString();
+            lblBillToAddress.Text = Ds.Tables[0].Rows[0]["Address"].ToString();
+            lblBillToGSTNo.Text = Ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+            lblBillToName.Text = Ds.Tables[0].Rows[0]["AccName"].ToString();
+            lblBillToPlaceofSupply.Text = Ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
+            lblBillToState.Text = Ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
+            lblBillToStateCode.Text = Ds.Tables[0].Rows[0]["AccGSTStateCode"].ToString();
             lblCompanyName.Text = GlobalVariables.CompanyName;
 
-            lblDispatchToAddress.Text = ds.Tables[0].Rows[0]["Address"].ToString();
-            lblDispatchToGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            lblDispatchToName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-            lblDispatchToState.Text = ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
-            lblDispatchToStateCode.Text = ds.Tables[0].Rows[0]["AccGSTStateCode"].ToString();
+            lblDispatchToAddress.Text = Ds.Tables[0].Rows[0]["Address"].ToString();
+            lblDispatchToGSTNo.Text = Ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+            lblDispatchToName.Text = Ds.Tables[0].Rows[0]["AccName"].ToString();
+            lblDispatchToState.Text = Ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
+            lblDispatchToStateCode.Text = Ds.Tables[0].Rows[0]["AccGSTStateCode"].ToString();
             lblGSTNo.Text = GlobalVariables.CmpGSTNo;
-            lblInvoiceAmount.Text = ds.Tables[0].Rows[0]["ImNetAmt"].ToString();
-            lblTotalInvoiceAmount.Text = ds.Tables[0].Rows[0]["ImNetAmtRO"].ToString();
+            lblInvoiceAmount.Text = Ds.Tables[0].Rows[0]["ImNetAmt"].ToString();
+            lblTotalInvoiceAmount.Text = Ds.Tables[0].Rows[0]["ImNetAmtRO"].ToString();
             xrInvType.Text = InvType;
 
             if (GlobalVariables.ProgCode == "PROG23")
             {
-                lblTCSAmount.Text = ds.Tables[0].Rows[0]["ImTCSAmount"].ToString();
+                lblTCSAmount.Text = Ds.Tables[0].Rows[0]["ImTCSAmount"].ToString();
 
-                lblEWayBillNo.Text = ds.Tables[0].Rows[0]["ImEWayBillNo"].ToString();
+                lblEWayBillNo.Text = Ds.Tables[0].Rows[0]["ImEWayBillNo"].ToString();
 
-                if (ds.Tables[0].Rows[0]["ImEWayBillDate"].ToString().Trim() == string.Empty)
+                if (Ds.Tables[0].Rows[0]["ImEWayBillDate"].ToString().Trim() == string.Empty)
                 {
                 }
                 else
                 {
 
-                    lblEWayBillDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["ImEWayBillDate"]).ToString("dd-MM-yyyy");
+                    lblEWayBillDate.Text = Convert.ToDateTime(Ds.Tables[0].Rows[0]["ImEWayBillDate"]).ToString("dd-MM-yyyy");
                 }
             }
 

@@ -699,7 +699,7 @@
             this.txtDeptCode.Properties.MaxLength = 4;
             this.txtDeptCode.Size = new System.Drawing.Size(58, 20);
             this.txtDeptCode.TabIndex = 694;
-            this.txtDeptCode.EditValueChanged += new System.EventHandler(this.txtDeptCode_EditValueChanged);
+            this.txtDeptCode.EditValueChanged += new System.EventHandler(this.TxtDeptCode_EditValueChanged);
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
             // txtDeptDesc

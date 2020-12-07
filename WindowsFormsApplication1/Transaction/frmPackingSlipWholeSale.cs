@@ -63,10 +63,10 @@ namespace WindowsFormsApplication1.Transaction
             }
             lblTotQty.Text = QtySum.ToString("0");
 
-            DataSet ds = new DataSet();
+            DataSet Ds = new DataSet();
             if (S1 == "&Add")
             {
-                ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount2] '" +
+                Ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount2] '" +
                   PSWSNO +
                   "','" +
                   PSWSTOTBOXES +
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             else
             {
-                ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
+                Ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
                   PSWSNO +
                   "','" +
                   PSWSTOTBOXES +
@@ -94,9 +94,9 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-            if (ds.Tables[0].Rows.Count > 0)
+            if (Ds.Tables[0].Rows.Count > 0)
             {
-                lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
+                lblPackingSLipTot.Text = (Convert.ToDecimal(Ds.Tables[0].Rows[0][0]) +
                     Convert.ToDecimal(lblTotQty.Text)).ToString();
             }
         }
@@ -764,7 +764,7 @@ namespace WindowsFormsApplication1.Transaction
                                     Qty = Qty + Convert.ToInt32(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
                                 }
                             }
-                            Qty = Qty + Convert.ToInt32(ProjectFunctions.GetDataSet("Select isnull(sum(SIDSCANQTY),0) from PSWSLDET where SIDPARTYC='" + txtAccCode.Text.Trim() + "' And SIDBARCODE='"+txtBarCode.Text+ "' ").Tables[0].Rows[0][0]);
+                            Qty += Convert.ToInt32(ProjectFunctions.GetDataSet("Select isnull(sum(SIDSCANQTY),0) from PSWSLDET where SIDPARTYC='" + txtAccCode.Text.Trim() + "' And SIDBARCODE='"+txtBarCode.Text+ "' ").Tables[0].Rows[0][0]);
                             if (Qty < Convert.ToDecimal(txtStoreQty.Text))
                             {
 

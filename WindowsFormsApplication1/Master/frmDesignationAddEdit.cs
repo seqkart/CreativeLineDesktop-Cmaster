@@ -6,11 +6,11 @@ using System.Data;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frmDesignationAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmDesignationAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public String DesgCode { get; set; }
-        public frmDesignationAddEdit()
+        public FrmDesignationAddEdit()
         {
             InitializeComponent();
         }

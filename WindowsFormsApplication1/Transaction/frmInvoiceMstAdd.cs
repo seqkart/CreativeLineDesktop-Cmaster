@@ -1608,7 +1608,7 @@ namespace WindowsFormsApplication1
                                                 else
                                                 {
                                                     GridControl1.Text = "SIDARTNO";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -1816,7 +1816,7 @@ namespace WindowsFormsApplication1
             PSGridView.CloseEditor();
             PSGridView.UpdateCurrentRow();
 
-            DataSet ds = new DataSet();
+            DataSet Ds = new DataSet();
 #pragma warning disable CS0219 // The variable 'i' is assigned but its value is never used
             int i = 0;
 #pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
@@ -1864,12 +1864,12 @@ namespace WindowsFormsApplication1
                             //{
                             var str = "Exec [sp_LoadTaxMstFInvoice] @PrdCode='" + dr["SIDARTID"].ToString() + "',";
                             str = str + "@LCTag='" + LCTag + "',@ValueOfGoods='" + Convert.ToDecimal(dr["SIDARTMRP"]) + "'";
-                            ds = ProjectFunctions.GetDataSet(str);
-                            if (ds.Tables[0].Rows.Count > 0)
+                            Ds = ProjectFunctions.GetDataSet(str);
+                            if (Ds.Tables[0].Rows.Count > 0)
                             {
-                                dtNewRow["SIDCGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxCGSTRate"]);
-                                dtNewRow["SIDSGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxSGSTRate"]);
-                                dtNewRow["SIDIGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxIGSTRate"]);
+                                dtNewRow["SIDCGSTPER"] = Convert.ToDecimal(Ds.Tables[0].Rows[0]["TaxCGSTRate"]);
+                                dtNewRow["SIDSGSTPER"] = Convert.ToDecimal(Ds.Tables[0].Rows[0]["TaxSGSTRate"]);
+                                dtNewRow["SIDIGSTPER"] = Convert.ToDecimal(Ds.Tables[0].Rows[0]["TaxIGSTRate"]);
                             }
                             //    i++;
                             //}
@@ -1882,8 +1882,8 @@ namespace WindowsFormsApplication1
 
 
                             dtNewRow["SIDPSDATE"] = Convert.ToDateTime("2001-01-01");
-                            dtNewRow["TAXCODE"] = ds.Tables[0].Rows[0]["TAXCODE"].ToString();
-                            dtNewRow["GRPHSNCODE"] = ds.Tables[0].Rows[0]["GRPHSNCODE"].ToString();
+                            dtNewRow["TAXCODE"] = Ds.Tables[0].Rows[0]["TAXCODE"].ToString();
+                            dtNewRow["GRPHSNCODE"] = Ds.Tables[0].Rows[0]["GRPHSNCODE"].ToString();
                             dt.Rows.Add(dtNewRow);
                         }
                     }

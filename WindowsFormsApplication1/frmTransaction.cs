@@ -1319,7 +1319,7 @@ namespace WindowsFormsApplication1
 
 
 
-                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab() { ds = ds };
+                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab() { Ds = ds };
 
 
                                                                               rpt.Parameters["PSWSNO"].Visible = false;
@@ -1363,7 +1363,7 @@ namespace WindowsFormsApplication1
                                                                                   GlobalVariables.CUnitID +
                                                                                   "'");
                                                                               //ds.Tables[0].WriteXmlSchema("C://Temp//abc.xml");
-                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab() { ds = ds };
+                                                                              Prints.PackingSlipCrossTab rpt = new Prints.PackingSlipCrossTab() { Ds = ds };
 
 
                                                                               rpt.Parameters["PSWSNO"].Visible = false;
@@ -1413,7 +1413,7 @@ namespace WindowsFormsApplication1
 
 
 
-                                                                             Prints.BOXLABEL rpt = new Prints.BOXLABEL() { ds = ds };
+                                                                             Prints.BOXLABEL rpt = new Prints.BOXLABEL() { Ds = ds };
 
 
                                                                              rpt.Parameters["PSWSNO"].Visible = false;

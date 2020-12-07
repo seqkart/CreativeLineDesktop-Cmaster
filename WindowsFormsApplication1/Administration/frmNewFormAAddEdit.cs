@@ -6,14 +6,14 @@ namespace WindowsFormsApplication1
 {
     public partial class frmNewFormAAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public string S1 { get; set; }
         public String ProgCode { get; set; }
         public frmNewFormAAddEdit()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -41,18 +41,18 @@ namespace WindowsFormsApplication1
                 txtPrinters.Properties.Items.Add(printer);
             }
         }
-        private void frmNewFormAAddEdit_Load(object sender, EventArgs e)
+        private void FrmNewFormAAddEdit_Load(object sender, EventArgs e)
         {
             try
             {
                 LoadPrinters();
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtFormCode.Focus();
                    
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     txtFormCode.Enabled = false;
                     txtFormName.Enabled = false;
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void txtMenuName_KeyDown(object sender, KeyEventArgs e)
+        private void TxtMenuName_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtSMenuName_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSMenuName_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtMenuName_EditValueChanged(object sender, EventArgs e)
+        private void TxtMenuName_EditValueChanged(object sender, EventArgs e)
         {
             txtSMenuName.Text = string.Empty;
         }
@@ -220,11 +220,11 @@ namespace WindowsFormsApplication1
             }
 
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet(String.Format("Select ProgCode From ProgramMaster Where ProgCode='" + txtFormCode.Text.Trim() + "'"));
                     if (ds.Tables[0].Rows.Count > 0)
@@ -252,12 +252,12 @@ namespace WindowsFormsApplication1
                         }
                     }
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     if (ValidateData())
                     {
                         var str = " UPDATE    ProgramMaster";
-                        str = str + " SET  ";
+                        str += " SET  ";
                         str = str + "OrderBy ='" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
                         str = str + "RoleCode ='" + ProjectFunctions.SqlString(txtRoleCode.Text.Trim()) + "',";
                         str = str + "ProgCode ='" + ProjectFunctions.SqlString(txtFormCode.Text.Trim()) + "',";
@@ -282,7 +282,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frmNewFormAAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmNewFormAAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -294,7 +294,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtNfaTag_Validating(object sender, CancelEventArgs e)
+        private void TxtNfaTag_Validating(object sender, CancelEventArgs e)
         {
             if (txtNfaTag.Text.ToUpper() == "Y" || (txtNfaTag.Text.ToUpper() == "N"))
             {

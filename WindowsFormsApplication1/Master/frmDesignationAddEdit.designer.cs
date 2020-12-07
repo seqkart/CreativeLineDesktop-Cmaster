@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmDesignationAddEdit
+    partial class FrmDesignationAddEdit
     {
         /// <summary>
         /// Required designer variable.

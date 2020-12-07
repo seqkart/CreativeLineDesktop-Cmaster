@@ -108,8 +108,8 @@
             this.txtMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMenuName.Size = new System.Drawing.Size(463, 20);
             this.txtMenuName.TabIndex = 5;
-            this.txtMenuName.EditValueChanged += new System.EventHandler(this.txtMenuName_EditValueChanged);
-            this.txtMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMenuName_KeyDown);
+            this.txtMenuName.EditValueChanged += new System.EventHandler(this.TxtMenuName_EditValueChanged);
+            this.txtMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMenuName_KeyDown);
             // 
             // label7
             // 
@@ -172,7 +172,7 @@
             this.txtSMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSMenuName.Size = new System.Drawing.Size(463, 20);
             this.txtSMenuName.TabIndex = 6;
-            this.txtSMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSMenuName_KeyDown);
+            this.txtSMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSMenuName_KeyDown);
             // 
             // label11
             // 
@@ -234,7 +234,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -246,7 +246,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(48, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtProcName
             // 
@@ -343,7 +343,7 @@
             this.txtNfaTag.Properties.MaxLength = 1;
             this.txtNfaTag.Size = new System.Drawing.Size(45, 20);
             this.txtNfaTag.TabIndex = 7;
-            this.txtNfaTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtNfaTag_Validating);
+            this.txtNfaTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNfaTag_Validating);
             // 
             // labelControl1
             // 
@@ -399,8 +399,8 @@
             this.KeyPreview = true;
             this.Name = "frmNewFormAAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmNewFormAAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmNewFormAAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmNewFormAAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmNewFormAAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).EndInit();

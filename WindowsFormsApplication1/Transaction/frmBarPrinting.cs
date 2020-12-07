@@ -1320,7 +1320,7 @@ namespace WindowsFormsApplication1.Transaction
             BTNIMPORT2.Visible = false;
         }
 
-        private void txtDeptCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDeptCode_EditValueChanged(object sender, EventArgs e)
         {
 
         }
