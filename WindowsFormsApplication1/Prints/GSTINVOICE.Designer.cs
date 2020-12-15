@@ -58,6 +58,7 @@
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrLabel120 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel37 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel108 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel65 = new DevExpress.XtraReports.UI.XRLabel();
@@ -208,7 +209,6 @@
             this.other = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX1 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrLabel120 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -543,6 +543,20 @@
             this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(4.960511F, 23.82016F);
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.SizeF = new System.Drawing.SizeF(1100.329F, 31.96077F);
+            // 
+            // xrLabel120
+            // 
+            this.xrLabel120.CanGrow = false;
+            this.xrLabel120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.xrLabel120.LocationFloat = new DevExpress.Utils.PointFloat(343.8125F, 0.999999F);
+            this.xrLabel120.Name = "xrLabel120";
+            this.xrLabel120.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel120.SizeF = new System.Drawing.SizeF(358.3334F, 14F);
+            this.xrLabel120.StylePriority.UseFont = false;
+            this.xrLabel120.StylePriority.UseTextAlignment = false;
+            this.xrLabel120.Text = "INSURANCE POLICY No.: 36170021200200000022";
+            this.xrLabel120.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel120.WordWrap = false;
             // 
             // xrLabel37
             // 
@@ -2666,20 +2680,6 @@
             this.TAX1.DataMember = "Table1";
             this.TAX1.Expression = "Sum([SIDIGSTAMT]+[SIDCGSTAMT]+[SIDSGSTAMT])";
             this.TAX1.Name = "TAX1";
-            // 
-            // xrLabel120
-            // 
-            this.xrLabel120.CanGrow = false;
-            this.xrLabel120.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.xrLabel120.LocationFloat = new DevExpress.Utils.PointFloat(343.8125F, 0.999999F);
-            this.xrLabel120.Name = "xrLabel120";
-            this.xrLabel120.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel120.SizeF = new System.Drawing.SizeF(358.3334F, 14F);
-            this.xrLabel120.StylePriority.UseFont = false;
-            this.xrLabel120.StylePriority.UseTextAlignment = false;
-            this.xrLabel120.Text = "INSURANCE POLICY No.: 36170021200100000088";
-            this.xrLabel120.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.xrLabel120.WordWrap = false;
             // 
             // GSTINVOICE
             // 

@@ -1537,7 +1537,7 @@ namespace WindowsFormsApplication1
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
-            ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterKey, HelpGrid, HelpGridView, e);
+            ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER", " Where TRPRSYSID", txtTransporterCode, txtTransporterName, txtTransporterKey, HelpGrid, HelpGridView, e);
         }
 
         private void ChDirect_CheckedChanged(object sender, EventArgs e)

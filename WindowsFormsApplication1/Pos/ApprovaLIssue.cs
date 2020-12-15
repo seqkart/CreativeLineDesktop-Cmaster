@@ -16,8 +16,6 @@ namespace WindowsFormsApplication1.Transaction.Pos
         public String ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public String ImSeries { get; set; }
-
-        DataSet dsPopUps = new DataSet();
         public ApprovaLIssue()
         {
             InitializeComponent();
@@ -80,9 +78,6 @@ namespace WindowsFormsApplication1.Transaction.Pos
                             txtCustName.Text = ds.Tables[0].Rows[0]["CAFFNAME"].ToString();
                             txtCustDetails.Text = ds.Tables[0].Rows[0]["CAFADD"].ToString();
                             txtBarCode.Focus();
-
-
-
 
                         }
 

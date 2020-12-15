@@ -1627,11 +1627,12 @@ namespace WindowsFormsApplication1
                         sub.ReportSource.DataSource = ds;
                     }
                     Report.CreateDocument();
-                    //Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+                    
 
 
                     if (GlobalVariables.ProgCode == "PROG132")
                     {
+                        Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
                         SendToDirectPrint("C:\\Application\\CashMemo.pdf");
                     }
                 

@@ -922,6 +922,8 @@ namespace WindowsFormsApplication1
                 DXMenuItem FixRight;
                 DXMenuItem UnFix;
                 DXMenuItem PartyAccount;
+                DXMenuItem XMLData;
+                DXMenuItem XMLSCHEMA;
 
                 DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                 PartyAccount = new DXMenuItem("View Party Account",
@@ -1013,6 +1015,20 @@ namespace WindowsFormsApplication1
                                                column.Fixed = DevExpress.XtraGrid.Columns.FixedStyle.None;
                                            }
                                        });
+
+
+                XMLData = new DXMenuItem("XML Schema With Data",
+                                      (o1, e1) =>
+                                      {
+                                          (InvoiceGridView.DataSource as DataTable).WriteXml("C:\\Temp\\Data.xml");
+                                      });
+                XMLSCHEMA = new DXMenuItem("XML Schema",
+                                        (o1, e1) =>
+                                        {
+                                            (InvoiceGridView.DataSource as DataTable).WriteXmlSchema("C:\\Temp\\Data.xml");
+                                        });
+
+
                 e.Menu.Items.Add(Copy);
                 e.Menu.Items.Add(SAR);
                 e.Menu.Items.Add(Collapse);
@@ -1020,6 +1036,8 @@ namespace WindowsFormsApplication1
                 e.Menu.Items.Add(FixLeft);
                 e.Menu.Items.Add(FixRight);
                 e.Menu.Items.Add(UnFix);
+                e.Menu.Items.Add(XMLData);
+                e.Menu.Items.Add(XMLSCHEMA);
                 if (GlobalVariables.ProgCode == "PROG8")
                 {
                     e.Menu.Items.Add(PartyAccount);
