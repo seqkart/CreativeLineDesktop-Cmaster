@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmColors : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public String S1 { get; set; }
         public String COLSYSID { get; set; }
         public frmColors()
         {
@@ -34,11 +34,11 @@ namespace WindowsFormsApplication1
         private void FrmColors_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtColorCode.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtSysColorID.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from COLOURS Where COLSYSID= '" + COLSYSID + "'");
@@ -57,13 +57,13 @@ namespace WindowsFormsApplication1
         {
             if (txtColorCode.Text.Trim().Length == 0)
             {
-                ProjectFunctions.SpeakError("Invalid Para1Code");
+                ProjectFunctions.SpeakError("Invalid Colour Code");
                 txtColorCode.Focus();
                 return false;
             }
             if (txtColorName.Text.Trim().Length == 0)
             {
-                ProjectFunctions.SpeakError("Invalid Para1Name");
+                ProjectFunctions.SpeakError("Invalid Colour Name");
                 txtColorName.Focus();
                 return false;
             }
@@ -85,16 +85,14 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into COLOURS"
                                                  + " (COLNAME, COLCODE)"
                                                  + " values(@COLNAME, @COLCODE)";
 
-
-
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE COLOURS SET "
                                                 + " COLNAME=@COLNAME,COLCODE=@COLCODE "
@@ -123,7 +121,9 @@ namespace WindowsFormsApplication1
                             ProjectFunctions.SpeakError("Something Wrong. \n Roll Back Failed." + ex2.Message);
                         }
                     }
+                    ProjectFunctions.SpeakError("COLOUR SAVED SUCCESSFULLY" );
                 }
+
             }
         }
 

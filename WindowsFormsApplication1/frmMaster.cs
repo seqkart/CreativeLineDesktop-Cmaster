@@ -200,7 +200,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG123")
                 {
-                    frmColors frm = new frmColors() { s1 = btnAdd.Text, Text = "Colors Addition" };
+                    frmColors frm = new frmColors() { S1 = btnAdd.Text, Text = "Colors Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -584,7 +584,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmColors frm = new frmColors()
-                    { s1 = btnEdit.Text, Text = "Colors Edition", COLSYSID = CurrentRow["COLSYSID"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Colors Edition", COLSYSID = CurrentRow["COLSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
