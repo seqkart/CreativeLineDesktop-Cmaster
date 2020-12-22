@@ -13,55 +13,51 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class Cashmemo : DevExpress.XtraEditors.XtraForm
     {
-        public String ProgCode { get; set; }
-        public String s1 { get; set; }
+        public string ProgCode { get; set; }
+        public string S1 { get; set; }
 
-        String SaleTag = "SALE";
+        string SaleTag = "SALE";
 
-        String HoldTag = String.Empty;
+        string HoldTag = string.Empty;
         DataTable dt = new DataTable();
         int rowindex;
-        public String ImNo { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
-        public String ImSeries { get; set; }
-#pragma warning disable CS0414 // The field 'Cashmemo.AccMRPMarkDown' is assigned but its value is never used
-        Decimal AccMRPMarkDown = 0;
-#pragma warning restore CS0414 // The field 'Cashmemo.AccMRPMarkDown' is assigned but its value is never used
-#pragma warning disable CS0169 // The field 'Cashmemo.SearchField' is never used
-        String SearchField;
-#pragma warning restore CS0169 // The field 'Cashmemo.SearchField' is never used
-        DataSet dsPopUps = new DataSet();
+        public string ImSeries { get; set; }
         public Cashmemo()
         {
             InitializeComponent();
-            dt.Columns.Add("SIDBARCODE", typeof(String));
-            dt.Columns.Add("SIDARTNO", typeof(String));
-            dt.Columns.Add("SIDARTDESC", typeof(String));
-            dt.Columns.Add("SIDCOLN", typeof(String));
-            dt.Columns.Add("SIDSIZN", typeof(String));
-            dt.Columns.Add("SIDSCANQTY", typeof(Decimal));
-            dt.Columns.Add("SIDARTMRP", typeof(Decimal));
-            dt.Columns.Add("SIDARTWSP", typeof(Decimal));
-            dt.Columns.Add("SIDITMDISCPRCN", typeof(Decimal));
-            dt.Columns.Add("SIDITMDISCAMT", typeof(Decimal));
-            dt.Columns.Add("SIDITMNETAMT", typeof(Decimal));
-            dt.Columns.Add("SIDBOXQTY", typeof(Decimal));
-            dt.Columns.Add("SIDBOXMRPVAL", typeof(Decimal));
-            dt.Columns.Add("SIDBOXWSPVAL", typeof(Decimal));
-            dt.Columns.Add("SIDARTID", typeof(String));
-            dt.Columns.Add("SIDCOLID", typeof(String));
-            dt.Columns.Add("SIDSIZID", typeof(String));
+
+            chall.Checked = false
+                ;
+            dt.Columns.Add("SIDBARCODE", typeof(string));
+            dt.Columns.Add("SIDARTNO", typeof(string));
+            dt.Columns.Add("SIDARTDESC", typeof(string));
+            dt.Columns.Add("SIDCOLN", typeof(string));
+            dt.Columns.Add("SIDSIZN", typeof(string));
+            dt.Columns.Add("SIDSCANQTY", typeof(decimal));
+            dt.Columns.Add("SIDARTMRP", typeof(decimal));
+            dt.Columns.Add("SIDARTWSP", typeof(decimal));
+            dt.Columns.Add("SIDITMDISCPRCN", typeof(decimal));
+            dt.Columns.Add("SIDITMDISCAMT", typeof(decimal));
+            dt.Columns.Add("SIDITMNETAMT", typeof(decimal));
+            dt.Columns.Add("SIDBOXQTY", typeof(decimal));
+            dt.Columns.Add("SIDBOXMRPVAL", typeof(decimal));
+            dt.Columns.Add("SIDBOXWSPVAL", typeof(decimal));
+            dt.Columns.Add("SIDARTID", typeof(string));
+            dt.Columns.Add("SIDCOLID", typeof(string));
+            dt.Columns.Add("SIDSIZID", typeof(string));
             dt.Columns.Add("SIDPSDATE", typeof(DateTime));
-            dt.Columns.Add("SIDPSID", typeof(String));
-            dt.Columns.Add("SIDPSNO", typeof(String));
-            dt.Columns.Add("SIDSGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDCGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDIGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDCGSTPER", typeof(Decimal));
-            dt.Columns.Add("SIDSGSTPER", typeof(Decimal));
-            dt.Columns.Add("SIDIGSTPER", typeof(Decimal));
-            dt.Columns.Add("ARTMARGIN", typeof(Decimal));
-            dt.Columns.Add("TAXCODE", typeof(String));
+            dt.Columns.Add("SIDPSID", typeof(string));
+            dt.Columns.Add("SIDPSNO", typeof(string));
+            dt.Columns.Add("SIDSGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDCGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDIGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDCGSTPER", typeof(decimal));
+            dt.Columns.Add("SIDSGSTPER", typeof(decimal));
+            dt.Columns.Add("SIDIGSTPER", typeof(decimal));
+            dt.Columns.Add("ARTMARGIN", typeof(decimal));
+            dt.Columns.Add("TAXCODE", typeof(string));
         }
         private void SetMyControls()
         {
@@ -80,7 +76,7 @@ namespace WindowsFormsApplication1.Transaction
             txtItemDiscAMount.Enabled = false;
         }
 
-        private void LoadBillForEdit(String BillNo, DateTime BillDate, String BillSeries)
+        private void LoadBillForEdit(string BillNo, DateTime BillDate, string BillSeries)
         {
             try
 
@@ -119,7 +115,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtCustMobileNo.Focus();
 
 
-                calculation();
+                Calculation();
                 GetPartyBalances();
             }
             catch (Exception ex)
@@ -129,11 +125,11 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void TxtCustMobileNo_EditValueChanged(object sender, EventArgs e)
         {
-            txtCustCode.Text = String.Empty;
-            txtCustDetails.Text = String.Empty;
-            txtCustName.Text = String.Empty;
-            txtLastVisitedOn.Text = String.Empty;
-            txtBalance.Text = String.Empty;
+            txtCustCode.Text = string.Empty;
+            txtCustDetails.Text = string.Empty;
+            txtCustName.Text = string.Empty;
+            txtLastVisitedOn.Text = string.Empty;
+            txtBalance.Text = string.Empty;
         }
         private void GetPartyBalances()
         {
@@ -179,6 +175,10 @@ namespace WindowsFormsApplication1.Transaction
             if (txtAlterCharges.Text.Length == 0)
             {
                 txtAlterCharges.Text = "0";
+            }
+            if (txtMainDisc.Text.Length == 0)
+            {
+                txtMainDisc.Text = "0";
             }
             if (txtOtherCharges.Text.Length == 0)
             {
@@ -341,7 +341,7 @@ namespace WindowsFormsApplication1.Transaction
                         InfoGrid.DataSource = null;
                     }
                     HelpGrid.Visible = false;
-                    calculation();
+                    Calculation();
                 }
                 if (HelpGrid.Text == "txtCustMobileNo")
                 {
@@ -471,9 +471,9 @@ namespace WindowsFormsApplication1.Transaction
                         {
                             InfoGrid.DataSource = null;
                         }
-                        txtBarCode.Text = String.Empty;
+                        txtBarCode.Text = string.Empty;
                         txtBarCode.Focus();
-                        calculation();
+                        Calculation();
                     }
                     else
                     {
@@ -505,9 +505,9 @@ namespace WindowsFormsApplication1.Transaction
                         {
                             InfoGrid.DataSource = null;
                         }
-                        txtBarCode.Text = String.Empty;
+                        txtBarCode.Text = string.Empty;
                         txtBarCode.Focus();
-                        calculation();
+                        Calculation();
                     }
                 }
             }
@@ -530,7 +530,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtBarCode.Focus();
             }
         }
-        private void ShowImage(String ArticleID)
+        private void ShowImage(string ArticleID)
         {
             try
             {
@@ -552,10 +552,6 @@ namespace WindowsFormsApplication1.Transaction
                 XtraMessageBox.Show(ex.Message);
             }
         }
-        private void TxtSMCode_EditValueChanged(object sender, EventArgs e)
-        {
-            txtSMName.Text = String.Empty;
-        }
 
 
 
@@ -564,10 +560,10 @@ namespace WindowsFormsApplication1.Transaction
             if (chExclusive.Checked)
             {
                 chInclusive.Checked = false;
-                calculation();
+                Calculation();
             }
         }
-        private void calculation()
+        private void Calculation()
         {
             try
             {
@@ -609,15 +605,15 @@ namespace WindowsFormsApplication1.Transaction
             try
 
             {
-                Decimal MainDiscAmount = 0;
-                Decimal ValueOfGoods = 0;
-                Decimal SumValueOfGoods = 0;
-                Decimal SumRowDiscAmount = 0;
-                Decimal SumCGSTAmount = 0;
-                Decimal SumSGSTAmount = 0;
-                Decimal SumIGSTAmount = 0;
-                Decimal TotalSaleQty = 0;
-                Decimal TotalReturnQty = 0;
+                decimal MainDiscAmount = 0;
+                decimal ValueOfGoods = 0;
+                decimal SumValueOfGoods = 0;
+                decimal SumRowDiscAmount = 0;
+                decimal SumCGSTAmount = 0;
+                decimal SumSGSTAmount = 0;
+                decimal SumIGSTAmount = 0;
+                decimal TotalSaleQty = 0;
+                decimal TotalReturnQty = 0;
                 foreach (DataRow dr in dt.Rows)
                 {
                     if (Convert.ToDecimal(dr["SIDSCANQTY"]) > 0)
@@ -635,9 +631,9 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
 
-                        Decimal NetRate = 0;
+                        decimal NetRate = 0;
 
-                        Decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
+                        decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
                         if (NetRate == 0)
                         {
                             NetRate = Convert.ToDecimal(dr["SIDARTMRP"]) - ((Convert.ToDecimal(dr["SIDARTMRP"]) * TaxRate) / (100 + TaxRate));
@@ -662,12 +658,12 @@ namespace WindowsFormsApplication1.Transaction
 
                         dr["SIDARTWSP"] = Convert.ToDecimal("0");
 
-                        Decimal TempValueOfGoods = 0;
-                        Decimal RowDiscAmount = (Convert.ToDecimal(dr["SIDSCANQTY"]) * ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100));
+                        decimal TempValueOfGoods = 0;
+                        decimal RowDiscAmount = (Convert.ToDecimal(dr["SIDSCANQTY"]) * ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100));
 
                         TempValueOfGoods = ((Convert.ToDecimal(dr["SIDSCANQTY"]) * (Convert.ToDecimal(dr["SIDARTMRP"])) - RowDiscAmount));
 
-                        Decimal TempMainDisc = (TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100;
+                        decimal TempMainDisc = (TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100;
 
 
                         MainDiscAmount = MainDiscAmount + TempMainDisc;
@@ -681,9 +677,9 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                        Decimal CGSTAmount = 0;
-                        Decimal SGSTAmount = 0;
-                        Decimal IGSTAmount = 0;
+                        decimal CGSTAmount = 0;
+                        decimal SGSTAmount = 0;
+                        decimal IGSTAmount = 0;
 
 
                         if (Convert.ToDecimal(dr["SIDITMDISCAMT"]) > 0 || Convert.ToDecimal(txtMainDisc.Text) > 0)
@@ -704,8 +700,8 @@ namespace WindowsFormsApplication1.Transaction
                         SumValueOfGoods = SumValueOfGoods + ValueOfGoods;
 
 
-                        Decimal TaxRateFinal = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
-                        Decimal Tax = ValueOfGoods * TaxRateFinal / (100 + TaxRateFinal);
+                        decimal TaxRateFinal = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
+                        decimal Tax = ValueOfGoods * TaxRateFinal / (100 + TaxRateFinal);
                         if (Convert.ToDecimal(dr["SIDCGSTPER"]) > 0 || Convert.ToDecimal(dr["SIDSGSTPER"]) > 0)
                         {
                             CGSTAmount = Tax / 2;
@@ -764,7 +760,7 @@ namespace WindowsFormsApplication1.Transaction
 
                 txtSubTotal.Text = SumValueOfGoods.ToString("0.00");
                 lblTotalDisc.Text = SumRowDiscAmount.ToString("0.00");
-                Decimal TempNetPayable = 0;
+                decimal TempNetPayable = 0;
 
                 TempNetPayable = SumValueOfGoods + Convert.ToDecimal(txtAlterCharges.Text) + Convert.ToDecimal(txtOtherCharges.Text);
                 lblNetPayable.Text = Math.Round(TempNetPayable, 0).ToString("0.00");
@@ -789,15 +785,15 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                Decimal MainDiscAmount = 0;
-                Decimal ValueOfGoods = 0;
-                Decimal SumValueOfGoods = 0;
-                Decimal SumRowDiscAmount = 0;
-                Decimal SumCGSTAmount = 0;
-                Decimal SumSGSTAmount = 0;
-                Decimal SumIGSTAmount = 0;
-                Decimal TotalSaleQty = 0;
-                Decimal TotalReturnQty = 0;
+                decimal MainDiscAmount = 0;
+                decimal ValueOfGoods = 0;
+                decimal SumValueOfGoods = 0;
+                decimal SumRowDiscAmount = 0;
+                decimal SumCGSTAmount = 0;
+                decimal SumSGSTAmount = 0;
+                decimal SumIGSTAmount = 0;
+                decimal TotalSaleQty = 0;
+                decimal TotalReturnQty = 0;
                 foreach (DataRow dr in dt.Rows)
                 {
 
@@ -806,7 +802,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                        Decimal NetRate = 0;
+                        decimal NetRate = 0;
                         DataSet dsCheckDate = ProjectFunctions.GetDataSet("sp_GetSchemeData '" + dr["SIDBARCODE"].ToString() + "','" + Convert.ToDateTime(lblCashMemoDate.Text).ToString("yyyy-MM-dd") + "'");
                         if (dsCheckDate.Tables[0].Rows.Count > 0)
                         {
@@ -828,12 +824,12 @@ namespace WindowsFormsApplication1.Transaction
 
                         dr["SIDARTWSP"] = Convert.ToDecimal("0");
 
-                        Decimal TempValueOfGoods = 0;
-                        Decimal RowDiscAmount = (Convert.ToDecimal(dr["SIDSCANQTY"]) * ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100));
+                        decimal TempValueOfGoods = 0;
+                        decimal RowDiscAmount = (Convert.ToDecimal(dr["SIDSCANQTY"]) * ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100));
 
                         TempValueOfGoods = ((Convert.ToDecimal(dr["SIDSCANQTY"]) * Convert.ToDecimal(Convert.ToDecimal(dr["SIDARTMRP"]))) - RowDiscAmount);
 
-                        Decimal TempMainDisc = (TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100;
+                        decimal TempMainDisc = (TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100;
 
 
                         MainDiscAmount = MainDiscAmount + TempMainDisc;
@@ -844,9 +840,9 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                        Decimal CGSTAmount = 0;
-                        Decimal SGSTAmount = 0;
-                        Decimal IGSTAmount = 0;
+                        decimal CGSTAmount = 0;
+                        decimal SGSTAmount = 0;
+                        decimal IGSTAmount = 0;
 
 
                         SumValueOfGoods = SumValueOfGoods + ValueOfGoods;
@@ -871,7 +867,7 @@ namespace WindowsFormsApplication1.Transaction
                         SumCGSTAmount = SumCGSTAmount + Convert.ToDecimal(dr["SIDCGSTAMT"]);
                         SumSGSTAmount = SumSGSTAmount + Convert.ToDecimal(dr["SIDSGSTAMT"]);
                         SumIGSTAmount = SumIGSTAmount + Convert.ToDecimal(dr["SIDIGSTAMT"]);
-                        Decimal TempAmount = 0;
+                        decimal TempAmount = 0;
                         TempAmount = Convert.ToDecimal(dr["SIDITMNETAMT"]) - Convert.ToDecimal(dr["SIDCGSTAMT"]) - Convert.ToDecimal(dr["SIDSGSTAMT"]) - Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         dr["SIDITMDISCPRCN"] = (100 + ((TempAmount / Convert.ToDecimal(dr["SIDARTMRP"])) * 100));
                         dr["SIDITMDISCAMT"] = -(Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100;
@@ -905,11 +901,11 @@ namespace WindowsFormsApplication1.Transaction
                 lblTotalTaxExclusive.Text = txtTotalTax.Text;
 
                 txtMainDiscVal.Text = MainDiscAmount.ToString("0.00");
-
+                
 
                 txtSubTotal.Text = SumValueOfGoods.ToString("0.00");
                 lblTotalDisc.Text = SumRowDiscAmount.ToString("0.00");
-                Decimal TempNetPayable = 0;
+                decimal TempNetPayable = 0;
 
                 TempNetPayable = SumValueOfGoods + SumCGSTAmount + SumSGSTAmount + SumIGSTAmount + Convert.ToDecimal(txtAlterCharges.Text) + Convert.ToDecimal(txtOtherCharges.Text);
                 lblNetPayable.Text = Math.Round(TempNetPayable, 0).ToString("0.00");
@@ -934,19 +930,14 @@ namespace WindowsFormsApplication1.Transaction
             if (chInclusive.Checked)
             {
                 chExclusive.Checked = false;
-                calculation();
+                Calculation();
             }
-        }
-
-        private void XtraTabPage1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
         private void SaveInvoice()
         {
             if (ValidateDataForSaving())
             {
-                String Series = String.Empty;
+                string Series = string.Empty;
                 if (Convert.ToDecimal(lblNetPayable.Text) >= 0)
                 {
                     Series = "S";
@@ -959,17 +950,17 @@ namespace WindowsFormsApplication1.Transaction
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                    var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+                    var MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
                     sqlcom.Connection = sqlcon;
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
-                            String BillNo = String.Empty;
+                            string BillNo = string.Empty;
 
                             BillNo = ProjectFunctions.GetDataSet("select isnull(max(SIMNO),0)+1 from SALEINVMAIN where SIMSERIES='" + Series + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                             lblCashMemoNo.Text = BillNo;
@@ -1012,7 +1003,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = "Update SALEINVMAIN Set SIMSYSDATE=@SIMSYSDATE,SIMFNYR=@SIMFNYR,SIMDATE=@SIMDATE,SIMNO=@SIMNO," +
                                 " SIMSERIES=@SIMSERIES,SIMPartyC=@SIMPartyC,SIMINVTAXTYPE=@SIMINVTAXTYPE,SIMSUBTOTVAL=@SIMSUBTOTVAL," +
@@ -1118,17 +1109,16 @@ namespace WindowsFormsApplication1.Transaction
                             }
                             else
                             {
-                                HoldTag = String.Empty;
+                                HoldTag = string.Empty;
                             }
 
                             XtraMessageBox.Show("Cash Memo Saved Successfully");
+                            txtMainDisc.Text = String.Empty;
 
                         }
                         else
                         {
                             File.Delete(Application.StartupPath + @"\" + txtCustMobileNo.Text + ".xml");
-
-
 
                         }
 
@@ -1148,7 +1138,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 SetMyControls();
                 btnUnhold.Visible = false;
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     this.Location = new Point(0, 0);
                     this.Size = Screen.PrimaryScreen.WorkingArea.Size;
@@ -1157,14 +1147,10 @@ namespace WindowsFormsApplication1.Transaction
                     chInclusive.Checked = true;
                     lblCashMemoNo.Text = ProjectFunctions.GetDataSet("select isnull(max(SIMNO),0)+1 from SALEINVMAIN where SIMSERIES='S' And SIMFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
 
-
                     LoadBillForEdit(ImNo, ImDate, "S");
-
-
-
 
                 }
             }
@@ -1190,13 +1176,13 @@ namespace WindowsFormsApplication1.Transaction
             {
                 chInclusive.Checked = true;
                 chExclusive.Checked = false;
-                calculation();
+                Calculation();
             }
             else
             {
                 chExclusive.Checked = true;
                 chInclusive.Checked = false;
-                calculation();
+                Calculation();
             }
         }
 
@@ -1226,10 +1212,10 @@ namespace WindowsFormsApplication1.Transaction
             try
             {
                 dt.Clear();
-                s1 = "&Add";
+                S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
-                calculation();
+                Calculation();
             }
             catch (Exception ex)
             {
@@ -1245,7 +1231,7 @@ namespace WindowsFormsApplication1.Transaction
                 DataSet dsGetData = ProjectFunctions.GetDataSet("Select SIMDATE,SIMNO,SIMSERIES from SALEINVMAIN  Where SIMSERIES='S' And  SIMNO='1' And SIMFNYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                 if (dsGetData.Tables[0].Rows.Count > 0)
                 {
-                    s1 = "Edit";
+                    S1 = "Edit";
                     Text = "Cash Memo Edition";
                     ImDate = Convert.ToDateTime(dsGetData.Tables[0].Rows[0]["SIMDATE"]);
                     ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
@@ -1268,7 +1254,7 @@ namespace WindowsFormsApplication1.Transaction
             DataSet dsGetData = ProjectFunctions.GetDataSet("Select SIMDATE,SIMNO,SIMSERIES from SALEINVMAIN  Where SIMSERIES='S' And  SIMNO=(Select max(SIMNO) from SALEINVMAIN Where SIMSERIES='S' And  SIMFNYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "') And SIMFNYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
             if (dsGetData.Tables[0].Rows.Count > 0)
             {
-                s1 = "Edit";
+                S1 = "Edit";
                 Text = "Cash Memo Edition";
                 ImDate = Convert.ToDateTime(dsGetData.Tables[0].Rows[0]["SIMDATE"]);
                 ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
@@ -1289,7 +1275,7 @@ namespace WindowsFormsApplication1.Transaction
                 DataSet dsGetData = ProjectFunctions.GetDataSet("Select SIMDATE,SIMNO,SIMSERIES from SALEINVMAIN  Where SIMSERIES='S' And  SIMNO='" + (Convert.ToInt64(lblCashMemoNo.Text) + 1) + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                 if (dsGetData.Tables[0].Rows.Count > 0)
                 {
-                    s1 = "Edit";
+                    S1 = "Edit";
                     Text = "Cash Memo Edition";
                     ImDate = Convert.ToDateTime(dsGetData.Tables[0].Rows[0]["SIMDATE"]);
                     ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
@@ -1315,7 +1301,7 @@ namespace WindowsFormsApplication1.Transaction
                 DataSet dsGetData = ProjectFunctions.GetDataSet("Select SIMDATE,SIMNO,SIMSERIES from SALEINVMAIN  Where SIMSERIES='S' And  SIMNO='" + (Convert.ToInt64(lblCashMemoNo.Text) - 1) + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                 if (dsGetData.Tables[0].Rows.Count > 0)
                 {
-                    s1 = "Edit";
+                    S1 = "Edit";
                     Text = "Cash Memo Edition";
                     ImDate = Convert.ToDateTime(dsGetData.Tables[0].Rows[0]["SIMDATE"]);
                     ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
@@ -1339,7 +1325,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 SaveInvoice();
 
-                s1 = "Edit";
+                S1 = "Edit";
                 Text = "Cash Memo Edition";
                 ImDate = Convert.ToDateTime(lblCashMemoDate.Text);
                 ImNo = lblCashMemoNo.Text;
@@ -1358,29 +1344,10 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void TxtCustCode_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtCustName_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtCustDetails_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupControl3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void TxtMainDisc_EditValueChanged(object sender, EventArgs e)
         {
-            calculation();
+            Calculation();
         }
 
         private void BtnCard_Click(object sender, EventArgs e)
@@ -1388,7 +1355,7 @@ namespace WindowsFormsApplication1.Transaction
             try
             {
                 SaveInvoice();
-                s1 = "Edit";
+                S1 = "Edit";
                 Text = "Cash Memo Edition";
                 ImDate = Convert.ToDateTime(lblCashMemoDate.Text);
                 ImNo = lblCashMemoNo.Text;
@@ -1401,10 +1368,11 @@ namespace WindowsFormsApplication1.Transaction
 
 
                 dt.Clear();
-                s1 = "&Add";
+                S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
-                calculation();
+                txtMainDisc.Text = String.Empty;
+                Calculation();
             }
             catch (Exception ex)
             {
@@ -1417,7 +1385,7 @@ namespace WindowsFormsApplication1.Transaction
             try
             {
                 SaveInvoice();
-                s1 = "Edit";
+                S1 = "Edit";
                 Text = "Cash Memo Edition";
                 ImDate = Convert.ToDateTime(lblCashMemoDate.Text);
                 ImNo = lblCashMemoNo.Text;
@@ -1429,10 +1397,11 @@ namespace WindowsFormsApplication1.Transaction
                 frm.ShowDialog(this.Parent);
 
                 dt.Clear();
-                s1 = "&Add";
+                S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
-                calculation();
+                txtMainDisc.Text = String.Empty;
+                Calculation();
 
             }
             catch (Exception ex)
@@ -1519,17 +1488,18 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                if (InfoGrid.DataSource != null)
+                if (dt.Rows.Count > 0)
                 {
-                    DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
+                    if (InfoGrid.DataSource != null)
+                    {
+                        DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
+                        rowindex = InfoGridView.FocusedRowHandle;
+                        txtItemMRP.EditValue = currentrow["SIDARTMRP"];
+                        txtItemDiscAMount.EditValue = currentrow["SIDITMDISCAMT"];
+                        txtItemDiscPer.EditValue = currentrow["SIDITMDISCPRCN"];
+                        txtItemFlatRate.EditValue = currentrow["SIDITMNETAMT"];
 
-                    rowindex = InfoGridView.FocusedRowHandle;
-                    txtItemMRP.EditValue = currentrow["SIDARTMRP"];
-                    txtItemDiscAMount.EditValue = currentrow["SIDITMDISCAMT"];
-                    txtItemDiscPer.EditValue = currentrow["SIDITMDISCPRCN"];
-
-                    txtItemFlatRate.EditValue = currentrow["SIDITMNETAMT"];
-
+                    }
                 }
             }
             catch (Exception ex)
@@ -1538,7 +1508,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtItemDiscPer_EditValueChanged(object sender, EventArgs e)
+        private void TxtItemDiscPer_EditValueChanged(object sender, EventArgs e)
         {
             if (txtItemDiscPer.Enabled && Convert.ToDecimal(txtItemDiscPer.Text) > 0)
             {
@@ -1547,17 +1517,36 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
+        private void TxtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
-                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
-                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
-                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
-                    calculation();
+
+                    if (chall.Checked)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (txtItemDiscPer.Enabled )
+                            {
+                                dr["SIDITMDISCAMT"] = ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
+                                dr["SIDITMDISCPRCN"] = Convert.ToDecimal(txtItemDiscPer.Text);
+
+                                Calculation();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
+                        Calculation();
+                    }
+
+                   
 
                     InfoGridView.Focus();
 
@@ -1573,7 +1562,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
+        private void TxtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -1583,7 +1572,7 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
                     InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
                     InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
-                    calculation();
+                    Calculation();
 
                     InfoGridView.Focus();
 
@@ -1603,7 +1592,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtItemFlatRate_EditValueChanged(object sender, EventArgs e)
+        private void TxtItemFlatRate_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
@@ -1627,7 +1616,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     ProjectFunctions.DeleteCurrentRowOnRightClick(InfoGrid, InfoGridView);
                     dt.AcceptChanges();
-                    calculation();
+                    Calculation();
                     if (dt.Rows.Count == 0)
                     {
                         InfoGrid.DataSource = null;

@@ -1496,8 +1496,10 @@
             this.txtTotalPayBack.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotalPayBack.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtTotalPayBack.Properties.MaskSettings.Set("mask", "n0");
+            this.txtTotalPayBack.Properties.ReadOnly = true;
             this.txtTotalPayBack.Size = new System.Drawing.Size(95, 24);
             this.txtTotalPayBack.TabIndex = 3;
+            this.txtTotalPayBack.TabStop = false;
             // 
             // txtTotalReceived
             // 
@@ -1513,9 +1515,11 @@
             this.txtTotalReceived.Properties.Mask.EditMask = "n0";
             this.txtTotalReceived.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalReceived.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTotalReceived.Properties.ReadOnly = true;
             this.txtTotalReceived.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTotalReceived.Size = new System.Drawing.Size(95, 24);
             this.txtTotalReceived.TabIndex = 3;
+            this.txtTotalReceived.TabStop = false;
             // 
             // txtBillBalanceAmount
             // 
@@ -1531,9 +1535,11 @@
             this.txtBillBalanceAmount.Properties.Mask.EditMask = "n0";
             this.txtBillBalanceAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBillBalanceAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtBillBalanceAmount.Properties.ReadOnly = true;
             this.txtBillBalanceAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBillBalanceAmount.Size = new System.Drawing.Size(95, 24);
             this.txtBillBalanceAmount.TabIndex = 3;
+            this.txtBillBalanceAmount.TabStop = false;
             // 
             // txtPGPayment
             // 
@@ -1549,9 +1555,11 @@
             this.txtPGPayment.Properties.Mask.EditMask = "n0";
             this.txtPGPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPGPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtPGPayment.Properties.ReadOnly = true;
             this.txtPGPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPGPayment.Size = new System.Drawing.Size(95, 24);
             this.txtPGPayment.TabIndex = 3;
+            this.txtPGPayment.TabStop = false;
             // 
             // txtCardPayment
             // 
@@ -1567,9 +1575,11 @@
             this.txtCardPayment.Properties.Mask.EditMask = "n0";
             this.txtCardPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCardPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCardPayment.Properties.ReadOnly = true;
             this.txtCardPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCardPayment.Size = new System.Drawing.Size(95, 24);
             this.txtCardPayment.TabIndex = 3;
+            this.txtCardPayment.TabStop = false;
             // 
             // txtCashMemoAmount
             // 
@@ -1585,9 +1595,11 @@
             this.txtCashMemoAmount.Properties.Mask.EditMask = "n0";
             this.txtCashMemoAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashMemoAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashMemoAmount.Properties.ReadOnly = true;
             this.txtCashMemoAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtCashMemoAmount.Size = new System.Drawing.Size(95, 24);
             this.txtCashMemoAmount.TabIndex = 3;
+            this.txtCashMemoAmount.TabStop = false;
             // 
             // txtCashMemoNo
             // 
@@ -1595,8 +1607,10 @@
             this.txtCashMemoNo.Name = "txtCashMemoNo";
             this.txtCashMemoNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoNo.Properties.Appearance.Options.UseFont = true;
+            this.txtCashMemoNo.Properties.ReadOnly = true;
             this.txtCashMemoNo.Size = new System.Drawing.Size(95, 24);
             this.txtCashMemoNo.TabIndex = 3;
+            this.txtCashMemoNo.TabStop = false;
             // 
             // txtCashMemoDate
             // 
@@ -1604,8 +1618,10 @@
             this.txtCashMemoDate.Name = "txtCashMemoDate";
             this.txtCashMemoDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoDate.Properties.Appearance.Options.UseFont = true;
+            this.txtCashMemoDate.Properties.ReadOnly = true;
             this.txtCashMemoDate.Size = new System.Drawing.Size(95, 24);
             this.txtCashMemoDate.TabIndex = 3;
+            this.txtCashMemoDate.TabStop = false;
             // 
             // groupControl4
             // 

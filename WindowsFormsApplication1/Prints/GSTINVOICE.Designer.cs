@@ -143,6 +143,7 @@
             this.BILLNO = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -208,7 +209,6 @@
             this.other = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX1 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -230,7 +230,6 @@
             this.xrLabel19,
             this.xrLabel20,
             this.xrLabel21});
-            this.Detail.FillEmptySpace = true;
             this.Detail.HeightF = 14.6608F;
             this.Detail.KeepTogether = true;
             this.Detail.KeepTogetherWithDetailReports = true;
@@ -1765,6 +1764,13 @@
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 149.75F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
+            // 
             // xrLabel27
             // 
             this.xrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -2457,7 +2463,7 @@
             // 
             this.xrLabel32.CanGrow = false;
             this.xrLabel32.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([SIDSCANQTY])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumRunningSum([SIDSCANQTY])")});
             this.xrLabel32.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(292.2708F, 1.674911F);
             this.xrLabel32.Name = "xrLabel32";
@@ -2466,7 +2472,7 @@
             this.xrLabel32.StylePriority.UseFont = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
             xrSummary5.IgnoreNullValues = true;
-            xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Page;
+            xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel32.Summary = xrSummary5;
             this.xrLabel32.Text = "QTY";
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -2676,13 +2682,6 @@
             this.TAX1.DataMember = "Table1";
             this.TAX1.Expression = "Sum([SIDIGSTAMT]+[SIDCGSTAMT]+[SIDSGSTAMT])";
             this.TAX1.Name = "TAX1";
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 149.75F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
             // 
             // GSTINVOICE
             // 

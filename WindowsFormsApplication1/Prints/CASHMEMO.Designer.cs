@@ -81,6 +81,7 @@
             this.xrLine10 = new DevExpress.XtraReports.UI.XRLine();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrLabel61 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel80 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel79 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
@@ -124,7 +125,6 @@
             this.cashback = new DevExpress.XtraReports.UI.CalculatedField();
             this.calculatedField1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.carddetails = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             Detail = new DevExpress.XtraReports.UI.DetailBand();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -140,6 +140,7 @@
             this.xrLabel51,
             this.xrLabel52});
             Detail.HeightF = 38.12502F;
+            Detail.KeepTogether = true;
             Detail.Name = "Detail";
             // 
             // xrLabel58
@@ -457,7 +458,7 @@
             this.xrLabel18.NullValueText = "SIDITMDISCPRCN";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel18.ProcessNullValues = DevExpress.XtraReports.UI.ValueSuppressType.Suppress;
-            this.xrLabel18.SizeF = new System.Drawing.SizeF(22.38889F, 12.83334F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(22.38889F, 12.83333F);
             this.xrLabel18.StylePriority.UseFont = false;
             this.xrLabel18.StylePriority.UseTextAlignment = false;
             this.xrLabel18.Text = "%";
@@ -496,7 +497,7 @@
             // 
             this.xrLabel15.CanGrow = false;
             this.xrLabel15.Font = new System.Drawing.Font("Bahnschrift", 8F, System.Drawing.FontStyle.Bold);
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(7.4375F, 214.25F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(7.4375F, 215.25F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(75.16666F, 12.83333F);
@@ -761,6 +762,7 @@
             this.xrLabel21,
             this.xrLine3});
             this.ReportFooter.HeightF = 649.1245F;
+            this.ReportFooter.KeepTogether = true;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrLabel26
@@ -829,6 +831,13 @@
             this.xrLabel61.Text = "AMT. :";
             this.xrLabel61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrLabel61.WordWrap = false;
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(4.097197F, 177.6842F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.TAXDETAILSUBREPORT();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(274.1111F, 19.99998F);
             // 
             // xrLabel80
             // 
@@ -1378,13 +1387,6 @@
             this.carddetails.Name = "carddetails";
             this.carddetails.GetValue += new DevExpress.XtraReports.UI.GetValueEventHandler(this.carddetails_GetValue);
             // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(4.097197F, 177.6842F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.TAXDETAILSUBREPORT();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(274.1111F, 19.99998F);
-            // 
             // CASHMEMO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1416,8 +1418,7 @@
             this.ShowPreviewMarginLines = false;
             this.ShowPrintMarginsWarning = false;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "20.1";
-            this.VerticalContentSplitting = DevExpress.XtraPrinting.VerticalContentSplitting.Smart;
+            this.Version = "20.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

@@ -73,8 +73,8 @@ namespace WindowsFormsApplication1.Transaction
                     txtCashMemoNo.Text = ds.Tables[0].Rows[0]["CATMEMONO"].ToString();
                     txtCashMemoDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["CATMEMODATE"]).ToString("yyyy-MM-dd");
                     txtCashMemoAmount.Text = ds.Tables[0].Rows[0]["CATMEMOAMT"].ToString();
-                    txtCardPayment.Text = ds.Tables[0].Rows[0]["CATCARDAMT"].ToString();
-                    txtPGPayment.Text = ds.Tables[0].Rows[0]["CATPGAMT"].ToString();
+                    txtCardPayment.Text = "0";
+                    txtPGPayment.Text = "0";
                     txtCashInAmount2000.Text = ds.Tables[0].Rows[0]["CURIN2000"].ToString();
                     txtCashInAmount1000.Text = ds.Tables[0].Rows[0]["CURIN1000"].ToString();
                     txtCashInAmount200.Text = ds.Tables[0].Rows[0]["CURIN200"].ToString();
@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtCashOutCount1.Text = (Convert.ToDecimal(txtCashOutAmount1.Text) / 1).ToString();
 
                 txtTotalReceived.Text = txtCashInTotal.Text;
-                txtTotalPayBack.Text = (Convert.ToDecimal(txtCashMemoAmount.Text) - Convert.ToDecimal(txtTotalReceived.Text) + Convert.ToDecimal(txtCashOutTotal.Text)).ToString("0.00");
+                txtTotalPayBack.Text = (Convert.ToDecimal(txtCashMemoAmount.Text) - Convert.ToDecimal(txtTotalReceived.Text) - Convert.ToDecimal(txtPGPayment.Text)-Convert.ToDecimal(txtCardPayment.Text) + Convert.ToDecimal(txtCashOutTotal.Text)).ToString("0.00");
             }
             catch (Exception ex)
             {
@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@CATMEMONO", SqlDbType.NVarChar).Value = txtCashMemoNo.Text;
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtCashMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashMemoAmount.Text);
-                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCardPayment.Text);
+                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtPGPayment.Text);
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashInAmount2000.Text);
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashInAmount1000.Text);
@@ -281,7 +281,8 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@CATMEMONO", SqlDbType.NVarChar).Value = txtCashMemoNo.Text;
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtCashMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashMemoAmount.Text);
-                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCardPayment.Text);
+                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0" +
+                                "");
                             sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtPGPayment.Text);
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashInAmount2000.Text);
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashInAmount1000.Text);

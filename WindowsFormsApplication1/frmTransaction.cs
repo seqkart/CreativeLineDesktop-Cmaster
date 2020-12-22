@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
             FillGrid();
             if (GlobalVariables.ProgCode == "PROG132")
             {
-                Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = btnAdd.Text, Text = "Cash Memo Addition" };
+                Transaction.Cashmemo frm = new Transaction.Cashmemo() { S1 = btnAdd.Text, Text = "Cash Memo Addition" };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2),
                                          P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
@@ -159,7 +159,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG132")
                 {
                     Transaction.Cashmemo frm = new Transaction.Cashmemo()
-                    { s1 = btnAdd.Text, Text = "Cash Memo Addition" };
+                    { S1 = btnAdd.Text, Text = "Cash Memo Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -479,7 +479,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     Transaction.Cashmemo frm = new Transaction.Cashmemo()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Cash Memo Edition",
                         ImDate = Convert.ToDateTime(CurrentRow["BillDate"]),
                         ImNo = CurrentRow["BillNo"].ToString(),

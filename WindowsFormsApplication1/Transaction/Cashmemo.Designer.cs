@@ -176,6 +176,7 @@
             this.btnUnhold = new DevExpress.XtraEditors.SimpleButton();
             this.lblPAyBack = new DevExpress.XtraEditors.TextEdit();
             this.lblCashTender = new DevExpress.XtraEditors.TextEdit();
+            this.chall = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
@@ -234,6 +235,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPAyBack.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblCashTender.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView2
@@ -257,7 +259,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(166, 87);
+            this.HelpGrid.Location = new System.Drawing.Point(-322, 268);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(865, 384);
@@ -574,7 +576,6 @@
             this.txtCustDetails.Size = new System.Drawing.Size(235, 48);
             this.txtCustDetails.TabIndex = 0;
             this.txtCustDetails.TabStop = false;
-            this.txtCustDetails.EditValueChanged += new System.EventHandler(this.TxtCustDetails_EditValueChanged);
             // 
             // txtCustName
             // 
@@ -586,7 +587,6 @@
             this.txtCustName.Size = new System.Drawing.Size(235, 22);
             this.txtCustName.TabIndex = 0;
             this.txtCustName.TabStop = false;
-            this.txtCustName.EditValueChanged += new System.EventHandler(this.TxtCustName_EditValueChanged);
             // 
             // txtBalance
             // 
@@ -620,7 +620,6 @@
             this.txtCustCode.Size = new System.Drawing.Size(102, 22);
             this.txtCustCode.TabIndex = 0;
             this.txtCustCode.TabStop = false;
-            this.txtCustCode.EditValueChanged += new System.EventHandler(this.TxtCustCode_EditValueChanged);
             // 
             // labelControl28
             // 
@@ -778,7 +777,7 @@
             this.chExclusive.Location = new System.Drawing.Point(14, 13);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(68, 20);
+            this.chExclusive.Size = new System.Drawing.Size(68, 18);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -1323,18 +1322,30 @@
             this.txtItemDiscPer.Name = "txtItemDiscPer";
             this.txtItemDiscPer.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemDiscPer.Properties.Appearance.Options.UseFont = true;
+            this.txtItemDiscPer.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtItemDiscPer.Properties.DisplayFormat.FormatString = "n2";
             this.txtItemDiscPer.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtItemDiscPer.Properties.EditFormat.FormatString = "n2";
             this.txtItemDiscPer.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscPer.Properties.Mask.EditMask = "n2";
-            this.txtItemDiscPer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtItemDiscPer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemDiscPer.Properties.MaskSettings.Set("mask", "n2");
             this.txtItemDiscPer.Size = new System.Drawing.Size(49, 24);
             this.txtItemDiscPer.TabIndex = 770;
-            this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.txtItemDiscPer_EditValueChanged);
-            this.txtItemDiscPer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemDiscPer_KeyDown);
+            this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.TxtItemDiscPer_EditValueChanged);
+            this.txtItemDiscPer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemDiscPer_KeyDown);
             // 
             // btnPreviousBill
             // 
@@ -1477,7 +1488,7 @@
             this.chInclusive.Location = new System.Drawing.Point(84, 13);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(78, 20);
+            this.chInclusive.Size = new System.Drawing.Size(78, 18);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -1622,7 +1633,7 @@
             // 
             // labelControl34
             // 
-            this.labelControl34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl34.Appearance.Options.UseFont = true;
             this.labelControl34.Location = new System.Drawing.Point(768, 667);
@@ -1687,7 +1698,7 @@
             // 
             // labelControl27
             // 
-            this.labelControl27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelControl27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl27.Appearance.Options.UseFont = true;
             this.labelControl27.Location = new System.Drawing.Point(642, 667);
@@ -1869,7 +1880,6 @@
             this.groupControl3.Size = new System.Drawing.Size(257, 171);
             this.groupControl3.TabIndex = 764;
             this.groupControl3.Text = "Bill Sundries";
-            this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupControl3_Paint);
             // 
             // labelControl7
             // 
@@ -1957,8 +1967,8 @@
             this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtItemFlatRate.Size = new System.Drawing.Size(72, 24);
             this.txtItemFlatRate.TabIndex = 771;
-            this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.txtItemFlatRate_EditValueChanged);
-            this.txtItemFlatRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemFlatRate_KeyDown);
+            this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.TxtItemFlatRate_EditValueChanged);
+            this.txtItemFlatRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemFlatRate_KeyDown);
             // 
             // txtItemDiscAMount
             // 
@@ -2071,6 +2081,14 @@
             this.lblCashTender.Size = new System.Drawing.Size(110, 24);
             this.lblCashTender.TabIndex = 814;
             // 
+            // chall
+            // 
+            this.chall.Location = new System.Drawing.Point(597, 174);
+            this.chall.Name = "chall";
+            this.chall.Properties.Caption = "All";
+            this.chall.Size = new System.Drawing.Size(75, 18);
+            this.chall.TabIndex = 815;
+            // 
             // Cashmemo
             // 
             this.ActiveGlowColor = System.Drawing.Color.Lime;
@@ -2078,6 +2096,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1384, 756);
             this.ControlBox = false;
+            this.Controls.Add(this.chall);
             this.Controls.Add(this.lblPAyBack);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupControl4);
@@ -2208,6 +2227,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblPAyBack.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblCashTender.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2360,5 +2380,6 @@
         private DevExpress.XtraEditors.TextEdit lblTotalQtySold;
         private DevExpress.XtraEditors.TextEdit lblPAyBack;
         private DevExpress.XtraEditors.TextEdit lblCashTender;
+        private DevExpress.XtraEditors.CheckEdit chall;
     }
 }
