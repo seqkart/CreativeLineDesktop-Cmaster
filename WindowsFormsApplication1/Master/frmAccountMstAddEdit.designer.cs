@@ -38,8 +38,6 @@
             this.ProductTabCtrl = new DevExpress.XtraTab.XtraTabControl();
             this.AInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtAgentName = new DevExpress.XtraEditors.TextEdit();
             this.txtAgentCode = new DevExpress.XtraEditors.TextEdit();
             this.label17 = new DevExpress.XtraEditors.LabelControl();
@@ -129,6 +127,8 @@
             this.BtnOK = new DevExpress.XtraEditors.SimpleButton();
             this.txtDelCityName = new DevExpress.XtraEditors.TextEdit();
             this.txtDelCitycode = new DevExpress.XtraEditors.TextEdit();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtMRPMarkDown = new DevExpress.XtraEditors.TextEdit();
             this.label23 = new DevExpress.XtraEditors.LabelControl();
             this.StockTransfer1111 = new DevExpress.XtraEditors.LabelControl();
@@ -155,8 +155,6 @@
             this.AInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameAsOnBankAcc.Properties)).BeginInit();
@@ -209,6 +207,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -285,7 +285,7 @@
             this.ProductTabCtrl.Name = "ProductTabCtrl";
             this.ProductTabCtrl.SelectedTabPage = this.AInfoTab;
             this.ProductTabCtrl.Size = new System.Drawing.Size(702, 423);
-            this.ProductTabCtrl.TabIndex = 264;
+            this.ProductTabCtrl.TabIndex = 7;
             this.ProductTabCtrl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.AInfoTab,
             this.BInfoTab,
@@ -328,31 +328,6 @@
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(680, 378);
             this.panelControl3.TabIndex = 0;
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.Location = new System.Drawing.Point(90, 12);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
-            this.HelpGrid.TabIndex = 408;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // txtAgentName
             // 
@@ -492,7 +467,7 @@
             this.txtBSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSCode.Properties.MaxLength = 4;
             this.txtBSCode.Size = new System.Drawing.Size(69, 20);
-            this.txtBSCode.TabIndex = 8;
+            this.txtBSCode.TabIndex = 1;
             this.txtBSCode.EditValueChanged += new System.EventHandler(this.txtBCCode_EditValueChanged);
             this.txtBSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBSCode_KeyDown);
             this.txtBSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpCode_KeyPress);
@@ -551,7 +526,7 @@
             this.txtSLCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSLCode.Properties.MaxLength = 4;
             this.txtSLCode.Size = new System.Drawing.Size(69, 20);
-            this.txtSLCode.TabIndex = 7;
+            this.txtSLCode.TabIndex = 0;
             this.txtSLCode.EditValueChanged += new System.EventHandler(this.txtSLCode_EditValueChanged);
             this.txtSLCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSLCode_KeyDown);
             this.txtSLCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpCode_KeyPress);
@@ -687,7 +662,7 @@
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 100;
             this.txtCityCode.Size = new System.Drawing.Size(69, 20);
-            this.txtCityCode.TabIndex = 449;
+            this.txtCityCode.TabIndex = 4;
             this.txtCityCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCityCode_KeyDown);
             // 
             // label6
@@ -782,7 +757,7 @@
             this.txtZipCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtZipCode.Properties.MaxLength = 40;
             this.txtZipCode.Size = new System.Drawing.Size(115, 20);
-            this.txtZipCode.TabIndex = 436;
+            this.txtZipCode.TabIndex = 5;
             // 
             // label18
             // 
@@ -859,7 +834,7 @@
             this.txtGSTStateCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTStateCode.Properties.MaxLength = 4;
             this.txtGSTStateCode.Size = new System.Drawing.Size(69, 20);
-            this.txtGSTStateCode.TabIndex = 28;
+            this.txtGSTStateCode.TabIndex = 9;
             this.txtGSTStateCode.EditValueChanged += new System.EventHandler(this.txtGSTStateCode_EditValueChanged);
             this.txtGSTStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGSTStateCode_KeyDown);
             // 
@@ -889,7 +864,7 @@
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.MaxLength = 15;
             this.txtGSTNo.Size = new System.Drawing.Size(280, 20);
-            this.txtGSTNo.TabIndex = 27;
+            this.txtGSTNo.TabIndex = 7;
             // 
             // label2
             // 
@@ -907,7 +882,7 @@
             this.txtBillingName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBillingName.Properties.MaxLength = 60;
             this.txtBillingName.Size = new System.Drawing.Size(552, 20);
-            this.txtBillingName.TabIndex = 18;
+            this.txtBillingName.TabIndex = 0;
             // 
             // label51
             // 
@@ -1015,7 +990,7 @@
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 45;
             this.txtAddress2.Size = new System.Drawing.Size(552, 20);
-            this.txtAddress2.TabIndex = 20;
+            this.txtAddress2.TabIndex = 2;
             // 
             // txtAddress3
             // 
@@ -1025,7 +1000,7 @@
             this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress3.Properties.MaxLength = 45;
             this.txtAddress3.Size = new System.Drawing.Size(552, 20);
-            this.txtAddress3.TabIndex = 21;
+            this.txtAddress3.TabIndex = 3;
             // 
             // txtAddress1
             // 
@@ -1035,7 +1010,7 @@
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 45;
             this.txtAddress1.Size = new System.Drawing.Size(552, 20);
-            this.txtAddress1.TabIndex = 19;
+            this.txtAddress1.TabIndex = 1;
             // 
             // label9
             // 
@@ -1295,6 +1270,31 @@
             this.txtDelCitycode.EditValueChanged += new System.EventHandler(this.txtDelCitycode_EditValueChanged);
             this.txtDelCitycode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelCitycode_KeyDown);
             // 
+            // HelpGrid
+            // 
+            this.HelpGrid.Location = new System.Drawing.Point(84, 28);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(538, 391);
+            this.HelpGrid.TabIndex = 408;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
             // txtMRPMarkDown
             // 
             this.txtMRPMarkDown.EnterMoveNextControl = true;
@@ -1303,7 +1303,7 @@
             this.txtMRPMarkDown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMRPMarkDown.Properties.MaxLength = 4;
             this.txtMRPMarkDown.Size = new System.Drawing.Size(62, 20);
-            this.txtMRPMarkDown.TabIndex = 440;
+            this.txtMRPMarkDown.TabIndex = 5;
             // 
             // label23
             // 
@@ -1405,7 +1405,7 @@
             "Y",
             "N"});
             this.txtStatusTag.Size = new System.Drawing.Size(41, 20);
-            this.txtStatusTag.TabIndex = 5;
+            this.txtStatusTag.TabIndex = 2;
             // 
             // txtLCTag
             // 
@@ -1439,7 +1439,7 @@
             "M",
             "P"});
             this.txtFixBArCodeTag.Size = new System.Drawing.Size(42, 20);
-            this.txtFixBArCodeTag.TabIndex = 444;
+            this.txtFixBArCodeTag.TabIndex = 0;
             // 
             // txtStockTransferTag
             // 
@@ -1451,7 +1451,7 @@
             "Y",
             "N"});
             this.txtStockTransferTag.Size = new System.Drawing.Size(41, 20);
-            this.txtStockTransferTag.TabIndex = 445;
+            this.txtStockTransferTag.TabIndex = 1;
             // 
             // cmbTaxType
             // 
@@ -1463,7 +1463,7 @@
             "IN",
             "EX"});
             this.cmbTaxType.Size = new System.Drawing.Size(62, 20);
-            this.cmbTaxType.TabIndex = 446;
+            this.cmbTaxType.TabIndex = 4;
             // 
             // label28
             // 
@@ -1522,8 +1522,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameAsOnBankAcc.Properties)).EndInit();
@@ -1578,6 +1576,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCityName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelCitycode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
