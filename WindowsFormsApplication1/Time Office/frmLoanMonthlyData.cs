@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 cmd.ExecuteNonQuery();
 
                 con.Close();
-                this.Close();
+                Close();
             }
         }
 
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void txtLoanAmt_KeyPress(object sender, KeyPressEventArgs e)
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     }
                     else
                     {
-                        var query = String.Format("SELECT EmpCode, EmpName FROM  empmst  where EmpCode='{0}'", txtEmpCode.Text.Trim());
+                        var query = string.Format("SELECT EmpCode, EmpName FROM  empmst  where EmpCode='{0}'", txtEmpCode.Text.Trim());
 
                         var ds = new DataSet();
                         var dap = new SqlDataAdapter(query, connection);
@@ -235,7 +235,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtEmpName.Text = String.Empty;
+            txtEmpName.Text = string.Empty;
         }
     }
 }

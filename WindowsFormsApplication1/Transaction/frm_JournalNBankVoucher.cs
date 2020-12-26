@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         DataTable dt = new DataTable();
 
 
-        public String s1 { get; set; }
+        public string s1 { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string CurrentControl { get; set; }
@@ -44,24 +44,24 @@ namespace WindowsFormsApplication1
         public frm_JournalNBankVoucher()
         {
             InitializeComponent();
-            dt.Columns.Add("AccCode", typeof(String));
-            dt.Columns.Add("AccName", typeof(String));
-            dt.Columns.Add("Narration", typeof(String));
-            dt.Columns.Add("Credit", typeof(Decimal));
-            dt.Columns.Add("Debit", typeof(Decimal));
-            dt.Columns.Add("SplInf", typeof(String));
-            dt.Columns.Add("RefMethod", typeof(String));
-            dt.Columns.Add("CDlrCode", typeof(String));
-            dt.Columns.Add("CDlrNm", typeof(String));
-            dt.Columns.Add("ExpCode", typeof(String));
-            dt.Columns.Add("ExpDesc", typeof(String));
-            dt.Columns.Add("CostCode", typeof(String));
-            dt.Columns.Add("CostDesc", typeof(String));
-            dt.Columns.Add("CostSubcode", typeof(String));
-            dt.Columns.Add("CostSubDesc", typeof(String));
-            dt.Columns.Add("InstType", typeof(String));
-            dt.Columns.Add("InstNo", typeof(String));
-            dt.Columns.Add("VutCostHeadID", typeof(Int64));
+            dt.Columns.Add("AccCode", typeof(string));
+            dt.Columns.Add("AccName", typeof(string));
+            dt.Columns.Add("Narration", typeof(string));
+            dt.Columns.Add("Credit", typeof(decimal));
+            dt.Columns.Add("Debit", typeof(decimal));
+            dt.Columns.Add("SplInf", typeof(string));
+            dt.Columns.Add("RefMethod", typeof(string));
+            dt.Columns.Add("CDlrCode", typeof(string));
+            dt.Columns.Add("CDlrNm", typeof(string));
+            dt.Columns.Add("ExpCode", typeof(string));
+            dt.Columns.Add("ExpDesc", typeof(string));
+            dt.Columns.Add("CostCode", typeof(string));
+            dt.Columns.Add("CostDesc", typeof(string));
+            dt.Columns.Add("CostSubcode", typeof(string));
+            dt.Columns.Add("CostSubDesc", typeof(string));
+            dt.Columns.Add("InstType", typeof(string));
+            dt.Columns.Add("InstNo", typeof(string));
+            dt.Columns.Add("VutCostHeadID", typeof(long));
             dt.Columns.Add("vutChqClearDt", typeof(DateTime));
 
         }
@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1
 
         private void frm_JournalNBankVoucher_Load(object sender, EventArgs e)
         {
-            path = String.Format(@"C:\Application\VU_CMN_{0}.Xlsx", GlobalVariables.CurrentUser);
+            path = string.Format(@"C:\Application\VU_CMN_{0}.Xlsx", GlobalVariables.CurrentUser);
             DtVoucher.EditValue = (DateTime.Now.Date >= GlobalVariables.FinYearStartDate && DateTime.Now.Date <= GlobalVariables.FinYearEndDate) ? DateTime.Now : GlobalVariables.FinYearEndDate.Date;
             SetMyControls();
             if (isupdate)
@@ -210,7 +210,7 @@ namespace WindowsFormsApplication1
                     return;
                 }
             }
-            using (var ds = ProjectFunctions.GetDataSet(String.Format("Select [AccName],[AccCode],[AccSplInfo]  FROM [dbo].[ActMst] where  [AccCode]='{0}' ;", TextAcCode.Text)))
+            using (var ds = ProjectFunctions.GetDataSet(string.Format("Select [AccName],[AccCode],[AccSplInfo]  FROM [dbo].[ActMst] where  [AccCode]='{0}' ;", TextAcCode.Text)))
             {
                 if (!(ds.Tables[0].Rows.Count > 0))
                 {
@@ -470,7 +470,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("SELECT  [VouCode],[VouDesc]  FROM  [VoucherType]  where  VouCode='{0}' Order By VouCode;", TextVoucherType.Text);
+                        var query = string.Format("SELECT  [VouCode],[VouDesc]  FROM  [VoucherType]  where  VouCode='{0}' Order By VouCode;", TextVoucherType.Text);
                         var ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -790,7 +790,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("Select [AccName],[AccCode],[AccSplInfo]  FROM [dbo].[{2}ActMst] where  [AccCode]={0} {1};", TextAcCode.Text, (TextVoucherType.Text == "CP" || TextVoucherType.Text == "CR") ? "And AccCode<>'" + GlobalVariables.CashCode + "'" : string.Empty, (Cost_CmBx.Text == "NA#") ? string.Empty : Cost_CmBx.Text);
+                        var query = string.Format("Select [AccName],[AccCode],[AccSplInfo]  FROM [dbo].[{2}ActMst] where  [AccCode]={0} {1};", TextAcCode.Text, (TextVoucherType.Text == "CP" || TextVoucherType.Text == "CR") ? "And AccCode<>'" + GlobalVariables.CashCode + "'" : string.Empty, (Cost_CmBx.Text == "NA#") ? string.Empty : Cost_CmBx.Text);
                         var ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -946,7 +946,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("SELECT ExpHeadDesc,ExpHeadCode from ExpHeadMst  where  [ExpHeadCode]={0} ;", TextExpHeadCode.Text.Trim());
+                        var query = string.Format("SELECT ExpHeadDesc,ExpHeadCode from ExpHeadMst  where  [ExpHeadCode]={0} ;", TextExpHeadCode.Text.Trim());
                         using (var ds = ProjectFunctions.GetDataSet(query))
                         {
                             if (ds.Tables[0].Rows.Count > 0)
@@ -1029,9 +1029,15 @@ namespace WindowsFormsApplication1
                         TextDlrDesc.Visible = true;
                         DlrLbl.Visible = true;
                         if (Paramater == "A")
+                        {
                             DlrLbl.Text = "Asset Code";
+                        }
+
                         if (Paramater == "E")
+                        {
                             DlrLbl.Text = "Emp Code";
+                        }
+
                         TextDlrCode.Focus();
                         TextCostCode.Visible = false;
                         TextCostDesc.Visible = false;
@@ -1081,11 +1087,20 @@ namespace WindowsFormsApplication1
                     TextDlrDesc.Visible = true;
                     DlrLbl.Visible = true;
                     if (Paramater == "R")
+                    {
                         DlrLbl.Text = "Retailer";
+                    }
+
                     if (Paramater == "A")
+                    {
                         DlrLbl.Text = "Asset Code";
+                    }
+
                     if (Paramater == "E")
+                    {
                         DlrLbl.Text = "Emp Code";
+                    }
+
                     TextDlrCode.Focus();
                     TextCostCode.Visible = false;
                     TextCostDesc.Visible = false;
@@ -1228,7 +1243,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("SELECT [Type],[Description] FROM  [TempTable] where Id='IT' and [Type]='{0}'  order by [Type] ;", TextInstrumentType.Text.Trim());
+                        var query = string.Format("SELECT [Type],[Description] FROM  [TempTable] where Id='IT' and [Type]='{0}'  order by [Type] ;", TextInstrumentType.Text.Trim());
 
                         var ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
@@ -1356,7 +1371,7 @@ namespace WindowsFormsApplication1
 
             try
             {
-                var Query = String.Format("SELECT     AccCode, AccName, Narration, Credit, Debit, SplInf, RefMethod, CDlrCode, CDlrNm, ExpCode, ExpDesc, CostCode, " +
+                var Query = string.Format("SELECT     AccCode, AccName, Narration, Credit, Debit, SplInf, RefMethod, CDlrCode, CDlrNm, ExpCode, ExpDesc, CostCode, " +
                     "CostDesc, CostSubcode, CostSubDesc, InstType, InstNo,VutCostHeadID, VutID,vutChqClearDt,VutCostHead FROM V_VuData4CMN WHERE     " +
                     "(VutDate = '{0:yyyy-MM-dd}') AND (VutType = '{1}') AND (VutNo = '{2}')", VoucherDate.Date, VoucherType, VoucherNo);
                 using (var Ds = ProjectFunctions.GetDataSet(Query))
@@ -1417,7 +1432,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                using (var Ds = ProjectFunctions.GetDataSet(String.Format("SELECT     AccCode, AccName, Narration, Credit, Debit, SplInf, RefMethod, CDlrCode, CDlrNm, ExpCode, ExpDesc, CostCode, " +
+                using (var Ds = ProjectFunctions.GetDataSet(string.Format("SELECT     AccCode, AccName, Narration, Credit, Debit, SplInf, RefMethod, CDlrCode, CDlrNm, ExpCode, ExpDesc, CostCode, " +
                     "CostDesc, CostSubcode, CostSubDesc, InstType, InstNo,VutCostHeadID, VutID,vutChqClearDt FROM V_VuData4CMN WHERE     " +
                     "(VutDate = '{0:yyyy-MM-dd}') AND (VutType = '{1}') AND (VutNo = '{2}')", VoucherDate.Date, VoucherType, VoucherNo)))
                 {
@@ -1527,7 +1542,7 @@ namespace WindowsFormsApplication1
 
         private void Validate_Click(object sender, EventArgs e)
         {
-            using (var ds = ProjectFunctions.GetDataSet(String.Format("SELECT  [VouCode],[VouDesc]  FROM  [VoucherType]  where   VouCode='{0}' Order By VouCode;", TextVoucherType.Text)))
+            using (var ds = ProjectFunctions.GetDataSet(string.Format("SELECT  [VouCode],[VouDesc]  FROM  [VoucherType]  where   VouCode='{0}' Order By VouCode;", TextVoucherType.Text)))
             {
                 if (!(ds.Tables[0].Rows.Count > 0))
                 {
@@ -1633,7 +1648,7 @@ namespace WindowsFormsApplication1
                     default:
                         break;
                 }
-                TextNarration.Text = ((TextVoucherType.Text == "BP" || TextVoucherType.Text == "BR") ? ((TextSplInfo.Text == "DR") ? (String.Format("TO {0} FAV. {1}", EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2), EntryInfo_Grid.GetDataRow(0)["AccName"])) : ("BY " + EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2) + " FAV. " + EntryInfo_Grid.GetDataRow(0)["AccName"])) : ((TextVoucherType.Text == "CP" || TextVoucherType.Text == "CR") ? ((TextSplInfo.Text == "DR") ? ("TO " + EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2)) : ("BY " + EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2))) : ((TextSplInfo.Text == "DR") ? "TO " : "BY ")));
+                TextNarration.Text = ((TextVoucherType.Text == "BP" || TextVoucherType.Text == "BR") ? ((TextSplInfo.Text == "DR") ? (string.Format("TO {0} FAV. {1}", EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2), EntryInfo_Grid.GetDataRow(0)["AccName"])) : ("BY " + EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2) + " FAV. " + EntryInfo_Grid.GetDataRow(0)["AccName"])) : ((TextVoucherType.Text == "CP" || TextVoucherType.Text == "CR") ? ((TextSplInfo.Text == "DR") ? ("TO " + EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2)) : ("BY " + EntryInfo_Grid.GetDataRow(0)["Narration"].ToString().Trim().Remove(0, 2))) : ((TextSplInfo.Text == "DR") ? "TO " : "BY ")));
             }
             if (Math.Round(Convert.ToDecimal(colCredit.SummaryItem.SummaryValue), 2, MidpointRounding.AwayFromZero) != Math.Round(Convert.ToDecimal(colDebit.SummaryItem.SummaryValue), 2, MidpointRounding.AwayFromZero))
             {
@@ -1651,7 +1666,7 @@ namespace WindowsFormsApplication1
 
                 if (!isupdate)
                 {
-                    var query = String.Format("select dbo.DoPadd((SELECT  isnull(cast(max(VumNo)as int),0)  as 'Value' FROM VuMst WHERE UnitCode='" + GlobalVariables.CUnitID + "' And VumType='" + TextVoucherType.Text + "' And VumFYear='" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "' )+1) as Value;");
+                    var query = string.Format("select dbo.DoPadd((SELECT  isnull(cast(max(VumNo)as int),0)  as 'Value' FROM VuMst WHERE UnitCode='" + GlobalVariables.CUnitID + "' And VumType='" + TextVoucherType.Text + "' And VumFYear='" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "' )+1) as Value;");
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -1738,7 +1753,7 @@ namespace WindowsFormsApplication1
                                         command.ExecuteNonQuery();
                                     }
 
-                                    var Query = String.Format(" Delete From VuData Where VutNo='{0}' And VutDate='{1}' And VutType='{2}'  And UnitCode='" + GlobalVariables.CUnitID + "';", TextVoucherNo.Text, DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"), TextVoucherType.Text);
+                                    var Query = string.Format(" Delete From VuData Where VutNo='{0}' And VutDate='{1}' And VutType='{2}'  And UnitCode='" + GlobalVariables.CUnitID + "';", TextVoucherNo.Text, DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"), TextVoucherType.Text);
                                     command.Parameters.Clear();
                                     command.CommandText = Query;
                                     command.CommandType = CommandType.Text;
@@ -1783,7 +1798,7 @@ namespace WindowsFormsApplication1
                                         }
                                         else
                                         {
-                                            var Ds = ProjectFunctions.GetDataSet(String.Format("SELECT      BuCode, BuSelfACode, BuHOAcode FROM BUMst Where BuCode='{0}'", Cost_CmBx.Text));
+                                            var Ds = ProjectFunctions.GetDataSet(string.Format("SELECT      BuCode, BuSelfACode, BuHOAcode FROM BUMst Where BuCode='{0}'", Cost_CmBx.Text));
                                             BuCode = Ds.Tables[0].Rows[0][0].ToString();
                                             BuSelfACode = Ds.Tables[0].Rows[0][1].ToString();
                                             BuHOAcode = Ds.Tables[0].Rows[0][2].ToString();
@@ -2127,7 +2142,7 @@ namespace WindowsFormsApplication1
             {
                 SubPanel.Visible = false;
                 panelControl2.Focus();
-                BankDesc.Text = String.Format("({0}) {1}", TextBankCode.Text, TextBankDesc.Text);
+                BankDesc.Text = string.Format("({0}) {1}", TextBankCode.Text, TextBankDesc.Text);
             }
             if ((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up)
             {
@@ -2250,7 +2265,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                var Ds = ProjectFunctions.GetDataSet(String.Format("SELECT      BuCode, BuSelfACode, BuHOAcode FROM BUMst Where BuCode='{0}'", Cost_CmBx.Text));
+                var Ds = ProjectFunctions.GetDataSet(string.Format("SELECT      BuCode, BuSelfACode, BuHOAcode FROM BUMst Where BuCode='{0}'", Cost_CmBx.Text));
                 BuCode = Ds.Tables[0].Rows[0][0].ToString();
                 BuSelfACode = Ds.Tables[0].Rows[0][1].ToString();
                 BuHOAcode = Ds.Tables[0].Rows[0][2].ToString();
@@ -2306,7 +2321,7 @@ namespace WindowsFormsApplication1
 
             if (!isupdate)
             {
-                var query = String.Format("select dbo.DoPadd((SELECT  isnull(cast(max(VumNo)as int),0)  as 'Value' FROM VuMst WHERE UnitCode='" + GlobalVariables.CUnitID + "' And VumType='" + TextVoucherType.Text + "' And VumFYear='" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "' )+1) as Value;");
+                var query = string.Format("select dbo.DoPadd((SELECT  isnull(cast(max(VumNo)as int),0)  as 'Value' FROM VuMst WHERE UnitCode='" + GlobalVariables.CUnitID + "' And VumType='" + TextVoucherType.Text + "' And VumFYear='" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "' )+1) as Value;");
                 var ds = ProjectFunctions.GetDataSet(query);
                 if (ds.Tables[0].Rows.Count > 0)
                 {

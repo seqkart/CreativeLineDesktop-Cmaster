@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
     public partial class frmGroupMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
-        public String s1 { get; set; }
+        public string s1 { get; set; }
         public string GrpCode { get; set; }
         public string SubGrpCode { get; set; }
 
@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private bool ValidateSubGrpData()
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-            this.Close();
+            Close();
         }
 
         private void txtGrpCode_KeyPress(object sender, KeyPressEventArgs e)

@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1.Transaction
     public partial class frmBankMarking : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public String AccCode { get; set; }
+        public string AccCode { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public frmBankMarking()
@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void fillGrid()
         {

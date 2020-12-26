@@ -28,8 +28,8 @@ namespace WindowsFormsApplication1
         // public static String ImageConnectionString = "Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
 
 
-        public static String ConnectionString = ProjectFunctionsUtils.ConnectionString;
-        public static String ImageConnectionString = ProjectFunctionsUtils.ImageConnectionString;
+        public static string ConnectionString = ProjectFunctionsUtils.ConnectionString;
+        public static string ImageConnectionString = ProjectFunctionsUtils.ImageConnectionString;
         ////@"Data Source=cserver;Initial Catalog=SEQKART;User ID=sa;pwd=Seq@2021";
 
 
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
             return XtraMessageBox.Show(message, caption, messageBoxButtons);
 
         }
-        public static void SpeakError(String Error)
+        public static void SpeakError(string Error)
         {
 
             Task.Run(() => _synthesizer.Speak(Error));
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public static void Speak(String MSG)
+        public static void Speak(string MSG)
         {
 
             Task.Run(() => _synthesizer.Speak(MSG));
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1
 
 
 
-        public static String CheckNull(String Value)
+        public static string CheckNull(string Value)
         {
             if (Value.Trim().Length == 0)
             {
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1
         //    }
         //}
 
-        public static String GetConnection()
+        public static string GetConnection()
         {
 
 
@@ -227,7 +227,7 @@ namespace WindowsFormsApplication1
             return (finyear.Substring(2, 2));
         }
 
-        public static Tuple<Decimal, Decimal, Decimal, Decimal> TaxCalculationData(Decimal CGSTRate, Decimal SGSTRate, Decimal IGSTRate, Decimal RATE, Decimal RDC, Decimal Quantity)
+        public static Tuple<decimal, decimal, decimal, decimal> TaxCalculationData(decimal CGSTRate, decimal SGSTRate, decimal IGSTRate, decimal RATE, decimal RDC, decimal Quantity)
         {
             var disc = Convert.ToDecimal(RDC); ;
             var AmountATRDC = Math.Round((Quantity * RATE * disc) / 100, 2);
@@ -295,7 +295,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static DataSet GetDataSet(string Query, String ConnectionString)
+        public static DataSet GetDataSet(string Query, string ConnectionString)
         {
             using (var _VarDataSet = new DataSet())
             {
@@ -327,13 +327,13 @@ namespace WindowsFormsApplication1
         {
             ReportGridView.DeleteRow(ReportGridView.FocusedRowHandle);
         }
-        public static String SqlString(string Text)
+        public static string SqlString(string Text)
         {
             return string.Concat(Text.Select(c => @"'()%#!<>{};:?/\-[]+@".IndexOf(c) >= 0 ? '_' : c));
         }
         public static void GroupCtrlVisualize(GroupControl C)
         {
-            C.AppearanceCaption.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            C.AppearanceCaption.Font = new Font("Tahoma", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             C.AppearanceCaption.ForeColor = Color.Gray;
             C.AppearanceCaption.Options.UseFont = true;
             C.AppearanceCaption.Options.UseForeColor = true;
@@ -420,7 +420,7 @@ namespace WindowsFormsApplication1
             { return dsMaster; }
             return null;
         }
-        public static void SetMasterAddEditFromTextBoxLengths(String TableName, XtraForm FormName)
+        public static void SetMasterAddEditFromTextBoxLengths(string TableName, XtraForm FormName)
         {
             TextBoxVisualize(FormName);
             ButtonVisualize(FormName);
@@ -445,7 +445,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public static void SetMasterAddEditFromTextBoxValues(String ProcedureName, XtraForm FormName)
+        public static void SetMasterAddEditFromTextBoxValues(string ProcedureName, XtraForm FormName)
         {
             //DataSet dsMaster = GetDataSet(ProcedureName + " '" + GlobalVariables.MasterCode + "'");
             //if (dsMaster.Tables[0].Rows.Count > 0)
@@ -485,7 +485,7 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        public static void SaveNewMasterRecord(String ProcedureName, XtraForm FormName)
+        public static void SaveNewMasterRecord(string ProcedureName, XtraForm FormName)
         {
             DataSet dsMaster = GetDataSet("select PARAMETER_NAME from information_schema.parameters where specific_name='" + ProcedureName + "'");
             using (var sqlcon = new SqlConnection(GetConnection()))
@@ -516,7 +516,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static void SaveDataTable(String ProcedureName, DataTable dtFinal)
+        public static void SaveDataTable(string ProcedureName, DataTable dtFinal)
         {
             DataSet dsMaster = GetDataSet("select PARAMETER_NAME from information_schema.parameters where specific_name='" + ProcedureName + "'");
             using (var sqlcon = new SqlConnection(GetConnection()))
@@ -551,7 +551,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static String ValidateKeysForSearchBox(KeyEventArgs e)
+        public static string ValidateKeysForSearchBox(KeyEventArgs e)
         {
             string Value = string.Empty;
             switch (e.KeyCode)
@@ -623,7 +623,7 @@ namespace WindowsFormsApplication1
 
             }
         }
-        public static void BindReportToPivotGrid(String ProcedureName, DateTime From, DateTime To, DevExpress.XtraPivotGrid.PivotGridControl ReportGrid)
+        public static void BindReportToPivotGrid(string ProcedureName, DateTime From, DateTime To, DevExpress.XtraPivotGrid.PivotGridControl ReportGrid)
         {
             ReportGrid.Fields.Clear();
             DataSet dsMaster = GetDataSet(ProcedureName + "'" + From.Date.ToString("yyyy-MM-dd") + "','" + To.Date.ToString("yyyy-MM-dd") + "'");
@@ -703,7 +703,7 @@ namespace WindowsFormsApplication1
         {
             C.BackColor = Color.FromArgb(0x15, 0x60, 0xA9);
             C.CanOverflow = false;
-            C.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            C.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             C.GripStyle = ToolStripGripStyle.Hidden;
             C.RenderMode = ToolStripRenderMode.System;
             C.Renderer.RenderButtonBackground += new ToolStripItemRenderEventHandler(Renderer_RenderButtonBackground);
@@ -775,7 +775,7 @@ namespace WindowsFormsApplication1
             thisItem.BackColor = Color.White;
             thisItem.ForeColor = Color.FromArgb(0x15, 0x60, 0xA9);
         }
-        public static void LoadFormDataForEditing(String Query, XtraForm FormName)
+        public static void LoadFormDataForEditing(string Query, XtraForm FormName)
         {
             //DataSet dsMain = GetDataSet(Query);
             //if (dsMain.Tables[0].Rows.Count > 0)
@@ -819,9 +819,9 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        public static string GetNewTransactionCode(String Query)
+        public static string GetNewTransactionCode(string Query)
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet(Query);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -863,14 +863,14 @@ namespace WindowsFormsApplication1
             //    }
             //}
         }
-        public static Decimal RoundFive(Decimal No)
+        public static decimal RoundFive(decimal No)
         {
             No = ((int)(No / 5)) * 5;
             return No;
         }
 
 
-        public static void BindMasterFormToGrid(String ProcedureName, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
+        public static void BindMasterFormToGrid(string ProcedureName, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
             bool editBtn = false;
             ReportGridView.Columns.Clear();
@@ -926,7 +926,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public static void CreatePopUpForOneBox(String Query, String WhereClause, TextEdit TextBox1, TextEdit TextBox2, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
+        public static void CreatePopUpForOneBox(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
             ReportGrid.Text = TextBox1.Name;
             if (TextBox1.Text.Trim().Length == 0)
@@ -972,7 +972,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public static void CreatePopUpForTwoBoxes(String Query, String WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
+        public static void CreatePopUpForTwoBoxes(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -1026,7 +1026,7 @@ namespace WindowsFormsApplication1
 
 
 
-        public static void CreatePopUpForThreeBoxes(String Query, String WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
+        public static void CreatePopUpForThreeBoxes(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -1078,7 +1078,7 @@ namespace WindowsFormsApplication1
             }
             e.Handled = true;
         }
-        public static void CreatePopUpForFourBoxes(String Query, String WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, TextEdit TextBox5, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
+        public static void CreatePopUpForFourBoxes(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, TextEdit TextBox5, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -1131,7 +1131,7 @@ namespace WindowsFormsApplication1
             }
             e.Handled = true;
         }
-        public static void CreatePopUpForFiveBoxes(String Query, String WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, TextEdit TextBox5, TextEdit TextBox6, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
+        public static void CreatePopUpForFiveBoxes(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, TextEdit TextBox5, TextEdit TextBox6, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -1185,7 +1185,7 @@ namespace WindowsFormsApplication1
             }
             e.Handled = true;
         }
-        public static void BindReportToGrid(String ProcedureName, DateTime From, DateTime To, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
+        public static void BindReportToGrid(string ProcedureName, DateTime From, DateTime To, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
             ReportGridView.Columns.Clear();
             DataSet dsMaster = GetDataSet(ProcedureName + "'" + From.Date.ToString("yyyy-MM-dd") + "','" + To.Date.ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "'");
@@ -1219,7 +1219,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        public static void BindTransactionDataToGrid1(String ProcedureName, DateTime From, DateTime To, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
+        public static void BindTransactionDataToGrid1(string ProcedureName, DateTime From, DateTime To, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
             if (From.ToString().Trim().Length > 0 && From.ToString().Trim().Length > 0)
             {
@@ -1326,7 +1326,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError("Please Select Data Range First");
             }
         }
-        public static void BindMonthYearTransactionDataToGrid(String ProcedureName, DateTime From, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
+        public static void BindMonthYearTransactionDataToGrid(string ProcedureName, DateTime From, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
             ReportGridView.OptionsBehavior.Editable = true;
             ReportGridView.Columns.Clear();
@@ -1374,7 +1374,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static bool CheckAllPossible(String ArticleID, Decimal MRP, String ColorID, String SizeID)
+        public static bool CheckAllPossible(string ArticleID, decimal MRP, string ColorID, string SizeID)
         {
             DataSet dsCheckART = ProjectFunctions.GetDataSet("select ARTSYSID,ARTMRP from ARTICLE where ARTSYSID='" + ArticleID + "' ");
             if (dsCheckART.Tables[0].Rows.Count > 0)
@@ -1427,18 +1427,18 @@ namespace WindowsFormsApplication1
                     var thiscontrol = (TextEdit)c;
 
 
-                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(224, 224, 224);
                     thiscontrol.Properties.Appearance.Options.UseBorderColor = true;
                     thiscontrol.Properties.AppearanceFocused.BackColor = Color.AliceBlue;
                     thiscontrol.Properties.AppearanceFocused.BorderColor = Color.FromArgb(0x15, 0x60, 0xA9);
                     thiscontrol.Properties.AppearanceFocused.ForeColor = Color.Black;
                     thiscontrol.Properties.AppearanceDisabled.BackColor = Color.Lavender;
                     thiscontrol.Properties.AppearanceDisabled.Options.UseBackColor = true;
-                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
 
                     thiscontrol.Properties.AppearanceReadOnly.BackColor = Color.Lavender;
                     thiscontrol.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-                    thiscontrol.Properties.AppearanceReadOnly.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                    thiscontrol.Properties.AppearanceReadOnly.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
 
                     thiscontrol.Properties.AppearanceFocused.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
                     thiscontrol.Properties.AppearanceFocused.Options.UseBackColor = true;
@@ -1544,7 +1544,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static void EventTracker(String ProcessName)
+        public static void EventTracker(string ProcessName)
         {
             using (var sqlcon = new SqlConnection(GetConnection()))
             {
@@ -1612,7 +1612,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static void PrintDocument(String DocNo, DateTime DocDate, String DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        public static void PrintDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
 
@@ -1655,7 +1655,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static void PrintPDFDocument(String DocNo, DateTime DocDate, String DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        public static void PrintPDFDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
 
@@ -1685,7 +1685,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static void CRPrintDocument(String DocNo, DateTime DocDate, String DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        public static void CRPrintDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
 
@@ -1728,13 +1728,13 @@ namespace WindowsFormsApplication1
                     thiscontrol.Properties.Mask.EditMask = "HH:mm:ss";
                     thiscontrol.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
                     thiscontrol.Properties.Mask.UseMaskAsDisplayFormat = true;
-                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(224, 224, 224);
                     thiscontrol.Properties.Appearance.Options.UseBorderColor = true;
                     thiscontrol.Properties.AppearanceFocused.BackColor = Color.AliceBlue;
                     thiscontrol.Properties.AppearanceFocused.BorderColor = Color.FromArgb(0x15, 0x60, 0xA9);
                     thiscontrol.Properties.AppearanceDisabled.BackColor = Color.Bisque;
                     thiscontrol.Properties.AppearanceDisabled.Options.UseBackColor = true;
-                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
                     thiscontrol.Properties.AppearanceFocused.Options.UseBackColor = true;
                     thiscontrol.Properties.AppearanceFocused.Options.UseBorderColor = true;
                     thiscontrol.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -1761,13 +1761,13 @@ namespace WindowsFormsApplication1
                     thiscontrol.Properties.Mask.EditMask = "HH:mm";
                     thiscontrol.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
                     thiscontrol.Properties.Mask.UseMaskAsDisplayFormat = true;
-                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(224, 224, 224);
                     thiscontrol.Properties.Appearance.Options.UseBorderColor = true;
                     thiscontrol.Properties.AppearanceFocused.BackColor = Color.AliceBlue;
                     thiscontrol.Properties.AppearanceFocused.BorderColor = Color.FromArgb(0x15, 0x60, 0xA9);
                     thiscontrol.Properties.AppearanceDisabled.BackColor = Color.Bisque;
                     thiscontrol.Properties.AppearanceDisabled.Options.UseBackColor = true;
-                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
                     thiscontrol.Properties.AppearanceFocused.Options.UseBackColor = true;
                     thiscontrol.Properties.AppearanceFocused.Options.UseBorderColor = true;
                     thiscontrol.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
@@ -1793,13 +1793,13 @@ namespace WindowsFormsApplication1
                     thiscontrol.Properties.Mask.EditMask = "dd/MM/yyyy";
                     thiscontrol.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
                     thiscontrol.Properties.Mask.UseMaskAsDisplayFormat = true;
-                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+                    thiscontrol.Properties.Appearance.BorderColor = Color.FromArgb(224, 224, 224);
                     thiscontrol.Properties.Appearance.Options.UseBorderColor = true;
                     thiscontrol.Properties.AppearanceFocused.BackColor = Color.AliceBlue;
                     thiscontrol.Properties.AppearanceFocused.BorderColor = Color.FromArgb(0x15, 0x60, 0xA9);
                     thiscontrol.Properties.AppearanceDisabled.BackColor = Color.Bisque;
                     thiscontrol.Properties.AppearanceDisabled.Options.UseBackColor = true;
-                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                    thiscontrol.Properties.AppearanceDisabled.Font = new Font("Segoe UI", 8.5F, FontStyle.Bold, GraphicsUnit.Point, 0);
                     thiscontrol.Properties.AppearanceFocused.Options.UseBackColor = true;
                     thiscontrol.Properties.AppearanceFocused.Options.UseBorderColor = true;
                     thiscontrol.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;

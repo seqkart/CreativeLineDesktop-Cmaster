@@ -190,10 +190,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
             PrintLogWin.PrintLog(str);
 
             DataSet ds = ProjectFunctionsUtils.GetDataSet(str);
-            ds.Tables[0].Columns.Add(new DataColumn("Balance_1", typeof(Double)));
-            ds.Tables[0].Columns.Add(new DataColumn("Arrears_1", typeof(Double)));
-            ds.Tables[0].Columns.Add(new DataColumn("Loan_1", typeof(Double)));
-            ds.Tables[0].Columns.Add(new DataColumn("SalaryCalculated_1", typeof(Double)));
+            ds.Tables[0].Columns.Add(new DataColumn("Balance_1", typeof(double)));
+            ds.Tables[0].Columns.Add(new DataColumn("Arrears_1", typeof(double)));
+            ds.Tables[0].Columns.Add(new DataColumn("Loan_1", typeof(double)));
+            ds.Tables[0].Columns.Add(new DataColumn("SalaryCalculated_1", typeof(double)));
 
             for (int i = 0; i <= ds.Tables[0].Rows.Count - 1; i++)
             {
@@ -1003,7 +1003,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         */
         private void fillGrid_OLD()
         {
-            _Mnthyr = String.Format("{0}{1}", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
+            _Mnthyr = string.Format("{0}{1}", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
 
             var ds = new DataSet();
             //var str = "SELECT DeptMst.DeptDesc,payFinal.EmpCode,EmpName,RTrim(EmpFHRelationTag) As 'F/H',empFHname As 'F/H Name', payFinal.EmpNetPaid,B.EmpPymtMode,payFinal.EmpLockTag As IsLock, Cast(0 As Bit) As Sel,payFinal.EmpSalLocTag as Locked from PayFinal INNER JOIN  DeptMst ON payFinal.EmpDeptCode = DeptMst.DeptCode inner join AtnData B on payfinal.EmpCode=B.EmpCode and B.MonthYear= '" + _Mnthyr + "'";
@@ -1155,7 +1155,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
         private void btnLock_Click_OLD(object sender, EventArgs e)
         {
-            _Mnthyr = String.Format("{0}{1}", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
+            _Mnthyr = string.Format("{0}{1}", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
             int MaxRow = ((SalaryGrid.KeyboardFocusView as GridView).RowCount);
 #pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'

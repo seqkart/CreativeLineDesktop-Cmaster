@@ -120,6 +120,7 @@ namespace WindowsFormsApplication1
             {
                 string Query = string.Format("Sp_GetData4MRR_MRI_UPDGST '{0}','{1:yyyy-MM-dd}','" + _MRI + "';", MMDocNo, MMDocDate);
                 using (DataSet ds = ProjectFunctions.GetDataSet(Query))
+                {
                     if (ds != null)
                     {
                         //Do Data binding
@@ -195,6 +196,7 @@ namespace WindowsFormsApplication1
                         TextChoiceRCO.Focus();
                         Text = "Material Receipt Updation";
                     }
+                }
             }
             catch (Exception ex)
             {
@@ -245,15 +247,15 @@ namespace WindowsFormsApplication1
                 BtnZoomPrd.Visible = false;
                 TextStockInHand.Visible = false;
                 TextProdAsgnCode.Visible = false;
-                this.TextProdQnty.Properties.Mask.EditMask = "N2";
-                this.TextProdRate.Properties.Mask.EditMask = "N2";
+                TextProdQnty.Properties.Mask.EditMask = "N2";
+                TextProdRate.Properties.Mask.EditMask = "N2";
 
             }
 
             DtEntry.EditValue = (DateTime.Now >= GlobalVariables.FinYearStartDate && DateTime.Now <= GlobalVariables.FinYearEndDate) ? DateTime.Now.Date : GlobalVariables.FinYearEndDate.Date;
             DtDocDate.EditValue = (DateTime.Now >= GlobalVariables.FinYearStartDate && DateTime.Now <= GlobalVariables.FinYearEndDate) ? DateTime.Now.Date : GlobalVariables.FinYearEndDate.Date;
             //FStartDate = new DateTime(2013, 04, 01);
-            this.Text = _MRI == "SVC" ? "Service Receipt Addition" : "Material Receipt Addition";
+            Text = _MRI == "SVC" ? "Service Receipt Addition" : "Material Receipt Addition";
             if (!IsUpdate)
             { EntryInfo_GridCtrl.DataSource = ProjectFunctions.GetDataSet("Select * From V_MrDataPurchase Where 1=2").Tables[0]; }
             if (IsUpdate) { Setting4Updation(); }
@@ -279,12 +281,14 @@ namespace WindowsFormsApplication1
                 Query += " SELECT         AccName as 'Supplier Name', AccCode  as 'Supplier Code',  AccLcTag Tag,   IsNull(AccGSTType,'URGD') PurchaseType ,IsNull(AccGSTNo,'') AccGSTNo  FROM            ActMstSvc) as X";
 
                 if (TextSuppCode.Text.Trim().Length == 0)
+                {
                     ShowHelpWindow(Query);
+                }
                 else
                 {
                     string query = string.Empty;
 
-                    query = String.Format("Select * from (SELECT ActMst.[AccName] as 'Supplier Name', ActMst.[AccCode] as 'Supplier Code',AccLcTag Tag, IsNull(ActMst.AccGSTType,'URGD') PurchaseType ,IsNull(AccGSTNo,'') AccGSTNo FROM  [ActMst] Inner Join ActMStAddInf on ActMSt.AccCode=ActMStAddInf.AccCode   Union All ", TextSuppCode.Text.Trim());
+                    query = string.Format("Select * from (SELECT ActMst.[AccName] as 'Supplier Name', ActMst.[AccCode] as 'Supplier Code',AccLcTag Tag, IsNull(ActMst.AccGSTType,'URGD') PurchaseType ,IsNull(AccGSTNo,'') AccGSTNo FROM  [ActMst] Inner Join ActMStAddInf on ActMSt.AccCode=ActMStAddInf.AccCode   Union All ", TextSuppCode.Text.Trim());
                     query += "SELECT         AccName as 'Supplier Name', AccCode  as 'Supplier Code', AccLcTag Tag,   IsNull(AccGSTType,'URGD') PurchaseType ,IsNull(AccGSTNo,'') AccGSTNo  FROM            ActMstSvc Where AccCode='" + TextSuppCode.Text.Trim() + "') as X";
 
                     DataSet ds = ProjectFunctions.GetDataSet(query);
@@ -360,7 +364,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     //Checking whether Value  is Existing or not!
-                    string query = String.Format("SELECT [AccName] as 'Credit Description', [AccCode] as 'Credit Code'  FROM  [ActMst]  where    [AccCode]='{0}'  Order By AccCode;", TextCreditCode.Text.Trim());
+                    string query = string.Format("SELECT [AccName] as 'Credit Description', [AccCode] as 'Credit Code'  FROM  [ActMst]  where    [AccCode]='{0}'  Order By AccCode;", TextCreditCode.Text.Trim());
 
                     DataSet ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
@@ -405,9 +409,13 @@ namespace WindowsFormsApplication1
                     {
                         TextPrdHSNCd.Enabled = false;
                         if (_MRI == "SVC")
+                        {
                             ShowHelpWindow(SQuery);
+                        }
                         else
+                        {
                             ShowHelpWindow(PQuery);
+                        }
                     }
 
                     else
@@ -416,8 +424,8 @@ namespace WindowsFormsApplication1
                         try
                         {
                             //Checking whether Value  is Existing or not!
-                            string Pquery = String.Format("SELECT     PrdMst.PrdName AS 'Product Name', PrdMst.PrdCode AS 'Code', PrdMst.PrdAsgnCode AS 'Assigned Code', uOmMst.UomDesc AS 'UOM',PrdMst.PrdRate AS 'Rate', PrdHSNCode FROM         PrdMst LEFT OUTER JOIN uOmMst ON PrdMst.PrdUOM = uOmMst.UomCode  where   [PrdCode]='{0}' And ISNull(PrdHSNItemType,'G')<>'S' ORDER BY PrdMst.PrdName;", int.Parse(TextProdCode.Text.Trim()));
-                            string Squery = String.Format("SELECT     PrdMst.PrdName AS 'Product Name', PrdMst.PrdCode AS 'Code', PrdMst.PrdAsgnCode AS 'Assigned Code', uOmMst.UomDesc AS 'UOM',PrdMst.PrdRate AS 'Rate', PrdHSNCode FROM         PrdMst LEFT OUTER JOIN uOmMst ON PrdMst.PrdUOM = uOmMst.UomCode  where   [PrdCode]='{0}' And ISNull(PrdHSNItemType,'G')='S' ORDER BY PrdMst.PrdName;", int.Parse(TextProdCode.Text.Trim()));
+                            string Pquery = string.Format("SELECT     PrdMst.PrdName AS 'Product Name', PrdMst.PrdCode AS 'Code', PrdMst.PrdAsgnCode AS 'Assigned Code', uOmMst.UomDesc AS 'UOM',PrdMst.PrdRate AS 'Rate', PrdHSNCode FROM         PrdMst LEFT OUTER JOIN uOmMst ON PrdMst.PrdUOM = uOmMst.UomCode  where   [PrdCode]='{0}' And ISNull(PrdHSNItemType,'G')<>'S' ORDER BY PrdMst.PrdName;", int.Parse(TextProdCode.Text.Trim()));
+                            string Squery = string.Format("SELECT     PrdMst.PrdName AS 'Product Name', PrdMst.PrdCode AS 'Code', PrdMst.PrdAsgnCode AS 'Assigned Code', uOmMst.UomDesc AS 'UOM',PrdMst.PrdRate AS 'Rate', PrdHSNCode FROM         PrdMst LEFT OUTER JOIN uOmMst ON PrdMst.PrdUOM = uOmMst.UomCode  where   [PrdCode]='{0}' And ISNull(PrdHSNItemType,'G')='S' ORDER BY PrdMst.PrdName;", int.Parse(TextProdCode.Text.Trim()));
                             DataSet ds = ProjectFunctions.GetDataSet(_MRI == "SVC" ? Squery : Pquery);
                             if (ds.Tables[0].Rows.Count > 0)
                             {
@@ -439,9 +447,13 @@ namespace WindowsFormsApplication1
                             {
                                 // Display Help Window
                                 if (_MRI == "SVC")
+                                {
                                     ShowHelpWindow(SQuery);
+                                }
                                 else
+                                {
                                     ShowHelpWindow(PQuery);
+                                }
                             }
 
                         }
@@ -495,7 +507,9 @@ namespace WindowsFormsApplication1
         private void GetHSN()
         {
             if (Flag)
+            {
                 return;
+            }
             else if (TextPrdHSNCd.Text == string.Empty)
             {
                 Flag = true;
@@ -508,7 +522,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                string query = String.Format("SELECT GSTCode, GSTDesc, IsNull(GSTSGSTRate,0) SGSTRate, ISNull(GSTCGSTRate,0)CGSTRate, IsNull(GSTIGSTRate,0) as IGST,GSTPurPost,GSTPurPostIS,GSTRateOpenTag, GSTSalePost, GSTSalePostIS FROM GSTMst Where GstCode='{0}' ", TextPrdHSNCd.Text);
+                string query = string.Format("SELECT GSTCode, GSTDesc, IsNull(GSTSGSTRate,0) SGSTRate, ISNull(GSTCGSTRate,0)CGSTRate, IsNull(GSTIGSTRate,0) as IGST,GSTPurPost,GSTPurPostIS,GSTRateOpenTag, GSTSalePost, GSTSalePostIS FROM GSTMst Where GstCode='{0}' ", TextPrdHSNCd.Text);
                 DataSet ds = ProjectFunctions.GetDataSet(query);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -547,13 +561,17 @@ namespace WindowsFormsApplication1
                         {
                             TextPrdSGSTRate.Text = TextPrdCGSTRate.Text = "0";
                             if (BtnOK.Text != "&Update")
+                            {
                                 TextAcPostingCode.Text = ds.Tables[0].Rows[0][6].ToString();
+                            }
                         }
                         else
                         {
                             TextPrdSGSTRate.Text = TextPrdCGSTRate.Text = "0";
                             if (BtnOK.Text != "&Update")
+                            {
                                 TextAcPostingCode.Text = ds.Tables[0].Rows[0][9].ToString();
+                            }
                         }
                     }
                     else
@@ -562,13 +580,17 @@ namespace WindowsFormsApplication1
                         {
                             TextPrdIGSTRate.Text = "0";
                             if (BtnOK.Text != "&Update")
+                            {
                                 TextAcPostingCode.Text = ds.Tables[0].Rows[0][5].ToString();
+                            }
                         }
                         else
                         {
                             TextPrdIGSTRate.Text = "0";
                             if (BtnOK.Text != "&Update")
+                            {
                                 TextAcPostingCode.Text = ds.Tables[0].Rows[0][8].ToString();
+                            }
                         }
                     }
                     TextPrdHSNCd.Enabled = false;
@@ -669,8 +691,12 @@ namespace WindowsFormsApplication1
                     HelpGrid.CustomColumnDisplayText += (o, e) =>
                     {
                         if (e.Column.FieldName == "Issue" || e.Column.FieldName == "Receipt" || e.Column.FieldName == "SIssue" || e.Column.FieldName == "RTN")
-                            if (Convert.ToDecimal(e.Value) == 0) e.DisplayText = string.Empty;
-                        ;
+                        {
+                            if (Convert.ToDecimal(e.Value) == 0)
+                            {
+                                e.DisplayText = string.Empty;
+                            }
+                        };
                     };
                 }
                 else
@@ -706,7 +732,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("SELECT ExpHeadDesc,ExpHeadCode from ExpHeadMst  where  [ExpHeadCode]={0} ;", TextExpHeadCode.Text.Trim());
+                        var query = string.Format("SELECT ExpHeadDesc,ExpHeadCode from ExpHeadMst  where  [ExpHeadCode]={0} ;", TextExpHeadCode.Text.Trim());
                         using (var ds = ProjectFunctions.GetDataSet(query))
                         {
                             if (ds.Tables[0].Rows.Count > 0)
@@ -810,7 +836,7 @@ namespace WindowsFormsApplication1
             {
                 string s = DtDocDate.DateTime.ToString("dd/MM/yyyy");
                 s = s.Replace('-', '/');
-                string query = String.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMdocType='" + _MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
+                string query = string.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMdocType='" + _MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
 
                 using (DataSet ds = ProjectFunctions.GetDataSet(query))
                 {
@@ -820,7 +846,9 @@ namespace WindowsFormsApplication1
                         TextDocNumber.Focus();
                     }
                     else
+                    {
                         Error.Dispose();
+                    }
                 }
             }
             catch (Exception ex)
@@ -838,11 +866,13 @@ namespace WindowsFormsApplication1
                 if (!string.IsNullOrEmpty(TextProdQnty.Text.Trim()) && Convert.ToDecimal(TextProdQnty.Text) > 0)
                 {
                     if (!TextProdPONO.Visible)
+                    {
                         return;
+                    }
 
                     if (BtnOK.Text == "&Update")
                     {
-                        DataSet Ds = ProjectFunctions.GetDataSet(String.Format("select [Qnty. Ord.], [Qnty. Rcvd.] from [{2}] where [PO No]= '{0}'and [Sub No.]='{1}'", TextProdPONO.Text, textEdit1.Text, (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent")));
+                        DataSet Ds = ProjectFunctions.GetDataSet(string.Format("select [Qnty. Ord.], [Qnty. Rcvd.] from [{2}] where [PO No]= '{0}'and [Sub No.]='{1}'", TextProdPONO.Text, textEdit1.Text, (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent")));
                         if (Ds != null)
                         {
                             DataTable Dt = Ds.Tables[0];
@@ -937,7 +967,9 @@ namespace WindowsFormsApplication1
                     }
                 }
                 else
+                {
                     Error.Dispose();
+                }
             }
         }
 
@@ -1087,7 +1119,9 @@ namespace WindowsFormsApplication1
                         {
                             CheckService();
                             if (xtraflag)
+                            {
                                 return;
+                            }
                         }
                     }
                     else
@@ -1099,7 +1133,7 @@ namespace WindowsFormsApplication1
 
             else if (!IsUpdate && !(TextProdDesc.Text.ToUpper().Contains("FREIGHT") || _MRI == "SVC"))
             {
-                using (DataSet Dsx = ProjectFunctions.GetDataSet(String.Format("SELECT         [PO Date], PrdCode, PrdName, [Qnty. Ord.], [Qnty. Rcvd.], Party, Rate, PartyCode FROM " + (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent") + " WHERE        (PrdCode = '{0}') And [PO No]='{1}' And [Sub No.]='{2}'", TextProdCode.Text, TextProdPONO.Text, textEdit1.Text)))
+                using (DataSet Dsx = ProjectFunctions.GetDataSet(string.Format("SELECT         [PO Date], PrdCode, PrdName, [Qnty. Ord.], [Qnty. Rcvd.], Party, Rate, PartyCode FROM " + (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent") + " WHERE        (PrdCode = '{0}') And [PO No]='{1}' And [Sub No.]='{2}'", TextProdCode.Text, TextProdPONO.Text, textEdit1.Text)))
                 {
                     if (Dsx.Tables[0].Rows.Count == 0)
                     {
@@ -1282,7 +1316,9 @@ namespace WindowsFormsApplication1
                 int rowHandle = -1;
 
                 if (EntryInfo_Grid.RowCount > 0)
+                {
                     rowHandle = __rohandle;
+                }
 
                 EntryInfo_Grid.DeleteRow(rowHandle);
                 EntryInfo_Grid.RefreshData();
@@ -1449,10 +1485,14 @@ namespace WindowsFormsApplication1
                     AuthenticateFlag = true;
                     MyValidationProvider.Validate();
                     if (MyValidationProvider.GetInvalidControls().Count > 0)
+                    {
                         Errorflag = false;
-                    if (EntryInfo_Grid.RowCount == 0)
-                        Errorflag = false;
+                    }
 
+                    if (EntryInfo_Grid.RowCount == 0)
+                    {
+                        Errorflag = false;
+                    }
                 }
 
                 //if (!AuthenticateFlag)
@@ -1513,6 +1553,7 @@ namespace WindowsFormsApplication1
             try
             {
                 if (EntryInfo_GridCtrl.DataSource != null)
+                {
                     if (EntryInfo_Grid.RowCount > 0)
                     {
                         (EntryInfo_GridCtrl.DataSource as DataTable).AcceptChanges();
@@ -1523,11 +1564,16 @@ namespace WindowsFormsApplication1
                                 using (DataSet Dsx = ProjectFunctions.GetDataSet("Select PrdCode from PrdMst Where PrdAsgnCode =(Select PrdEAsgnCode From PrdMst where IsNull(PrdEAsgnCode,'0')<>'0' and PrdCode ='" + Dr["MdPrdCode"] + "')"))
                                 {
                                     if (Dsx.Tables[0].Rows.Count > 0)
+                                    {
                                         Dr["MdPrdCode"] = Dsx.Tables[0].Rows[0][0];
+                                    }
                                 }
                             }
                         }
-                        if (!Errorflag) return;
+                        if (!Errorflag)
+                        {
+                            return;
+                        }
                         else
                         {
                             using (SqlConnection con = new SqlConnection(ProjectFunctions.ConnectionString))
@@ -1657,7 +1703,7 @@ namespace WindowsFormsApplication1
                                         command.Parameters.Add("@vMdDocType", SqlDbType.NVarChar, 3).Value = TextEntryDocType.Text;
                                         command.Parameters.Add("@vMdAccCode", SqlDbType.NVarChar, 6).Value = TextSuppCode.Text;
                                         command.Parameters.Add("@vMdTxnCd", SqlDbType.NVarChar, 1).Value = TextDocType.Text;
-                                        command.Parameters.Add("@vMdNart", SqlDbType.NVarChar, 120).Value = String.Format("Received from {0} against {1}-{2} Dt. {3:dd/MM/yyyy}'", TextSuppDesc.Text, TextDocType.Text, TextDocNumber.Text, DtDocDate.DateTime);
+                                        command.Parameters.Add("@vMdNart", SqlDbType.NVarChar, 120).Value = string.Format("Received from {0} against {1}-{2} Dt. {3:dd/MM/yyyy}'", TextSuppDesc.Text, TextDocType.Text, TextDocNumber.Text, DtDocDate.DateTime);
                                         command.Parameters.Add("@vMdUserId", SqlDbType.NVarChar, 15).Value = GlobalVariables.CurrentUser;
                                         command.Parameters.Add("@vMdFyear", SqlDbType.NVarChar, 4).Value = ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear);
                                         command.Parameters.Add("@vMdEntrySrNo", SqlDbType.SmallInt).Value = id;
@@ -1719,7 +1765,10 @@ namespace WindowsFormsApplication1
 
                     }
                     else
+                    {
                         ProjectFunctions.SpeakError("Grid has no Record.");
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -1733,8 +1782,12 @@ namespace WindowsFormsApplication1
         private static void ResetControls(Control C)
         {
             foreach (Control ctrl in C.Controls)
+            {
                 if (ctrl.GetType() == typeof(TextEdit))
+                {
                     ctrl.ResetText();
+                }
+            }
         }
 
         private void BtnQuit_Click(object sender, EventArgs e)
@@ -1749,7 +1802,9 @@ namespace WindowsFormsApplication1
         private void TextRegNo_Validated(object sender, EventArgs e)
         {
             if (!TextSuppCode.Enabled)
+            {
                 TextIsCash.Focus();
+            }
         }
 
         private void BtnAttach_Click(object sender, EventArgs e)
@@ -1780,7 +1835,7 @@ namespace WindowsFormsApplication1
             if (!string.IsNullOrEmpty(TextProdCode.Text.Trim()))
             {
                 CurrentControl = "Pen_Po_BTn";
-                ShowHelpWindow(String.Format("Select * from {2} where PrdCode='{0}' " + (TextChoiceRCO.Text == "R" ? "and PartyCode='{1}' " : string.Empty) + " ;", TextProdCode.Text, TextSuppCode.Text, (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent")));
+                ShowHelpWindow(string.Format("Select * from {2} where PrdCode='{0}' " + (TextChoiceRCO.Text == "R" ? "and PartyCode='{1}' " : string.Empty) + " ;", TextProdCode.Text, TextSuppCode.Text, (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent")));
             }
         }
 
@@ -1803,8 +1858,9 @@ namespace WindowsFormsApplication1
         private void TextProdRate_Enter(object sender, EventArgs e)
         {
             if (_MRI == "MRI")
+            {
                 TextProdRate.Properties.Mask.EditMask = "N5";
-
+            }
         }
 
         private void textEdit1_Validated(object sender, EventArgs e)
@@ -1812,7 +1868,9 @@ namespace WindowsFormsApplication1
             try
             {
                 if (DtEntry.DateTime.Date > Convert.ToDateTime("2015-03-31"))
-                    using (DataSet Ds = ProjectFunctions.GetDataSet(String.Format("select [Qnty. Ord.], [Qnty. Rcvd.] from [{2}] where [PO No]= '{0}'and [Sub No.]='{1}'; Select prdgrpcode from PrdMst where PrdCode='" + TextProdCode.Text + "'", TextProdPONO.Text, textEdit1.Text, (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent"))))
+                {
+                    using (DataSet Ds = ProjectFunctions.GetDataSet(string.Format("select [Qnty. Ord.], [Qnty. Rcvd.] from [{2}] where [PO No]= '{0}'and [Sub No.]='{1}'; Select prdgrpcode from PrdMst where PrdCode='" + TextProdCode.Text + "'", TextProdPONO.Text, textEdit1.Text, (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent"))))
+                    {
                         if (Ds != null)
                         {
                             using (DataTable Dt1 = Ds.Tables[1])
@@ -1826,7 +1884,7 @@ namespace WindowsFormsApplication1
                                 }
                                 oldPOqntyord = Convert.ToDecimal(Dt.Rows[0][0].ToString());
                                 oldPOqntyRcvd = Convert.ToDecimal(Dt.Rows[0][1].ToString());
-                                Decimal Qntys = 0;
+                                decimal Qntys = 0;
                                 if (IsUpdate && BtnOK.Text == "&Update")
                                 {
                                     int rowHandle = ProjectFunctions.GetRowHandleByColumnValue(EntryInfo_Grid, "Id", id);
@@ -1841,6 +1899,8 @@ namespace WindowsFormsApplication1
                             ProjectFunctions.SpeakError("Unable to Find This PONO.");
                             TextProdPONO.Focus();
                         }
+                    }
+                }
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
@@ -1862,14 +1922,14 @@ namespace WindowsFormsApplication1
 
         private void TextAuthenticate_Leave(object sender, EventArgs e)
         {
-            string authenticate = String.Format("dbo.Sp_Authenticate '{0:yyyy-MM-dd}', '{1}', '{2}','{3}'", DtEntry.DateTime.Date, GlobalVariables.CurrentUser, TextAuthenticate.Text.Trim(), IsUpdate ? Name + "_Y" : Name);
+            string authenticate = string.Format("dbo.Sp_Authenticate '{0:yyyy-MM-dd}', '{1}', '{2}','{3}'", DtEntry.DateTime.Date, GlobalVariables.CurrentUser, TextAuthenticate.Text.Trim(), IsUpdate ? Name + "_Y" : Name);
             using (DataSet Ds = ProjectFunctions.GetDataSet(authenticate))
             {
                 if (Ds.Tables[0].Rows[0][0].ToString().Equals("Y"))
                 {
                     if (!IsUpdate)
                     {
-                        string query = String.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
+                        string query = string.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
 
                         DataSet ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
@@ -1907,7 +1967,7 @@ namespace WindowsFormsApplication1
             {
                 string s = DtDocDate.DateTime.ToString("dd/MM/yyyy");
                 s = s.Replace('-', '/');
-                string query = String.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMDocType='" + _MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
+                string query = string.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMDocType='" + _MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
 
                 using (DataSet ds = ProjectFunctions.GetDataSet(query))
                 {
@@ -1917,7 +1977,9 @@ namespace WindowsFormsApplication1
                         TextDocNumber.Focus();
                     }
                     else
+                    {
                         Error.Dispose();
+                    }
                 }
             }
             catch (Exception ex)
@@ -1931,14 +1993,14 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                string authenticate = String.Format("dbo.Sp_Authenticate '{0:yyyy-MM-dd}', '{1}', '{2}','{3}'", DtEntry.DateTime.Date, GlobalVariables.CurrentUser, TextAuthenticate.Text.Trim(), IsUpdate ? Name + "_Y" : Name);
+                string authenticate = string.Format("dbo.Sp_Authenticate '{0:yyyy-MM-dd}', '{1}', '{2}','{3}'", DtEntry.DateTime.Date, GlobalVariables.CurrentUser, TextAuthenticate.Text.Trim(), IsUpdate ? Name + "_Y" : Name);
                 using (DataSet Ds = ProjectFunctions.GetDataSet(authenticate))
                 {
                     if (Ds.Tables[0].Rows[0][0].ToString().Equals("Y"))
                     {
                         if (!IsUpdate)
                         {
-                            string query = String.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
+                            string query = string.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
 
                             DataSet ds = ProjectFunctions.GetDataSet(query);
                             if (ds.Tables[0].Rows.Count > 0)
@@ -1981,7 +2043,9 @@ namespace WindowsFormsApplication1
             try
             {
                 if (Convert.ToDecimal(TextProdRate.Text) <= 0)
+                {
                     e.Cancel = true;
+                }
             }
             catch (Exception) { e.Cancel = true; }
         }
@@ -2001,7 +2065,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     //Checking whether Value  is Existing or not!
-                    string query = String.Format("SELECT     ActMst.AccName as 'AC Name', ActMst.AccCode as 'AC Code' FROM  ActMst where ActMst.AccCode='{0}' order by ActMst.AccName ;", TextFrtCode.Text.Trim());
+                    string query = string.Format("SELECT     ActMst.AccName as 'AC Name', ActMst.AccCode as 'AC Code' FROM  ActMst where ActMst.AccCode='{0}' order by ActMst.AccName ;", TextFrtCode.Text.Trim());
                     DataSet ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -2134,7 +2198,7 @@ namespace WindowsFormsApplication1
 
         private void TextInvAmount_Validating_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            Decimal temp = 0;
+            decimal temp = 0;
             decimal.TryParse(TextValueOfGoods.Text, out temp);
             TextValueOfGoods.Text = temp.ToString();
 
@@ -2194,7 +2258,7 @@ namespace WindowsFormsApplication1
                 {
                     //Checking whether Value  is Existing or not!
                     TextAcPostingCode.Text = TextAcPostingCode.Text.PadLeft(4, '0');
-                    string query = String.Format("SELECT     ActMst.AccName as 'AC Name', ActMst.AccCode as 'AC Code' FROM  ActMst where ActMst.AccCode='{0}' order by ActMst.AccName ;", TextAcPostingCode.Text.Trim());
+                    string query = string.Format("SELECT     ActMst.AccName as 'AC Name', ActMst.AccCode as 'AC Code' FROM  ActMst where ActMst.AccCode='{0}' order by ActMst.AccName ;", TextAcPostingCode.Text.Trim());
                     DataSet ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -2207,7 +2271,9 @@ namespace WindowsFormsApplication1
 
                         }
                         else
+                        {
                             TextProdQnty.Focus();
+                        }
                     }
                     else
                     {
@@ -2229,7 +2295,7 @@ namespace WindowsFormsApplication1
         private void TextProdQnty_Validating_1(object sender, System.ComponentModel.CancelEventArgs e)
         {
             decimal xd = Math.Round(Convert.ToDecimal(100.00), 2);
-            Decimal temp = 0;
+            decimal temp = 0;
             decimal.TryParse(TextProdQnty.Text, out temp);
             TextProdQnty.Text = temp.ToString();
 
@@ -2250,7 +2316,9 @@ namespace WindowsFormsApplication1
             TextPrdCGSTRate.Text = temp.ToString();
 
             if (Convert.ToDecimal(TextPrdCGSTAmt.Text) == 0)
+            {
                 TextPrdCGSTAmt.Text = Math.Round((Convert.ToDecimal(TextMdPrdTxbAmt.Text) * Convert.ToDecimal(TextPrdCGSTRate.Text)) / xd, 2).ToString();
+            }
             else
             {
                 temp = 0;
@@ -2269,7 +2337,9 @@ namespace WindowsFormsApplication1
             TextPrdSGSTRate.Text = temp.ToString();
 
             if (Convert.ToDecimal(TextPrdSGSTAmt.Text) == 0)
+            {
                 TextPrdSGSTAmt.Text = Math.Round((Convert.ToDecimal(TextMdPrdTxbAmt.Text) * Convert.ToDecimal(TextPrdSGSTRate.Text)) / xd, 2).ToString();
+            }
             else
             {
                 temp = 0;
@@ -2288,7 +2358,9 @@ namespace WindowsFormsApplication1
             TextPrdIGSTRate.Text = temp.ToString();
 
             if (Convert.ToDecimal(TextPrdIGSTAmt.Text) == 0)
+            {
                 TextPrdIGSTAmt.Text = Math.Round((Convert.ToDecimal(TextMdPrdTxbAmt.Text) * Convert.ToDecimal(TextPrdIGSTRate.Text)) / xd, 2).ToString();
+            }
             else
             {
                 temp = 0;
@@ -2339,7 +2411,7 @@ namespace WindowsFormsApplication1
                 {
                     if ((DtEntry.DateTime.Date == DateTime.Now.Date || AuthenticateFlag) && !IsUpdate)
                     {
-                        string query = String.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
+                        string query = string.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
 
                         DataSet ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
@@ -2380,7 +2452,7 @@ namespace WindowsFormsApplication1
                 {
                     if ((DtEntry.DateTime.Date == DateTime.Now.Date || AuthenticateFlag) && !IsUpdate)
                     {
-                        string query = String.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
+                        string query = string.Format("SELECT isnull(MAX([MmDocNo]),0000) as Value FROM MrMst WHERE MMDocType='{0}' AND MmDocDate='{1}' and MmFinYear='{2}';", TextEntryDocType.Text.Trim(), DtEntry.DateTime.ToString("yyyy-MM-dd"), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
 
                         DataSet ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
@@ -2447,7 +2519,7 @@ namespace WindowsFormsApplication1
                 else
                 {
                     //Checking whether Value  is Existing or not!
-                    string query = String.Format("SELECT CostCode, CostDesc,  CostSubDesc ,CostSubCode,ID from CostMst  WHERE  (((CostMst.Costcode)='{0}' And IsNull(CostMst.CostSubcode,'') ='{1}')) ORDER BY CostDesc  ;", TextCostCode.Text.Trim(), TextCostSubCode.Text);
+                    string query = string.Format("SELECT CostCode, CostDesc,  CostSubDesc ,CostSubCode,ID from CostMst  WHERE  (((CostMst.Costcode)='{0}' And IsNull(CostMst.CostSubcode,'') ='{1}')) ORDER BY CostDesc  ;", TextCostCode.Text.Trim(), TextCostSubCode.Text);
                     DataSet ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {

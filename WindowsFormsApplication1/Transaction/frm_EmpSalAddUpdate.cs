@@ -7,9 +7,9 @@ namespace WindowsFormsApplication1
 {
     public partial class frm_EmpSalAddUpdate : XtraForm
     {
-        public String s1 { get; set; }
-        public String MonthYear { get; set; }
-        public String EmpCode { get; set; }
+        public string s1 { get; set; }
+        public string MonthYear { get; set; }
+        public string EmpCode { get; set; }
         public frm_EmpSalAddUpdate()
         {
             InitializeComponent();
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void frm_EmpSalAddUpdate_Load(object sender, EventArgs e)
@@ -231,7 +231,7 @@ namespace WindowsFormsApplication1
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

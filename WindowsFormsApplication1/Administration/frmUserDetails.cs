@@ -8,8 +8,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmUserDetails : XtraForm
     {
-        public String s1 { get; set; }
-        public String UserName { get; set; }
+        public string s1 { get; set; }
+        public string UserName { get; set; }
         private void SetMyControls()
         {
             try
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void UpdateData()
         {
@@ -193,7 +193,7 @@ namespace WindowsFormsApplication1
                                 ProjectFunctions.GetDataSet(strQry);
                                 ProjectFunctions.SpeakError("Entry Added Successfully");
                                 UpdateData();
-                                this.Close();
+                                Close();
                             }
                         }
                         else
@@ -218,7 +218,7 @@ namespace WindowsFormsApplication1
                         ProjectFunctions.GetDataSet(strQry);
                         ProjectFunctions.SpeakError("Entry Updated Successfully");
                         UpdateData();
-                        this.Close();
+                        Close();
                     }
                 }
             }

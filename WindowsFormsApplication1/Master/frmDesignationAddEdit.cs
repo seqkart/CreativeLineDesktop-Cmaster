@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
     public partial class FrmDesignationAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
-        public String DesgCode { get; set; }
+        public string DesgCode { get; set; }
         public FrmDesignationAddEdit()
         {
             InitializeComponent();
@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
                 {
                     ProjectFunctions.SpeakError("Some Error in Save Data");
                 }
-                this.Close();
+                Close();
 
                 /*
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))

@@ -8,8 +8,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTransporterMaster : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String TRPRSYSID { get; set; }
+        public string s1 { get; set; }
+        public string TRPRSYSID { get; set; }
         public frmTransporterMaster()
         {
             InitializeComponent();
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FrmTransporterMaster_KeyDown(object sender, KeyEventArgs e)
@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -193,9 +193,9 @@ namespace WindowsFormsApplication1
 
         private void TxtCity_EditValueChanged(object sender, EventArgs e)
         {
-            txtCityName.Text = String.Empty;
-            txtState.Text = String.Empty;
-            txtCountry.Text = String.Empty;
+            txtCityName.Text = string.Empty;
+            txtState.Text = string.Empty;
+            txtCountry.Text = string.Empty;
         }
 
         private void Label4_Click(object sender, EventArgs e)

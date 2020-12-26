@@ -6,27 +6,27 @@ namespace WindowsFormsApplication1
 {
     public partial class frmSaleReportF2 : DevExpress.XtraEditors.XtraForm
     {
-        public String WorkingTag { get; set; }
+        public string WorkingTag { get; set; }
         DataTable dt = new DataTable();
-        String HOTAG = String.Empty;
+        string HOTAG = string.Empty;
         public frmSaleReportF2()
         {
             InitializeComponent();
-            dt.Columns.Add("Name", typeof(String));
-            dt.Columns.Add("Amount", typeof(Decimal));
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Amount", typeof(decimal));
 
         }
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FrmSaleReportF2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F2 || e.KeyCode == Keys.F4 || e.KeyCode == Keys.F6 || e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 

@@ -6,8 +6,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTaxMasterAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String TaxCode { get; set; }
+        public string s1 { get; set; }
+        public string TaxCode { get; set; }
         public frmTaxMasterAddEdit()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
         }
         private string GetNewTaxCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(TaxCode as int)),0000) from TaxMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -147,7 +147,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void frmTaxMasterAddEdit_KeyDown(object sender, KeyEventArgs e)
@@ -255,7 +255,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

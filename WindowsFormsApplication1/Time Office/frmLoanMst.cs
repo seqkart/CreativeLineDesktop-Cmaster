@@ -14,25 +14,13 @@ namespace WindowsFormsApplication1.Forms_Master
         public string _empcode = null;
         public string s1
         {
-            get
-            {
-                return _s1;
-            }
-            set
-            {
-                _s1 = value;
-            }
+            get => _s1;
+            set => _s1 = value;
         }
         public string empcode
         {
-            get
-            {
-                return _empcode;
-            }
-            set
-            {
-                _empcode = value;
-            }
+            get => _empcode;
+            set => _empcode = value;
         }
         public frmLoanMst()
         {

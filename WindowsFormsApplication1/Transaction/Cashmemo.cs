@@ -537,8 +537,8 @@ namespace WindowsFormsApplication1.Transaction
                 DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
                 if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
                 {
-                    Byte[] MyData = new byte[0];
-                    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
+                    byte[] MyData = new byte[0];
+                    MyData = (byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
                     MemoryStream stream = new MemoryStream(MyData)
                     {
                         Position = 0
@@ -1113,7 +1113,7 @@ namespace WindowsFormsApplication1.Transaction
                             }
 
                             XtraMessageBox.Show("Cash Memo Saved Successfully");
-                            txtMainDisc.Text = String.Empty;
+                            txtMainDisc.Text = string.Empty;
 
                         }
                         else
@@ -1140,8 +1140,8 @@ namespace WindowsFormsApplication1.Transaction
                 btnUnhold.Visible = false;
                 if (S1 == "&Add")
                 {
-                    this.Location = new Point(0, 0);
-                    this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+                    Location = new Point(0, 0);
+                    Size = Screen.PrimaryScreen.WorkingArea.Size;
                     txtCustMobileNo.Focus();
                     lblCashMemoDate.Text = DateTime.Now.ToString("dd-MM-yyyy");
                     chInclusive.Checked = true;
@@ -1162,7 +1162,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void SimpleButton16_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void SimpleButton13_Click(object sender, EventArgs e)
@@ -1199,7 +1199,7 @@ namespace WindowsFormsApplication1.Transaction
                 frmCustomerMst frm = new frmCustomerMst() { s1 = "Edit", Text = "Customer Edition", CAFSYSID = txtCustCode.Text };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                frm.ShowDialog(this.Parent);
+                frm.ShowDialog(Parent);
             }
             catch (Exception ex)
             {
@@ -1364,14 +1364,14 @@ namespace WindowsFormsApplication1.Transaction
                 Pos.Card frm = new Pos.Card() { MemoNo = lblCashMemoNo.Text, MemoDate = Convert.ToDateTime(lblCashMemoDate.Text), TotalMemoAmount = Convert.ToDecimal(lblNetPayable.Text) };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                frm.ShowDialog(this.Parent);
+                frm.ShowDialog(Parent);
 
 
                 dt.Clear();
                 S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
-                txtMainDisc.Text = String.Empty;
+                txtMainDisc.Text = string.Empty;
                 Calculation();
             }
             catch (Exception ex)
@@ -1394,13 +1394,13 @@ namespace WindowsFormsApplication1.Transaction
                 WindowsFormsApplication1.Transaction.CashTender frm = new WindowsFormsApplication1.Transaction.CashTender() { MemoNo = lblCashMemoNo.Text, MemoDate = Convert.ToDateTime(lblCashMemoDate.Text), TotalMemoAmount = Convert.ToDecimal(lblNetPayable.Text) };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                frm.ShowDialog(this.Parent);
+                frm.ShowDialog(Parent);
 
                 dt.Clear();
                 S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
-                txtMainDisc.Text = String.Empty;
+                txtMainDisc.Text = string.Empty;
                 Calculation();
 
             }
@@ -1418,7 +1418,7 @@ namespace WindowsFormsApplication1.Transaction
                 frmCustomerMst frm = new frmCustomerMst() { s1 = "Edit", Text = "Customer Edition", CAFSYSID = txtCustCode.Text };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                frm.ShowDialog(this.Parent);
+                frm.ShowDialog(Parent);
             }
             catch (Exception ex)
             {

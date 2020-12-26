@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void SetMyControls()
         {
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -233,7 +233,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 

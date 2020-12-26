@@ -8,10 +8,10 @@ namespace WindowsFormsApplication1
 {
     public partial class frmSchemeMstAddEdit : XtraForm
     {
-        public String s1 { get; set; }
+        public string s1 { get; set; }
         DataTable dt = new DataTable();
         int rowindex;
-        public String ImNo { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public frmSchemeMstAddEdit()
         {
@@ -145,7 +145,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -305,7 +305,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void txtFree_KeyPress(object sender, KeyPressEventArgs e)
@@ -410,7 +410,7 @@ namespace WindowsFormsApplication1
 
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

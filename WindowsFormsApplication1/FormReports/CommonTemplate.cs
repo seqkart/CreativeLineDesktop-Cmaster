@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
 
         #endregion
 
-        public String Title { get; set; }
+        public string Title { get; set; }
         public bool IsCrystal { get; set; }
         private RangeSelector _RangeSelector;
 
@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void RefreshBtn_Click(object sender, EventArgs e)
@@ -127,67 +127,67 @@ namespace WindowsFormsApplication1.Crystal_Reports
                 switch (GlobalVariables.ProgCode)
                 {
                     case "PROG143":
-                        DataSet Ds = ProjectFunctions.GetDataSet(String.Format("Exec [Sp_CashBookRpt] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
+                        DataSet Ds = ProjectFunctions.GetDataSet(string.Format("Exec [Sp_CashBookRpt] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
                         rpt_CashBook RptDoc1 = new rpt_CashBook();
                         (RptDoc1.ReportDefinition.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
                         (RptDoc1.ReportDefinition.ReportObjects["txtReportHead"] as TextObject).Text = Title;
                         (RptDoc1.ReportDefinition.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         RptDoc1.SetDataSource(Ds.Tables[0]);
                         lbl.Text = string.Format(Title + " ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
-                        this.crystalReportViewer1.ReportSource = RptDoc1;
+                        crystalReportViewer1.ReportSource = RptDoc1;
                         _RangeSelector.Hide();
                         break;
                     case "PROG144":
                         HelpGrid.CloseEditor();
                         HelpGrid.UpdateCurrentRow();
-                        DataSet DsRecoBank = ProjectFunctions.GetDataSet(String.Format("Exec [SP_RecoBank] '{0:yyyy-MM-dd}', '253'", EndDate.Date));
+                        DataSet DsRecoBank = ProjectFunctions.GetDataSet(string.Format("Exec [SP_RecoBank] '{0:yyyy-MM-dd}', '253'", EndDate.Date));
                         rpt_BankReco RptDoc2 = new rpt_BankReco();
                         (RptDoc2.ReportDefinition.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
                         (RptDoc2.ReportDefinition.ReportObjects["txtReportName"] as TextObject).Text = "Bank Reco";
                         (RptDoc2.ReportDefinition.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         RptDoc2.SetDataSource(DsRecoBank.Tables[0]);
                         lbl.Text = string.Format(Title + " ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
-                        this.crystalReportViewer1.ReportSource = RptDoc2;
+                        crystalReportViewer1.ReportSource = RptDoc2;
                         crystalReportViewer1.Show();
                         crystalReportViewer1.BringToFront();
                         _RangeSelector.Hide();
                         HelpGridCtrl.Hide();
                         break;
                     case "PROG145":
-                        DataSet dsDayBook = ProjectFunctions.GetDataSet(String.Format("[Sp_PrepareDayBook] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
+                        DataSet dsDayBook = ProjectFunctions.GetDataSet(string.Format("[Sp_PrepareDayBook] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
                         rpt_DayBook RptDoc3 = new rpt_DayBook();
                         (RptDoc3.ReportDefinition.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
                         (RptDoc3.ReportDefinition.ReportObjects["txtReportHead"] as TextObject).Text = "Day Book";
                         (RptDoc3.ReportDefinition.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         RptDoc3.SetDataSource(dsDayBook.Tables[0]);
                         lbl.Text = string.Format(Title + " ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
-                        this.crystalReportViewer1.ReportSource = RptDoc3;
+                        crystalReportViewer1.ReportSource = RptDoc3;
                         crystalReportViewer1.Show();
                         crystalReportViewer1.BringToFront();
                         _RangeSelector.Hide();
                         break;
                     case "PROG147":
-                        DataSet ds = ProjectFunctions.GetDataSet(String.Format("[Sp_PrepareBankBook] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
+                        DataSet ds = ProjectFunctions.GetDataSet(string.Format("[Sp_PrepareBankBook] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
                         Rpt_BankBook RptDoc = new Rpt_BankBook();
                         (RptDoc.Section2.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
                         (RptDoc.Section2.ReportObjects["txtReportName"] as TextObject).Text = "Bank Book";
                         (RptDoc.Section2.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         lbl.Text = string.Format(Title + " ({0} to {1})", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         RptDoc.SetDataSource(ds.Tables[0]);
-                        this.crystalReportViewer1.ReportSource = RptDoc;
+                        crystalReportViewer1.ReportSource = RptDoc;
                         crystalReportViewer1.Show();
                         crystalReportViewer1.BringToFront();
                         _RangeSelector.Hide();
                         break;
                     case "PROG165":
-                        DataSet dsLedger = ProjectFunctions.GetDataSet(String.Format("[sp_ZoomPartyAct] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}','{2}'", StartDate.Date, EndDate.Date, Currentrow["AccCode"].ToString()));
+                        DataSet dsLedger = ProjectFunctions.GetDataSet(string.Format("[sp_ZoomPartyAct] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}','{2}'", StartDate.Date, EndDate.Date, Currentrow["AccCode"].ToString()));
                         PartyLedger RptLedger = new PartyLedger();
                         (RptLedger.Section2.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
                         (RptLedger.Section2.ReportObjects["txtReportName"] as TextObject).Text = "Party Ledger";
                         (RptLedger.Section2.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         lbl.Text = string.Format(Title + " ({0} to {1})", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         RptLedger.SetDataSource(dsLedger.Tables[0]);
-                        this.crystalReportViewer1.ReportSource = RptLedger;
+                        crystalReportViewer1.ReportSource = RptLedger;
                         crystalReportViewer1.Show();
                         crystalReportViewer1.BringToFront();
                         _RangeSelector.Hide();
@@ -205,16 +205,22 @@ namespace WindowsFormsApplication1.Crystal_Reports
         private void HelpGridCtrl_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
+            {
                 HelpGridCtrl.Visible = false;
+            }
 
             if (e.KeyCode == Keys.Enter)
+            {
                 _RangeSelector.BtnLoad.PerformClick();
+            }
         }
 
         private void HelpGridCtrl_DoubleClick(object sender, EventArgs e)
         {
             if ((HelpGridCtrl.DataSource as DataTable).Select("Sel <> False").Length == 1)
+            {
                 _RangeSelector.BtnLoad.PerformClick();
+            }
         }
 
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)

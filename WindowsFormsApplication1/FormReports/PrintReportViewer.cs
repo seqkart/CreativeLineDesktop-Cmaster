@@ -6,7 +6,7 @@ namespace payroll.FormReports
     public partial class PrintReportViewer : DevExpress.XtraEditors.XtraForm
     {
 
-        public String pkInstalledPrinters { get; set; }
+        public string pkInstalledPrinters { get; set; }
         public PrintReportViewer()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace payroll.FormReports
                 rpt = (XtraReport)documentViewer1.DocumentSource;
                 ReportPrintTool printTool = new ReportPrintTool(rpt);
                 printTool.Print(pkInstalledPrinters);
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {

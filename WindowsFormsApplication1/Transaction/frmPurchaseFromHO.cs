@@ -10,35 +10,35 @@ namespace WindowsFormsApplication1.Transaction
     public partial class frmPurchaseFromHO : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public String s1 { get; set; }
-        public String SFMTOTBOX { get; set; }
-        public String SFDVNO { get; set; }
+        public string s1 { get; set; }
+        public string SFMTOTBOX { get; set; }
+        public string SFDVNO { get; set; }
 
         public frmPurchaseFromHO()
         {
             InitializeComponent();
-            dt.Columns.Add("SFDBOXNO", typeof(String));
-            dt.Columns.Add("SFDBARCODE", typeof(String));
-            dt.Columns.Add("SFDARTNO", typeof(String));
-            dt.Columns.Add("SFDARTDESC", typeof(String));
-            dt.Columns.Add("SFDCOLN", typeof(String));
-            dt.Columns.Add("SFDSIZN", typeof(String));
-            dt.Columns.Add("SFDSCANQTY", typeof(Decimal));
-            dt.Columns.Add("SFDARTMRP", typeof(Decimal));
-            dt.Columns.Add("SFDARTWSP", typeof(Decimal));
-            dt.Columns.Add("SFDARTID", typeof(String));
-            dt.Columns.Add("SFDCOLID", typeof(String));
-            dt.Columns.Add("SFDSIZID", typeof(String));
+            dt.Columns.Add("SFDBOXNO", typeof(string));
+            dt.Columns.Add("SFDBARCODE", typeof(string));
+            dt.Columns.Add("SFDARTNO", typeof(string));
+            dt.Columns.Add("SFDARTDESC", typeof(string));
+            dt.Columns.Add("SFDCOLN", typeof(string));
+            dt.Columns.Add("SFDSIZN", typeof(string));
+            dt.Columns.Add("SFDSCANQTY", typeof(decimal));
+            dt.Columns.Add("SFDARTMRP", typeof(decimal));
+            dt.Columns.Add("SFDARTWSP", typeof(decimal));
+            dt.Columns.Add("SFDARTID", typeof(string));
+            dt.Columns.Add("SFDCOLID", typeof(string));
+            dt.Columns.Add("SFDSIZID", typeof(string));
         }
-        private void ShowImage(String ArticleID)
+        private void ShowImage(string ArticleID)
         {
             try
             {
                 DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
                 if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
                 {
-                    Byte[] MyData = new byte[0];
-                    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
+                    byte[] MyData = new byte[0];
+                    MyData = (byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
                     MemoryStream stream = new MemoryStream(MyData)
                     {
                         Position = 0
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.TextBoxVisualize(this);
                 if (s1 == "&Add")
                 {
-                    String MemoNo = ProjectFunctions.GetDataSet("select isnull(max(SFMVNO),0)+1 from SFMAIN where SFMFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                    string MemoNo = ProjectFunctions.GetDataSet("select isnull(max(SFMVNO),0)+1 from SFMAIN where SFMFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                     txtMemoNo.Text = MemoNo;
                     lblBox.Text = "1";
                     txtMemoDate.EditValue = DateTime.Now;
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1.Transaction
                         BarCodeGrid.DataSource = dt;
                         BarCodeGridView.BestFitColumns();
 
-                        Decimal QtySum = 0;
+                        decimal QtySum = 0;
                         foreach (DataRow dr in dt.Rows)
                         {
                             lblBox.Text = Convert.ToDecimal(dr["SFDBOXNO"]).ToString("0");
@@ -335,7 +335,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     ProjectFunctions.DeleteCurrentRowOnRightClick(BarCodeGrid, BarCodeGridView);
                     dt.AcceptChanges();
-                    Decimal QtySum = 0;
+                    decimal QtySum = 0;
                     foreach (DataRow dr in dt.Rows)
                     {
                         QtySum = QtySum + Convert.ToDecimal(dr["SFDSCANQTY"]);
@@ -377,7 +377,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     if (dt.Rows.Count > 0)
                     {
-                        Decimal QtySum = 0;
+                        decimal QtySum = 0;
                         foreach (DataRow dr in dt.Rows)
                         {
                             dr["SFDBOXNO"] = Convert.ToDecimal(lblBox.Text);
@@ -403,7 +403,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FrmPurchaseFromHO_KeyDown(object sender, KeyEventArgs e)

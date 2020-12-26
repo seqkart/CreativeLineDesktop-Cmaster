@@ -14,13 +14,13 @@ namespace WindowsFormsApplication1.Master
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void txtARTID_EditValueChanged(object sender, EventArgs e)
         {
-            txtArtNo.Text = String.Empty;
-            txtArtDesc.Text = String.Empty;
+            txtArtNo.Text = string.Empty;
+            txtArtDesc.Text = string.Empty;
         }
 
         private void txtARTID_KeyDown(object sender, KeyEventArgs e)
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1.Master
             {
                 if (col.Visible)
                 {
-                    dt.Columns.Add(col.FieldName, typeof(String));
+                    dt.Columns.Add(col.FieldName, typeof(string));
                 }
             }
             foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in txtMeasurement.Properties.Items)

@@ -15,8 +15,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmEmloyeeMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String EmpCode { get; set; }
+        public string s1 { get; set; }
+        public string EmpCode { get; set; }
         public frmEmloyeeMstAddEdit()
         {
             InitializeComponent();
@@ -482,7 +482,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -758,7 +758,7 @@ string.Empty +
                         sqlcon.Close();
                         //XtraMessageBox.Show("Data Saved Successfully");
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -861,7 +861,7 @@ string.Empty +
                     break;
                 case "close":
                     /* Navigate to page E */
-                    this.Close();
+                    Close();
 
                     break;
             }

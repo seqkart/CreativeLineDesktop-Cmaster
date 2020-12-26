@@ -4,7 +4,7 @@ namespace WindowsFormsApplication1.Crystals
 {
     public partial class SalePrint : DevExpress.XtraReports.UI.XtraReport
     {
-        public String InvType { get; set; }
+        public string InvType { get; set; }
         public DataSet Ds { get; set; }
 
         public SalePrint()

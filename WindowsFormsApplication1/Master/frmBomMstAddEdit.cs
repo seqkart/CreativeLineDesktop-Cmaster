@@ -27,36 +27,18 @@ namespace WindowsFormsApplication1
         private int rowindex;
         public string bomno
         {
-            get
-            {
-                return _bomno;
-            }
-            set
-            {
-                _bomno = value;
-            }
+            get => _bomno;
+            set => _bomno = value;
         }
         public string bomPrdId
         {
-            get
-            {
-                return _bomPrdId;
-            }
-            set
-            {
-                _bomPrdId = value;
-            }
+            get => _bomPrdId;
+            set => _bomPrdId = value;
         }
         public string s1
         {
-            get
-            {
-                return _s1;
-            }
-            set
-            {
-                _s1 = value;
-            }
+            get => _s1;
+            set => _s1 = value;
         }
 
         public frmBomMstAddEdit()

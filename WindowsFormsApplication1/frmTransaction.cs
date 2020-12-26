@@ -843,16 +843,16 @@ namespace WindowsFormsApplication1
                                                                          DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIMstFEDit '" + CurrentRow["PINo"].ToString() + "','" + Convert.ToDateTime(CurrentRow["PIDate"]).ToString("yyyy-MM-dd") + "'");
                                                                          if (ds.Tables[0].Rows.Count > 0)
                                                                          {
-                                                                             dt.Columns.Add("Brand", typeof(String));
-                                                                             dt.Columns.Add("Store Code", typeof(String));
-                                                                             dt.Columns.Add("EAN Code", typeof(String));
-                                                                             dt.Columns.Add("Article", typeof(String));
-                                                                             dt.Columns.Add("HSN Code", typeof(String));
-                                                                             dt.Columns.Add("PI Qty", typeof(String));
-                                                                             dt.Columns.Add("Mrp.", typeof(String));
-                                                                             dt.Columns.Add("Tax%", typeof(String));
-                                                                             dt.Columns.Add("Core/Fashion", typeof(String));
-                                                                             dt.Columns.Add("Season", typeof(String));
+                                                                             dt.Columns.Add("Brand", typeof(string));
+                                                                             dt.Columns.Add("Store Code", typeof(string));
+                                                                             dt.Columns.Add("EAN Code", typeof(string));
+                                                                             dt.Columns.Add("Article", typeof(string));
+                                                                             dt.Columns.Add("HSN Code", typeof(string));
+                                                                             dt.Columns.Add("PI Qty", typeof(string));
+                                                                             dt.Columns.Add("Mrp.", typeof(string));
+                                                                             dt.Columns.Add("Tax%", typeof(string));
+                                                                             dt.Columns.Add("Core/Fashion", typeof(string));
+                                                                             dt.Columns.Add("Season", typeof(string));
 
                                                                              foreach (DataRow dr in ds.Tables[1].Rows)
                                                                              {
@@ -1484,29 +1484,29 @@ namespace WindowsFormsApplication1
 
                     PrintOutGridView.Columns.Clear();
                     DataTable dt = new DataTable();
-                    dt.Columns.Add("SKUPRODUCTCODE", typeof(String));
-                    dt.Columns.Add("SKUPARTYBARCODE", typeof(String));
-                    dt.Columns.Add("SKUFIXBARCODE", typeof(String));
-                    dt.Columns.Add("SKUARTNO", typeof(String));
-                    dt.Columns.Add("ARTDESC", typeof(String));
-                    dt.Columns.Add("SKUCOLN", typeof(String));
-                    dt.Columns.Add("SKUSIZN", typeof(String));
-                    dt.Columns.Add("SKUFEDQTY", typeof(Decimal));
-                    dt.Columns.Add("SKUMRP", typeof(String));
-                    dt.Columns.Add("SKUWSP", typeof(String));
-                    dt.Columns.Add("SKUMRPVAL", typeof(Decimal));
-                    dt.Columns.Add("SKUWSPVAL", typeof(Decimal));
-                    dt.Columns.Add("SKUARTID", typeof(String));
-                    dt.Columns.Add("SKUCOLID", typeof(String));
-                    dt.Columns.Add("SKUSIZID", typeof(String));
-                    dt.Columns.Add("SKUSIZINDX", typeof(String));
-                    dt.Columns.Add("SKUCODE", typeof(String));
-                    dt.Columns.Add("SKUVOUCHNO", typeof(String));
-                    dt.Columns.Add("SKUFNYR", typeof(String));
-                    dt.Columns.Add("DISCPRCN", typeof(String));
-                    dt.Columns.Add("FLATMRP", typeof(String));
-                    dt.Columns.Add("SKUPPRICE", typeof(String));
-                    dt.Columns.Add("GrpHSNCode", typeof(String));
+                    dt.Columns.Add("SKUPRODUCTCODE", typeof(string));
+                    dt.Columns.Add("SKUPARTYBARCODE", typeof(string));
+                    dt.Columns.Add("SKUFIXBARCODE", typeof(string));
+                    dt.Columns.Add("SKUARTNO", typeof(string));
+                    dt.Columns.Add("ARTDESC", typeof(string));
+                    dt.Columns.Add("SKUCOLN", typeof(string));
+                    dt.Columns.Add("SKUSIZN", typeof(string));
+                    dt.Columns.Add("SKUFEDQTY", typeof(decimal));
+                    dt.Columns.Add("SKUMRP", typeof(string));
+                    dt.Columns.Add("SKUWSP", typeof(string));
+                    dt.Columns.Add("SKUMRPVAL", typeof(decimal));
+                    dt.Columns.Add("SKUWSPVAL", typeof(decimal));
+                    dt.Columns.Add("SKUARTID", typeof(string));
+                    dt.Columns.Add("SKUCOLID", typeof(string));
+                    dt.Columns.Add("SKUSIZID", typeof(string));
+                    dt.Columns.Add("SKUSIZINDX", typeof(string));
+                    dt.Columns.Add("SKUCODE", typeof(string));
+                    dt.Columns.Add("SKUVOUCHNO", typeof(string));
+                    dt.Columns.Add("SKUFNYR", typeof(string));
+                    dt.Columns.Add("DISCPRCN", typeof(string));
+                    dt.Columns.Add("FLATMRP", typeof(string));
+                    dt.Columns.Add("SKUPPRICE", typeof(string));
+                    dt.Columns.Add("GrpHSNCode", typeof(string));
 
 
                     DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersPrint] '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");

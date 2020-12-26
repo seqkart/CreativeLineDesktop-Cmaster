@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.FormReports
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }

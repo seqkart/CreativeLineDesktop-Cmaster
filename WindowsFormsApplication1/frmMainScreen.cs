@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1
 
             try
             {
-                var str = String.Format("[sp_LoadUserAllocatedWork2] '" + GlobalVariables.CurrentUser + "'");
+                var str = string.Format("[sp_LoadUserAllocatedWork2] '" + GlobalVariables.CurrentUser + "'");
                 using (var ds = ProjectFunctions.GetDataSet(str))
                 {
                     if (ds.Tables[0].Rows.Count > 0)
@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1
                                     Caption = NameSubItem
                                 };
                                 group.ItemLinks.Add(container);
-                                var Drs = MyTempTable.Select(String.Format("ProginMenu='{0}' and ProginMenuGroup='{1}'", ItemPage.Text, NameSubItem));
+                                var Drs = MyTempTable.Select(string.Format("ProginMenu='{0}' and ProginMenuGroup='{1}'", ItemPage.Text, NameSubItem));
                                 foreach (DataRow R in Drs)
                                 {
                                     var Kc = new KeysConverter();
@@ -831,15 +831,15 @@ namespace WindowsFormsApplication1
         private void LoadLayoutForms()
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("ProgCode", typeof(String));
-            dt.Columns.Add("LayoutName", typeof(String));
-            String Address = String.Format(@"{0}\Layouts\{1}\", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser);
-            String[] Dir = System.IO.Directory.GetDirectories(Address);
-            foreach (String StrDir in Dir)
+            dt.Columns.Add("ProgCode", typeof(string));
+            dt.Columns.Add("LayoutName", typeof(string));
+            string Address = string.Format(@"{0}\Layouts\{1}\", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser);
+            string[] Dir = System.IO.Directory.GetDirectories(Address);
+            foreach (string StrDir in Dir)
             {
 
-                String[] DirFiles = System.IO.Directory.GetFiles(StrDir);
-                foreach (String StrFiles in DirFiles)
+                string[] DirFiles = System.IO.Directory.GetFiles(StrDir);
+                foreach (string StrFiles in DirFiles)
                 {
                     DataRow dr = dt.NewRow();
                     dr["ProgCode"] = StrDir.Replace(Address, string.Empty);

@@ -14,52 +14,52 @@ namespace WindowsFormsApplication1.Transaction
         DataTable dtVariants = new DataTable();
         public string S1 { get; set; }
 #pragma warning disable CS0108 // 'frmBarPrinting.Tag' hides inherited member 'Control.Tag'. Use the new keyword if hiding was intended.
-        public String Tag { get; set; }
+        public string Tag { get; set; }
 #pragma warning restore CS0108 // 'frmBarPrinting.Tag' hides inherited member 'Control.Tag'. Use the new keyword if hiding was intended.
-        public String SKUVOUCHNO { get; set; }
+        public string SKUVOUCHNO { get; set; }
         DataTable dt = new DataTable();
         DataSet dsPopUps = new DataSet();
 
         int RowIndex = 0;
-        String UpdateTag = "N";
+        string UpdateTag = "N";
 
 
         public frmBarPrinting()
         {
             InitializeComponent();
-            dt.Columns.Add("SKUPRODUCTCODE", typeof(String));
-            dt.Columns.Add("SKUPARTYBARCODE", typeof(String));
-            dt.Columns.Add("SKUFIXBARCODE", typeof(String));
-            dt.Columns.Add("SKUARTNO", typeof(String));
-            dt.Columns.Add("ARTDESC", typeof(String));
-            dt.Columns.Add("SKUCOLN", typeof(String));
-            dt.Columns.Add("SKUSIZN", typeof(String));
-            dt.Columns.Add("SKUFEDQTY", typeof(Decimal));
-            dt.Columns.Add("SKUMRP", typeof(String));
-            dt.Columns.Add("SKUWSP", typeof(String));
-            dt.Columns.Add("SKUMRPVAL", typeof(Decimal));
-            dt.Columns.Add("SKUWSPVAL", typeof(Decimal));
-            dt.Columns.Add("SKUARTID", typeof(String));
-            dt.Columns.Add("SKUCOLID", typeof(String));
-            dt.Columns.Add("SKUSIZID", typeof(String));
-            dt.Columns.Add("SKUARTCOLSET", typeof(String));
-            dt.Columns.Add("SKUARTSIZSET", typeof(String));
-            dt.Columns.Add("SKUSIZINDX", typeof(String));
-            dt.Columns.Add("SKUCODE", typeof(String));
-            dt.Columns.Add("SKUVOUCHNO", typeof(String));
-            dt.Columns.Add("SKUFNYR", typeof(String));
-            dt.Columns.Add("DISCPRCN", typeof(String));
-            dt.Columns.Add("FLATMRP", typeof(String));
-            dt.Columns.Add("SKUPPRICE", typeof(String));
-            dt.Columns.Add("GrpHSNCode", typeof(String));
-            dt.Columns.Add("VARIANTART", typeof(String));
+            dt.Columns.Add("SKUPRODUCTCODE", typeof(string));
+            dt.Columns.Add("SKUPARTYBARCODE", typeof(string));
+            dt.Columns.Add("SKUFIXBARCODE", typeof(string));
+            dt.Columns.Add("SKUARTNO", typeof(string));
+            dt.Columns.Add("ARTDESC", typeof(string));
+            dt.Columns.Add("SKUCOLN", typeof(string));
+            dt.Columns.Add("SKUSIZN", typeof(string));
+            dt.Columns.Add("SKUFEDQTY", typeof(decimal));
+            dt.Columns.Add("SKUMRP", typeof(string));
+            dt.Columns.Add("SKUWSP", typeof(string));
+            dt.Columns.Add("SKUMRPVAL", typeof(decimal));
+            dt.Columns.Add("SKUWSPVAL", typeof(decimal));
+            dt.Columns.Add("SKUARTID", typeof(string));
+            dt.Columns.Add("SKUCOLID", typeof(string));
+            dt.Columns.Add("SKUSIZID", typeof(string));
+            dt.Columns.Add("SKUARTCOLSET", typeof(string));
+            dt.Columns.Add("SKUARTSIZSET", typeof(string));
+            dt.Columns.Add("SKUSIZINDX", typeof(string));
+            dt.Columns.Add("SKUCODE", typeof(string));
+            dt.Columns.Add("SKUVOUCHNO", typeof(string));
+            dt.Columns.Add("SKUFNYR", typeof(string));
+            dt.Columns.Add("DISCPRCN", typeof(string));
+            dt.Columns.Add("FLATMRP", typeof(string));
+            dt.Columns.Add("SKUPPRICE", typeof(string));
+            dt.Columns.Add("GrpHSNCode", typeof(string));
+            dt.Columns.Add("VARIANTART", typeof(string));
 
             dsPopUps = ProjectFunctions.GetDataSet("[sp_LoadBarPrintPopUps2]");
 
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
 
         }
 
@@ -108,7 +108,7 @@ namespace WindowsFormsApplication1.Transaction
                             BarCodeGridView.Focus();
                             BarCodeGridView.MoveLast();
                             BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUCOLN"];
-                            txtSearchBox.Text = String.Empty;
+                            txtSearchBox.Text = string.Empty;
                             ProjectFunctions.ShowImage(row["ARTSYSID"].ToString(), ArticleImageBox);
                         }
                         else
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1.Transaction
 
                             BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUCOLN"];
                             BarCodeGridView.FocusedRowHandle = RowIndex;
-                            txtSearchBox.Text = String.Empty;
+                            txtSearchBox.Text = string.Empty;
                             ProjectFunctions.ShowImage(row["ARTSYSID"].ToString(), ArticleImageBox);
                             dt.AcceptChanges();
                         }
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["SKUSIZN"];
                         BarCodeGridView.FocusedRowHandle = RowIndex;
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
                         dt.AcceptChanges();
                     }
                     if (HelpGrid.Text == "SKUSIZN")
@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1.Transaction
                         BarCodeGridView.ShowEditor();
                         BarCodeGridView.FocusedRowHandle = RowIndex;
 
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
 
                     }
                 }
@@ -520,11 +520,11 @@ namespace WindowsFormsApplication1.Transaction
                                         SplashScreenManager.Default.SetWaitFormDescription("Saving Item " + i.ToString() + " / " + (BarCodeGrid.DataSource as DataTable).Rows.Count);
 
 
-                                        String SKUCode = ProjectFunctions.GetDataSet("sp_GetMaxSKUCode '" + GlobalVariables.FinancialYear + "' ,'" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                        String SKUPRODUCTCODE = ProjectFunctions.ClipFYearBarCode(GlobalVariables.FinancialYear) + GlobalVariables.CUnitID + GlobalVariables.BarCodePreFix + SKUCode;
+                                        string SKUCode = ProjectFunctions.GetDataSet("sp_GetMaxSKUCode '" + GlobalVariables.FinancialYear + "' ,'" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                        string SKUPRODUCTCODE = ProjectFunctions.ClipFYearBarCode(GlobalVariables.FinancialYear) + GlobalVariables.CUnitID + GlobalVariables.BarCodePreFix + SKUCode;
 
-                                        String SKUFixCode = ProjectFunctions.GetDataSet("sp_GetMaxSKUFIXPRODUCTCODE '" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                        String SKUFIXPRODUCTCODE = String.Empty; ;
+                                        string SKUFixCode = ProjectFunctions.GetDataSet("sp_GetMaxSKUFIXPRODUCTCODE '" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                        string SKUFIXPRODUCTCODE = string.Empty; ;
 
                                         DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "' And SKUFIXBARCODE is not null");
                                         if (dsCheck.Tables[0].Rows.Count > 0)
@@ -623,9 +623,9 @@ namespace WindowsFormsApplication1.Transaction
 
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
-                                    String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                    string SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     //String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                    String SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
+                                    string SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
 
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
@@ -720,7 +720,7 @@ namespace WindowsFormsApplication1.Transaction
                             SKUVOUCHNO = txtSysID.Text;
                             FillGrid();
 
-                            this.Close();
+                            Close();
                         }
                         catch (Exception ex)
                         {
@@ -1040,7 +1040,7 @@ namespace WindowsFormsApplication1.Transaction
                             {
                                 BarCodeGrid.DataSource = dt;
                                 BarCodeGridView.BestFitColumns();
-                                txtBarCode.Text = String.Empty;
+                                txtBarCode.Text = string.Empty;
                             }
                             else
                             {
@@ -1262,7 +1262,7 @@ namespace WindowsFormsApplication1.Transaction
                         DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpCode,GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
                         DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode,GrpSubCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
 
-                        Decimal MRP = 0;
+                        decimal MRP = 0;
                         foreach (DataRow drMRP in dtVariants.Rows)
                         {
                             if (dr["GENERIC ART"].ToString() == drMRP["GENERIC ART"].ToString())

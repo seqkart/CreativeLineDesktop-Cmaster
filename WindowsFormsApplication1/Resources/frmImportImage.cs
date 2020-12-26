@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.Resources
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
                 {
                     sqlcon.Open();
-                    String str = string.Empty;
+                    string str = string.Empty;
                     DataSet ds = ProjectFunctions.GetDataSet("Select * from CRImages where TransId='1'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {

@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmItemMaster : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String ITMSYSID { get; set; }
+        public string s1 { get; set; }
+        public string ITMSYSID { get; set; }
         public frmItemMaster()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FrmItemMaster_Load(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -207,7 +207,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

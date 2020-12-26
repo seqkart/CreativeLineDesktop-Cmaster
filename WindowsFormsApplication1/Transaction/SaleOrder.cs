@@ -3,7 +3,6 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
@@ -11,55 +10,55 @@ namespace WindowsFormsApplication1.Transaction
     public partial class SaleOrder : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public String s1 { get; set; }
-        public String DocNo { get; set; }
+        public string s1 { get; set; }
+        public string DocNo { get; set; }
         public DateTime DocDate { get; set; }
         DataSet dsPopUps = new DataSet();
         int RowIndex = 0;
-        String UpdateTag = "N";
+        string UpdateTag = "N";
         public SaleOrder()
         {
             InitializeComponent();
-            dt.Columns.Add("EANNo", typeof(String));
-            dt.Columns.Add("ArticleID", typeof(String));
-            dt.Columns.Add("ArtNo", typeof(String));
-            dt.Columns.Add("ArticleDesc", typeof(String));
-            dt.Columns.Add("ColorId", typeof(String));
-            dt.Columns.Add("ColorDesc", typeof(String));
-            dt.Columns.Add("SizeId", typeof(String));
-            dt.Columns.Add("SizeDesc", typeof(String));
-            dt.Columns.Add("Quantity", typeof(String));
-            dt.Columns.Add("MRP", typeof(String));
-            dt.Columns.Add("BaseCost", typeof(String));
-            dt.Columns.Add("CGSTPer", typeof(String));
-            dt.Columns.Add("SGSTPer", typeof(String));
-            dt.Columns.Add("IGSTPer", typeof(String));
-            dt.Columns.Add("CGSTAmount", typeof(String));
-            dt.Columns.Add("SGSTAmount", typeof(String));
-            dt.Columns.Add("IGSTAmount", typeof(String));
+            dt.Columns.Add("EANNo", typeof(string));
+            dt.Columns.Add("ArticleID", typeof(string));
+            dt.Columns.Add("ArtNo", typeof(string));
+            dt.Columns.Add("ArticleDesc", typeof(string));
+            dt.Columns.Add("ColorId", typeof(string));
+            dt.Columns.Add("ColorDesc", typeof(string));
+            dt.Columns.Add("SizeId", typeof(string));
+            dt.Columns.Add("SizeDesc", typeof(string));
+            dt.Columns.Add("Quantity", typeof(string));
+            dt.Columns.Add("MRP", typeof(string));
+            dt.Columns.Add("BaseCost", typeof(string));
+            dt.Columns.Add("CGSTPer", typeof(string));
+            dt.Columns.Add("SGSTPer", typeof(string));
+            dt.Columns.Add("IGSTPer", typeof(string));
+            dt.Columns.Add("CGSTAmount", typeof(string));
+            dt.Columns.Add("SGSTAmount", typeof(string));
+            dt.Columns.Add("IGSTAmount", typeof(string));
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
 
         }
 
         private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDebitPartyName.Text = String.Empty;
-            txtBillingAddress1.Text = String.Empty;
-            txtBillingAddress2.Text = String.Empty;
-            txtBillingAddress3.Text = String.Empty;
-            txtBillingState.Text = String.Empty;
-            txtBillingCity.Text = String.Empty;
-            txtBillingZip.Text = String.Empty;
-            txtDelieveryCode.Text = String.Empty;
-            txtDelieveryName.Text = String.Empty;
-            txtDelAddress1.Text = String.Empty;
-            txtDelAddress2.Text = String.Empty;
-            txtDelAddress3.Text = String.Empty;
-            txtDelieveryState.Text = String.Empty;
-            txtDelieveryCity.Text = String.Empty;
-            txtDelZipCode.Text = String.Empty;
-            txtDelTransID.Text = String.Empty;
-            txtGSTNo.Text = String.Empty;
+            txtDebitPartyName.Text = string.Empty;
+            txtBillingAddress1.Text = string.Empty;
+            txtBillingAddress2.Text = string.Empty;
+            txtBillingAddress3.Text = string.Empty;
+            txtBillingState.Text = string.Empty;
+            txtBillingCity.Text = string.Empty;
+            txtBillingZip.Text = string.Empty;
+            txtDelieveryCode.Text = string.Empty;
+            txtDelieveryName.Text = string.Empty;
+            txtDelAddress1.Text = string.Empty;
+            txtDelAddress2.Text = string.Empty;
+            txtDelAddress3.Text = string.Empty;
+            txtDelieveryState.Text = string.Empty;
+            txtDelieveryCity.Text = string.Empty;
+            txtDelZipCode.Text = string.Empty;
+            txtDelTransID.Text = string.Empty;
+            txtGSTNo.Text = string.Empty;
         }
 
         private void txtDebitPartyCode_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
@@ -194,14 +193,14 @@ namespace WindowsFormsApplication1.Transaction
 
         private void txtDelieveryCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDelieveryName.Text = String.Empty;
-            txtDelAddress1.Text = String.Empty;
-            txtDelAddress2.Text = String.Empty;
-            txtDelAddress3.Text = String.Empty;
-            txtDelieveryCity.Text = String.Empty;
-            txtDelZipCode.Text = String.Empty;
-            txtDelieveryState.Text = String.Empty;
-            txtDelTransID.Text = String.Empty;
+            txtDelieveryName.Text = string.Empty;
+            txtDelAddress1.Text = string.Empty;
+            txtDelAddress2.Text = string.Empty;
+            txtDelAddress3.Text = string.Empty;
+            txtDelieveryCity.Text = string.Empty;
+            txtDelZipCode.Text = string.Empty;
+            txtDelieveryState.Text = string.Empty;
+            txtDelTransID.Text = string.Empty;
         }
         private void LoadDelAddresses()
         {
@@ -234,7 +233,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void txtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtTransporterName.Text = String.Empty;
+            txtTransporterName.Text = string.Empty;
         }
 
         private void txtTransporterCode_KeyDown(object sender, KeyEventArgs e)
@@ -257,9 +256,9 @@ namespace WindowsFormsApplication1.Transaction
 
         private void Calculation()
         {
-            Decimal TotalSubValue = 0;
-            Decimal TotalDiscValue = 0;
-            Decimal TotalTaxValue = 0;
+            decimal TotalSubValue = 0;
+            decimal TotalDiscValue = 0;
+            decimal TotalTaxValue = 0;
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -503,7 +502,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
 
@@ -641,7 +640,7 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.SpeakError("Invoice Data Saved Successfully");
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
 
                     catch (Exception ex)
@@ -650,7 +649,7 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.SpeakError(ex.Message);
                         
                     }
-                    this.Close();
+                    Close();
                 }
             }
         }
@@ -848,7 +847,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         InfoGridView.FocusedColumn = InfoGridView.Columns["ColorId"];
                         InfoGridView.FocusedRowHandle = RowIndex;
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
                         dt.AcceptChanges();
                     }
 
@@ -870,7 +869,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         InfoGridView.FocusedColumn = InfoGridView.Columns["SizeId"];
                         InfoGridView.FocusedRowHandle = RowIndex;
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
                         dt.AcceptChanges();
                     }
                     if (GridControl1.Text == "SizeId")
@@ -885,7 +884,7 @@ namespace WindowsFormsApplication1.Transaction
                         InfoGridView.FocusedRowHandle = RowIndex;
 
 
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
 
                         dt.AcceptChanges();
 
@@ -984,7 +983,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }

@@ -27,12 +27,12 @@ namespace WindowsFormsApplication1.FormReports
                     return;
                 }
 
-                Address = String.Format(@"{0}\Layouts\{1}\{2}", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName);
+                Address = string.Format(@"{0}\Layouts\{1}\{2}", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName);
                 if (!Directory.Exists(Address))
                 {
                     Directory.CreateDirectory(Address);
                 }
-                Address = String.Format(@"{0}\Layouts\{1}\{2}\{3}.xml", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName, FileName.Text);
+                Address = string.Format(@"{0}\Layouts\{1}\{2}\{3}.xml", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName, FileName.Text);
                 PGC.SaveLayoutToXml(Address);
                 ProjectFunctions.EventTracker("Save Report Layout Process Ended");
             }

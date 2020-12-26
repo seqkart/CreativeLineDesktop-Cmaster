@@ -74,13 +74,13 @@ namespace WindowsFormsApplication1
             Record.Columns.Add("Id", typeof(int)).AutoIncrement = true;
             Record.Columns.Add("Remarks", typeof(string));
             Record.Columns.Add("IndId", typeof(string));
-            Record.Columns.Add("IndNo", typeof(Int64));
+            Record.Columns.Add("IndNo", typeof(long));
             Record.Columns.Add("PoSGSTR", typeof(decimal));
             Record.Columns.Add("PoCGSTR", typeof(decimal));
             Record.Columns.Add("PoIGSTR", typeof(decimal));
             if (IsUpdate)
             {
-                this.Text = "PO Updation";
+                Text = "PO Updation";
                 //DtEntry.Enabled = false;
                 TextPartyCode.Enabled = false;
                 string Query = string.Format("sp_GetData4POUPDGST '{0}','{1:yyyy-MM-dd}';", PoNo, PoDate);
@@ -148,8 +148,8 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Dispose();
-            this.Close();
+            Dispose();
+            Close();
         }
 
         private void frm_poAddition_Load(object sender, EventArgs e)
@@ -304,7 +304,10 @@ namespace WindowsFormsApplication1
                             DataTable temp = new DataTable();
                             Ds.Tables[0].Columns.Add("Select", Type.GetType("System.Boolean"));
                             if (Ds.Tables.Count > 1)
+                            {
                                 Ds.Tables[1].Columns.Add("Select", Type.GetType("System.Boolean"));
+                            }
+
                             if (IsUpdate)
                             {
                                 var diff = Ds.Tables[1].AsEnumerable().Except(Ds.Tables[0].AsEnumerable(),
@@ -331,14 +334,16 @@ namespace WindowsFormsApplication1
                             }
                         }
                         else
+                        {
                             HelpGridCtrl.DataSource = TacData;
+                        }
 
                         ProjectFunctions.GirdViewVisualize(HelpGrid);
                         HelpGrid.OptionsBehavior.Editable = true;
-                        this.HelpGrid.Columns[0].OptionsColumn.AllowEdit = false;
-                        this.HelpGrid.Columns[0].OptionsColumn.ReadOnly = true;
-                        this.HelpGrid.Columns[1].OptionsColumn.AllowEdit = false;
-                        this.HelpGrid.Columns[1].OptionsColumn.ReadOnly = true;
+                        HelpGrid.Columns[0].OptionsColumn.AllowEdit = false;
+                        HelpGrid.Columns[0].OptionsColumn.ReadOnly = true;
+                        HelpGrid.Columns[1].OptionsColumn.AllowEdit = false;
+                        HelpGrid.Columns[1].OptionsColumn.ReadOnly = true;
                         HelpGrid.Columns[0].Width = 35;
                         HelpGrid.Columns[2].Width = 45;
                     }
@@ -392,7 +397,7 @@ namespace WindowsFormsApplication1
                     else
                     {
                         //Checking whether Value  is Existing or not!
-                        string query = String.Format("SELECT    ActMst.AccName AS 'Party Name',ActMst.AccCode as Code, ActMstAddInf.AccPSTCST  FROM         ActMstAddInf RIGHT OUTER JOIN ActMst ON ActMstAddInf.AccCode = ActMst.AccCode WHERE     ActMst.AccCode='{0}' order by ActMst.AccName;", TextPartyCode.Text.Trim());
+                        string query = string.Format("SELECT    ActMst.AccName AS 'Party Name',ActMst.AccCode as Code, ActMstAddInf.AccPSTCST  FROM         ActMstAddInf RIGHT OUTER JOIN ActMst ON ActMstAddInf.AccCode = ActMst.AccCode WHERE     ActMst.AccCode='{0}' order by ActMst.AccName;", TextPartyCode.Text.Trim());
                         DataSet ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -403,7 +408,10 @@ namespace WindowsFormsApplication1
                             TextDeptCode.Focus();
                         }
                         else
+                        {
                             ShowHelpWindow(Query);
+                        }
+
                         e.Handled = true;
                     }
                     if ((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up)
@@ -456,7 +464,7 @@ namespace WindowsFormsApplication1
                     else
                     {
                         //Checking whether Value  is Existing or not!
-                        string query = String.Format("SELECT     DeptDesc, DeptCode FROM         deptMst  where  DeptCode='{0}' order by DeptDesc", TextDeptCode.Text.Trim());
+                        string query = string.Format("SELECT     DeptDesc, DeptCode FROM         deptMst  where  DeptCode='{0}' order by DeptDesc", TextDeptCode.Text.Trim());
                         DataSet ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -465,7 +473,10 @@ namespace WindowsFormsApplication1
                             TextProdCode.Focus();
                         }
                         else
+                        {
                             ShowHelpWindow(Query);
+                        }
+
                         e.Handled = true;
                     }
                     if ((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up)
@@ -514,7 +525,7 @@ namespace WindowsFormsApplication1
                     {
                         if (!currentprodCode.Equals(TextProdCode.Text))
                         {
-                            var query = String.Format("SELECT * from V_PrdMst4PO  where   Code='{0}' ORDER BY [Product Name];", TextProdCode.Text.Trim());
+                            var query = string.Format("SELECT * from V_PrdMst4PO  where   Code='{0}' ORDER BY [Product Name];", TextProdCode.Text.Trim());
 
                             var ds = ProjectFunctions.GetDataSet(query);
                             if (ds.Tables[0].Rows.Count > 0)
@@ -552,15 +563,15 @@ namespace WindowsFormsApplication1
 
         private void TextProdAmount_Enter(object sender, EventArgs e)
         {
-            Decimal Amt1 = (decimal.Parse(string.IsNullOrEmpty(TextProdQnty.Text) ? "0.00" : TextProdQnty.Text.Trim()) * decimal.Parse(string.IsNullOrEmpty(TextProdRate.Text) ? "0.00" : TextProdRate.Text.Trim()));
+            decimal Amt1 = (decimal.Parse(string.IsNullOrEmpty(TextProdQnty.Text) ? "0.00" : TextProdQnty.Text.Trim()) * decimal.Parse(string.IsNullOrEmpty(TextProdRate.Text) ? "0.00" : TextProdRate.Text.Trim()));
 
             TextDiscountRate.Text = string.IsNullOrEmpty(TextDiscountRate.Text) ? "0.00" : TextDiscountRate.Text.Trim();
-            Decimal Temp1 = Amt1 * (1 - Convert.ToDecimal(TextDiscountRate.Text) / 100);
+            decimal Temp1 = Amt1 * (1 - Convert.ToDecimal(TextDiscountRate.Text) / 100);
 
-            Decimal NetAmt = Temp1 * (1 + ((Convert.ToDecimal(SGST.Text) / 100) + (Convert.ToDecimal(CGST.Text) / 100) + (Convert.ToDecimal(IGST.Text) / 100)));
+            decimal NetAmt = Temp1 * (1 + ((Convert.ToDecimal(SGST.Text) / 100) + (Convert.ToDecimal(CGST.Text) / 100) + (Convert.ToDecimal(IGST.Text) / 100)));
 
 
-            Decimal NetAmtx = NetAmt * (1 - (Convert.ToDecimal(TextCashDiscRate.Text) / 100));
+            decimal NetAmtx = NetAmt * (1 - (Convert.ToDecimal(TextCashDiscRate.Text) / 100));
 
             TextProdAmount.Text = NetAmtx.ToString();
         }
@@ -866,8 +877,8 @@ namespace WindowsFormsApplication1
                         TextDoc_NO.Text = cmd.Parameters["@vPomNo"].Value.ToString();
                         if (IsUpdate)
                         {
-                            String Query = String.Format("delete from  PoData  where PodNo='{0}';", TextDoc_NO.Text);
-                            Query += String.Format("delete from  [dbo].[POTacData] WHERE [TacDataPo]='{0}';", TextDoc_NO.Text);
+                            string Query = string.Format("delete from  PoData  where PodNo='{0}';", TextDoc_NO.Text);
+                            Query += string.Format("delete from  [dbo].[POTacData] WHERE [TacDataPo]='{0}';", TextDoc_NO.Text);
                             cmd.Parameters.Clear();
                             cmd.CommandText = Query;
                             cmd.CommandType = CommandType.Text;
@@ -914,7 +925,7 @@ namespace WindowsFormsApplication1
                             {
                                 Dr["IndId"] = 0;
                             }
-                            cmd.Parameters.Add("@vPoIndId", SqlDbType.Int).Value = Int32.Parse(Dr["IndId"].ToString());
+                            cmd.Parameters.Add("@vPoIndId", SqlDbType.Int).Value = int.Parse(Dr["IndId"].ToString());
                             cmd.Parameters.Add("@vPoIndNo", SqlDbType.VarChar, 15).Value = Dr["IndNo"].ToString().PadLeft(5, '0');
                             cmd.Parameters.Add("@vPoIndDeptCode", SqlDbType.VarChar, 6).Value = Dr["DeptCode"].ToString();
                             cmd.Parameters.Add("@vPomID", SqlDbType.Float).Value = Math.Round(float.Parse(AutoId.ToString()));
@@ -970,7 +981,7 @@ namespace WindowsFormsApplication1
                         else
                         {
                             ProjectFunctions.SpeakError("Data Saved");
-                            this.Dispose();
+                            Dispose();
 
                         }
                     }
@@ -1102,7 +1113,9 @@ namespace WindowsFormsApplication1
             Errorflag = true;
             MyValidationProvider.Validate();
             if (MyValidationProvider.GetInvalidControls().Count > 0)
+            {
                 Errorflag = false;
+            }
 
             //if (TextDoc_NO.Text == "")
             //{
@@ -1171,9 +1184,13 @@ namespace WindowsFormsApplication1
 
 
             if (Errorflag && AuthenticateFlag)
+            {
                 Save.Enabled = true;
+            }
             else
+            {
                 Save.Enabled = false;
+            }
         }
 
         private void Pend_Po_Btn_Click(object sender, EventArgs e)
@@ -1209,10 +1226,13 @@ namespace WindowsFormsApplication1
         {
             CurrentControl = "Btn_Term";
             if (IsUpdate)
+            {
                 ShowHelpWindow("SELECT     TacMst.TacId, TacMst.TacDesc FROM         TacMst INNER JOIN POTacData ON TacMst.TacId = POTacData.TacId WHERE     (POTacData.TacDataPo = '13198001'); select * from TacMst");
+            }
             else
+            {
                 ShowHelpWindow("Select * from TacMst");
-
+            }
         }
 
         private void BtnCalc_Click(object sender, EventArgs e)
@@ -1239,7 +1259,7 @@ namespace WindowsFormsApplication1
                 else
                 {
 
-                    string query = String.Format("select BCode as Code, BName as Agent from brokermst where   BCode='{0}' ;", TextBroker.Text.Trim());
+                    string query = string.Format("select BCode as Code, BName as Agent from brokermst where   BCode='{0}' ;", TextBroker.Text.Trim());
 
                     DataSet ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
@@ -1299,7 +1319,9 @@ namespace WindowsFormsApplication1
                         {
                             DataRow Dr = EntryInfo_Grid.GetDataRow(i);
                             if (Dr["PrdCode"].ToString() == TextProdCode.Text && Dr["IndId"].ToString() == TextIndNo.Text)
+                            {
                                 _Sum += Convert.ToDecimal(Dr["Qnty"]);
+                            }
                         }
 
                         if (BtnOK.Text == "&Update")
@@ -1324,7 +1346,9 @@ namespace WindowsFormsApplication1
         private void TextProdQnty_Validating(object sender, CancelEventArgs e)
         {
             if (TextProdQnty.Text == string.Empty)
+            {
                 e.Cancel = true;
+            }
 
             TextProdRate.Focus();
         }

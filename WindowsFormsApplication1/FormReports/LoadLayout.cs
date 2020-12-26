@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.FormReports
         {
             try
             {
-                Address = String.Format(@"{0}\Layouts\{1}\{2}", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName);
+                Address = string.Format(@"{0}\Layouts\{1}\{2}", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName);
                 if (Directory.Exists(Address))
                 {
                     var df = new DirectoryInfo(Address);
@@ -52,11 +52,11 @@ namespace WindowsFormsApplication1.FormReports
                 {
                     if (FileName.EditValue.ToString().Contains(".xml"))
                     {
-                        Address = String.Format(@"{0}\Layouts\{1}\{2}\{3}", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName, FileName.EditValue);
+                        Address = string.Format(@"{0}\Layouts\{1}\{2}\{3}", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName, FileName.EditValue);
                     }
                     else
                     {
-                        Address = String.Format(@"{0}\Layouts\{1}\{2}\{3}.xml", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName, FileName.EditValue);
+                        Address = string.Format(@"{0}\Layouts\{1}\{2}\{3}.xml", GlobalVariables.LayoutLocation, GlobalVariables.CurrentUser, ReportName, FileName.EditValue);
                     }
                     PGC.RestoreLayoutFromXml(Address);
                     Hide();

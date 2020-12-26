@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmColors : DevExpress.XtraEditors.XtraForm
     {
-        public String S1 { get; set; }
-        public String COLSYSID { get; set; }
+        public string S1 { get; set; }
+        public string COLSYSID { get; set; }
         public frmColors()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FrmColors_Load(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
     }

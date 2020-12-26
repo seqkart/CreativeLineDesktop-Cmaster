@@ -6,8 +6,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmLedgerAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String LgrCode { get; set; }
+        public string s1 { get; set; }
+        public string LgrCode { get; set; }
         public frmLedgerAddEdit()
         {
             InitializeComponent();
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1
         }
         private string GetNewVehicleCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(LgrCode as int)),00000) from LgrMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -187,7 +187,7 @@ string.Empty;
                 {
                     if (ValidateData())
                     {
-                        String DocNo = getNewLoanPassNo().PadLeft(6, '0');
+                        string DocNo = getNewLoanPassNo().PadLeft(6, '0');
                         var str = "Insert into ExMst(ExDate,ExEmpCode,ExAmt,ExTag,ExDatePost,ExFedDate,ExNo";
                         str = str + ")values(";
                         str = str + "'" + Convert.ToDateTime(DtDate.Text).ToString("yyyy-MM-dd") + "',";

@@ -9,8 +9,8 @@ namespace WindowsFormsApplication1.Master
 
     public partial class frmMeasurementMapping : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String MCode { get; set; }
+        public string s1 { get; set; }
+        public string MCode { get; set; }
         public frmMeasurementMapping()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Master
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private bool ValidateData()
         {
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1.Master
                         //    ProjectFunctions.GetDataSet("Insert into Measurements(MCode,SZSYSID,Measurement)values('" + txtMCode.Text + "','" + dr["SZSYSID"].ToString() + "','" + dr["Measurement"].ToString() + "')");
                         //}
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -140,7 +140,7 @@ namespace WindowsFormsApplication1.Master
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
     }

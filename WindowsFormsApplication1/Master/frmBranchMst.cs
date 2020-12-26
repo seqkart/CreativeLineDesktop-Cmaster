@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmBranchMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String BranchCode { get; set; }
+        public string s1 { get; set; }
+        public string BranchCode { get; set; }
         public frmBranchMst()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void txtStateCode_EditValueChanged(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1.Master
 
         private void txtAccCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtAccName.Text = String.Empty;
+            txtAccName.Text = string.Empty;
         }
 
         private void SetMyControls()
@@ -111,7 +111,7 @@ namespace WindowsFormsApplication1.Master
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -250,7 +250,7 @@ namespace WindowsFormsApplication1.Master
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

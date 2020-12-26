@@ -8,10 +8,10 @@ namespace WindowsFormsApplication1
     public partial class frmLoanMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
-        public String Ms1yProperty { get; set; }
-        public String LoanNo { get; set; }
+        public string Ms1yProperty { get; set; }
+        public string LoanNo { get; set; }
         public DateTime LoanADate { get; set; }
-        public String s1 { get; set; }
+        public string s1 { get; set; }
 
         public frmLoanMstAddEdit()
         {
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
 
                     catch (Exception ex)

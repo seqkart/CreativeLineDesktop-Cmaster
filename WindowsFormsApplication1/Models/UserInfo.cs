@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Models
         string user_name;
         public string UserName
         {
-            get { return user_name; }
+            get => user_name;
             set
             {
                 if (user_name != value)
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Models
         string login_as;
         public string Login_As
         {
-            get { return login_as; }
+            get => login_as;
             set
             {
                 if (login_as != value)
@@ -36,7 +36,7 @@ namespace WindowsFormsApplication1.Models
         string user_active;
         public string UserActive
         {
-            get { return user_active; }
+            get => user_active;
             set
             {
                 if (user_active != value)
@@ -51,7 +51,9 @@ namespace WindowsFormsApplication1.Models
         protected void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)
+            {
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
 
     }

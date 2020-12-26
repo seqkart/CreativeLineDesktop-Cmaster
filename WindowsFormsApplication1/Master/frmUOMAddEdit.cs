@@ -8,8 +8,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmUOMAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String UomCode { get; set; }
+        public string s1 { get; set; }
+        public string UomCode { get; set; }
         public frmUOMAddEdit()
         {
             InitializeComponent();
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1
         }
         private string GetNewUnitCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(UomCode as int)),00000) from UomMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -84,7 +84,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

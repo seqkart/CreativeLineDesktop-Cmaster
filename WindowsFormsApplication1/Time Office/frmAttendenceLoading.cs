@@ -44,15 +44,15 @@ namespace WindowsFormsApplication1.Forms_Master
             //gridView_AttendanceData.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditForm;
             gridView_AttendanceData.OptionsBehavior.Editable = false;
 
-            dt.Columns.Add("MonthYear", typeof(String));
-            dt.Columns.Add("EmpCode", typeof(String));
-            dt.Columns.Add("EmpName", typeof(String));
-            dt.Columns.Add("EmpDW", typeof(Decimal));
-            dt.Columns.Add("EmpPH", typeof(Decimal));
-            dt.Columns.Add("EmpEL", typeof(Decimal));
-            dt.Columns.Add("EmpCL", typeof(Decimal));
-            dt.Columns.Add("EmpSL", typeof(Decimal));
-            dt.Columns.Add("EmpPymtMode", typeof(String));
+            dt.Columns.Add("MonthYear", typeof(string));
+            dt.Columns.Add("EmpCode", typeof(string));
+            dt.Columns.Add("EmpName", typeof(string));
+            dt.Columns.Add("EmpDW", typeof(decimal));
+            dt.Columns.Add("EmpPH", typeof(decimal));
+            dt.Columns.Add("EmpEL", typeof(decimal));
+            dt.Columns.Add("EmpCL", typeof(decimal));
+            dt.Columns.Add("EmpSL", typeof(decimal));
+            dt.Columns.Add("EmpPymtMode", typeof(string));
 
 
 
@@ -436,7 +436,7 @@ namespace WindowsFormsApplication1.Forms_Master
                         //LastInstlmnt();
                         //txtLoanAmount.Focus();
                         // btnLoad_Data.Focus();
-                        btnLoad_Data_Click(sender, (EventArgs)e);
+                        btnLoad_Data_Click(sender, e);
                     }
                     else
                     {

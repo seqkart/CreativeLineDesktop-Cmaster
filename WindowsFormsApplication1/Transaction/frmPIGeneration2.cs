@@ -15,27 +15,27 @@ namespace WindowsFormsApplication1.Transaction
 
 
         DataTable dt = new DataTable();
-        public String s1 { get; set; }
-        public String DocNo { get; set; }
+        public string s1 { get; set; }
+        public string DocNo { get; set; }
         public DateTime DocDate { get; set; }
         public frmPIGeneration2()
         {
             InitializeComponent();
 
-            dt.Columns.Add("ARTNO", typeof(String));
-            dt.Columns.Add("ARTALIAS", typeof(String));
-            dt.Columns.Add("VARIANTART", typeof(String));
-            dt.Columns.Add("ARTMRP", typeof(String));
-            dt.Columns.Add("SIZE", typeof(String));
-            dt.Columns.Add("COLOR", typeof(String));
-            dt.Columns.Add("COLSYSID", typeof(String));
-            dt.Columns.Add("SZSYSID", typeof(String));
-            dt.Columns.Add("ARTSYSID", typeof(String));
-            dt.Columns.Add("GrpDesc", typeof(String));
-            dt.Columns.Add("GrpSubDesc", typeof(String));
-            dt.Columns.Add("GrpHSNCode", typeof(String));
-            dt.Columns.Add("EANNo", typeof(String));
-            dt.Columns.Add("PIQty", typeof(String));
+            dt.Columns.Add("ARTNO", typeof(string));
+            dt.Columns.Add("ARTALIAS", typeof(string));
+            dt.Columns.Add("VARIANTART", typeof(string));
+            dt.Columns.Add("ARTMRP", typeof(string));
+            dt.Columns.Add("SIZE", typeof(string));
+            dt.Columns.Add("COLOR", typeof(string));
+            dt.Columns.Add("COLSYSID", typeof(string));
+            dt.Columns.Add("SZSYSID", typeof(string));
+            dt.Columns.Add("ARTSYSID", typeof(string));
+            dt.Columns.Add("GrpDesc", typeof(string));
+            dt.Columns.Add("GrpSubDesc", typeof(string));
+            dt.Columns.Add("GrpHSNCode", typeof(string));
+            dt.Columns.Add("EANNo", typeof(string));
+            dt.Columns.Add("PIQty", typeof(string));
 
 
         }
@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private string GetNewInvoiceDocumentNo()
         {
@@ -238,7 +238,7 @@ namespace WindowsFormsApplication1.Transaction
                         else
                         {
                             SplashScreenManager.CloseForm(false);
-                            this.Close();
+                            Close();
                         }
 
                     }

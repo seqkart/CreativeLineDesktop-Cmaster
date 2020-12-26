@@ -1,5 +1,4 @@
 ﻿using SeqKartLibrary;
-using System;
 using System.Windows.Forms;
 
 public class MainFormButtons
@@ -10,7 +9,7 @@ public class MainFormButtons
         ToolStripButton btnDelete = null,
         ToolStripButton btnPrint = null)
     {
-        string Query4Controls = String.Format("SELECT     ProgAdd_F, ProgUpd_F, ProgDel_F, ProgRep_p, ProgRep_p,ProgSpl_U FROM         UserProgAccess WHERE     (ProgActive is Null or progActive= 'Y') AND (ProgCode = N'" + ProgCode + "') AND (UserName = N'{0}'); ", CurrentUser);
+        string Query4Controls = string.Format("SELECT     ProgAdd_F, ProgUpd_F, ProgDel_F, ProgRep_p, ProgRep_p,ProgSpl_U FROM         UserProgAccess WHERE     (ProgActive is Null or progActive= 'Y') AND (ProgCode = N'" + ProgCode + "') AND (UserName = N'{0}'); ", CurrentUser);
 
         using (var Tempds = ProjectFunctionsUtils.GetDataSet(Query4Controls))
         {

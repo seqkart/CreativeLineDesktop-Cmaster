@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmWorkerMaster : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String WRKSYSID { get; set; }
+        public string s1 { get; set; }
+        public string WRKSYSID { get; set; }
         public frmWorkerMaster()
         {
             InitializeComponent();
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
@@ -117,7 +117,7 @@ namespace WindowsFormsApplication1
 
         private void TxtContractorCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtContractorDesc.Text = String.Empty;
+            txtContractorDesc.Text = string.Empty;
         }
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -206,7 +206,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 

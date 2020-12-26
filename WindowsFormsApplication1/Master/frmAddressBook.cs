@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmAddressBook : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String AddressBookCode { get; set; }
+        public string s1 { get; set; }
+        public string AddressBookCode { get; set; }
         public frmAddressBook()
         {
             InitializeComponent();
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
@@ -170,13 +170,13 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
         private void TxtGroupCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtGroupDesc.Text = String.Empty;
+            txtGroupDesc.Text = string.Empty;
         }
 
         private void TxtGroupCode_KeyDown(object sender, KeyEventArgs e)
@@ -279,7 +279,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -299,9 +299,9 @@ namespace WindowsFormsApplication1
 
         private void TxtCityCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtCityName.Text = String.Empty;
-            txtState.Text = String.Empty;
-            txtCountry.Text = String.Empty;
+            txtCityName.Text = string.Empty;
+            txtState.Text = string.Empty;
+            txtCountry.Text = string.Empty;
         }
 
         private void TxtCityCode_KeyDown(object sender, KeyEventArgs e)

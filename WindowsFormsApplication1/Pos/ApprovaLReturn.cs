@@ -11,36 +11,36 @@ namespace WindowsFormsApplication1.Transaction.Pos
 {
     public partial class ApprovaLReturn : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public string s1 { get; set; }
         DataTable dt = new DataTable();
-        public String ImNo { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
-        public String ImSeries { get; set; }
+        public string ImSeries { get; set; }
         public ApprovaLReturn()
         {
 
             InitializeComponent();
-            dt.Columns.Add("SIDBARCODE", typeof(String));
-            dt.Columns.Add("SIDARTNO", typeof(String));
-            dt.Columns.Add("SIDARTDESC", typeof(String));
-            dt.Columns.Add("SIDCOLN", typeof(String));
-            dt.Columns.Add("SIDSIZN", typeof(String));
-            dt.Columns.Add("SIDSCANQTY", typeof(Decimal));
-            dt.Columns.Add("SIDARTMRP", typeof(Decimal));
-            dt.Columns.Add("SIDARTWSP", typeof(Decimal));
+            dt.Columns.Add("SIDBARCODE", typeof(string));
+            dt.Columns.Add("SIDARTNO", typeof(string));
+            dt.Columns.Add("SIDARTDESC", typeof(string));
+            dt.Columns.Add("SIDCOLN", typeof(string));
+            dt.Columns.Add("SIDSIZN", typeof(string));
+            dt.Columns.Add("SIDSCANQTY", typeof(decimal));
+            dt.Columns.Add("SIDARTMRP", typeof(decimal));
+            dt.Columns.Add("SIDARTWSP", typeof(decimal));
 
-            dt.Columns.Add("SIDBOXQTY", typeof(Decimal));
+            dt.Columns.Add("SIDBOXQTY", typeof(decimal));
 
-            dt.Columns.Add("SIDARTID", typeof(String));
-            dt.Columns.Add("SIDCOLID", typeof(String));
-            dt.Columns.Add("SIDSIZID", typeof(String));
+            dt.Columns.Add("SIDARTID", typeof(string));
+            dt.Columns.Add("SIDCOLID", typeof(string));
+            dt.Columns.Add("SIDSIZID", typeof(string));
         }
 
         private void TxtCustMobileNo_EditValueChanged(object sender, EventArgs e)
         {
-            txtCustCode.Text = String.Empty;
-            txtCustDetails.Text = String.Empty;
-            txtCustName.Text = String.Empty;
+            txtCustCode.Text = string.Empty;
+            txtCustDetails.Text = string.Empty;
+            txtCustName.Text = string.Empty;
         }
 
         private void TxtCustMobileNo_KeyDown(object sender, KeyEventArgs e)
@@ -166,7 +166,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                     {
                         if (s1 == "&Add")
                         {
-                            String BillNo = String.Empty;
+                            string BillNo = string.Empty;
 
                             BillNo = ProjectFunctions.GetDataSet("select isnull(max(SIMNO),0)+1 from SALEINVMAIN where SIMSERIES='AR' And SIMFNYR='" + GlobalVariables.FinancialYear + "'And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                             txtReturnNo.Text = BillNo;
@@ -250,7 +250,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         ProjectFunctions.SpeakError("Approval Return Saved Successfully");
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
@@ -300,7 +300,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void TxtBarCode_KeyDown(object sender, KeyEventArgs e)
@@ -405,7 +405,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                     {
                         InfoGrid.DataSource = null;
                     }
-                    txtBarCode.Text = String.Empty;
+                    txtBarCode.Text = string.Empty;
                     txtBarCode.Focus();
                 }
             }
@@ -415,7 +415,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
             e.Handled = true;
         }
-        private void ShowImage(String ArticleID)
+        private void ShowImage(string ArticleID)
         {
             try
 
@@ -423,8 +423,8 @@ namespace WindowsFormsApplication1.Transaction.Pos
                 DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
                 if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
                 {
-                    Byte[] MyData = new byte[0];
-                    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
+                    byte[] MyData = new byte[0];
+                    MyData = (byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
                     MemoryStream stream = new MemoryStream(MyData)
                     {
                         Position = 0

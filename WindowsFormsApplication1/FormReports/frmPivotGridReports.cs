@@ -10,14 +10,14 @@ namespace WindowsFormsApplication1.FormReports
     public partial class frmPivotGridReports : DevExpress.XtraEditors.XtraForm
     {
 
-        public String CurrentUser { get; set; }
+        public string CurrentUser { get; set; }
 
         RangeSelector _RangeSelector = new RangeSelector() { StartDate = GlobalVariables.FinYearStartDate, EndDate = GlobalVariables.FinYearEndDate };
         private LoadLayout _LoadLayout;
         private ReportFormatName _RepLayout;
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public String LayoutName = string.Empty;
+        public string LayoutName = string.Empty;
         CheckEdit ch = new CheckEdit();
 
         public frmPivotGridReports()
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1.FormReports
                 e.Menu.Items.Add(new DXMenuItem("Close", (o1, e1) =>
                 {
 
-                    this.Close();
+                    Close();
                 }));
             }
             catch (Exception ex)
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication1.FormReports
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void HelpGrid_Click(object sender, EventArgs e)

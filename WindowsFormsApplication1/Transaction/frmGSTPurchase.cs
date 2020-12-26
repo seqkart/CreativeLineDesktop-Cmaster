@@ -15,39 +15,39 @@ namespace WindowsFormsApplication1.Transaction
     {
         DataSet dsPopUps = new DataSet();
         int RowIndex = 0;
-        String UpdateTag = "N";
-        public String s1 { get; set; }
+        string UpdateTag = "N";
+        public string s1 { get; set; }
         DataTable dt = new DataTable();
 
-        public String ImNo { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
-        public String ImSeries { get; set; }
+        public string ImSeries { get; set; }
 
         public frmGSTPurchase()
         {
             InitializeComponent();
-            dt.Columns.Add("SIDPRDCODE", typeof(String));
-            dt.Columns.Add("SIDPRDNAME", typeof(String));
-            dt.Columns.Add("SIDARTNO", typeof(String));
-            dt.Columns.Add("SIDARTDESC", typeof(String));
-            dt.Columns.Add("SIDCOLN", typeof(String));
-            dt.Columns.Add("SIDSIZN", typeof(String));
-            dt.Columns.Add("SIDITMRATE", typeof(Decimal));
-            dt.Columns.Add("SIDITMDISCPRCN", typeof(Decimal));
-            dt.Columns.Add("SIDITMDISCAMT", typeof(Decimal));
-            dt.Columns.Add("SIDITMNETAMT", typeof(Decimal));
-            dt.Columns.Add("SIDARTID", typeof(String));
-            dt.Columns.Add("SIDCOLID", typeof(String));
-            dt.Columns.Add("SIDSIZID", typeof(String));
-            dt.Columns.Add("SIDQTY", typeof(String));
-            dt.Columns.Add("SIDSGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDCGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDIGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDCGSTPER", typeof(Decimal));
-            dt.Columns.Add("SIDSGSTPER", typeof(Decimal));
-            dt.Columns.Add("SIDIGSTPER", typeof(Decimal));
-            dt.Columns.Add("TAXCODE", typeof(String));
-            dt.Columns.Add("GRPHSNCODE", typeof(String));
+            dt.Columns.Add("SIDPRDCODE", typeof(string));
+            dt.Columns.Add("SIDPRDNAME", typeof(string));
+            dt.Columns.Add("SIDARTNO", typeof(string));
+            dt.Columns.Add("SIDARTDESC", typeof(string));
+            dt.Columns.Add("SIDCOLN", typeof(string));
+            dt.Columns.Add("SIDSIZN", typeof(string));
+            dt.Columns.Add("SIDITMRATE", typeof(decimal));
+            dt.Columns.Add("SIDITMDISCPRCN", typeof(decimal));
+            dt.Columns.Add("SIDITMDISCAMT", typeof(decimal));
+            dt.Columns.Add("SIDITMNETAMT", typeof(decimal));
+            dt.Columns.Add("SIDARTID", typeof(string));
+            dt.Columns.Add("SIDCOLID", typeof(string));
+            dt.Columns.Add("SIDSIZID", typeof(string));
+            dt.Columns.Add("SIDQTY", typeof(string));
+            dt.Columns.Add("SIDSGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDCGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDIGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDCGSTPER", typeof(decimal));
+            dt.Columns.Add("SIDSGSTPER", typeof(decimal));
+            dt.Columns.Add("SIDIGSTPER", typeof(decimal));
+            dt.Columns.Add("TAXCODE", typeof(string));
+            dt.Columns.Add("GRPHSNCODE", typeof(string));
 
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
         }
@@ -61,11 +61,11 @@ namespace WindowsFormsApplication1.Transaction
                 InfoGridView.UpdateCurrentRow();
             }));
             DataSet ds = new DataSet();
-            Decimal SumDiscAmount = 0;
-            Decimal SumValueOfGoods = 0;
-            Decimal SumCGSTAmount = 0;
-            Decimal SumSGSTAmount = 0;
-            Decimal SumIGSTAmount = 0;
+            decimal SumDiscAmount = 0;
+            decimal SumValueOfGoods = 0;
+            decimal SumCGSTAmount = 0;
+            decimal SumSGSTAmount = 0;
+            decimal SumIGSTAmount = 0;
             foreach (DataRow dr in dt.Rows)
             {
 
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1.Transaction
 
             txtTotalTaxAmount.Text = (SumCGSTAmount + SumSGSTAmount + SumIGSTAmount).ToString("0.00");
             txtValueOfGoods.Text = SumValueOfGoods.ToString("0.00");
-            Decimal NetAmount = 0;
+            decimal NetAmount = 0;
             NetAmount = (SumValueOfGoods + SumCGSTAmount + SumSGSTAmount + SumIGSTAmount);
             txtRNetAmount.Text = Math.Round(NetAmount, 0).ToString("0.00");
             txtRoundOffAmount.Text = (Convert.ToDecimal(txtRNetAmount.Text) - NetAmount).ToString("0.00");
@@ -87,14 +87,14 @@ namespace WindowsFormsApplication1.Transaction
 
         private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDebitPartyName.Text = String.Empty;
-            txtBillingAddress1.Text = String.Empty;
-            txtBillingAddress2.Text = String.Empty;
-            txtBillingAddress3.Text = String.Empty;
-            txtBillingState.Text = String.Empty;
-            txtBillingCity.Text = String.Empty;
-            txtBillingZip.Text = String.Empty;
-            txtGSTNo.Text = String.Empty;
+            txtDebitPartyName.Text = string.Empty;
+            txtBillingAddress1.Text = string.Empty;
+            txtBillingAddress2.Text = string.Empty;
+            txtBillingAddress3.Text = string.Empty;
+            txtBillingState.Text = string.Empty;
+            txtBillingCity.Text = string.Empty;
+            txtBillingZip.Text = string.Empty;
+            txtGSTNo.Text = string.Empty;
         }
 
 
@@ -220,7 +220,7 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGridView.Focus();
                     InfoGridView.MoveLast();
                     InfoGridView.FocusedColumn = InfoGridView.Columns["SIDARTNO"];
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
                     calculation();
                 }
                 if (HelpGrid.Text == "SIDARTNO")
@@ -257,7 +257,7 @@ namespace WindowsFormsApplication1.Transaction
                     panelControl1.Visible = false;
                     InfoGridView.FocusedColumn = InfoGridView.Columns["SIDCOLN"];
                     InfoGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
                     dt.AcceptChanges();
                 }
 
@@ -274,7 +274,7 @@ namespace WindowsFormsApplication1.Transaction
                     panelControl1.Visible = false;
                     InfoGridView.FocusedColumn = InfoGridView.Columns["SIDSIZN"];
                     InfoGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
                     dt.AcceptChanges();
                 }
                 if (HelpGrid.Text == "SIDSIZN")
@@ -287,7 +287,7 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGridView.Focus();
                     InfoGridView.FocusedColumn = InfoGridView.Columns["SIDQTY"];
                     InfoGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = String.Empty;
+                    txtSearchBox.Text = string.Empty;
                     dt.AcceptChanges();
                     InfoGridView.ShowEditor();
                 }
@@ -318,7 +318,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void txtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtTransporterName.Text = String.Empty;
+            txtTransporterName.Text = string.Empty;
         }
 
         private void txtTransporterCode_KeyDown(object sender, KeyEventArgs e)
@@ -689,7 +689,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         ProjectFunctions.SpeakError(" Purchase Saved Successfully");
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                 }
             }
@@ -1097,7 +1097,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void InfoGridView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -1111,7 +1111,7 @@ namespace WindowsFormsApplication1.Transaction
                         InfoGridView.CloseEditor();
                         InfoGridView.UpdateCurrentRow();
 
-                        String LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
+                        string LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
                         DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
                         var str = "Exec [sp_LoadTaxMstFPurchase] @PrdCode='" + currentrow["SIDARTID"].ToString() + "',";
                         str = str + "@LCTag='" + LCTag + "'";
@@ -1153,7 +1153,7 @@ namespace WindowsFormsApplication1.Transaction
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
                 {
                     sqlcon.Open();
-                    String str = string.Empty;
+                    string str = string.Empty;
 
                     str = "insert into ImagesData(DocType,DocNo,DocDate,DocImage) values(@DocType,@DocNo,@DocDate,@DocImage)";
                     var sqlcom = new SqlCommand(str, sqlcon);
@@ -1203,8 +1203,8 @@ namespace WindowsFormsApplication1.Transaction
             DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
             if (ds.Tables[0].Rows.Count > 0)
             {
-                Byte[] MyData = new byte[0];
-                MyData = (Byte[])ds.Tables[0].Rows[0]["DocImage"];
+                byte[] MyData = new byte[0];
+                MyData = (byte[])ds.Tables[0].Rows[0]["DocImage"];
                 MemoryStream stream = new MemoryStream(MyData)
                 {
                     Position = 0

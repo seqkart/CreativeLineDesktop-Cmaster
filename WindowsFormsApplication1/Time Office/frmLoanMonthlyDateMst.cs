@@ -84,7 +84,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
         private void fillGrid()
         {
-            String sql = String.Format("SELECT        LoanMonthlyData.MonthYear, LoanMonthlyData.EmpCode, EmpMST.EmpName, EmpMST.EmpFHName, LoanMonthlyData.LoanInstlmnt, LoanMonthlyData.TransID FROM            LoanMonthlyData INNER JOIN EmpMST ON LoanMonthlyData.EmpCode = EmpMST.EmpCode where MonthYear = '{0}{1}'", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
+            string sql = string.Format("SELECT        LoanMonthlyData.MonthYear, LoanMonthlyData.EmpCode, EmpMST.EmpName, EmpMST.EmpFHName, LoanMonthlyData.LoanInstlmnt, LoanMonthlyData.TransID FROM            LoanMonthlyData INNER JOIN EmpMST ON LoanMonthlyData.EmpCode = EmpMST.EmpCode where MonthYear = '{0}{1}'", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
             DataSet ds = ProjectFunctions.GetDataSet(sql);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void Btn_RefreshRateL_Click(object sender, EventArgs e)

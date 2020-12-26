@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Linq;
 using System.Data;
-using System.Data.Sql;
 namespace WindowsFormsApplication1.Master
 {
     public partial class frmSizeMapping : DevExpress.XtraEditors.XtraForm
@@ -13,7 +11,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void frmSizeMapping_Load(object sender, EventArgs e)
@@ -87,7 +85,7 @@ namespace WindowsFormsApplication1.Master
                 }
             }
 
-            this.Close();
+            Close();
         }
     }
 }

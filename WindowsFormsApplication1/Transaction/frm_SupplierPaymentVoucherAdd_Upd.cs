@@ -72,11 +72,11 @@ namespace WindowsFormsApplication1
 
                 Record.Columns.Add("AcName", typeof(string));
                 Record.Columns.Add("Method", typeof(string));
-                Record.Columns.Add("RefPayment", typeof(Decimal));
+                Record.Columns.Add("RefPayment", typeof(decimal));
                 Record.Columns.Add("BillRefNo", typeof(string));
                 Record.Columns.Add("BillRefDate", typeof(DateTime));
-                Record.Columns.Add("BillRefAmount", typeof(Decimal));
-                Record.Columns.Add("BillRefBalance", typeof(Decimal));
+                Record.Columns.Add("BillRefAmount", typeof(decimal));
+                Record.Columns.Add("BillRefBalance", typeof(decimal));
                 Record.Columns.Add("MmBillPassID", typeof(string));
                 Record.Columns.Add("MmDocNo", typeof(string));
                 Record.Columns.Add("MmDocDate", typeof(DateTime));
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                using (var ds = ProjectFunctions.GetDataSet(String.Format("SP_GETDATA4Party2PAyMENT '{0}', '{1}', '{2:yyyy-MM-dd}'", VoucherNo, VoucherType, VoucherDate)))
+                using (var ds = ProjectFunctions.GetDataSet(string.Format("SP_GETDATA4Party2PAyMENT '{0}', '{1}', '{2:yyyy-MM-dd}'", VoucherNo, VoucherType, VoucherDate)))
                 {
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -179,7 +179,7 @@ namespace WindowsFormsApplication1
                 if (!isupdate)
                 {
                     Error.Dispose();
-                    var query = String.Format("select dbo.DoPadd((SELECT     isnull(max(cast(VumNo as int)),0) as 'Value' FROM VuMst WHERE     (VumType <> 'SL') and (VumType <> 'SR')and VumDate='{0}')+1) as Value;", DtVoucher.DateTime.ToString("yyyy-MM-dd"));
+                    var query = string.Format("select dbo.DoPadd((SELECT     isnull(max(cast(VumNo as int)),0) as 'Value' FROM VuMst WHERE     (VumType <> 'SL') and (VumType <> 'SR')and VumDate='{0}')+1) as Value;", DtVoucher.DateTime.ToString("yyyy-MM-dd"));
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -211,7 +211,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("SELECT  [VouCode],[VouDesc]  FROM  [VoucherType]  where (VouCode in ('JL','BP','DN','CP')) AND VouCode='{0}' Order By VouCode;", TextVoucherType.Text);
+                        var query = string.Format("SELECT  [VouCode],[VouDesc]  FROM  [VoucherType]  where (VouCode in ('JL','BP','DN','CP')) AND VouCode='{0}' Order By VouCode;", TextVoucherType.Text);
                         var ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -520,7 +520,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("SELECT [Type],[Description] FROM  [TempTable] where Id='IT' and [Type]='{0}'  order by [Type] ;", TextInstrumentType.Text.Trim());
+                        var query = string.Format("SELECT [Type],[Description] FROM  [TempTable] where Id='IT' and [Type]='{0}'  order by [Type] ;", TextInstrumentType.Text.Trim());
                         var ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -569,7 +569,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        var query = String.Format("Select [AccName],[AccCode],[CurBal]  FROM [dbo].[V_PartyWithCurBal] where  [AccCode]={0} ;", TextDebitAc.Text.Trim());
+                        var query = string.Format("Select [AccName],[AccCode],[CurBal]  FROM [dbo].[V_PartyWithCurBal] where  [AccCode]={0} ;", TextDebitAc.Text.Trim());
                         var ds = ProjectFunctions.GetDataSet(query);
                         if (ds.Tables[0].Rows.Count > 0)
                         {
@@ -622,7 +622,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        using (var ds = ProjectFunctions.GetDataSet(String.Format("SELECT [Type],[Description] FROM  [TempTable] where Id='PM' and [TYPE]='{0}';", TextPaymentMethod.Text.Trim())))
+                        using (var ds = ProjectFunctions.GetDataSet(string.Format("SELECT [Type],[Description] FROM  [TempTable] where Id='PM' and [TYPE]='{0}';", TextPaymentMethod.Text.Trim())))
                         {
                             if (ds.Tables[0].Rows.Count > 0)
                             {
@@ -664,11 +664,11 @@ namespace WindowsFormsApplication1
                         Query += "  BilltoPass.MmRDocNetAmt - ISNULL(BilltoPass.MmDNAmt, 0) - ISNULL(BilltoPass.MmJLAmt, 0) - ISNULL(BilltoPass.MmPymtAmt, 0)  AS mmBillBalAmt ";
                         Query += "FROM         BilltoPass INNER JOIN ";
                         Query += "ActMst ON BilltoPass.MmPartyCode = ActMst.AccCode ";
-                        Query += String.Format("WHERE   BilltoPass.MmPassedAmt is not null and   (BilltoPass.MmDocDate >= CONVERT(DATETIME, '2015-04-01', 102)) AND (BilltoPass.MmPartyCode = N'{0}') AND ", TextDebitAc.Text);
+                        Query += string.Format("WHERE   BilltoPass.MmPassedAmt is not null and   (BilltoPass.MmDocDate >= CONVERT(DATETIME, '2015-04-01', 102)) AND (BilltoPass.MmPartyCode = N'{0}') AND ", TextDebitAc.Text);
                         Query += "(BilltoPass.MmRDocNetAmt - ISNULL(BilltoPass.MmDNAmt, 0) - ISNULL(BilltoPass.MmJLAmt, 0) - ISNULL(BilltoPass.MmPymtAmt, 0) > 0) ";
                         if (BtnOk.Text != "&Ok")
                         {
-                            Query += String.Format(" Or ((MmDocDate>'20140101') And (BilltoPass.MmRDocNo='{0}'))", TextBill_Ref_No.Text);
+                            Query += string.Format(" Or ((MmDocDate>'20140101') And (BilltoPass.MmRDocNo='{0}'))", TextBill_Ref_No.Text);
                         }
                         Query += " ORDER BY MMDOCDATE;";
                         if (TextBill_Ref_No.Text.Trim().Length == 0)
@@ -682,7 +682,7 @@ namespace WindowsFormsApplication1
                             query += "  BilltoPass.MmRDocNetAmt - ISNULL(BilltoPass.MmDNAmt, 0) - ISNULL(BilltoPass.MmJLAmt, 0) - ISNULL(BilltoPass.MmPymtAmt, 0)  AS mmBillBalAmt ";
                             query += "FROM         BilltoPass INNER JOIN ";
                             query += "ActMst ON BilltoPass.MmPartyCode = ActMst.AccCode ";
-                            query += String.Format("WHERE  BilltoPass.MmPassedAmt is not null AND (BilltoPass.MmPartyCode = N'{1}') and    (BilltoPass.MmDocDate >= CONVERT(DATETIME, '" + GlobalVariables.FinYearStartDate.ToString("yyyy-MM-dd") + "', 102)) AND  BilltoPass.MmRDocNo='{0}' ;", TextBill_Ref_No.Text.Trim(), TextDebitAc.Text);
+                            query += string.Format("WHERE  BilltoPass.MmPassedAmt is not null AND (BilltoPass.MmPartyCode = N'{1}') and    (BilltoPass.MmDocDate >= CONVERT(DATETIME, '" + GlobalVariables.FinYearStartDate.ToString("yyyy-MM-dd") + "', 102)) AND  BilltoPass.MmRDocNo='{0}' ;", TextBill_Ref_No.Text.Trim(), TextDebitAc.Text);
 
                             var ds = ProjectFunctions.GetDataSet(query);
                             if (ds.Tables[0].Rows.Count > 0)
@@ -984,7 +984,7 @@ namespace WindowsFormsApplication1
             var MultorNo = string.Empty;
             foreach (DataRow RowRecord in (EntryInfo_GridCtrl.DataSource as DataTable).Rows)
             {
-                MultorNo += String.Format("{0},", RowRecord["BillRefNo"]);
+                MultorNo += string.Format("{0},", RowRecord["BillRefNo"]);
             }
             var ki = MultorNo.LastIndexOf(',');
             MultorNo = MultorNo.Substring(0, ki);
@@ -993,16 +993,16 @@ namespace WindowsFormsApplication1
             switch (TextInstrumentType.Text)
             {
                 case "RTGS":
-                    Narration = String.Format("AMT. OF RTGS TFD. {0} To {1}", ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")), TextDebitAcName.Text);
+                    Narration = string.Format("AMT. OF RTGS TFD. {0} To {1}", ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")), TextDebitAcName.Text);
                     break;
                 case "NEFT":
-                    Narration = String.Format("AMT. OF NEFT TFD. {0} To {1}", ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")), TextDebitAcName.Text);
+                    Narration = string.Format("AMT. OF NEFT TFD. {0} To {1}", ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")), TextDebitAcName.Text);
                     break;
                 case "CH":
-                    Narration = (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? String.Format(" Ch. NO {0} IN FAV. OF {1} AGST Bills {2} {3}", TextInstrumentNo.Text, TextDebitAcName.Text, (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo), TextVouchNarration.Text) : TextVouchNarration.Text;
+                    Narration = (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? string.Format(" Ch. NO {0} IN FAV. OF {1} AGST Bills {2} {3}", TextInstrumentNo.Text, TextDebitAcName.Text, (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo), TextVouchNarration.Text) : TextVouchNarration.Text;
                     break;
                 case "OTH":
-                    Narration = String.Format("AMT. OF BANK TFD. {0} To {1}", ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")), TextDebitAcName.Text);
+                    Narration = string.Format("AMT. OF BANK TFD. {0} To {1}", ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")), TextDebitAcName.Text);
                     break;
                 default:
                     Narration = TextVouchNarration.Text;
@@ -1017,16 +1017,16 @@ namespace WindowsFormsApplication1
             switch (TextInstrumentType.Text)
             {
                 case "RTGS":
-                    Narration = String.Format("AMT. OF RTGS TFD. FROM {0} {1}", TextCreditAcName.Text, ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")));
+                    Narration = string.Format("AMT. OF RTGS TFD. FROM {0} {1}", TextCreditAcName.Text, ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")));
                     break;
                 case "NEFT":
-                    Narration = String.Format("AMT. OF NEFT TFD. FROM {0} {1}", TextCreditAcName.Text, ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")));
+                    Narration = string.Format("AMT. OF NEFT TFD. FROM {0} {1}", TextCreditAcName.Text, ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")));
                     break;
                 case "CH":
-                    Narration = (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? String.Format(" Ch. NO {0}  AGST Bills {2} {3}", TextInstrumentNo.Text, TextDebitAcName.Text, (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo), string.Empty) : string.Empty;
+                    Narration = (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? string.Format(" Ch. NO {0}  AGST Bills {2} {3}", TextInstrumentNo.Text, TextDebitAcName.Text, (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo), string.Empty) : string.Empty;
                     break;
                 case "OTH":
-                    Narration = String.Format("AMT. OF BANK TFD. FROM {0} {1}", TextCreditAcName.Text, ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")));
+                    Narration = string.Format("AMT. OF BANK TFD. FROM {0} {1}", TextCreditAcName.Text, ((EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"].ToString() == "Ref. Payment" ? (" AGST Bills " + (MultorNo.EndsWith(",") ? MultorNo.Remove(MultorNo.Length - 1) : MultorNo)) : (" ")));
                     break;
                 default:
                     Narration = TextVouchNarration.Text;
@@ -1127,7 +1127,7 @@ namespace WindowsFormsApplication1
 
                             foreach (DataRow RowRecord in (EntryInfo_GridCtrl.DataSource as DataTable).Rows)
                             {
-                                MultorNo += String.Format("{0},", RowRecord["BillRefNo"]);
+                                MultorNo += string.Format("{0},", RowRecord["BillRefNo"]);
                             }
                             using (var con = new SqlConnection(ProjectFunctions.ConnectionString))
                             {
@@ -1171,25 +1171,25 @@ namespace WindowsFormsApplication1
                                         if (isupdate)
                                         {
                                             query += " UPDATE  [vuData]";
-                                            query += String.Format(" SET       [VutDate] = '{0}' ", DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"));
-                                            query += String.Format(" ,[VutNo] = '{0}' ", TextVoucherNo.Text);
-                                            query += String.Format(" ,[VutType] = '{0}' ", TextVoucherType.Text);
-                                            query += String.Format(" ,[VutACode] = '{0}' ", BnkChgsCode);
-                                            query += String.Format(" ,[VutAmt] = '{0}' ", Convert.ToDecimal(TextBnkChgs.EditValue));
+                                            query += string.Format(" SET       [VutDate] = '{0}' ", DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"));
+                                            query += string.Format(" ,[VutNo] = '{0}' ", TextVoucherNo.Text);
+                                            query += string.Format(" ,[VutType] = '{0}' ", TextVoucherType.Text);
+                                            query += string.Format(" ,[VutACode] = '{0}' ", BnkChgsCode);
+                                            query += string.Format(" ,[VutAmt] = '{0}' ", Convert.ToDecimal(TextBnkChgs.EditValue));
                                             query += " ,[VutCrDr] = 'D' ";
-                                            query += String.Format(" ,[VutNart] = 'TO {0}' ", TextVouchNarration.Text.StartsWith("BY") ? TextVouchNarration.Text.Remove(0, 2) : TextVouchNarration.Text);
-                                            query += String.Format(" ,[VutRefType] ='{0}' ", (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"]);
-                                            query += String.Format(" ,[VutUserID] = '{0}' ", GlobalVariables.CurrentUser);
-                                            query += String.Format(",[VutFDt] = '{0}'", DateTime.Now.Date.ToString("yyyy-MM-dd"));
-                                            query += String.Format(" ,[VutFYear] = '{0}' ", ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
-                                            query += String.Format(" ,[VutFrmId] = '{0}' ", Name);
+                                            query += string.Format(" ,[VutNart] = 'TO {0}' ", TextVouchNarration.Text.StartsWith("BY") ? TextVouchNarration.Text.Remove(0, 2) : TextVouchNarration.Text);
+                                            query += string.Format(" ,[VutRefType] ='{0}' ", (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"]);
+                                            query += string.Format(" ,[VutUserID] = '{0}' ", GlobalVariables.CurrentUser);
+                                            query += string.Format(",[VutFDt] = '{0}'", DateTime.Now.Date.ToString("yyyy-MM-dd"));
+                                            query += string.Format(" ,[VutFYear] = '{0}' ", ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
+                                            query += string.Format(" ,[VutFrmId] = '{0}' ", Name);
 
-                                            query += String.Format(" WHERE [VutDate] = '{1}' and [VutType]='{2}' and VutNo='{3}' and ([VutACode]='{0}'); ", BnkChgsCode, DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"), TextVoucherType.Text, TextVoucherNo.Text);
+                                            query += string.Format(" WHERE [VutDate] = '{1}' and [VutType]='{2}' and VutNo='{3}' and ([VutACode]='{0}'); ", BnkChgsCode, DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"), TextVoucherType.Text, TextVoucherNo.Text);
                                         }
                                         else
                                         {
                                             query += "INSERT INTO [dbo].[vuData] ([VutDate],[VutNo],[VutType],[VutACode],[VutAmt],[VutCrDr],[VutNart],[VutRefType],[VutFDt],[VutFrmId],[VutUserID],[VutFYear]) ";
-                                            query += String.Format("VALUES( '{0}','" + TextVoucherNo.Text + "','{1}','{2}','{3}','D','TO AMT OF {4} NO {5} FAV. of Bank Charges  AGST BillS {6}', '{7}','{8}','{9}','{10}','{11}');", DtVoucher.DateTime.ToString("yyyy-MM-dd"), TextVoucherType.Text, BnkChgsCode, TextBnkChgs.Text, TextInstrumentType.Text, TextInstrumentNo.Text, MultorNo.Remove(MultorNo.Length - 1), (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"], DateTime.Now.Date.ToString("yyyy-MM-dd"), Name, GlobalVariables.CurrentUser, ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
+                                            query += string.Format("VALUES( '{0}','" + TextVoucherNo.Text + "','{1}','{2}','{3}','D','TO AMT OF {4} NO {5} FAV. of Bank Charges  AGST BillS {6}', '{7}','{8}','{9}','{10}','{11}');", DtVoucher.DateTime.ToString("yyyy-MM-dd"), TextVoucherType.Text, BnkChgsCode, TextBnkChgs.Text, TextInstrumentType.Text, TextInstrumentNo.Text, MultorNo.Remove(MultorNo.Length - 1), (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"], DateTime.Now.Date.ToString("yyyy-MM-dd"), Name, GlobalVariables.CurrentUser, ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear));
                                         }
                                     }
 
@@ -1222,13 +1222,13 @@ namespace WindowsFormsApplication1
 
                                     foreach (DataRow Dr in (EntryInfo_GridCtrl.DataSource as DataTable).Rows)
                                     {
-                                        var Query = String.Format("update [BilltoPass] set  [{3}]=(isnull((SELECT [{3}] FROM [BilltoPass] where MmPartyCode='{4}' And MmBillPassID='{0}'),0)+'{1}')      where MmPartyCode='{4}' And MmBillPassID='{2}'; ", Dr["MmBillPassID"], Dr["RefPayment"], Dr["MmBillPassID"], MMValue, TextDebitAc.Text);
+                                        var Query = string.Format("update [BilltoPass] set  [{3}]=(isnull((SELECT [{3}] FROM [BilltoPass] where MmPartyCode='{4}' And MmBillPassID='{0}'),0)+'{1}')      where MmPartyCode='{4}' And MmBillPassID='{2}'; ", Dr["MmBillPassID"], Dr["RefPayment"], Dr["MmBillPassID"], MMValue, TextDebitAc.Text);
                                         Query += "INSERT INTO [VuDetail] ([VutDate],[VutNo],[VutType],[VutACode],[VutAmt],[VutCrDr]";
                                         Query += ",[VutNart],[VutRefNo],[VutRefType],[VutRef],[VutRefDate]";
                                         Query += ",[VutUserID],[VutFDt],[VutUpTag],[VutFYear],[VutFrmId])";
-                                        Query += String.Format("VALUES ('{0}','{1}','{2}','{3}','{4}','D','", DtVoucher.DateTime.ToString("yyyy-MM-dd"), TextVoucherNo.Text, TextVoucherType.Text, TextDebitAc.Text, Dr["RefPayment"]);
-                                        Query += String.Format("{0}','{5}','{2}','{3}','{4}',", TextDNNarr1.Text.Replace("'", string.Empty), TextDebitAcName.Text, Dr["Method"], Dr["MmDocNo"], Convert.ToDateTime(Dr["MmDocDate"]).ToString("yyyy-MM-dd"), Dr["BillRefNo"].ToString().Equals("BF") ? "ORI" : "MRI");
-                                        Query += String.Format("'" + GlobalVariables.CurrentUser + "',GetDate(),'A','" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "','{0}');", Name);
+                                        Query += string.Format("VALUES ('{0}','{1}','{2}','{3}','{4}','D','", DtVoucher.DateTime.ToString("yyyy-MM-dd"), TextVoucherNo.Text, TextVoucherType.Text, TextDebitAc.Text, Dr["RefPayment"]);
+                                        Query += string.Format("{0}','{5}','{2}','{3}','{4}',", TextDNNarr1.Text.Replace("'", string.Empty), TextDebitAcName.Text, Dr["Method"], Dr["MmDocNo"], Convert.ToDateTime(Dr["MmDocDate"]).ToString("yyyy-MM-dd"), Dr["BillRefNo"].ToString().Equals("BF") ? "ORI" : "MRI");
+                                        Query += string.Format("'" + GlobalVariables.CurrentUser + "',GetDate(),'A','" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "','{0}');", Name);
                                         command.CommandType = CommandType.Text;
                                         command.CommandText = Query;
                                         command.ExecuteNonQuery();
@@ -1405,7 +1405,7 @@ namespace WindowsFormsApplication1
             {
                 if (TextInstrumentType.Text == "CQ")
                 {
-                    if (ProjectFunctions.GetDataSet(String.Format("Select * from [ChqControlData] where [CCDChqNo]='{0}' and [CCDBankCode]='{1}' and [CCSplTag] is null;", TextInstrumentNo.Text.Trim(), TextCreditAc.Text)).Tables[0].Rows.Count <= 0)
+                    if (ProjectFunctions.GetDataSet(string.Format("Select * from [ChqControlData] where [CCDChqNo]='{0}' and [CCDBankCode]='{1}' and [CCSplTag] is null;", TextInstrumentNo.Text.Trim(), TextCreditAc.Text)).Tables[0].Rows.Count <= 0)
                     {
                         Error.SetError(TextInstrumentNo, "Correct instrument No.");
                         TextInstrumentNo.Focus();
@@ -1558,7 +1558,7 @@ namespace WindowsFormsApplication1
                 if (!isupdate)
                 {
                     Error.Dispose();
-                    var query = String.Format("select dbo.DoPadd((SELECT     isnull(max(cast(VumNo as int)),0) as 'Value' FROM VuMst WHERE     (VumType <> 'SL') and (VumType <> 'SR')and VumDate='{0}')+1) as Value;", DtVoucher.DateTime.ToString("yyyy-MM-dd"));
+                    var query = string.Format("select dbo.DoPadd((SELECT     isnull(max(cast(VumNo as int)),0) as 'Value' FROM VuMst WHERE     (VumType <> 'SL') and (VumType <> 'SR')and VumDate='{0}')+1) as Value;", DtVoucher.DateTime.ToString("yyyy-MM-dd"));
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {

@@ -9,16 +9,16 @@ namespace WindowsFormsApplication1.Forms_Master
     public partial class frm_EmpSalAddUpdate : XtraForm
     {
 #pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.EmpDummy' is assigned but its value is never used
-        String EmpDummy = string.Empty;
+        string EmpDummy = string.Empty;
 #pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.EmpDummy' is assigned but its value is never used
 #pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.BankName' is assigned but its value is never used
-        String BankName = string.Empty;
+        string BankName = string.Empty;
 #pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankName' is assigned but its value is never used
 #pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.BankIfscCode' is assigned but its value is never used
-        String BankIfscCode = string.Empty;
+        string BankIfscCode = string.Empty;
 #pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankIfscCode' is assigned but its value is never used
 #pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.BankAccNo' is assigned but its value is never used
-        String BankAccNo = string.Empty;
+        string BankAccNo = string.Empty;
 #pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankAccNo' is assigned but its value is never used
 
         private string CurrentControl = string.Empty;
@@ -520,7 +520,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     }
                     else
                     {
-                        var query = String.Format("SELECT  empmst.EmpCode, empmst.EmpName, DeptMst.DeptDesc,EmpMst.EmpPymtMode"
+                        var query = string.Format("SELECT  empmst.EmpCode, empmst.EmpName, DeptMst.DeptDesc,EmpMst.EmpPymtMode"
                                        + " FROM            empmst Inner Join"
                                        + " DeptMst ON empmst.EmpDeptCode = DeptMst.DeptCode where empmst.EmpCode='{0}' ", TextCode.Text.Trim());
 

@@ -2,7 +2,6 @@
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
@@ -11,8 +10,8 @@ namespace WindowsFormsApplication1.Transaction
     {
         DataTable dt = new DataTable();
 
-        String SourceTable;
-        String DestinationTable;
+        string SourceTable;
+        string DestinationTable;
         public frmDesignDataTemplates()
         {
             InitializeComponent();
@@ -20,7 +19,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void frmDesignDataTemplates_Load(object sender, EventArgs e)
@@ -72,8 +71,8 @@ namespace WindowsFormsApplication1.Transaction
                 if (dt.Columns.Count > 0)
                 {
                     DataTable dtFinal = new DataTable();
-                    dtFinal.Columns.Add("ColumnName", typeof(String));
-                    dtFinal.Columns.Add("Source", typeof(String));
+                    dtFinal.Columns.Add("ColumnName", typeof(string));
+                    dtFinal.Columns.Add("Source", typeof(string));
                     foreach (DataColumn dr in dt.Columns)
                     {
                         DataRow drNewRow = dtFinal.NewRow();
@@ -103,7 +102,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDebitPartyName.Text = String.Empty;
+            txtDebitPartyName.Text = string.Empty;
         }
 
         private void txtDebitPartyCode_KeyPress(object sender, KeyPressEventArgs e)
@@ -240,7 +239,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private string GetTemplateCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(TemplateCode as int)),0000) from DataTemplates");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -253,12 +252,12 @@ namespace WindowsFormsApplication1.Transaction
         {
             if (ValidateData())
             {
-                String DocNo = GetTemplateCode().PadLeft(4, '0');
+                string DocNo = GetTemplateCode().PadLeft(4, '0');
                 foreach (DataRow dr in (DColumnGrid.DataSource as DataTable).Rows)
                 {
                     if (dr["Source"].ToString().Length > 0)
                     {
-                        String Query = "Insert into DataTemplates( TemplateCode,TemplateName,AccCode,DocType,DFieldName,SFieldName,DTableName)Values(";
+                        string Query = "Insert into DataTemplates( TemplateCode,TemplateName,AccCode,DocType,DFieldName,SFieldName,DTableName)Values(";
                         Query = Query + "'" + DocNo + "',";
 
 
@@ -270,7 +269,7 @@ namespace WindowsFormsApplication1.Transaction
                         Query = Query + "'" + SourceTable + "')";
 
                         ProjectFunctions.GetDataSet(Query);
-                        this.Close();
+                        Close();
 
                     }
                 }

@@ -11,29 +11,29 @@ namespace WindowsFormsApplication1.Transaction
 
         DataTable dt = new DataTable();
         public string S1 { get; set; }
-        public String DocNo { get; set; }
+        public string DocNo { get; set; }
         public DateTime DocDate { get; set; }
         public frmProformaMst()
         {
             InitializeComponent();
-            dt.Columns.Add("PIBrand", typeof(String));
-            dt.Columns.Add("PIEANNo", typeof(String));
-            dt.Columns.Add("PIArticle", typeof(String));
-            dt.Columns.Add("PIHSNCode", typeof(String));
-            dt.Columns.Add("PIQyt", typeof(Decimal));
-            dt.Columns.Add("PIMrp", typeof(Decimal));
-            dt.Columns.Add("PTTaxPer", typeof(Decimal));
-            dt.Columns.Add("PICoreFashion", typeof(String));
-            dt.Columns.Add("Season", typeof(String));
-            dtAll.Columns.Add("PIBrand", typeof(String));
-            dtAll.Columns.Add("PIEANNo", typeof(String));
-            dtAll.Columns.Add("PIArticle", typeof(String));
-            dtAll.Columns.Add("PIHSNCode", typeof(String));
-            dtAll.Columns.Add("PIQyt", typeof(Decimal));
-            dtAll.Columns.Add("PIMrp", typeof(Decimal));
-            dtAll.Columns.Add("PTTaxPer", typeof(Decimal));
-            dtAll.Columns.Add("PICoreFashion", typeof(String));
-            dtAll.Columns.Add("Season", typeof(String));
+            dt.Columns.Add("PIBrand", typeof(string));
+            dt.Columns.Add("PIEANNo", typeof(string));
+            dt.Columns.Add("PIArticle", typeof(string));
+            dt.Columns.Add("PIHSNCode", typeof(string));
+            dt.Columns.Add("PIQyt", typeof(decimal));
+            dt.Columns.Add("PIMrp", typeof(decimal));
+            dt.Columns.Add("PTTaxPer", typeof(decimal));
+            dt.Columns.Add("PICoreFashion", typeof(string));
+            dt.Columns.Add("Season", typeof(string));
+            dtAll.Columns.Add("PIBrand", typeof(string));
+            dtAll.Columns.Add("PIEANNo", typeof(string));
+            dtAll.Columns.Add("PIArticle", typeof(string));
+            dtAll.Columns.Add("PIHSNCode", typeof(string));
+            dtAll.Columns.Add("PIQyt", typeof(decimal));
+            dtAll.Columns.Add("PIMrp", typeof(decimal));
+            dtAll.Columns.Add("PTTaxPer", typeof(decimal));
+            dtAll.Columns.Add("PICoreFashion", typeof(string));
+            dtAll.Columns.Add("Season", typeof(string));
 
         }
         private void SetMyControls()
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -190,7 +190,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void InfoGridView_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
@@ -320,7 +320,7 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.SpeakError("PI Data Saved Successfully");
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -422,7 +422,7 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.SpeakError("PI Data Saved Successfully");
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
 
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
         private void fillPartyGrid()
         {

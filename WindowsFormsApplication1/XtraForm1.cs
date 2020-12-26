@@ -34,11 +34,11 @@ namespace WindowsFormsApplication1
         {
 
             // DevExpress.Utils.AppearanceObject.DefaultFont = new Font(DevExpress.Utils.AppearanceObject.DefaultFont.FontFamily.Name, 10);
-            this.Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
+            Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
             CreateMenuType1();
 
 
-            var str = String.Format("[sp_LoadUserAllocatedWork2] '" + GlobalVariables.CurrentUser + "'");
+            var str = string.Format("[sp_LoadUserAllocatedWork2] '" + GlobalVariables.CurrentUser + "'");
             using (var ds = ProjectFunctions.GetDataSet(str))
             {
                 if (ds.Tables[0].Rows.Count > 0)
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1
                             };
                             OuterElement.Elements.Add(InnerElement);
 
-                            var Drs = MyTempTable.Select(String.Format("ProginMenu='{0}' and ProginMenuGroup='{1}'", OuterElement.Text, NameSubItem));
+                            var Drs = MyTempTable.Select(string.Format("ProginMenu='{0}' and ProginMenuGroup='{1}'", OuterElement.Text, NameSubItem));
                             foreach (DataRow R in Drs)
                             {
                                 DevExpress.XtraBars.Navigation.AccordionControlElement InnerMostElement = new DevExpress.XtraBars.Navigation.AccordionControlElement
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1
             {
                 if (xtraTabControl1.TabPages.Count > 0)
                 {
-                    if (!String.IsNullOrEmpty(xtraTabControl1.SelectedTabPage.Name))
+                    if (!string.IsNullOrEmpty(xtraTabControl1.SelectedTabPage.Name))
                     {
                         GlobalVariables.ProgCode = xtraTabControl1.SelectedTabPage.Name;
                     }
@@ -296,7 +296,7 @@ namespace WindowsFormsApplication1
 
                 case WIN_APP_TABS._frmUserFinancialYearAddition:
                     var PROG4 = new frmUserFinancialYearAddition();
-                    PROG4.ShowDialog(this.Parent);
+                    PROG4.ShowDialog(Parent);
                     PROG4.BringToFront();
 
                     break;

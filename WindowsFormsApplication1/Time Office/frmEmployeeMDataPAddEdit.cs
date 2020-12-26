@@ -11,27 +11,15 @@ namespace WindowsFormsApplication1.Forms_Master
 
         public string empcode
         {
-            get
-            {
-                return _empcode;
-            }
-            set
-            {
-                _empcode = value;
-            }
+            get => _empcode;
+            set => _empcode = value;
         }
         public string _empdate = null;
 
         public string empdate
         {
-            get
-            {
-                return _empdate;
-            }
-            set
-            {
-                _empdate = value;
-            }
+            get => _empdate;
+            set => _empdate = value;
         }
 
         private void SetMyControls()

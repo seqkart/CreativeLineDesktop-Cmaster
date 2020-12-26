@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1.FormReports
                 _SelectRange = new RangeSelectorLedger() { StartDate = GlobalVariables.FinYearStartDate, EndDate = GlobalVariables.FinYearEndDate };
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 _SelectRange.BtnLoad.Click += BtnLoad_Click;
-                this.Controls.Add(_SelectRange);
+                Controls.Add(_SelectRange);
                 _SelectRange.BringToFront();
             }
             catch (Exception ex)

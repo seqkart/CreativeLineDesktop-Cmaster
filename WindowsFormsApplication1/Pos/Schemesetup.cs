@@ -6,8 +6,8 @@ namespace WindowsFormsApplication1.Transaction.Pos
 {
     public partial class Schemesetup : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String SchemeID { get; set; }
+        public string s1 { get; set; }
+        public string SchemeID { get; set; }
         public Schemesetup()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private bool ValidateData()
         {
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 
 
                             ProjectFunctions.SpeakError("Data Saved Successfully");
-                            this.Close();
+                            Close();
                         }
                         catch (Exception ex)
                         {

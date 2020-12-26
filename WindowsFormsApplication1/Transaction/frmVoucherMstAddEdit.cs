@@ -9,11 +9,11 @@ namespace WindowsFormsApplication1.Transaction
     public partial class frmVoucherMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
         int rowindex = 0;
-        public String s1 { get; set; }
-        public String VoucherNo { get; set; }
+        public string s1 { get; set; }
+        public string VoucherNo { get; set; }
         public DateTime VoucherDate { get; set; }
 
-        Decimal VoucherAmount = 0;
+        decimal VoucherAmount = 0;
 #pragma warning restore CS0169 // The field 'frmVoucherMstAddEdit.HelpWindowText' is never used
 
         DataTable dt = new DataTable();
@@ -22,14 +22,14 @@ namespace WindowsFormsApplication1.Transaction
         public frmVoucherMstAddEdit()
         {
             InitializeComponent();
-            dt.Columns.Add("AccCode", typeof(String));
-            dt.Columns.Add("AccName", typeof(String));
-            dt.Columns.Add("Narration", typeof(String));
-            dt.Columns.Add("Debit", typeof(Decimal));
-            dt.Columns.Add("Credit", typeof(Decimal));
-            dt.Columns.Add("CrDr", typeof(String));
-            dt.Columns.Add("VutTType", typeof(String));
-            dt.Columns.Add("VutChequeNo", typeof(String));
+            dt.Columns.Add("AccCode", typeof(string));
+            dt.Columns.Add("AccName", typeof(string));
+            dt.Columns.Add("Narration", typeof(string));
+            dt.Columns.Add("Debit", typeof(decimal));
+            dt.Columns.Add("Credit", typeof(decimal));
+            dt.Columns.Add("CrDr", typeof(string));
+            dt.Columns.Add("VutTType", typeof(string));
+            dt.Columns.Add("VutChequeNo", typeof(string));
             dt.Columns.Add("VutChequeDate", typeof(DateTime));
 
         }
@@ -59,8 +59,8 @@ namespace WindowsFormsApplication1.Transaction
                 txtVuType.Text = ds.Tables[0].Rows[0]["VumType"].ToString();
                 txtVuDesc.Text = ds.Tables[0].Rows[0]["VouDesc"].ToString();
 
-                ds.Tables[1].Columns.Add("Credit", typeof(Decimal));
-                ds.Tables[1].Columns.Add("Debit", typeof(Decimal));
+                ds.Tables[1].Columns.Add("Credit", typeof(decimal));
+                ds.Tables[1].Columns.Add("Debit", typeof(decimal));
 
 
                 foreach (DataRow dr in ds.Tables[1].Rows)
@@ -234,8 +234,8 @@ namespace WindowsFormsApplication1.Transaction
                 dtInvoiceDate.Focus();
                 return false;
             }
-            Decimal DebitAmt = 0;
-            Decimal CreditAmt = 0;
+            decimal DebitAmt = 0;
+            decimal CreditAmt = 0;
             foreach (DataRow dr in dt.Rows)
             {
                 DebitAmt = DebitAmt + Convert.ToDecimal(dr["Debit"]);
@@ -307,8 +307,8 @@ namespace WindowsFormsApplication1.Transaction
                 cmd.Transaction = transaction;
                 try
                 {
-                    String DocNo = getNewInvoiceDocumentNo().ToString().PadLeft(7, '0');
-                    String str = "Insert Into VuMst(VumNo,VumDate,VumType,VumAmt,VumAutoGen)values(";
+                    string DocNo = getNewInvoiceDocumentNo().ToString().PadLeft(7, '0');
+                    string str = "Insert Into VuMst(VumNo,VumDate,VumType,VumAmt,VumAutoGen)values(";
                     str = str + "'" + DocNo + "',";
                     str = str + "'" + Convert.ToDateTime(dtInvoiceDate.EditValue).ToString("yyyy-MM-dd") + "',";
                     str = str + "'" + txtVuType.Text.Trim() + "',";
@@ -322,7 +322,7 @@ namespace WindowsFormsApplication1.Transaction
                     foreach (DataRow dr in dt.Rows)
                     {
 
-                        String str1 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart,VutChequeNo,VutChequeDate)values(";
+                        string str1 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart,VutChequeNo,VutChequeDate)values(";
                         str1 = str1 + "'" + DocNo + "',";
                         str1 = str1 + "'" + Convert.ToDateTime(dtInvoiceDate.EditValue).ToString("yyyy-MM-dd") + "',";
                         str1 = str1 + "'" + txtVuType.Text.Trim() + "',";
@@ -379,7 +379,7 @@ namespace WindowsFormsApplication1.Transaction
                 try
                 {
 
-                    String str = "Update VuMst Set ";
+                    string str = "Update VuMst Set ";
                     str = str + " VumAmt='" + VoucherAmount + "'";
                     str = str + " Where VumNo='" + VoucherNo + "' And VumDate='" + Convert.ToDateTime(VoucherDate).ToString("yyyy-MM-dd") + "'";
                     cmd.CommandType = CommandType.Text;
@@ -397,7 +397,7 @@ namespace WindowsFormsApplication1.Transaction
 
                     foreach (DataRow dr in dt.Rows)
                     {
-                        String str1 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart,VutChequeNo,VutChequeDate)values(";
+                        string str1 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart,VutChequeNo,VutChequeDate)values(";
                         str1 = str1 + "'" + VoucherNo + "',";
                         str1 = str1 + "'" + Convert.ToDateTime(VoucherDate).ToString("yyyy-MM-dd") + "',";
                         str1 = str1 + "'" + txtVuType.Text.Trim() + "',";
@@ -590,7 +590,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

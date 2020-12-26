@@ -48,14 +48,14 @@ namespace WindowsFormsApplication1.Prints
 
         }
 
-        public static String changeToWords(String numb)
+        public static string changeToWords(string numb)
         {
-            String val = string.Empty;
-            String wholeNo = numb;
-            String points = string.Empty;
-            String andStr = string.Empty;
-            String pointStr = string.Empty;
-            String endStr = string.Empty;
+            string val = string.Empty;
+            string wholeNo = numb;
+            string points = string.Empty;
+            string andStr = string.Empty;
+            string pointStr = string.Empty;
+            string endStr = string.Empty;
             try
             {
                 int decimalPlace = numb.IndexOf(".");
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1.Prints
                         pointStr = translateCents(points);
                     }
                 }
-                val = String.Format("{0} {1}{2} {3}", translateWholeNumber(wholeNo).Trim(), andStr, pointStr, endStr);
+                val = string.Format("{0} {1}{2} {3}", translateWholeNumber(wholeNo).Trim(), andStr, pointStr, endStr);
 
             }
             catch
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1.Prints
             }
             return val;
         }
-        private static String translateWholeNumber(String number)
+        private static string translateWholeNumber(string number)
         {
             string word = string.Empty;
             try
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Prints
                     int numDigits = number.Length;
                     int pos = 0;
                     //store digit grouping  
-                    String place = string.Empty;
+                    string place = string.Empty;
                     //digit grouping name:hundred,thousand,etc...  
                     switch (numDigits)
                     {
@@ -167,10 +167,10 @@ namespace WindowsFormsApplication1.Prints
             }
             return word.Trim();
         }
-        private static String tens(String digit)
+        private static string tens(string digit)
         {
             int digt = Convert.ToInt32(digit);
-            String name = null;
+            string name = null;
             switch (digt)
             {
                 case 10:
@@ -236,10 +236,10 @@ namespace WindowsFormsApplication1.Prints
             }
             return name;
         }
-        private static String ones(String digit)
+        private static string ones(string digit)
         {
             int digt = Convert.ToInt32(digit);
-            String name = string.Empty;
+            string name = string.Empty;
             switch (digt)
             {
                 case 1:
@@ -273,11 +273,11 @@ namespace WindowsFormsApplication1.Prints
             }
             return name;
         }
-        private static String translateCents(String cents)
+        private static string translateCents(string cents)
         {
-            String cts = string.Empty;
-            String digit = string.Empty;
-            String engOne = string.Empty;
+            string cts = string.Empty;
+            string digit = string.Empty;
+            string engOne = string.Empty;
             for (int i = 0; i <= cents.Length - 1; i++)
             {
                 digit = cents[i].ToString();

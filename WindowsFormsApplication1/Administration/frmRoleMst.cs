@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1.Administration
 {
     public partial class frmRoleMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String RoleCode { get; set; }
+        public string s1 { get; set; }
+        public string RoleCode { get; set; }
         public frmRoleMst()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Administration
         }
         private string GetNewDeptCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(RoleCode as int)),0000) from RoleMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1.Administration
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1.Administration
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -14,14 +14,14 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                if (String.IsNullOrEmpty(txtOldPass.Text) || String.IsNullOrWhiteSpace(txtOldPass.Text))
+                if (string.IsNullOrEmpty(txtOldPass.Text) || string.IsNullOrWhiteSpace(txtOldPass.Text))
                 {
                     ProjectFunctions.SpeakError("Please Enter Old Password.");
                     txtNewPass.Focus();
                     return;
                 }
 
-                if (String.IsNullOrEmpty(txtNewPass.Text) || String.IsNullOrWhiteSpace(txtNewPass.Text))
+                if (string.IsNullOrEmpty(txtNewPass.Text) || string.IsNullOrWhiteSpace(txtNewPass.Text))
                 {
                     ProjectFunctions.SpeakError("Please Enter New Password.");
                     txtNewPass.Focus();
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1
 
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            Dispose();
         }
     }
 }

@@ -7,9 +7,9 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class frmDealerOrderMaster : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public string s1 { get; set; }
         DataTable dt = new DataTable();
-        public String OrderNo { get; set; }
+        public string OrderNo { get; set; }
         private void SetMyControls()
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
@@ -19,10 +19,10 @@ namespace WindowsFormsApplication1.Transaction
         public frmDealerOrderMaster()
         {
             InitializeComponent();
-            dt.Columns.Add("OrdDPrdCode", typeof(Decimal));
-            dt.Columns.Add("PrdAsgnCode", typeof(String));
-            dt.Columns.Add("PrdName", typeof(String));
-            dt.Columns.Add("OrdDPrdQuantity", typeof(Decimal));
+            dt.Columns.Add("OrdDPrdCode", typeof(decimal));
+            dt.Columns.Add("PrdAsgnCode", typeof(string));
+            dt.Columns.Add("PrdName", typeof(string));
+            dt.Columns.Add("OrdDPrdQuantity", typeof(decimal));
         }
         private bool ValidateData()
         {
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -259,7 +259,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                         else
                         {
-                            this.Close();
+                            Close();
                         }
                     }
                     catch (Exception ex)
@@ -282,7 +282,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void InfoGridView_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)

@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
         public main()
         {
             InitializeComponent();
-            this.labelCopyright.Text = "Copyright © 1998-" + DateTime.Now.Year.ToString();
+            labelCopyright.Text = "Copyright © 1998-" + DateTime.Now.Year.ToString();
         }
 
         #region Overrides

@@ -9,19 +9,19 @@ namespace WindowsFormsApplication1.Transaction
     public partial class frmIndentMst : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public String s1 { get; set; }
-        public String ImNo { get; set; }
+        public string s1 { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         int rowindex;
 
         public frmIndentMst()
         {
             InitializeComponent();
-            dt.Columns.Add("PrdAsgnCode", typeof(String));
-            dt.Columns.Add("PrdName", typeof(String));
-            dt.Columns.Add("PrdCode", typeof(Decimal));
-            dt.Columns.Add("Qty", typeof(Decimal));
-            dt.Columns.Add("Amount", typeof(Decimal));
+            dt.Columns.Add("PrdAsgnCode", typeof(string));
+            dt.Columns.Add("PrdName", typeof(string));
+            dt.Columns.Add("PrdCode", typeof(decimal));
+            dt.Columns.Add("Qty", typeof(decimal));
+            dt.Columns.Add("Amount", typeof(decimal));
 
         }
         private void SetMyControls()
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1.Transaction
             if (s1 == "Edit")
             {
                 dtInvoiceDate.Enabled = false;
-                DataSet ds = ProjectFunctions.GetDataSet(String.Format("sp_LoadIndDataFEdit '{0}','{1}','{2}'", ImNo, ImDate.Date.ToString("yyyy-MM-dd"), GlobalVariables.CUnitID));
+                DataSet ds = ProjectFunctions.GetDataSet(string.Format("sp_LoadIndDataFEdit '{0}','{1}','{2}'", ImNo, ImDate.Date.ToString("yyyy-MM-dd"), GlobalVariables.CUnitID));
                 txtSerialNo.Text = ds.Tables[0].Rows[0]["IndmNo"].ToString();
                 dtInvoiceDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["IndmDate"]);
                 txtDeptCode.Text = ds.Tables[0].Rows[0]["IndmDeptCode"].ToString();
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private bool ValidateDataForSaving()
@@ -347,7 +347,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

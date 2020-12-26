@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmUserFinancialYearAddition : XtraForm
     {
-        public String s1 { get; set; }
+        public string s1 { get; set; }
         private void SetMyControls()
         {
             try
@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void frmUserFinancialYearAddition_Load(object sender, EventArgs e)
         {
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
                         Query = Query + "'" + cmbSelectFY.SelectedValue + "')";
 
                         ProjectFunctions.GetDataSet(Query);
-                        this.Close();
+                        Close();
                     }
                 }
             }

@@ -6,8 +6,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTdsAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String TdsCode { get; set; }
+        public string s1 { get; set; }
+        public string TdsCode { get; set; }
         public frmTdsAddEdit()
         {
             InitializeComponent();
@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
         }
         private string GetNewTDSCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(TdsCode as int)),0000) from TdsMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -106,13 +106,13 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

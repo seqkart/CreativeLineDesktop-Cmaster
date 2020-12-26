@@ -8,8 +8,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmDepartmentAddUpdate : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String DeptCode { get; set; }
+        public string s1 { get; set; }
+        public string DeptCode { get; set; }
         public frmDepartmentAddUpdate()
         {
             InitializeComponent();
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

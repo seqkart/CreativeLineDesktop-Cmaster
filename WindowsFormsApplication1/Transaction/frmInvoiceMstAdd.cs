@@ -15,49 +15,49 @@ namespace WindowsFormsApplication1
 {
     public partial class FrmInvoiceMstAdd : DevExpress.XtraEditors.XtraForm
     {
-        public String ProgCode { get; set; }
+        public string ProgCode { get; set; }
         public string S1 { get; set; }
         DataTable dt = new DataTable();
         DataTable dtWeight = new DataTable();
-        public String ImNo { get; set; }
+        public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
-        public String ImSeries { get; set; }
-        String StkTransfer = String.Empty;
-        Decimal AccMRPMarkDown = 0;
+        public string ImSeries { get; set; }
+        string StkTransfer = string.Empty;
+        decimal AccMRPMarkDown = 0;
 #pragma warning restore CS0169 // The field 'frmInvoiceMstAdd.SearchField' is never used
         DataSet dsPopUps = new DataSet();
         public FrmInvoiceMstAdd()
         {
             InitializeComponent();
-            dt.Columns.Add("SIDBARCODE", typeof(String));
-            dt.Columns.Add("SIDARTNO", typeof(String));
-            dt.Columns.Add("SIDARTDESC", typeof(String));
-            dt.Columns.Add("SIDCOLN", typeof(String));
-            dt.Columns.Add("SIDSIZN", typeof(String));
-            dt.Columns.Add("SIDSCANQTY", typeof(Decimal));
-            dt.Columns.Add("SIDARTMRP", typeof(Decimal));
-            dt.Columns.Add("SIDARTWSP", typeof(Decimal));
-            dt.Columns.Add("SIDITMDISCPRCN", typeof(Decimal));
-            dt.Columns.Add("SIDITMDISCAMT", typeof(Decimal));
-            dt.Columns.Add("SIDITMNETAMT", typeof(Decimal));
-            dt.Columns.Add("SIDBOXQTY", typeof(Decimal));
-            dt.Columns.Add("SIDBOXMRPVAL", typeof(Decimal));
-            dt.Columns.Add("SIDBOXWSPVAL", typeof(Decimal));
-            dt.Columns.Add("SIDARTID", typeof(String));
-            dt.Columns.Add("SIDCOLID", typeof(String));
-            dt.Columns.Add("SIDSIZID", typeof(String));
+            dt.Columns.Add("SIDBARCODE", typeof(string));
+            dt.Columns.Add("SIDARTNO", typeof(string));
+            dt.Columns.Add("SIDARTDESC", typeof(string));
+            dt.Columns.Add("SIDCOLN", typeof(string));
+            dt.Columns.Add("SIDSIZN", typeof(string));
+            dt.Columns.Add("SIDSCANQTY", typeof(decimal));
+            dt.Columns.Add("SIDARTMRP", typeof(decimal));
+            dt.Columns.Add("SIDARTWSP", typeof(decimal));
+            dt.Columns.Add("SIDITMDISCPRCN", typeof(decimal));
+            dt.Columns.Add("SIDITMDISCAMT", typeof(decimal));
+            dt.Columns.Add("SIDITMNETAMT", typeof(decimal));
+            dt.Columns.Add("SIDBOXQTY", typeof(decimal));
+            dt.Columns.Add("SIDBOXMRPVAL", typeof(decimal));
+            dt.Columns.Add("SIDBOXWSPVAL", typeof(decimal));
+            dt.Columns.Add("SIDARTID", typeof(string));
+            dt.Columns.Add("SIDCOLID", typeof(string));
+            dt.Columns.Add("SIDSIZID", typeof(string));
             dt.Columns.Add("SIDPSDATE", typeof(DateTime));
-            dt.Columns.Add("SIDPSID", typeof(String));
-            dt.Columns.Add("SIDPSNO", typeof(String));
-            dt.Columns.Add("SIDSGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDCGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDIGSTAMT", typeof(Decimal));
-            dt.Columns.Add("SIDCGSTPER", typeof(Decimal));
-            dt.Columns.Add("SIDSGSTPER", typeof(Decimal));
-            dt.Columns.Add("SIDIGSTPER", typeof(Decimal));
-            dt.Columns.Add("ARTMARGIN", typeof(Decimal));
-            dt.Columns.Add("TAXCODE", typeof(String));
-            dt.Columns.Add("GRPHSNCODE", typeof(String));
+            dt.Columns.Add("SIDPSID", typeof(string));
+            dt.Columns.Add("SIDPSNO", typeof(string));
+            dt.Columns.Add("SIDSGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDCGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDIGSTAMT", typeof(decimal));
+            dt.Columns.Add("SIDCGSTPER", typeof(decimal));
+            dt.Columns.Add("SIDSGSTPER", typeof(decimal));
+            dt.Columns.Add("SIDIGSTPER", typeof(decimal));
+            dt.Columns.Add("ARTMARGIN", typeof(decimal));
+            dt.Columns.Add("TAXCODE", typeof(string));
+            dt.Columns.Add("GRPHSNCODE", typeof(string));
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
         }
         private void SetMyControls()
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private bool ValidateDataForSaving()
@@ -234,20 +234,20 @@ namespace WindowsFormsApplication1
                 InfoGridView.UpdateCurrentRow();
             }));
 
-            String LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
+            string LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
 
 
             int i = 0;
 
 
             DataSet ds = new DataSet();
-            Decimal MainDiscAmount = i;
-            Decimal ValueOfGoods = 0;
-            Decimal SumValueOfGoods = 0;
-            Decimal SumRowDiscAmount = 0;
-            Decimal SumCGSTAmount = 0;
-            Decimal SumSGSTAmount = 0;
-            Decimal SumIGSTAmount = 0;
+            decimal MainDiscAmount = i;
+            decimal ValueOfGoods = 0;
+            decimal SumValueOfGoods = 0;
+            decimal SumRowDiscAmount = 0;
+            decimal SumCGSTAmount = 0;
+            decimal SumSGSTAmount = 0;
+            decimal SumIGSTAmount = 0;
             foreach (DataRow dr in dt.Rows)
             {
 
@@ -256,7 +256,7 @@ namespace WindowsFormsApplication1
 
 
 
-                Decimal WSP = 0;
+                decimal WSP = 0;
                 if (chInclusive.Checked)
                 {
                     if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P") 
@@ -266,7 +266,7 @@ namespace WindowsFormsApplication1
                     else
                     {
 
-                        Decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
+                        decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
                         WSP = Convert.ToDecimal(dr["SIDARTMRP"]) - ((Convert.ToDecimal(dr["SIDARTMRP"]) * TaxRate) / (100 + TaxRate));
                     }
                 }
@@ -318,9 +318,9 @@ namespace WindowsFormsApplication1
                 }
 
 
-                Decimal RowDiscAmount = Math.Round((Convert.ToDecimal(dr["SIDSCANQTY"]) * ((Convert.ToDecimal(dr["SIDARTWSP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100)), 2);
-                Decimal TempValueOfGoods = Math.Round(((Convert.ToDecimal(dr["SIDSCANQTY"]) * Convert.ToDecimal(dr["SIDARTWSP"])) - RowDiscAmount), 2);
-                Decimal TempMainDisc = Math.Round((TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100, 2);
+                decimal RowDiscAmount = Math.Round((Convert.ToDecimal(dr["SIDSCANQTY"]) * ((Convert.ToDecimal(dr["SIDARTWSP"]) * Convert.ToDecimal(dr["SIDITMDISCPRCN"])) / 100)), 2);
+                decimal TempValueOfGoods = Math.Round(((Convert.ToDecimal(dr["SIDSCANQTY"]) * Convert.ToDecimal(dr["SIDARTWSP"])) - RowDiscAmount), 2);
+                decimal TempMainDisc = Math.Round((TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100, 2);
 
 
                 MainDiscAmount = Math.Round(MainDiscAmount + TempMainDisc, 2);
@@ -337,9 +337,9 @@ namespace WindowsFormsApplication1
                 {
                     dr["SIDITMDISCPRCN"] = 0;
                 }
-                Decimal CGSTAmount = 0;
-                Decimal SGSTAmount = 0;
-                Decimal IGSTAmount = 0;
+                decimal CGSTAmount = 0;
+                decimal SGSTAmount = 0;
+                decimal IGSTAmount = 0;
 
 
                 //if (i == 0)
@@ -413,27 +413,27 @@ namespace WindowsFormsApplication1
         {
             DataTable dtTax1 = new DataTable();
 
-            dtTax1.Columns.Add("SIDSCANQTY", typeof(Decimal));
-            dtTax1.Columns.Add("SIDITMNETAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDSGSTAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDCGSTAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDIGSTAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDCGSTPER", typeof(Decimal));
-            dtTax1.Columns.Add("SIDSGSTPER", typeof(Decimal));
-            dtTax1.Columns.Add("SIDIGSTPER", typeof(Decimal));
-            dtTax1.Columns.Add("TAXCODE", typeof(String));
+            dtTax1.Columns.Add("SIDSCANQTY", typeof(decimal));
+            dtTax1.Columns.Add("SIDITMNETAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDSGSTAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDCGSTAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDIGSTAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDCGSTPER", typeof(decimal));
+            dtTax1.Columns.Add("SIDSGSTPER", typeof(decimal));
+            dtTax1.Columns.Add("SIDIGSTPER", typeof(decimal));
+            dtTax1.Columns.Add("TAXCODE", typeof(string));
             var distinctRows = (from DataRow dRow in dt.Rows
                                 select (Convert.ToDecimal(dRow["SIDCGSTPER"]) + Convert.ToDecimal(dRow["SIDSGSTPER"]) + Convert.ToDecimal(dRow["SIDIGSTPER"]))).Distinct();
             foreach (var v in distinctRows)
             {
-                Decimal SIDSCANQTY = 0;
-                Decimal SIDITMNETAMT = 0;
-                Decimal SIDSGSTAMT = 0;
-                Decimal SIDCGSTAMT = 0;
-                Decimal SIDIGSTAMT = 0;
-                Decimal SIDCGSTPER = 0;
-                Decimal SIDSGSTPER = 0;
-                Decimal SIDIGSTPER = 0;
+                decimal SIDSCANQTY = 0;
+                decimal SIDITMNETAMT = 0;
+                decimal SIDSGSTAMT = 0;
+                decimal SIDCGSTAMT = 0;
+                decimal SIDIGSTAMT = 0;
+                decimal SIDCGSTPER = 0;
+                decimal SIDSGSTPER = 0;
+                decimal SIDIGSTPER = 0;
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -477,15 +477,15 @@ namespace WindowsFormsApplication1
         {
             DataTable dtTax1 = new DataTable();
 
-            dtTax1.Columns.Add("SIDSCANQTY", typeof(Decimal));
-            dtTax1.Columns.Add("SIDITMNETAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDSGSTAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDCGSTAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDIGSTAMT", typeof(Decimal));
-            dtTax1.Columns.Add("SIDCGSTPER", typeof(Decimal));
-            dtTax1.Columns.Add("SIDSGSTPER", typeof(Decimal));
-            dtTax1.Columns.Add("SIDIGSTPER", typeof(Decimal));
-            dtTax1.Columns.Add("GRPHSNCODE", typeof(String));
+            dtTax1.Columns.Add("SIDSCANQTY", typeof(decimal));
+            dtTax1.Columns.Add("SIDITMNETAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDSGSTAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDCGSTAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDIGSTAMT", typeof(decimal));
+            dtTax1.Columns.Add("SIDCGSTPER", typeof(decimal));
+            dtTax1.Columns.Add("SIDSGSTPER", typeof(decimal));
+            dtTax1.Columns.Add("SIDIGSTPER", typeof(decimal));
+            dtTax1.Columns.Add("GRPHSNCODE", typeof(string));
 
 
             var distinctRows = (from DataRow dRow in dt.Rows
@@ -493,14 +493,14 @@ namespace WindowsFormsApplication1
             foreach (var v in distinctRows)
 
             {
-                Decimal SIDSCANQTY = 0;
-                Decimal SIDITMNETAMT = 0;
-                Decimal SIDSGSTAMT = 0;
-                Decimal SIDCGSTAMT = 0;
-                Decimal SIDIGSTAMT = 0;
-                Decimal SIDCGSTPER = 0;
-                Decimal SIDSGSTPER = 0;
-                Decimal SIDIGSTPER = 0;
+                decimal SIDSCANQTY = 0;
+                decimal SIDITMNETAMT = 0;
+                decimal SIDSGSTAMT = 0;
+                decimal SIDCGSTAMT = 0;
+                decimal SIDIGSTAMT = 0;
+                decimal SIDCGSTPER = 0;
+                decimal SIDSGSTPER = 0;
+                decimal SIDIGSTPER = 0;
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -801,7 +801,7 @@ namespace WindowsFormsApplication1
                     {
                         if (S1 == "&Add")
                         {
-                            String BillNo = String.Empty;
+                            string BillNo = string.Empty;
                             if (StkTransfer.ToUpper() == "Y")
                             {
                                 BillNo = ProjectFunctions.GetDataSet("select isnull(max(SIMNO),0)+1 from SALEINVMAIN where SIMSERIES='DCO' And SIMFNYR='" + GlobalVariables.FinancialYear + "'").Tables[0].Rows[0][0].ToString();
@@ -1118,13 +1118,13 @@ namespace WindowsFormsApplication1
                         ProjectFunctions.SpeakError("Invoice Data Saved Successfully");
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
                     }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
                     {
-                        this.Close();
+                        Close();
                     }
                 }
             }
@@ -1173,33 +1173,33 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
         private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDebitPartyName.Text = String.Empty;
-            txtBillingAddress1.Text = String.Empty;
-            txtBillingAddress2.Text = String.Empty;
-            txtBillingAddress3.Text = String.Empty;
-            txtBillingState.Text = String.Empty;
-            txtBillingCity.Text = String.Empty;
-            txtBillingZip.Text = String.Empty;
-            txtDelieveryCode.Text = String.Empty;
-            txtDelieveryName.Text = String.Empty;
-            txtDelAddress1.Text = String.Empty;
-            txtDelAddress2.Text = String.Empty;
-            txtDelAddress3.Text = String.Empty;
-            txtDelieveryState.Text = String.Empty;
-            txtDelieveryCity.Text = String.Empty;
-            txtDelZipCode.Text = String.Empty;
-            txtDelTransID.Text = String.Empty;
-            txtBankName.Text = String.Empty;
-            txtBankAccNo.Text = String.Empty;
-            txtGSTNo.Text = String.Empty;
-            txtBankAccNo.Text = String.Empty;
-            txtCreditLimit.Text = String.Empty;
+            txtDebitPartyName.Text = string.Empty;
+            txtBillingAddress1.Text = string.Empty;
+            txtBillingAddress2.Text = string.Empty;
+            txtBillingAddress3.Text = string.Empty;
+            txtBillingState.Text = string.Empty;
+            txtBillingCity.Text = string.Empty;
+            txtBillingZip.Text = string.Empty;
+            txtDelieveryCode.Text = string.Empty;
+            txtDelieveryName.Text = string.Empty;
+            txtDelAddress1.Text = string.Empty;
+            txtDelAddress2.Text = string.Empty;
+            txtDelAddress3.Text = string.Empty;
+            txtDelieveryState.Text = string.Empty;
+            txtDelieveryCity.Text = string.Empty;
+            txtDelZipCode.Text = string.Empty;
+            txtDelTransID.Text = string.Empty;
+            txtBankName.Text = string.Empty;
+            txtBankAccNo.Text = string.Empty;
+            txtGSTNo.Text = string.Empty;
+            txtBankAccNo.Text = string.Empty;
+            txtCreditLimit.Text = string.Empty;
         }
 
 
@@ -1409,8 +1409,8 @@ namespace WindowsFormsApplication1
             DataRow row = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
             if (HelpGrid.Text == "WEIGHT")
             {
-                Decimal Weight = 0;
-                Int32 Count = 0;
+                decimal Weight = 0;
+                int Count = 0;
                 foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
                 {
                     Count = Count + 1;
@@ -1532,7 +1532,7 @@ namespace WindowsFormsApplication1
 
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtTransporterName.Text = String.Empty;
+            txtTransporterName.Text = string.Empty;
         }
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
@@ -1699,7 +1699,7 @@ namespace WindowsFormsApplication1
                         InfoGridView.Focus();
                         InfoGridView.MoveLast();
                         InfoGridView.FocusedColumn = InfoGridView.Columns["SIDSCANQTY"];
-                        txtSearchBox.Text = String.Empty;
+                        txtSearchBox.Text = string.Empty;
                         BtnRecalculate_Click(null, e);
 
                         //ShowImage(row["ARTSYSID"].ToString());
@@ -1821,7 +1821,7 @@ namespace WindowsFormsApplication1
             int i = 0;
 #pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
 
-            String LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0][0].ToString();
+            string LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0][0].ToString();
 
             foreach (DataRow drOuter in (PSGrid.DataSource as DataTable).Rows)
             {
@@ -1936,14 +1936,14 @@ namespace WindowsFormsApplication1
         }
         private void TxtDelieveryCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtDelieveryName.Text = String.Empty;
-            txtDelAddress1.Text = String.Empty;
-            txtDelAddress2.Text = String.Empty;
-            txtDelAddress3.Text = String.Empty;
-            txtDelieveryCity.Text = String.Empty;
-            txtDelZipCode.Text = String.Empty;
-            txtDelieveryState.Text = String.Empty;
-            txtDelTransID.Text = String.Empty;
+            txtDelieveryName.Text = string.Empty;
+            txtDelAddress1.Text = string.Empty;
+            txtDelAddress2.Text = string.Empty;
+            txtDelAddress3.Text = string.Empty;
+            txtDelieveryCity.Text = string.Empty;
+            txtDelZipCode.Text = string.Empty;
+            txtDelieveryState.Text = string.Empty;
+            txtDelTransID.Text = string.Empty;
         }
         private void GetPartyBalances()
         {
@@ -2024,7 +2024,7 @@ namespace WindowsFormsApplication1
             if (chToPay.Checked)
             {
                 chPaid.Checked = false;
-                txtBuiltyAmount.Text = String.Empty;
+                txtBuiltyAmount.Text = string.Empty;
             }
         }
 
@@ -2050,7 +2050,7 @@ namespace WindowsFormsApplication1
 
         private void BtnRecalculate_Click(object sender, EventArgs e)
         {
-            String LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
+            string LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
 
             foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
             {
@@ -2127,7 +2127,7 @@ namespace WindowsFormsApplication1
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
                 {
                     sqlcon.Open();
-                    String str = string.Empty;
+                    string str = string.Empty;
 
                     str = "insert into ImagesData(DocType,DocNo,DocDate,DocImage) values(@DocType,@DocNo,@DocDate,@DocImage)";
                     var sqlcom = new SqlCommand(str, sqlcon);
@@ -2172,8 +2172,8 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
             if (ds.Tables[0].Rows.Count > 0)
             {
-                Byte[] MyData = new byte[0];
-                MyData = (Byte[])ds.Tables[0].Rows[0]["DocImage"];
+                byte[] MyData = new byte[0];
+                MyData = (byte[])ds.Tables[0].Rows[0]["DocImage"];
                 MemoryStream stream = new MemoryStream(MyData)
                 {
                     Position = 0

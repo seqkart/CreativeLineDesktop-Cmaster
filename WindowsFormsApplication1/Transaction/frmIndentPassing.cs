@@ -5,7 +5,7 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class frmIndentPassing : DevExpress.XtraEditors.XtraForm
     {
-        public String IndentNo { get; set; }
+        public string IndentNo { get; set; }
         public DateTime IndentDate { get; set; }
         public frmIndentPassing()
         {
@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void frmIndentPassing_Load(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1.Transaction
                 if (CurrentRow["PassUnPass"].ToString().ToUpper() == "TRUE")
                 {
 
-                    String Query = "update  IndData Set ";
+                    string Query = "update  IndData Set ";
                     Query = Query + " IndPassTag='Y',IndPassDt='" + DateTime.Now.ToString("yyyy-MM-dd") + "',IndDItemQtyPass='" + Convert.ToDecimal(CurrentRow["PassQty"]) + "' Where IndID='" + CurrentRow["IndID"] + "'";
 
                     ProjectFunctions.GetDataSet(Query);
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     else
                     {
-                        String Query = "update  IndData Set IndDItemQtyPass=0,";
+                        string Query = "update  IndData Set IndDItemQtyPass=0,";
                         Query = Query + " IndPassTag=null,IndPassDt=null Where IndID='" + CurrentRow["IndID"] + "'";
 
                         ProjectFunctions.GetDataSet(Query);
@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1.Transaction
 
                 }
             }
-            this.Close();
+            Close();
         }
     }
 }

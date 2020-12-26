@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void fillGrid()
@@ -123,7 +123,7 @@ namespace WindowsFormsApplication1
                         }
                         if (Convert.ToDecimal(dr["CratesInctives"]) > 0)
                         {
-                            String Query = "Insert into IncData(IncAccIncTag,IncDate,IncPartyCode,IncPrdCode,IncQty,IncRate,IncAmount,IncBillNo)values(";
+                            string Query = "Insert into IncData(IncAccIncTag,IncDate,IncPartyCode,IncPrdCode,IncQty,IncRate,IncAmount,IncBillNo)values(";
                             Query = Query + " '" + dr["AccIncTag"].ToString() + "',";
                             Query = Query + " '" + Convert.ToDateTime(dr["BillDate"]).ToString("yyyy-MM-dd") + "',";
                             Query = Query + " '" + dr["PartyCode"].ToString() + "',";

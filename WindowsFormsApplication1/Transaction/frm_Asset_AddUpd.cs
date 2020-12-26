@@ -344,7 +344,7 @@ namespace WindowsFormsApplication1
             {
                 var Connection = new SqlConnection(ProjectFunctions.ConnectionString);
                 Connection.Open();
-                var DS = ProjectFunctions.GetDataSet(String.Format("SELECT   * From V_AssetMst4Upd   where AssetCode='{0}'", AssetCode));
+                var DS = ProjectFunctions.GetDataSet(string.Format("SELECT   * From V_AssetMst4Upd   where AssetCode='{0}'", AssetCode));
 
                 if (DS.Tables[0].Rows.Count > 0)
                 {
@@ -484,12 +484,12 @@ namespace WindowsFormsApplication1
                     var Ds1s = "NA";
                     try
                     {
-                        Ds1s = ProjectFunctions.GetDataSet(String.Format("select Top 1 CityName from dbo.AssetMovmentData Inner Join CityMSt On CityCode=AMMoved2Location WHERE AMAssetCode='{0}' Order By AmAid Desc", TextAssetCode.Text)).Tables[0].Rows[0][0].ToString();
+                        Ds1s = ProjectFunctions.GetDataSet(string.Format("select Top 1 CityName from dbo.AssetMovmentData Inner Join CityMSt On CityCode=AMMoved2Location WHERE AMAssetCode='{0}' Order By AmAid Desc", TextAssetCode.Text)).Tables[0].Rows[0][0].ToString();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
                     }
-                    barCodeControl1.Text = String.Format("ASSET CODE {0} NAME {1} REG. NO. {0}CURRENT LOCATION {2}", TextAssetNumber.Text.ToUpper(), TextDesc.Text.ToUpper(), Ds1s.ToUpper());
+                    barCodeControl1.Text = string.Format("ASSET CODE {0} NAME {1} REG. NO. {0}CURRENT LOCATION {2}", TextAssetNumber.Text.ToUpper(), TextDesc.Text.ToUpper(), Ds1s.ToUpper());
                     TextDesc.Focus();
                 }
             }
@@ -577,7 +577,7 @@ namespace WindowsFormsApplication1
                     selected_Record = e.FocusedRowHandle;
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -587,7 +587,7 @@ namespace WindowsFormsApplication1
             try
             {
                 System.IO.File.Delete(DocLoc);
-                var query = String.Format("Delete from DocData where DocID='{0}';", DocID);
+                var query = string.Format("Delete from DocData where DocID='{0}';", DocID);
                 using (var con = new SqlConnection(ProjectFunctions.ConnectionString))
                 {
                     con.Open();
@@ -617,7 +617,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("SELECT [ComplaintTypeCode] As 'Type',[ComplaintType] As 'Desc' FROM [dbo].[complaintmaster]  where [ComplaintTypeCode]='{0}' ;", TextAssetType.Text.Trim());
+                    var query = string.Format("SELECT [ComplaintTypeCode] As 'Type',[ComplaintType] As 'Desc' FROM [dbo].[complaintmaster]  where [ComplaintTypeCode]='{0}' ;", TextAssetType.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -646,7 +646,7 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
             {
                 CurrentControl = "TextAssetCategory";
-                var Query = String.Format("Select Distinct CCDesc,CCCode From CommonCategoryMst Where CCType='{0}' and CCCode is not null ", TextAssetType.Text);
+                var Query = string.Format("Select Distinct CCDesc,CCCode From CommonCategoryMst Where CCType='{0}' and CCCode is not null ", TextAssetType.Text);
 
                 if (TextAssetCategory.Text.Trim().Length == 0)
                 {
@@ -654,7 +654,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select CCCode,CCDesc From CommonCategoryMst Where CCType='{0}' And CCCode='{1}'", TextAssetType.Text, TextAssetCategory.Text.Trim());
+                    var query = string.Format("Select CCCode,CCDesc From CommonCategoryMst Where CCType='{0}' And CCCode='{1}'", TextAssetType.Text, TextAssetCategory.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -682,14 +682,14 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
             {
                 CurrentControl = "TextAstSubCat";
-                var Query = String.Format("Select CCSubDesc,CCSubCode From CommonCategoryMst Where CCCode='{0}' and CCSubCode is not null ;", TextAssetCategory.Text);
+                var Query = string.Format("Select CCSubDesc,CCSubCode From CommonCategoryMst Where CCCode='{0}' and CCSubCode is not null ;", TextAssetCategory.Text);
                 if (TextAstSubCat.Text.Trim().Length == 0)
                 {
                     ShowHelpWindow(Query);
                 }
                 else
                 {
-                    var query = String.Format("Select CCSubCode,CCSubDesc From CommonCategoryMst Where CCCode='{0}' And CCSubCode='{1}';", TextAssetCategory.Text, TextAstSubCat.Text.Trim());
+                    var query = string.Format("Select CCSubCode,CCSubDesc From CommonCategoryMst Where CCCode='{0}' And CCSubCode='{1}';", TextAssetCategory.Text, TextAstSubCat.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -724,7 +724,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select CityCode,CityName From CityMst  where [CityCode]='{0}' ;", TextAssetLocation.Text.Trim());
+                    var query = string.Format("Select CityCode,CityName From CityMst  where [CityCode]='{0}' ;", TextAssetLocation.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -760,7 +760,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select VehicleCode,VehicleRegNo From vehicleMst WHere VehicleCode not in (Select IsNull(AssetRefCode,'XXXX') From AssetMst Where AssetCode <>'{1}') And VehicleCode='{0}' Order by 2;", VehicleCode.Text.Trim(), TextAssetCode.Text);
+                    var query = string.Format("Select VehicleCode,VehicleRegNo From vehicleMst WHere VehicleCode not in (Select IsNull(AssetRefCode,'XXXX') From AssetMst Where AssetCode <>'{1}') And VehicleCode='{0}' Order by 2;", VehicleCode.Text.Trim(), TextAssetCode.Text);
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -875,7 +875,7 @@ namespace WindowsFormsApplication1
                 HelpGridCtrl.Visible = false;
                 CurrentControl = string.Empty;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 XtraMessageBox.Show("!Error");
             }
@@ -931,7 +931,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select AccCode,AccName From ActMst  where AccCode='{0}' ;", TextAcCode.Text.Trim());
+                    var query = string.Format("Select AccCode,AccName From ActMst  where AccCode='{0}' ;", TextAcCode.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -966,7 +966,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select AccCode,AccName From ActMst  where AccCode='{0}' ;", TextSupplier.Text.Trim());
+                    var query = string.Format("Select AccCode,AccName From ActMst  where AccCode='{0}' ;", TextSupplier.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -1001,7 +1001,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select AccCode,AccName From ActMst  where AccCode='{0}' ;", TextFinanceBy.Text.Trim());
+                    var query = string.Format("Select AccCode,AccName From ActMst  where AccCode='{0}' ;", TextFinanceBy.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -1193,10 +1193,10 @@ namespace WindowsFormsApplication1
             var Ds1s = "NA";
             try
             {
-                Ds1s = ProjectFunctions.GetDataSet(String.Format("select Top 1 CityName from dbo.AssetMovmentData Inner Join CityMSt On CityCode=AMMoved2Location WHERE AMAssetCode='{0}' Order By AmAid Desc", TextAssetCode.Text)).Tables[0].Rows[0][0].ToString();
-                barCodeControl1.Text = String.Format("ASSET CODE {0} NAME {1} REG. NO. {0}CURRENT LOCATION {2}", TextAssetNumber.Text.ToUpper(), TextDesc.Text.ToUpper(), Ds1s.ToUpper());
+                Ds1s = ProjectFunctions.GetDataSet(string.Format("select Top 1 CityName from dbo.AssetMovmentData Inner Join CityMSt On CityCode=AMMoved2Location WHERE AMAssetCode='{0}' Order By AmAid Desc", TextAssetCode.Text)).Tables[0].Rows[0][0].ToString();
+                barCodeControl1.Text = string.Format("ASSET CODE {0} NAME {1} REG. NO. {0}CURRENT LOCATION {2}", TextAssetNumber.Text.ToUpper(), TextDesc.Text.ToUpper(), Ds1s.ToUpper());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }
@@ -1214,7 +1214,7 @@ namespace WindowsFormsApplication1
                 TextCurrentLocation.Text = ThisRecord["AMMoved2Location"].ToString();
 
                 DtCheckedODate.EditValue = Convert.ToDateTime(ThisRecord["AMMovedonDate"]).Date;
-                var query = String.Format("Select CityCode,CityName From CityMst  where [CityCode]='{0}' ;", TextCurrentLocation.Text.Trim());
+                var query = string.Format("Select CityCode,CityName From CityMst  where [CityCode]='{0}' ;", TextCurrentLocation.Text.Trim());
                 var ds = ProjectFunctions.GetDataSet(query);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -1241,7 +1241,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    var query = String.Format("Select CityName,CityCode From CityMst  where [CityCode]='{0}' ;", TextAssetLocation.Text.Trim());
+                    var query = string.Format("Select CityName,CityCode From CityMst  where [CityCode]='{0}' ;", TextAssetLocation.Text.Trim());
                     var ds = ProjectFunctions.GetDataSet(query);
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -1281,9 +1281,9 @@ namespace WindowsFormsApplication1
             try
             {
                 Ds1s = AssetLocDesc.Text;
-                barCodeControl1.Text = String.Format("ASSET CODE {0} NAME {1} REG. NO. {0}CURRENT LOCATION {2}", TextAssetNumber.Text.ToUpper(), TextDesc.Text.ToUpper(), Ds1s.ToUpper());
+                barCodeControl1.Text = string.Format("ASSET CODE {0} NAME {1} REG. NO. {0}CURRENT LOCATION {2}", TextAssetNumber.Text.ToUpper(), TextDesc.Text.ToUpper(), Ds1s.ToUpper());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
             }
         }

@@ -6,8 +6,8 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmBalanceSheetHeads : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String BSCode { get; set; }
+        public string s1 { get; set; }
+        public string BSCode { get; set; }
         public frmBalanceSheetHeads()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Master
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private bool ValidateData()
         {
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1.Master
         }
         private string GetNewBSCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(BSCode as int)),0000) from BshMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1.Master
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
     public partial class frmProductMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
-        public String PrdCode { get; set; }
+        public string PrdCode { get; set; }
         public frmProductMstAddEdit()
         {
             InitializeComponent();
@@ -148,7 +148,7 @@ namespace WindowsFormsApplication1
         }
         private string GetNewPrdCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(PrdCode as int)),0000) from PrdMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -183,7 +183,7 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -233,7 +233,7 @@ namespace WindowsFormsApplication1
                         sqlcom.ExecuteNonQuery();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

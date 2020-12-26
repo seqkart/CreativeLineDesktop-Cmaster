@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraPivotGrid;
 using DevExpress.XtraPrinting;
-using System;
 using System.Drawing;
 using System.Drawing.Printing;
 
@@ -41,11 +40,11 @@ namespace WindowsFormsApplication1.FormReports
             PGC.RefreshData();
             PCL.Component = PGC;
             PCL.PageHeaderFooter = new PageHeaderFooter(new PageHeaderArea(new string[] {
-                "Printed At:-[Date Printed] [Time Printed]", String.Format("{0}\r\n{1}",  GlobalVariables.CompanyName, HeaderMiddle),
-                "[Page # of Pages #]" }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0))), BrickAlignment.Near), new PageFooterArea(new string[] {
+                "Printed At:-[Date Printed] [Time Printed]", string.Format("{0}\r\n{1}",  GlobalVariables.CompanyName, HeaderMiddle),
+                "[Page # of Pages #]" }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, 0), BrickAlignment.Near), new PageFooterArea(new string[] {
                 string.Empty,
                 string.Empty,
-                string.Empty }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0))), BrickAlignment.Near));
+                string.Empty }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, 0), BrickAlignment.Near));
             PCL.PaperKind = PaperKind.CSheet;
             PCL.PaperName = "Internal Report";
             PCL.Landscape = true;
@@ -79,11 +78,11 @@ namespace WindowsFormsApplication1.FormReports
             PGC.RefreshDataSource();
             PCL.Component = PGC;
             PCL.PageHeaderFooter = new PageHeaderFooter(new PageHeaderArea(new string[] {
-                 "Printed At:-[Date Printed] [Time Printed]", String.Format("{0}\r\n{1}", GlobalVariables.CompanyName, HeaderMiddle),
-                "[Page # of Pages #]" }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0))), BrickAlignment.Near), new PageFooterArea(new string[] {
+                 "Printed At:-[Date Printed] [Time Printed]", string.Format("{0}\r\n{1}", GlobalVariables.CompanyName, HeaderMiddle),
+                "[Page # of Pages #]" }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, 0), BrickAlignment.Near), new PageFooterArea(new string[] {
                 string.Empty,
                 string.Empty,
-                string.Empty }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0))), BrickAlignment.Near));
+                string.Empty }, new Font("Arial Narrow", 10.25F, FontStyle.Bold, GraphicsUnit.Point, 0), BrickAlignment.Near));
             PCL.PaperKind = PaperKind.A3;
             PCL.PaperName = "Internal Report";
             PCL.Landscape = true;
@@ -109,7 +108,7 @@ namespace WindowsFormsApplication1.FormReports
 
         private static void SetXlsOptions(XlsExportOptions xlsExportOptions, string SheetName)
         {
-            xlsExportOptions.SheetName = String.IsNullOrEmpty(SheetName) ? "Document" : SheetName;
+            xlsExportOptions.SheetName = string.IsNullOrEmpty(SheetName) ? "Document" : SheetName;
             xlsExportOptions.ShowGridLines = true;
             xlsExportOptions.TextExportMode = TextExportMode.Value;
             xlsExportOptions.Suppress65536RowsWarning = true;

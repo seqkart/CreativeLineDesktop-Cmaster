@@ -6,8 +6,8 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmCityMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String CityCode { get; set; }
+        public string s1 { get; set; }
+        public string CityCode { get; set; }
         public frmCityMst()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1.Master
 
         private void txtStateCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtStateName.Text = String.Empty;
+            txtStateName.Text = string.Empty;
 
         }
         private void SetMyControls()
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1.Master
                         transaction.Commit();
                         sqlcon.Close();
                         //ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1.Master
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 

@@ -16,10 +16,6 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                int nError = 0;
-                //AxSBXPCLib.AxSBXPC SBXPC1 = new AxSBXPCLib.AxSBXPC();
-                String lpszIPAddress = "192.168.1.150";
-                String lpszDevId = "rss1030029868";
 
 
 

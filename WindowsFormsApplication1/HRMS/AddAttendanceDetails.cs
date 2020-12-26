@@ -9,8 +9,8 @@ namespace HumanResourceManagementSystem
 
     public partial class AddAttendanceDetails : Form
     {
-        public String s1 { get; set; }
-        public String UserName { get; set; }
+        public string s1 { get; set; }
+        public string UserName { get; set; }
 
         SqlConnection con;
         SqlTransaction objTran = null;
@@ -299,7 +299,7 @@ namespace HumanResourceManagementSystem
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
 
         private void txtTimeIn_TextChanged(object sender, EventArgs e)
@@ -307,7 +307,7 @@ namespace HumanResourceManagementSystem
             string str = txtTimeIn.Text.ToString();
             foreach (char c in str)
             {
-                if (Char.IsLetter(c))
+                if (char.IsLetter(c))
                 {
                     MessageBox.Show("Please Enter Numbers in hh:mm format");
                     txtTimeIn.Text = string.Empty;
@@ -323,7 +323,7 @@ namespace HumanResourceManagementSystem
             string str = txtTimeOut.Text.ToString();
             foreach (char c in str)
             {
-                if (Char.IsLetter(c))
+                if (char.IsLetter(c))
                 {
                     MessageBox.Show("Please Enter Numbers in hh:mm format");
                     txtTimeOut.Text = string.Empty;

@@ -9,8 +9,8 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmCategoryMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String CatgCode { get; set; }
+        public string s1 { get; set; }
+        public string CatgCode { get; set; }
         public frmCategoryMst()
         {
             InitializeComponent();
@@ -26,12 +26,12 @@ namespace WindowsFormsApplication1.Master
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private string GetNewDesgCode()
         {
 
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(CatgCode as int)),00000) from CatgMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1.Master
 
 
 
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -287,7 +287,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     {
                         ProjectFunctions.SpeakError("Salary Structure Updated.");
                     }
-                    this.Close();
+                    Close();
 
                 }
                 else

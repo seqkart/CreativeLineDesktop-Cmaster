@@ -7,9 +7,9 @@ namespace WindowsFormsApplication1
 {
     public partial class frmCustomerMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String CAFSYSID { get; set; }
-        public String CustMobileNo { get; set; }
+        public string s1 { get; set; }
+        public string CAFSYSID { get; set; }
+        public string CustMobileNo { get; set; }
         public frmCustomerMst()
         {
             InitializeComponent();
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void FrmCustomerMst_KeyDown(object sender, KeyEventArgs e)
@@ -145,7 +145,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -239,7 +239,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         GlobalVariables.GlobalCustWindowCount = 1;
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

@@ -8,8 +8,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTdsDeductionAddEdit : XtraForm
     {
-        public String s1 { get; set; }
-        public String TdNo { get; set; }
+        public string s1 { get; set; }
+        public string TdNo { get; set; }
         public DateTime TdDate { get; set; }
 
 
@@ -28,12 +28,12 @@ namespace WindowsFormsApplication1
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private string GetNewTDSCode()
         {
-            String s2 = String.Empty;
-            DataSet ds = ProjectFunctions.GetDataSet(String.Format("select isnull(max(Cast(TDNo as int)),00000) from TDSdataMst Where TdDate='{0:yyyy-MM-dd}'", dtTransDate.DateTime.Date));
+            string s2 = string.Empty;
+            DataSet ds = ProjectFunctions.GetDataSet(string.Format("select isnull(max(Cast(TDNo as int)),00000) from TDSdataMst Where TdDate='{0:yyyy-MM-dd}'", dtTransDate.DateTime.Date));
             if (ds.Tables[0].Rows.Count > 0)
             {
                 s2 = ds.Tables[0].Rows[0][0].ToString();
@@ -193,7 +193,7 @@ namespace WindowsFormsApplication1
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -337,11 +337,11 @@ namespace WindowsFormsApplication1
             txtRemarks.Text = string.Empty;
             if (txtTDSRate.Text.Length == 0 || Convert.ToDecimal(txtTDSRate.EditValue) == 0)
             {
-                txtRemarks.Text = String.Format("AMT. OF TDS DEDUCTED {1} {0} FROM {2}", txtReference.Text, (Convert.ToDecimal(txtOnAmount.EditValue) > 0 ? ("ON Rs." + txtOnAmount.Text + " AGNST. ") : string.Empty), txtPDesc.Text);
+                txtRemarks.Text = string.Format("AMT. OF TDS DEDUCTED {1} {0} FROM {2}", txtReference.Text, (Convert.ToDecimal(txtOnAmount.EditValue) > 0 ? ("ON Rs." + txtOnAmount.Text + " AGNST. ") : string.Empty), txtPDesc.Text);
             }
             else
             {
-                txtRemarks.Text = String.Format("AMT. OF TDS DEDUCTED ON Rs. {1} @ {2} U/S {3} FROM {4} AGNST. {0}", txtReference.Text, txtOnAmount.Text, txtTDSRate.Text, txtUnderSection.Text, txtPDesc.Text);
+                txtRemarks.Text = string.Format("AMT. OF TDS DEDUCTED ON Rs. {1} @ {2} U/S {3} FROM {4} AGNST. {0}", txtReference.Text, txtOnAmount.Text, txtTDSRate.Text, txtUnderSection.Text, txtPDesc.Text);
             }
         }
 

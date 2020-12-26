@@ -8,12 +8,12 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class CashTender : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String MemoNo { get; set; }
+        public string s1 { get; set; }
+        public string MemoNo { get; set; }
         public DateTime MemoDate { get; set; }
-        public Decimal CardPayment { get; set; }
-        public Decimal PGPayment { get; set; }
-        public Decimal TotalMemoAmount { get; set; }
+        public decimal CardPayment { get; set; }
+        public decimal PGPayment { get; set; }
+        public decimal TotalMemoAmount { get; set; }
         public CashTender()
         {
             InitializeComponent();
@@ -315,7 +315,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                         sqlcon.Close();
 
-                        this.Close();
+                        Close();
 
 
 
@@ -334,18 +334,18 @@ namespace WindowsFormsApplication1.Transaction
             Save();
             Prints.CASHMEMO rpt = new Prints.CASHMEMO();
             ProjectFunctions.PrintDocument(txtCashMemoNo.Text, Convert.ToDateTime(txtCashMemoDate.Text), "S", rpt);
-            this.Close();
+            Close();
         }
 
         private void SimpleButton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
         }
 
         private void BtnSaveOnly_Click(object sender, EventArgs e)
         {
             Save();
-            this.Close();
+            Close();
             //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
             //var P = ProjectFunctions.GetPositionInForm(this);
             //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));

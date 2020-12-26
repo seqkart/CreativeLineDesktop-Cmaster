@@ -44,9 +44,9 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
 
-            HelpGrid.Height = this.Height - 10;
-            HelpGrid.Left = this.Width - HelpGrid.Width;
-            HelpGrid.Top = this.Height - HelpGrid.Height - 10;
+            HelpGrid.Height = Height - 10;
+            HelpGrid.Left = Width - HelpGrid.Width;
+            HelpGrid.Top = Height - HelpGrid.Height - 10;
             HelpGrid.BringToFront();
 
 
@@ -300,9 +300,15 @@ namespace WindowsFormsApplication1
             DataRow dr = AdvanceGridView.GetDataRow(e.RowHandle);
             if (dr != null)
             {
-                if (dr["EditMode"] == null) return;
+                if (dr["EditMode"] == null)
+                {
+                    return;
+                }
+
                 if (dr["EditMode"].ToString() == "1")
+                {
                     e.Appearance.BackColor = System.Drawing.Color.Lavender;//.FromArgb(224, 224, 224);
+                }
             }
         }
 
@@ -422,7 +428,9 @@ namespace WindowsFormsApplication1
         {
 
             if (ValidateDataForSaving() == false)
+            {
                 return;
+            }
 
             btnSave.Enabled = true;
         }
@@ -469,7 +477,9 @@ namespace WindowsFormsApplication1
                             decimal balamt;
                             balamt = Convert.ToDecimal(Txt_AdvAmt.EditValue) - (TotAmt - Convert.ToDecimal(dr["IdPrdAmt"]));
                             if (balamt < 0)
+                            {
                                 balamt = 0;
+                            }
 
                             dr["AmdAdjustAmt"] = balamt;
                         }

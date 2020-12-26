@@ -8,8 +8,8 @@ namespace WindowsFormsApplication1.FormReports
     public partial class frmshowroomreport : DevExpress.XtraEditors.XtraForm
 
     {
-        String ShowConnectionString = @"Data Source=CREATIVE-PC\MSSQLSERVER1;Initial Catalog=SEQKART;User ID=sa;pwd=123";
-        String ShowConnectionStringHO = @"Data Source=seqkart.ddns.net;Initial Catalog=test;User ID=sa;pwd=Seq@2020";
+        string ShowConnectionString = @"Data Source=CREATIVE-PC\MSSQLSERVER1;Initial Catalog=SEQKART;User ID=sa;pwd=123";
+        string ShowConnectionStringHO = @"Data Source=seqkart.ddns.net;Initial Catalog=test;User ID=sa;pwd=Seq@2020";
         public frmshowroomreport()
         {
             InitializeComponent();

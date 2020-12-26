@@ -15,25 +15,13 @@ namespace WindowsFormsApplication1.Forms_Master
         public string LoanADate { get; set; }
         public string s1
         {
-            get
-            {
-                return _s1;
-            }
-            set
-            {
-                _s1 = value;
-            }
+            get => _s1;
+            set => _s1 = value;
         }
         public string empcode
         {
-            get
-            {
-                return _empcode;
-            }
-            set
-            {
-                _empcode = value;
-            }
+            get => _empcode;
+            set => _empcode = value;
         }
 
         public string MonthYear { get; set; }
@@ -225,7 +213,7 @@ namespace WindowsFormsApplication1.Forms_Master
                         sqlcom.ExecuteNonQuery();
                         //UpDateLoanInstlmnt();
                         ProjectFunctions.SpeakError("Data has been Added");
-                        this.Close();
+                        Close();
                     }
                 }
 
@@ -250,7 +238,7 @@ namespace WindowsFormsApplication1.Forms_Master
                         sqlcom.ExecuteNonQuery();
                         //UpDateLoanInstlmnt();
                         ProjectFunctions.SpeakError("Data has been Updated");
-                        this.Close();
+                        Close();
                     }
                 }
             }

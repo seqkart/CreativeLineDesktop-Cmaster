@@ -9,9 +9,9 @@ namespace WindowsFormsApplication1
 {
     public partial class frmAccountMstAddEdit : XtraForm
     {
-        String TransID;
-        public String s1 { get; set; }
-        public String AccCode { get; set; }
+        string TransID;
+        public string s1 { get; set; }
+        public string AccCode { get; set; }
         public frmAccountMstAddEdit()
         {
             InitializeComponent();
@@ -171,7 +171,7 @@ namespace WindowsFormsApplication1
         }
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private bool ValidateData()
         {
@@ -380,7 +380,7 @@ namespace WindowsFormsApplication1
 
                         transaction.Commit();
                         ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
 
                     }
                     catch (Exception ex)
@@ -573,7 +573,7 @@ namespace WindowsFormsApplication1
 
         private void TxtAgentCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtAgentName.Text = String.Empty;
+            txtAgentName.Text = string.Empty;
         }
 
         private void TxtAgentCode_KeyDown(object sender, KeyEventArgs e)
@@ -590,7 +590,7 @@ namespace WindowsFormsApplication1
 
         private void TxtUnitCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtUnitName.Text = String.Empty;
+            txtUnitName.Text = string.Empty;
         }
 
         private void TxtUnitCode_KeyDown(object sender, KeyEventArgs e)
@@ -655,7 +655,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                String Query = "update ActDelAddresses Set ";
+                string Query = "update ActDelAddresses Set ";
                 Query = Query + " DelAccName='" + txtDelAccName.Text + "',";
                 Query = Query + " DelZipCode='" + txtDelZipCode.Text + "',";
                 Query = Query + " AccAddress1='" + txtDelAddress1.Text + "',";

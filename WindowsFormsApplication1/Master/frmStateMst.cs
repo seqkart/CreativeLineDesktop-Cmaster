@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmStateMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String StateCode { get; set; }
+        public string s1 { get; set; }
+        public string StateCode { get; set; }
         public frmStateMst()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void SetMyControls()
         {
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1.Master
                         transaction.Commit();
                         sqlcon.Close();
                         //ProjectFunctions.SpeakError("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1.Master
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
     }

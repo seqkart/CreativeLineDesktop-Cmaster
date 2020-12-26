@@ -6,16 +6,16 @@ namespace WindowsFormsApplication1
 {
     public partial class frmDataTransfer : DevExpress.XtraEditors.XtraForm
     {
-        String SourceConnectionString = String.Empty;
-        String DestinationConnectionString = String.Empty;
+        string SourceConnectionString = string.Empty;
+        string DestinationConnectionString = string.Empty;
 
-        String SourceTable;
-        String DestinationTable;
+        string SourceTable;
+        string DestinationTable;
         public frmDataTransfer()
         {
             InitializeComponent();
         }
-        public DataSet GetDataSet(string Query, String ConnectionString)
+        public DataSet GetDataSet(string Query, string ConnectionString)
         {
             using (var _VarDataSet = new DataSet())
             {
@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
         private void MakeQuery()
         {
             int i = 0;
-            String Query = String.Empty;
+            string Query = string.Empty;
 
             foreach (DataRow dr in (DColumnGrid.DataSource as DataTable).Rows)
             {

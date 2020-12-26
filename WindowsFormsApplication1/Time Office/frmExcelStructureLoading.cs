@@ -14,22 +14,22 @@ namespace WindowsFormsApplication1.Forms_Master
         public frmExcelStructureLoading()
         {
             InitializeComponent();
-            dt.Columns.Add("EmpPartyCode", typeof(String));
-            dt.Columns.Add("AccName", typeof(String));
-            dt.Columns.Add("UnitCode", typeof(String));
-            dt.Columns.Add("UnitName", typeof(String));
-            dt.Columns.Add("EmpCode", typeof(String));
-            dt.Columns.Add("EmpName", typeof(String));
-            dt.Columns.Add("EmpFHRelationTag", typeof(String));
-            dt.Columns.Add("EmpFHName", typeof(String));
-            dt.Columns.Add("EmpDeptCode", typeof(String));
-            dt.Columns.Add("DeptDesc", typeof(String));
-            dt.Columns.Add("EmpDesgCode", typeof(String));
-            dt.Columns.Add("DesgDesc", typeof(String));
+            dt.Columns.Add("EmpPartyCode", typeof(string));
+            dt.Columns.Add("AccName", typeof(string));
+            dt.Columns.Add("UnitCode", typeof(string));
+            dt.Columns.Add("UnitName", typeof(string));
+            dt.Columns.Add("EmpCode", typeof(string));
+            dt.Columns.Add("EmpName", typeof(string));
+            dt.Columns.Add("EmpFHRelationTag", typeof(string));
+            dt.Columns.Add("EmpFHName", typeof(string));
+            dt.Columns.Add("EmpDeptCode", typeof(string));
+            dt.Columns.Add("DeptDesc", typeof(string));
+            dt.Columns.Add("EmpDesgCode", typeof(string));
+            dt.Columns.Add("DesgDesc", typeof(string));
             dt.Columns.Add("EmpDOJ", typeof(DateTime));
             dt.Columns.Add("EmpDOB", typeof(DateTime));
-            dt.Columns.Add("EmpPFno", typeof(String));
-            dt.Columns.Add("EmpUANNo", typeof(String));
+            dt.Columns.Add("EmpPFno", typeof(string));
+            dt.Columns.Add("EmpUANNo", typeof(string));
             dt.Columns.Add("EmpBasic", typeof(decimal));
             dt.Columns.Add("EmpHRA", typeof(decimal));
             dt.Columns.Add("EmpConv", typeof(decimal));
@@ -37,14 +37,14 @@ namespace WindowsFormsApplication1.Forms_Master
             dt.Columns.Add("EmpSplAlw", typeof(decimal));
             dt.Columns.Add("EmpTDS", typeof(decimal));
             dt.Columns.Add("EmpMscD1", typeof(decimal));
-            dt.Columns.Add("EmpPanNo", typeof(String));
-            dt.Columns.Add("EmpAdharCardNo", typeof(String));
-            dt.Columns.Add("EmpBankIFSCode", typeof(String));
-            dt.Columns.Add("EmpBankAcNo", typeof(String));
+            dt.Columns.Add("EmpPanNo", typeof(string));
+            dt.Columns.Add("EmpAdharCardNo", typeof(string));
+            dt.Columns.Add("EmpBankIFSCode", typeof(string));
+            dt.Columns.Add("EmpBankAcNo", typeof(string));
 
-            dt.Columns.Add("EmpPFDTag", typeof(String));
-            dt.Columns.Add("EmpFpfDTag", typeof(String));
-            dt.Columns.Add("EmpESIDTag", typeof(String));
+            dt.Columns.Add("EmpPFDTag", typeof(string));
+            dt.Columns.Add("EmpFpfDTag", typeof(string));
+            dt.Columns.Add("EmpESIDTag", typeof(string));
 
         }
         private string getNewDocumentNo()

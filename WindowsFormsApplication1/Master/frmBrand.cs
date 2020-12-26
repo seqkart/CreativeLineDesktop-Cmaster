@@ -7,8 +7,8 @@ namespace WindowsFormsApplication1
 {
     public partial class frmBrand : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String BrandCode { get; set; }
+        public string s1 { get; set; }
+        public string BrandCode { get; set; }
         public frmBrand()
         {
             InitializeComponent();
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1
                         transaction.Commit();
                         sqlcon.Close();
                         ProjectFunctions.SpeakError("Brand Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {
@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
     }

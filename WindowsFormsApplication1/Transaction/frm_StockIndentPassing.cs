@@ -97,7 +97,7 @@ namespace WindowsFormsApplication1
             IndentPassGrd.UpdateCurrentRow();
             foreach (DataRow Dr in (InPassGridCtrl.DataSource as DataTable).Select("Pass=True And IndPassTag='N'"))
             {
-                ProjectFunctions.GetDataSet(String.Format(" Update indData set IndPassTag='Y',IndPassDt='{0}',IndDItemQtyPass='{1}',IndDPassUser='{3}',IndDPassedDt=GetDate() where IndID={2};", DtIndentPass.DateTime.Date.ToString("yyyy-MM-dd"), Dr["IndDItemQty"], Dr["IndID"], GlobalVariables.CurrentUser));
+                ProjectFunctions.GetDataSet(string.Format(" Update indData set IndPassTag='Y',IndPassDt='{0}',IndDItemQtyPass='{1}',IndDPassUser='{3}',IndDPassedDt=GetDate() where IndID={2};", DtIndentPass.DateTime.Date.ToString("yyyy-MM-dd"), Dr["IndDItemQty"], Dr["IndID"], GlobalVariables.CurrentUser));
             }
             fillGrid();
         }
@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1
             IndentPassGrd.UpdateCurrentRow();
             foreach (DataRow Dr in (InPassGridCtrl.DataSource as DataTable).Select("Pass=True And IndPassTag='Y'"))
             {
-                ProjectFunctions.GetDataSet(String.Format(" Update indData set IndPassTag=Null,IndPassDt=Null,IndDItemQtyPass=Null,IndDPassedDt=GetDate() where IndID={2};", DtIndentPass.DateTime.Date.ToString("yyyy-MM-dd"), Dr["IndDItemQty"], Dr["IndID"]));
+                ProjectFunctions.GetDataSet(string.Format(" Update indData set IndPassTag=Null,IndPassDt=Null,IndDItemQtyPass=Null,IndDPassedDt=GetDate() where IndID={2};", DtIndentPass.DateTime.Date.ToString("yyyy-MM-dd"), Dr["IndDItemQty"], Dr["IndID"]));
             }
 
             fillGrid();

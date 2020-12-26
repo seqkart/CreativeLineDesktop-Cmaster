@@ -13,33 +13,33 @@ namespace WindowsFormsApplication1.Transaction
 
         public string S1 { get; set; }
 
-        public String PSWSNO { get; set; }
+        public string PSWSNO { get; set; }
 
-        public String PSWSTOTBOXES { get; set; }
+        public string PSWSTOTBOXES { get; set; }
 
-        public String StkTransfer { get; set; }
-        public String UpdateTag { get; set; }
-        public String FixBarPartyTag { get; set; }
+        public string StkTransfer { get; set; }
+        public string UpdateTag { get; set; }
+        public string FixBarPartyTag { get; set; }
 
         public FrmPackingSlipWholeSale()
         {
             InitializeComponent();
-            dt.Columns.Add("SIDBOXNO", typeof(String));
-            dt.Columns.Add("SIDBARCODE", typeof(String));
-            dt.Columns.Add("SIDARTNO", typeof(String));
-            dt.Columns.Add("SIDARTDESC", typeof(String));
-            dt.Columns.Add("SIDCOLN", typeof(String));
-            dt.Columns.Add("SIDSIZN", typeof(String));
-            dt.Columns.Add("SIDSCANQTY", typeof(Decimal));
-            dt.Columns.Add("SIDARTMRP", typeof(Decimal));
-            dt.Columns.Add("SIDARTWSP", typeof(Decimal));
-            dt.Columns.Add("SIDARTID", typeof(String));
-            dt.Columns.Add("SIDCOLID", typeof(String));
-            dt.Columns.Add("SIDSIZID", typeof(String));
-            dt.Columns.Add("SIDPSNO", typeof(String));
+            dt.Columns.Add("SIDBOXNO", typeof(string));
+            dt.Columns.Add("SIDBARCODE", typeof(string));
+            dt.Columns.Add("SIDARTNO", typeof(string));
+            dt.Columns.Add("SIDARTDESC", typeof(string));
+            dt.Columns.Add("SIDCOLN", typeof(string));
+            dt.Columns.Add("SIDSIZN", typeof(string));
+            dt.Columns.Add("SIDSCANQTY", typeof(decimal));
+            dt.Columns.Add("SIDARTMRP", typeof(decimal));
+            dt.Columns.Add("SIDARTWSP", typeof(decimal));
+            dt.Columns.Add("SIDARTID", typeof(string));
+            dt.Columns.Add("SIDCOLID", typeof(string));
+            dt.Columns.Add("SIDSIZID", typeof(string));
+            dt.Columns.Add("SIDPSNO", typeof(string));
         }
 
-        private void BtnQuit_Click(object sender, EventArgs e) { this.Close(); }
+        private void BtnQuit_Click(object sender, EventArgs e) { Close(); }
 
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
         {
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void Count()
         {
-            Decimal QtySum = 0;
+            decimal QtySum = 0;
             foreach (DataRow dr in dt.Rows)
             {
                 dr["SIDBOXNO"] = Convert.ToDecimal(lblBox.Text);
@@ -379,7 +379,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                     {
-                        String PSWSID = String.Empty;
+                        string PSWSID = string.Empty;
                         sqlcon.Open();
                         var sqlcom = sqlcon.CreateCommand();
                         sqlcom.Connection = sqlcon;
@@ -892,7 +892,7 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         BarCodeGrid.DataSource = null;
                     }
-                    txtBarCode.Text = String.Empty;
+                    txtBarCode.Text = string.Empty;
                     txtBarCode.Focus();
 
 
@@ -1028,10 +1028,10 @@ namespace WindowsFormsApplication1.Transaction
                 e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Paste", (o1, e1) =>
                 {
                     dt.Clear();
-                    String Text = Clipboard.GetText().Replace("\r", string.Empty);
-                    String[] strlist = Text.Split('\n');
+                    string Text = Clipboard.GetText().Replace("\r", string.Empty);
+                    string[] strlist = Text.Split('\n');
 
-                    foreach (String str in strlist)
+                    foreach (string str in strlist)
                     {
                         DataSet ds = ProjectFunctions.GetDataSet("sp_LoadDataFromSKUdetUsingBarCode '" +
                              str +
@@ -1088,14 +1088,14 @@ namespace WindowsFormsApplication1.Transaction
 
         private void TxtAccCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtAccName.Text = String.Empty;
-            txtGSTNo.Text = String.Empty;
-            txtAddress.Text = String.Empty;
-            txtAddress2.Text = String.Empty;
-            txtAddress3.Text = String.Empty;
-            StkTransfer = String.Empty;
-            txtCity.Text = String.Empty;
-            txtState.Text = String.Empty;
+            txtAccName.Text = string.Empty;
+            txtGSTNo.Text = string.Empty;
+            txtAddress.Text = string.Empty;
+            txtAddress2.Text = string.Empty;
+            txtAddress3.Text = string.Empty;
+            StkTransfer = string.Empty;
+            txtCity.Text = string.Empty;
+            txtState.Text = string.Empty;
         }
 
         private void HelpGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)

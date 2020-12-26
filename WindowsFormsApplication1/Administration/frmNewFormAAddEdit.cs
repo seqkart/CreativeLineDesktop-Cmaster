@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
     public partial class frmNewFormAAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
-        public String ProgCode { get; set; }
+        public string ProgCode { get; set; }
         public frmNewFormAAddEdit()
         {
             InitializeComponent();
@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         private void SetMyControls()
         {
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
                     txtFormCode.Enabled = false;
                     txtFormName.Enabled = false;
                     txtstatusTag.Focus();
-                    DataSet ds = ProjectFunctions.GetDataSet(String.Format(" sp_LoadProgMstFEdit '" + ProgCode + "'"));
+                    DataSet ds = ProjectFunctions.GetDataSet(string.Format(" sp_LoadProgMstFEdit '" + ProgCode + "'"));
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         txtFormCode.Text = ds.Tables[0].Rows[0]["ProgCode"].ToString();
@@ -226,7 +226,7 @@ namespace WindowsFormsApplication1
             {
                 if (S1 == "&Add")
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet(String.Format("Select ProgCode From ProgramMaster Where ProgCode='" + txtFormCode.Text.Trim() + "'"));
+                    DataSet ds = ProjectFunctions.GetDataSet(string.Format("Select ProgCode From ProgramMaster Where ProgCode='" + txtFormCode.Text.Trim() + "'"));
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         ProjectFunctions.SpeakError("Program Code Already Used For Some Other Form");
@@ -274,7 +274,7 @@ namespace WindowsFormsApplication1
                         ProjectFunctions.SpeakError("Entry Updated Successfully");
                     }
                 }
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {
@@ -290,7 +290,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.Escape)
             {
-                this.Close();
+                Close();
             }
         }
 
@@ -322,7 +322,7 @@ namespace WindowsFormsApplication1
 
         private void TxtRoleCode_EditValueChanged(object sender, EventArgs e)
         {
-            txtRoleDesc.Text = String.Empty;
+            txtRoleDesc.Text = string.Empty;
         }
 
         private void TxtRoleCode_KeyDown(object sender, KeyEventArgs e)
