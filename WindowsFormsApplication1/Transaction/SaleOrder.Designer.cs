@@ -257,7 +257,7 @@
             // txtGSTNo
             // 
             this.txtGSTNo.EnterMoveNextControl = true;
-            this.txtGSTNo.Location = new System.Drawing.Point(279, 151);
+            this.txtGSTNo.Location = new System.Drawing.Point(279, 149);
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.ReadOnly = true;
@@ -267,7 +267,7 @@
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(77, 154);
+            this.labelControl22.Location = new System.Drawing.Point(77, 153);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(16, 13);
             this.labelControl22.TabIndex = 550;
@@ -276,7 +276,7 @@
             // txtBillingZip
             // 
             this.txtBillingZip.Enabled = false;
-            this.txtBillingZip.Location = new System.Drawing.Point(99, 151);
+            this.txtBillingZip.Location = new System.Drawing.Point(99, 149);
             this.txtBillingZip.Name = "txtBillingZip";
             this.txtBillingZip.Size = new System.Drawing.Size(136, 20);
             this.txtBillingZip.TabIndex = 549;
@@ -284,7 +284,7 @@
             // txtBillingState
             // 
             this.txtBillingState.Enabled = false;
-            this.txtBillingState.Location = new System.Drawing.Point(279, 128);
+            this.txtBillingState.Location = new System.Drawing.Point(279, 124);
             this.txtBillingState.Name = "txtBillingState";
             this.txtBillingState.Size = new System.Drawing.Size(197, 20);
             this.txtBillingState.TabIndex = 547;
@@ -292,7 +292,7 @@
             // txtBillingCity
             // 
             this.txtBillingCity.Enabled = false;
-            this.txtBillingCity.Location = new System.Drawing.Point(99, 128);
+            this.txtBillingCity.Location = new System.Drawing.Point(99, 124);
             this.txtBillingCity.Name = "txtBillingCity";
             this.txtBillingCity.Size = new System.Drawing.Size(136, 20);
             this.txtBillingCity.TabIndex = 548;
@@ -300,7 +300,7 @@
             // txtBillingAddress3
             // 
             this.txtBillingAddress3.Enabled = false;
-            this.txtBillingAddress3.Location = new System.Drawing.Point(99, 102);
+            this.txtBillingAddress3.Location = new System.Drawing.Point(99, 99);
             this.txtBillingAddress3.Name = "txtBillingAddress3";
             this.txtBillingAddress3.Size = new System.Drawing.Size(377, 20);
             this.txtBillingAddress3.TabIndex = 546;
@@ -308,7 +308,7 @@
             // txtBillingAddress2
             // 
             this.txtBillingAddress2.Enabled = false;
-            this.txtBillingAddress2.Location = new System.Drawing.Point(99, 76);
+            this.txtBillingAddress2.Location = new System.Drawing.Point(99, 74);
             this.txtBillingAddress2.Name = "txtBillingAddress2";
             this.txtBillingAddress2.Size = new System.Drawing.Size(377, 20);
             this.txtBillingAddress2.TabIndex = 545;
@@ -316,7 +316,7 @@
             // txtBillingAddress1
             // 
             this.txtBillingAddress1.Enabled = false;
-            this.txtBillingAddress1.Location = new System.Drawing.Point(99, 50);
+            this.txtBillingAddress1.Location = new System.Drawing.Point(99, 49);
             this.txtBillingAddress1.Name = "txtBillingAddress1";
             this.txtBillingAddress1.Size = new System.Drawing.Size(377, 20);
             this.txtBillingAddress1.TabIndex = 544;
@@ -347,7 +347,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(247, 131);
+            this.labelControl11.Location = new System.Drawing.Point(247, 128);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(26, 13);
             this.labelControl11.TabIndex = 3;
@@ -355,7 +355,7 @@
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(235, 154);
+            this.labelControl30.Location = new System.Drawing.Point(235, 153);
             this.labelControl30.Name = "labelControl30";
             this.labelControl30.Size = new System.Drawing.Size(38, 13);
             this.labelControl30.TabIndex = 4;
@@ -363,7 +363,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(74, 131);
+            this.labelControl10.Location = new System.Drawing.Point(74, 128);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(19, 13);
             this.labelControl10.TabIndex = 4;
@@ -371,7 +371,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 105);
+            this.labelControl4.Location = new System.Drawing.Point(12, 103);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(81, 13);
             this.labelControl4.TabIndex = 5;
@@ -379,7 +379,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(12, 79);
+            this.labelControl3.Location = new System.Drawing.Point(12, 78);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(81, 13);
             this.labelControl3.TabIndex = 6;

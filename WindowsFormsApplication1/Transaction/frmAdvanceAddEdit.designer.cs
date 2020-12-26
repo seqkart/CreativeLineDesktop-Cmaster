@@ -108,7 +108,7 @@
             // txtAmount
             // 
             this.txtAmount.EnterMoveNextControl = true;
-            this.txtAmount.Location = new System.Drawing.Point(108, 195);
+            this.txtAmount.Location = new System.Drawing.Point(106, 195);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.MaxLength = 6;
             this.txtAmount.Size = new System.Drawing.Size(100, 20);
@@ -118,7 +118,7 @@
             // txtType
             // 
             this.txtType.EnterMoveNextControl = true;
-            this.txtType.Location = new System.Drawing.Point(108, 164);
+            this.txtType.Location = new System.Drawing.Point(106, 164);
             this.txtType.Name = "txtType";
             this.txtType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtType.Properties.MaxLength = 6;
@@ -129,7 +129,7 @@
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(108, 134);
+            this.txtEmpCode.Location = new System.Drawing.Point(106, 134);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.MaxLength = 6;
             this.txtEmpCode.Size = new System.Drawing.Size(100, 20);
@@ -139,7 +139,7 @@
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(79, 168);
+            this.labelControl35.Location = new System.Drawing.Point(76, 168);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(24, 13);
             this.labelControl35.TabIndex = 29;
@@ -147,7 +147,7 @@
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(77, 109);
+            this.labelControl33.Location = new System.Drawing.Point(76, 109);
             this.labelControl33.Name = "labelControl33";
             this.labelControl33.Size = new System.Drawing.Size(24, 13);
             this.labelControl33.TabIndex = 30;
@@ -155,7 +155,7 @@
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(54, 137);
+            this.labelControl34.Location = new System.Drawing.Point(48, 137);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(52, 13);
             this.labelControl34.TabIndex = 27;
@@ -163,7 +163,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(65, 199);
+            this.labelControl3.Location = new System.Drawing.Point(59, 199);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(41, 13);
             this.labelControl3.TabIndex = 31;
@@ -193,8 +193,8 @@
             this.DtDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.DtDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DtDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.DtDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.DtDate.Size = new System.Drawing.Size(102, 20);
             this.DtDate.TabIndex = 32;
             // 
@@ -291,7 +291,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(40, 84);
+            this.labelControl1.Location = new System.Drawing.Point(39, 84);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(61, 13);
             this.labelControl1.TabIndex = 370;

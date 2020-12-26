@@ -44,8 +44,8 @@
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GroupGridView)).BeginInit();
@@ -66,7 +66,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(915, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(886, 25);
             this.Menu_ToolStrip.TabIndex = 204;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -92,7 +92,7 @@
             // 
             // GroupGrid
             // 
-            this.GroupGrid.Location = new System.Drawing.Point(21, 89);
+            this.GroupGrid.Location = new System.Drawing.Point(12, 37);
             this.GroupGrid.MainView = this.GroupGridView;
             this.GroupGrid.Name = "GroupGrid";
             this.GroupGrid.Size = new System.Drawing.Size(354, 292);
@@ -110,6 +110,7 @@
             this.gridColumn5});
             this.GroupGridView.GridControl = this.GroupGrid;
             this.GroupGridView.Name = "GroupGridView";
+            this.GroupGridView.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn1
             // 
@@ -157,7 +158,7 @@
             // 
             // SizeGrid
             // 
-            this.SizeGrid.Location = new System.Drawing.Point(398, 89);
+            this.SizeGrid.Location = new System.Drawing.Point(372, 37);
             this.SizeGrid.MainView = this.SizeGridView;
             this.SizeGrid.Name = "SizeGrid";
             this.SizeGrid.Size = new System.Drawing.Size(505, 292);
@@ -175,6 +176,7 @@
             this.gridColumn9});
             this.SizeGridView.GridControl = this.SizeGrid;
             this.SizeGridView.Name = "SizeGridView";
+            this.SizeGridView.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn6
             // 
@@ -203,14 +205,6 @@
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 2;
             // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Select";
-            this.gridColumn9.FieldName = "Select";
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 3;
-            // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "SizeDesc";
@@ -219,11 +213,19 @@
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
             // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Select";
+            this.gridColumn9.FieldName = "Select";
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 4;
+            // 
             // frmSizeMapping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(915, 415);
+            this.ClientSize = new System.Drawing.Size(886, 339);
             this.ControlBox = false;
             this.Controls.Add(this.SizeGrid);
             this.Controls.Add(this.GroupGrid);

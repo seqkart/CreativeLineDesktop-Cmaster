@@ -259,10 +259,10 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(-322, 268);
+            this.HelpGrid.Location = new System.Drawing.Point(86, 176);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(865, 384);
+            this.HelpGrid.Size = new System.Drawing.Size(865, 306);
             this.HelpGrid.TabIndex = 810;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -777,7 +777,7 @@
             this.chExclusive.Location = new System.Drawing.Point(14, 13);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(68, 18);
+            this.chExclusive.Size = new System.Drawing.Size(68, 19);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -1488,7 +1488,7 @@
             this.chInclusive.Location = new System.Drawing.Point(84, 13);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(78, 18);
+            this.chInclusive.Size = new System.Drawing.Size(78, 19);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -2086,7 +2086,7 @@
             this.chall.Location = new System.Drawing.Point(597, 174);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(75, 18);
+            this.chall.Size = new System.Drawing.Size(75, 19);
             this.chall.TabIndex = 815;
             // 
             // Cashmemo
@@ -2094,11 +2094,11 @@
             this.ActiveGlowColor = System.Drawing.Color.Lime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1384, 756);
+            this.ClientSize = new System.Drawing.Size(1370, 747);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.chall);
             this.Controls.Add(this.lblPAyBack);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupControl4);
             this.Controls.Add(this.lblCashTender);
             this.Controls.Add(this.btnUnhold);

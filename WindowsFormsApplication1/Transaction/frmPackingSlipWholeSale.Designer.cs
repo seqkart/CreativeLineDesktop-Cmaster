@@ -56,7 +56,10 @@
             this.BarCodeGrid = new DevExpress.XtraGrid.GridControl();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.txtPackingSlipNO = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtPackingSLipDate = new DevExpress.XtraEditors.DateEdit();
+            this.txtStoreQty = new DevExpress.XtraEditors.TextEdit();
+            this.txtStoreCode = new DevExpress.XtraEditors.TextEdit();
             this.Label8 = new DevExpress.XtraEditors.LabelControl();
             this.Label7 = new DevExpress.XtraEditors.LabelControl();
             this.lblPackingSLipTot = new DevExpress.XtraEditors.LabelControl();
@@ -83,9 +86,6 @@
             this.ArticleImageBox = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStoreCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtStoreQty = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -97,6 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSlipNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).BeginInit();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
@@ -111,8 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
@@ -132,7 +132,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1122, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1105, 26);
             this.Menu_ToolStrip.TabIndex = 708;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -179,7 +179,7 @@
             this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotQty.Appearance.Options.UseBackColor = true;
             this.lblTotQty.Appearance.Options.UseFont = true;
-            this.lblTotQty.Location = new System.Drawing.Point(385, 37);
+            this.lblTotQty.Location = new System.Drawing.Point(485, 36);
             this.lblTotQty.Name = "lblTotQty";
             this.lblTotQty.Size = new System.Drawing.Size(57, 112);
             this.lblTotQty.TabIndex = 723;
@@ -191,7 +191,7 @@
             this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBox.Appearance.Options.UseBackColor = true;
             this.lblBox.Appearance.Options.UseFont = true;
-            this.lblBox.Location = new System.Drawing.Point(145, 37);
+            this.lblBox.Location = new System.Drawing.Point(245, 36);
             this.lblBox.Name = "lblBox";
             this.lblBox.Size = new System.Drawing.Size(57, 112);
             this.lblBox.TabIndex = 716;
@@ -219,7 +219,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(26, 71);
+            this.labelControl1.Location = new System.Drawing.Point(126, 70);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(113, 45);
             this.labelControl1.TabIndex = 721;
@@ -229,7 +229,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(326, 71);
+            this.labelControl2.Location = new System.Drawing.Point(426, 70);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(49, 45);
             this.labelControl2.TabIndex = 722;
@@ -422,7 +422,7 @@
             this.Panel2.Controls.Add(this.lblBox);
             this.Panel2.Location = new System.Drawing.Point(430, 29);
             this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(655, 157);
+            this.Panel2.Size = new System.Drawing.Size(669, 157);
             this.Panel2.TabIndex = 725;
             // 
             // txtPackingSlipNO
@@ -432,6 +432,14 @@
             this.txtPackingSlipNO.Name = "txtPackingSlipNO";
             this.txtPackingSlipNO.Size = new System.Drawing.Size(113, 20);
             this.txtPackingSlipNO.TabIndex = 15;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(55, 33);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(57, 13);
+            this.labelControl12.TabIndex = 734;
+            this.labelControl12.Text = "Store Code";
             // 
             // txtPackingSLipDate
             // 
@@ -448,6 +456,37 @@
             this.txtPackingSLipDate.Size = new System.Drawing.Size(118, 20);
             this.txtPackingSLipDate.TabIndex = 724;
             this.txtPackingSLipDate.TabStop = false;
+            // 
+            // txtStoreQty
+            // 
+            this.txtStoreQty.Enabled = false;
+            this.txtStoreQty.Location = new System.Drawing.Point(174, 29);
+            this.txtStoreQty.Name = "txtStoreQty";
+            this.txtStoreQty.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreQty.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.txtStoreQty.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreQty.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtStoreQty.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreQty.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.txtStoreQty.Properties.UseReadOnlyAppearance = false;
+            this.txtStoreQty.Size = new System.Drawing.Size(51, 20);
+            this.txtStoreQty.TabIndex = 733;
+            // 
+            // txtStoreCode
+            // 
+            this.txtStoreCode.Enabled = false;
+            this.txtStoreCode.Location = new System.Drawing.Point(112, 29);
+            this.txtStoreCode.Name = "txtStoreCode";
+            this.txtStoreCode.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreCode.Properties.AppearanceDisabled.Options.UseFont = true;
+            this.txtStoreCode.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreCode.Properties.AppearanceFocused.Options.UseFont = true;
+            this.txtStoreCode.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStoreCode.Properties.AppearanceReadOnly.Options.UseFont = true;
+            this.txtStoreCode.Properties.UseReadOnlyAppearance = false;
+            this.txtStoreCode.Size = new System.Drawing.Size(62, 20);
+            this.txtStoreCode.TabIndex = 732;
+            this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStoreCode_KeyDown);
             // 
             // Label8
             // 
@@ -505,7 +544,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(305, 136);
+            this.labelControl11.Location = new System.Drawing.Point(305, 131);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(21, 13);
             this.labelControl11.TabIndex = 727;
@@ -513,14 +552,14 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(329, 132);
+            this.textEdit1.Location = new System.Drawing.Point(329, 127);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(77, 20);
             this.textEdit1.TabIndex = 726;
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(162, 136);
+            this.labelControl10.Location = new System.Drawing.Point(162, 131);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(44, 13);
             this.labelControl10.TabIndex = 725;
@@ -529,7 +568,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(15, 136);
+            this.labelControl9.Location = new System.Drawing.Point(15, 131);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(44, 13);
             this.labelControl9.TabIndex = 725;
@@ -538,7 +577,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(43, 116);
+            this.labelControl8.Location = new System.Drawing.Point(43, 111);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(49, 13);
             this.labelControl8.TabIndex = 725;
@@ -547,7 +586,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(30, 95);
+            this.labelControl7.Location = new System.Drawing.Point(30, 91);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(62, 13);
             this.labelControl7.TabIndex = 725;
@@ -556,7 +595,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(38, 32);
+            this.labelControl5.Location = new System.Drawing.Point(38, 31);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(54, 13);
             this.labelControl5.TabIndex = 725;
@@ -575,7 +614,7 @@
             // txtGSTNo
             // 
             this.txtGSTNo.Enabled = false;
-            this.txtGSTNo.Location = new System.Drawing.Point(95, 112);
+            this.txtGSTNo.Location = new System.Drawing.Point(95, 107);
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Size = new System.Drawing.Size(311, 20);
             this.txtGSTNo.TabIndex = 13;
@@ -583,7 +622,7 @@
             // txtState
             // 
             this.txtState.Enabled = false;
-            this.txtState.Location = new System.Drawing.Point(244, 91);
+            this.txtState.Location = new System.Drawing.Point(244, 87);
             this.txtState.Name = "txtState";
             this.txtState.Size = new System.Drawing.Size(162, 20);
             this.txtState.TabIndex = 18;
@@ -591,7 +630,7 @@
             // txtCity
             // 
             this.txtCity.Enabled = false;
-            this.txtCity.Location = new System.Drawing.Point(95, 91);
+            this.txtCity.Location = new System.Drawing.Point(95, 87);
             this.txtCity.Name = "txtCity";
             this.txtCity.Size = new System.Drawing.Size(149, 20);
             this.txtCity.TabIndex = 18;
@@ -599,7 +638,7 @@
             // txtAddress3
             // 
             this.txtAddress3.Enabled = false;
-            this.txtAddress3.Location = new System.Drawing.Point(95, 70);
+            this.txtAddress3.Location = new System.Drawing.Point(95, 67);
             this.txtAddress3.Name = "txtAddress3";
             this.txtAddress3.Size = new System.Drawing.Size(311, 20);
             this.txtAddress3.TabIndex = 18;
@@ -607,21 +646,21 @@
             // txtAddress2
             // 
             this.txtAddress2.Enabled = false;
-            this.txtAddress2.Location = new System.Drawing.Point(95, 49);
+            this.txtAddress2.Location = new System.Drawing.Point(95, 47);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Size = new System.Drawing.Size(311, 20);
             this.txtAddress2.TabIndex = 17;
             // 
             // txtDANo
             // 
-            this.txtDANo.Location = new System.Drawing.Point(61, 132);
+            this.txtDANo.Location = new System.Drawing.Point(61, 127);
             this.txtDANo.Name = "txtDANo";
             this.txtDANo.Size = new System.Drawing.Size(96, 20);
             this.txtDANo.TabIndex = 16;
             // 
             // txtPONo
             // 
-            this.txtPONo.Location = new System.Drawing.Point(212, 132);
+            this.txtPONo.Location = new System.Drawing.Point(212, 127);
             this.txtPONo.Name = "txtPONo";
             this.txtPONo.Size = new System.Drawing.Size(86, 20);
             this.txtPONo.TabIndex = 17;
@@ -629,7 +668,7 @@
             // txtAddress
             // 
             this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(95, 28);
+            this.txtAddress.Location = new System.Drawing.Point(95, 27);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(311, 20);
             this.txtAddress.TabIndex = 12;
@@ -663,7 +702,7 @@
             // 
             // ArticleImageBox
             // 
-            this.ArticleImageBox.Location = new System.Drawing.Point(882, 242);
+            this.ArticleImageBox.Location = new System.Drawing.Point(870, 242);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
@@ -690,45 +729,6 @@
             this.labelControl3.TabIndex = 721;
             this.labelControl3.Text = "Total Ps Pcs";
             // 
-            // txtStoreCode
-            // 
-            this.txtStoreCode.Enabled = false;
-            this.txtStoreCode.Location = new System.Drawing.Point(112, 29);
-            this.txtStoreCode.Name = "txtStoreCode";
-            this.txtStoreCode.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtStoreCode.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtStoreCode.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtStoreCode.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtStoreCode.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtStoreCode.Properties.AppearanceReadOnly.Options.UseFont = true;
-            this.txtStoreCode.Properties.UseReadOnlyAppearance = false;
-            this.txtStoreCode.Size = new System.Drawing.Size(62, 20);
-            this.txtStoreCode.TabIndex = 732;
-            this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStoreCode_KeyDown);
-            // 
-            // txtStoreQty
-            // 
-            this.txtStoreQty.Enabled = false;
-            this.txtStoreQty.Location = new System.Drawing.Point(174, 29);
-            this.txtStoreQty.Name = "txtStoreQty";
-            this.txtStoreQty.Properties.AppearanceDisabled.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtStoreQty.Properties.AppearanceDisabled.Options.UseFont = true;
-            this.txtStoreQty.Properties.AppearanceFocused.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtStoreQty.Properties.AppearanceFocused.Options.UseFont = true;
-            this.txtStoreQty.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.txtStoreQty.Properties.AppearanceReadOnly.Options.UseFont = true;
-            this.txtStoreQty.Properties.UseReadOnlyAppearance = false;
-            this.txtStoreQty.Size = new System.Drawing.Size(51, 20);
-            this.txtStoreQty.TabIndex = 733;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(55, 33);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(57, 13);
-            this.labelControl12.TabIndex = 734;
-            this.labelControl12.Text = "Store Code";
-            // 
             // gridView1
             // 
             this.gridView1.GridControl = this.HelpGrid;
@@ -736,7 +736,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(139, 60);
+            this.HelpGrid.Location = new System.Drawing.Point(140, 60);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(737, 368);
@@ -767,7 +767,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1122, 604);
+            this.ClientSize = new System.Drawing.Size(1105, 604);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.ArticleImageBox);
@@ -797,6 +797,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSlipNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).EndInit();
             this.Panel1.ResumeLayout(false);
             this.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
@@ -812,8 +814,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBarCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ArticleImageBox.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();

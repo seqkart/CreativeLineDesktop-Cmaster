@@ -296,7 +296,7 @@
             // 
             // s
             // 
-            this.s.Location = new System.Drawing.Point(88, 192);
+            this.s.Location = new System.Drawing.Point(87, 192);
             this.s.Name = "s";
             this.s.Size = new System.Drawing.Size(43, 13);
             this.s.TabIndex = 286;
@@ -312,7 +312,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(54, 166);
+            this.label10.Location = new System.Drawing.Point(47, 166);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 13);
             this.label10.TabIndex = 284;
@@ -338,7 +338,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(92, 140);
+            this.label8.Location = new System.Drawing.Point(91, 140);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 13);
             this.label8.TabIndex = 282;
@@ -367,7 +367,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(64, 113);
+            this.label7.Location = new System.Drawing.Point(60, 113);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 13);
             this.label7.TabIndex = 280;
@@ -397,7 +397,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(70, 87);
+            this.label6.Location = new System.Drawing.Point(67, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 13);
             this.label6.TabIndex = 278;

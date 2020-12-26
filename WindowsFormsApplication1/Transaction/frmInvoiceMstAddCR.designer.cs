@@ -360,14 +360,14 @@
             this.groupControl2.Controls.Add(this.txtTransporterCode);
             this.groupControl2.Location = new System.Drawing.Point(526, 55);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(431, 203);
+            this.groupControl2.Size = new System.Drawing.Size(431, 200);
             this.groupControl2.TabIndex = 541;
             this.groupControl2.Text = "DEBIT NOTE DETAILS";
             // 
             // txtGRDate
             // 
             this.txtGRDate.EditValue = null;
-            this.txtGRDate.Location = new System.Drawing.Point(273, 149);
+            this.txtGRDate.Location = new System.Drawing.Point(305, 144);
             this.txtGRDate.Name = "txtGRDate";
             this.txtGRDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -377,8 +377,8 @@
             this.txtGRDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtGRDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.txtGRDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtGRDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.txtGRDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtGRDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtGRDate.Size = new System.Drawing.Size(111, 20);
             this.txtGRDate.TabIndex = 555;
             this.txtGRDate.TabStop = false;
@@ -397,7 +397,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(28, 174);
+            this.labelControl5.Location = new System.Drawing.Point(30, 169);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(59, 13);
             this.labelControl5.TabIndex = 568;
@@ -405,7 +405,7 @@
             // 
             // txtbox
             // 
-            this.txtbox.Location = new System.Drawing.Point(93, 171);
+            this.txtbox.Location = new System.Drawing.Point(93, 165);
             this.txtbox.Name = "txtbox";
             this.txtbox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtbox.Properties.MaxLength = 30;
@@ -414,7 +414,7 @@
             // 
             // txtReason
             // 
-            this.txtReason.Location = new System.Drawing.Point(93, 84);
+            this.txtReason.Location = new System.Drawing.Point(93, 81);
             this.txtReason.Name = "txtReason";
             this.txtReason.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -423,14 +423,14 @@
             "DEFECTIVE GOODS",
             "SOR",
             "OTHERS"});
-            this.txtReason.Size = new System.Drawing.Size(322, 20);
+            this.txtReason.Size = new System.Drawing.Size(323, 20);
             this.txtReason.TabIndex = 567;
             this.txtReason.SelectedIndexChanged += new System.EventHandler(this.txtReason_SelectedIndexChanged);
             // 
             // txtDEbitNoteDate
             // 
             this.txtDEbitNoteDate.EditValue = null;
-            this.txtDEbitNoteDate.Location = new System.Drawing.Point(305, 38);
+            this.txtDEbitNoteDate.Location = new System.Drawing.Point(305, 39);
             this.txtDEbitNoteDate.Name = "txtDEbitNoteDate";
             this.txtDEbitNoteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -448,15 +448,15 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(50, 87);
+            this.labelControl9.Location = new System.Drawing.Point(45, 85);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(38, 13);
+            this.labelControl9.Size = new System.Drawing.Size(44, 13);
             this.labelControl9.TabIndex = 552;
-            this.labelControl9.Text = "Reason";
+            this.labelControl9.Text = "Reason :";
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(225, 153);
+            this.labelControl32.Location = new System.Drawing.Point(256, 148);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(45, 13);
             this.labelControl32.TabIndex = 552;
@@ -464,15 +464,15 @@
             // 
             // labelControl31
             // 
-            this.labelControl31.Location = new System.Drawing.Point(49, 153);
+            this.labelControl31.Location = new System.Drawing.Point(44, 148);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(39, 13);
+            this.labelControl31.Size = new System.Drawing.Size(45, 13);
             this.labelControl31.TabIndex = 553;
-            this.labelControl31.Text = "GR. No.";
+            this.labelControl31.Text = "GR. No. :";
             // 
             // txtGRNo
             // 
-            this.txtGRNo.Location = new System.Drawing.Point(93, 149);
+            this.txtGRNo.Location = new System.Drawing.Point(93, 144);
             this.txtGRNo.Name = "txtGRNo";
             this.txtGRNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGRNo.Properties.MaxLength = 15;
@@ -481,54 +481,54 @@
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(28, 131);
+            this.labelControl24.Location = new System.Drawing.Point(23, 127);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(60, 13);
+            this.labelControl24.Size = new System.Drawing.Size(66, 13);
             this.labelControl24.TabIndex = 540;
-            this.labelControl24.Text = "Transporter";
+            this.labelControl24.Text = "Transporter :";
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(201, 65);
+            this.labelControl15.Location = new System.Drawing.Point(196, 64);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(100, 13);
+            this.labelControl15.Size = new System.Drawing.Size(106, 13);
             this.labelControl15.TabIndex = 542;
-            this.labelControl15.Text = "Debit Note Amount";
+            this.labelControl15.Text = "Debit Note Amount :";
             // 
             // txtDebitNoteAmount
             // 
-            this.txtDebitNoteAmount.Location = new System.Drawing.Point(305, 61);
+            this.txtDebitNoteAmount.Location = new System.Drawing.Point(305, 60);
             this.txtDebitNoteAmount.Name = "txtDebitNoteAmount";
             this.txtDebitNoteAmount.Size = new System.Drawing.Size(111, 20);
             this.txtDebitNoteAmount.TabIndex = 541;
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(218, 43);
+            this.labelControl16.Location = new System.Drawing.Point(213, 43);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(83, 13);
+            this.labelControl16.Size = new System.Drawing.Size(89, 13);
             this.labelControl16.TabIndex = 540;
-            this.labelControl16.Text = "Debit Note Date";
+            this.labelControl16.Text = "Debit Note Date :";
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(12, 65);
+            this.labelControl17.Location = new System.Drawing.Point(7, 64);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(76, 13);
+            this.labelControl17.Size = new System.Drawing.Size(82, 13);
             this.labelControl17.TabIndex = 540;
-            this.labelControl17.Text = "Debit Note Qty";
+            this.labelControl17.Text = "Debit Note Qty :";
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(14, 43);
+            this.labelControl18.Location = new System.Drawing.Point(6, 43);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(74, 13);
+            this.labelControl18.Size = new System.Drawing.Size(83, 13);
             this.labelControl18.TabIndex = 540;
-            this.labelControl18.Text = "Debit Note No";
+            this.labelControl18.Text = "Debit Note No. :";
             // 
             // txtOtherReason
             // 
-            this.txtOtherReason.Location = new System.Drawing.Point(93, 105);
+            this.txtOtherReason.Location = new System.Drawing.Point(93, 102);
             this.txtOtherReason.Name = "txtOtherReason";
             this.txtOtherReason.Size = new System.Drawing.Size(323, 20);
             this.txtOtherReason.TabIndex = 539;
@@ -536,7 +536,7 @@
             // 
             // txtDEbitNoteQty
             // 
-            this.txtDEbitNoteQty.Location = new System.Drawing.Point(93, 61);
+            this.txtDEbitNoteQty.Location = new System.Drawing.Point(93, 60);
             this.txtDEbitNoteQty.Name = "txtDEbitNoteQty";
             this.txtDEbitNoteQty.Size = new System.Drawing.Size(97, 20);
             this.txtDEbitNoteQty.TabIndex = 539;
@@ -553,17 +553,17 @@
             // txtTransporterName
             // 
             this.txtTransporterName.EnterMoveNextControl = true;
-            this.txtTransporterName.Location = new System.Drawing.Point(160, 127);
+            this.txtTransporterName.Location = new System.Drawing.Point(160, 123);
             this.txtTransporterName.Name = "txtTransporterName";
             this.txtTransporterName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterName.Properties.ReadOnly = true;
-            this.txtTransporterName.Size = new System.Drawing.Size(255, 20);
+            this.txtTransporterName.Size = new System.Drawing.Size(256, 20);
             this.txtTransporterName.TabIndex = 532;
             this.txtTransporterName.TabStop = false;
             // 
             // txtTransporterCode
             // 
-            this.txtTransporterCode.Location = new System.Drawing.Point(93, 127);
+            this.txtTransporterCode.Location = new System.Drawing.Point(93, 123);
             this.txtTransporterCode.Name = "txtTransporterCode";
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterCode.Properties.MaxLength = 6;
@@ -596,10 +596,11 @@
             this.groupControl1.Size = new System.Drawing.Size(479, 200);
             this.groupControl1.TabIndex = 532;
             this.groupControl1.Text = "Billing Address";
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(39, 176);
+            this.labelControl10.Location = new System.Drawing.Point(39, 175);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(38, 13);
             this.labelControl10.TabIndex = 546;
@@ -608,7 +609,7 @@
             // txtGSTNo
             // 
             this.txtGSTNo.EnterMoveNextControl = true;
-            this.txtGSTNo.Location = new System.Drawing.Point(82, 172);
+            this.txtGSTNo.Location = new System.Drawing.Point(82, 171);
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.ReadOnly = true;
@@ -618,7 +619,7 @@
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(232, 132);
+            this.labelControl13.Location = new System.Drawing.Point(232, 131);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(26, 13);
             this.labelControl13.TabIndex = 544;
@@ -634,7 +635,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(57, 132);
+            this.labelControl12.Location = new System.Drawing.Point(57, 131);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(19, 13);
             this.labelControl12.TabIndex = 542;
@@ -643,7 +644,7 @@
             // txtBillingZip
             // 
             this.txtBillingZip.Enabled = false;
-            this.txtBillingZip.Location = new System.Drawing.Point(82, 150);
+            this.txtBillingZip.Location = new System.Drawing.Point(82, 149);
             this.txtBillingZip.Name = "txtBillingZip";
             this.txtBillingZip.Size = new System.Drawing.Size(144, 20);
             this.txtBillingZip.TabIndex = 539;
@@ -651,7 +652,7 @@
             // txtBillingState
             // 
             this.txtBillingState.Enabled = false;
-            this.txtBillingState.Location = new System.Drawing.Point(262, 128);
+            this.txtBillingState.Location = new System.Drawing.Point(262, 127);
             this.txtBillingState.Name = "txtBillingState";
             this.txtBillingState.Size = new System.Drawing.Size(191, 20);
             this.txtBillingState.TabIndex = 540;
@@ -659,7 +660,7 @@
             // txtBillingCity
             // 
             this.txtBillingCity.Enabled = false;
-            this.txtBillingCity.Location = new System.Drawing.Point(82, 128);
+            this.txtBillingCity.Location = new System.Drawing.Point(82, 127);
             this.txtBillingCity.Name = "txtBillingCity";
             this.txtBillingCity.Size = new System.Drawing.Size(144, 20);
             this.txtBillingCity.TabIndex = 541;
@@ -675,7 +676,7 @@
             // txtBillingAddress3
             // 
             this.txtBillingAddress3.Enabled = false;
-            this.txtBillingAddress3.Location = new System.Drawing.Point(82, 106);
+            this.txtBillingAddress3.Location = new System.Drawing.Point(82, 105);
             this.txtBillingAddress3.Name = "txtBillingAddress3";
             this.txtBillingAddress3.Size = new System.Drawing.Size(371, 20);
             this.txtBillingAddress3.TabIndex = 537;
@@ -683,7 +684,7 @@
             // txtBillingAddress2
             // 
             this.txtBillingAddress2.Enabled = false;
-            this.txtBillingAddress2.Location = new System.Drawing.Point(82, 84);
+            this.txtBillingAddress2.Location = new System.Drawing.Point(82, 83);
             this.txtBillingAddress2.Name = "txtBillingAddress2";
             this.txtBillingAddress2.Size = new System.Drawing.Size(371, 20);
             this.txtBillingAddress2.TabIndex = 536;
@@ -790,7 +791,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(148, 149);
+            this.HelpGrid.Location = new System.Drawing.Point(123, 299);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(658, 325);
@@ -1290,7 +1291,7 @@
             this.xtraTabPage5.Controls.Add(this.txtInsuranceAmount);
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(563, 156);
+            this.xtraTabPage5.Size = new System.Drawing.Size(563, 154);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // btnCalculate
@@ -1596,7 +1597,7 @@
             this.xtraTabPage6.Controls.Add(this.TaxCodeGrid);
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(563, 156);
+            this.xtraTabPage6.Size = new System.Drawing.Size(563, 154);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -1605,7 +1606,7 @@
             this.TaxCodeGrid.Location = new System.Drawing.Point(0, 0);
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(563, 156);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(563, 154);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1715,7 +1716,7 @@
             // 
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(563, 156);
+            this.xtraTabPage9.Size = new System.Drawing.Size(563, 154);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -1724,7 +1725,7 @@
             this.HSNGrid.Location = new System.Drawing.Point(0, 0);
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(563, 156);
+            this.HSNGrid.Size = new System.Drawing.Size(563, 154);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1837,7 +1838,7 @@
             this.xtraTabPage7.Controls.Add(this.TXMAINREMARKS);
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(563, 156);
+            this.xtraTabPage7.Size = new System.Drawing.Size(563, 154);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -1897,7 +1898,7 @@
             // 
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(371, 159);
+            this.xtraTabPage8.Size = new System.Drawing.Size(371, 157);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // pictureEdit1
@@ -1907,7 +1908,7 @@
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(371, 159);
+            this.pictureEdit1.Size = new System.Drawing.Size(371, 157);
             this.pictureEdit1.TabIndex = 2;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
@@ -1915,7 +1916,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(371, 159);
+            this.xtraTabPage1.Size = new System.Drawing.Size(371, 157);
             this.xtraTabPage1.Text = "View Docs";
             // 
             // DocsGrid
@@ -1924,7 +1925,7 @@
             this.DocsGrid.Location = new System.Drawing.Point(0, 0);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(371, 159);
+            this.DocsGrid.Size = new System.Drawing.Size(371, 157);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1984,7 +1985,7 @@
             this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
             this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(75, 18);
+            this.chMultiParty.Size = new System.Drawing.Size(75, 19);
             this.chMultiParty.TabIndex = 558;
             // 
             // frmInvoiceMstAddCR

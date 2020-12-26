@@ -107,7 +107,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(12, 49);
+            this.label4.Location = new System.Drawing.Point(20, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(36, 13);
             this.label4.TabIndex = 448;
@@ -147,7 +147,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(148, 50);
+            this.label5.Location = new System.Drawing.Point(148, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(27, 13);
             this.label5.TabIndex = 446;
@@ -155,7 +155,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(23, 75);
+            this.label15.Location = new System.Drawing.Point(29, 75);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(27, 13);
             this.label15.TabIndex = 451;
@@ -164,7 +164,7 @@
             // txtPINo
             // 
             this.txtPINo.Enabled = false;
-            this.txtPINo.Location = new System.Drawing.Point(175, 46);
+            this.txtPINo.Location = new System.Drawing.Point(178, 45);
             this.txtPINo.Name = "txtPINo";
             this.txtPINo.Size = new System.Drawing.Size(148, 20);
             this.txtPINo.TabIndex = 449;
@@ -172,7 +172,7 @@
             // 
             // txtStoreCode
             // 
-            this.txtStoreCode.Location = new System.Drawing.Point(62, 72);
+            this.txtStoreCode.Location = new System.Drawing.Point(62, 71);
             this.txtStoreCode.Name = "txtStoreCode";
             this.txtStoreCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStoreCode.Properties.MaxLength = 6;
@@ -183,14 +183,13 @@
             // 
             this.txtPIDate.EditValue = null;
             this.txtPIDate.Enabled = false;
-            this.txtPIDate.Location = new System.Drawing.Point(62, 46);
+            this.txtPIDate.Location = new System.Drawing.Point(62, 45);
             this.txtPIDate.Name = "txtPIDate";
             this.txtPIDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtPIDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtPIDate.Properties.Mask.EditMask = "";
-            this.txtPIDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
+            this.txtPIDate.Properties.MaskSettings.Set("mask", "");
             this.txtPIDate.Size = new System.Drawing.Size(79, 20);
             this.txtPIDate.TabIndex = 447;
             this.txtPIDate.TabStop = false;
@@ -203,7 +202,7 @@
             // txtAddress
             // 
             this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(175, 72);
+            this.txtAddress.Location = new System.Drawing.Point(141, 71);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(551, 20);
             this.txtAddress.TabIndex = 452;

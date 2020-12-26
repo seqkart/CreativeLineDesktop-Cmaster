@@ -87,7 +87,7 @@
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl2.Location = new System.Drawing.Point(415, 108);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(384, 442);
+            this.groupControl2.Size = new System.Drawing.Size(384, 490);
             this.groupControl2.TabIndex = 213;
             // 
             // btnLoadExcel
@@ -166,7 +166,7 @@
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl1.Location = new System.Drawing.Point(24, 118);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(385, 432);
+            this.groupControl1.Size = new System.Drawing.Size(385, 480);
             this.groupControl1.TabIndex = 212;
             this.groupControl1.Text = "Source Db";
             // 
@@ -325,7 +325,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(553, 42);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 13);
+            this.labelControl1.Size = new System.Drawing.Size(80, 13);
             this.labelControl1.TabIndex = 539;
             this.labelControl1.Text = "Document Type";
             // 
@@ -374,7 +374,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(10, 69);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(75, 13);
+            this.labelControl2.Size = new System.Drawing.Size(76, 13);
             this.labelControl2.TabIndex = 542;
             this.labelControl2.Text = "TemplateName";
             // 

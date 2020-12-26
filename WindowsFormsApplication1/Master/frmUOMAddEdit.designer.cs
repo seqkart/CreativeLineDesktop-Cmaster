@@ -54,7 +54,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(398, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(324, 25);
             this.Menu_ToolStrip.TabIndex = 197;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -80,7 +80,7 @@
             // 
             // txtUnitDesc
             // 
-            this.txtUnitDesc.Location = new System.Drawing.Point(95, 83);
+            this.txtUnitDesc.Location = new System.Drawing.Point(45, 66);
             this.txtUnitDesc.Name = "txtUnitDesc";
             this.txtUnitDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnitDesc.Size = new System.Drawing.Size(267, 20);
@@ -88,7 +88,7 @@
             // 
             // txtUnitCode
             // 
-            this.txtUnitCode.Location = new System.Drawing.Point(95, 49);
+            this.txtUnitCode.Location = new System.Drawing.Point(45, 32);
             this.txtUnitCode.Name = "txtUnitCode";
             this.txtUnitCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnitCode.Size = new System.Drawing.Size(71, 20);
@@ -96,7 +96,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(64, 86);
+            this.label3.Location = new System.Drawing.Point(14, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 196;
@@ -104,7 +104,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(61, 52);
+            this.label1.Location = new System.Drawing.Point(11, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 195;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 155);
+            this.ClientSize = new System.Drawing.Size(324, 98);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtUnitDesc);

@@ -193,7 +193,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(79, 81);
+            this.label4.Location = new System.Drawing.Point(86, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(25, 13);
             this.label4.TabIndex = 221;
@@ -212,7 +212,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(58, 111);
+            this.label5.Location = new System.Drawing.Point(61, 111);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
             this.label5.TabIndex = 223;
@@ -264,7 +264,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(64, 271);
+            this.label8.Location = new System.Drawing.Point(68, 271);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 230;
@@ -371,7 +371,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(46, 207);
+            this.label10.Location = new System.Drawing.Point(47, 207);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 13);
             this.label10.TabIndex = 235;
@@ -384,9 +384,9 @@
             this.txtSurcOnTDS.Name = "txtSurcOnTDS";
             this.txtSurcOnTDS.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSurcOnTDS.Properties.Mask.BeepOnError = true;
-            this.txtSurcOnTDS.Properties.Mask.EditMask = "N0";
-            this.txtSurcOnTDS.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtSurcOnTDS.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtSurcOnTDS.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtSurcOnTDS.Properties.MaskSettings.Set("mask", "N0");
             this.txtSurcOnTDS.Properties.NullText = "0";
             this.txtSurcOnTDS.Properties.NullValuePrompt = "0";
             this.txtSurcOnTDS.Size = new System.Drawing.Size(110, 20);
@@ -394,7 +394,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(22, 239);
+            this.label11.Location = new System.Drawing.Point(23, 239);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(88, 13);
             this.label11.TabIndex = 237;

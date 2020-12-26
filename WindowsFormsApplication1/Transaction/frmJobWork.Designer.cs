@@ -150,6 +150,7 @@
             this.txtBillingCity = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.txtBillingAddress3 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.txtBillingAddress2 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtDebitPartyName = new DevExpress.XtraEditors.TextEdit();
@@ -159,7 +160,6 @@
             this.dtInvoiceDate = new DevExpress.XtraEditors.DateEdit();
             this.txtSerialNo = new DevExpress.XtraEditors.TextEdit();
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl4)).BeginInit();
@@ -187,6 +187,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingState.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyCode.Properties)).BeginInit();
@@ -194,7 +195,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // gridView3
@@ -1537,6 +1537,14 @@
             this.txtBillingAddress3.Size = new System.Drawing.Size(458, 20);
             this.txtBillingAddress3.TabIndex = 537;
             // 
+            // textEdit1
+            // 
+            this.textEdit1.Enabled = false;
+            this.textEdit1.Location = new System.Drawing.Point(82, 63);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(458, 20);
+            this.textEdit1.TabIndex = 536;
+            // 
             // txtBillingAddress2
             // 
             this.txtBillingAddress2.Enabled = false;
@@ -1622,14 +1630,6 @@
             this.txtserial.TabIndex = 539;
             this.txtserial.TabStop = false;
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(82, 63);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(458, 20);
-            this.textEdit1.TabIndex = 536;
-            // 
             // frmJobWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1677,6 +1677,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingState.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBillingAddress2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyCode.Properties)).EndInit();
@@ -1684,7 +1685,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtInvoiceDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -186,7 +186,7 @@
             // 
             this.lblDocCode.Location = new System.Drawing.Point(12, 42);
             this.lblDocCode.Name = "lblDocCode";
-            this.lblDocCode.Size = new System.Drawing.Size(30, 13);
+            this.lblDocCode.Size = new System.Drawing.Size(35, 13);
             this.lblDocCode.TabIndex = 29;
             this.lblDocCode.Text = "Month";
             // 
@@ -212,7 +212,7 @@
             // 
             this.label27.Location = new System.Drawing.Point(121, 89);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(71, 13);
+            this.label27.Size = new System.Drawing.Size(76, 13);
             this.label27.TabIndex = 253;
             this.label27.Text = "Payment Mode";
             // 
@@ -288,7 +288,7 @@
             // 
             this.labelControl2.Location = new System.Drawing.Point(5, 64);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(57, 13);
+            this.labelControl2.Size = new System.Drawing.Size(61, 13);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "Department";
             // 
@@ -309,16 +309,16 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(5, 36);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(25, 13);
+            this.labelControl1.Size = new System.Drawing.Size(27, 13);
             this.labelControl1.TabIndex = 31;
             this.labelControl1.Text = "Code";
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(62, 28);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(45, 0);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(444, 400);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(444, 345);
             this.HelpGridCtrl.TabIndex = 80;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -332,6 +332,7 @@
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.OptionsBehavior.AllowIncrementalSearch = true;
             this.HelpGrid.OptionsBehavior.Editable = false;
+            this.HelpGrid.OptionsView.ShowGroupPanel = false;
             // 
             // panelControl1
             // 
@@ -369,7 +370,7 @@
             // 
             this.labelControl25.Location = new System.Drawing.Point(12, 123);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(51, 13);
+            this.labelControl25.Size = new System.Drawing.Size(53, 13);
             this.labelControl25.TabIndex = 37;
             this.labelControl25.Text = "Total Days";
             // 
@@ -421,7 +422,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(12, 79);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(63, 13);
+            this.labelControl5.Size = new System.Drawing.Size(69, 13);
             this.labelControl5.TabIndex = 33;
             this.labelControl5.Text = "Paid Holidays";
             // 
@@ -448,7 +449,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(12, 34);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(52, 13);
+            this.labelControl4.Size = new System.Drawing.Size(55, 13);
             this.labelControl4.TabIndex = 31;
             this.labelControl4.Text = "Worked(D)";
             // 
@@ -492,7 +493,7 @@
             // 
             this.labelControl35.Location = new System.Drawing.Point(61, 80);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(58, 13);
+            this.labelControl35.Size = new System.Drawing.Size(64, 13);
             this.labelControl35.TabIndex = 43;
             this.labelControl35.Text = "Variable Alw";
             // 
@@ -518,7 +519,7 @@
             // 
             this.labelControl27.Location = new System.Drawing.Point(12, 123);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(24, 13);
+            this.labelControl27.Size = new System.Drawing.Size(27, 13);
             this.labelControl27.TabIndex = 38;
             this.labelControl27.Text = "Food";
             // 
@@ -545,7 +546,7 @@
             // 
             this.labelControl12.Location = new System.Drawing.Point(9, 80);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(30, 13);
+            this.labelControl12.Size = new System.Drawing.Size(32, 13);
             this.labelControl12.TabIndex = 37;
             this.labelControl12.Text = "Misc.3";
             // 
@@ -570,7 +571,7 @@
             // 
             this.labelControl11.Location = new System.Drawing.Point(61, 34);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(30, 13);
+            this.labelControl11.Size = new System.Drawing.Size(32, 13);
             this.labelControl11.TabIndex = 35;
             this.labelControl11.Text = "Misc.2";
             // 
@@ -595,7 +596,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(9, 34);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(30, 13);
+            this.labelControl10.Size = new System.Drawing.Size(32, 13);
             this.labelControl10.TabIndex = 33;
             this.labelControl10.Text = "Misc.1";
             // 
@@ -637,7 +638,7 @@
             // 
             this.labelControl30.Location = new System.Drawing.Point(66, 80);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(42, 13);
+            this.labelControl30.Size = new System.Drawing.Size(47, 13);
             this.labelControl30.TabIndex = 41;
             this.labelControl30.Text = "Misc Ded";
             // 
@@ -662,7 +663,7 @@
             // 
             this.labelControl16.Location = new System.Drawing.Point(66, 34);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(43, 13);
+            this.labelControl16.Size = new System.Drawing.Size(44, 13);
             this.labelControl16.TabIndex = 39;
             this.labelControl16.Text = "Tds Amt.";
             // 
@@ -688,7 +689,7 @@
             // 
             this.labelControl15.Location = new System.Drawing.Point(12, 124);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(21, 13);
+            this.labelControl15.Size = new System.Drawing.Size(22, 13);
             this.labelControl15.TabIndex = 37;
             this.labelControl15.Text = "LWF";
             // 
@@ -713,7 +714,7 @@
             // 
             this.labelControl14.Location = new System.Drawing.Point(12, 79);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(49, 13);
+            this.labelControl14.Size = new System.Drawing.Size(51, 13);
             this.labelControl14.TabIndex = 35;
             this.labelControl14.Text = "Loan Amt.";
             // 
@@ -738,7 +739,7 @@
             // 
             this.labelControl13.Location = new System.Drawing.Point(12, 34);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(47, 13);
+            this.labelControl13.Size = new System.Drawing.Size(48, 13);
             this.labelControl13.TabIndex = 33;
             this.labelControl13.Text = "Advances";
             // 
@@ -746,7 +747,7 @@
             // 
             this.labelControl17.Location = new System.Drawing.Point(22, 180);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(83, 13);
+            this.labelControl17.Size = new System.Drawing.Size(84, 13);
             this.labelControl17.TabIndex = 42;
             this.labelControl17.Text = "Last Saved Emp :";
             // 
@@ -812,7 +813,7 @@
             // 
             this.labelControl19.Location = new System.Drawing.Point(12, 124);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(18, 13);
+            this.labelControl19.Size = new System.Drawing.Size(20, 13);
             this.labelControl19.TabIndex = 37;
             this.labelControl19.Text = "Sick";
             // 
@@ -838,7 +839,7 @@
             // 
             this.labelControl20.Location = new System.Drawing.Point(12, 79);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(32, 13);
+            this.labelControl20.Size = new System.Drawing.Size(34, 13);
             this.labelControl20.TabIndex = 35;
             this.labelControl20.Text = "Casual";
             // 
@@ -864,7 +865,7 @@
             // 
             this.labelControl21.Location = new System.Drawing.Point(12, 34);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(34, 13);
+            this.labelControl21.Size = new System.Drawing.Size(36, 13);
             this.labelControl21.TabIndex = 33;
             this.labelControl21.Text = "Earned";
             // 

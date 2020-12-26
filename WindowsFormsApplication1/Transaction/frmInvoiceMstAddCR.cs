@@ -1222,5 +1222,11 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
+
+        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+
+        }
     }
 }

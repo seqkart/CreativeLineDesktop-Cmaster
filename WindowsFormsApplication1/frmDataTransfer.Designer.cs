@@ -609,7 +609,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 756);
+            this.ClientSize = new System.Drawing.Size(1259, 747);
             this.Controls.Add(this.lblTotalRecordsToTransfer);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDestinationConnection);

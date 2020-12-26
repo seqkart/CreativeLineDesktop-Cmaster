@@ -266,7 +266,7 @@
             // 
             this.labelControl18.Location = new System.Drawing.Point(54, 37);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(37, 13);
+            this.labelControl18.Size = new System.Drawing.Size(41, 13);
             this.labelControl18.TabIndex = 52;
             this.labelControl18.Text = "Amount";
             // 
@@ -292,7 +292,7 @@
             // 
             this.labelControl26.Location = new System.Drawing.Point(18, 38);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(65, 13);
+            this.labelControl26.Size = new System.Drawing.Size(70, 13);
             this.labelControl26.TabIndex = 41;
             this.labelControl26.Text = "Voucher Date";
             // 
@@ -350,7 +350,7 @@
             // 
             this.labelControl21.Location = new System.Drawing.Point(635, 38);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(40, 13);
+            this.labelControl21.Size = new System.Drawing.Size(44, 13);
             this.labelControl21.TabIndex = 46;
             this.labelControl21.Text = "Location";
             // 
@@ -358,7 +358,7 @@
             // 
             this.labelControl1.Location = new System.Drawing.Point(411, 39);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(59, 13);
+            this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 47;
             this.labelControl1.Text = "Voucher No.";
             // 
@@ -384,7 +384,7 @@
             // 
             this.labelControl3.Location = new System.Drawing.Point(21, 14);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(70, 13);
+            this.labelControl3.Size = new System.Drawing.Size(75, 13);
             this.labelControl3.TabIndex = 42;
             this.labelControl3.Text = "Account  Code";
             // 
@@ -433,7 +433,7 @@
             // 
             this.labelControl5.Location = new System.Drawing.Point(619, 14);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(56, 13);
+            this.labelControl5.Size = new System.Drawing.Size(58, 13);
             this.labelControl5.TabIndex = 48;
             this.labelControl5.Text = "A/c Balance";
             // 
@@ -493,7 +493,7 @@
             // 
             this.labelControl4.Location = new System.Drawing.Point(8, 37);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(50, 13);
+            this.labelControl4.Size = new System.Drawing.Size(49, 13);
             this.labelControl4.TabIndex = 45;
             this.labelControl4.Text = "Inst. Type";
             this.labelControl4.Visible = false;
@@ -502,7 +502,7 @@
             // 
             this.labelControl6.Location = new System.Drawing.Point(153, 37);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(17, 13);
+            this.labelControl6.Size = new System.Drawing.Size(18, 13);
             this.labelControl6.TabIndex = 44;
             this.labelControl6.Text = "No.";
             this.labelControl6.Visible = false;
@@ -603,7 +603,7 @@
             // 
             this.labelControl10.Location = new System.Drawing.Point(224, 37);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(26, 13);
+            this.labelControl10.Size = new System.Drawing.Size(27, 13);
             this.labelControl10.TabIndex = 17;
             this.labelControl10.Text = "Cr/Dr";
             // 
@@ -888,7 +888,7 @@
             this.HelpGridCtrl.Location = new System.Drawing.Point(246, 29);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(496, 372);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(496, 351);
             this.HelpGridCtrl.TabIndex = 56;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -950,7 +950,7 @@
             // 
             this.labelControl19.Location = new System.Drawing.Point(46, 59);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(45, 13);
+            this.labelControl19.Size = new System.Drawing.Size(49, 13);
             this.labelControl19.TabIndex = 58;
             this.labelControl19.Text = "Narration";
             // 
@@ -1047,7 +1047,7 @@
             // 
             this.banklbl.Location = new System.Drawing.Point(7, 14);
             this.banklbl.Name = "banklbl";
-            this.banklbl.Size = new System.Drawing.Size(51, 13);
+            this.banklbl.Size = new System.Drawing.Size(55, 13);
             this.banklbl.TabIndex = 51;
             this.banklbl.Text = "Bank Code";
             this.banklbl.Visible = false;
@@ -1122,7 +1122,7 @@
             // 
             this.DlrLbl.Location = new System.Drawing.Point(9, 35);
             this.DlrLbl.Name = "DlrLbl";
-            this.DlrLbl.Size = new System.Drawing.Size(45, 13);
+            this.DlrLbl.Size = new System.Drawing.Size(48, 13);
             this.DlrLbl.TabIndex = 48;
             this.DlrLbl.Text = "Dlr. Code";
             this.DlrLbl.Visible = false;
@@ -1151,7 +1151,7 @@
             this.ChoiceAllDlr.Location = new System.Drawing.Point(400, 6);
             this.ChoiceAllDlr.Name = "ChoiceAllDlr";
             this.ChoiceAllDlr.Properties.Caption = "All";
-            this.ChoiceAllDlr.Size = new System.Drawing.Size(37, 20);
+            this.ChoiceAllDlr.Size = new System.Drawing.Size(37, 19);
             this.ChoiceAllDlr.TabIndex = 1;
             this.ChoiceAllDlr.Visible = false;
             // 
@@ -1219,7 +1219,7 @@
             // 
             this.ExpLbl.Location = new System.Drawing.Point(8, 60);
             this.ExpLbl.Name = "ExpLbl";
-            this.ExpLbl.Size = new System.Drawing.Size(46, 13);
+            this.ExpLbl.Size = new System.Drawing.Size(48, 13);
             this.ExpLbl.TabIndex = 44;
             this.ExpLbl.Text = "Exp Head";
             this.ExpLbl.Visible = false;
@@ -1228,7 +1228,7 @@
             // 
             this.SubGrpLbl.Location = new System.Drawing.Point(8, 34);
             this.SubGrpLbl.Name = "SubGrpLbl";
-            this.SubGrpLbl.Size = new System.Drawing.Size(50, 13);
+            this.SubGrpLbl.Size = new System.Drawing.Size(56, 13);
             this.SubGrpLbl.TabIndex = 44;
             this.SubGrpLbl.Text = "Sub Group";
             this.SubGrpLbl.Visible = false;
@@ -1237,7 +1237,7 @@
             // 
             this.GrpLbl.Location = new System.Drawing.Point(8, 8);
             this.GrpLbl.Name = "GrpLbl";
-            this.GrpLbl.Size = new System.Drawing.Size(29, 13);
+            this.GrpLbl.Size = new System.Drawing.Size(33, 13);
             this.GrpLbl.TabIndex = 44;
             this.GrpLbl.Text = "Group";
             this.GrpLbl.Visible = false;
@@ -1342,7 +1342,7 @@
             // 
             this.labelControl8.Location = new System.Drawing.Point(7, 80);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(84, 13);
+            this.labelControl8.Size = new System.Drawing.Size(89, 13);
             this.labelControl8.TabIndex = 64;
             this.labelControl8.Text = "Advance Voucher";
             // 
@@ -1454,7 +1454,7 @@
             // 
             this.labelControl11.Location = new System.Drawing.Point(310, 29);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(37, 13);
+            this.labelControl11.Size = new System.Drawing.Size(41, 13);
             this.labelControl11.TabIndex = 46;
             this.labelControl11.Text = "Amount";
             // 
@@ -1462,7 +1462,7 @@
             // 
             this.labelControl9.Location = new System.Drawing.Point(20, 57);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(45, 13);
+            this.labelControl9.Size = new System.Drawing.Size(49, 13);
             this.labelControl9.TabIndex = 45;
             this.labelControl9.Text = "Narration";
             // 
@@ -1488,7 +1488,7 @@
             // 
             this.lblDn.Location = new System.Drawing.Point(18, 29);
             this.lblDn.Name = "lblDn";
-            this.lblDn.Size = new System.Drawing.Size(71, 13);
+            this.lblDn.Size = new System.Drawing.Size(77, 13);
             this.lblDn.TabIndex = 43;
             this.lblDn.Text = "Debit Note No.";
             // 
@@ -1497,7 +1497,7 @@
             this.CheckCB.Location = new System.Drawing.Point(555, 35);
             this.CheckCB.Name = "CheckCB";
             this.CheckCB.Properties.Caption = "CB Entries";
-            this.CheckCB.Size = new System.Drawing.Size(75, 20);
+            this.CheckCB.Size = new System.Drawing.Size(75, 19);
             this.CheckCB.TabIndex = 57;
             // 
             // frm_JournalNBankVoucher

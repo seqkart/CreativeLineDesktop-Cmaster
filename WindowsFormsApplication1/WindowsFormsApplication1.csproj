@@ -1610,23 +1610,11 @@
     <Compile Include="Transaction\frmSchemeMstAddEdit.designer.cs">
       <DependentUpon>frmSchemeMstAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\frmShowRoomBarCodeImport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\frmShowRoomBarCodeImport.Designer.cs">
-      <DependentUpon>frmShowRoomBarCodeImport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transaction\frmTdsDeductionAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transaction\frmTdsDeductionAddEdit.designer.cs">
       <DependentUpon>frmTdsDeductionAddEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\FRMVIEWLEDERS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\FRMVIEWLEDERS.Designer.cs">
-      <DependentUpon>FRMVIEWLEDERS.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\frmVoucherMstAddEdit.cs">
       <SubType>Form</SubType>
@@ -2121,14 +2109,8 @@
     <EmbeddedResource Include="Transaction\frmSchemeMstAddEdit.resx">
       <DependentUpon>frmSchemeMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\frmShowRoomBarCodeImport.resx">
-      <DependentUpon>frmShowRoomBarCodeImport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmTdsDeductionAddEdit.resx">
       <DependentUpon>frmTdsDeductionAddEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\FRMVIEWLEDERS.resx">
-      <DependentUpon>FRMVIEWLEDERS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmVoucherMstAddEdit.resx">
       <DependentUpon>frmVoucherMstAddEdit.cs</DependentUpon>
