@@ -984,7 +984,7 @@ namespace WindowsFormsApplication1.Time_Office
                         //timeEdit_Time_In_Last.EditValue = null;
                         //timeEdit_Time_Out_Last.EditValue = null;
                         SetEditValue(timeEdit_Time_In_Last, null);
-                        SetEditValue(timeEdit_Time_Out_Last, null);
+                       SetEditValue(timeEdit_Time_Out_Last, null);
                         ProjectFunctionsUtils.SpeakError("Please Enter Time In First and Time Out First");
                         timeEdit_Time_In_First.Focus();
 
@@ -1226,7 +1226,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_In_First_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_In_First_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1234,14 +1234,14 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_Out_First_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_Out_First_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
                 CalculateDUtyHours("first_out");
             }
         }
-        private void timeEdit_Time_In_Last_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_In_Last_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1766,8 +1766,8 @@ namespace WindowsFormsApplication1.Time_Office
                     {
                         SetEditValue(timeEdit_Time_In_First, timeEdit_Time_In_First_Main.EditValue);
                         SetEditValue(timeEdit_Time_Out_First, timeEdit_Time_Out_First_Main.EditValue);
-                        SetEditValue(timeEdit_Time_In_Last, timeEdit_Time_In_Last_Main.EditValue);
-                        SetEditValue(timeEdit_Time_Out_Last, timeEdit_Time_Out_Last_Main.EditValue);
+                        SetEditValue(timeEdit_Time_In_Last, null);
+                       SetEditValue(timeEdit_Time_Out_Last, null);
 
                         timeEdit_Time_In_First.Enabled = true;
                         timeEdit_Time_Out_First.Enabled = true;
@@ -1802,8 +1802,8 @@ namespace WindowsFormsApplication1.Time_Office
                     }
                     if (IsString.IsEqualTo(clearStr, "0011"))
                     {
-                        SetEditValue(timeEdit_Time_In_First, timeEdit_Time_In_First_Main.EditValue);
-                        SetEditValue(timeEdit_Time_Out_First, timeEdit_Time_Out_First_Main.EditValue);
+                        SetEditValue(timeEdit_Time_In_First, null);
+                        SetEditValue(timeEdit_Time_Out_First, null);
                         SetEditValue(timeEdit_Time_In_Last, timeEdit_Time_In_Last_Main.EditValue);
                         SetEditValue(timeEdit_Time_Out_Last, timeEdit_Time_Out_Last_Main.EditValue);
 
@@ -1825,8 +1825,8 @@ namespace WindowsFormsApplication1.Time_Office
                         {
                             timeEdit_Time_In_First.Enabled = true;
 
-                            timeEdit_Time_Out_First.Enabled = false;
-                            timeEdit_Time_In_Last.Enabled = false;
+                            timeEdit_Time_Out_First.Enabled = true;
+                            timeEdit_Time_In_Last.Enabled = true;
 
                             timeEdit_Time_Out_Last.Enabled = true;
                         }
@@ -1867,7 +1867,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void txtLunchBreak_EditValueChanged(object sender, EventArgs e)
+        private void TxtLunchBreak_EditValueChanged(object sender, EventArgs e)
         {
             string clearStr = string.Empty;
             if (GetEditValue(txtStatusType) != null)

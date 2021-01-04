@@ -46,7 +46,7 @@
             // 
             // txtBrandAlias
             // 
-            this.txtBrandAlias.Location = new System.Drawing.Point(116, 119);
+            this.txtBrandAlias.Location = new System.Drawing.Point(91, 97);
             this.txtBrandAlias.Name = "txtBrandAlias";
             this.txtBrandAlias.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandAlias.Properties.MaxLength = 100;
@@ -92,7 +92,7 @@
             // 
             // txtBrandName
             // 
-            this.txtBrandName.Location = new System.Drawing.Point(116, 86);
+            this.txtBrandName.Location = new System.Drawing.Point(91, 64);
             this.txtBrandName.Name = "txtBrandName";
             this.txtBrandName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandName.Properties.MaxLength = 100;
@@ -101,7 +101,7 @@
             // 
             // txtSysID
             // 
-            this.txtSysID.Location = new System.Drawing.Point(116, 53);
+            this.txtSysID.Location = new System.Drawing.Point(91, 31);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysID.Size = new System.Drawing.Size(83, 20);
@@ -111,7 +111,7 @@
             // 
             this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(32, 90);
+            this.Label17.Location = new System.Drawing.Point(7, 68);
             this.Label17.Name = "Label17";
             this.Label17.Size = new System.Drawing.Size(77, 13);
             this.Label17.TabIndex = 377;
@@ -121,7 +121,7 @@
             // 
             this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label16.Appearance.Options.UseFont = true;
-            this.Label16.Location = new System.Drawing.Point(35, 123);
+            this.Label16.Location = new System.Drawing.Point(10, 101);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(74, 13);
             this.Label16.TabIndex = 378;
@@ -131,7 +131,7 @@
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(71, 57);
+            this.Label15.Location = new System.Drawing.Point(46, 35);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(38, 13);
             this.Label15.TabIndex = 376;
@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 181);
+            this.ClientSize = new System.Drawing.Size(512, 129);
             this.ControlBox = false;
             this.Controls.Add(this.txtBrandAlias);
             this.Controls.Add(this.Menu_ToolStrip);

@@ -344,6 +344,85 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     ProjectFunctions.SpeakError("No Data To Save");
                 }
+
+
+                DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData2 ");
+
+                SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
+                int i = 0;
+                foreach (DataRow dr in dt.Rows)
+                {
+                    i++;
+                    SplashScreenManager.Default.SetWaitFormDescription("Validating Item " + i.ToString() + " / " + dt.Rows.Count.ToString());
+
+                    //if (ProjectFunctions.CheckAllPossible(dr["SKUARTID"].ToString(), Convert.ToDecimal(dr["SKUMRP"]), dr["SKUCOLID"].ToString(), dr["SKUSIZID"].ToString()))
+                    //{
+
+                    //}
+                    //else
+                    //{
+                    //    return false;
+                    //}
+
+
+
+                    if (dsCheckART.Tables[0].Rows.Count > 0)
+                    {
+
+
+                        foreach (DataRow drInner in dsCheckART.Tables[0].Rows)
+                        {
+                            if (drInner["ARTSYSID"].ToString() == dr["SIDARTID"].ToString())
+                            {
+                                if (Convert.ToDecimal(dr["SIDARTMRP"]) == Convert.ToDecimal(drInner["ARTMRP"]))
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    ProjectFunctions.SpeakError("Wrong MRP Found");
+                                    return false;
+                                }
+                            }
+                        }
+
+
+                        int colorcount = 0;
+                        foreach (DataRow drInner in dsCheckART.Tables[1].Rows)
+                        {
+                            if (drInner["COLSYSID"].ToString() == dr["SIDCOLID"].ToString())
+                            {
+                                colorcount++;
+                                break;
+                            }
+                        }
+
+                        if (colorcount == 0)
+                        {
+                            ProjectFunctions.SpeakError("No Color Found");
+                            return false;
+                        }
+
+
+                        int sizecount = 0;
+                        foreach (DataRow drInner in dsCheckART.Tables[2].Rows)
+                        {
+                            if (drInner["SZSYSID"].ToString() == dr["SIDSIZID"].ToString())
+                            {
+                                sizecount++;
+                                break;
+                            }
+                        }
+
+                        if (sizecount == 0)
+                        {
+                            ProjectFunctions.SpeakError("No Size Found");
+                            return false;
+                        }
+                    }
+                }
+                SplashScreenManager.CloseForm(false);
+
                 //SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                 //int i = 0;
                 //foreach (DataRow dr in dt.Rows)
@@ -507,49 +586,120 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
+
+
+                        DataTable dtFinal = new DataTable();
+                        dtFinal.Columns.Add("SIDPSDATE", typeof(DateTime));
+                        dtFinal.Columns.Add("SIDFNYR", typeof(String));
+                        dtFinal.Columns.Add("SIDPSFNYR", typeof(String));
+                        dtFinal.Columns.Add("SIDPSNO", typeof(String));
+                        dtFinal.Columns.Add("SIDBOXNO", typeof(String));
+                        dtFinal.Columns.Add("SIDBARCODE", typeof(String));
+                        dtFinal.Columns.Add("SIDARTNO", typeof(String));
+                        dtFinal.Columns.Add("SIDARTID", typeof(String));
+                        dtFinal.Columns.Add("SIDARTDESC", typeof(String));
+                        dtFinal.Columns.Add("SIDCOLN", typeof(String));
+                        dtFinal.Columns.Add("SIDCOLID", typeof(String));
+                        dtFinal.Columns.Add("SIDSIZN", typeof(String));
+                        dtFinal.Columns.Add("SIDSIZID", typeof(Decimal));
+                        dtFinal.Columns.Add("SIDSCANQTY", typeof(Decimal));
+                        dtFinal.Columns.Add("SIDARTMRP", typeof(Decimal));
+                        dtFinal.Columns.Add("SIDARTWSP", typeof(Decimal));
+                        dtFinal.Columns.Add("SIDBOXQTY", typeof(String));
+                        dtFinal.Columns.Add("SIDBOXMRPVAL", typeof(String));
+                        dtFinal.Columns.Add("SIDBOXWSPVAL", typeof(String));
+                        dtFinal.Columns.Add("SIDPONO", typeof(String));
+                        dtFinal.Columns.Add("UnitCode", typeof(String));
+                        dtFinal.Columns.Add("SIDPartyC", typeof(String));
+                        dtFinal.Rows.Clear();
+
+
+                        foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
+                        {
+
+                            DataRow drRow = dtFinal.NewRow();
+                            drRow["SIDPSDATE"] = Convert.ToDateTime(txtPackingSLipDate.Text);
+                            drRow["SIDFNYR"] = GlobalVariables.FinancialYear;
+                            drRow["SIDPSFNYR"] = GlobalVariables.FinancialYear;
+                            drRow["SIDPSNO"] = txtPackingSlipNO.Text;
+                            drRow["SIDBOXNO"] = dr["SIDBOXNO"].ToString();
+                            drRow["SIDBARCODE"] = dr["SIDBARCODE"].ToString();
+                            drRow["SIDARTNO"] = dr["SIDARTNO"].ToString();
+                            drRow["SIDARTID"] = dr["SIDARTID"].ToString();
+                            drRow["SIDARTDESC"] = dr["SIDARTDESC"].ToString();
+                            drRow["SIDCOLN"] = dr["SIDCOLN"].ToString();
+                            drRow["SIDCOLID"] = dr["SIDCOLID"].ToString();
+                            drRow["SIDSIZN"] = dr["SIDSIZN"].ToString();
+                            drRow["SIDSIZID"] = dr["SIDSIZID"].ToString();
+                            drRow["SIDSCANQTY"] = dr["SIDSCANQTY"].ToString();
+                            drRow["SIDARTMRP"] = dr["SIDARTMRP"].ToString();
+                            drRow["SIDBOXQTY"] = dr["SIDBOXQTY"].ToString();
+                            drRow["SIDBOXMRPVAL"] = dr["SIDBOXMRPVAL"].ToString();
+                            drRow["SIDBOXWSPVAL"] = dr["SIDBOXWSPVAL"].ToString();
+                            drRow["SIDPONO"] = txtPONo.Text;
+                            drRow["UnitCode"] = GlobalVariables.CUnitID;
+                            drRow["SIDPartyC"] = txtAccCode.Text.Trim();
+                            dtFinal.Rows.Add(drRow);
+                        }
+
+                        dtFinal.AcceptChanges();
+                        sqlcom.CommandType = CommandType.StoredProcedure;
+                        sqlcom.CommandText = "sp_InsertPackingSlipData";
+                        sqlcom.CommandTimeout = 600000;
+                        SqlParameter param = new SqlParameter
+                        {
+                            ParameterName = "@PackingSlipTable",
+                            Value = dtFinal
+                        };
+                        sqlcom.Parameters.Add(param);
+                        sqlcom.ExecuteNonQuery();
+                        sqlcom.Parameters.Clear();
+
+
+
+
                         SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                         int i = 0;
                         foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                         {
                             i++;
-
                             SplashScreenManager.Default.SetWaitFormDescription("Saving Item " + i.ToString() + " / " + (BarCodeGrid.DataSource as DataTable).Rows.Count);
 
-                            sqlcom.CommandText = " Insert into PSWSLDET " +
-                                " (SIDSYSDATE,SIDPSDATE,SIDPSFNYR,SIDPSNO,SIDBOXNO,SIDBARCODE," +
-                                " SIDARTNO,SIDARTID,SIDARTDESC,SIDCOLN,SIDCOLID,SIDSIZN,SIDSIZID,SIDSCANQTY," +
-                                " SIDARTMRP,SIDARTWSP,SIDBOXQTY,SIDBOXMRPVAL,SIDBOXWSPVAL,SIDPONO,UnitCode,SIDFNYR,SIDPartyC)" +
-                                " values(@SIDSYSDATE,@SIDPSDATE,@SIDPSFNYR,@SIDPSNO,@SIDBOXNO,@SIDBARCODE," +
-                                " @SIDARTNO,@SIDARTID,@SIDARTDESC,@SIDCOLN,@SIDCOLID,@SIDSIZN,@SIDSIZID,@SIDSCANQTY," +
-                                " @SIDARTMRP,@SIDARTWSP,@SIDBOXQTY,@SIDBOXMRPVAL,@SIDBOXWSPVAL,@SIDPONO,@UnitCode,@SIDFNYR,@SIDPartyC)";
-                            sqlcom.Parameters.Add("@SIDSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now
-                                .ToString("yyyy-MM-dd HH:mm:ss");
-                            sqlcom.Parameters.Add("@SIDPSDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtPackingSLipDate.Text)
-                                .ToString("yyyy-MM-dd");
+                            //sqlcom.CommandText = " Insert into PSWSLDET " +
+                            //    " (SIDSYSDATE,SIDPSDATE,SIDPSFNYR,SIDPSNO,SIDBOXNO,SIDBARCODE," +
+                            //    " SIDARTNO,SIDARTID,SIDARTDESC,SIDCOLN,SIDCOLID,SIDSIZN,SIDSIZID,SIDSCANQTY," +
+                            //    " SIDARTMRP,SIDARTWSP,SIDBOXQTY,SIDBOXMRPVAL,SIDBOXWSPVAL,SIDPONO,UnitCode,SIDFNYR,SIDPartyC)" +
+                            //    " values(@SIDSYSDATE,@SIDPSDATE,@SIDPSFNYR,@SIDPSNO,@SIDBOXNO,@SIDBARCODE," +
+                            //    " @SIDARTNO,@SIDARTID,@SIDARTDESC,@SIDCOLN,@SIDCOLID,@SIDSIZN,@SIDSIZID,@SIDSCANQTY," +
+                            //    " @SIDARTMRP,@SIDARTWSP,@SIDBOXQTY,@SIDBOXMRPVAL,@SIDBOXWSPVAL,@SIDPONO,@UnitCode,@SIDFNYR,@SIDPartyC)";
+                            //sqlcom.Parameters.Add("@SIDSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now
+                            //    .ToString("yyyy-MM-dd HH:mm:ss");
+                            //sqlcom.Parameters.Add("@SIDPSDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtPackingSLipDate.Text)
+                            //    .ToString("yyyy-MM-dd");
 
-                            sqlcom.Parameters.Add("@SIDFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
-                            sqlcom.Parameters.Add("@SIDPSFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
-                            sqlcom.Parameters.Add("@SIDPSNO", SqlDbType.NVarChar).Value = txtPackingSlipNO.Text;
-                            sqlcom.Parameters.Add("@SIDBOXNO", SqlDbType.NVarChar).Value = dr["SIDBOXNO"].ToString();
-                            sqlcom.Parameters.Add("@SIDBARCODE", SqlDbType.NVarChar).Value = dr["SIDBARCODE"].ToString();
-                            sqlcom.Parameters.Add("@SIDARTNO", SqlDbType.NVarChar).Value = dr["SIDARTNO"].ToString();
-                            sqlcom.Parameters.Add("@SIDARTID", SqlDbType.NVarChar).Value = dr["SIDARTID"].ToString();
-                            sqlcom.Parameters.Add("@SIDARTDESC", SqlDbType.NVarChar).Value = dr["SIDARTDESC"].ToString();
-                            sqlcom.Parameters.Add("@SIDCOLN", SqlDbType.NVarChar).Value = dr["SIDCOLN"].ToString();
-                            sqlcom.Parameters.Add("@SIDCOLID", SqlDbType.NVarChar).Value = dr["SIDCOLID"].ToString();
-                            sqlcom.Parameters.Add("@SIDSIZN", SqlDbType.NVarChar).Value = dr["SIDSIZN"].ToString();
-                            sqlcom.Parameters.Add("@SIDSIZID", SqlDbType.NVarChar).Value = dr["SIDSIZID"].ToString();
-                            sqlcom.Parameters.Add("@SIDSCANQTY", SqlDbType.NVarChar).Value = dr["SIDSCANQTY"].ToString();
-                            sqlcom.Parameters.Add("@SIDARTMRP", SqlDbType.NVarChar).Value = dr["SIDARTMRP"].ToString();
-                            sqlcom.Parameters.Add("@SIDARTWSP", SqlDbType.NVarChar).Value = dr["SIDARTWSP"].ToString();
-                            sqlcom.Parameters.Add("@SIDBOXQTY", SqlDbType.NVarChar).Value = dr["SIDSCANQTY"].ToString();
-                            sqlcom.Parameters.Add("@SIDBOXMRPVAL", SqlDbType.NVarChar).Value = dr["SIDARTMRP"].ToString();
-                            sqlcom.Parameters.Add("@SIDBOXWSPVAL", SqlDbType.NVarChar).Value = dr["SIDARTWSP"].ToString();
-                            sqlcom.Parameters.Add("@SIDPONO", SqlDbType.NVarChar).Value = txtPONo.Text;
-                            sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
-                            sqlcom.Parameters.Add("@SIDPartyC", SqlDbType.NVarChar).Value = txtAccCode.Text.Trim();
-                            sqlcom.ExecuteNonQuery();
-                            sqlcom.Parameters.Clear();
+                            //sqlcom.Parameters.Add("@SIDFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
+                            //sqlcom.Parameters.Add("@SIDPSFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
+                            //sqlcom.Parameters.Add("@SIDPSNO", SqlDbType.NVarChar).Value = txtPackingSlipNO.Text;
+                            //sqlcom.Parameters.Add("@SIDBOXNO", SqlDbType.NVarChar).Value = dr["SIDBOXNO"].ToString();
+                            //sqlcom.Parameters.Add("@SIDBARCODE", SqlDbType.NVarChar).Value = dr["SIDBARCODE"].ToString();
+                            //sqlcom.Parameters.Add("@SIDARTNO", SqlDbType.NVarChar).Value = dr["SIDARTNO"].ToString();
+                            //sqlcom.Parameters.Add("@SIDARTID", SqlDbType.NVarChar).Value = dr["SIDARTID"].ToString();
+                            //sqlcom.Parameters.Add("@SIDARTDESC", SqlDbType.NVarChar).Value = dr["SIDARTDESC"].ToString();
+                            //sqlcom.Parameters.Add("@SIDCOLN", SqlDbType.NVarChar).Value = dr["SIDCOLN"].ToString();
+                            //sqlcom.Parameters.Add("@SIDCOLID", SqlDbType.NVarChar).Value = dr["SIDCOLID"].ToString();
+                            //sqlcom.Parameters.Add("@SIDSIZN", SqlDbType.NVarChar).Value = dr["SIDSIZN"].ToString();
+                            //sqlcom.Parameters.Add("@SIDSIZID", SqlDbType.NVarChar).Value = dr["SIDSIZID"].ToString();
+                            //sqlcom.Parameters.Add("@SIDSCANQTY", SqlDbType.NVarChar).Value = dr["SIDSCANQTY"].ToString();
+                            //sqlcom.Parameters.Add("@SIDARTMRP", SqlDbType.NVarChar).Value = dr["SIDARTMRP"].ToString();
+                            //sqlcom.Parameters.Add("@SIDARTWSP", SqlDbType.NVarChar).Value = dr["SIDARTWSP"].ToString();
+                            //sqlcom.Parameters.Add("@SIDBOXQTY", SqlDbType.NVarChar).Value = dr["SIDSCANQTY"].ToString();
+                            //sqlcom.Parameters.Add("@SIDBOXMRPVAL", SqlDbType.NVarChar).Value = dr["SIDARTMRP"].ToString();
+                            //sqlcom.Parameters.Add("@SIDBOXWSPVAL", SqlDbType.NVarChar).Value = dr["SIDARTWSP"].ToString();
+                            //sqlcom.Parameters.Add("@SIDPONO", SqlDbType.NVarChar).Value = txtPONo.Text;
+                            //sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            //sqlcom.Parameters.Add("@SIDPartyC", SqlDbType.NVarChar).Value = txtAccCode.Text.Trim();
+                            //sqlcom.ExecuteNonQuery();
+                            //sqlcom.Parameters.Clear();
 
                             if (FixBarPartyTag == "Y")
                             {

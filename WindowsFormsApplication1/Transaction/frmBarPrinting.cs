@@ -463,6 +463,10 @@ namespace WindowsFormsApplication1.Transaction
                     ProjectFunctions.SpeakError("No Data To Save");
 
                 }
+
+
+                DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData2 ");
+
                 SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
                 int i = 0;
                 foreach (DataRow dr in dt.Rows)
@@ -470,13 +474,70 @@ namespace WindowsFormsApplication1.Transaction
                     i++;
                     SplashScreenManager.Default.SetWaitFormDescription("Validating Item " + i.ToString() + " / " + dt.Rows.Count.ToString());
 
-                    if (ProjectFunctions.CheckAllPossible(dr["SKUARTID"].ToString(), Convert.ToDecimal(dr["SKUMRP"]), dr["SKUCOLID"].ToString(), dr["SKUSIZID"].ToString()))
-                    {
+                    //if (ProjectFunctions.CheckAllPossible(dr["SKUARTID"].ToString(), Convert.ToDecimal(dr["SKUMRP"]), dr["SKUCOLID"].ToString(), dr["SKUSIZID"].ToString()))
+                    //{
 
-                    }
-                    else
+                    //}
+                    //else
+                    //{
+                    //    return false;
+                    //}
+
+
+
+                    if (dsCheckART.Tables[0].Rows.Count > 0)
                     {
-                        return false;
+                      
+
+                        foreach (DataRow drInner in dsCheckART.Tables[0].Rows)
+                        {
+                            if (drInner["ARTSYSID"].ToString() == dr["SKUARTID"].ToString())
+                            {
+                                if (Convert.ToDecimal(dr["SKUMRP"]) == Convert.ToDecimal(drInner["ARTMRP"]))
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    ProjectFunctions.SpeakError("Wrong MRP Found");
+                                    return false;
+                                }
+                            }
+                        }
+
+
+                        int colorcount = 0;
+                        foreach (DataRow drInner in dsCheckART.Tables[1].Rows)
+                        {
+                            if (drInner["COLSYSID"].ToString() == dr["SKUCOLID"].ToString())
+                            {
+                                colorcount++;
+                                break;
+                            }
+                        }
+
+                        if (colorcount == 0)
+                        {
+                            ProjectFunctions.SpeakError("No Color Found");
+                            return false;
+                        }
+
+
+                        int sizecount = 0;
+                        foreach (DataRow drInner in dsCheckART.Tables[2].Rows)
+                        {
+                            if (drInner["SZSYSID"].ToString() == dr["SKUSIZID"].ToString())
+                            {
+                                sizecount++;
+                                break;
+                            }
+                        }
+
+                        if (sizecount == 0)
+                        {
+                            ProjectFunctions.SpeakError("No Size Found");
+                            return false;
+                        }
                     }
                 }
                 SplashScreenManager.CloseForm(false);
@@ -496,121 +557,90 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                     {
-
                         sqlcon.Open();
                         var sqlcom = sqlcon.CreateCommand();
-
                         sqlcom.Connection = sqlcon;
-
                         sqlcom.CommandType = CommandType.StoredProcedure;
                         try
                         {
+
                             SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
+                            SplashScreenManager.Default.SetWaitFormDescription("Saving Items");
+
                             int i = 0;
 
                             if (ChkFixedBarCode.Checked == false)
                             {
-                                txtSysID.Text = ProjectFunctions.GetDataSet("select isnull(max(SKUVOUCHNO),0)+1 from SKU Where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                DataTable dtFinal = new DataTable();
+
+                                dtFinal.Columns.Add("SKUPARTYBARCODE", typeof(String));
+                                dtFinal.Columns.Add("SKUFNYR", typeof(String));
+                                dtFinal.Columns.Add("SKUARTNO", typeof(String));
+                                dtFinal.Columns.Add("SKUARTID", typeof(String));
+                                dtFinal.Columns.Add("SKUCOLN", typeof(String));
+                                dtFinal.Columns.Add("SKUCOLID", typeof(String));
+                                dtFinal.Columns.Add("SKUSIZN", typeof(String));
+                                dtFinal.Columns.Add("SKUSIZID", typeof(String));
+                                dtFinal.Columns.Add("SKUFEDQTY", typeof(String));
+                                dtFinal.Columns.Add("SKUGENMODAUTO", typeof(String));
+                                dtFinal.Columns.Add("SKUCODSCHEM", typeof(String));
+                                dtFinal.Columns.Add("SKUWSP", typeof(Decimal));
+                                dtFinal.Columns.Add("SKUMRP", typeof(Decimal));
+                                dtFinal.Columns.Add("SKUWSPVAL", typeof(Decimal));
+                                dtFinal.Columns.Add("SKUMRPVAL", typeof(Decimal));
+                                dtFinal.Columns.Add("SKUASORDR", typeof(String));
+                                dtFinal.Columns.Add("SKUNMAINTSTK", typeof(String));
+                                dtFinal.Columns.Add("SKUARTCOLSET", typeof(String));
+                                dtFinal.Columns.Add("SKUARTSIZSET", typeof(String));
+                                dtFinal.Columns.Add("SKUSIZINDX", typeof(String));
+                                dtFinal.Columns.Add("UnitCode", typeof(String));
+                                dtFinal.Rows.Clear();
+
+
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
-
-                                    for (int k = 0; k < Convert.ToDecimal(dr["SKUFEDQTY"]); k++)
+                                    if (Convert.ToDecimal(dr["SKUFEDQTY"]) > 0)
                                     {
-                                        i++;
-                                        SplashScreenManager.Default.SetWaitFormDescription("Saving Item " + i.ToString() + " / " + (BarCodeGrid.DataSource as DataTable).Rows.Count);
-
-
-                                        string SKUCode = ProjectFunctions.GetDataSet("sp_GetMaxSKUCode '" + GlobalVariables.FinancialYear + "' ,'" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                        string SKUPRODUCTCODE = ProjectFunctions.ClipFYearBarCode(GlobalVariables.FinancialYear) + GlobalVariables.CUnitID + GlobalVariables.BarCodePreFix + SKUCode;
-
-                                        string SKUFixCode = ProjectFunctions.GetDataSet("sp_GetMaxSKUFIXPRODUCTCODE '" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                        string SKUFIXPRODUCTCODE = string.Empty; ;
-
-                                        DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "' And SKUFIXBARCODE is not null");
-                                        if (dsCheck.Tables[0].Rows.Count > 0)
-                                        {
-
-                                            SKUFIXPRODUCTCODE = dsCheck.Tables[0].Rows[0]["SKUFIXBARCODE"].ToString();
-                                            SKUFixCode = dsCheck.Tables[0].Rows[0]["SKUFIXPRODUCTCODE"].ToString();
-                                        }
-                                        else
-                                        {
-                                            SKUFIXPRODUCTCODE = "X" + SKUFixCode.PadLeft(9, '0');
-                                        }
-
-                                        //SKUFIXPRODUCTCODE = dr["SKUFIXBARCODE"].ToString();
-
-
-                                        sqlcom.CommandType = CommandType.Text;
-
-                                        sqlcom.CommandText = " Insert into [SKU] "
-                                                                    + " (SKUFIXPRODUCTCODE,SKUPARTYBARCODE,SKUFIXBARCODE,SKUSYSDATE,SKUFNYR,SKUCODE,SKUVOUCHNO,SKUPRODUCTCODE,SKUARTNO,"
-                                                                    + " SKUARTID,SKUCOLN,SKUCOLID,SKUSIZN,SKUSIZID,SKUFEDQTY,"
-                                                                    + " SKUGENMODAUTO,SKUCODSCHEM,SKUWSP,SKUMRP,SKUWSPVAL,SKUMRPVAL,SKUASORDR,SKUNMAINTSTK,SKUARTCOLSET,SKUARTSIZSET,SKUSIZINDX,UnitCode,StoreCode)"
-                                                                    + " values(@SKUFIXPRODUCTCODE,@SKUPARTYBARCODE,@SKUFIXBARCODE,@SKUSYSDATE,@SKUFNYR,@SKUCODE,@SKUVOUCHNO,@SKUPRODUCTCODE,@SKUARTNO,"
-                                                                    + " @SKUARTID,@SKUCOLN,@SKUCOLID,@SKUSIZN,@SKUSIZID,@SKUFEDQTY,"
-                                                                    + " @SKUGENMODAUTO,@SKUCODSCHEM,@SKUWSP,@SKUMRP,@SKUWSPVAL,@SKUMRPVAL,@SKUASORDR,@SKUNMAINTSTK,@SKUARTCOLSET,@SKUARTSIZSET,@SKUSIZINDX,@UnitCode,@StoreCode)";
-                                        sqlcom.Parameters.Add("@SKUFIXPRODUCTCODE", SqlDbType.NVarChar).Value = SKUFixCode;
-
-                                        sqlcom.Parameters.Add("@SKUPARTYBARCODE", SqlDbType.NVarChar).Value = dr["SKUPARTYBARCODE"].ToString();
-                                        sqlcom.Parameters.Add("@SKUFIXBARCODE", SqlDbType.NVarChar).Value = SKUFIXPRODUCTCODE;
-                                        sqlcom.Parameters.Add("@SKUSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-
-                                        sqlcom.Parameters.Add("@SKUFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
-                                        sqlcom.Parameters.Add("@SKUCODE", SqlDbType.NVarChar).Value = SKUCode;
-                                        sqlcom.Parameters.Add("@SKUVOUCHNO", SqlDbType.NVarChar).Value = txtSysID.Text;
-                                        sqlcom.Parameters.Add("@SKUPRODUCTCODE", SqlDbType.NVarChar).Value = SKUPRODUCTCODE;
-                                        sqlcom.Parameters.Add("@SKUARTNO", SqlDbType.NVarChar).Value = dr["SKUARTNO"].ToString();
-                                        sqlcom.Parameters.Add("@SKUARTID", SqlDbType.NVarChar).Value = dr["SKUARTID"].ToString();
-                                        sqlcom.Parameters.Add("@SKUCOLN", SqlDbType.NVarChar).Value = dr["SKUCOLN"].ToString();
-                                        sqlcom.Parameters.Add("@SKUCOLID", SqlDbType.NVarChar).Value = dr["SKUCOLID"].ToString();
-                                        sqlcom.Parameters.Add("@SKUSIZN", SqlDbType.NVarChar).Value = dr["SKUSIZN"].ToString();
-                                        sqlcom.Parameters.Add("@SKUSIZID", SqlDbType.NVarChar).Value = dr["SKUSIZID"].ToString();
-                                        sqlcom.Parameters.Add("@SKUFEDQTY", SqlDbType.NVarChar).Value = "1";
-
-                                        sqlcom.Parameters.Add("@SKUGENMODAUTO", SqlDbType.NVarChar).Value = "0";
-
-                                        sqlcom.Parameters.Add("@SKUCODSCHEM", SqlDbType.NVarChar).Value = "0";
-                                        if (dr["SKUWSP"].ToString() == string.Empty)
-                                        {
-                                            dr["SKUWSP"] = "0";
-                                        }
-                                        sqlcom.Parameters.Add("@SKUWSP", SqlDbType.NVarChar).Value = dr["SKUWSP"].ToString();
-                                        if (dr["SKUMRP"].ToString() == string.Empty)
-                                        {
-                                            dr["SKUMRP"] = "0";
-                                        }
-                                        sqlcom.Parameters.Add("@SKUMRP", SqlDbType.NVarChar).Value = dr["SKUMRP"].ToString();
-                                        sqlcom.Parameters.Add("@SKUWSPVAL", SqlDbType.NVarChar).Value = dr["SKUWSP"].ToString();
-
-                                        sqlcom.Parameters.Add("@SKUMRPVAL", SqlDbType.NVarChar).Value = dr["SKUMRP"].ToString();
-
-                                        sqlcom.Parameters.Add("@SKUASORDR", SqlDbType.NVarChar).Value = "0";
-
-                                        sqlcom.Parameters.Add("@SKUNMAINTSTK", SqlDbType.NVarChar).Value = "0";
-                                        if (dr["SKUARTCOLSET"].ToString() == string.Empty)
-                                        {
-                                            dr["SKUARTCOLSET"] = "0";
-                                        }
-                                        sqlcom.Parameters.Add("@SKUARTCOLSET", SqlDbType.NVarChar).Value = dr["SKUARTCOLSET"].ToString();
-                                        if (dr["SKUARTSIZSET"].ToString() == string.Empty)
-                                        {
-                                            dr["SKUARTSIZSET"] = "0";
-                                        }
-                                        sqlcom.Parameters.Add("@SKUARTSIZSET", SqlDbType.NVarChar).Value = dr["SKUARTSIZSET"].ToString();
-                                        if (dr["SKUSIZINDX"].ToString() == string.Empty)
-                                        {
-                                            dr["SKUSIZINDX"] = "0";
-                                        }
-                                        sqlcom.Parameters.Add("@SKUSIZINDX", SqlDbType.NVarChar).Value = dr["SKUSIZINDX"].ToString();
-                                        sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
-                                        sqlcom.Parameters.Add("@StoreCode", SqlDbType.NVarChar).Value = txtDeptCode.Text;
-                                        sqlcom.ExecuteNonQuery();
-                                        sqlcom.Parameters.Clear();
-                                        
+                                        DataRow drRow = dtFinal.NewRow();
+                                        drRow["SKUPARTYBARCODE"] = dr["SKUPARTYBARCODE"].ToString();
+                                        drRow["SKUFNYR"] = GlobalVariables.FinancialYear;
+                                        drRow["SKUARTNO"] = dr["SKUARTNO"].ToString();
+                                        drRow["SKUARTID"] = dr["SKUARTID"].ToString();
+                                        drRow["SKUCOLN"] = dr["SKUCOLN"].ToString();
+                                        drRow["SKUCOLID"] = dr["SKUCOLID"].ToString();
+                                        drRow["SKUSIZN"] = dr["SKUSIZN"].ToString();
+                                        drRow["SKUSIZID"] = dr["SKUSIZID"].ToString();
+                                        drRow["SKUFEDQTY"] = "1";
+                                        drRow["SKUGENMODAUTO"] = "0";
+                                        drRow["SKUCODSCHEM"] = "0";
+                                        drRow["SKUWSP"] = Convert.ToDecimal(dr["SKUWSP"]);
+                                        drRow["SKUMRP"] = Convert.ToDecimal(dr["SKUMRP"]);
+                                        drRow["SKUWSPVAL"] = Convert.ToDecimal(dr["SKUWSP"]);
+                                        drRow["SKUMRPVAL"] = Convert.ToDecimal(dr["SKUMRP"]);
+                                        drRow["SKUASORDR"] = "0";
+                                        drRow["SKUNMAINTSTK"] = "0";
+                                        drRow["SKUARTCOLSET"] = "0";
+                                        drRow["SKUARTSIZSET"] = "0";
+                                        drRow["SKUSIZINDX"] = dr["SKUSIZINDX"].ToString();
+                                        drRow["UnitCode"] = GlobalVariables.CUnitID;
+                                        dtFinal.Rows.Add(drRow);
                                     }
                                 }
-                                
+
+                                dtFinal.AcceptChanges();
+                                sqlcom.CommandType = CommandType.StoredProcedure;
+                                sqlcom.CommandText = "sp_InsertBarCodeData";
+                                sqlcom.CommandTimeout = 600000;
+                                SqlParameter param = new SqlParameter
+                                {
+                                    ParameterName = "@BarCodeTable",
+                                    Value = dtFinal
+                                };
+                                sqlcom.Parameters.Add(param);
+                                sqlcom.ExecuteNonQuery();
+                                sqlcom.Parameters.Clear();
+
+                                SplashScreenManager.CloseForm();
                             }
                             else
                             {
@@ -623,9 +653,9 @@ namespace WindowsFormsApplication1.Transaction
 
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
-                                    string SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                    String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     //String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                    string SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
+                                    String SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
 
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
@@ -638,7 +668,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     sqlcom.CommandType = CommandType.Text;
-
+                                    sqlcom.CommandTimeout = 600000;
                                     sqlcom.CommandText = " Insert into SKU_FIx "
                                                                 + " (SKUSYSDATE,SKUFNYR,SKUCODE,SKUVOUCHNO,SKUPRODUCTCODE,SKUARTNO,"
                                                                 + " SKUARTID,SKUCOLN,SKUCOLID,SKUSIZN,SKUSIZID,SKUFEDQTY,"
@@ -706,21 +736,21 @@ namespace WindowsFormsApplication1.Transaction
 
                                     sqlcom.ExecuteNonQuery();
                                     sqlcom.Parameters.Clear();
-                                    
+
                                 }
 
-                                
+                                SplashScreenManager.CloseForm();
                             }
 
 
-                            SplashScreenManager.CloseForm();
+
                             ProjectFunctions.SpeakError("Barcode Generated Successfully");
                             sqlcon.Close();
                             btnSave.Enabled = false;
                             SKUVOUCHNO = txtSysID.Text;
                             FillGrid();
 
-                            Close();
+                            this.Close();
                         }
                         catch (Exception ex)
                         {

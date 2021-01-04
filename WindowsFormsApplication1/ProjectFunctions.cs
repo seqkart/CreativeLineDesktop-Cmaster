@@ -1376,7 +1376,7 @@ namespace WindowsFormsApplication1
 
         public static bool CheckAllPossible(string ArticleID, decimal MRP, string ColorID, string SizeID)
         {
-            DataSet dsCheckART = ProjectFunctions.GetDataSet("select ARTSYSID,ARTMRP from ARTICLE where ARTSYSID='" + ArticleID + "' ");
+            DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData '" + ArticleID + "','"+ ColorID + "','"+ SizeID + "' ");
             if (dsCheckART.Tables[0].Rows.Count > 0)
             {
                 if (MRP == Convert.ToDecimal(dsCheckART.Tables[0].Rows[0]["ARTMRP"]))
@@ -1395,8 +1395,7 @@ namespace WindowsFormsApplication1
                 return false;
             }
 
-            DataSet dsCheckColor = ProjectFunctions.GetDataSet("select COLSYSID from COLOURS where COLSYSID='" + ColorID + "' ");
-            if (dsCheckColor.Tables[0].Rows.Count > 0)
+            if (dsCheckART.Tables[1].Rows.Count > 0)
             {
 
             }
@@ -1405,8 +1404,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError("No Color Found");
                 return false;
             }
-            DataSet dsCheckSize = ProjectFunctions.GetDataSet("select SZSYSID from SIZEMAST where SZSYSID='" + SizeID + "' ");
-            if (dsCheckSize.Tables[0].Rows.Count > 0)
+            if (dsCheckART.Tables[2].Rows.Count > 0)
             {
 
             }

@@ -756,7 +756,7 @@ namespace WindowsFormsApplication1
 
 
 
-                BtnRecalculate_Click(null, e);
+                //BtnRecalculate_Click(null, e);
                 ShowPendingPSlips();
 
                 LoadDocs();

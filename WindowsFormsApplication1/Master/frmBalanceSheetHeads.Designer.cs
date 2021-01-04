@@ -54,7 +54,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(407, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(304, 25);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -81,7 +81,7 @@
             // txtBSDesc
             // 
             this.txtBSDesc.EnterMoveNextControl = true;
-            this.txtBSDesc.Location = new System.Drawing.Point(106, 77);
+            this.txtBSDesc.Location = new System.Drawing.Point(63, 62);
             this.txtBSDesc.Name = "txtBSDesc";
             this.txtBSDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSDesc.Properties.MaxLength = 30;
@@ -90,7 +90,7 @@
             // 
             // txtBSCode
             // 
-            this.txtBSCode.Location = new System.Drawing.Point(106, 51);
+            this.txtBSCode.Location = new System.Drawing.Point(63, 36);
             this.txtBSCode.Name = "txtBSCode";
             this.txtBSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSCode.Size = new System.Drawing.Size(56, 20);
@@ -99,19 +99,17 @@
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 80);
+            this.label3.Location = new System.Drawing.Point(15, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.Size = new System.Drawing.Size(24, 13);
             this.label3.TabIndex = 198;
             this.label3.Text = "Desc";
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 54);
+            this.label1.Location = new System.Drawing.Point(15, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 197;
             this.label1.Text = "Code";
             // 
@@ -121,7 +119,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 141);
+            this.ClientSize = new System.Drawing.Size(304, 96);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtBSDesc);

@@ -247,17 +247,13 @@ namespace SeqKartLibrary
                     }
                     return _VarDataSet;
                 }
-
                 catch (Exception ex)
-
                 {
-                    System.Diagnostics.Debug.WriteLine("ProjectFunctionUtils => GetDataSet => " + Query);
-                    System.Diagnostics.Debug.WriteLine("ProjectFunctionUtils => GetDataSet => " + ex);
+                    XtraMessageBox.Show(ex.Message);
                     return null;
                 }
             }
         }
-
         public static DataSet GetDataSet_New(string sqlQuery)
         {
             DataSet ds = new DataSet();

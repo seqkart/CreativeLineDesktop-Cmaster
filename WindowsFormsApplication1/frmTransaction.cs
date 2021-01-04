@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         {
             //Task.Run(async () => { await FillGrid_1(); });
 
+            
             if (_RangeSelector.DtFrom.Text.Length == 0 || _RangeSelector.DtEnd.Text.Length == 0)
             {
                 _RangeSelector.DtFrom.EditValue = DateTime.Now.AddDays(-1);

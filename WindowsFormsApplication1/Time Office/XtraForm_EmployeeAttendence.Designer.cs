@@ -653,7 +653,7 @@
             this.timeEdit_Time_In_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_In_Last.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_In_Last.TabIndex = 3;
-            this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_Last_EditValueChanged);
+            this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_Last_EditValueChanged);
             // 
             // timeEdit_Time_Out_First
             // 
@@ -674,7 +674,7 @@
             this.timeEdit_Time_Out_First.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_Out_First.TabIndex = 2;
             this.timeEdit_Time_Out_First.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.timeEdit_Time_Out_First_InvalidValue);
-            this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_First_EditValueChanged);
+            this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_First_EditValueChanged);
             this.timeEdit_Time_Out_First.Validating += new System.ComponentModel.CancelEventHandler(this.TimeEdit_Time_Out_First_Validating);
             // 
             // timeEdit_Time_In_First
@@ -695,7 +695,7 @@
             this.timeEdit_Time_In_First.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_In_First.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_In_First.TabIndex = 1;
-            this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_First_EditValueChanged);
+            this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_EditValueChanged);
             // 
             // timeEdit_Time_In_First_Testing
             // 
@@ -1233,7 +1233,7 @@
             this.txtLunchBreak.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtLunchBreak.Size = new System.Drawing.Size(37, 20);
             this.txtLunchBreak.TabIndex = 27;
-            this.txtLunchBreak.EditValueChanged += new System.EventHandler(this.txtLunchBreak_EditValueChanged);
+            this.txtLunchBreak.EditValueChanged += new System.EventHandler(this.TxtLunchBreak_EditValueChanged);
             // 
             // txtOvertimeHours
             // 
