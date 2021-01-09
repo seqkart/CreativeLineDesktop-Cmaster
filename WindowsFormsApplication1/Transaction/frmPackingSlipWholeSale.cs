@@ -633,9 +633,18 @@ namespace WindowsFormsApplication1.Transaction
                             drRow["SIDSIZID"] = dr["SIDSIZID"].ToString();
                             drRow["SIDSCANQTY"] = dr["SIDSCANQTY"].ToString();
                             drRow["SIDARTMRP"] = dr["SIDARTMRP"].ToString();
-                            drRow["SIDBOXQTY"] = dr["SIDBOXQTY"].ToString();
-                            drRow["SIDBOXMRPVAL"] = dr["SIDBOXMRPVAL"].ToString();
-                            drRow["SIDBOXWSPVAL"] = dr["SIDBOXWSPVAL"].ToString();
+                            drRow["SIDARTWSP"] = dr["SIDARTWSP"].ToString();
+                            drRow["SIDBOXQTY"] = dr["SIDSCANQTY"].ToString();
+                            if(dr["SIDARTWSP"].ToString().Trim()=="")
+                            {
+                                drRow["SIDBOXWSPVAL"] = "0";
+                            }
+                            else
+                            {
+                                drRow["SIDBOXWSPVAL"] = dr["SIDARTWSP"].ToString();
+                            }
+                           drRow["SIDBOXMRPVAL"] = dr["SIDARTMRP"].ToString();
+                          
                             drRow["SIDPONO"] = txtPONo.Text;
                             drRow["UnitCode"] = GlobalVariables.CUnitID;
                             drRow["SIDPartyC"] = txtAccCode.Text.Trim();

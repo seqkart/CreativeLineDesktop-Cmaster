@@ -756,7 +756,7 @@ namespace WindowsFormsApplication1
 
 
 
-                //BtnRecalculate_Click(null, e);
+               BtnRecalculate_Click(null, e);
                 ShowPendingPSlips();
 
                 LoadDocs();
@@ -1537,7 +1537,61 @@ namespace WindowsFormsApplication1
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
-            ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER", " Where TRPRSYSID", txtTransporterCode, txtTransporterName, txtTransporterKey, HelpGrid, HelpGridView, e);
+            if (e.KeyCode == Keys.Enter)
+            {
+
+               
+                HelpGridView.Columns.Clear();
+                HelpGrid.Text = "txtTransporterCode";
+                if (txtTransporterCode.Text.Trim().Length == 0)
+                {
+                    DataSet ds = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = ds.Tables[0];
+                        HelpGrid.Show();
+                        HelpGrid.Visible = true;
+                        HelpGrid.Focus();
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        ProjectFunctions.SpeakError("No Records To Display");
+                    }
+                }
+                else
+                {
+                    DataSet ds = ProjectFunctions.GetDataSet(" select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER Where TRPRSYSID= '" + txtTransporterCode.Text.Trim() + "'");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        txtTransporterCode.Text = ds.Tables[0].Rows[0]["TRPRSYSID"].ToString();
+                        txtTransporterName.Text = ds.Tables[0].Rows[0]["TRPRNAME"].ToString();
+                        txtTransporterKey.Focus();
+                    }
+
+                    else
+                    {
+                        DataSet ds1 = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER");
+                        if (ds1.Tables[0].Rows.Count > 0)
+                        {
+                            HelpGrid.DataSource = ds.Tables[0];
+                            HelpGrid.Show();
+                            HelpGrid.Visible = true;
+                            HelpGrid.Focus();
+                            HelpGridView.BestFitColumns();
+                        }
+                        else
+                        {
+                            ProjectFunctions.SpeakError("No Records To Display");
+                        }
+                    }
+                }
+            }
+            e.Handled = true;
+
+
+
+            //ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER", " Where TRPRSYSID", txtTransporterName, txtTransporterCode, txtTransporterKey, HelpGrid, HelpGridView, e);
         }
 
         private void ChDirect_CheckedChanged(object sender, EventArgs e)

@@ -610,7 +610,7 @@ namespace WindowsFormsApplication1.Transaction
                                         drRow["SKUCOLID"] = dr["SKUCOLID"].ToString();
                                         drRow["SKUSIZN"] = dr["SKUSIZN"].ToString();
                                         drRow["SKUSIZID"] = dr["SKUSIZID"].ToString();
-                                        drRow["SKUFEDQTY"] = "1";
+                                        drRow["SKUFEDQTY"] = dr["SKUFEDQTY"].ToString() ;
                                         drRow["SKUGENMODAUTO"] = "0";
                                         drRow["SKUCODSCHEM"] = "0";
                                         drRow["SKUWSP"] = Convert.ToDecimal(dr["SKUWSP"]);

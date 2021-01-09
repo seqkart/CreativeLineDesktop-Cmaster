@@ -192,7 +192,22 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
-                 case "PROG212":
+                case "PROG214":
+                    var PROG214 = new frmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG214.Show();
+                    PROG214.BringToFront();
+                    PROG214.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG213":
+                    var PROG213 = new frmGridReports
+                        () { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG213.Show();
+                    PROG213.BringToFront();
+                    PROG213.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG212":
                     var PROG212 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG212.Show();
                     PROG212.BringToFront();

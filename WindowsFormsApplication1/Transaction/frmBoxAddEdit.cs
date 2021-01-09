@@ -287,111 +287,111 @@ namespace WindowsFormsApplication1.Transaction
 
                         }
 
-                        DataTable dtFinal = new DataTable();
-                        dtFinal.Columns.Add("SFDSYSDATE", typeof(DateTime));
-                        dtFinal.Columns.Add("SFDFNYR", typeof(string));
-                        dtFinal.Columns.Add("SFDVDATE", typeof(DateTime));
-                        dtFinal.Columns.Add("SFDVNO", typeof(string));
-                        dtFinal.Columns.Add("SFDBOXNO", typeof(string));
-                        dtFinal.Columns.Add("SFDBARCODE", typeof(string));
-                        dtFinal.Columns.Add("SFDARTNO", typeof(string));
-                        dtFinal.Columns.Add("SFDARTID", typeof(long));
-                        dtFinal.Columns.Add("SFDARTDESC", typeof(string));
-                        dtFinal.Columns.Add("SFDCOLN", typeof(string));
-                        dtFinal.Columns.Add("SFDCOLID", typeof(long));
-                        dtFinal.Columns.Add("SFDSIZN", typeof(string));
-                        dtFinal.Columns.Add("SFDSIZID", typeof(long));
-                        dtFinal.Columns.Add("SFDSCANQTY", typeof(decimal));
-                        dtFinal.Columns.Add("SFDARTMRP", typeof(decimal));
-                        dtFinal.Columns.Add("SFDARTWSP", typeof(decimal));
-                        dtFinal.Columns.Add("SFDBOXQTY", typeof(decimal));
-                        dtFinal.Columns.Add("SFDBOXMRPVAL", typeof(decimal));
-                        dtFinal.Columns.Add("SFDBOXWSPVAL", typeof(decimal));
-                        dtFinal.Columns.Add("SFDWRONGMRP", typeof(decimal));
-                        dtFinal.Columns.Add("UnitCode", typeof(string));
+                        //DataTable dtFinal = new DataTable();
+                        //dtFinal.Columns.Add("SFDSYSDATE", typeof(DateTime));
+                        //dtFinal.Columns.Add("SFDFNYR", typeof(string));
+                        //dtFinal.Columns.Add("SFDVDATE", typeof(DateTime));
+                        //dtFinal.Columns.Add("SFDVNO", typeof(string));
+                        //dtFinal.Columns.Add("SFDBOXNO", typeof(string));
+                        //dtFinal.Columns.Add("SFDBARCODE", typeof(string));
+                        //dtFinal.Columns.Add("SFDARTNO", typeof(string));
+                        //dtFinal.Columns.Add("SFDARTID", typeof(long));
+                        //dtFinal.Columns.Add("SFDARTDESC", typeof(string));
+                        //dtFinal.Columns.Add("SFDCOLN", typeof(string));
+                        //dtFinal.Columns.Add("SFDCOLID", typeof(long));
+                        //dtFinal.Columns.Add("SFDSIZN", typeof(string));
+                        //dtFinal.Columns.Add("SFDSIZID", typeof(long));
+                        //dtFinal.Columns.Add("SFDSCANQTY", typeof(decimal));
+                        //dtFinal.Columns.Add("SFDARTMRP", typeof(decimal));
+                        //dtFinal.Columns.Add("SFDARTWSP", typeof(decimal));
+                        //dtFinal.Columns.Add("SFDBOXQTY", typeof(decimal));
+                        //dtFinal.Columns.Add("SFDBOXMRPVAL", typeof(decimal));
+                        //dtFinal.Columns.Add("SFDBOXWSPVAL", typeof(decimal));
+                        //dtFinal.Columns.Add("SFDWRONGMRP", typeof(decimal));
+                        //dtFinal.Columns.Add("UnitCode", typeof(string));
 
 
-                        foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
-                        {
-                            DataRow drRow = dtFinal.NewRow();
-
-                            drRow["SFDSYSDATE"] = DateTime.Now;
-                            drRow["SFDFNYR"] = GlobalVariables.FinancialYear;
-                            drRow["SFDVDATE"] = Convert.ToDateTime(txtMemoDate.Text);
-                            drRow["SFDVNO"] = txtMemoNo.Text;
-                            drRow["SFDBOXNO"] = dr["SFDBOXNO"].ToString();
-                            drRow["SFDBARCODE"] = dr["SFDBARCODE"].ToString();
-                            drRow["SFDARTNO"] = dr["SFDARTNO"].ToString();
-                            drRow["SFDARTID"] = dr["SFDARTID"].ToString();
-                            drRow["SFDARTDESC"] = dr["SFDARTDESC"].ToString();
-                            drRow["SFDCOLN"] = dr["SFDCOLN"].ToString();
-                            drRow["SFDCOLID"] = dr["SFDCOLID"].ToString();
-                            drRow["SFDSIZN"] = dr["SFDSIZN"].ToString();
-                            drRow["SFDSIZID"] = dr["SFDSIZID"].ToString();
-                            drRow["SFDSCANQTY"] = dr["SFDSCANQTY"].ToString();
-                            drRow["SFDARTMRP"] = dr["SFDARTMRP"].ToString();
-                            drRow["SFDARTWSP"] = dr["SFDARTWSP"].ToString();
-                            drRow["SFDBOXQTY"] = dr["SFDBOXNO"].ToString();
-                            drRow["SFDBOXMRPVAL"] = dr["SFDARTMRP"].ToString();
-                            drRow["SFDBOXWSPVAL"] = dr["SFDARTWSP"].ToString();
-                            drRow["SFDWRONGMRP"] = Convert.ToDecimal("0");
-                            drRow["UnitCode"] = GlobalVariables.CUnitID;
-
-                            dtFinal.Rows.Add(drRow);
-                        }
-
-                        dtFinal.AcceptChanges();
-                        sqlcom.CommandType = CommandType.StoredProcedure;
-                        sqlcom.CommandText = "sp_InsertBoxData";
-                        SqlParameter param = new SqlParameter
-                        {
-                            ParameterName = "@BoxTable",
-                            Value = dtFinal
-                        };
-                        sqlcom.Parameters.Add(param);
-                        sqlcom.ExecuteNonQuery();
-                        sqlcom.Parameters.Clear();
-
-
-                        //foreach (DataRow dr in dt.Rows)
+                        //foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                         //{
-                        //    sqlcom.CommandText = " Insert into SFDET "
-                        //                            + " (SFDSYSDATE,SFDFNYR,SFDVDATE,SFDVNO,SFDBOXNO,SFDBARCODE,"
-                        //                            + " SFDARTNO,SFDARTID,SFDARTDESC,SFDCOLN,SFDCOLID,SFDSIZN,SFDSIZID,SFDSCANQTY,"
-                        //                            + " SFDARTMRP,SFDARTWSP,SFDBOXQTY,SFDBOXMRPVAL,SFDBOXWSPVAL,SFDWRONGMRP,UnitCode)"
-                        //                            + " values(@SFDSYSDATE,@SFDFNYR,@SFDVDATE,@SFDVNO,@SFDBOXNO,@SFDBARCODE,"
-                        //                            + " @SFDARTNO,@SFDARTID,@SFDARTDESC,@SFDCOLN,@SFDCOLID,@SFDSIZN,@SFDSIZID,@SFDSCANQTY,"
-                        //                            + " @SFDARTMRP,@SFDARTWSP,@SFDBOXQTY,@SFDBOXMRPVAL,@SFDBOXWSPVAL,@SFDWRONGMRP,@UnitCode)";
-                        //    sqlcom.Parameters.Add("@SFDSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        //    sqlcom.Parameters.Add("@SFDFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
-                        //    sqlcom.Parameters.Add("@SFDVDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtMemoDate.Text).ToString("yyyy-MM-dd");
-                        //    sqlcom.Parameters.Add("@SFDVNO", SqlDbType.NVarChar).Value = txtMemoNo.Text;
-                        //    sqlcom.Parameters.Add("@SFDBOXNO", SqlDbType.NVarChar).Value = dr["SFDBOXNO"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDBARCODE", SqlDbType.NVarChar).Value = dr["SFDBARCODE"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDARTNO", SqlDbType.NVarChar).Value = dr["SFDARTNO"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDARTID", SqlDbType.NVarChar).Value = dr["SFDARTID"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDARTDESC", SqlDbType.NVarChar).Value = dr["SFDARTDESC"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDCOLN", SqlDbType.NVarChar).Value = dr["SFDCOLN"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDCOLID", SqlDbType.NVarChar).Value = dr["SFDCOLID"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDSIZN", SqlDbType.NVarChar).Value = dr["SFDSIZN"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDSIZID", SqlDbType.NVarChar).Value = dr["SFDSIZID"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDSCANQTY", SqlDbType.NVarChar).Value = dr["SFDSCANQTY"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDARTMRP", SqlDbType.NVarChar).Value = dr["SFDARTMRP"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDARTWSP", SqlDbType.NVarChar).Value = dr["SFDARTWSP"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDBOXQTY", SqlDbType.NVarChar).Value = dr["SFDBOXNO"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDBOXMRPVAL", SqlDbType.NVarChar).Value = dr["SFDARTMRP"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDBOXWSPVAL", SqlDbType.NVarChar).Value = dr["SFDARTWSP"].ToString();
-                        //    sqlcom.Parameters.Add("@SFDWRONGMRP", SqlDbType.NVarChar).Value = "0";
-                        //    sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
-                        //    sqlcom.ExecuteNonQuery();
-                        //    sqlcom.Parameters.Clear();
+                        //    DataRow drRow = dtFinal.NewRow();
 
-                        //    ProjectFunctions.GetDataSet("update SKU set Used='Y' where SKUPRODUCTCODE='" + dr["SFDBARCODE"].ToString() + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                        //    drRow["SFDSYSDATE"] = DateTime.Now;
+                        //    drRow["SFDFNYR"] = GlobalVariables.FinancialYear;
+                        //    drRow["SFDVDATE"] = Convert.ToDateTime(txtMemoDate.Text);
+                        //    drRow["SFDVNO"] = txtMemoNo.Text;
+                        //    drRow["SFDBOXNO"] = dr["SFDBOXNO"].ToString();
+                        //    drRow["SFDBARCODE"] = dr["SFDBARCODE"].ToString();
+                        //    drRow["SFDARTNO"] = dr["SFDARTNO"].ToString();
+                        //    drRow["SFDARTID"] = dr["SFDARTID"].ToString();
+                        //    drRow["SFDARTDESC"] = dr["SFDARTDESC"].ToString();
+                        //    drRow["SFDCOLN"] = dr["SFDCOLN"].ToString();
+                        //    drRow["SFDCOLID"] = dr["SFDCOLID"].ToString();
+                        //    drRow["SFDSIZN"] = dr["SFDSIZN"].ToString();
+                        //    drRow["SFDSIZID"] = dr["SFDSIZID"].ToString();
+                        //    drRow["SFDSCANQTY"] = dr["SFDSCANQTY"].ToString();
+                        //    drRow["SFDARTMRP"] = dr["SFDARTMRP"].ToString();
+                        //    drRow["SFDARTWSP"] = dr["SFDARTWSP"].ToString();
+                        //    drRow["SFDBOXQTY"] = dr["SFDBOXNO"].ToString();
+                        //    drRow["SFDBOXMRPVAL"] = dr["SFDARTMRP"].ToString();
+                        //    drRow["SFDBOXWSPVAL"] = dr["SFDARTWSP"].ToString();
+                        //    drRow["SFDWRONGMRP"] = Convert.ToDecimal("0");
+                        //    drRow["UnitCode"] = GlobalVariables.CUnitID;
+
+                        //    dtFinal.Rows.Add(drRow);
                         //}
 
+                        //dtFinal.AcceptChanges();
+                        //sqlcom.CommandType = CommandType.StoredProcedure;
+                        //sqlcom.CommandText = "~sp_InsertBoxData~";
+                        //SqlParameter param = new SqlParameter
+                        //{
+                        //    ParameterName = "@BoxTable",
+                        //    Value = dtFinal
+                        //};
+                        //sqlcom.Parameters.Add(param);
+                        //sqlcom.ExecuteNonQuery();
+                        //sqlcom.Parameters.Clear();
 
 
-                       // BarCodeGridView.ExportToCsv(AppDomain.CurrentDomain.BaseDirectory + @"\tempbarcode.txt");
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            sqlcom.CommandText = " Insert into SFDET "
+                                                    + " (SFDSYSDATE,SFDFNYR,SFDVDATE,SFDVNO,SFDBOXNO,SFDBARCODE,"
+                                                    + " SFDARTNO,SFDARTID,SFDARTDESC,SFDCOLN,SFDCOLID,SFDSIZN,SFDSIZID,SFDSCANQTY,"
+                                                    + " SFDARTMRP,SFDARTWSP,SFDBOXQTY,SFDBOXMRPVAL,SFDBOXWSPVAL,SFDWRONGMRP,UnitCode)"
+                                                    + " values(@SFDSYSDATE,@SFDFNYR,@SFDVDATE,@SFDVNO,@SFDBOXNO,@SFDBARCODE,"
+                                                    + " @SFDARTNO,@SFDARTID,@SFDARTDESC,@SFDCOLN,@SFDCOLID,@SFDSIZN,@SFDSIZID,@SFDSCANQTY,"
+                                                    + " @SFDARTMRP,@SFDARTWSP,@SFDBOXQTY,@SFDBOXMRPVAL,@SFDBOXWSPVAL,@SFDWRONGMRP,@UnitCode)";
+                            sqlcom.Parameters.Add("@SFDSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            sqlcom.Parameters.Add("@SFDFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
+                            sqlcom.Parameters.Add("@SFDVDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtMemoDate.Text).ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@SFDVNO", SqlDbType.NVarChar).Value = txtMemoNo.Text;
+                            sqlcom.Parameters.Add("@SFDBOXNO", SqlDbType.NVarChar).Value = dr["SFDBOXNO"].ToString();
+                            sqlcom.Parameters.Add("@SFDBARCODE", SqlDbType.NVarChar).Value = dr["SFDBARCODE"].ToString();
+                            sqlcom.Parameters.Add("@SFDARTNO", SqlDbType.NVarChar).Value = dr["SFDARTNO"].ToString();
+                            sqlcom.Parameters.Add("@SFDARTID", SqlDbType.NVarChar).Value = dr["SFDARTID"].ToString();
+                            sqlcom.Parameters.Add("@SFDARTDESC", SqlDbType.NVarChar).Value = dr["SFDARTDESC"].ToString();
+                            sqlcom.Parameters.Add("@SFDCOLN", SqlDbType.NVarChar).Value = dr["SFDCOLN"].ToString();
+                            sqlcom.Parameters.Add("@SFDCOLID", SqlDbType.NVarChar).Value = dr["SFDCOLID"].ToString();
+                            sqlcom.Parameters.Add("@SFDSIZN", SqlDbType.NVarChar).Value = dr["SFDSIZN"].ToString();
+                            sqlcom.Parameters.Add("@SFDSIZID", SqlDbType.NVarChar).Value = dr["SFDSIZID"].ToString();
+                            sqlcom.Parameters.Add("@SFDSCANQTY", SqlDbType.NVarChar).Value = dr["SFDSCANQTY"].ToString();
+                            sqlcom.Parameters.Add("@SFDARTMRP", SqlDbType.NVarChar).Value = dr["SFDARTMRP"].ToString();
+                            sqlcom.Parameters.Add("@SFDARTWSP", SqlDbType.NVarChar).Value = dr["SFDARTWSP"].ToString();
+                            sqlcom.Parameters.Add("@SFDBOXQTY", SqlDbType.NVarChar).Value = dr["SFDBOXNO"].ToString();
+                            sqlcom.Parameters.Add("@SFDBOXMRPVAL", SqlDbType.NVarChar).Value = dr["SFDARTMRP"].ToString();
+                            sqlcom.Parameters.Add("@SFDBOXWSPVAL", SqlDbType.NVarChar).Value = dr["SFDARTWSP"].ToString();
+                            sqlcom.Parameters.Add("@SFDWRONGMRP", SqlDbType.NVarChar).Value = "0";
+                            sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.ExecuteNonQuery();
+                            sqlcom.Parameters.Clear();
+
+                            ProjectFunctions.GetDataSet("update SKU set Used='Y' where SKUPRODUCTCODE='" + dr["SFDBARCODE"].ToString() + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                        }
+
+
+
+                        // BarCodeGridView.ExportToCsv(AppDomain.CurrentDomain.BaseDirectory + @"\tempbarcode.txt");
                         ProjectFunctions.SpeakError(" Box Saved Successfully");
                         sqlcon.Close();
                         if (s1 == "&Add")

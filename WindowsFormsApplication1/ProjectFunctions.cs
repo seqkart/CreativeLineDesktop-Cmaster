@@ -1211,7 +1211,7 @@ namespace WindowsFormsApplication1
                 if (dsMaster.Tables[0].Rows.Count > 0)
                 {
                     ReportGrid.DataSource = dsMaster.Tables[0];
-                    //ReportGridView.BestFitColumns();
+                    ReportGridView.BestFitColumns();
                 }
                 else
                 {
