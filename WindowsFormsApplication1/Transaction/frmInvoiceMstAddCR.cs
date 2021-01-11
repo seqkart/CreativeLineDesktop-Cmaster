@@ -13,17 +13,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmInvoiceMstAddCR : DevExpress.XtraEditors.XtraForm
+    public partial class FrmInvoiceMstAddCR : DevExpress.XtraEditors.XtraForm
     {
         public string ProgCode { get; set; }
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         DataTable dt = new DataTable();
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public string ImSeries { get; set; }
-        string StkTransfer = string.Empty;
+
+        private static readonly string empty = string.Empty;
+        string StkTransfer = empty;
         decimal AccMRPMarkDown = 0;
-        public frmInvoiceMstAddCR()
+        public FrmInvoiceMstAddCR()
         {
             InitializeComponent();
             dt.Columns.Add("SIDBARCODE", typeof(string));
@@ -73,7 +75,7 @@ namespace WindowsFormsApplication1
 
 
 
-        private void calculation()
+        private void Calculation()
         {
             InfoGridView.CloseEditor();
             InfoGridView.UpdateCurrentRow();
@@ -247,7 +249,7 @@ namespace WindowsFormsApplication1
                 HSNGrid.DataSource = null;
             }
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -313,18 +315,18 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        private void frmInvoiceMstAdd_Load(object sender, EventArgs e)
+        private void FrmInvoiceMstAdd_Load(object sender, EventArgs e)
         {
             SetMyControls();
 
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtDebitPartyCode.Focus();
                 txtserial.Text = string.Empty;
 
                 dtInvoiceDate.EditValue = DateTime.Now;
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
 
                 DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadCRMstFEDit] '" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + ImNo + "','" + ImSeries + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
@@ -380,7 +382,7 @@ namespace WindowsFormsApplication1
                 txtDebitPartyCode.Focus();
 
 
-                btnRecalculate_Click(null, e);
+                BtnRecalculate_Click(null, e);
 
                 LoadDocs();
 
@@ -422,7 +424,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             string BillNo = string.Empty;
 
@@ -476,7 +478,7 @@ namespace WindowsFormsApplication1
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
 
                             sqlcom.CommandText = "Update CRMAIN Set SIMTOTBOXES=@SIMTOTBOXES,SIMSYSDATE=@SIMSYSDATE,SIMFNYR=@SIMFNYR,SIMDATE=@SIMDATE,SIMNO=@SIMNO,SIMSERIES=@SIMSERIES,SIMPartyC=@SIMPartyC," +
@@ -638,7 +640,7 @@ namespace WindowsFormsApplication1
 
 
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
             SaveInvoice();
@@ -646,7 +648,7 @@ namespace WindowsFormsApplication1
 
 
 
-        private void frmInvoiceMstAdd_KeyDown(object sender, KeyEventArgs e)
+        private void FrmInvoiceMstAdd_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.SalePopUPForAllWindows(this, e);
             if (e.KeyCode == Keys.Up)
@@ -659,7 +661,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDebitPartyName.Text = string.Empty;
             txtBillingAddress1.Text = string.Empty;
@@ -729,7 +731,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void txtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
 
 
@@ -847,7 +849,7 @@ namespace WindowsFormsApplication1
                     InfoGrid.DataSource = null;
                 }
                 HelpGrid.Visible = false;
-                calculation();
+                Calculation();
             }
             if (HelpGrid.Text == "txtTransporterCode")
             {
@@ -903,12 +905,12 @@ namespace WindowsFormsApplication1
             ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterCode, HelpGrid, HelpGridView, e);
         }
 
-        private void btnRecalculate_Click(object sender, EventArgs e)
+        private void BtnRecalculate_Click(object sender, EventArgs e)
         {
-            calculation();
+            Calculation();
         }
 
-        private void txtBarCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtBarCode_KeyDown(object sender, KeyEventArgs e)
 
         {
             try
@@ -1061,13 +1063,13 @@ namespace WindowsFormsApplication1
                     {
                         InfoGrid.DataSource = dt;
                         InfoGridView.BestFitColumns();
-                        calculation();
+                        Calculation();
                     }
                     else
                     {
                         InfoGrid.DataSource = null;
                         InfoGridView.BestFitColumns();
-                        calculation();
+                        Calculation();
                     }
                     txtBarCode.Text = string.Empty;
                     txtBarCode.Focus();
@@ -1081,7 +1083,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtReason_SelectedIndexChanged(object sender, EventArgs e)
+        private void TxtReason_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (txtReason.SelectedItem.ToString().ToUpper() == "OTHERS")
             {
@@ -1102,7 +1104,7 @@ namespace WindowsFormsApplication1
                 {
                     ProjectFunctions.DeleteCurrentRowOnRightClick(InfoGrid, InfoGridView);
                     dt.AcceptChanges();
-                    calculation();
+                    Calculation();
                 }));
             }
             catch (Exception ex)
@@ -1111,20 +1113,20 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnCalculate_Click(object sender, EventArgs e)
+        private void BtnCalculate_Click(object sender, EventArgs e)
         {
-            calculation();
+            Calculation();
         }
 
-        private void txtRound2_KeyDown(object sender, KeyEventArgs e)
+        private void TxtRound2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                calculation();
+                Calculation();
             }
         }
 
-        private void txtBarCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtBarCode_EditValueChanged(object sender, EventArgs e)
         {
 
         }
@@ -1171,8 +1173,8 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select * from ImagesData Where Transid='" + Convert.ToInt64(currentrow["Transid"]) + "'", ProjectFunctions.ImageConnectionString);
             if (ds.Tables[0].Rows.Count > 0)
             {
-                byte[] MyData = new byte[0];
-                MyData = (byte[])ds.Tables[0].Rows[0]["DocImage"];
+                _ = new byte[0];
+                byte[] MyData = (byte[])ds.Tables[0].Rows[0]["DocImage"];
                 MemoryStream stream = new MemoryStream(MyData)
                 {
                     Position = 0
@@ -1223,7 +1225,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        private void GroupControl1_Paint(object sender, PaintEventArgs e)
         {
 
 

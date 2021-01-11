@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmInvoiceMstAddCR
+    partial class FrmInvoiceMstAddCR
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInvoiceMstAddCR));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceMstAddCR));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -292,7 +292,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -302,7 +302,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // gridColumn11
             // 
@@ -425,7 +425,7 @@
             "OTHERS"});
             this.txtReason.Size = new System.Drawing.Size(323, 20);
             this.txtReason.TabIndex = 567;
-            this.txtReason.SelectedIndexChanged += new System.EventHandler(this.txtReason_SelectedIndexChanged);
+            this.txtReason.SelectedIndexChanged += new System.EventHandler(this.TxtReason_SelectedIndexChanged);
             // 
             // txtDEbitNoteDate
             // 
@@ -596,7 +596,7 @@
             this.groupControl1.Size = new System.Drawing.Size(479, 200);
             this.groupControl1.TabIndex = 532;
             this.groupControl1.Text = "Billing Address";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupControl1_Paint);
             // 
             // labelControl10
             // 
@@ -725,8 +725,8 @@
             this.txtDebitPartyCode.Properties.MaxLength = 6;
             this.txtDebitPartyCode.Size = new System.Drawing.Size(71, 20);
             this.txtDebitPartyCode.TabIndex = 533;
-            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.txtDebitPartyCode_EditValueChanged);
-            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitPartyCode_KeyDown);
+            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
+            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
             // 
             // labelControl19
             // 
@@ -744,8 +744,8 @@
             this.txtBarCode.Properties.MaxLength = 60;
             this.txtBarCode.Size = new System.Drawing.Size(252, 20);
             this.txtBarCode.TabIndex = 548;
-            this.txtBarCode.EditValueChanged += new System.EventHandler(this.txtBarCode_EditValueChanged);
-            this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBarCode_KeyDown);
+            this.txtBarCode.EditValueChanged += new System.EventHandler(this.TxtBarCode_EditValueChanged);
+            this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
             // 
             // labelControl1
             // 
@@ -1303,7 +1303,7 @@
             this.btnCalculate.TabIndex = 558;
             this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // txtRound2
             // 
@@ -1314,7 +1314,7 @@
             this.txtRound2.Properties.MaxLength = 6;
             this.txtRound2.Size = new System.Drawing.Size(54, 20);
             this.txtRound2.TabIndex = 554;
-            this.txtRound2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRound2_KeyDown);
+            this.txtRound2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRound2_KeyDown);
             // 
             // cmbTradeDisc
             // 
@@ -2015,8 +2015,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmInvoiceMstAddCR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmInvoiceMstAdd_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmInvoiceMstAdd_KeyDown);
+            this.Load += new System.EventHandler(this.FrmInvoiceMstAdd_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInvoiceMstAdd_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();

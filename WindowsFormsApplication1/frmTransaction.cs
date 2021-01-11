@@ -131,8 +131,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG141")
                 {
-                    WindowsFormsApplication1.frmInvoiceMstAddCR frm = new WindowsFormsApplication1.frmInvoiceMstAddCR()
-                    { s1 = btnAdd.Text, Text = "Credit Note Addition" };
+                    WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
+                    { S1 = btnAdd.Text, Text = "Credit Note Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -179,8 +179,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG129")
                 {
-                    Transaction.frmBoxAddEdit frm = new Transaction.frmBoxAddEdit()
-                    { s1 = btnAdd.Text, Text = "Finware House Addition" };
+                    Transaction.FrmBoxAddEdit frm = new Transaction.FrmBoxAddEdit()
+                    { S1 = btnAdd.Text, Text = "Finware House Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -420,9 +420,9 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.frmInvoiceMstAddCR frm = new WindowsFormsApplication1.frmInvoiceMstAddCR()
+                    WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Credit Note Edition",
                         ImDate = Convert.ToDateTime(CurrentRow["CRDate"]),
                         ImNo = CurrentRow["CRNo"].ToString(),
@@ -547,9 +547,9 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.frmBoxAddEdit frm = new Transaction.frmBoxAddEdit()
+                    Transaction.FrmBoxAddEdit frm = new Transaction.FrmBoxAddEdit()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Finware House Edition",
                         SFDVNO = CurrentRow["SFDVNO"].ToString(),
                         SFMTOTBOX = CurrentRow["SFDBOXNO"].ToString()

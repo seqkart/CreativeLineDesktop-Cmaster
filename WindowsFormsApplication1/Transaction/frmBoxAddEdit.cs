@@ -8,14 +8,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmBoxAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBoxAddEdit : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string SFMTOTBOX { get; set; }
         public string UpdateTag { get; set; }
         public string SFDVNO { get; set; }
-        public frmBoxAddEdit()
+        public FrmBoxAddEdit()
         {
             InitializeComponent();
             dt.Columns.Add("SFDBOXNO", typeof(string));
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.GirdViewVisualize(BarCodeGridView);
                 ProjectFunctions.GirdViewVisualize(HelpGridView);
                 ProjectFunctions.TextBoxVisualize(this);
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     string MemoNo = ProjectFunctions.GetDataSet("select isnull(max(SFMVNO),0)+1 from SFMAIN where SFMFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                     txtMemoNo.Text = MemoNo;
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1.Transaction
                     lblTotQty.Text = "0";
                     txtBarCode.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("SP_LoadBoxDataFEdit '" + SFDVNO + "' ,'" + SFMTOTBOX + "','" + GlobalVariables.FinancialYear + "','" + GlobalVariables.CUnitID + "' ");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -240,7 +240,7 @@ namespace WindowsFormsApplication1.Transaction
                         sqlcom.Connection = sqlcon;
                         sqlcom.CommandType = CommandType.StoredProcedure;
                         sqlcom.CommandType = CommandType.Text;
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into SFMAIN "
                                                         + " (SFMSYSDATE,SFMFNYR,SFMVNO,SFMLOC,SFMTOTBOX,SFMREMARKS,"
@@ -262,7 +262,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " update SFMAIN Set  "
                                                         + "SFMLOC=@SFMLOC,SFMTOTBOX=@SFMTOTBOX,SFMREMARKS=@SFMREMARKS,"
@@ -394,7 +394,7 @@ namespace WindowsFormsApplication1.Transaction
                         // BarCodeGridView.ExportToCsv(AppDomain.CurrentDomain.BaseDirectory + @"\tempbarcode.txt");
                         ProjectFunctions.SpeakError(" Box Saved Successfully");
                         sqlcon.Close();
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             lblBox.Text = (Convert.ToInt32(lblBox.Text) + 1).ToString();
                             BarCodeGrid.DataSource = null;
@@ -407,7 +407,7 @@ namespace WindowsFormsApplication1.Transaction
                             BarCodeGrid.DataSource = null;
                             dt.Clear();
                             lblTotQty.Text = "0";
-                            s1 = "&Add";
+                            S1 = "&Add";
                         }
                     }
                 }
@@ -573,7 +573,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
-        private void btnImportBarCodeForBranch_Click(object sender, EventArgs e)
+        private void BtnImportBarCodeForBranch_Click(object sender, EventArgs e)
         {
 
         }

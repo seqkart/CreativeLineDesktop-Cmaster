@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmBoxAddEdit
+    partial class FrmBoxAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBoxAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBoxAddEdit));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -138,7 +138,7 @@
             this.btnImportBarCodeForBranch.Name = "btnImportBarCodeForBranch";
             this.btnImportBarCodeForBranch.Size = new System.Drawing.Size(163, 23);
             this.btnImportBarCodeForBranch.Text = "Import BarCode For Branch";
-            this.btnImportBarCodeForBranch.Click += new System.EventHandler(this.btnImportBarCodeForBranch_Click);
+            this.btnImportBarCodeForBranch.Click += new System.EventHandler(this.BtnImportBarCodeForBranch_Click);
             // 
             // btnImportBarode
             // 

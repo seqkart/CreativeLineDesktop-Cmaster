@@ -62,8 +62,8 @@ namespace WindowsFormsApplication1.Transaction
                 QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
             }
             lblTotQty.Text = QtySum.ToString("0");
-
-            DataSet Ds = new DataSet();
+            _ = new DataSet();
+            DataSet Ds;
             if (S1 == "&Add")
             {
                 Ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount2] '" +
@@ -590,27 +590,27 @@ namespace WindowsFormsApplication1.Transaction
 
                         DataTable dtFinal = new DataTable();
                         dtFinal.Columns.Add("SIDPSDATE", typeof(DateTime));
-                        dtFinal.Columns.Add("SIDFNYR", typeof(String));
-                        dtFinal.Columns.Add("SIDPSFNYR", typeof(String));
-                        dtFinal.Columns.Add("SIDPSNO", typeof(String));
-                        dtFinal.Columns.Add("SIDBOXNO", typeof(String));
-                        dtFinal.Columns.Add("SIDBARCODE", typeof(String));
-                        dtFinal.Columns.Add("SIDARTNO", typeof(String));
-                        dtFinal.Columns.Add("SIDARTID", typeof(String));
-                        dtFinal.Columns.Add("SIDARTDESC", typeof(String));
-                        dtFinal.Columns.Add("SIDCOLN", typeof(String));
-                        dtFinal.Columns.Add("SIDCOLID", typeof(String));
-                        dtFinal.Columns.Add("SIDSIZN", typeof(String));
-                        dtFinal.Columns.Add("SIDSIZID", typeof(Decimal));
-                        dtFinal.Columns.Add("SIDSCANQTY", typeof(Decimal));
-                        dtFinal.Columns.Add("SIDARTMRP", typeof(Decimal));
-                        dtFinal.Columns.Add("SIDARTWSP", typeof(Decimal));
-                        dtFinal.Columns.Add("SIDBOXQTY", typeof(String));
-                        dtFinal.Columns.Add("SIDBOXMRPVAL", typeof(String));
-                        dtFinal.Columns.Add("SIDBOXWSPVAL", typeof(String));
-                        dtFinal.Columns.Add("SIDPONO", typeof(String));
-                        dtFinal.Columns.Add("UnitCode", typeof(String));
-                        dtFinal.Columns.Add("SIDPartyC", typeof(String));
+                        dtFinal.Columns.Add("SIDFNYR", typeof(string));
+                        dtFinal.Columns.Add("SIDPSFNYR", typeof(string));
+                        dtFinal.Columns.Add("SIDPSNO", typeof(string));
+                        dtFinal.Columns.Add("SIDBOXNO", typeof(string));
+                        dtFinal.Columns.Add("SIDBARCODE", typeof(string));
+                        dtFinal.Columns.Add("SIDARTNO", typeof(string));
+                        dtFinal.Columns.Add("SIDARTID", typeof(string));
+                        dtFinal.Columns.Add("SIDARTDESC", typeof(string));
+                        dtFinal.Columns.Add("SIDCOLN", typeof(string));
+                        dtFinal.Columns.Add("SIDCOLID", typeof(string));
+                        dtFinal.Columns.Add("SIDSIZN", typeof(string));
+                        dtFinal.Columns.Add("SIDSIZID", typeof(decimal));
+                        dtFinal.Columns.Add("SIDSCANQTY", typeof(decimal));
+                        dtFinal.Columns.Add("SIDARTMRP", typeof(decimal));
+                        dtFinal.Columns.Add("SIDARTWSP", typeof(decimal));
+                        dtFinal.Columns.Add("SIDBOXQTY", typeof(string));
+                        dtFinal.Columns.Add("SIDBOXMRPVAL", typeof(string));
+                        dtFinal.Columns.Add("SIDBOXWSPVAL", typeof(string));
+                        dtFinal.Columns.Add("SIDPONO", typeof(string));
+                        dtFinal.Columns.Add("UnitCode", typeof(string));
+                        dtFinal.Columns.Add("SIDPartyC", typeof(string));
                         dtFinal.Rows.Clear();
 
 
