@@ -505,7 +505,7 @@
             this.labelControl6.TabIndex = 730;
             this.labelControl6.Text = "Barcode";
             // 
-            // frmBoxAddEdit
+            // FrmBoxAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -532,7 +532,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmBoxAddEdit";
+            this.Name = "FrmBoxAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmBoxAddEdit_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBoxAddEdit_KeyDown);
