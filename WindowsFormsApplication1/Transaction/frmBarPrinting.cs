@@ -776,14 +776,15 @@ namespace WindowsFormsApplication1.Transaction
                     txtBarCode.Visible = true;
                     label2.Visible = true;
                     btnPrint.Visible = true;
-                    btnSave.Visible = false;
+                    S1 = "&Add";
+                    //btnSave.Visible = false;
                 }
                 else
                 {
-                    txtBarCode.Visible = false;
-                    label2.Visible = false;
-                    btnPrint.Visible = false;
-                    btnSave.Visible = true;
+                    ////txtBarCode.Visible = false;
+                    ////label2.Visible = false;
+                    ////btnPrint.Visible = false;
+                    ////btnSave.Visible = true;
                 }
 
 
@@ -1045,7 +1046,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     if (e.KeyCode == Keys.Enter)
                     {
-                        DataSet dsCheck = ProjectFunctions.GetDataSet(" SELECT top 1 * FROM ( SELECT * FROM sku UNION ALL SELECT * FROM sku_fix ) as tmp Where SKUPRODUCTCODE='" + txtBarCode.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                        DataSet dsCheck = ProjectFunctions.GetDataSet(" sp_LoadRePrintBarCode '" + txtBarCode.Text + "','01'");
                         if (dsCheck.Tables[0].Rows.Count > 0)
                         {
 

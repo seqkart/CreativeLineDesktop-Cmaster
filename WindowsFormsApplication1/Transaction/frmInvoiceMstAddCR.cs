@@ -25,6 +25,9 @@ namespace WindowsFormsApplication1
         private static readonly string empty = string.Empty;
         string StkTransfer = empty;
         decimal AccMRPMarkDown = 0;
+
+
+        String FixPartyTag;
         public FrmInvoiceMstAddCR()
         {
             InitializeComponent();
@@ -346,7 +349,7 @@ namespace WindowsFormsApplication1
                 txtBillingState.Text = ds.Tables[0].Rows[0]["DebitStateName"].ToString();
                 txtBillingZip.Text = ds.Tables[0].Rows[0]["DebitPartyZipCode"].ToString();
 
-
+                FixPartyTag= ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
 
 
 
@@ -776,6 +779,8 @@ namespace WindowsFormsApplication1
                         txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
                         AccMRPMarkDown = Convert.ToDecimal(ds.Tables[0].Rows[0]["AccMrpMarkDown"]);
                         StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
+
+                        FixPartyTag= ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
                     }
 
                     else
@@ -876,7 +881,8 @@ namespace WindowsFormsApplication1
                 AccMRPMarkDown = Convert.ToDecimal(row["AccMrpMarkDown"]);
 
                 StkTransfer = row["AccStkTrf"].ToString();
-
+                FixPartyTag = row["AccFixBarCodeTag"].ToString();
+                
 
                 HelpGrid.Visible = false;
             }
@@ -964,31 +970,84 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            foreach (DataRow drRows in dt.Rows)
+                            if (FixPartyTag != "Y")
                             {
-                                if (ds.Tables[0].Rows[0]["SIDBARCODE"].ToString() == drRows["SIDBARCODE"].ToString())
+                                foreach (DataRow drRows in dt.Rows)
                                 {
-                                    ProjectFunctions.SpeakError("This BarCode Already Loaded In This Document");
+                                    if (ds.Tables[0].Rows[0]["SIDBARCODE"].ToString() == drRows["SIDBARCODE"].ToString())
+                                    { 
+                                        ProjectFunctions.SpeakError("This BarCode Already Loaded In This Document");
+                                        txtBarCode.SelectAll();
+                                        txtBarCode.Focus();
+                                        e.Handled = true;
+                                        return;
+                                    }
+                                   
+                                }
+                                dt.Merge(ds.Tables[0]);
+                            }
+                            else
+                            {
+                                int i = 0;
+                                foreach (DataRow drRows in dt.Rows)
+                                {
+                                    if (drRows["SIDBARCODE"].ToString().ToUpper() == ds.Tables[0].Rows[0]["SIDBARCODE"].ToString())
+                                    {
+                                        drRows["SIDSCANQTY"] = Convert.ToDecimal(drRows["SIDSCANQTY"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                        drRows["SIDITMDISCAMT"] = Convert.ToDecimal(drRows["SIDITMDISCAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDITMDISCAMT"]);
+                                        drRows["SIDITMNETAMT"] = Convert.ToDecimal(drRows["SIDITMNETAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDITMNETAMT"]);
+                                        drRows["SIDSGSTAMT"] = Convert.ToDecimal(drRows["SIDSGSTAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSGSTAMT"]);
+                                        drRows["SIDCGSTAMT"] = Convert.ToDecimal(drRows["SIDCGSTAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDCGSTAMT"]);
+                                        drRows["SIDIGSTAMT"] = Convert.ToDecimal(drRows["SIDIGSTAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDIGSTAMT"]);
+                                        i++;
+                                    }
+                                }
+                                if(i==0)
+                                {
+                                    dt.Merge(ds.Tables[0]); 
+                                }
+                            }
+                            
+                        }
+                    }
+                    else
+
+                    
+                    {
+                        if (ds.Tables.Count > 2)
+                        {
+                            if (ds.Tables[2].Rows.Count > 0)
+                            {
+                                if (FixPartyTag != "Y")
+                                {
+                                    ProjectFunctions.SpeakError("Return Has Already Been Taken Against This BarCode");
                                     txtBarCode.SelectAll();
                                     txtBarCode.Focus();
                                     e.Handled = true;
                                     return;
                                 }
+                                else
+                                {
+                                    int i = 0;
+                                    foreach (DataRow drRows in dt.Rows)
+                                    {
+                                        if (drRows["SIDBARCODE"].ToString().ToUpper() == ds.Tables[0].Rows[0]["SIDBARCODE"].ToString())
+                                        {
+                                            drRows["SIDSCANQTY"] = Convert.ToDecimal(drRows["SIDSCANQTY"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                            drRows["SIDITMDISCAMT"] = Convert.ToDecimal(drRows["SIDITMDISCAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDITMDISCAMT"]);
+                                            drRows["SIDITMNETAMT"] = Convert.ToDecimal(drRows["SIDITMNETAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDITMNETAMT"]);
+                                            drRows["SIDSGSTAMT"] = Convert.ToDecimal(drRows["SIDSGSTAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSGSTAMT"]);
+                                            drRows["SIDCGSTAMT"] = Convert.ToDecimal(drRows["SIDCGSTAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDCGSTAMT"]);
+                                            drRows["SIDIGSTAMT"] = Convert.ToDecimal(drRows["SIDIGSTAMT"]) + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDIGSTAMT"]);
+                                            i++;
+                                        }
+                                    }
+                                    if (i == 0)
+                                    {
+                                        dt.Merge(ds.Tables[0]);
+                                    }
+                                }
                             }
-                            dt.Merge(ds.Tables[0]);
-                        }
-                    }
-                    else
-
-                    {
-                        if (ds.Tables[2].Rows.Count > 0)
-                        {
-
-                            ProjectFunctions.SpeakError("Return Has Already Been Taken Against This BarCode");
-                            txtBarCode.SelectAll();
-                            txtBarCode.Focus();
-                            e.Handled = true;
-                            return;
                         }
                         else
                         {

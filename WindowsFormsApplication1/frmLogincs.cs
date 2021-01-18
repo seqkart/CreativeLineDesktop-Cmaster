@@ -334,7 +334,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@123");
+                    NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@1234");
                     System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
                     ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
                     string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
