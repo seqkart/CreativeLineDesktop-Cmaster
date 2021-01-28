@@ -380,7 +380,7 @@
             this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl37.Appearance.Options.UseFont = true;
-            this.labelControl37.Location = new System.Drawing.Point(836, 669);
+            this.labelControl37.Location = new System.Drawing.Point(836, 634);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(78, 17);
             this.labelControl37.TabIndex = 777;
@@ -636,7 +636,7 @@
             this.labelControl38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl38.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl38.Appearance.Options.UseFont = true;
-            this.labelControl38.Location = new System.Drawing.Point(860, 696);
+            this.labelControl38.Location = new System.Drawing.Point(860, 661);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(54, 17);
             this.labelControl38.TabIndex = 779;
@@ -1176,7 +1176,7 @@
             // 
             // groupControl6
             // 
-            this.groupControl6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.groupControl6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl6.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl6.CaptionImageOptions.Image")));
             this.groupControl6.Controls.Add(this.label47);
             this.groupControl6.Controls.Add(this.labelControl30);
@@ -1494,7 +1494,7 @@
             // 
             // groupControl5
             // 
-            this.groupControl5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupControl5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupControl5.Appearance.Options.UseBackColor = true;
             this.groupControl5.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl5.CaptionImageOptions.Image")));
@@ -2055,7 +2055,7 @@
             // 
             this.lblPAyBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPAyBack.EditValue = "0.00";
-            this.lblPAyBack.Location = new System.Drawing.Point(920, 691);
+            this.lblPAyBack.Location = new System.Drawing.Point(920, 656);
             this.lblPAyBack.Name = "lblPAyBack";
             this.lblPAyBack.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblPAyBack.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
@@ -2070,7 +2070,7 @@
             // 
             this.lblCashTender.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblCashTender.EditValue = "0.00";
-            this.lblCashTender.Location = new System.Drawing.Point(920, 664);
+            this.lblCashTender.Location = new System.Drawing.Point(920, 629);
             this.lblCashTender.Name = "lblCashTender";
             this.lblCashTender.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
             this.lblCashTender.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);

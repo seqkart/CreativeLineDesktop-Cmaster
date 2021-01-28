@@ -168,6 +168,8 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSaveOnly = new DevExpress.XtraEditors.SimpleButton();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl67 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotTotal.Properties)).BeginInit();
@@ -242,6 +244,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCashOutCount1000.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCashOutAmount2000.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCashOutCount2000.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -1368,6 +1371,7 @@
             this.groupControl3.CaptionLocation = DevExpress.Utils.Locations.Top;
             this.groupControl3.Controls.Add(this.labelControl52);
             this.groupControl3.Controls.Add(this.labelControl51);
+            this.groupControl3.Controls.Add(this.labelControl67);
             this.groupControl3.Controls.Add(this.labelControl50);
             this.groupControl3.Controls.Add(this.labelControl49);
             this.groupControl3.Controls.Add(this.labelControl48);
@@ -1376,6 +1380,7 @@
             this.groupControl3.Controls.Add(this.labelControl47);
             this.groupControl3.Controls.Add(this.txtTotalPayBack);
             this.groupControl3.Controls.Add(this.txtTotalReceived);
+            this.groupControl3.Controls.Add(this.textEdit1);
             this.groupControl3.Controls.Add(this.txtBillBalanceAmount);
             this.groupControl3.Controls.Add(this.txtPGPayment);
             this.groupControl3.Controls.Add(this.txtCardPayment);
@@ -1388,12 +1393,13 @@
             this.groupControl3.Size = new System.Drawing.Size(255, 339);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Invoice Details";
+            this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
             // 
             // labelControl52
             // 
             this.labelControl52.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl52.Appearance.Options.UseFont = true;
-            this.labelControl52.Location = new System.Drawing.Point(13, 304);
+            this.labelControl52.Location = new System.Drawing.Point(13, 302);
             this.labelControl52.Name = "labelControl52";
             this.labelControl52.Size = new System.Drawing.Size(98, 20);
             this.labelControl52.TabIndex = 2;
@@ -1403,7 +1409,7 @@
             // 
             this.labelControl51.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl51.Appearance.Options.UseFont = true;
-            this.labelControl51.Location = new System.Drawing.Point(9, 266);
+            this.labelControl51.Location = new System.Drawing.Point(9, 269);
             this.labelControl51.Name = "labelControl51";
             this.labelControl51.Size = new System.Drawing.Size(102, 20);
             this.labelControl51.TabIndex = 2;
@@ -1413,7 +1419,7 @@
             // 
             this.labelControl50.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl50.Appearance.Options.UseFont = true;
-            this.labelControl50.Location = new System.Drawing.Point(43, 228);
+            this.labelControl50.Location = new System.Drawing.Point(43, 203);
             this.labelControl50.Name = "labelControl50";
             this.labelControl50.Size = new System.Drawing.Size(68, 20);
             this.labelControl50.TabIndex = 2;
@@ -1423,7 +1429,7 @@
             // 
             this.labelControl49.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl49.Appearance.Options.UseFont = true;
-            this.labelControl49.Location = new System.Drawing.Point(25, 190);
+            this.labelControl49.Location = new System.Drawing.Point(25, 170);
             this.labelControl49.Name = "labelControl49";
             this.labelControl49.Size = new System.Drawing.Size(86, 20);
             this.labelControl49.TabIndex = 2;
@@ -1433,7 +1439,7 @@
             // 
             this.labelControl48.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl48.Appearance.Options.UseFont = true;
-            this.labelControl48.Location = new System.Drawing.Point(13, 152);
+            this.labelControl48.Location = new System.Drawing.Point(13, 137);
             this.labelControl48.Name = "labelControl48";
             this.labelControl48.Size = new System.Drawing.Size(98, 20);
             this.labelControl48.TabIndex = 2;
@@ -1453,7 +1459,7 @@
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(37, 76);
+            this.labelControl24.Location = new System.Drawing.Point(37, 71);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(74, 20);
             this.labelControl24.TabIndex = 2;
@@ -1463,7 +1469,7 @@
             // 
             this.labelControl47.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl47.Appearance.Options.UseFont = true;
-            this.labelControl47.Location = new System.Drawing.Point(4, 114);
+            this.labelControl47.Location = new System.Drawing.Point(4, 104);
             this.labelControl47.Name = "labelControl47";
             this.labelControl47.Size = new System.Drawing.Size(107, 20);
             this.labelControl47.TabIndex = 2;
@@ -1472,7 +1478,7 @@
             // txtTotalPayBack
             // 
             this.txtTotalPayBack.EditValue = "0";
-            this.txtTotalPayBack.Location = new System.Drawing.Point(124, 302);
+            this.txtTotalPayBack.Location = new System.Drawing.Point(124, 300);
             this.txtTotalPayBack.Name = "txtTotalPayBack";
             this.txtTotalPayBack.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalPayBack.Properties.Appearance.Options.UseFont = true;
@@ -1504,7 +1510,7 @@
             // txtTotalReceived
             // 
             this.txtTotalReceived.EditValue = "0";
-            this.txtTotalReceived.Location = new System.Drawing.Point(124, 264);
+            this.txtTotalReceived.Location = new System.Drawing.Point(124, 267);
             this.txtTotalReceived.Name = "txtTotalReceived";
             this.txtTotalReceived.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalReceived.Properties.Appearance.Options.UseFont = true;
@@ -1524,7 +1530,7 @@
             // txtBillBalanceAmount
             // 
             this.txtBillBalanceAmount.EditValue = "0";
-            this.txtBillBalanceAmount.Location = new System.Drawing.Point(124, 226);
+            this.txtBillBalanceAmount.Location = new System.Drawing.Point(124, 201);
             this.txtBillBalanceAmount.Name = "txtBillBalanceAmount";
             this.txtBillBalanceAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBillBalanceAmount.Properties.Appearance.Options.UseFont = true;
@@ -1544,7 +1550,7 @@
             // txtPGPayment
             // 
             this.txtPGPayment.EditValue = "0";
-            this.txtPGPayment.Location = new System.Drawing.Point(124, 188);
+            this.txtPGPayment.Location = new System.Drawing.Point(124, 168);
             this.txtPGPayment.Name = "txtPGPayment";
             this.txtPGPayment.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPGPayment.Properties.Appearance.Options.UseFont = true;
@@ -1564,7 +1570,7 @@
             // txtCardPayment
             // 
             this.txtCardPayment.EditValue = "0";
-            this.txtCardPayment.Location = new System.Drawing.Point(124, 150);
+            this.txtCardPayment.Location = new System.Drawing.Point(124, 135);
             this.txtCardPayment.Name = "txtCardPayment";
             this.txtCardPayment.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardPayment.Properties.Appearance.Options.UseFont = true;
@@ -1584,7 +1590,7 @@
             // txtCashMemoAmount
             // 
             this.txtCashMemoAmount.EditValue = "0";
-            this.txtCashMemoAmount.Location = new System.Drawing.Point(124, 112);
+            this.txtCashMemoAmount.Location = new System.Drawing.Point(124, 102);
             this.txtCashMemoAmount.Name = "txtCashMemoAmount";
             this.txtCashMemoAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoAmount.Properties.Appearance.Options.UseFont = true;
@@ -1603,7 +1609,7 @@
             // 
             // txtCashMemoNo
             // 
-            this.txtCashMemoNo.Location = new System.Drawing.Point(124, 74);
+            this.txtCashMemoNo.Location = new System.Drawing.Point(124, 69);
             this.txtCashMemoNo.Name = "txtCashMemoNo";
             this.txtCashMemoNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoNo.Properties.Appearance.Options.UseFont = true;
@@ -2388,6 +2394,36 @@
             this.btnSaveOnly.Text = "Save";
             this.btnSaveOnly.Click += new System.EventHandler(this.BtnSaveOnly_Click);
             // 
+            // textEdit1
+            // 
+            this.textEdit1.EditValue = "0";
+            this.textEdit1.Location = new System.Drawing.Point(125, 234);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textEdit1.Properties.Appearance.Options.UseFont = true;
+            this.textEdit1.Properties.DisplayFormat.FormatString = "n0";
+            this.textEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.EditFormat.FormatString = "n0";
+            this.textEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.textEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.textEdit1.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.textEdit1.Properties.MaskSettings.Set("mask", "n0");
+            this.textEdit1.Properties.ReadOnly = true;
+            this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textEdit1.Size = new System.Drawing.Size(95, 24);
+            this.textEdit1.TabIndex = 3;
+            this.textEdit1.TabStop = false;
+            // 
+            // labelControl67
+            // 
+            this.labelControl67.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl67.Appearance.Options.UseFont = true;
+            this.labelControl67.Location = new System.Drawing.Point(39, 236);
+            this.labelControl67.Name = "labelControl67";
+            this.labelControl67.Size = new System.Drawing.Size(72, 20);
+            this.labelControl67.TabIndex = 2;
+            this.labelControl67.Text = "Auto Cash";
+            // 
             // CashTender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2488,6 +2524,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCashOutCount1000.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCashOutAmount2000.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCashOutCount2000.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2633,5 +2670,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.TextEdit txtCashOutCount50;
         private DevExpress.XtraEditors.SimpleButton btnSaveOnly;
+        private DevExpress.XtraEditors.LabelControl labelControl67;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
     }
 }

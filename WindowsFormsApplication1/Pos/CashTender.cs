@@ -357,5 +357,10 @@ namespace WindowsFormsApplication1.Transaction
         {
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
+
+        private void groupControl3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

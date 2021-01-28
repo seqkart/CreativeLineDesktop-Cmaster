@@ -1527,6 +1527,12 @@
     <Compile Include="Transaction\frmGSTPurchase.Designer.cs">
       <DependentUpon>frmGSTPurchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmImportSaleFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmImportSaleFromExcel.Designer.cs">
+      <DependentUpon>frmImportSaleFromExcel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmIndentMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2061,6 +2067,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmGSTPurchase.resx">
       <DependentUpon>frmGSTPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmImportSaleFromExcel.resx">
+      <DependentUpon>frmImportSaleFromExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmIndentMst.resx">
       <DependentUpon>frmIndentMst.cs</DependentUpon>
