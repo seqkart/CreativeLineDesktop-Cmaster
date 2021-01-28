@@ -1503,7 +1503,7 @@
             this.txtTotalPayBack.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtTotalPayBack.Properties.MaskSettings.Set("mask", "n0");
             this.txtTotalPayBack.Properties.ReadOnly = true;
-            this.txtTotalPayBack.Size = new System.Drawing.Size(95, 24);
+            this.txtTotalPayBack.Size = new System.Drawing.Size(115, 24);
             this.txtTotalPayBack.TabIndex = 3;
             this.txtTotalPayBack.TabStop = false;
             // 
@@ -1518,12 +1518,12 @@
             this.txtTotalReceived.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtTotalReceived.Properties.EditFormat.FormatString = "n0";
             this.txtTotalReceived.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtTotalReceived.Properties.Mask.EditMask = "n0";
-            this.txtTotalReceived.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotalReceived.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtTotalReceived.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtTotalReceived.Properties.MaskSettings.Set("mask", "n0");
             this.txtTotalReceived.Properties.ReadOnly = true;
             this.txtTotalReceived.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTotalReceived.Size = new System.Drawing.Size(95, 24);
+            this.txtTotalReceived.Size = new System.Drawing.Size(115, 24);
             this.txtTotalReceived.TabIndex = 3;
             this.txtTotalReceived.TabStop = false;
             // 
@@ -1538,12 +1538,12 @@
             this.txtBillBalanceAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtBillBalanceAmount.Properties.EditFormat.FormatString = "n0";
             this.txtBillBalanceAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtBillBalanceAmount.Properties.Mask.EditMask = "n0";
-            this.txtBillBalanceAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBillBalanceAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtBillBalanceAmount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtBillBalanceAmount.Properties.MaskSettings.Set("mask", "n0");
             this.txtBillBalanceAmount.Properties.ReadOnly = true;
             this.txtBillBalanceAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtBillBalanceAmount.Size = new System.Drawing.Size(95, 24);
+            this.txtBillBalanceAmount.Size = new System.Drawing.Size(115, 24);
             this.txtBillBalanceAmount.TabIndex = 3;
             this.txtBillBalanceAmount.TabStop = false;
             // 
@@ -1558,12 +1558,12 @@
             this.txtPGPayment.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtPGPayment.Properties.EditFormat.FormatString = "n0";
             this.txtPGPayment.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtPGPayment.Properties.Mask.EditMask = "n0";
-            this.txtPGPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPGPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtPGPayment.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtPGPayment.Properties.MaskSettings.Set("mask", "n0");
             this.txtPGPayment.Properties.ReadOnly = true;
             this.txtPGPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtPGPayment.Size = new System.Drawing.Size(95, 24);
+            this.txtPGPayment.Size = new System.Drawing.Size(115, 24);
             this.txtPGPayment.TabIndex = 3;
             this.txtPGPayment.TabStop = false;
             // 
@@ -1578,12 +1578,12 @@
             this.txtCardPayment.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCardPayment.Properties.EditFormat.FormatString = "n0";
             this.txtCardPayment.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCardPayment.Properties.Mask.EditMask = "n0";
-            this.txtCardPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCardPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCardPayment.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtCardPayment.Properties.MaskSettings.Set("mask", "n0");
             this.txtCardPayment.Properties.ReadOnly = true;
             this.txtCardPayment.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCardPayment.Size = new System.Drawing.Size(95, 24);
+            this.txtCardPayment.Size = new System.Drawing.Size(115, 24);
             this.txtCardPayment.TabIndex = 3;
             this.txtCardPayment.TabStop = false;
             // 
@@ -1598,12 +1598,12 @@
             this.txtCashMemoAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtCashMemoAmount.Properties.EditFormat.FormatString = "n0";
             this.txtCashMemoAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtCashMemoAmount.Properties.Mask.EditMask = "n0";
-            this.txtCashMemoAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashMemoAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCashMemoAmount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtCashMemoAmount.Properties.MaskSettings.Set("mask", "n0");
             this.txtCashMemoAmount.Properties.ReadOnly = true;
             this.txtCashMemoAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCashMemoAmount.Size = new System.Drawing.Size(95, 24);
+            this.txtCashMemoAmount.Size = new System.Drawing.Size(115, 24);
             this.txtCashMemoAmount.TabIndex = 3;
             this.txtCashMemoAmount.TabStop = false;
             // 
@@ -1614,7 +1614,7 @@
             this.txtCashMemoNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoNo.Properties.Appearance.Options.UseFont = true;
             this.txtCashMemoNo.Properties.ReadOnly = true;
-            this.txtCashMemoNo.Size = new System.Drawing.Size(95, 24);
+            this.txtCashMemoNo.Size = new System.Drawing.Size(115, 24);
             this.txtCashMemoNo.TabIndex = 3;
             this.txtCashMemoNo.TabStop = false;
             // 
@@ -1625,7 +1625,7 @@
             this.txtCashMemoDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoDate.Properties.Appearance.Options.UseFont = true;
             this.txtCashMemoDate.Properties.ReadOnly = true;
-            this.txtCashMemoDate.Size = new System.Drawing.Size(95, 24);
+            this.txtCashMemoDate.Size = new System.Drawing.Size(115, 24);
             this.txtCashMemoDate.TabIndex = 3;
             this.txtCashMemoDate.TabStop = false;
             // 
@@ -2410,7 +2410,7 @@
             this.textEdit1.Properties.MaskSettings.Set("mask", "n0");
             this.textEdit1.Properties.ReadOnly = true;
             this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit1.Size = new System.Drawing.Size(95, 24);
+            this.textEdit1.Size = new System.Drawing.Size(115, 24);
             this.textEdit1.TabIndex = 3;
             this.textEdit1.TabStop = false;
             // 
