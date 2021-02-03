@@ -3,56 +3,40 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Transaction.Pos
+namespace WindowsFormsApplication1.Pos
 {
-    public partial class Card : DevExpress.XtraEditors.XtraForm
+    public partial class frmOnlinePayment : DevExpress.XtraEditors.XtraForm
     {
         public string s1 { get; set; }
         public string MemoNo { get; set; }
         public DateTime MemoDate { get; set; }
         public decimal CardPayment { get; set; }
         public decimal PGPayment { get; set; }
-
         public decimal TotalMemoAmount { get; set; }
-        public Card()
+        public frmOnlinePayment()
         {
             InitializeComponent();
         }
 
-        private void Btvisa_Click(object sender, EventArgs e)
+        private void btnPayTM_Click(object sender, EventArgs e)
         {
-            txtCardType.Text = "VISA";
+            txtUPIDType.Text = "PayTM";
         }
 
-
-
-        private void Btmaestro_Click(object sender, EventArgs e)
+        private void btnGooglePay_Click(object sender, EventArgs e)
         {
-            txtCardType.Text = "MAESTRO";
+            txtUPIDType.Text = "GooglePay";
         }
 
-        private void Btamex_Click(object sender, EventArgs e)
+        private void btnPhonePe_Click(object sender, EventArgs e)
         {
-            txtCardType.Text = "AMEX";
+            txtUPIDType.Text = "PhonePe";
         }
 
-        private void Btmaster_Click(object sender, EventArgs e)
-        {
-            txtCardType.Text = "MASTER CARD";
-        }
-
-        private void Btdci_Click(object sender, EventArgs e)
-        {
-            txtCardType.Text = "DINERS CLUB";
-        }
-
-
-
-
-
-        private void Card_Load(object sender, EventArgs e)
+        private void frmOnlinePayment_Load(object sender, EventArgs e)
         {
             try
+
             {
                 lblMemoNo.Text = MemoNo;
                 lblMemoDate.Text = MemoDate.ToString("dd-MM-yyyy");
@@ -65,22 +49,17 @@ namespace WindowsFormsApplication1.Transaction.Pos
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from CASHTENDER Where CATMEMONO='" + MemoNo + "' And CATMEMODATE='" + MemoDate.Date.ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    txtCardType.Text = ds.Tables[0].Rows[0]["CATCARDTYPE"].ToString();
-                    txtCardNo.Text = ds.Tables[0].Rows[0]["CATCARDNO"].ToString();
-                    txtNameOnCard.Text = ds.Tables[0].Rows[0]["CATCARDNAME"].ToString();
-                    txtSLipNo.Text = ds.Tables[0].Rows[0]["CATCARDSLIPNO"].ToString();
+                    txtUPIDType.Text = ds.Tables[0].Rows[0]["UPIDType"].ToString();
+                    txtUPIDMobileNo.Text = ds.Tables[0].Rows[0]["UPIDMobileNo"].ToString();
+                    txtNameOnUPID.Text = ds.Tables[0].Rows[0]["UPIDName"].ToString();
+                    txtUPID.Text = ds.Tables[0].Rows[0]["UPIDAddress"].ToString();
 
 
-                    txtAmountPaid.EditValue = ds.Tables[0].Rows[0]["CATCARDAMT"].ToString();
+                    
+
+
+                    txtAmountPaid.EditValue = ds.Tables[0].Rows[0]["CATPGAMT"].ToString();
                     txtBalanceAmount.EditValue = (Convert.ToDecimal(txtMemoAmount.Text) - Convert.ToDecimal(txtAmountPaid.Text));
-
-                    //if (Convert.ToDecimal(txtBalanceAmount.EditValue) > 0)
-                    //{
-                    //    WindowsFormsApplication1.Transaction.CashTender frm = new WindowsFormsApplication1.Transaction.CashTender() { MemoNo = lblMemoNo.Text, MemoDate = Convert.ToDateTime(lblMemoDate.Text), TotalMemoAmount = Convert.ToDecimal(txtMemoAmount.Text) };
-                    //    var P = ProjectFunctions.GetPositionInForm(this);
-                    //    frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                    //    frm.ShowDialog(this.Parent);
-                    //}
                 }
             }
 
@@ -89,27 +68,8 @@ namespace WindowsFormsApplication1.Transaction.Pos
             {
                 MessageBox.Show(ex.Message);
             }
-
-
         }
 
-        private void BtnRevert_Click(object sender, EventArgs e)
-        {
-            Hide();
-        }
-        private bool ValidateDataForSaving()
-        {
-            if (Convert.ToDecimal(txtAmountPaid.Text) > 0)
-            {
-
-            }
-            else
-            {
-                txtAmountPaid.Focus();
-                return false;
-            }
-            return true;
-        }
         private void Save()
         {
             if (ValidateDataForSaving())
@@ -125,16 +85,20 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from CASHTENDER where CATMEMONO='" + lblMemoNo.Text + "' And CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                         if (dsCheck.Tables[0].Rows.Count == 0)
                         {
-
-                            sqlcom.CommandText = "Insert into CASHTENDER(CATMEMONO,CATMEMODATE,CATMEMOAMT,CATCARDAMT,CATPGAMT,CURIN2000,CURIN1000,CURIN200,CURIN500,CURIN100,CURIN50,CURIN20,CURIN10,CURIN5," +
+                            
+                            sqlcom.CommandText = "Insert into CASHTENDER(UPIDType,UPIDMobileNo,UPIDName,UPIDAddress,CATMEMONO,CATMEMODATE,CATMEMOAMT,CATCARDAMT,CATPGAMT,CURIN2000,CURIN1000,CURIN200,CURIN500,CURIN100,CURIN50,CURIN20,CURIN10,CURIN5," +
                                 "  CURIN2,CURIN1,CURINTOT,CUROUT2000,CUROUT1000,CUROUT200,CUROUT500,CUROUT100,CUROUT50,CUROUT20,CUROUT10,CUROUT5,CUROUT2,CUROUT1,CUROUTTOT,CATCARDTYPE,CATCARDNO,CATCARDNAME,CATCARDSLIPNO,UnitCode,CASHAmount)values(" +
-                                "@CATMEMONO,@CATMEMODATE,@CATMEMOAMT,@CATCARDAMT,@CATPGAMT,@CURIN2000,@CURIN1000,@CURIN200,@CURIN500,@CURIN100,@CURIN50,@CURIN20,@CURIN10,@CURIN5," +
+                                "@UPIDType,@UPIDMobileNo,@UPIDName,@UPIDAddress,@CATMEMONO,@CATMEMODATE,@CATMEMOAMT,@CATCARDAMT,@CATPGAMT,@CURIN2000,@CURIN1000,@CURIN200,@CURIN500,@CURIN100,@CURIN50,@CURIN20,@CURIN10,@CURIN5," +
                                 "  @CURIN2,@CURIN1,@CURINTOT,@CUROUT2000,@CUROUT1000,@CUROUT200,@CUROUT500,@CUROUT100,@CUROUT50,@CUROUT20,@CUROUT10,@CUROUT5,@CUROUT2,@CUROUT1,@CUROUTTOT,@CATCARDTYPE,@CATCARDNO,@CATCARDNAME,@CATCARDSLIPNO,@UnitCode,@CASHAmount)";
+                            sqlcom.Parameters.Add("@UPIDType", SqlDbType.NVarChar).Value = txtUPIDType.Text;
+                            sqlcom.Parameters.Add("@UPIDMobileNo", SqlDbType.NVarChar).Value = txtUPIDMobileNo.Text;
+                            sqlcom.Parameters.Add("@UPIDName", SqlDbType.NVarChar).Value = txtNameOnUPID.Text;
+                            sqlcom.Parameters.Add("@UPIDAddress", SqlDbType.NVarChar).Value = txtUPID.Text;
                             sqlcom.Parameters.Add("@CATMEMONO", SqlDbType.NVarChar).Value = lblMemoNo.Text;
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = TotalMemoAmount.ToString("0.00");
-                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAmountPaid.Text);
-                            sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
+                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
+                            sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAmountPaid.Text);
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN200", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
@@ -159,9 +123,9 @@ namespace WindowsFormsApplication1.Transaction.Pos
                             sqlcom.Parameters.Add("@CUROUT2", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CUROUT1", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CUROUTTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
-                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = txtCardType.Text;
-                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = txtCardNo.Text;
-                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = txtNameOnCard.Text;
+                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = "";
+                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = "";
+                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = "";
                             sqlcom.Parameters.Add("@CATCARDSLIPNO", SqlDbType.NVarChar).Value = txtSLipNo.Text.Trim();
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@CASHAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
@@ -170,20 +134,23 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         }
                         else
                         {
-                            sqlcom.CommandText = "Update CASHTENDER Set CURIN2000=@CURIN2000,CURIN1000=@CURIN1000,CURIN200=@CURIN200,CURIN500=@CURIN500," +
-                                "CURIN100=@CURIN100,CURIN50=@CURIN50,CURIN20=@CURIN20,CURIN10=@CURIN10,CURIN5=@CURIN5,CURIN2=@CURIN2,CURIN1=@CURIN1,CASHAmount=@CASHAmount,CATMEMOAMT=@CATMEMOAMT,CATCARDAMT=@CATCARDAMT,CATCARDTYPE=@CATCARDTYPE,CATCARDNO=@CATCARDNO,CATCARDNAME=@CATCARDNAME,CATCARDSLIPNO=@CATCARDSLIPNO " +
+                            sqlcom.CommandText = "Update CASHTENDER Set UPIDType=@UPIDType,UPIDMobileNo=@UPIDMobileNo,UPIDName=@UPIDName,UPIDAddress=@UPIDAddress,CURIN2000=@CURIN2000,CURIN1000=@CURIN1000,CURIN200=@CURIN200,CURIN500=@CURIN500," +
+                                "CURIN100=@CURIN100,CURIN50=@CURIN50,CURIN20=@CURIN20,CURIN10=@CURIN10,CURIN5=@CURIN5,CURIN2=@CURIN2,CURIN1=@CURIN1,CASHAmount=@CASHAmount,CATMEMOAMT=@CATMEMOAMT,CATPGAMT=@CATPGAMT,CATCARDTYPE=@CATCARDTYPE,CATCARDNO=@CATCARDNO,CATCARDNAME=@CATCARDNAME,CATCARDSLIPNO=@CATCARDSLIPNO " +
                                 " Where CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' And CATMEMONO='" + lblMemoNo.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'";
 
-
+                            sqlcom.Parameters.Add("@UPIDType", SqlDbType.NVarChar).Value = txtUPIDType.Text;
+                            sqlcom.Parameters.Add("@UPIDMobileNo", SqlDbType.NVarChar).Value = txtUPIDMobileNo.Text;
+                            sqlcom.Parameters.Add("@UPIDName", SqlDbType.NVarChar).Value = txtNameOnUPID.Text;
+                            sqlcom.Parameters.Add("@UPIDAddress", SqlDbType.NVarChar).Value = txtUPID.Text;
                             sqlcom.Parameters.Add("@CATMEMONO", SqlDbType.NVarChar).Value = lblMemoNo.Text;
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = TotalMemoAmount.ToString("0.00");
-                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAmountPaid.Text);
-                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = txtCardType.Text;
-                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = txtCardNo.Text;
-                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = txtNameOnCard.Text;
+                            sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAmountPaid.Text);
+                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = "";
+                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = "";
+                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = "";
                             sqlcom.Parameters.Add("@CATCARDSLIPNO", SqlDbType.NVarChar).Value = txtSLipNo.Text.Trim();
-                            sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
+                         
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN200", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
@@ -224,101 +191,28 @@ namespace WindowsFormsApplication1.Transaction.Pos
                 }
             }
         }
-        private void BtnSave_Click(object sender, EventArgs e)
+        private bool ValidateDataForSaving()
         {
-            Save();
-            Prints.CASHMEMO rpt = new Prints.CASHMEMO();
-            ProjectFunctions.PrintDocument(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
-            Close();
-            //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
-            //var P = ProjectFunctions.GetPositionInForm(this);
-            //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-            //frm.ShowDialog(Parent);
-
-
-        }
-
-        private void TxtCardNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-
-        }
-
-        private void TxtCardDigits_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            try
+            if (Convert.ToDecimal(txtAmountPaid.Text) > 0)
             {
-                if (e.KeyCode == System.Windows.Forms.Keys.Enter)
-                {
 
-
-
-                    string MainValue = txtCardDigits.Text;
-                    MainValue = MainValue.Substring(0, MainValue.IndexOf("/"));
-                    MainValue = MainValue.Replace("\n", string.Empty);
-                    MainValue = MainValue.Replace("\r", string.Empty);
-                    MainValue = MainValue.Replace("\t", string.Empty);
-                    txtCardDigits.Text = MainValue;
-                    string Value = MainValue;
-
-                    Value = Value.Replace("%b".ToUpper(), string.Empty).Replace("%b", string.Empty);
-                    Value = Value.Substring(0, Value.IndexOf("^"));
-                    txtCardNo.Text = Value.Trim();
-
-                    string Value2 = MainValue;
-                    Value2 = Value2.Replace("%b".ToUpper(), string.Empty).Replace("%b", string.Empty);
-                    Value2 = Value2.Replace(Value, string.Empty).Replace("^", string.Empty);
-                    //Value2 = Value2.Substring(0, Value2.LastIndexOf("/"));
-
-
-                    txtNameOnCard.Text = Value2.Trim().ToUpper();
-                    txtCardDigits.Text = string.Empty;
-
-                    textEdit1.Focus();
-
-
-                }
             }
-
-            catch (Exception ex)
-
-            {
-                MessageBox.Show(ex.Message);
-            }
-            e.Handled = true;
-        }
-
-        private void TxtAmountPaid_EditValueChanged(object sender, EventArgs e)
-        {
-            //txtBalanceAmount.EditValue = Convert.ToDecimal(txtMemoAmount.EditValue) - Convert.ToDecimal(txtAmountPaid.EditValue);
-        }
-
-        private void TextEdit1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TextEdit1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
+            else
             {
                 txtAmountPaid.Focus();
+                return false;
             }
+            return true;
+        }
+        private void btnRevert_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
 
-        private void BtnSaveOnly_Click(object sender, EventArgs e)
+        private void btnSaveOnly_Click(object sender, EventArgs e)
         {
             Save();
             Close();
-            //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
-            //var P = ProjectFunctions.GetPositionInForm(this);
-            //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-            //frm.ShowDialog(Parent);
-
-        }
-
-        private void Card_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
-            ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
     }
 }

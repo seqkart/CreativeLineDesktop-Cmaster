@@ -101,6 +101,9 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
+
+
+
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
         {
             try
@@ -941,33 +944,82 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
 
+                        if (FixBarPartyTag == "M")
+                        {
+                            if (ds.Tables[0].Rows[0]["BarCodeType"].ToString().ToUpper() == "UNIQUE")
+                            {
+                                if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                                {
+                                    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                    txtBarCode.Focus();
+                                    txtBarCode.SelectAll();
+
+                                    e.Handled = true;
+                                    return;
+                                }
+
+                                foreach (DataRow dr in dt.Rows)
+                                {
+                                    if (dr["SIDBARCODE"].ToString().ToUpper() == ds.Tables[0].Rows[0]["SIDBARCODE"].ToString().ToUpper())
+                                    {
+                                        ProjectFunctions.SpeakError("BarCode Already Used In This PS");
+                                        txtBarCode.Focus();
+                                        txtBarCode.SelectAll();
+
+                                        e.Handled = true;
+                                        return;
+                                    }
+                                }
+
+                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
+                                if (dsCheck.Tables[0].Rows.Count > 0)
+                                {
+                                    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                    txtBarCode.Focus();
+                                    txtBarCode.SelectAll();
+                                    e.Handled = true;
+                                    return;
+                                }
+                            }
+                        }
 
 
-
-                        if (FixBarPartyTag == "N")
+                         if (FixBarPartyTag == "N")
                         {
 
-                            //if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
-                            //{
-                            //    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                            //    txtBarCode.Focus();
-                            //    txtBarCode.SelectAll();
+                            if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                            {
+                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                txtBarCode.Focus();
+                                txtBarCode.SelectAll();
 
-                            //    e.Handled = true;
-                            //    return;
-                            //}
+                                e.Handled = true;
+                                return;
+                            }
 
+                            foreach(DataRow  dr in dt.Rows)
+                            {
+                                if(dr["SIDBARCODE"].ToString().ToUpper()== ds.Tables[0].Rows[0]["SIDBARCODE"].ToString().ToUpper())
+                                {
+                                    ProjectFunctions.SpeakError("BarCode Already Used In This PS");
+                                    txtBarCode.Focus();
+                                    txtBarCode.SelectAll();
 
-                            //DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
-                            //if(dsCheck.Tables[0].Rows.Count>0)
-                            //{
-                            //    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                            //    txtBarCode.Focus();
-                            //    txtBarCode.SelectAll();
-                            //    e.Handled = true;
-                            //    return;
-                            //}
-                            
+                                    e.Handled = true;
+                                    return;
+                                }
+                            }
+
+                            DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
+                            if (dsCheck.Tables[0].Rows.Count > 0)
+                            {
+                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                txtBarCode.Focus();
+                                txtBarCode.SelectAll();
+                                e.Handled = true;
+                                return;
+                            }
+
                         }
 
                         ////////////////////////MRP
@@ -990,7 +1042,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                         else
                         {
-                            if (FixBarPartyTag == "Y")
+                            if (FixBarPartyTag == "Y" || FixBarPartyTag == "P")
                             {
                                 int i = 0;
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
@@ -1023,7 +1075,63 @@ namespace WindowsFormsApplication1.Transaction
                             }
                             else
                             {
-                                dt.Merge(ds.Tables[0]);
+                                if(FixBarPartyTag == "M")
+                                {
+                                    if(ds.Tables[0].Rows[0]["BarCodeType"].ToString().ToUpper()=="FIX")
+                                    {
+                                        int i = 0;
+                                        foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
+                                        {
+                                            if (dr["SIDBARCODE"].ToString() == txtBarCode.Text.Trim())
+                                            {
+                                                dr["SIDSCANQTY"] = Convert.ToDecimal(dr["SIDSCANQTY"]) +
+                                                    Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                                i++;
+                                                break;
+                                            }
+                                        }
+                                        if (i == 0)
+                                        {
+                                            DataRow row = dt.NewRow();
+                                            row["SIDBOXNO"] = Convert.ToDecimal(lblBox.Text);
+                                            row["SIDBARCODE"] = ds.Tables[0].Rows[0]["SIDBARCODE"].ToString();
+                                            row["SIDARTNO"] = ds.Tables[0].Rows[0]["SIDARTNO"].ToString();
+                                            row["SIDARTDESC"] = ds.Tables[0].Rows[0]["SIDARTDESC"].ToString();
+                                            row["SIDCOLN"] = ds.Tables[0].Rows[0]["SIDCOLN"].ToString();
+                                            row["SIDSIZN"] = ds.Tables[0].Rows[0]["SIDSIZN"].ToString();
+                                            row["SIDSCANQTY"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                            row["SIDARTMRP"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]);
+                                            row["SIDARTWSP"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTWSP"]);
+                                            row["SIDARTID"] = ds.Tables[0].Rows[0]["SIDARTID"].ToString();
+                                            row["SIDCOLID"] = ds.Tables[0].Rows[0]["SIDCOLID"].ToString();
+                                            row["SIDSIZID"] = ds.Tables[0].Rows[0]["SIDSIZID"].ToString();
+                                            dt.Rows.Add(row);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        DataRow row = dt.NewRow();
+                                        row["SIDBOXNO"] = Convert.ToDecimal(lblBox.Text);
+                                        row["SIDBARCODE"] = ds.Tables[0].Rows[0]["SIDBARCODE"].ToString();
+                                        row["SIDARTNO"] = ds.Tables[0].Rows[0]["SIDARTNO"].ToString();
+                                        row["SIDARTDESC"] = ds.Tables[0].Rows[0]["SIDARTDESC"].ToString();
+                                        row["SIDCOLN"] = ds.Tables[0].Rows[0]["SIDCOLN"].ToString();
+                                        row["SIDSIZN"] = ds.Tables[0].Rows[0]["SIDSIZN"].ToString();
+                                        row["SIDSCANQTY"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                        row["SIDARTMRP"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]);
+                                        row["SIDARTWSP"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTWSP"]);
+                                        row["SIDARTID"] = ds.Tables[0].Rows[0]["SIDARTID"].ToString();
+                                        row["SIDCOLID"] = ds.Tables[0].Rows[0]["SIDCOLID"].ToString();
+                                        row["SIDSIZID"] = ds.Tables[0].Rows[0]["SIDSIZID"].ToString();
+                                        dt.Rows.Add(row);
+                                    }
+                                }
+                                else
+                                {
+                                    dt.Merge(ds.Tables[0]);
+                                }
+
+                              
                             }
                         }
 

@@ -767,6 +767,24 @@ namespace WindowsFormsApplication1.Transaction
                 TempNetPayable = SumValueOfGoods + Convert.ToDecimal(txtAlterCharges.Text) + Convert.ToDecimal(txtOtherCharges.Text);
                 lblNetPayable.Text = Math.Round(TempNetPayable, 0).ToString("0.00");
 
+                if (Convert.ToDecimal(lblNetPayable.Text) % 5 == 0)
+                {
+
+                }
+                else
+                {
+                    if (Convert.ToDecimal(lblNetPayable.Text) % 5 < Convert.ToDecimal("2.5"))
+                    { 
+                        lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((-Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
+                    }
+                    else
+                    {
+                        lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
+                    }
+
+                   
+                }
+
                 txtRoundOff.Text = (Convert.ToDecimal(lblNetPayable.Text) - TempNetPayable).ToString("0.00");
 
 
@@ -911,7 +929,14 @@ namespace WindowsFormsApplication1.Transaction
 
                 TempNetPayable = SumValueOfGoods + SumCGSTAmount + SumSGSTAmount + SumIGSTAmount + Convert.ToDecimal(txtAlterCharges.Text) + Convert.ToDecimal(txtOtherCharges.Text);
                 lblNetPayable.Text = Math.Round(TempNetPayable, 0).ToString("0.00");
+                if (Convert.ToDecimal(lblNetPayable.Text) % 5 == 0)
+                {
 
+                }
+                else
+                {
+                    lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((5-Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
+                }
                 txtRoundOff.Text = (Convert.ToDecimal(lblNetPayable.Text) - TempNetPayable).ToString("0.00");
 
 
@@ -1473,17 +1498,57 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnPG_Click(object sender, EventArgs e)
         {
+
             try
             {
-                frmCustomerMst frm = new frmCustomerMst() { s1 = "Edit", Text = "Customer Edition", CAFSYSID = txtCustCode.Text };
+                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                if (MaxRow > 0)
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+
+                SaveInvoice();
+                S1 = "Edit";
+                Text = "Cash Memo Edition";
+                ImDate = Convert.ToDateTime(lblCashMemoDate.Text);
+                ImNo = lblCashMemoNo.Text;
+                ImSeries = "S";
+                Cashmemo_Load(null, e);
+                WindowsFormsApplication1.Pos.frmOnlinePayment frm = new WindowsFormsApplication1.Pos.frmOnlinePayment() { MemoNo = lblCashMemoNo.Text, MemoDate = Convert.ToDateTime(lblCashMemoDate.Text), TotalMemoAmount = Convert.ToDecimal(lblNetPayable.Text) };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                 frm.ShowDialog(Parent);
+
+
+                dt.Clear();
+                S1 = "&Add";
+                Text = "Cash Memo Addition";
+                Cashmemo_Load(null, e);
+                txtMainDisc.Text = string.Empty;
+                Calculation();
+                PreviousBillDetails();
             }
             catch (Exception ex)
             {
                 XtraMessageBox.Show(ex.Message);
             }
+
+
+            //try
+            //{
+            //    frmCustomerMst frm = new frmCustomerMst() { s1 = "Edit", Text = "Customer Edition", CAFSYSID = txtCustCode.Text };
+            //    var P = ProjectFunctions.GetPositionInForm(this);
+            //    frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
+            //    frm.ShowDialog(Parent);
+            //}
+            //catch (Exception ex)
+            //{
+            //    XtraMessageBox.Show(ex.Message);
+            //}
         }
 
         private void HyperlinkLabelControl2_Click(object sender, EventArgs e)

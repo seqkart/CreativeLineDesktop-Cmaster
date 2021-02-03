@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
@@ -199,9 +200,13 @@ namespace WindowsFormsApplication1
             try
             {
                 MemoryStream ms = new MemoryStream();
+                ArticleImageBox.Image.Save(ms, ImageFormat.Jpeg);
                 byte[] photo = new byte[ms.Length];
                 ms.Position = 0;
                 ms.Read(photo, 0, photo.Length);
+
+
+               
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
                 {
                     sqlcon.Open();

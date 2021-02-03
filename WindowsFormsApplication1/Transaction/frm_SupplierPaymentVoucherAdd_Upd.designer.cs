@@ -219,7 +219,7 @@
             // TextCreditAc
             // 
             this.TextCreditAc.EnterMoveNextControl = true;
-            this.TextCreditAc.Location = new System.Drawing.Point(111, 71);
+            this.TextCreditAc.Location = new System.Drawing.Point(107, 72);
             this.TextCreditAc.Name = "TextCreditAc";
             this.TextCreditAc.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextCreditAc.Properties.Appearance.Options.UseBorderColor = true;
@@ -230,13 +230,13 @@
             this.TextCreditAc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCreditAc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCreditAc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCreditAc.Size = new System.Drawing.Size(81, 20);
+            this.TextCreditAc.Size = new System.Drawing.Size(79, 20);
             this.TextCreditAc.TabIndex = 6;
             this.TextCreditAc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCreditAc_KeyDown);
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(40, 132);
+            this.labelControl15.Location = new System.Drawing.Point(37, 132);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(62, 13);
             this.labelControl15.TabIndex = 21;
@@ -336,7 +336,7 @@
             // TextInstrumentType
             // 
             this.TextInstrumentType.EnterMoveNextControl = true;
-            this.TextInstrumentType.Location = new System.Drawing.Point(111, 100);
+            this.TextInstrumentType.Location = new System.Drawing.Point(107, 100);
             this.TextInstrumentType.Name = "TextInstrumentType";
             this.TextInstrumentType.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextInstrumentType.Properties.Appearance.Options.UseBorderColor = true;
@@ -348,14 +348,14 @@
             this.TextInstrumentType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextInstrumentType.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextInstrumentType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextInstrumentType.Size = new System.Drawing.Size(81, 20);
+            this.TextInstrumentType.Size = new System.Drawing.Size(79, 20);
             this.TextInstrumentType.TabIndex = 8;
             this.TextInstrumentType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextInstrumentType_KeyDown);
             this.TextInstrumentType.Validated += new System.EventHandler(this.TextInstrumentType_Validated);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(17, 104);
+            this.labelControl4.Location = new System.Drawing.Point(16, 104);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(83, 13);
             this.labelControl4.TabIndex = 17;
@@ -397,7 +397,7 @@
             // TextDebitAc
             // 
             this.TextDebitAc.EnterMoveNextControl = true;
-            this.TextDebitAc.Location = new System.Drawing.Point(111, 129);
+            this.TextDebitAc.Location = new System.Drawing.Point(107, 128);
             this.TextDebitAc.Name = "TextDebitAc";
             this.TextDebitAc.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDebitAc.Properties.Appearance.Options.UseBorderColor = true;
@@ -408,7 +408,7 @@
             this.TextDebitAc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDebitAc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDebitAc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDebitAc.Size = new System.Drawing.Size(81, 20);
+            this.TextDebitAc.Size = new System.Drawing.Size(79, 20);
             this.TextDebitAc.TabIndex = 12;
             this.TextDebitAc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextDebitAc_KeyDown);
             // 
@@ -448,7 +448,7 @@
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(32, 48);
+            this.labelControl26.Location = new System.Drawing.Point(29, 48);
             this.labelControl26.Name = "labelControl26";
             this.labelControl26.Size = new System.Drawing.Size(70, 13);
             this.labelControl26.TabIndex = 15;
@@ -458,7 +458,7 @@
             // 
             this.DtVoucher.EditValue = null;
             this.DtVoucher.EnterMoveNextControl = true;
-            this.DtVoucher.Location = new System.Drawing.Point(111, 44);
+            this.DtVoucher.Location = new System.Drawing.Point(107, 44);
             this.DtVoucher.Name = "DtVoucher";
             this.DtVoucher.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DtVoucher.Properties.Appearance.Options.UseBorderColor = true;
@@ -474,9 +474,9 @@
             this.DtVoucher.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.DtVoucher.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.DtVoucher.Properties.Mask.BeepOnError = true;
-            this.DtVoucher.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.DtVoucher.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtVoucher.Size = new System.Drawing.Size(81, 20);
+            this.DtVoucher.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtVoucher.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
+            this.DtVoucher.Size = new System.Drawing.Size(79, 20);
             this.DtVoucher.TabIndex = 1;
             this.DtVoucher.EditValueChanged += new System.EventHandler(this.DtVoucher_EditValueChanged);
             this.DtVoucher.Enter += new System.EventHandler(this.DtVoucher_Enter);
@@ -485,7 +485,7 @@
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(464, 29);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(243, 29);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Name = "HelpGridCtrl";
             this.HelpGridCtrl.Size = new System.Drawing.Size(635, 368);
@@ -527,14 +527,14 @@
             this.TextMmBillPassID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextMmBillPassID.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextMmBillPassID.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextMmBillPassID.Size = new System.Drawing.Size(59, 20);
+            this.TextMmBillPassID.Size = new System.Drawing.Size(79, 20);
             this.TextMmBillPassID.TabIndex = 20;
             // 
             // TextMMDocNo
             // 
             this.TextMMDocNo.Enabled = false;
             this.TextMMDocNo.EnterMoveNextControl = true;
-            this.TextMMDocNo.Location = new System.Drawing.Point(171, 212);
+            this.TextMMDocNo.Location = new System.Drawing.Point(192, 212);
             this.TextMMDocNo.Name = "TextMMDocNo";
             this.TextMMDocNo.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextMMDocNo.Properties.Appearance.Options.UseBorderColor = true;
@@ -545,7 +545,7 @@
             this.TextMMDocNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextMMDocNo.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextMMDocNo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextMMDocNo.Size = new System.Drawing.Size(88, 20);
+            this.TextMMDocNo.Size = new System.Drawing.Size(67, 20);
             this.TextMMDocNo.TabIndex = 21;
             // 
             // TextBill_Ref_Amt
@@ -631,7 +631,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(59, 158);
+            this.labelControl7.Location = new System.Drawing.Point(58, 158);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(41, 13);
             this.labelControl7.TabIndex = 17;
@@ -658,7 +658,7 @@
             // TextPaymentMethod
             // 
             this.TextPaymentMethod.EnterMoveNextControl = true;
-            this.TextPaymentMethod.Location = new System.Drawing.Point(107, 154);
+            this.TextPaymentMethod.Location = new System.Drawing.Point(107, 156);
             this.TextPaymentMethod.Name = "TextPaymentMethod";
             this.TextPaymentMethod.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextPaymentMethod.Properties.Appearance.Options.UseBorderColor = true;
@@ -669,7 +669,7 @@
             this.TextPaymentMethod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextPaymentMethod.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextPaymentMethod.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextPaymentMethod.Size = new System.Drawing.Size(85, 20);
+            this.TextPaymentMethod.Size = new System.Drawing.Size(79, 20);
             this.TextPaymentMethod.TabIndex = 14;
             this.TextPaymentMethod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextPaymentMethod_KeyDown);
             // 
@@ -810,7 +810,7 @@
             this.DtBillRef.EditValue = null;
             this.DtBillRef.Enabled = false;
             this.DtBillRef.EnterMoveNextControl = true;
-            this.DtBillRef.Location = new System.Drawing.Point(107, 185);
+            this.DtBillRef.Location = new System.Drawing.Point(107, 184);
             this.DtBillRef.Name = "DtBillRef";
             this.DtBillRef.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DtBillRef.Properties.Appearance.Options.UseBorderColor = true;
@@ -826,9 +826,9 @@
             this.DtBillRef.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.DtBillRef.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.DtBillRef.Properties.Mask.BeepOnError = true;
-            this.DtBillRef.Properties.Mask.EditMask = "dd/MM/yy";
-            this.DtBillRef.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtBillRef.Size = new System.Drawing.Size(85, 20);
+            this.DtBillRef.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtBillRef.Properties.MaskSettings.Set("mask", "dd/MM/yy");
+            this.DtBillRef.Size = new System.Drawing.Size(79, 20);
             this.DtBillRef.TabIndex = 17;
             // 
             // EntryInfo_GridCtrl

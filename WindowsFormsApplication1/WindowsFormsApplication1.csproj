@@ -917,6 +917,12 @@
     <Compile Include="Master\frmStateMst.Designer.cs">
       <DependentUpon>frmStateMst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pos\frmOnlinePayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pos\frmOnlinePayment.Designer.cs">
+      <DependentUpon>frmOnlinePayment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\BOXLABEL.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1503,12 +1509,6 @@
     <Compile Include="Transaction\frmBoxAddEdit.Designer.cs">
       <DependentUpon>frmBoxAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\frmDayClose.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\frmDayClose.Designer.cs">
-      <DependentUpon>frmDayClose.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transaction\frmDealerOrderMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1758,6 +1758,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmStateMst.resx">
       <DependentUpon>frmStateMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pos\frmOnlinePayment.resx">
+      <DependentUpon>frmOnlinePayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\BOXLABEL.resx">
       <DependentUpon>BOXLABEL.cs</DependentUpon>
@@ -2055,9 +2058,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmBoxAddEdit.resx">
       <DependentUpon>frmBoxAddEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\frmDayClose.resx">
-      <DependentUpon>frmDayClose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmDealerOrderMaster.resx">
       <DependentUpon>frmDealerOrderMaster.cs</DependentUpon>
