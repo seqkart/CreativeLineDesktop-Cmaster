@@ -143,7 +143,7 @@
             this.lblTotalQtySold = new DevExpress.XtraEditors.TextEdit();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl34 = new DevExpress.XtraEditors.LabelControl();
+            this.lblPaymentMode = new DevExpress.XtraEditors.LabelControl();
             this.simpleButton20 = new DevExpress.XtraEditors.SimpleButton();
             this.btnInvoiceConfig = new DevExpress.XtraEditors.SimpleButton();
             this.btnPG = new DevExpress.XtraEditors.SimpleButton();
@@ -174,8 +174,8 @@
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.btnAddCashMemo = new DevExpress.XtraEditors.SimpleButton();
             this.btnUnhold = new DevExpress.XtraEditors.SimpleButton();
-            this.lblPAyBack = new DevExpress.XtraEditors.TextEdit();
-            this.lblCashTender = new DevExpress.XtraEditors.TextEdit();
+            this.lblPAyBackAmount = new DevExpress.XtraEditors.TextEdit();
+            this.lblCashTenderAmount = new DevExpress.XtraEditors.TextEdit();
             this.chall = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -233,8 +233,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblPAyBack.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblCashTender.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblPAyBackAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCashTenderAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,7 +259,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(86, 176);
+            this.HelpGrid.Location = new System.Drawing.Point(86, 173);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(865, 306);
@@ -352,6 +352,7 @@
             this.txtMainDiscVal.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtMainDiscVal.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtMainDiscVal.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMainDiscVal.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtMainDiscVal.Size = new System.Drawing.Size(96, 22);
             this.txtMainDiscVal.TabIndex = 0;
             // 
@@ -683,6 +684,7 @@
             this.txtOtherCharges.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtOtherCharges.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtOtherCharges.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtOtherCharges.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtOtherCharges.Properties.DisplayFormat.FormatString = "n2";
             this.txtOtherCharges.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtOtherCharges.Properties.EditFormat.FormatString = "n2";
@@ -712,6 +714,7 @@
             this.txtAlterCharges.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtAlterCharges.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtAlterCharges.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtAlterCharges.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtAlterCharges.Properties.DisplayFormat.FormatString = "n2";
             this.txtAlterCharges.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtAlterCharges.Properties.EditFormat.FormatString = "n2";
@@ -736,6 +739,7 @@
             this.txtTotalTax.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtTotalTax.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtTotalTax.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalTax.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtTotalTax.Size = new System.Drawing.Size(148, 22);
             this.txtTotalTax.TabIndex = 0;
             // 
@@ -884,6 +888,7 @@
             this.txtRoundOff.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtRoundOff.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtRoundOff.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRoundOff.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtRoundOff.Size = new System.Drawing.Size(148, 22);
             this.txtRoundOff.TabIndex = 0;
             // 
@@ -1234,8 +1239,16 @@
             this.lblTotalIGST.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalIGST.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalIGST.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalIGST.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalIGST.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalIGST.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalIGST.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalIGST.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalIGST.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalIGST.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalIGST.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalIGST.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalIGST.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalIGST.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalIGST.Size = new System.Drawing.Size(106, 24);
             this.lblTotalIGST.TabIndex = 814;
             // 
@@ -1258,8 +1271,16 @@
             this.lblTotalCGST.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalCGST.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalCGST.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalCGST.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalCGST.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalCGST.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalCGST.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalCGST.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalCGST.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalCGST.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalCGST.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalCGST.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalCGST.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalCGST.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalCGST.Size = new System.Drawing.Size(106, 24);
             this.lblTotalCGST.TabIndex = 814;
             // 
@@ -1282,8 +1303,16 @@
             this.lblTotalSGST.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalSGST.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalSGST.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalSGST.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalSGST.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSGST.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalSGST.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSGST.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalSGST.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSGST.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalSGST.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalSGST.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalSGST.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalSGST.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalSGST.Size = new System.Drawing.Size(106, 24);
             this.lblTotalSGST.TabIndex = 814;
             // 
@@ -1296,8 +1325,16 @@
             this.lblTotalTaxInclusive.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalTaxInclusive.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalTaxInclusive.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalTaxInclusive.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalTaxInclusive.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalTaxInclusive.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalTaxInclusive.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalTaxInclusive.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalTaxInclusive.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalTaxInclusive.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalTaxInclusive.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalTaxInclusive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalTaxInclusive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalTaxInclusive.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalTaxInclusive.Size = new System.Drawing.Size(106, 24);
             this.lblTotalTaxInclusive.TabIndex = 814;
             // 
@@ -1310,8 +1347,16 @@
             this.lblTotalTaxExclusive.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalTaxExclusive.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalTaxExclusive.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalTaxExclusive.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalTaxExclusive.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalTaxExclusive.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalTaxExclusive.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalTaxExclusive.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalTaxExclusive.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalTaxExclusive.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalTaxExclusive.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalTaxExclusive.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalTaxExclusive.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalTaxExclusive.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalTaxExclusive.Size = new System.Drawing.Size(106, 24);
             this.lblTotalTaxExclusive.TabIndex = 814;
             // 
@@ -1342,6 +1387,7 @@
             this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtItemDiscPer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtItemDiscPer.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtItemDiscPer.Size = new System.Drawing.Size(49, 24);
             this.txtItemDiscPer.TabIndex = 770;
             this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.TxtItemDiscPer_EditValueChanged);
@@ -1526,8 +1572,16 @@
             this.lblTotalDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalDisc.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalDisc.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalDisc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalDisc.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalDisc.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalDisc.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalDisc.Size = new System.Drawing.Size(106, 24);
             this.lblTotalDisc.TabIndex = 814;
             // 
@@ -1540,8 +1594,16 @@
             this.lblTotalValueAterDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalValueAterDisc.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalValueAterDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalValueAterDisc.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalValueAterDisc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueAterDisc.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalValueAterDisc.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueAterDisc.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalValueAterDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueAterDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalValueAterDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalValueAterDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalValueAterDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalValueAterDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalValueAterDisc.Size = new System.Drawing.Size(106, 24);
             this.lblTotalValueAterDisc.TabIndex = 814;
             // 
@@ -1554,8 +1616,16 @@
             this.lblTotalValueDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalValueDisc.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalValueDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalValueDisc.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalValueDisc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueDisc.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalValueDisc.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueDisc.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalValueDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalValueDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalValueDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalValueDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalValueDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalValueDisc.Size = new System.Drawing.Size(106, 24);
             this.lblTotalValueDisc.TabIndex = 814;
             // 
@@ -1568,8 +1638,16 @@
             this.lblTotalValueBeforDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalValueBeforDisc.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalValueBeforDisc.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalValueBeforDisc.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalValueBeforDisc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueBeforDisc.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalValueBeforDisc.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueBeforDisc.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalValueBeforDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalValueBeforDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalValueBeforDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalValueBeforDisc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalValueBeforDisc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalValueBeforDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalValueBeforDisc.Size = new System.Drawing.Size(106, 24);
             this.lblTotalValueBeforDisc.TabIndex = 814;
             // 
@@ -1582,8 +1660,16 @@
             this.lblTotalQtyReturned.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalQtyReturned.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalQtyReturned.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalQtyReturned.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalQtyReturned.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalQtyReturned.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalQtyReturned.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalQtyReturned.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalQtyReturned.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalQtyReturned.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalQtyReturned.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalQtyReturned.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalQtyReturned.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalQtyReturned.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalQtyReturned.Size = new System.Drawing.Size(106, 24);
             this.lblTotalQtyReturned.TabIndex = 814;
             // 
@@ -1606,8 +1692,16 @@
             this.lblTotalQtySold.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblTotalQtySold.Properties.Appearance.Options.UseBackColor = true;
             this.lblTotalQtySold.Properties.Appearance.Options.UseFont = true;
+            this.lblTotalQtySold.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblTotalQtySold.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalQtySold.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalQtySold.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalQtySold.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblTotalQtySold.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalQtySold.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblTotalQtySold.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalQtySold.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblTotalQtySold.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblTotalQtySold.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.lblTotalQtySold.Size = new System.Drawing.Size(106, 24);
             this.lblTotalQtySold.TabIndex = 814;
             // 
@@ -1631,16 +1725,16 @@
             this.labelControl23.TabIndex = 1;
             this.labelControl23.Text = "Total Qty Sold";
             // 
-            // labelControl34
+            // lblPaymentMode
             // 
-            this.labelControl34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelControl34.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl34.Appearance.Options.UseFont = true;
-            this.labelControl34.Location = new System.Drawing.Point(768, 667);
-            this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(44, 20);
-            this.labelControl34.TabIndex = 774;
-            this.labelControl34.Text = "MODE";
+            this.lblPaymentMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblPaymentMode.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPaymentMode.Appearance.Options.UseFont = true;
+            this.lblPaymentMode.Location = new System.Drawing.Point(768, 667);
+            this.lblPaymentMode.Name = "lblPaymentMode";
+            this.lblPaymentMode.Size = new System.Drawing.Size(44, 20);
+            this.lblPaymentMode.TabIndex = 774;
+            this.lblPaymentMode.Text = "MODE";
             // 
             // simpleButton20
             // 
@@ -1823,6 +1917,7 @@
             this.txtSubTotal.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtSubTotal.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtSubTotal.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSubTotal.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtSubTotal.Size = new System.Drawing.Size(148, 22);
             this.txtSubTotal.TabIndex = 0;
             // 
@@ -1910,6 +2005,7 @@
             this.txtMainDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtMainDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
             this.txtMainDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMainDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtMainDisc.Properties.DisplayFormat.FormatString = "n2";
             this.txtMainDisc.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtMainDisc.Properties.EditFormat.FormatString = "n2";
@@ -1957,6 +2053,15 @@
             this.txtItemFlatRate.Name = "txtItemFlatRate";
             this.txtItemFlatRate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemFlatRate.Properties.Appearance.Options.UseFont = true;
+            this.txtItemFlatRate.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtItemFlatRate.Properties.DisplayFormat.FormatString = "n2";
             this.txtItemFlatRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtItemFlatRate.Properties.EditFormat.FormatString = "n2";
@@ -1964,7 +2069,7 @@
             this.txtItemFlatRate.Properties.Mask.EditMask = "n2";
             this.txtItemFlatRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemFlatRate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtItemFlatRate.Size = new System.Drawing.Size(72, 24);
             this.txtItemFlatRate.TabIndex = 771;
             this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.TxtItemFlatRate_EditValueChanged);
@@ -1977,6 +2082,15 @@
             this.txtItemDiscAMount.Name = "txtItemDiscAMount";
             this.txtItemDiscAMount.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemDiscAMount.Properties.Appearance.Options.UseFont = true;
+            this.txtItemDiscAMount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtItemDiscAMount.Properties.DisplayFormat.FormatString = "n2";
             this.txtItemDiscAMount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtItemDiscAMount.Properties.EditFormat.FormatString = "n2";
@@ -1984,7 +2098,7 @@
             this.txtItemDiscAMount.Properties.Mask.EditMask = "n2";
             this.txtItemDiscAMount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemDiscAMount.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtItemDiscAMount.Size = new System.Drawing.Size(69, 24);
             this.txtItemDiscAMount.TabIndex = 769;
             // 
@@ -2004,6 +2118,15 @@
             this.txtItemMRP.Name = "txtItemMRP";
             this.txtItemMRP.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtItemMRP.Properties.Appearance.Options.UseFont = true;
+            this.txtItemMRP.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtItemMRP.Properties.DisplayFormat.FormatString = "n2";
             this.txtItemMRP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtItemMRP.Properties.EditFormat.FormatString = "n2";
@@ -2011,7 +2134,7 @@
             this.txtItemMRP.Properties.Mask.EditMask = "n2";
             this.txtItemMRP.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtItemMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtItemMRP.Size = new System.Drawing.Size(72, 24);
             this.txtItemMRP.TabIndex = 771;
             // 
@@ -2051,35 +2174,59 @@
             this.btnUnhold.Text = "Unhold";
             this.btnUnhold.Click += new System.EventHandler(this.BtnUnhold_Click);
             // 
-            // lblPAyBack
+            // lblPAyBackAmount
             // 
-            this.lblPAyBack.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblPAyBack.EditValue = "0.00";
-            this.lblPAyBack.Location = new System.Drawing.Point(920, 656);
-            this.lblPAyBack.Name = "lblPAyBack";
-            this.lblPAyBack.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblPAyBack.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblPAyBack.Properties.Appearance.Options.UseBackColor = true;
-            this.lblPAyBack.Properties.Appearance.Options.UseFont = true;
-            this.lblPAyBack.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblPAyBack.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblPAyBack.Size = new System.Drawing.Size(110, 24);
-            this.lblPAyBack.TabIndex = 814;
+            this.lblPAyBackAmount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblPAyBackAmount.EditValue = "0.00";
+            this.lblPAyBackAmount.Location = new System.Drawing.Point(920, 656);
+            this.lblPAyBackAmount.Name = "lblPAyBackAmount";
+            this.lblPAyBackAmount.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblPAyBackAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblPAyBackAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.lblPAyBackAmount.Properties.Appearance.Options.UseFont = true;
+            this.lblPAyBackAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblPAyBackAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPAyBackAmount.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblPAyBackAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblPAyBackAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPAyBackAmount.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblPAyBackAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblPAyBackAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPAyBackAmount.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblPAyBackAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblPAyBackAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblPAyBackAmount.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblPAyBackAmount.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblPAyBackAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.lblPAyBackAmount.Size = new System.Drawing.Size(110, 24);
+            this.lblPAyBackAmount.TabIndex = 814;
             // 
-            // lblCashTender
+            // lblCashTenderAmount
             // 
-            this.lblCashTender.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblCashTender.EditValue = "0.00";
-            this.lblCashTender.Location = new System.Drawing.Point(920, 629);
-            this.lblCashTender.Name = "lblCashTender";
-            this.lblCashTender.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.lblCashTender.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblCashTender.Properties.Appearance.Options.UseBackColor = true;
-            this.lblCashTender.Properties.Appearance.Options.UseFont = true;
-            this.lblCashTender.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.lblCashTender.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblCashTender.Size = new System.Drawing.Size(110, 24);
-            this.lblCashTender.TabIndex = 814;
+            this.lblCashTenderAmount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblCashTenderAmount.EditValue = "0.00";
+            this.lblCashTenderAmount.Location = new System.Drawing.Point(920, 629);
+            this.lblCashTenderAmount.Name = "lblCashTenderAmount";
+            this.lblCashTenderAmount.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblCashTenderAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblCashTenderAmount.Properties.Appearance.Options.UseBackColor = true;
+            this.lblCashTenderAmount.Properties.Appearance.Options.UseFont = true;
+            this.lblCashTenderAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.lblCashTenderAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblCashTenderAmount.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCashTenderAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblCashTenderAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblCashTenderAmount.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCashTenderAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.lblCashTenderAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblCashTenderAmount.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCashTenderAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.lblCashTenderAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblCashTenderAmount.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblCashTenderAmount.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.lblCashTenderAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.lblCashTenderAmount.Size = new System.Drawing.Size(110, 24);
+            this.lblCashTenderAmount.TabIndex = 814;
             // 
             // chall
             // 
@@ -2098,9 +2245,9 @@
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.chall);
-            this.Controls.Add(this.lblPAyBack);
+            this.Controls.Add(this.lblPAyBackAmount);
             this.Controls.Add(this.groupControl4);
-            this.Controls.Add(this.lblCashTender);
+            this.Controls.Add(this.lblCashTenderAmount);
             this.Controls.Add(this.btnUnhold);
             this.Controls.Add(this.groupControl8);
             this.Controls.Add(this.btnCash);
@@ -2127,7 +2274,7 @@
             this.Controls.Add(this.labelControl14);
             this.Controls.Add(this.labelControl22);
             this.Controls.Add(this.groupControl5);
-            this.Controls.Add(this.labelControl34);
+            this.Controls.Add(this.lblPaymentMode);
             this.Controls.Add(this.simpleButton20);
             this.Controls.Add(this.btnInvoiceConfig);
             this.Controls.Add(this.btnPG);
@@ -2225,8 +2372,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSMCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblPAyBack.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblCashTender.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblPAyBackAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lblCashTenderAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2333,7 +2480,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl25;
         private DevExpress.XtraEditors.LabelControl labelControl24;
         private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.LabelControl labelControl34;
+        private DevExpress.XtraEditors.LabelControl lblPaymentMode;
         private DevExpress.XtraEditors.SimpleButton simpleButton20;
         private DevExpress.XtraEditors.SimpleButton btnInvoiceConfig;
         private DevExpress.XtraEditors.SimpleButton btnPG;
@@ -2378,8 +2525,8 @@
         private DevExpress.XtraEditors.TextEdit lblTotalValueBeforDisc;
         private DevExpress.XtraEditors.TextEdit lblTotalQtyReturned;
         private DevExpress.XtraEditors.TextEdit lblTotalQtySold;
-        private DevExpress.XtraEditors.TextEdit lblPAyBack;
-        private DevExpress.XtraEditors.TextEdit lblCashTender;
+        private DevExpress.XtraEditors.TextEdit lblPAyBackAmount;
+        private DevExpress.XtraEditors.TextEdit lblCashTenderAmount;
         private DevExpress.XtraEditors.CheckEdit chall;
     }
 }

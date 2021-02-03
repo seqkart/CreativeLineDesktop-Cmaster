@@ -142,6 +142,8 @@ namespace WindowsFormsApplication1.Transaction
         private bool ValidateDataForSaving()
         {
 
+         
+
             if (InfoGrid.DataSource == null)
             {
                 ProjectFunctions.SpeakError("Blank Bill Cannot Be Saved");
@@ -200,9 +202,9 @@ namespace WindowsFormsApplication1.Transaction
             {
                 lblNetPayable.Text = "0";
             }
-            if (lblPAyBack.Text.Length == 0)
+            if (lblPAyBackAmount.Text.Length == 0)
             {
-                lblPAyBack.Text = "0";
+                lblPAyBackAmount.Text = "0";
             }
             if (lblTotalCGST.Text.Length == 0)
             {
@@ -1209,13 +1211,17 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnAddCashMemo_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                
                 dt.Clear();
                 S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
                 Calculation();
+                PreviousBillDetails();
+
             }
             catch (Exception ex)
             {
@@ -1237,6 +1243,7 @@ namespace WindowsFormsApplication1.Transaction
                     ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
                     ImSeries = "S";
                     Cashmemo_Load(null, e);
+                    PreviousBillDetails();
                 }
                 else
                 {
@@ -1260,6 +1267,7 @@ namespace WindowsFormsApplication1.Transaction
                 ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
                 ImSeries = "S";
                 Cashmemo_Load(null, e);
+                PreviousBillDetails();
             }
             else
             {
@@ -1281,6 +1289,7 @@ namespace WindowsFormsApplication1.Transaction
                     ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
                     ImSeries = "S";
                     Cashmemo_Load(null, e);
+                    PreviousBillDetails();
                 }
                 else
                 {
@@ -1307,6 +1316,7 @@ namespace WindowsFormsApplication1.Transaction
                     ImNo = dsGetData.Tables[0].Rows[0]["SIMNO"].ToString();
                     ImSeries = "S";
                     Cashmemo_Load(null, e);
+                    PreviousBillDetails();
                 }
                 else
                 {
@@ -1354,6 +1364,16 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
+                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                if (MaxRow > 0)
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+
                 SaveInvoice();
                 S1 = "Edit";
                 Text = "Cash Memo Edition";
@@ -1373,6 +1393,7 @@ namespace WindowsFormsApplication1.Transaction
                 Cashmemo_Load(null, e);
                 txtMainDisc.Text = string.Empty;
                 Calculation();
+                PreviousBillDetails();
             }
             catch (Exception ex)
             {
@@ -1380,10 +1401,48 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
+
+        private void PreviousBillDetails()
+        {
+            lblPaymentMode.Text = String.Empty;
+            lblCashTenderAmount.Text = String.Empty;
+            lblPAyBackAmount.Text= String.Empty;
+            DataSet ds = ProjectFunctions.GetDataSet("sp_PreviousBillDetails '" + lblCashMemoNo.Text + "'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+
+                if (Convert.ToDecimal(ds.Tables[0].Rows[0]["CASHAmount"]) > 0 || Convert.ToDecimal(ds.Tables[0].Rows[0]["AutoCashAmount"]) > 0)
+                {
+                    lblPaymentMode.Text = "CASH";
+                    lblCashTenderAmount.Text = ds.Tables[0].Rows[0]["CURINTOT"].ToString();
+                    lblPAyBackAmount.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["CATMEMOAMT"]) - Convert.ToDecimal(ds.Tables[0].Rows[0]["CURINTOT"])).ToString();
+                }
+                else
+                {
+                    if (Convert.ToDecimal(ds.Tables[0].Rows[0]["CATCARDAMT"]) > 0)
+                    {
+                        lblPaymentMode.Text = "CARD";
+
+                    }
+                }
+            }
+        }
+
         private void BtnCash_Click(object sender, EventArgs e)
         {
             try
             {
+
+                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                if (MaxRow > 0)
+                {
+
+                }
+                else
+                {
+                    return;
+                }
+
                 SaveInvoice();
                 S1 = "Edit";
                 Text = "Cash Memo Edition";
@@ -1402,6 +1461,7 @@ namespace WindowsFormsApplication1.Transaction
                 Cashmemo_Load(null, e);
                 txtMainDisc.Text = string.Empty;
                 Calculation();
+                PreviousBillDetails();
 
             }
             catch (Exception ex)
@@ -1617,6 +1677,13 @@ namespace WindowsFormsApplication1.Transaction
                     ProjectFunctions.DeleteCurrentRowOnRightClick(InfoGrid, InfoGridView);
                     dt.AcceptChanges();
                     Calculation();
+
+                    txtItemMRP.EditValue = 0;
+                    txtItemDiscPer.EditValue = 0;
+                    txtItemDiscAMount.EditValue = 0;
+                    txtItemFlatRate.EditValue = 0;
+
+
                     if (dt.Rows.Count == 0)
                     {
                         InfoGrid.DataSource = null;

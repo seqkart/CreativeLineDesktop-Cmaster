@@ -101,8 +101,10 @@ namespace WindowsFormsApplication1.Transaction
                     txtCashInCount1.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["CURIN1"]) / 1).ToString();
 
 
+                    txtAutoCash.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["AutoCashAmount"])).ToString();
 
-                    txtCashInTotal.Text = ds.Tables[0].Rows[0]["CURINTOT"].ToString();
+
+                    txtCashInTotal.Text = Convert.ToDecimal(ds.Tables[0].Rows[0]["CURINTOT"]) + (Convert.ToDecimal(ds.Tables[0].Rows[0]["AutoCashAmount"])).ToString();
                     txtCashOutAmount2000.Text = ds.Tables[0].Rows[0]["CUROUT2000"].ToString();
                     txtCashOutAmount1000.Text = ds.Tables[0].Rows[0]["CUROUT1000"].ToString();
                     txtCashOutAmount200.Text = ds.Tables[0].Rows[0]["CUROUT200"].ToString();
@@ -154,9 +156,18 @@ namespace WindowsFormsApplication1.Transaction
                 txtCashInAmount2.Text = (Convert.ToDecimal(txtCashInCount2.Text) * 2).ToString("0.00");
                 txtCashInAmount1.Text = (Convert.ToDecimal(txtCashInCount1.Text) * 1).ToString("0.00");
 
-
+              
                 txtCashInTotal.Text = (Convert.ToDecimal(txtCashInAmount2000.Text) + Convert.ToDecimal(txtCashInAmount1000.Text) + Convert.ToDecimal(txtCashInAmount500.Text) + Convert.ToDecimal(txtCashInAmount200.Text) + Convert.ToDecimal(txtCashInAmount100.Text) + Convert.ToDecimal(txtCashInAmount50.Text) + Convert.ToDecimal(txtCashInAmount20.Text) + Convert.ToDecimal(txtCashInAmount10.Text) + Convert.ToDecimal(txtCashInAmount5.Text) + Convert.ToDecimal(txtCashInAmount2.Text) + Convert.ToDecimal(txtCashInAmount1.Text)).ToString("0.00");
-
+                if(Convert.ToDecimal(txtCashInTotal.Text)==0)
+                {
+                    txtAutoCash.Text = txtCashMemoAmount.Text;
+                    txtCashInTotal.Text = txtAutoCash.Text;
+                }
+                else
+                {
+                    txtAutoCash.Text = "0";
+                }
+                
                 txtCashOutAmount2000.Text = (Convert.ToDecimal(txtCashOutCount2000.Text) * 2000).ToString("0.00");
                 txtCashOutAmount1000.Text = (Convert.ToDecimal(txtCashOutCount1000.Text) * 1000).ToString("0.00");
                 txtCashOutAmount500.Text = (Convert.ToDecimal(txtCashOutCount500.Text) * 500).ToString("0.00");
@@ -182,6 +193,10 @@ namespace WindowsFormsApplication1.Transaction
                 txtCashOutCount5.Text = (Convert.ToDecimal(txtCashOutAmount5.Text) / 5).ToString();
                 txtCashOutCount2.Text = (Convert.ToDecimal(txtCashOutAmount2.Text) / 2).ToString();
                 txtCashOutCount1.Text = (Convert.ToDecimal(txtCashOutAmount1.Text) / 1).ToString();
+
+
+
+
 
                 txtTotalReceived.Text = txtCashInTotal.Text;
                 txtTotalPayBack.Text = (Convert.ToDecimal(txtCashMemoAmount.Text) - Convert.ToDecimal(txtTotalReceived.Text) - Convert.ToDecimal(txtPGPayment.Text)-Convert.ToDecimal(txtCardPayment.Text) + Convert.ToDecimal(txtCashOutTotal.Text)).ToString("0.00");
@@ -231,9 +246,9 @@ namespace WindowsFormsApplication1.Transaction
                         {
 
                             sqlcom.CommandText = "Insert into CASHTENDER(CATMEMONO,CATMEMODATE,CATMEMOAMT,CATCARDAMT,CATPGAMT,CURIN2000,CURIN1000,CURIN200,CURIN500,CURIN100,CURIN50,CURIN20,CURIN10,CURIN5," +
-                                "  CURIN2,CURIN1,CURINTOT,CUROUT2000,CUROUT1000,CUROUT200,CUROUT500,CUROUT100,CUROUT50,CUROUT20,CUROUT10,CUROUT5,CUROUT2,CUROUT1,CUROUTTOT,CASHAmount,UnitCode)values(" +
+                                "  CURIN2,CURIN1,CURINTOT,CUROUT2000,CUROUT1000,CUROUT200,CUROUT500,CUROUT100,CUROUT50,CUROUT20,CUROUT10,CUROUT5,CUROUT2,CUROUT1,CUROUTTOT,CASHAmount,UnitCode,AutoCashAmount)values(" +
                                 "@CATMEMONO,@CATMEMODATE,@CATMEMOAMT,@CATCARDAMT,@CATPGAMT,@CURIN2000,@CURIN1000,@CURIN200,@CURIN500,@CURIN100,@CURIN50,@CURIN20,@CURIN10,@CURIN5," +
-                                "  @CURIN2,@CURIN1,@CURINTOT,@CUROUT2000,@CUROUT1000,@CUROUT200,@CUROUT500,@CUROUT100,@CUROUT50,@CUROUT20,@CUROUT10,@CUROUT5,@CUROUT2,@CUROUT1,@CUROUTTOT,@CASHAmount,@UnitCode)";
+                                "  @CURIN2,@CURIN1,@CURINTOT,@CUROUT2000,@CUROUT1000,@CUROUT200,@CUROUT500,@CUROUT100,@CUROUT50,@CUROUT20,@CUROUT10,@CUROUT5,@CUROUT2,@CUROUT1,@CUROUTTOT,@CASHAmount,@UnitCode,@AutoCashAmount)";
                             sqlcom.Parameters.Add("@CATMEMONO", SqlDbType.NVarChar).Value = txtCashMemoNo.Text;
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtCashMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashMemoAmount.Text);
@@ -265,6 +280,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@CUROUTTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashOutTotal.Text);
                             sqlcom.Parameters.Add("@CASHAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashMemoAmount.Text);
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.Parameters.Add("@AutoCashAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAutoCash.Text);
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -274,15 +290,14 @@ namespace WindowsFormsApplication1.Transaction
                                 " CURIN1000=@CURIN1000,CURIN200=@CURIN200,CURIN500=@CURIN500,CURIN100=@CURIN100," +
                                 " CURIN50=@CURIN50,CURIN20=@CURIN20,CURIN10=@CURIN10,CURIN5=@CURIN5,CURIN2=@CURIN2,CURIN1=@CURIN1," +
                                  " CURINTOT=@CURINTOT,CUROUT2000=@CUROUT2000,CUROUT1000=@CUROUT1000,CUROUT200=@CUROUT200,CUROUT500=@CUROUT500,CUROUT100=@CUROUT100," +
-                                  " CUROUT50=@CUROUT50,CUROUT20=@CUROUT20,CUROUT10=@CUROUT10,CUROUT5=@CUROUT5,CUROUT2=@CUROUT2,CUROUT1=@CUROUT1,CUROUTTOT=@CUROUTTOT,CASHAmount=@CASHAmount" +
+                                  " CUROUT50=@CUROUT50,CUROUT20=@CUROUT20,CUROUT10=@CUROUT10,CUROUT5=@CUROUT5,CUROUT2=@CUROUT2,CUROUT1=@CUROUT1,CUROUTTOT=@CUROUTTOT,CASHAmount=@CASHAmount,AutoCashAmount=@AutoCashAmount" +
                                 " Where CATMEMODATE='" + Convert.ToDateTime(txtCashMemoDate.Text).ToString("yyyy-MM-dd") + "' And CATMEMONO='" + txtCashMemoNo.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'";
 
 
                             sqlcom.Parameters.Add("@CATMEMONO", SqlDbType.NVarChar).Value = txtCashMemoNo.Text;
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtCashMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashMemoAmount.Text);
-                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0" +
-                                "");
+                            sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCardPayment.Text);
                             sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtPGPayment.Text);
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashInAmount2000.Text);
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashInAmount1000.Text);
@@ -309,20 +324,15 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@CUROUT1", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashOutAmount1.Text);
                             sqlcom.Parameters.Add("@CUROUTTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashOutTotal.Text);
                             sqlcom.Parameters.Add("@CASHAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCashMemoAmount.Text);
-
+                            sqlcom.Parameters.Add("@AutoCashAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAutoCash.Text);
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
                         sqlcon.Close();
 
                         Close();
-
-
-
                     }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                     catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                     {
 
                     }

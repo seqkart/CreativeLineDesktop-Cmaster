@@ -252,6 +252,15 @@
             this.txtBalanceAmount.Name = "txtBalanceAmount";
             this.txtBalanceAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBalanceAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtBalanceAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtBalanceAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBalanceAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtBalanceAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBalanceAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtBalanceAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBalanceAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtBalanceAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBalanceAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtBalanceAmount.Properties.DisplayFormat.FormatString = "n2";
             this.txtBalanceAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtBalanceAmount.Properties.EditFormat.FormatString = "n2";
@@ -259,7 +268,6 @@
             this.txtBalanceAmount.Properties.Mask.EditMask = "n2";
             this.txtBalanceAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBalanceAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtBalanceAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBalanceAmount.Size = new System.Drawing.Size(114, 24);
             this.txtBalanceAmount.TabIndex = 10;
             // 
@@ -269,7 +277,15 @@
             this.txtSLipNo.Name = "txtSLipNo";
             this.txtSLipNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSLipNo.Properties.Appearance.Options.UseFont = true;
-            this.txtSLipNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSLipNo.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtSLipNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSLipNo.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtSLipNo.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSLipNo.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtSLipNo.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSLipNo.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtSLipNo.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtSLipNo.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtSLipNo.Size = new System.Drawing.Size(114, 24);
             this.txtSLipNo.TabIndex = 11;
             // 
@@ -280,6 +296,15 @@
             this.txtAmountPaid.Name = "txtAmountPaid";
             this.txtAmountPaid.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmountPaid.Properties.Appearance.Options.UseFont = true;
+            this.txtAmountPaid.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtAmountPaid.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtAmountPaid.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtAmountPaid.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtAmountPaid.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtAmountPaid.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtAmountPaid.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtAmountPaid.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtAmountPaid.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtAmountPaid.Properties.DisplayFormat.FormatString = "n2";
             this.txtAmountPaid.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtAmountPaid.Properties.EditFormat.FormatString = "n2";
@@ -287,7 +312,6 @@
             this.txtAmountPaid.Properties.Mask.EditMask = "n2";
             this.txtAmountPaid.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAmountPaid.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtAmountPaid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtAmountPaid.Size = new System.Drawing.Size(114, 24);
             this.txtAmountPaid.TabIndex = 12;
             this.txtAmountPaid.EditValueChanged += new System.EventHandler(this.TxtAmountPaid_EditValueChanged);
@@ -299,6 +323,15 @@
             this.txtMemoAmount.Name = "txtMemoAmount";
             this.txtMemoAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMemoAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtMemoAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtMemoAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMemoAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtMemoAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMemoAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtMemoAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMemoAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtMemoAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMemoAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtMemoAmount.Properties.DisplayFormat.FormatString = "n2";
             this.txtMemoAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtMemoAmount.Properties.EditFormat.FormatString = "n2";
@@ -306,7 +339,6 @@
             this.txtMemoAmount.Properties.Mask.EditMask = "n2";
             this.txtMemoAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMemoAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtMemoAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMemoAmount.Size = new System.Drawing.Size(114, 24);
             this.txtMemoAmount.TabIndex = 13;
             // 

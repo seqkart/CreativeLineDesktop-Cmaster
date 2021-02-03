@@ -391,9 +391,9 @@
             this.labelControl6.Appearance.Options.UseForeColor = true;
             this.labelControl6.Location = new System.Drawing.Point(319, 166);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(96, 37);
+            this.labelControl6.Size = new System.Drawing.Size(16, 37);
             this.labelControl6.TabIndex = 569;
-            this.labelControl6.Text = "GR. No.";
+            this.labelControl6.Text = "0";
             // 
             // labelControl5
             // 
@@ -593,7 +593,7 @@
             this.groupControl1.Controls.Add(this.txtDebitPartyCode);
             this.groupControl1.Location = new System.Drawing.Point(12, 55);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(479, 200);
+            this.groupControl1.Size = new System.Drawing.Size(465, 200);
             this.groupControl1.TabIndex = 532;
             this.groupControl1.Text = "Billing Address";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupControl1_Paint);
@@ -791,7 +791,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(123, 299);
+            this.HelpGrid.Location = new System.Drawing.Point(124, 261);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(658, 325);
@@ -1250,7 +1250,7 @@
             // 
             // xtraTabControl3
             // 
-            this.xtraTabControl3.Location = new System.Drawing.Point(393, 508);
+            this.xtraTabControl3.Location = new System.Drawing.Point(393, 507);
             this.xtraTabControl3.Name = "xtraTabControl3";
             this.xtraTabControl3.SelectedTabPage = this.xtraTabPage5;
             this.xtraTabControl3.Size = new System.Drawing.Size(565, 182);
@@ -1310,7 +1310,16 @@
             this.txtRound2.EditValue = "0";
             this.txtRound2.Location = new System.Drawing.Point(418, 94);
             this.txtRound2.Name = "txtRound2";
+            this.txtRound2.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRound2.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRound2.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtRound2.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRound2.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtRound2.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRound2.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtRound2.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtRound2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRound2.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtRound2.Properties.MaxLength = 6;
             this.txtRound2.Size = new System.Drawing.Size(54, 20);
             this.txtRound2.TabIndex = 554;
@@ -1427,7 +1436,16 @@
             // 
             this.txtValueOfGoods.Location = new System.Drawing.Point(102, 6);
             this.txtValueOfGoods.Name = "txtValueOfGoods";
+            this.txtValueOfGoods.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtValueOfGoods.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtValueOfGoods.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtValueOfGoods.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtValueOfGoods.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtValueOfGoods.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtValueOfGoods.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtValueOfGoods.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtValueOfGoods.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtValueOfGoods.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtValueOfGoods.Properties.MaxLength = 8;
             this.txtValueOfGoods.Properties.ReadOnly = true;
             this.txtValueOfGoods.Size = new System.Drawing.Size(135, 20);
@@ -1438,7 +1456,16 @@
             // 
             this.txtTotalTaxAmount.Location = new System.Drawing.Point(102, 50);
             this.txtTotalTaxAmount.Name = "txtTotalTaxAmount";
+            this.txtTotalTaxAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotalTaxAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalTaxAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtTotalTaxAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalTaxAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtTotalTaxAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalTaxAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtTotalTaxAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtTotalTaxAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotalTaxAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtTotalTaxAmount.Properties.MaxLength = 8;
             this.txtTotalTaxAmount.Properties.ReadOnly = true;
             this.txtTotalTaxAmount.Size = new System.Drawing.Size(135, 20);
@@ -1449,7 +1476,16 @@
             // 
             this.txtMainDiscVal.Location = new System.Drawing.Point(417, 28);
             this.txtMainDiscVal.Name = "txtMainDiscVal";
+            this.txtMainDiscVal.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtMainDiscVal.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMainDiscVal.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtMainDiscVal.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMainDiscVal.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtMainDiscVal.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMainDiscVal.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtMainDiscVal.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtMainDiscVal.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMainDiscVal.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtMainDiscVal.Properties.MaxLength = 8;
             this.txtMainDiscVal.Properties.ReadOnly = true;
             this.txtMainDiscVal.Size = new System.Drawing.Size(135, 20);
@@ -1460,7 +1496,16 @@
             // 
             this.txtRoundOffAmount.Location = new System.Drawing.Point(499, 94);
             this.txtRoundOffAmount.Name = "txtRoundOffAmount";
+            this.txtRoundOffAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRoundOffAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRoundOffAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtRoundOffAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRoundOffAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtRoundOffAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRoundOffAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtRoundOffAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtRoundOffAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRoundOffAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtRoundOffAmount.Properties.MaxLength = 6;
             this.txtRoundOffAmount.Size = new System.Drawing.Size(53, 20);
             this.txtRoundOffAmount.TabIndex = 552;
@@ -1474,7 +1519,16 @@
             131072});
             this.txtOctoriAmount.Location = new System.Drawing.Point(417, 72);
             this.txtOctoriAmount.Name = "txtOctoriAmount";
+            this.txtOctoriAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtOctoriAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtOctoriAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtOctoriAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtOctoriAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtOctoriAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtOctoriAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtOctoriAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtOctoriAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtOctoriAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtOctoriAmount.Properties.DisplayFormat.FormatString = "N2";
             this.txtOctoriAmount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtOctoriAmount.Properties.EditFormat.FormatString = "N2";
@@ -1490,7 +1544,16 @@
             // 
             this.txtTotalDisc.Location = new System.Drawing.Point(434, 6);
             this.txtTotalDisc.Name = "txtTotalDisc";
+            this.txtTotalDisc.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotalDisc.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalDisc.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtTotalDisc.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalDisc.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtTotalDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtTotalDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtTotalDisc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTotalDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtTotalDisc.Properties.MaxLength = 8;
             this.txtTotalDisc.Properties.ReadOnly = true;
             this.txtTotalDisc.Size = new System.Drawing.Size(118, 20);
@@ -1506,7 +1569,16 @@
             131072});
             this.txtPKGFrt.Location = new System.Drawing.Point(180, 72);
             this.txtPKGFrt.Name = "txtPKGFrt";
+            this.txtPKGFrt.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtPKGFrt.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtPKGFrt.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtPKGFrt.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtPKGFrt.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtPKGFrt.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtPKGFrt.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtPKGFrt.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtPKGFrt.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPKGFrt.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtPKGFrt.Properties.DisplayFormat.FormatString = "N2";
             this.txtPKGFrt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtPKGFrt.Properties.EditFormat.FormatString = "N2";
@@ -1524,7 +1596,16 @@
             this.txtRNetAmount.Name = "txtRNetAmount";
             this.txtRNetAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRNetAmount.Properties.Appearance.Options.UseFont = true;
+            this.txtRNetAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtRNetAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRNetAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtRNetAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRNetAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtRNetAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtRNetAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtRNetAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtRNetAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRNetAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtRNetAmount.Properties.MaxLength = 8;
             this.txtRNetAmount.Properties.ReadOnly = true;
             this.txtRNetAmount.Size = new System.Drawing.Size(135, 24);
@@ -1542,7 +1623,10 @@
             this.txtInsurancePer.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtInsurancePer.Properties.AppearanceFocused.Options.UseTextOptions = true;
             this.txtInsurancePer.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtInsurancePer.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtInsurancePer.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtInsurancePer.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtInsurancePer.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtInsurancePer.Properties.DisplayFormat.FormatString = "N2";
             this.txtInsurancePer.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtInsurancePer.Properties.EditFormat.FormatString = "N2";
@@ -1569,7 +1653,10 @@
             this.txtMainDisc.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtMainDisc.Properties.AppearanceFocused.Options.UseTextOptions = true;
             this.txtMainDisc.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtMainDisc.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtMainDisc.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtMainDisc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMainDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtMainDisc.Properties.DisplayFormat.FormatString = "N2";
             this.txtMainDisc.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtMainDisc.Properties.EditFormat.FormatString = "N2";
@@ -1585,7 +1672,16 @@
             // 
             this.txtInsuranceAmount.Location = new System.Drawing.Point(417, 50);
             this.txtInsuranceAmount.Name = "txtInsuranceAmount";
+            this.txtInsuranceAmount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtInsuranceAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtInsuranceAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtInsuranceAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtInsuranceAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtInsuranceAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtInsuranceAmount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtInsuranceAmount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtInsuranceAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtInsuranceAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtInsuranceAmount.Properties.MaxLength = 8;
             this.txtInsuranceAmount.Properties.ReadOnly = true;
             this.txtInsuranceAmount.Size = new System.Drawing.Size(135, 20);
@@ -1988,7 +2084,7 @@
             this.chMultiParty.Size = new System.Drawing.Size(75, 19);
             this.chMultiParty.TabIndex = 558;
             // 
-            // frmInvoiceMstAddCR
+            // FrmInvoiceMstAddCR
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
@@ -2013,7 +2109,7 @@
             this.Controls.Add(this.txtserial);
             this.Controls.Add(this.txtSerialNo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmInvoiceMstAddCR";
+            this.Name = "FrmInvoiceMstAddCR";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmInvoiceMstAdd_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInvoiceMstAdd_KeyDown);

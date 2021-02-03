@@ -991,6 +991,16 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage google_pay_primary_logo {
+            get {
+                object obj = ResourceManager.GetObject("google-pay-primary-logo", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Green_tag {
@@ -1431,6 +1441,16 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage paytm {
+            get {
+                object obj = ResourceManager.GetObject("paytm", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap People {
@@ -1457,6 +1477,16 @@ namespace WindowsFormsApplication1.Properties {
             get {
                 object obj = ResourceManager.GetObject("Phone_number", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        /// </summary>
+        internal static DevExpress.Utils.Svg.SvgImage PhonePe_Logo_wine {
+            get {
+                object obj = ResourceManager.GetObject("PhonePe-Logo.wine", resourceCulture);
+                return ((DevExpress.Utils.Svg.SvgImage)(obj));
             }
         }
         
