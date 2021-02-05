@@ -40,6 +40,10 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl49 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl48 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl47 = new DevExpress.XtraEditors.LabelControl();
+            this.txtBalanceAmount = new DevExpress.XtraEditors.TextEdit();
+            this.txtSLipNo = new DevExpress.XtraEditors.TextEdit();
+            this.txtAmountPaid = new DevExpress.XtraEditors.TextEdit();
+            this.txtMemoAmount = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
             this.lblMemoDate = new DevExpress.XtraEditors.LabelControl();
@@ -48,10 +52,6 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtUPID = new DevExpress.XtraEditors.TextEdit();
-            this.txtBalanceAmount = new DevExpress.XtraEditors.TextEdit();
-            this.txtSLipNo = new DevExpress.XtraEditors.TextEdit();
-            this.txtAmountPaid = new DevExpress.XtraEditors.TextEdit();
-            this.txtMemoAmount = new DevExpress.XtraEditors.TextEdit();
             this.txtNameOnUPID = new DevExpress.XtraEditors.TextEdit();
             this.txtUPIDMobileNo = new DevExpress.XtraEditors.TextEdit();
             this.txtUPIDType = new DevExpress.XtraEditors.TextEdit();
@@ -61,11 +61,11 @@ namespace WindowsFormsApplication1.Pos
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUPID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBalanceAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSLipNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAmountPaid.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMemoAmount.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUPID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameOnUPID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUPIDMobileNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUPIDType.Properties)).BeginInit();
@@ -176,85 +176,6 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl47.TabIndex = 9;
             this.labelControl47.Text = "Memo Amount";
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(11, 205);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(102, 20);
-            this.labelControl3.TabIndex = 23;
-            this.labelControl3.Text = "Name on UPID";
-            // 
-            // labelControl25
-            // 
-            this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(155, 7);
-            this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(91, 20);
-            this.labelControl25.TabIndex = 28;
-            this.labelControl25.Text = "Memo Dated";
-            // 
-            // lblMemoDate
-            // 
-            this.lblMemoDate.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemoDate.Appearance.Options.UseFont = true;
-            this.lblMemoDate.Location = new System.Drawing.Point(252, 7);
-            this.lblMemoDate.Name = "lblMemoDate";
-            this.lblMemoDate.Size = new System.Drawing.Size(86, 20);
-            this.lblMemoDate.TabIndex = 30;
-            this.lblMemoDate.Text = "00/00/0000";
-            // 
-            // lblMemoNo
-            // 
-            this.lblMemoNo.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMemoNo.Appearance.Options.UseFont = true;
-            this.lblMemoNo.Location = new System.Drawing.Point(96, 7);
-            this.lblMemoNo.Name = "lblMemoNo";
-            this.lblMemoNo.Size = new System.Drawing.Size(18, 20);
-            this.lblMemoNo.TabIndex = 31;
-            this.lblMemoNo.Text = "00";
-            // 
-            // labelControl24
-            // 
-            this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(16, 7);
-            this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(74, 20);
-            this.labelControl24.TabIndex = 29;
-            this.labelControl24.Text = "Memo No.";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(1, 177);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(112, 20);
-            this.labelControl2.TabIndex = 22;
-            this.labelControl2.Text = "UPID Mobile No";
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(57, 124);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(56, 20);
-            this.labelControl1.TabIndex = 21;
-            this.labelControl1.Text = "PG Type";
-            // 
-            // txtUPID
-            // 
-            this.txtUPID.Location = new System.Drawing.Point(119, 149);
-            this.txtUPID.Name = "txtUPID";
-            this.txtUPID.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUPID.Properties.Appearance.Options.UseFont = true;
-            this.txtUPID.Size = new System.Drawing.Size(192, 24);
-            this.txtUPID.TabIndex = 36;
-            // 
             // txtBalanceAmount
             // 
             this.txtBalanceAmount.EditValue = "0";
@@ -352,6 +273,85 @@ namespace WindowsFormsApplication1.Pos
             this.txtMemoAmount.Size = new System.Drawing.Size(114, 24);
             this.txtMemoAmount.TabIndex = 13;
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(11, 205);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(102, 20);
+            this.labelControl3.TabIndex = 23;
+            this.labelControl3.Text = "Name on UPID";
+            // 
+            // labelControl25
+            // 
+            this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl25.Appearance.Options.UseFont = true;
+            this.labelControl25.Location = new System.Drawing.Point(155, 7);
+            this.labelControl25.Name = "labelControl25";
+            this.labelControl25.Size = new System.Drawing.Size(91, 20);
+            this.labelControl25.TabIndex = 28;
+            this.labelControl25.Text = "Memo Dated";
+            // 
+            // lblMemoDate
+            // 
+            this.lblMemoDate.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemoDate.Appearance.Options.UseFont = true;
+            this.lblMemoDate.Location = new System.Drawing.Point(252, 7);
+            this.lblMemoDate.Name = "lblMemoDate";
+            this.lblMemoDate.Size = new System.Drawing.Size(86, 20);
+            this.lblMemoDate.TabIndex = 30;
+            this.lblMemoDate.Text = "00/00/0000";
+            // 
+            // lblMemoNo
+            // 
+            this.lblMemoNo.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMemoNo.Appearance.Options.UseFont = true;
+            this.lblMemoNo.Location = new System.Drawing.Point(96, 7);
+            this.lblMemoNo.Name = "lblMemoNo";
+            this.lblMemoNo.Size = new System.Drawing.Size(18, 20);
+            this.lblMemoNo.TabIndex = 31;
+            this.lblMemoNo.Text = "00";
+            // 
+            // labelControl24
+            // 
+            this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl24.Appearance.Options.UseFont = true;
+            this.labelControl24.Location = new System.Drawing.Point(16, 7);
+            this.labelControl24.Name = "labelControl24";
+            this.labelControl24.Size = new System.Drawing.Size(74, 20);
+            this.labelControl24.TabIndex = 29;
+            this.labelControl24.Text = "Memo No.";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(1, 177);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(112, 20);
+            this.labelControl2.TabIndex = 22;
+            this.labelControl2.Text = "UPID Mobile No";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(57, 124);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(56, 20);
+            this.labelControl1.TabIndex = 21;
+            this.labelControl1.Text = "PG Type";
+            // 
+            // txtUPID
+            // 
+            this.txtUPID.Location = new System.Drawing.Point(119, 149);
+            this.txtUPID.Name = "txtUPID";
+            this.txtUPID.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUPID.Properties.Appearance.Options.UseFont = true;
+            this.txtUPID.Size = new System.Drawing.Size(192, 24);
+            this.txtUPID.TabIndex = 36;
+            // 
             // txtNameOnUPID
             // 
             this.txtNameOnUPID.Location = new System.Drawing.Point(119, 203);
@@ -446,11 +446,11 @@ namespace WindowsFormsApplication1.Pos
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUPID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBalanceAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSLipNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAmountPaid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMemoAmount.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUPID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameOnUPID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUPIDMobileNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUPIDType.Properties)).EndInit();
