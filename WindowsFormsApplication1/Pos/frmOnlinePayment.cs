@@ -87,9 +87,9 @@ namespace WindowsFormsApplication1.Pos
                         {
                             
                             sqlcom.CommandText = "Insert into CASHTENDER(UPIDType,UPIDMobileNo,UPIDName,UPIDAddress,CATMEMONO,CATMEMODATE,CATMEMOAMT,CATCARDAMT,CATPGAMT,CURIN2000,CURIN1000,CURIN200,CURIN500,CURIN100,CURIN50,CURIN20,CURIN10,CURIN5," +
-                                "  CURIN2,CURIN1,CURINTOT,CUROUT2000,CUROUT1000,CUROUT200,CUROUT500,CUROUT100,CUROUT50,CUROUT20,CUROUT10,CUROUT5,CUROUT2,CUROUT1,CUROUTTOT,CATCARDTYPE,CATCARDNO,CATCARDNAME,CATCARDSLIPNO,UnitCode,CASHAmount)values(" +
+                                "  CURIN2,CURIN1,CURINTOT,CUROUT2000,CUROUT1000,CUROUT200,CUROUT500,CUROUT100,CUROUT50,CUROUT20,CUROUT10,CUROUT5,CUROUT2,CUROUT1,CUROUTTOT,CATCARDTYPE,CATCARDNO,CATCARDNAME,CATCARDSLIPNO,UnitCode,CASHAmount,AutoCashAmount)values(" +
                                 "@UPIDType,@UPIDMobileNo,@UPIDName,@UPIDAddress,@CATMEMONO,@CATMEMODATE,@CATMEMOAMT,@CATCARDAMT,@CATPGAMT,@CURIN2000,@CURIN1000,@CURIN200,@CURIN500,@CURIN100,@CURIN50,@CURIN20,@CURIN10,@CURIN5," +
-                                "  @CURIN2,@CURIN1,@CURINTOT,@CUROUT2000,@CUROUT1000,@CUROUT200,@CUROUT500,@CUROUT100,@CUROUT50,@CUROUT20,@CUROUT10,@CUROUT5,@CUROUT2,@CUROUT1,@CUROUTTOT,@CATCARDTYPE,@CATCARDNO,@CATCARDNAME,@CATCARDSLIPNO,@UnitCode,@CASHAmount)";
+                                "  @CURIN2,@CURIN1,@CURINTOT,@CUROUT2000,@CUROUT1000,@CUROUT200,@CUROUT500,@CUROUT100,@CUROUT50,@CUROUT20,@CUROUT10,@CUROUT5,@CUROUT2,@CUROUT1,@CUROUTTOT,@CATCARDTYPE,@CATCARDNO,@CATCARDNAME,@CATCARDSLIPNO,@UnitCode,@CASHAmount,@AutoCashAmount)";
                             sqlcom.Parameters.Add("@UPIDType", SqlDbType.NVarChar).Value = txtUPIDType.Text;
                             sqlcom.Parameters.Add("@UPIDMobileNo", SqlDbType.NVarChar).Value = txtUPIDMobileNo.Text;
                             sqlcom.Parameters.Add("@UPIDName", SqlDbType.NVarChar).Value = txtNameOnUPID.Text;
@@ -129,12 +129,13 @@ namespace WindowsFormsApplication1.Pos
                             sqlcom.Parameters.Add("@CATCARDSLIPNO", SqlDbType.NVarChar).Value = txtSLipNo.Text.Trim();
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@CASHAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
+                            sqlcom.Parameters.Add("@AutoCashAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
                         else
                         {
-                            sqlcom.CommandText = "Update CASHTENDER Set UPIDType=@UPIDType,UPIDMobileNo=@UPIDMobileNo,UPIDName=@UPIDName,UPIDAddress=@UPIDAddress,CURIN2000=@CURIN2000,CURIN1000=@CURIN1000,CURIN200=@CURIN200,CURIN500=@CURIN500," +
+                            sqlcom.CommandText = "Update CASHTENDER Set AutoCashAmount=@AutoCashAmount,UPIDType=@UPIDType,UPIDMobileNo=@UPIDMobileNo,UPIDName=@UPIDName,UPIDAddress=@UPIDAddress,CURIN2000=@CURIN2000,CURIN1000=@CURIN1000,CURIN200=@CURIN200,CURIN500=@CURIN500," +
                                 "CURIN100=@CURIN100,CURIN50=@CURIN50,CURIN20=@CURIN20,CURIN10=@CURIN10,CURIN5=@CURIN5,CURIN2=@CURIN2,CURIN1=@CURIN1,CASHAmount=@CASHAmount,CATMEMOAMT=@CATMEMOAMT,CATPGAMT=@CATPGAMT,CATCARDTYPE=@CATCARDTYPE,CATCARDNO=@CATCARDNO,CATCARDNAME=@CATCARDNAME,CATCARDSLIPNO=@CATCARDSLIPNO " +
                                 " Where CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' And CATMEMONO='" + lblMemoNo.Text + "' And UnitCode='" + GlobalVariables.CUnitID + "'";
 
@@ -176,6 +177,7 @@ namespace WindowsFormsApplication1.Pos
                             sqlcom.Parameters.Add("@CUROUT1", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CUROUTTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CASHAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
+                            sqlcom.Parameters.Add("@AutoCashAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -213,6 +215,11 @@ namespace WindowsFormsApplication1.Pos
         {
             Save();
             Close();
+        }
+
+        private void labelControl49_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

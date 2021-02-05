@@ -991,12 +991,32 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap google {
+            get {
+                object obj = ResourceManager.GetObject("google", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
         /// </summary>
         internal static DevExpress.Utils.Svg.SvgImage google_pay_primary_logo {
             get {
                 object obj = ResourceManager.GetObject("google-pay-primary-logo", resourceCulture);
                 return ((DevExpress.Utils.Svg.SvgImage)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap google1 {
+            get {
+                object obj = ResourceManager.GetObject("google1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -1441,12 +1461,22 @@ namespace WindowsFormsApplication1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type DevExpress.Utils.Svg.SvgImage.
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static DevExpress.Utils.Svg.SvgImage paytm {
+        internal static System.Drawing.Bitmap paytm {
             get {
                 object obj = ResourceManager.GetObject("paytm", resourceCulture);
-                return ((DevExpress.Utils.Svg.SvgImage)(obj));
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap paytm1 {
+            get {
+                object obj = ResourceManager.GetObject("paytm1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -1466,6 +1496,16 @@ namespace WindowsFormsApplication1.Properties {
         internal static System.Drawing.Bitmap Person {
             get {
                 object obj = ResourceManager.GetObject("Person", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap phone {
+            get {
+                object obj = ResourceManager.GetObject("phone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

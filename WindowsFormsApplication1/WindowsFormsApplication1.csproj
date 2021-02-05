@@ -2295,6 +2295,8 @@
     <None Include="Resources\Lock.png" />
     <None Include="Resources\Low rating.png" />
     <None Include="Resources\fm2.jpg" />
+    <None Include="Resources\google.png" />
+    <None Include="Resources\google1.png" />
     <Content Include="Resources\Maestro.png" />
     <None Include="Resources\Mail.png" />
     <None Include="Resources\Male.png" />
@@ -2392,6 +2394,9 @@
     <None Include="Resources\Print_16x16.png" />
     <None Include="Resources\photo.jpg" />
     <None Include="Resources\profile_icon.jpg" />
+    <None Include="Resources\paytm.png" />
+    <None Include="Resources\paytm1.png" />
+    <None Include="Resources\phone.png" />
     <Content Include="Resources\VISA.png" />
     <None Include="Resources\fm1.jpg" />
     <Content Include="Resources\login.jpg" />

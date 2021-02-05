@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     txtCashMemoNo.Text = ds.Tables[0].Rows[0]["CATMEMONO"].ToString();
                     txtCashMemoDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["CATMEMODATE"]).ToString("yyyy-MM-dd");
-                    txtCashMemoAmount.Text = ds.Tables[0].Rows[0]["CATMEMOAMT"].ToString();
+                    //txtCashMemoAmount.Text = ds.Tables[0].Rows[0]["CATMEMOAMT"].ToString();
                     txtCardPayment.Text = "0";
                     txtPGPayment.Text = "0";
                     txtCashInAmount2000.Text = ds.Tables[0].Rows[0]["CURIN2000"].ToString();
@@ -100,7 +100,10 @@ namespace WindowsFormsApplication1.Transaction
                     txtCashInCount2.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["CURIN2"]) / 2).ToString();
                     txtCashInCount1.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["CURIN1"]) / 1).ToString();
 
-
+                    if(ds.Tables[0].Rows[0]["AutoCashAmount"].ToString().Trim()=="")
+                    {
+                        ds.Tables[0].Rows[0]["AutoCashAmount"] = 0;
+                    }
                     txtAutoCash.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["AutoCashAmount"])).ToString();
 
 

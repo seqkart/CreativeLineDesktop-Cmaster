@@ -779,7 +779,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     else
                     {
-                        lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
+                        lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((5-Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
                     }
 
                    
@@ -1150,6 +1150,10 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         sqlcon.Close();
+                        txtItemMRP.EditValue = 0;
+                        txtItemDiscPer.EditValue = 0;
+                        txtItemDiscAMount.EditValue = 0;
+                        txtItemFlatRate.EditValue = 0;
                         //this.Close();
                     }
                     catch (Exception ex)
@@ -1358,6 +1362,15 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
+                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                if (MaxRow > 0)
+                {
+
+                }
+                else
+                {
+                    return;
+                }
                 SaveInvoice();
 
                 S1 = "Edit";
@@ -1484,7 +1497,7 @@ namespace WindowsFormsApplication1.Transaction
                 S1 = "&Add";
                 Text = "Cash Memo Addition";
                 Cashmemo_Load(null, e);
-                txtMainDisc.Text = string.Empty;
+                txtMainDisc.Text = "0";
                 Calculation();
                 PreviousBillDetails();
 
@@ -1752,6 +1765,7 @@ namespace WindowsFormsApplication1.Transaction
                     if (dt.Rows.Count == 0)
                     {
                         InfoGrid.DataSource = null;
+                        txtMainDisc.Text = "0";
                     }
                 }));
             }
