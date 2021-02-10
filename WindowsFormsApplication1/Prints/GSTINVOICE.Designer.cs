@@ -544,7 +544,7 @@
             this.xrLabel3});
             this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(4.960511F, 23.82016F);
             this.xrPanel2.Name = "xrPanel2";
-            this.xrPanel2.SizeF = new System.Drawing.SizeF(1100.329F, 31.96077F);
+            this.xrPanel2.SizeF = new System.Drawing.SizeF(1100.329F, 31.9608F);
             // 
             // xrLabel120
             // 
@@ -1864,10 +1864,10 @@
             this.xrLabel68.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel68.CanGrow = false;
             this.xrLabel68.Font = new System.Drawing.Font("Calibri", 8F);
-            this.xrLabel68.LocationFloat = new DevExpress.Utils.PointFloat(6.804582F, 13.42426F);
+            this.xrLabel68.LocationFloat = new DevExpress.Utils.PointFloat(6.804577F, 13.42424F);
             this.xrLabel68.Name = "xrLabel68";
             this.xrLabel68.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel68.SizeF = new System.Drawing.SizeF(785.6049F, 11.42427F);
+            this.xrLabel68.SizeF = new System.Drawing.SizeF(699.1467F, 11.42427F);
             this.xrLabel68.StylePriority.UseBorders = false;
             this.xrLabel68.StylePriority.UseFont = false;
             this.xrLabel68.StylePriority.UseTextAlignment = false;
