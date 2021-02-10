@@ -653,7 +653,9 @@
             this.Text19.Name = "Text19";
             this.Text19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.Text19.SizeF = new System.Drawing.SizeF(47.56944F, 19.51389F);
-            this.Text19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Text19.StylePriority.UseTextAlignment = false;
+            this.Text19.Text = "Type";
+            this.Text19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Text21
             // 

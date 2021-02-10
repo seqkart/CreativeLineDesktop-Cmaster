@@ -618,13 +618,14 @@
             // 
             // xrLabel4
             // 
+            this.xrLabel4.AutoWidth = true;
             this.xrLabel4.CanGrow = false;
             this.xrLabel4.Font = new System.Drawing.Font("Bahnschrift", 14F, System.Drawing.FontStyle.Bold);
             this.xrLabel4.ForeColor = System.Drawing.Color.White;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(711.6677F, 9F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(711.6678F, 9F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(171.875F, 21F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(142.7083F, 17F);
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.StylePriority.UseForeColor = false;
             this.xrLabel4.Text = "CREATIVE LINE";

@@ -88,9 +88,9 @@
             this.crossTabTotalStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrAccName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSIDPONO = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCTName = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrAccName = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCharacterComb2 = new DevExpress.XtraReports.UI.XRCharacterComb();
             this.xrCharacterComb1 = new DevExpress.XtraReports.UI.XRCharacterComb();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -471,6 +471,15 @@
             this.PageHeader.HeightF = 94.74999F;
             this.PageHeader.Name = "PageHeader";
             // 
+            // xrAccName
+            // 
+            this.xrAccName.CanGrow = false;
+            this.xrAccName.LocationFloat = new DevExpress.Utils.PointFloat(10.04164F, 21.91669F);
+            this.xrAccName.Multiline = true;
+            this.xrAccName.Name = "xrAccName";
+            this.xrAccName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrAccName.SizeF = new System.Drawing.SizeF(389.5834F, 19F);
+            // 
             // xrSIDPONO
             // 
             this.xrSIDPONO.CanGrow = false;
@@ -488,15 +497,6 @@
             this.xrCTName.Name = "xrCTName";
             this.xrCTName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrCTName.SizeF = new System.Drawing.SizeF(389.5834F, 20F);
-            // 
-            // xrAccName
-            // 
-            this.xrAccName.CanGrow = false;
-            this.xrAccName.LocationFloat = new DevExpress.Utils.PointFloat(10.04164F, 21.91669F);
-            this.xrAccName.Multiline = true;
-            this.xrAccName.Name = "xrAccName";
-            this.xrAccName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrAccName.SizeF = new System.Drawing.SizeF(389.5834F, 19F);
             // 
             // xrCharacterComb2
             // 
@@ -522,6 +522,7 @@
             // 
             // ReportHeader
             // 
+            this.ReportHeader.HeightF = 0F;
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.ReportHeader_BeforePrint);
             // 
