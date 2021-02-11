@@ -250,6 +250,16 @@
             this.lblTotalSale.Appearance.ForeColor = System.Drawing.Color.Green;
             this.lblTotalSale.Appearance.Options.UseFont = true;
             this.lblTotalSale.Appearance.Options.UseForeColor = true;
+            this.lblTotalSale.Appearance.Options.UseTextOptions = true;
+            this.lblTotalSale.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSale.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblTotalSale.AppearanceDisabled.Options.UseTextOptions = true;
+            this.lblTotalSale.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSale.AppearanceHovered.Options.UseTextOptions = true;
+            this.lblTotalSale.AppearanceHovered.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSale.AppearancePressed.Options.UseTextOptions = true;
+            this.lblTotalSale.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.lblTotalSale.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
             this.lblTotalSale.Location = new System.Drawing.Point(512, 61);
             this.lblTotalSale.Name = "lblTotalSale";
             this.lblTotalSale.Size = new System.Drawing.Size(15, 33);
