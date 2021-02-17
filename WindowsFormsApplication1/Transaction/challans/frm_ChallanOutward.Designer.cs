@@ -252,6 +252,7 @@
             this.txtTransporterCode.TabIndex = 5;
             this.txtTransporterCode.EditValueChanged += new System.EventHandler(this.TxtTransporterCode_EditValueChanged);
             this.txtTransporterCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTransporterCode_KeyDown);
+            this.txtTransporterCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTransporterCode_KeyPress);
             // 
             // labelControl7
             // 
@@ -404,6 +405,7 @@
             this.txtDebitPartyCode.TabStop = false;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
+            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDebitPartyCode_KeyPress);
             // 
             // labelControl8
             // 
@@ -782,7 +784,7 @@
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             this.txtSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBox_KeyPress);
             // 
-            // frm_ChallanOutward
+            // Frm_ChallanOutward
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -795,7 +797,7 @@
             this.Controls.Add(this.txtMainRemarks);
             this.Controls.Add(this.BarCodeGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frm_ChallanOutward";
+            this.Name = "Frm_ChallanOutward";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Frm_ChallanOutward_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

@@ -80,6 +80,13 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG150")
+                {
+                    Transaction.challans.Frm_Challaninward frm = new Transaction.challans.Frm_Challaninward()
+                    { S1 = btnAdd.Text, Text = "Challan Inward Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG211")
                 {
                     WindowsFormsApplication1.Transaction.frmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.frmPIGeneration2

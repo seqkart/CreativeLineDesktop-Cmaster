@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 {
     public partial class Frm_Challaninward : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         DataTable dt = new DataTable();
@@ -15,25 +15,37 @@ namespace WindowsFormsApplication1.Transaction.challans
         string UpdateTag = "N";
         string ProductFeedTag = "N";
 
+
+
         public Frm_Challaninward()
         {
+
+
             InitializeComponent();
-            dt.Columns.Add("CHOPrdCode", typeof(string));
-            dt.Columns.Add("CHOPrdName", typeof(string));
-            dt.Columns.Add("CHOManualDesc", typeof(string));
-            dt.Columns.Add("CHOArtNo", typeof(string));
-            dt.Columns.Add("CHOArtDesc", typeof(string));
-            dt.Columns.Add("CHOArtID", typeof(string));
-            dt.Columns.Add("CHOColID", typeof(string));
-            dt.Columns.Add("CHOColName", typeof(string));
-            dt.Columns.Add("CHOSizeID", typeof(string));
-            dt.Columns.Add("CHOSizeName", typeof(string));
-            dt.Columns.Add("CHOLotNo", typeof(string));
-            dt.Columns.Add("CHOTotQtyKgs", typeof(string));
-            dt.Columns.Add("CHOUom", typeof(string));
-            dt.Columns.Add("CHORemarks", typeof(string));
-            dt.Columns.Add("CHOKgsType", typeof(string));
-            dt.Columns.Add("CHOTotQty", typeof(string));
+            dt.Columns.Add("AgnstChallanType", typeof(string));
+            dt.Columns.Add("AgnstChallanNo", typeof(string));
+            dt.Columns.Add("PrdCode", typeof(string));
+            dt.Columns.Add("PrdName", typeof(string));
+            dt.Columns.Add("ARTNO", typeof(string));
+            dt.Columns.Add("ARTDESC", typeof(string));
+            dt.Columns.Add("ARTID", typeof(string));
+            dt.Columns.Add("IssuedQty", typeof(Decimal));
+            dt.Columns.Add("IssuedQtyInKgs", typeof(Decimal));
+            dt.Columns.Add("UomCode", typeof(string));
+            dt.Columns.Add("UomDesc", typeof(string));
+            dt.Columns.Add("ReceivedQty", typeof(Decimal));
+            dt.Columns.Add("ReceivedQtyInKgs", typeof(Decimal));
+            dt.Columns.Add("WastageQty", typeof(Decimal));
+            dt.Columns.Add("WastageQtyInKgs", typeof(Decimal));
+            dt.Columns.Add("ProcessCode", typeof(string));
+            dt.Columns.Add("ProcessName", typeof(string));
+            dt.Columns.Add("Rate", typeof(Decimal));
+            dt.Columns.Add("CalculationType", typeof(string));
+            dt.Columns.Add("CalcAmount", typeof(Decimal));
+            dt.Columns.Add("Remarks", typeof(string));
+            dt.Columns.Add("ActualQty", typeof(Decimal));
+            dt.Columns.Add("ActualQtyInKgs", typeof(Decimal));
+            
 
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
         }
@@ -52,10 +64,51 @@ namespace WindowsFormsApplication1.Transaction.challans
         {
 
         }
+        private void GetOurwardData()
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("select CHOTYPE,CHONO,CHODATE,CHOREMARKS from CHOUTMain Where CHOPARTYCODE='" + txtDebitPartyCode.Text + "'");
+            if(ds.Tables[0].Rows.Count>0)
+            {
+                ChallanGrid.DataSource = ds.Tables[0];
+                ChallanGridView.BestFitColumns();
+            }
+            else
+            {
+                ChallanGrid.DataSource = null;
+                ChallanGridView.BestFitColumns();
+            }
+        }
+
+
+        private void GetOurwardDataFProcess()
+        {
+            DataRow currentrow = ChallanGridView.GetDataRow(ChallanGridView.FocusedRowHandle);
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanDataFProcess '"+ currentrow["CHOTYPE"].ToString() + "','"+ currentrow["CHONO"].ToString() + "','"+ Convert.ToDateTime(currentrow["CHODATE"]).ToString("yyyy-MM-dd")+"'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                dt = ds.Tables[0];
+
+                BarCodeGrid.DataSource = dt;
+                BarCodeGridView.BestFitColumns();
+            }
+            else
+            {
+                BarCodeGrid.DataSource = null;
+                BarCodeGridView.BestFitColumns();
+            }
+        }
 
         private void Frm_Challaninward_Load(object sender, EventArgs e)
         {
+            if (S1 == "Add")
+            {
+                txtDocDate.EditValue = DateTime.Now;
+                txtGateEntryNo.Focus();
+            }
+            if (S1 == "Edit")
+            {
 
+            }
         }
 
         private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
@@ -138,65 +191,46 @@ namespace WindowsFormsApplication1.Transaction.challans
         }
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode != Keys.Back)
             {
-
-                PrepareActMstHelpGrid();
-                HelpGrid.Text = "txtDebitPartyCode";
-                if (txtDebitPartyCode.Text.Trim().Length == 0)
+                if (e.KeyCode != Keys.Delete)
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstHelp");
-                    if (ds.Tables[0].Rows.Count > 0)
+                    if (e.KeyCode != Keys.Up)
                     {
-                        HelpGrid.DataSource = ds.Tables[0];
-                        HelpGrid.Show();
-                        panelControl1.Visible = true;
-                        HelpGrid.Visible = true;
-                        HelpGrid.Focus();
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        ProjectFunctions.SpeakError("No Records To Display");
-                    }
-                }
-                else
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstHelp '" + txtDebitPartyCode.Text.Trim() + "'");//sp_LoadActMstHelpWithCode
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
-                        txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-                        txtBillingAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
-                        txtBillingAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
-                        txtBillingAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
-
-                        txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-
-                        txtTransporterCode.Focus();
-                        panelControl1.Visible = false;
-                    }
-
-                    else
-                    {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelp");
-                        if (ds1.Tables[0].Rows.Count > 0)
+                        if (e.KeyCode != Keys.Down)
                         {
-                            HelpGrid.DataSource = ds.Tables[0];
-                            HelpGrid.Show();
-                            panelControl1.Visible = true;
-                            HelpGrid.Visible = true;
-                            HelpGrid.Focus();
-                            HelpGridView.BestFitColumns();
-                        }
-                        else
-                        {
-                            ProjectFunctions.SpeakError("No Records To Display");
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            PrepareActMstHelpGrid();
+                                            HelpGrid.Text = "txtDebitPartyCode";
+                                            txtSearchBox.Text = String.Empty;
+                                            txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl2.Visible = true;
+                                            HelpGrid.Visible = true;
+                                            
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtDebitPartyCode.Text = String.Empty;
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-            e.Handled = true;
+
+          
+            //e.Handled = true;
+           
         }
 
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
@@ -223,60 +257,102 @@ namespace WindowsFormsApplication1.Transaction.challans
         }
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+
+
+            if (e.KeyCode != Keys.Back)
             {
-
-                HelpGridView.Columns.Clear();
-                HelpGrid.Text = "txtTransporterCode";
-                if (txtTransporterCode.Text.Trim().Length == 0)
+                if (e.KeyCode != Keys.Delete)
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER");
-                    if (ds.Tables[0].Rows.Count > 0)
+                    if (e.KeyCode != Keys.Up)
                     {
-                        HelpGrid.DataSource = ds.Tables[0];
-                        HelpGrid.Show();
-                        panelControl1.Visible = true;
-                        HelpGrid.Visible = true;
-                        HelpGrid.Focus();
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        ProjectFunctions.SpeakError("No Records To Display");
-                    }
-                }
-                else
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet(" select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER Where  TRPRSYSID='" + txtTransporterCode.Text.Trim() + "'");
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        txtTransporterCode.Text = ds.Tables[0].Rows[0]["TRPRSYSID"].ToString();
-                        txtTransporterName.Text = ds.Tables[0].Rows[0]["TRPRNAME"].ToString();
-
-                        txtTransporterCode.Focus();
-                        panelControl1.Visible = false;
-                    }
-
-                    else
-                    {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER");
-                        if (ds1.Tables[0].Rows.Count > 0)
+                        if (e.KeyCode != Keys.Down)
                         {
-                            HelpGrid.DataSource = ds.Tables[0];
-                            HelpGrid.Show();
-                            panelControl1.Visible = true;
-                            HelpGrid.Visible = true;
-                            HelpGrid.Focus();
-                            HelpGridView.BestFitColumns();
-                        }
-                        else
-                        {
-                            ProjectFunctions.SpeakError("No Records To Display");
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            
+                                            HelpGrid.Text = "txtTransporterCode";
+                                            HelpGridView.Columns.Clear();
+                                            txtSearchBox.Text = String.Empty;
+                                            txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl2.Visible = true;
+                                            HelpGrid.Visible = true;
+
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
+
+
             e.Handled = true;
+            //if (e.KeyCode == Keys.Enter)
+            //{
+
+            //    HelpGridView.Columns.Clear();
+            //    HelpGrid.Text = "txtTransporterCode";
+            //    if (txtTransporterCode.Text.Trim().Length == 0)
+            //    {
+            //        DataSet ds = ProjectFunctions.GetDataSet("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER");
+            //        if (ds.Tables[0].Rows.Count > 0)
+            //        {
+            //            HelpGrid.DataSource = ds.Tables[0];
+            //            HelpGrid.Show();
+            //            panelControl1.Visible = true;
+            //            HelpGrid.Visible = true;
+            //            HelpGrid.Focus();
+            //            HelpGridView.BestFitColumns();
+            //        }
+            //        else
+            //        {
+            //            ProjectFunctions.SpeakError("No Records To Display");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        DataSet ds = ProjectFunctions.GetDataSet(" select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER Where  TRPRSYSID='" + txtTransporterCode.Text.Trim() + "'");
+            //        if (ds.Tables[0].Rows.Count > 0)
+            //        {
+            //            txtTransporterCode.Text = ds.Tables[0].Rows[0]["TRPRSYSID"].ToString();
+            //            txtTransporterName.Text = ds.Tables[0].Rows[0]["TRPRNAME"].ToString();
+
+            //            txtTransporterCode.Focus();
+            //            panelControl1.Visible = false;
+            //        }
+
+            //        else
+            //        {
+            //            DataSet ds1 = ProjectFunctions.GetDataSet("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER");
+            //            if (ds1.Tables[0].Rows.Count > 0)
+            //            {
+            //                HelpGrid.DataSource = ds.Tables[0];
+            //                HelpGrid.Show();
+            //                panelControl1.Visible = true;
+            //                HelpGrid.Visible = true;
+            //                HelpGrid.Focus();
+            //                HelpGridView.BestFitColumns();
+            //            }
+            //            else
+            //            {
+            //                ProjectFunctions.SpeakError("No Records To Display");
+            //            }
+            //        }
+            //    }
+            //}
+            //e.Handled = true;
         }
 
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
@@ -337,7 +413,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 txtTransporterCode.Text = row["TRPRSYSID"].ToString();
                 txtTransporterName.Text = row["TRPRNAME"].ToString();
                 HelpGrid.Visible = false;
-                panelControl1.Visible = false;
+                panelControl2.Visible = false;
                 txtTransporterCode.Focus();
             }
 
@@ -352,106 +428,119 @@ namespace WindowsFormsApplication1.Transaction.challans
                 txtBillingCity.Text = row["CTNAME"].ToString();
 
                 HelpGrid.Visible = false;
-                panelControl1.Visible = false;
+                panelControl2.Visible = false;
                 txtTransporterCode.Focus();
+                GetOurwardData();
             }
             if (HelpGridView.RowCount > 0)
             {
 
-                if (HelpGrid.Text == "CHOPrdName")
+                if(HelpGrid.Text=="ProcessName")
                 {
-                    DataRow dtNewRow = dt.NewRow();
-                    dtNewRow["CHOPrdCode"] = row["PrdCode"].ToString();
-                    dtNewRow["CHOPrdName"] = row["PrdName"].ToString();
-
-                    dt.Rows.Add(dtNewRow);
-                    if (dt.Rows.Count > 0)
-                    {
-                        BarCodeGrid.DataSource = dt;
-                        BarCodeGridView.BestFitColumns();
-                    }
-                    panelControl1.Visible = false;
+                    BarCodeGridView.UpdateCurrentRow();
+                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ProcessCode"], row["ProcessCode"].ToString());
+                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ProcessName"], row["ProcessName"].ToString());
+                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["Rate"], Convert.ToDecimal(row["Rate"]));
                     BarCodeGridView.Focus();
-                    BarCodeGridView.MoveLast();
-                    BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOManualDesc"];
+                    panelControl2.Visible = false;
+                    BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["Rate"];
+                    BarCodeGridView.FocusedRowHandle = RowIndex;
                     txtSearchBox.Text = string.Empty;
+                    dt.AcceptChanges();
 
-                    if (BarCodeGridView.FocusedColumn.FieldName == "CHOManualDesc")
+                    if (BarCodeGridView.FocusedColumn.FieldName == "Rate")
                     {
                         BarCodeGridView.ShowEditor();
                     }
-
-
-                    ProductFeedTag = "Y";
                 }
-                if (HelpGrid.Text == "CHOArtNo")
+                if (HelpGrid.Text == "UomDesc")
                 {
-                    if (ProductFeedTag == "N")
+                    BarCodeGridView.UpdateCurrentRow();
+                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["UomCode"], row["UomCode"].ToString());
+                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["UomDesc"], row["UomDesc"].ToString());
+                    BarCodeGridView.Focus();
+                    panelControl2.Visible = false;
+                    BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["Rate"];
+                    BarCodeGridView.FocusedRowHandle = RowIndex;
+                    txtSearchBox.Text = string.Empty;
+                    dt.AcceptChanges();
+
+                    if (BarCodeGridView.FocusedColumn.FieldName == "Rate")
+                    {
+                        BarCodeGridView.ShowEditor();
+                    }
+                }
+                if (chProductType.Checked)
+                {
+                    if (HelpGrid.Text == "ARTNO")
+                    {
+                        if (ProductFeedTag == "N")
+                        {
+                            DataRow dtNewRow = dt.NewRow();
+                            dtNewRow["ARTNO"] = row["ARTNO"].ToString();
+                            dtNewRow["ARTDESC"] = row["ARTDESC"].ToString();
+                            dtNewRow["ARTID"] = row["ARTSYSID"].ToString();
+                            dt.Rows.Add(dtNewRow);
+                            if (dt.Rows.Count > 0)
+                            {
+                                BarCodeGrid.DataSource = dt;
+                                BarCodeGridView.BestFitColumns();
+                            }
+                            panelControl2.Visible = false;
+                            BarCodeGridView.Focus();
+                            BarCodeGridView.MoveLast();
+                            BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
+                            txtSearchBox.Text = string.Empty;
+                        }
+                        else
+                        {
+                            BarCodeGridView.UpdateCurrentRow();
+                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTNO"], row["ARTNO"].ToString());
+                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTDESC"], row["ARTDESC"].ToString());
+                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTID"], row["ARTSYSID"].ToString());
+                            BarCodeGridView.Focus();
+                            panelControl2.Visible = false;
+                            BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["UOMDesc"];
+                            BarCodeGridView.FocusedRowHandle = RowIndex;
+                            txtSearchBox.Text = string.Empty;
+                            dt.AcceptChanges();
+                            ProductFeedTag = "N";
+                        }
+                    }
+                }
+                else
+                {
+                    if (HelpGrid.Text == "PrdName")
                     {
                         DataRow dtNewRow = dt.NewRow();
-                        dtNewRow["CHOArtNo"] = row["ARTNO"].ToString();
-                        dtNewRow["CHOArtDesc"] = row["ARTDESC"].ToString();
-                        dtNewRow["CHOArtID"] = row["ARTSYSID"].ToString();
+                        dtNewRow["PrdCode"] = row["PrdCode"].ToString();
+                        dtNewRow["PrdName"] = row["PrdName"].ToString();
+
                         dt.Rows.Add(dtNewRow);
                         if (dt.Rows.Count > 0)
                         {
                             BarCodeGrid.DataSource = dt;
                             BarCodeGridView.BestFitColumns();
                         }
-                        panelControl1.Visible = false;
+                        panelControl2.Visible = false;
                         BarCodeGridView.Focus();
                         BarCodeGridView.MoveLast();
-                        BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
+                        BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["UOMDesc"];
                         txtSearchBox.Text = string.Empty;
-                    }
-                    else
-                    {
-                        BarCodeGridView.UpdateCurrentRow();
-                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOArtNo"], row["ARTNO"].ToString());
-                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOArtDesc"], row["ARTDESC"].ToString());
-                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOArtID"], row["ARTSYSID"].ToString());
-                        BarCodeGridView.Focus();
-                        panelControl1.Visible = false;
-                        BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
-                        BarCodeGridView.FocusedRowHandle = RowIndex;
-                        txtSearchBox.Text = string.Empty;
-                        dt.AcceptChanges();
-                        ProductFeedTag = "N";
+
+                        //if (BarCodeGridView.FocusedColumn.FieldName == "CHOManualDesc")
+                        //{
+                        //    BarCodeGridView.ShowEditor();
+                        //}
+
+
+                        ProductFeedTag = "Y";
                     }
 
-
-
-                }
-
-
-                if (HelpGrid.Text == "CHOColName")
-                {
-                    BarCodeGridView.UpdateCurrentRow();
-                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOColID"], row["COLSYSID"].ToString());
-                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOColName"], row["COLNAME"].ToString());
-                    BarCodeGridView.Focus();
-                    panelControl1.Visible = false;
-                    BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOSizeName"];
-                    BarCodeGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = string.Empty;
-                    dt.AcceptChanges();
-                }
-                if (HelpGrid.Text == "CHOSizeName")
-                {
-
-                    UpdateTag = "N";
-                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOSizeID"], row["SZSYSID"].ToString());
-                    BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["CHOSizeName"], row["SZNAME"].ToString());
-                    panelControl1.Visible = false;
-                    BarCodeGridView.Focus();
-                    BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOLotNo"];
-                    BarCodeGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = string.Empty;
-                    dt.AcceptChanges();
-                    BarCodeGridView.ShowEditor();
                 }
             }
         }
+    
 
         private void BarCodeGrid_KeyDown(object sender, KeyEventArgs e)
         {
@@ -473,32 +562,32 @@ namespace WindowsFormsApplication1.Transaction.challans
                                     if (e.KeyCode != Keys.Enter)
                                     {
 
-                                        if (BarCodeGridView.FocusedColumn.FieldName == "CHOPrdName")
+                                        if (BarCodeGridView.FocusedColumn.FieldName == "PrdName")
                                         {
                                             if (currentrow == null)
                                             {
-                                                HelpGrid.Text = "CHOPrdName";
+                                                HelpGrid.Text = "PrdName";
 
                                                 txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
+                                                panelControl2.Visible = true;
+                                                panelControl2.Select();
                                                 txtSearchBox.Focus();
                                                 txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                 txtSearchBox.SelectionLength = 0;
                                             }
                                             else
                                             {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PrdMst where PrdCode='" + ProjectFunctions.CheckNull(currentrow["CHOPrdCode"].ToString()) + "'");
+                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PrdMst where PrdCode='" + ProjectFunctions.CheckNull(currentrow["PrdCode"].ToString()) + "'");
                                                 if (dsCheck.Tables[0].Rows.Count > 0)
                                                 {
 
                                                     UpdateTag = "Y";
 
 
-                                                    HelpGrid.Text = "CHOPrdName";
+                                                    HelpGrid.Text = "PrdName";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
@@ -506,10 +595,10 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 }
                                                 else
                                                 {
-                                                    HelpGrid.Text = "CHOPrdName";
+                                                    HelpGrid.Text = "PrdName";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
@@ -517,32 +606,32 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 }
                                             }
                                         }
-                                        if (BarCodeGridView.FocusedColumn.FieldName == "CHOArtNo")
+                                        if (BarCodeGridView.FocusedColumn.FieldName == "ARTNO")
                                         {
                                             if (currentrow == null)
                                             {
-                                                HelpGrid.Text = "CHOArtNo";
+                                                HelpGrid.Text = "ARTNO";
 
                                                 txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
+                                                panelControl2.Visible = true;
+                                                panelControl2.Select();
                                                 txtSearchBox.Focus();
                                                 txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                 txtSearchBox.SelectionLength = 0;
                                             }
                                             else
                                             {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from ARTICLE where ARTNO='" + ProjectFunctions.CheckNull(currentrow["CHOArtNo"].ToString()) + "'");
+                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from ARTICLE where ARTNO='" + ProjectFunctions.CheckNull(currentrow["ARTNO"].ToString()) + "'");
                                                 if (dsCheck.Tables[0].Rows.Count > 0)
                                                 {
 
                                                     UpdateTag = "Y";
 
 
-                                                    HelpGrid.Text = "CHOArtNo";
+                                                    HelpGrid.Text = "ARTNO";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
@@ -550,10 +639,10 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 }
                                                 else
                                                 {
-                                                    HelpGrid.Text = "CHOArtNo";
+                                                    HelpGrid.Text = "ARTNO";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
@@ -561,99 +650,94 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 }
                                             }
                                         }
-                                        if (BarCodeGridView.FocusedColumn.FieldName == "CHOColName")
+                                        if (BarCodeGridView.FocusedColumn.FieldName == "UomDesc")
                                         {
-
                                             if (currentrow == null)
                                             {
-                                                HelpGrid.Text = "CHOColName";
+                                                HelpGrid.Text = "UomDesc";
+
                                                 txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
+                                                panelControl2.Visible = true;
+                                                panelControl2.Select();
                                                 txtSearchBox.Focus();
                                                 txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                 txtSearchBox.SelectionLength = 0;
                                             }
                                             else
                                             {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from COLOURS where COLSYSID='" + ProjectFunctions.CheckNull(currentrow["CHOColID"].ToString()) + "'");
+                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from UomMst where UomCode='" + ProjectFunctions.CheckNull(currentrow["UomCode"].ToString()) + "'");
                                                 if (dsCheck.Tables[0].Rows.Count > 0)
                                                 {
 
                                                     UpdateTag = "Y";
 
-                                                    HelpGrid.Text = "CHOColName";
+
+                                                    HelpGrid.Text = "UomDesc";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
-
                                                     RowIndex = BarCodeGridView.FocusedRowHandle;
                                                 }
                                                 else
                                                 {
-                                                    HelpGrid.Text = "CHOColName";
+                                                    HelpGrid.Text = "UomDesc";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
-
                                                     RowIndex = BarCodeGridView.FocusedRowHandle;
                                                 }
                                             }
                                         }
-
-                                        if (BarCodeGridView.FocusedColumn.FieldName == "CHOSizeName")
+                                        if (BarCodeGridView.FocusedColumn.FieldName == "ProcessName")
                                         {
                                             if (currentrow == null)
                                             {
-                                                HelpGrid.Text = "CHOSizeName";
+                                                HelpGrid.Text = "ProcessName";
+
                                                 txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
+                                                panelControl2.Visible = true;
+                                                panelControl2.Select();
                                                 txtSearchBox.Focus();
                                                 txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                 txtSearchBox.SelectionLength = 0;
-
-
                                             }
                                             else
                                             {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SIZEMAST where SZSYSID='" + ProjectFunctions.CheckNull(currentrow["CHOSizeID"].ToString()) + "' ORDER BY SZINDEX,SZSYSID");
+                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from ProcessMst where ProcessCode='" + ProjectFunctions.CheckNull(currentrow["ProcessCode"].ToString()) + "'");
                                                 if (dsCheck.Tables[0].Rows.Count > 0)
                                                 {
+
                                                     UpdateTag = "Y";
 
-                                                    HelpGrid.Text = "CHOSizeName";
+
+                                                    HelpGrid.Text = "ProcessName";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
-
                                                     RowIndex = BarCodeGridView.FocusedRowHandle;
                                                 }
                                                 else
                                                 {
-                                                    HelpGrid.Text = "CHOSizeName";
+                                                    HelpGrid.Text = "ProcessName";
                                                     txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
+                                                    panelControl2.Visible = true;
+                                                    panelControl2.Select();
                                                     txtSearchBox.Focus();
                                                     txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                                     txtSearchBox.SelectionLength = 0;
-
                                                     RowIndex = BarCodeGridView.FocusedRowHandle;
                                                 }
                                             }
                                         }
-
-
                                         dt.AcceptChanges();
                                     }
                                 }
@@ -665,11 +749,10 @@ namespace WindowsFormsApplication1.Transaction.challans
 
                 ProjectFunctions.DeleteCurrentRowOnKeyDown(BarCodeGrid, BarCodeGridView, e);
 
-                if (BarCodeGridView.FocusedColumn.FieldName == "CHOTotQtyKgs" || BarCodeGridView.FocusedColumn.FieldName == "CHOLotNo" || BarCodeGridView.FocusedColumn.FieldName == "CHOTotQtyKgs" || BarCodeGridView.FocusedColumn.FieldName == "CHOTotQty")
+                if (BarCodeGridView.FocusedColumn.FieldName == "ReceivedQty" || BarCodeGridView.FocusedColumn.FieldName == "ReceivedQtyInKgs" || BarCodeGridView.FocusedColumn.FieldName == "WastageQty" || BarCodeGridView.FocusedColumn.FieldName == "WastageQtyInKgs" || BarCodeGridView.FocusedColumn.FieldName == "Rate" || BarCodeGridView.FocusedColumn.FieldName == "CalculationType")
                 {
                     BarCodeGridView.ShowEditor();
                 }
-
             }
             catch (Exception ex)
             {
@@ -681,9 +764,112 @@ namespace WindowsFormsApplication1.Transaction.challans
         {
             try
             {
-
+                
                 HelpGrid.Show();
-                if (HelpGrid.Text == "CHOPrdName")
+                if (HelpGrid.Text == "txtTransporterCode")
+                {
+                    
+                    DataTable dtNew = dsPopUps.Tables[7].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[7].Select("TRPRNAME like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["TRPRSYSID"] = dr["TRPRSYSID"];
+                        NewRow["TRPRNAME"] = dr["TRPRNAME"];
+                        
+
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+                if (HelpGrid.Text == "txtDebitPartyCode")
+                {
+                   
+                    DataTable dtNew = dsPopUps.Tables[6].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[6].Select("AccName like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["AccCode"] = dr["AccCode"];
+                        NewRow["AccName"] = dr["AccName"];
+                        NewRow["AccAddress1"] = dr["AccAddress1"];
+                        NewRow["AccAddress2"] = dr["AccAddress2"];
+                        NewRow["AccAddress3"] = dr["AccAddress3"];
+                        NewRow["CTNAME"] = dr["CTNAME"];
+                        NewRow["STNAME"] = dr["STNAME"];
+                        NewRow["AccZipCode"] = dr["AccZipCode"];
+                        NewRow["AccTeleFax"] = dr["AccTeleFax"];
+
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+                if (HelpGrid.Text == "UomDesc")
+                {
+                    DataTable dtNew = dsPopUps.Tables[5].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[5].Select("UomDesc like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["UomCode"] = dr["UomCode"];
+                        NewRow["UomDesc"] = dr["UomDesc"];
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+                if (HelpGrid.Text == "ProcessName")
+                {
+                    DataTable dtNew = dsPopUps.Tables[4].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[4].Select("ProcessName like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["ProcessCode"] = dr["ProcessCode"];
+                        NewRow["ProcessName"] = dr["ProcessName"];
+                        NewRow["Rate"] = dr["Rate"];
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+                if (HelpGrid.Text == "PrdName")
                 {
                     DataTable dtNew = dsPopUps.Tables[3].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[3].Select("PrdName like '" + txtSearchBox.Text + "%'");
@@ -705,7 +891,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         HelpGridView.BestFitColumns();
                     }
                 }
-                if (HelpGrid.Text == "CHOArtNo")
+                if (HelpGrid.Text == "ARTNO")
                 {
                     DataTable dtNew = dsPopUps.Tables[0].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[0].Select("ARTNO like '" + txtSearchBox.Text + "%'");
@@ -730,65 +916,73 @@ namespace WindowsFormsApplication1.Transaction.challans
                         HelpGridView.BestFitColumns();
                     }
                 }
-                if (HelpGrid.Text == "CHOColName")
-                {
-                    DataTable dtNew = dsPopUps.Tables[1].Clone();
-                    DataRow[] dtRow = dsPopUps.Tables[1].Select("COLNAME like '" + txtSearchBox.Text + "%'");
-                    foreach (DataRow dr in dtRow)
-                    {
-                        DataRow NewRow = dtNew.NewRow();
-                        NewRow["COLNAME"] = dr["COLNAME"];
-                        NewRow["COLSYSID"] = dr["COLSYSID"];
-                        dtNew.Rows.Add(NewRow);
-                    }
-                    if (dtNew.Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = dtNew;
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        HelpGrid.DataSource = null;
-                        HelpGridView.BestFitColumns();
-                    }
-                }
-                if (HelpGrid.Text == "CHOSizeName")
-                {
-                    DataTable dtNew = dsPopUps.Tables[2].Clone();
-                    DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
-                    foreach (DataRow dr in dtRow)
-                    {
-                        DataRow NewRow = dtNew.NewRow();
-                        NewRow["SZNAME"] = dr["SZNAME"];
-                        NewRow["SZSYSID"] = dr["SZSYSID"];
-                        NewRow["SZINDEX"] = dr["SZINDEX"];
-                        dtNew.Rows.Add(NewRow);
-                    }
-                    if (dtNew.Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = dtNew;
-                        HelpGridView.BestFitColumns();
-
-                        HelpGridView.Columns[2].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
-                        HelpGridView.FocusedRowHandle = 0;
-                    }
-                    else
-                    {
-                        HelpGrid.DataSource = null;
-                        HelpGridView.BestFitColumns();
-                    }
-                }
+             
             }
 
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                
             }
         }
 
         private void GroupControl1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ChallanGrid_DoubleClick(object sender, EventArgs e)
+        {
+            GetOurwardDataFProcess();
+        }
+
+        private void BarCodeGridView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            try
+            {
+               
+
+                if (BarCodeGrid.DataSource != null)
+                {
+                    if (e.Column.FieldName == "ReceivedQty" || e.Column.FieldName == "ReceivedQtyInKgs" || e.Column.FieldName == "WastageQty" || e.Column.FieldName == "WastageQtyInKgs" || e.Column.FieldName == "Rate")
+                    {
+                        BarCodeGridView.CloseEditor();
+                        BarCodeGridView.UpdateCurrentRow();
+                        DataRow row = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
+
+
+                        BarCodeGridView.SetRowCellValue(BarCodeGridView.FocusedRowHandle, BarCodeGridView.Columns["ActualQty"], Convert.ToDecimal(row["ReceivedQty"]) - Convert.ToDecimal(row["WastageQty"]));
+                        BarCodeGridView.SetRowCellValue(BarCodeGridView.FocusedRowHandle, BarCodeGridView.Columns["ActualQtyInKgs"], Convert.ToDecimal(row["ReceivedQtyInKgs"]) - Convert.ToDecimal(row["WastageQtyInKgs"]));
+                        if (row["CalculationType"].ToString().ToUpper() == "D")
+                        {
+                            BarCodeGridView.SetRowCellValue(BarCodeGridView.FocusedRowHandle, BarCodeGridView.Columns["CalcAmount"], Convert.ToDecimal(row["ActualQty"]) * (Convert.ToDecimal(row["Rate"]) / 12));
+                        }
+                        else
+                        {
+                            if (row["CalculationType"].ToString().ToUpper() == "PCS")
+                            {
+                                BarCodeGridView.SetRowCellValue(BarCodeGridView.FocusedRowHandle, BarCodeGridView.Columns["CalcAmount"], Convert.ToDecimal(row["ActualQty"]) * Convert.ToDecimal(row["Rate"]));
+
+                            }
+                            else
+                            {
+                                BarCodeGridView.SetRowCellValue(BarCodeGridView.FocusedRowHandle, BarCodeGridView.Columns["CalcAmount"], Convert.ToDecimal(row["ActualQtyInKgs"]) * Convert.ToDecimal(row["Rate"]));
+                            }
+                        }
+
+                        if (Convert.ToDecimal(row["ActualQty"]) > Convert.ToDecimal(row["IssuedQty"]))
+                        {
+                            
+                            ProjectFunctions.SpeakError("Actual Quantity Cannot Be Greater Than Issued Quantity");
+                           
+                        }
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
         }
     }
 }

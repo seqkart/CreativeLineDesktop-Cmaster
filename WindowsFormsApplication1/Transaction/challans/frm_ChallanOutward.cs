@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             txtApprovedBy.MaskBox.AutoCompleteCustomSource = collection;
 
 
-           
+
 
 
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
@@ -78,67 +78,85 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try
             {
 
                 PrepareActMstHelpGrid();
                 HelpGrid.Text = "txtDebitPartyCode";
-                if (txtDebitPartyCode.Text.Trim().Length == 0)
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstHelp");
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = ds.Tables[0];
-                        HelpGrid.Show();
-                        panelControl1.Visible = true;
-                        HelpGrid.Visible = true;
-                        HelpGrid.Focus();
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        ProjectFunctions.SpeakError("No Records To Display");
-                    }
-                }
-                else
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstHelp '" + txtDebitPartyCode.Text.Trim() + "'");//sp_LoadActMstHelpWithCode
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
-                        txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-                        txtBillingAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
-                        txtBillingAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
-                        txtBillingAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
+                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
+                panelControl1.Visible = true;
+                panelControl1.Select();
+                txtSearchBox.Focus();
+                txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                txtSearchBox.SelectionLength = 0;
 
-                        txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-                        txtBillingState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
-                        txtBillingZIP.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
-                        txtContactDetails.Text = ds.Tables[0].Rows[0]["AccTeleFax"].ToString();
-
-                        txtIssuedBy.Focus();
-                        panelControl1.Visible = false;
-                    }
-
-                    else
-                    {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelp");
-                        if (ds1.Tables[0].Rows.Count > 0)
-                        {
-                            HelpGrid.DataSource = ds.Tables[0];
-                            HelpGrid.Show();
-                            panelControl1.Visible = true;
-                            HelpGrid.Visible = true;
-                            HelpGrid.Focus();
-                            HelpGridView.BestFitColumns();
-                        }
-                        else
-                        {
-                            ProjectFunctions.SpeakError("No Records To Display");
-                        }
-                    }
-                }
             }
+
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+            //if (e.KeyCode == Keys.Enter)
+            //{
+
+            //    PrepareActMstHelpGrid();
+            //    HelpGrid.Text = "txtDebitPartyCode";
+            //    if (txtDebitPartyCode.Text.Trim().Length == 0)
+            //    {
+            //        DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstHelp");
+            //        if (ds.Tables[0].Rows.Count > 0)
+            //        {
+            //            HelpGrid.DataSource = ds.Tables[0];
+            //            HelpGrid.Show();
+            //            panelControl1.Visible = true;
+            //            HelpGrid.Visible = true;
+            //            HelpGrid.Focus();
+            //            HelpGridView.BestFitColumns();
+            //        }
+            //        else
+            //        {
+            //            ProjectFunctions.SpeakError("No Records To Display");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstHelp '" + txtDebitPartyCode.Text.Trim() + "'");//sp_LoadActMstHelpWithCode
+            //        if (ds.Tables[0].Rows.Count > 0)
+            //        {
+            //            txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
+            //            txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+            //            txtBillingAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
+            //            txtBillingAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
+            //            txtBillingAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
+
+            //            txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
+            //            txtBillingState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
+            //            txtBillingZIP.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
+            //            txtContactDetails.Text = ds.Tables[0].Rows[0]["AccTeleFax"].ToString();
+
+            //            txtIssuedBy.Focus();
+            //            panelControl1.Visible = false;
+            //        }
+
+            //        else
+            //        {
+            //            DataSet ds1 = ProjectFunctions.GetDataSet("sp_LoadActMstHelp");
+            //            if (ds1.Tables[0].Rows.Count > 0)
+            //            {
+            //                HelpGrid.DataSource = ds.Tables[0];
+            //                HelpGrid.Show();
+            //                panelControl1.Visible = true;
+            //                HelpGrid.Visible = true;
+            //                HelpGrid.Focus();
+            //                HelpGridView.BestFitColumns();
+            //            }
+            //            else
+            //            {
+            //                ProjectFunctions.SpeakError("No Records To Display");
+            //            }
+            //        }
+            //    }
+            //}
             e.Handled = true;
         }
 
@@ -1294,6 +1312,8 @@ namespace WindowsFormsApplication1.Transaction.challans
             {
 
                 HelpGrid.Show();
+                
+               
                 if (HelpGrid.Text == "CHOPrdName")
                 {
                     DataTable dtNew = dsPopUps.Tables[3].Clone();
@@ -1405,6 +1425,16 @@ namespace WindowsFormsApplication1.Transaction.challans
         private void txtContactDetails_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtDebitPartyCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProjectFunctions.NumberOnly(e);
+        }
+
+        private void txtTransporterCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            ProjectFunctions.NumberOnly(e);
         }
     }
 }
