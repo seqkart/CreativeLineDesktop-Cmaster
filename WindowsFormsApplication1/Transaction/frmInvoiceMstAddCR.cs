@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1
         decimal AccMRPMarkDown = 0;
 
 
-        String FixPartyTag;
+        string FixPartyTag;
         public FrmInvoiceMstAddCR()
         {
             InitializeComponent();

@@ -1442,9 +1442,9 @@ namespace WindowsFormsApplication1.Transaction
 
         private void PreviousBillDetails()
         {
-            lblPaymentMode.Text = String.Empty;
-            lblCashTenderAmount.Text = String.Empty;
-            lblPAyBackAmount.Text= String.Empty;
+            lblPaymentMode.Text = string.Empty;
+            lblCashTenderAmount.Text = string.Empty;
+            lblPAyBackAmount.Text= string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("sp_PreviousBillDetails '" + lblCashMemoNo.Text + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {

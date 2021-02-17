@@ -29,45 +29,45 @@ namespace WindowsFormsApplication1.Transaction.challans
             dt.Columns.Add("ARTNO", typeof(string));
             dt.Columns.Add("ARTDESC", typeof(string));
             dt.Columns.Add("ARTID", typeof(string));
-            dt.Columns.Add("IssuedQty", typeof(Decimal));
-            dt.Columns.Add("IssuedQtyInKgs", typeof(Decimal));
+            dt.Columns.Add("IssuedQty", typeof(decimal));
+            dt.Columns.Add("IssuedQtyInKgs", typeof(decimal));
             dt.Columns.Add("UomCode", typeof(string));
             dt.Columns.Add("UomDesc", typeof(string));
-            dt.Columns.Add("ReceivedQty", typeof(Decimal));
-            dt.Columns.Add("ReceivedQtyInKgs", typeof(Decimal));
-            dt.Columns.Add("WastageQty", typeof(Decimal));
-            dt.Columns.Add("WastageQtyInKgs", typeof(Decimal));
+            dt.Columns.Add("ReceivedQty", typeof(decimal));
+            dt.Columns.Add("ReceivedQtyInKgs", typeof(decimal));
+            dt.Columns.Add("WastageQty", typeof(decimal));
+            dt.Columns.Add("WastageQtyInKgs", typeof(decimal));
             dt.Columns.Add("ProcessCode", typeof(string));
             dt.Columns.Add("ProcessName", typeof(string));
-            dt.Columns.Add("Rate", typeof(Decimal));
+            dt.Columns.Add("Rate", typeof(decimal));
             dt.Columns.Add("CalculationType", typeof(string));
-            dt.Columns.Add("CalcAmount", typeof(Decimal));
+            dt.Columns.Add("CalcAmount", typeof(decimal));
             dt.Columns.Add("Remarks", typeof(string));
-            dt.Columns.Add("ActualQty", typeof(Decimal));
-            dt.Columns.Add("ActualQtyInKgs", typeof(Decimal));
-            
+            dt.Columns.Add("ActualQty", typeof(decimal));
+            dt.Columns.Add("ActualQtyInKgs", typeof(decimal));
+
 
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
         }
 
-        private void textEdit3_EditValueChanged(object sender, EventArgs e)
+        private void TextEdit3_EditValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void labelControl5_Click(object sender, EventArgs e)
+        private void LabelControl5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
 
         }
         private void GetOurwardData()
         {
             DataSet ds = ProjectFunctions.GetDataSet("select CHOTYPE,CHONO,CHODATE,CHOREMARKS from CHOUTMain Where CHOPARTYCODE='" + txtDebitPartyCode.Text + "'");
-            if(ds.Tables[0].Rows.Count>0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 ChallanGrid.DataSource = ds.Tables[0];
                 ChallanGridView.BestFitColumns();
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1.Transaction.challans
         private void GetOurwardDataFProcess()
         {
             DataRow currentrow = ChallanGridView.GetDataRow(ChallanGridView.FocusedRowHandle);
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanDataFProcess '"+ currentrow["CHOTYPE"].ToString() + "','"+ currentrow["CHONO"].ToString() + "','"+ Convert.ToDateTime(currentrow["CHODATE"]).ToString("yyyy-MM-dd")+"'");
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanDataFProcess '" + currentrow["CHOTYPE"].ToString() + "','" + currentrow["CHONO"].ToString() + "','" + Convert.ToDateTime(currentrow["CHODATE"]).ToString("yyyy-MM-dd") + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 dt = ds.Tables[0];
@@ -209,16 +209,16 @@ namespace WindowsFormsApplication1.Transaction.challans
                                         {
                                             PrepareActMstHelpGrid();
                                             HelpGrid.Text = "txtDebitPartyCode";
-                                            txtSearchBox.Text = String.Empty;
+                                            txtSearchBox.Text = string.Empty;
                                             txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
                                             HelpGrid.Show();
                                             panelControl2.Visible = true;
                                             HelpGrid.Visible = true;
-                                            
+
                                             txtSearchBox.Focus();
                                             txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
                                             txtSearchBox.SelectionLength = 0;
-                                            txtDebitPartyCode.Text = String.Empty;
+                                            txtDebitPartyCode.Text = string.Empty;
                                         }
                                     }
                                 }
@@ -228,32 +228,14 @@ namespace WindowsFormsApplication1.Transaction.challans
                 }
             }
 
-          
+
             //e.Handled = true;
-           
+
         }
 
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTransporterName.Text = string.Empty;
-        }
-        private bool ValidateDataForSaving()
-        {
-            try
-
-            {
-                if (BarCodeGrid.DataSource == null)
-                {
-                    ProjectFunctions.SpeakError("No Data To Save");
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-                return false;
-            }
         }
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -275,10 +257,10 @@ namespace WindowsFormsApplication1.Transaction.challans
                                     {
                                         if (e.KeyCode != Keys.Enter)
                                         {
-                                            
+
                                             HelpGrid.Text = "txtTransporterCode";
                                             HelpGridView.Columns.Clear();
-                                            txtSearchBox.Text = String.Empty;
+                                            txtSearchBox.Text = string.Empty;
                                             txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
                                             HelpGrid.Show();
                                             panelControl2.Visible = true;
@@ -435,7 +417,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             if (HelpGridView.RowCount > 0)
             {
 
-                if(HelpGrid.Text=="ProcessName")
+                if (HelpGrid.Text == "ProcessName")
                 {
                     BarCodeGridView.UpdateCurrentRow();
                     BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ProcessCode"], row["ProcessCode"].ToString());
@@ -540,7 +522,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 }
             }
         }
-    
+
 
         private void BarCodeGrid_KeyDown(object sender, KeyEventArgs e)
         {
@@ -764,11 +746,11 @@ namespace WindowsFormsApplication1.Transaction.challans
         {
             try
             {
-                
+
                 HelpGrid.Show();
                 if (HelpGrid.Text == "txtTransporterCode")
                 {
-                    
+
                     DataTable dtNew = dsPopUps.Tables[7].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[7].Select("TRPRNAME like '" + txtSearchBox.Text + "%'");
                     foreach (DataRow dr in dtRow)
@@ -777,7 +759,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                         DataRow NewRow = dtNew.NewRow();
                         NewRow["TRPRSYSID"] = dr["TRPRSYSID"];
                         NewRow["TRPRNAME"] = dr["TRPRNAME"];
-                        
+
 
                         dtNew.Rows.Add(NewRow);
                     }
@@ -794,7 +776,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 }
                 if (HelpGrid.Text == "txtDebitPartyCode")
                 {
-                   
+
                     DataTable dtNew = dsPopUps.Tables[6].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[6].Select("AccName like '" + txtSearchBox.Text + "%'");
                     foreach (DataRow dr in dtRow)
@@ -916,12 +898,12 @@ namespace WindowsFormsApplication1.Transaction.challans
                         HelpGridView.BestFitColumns();
                     }
                 }
-             
+
             }
 
-            catch (Exception ex)
+            catch (Exception)
             {
-                
+
             }
         }
 
@@ -939,8 +921,6 @@ namespace WindowsFormsApplication1.Transaction.challans
         {
             try
             {
-               
-
                 if (BarCodeGrid.DataSource != null)
                 {
                     if (e.Column.FieldName == "ReceivedQty" || e.Column.FieldName == "ReceivedQtyInKgs" || e.Column.FieldName == "WastageQty" || e.Column.FieldName == "WastageQtyInKgs" || e.Column.FieldName == "Rate")
@@ -971,12 +951,12 @@ namespace WindowsFormsApplication1.Transaction.challans
 
                         if (Convert.ToDecimal(row["ActualQty"]) > Convert.ToDecimal(row["IssuedQty"]))
                         {
-                            
+
                             ProjectFunctions.SpeakError("Actual Quantity Cannot Be Greater Than Issued Quantity");
-                           
+
                         }
                     }
-                    
+
                 }
             }
             catch (Exception ex)

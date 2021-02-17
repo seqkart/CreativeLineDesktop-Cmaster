@@ -335,7 +335,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         Close();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
 
                     }

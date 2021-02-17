@@ -573,27 +573,27 @@ namespace WindowsFormsApplication1.Transaction
                             {
                                 DataTable dtFinal = new DataTable();
 
-                                dtFinal.Columns.Add("SKUPARTYBARCODE", typeof(String));
-                                dtFinal.Columns.Add("SKUFNYR", typeof(String));
-                                dtFinal.Columns.Add("SKUARTNO", typeof(String));
-                                dtFinal.Columns.Add("SKUARTID", typeof(String));
-                                dtFinal.Columns.Add("SKUCOLN", typeof(String));
-                                dtFinal.Columns.Add("SKUCOLID", typeof(String));
-                                dtFinal.Columns.Add("SKUSIZN", typeof(String));
-                                dtFinal.Columns.Add("SKUSIZID", typeof(String));
-                                dtFinal.Columns.Add("SKUFEDQTY", typeof(String));
-                                dtFinal.Columns.Add("SKUGENMODAUTO", typeof(String));
-                                dtFinal.Columns.Add("SKUCODSCHEM", typeof(String));
-                                dtFinal.Columns.Add("SKUWSP", typeof(Decimal));
-                                dtFinal.Columns.Add("SKUMRP", typeof(Decimal));
-                                dtFinal.Columns.Add("SKUWSPVAL", typeof(Decimal));
-                                dtFinal.Columns.Add("SKUMRPVAL", typeof(Decimal));
-                                dtFinal.Columns.Add("SKUASORDR", typeof(String));
-                                dtFinal.Columns.Add("SKUNMAINTSTK", typeof(String));
-                                dtFinal.Columns.Add("SKUARTCOLSET", typeof(String));
-                                dtFinal.Columns.Add("SKUARTSIZSET", typeof(String));
-                                dtFinal.Columns.Add("SKUSIZINDX", typeof(String));
-                                dtFinal.Columns.Add("UnitCode", typeof(String));
+                                dtFinal.Columns.Add("SKUPARTYBARCODE", typeof(string));
+                                dtFinal.Columns.Add("SKUFNYR", typeof(string));
+                                dtFinal.Columns.Add("SKUARTNO", typeof(string));
+                                dtFinal.Columns.Add("SKUARTID", typeof(string));
+                                dtFinal.Columns.Add("SKUCOLN", typeof(string));
+                                dtFinal.Columns.Add("SKUCOLID", typeof(string));
+                                dtFinal.Columns.Add("SKUSIZN", typeof(string));
+                                dtFinal.Columns.Add("SKUSIZID", typeof(string));
+                                dtFinal.Columns.Add("SKUFEDQTY", typeof(string));
+                                dtFinal.Columns.Add("SKUGENMODAUTO", typeof(string));
+                                dtFinal.Columns.Add("SKUCODSCHEM", typeof(string));
+                                dtFinal.Columns.Add("SKUWSP", typeof(decimal));
+                                dtFinal.Columns.Add("SKUMRP", typeof(decimal));
+                                dtFinal.Columns.Add("SKUWSPVAL", typeof(decimal));
+                                dtFinal.Columns.Add("SKUMRPVAL", typeof(decimal));
+                                dtFinal.Columns.Add("SKUASORDR", typeof(string));
+                                dtFinal.Columns.Add("SKUNMAINTSTK", typeof(string));
+                                dtFinal.Columns.Add("SKUARTCOLSET", typeof(string));
+                                dtFinal.Columns.Add("SKUARTSIZSET", typeof(string));
+                                dtFinal.Columns.Add("SKUSIZINDX", typeof(string));
+                                dtFinal.Columns.Add("UnitCode", typeof(string));
                                 dtFinal.Rows.Clear();
 
 
@@ -653,9 +653,9 @@ namespace WindowsFormsApplication1.Transaction
 
                                 foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
-                                    String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                                    string SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
                                     //String SKUCode = ProjectFunctions.GetDataSet("select isnull(max(SKUCODE),0)+1 from SKU_FIx where SKUFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
-                                    String SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
+                                    string SKUPRODUCTCODE = "X" + SKUCode.PadLeft(9, '0');
 
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SKU_FIx Where SKUARTID='" + dr["SKUARTID"].ToString() + "'ANd SKUCOLID='" + dr["SKUCOLID"].ToString() + "' And SKUSIZID='" + dr["SKUSIZID"].ToString() + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
@@ -750,7 +750,7 @@ namespace WindowsFormsApplication1.Transaction
                             SKUVOUCHNO = txtSysID.Text;
                             FillGrid();
 
-                            this.Close();
+                            Close();
                         }
                         catch (Exception ex)
                         {

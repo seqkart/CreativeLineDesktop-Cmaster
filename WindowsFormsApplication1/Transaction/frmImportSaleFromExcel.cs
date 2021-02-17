@@ -1,14 +1,7 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -22,7 +15,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
@@ -82,7 +75,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 foreach (DataRow dr in dt.Rows)
                 {
-                    String Query = "Insert into PartySalesData(AccCode,SaleDate,BarCode,SalesAmount,Discount,NetSalesAmount)values(";
+                    string Query = "Insert into PartySalesData(AccCode,SaleDate,BarCode,SalesAmount,Discount,NetSalesAmount)values(";
                     Query = Query + "'" + dr["AccCode"].ToString() + "',";
                     Query = Query + "'" + Convert.ToDateTime(dr["BILL DATE"]).ToString("yyyy-MM-dd") + "',";
                     Query = Query + "'" + dr["USER ITEM CODE"].ToString() + "',";
@@ -91,7 +84,7 @@ namespace WindowsFormsApplication1.Transaction
                     Query = Query + "'" + Convert.ToDecimal(dr["NET SALE AFTER ADJ"]) + "')";
                     ProjectFunctions.GetDataSet(Query);
                }
-                this.Close();
+                Close();
             }
         }
     }
