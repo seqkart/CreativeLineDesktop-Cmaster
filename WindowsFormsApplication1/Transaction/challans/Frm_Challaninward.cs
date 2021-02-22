@@ -1,6 +1,7 @@
 ﻿using SeqKartLibrary;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Transaction.challans
 {
@@ -33,6 +34,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             dt.Columns.Add("IssuedQtyInKgs", typeof(decimal));
             dt.Columns.Add("UomCode", typeof(string));
             dt.Columns.Add("UomDesc", typeof(string));
+            dt.Columns.Add("Bal", typeof(decimal));
             dt.Columns.Add("ReceivedQty", typeof(decimal));
             dt.Columns.Add("ReceivedQtyInKgs", typeof(decimal));
             dt.Columns.Add("WastageQty", typeof(decimal));
@@ -45,6 +47,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             dt.Columns.Add("Remarks", typeof(string));
             dt.Columns.Add("ActualQty", typeof(decimal));
             dt.Columns.Add("ActualQtyInKgs", typeof(decimal));
+            dt.Columns.Add("TransID", typeof(decimal));
 
 
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
@@ -66,9 +69,14 @@ namespace WindowsFormsApplication1.Transaction.challans
         }
         private void GetOurwardData()
         {
-            DataSet ds = ProjectFunctions.GetDataSet("select CHOTYPE,CHONO,CHODATE,CHOREMARKS from CHOUTMain Where CHOPARTYCODE='" + txtDebitPartyCode.Text + "'");
+            DataSet ds = ProjectFunctions.GetDataSet("select CHOTYPE,CHONO,CHODATE from CHOUTMain Where CHOPARTYCODE='" + txtDebitPartyCode.Text + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
+                ds.Tables[0].Columns.Add("Select", typeof(bool));
+                foreach(DataRow dr in ds.Tables[0].Rows)
+                {
+                    dr["Select"] = false;
+                }
                 ChallanGrid.DataSource = ds.Tables[0];
                 ChallanGridView.BestFitColumns();
             }
@@ -82,11 +90,27 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void GetOurwardDataFProcess()
         {
-            DataRow currentrow = ChallanGridView.GetDataRow(ChallanGridView.FocusedRowHandle);
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanDataFProcess '" + currentrow["CHOTYPE"].ToString() + "','" + currentrow["CHONO"].ToString() + "','" + Convert.ToDateTime(currentrow["CHODATE"]).ToString("yyyy-MM-dd") + "'");
-            if (ds.Tables[0].Rows.Count > 0)
+            dt.Clear();
+            ChallanGridView.CloseEditor();
+            ChallanGridView.UpdateCurrentRow();
+            foreach (DataRow drchallan in (ChallanGrid.DataSource as DataTable).Rows)
             {
-                dt = ds.Tables[0];
+                if (drchallan["Select"].ToString().ToUpper() == "TRUE")
+                {
+                    
+                    DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanDataFProcess '" + drchallan["CHOTYPE"].ToString() + "','" + drchallan["CHONO"].ToString() + "','" + Convert.ToDateTime(drchallan["CHODATE"]).ToString("yyyy-MM-dd") + "'");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dr in ds.Tables[0].Rows)
+                        {
+                            dt.ImportRow(dr);
+
+                        }
+                    }
+                }
+            }
+            if(dt.Rows.Count>0)
+            { 
 
                 BarCodeGrid.DataSource = dt;
                 BarCodeGridView.BestFitColumns();
@@ -100,14 +124,55 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void Frm_Challaninward_Load(object sender, EventArgs e)
         {
-            if (S1 == "Add")
+
+            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
+            ProjectFunctions.TextBoxVisualize(groupControl1);
+            if (S1 == "&Add")
             {
-                txtDocDate.EditValue = DateTime.Now;
+               
+                txtTransDate.EditValue = DateTime.Now;
+                txtReceivingDate.EditValue = DateTime.Now;
                 txtGateEntryNo.Focus();
             }
             if (S1 == "Edit")
             {
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadCHINDataFEdit '" + ImNo + "','" + ImDate.Date.ToString("yyyy-MM-dd") + "','"+GlobalVariables.CUnitID+"'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    txtDocNo.Text = ds.Tables[0].Rows[0]["DocNo"].ToString();
+                    txtDocDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["DocDate"]);
+                    txtGateEntryNo.Text = ds.Tables[0].Rows[0]["CHIGateEntryNo"].ToString();
+                    txtTransNo.Text = ds.Tables[0].Rows[0]["CHINO"].ToString();
+                    txtDocType.Text = ds.Tables[0].Rows[0]["CHITYPE"].ToString();
+                    txtTransDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["CHIDATE"]);
+                    txtReceivingDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["CHIReceiveDate"]);
+                    txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["CHIPARTYCODE"].ToString();
+                    txtRemarks.Text = ds.Tables[0].Rows[0]["CHOREMARKS"].ToString();
+                    txtTransporterCode.Text = ds.Tables[0].Rows[0]["CHOTRPID"].ToString();
+                    txtTransporterName.Text = ds.Tables[0].Rows[0]["TrpName"].ToString();
+                    txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+                    txtBillingAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
+                    txtBillingAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
+                    txtBillingAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
+                    txtContactDetails.Text = ds.Tables[0].Rows[0]["AccTeleFax"].ToString();
 
+                    txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
+
+                    if(ds.Tables[1].Rows.Count>0)
+                    {
+                        dt = ds.Tables[1];
+                        BarCodeGrid.DataSource = dt;
+                        BarCodeGridView.BestFitColumns();
+                        GetOurwardData();
+
+                    }
+                    else
+                    {
+                        BarCodeGrid.DataSource = null;
+                        BarCodeGridView.BestFitColumns();
+                    }
+
+                }
             }
         }
 
@@ -452,52 +517,16 @@ namespace WindowsFormsApplication1.Transaction.challans
                         BarCodeGridView.ShowEditor();
                     }
                 }
-                if (chProductType.Checked)
+
+                if (HelpGrid.Text == "ARTNO")
                 {
-                    if (HelpGrid.Text == "ARTNO")
-                    {
-                        if (ProductFeedTag == "N")
-                        {
-                            DataRow dtNewRow = dt.NewRow();
-                            dtNewRow["ARTNO"] = row["ARTNO"].ToString();
-                            dtNewRow["ARTDESC"] = row["ARTDESC"].ToString();
-                            dtNewRow["ARTID"] = row["ARTSYSID"].ToString();
-                            dt.Rows.Add(dtNewRow);
-                            if (dt.Rows.Count > 0)
-                            {
-                                BarCodeGrid.DataSource = dt;
-                                BarCodeGridView.BestFitColumns();
-                            }
-                            panelControl2.Visible = false;
-                            BarCodeGridView.Focus();
-                            BarCodeGridView.MoveLast();
-                            BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
-                            txtSearchBox.Text = string.Empty;
-                        }
-                        else
-                        {
-                            BarCodeGridView.UpdateCurrentRow();
-                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTNO"], row["ARTNO"].ToString());
-                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTDESC"], row["ARTDESC"].ToString());
-                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTID"], row["ARTSYSID"].ToString());
-                            BarCodeGridView.Focus();
-                            panelControl2.Visible = false;
-                            BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["UOMDesc"];
-                            BarCodeGridView.FocusedRowHandle = RowIndex;
-                            txtSearchBox.Text = string.Empty;
-                            dt.AcceptChanges();
-                            ProductFeedTag = "N";
-                        }
-                    }
-                }
-                else
-                {
-                    if (HelpGrid.Text == "PrdName")
+                    ProductFeedTag = "Y";
+                    if (ProductFeedTag == "N")
                     {
                         DataRow dtNewRow = dt.NewRow();
-                        dtNewRow["PrdCode"] = row["PrdCode"].ToString();
-                        dtNewRow["PrdName"] = row["PrdName"].ToString();
-
+                        dtNewRow["ARTNO"] = row["ARTNO"].ToString();
+                        dtNewRow["ARTDESC"] = row["ARTDESC"].ToString();
+                        dtNewRow["ARTID"] = row["ARTSYSID"].ToString();
                         dt.Rows.Add(dtNewRow);
                         if (dt.Rows.Count > 0)
                         {
@@ -507,19 +536,53 @@ namespace WindowsFormsApplication1.Transaction.challans
                         panelControl2.Visible = false;
                         BarCodeGridView.Focus();
                         BarCodeGridView.MoveLast();
-                        BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["UOMDesc"];
+                        BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["CHOColName"];
                         txtSearchBox.Text = string.Empty;
-
-                        //if (BarCodeGridView.FocusedColumn.FieldName == "CHOManualDesc")
-                        //{
-                        //    BarCodeGridView.ShowEditor();
-                        //}
-
-
-                        ProductFeedTag = "Y";
                     }
-
+                    else
+                    {
+                        BarCodeGridView.UpdateCurrentRow();
+                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTNO"], row["ARTNO"].ToString());
+                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTDESC"], row["ARTDESC"].ToString());
+                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["ARTID"], row["ARTSYSID"].ToString());
+                        BarCodeGridView.Focus();
+                        panelControl2.Visible = false;
+                        BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["UOMDesc"];
+                        BarCodeGridView.FocusedRowHandle = RowIndex;
+                        txtSearchBox.Text = string.Empty;
+                        dt.AcceptChanges();
+                        ProductFeedTag = "N";
+                    }
                 }
+
+                if (HelpGrid.Text == "PrdName")
+                {
+                    ProductFeedTag = "Y";
+                    DataRow dtNewRow = dt.NewRow();
+                    dtNewRow["PrdCode"] = row["PrdCode"].ToString();
+                    dtNewRow["PrdName"] = row["PrdName"].ToString();
+
+                    dt.Rows.Add(dtNewRow);
+                    if (dt.Rows.Count > 0)
+                    {
+                        BarCodeGrid.DataSource = dt;
+                        BarCodeGridView.BestFitColumns();
+                    }
+                    panelControl2.Visible = false;
+                    BarCodeGridView.Focus();
+                    BarCodeGridView.MoveLast();
+                    BarCodeGridView.FocusedColumn = BarCodeGridView.Columns["UOMDesc"];
+                    txtSearchBox.Text = string.Empty;
+
+                    //if (BarCodeGridView.FocusedColumn.FieldName == "CHOManualDesc")
+                    //{
+                    //    BarCodeGridView.ShowEditor();
+                    //}
+
+
+                    ProductFeedTag = "Y";
+                }
+
             }
         }
 
@@ -949,7 +1012,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                             }
                         }
 
-                        if (Convert.ToDecimal(row["ActualQty"]) > Convert.ToDecimal(row["IssuedQty"]))
+                        if (Convert.ToDecimal(row["ActualQty"]) > Convert.ToDecimal(row["Bal"]))
                         {
 
                             ProjectFunctions.SpeakError("Actual Quantity Cannot Be Greater Than Issued Quantity");
@@ -957,6 +1020,128 @@ namespace WindowsFormsApplication1.Transaction.challans
                         }
                     }
 
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private bool ValidateDataForSaving()
+        {
+            return true;
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                dt.AcceptChanges();
+                if (ValidateDataForSaving())
+                {
+                    using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
+                    {
+                        sqlcon.Open();
+                        var sqlcom = sqlcon.CreateCommand();
+                        sqlcom.Connection = sqlcon;
+                        sqlcom.CommandType = CommandType.StoredProcedure;
+                        sqlcom.CommandType = CommandType.Text;
+                        if (S1 == "&Add")
+                        {
+
+                            txtTransNo.Text = ProjectFunctions.GetDataSet("Select isnull(Max(CHINO),0)+1 from CHINMain WHere CHIFYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'").Tables[0].Rows[0][0].ToString();
+                            sqlcom.CommandText = " Insert into CHINMain "
+                                                        + " (DocNo,DocDate,CHIReceiveDate,CHIGateEntryNo,CHIFYR,CHINO,CHITYPE,CHIDATE,CHIPARTYCODE,CHOREMARKS,UnitCode,CHOTRPID)values("
+                                                        + " @DocNo,@DocDate,@CHIReceiveDate,@CHIGateEntryNo,@CHIFYR,@CHINO,@CHITYPE,@CHIDATE,@CHIPARTYCODE,@CHOREMARKS,@UnitCode,@CHOTRPID)";
+                            sqlcom.Parameters.Add("@DocNo", SqlDbType.NVarChar).Value = txtDocNo.Text;
+                            sqlcom.Parameters.Add("@DocDate", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtDocDate.Text).ToString("yyyy-MM-dd");
+
+                            sqlcom.Parameters.Add("@CHIReceiveDate", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtReceivingDate.Text).ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@CHIGateEntryNo", SqlDbType.NVarChar).Value = txtGateEntryNo.Text;
+                            sqlcom.Parameters.Add("@CHIFYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
+                            sqlcom.Parameters.Add("@CHINO", SqlDbType.NVarChar).Value = txtTransNo.Text;
+                            sqlcom.Parameters.Add("@CHITYPE", SqlDbType.NVarChar).Value = txtDocType.Text;
+                            sqlcom.Parameters.Add("@CHIDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtTransDate.Text).ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@CHIPARTYCODE", SqlDbType.NVarChar).Value = txtDebitPartyCode.Text;
+                            sqlcom.Parameters.Add("@CHOREMARKS", SqlDbType.NVarChar).Value = txtRemarks.Text;
+                            sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.Parameters.Add("@CHOTRPID", SqlDbType.NVarChar).Value =txtTransporterCode.Text;
+                            sqlcom.ExecuteNonQuery();
+                            sqlcom.Parameters.Clear();
+                        }
+                        if (S1 == "Edit")
+                        {
+                            sqlcom.CommandText = " update CHINMain Set  "
+                                                        + "DocNo=@DocNo,DocDate=@DocDate,CHIReceiveDate=@CHIReceiveDate,CHIGateEntryNo=@CHIGateEntryNo,CHIPARTYCODE=@CHIPARTYCODE,CHOREMARKS=@CHOREMARKS,CHOTRPID=@CHOTRPID "
+                                                        + " where CHINO='" + txtTransNo.Text + "' And CHIDATE='" + Convert.ToDateTime(txtTransDate.Text).ToString("yyyy-MM-dd") + "' And UnitCode='" + GlobalVariables.CUnitID + "'";
+                            sqlcom.Parameters.Add("@DocNo", SqlDbType.NVarChar).Value = txtDocNo.Text;
+                            sqlcom.Parameters.Add("@DocDate", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtDocDate.Text).ToString("yyyy-MM-dd");
+
+                            sqlcom.Parameters.Add("@CHIReceiveDate", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtReceivingDate.Text).ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@CHIGateEntryNo", SqlDbType.NVarChar).Value = txtGateEntryNo.Text;
+                            sqlcom.Parameters.Add("@CHIFYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
+                            sqlcom.Parameters.Add("@CHINO", SqlDbType.NVarChar).Value = txtTransNo.Text;
+                            sqlcom.Parameters.Add("@CHITYPE", SqlDbType.NVarChar).Value = txtDocType.Text;
+                            sqlcom.Parameters.Add("@CHIDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtTransDate.Text).ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@CHIPARTYCODE", SqlDbType.NVarChar).Value = txtDebitPartyCode.Text;
+                            sqlcom.Parameters.Add("@CHOREMARKS", SqlDbType.NVarChar).Value = txtRemarks.Text;
+                            sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            sqlcom.Parameters.Add("@CHOTRPID", SqlDbType.NVarChar).Value = txtTransporterCode.Text;
+                            sqlcom.ExecuteNonQuery();
+                            sqlcom.Parameters.Clear();
+                            ProjectFunctions.GetDataSet("Delete from CHINData Where CHINO='" + txtTransNo.Text + "' And CHIDATE='" + Convert.ToDateTime(txtTransDate.Text).ToString("yyyy-MM-dd") + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                        }
+
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (Convert.ToDecimal(dr["ReceivedQty"]) > 0 || Convert.ToDecimal(dr["ReceivedQtyInKgs"]) > 0)
+                            {
+                                sqlcom.CommandText = " Insert into CHINData "
+                                                        + " (CHIFYR,CHINO,CHITYPE,CHIDATE,AgnstChallanType,AgnstChallanNo,PrdCode,"
+                                                        + " ARTID,UomCode,ReceivedQty,ReceivedQtyInKgs,WastageQty,WastageQtyInKgs,ProcessCode,Rate,"
+                                                        + " CalculationType,CalcAmount,Remarks,ActualQty,ActualQtyInKgs,UnitCode,CHOUTTransID)"
+                                                        + " values(@CHIFYR,@CHINO,@CHITYPE,@CHIDATE,@AgnstChallanType,@AgnstChallanNo,@PrdCode,"
+                                                        + " @ARTID,@UomCode,@ReceivedQty,@ReceivedQtyInKgs,@WastageQty,@WastageQtyInKgs,@ProcessCode,@Rate,"
+                                                        + " @CalculationType,@CalcAmount,@Remarks,@ActualQty,@ActualQtyInKgs,@UnitCode,@CHOUTTransID)";
+                                sqlcom.Parameters.Add("@CHIFYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
+                                sqlcom.Parameters.Add("@CHINO", SqlDbType.NVarChar).Value = txtTransNo.Text;
+                                sqlcom.Parameters.Add("@CHITYPE", SqlDbType.NVarChar).Value = txtDocType.Text;
+                                sqlcom.Parameters.Add("@CHIDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtTransDate.Text).ToString("yyyy-MM-dd");
+                                sqlcom.Parameters.Add("@AgnstChallanType", SqlDbType.NVarChar).Value = dr["AgnstChallanType"].ToString();
+                                sqlcom.Parameters.Add("@AgnstChallanNo", SqlDbType.NVarChar).Value = dr["AgnstChallanNo"].ToString();
+                                sqlcom.Parameters.Add("@PrdCode", SqlDbType.NVarChar).Value = dr["PrdCode"].ToString();
+                                sqlcom.Parameters.Add("@ARTID", SqlDbType.NVarChar).Value = dr["ARTID"].ToString();
+                                sqlcom.Parameters.Add("@UomCode", SqlDbType.NVarChar).Value = dr["UomCode"].ToString();
+                                sqlcom.Parameters.Add("@ReceivedQty", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ReceivedQty"]);
+                                sqlcom.Parameters.Add("@ReceivedQtyInKgs", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ReceivedQtyInKgs"]);
+                                sqlcom.Parameters.Add("@WastageQty", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["WastageQty"]);
+                                sqlcom.Parameters.Add("@WastageQtyInKgs", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["WastageQtyInKgs"]); ;
+                                sqlcom.Parameters.Add("@ProcessCode", SqlDbType.NVarChar).Value = dr["Rate"].ToString();
+                                sqlcom.Parameters.Add("@Rate", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ReceivedQty"]);
+                                sqlcom.Parameters.Add("@CalculationType", SqlDbType.NVarChar).Value = dr["CalculationType"].ToString();
+                                sqlcom.Parameters.Add("@CalcAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["CalcAmount"]);
+                                sqlcom.Parameters.Add("@Remarks", SqlDbType.NVarChar).Value = dr["Remarks"].ToString();
+                                sqlcom.Parameters.Add("@ActualQty", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ActualQty"]);
+                                sqlcom.Parameters.Add("@ActualQtyInKgs", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ActualQtyInKgs"]);
+                                sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                                sqlcom.Parameters.Add("@CHOUTTransID", SqlDbType.NVarChar).Value = dr["TransID"].ToString() ;
+
+                                sqlcom.ExecuteNonQuery();
+                                sqlcom.Parameters.Clear();
+                            }
+
+                        }
+
+                        ProjectFunctions.SpeakError(" Data Saved Successfully");
+                        sqlcon.Close();
+                        Close();
+                    }
                 }
             }
             catch (Exception ex)

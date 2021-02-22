@@ -41,6 +41,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             dt.Columns.Add("CHORemarks", typeof(string));
             dt.Columns.Add("CHOKgsType", typeof(string));
             dt.Columns.Add("CHOTotQty", typeof(string));
+            dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
 
             AutoCompleteStringCollection collection = new AutoCompleteStringCollection
             {
@@ -78,24 +79,44 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (e.KeyCode != Keys.Back)
             {
+                if (e.KeyCode != Keys.Delete)
+                {
+                    if (e.KeyCode != Keys.Up)
+                    {
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            PrepareActMstHelpGrid();
+                                            HelpGrid.Text = "txtDebitPartyCode";
+                                            txtSearchBox.Text = string.Empty;
+                                            txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl1.Visible = true;
+                                            HelpGrid.Visible = true;
 
-                PrepareActMstHelpGrid();
-                HelpGrid.Text = "txtDebitPartyCode";
-                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                panelControl1.Visible = true;
-                panelControl1.Select();
-                txtSearchBox.Focus();
-                txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                txtSearchBox.SelectionLength = 0;
-
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtDebitPartyCode.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
+
             //if (e.KeyCode == Keys.Enter)
             //{
 
@@ -329,7 +350,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 panelControl1.Visible = false;
                 txtTransporterCode.Focus();
             }
-
+            
             if (HelpGrid.Text == "txtDebitPartyCode")
             {
                 txtDebitPartyCode.Text = row["AccCode"].ToString();
@@ -1312,8 +1333,39 @@ namespace WindowsFormsApplication1.Transaction.challans
             {
 
                 HelpGrid.Show();
-                
-               
+
+                if (HelpGrid.Text == "txtDebitPartyCode")
+                {
+
+                    DataTable dtNew = dsPopUps.Tables[6].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[6].Select("AccName like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["AccCode"] = dr["AccCode"];
+                        NewRow["AccName"] = dr["AccName"];
+                        NewRow["AccAddress1"] = dr["AccAddress1"];
+                        NewRow["AccAddress2"] = dr["AccAddress2"];
+                        NewRow["AccAddress3"] = dr["AccAddress3"];
+                        NewRow["CTNAME"] = dr["CTNAME"];
+                        NewRow["STNAME"] = dr["STNAME"];
+                        NewRow["AccZipCode"] = dr["AccZipCode"];
+                        NewRow["AccTeleFax"] = dr["AccTeleFax"];
+
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
                 if (HelpGrid.Text == "CHOPrdName")
                 {
                     DataTable dtNew = dsPopUps.Tables[3].Clone();

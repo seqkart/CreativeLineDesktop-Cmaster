@@ -86,11 +86,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void txtstatusTag_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
         private void btnSaveFY_Click(object sender, EventArgs e)
         {
             try
@@ -101,6 +96,7 @@ namespace WindowsFormsApplication1
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         ProjectFunctions.SpeakError("Entry Already Exists For User (" + cmbSelectUser.Text + ") for FY (" + cmbSelectFY.Text + ")");
+                        Close();
                     }
                     else
                     {

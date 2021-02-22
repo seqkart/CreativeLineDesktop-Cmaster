@@ -410,8 +410,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-
+        [Obsolete]
         private void SaveInvoice()
         {
             if (ValidateDataForSaving())
@@ -419,7 +418,7 @@ namespace WindowsFormsApplication1
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
 
-                    var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+                    var MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
 
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
@@ -1187,7 +1186,7 @@ namespace WindowsFormsApplication1
 
         private void TxtBarCode_EditValueChanged(object sender, EventArgs e)
         {
-
+            throw new NotSupportedException();
         }
         private void CaptureScreen()
         {
@@ -1286,8 +1285,7 @@ namespace WindowsFormsApplication1
 
         private void GroupControl1_Paint(object sender, PaintEventArgs e)
         {
-
-
+            throw new NotSupportedException();
         }
     }
 }

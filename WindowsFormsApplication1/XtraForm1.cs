@@ -192,6 +192,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG221":
+                    var PROG221 = new WindowsFormsApplication1.frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG221.Show();
+                    PROG221.BringToFront();
+                    PROG221.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG220":
                     var PROG220 = new WindowsFormsApplication1.Transaction.frmImportSaleFromExcel() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG220.Show();

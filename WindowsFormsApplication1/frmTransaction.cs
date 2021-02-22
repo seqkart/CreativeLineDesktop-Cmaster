@@ -321,6 +321,14 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG150")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    WindowsFormsApplication1.Transaction.challans.Frm_Challaninward frm = new WindowsFormsApplication1.Transaction.challans.Frm_Challaninward()
+                    { S1 = btnEdit.Text, Text = "Material Receipt Edition", ImNo = CurrentRow["CHINO"].ToString(), ImDate = Convert.ToDateTime(CurrentRow["CHIDATE"]) };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG211")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

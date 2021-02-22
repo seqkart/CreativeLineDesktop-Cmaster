@@ -176,7 +176,7 @@
             // 
             this.PDTab.Controls.Add(this.panelControl1);
             this.PDTab.Name = "PDTab";
-            this.PDTab.Size = new System.Drawing.Size(702, 271);
+            this.PDTab.Size = new System.Drawing.Size(702, 269);
             this.PDTab.Text = "Product Details";
             // 
             // panelControl1
@@ -203,7 +203,7 @@
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(702, 271);
+            this.panelControl1.Size = new System.Drawing.Size(702, 269);
             this.panelControl1.TabIndex = 5;
             // 
             // txtUMDesc

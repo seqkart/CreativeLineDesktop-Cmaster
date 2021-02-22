@@ -43,26 +43,18 @@ namespace WindowsFormsApplication1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //if(btnAdd.Enabled)
-            //{
-            //    DataSet ds = ProjectFunctions.GetDataSet("Select * from ProgramMaster  Where ProgCode='" + GlobalVariables.ProgCode + "'");
-            //    if(ds.Tables[0].Rows.Count>0)
-            //    {
-            //        string FormToCall = ds.Tables[0].Rows[0]["ProgFormLink"].ToString();
-            //        //var type = Type.GetType("MyForms." + FormToCall);
-            //        //var form = Activator.CreateInstance(type) as DevExpress.XtraEditors.XtraForm;
-
-            //        //if (form != null)
-            //        //    form.Show(this.Parent);
-
-            //        var frm = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(FormToCall);
-            //        (frm as DevExpress.XtraEditors.XtraForm).ShowDialog(this.Parent);
-
-            //    }
-            //}
+            
 
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG221")
+                {
+                    WindowsFormsApplication1.Master.frmProcessMst frm = new WindowsFormsApplication1.Master.frmProcessMst()
+                    { s1 = btnAdd.Text, Text = "Process Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG212")
                 {
                     WindowsFormsApplication1.Master.frmSizeMapping frm = new WindowsFormsApplication1.Master.frmSizeMapping()
@@ -450,6 +442,16 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG221")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmProcessMst frm = new WindowsFormsApplication1.Master.frmProcessMst()
+                    { s1 = btnEdit.Text, Text = "Process Master Edition", ProcessCode = CurrentRow["ProcessCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG176")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -1052,6 +1054,7 @@ namespace WindowsFormsApplication1
 
         private void InvoiceGrid_Click(object sender, EventArgs e)
         {
+           
         }
 
         private void FrmMaster_KeyDown(object sender, KeyEventArgs e)
@@ -1084,6 +1087,7 @@ namespace WindowsFormsApplication1
 
         private void Menu_ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
+         
         }
     }
 }
