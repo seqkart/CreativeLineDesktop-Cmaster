@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SeqKartLibrary
+﻿namespace SeqKartLibrary
 {
     public class SQL_QUERIES
     {
@@ -12,7 +10,7 @@ namespace SeqKartLibrary
             }
             public static string SQL_UserMaster_Update_Pass(object UserName, object UserPwd)
             {
-                return String.Format("Update UserMaster Set UserPwd='{0}' where UserName='{1}'", UserPwd, UserName);
+                return string.Format("Update UserMaster Set UserPwd='{0}' where UserName='{1}'", UserPwd, UserName);
             }
         }
         public static class _frmEmployeeMstAddEdit

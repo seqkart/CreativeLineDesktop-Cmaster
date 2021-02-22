@@ -414,18 +414,7 @@ namespace WindowsFormsApplication1.Time_Office
                         break;
                     }
                 }
-                //else
-
-                //if (IsString.IsEqualTo(item.status_code, "HH"))
-                //{
-                //    SetComboSelectedValue_NullTag(comboBox_Status, status_id);
-                //}
-                //else
-                //{
-                //    SetComboSelectedValue_NullTag(comboBox_Status, 1);
-                //    Thread.Sleep(100);
-                //    SetComboSelectedValue_NullTag(comboBox_Status, status_id);
-                //}
+                
 
                 if (next_date_after_save)
                 {
@@ -444,7 +433,7 @@ namespace WindowsFormsApplication1.Time_Office
             {
                 if (next_date_after_save)
                 {
-                    //if (IsString.IsEqualTo(today.ToString("dddd"), "Monday"))
+                   
                     if (input_fields_empty)
                     {
                         SetComboSelectedValue_NullTag(comboBox_Status, "1");
@@ -783,7 +772,7 @@ namespace WindowsFormsApplication1.Time_Office
                     PrintLogWin.PrintLog("Insert => timeEdit_Time_Out_Last : " + ConvertTo.TimeSpanVal_Null(timeEdit_Time_Out_Last.EditValue));
 
                 }
-                //if (crudAction == CrudAction.Update)
+                
                 if (ConvertTo.IntVal(GetEditValue(txtSerial_ID)) != 0)
                 {
 

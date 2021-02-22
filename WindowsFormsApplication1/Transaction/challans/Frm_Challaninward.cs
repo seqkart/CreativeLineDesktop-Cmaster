@@ -1030,7 +1030,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
 

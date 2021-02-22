@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             if (S1 == "Edit")
             {
                 txtProductAsgnCode.Enabled = false;
-                //txtPrdName.Enabled = false;
+                
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPrdMstFEditing '" + PrdCode + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {

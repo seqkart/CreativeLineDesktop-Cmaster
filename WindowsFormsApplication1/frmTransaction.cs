@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1
             FillGrid();
             if (GlobalVariables.ProgCode == "PROG132")
             {
-                Transaction.Cashmemo frm = new Transaction.Cashmemo() { S1 = btnAdd.Text, Text = "Cash Memo Addition" };
+                Transaction.CashMemo frm = new Transaction.CashMemo() { S1 = btnAdd.Text, Text = "Cash Memo Addition" };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2),
                                          P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
@@ -166,7 +166,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG132")
                 {
-                    Transaction.Cashmemo frm = new Transaction.Cashmemo()
+                    Transaction.CashMemo frm = new Transaction.CashMemo()
                     { S1 = btnAdd.Text, Text = "Cash Memo Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -493,7 +493,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG132")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    Transaction.Cashmemo frm = new Transaction.Cashmemo()
+                    Transaction.CashMemo frm = new Transaction.CashMemo()
                     {
                         S1 = btnEdit.Text,
                         Text = "Cash Memo Edition",
@@ -1960,6 +1960,7 @@ namespace WindowsFormsApplication1
 
         private void InvoiceGrid_Click(object sender, EventArgs e)
         {
+            // Method intentionally left empty.
         }
 
         private void GridControl1_DoubleClick(object sender, EventArgs e)
@@ -2011,20 +2012,6 @@ namespace WindowsFormsApplication1
                                     pt.ShowRibbonPreviewDialog();
                                 }
 
-
-                                //System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
-                                //List<Dictionary<string, object>> rows = new List<Dictionary<string, object>>();
-                                //Dictionary<string, object> row;
-                                //foreach (DataRow drNew in dt.Rows)
-                                //{
-                                //    row = new Dictionary<string, object>();
-                                //    foreach (DataColumn col in dt.Columns)
-                                //    {
-                                //        row.Add(col.ColumnName, drNew[col]);
-                                //    }
-                                //    rows.Add(row);
-                                //}
-                                //String x = row;
 
 
                             }

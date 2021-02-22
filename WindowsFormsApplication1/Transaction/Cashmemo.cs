@@ -11,7 +11,7 @@ using System.Xml;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class Cashmemo : DevExpress.XtraEditors.XtraForm
+    public partial class CashMemo : DevExpress.XtraEditors.XtraForm
     {
         public string ProgCode { get; set; }
         public string S1 { get; set; }
@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.Transaction
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public string ImSeries { get; set; }
-        public Cashmemo()
+        public CashMemo()
         {
             InitializeComponent();
 
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void SetMyControls()
         {
-            //ProjectFunctions.TextBoxVisualize(this);
+          
             ProjectFunctions.TextBoxVisualize(groupControl1);
             ProjectFunctions.TextBoxVisualize(groupControl2);
             ProjectFunctions.TextBoxVisualize(groupControl3);

@@ -1,19 +1,15 @@
 ﻿using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
     public partial class frmProcessMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String ProcessCode { get; set; }
+        public string s1 { get; set; }
+        public string ProcessCode { get; set; }
         public frmProcessMst()
         {
             InitializeComponent();
@@ -21,7 +17,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void SetMyControls()
@@ -34,7 +30,7 @@ namespace WindowsFormsApplication1.Master
         }
         private string GetNewProcessCode()
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(ProcessCode as int)),0000) from ProcessMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -128,7 +124,7 @@ namespace WindowsFormsApplication1.Master
                         transaction.Commit();
                         sqlcon.Close();
                         XtraMessageBox.Show("Data Saved Successfully");
-                        this.Close();
+                        Close();
                     }
                     catch (Exception ex)
                     {

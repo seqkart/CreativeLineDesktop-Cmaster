@@ -6,9 +6,9 @@ namespace SeqKartLibrary.Models
     {
         //ChallanOutMain_Concrete
         public DateTime CHODATE { get; set; }
-        public Int32 CHONO { get; set; }
+        public int CHONO { get; set; }
         public string CHOTYPE { get; set; }
-        public Int32 CHOPARTYCODE { get; set; }
+        public int CHOPARTYCODE { get; set; }
         public string AccName { get; set; }
 
     }

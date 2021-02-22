@@ -16,8 +16,8 @@ namespace SeqKartLibrary
     public class ProjectFunctionsUtils
     {
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
-        public static String ConnectionString = ConnectionStringsDb.DefaultConnectionString;
-        public static String ImageConnectionString = ConnectionStringsDb.DefaultConnectionString;
+        public static string ConnectionString = ConnectionStringsDb.DefaultConnectionString;
+        public static string ImageConnectionString = ConnectionStringsDb.DefaultConnectionString;
         //@"Data Source=seqkart.ddns.net;Initial Catalog=SEQKARTNew;User ID=sa;pwd=Seq@2021";
         //public static String ConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\server.txt");
 
@@ -58,14 +58,14 @@ namespace SeqKartLibrary
 
         //}
 
-        public static void SpeakError(String Error)
+        public static void SpeakError(string Error)
         {
             Task.Run(() => _synthesizer.Speak(Error));
 
             XtraMessageBox.Show(Error);
 
         }
-        public static String CheckNull(String Value)
+        public static string CheckNull(string Value)
         {
             if (Value.Trim().Length == 0)
             {
@@ -82,7 +82,10 @@ namespace SeqKartLibrary
             {
                 var c = t.Columns.Add(k);
                 var val = first[k];
-                if (val != null) c.DataType = val.GetType();
+                if (val != null)
+                {
+                    c.DataType = val.GetType();
+                }
             }
 
             foreach (var item in items)
@@ -92,7 +95,11 @@ namespace SeqKartLibrary
                 foreach (var k in i.Keys)
                 {
                     var val = i[k];
-                    if (val == null) val = DBNull.Value;
+                    if (val == null)
+                    {
+                        val = DBNull.Value;
+                    }
+
                     r[k] = val;
                 }
                 t.Rows.Add(r);
@@ -154,7 +161,7 @@ namespace SeqKartLibrary
         //    }
         //}
 
-        public static String GetConnection()
+        public static string GetConnection()
         {
             // ; return ConnectionString;
 
@@ -189,7 +196,7 @@ namespace SeqKartLibrary
             return (finyear.Substring(2, 2));
         }
 
-        public static Tuple<Decimal, Decimal, Decimal, Decimal> TaxCalculatioData(Decimal CGSTRate, Decimal SGSTRate, Decimal IGSTRate, Decimal RATE, Decimal RDC, Decimal Quantity)
+        public static Tuple<decimal, decimal, decimal, decimal> TaxCalculatioData(decimal CGSTRate, decimal SGSTRate, decimal IGSTRate, decimal RATE, decimal RDC, decimal Quantity)
         {
             var disc = Convert.ToDecimal(RDC); ;
             var AmountATRDC = Math.Round((Quantity * RATE * disc) / 100, 2);
@@ -324,7 +331,7 @@ namespace SeqKartLibrary
             return new Tuple<bool, DataSet>(hasData, ds);
         }
 
-        public static int InsertQuery(String sqlQuery)
+        public static int InsertQuery(string sqlQuery)
         {
             int intResult = -1;
             try
@@ -369,14 +376,14 @@ namespace SeqKartLibrary
 
                 //ds = ProjectFunctionsUtils.GetDataSet("SELECT * FROM GridViewStyle_Master WHERE form_name='" + form_name + "' AND gridview_name='" + gridview_name + "'");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
             }
             return gridView_Style_List;
         }
 
-        public static String SqlString(string Text)
+        public static string SqlString(string Text)
         {
             return string.Concat(Text.Select(c => @"'()%#!<>{};:?/\-[]+@".IndexOf(c) >= 0 ? '_' : c));
         }
@@ -492,7 +499,7 @@ namespace SeqKartLibrary
         }
         */
 
-        public static void SaveDataTable(String ProcedureName, DataTable dtFinal)
+        public static void SaveDataTable(string ProcedureName, DataTable dtFinal)
         {
             DataSet dsMaster = GetDataSet("select PARAMETER_NAME from information_schema.parameters where specific_name='" + ProcedureName + "'");
             using (var sqlcon = new SqlConnection(GetConnection()))
@@ -527,9 +534,9 @@ namespace SeqKartLibrary
         }
 
 
-        public static String ValidateKeysForSearchBox(KeyEventArgs e)
+        public static string ValidateKeysForSearchBox(KeyEventArgs e)
         {
-            String Value = String.Empty;
+            string Value = string.Empty;
             switch (e.KeyCode)
             {
                 case Keys.NumPad1:
@@ -570,9 +577,9 @@ namespace SeqKartLibrary
             return Value;
         }
 
-        public static string GetNewTransactionCode(String Query)
+        public static string GetNewTransactionCode(string Query)
         {
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = ProjectFunctionsUtils.GetDataSet(Query);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -582,13 +589,13 @@ namespace SeqKartLibrary
             return s2;
         }
 
-        public static Decimal RoundFive(Decimal No)
+        public static decimal RoundFive(decimal No)
         {
             No = ((int)(No / 5)) * 5;
             return No;
         }
 
-        public static bool CheckAllPossible(String ArticleID, Decimal MRP, String ColorID, String SizeID)
+        public static bool CheckAllPossible(string ArticleID, decimal MRP, string ColorID, string SizeID)
         {
             DataSet dsCheckART = ProjectFunctionsUtils.GetDataSet("select ARTSYSID,ARTMRP from ARTICLE where ARTSYSID='" + ArticleID + "' ");
             if (dsCheckART.Tables[0].Rows.Count > 0)
@@ -635,7 +642,7 @@ namespace SeqKartLibrary
 
 
 
-        public static void EventTracker(String ProcessName, string ProgCode, string CurrentUser)
+        public static void EventTracker(string ProcessName, string ProgCode, string CurrentUser)
         {
             using (var sqlcon = new SqlConnection(GetConnection()))
             {
@@ -659,7 +666,7 @@ namespace SeqKartLibrary
         {
             string sql = SQL_QUERIES._frmEmployeeMstAddEdit._GetNewEmpCode();
 
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = GetDataSet(sql);//"select isnull(max(Cast(EmpCode as int)),00000) from EmpMst"
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -673,7 +680,7 @@ namespace SeqKartLibrary
         {
             string sql = SQL_QUERIES._frmDepartmentAddUpdate._GetNewDeptCode(); ;
             //"select isnull(max(Cast(DeptCode as int)),00000) from DeptMSt"
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = GetDataSet(sql);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -686,7 +693,7 @@ namespace SeqKartLibrary
         public static string GetNewDesgCode()
         {
             string sql = SQL_QUERIES._frmDesignationAddUpdate._GetNewDesgCode();
-            String s2 = String.Empty;
+            string s2 = string.Empty;
             DataSet ds = GetDataSet(sql);//"select isnull(max(Cast(DesgCode as int)),00000) from DesgMst"
             if (ds.Tables[0].Rows.Count > 0)
             {

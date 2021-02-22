@@ -223,12 +223,12 @@ namespace SeqKartLibrary.HelperClass
         }
         public static int MinutesToHours_DB(object _totalMinute)
         {
-            Int32 totalMinute = IntVal(_totalMinute);
+            int totalMinute = IntVal(_totalMinute);
             if (totalMinute == 0)
             {
                 return 0;
             }
-            Int32 Hour = default(Int32);
+            int Hour = default(int);
             {
                 Hour = totalMinute / 60;
                 return Hour;
@@ -237,13 +237,13 @@ namespace SeqKartLibrary.HelperClass
         public static string MinutesToHours(object _totalMinute)
         {
             string sign = "";
-            Int32 totalMinute = IntVal(_totalMinute);
+            int totalMinute = IntVal(_totalMinute);
             if (totalMinute == 0)
             {
                 return "0";
             }
-            Int32 Minute = default(Int32);
-            Int32 Hour = default(Int32);
+            int Minute = default(int);
+            int Hour = default(int);
             {
                 if (totalMinute < 0)
                 {
@@ -261,7 +261,7 @@ namespace SeqKartLibrary.HelperClass
         public static object MinutesToHours(object _totalMinute, EmptyReturn _zeroReturn)
         {
             string sign = "";
-            Int32 totalMinute = IntVal(_totalMinute);
+            int totalMinute = IntVal(_totalMinute);
             if (totalMinute == 0)
             {
                 if (_zeroReturn == EmptyReturn.DbNull)
@@ -278,8 +278,8 @@ namespace SeqKartLibrary.HelperClass
                 }
                 return "";
             }
-            Int32 Minute = default(Int32);
-            Int32 Hour = default(Int32);
+            int Minute = default(int);
+            int Hour = default(int);
             {
                 if (totalMinute < 0)
                 {
@@ -294,7 +294,7 @@ namespace SeqKartLibrary.HelperClass
             //return _totalMinute + "";
         }
 
-        public static string FormatTwoDigits(Int32 i, string sign)
+        public static string FormatTwoDigits(int i, string sign)
         {
             string functionReturnValue = null;
             if (10 > i)

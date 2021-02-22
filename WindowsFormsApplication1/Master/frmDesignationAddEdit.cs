@@ -28,11 +28,11 @@ namespace WindowsFormsApplication1
             if (S1 == "&Add")
             {
                 txtDesc.Focus();
-                txtDesgCode.Text = ProjectFunctionsUtils.GetNewDesgCode();//.PadLeft(4, '0');
+                txtDesgCode.Text = ProjectFunctionsUtils.GetNewDesgCode();
             }
             if (S1 == "Edit")
             {
-                //txtDesc.Enabled = false;
+                
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT DesgCode,DesgDesc FROM DesgMst Where DesgCode='" + DesgCode + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -59,17 +59,7 @@ namespace WindowsFormsApplication1
 
             return true;
         }
-        //private string GetNewDesgCode()
-        //{
-        //    String s2 = String.Empty;
-        //    DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(DesgCode as int)),00000) from DesgMst");
-        //    if (ds.Tables[0].Rows.Count > 0)
-        //    {
-        //        s2 = ds.Tables[0].Rows[0][0].ToString();
-        //        s2 = (Convert.ToInt32(s2) + 1).ToString();
-        //    }
-        //    return s2;
-        //}
+       
         private void FrmDesignationAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -112,63 +102,7 @@ namespace WindowsFormsApplication1
                 }
                 Close();
 
-                /*
-                using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
-                {
-                    sqlcon.Open();
-                    var sqlcom = sqlcon.CreateCommand();
-                    var transaction = sqlcon.BeginTransaction("SaveTransaction");
-                    sqlcom.Connection = sqlcon;
-                    sqlcom.Transaction = transaction;
-                    sqlcom.CommandType = CommandType.Text;
-                    try
-                    {
-                        
-                        if (s1 == "&Add")
-                        {
-                            
-                            //sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
-                            //                        + " Insert into DesgMst"
-                            //                        + " (DesgCode,DesgDesc)"
-                            //                        + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(DesgCode as int)),0)+1 AS VARCHAR(4)),4) from DesgMst),@DesgDesc)"
-                            //                        + " Commit ";
-                        }
-                        if (s1 == "Edit")
-                        {                            
-                            //sqlcom.CommandText = " UPDATE DesgMst SET "
-                            //                    + " DesgDesc=@DesgDesc"
-                            //                    + " Where DesgCode=@DesgCode";
-
-                        }
-
-                        string addEditTag = s1;
-
-                        string sql = "sp_DesignationAddUpdate @DesgCode, @DesgDesc, @AddEditTag";
-                        sqlcom.CommandText = sql;
-                        sqlcom.Parameters.AddWithValue("@DesgCode", txtDesgCode.Text.Trim());
-                        sqlcom.Parameters.AddWithValue("@DesgDesc", txtDesc.Text.Trim());
-                        sqlcom.Parameters.AddWithValue("@AddEditTag", addEditTag);
-                        sqlcom.ExecuteNonQuery();
-                        transaction.Commit();
-                        sqlcon.Close();
-                        ProjectFunctions.SpeakError("Data Saved Successfully");
-
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        XtraMessageBox.Show("Something Wrong. \n I am going to Roll Back." + ex.Message, ex.GetType().ToString());
-                        try
-                        {
-                            transaction.Rollback();
-                        }
-                        catch (Exception ex2)
-                        {
-                            XtraMessageBox.Show("Something Wrong. \n Roll Back Failed." + ex2.Message, ex2.GetType().ToString());
-                        }
-                    }
-                }
-                */
+               
             }
         }
     }

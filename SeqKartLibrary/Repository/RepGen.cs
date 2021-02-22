@@ -137,7 +137,7 @@ namespace SeqKartLibrary.Repository
                 var returnVal = param.Get<int>("@Returnvalue");
                 return returnVal;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 //return ex.Message;
             }

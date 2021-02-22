@@ -1,10 +1,4 @@
-﻿
-
-using System;
-
-using System.Linq;
-
-namespace SeqKartSecurity.Connections
+﻿namespace SeqKartSecurity.Connections
 {
     public class ConnectionStringsDb
     {

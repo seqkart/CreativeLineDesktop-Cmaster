@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class Cashmemo
+    partial class CashMemo
     {
         private const int X = 752;
 
@@ -30,7 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cashmemo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashMemo));
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();

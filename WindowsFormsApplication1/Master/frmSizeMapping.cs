@@ -58,13 +58,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //if (txtDesc.Text.Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Desc");
-            //    txtDesc.Focus();
-            //    return;
-            //}
-
+            
 
             SizeGridView.CloseEditor();
             SizeGridView.UpdateCurrentRow();
