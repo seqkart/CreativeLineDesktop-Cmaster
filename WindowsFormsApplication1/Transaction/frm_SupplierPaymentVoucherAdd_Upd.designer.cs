@@ -485,7 +485,7 @@
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(243, 29);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(344, 338);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Name = "HelpGridCtrl";
             this.HelpGridCtrl.Size = new System.Drawing.Size(635, 368);
@@ -838,7 +838,7 @@
             this.EntryInfo_GridCtrl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.EntryInfo_GridCtrl.MainView = this.EntryInfo_Grid;
             this.EntryInfo_GridCtrl.Name = "EntryInfo_GridCtrl";
-            this.EntryInfo_GridCtrl.Size = new System.Drawing.Size(1082, 232);
+            this.EntryInfo_GridCtrl.Size = new System.Drawing.Size(1082, 221);
             this.EntryInfo_GridCtrl.TabIndex = 2;
             this.EntryInfo_GridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.EntryInfo_Grid});

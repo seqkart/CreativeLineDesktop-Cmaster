@@ -49,8 +49,8 @@ namespace WindowsFormsApplication1.Crystal_Reports
 
             _RangeSelector.BringToFront();
             _RangeSelector.Location = new Point(20, 20);
-            _RangeSelector.DtFrom.EditValue = StartDate.Date;
-            _RangeSelector.DtEnd.EditValue = EndDate.Date;
+            _RangeSelector.DtFrom.EditValue = GlobalVariables.FinYearStartDate;
+            _RangeSelector.DtEnd.EditValue = GlobalVariables.FinYearEndDate;
 
             _RangeSelector.Show();
             _RangeSelector.DtFrom.Focus();
@@ -130,7 +130,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
                         DataSet Ds = ProjectFunctions.GetDataSet(string.Format("Exec [Sp_CashBookRpt] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}'", StartDate.Date, EndDate.Date));
                         rpt_CashBook RptDoc1 = new rpt_CashBook();
                         (RptDoc1.ReportDefinition.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
-                        (RptDoc1.ReportDefinition.ReportObjects["txtReportHead"] as TextObject).Text = Title;
+                        (RptDoc1.ReportDefinition.ReportObjects["txtReportHead"] as TextObject).Text = "CASH BOOK";
                         (RptDoc1.ReportDefinition.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
                         RptDoc1.SetDataSource(Ds.Tables[0]);
                         lbl.Text = string.Format(Title + " ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
@@ -180,17 +180,25 @@ namespace WindowsFormsApplication1.Crystal_Reports
                         _RangeSelector.Hide();
                         break;
                     case "PROG165":
-                        DataSet dsLedger = ProjectFunctions.GetDataSet(string.Format("[sp_ZoomPartyAct] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}','{2}'", StartDate.Date, EndDate.Date, Currentrow["AccCode"].ToString()));
-                        PartyLedger RptLedger = new PartyLedger();
-                        (RptLedger.Section2.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
-                        (RptLedger.Section2.ReportObjects["txtReportName"] as TextObject).Text = "Party Ledger";
-                        (RptLedger.Section2.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
-                        lbl.Text = string.Format(Title + " ({0} to {1})", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
-                        RptLedger.SetDataSource(dsLedger.Tables[0]);
-                        crystalReportViewer1.ReportSource = RptLedger;
-                        crystalReportViewer1.Show();
-                        crystalReportViewer1.BringToFront();
-                        _RangeSelector.Hide();
+                        if (Currentrow!=null)
+                        {
+                            DataSet dsLedger = ProjectFunctions.GetDataSet(string.Format("[sp_ZoomPartyAct] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}','{2}'", StartDate.Date, EndDate.Date, Currentrow["AccCode"].ToString()));
+                            PartyLedger RptLedger = new PartyLedger();
+                            (RptLedger.Section2.ReportObjects["txtCompanyName"] as TextObject).Text = GlobalVariables.CompanyName;
+                            (RptLedger.Section2.ReportObjects["txtReportName"] as TextObject).Text = "Party Ledger";
+                            (RptLedger.Section2.ReportObjects["txtDateRange"] as TextObject).Text = string.Format("From ({0} to {1}) ", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
+                            lbl.Text = string.Format(Title + " ({0} to {1})", StartDate.Date.ToString("dd-MM-yyyy"), EndDate.Date.ToString("dd-MM-yyyy"));
+                            RptLedger.SetDataSource(dsLedger.Tables[0]);
+                            crystalReportViewer1.ReportSource = RptLedger;
+                            crystalReportViewer1.Show();
+                            crystalReportViewer1.BringToFront();
+                            _RangeSelector.Hide();
+                        }
+                        else
+                        {
+                            ProjectFunctions.SpeakError("Plz Select Party First");
+                            
+                        }
                         break;
                     default:
                         break;

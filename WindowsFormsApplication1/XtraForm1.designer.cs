@@ -269,7 +269,6 @@
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
             this.accordionControl1.Size = new System.Drawing.Size(181, 633);
             this.accordionControl1.TabIndex = 0;
-            this.accordionControl1.Text = "accordionControl1";
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // xtraTabControl1

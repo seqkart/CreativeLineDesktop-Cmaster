@@ -381,7 +381,7 @@
             this.ChoiceSelectAll.Location = new System.Drawing.Point(864, 34);
             this.ChoiceSelectAll.Name = "ChoiceSelectAll";
             this.ChoiceSelectAll.Properties.Caption = "Select All";
-            this.ChoiceSelectAll.Size = new System.Drawing.Size(75, 18);
+            this.ChoiceSelectAll.Size = new System.Drawing.Size(75, 19);
             this.ChoiceSelectAll.TabIndex = 200;
             this.ChoiceSelectAll.CheckedChanged += new System.EventHandler(this.ChoiceSelectAll_CheckedChanged);
             // 
