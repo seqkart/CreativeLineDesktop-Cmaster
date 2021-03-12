@@ -245,7 +245,7 @@ namespace WindowsFormsApplication1
                             str = str + "'" + ProjectFunctions.SqlString(txtSMenuName.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtstatusTag.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtNfaTag.Text.Trim()) + "',";
-                            str = str + "'" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "')";
+                            str = str + "'" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtPrinters.Text.Trim()) + "')";
                             ProjectFunctions.GetDataSet(str);
                             ProjectFunctions.SpeakError("Entry Added Successfully");
@@ -337,19 +337,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void TxtstatusTag_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        private void TxtstatusTag_EditValueChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void TxtFormDesc_EditValueChanged(object sender, EventArgs e)
-        {
-          
-        }
+      
     }
 }

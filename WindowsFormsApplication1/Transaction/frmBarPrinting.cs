@@ -1028,10 +1028,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void BarCodeGrid_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
+     
 
         private void BarCodeGrid_EditorKeyDown(object sender, KeyEventArgs e)
         {
@@ -1129,16 +1126,8 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-        private void LabelControl6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BtnLoadPreviousBarCodes_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
+       
         private void BarCodeGridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
 

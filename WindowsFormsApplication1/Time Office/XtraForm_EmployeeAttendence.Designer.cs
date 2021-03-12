@@ -444,7 +444,7 @@
             this.dateAttendance.Size = new System.Drawing.Size(120, 22);
             this.dateAttendance.TabIndex = 0;
             this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
-            this.dateAttendance.Leave += new System.EventHandler(this.DateAttendance_Leave);
+           // this.dateAttendance.Leave += new System.EventHandler(this.DateAttendance_Leave);
             // 
             // label7
             // 
@@ -673,7 +673,7 @@
             this.timeEdit_Time_Out_First.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_Out_First.Size = new System.Drawing.Size(65, 20);
             this.timeEdit_Time_Out_First.TabIndex = 2;
-            this.timeEdit_Time_Out_First.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.timeEdit_Time_Out_First_InvalidValue);
+          //  this.timeEdit_Time_Out_First.InvalidValue += new DevExpress.XtraEditors.Controls.InvalidValueExceptionEventHandler(this.timeEdit_Time_Out_First_InvalidValue);
             this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_First_EditValueChanged);
             this.timeEdit_Time_Out_First.Validating += new System.ComponentModel.CancelEventHandler(this.TimeEdit_Time_Out_First_Validating);
             // 

@@ -502,7 +502,7 @@
             this.hyperlinkLabelControl2.Size = new System.Drawing.Size(53, 15);
             this.hyperlinkLabelControl2.TabIndex = 2;
             this.hyperlinkLabelControl2.Text = "Approvals";
-            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.HyperlinkLabelControl2_Click);
+         //   this.hyperlinkLabelControl2.Click += new System.EventHandler(this.HyperlinkLabelControl2_Click);
             // 
             // labelControl5
             // 

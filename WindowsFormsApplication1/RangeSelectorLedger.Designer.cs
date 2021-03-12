@@ -134,7 +134,7 @@
             this.chParty.Properties.Caption = "Party";
             this.chParty.Size = new System.Drawing.Size(75, 18);
             this.chParty.TabIndex = 6;
-            this.chParty.CheckedChanged += new System.EventHandler(this.chParty_CheckedChanged);
+            this.chParty.CheckedChanged += new System.EventHandler(this.ChParty_CheckedChanged);
             // 
             // chBSHead
             // 
@@ -143,7 +143,7 @@
             this.chBSHead.Properties.Caption = "BSHead";
             this.chBSHead.Size = new System.Drawing.Size(75, 18);
             this.chBSHead.TabIndex = 7;
-            this.chBSHead.CheckedChanged += new System.EventHandler(this.chBSHead_CheckedChanged);
+            this.chBSHead.CheckedChanged += new System.EventHandler(this.ChBSHead_CheckedChanged);
             // 
             // chLedger
             // 
@@ -152,7 +152,7 @@
             this.chLedger.Properties.Caption = "Group";
             this.chLedger.Size = new System.Drawing.Size(75, 18);
             this.chLedger.TabIndex = 8;
-            this.chLedger.CheckedChanged += new System.EventHandler(this.chLedger_CheckedChanged);
+            this.chLedger.CheckedChanged += new System.EventHandler(this.ChLedger_CheckedChanged);
             // 
             // HelpGrid
             // 

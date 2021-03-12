@@ -756,7 +756,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void BtnPrint_Click(object sender, EventArgs e)
         {
             if (ComparisonUtils.IsEmpty(DtStartDate.EditValue) || ComparisonUtils.IsEmpty(txtEmpCode.EditValue))
             {

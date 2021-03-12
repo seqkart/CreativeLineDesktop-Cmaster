@@ -682,7 +682,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(133, 29);
             this.simpleButton1.TabIndex = 559;
             this.simpleButton1.Text = "Attach\r\nDocuments";
-            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
+           // this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // labelControl13
             // 
@@ -699,7 +699,7 @@
             this.labelControl5.Size = new System.Drawing.Size(78, 13);
             this.labelControl5.TabIndex = 555;
             this.labelControl5.Text = "Contact Details";
-            this.labelControl5.Click += new System.EventHandler(this.LabelControl5_Click);
+         //   this.labelControl5.Click += new System.EventHandler(this.LabelControl5_Click);
             // 
             // labelControl12
             // 
@@ -722,7 +722,7 @@
             this.txtContactDetails.Name = "txtContactDetails";
             this.txtContactDetails.Size = new System.Drawing.Size(303, 20);
             this.txtContactDetails.TabIndex = 554;
-            this.txtContactDetails.EditValueChanged += new System.EventHandler(this.TextEdit3_EditValueChanged);
+           // this.txtContactDetails.EditValueChanged += new System.EventHandler(this.TextEdit3_EditValueChanged);
             // 
             // txtBillingCity
             // 

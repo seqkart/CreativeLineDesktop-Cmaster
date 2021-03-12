@@ -122,7 +122,7 @@
             this.BarCodeGrid.EditorKeyDown += new System.Windows.Forms.KeyEventHandler(this.BarCodeGrid_EditorKeyDown);
             this.BarCodeGrid.Click += new System.EventHandler(this.BarCodeGrid_Click);
             this.BarCodeGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarCodeGrid_KeyDown);
-            this.BarCodeGrid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BarCodeGrid_KeyPress);
+          //  this.BarCodeGrid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BarCodeGrid_KeyPress);
             // 
             // BarCodeGridView
             // 
@@ -607,7 +607,7 @@
             this.btnLoadEANs.Text = "Load";
             this.btnLoadEANs.UseVisualStyleBackColor = true;
             this.btnLoadEANs.Visible = false;
-            this.btnLoadEANs.Click += new System.EventHandler(this.BtnLoadPreviousBarCodes_Click);
+           // this.btnLoadEANs.Click += new System.EventHandler(this.BtnLoadPreviousBarCodes_Click);
             // 
             // label2
             // 
@@ -741,7 +741,7 @@
             this.labelControl6.Size = new System.Drawing.Size(67, 13);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "STORE CODE";
-            this.labelControl6.Click += new System.EventHandler(this.LabelControl6_Click);
+          //  this.labelControl6.Click += new System.EventHandler(this.LabelControl6_Click);
             // 
             // RBPUR
             // 

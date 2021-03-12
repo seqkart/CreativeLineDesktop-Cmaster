@@ -386,27 +386,30 @@ namespace WindowsFormsApplication1
             }
         }
 
+#pragma warning disable S125 // Sections of code should not be commented out
+        /*
+                        public static void sendsmsviagatepass(String Message)
+                        {
+                            string serverURL1 = "167.114.117.218";//eg IP or Domain     
+                            string authkey1 = "d93f366bc185af6158755201ab143ab"; // "Sample Auth key" 'eg -- 16 digits alphanumeric;
+                            string message1 = "Sample message"; //eg "message hello ";
+                            string senderId1 = "testing";//eg -- TestinG 6 Alphabet'
+                            string routeId1 = "1";// eg 1;
+                            string mobileNos1 = "9855630394";//eg '99999999xx,99999998xx
+                            string smsContentType1 = "english";//or Unicode
+                            string groupId1 = "1";// eg 1
 
-        //public static void sendsmsviagatepass(String Message)
-        //{
-        //    string serverURL1 = "167.114.117.218";//eg IP or Domain     
-        //    string authkey1 = "d93f366bc185af6158755201ab143ab"; // "Sample Auth key" 'eg -- 16 digits alphanumeric;
-        //    string message1 = "Sample message"; //eg "message hello ";
-        //    string senderId1 = "testing";//eg -- TestinG 6 Alphabet'
-        //    string routeId1 = "1";// eg 1;
-        //    string mobileNos1 = "9855630394";//eg '99999999xx,99999998xx
-        //    string smsContentType1 = "english";//or Unicode
-        //    string groupId1 = "1";// eg 1
+                            string scheduledate1 = string.Empty; //optional if(scheduledate  eg “26/08/2015 17:00”);
+                            string signature1 = string.Empty; //optional if(signature available  eg “1”);
+                            string groupName = string.Empty;//optional if(groupName available eg “1”);
 
-        //    string scheduledate1 = string.Empty; //optional if(scheduledate  eg “26/08/2015 17:00”);
-        //    string signature1 = string.Empty; //optional if(signature available  eg “1”);
-        //    string groupName = string.Empty;//optional if(groupName available eg “1”);
+                            Sendsms.HitApi hitAPI = new Sendsms.HitApi();
+                            hitAPI.hitGetApi(serverURL1, authkey1, Message, senderId1, routeId1, mobileNos1, smsContentType1, groupId1, null, signature1, groupName);
 
-        //    Sendsms.HitApi hitAPI = new Sendsms.HitApi();
-        //    hitAPI.hitGetApi(serverURL1, authkey1, Message, senderId1, routeId1, mobileNos1, smsContentType1, groupId1, null, signature1, groupName);
-
-        //}
+                        }
+                */
         public static DataSet GetMasterFormAdd()
+#pragma warning restore S125 // Sections of code should not be commented out
         {
             DataSet dsMaster = GetDataSet("Select ProgCode,Mode,Caption,FormName from MasterAddEdit Where ProgCode='" + GlobalVariables.ProgCode + "' And Mode='ADD'");
             if (dsMaster.Tables[0].Rows.Count > 0)
@@ -1187,7 +1190,7 @@ namespace WindowsFormsApplication1
         }
         public static void BindReportToGrid(string ProcedureName, DateTime From, DateTime To, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
-            ReportGridView.Columns.Clear();
+            //ReportGridView.Columns.Clear();
             DataSet dsMaster = GetDataSet(ProcedureName + "'" + From.Date.ToString("yyyy-MM-dd") + "','" + To.Date.ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "'");
             if (dsMaster.Tables[0].Rows.Count > 0)
             {
@@ -1212,6 +1215,9 @@ namespace WindowsFormsApplication1
                 {
                     ReportGrid.DataSource = dsMaster.Tables[0];
                     ReportGridView.BestFitColumns();
+
+
+                  
                 }
                 else
                 {

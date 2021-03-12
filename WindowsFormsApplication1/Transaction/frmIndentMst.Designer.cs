@@ -80,7 +80,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(619, 12);
+            this.HelpGrid.Location = new System.Drawing.Point(131, 29);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(559, 243);
@@ -90,7 +90,6 @@
             this.HelpGridView,
             this.gridView1});
             this.HelpGrid.Visible = false;
-            this.HelpGrid.Click += new System.EventHandler(this.HelpGrid_Click);
             this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
             this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
             // 
@@ -199,8 +198,8 @@
             this.txtProductACode.Properties.MaxLength = 8;
             this.txtProductACode.Size = new System.Drawing.Size(78, 20);
             this.txtProductACode.TabIndex = 352;
-            this.txtProductACode.EditValueChanged += new System.EventHandler(this.txtProductACode_EditValueChanged);
-            this.txtProductACode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductACode_KeyDown);
+            this.txtProductACode.EditValueChanged += new System.EventHandler(this.TxtProductACode_EditValueChanged);
+            this.txtProductACode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtProductACode_KeyDown);
             // 
             // label6
             // 
@@ -218,7 +217,7 @@
             this.txtDeptCode.Properties.MaxLength = 6;
             this.txtDeptCode.Size = new System.Drawing.Size(78, 20);
             this.txtDeptCode.TabIndex = 350;
-            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDeptCode_KeyDown);
+            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
             // label30
             // 
@@ -248,7 +247,7 @@
             this.txtProductQty.Properties.MaxLength = 15;
             this.txtProductQty.Size = new System.Drawing.Size(77, 20);
             this.txtProductQty.TabIndex = 376;
-            this.txtProductQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductQty_KeyPress);
+            this.txtProductQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProductQty_KeyPress);
             // 
             // label4
             // 
@@ -268,7 +267,7 @@
             this.txtAmount.Properties.MaxLength = 15;
             this.txtAmount.Size = new System.Drawing.Size(77, 20);
             this.txtAmount.TabIndex = 378;
-            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductQty_KeyPress);
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProductQty_KeyPress);
             // 
             // label3
             // 
@@ -388,7 +387,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -398,7 +397,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // frmIndentMst
             // 
@@ -432,7 +431,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmIndentMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmIndentMst_Load);
+            this.Load += new System.EventHandler(this.FrmIndentMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.FormReports
     public partial class frmPartyAccounts : DevExpress.XtraEditors.XtraForm
     {
         RangeSelectorLedger _SelectRange;
-        public DataSet dsGetData { get; set; }
+        public DataSet DsGetData { get; set; }
         public frmPartyAccounts()
         {
             InitializeComponent();
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1.FormReports
             _SelectRange.BringToFront();
         }
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void BtnPrint_Click(object sender, EventArgs e)
         {
             HelpGridView.ShowRibbonPrintPreview();
         }

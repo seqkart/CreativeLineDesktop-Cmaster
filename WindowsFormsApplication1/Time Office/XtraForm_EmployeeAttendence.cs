@@ -1945,12 +1945,6 @@ namespace WindowsFormsApplication1.Time_Office
             HelpGridView.Columns[2].FieldName = "Code";
             HelpGridView.Columns[2].OptionsColumn.AllowEdit = false;
         }
-
-        private void DateAttendance_Leave(object sender, EventArgs e)
-        {
-
-        }
-
         private void DateAttendance_ValueChanged(object sender, EventArgs e)
         {
             DateTime today = dateAttendance.Value;
@@ -2097,10 +2091,7 @@ namespace WindowsFormsApplication1.Time_Office
         }
 
 
-        private void timeEdit_Time_Out_First_InvalidValue(object sender, DevExpress.XtraEditors.Controls.InvalidValueExceptionEventArgs e)
-        {
-
-        }
+        
     }
 
 

@@ -1048,13 +1048,14 @@ namespace WindowsFormsApplication1
                                 }
                             }
                         }
+
                         else
                         {
 
 
                             if (chMultiParty.Checked)
                             {
-                                if (chMultiParty.Checked && ProjectFunctions.GetDataSet("SELECT AccGSTStateCode FROM ACTMST WHERE AccCode='" + ds.Tables[1].Rows[0]["SIDPARTYC"].ToString() + "'").Tables[0].Rows[0][0].ToString() == ProjectFunctions.GetDataSet("SELECT AccGSTStateCode FROM ACTMST WHERE AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0][0].ToString())
+                                if (chMultiParty.Checked && ProjectFunctions.GetDataSet("SELECT AccLCTag FROM ACTMST WHERE AccCode='" + ds.Tables[1].Rows[0]["SIDPARTYC"].ToString() + "'").Tables[0].Rows[0][0].ToString() == ProjectFunctions.GetDataSet("SELECT AccLCTag FROM ACTMST WHERE AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0][0].ToString())
                                 {
                                     dt.Merge(ds.Tables[1]);
                                 }
@@ -1186,7 +1187,6 @@ namespace WindowsFormsApplication1
 
         private void TxtBarCode_EditValueChanged(object sender, EventArgs e)
         {
-            throw new NotSupportedException();
         }
         private void CaptureScreen()
         {
@@ -1285,7 +1285,7 @@ namespace WindowsFormsApplication1
 
         private void GroupControl1_Paint(object sender, PaintEventArgs e)
         {
-            throw new NotSupportedException();
+       
         }
     }
 }

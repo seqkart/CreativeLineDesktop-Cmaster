@@ -30,14 +30,14 @@
         {
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDesgCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtDesc = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).BeginInit();
+            this.txtDesc = new DevExpress.XtraEditors.TextEdit();
+            this.txtDesgCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -55,23 +55,6 @@
             this.label1.Size = new System.Drawing.Size(27, 13);
             this.label1.TabIndex = 22;
             this.label1.Text = "Code";
-            // 
-            // txtDesgCode
-            // 
-            this.txtDesgCode.Location = new System.Drawing.Point(89, 44);
-            this.txtDesgCode.Name = "txtDesgCode";
-            this.txtDesgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDesgCode.Size = new System.Drawing.Size(83, 20);
-            this.txtDesgCode.TabIndex = 1;
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.Location = new System.Drawing.Point(89, 82);
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDesc.Properties.MaxLength = 100;
-            this.txtDesc.Size = new System.Drawing.Size(209, 20);
-            this.txtDesc.TabIndex = 2;
             // 
             // Menu_ToolStrip
             // 
@@ -109,7 +92,24 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // frmDesignationAddEdit
+            // txtDesc
+            // 
+            this.txtDesc.Location = new System.Drawing.Point(89, 82);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDesc.Properties.MaxLength = 100;
+            this.txtDesc.Size = new System.Drawing.Size(209, 20);
+            this.txtDesc.TabIndex = 2;
+            // 
+            // txtDesgCode
+            // 
+            this.txtDesgCode.Location = new System.Drawing.Point(89, 44);
+            this.txtDesgCode.Name = "txtDesgCode";
+            this.txtDesgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDesgCode.Size = new System.Drawing.Size(83, 20);
+            this.txtDesgCode.TabIndex = 1;
+            // 
+            // FrmDesignationAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,14 +122,14 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmDesignationAddEdit";
+            this.Name = "FrmDesignationAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmDesignationAddEdit_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDesignationAddEdit_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

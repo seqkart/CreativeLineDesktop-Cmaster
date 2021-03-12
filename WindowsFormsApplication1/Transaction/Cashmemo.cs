@@ -1564,10 +1564,7 @@ namespace WindowsFormsApplication1.Transaction
             //}
         }
 
-        private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void InfoGrid_KeyDown(object sender, KeyEventArgs e)
         {

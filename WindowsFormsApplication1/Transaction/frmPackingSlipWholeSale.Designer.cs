@@ -89,6 +89,7 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.chOtherPS = new DevExpress.XtraEditors.CheckEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
@@ -116,6 +117,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chOtherPS.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -736,7 +738,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(140, 60);
+            this.HelpGrid.Location = new System.Drawing.Point(190, 222);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(737, 368);
@@ -763,12 +765,22 @@
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.HelpGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.HelpGridView_PopupMenuShowing);
             // 
+            // chOtherPS
+            // 
+            this.chOtherPS.Location = new System.Drawing.Point(355, 197);
+            this.chOtherPS.Name = "chOtherPS";
+            this.chOtherPS.Properties.Caption = "Other PS";
+            this.chOtherPS.Size = new System.Drawing.Size(75, 19);
+            this.chOtherPS.TabIndex = 732;
+            this.chOtherPS.CheckedChanged += new System.EventHandler(this.chOtherPS_CheckedChanged);
+            // 
             // FrmPackingSlipWholeSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 604);
             this.ControlBox = false;
+            this.Controls.Add(this.chOtherPS);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.ArticleImageBox);
             this.Controls.Add(this.BarCodeGrid);
@@ -817,6 +829,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chOtherPS.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -883,5 +896,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
+        private DevExpress.XtraEditors.CheckEdit chOtherPS;
     }
 }

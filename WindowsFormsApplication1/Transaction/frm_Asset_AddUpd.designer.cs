@@ -1763,7 +1763,7 @@
         private DevExpress.XtraEditors.DateEdit DtCheckedODate;
         private DevExpress.XtraEditors.TextEdit TextOtherNumber;
         private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraGrid.Columns.GridColumn Location;
+        private new DevExpress.XtraGrid.Columns.GridColumn Location;
         private DevExpress.XtraGrid.Columns.GridColumn MovedDate;
         private DevExpress.XtraGrid.Columns.GridColumn MovedforPerson;
         private DevExpress.XtraEditors.TextEdit CLocDesc;

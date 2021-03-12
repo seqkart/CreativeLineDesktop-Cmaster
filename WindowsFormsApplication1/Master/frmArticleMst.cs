@@ -663,9 +663,7 @@ namespace WindowsFormsApplication1
                 (100 - Convert.ToDecimal(txtMargin.Text)) * 100));
         }
 
-        private void TxtMRP_Leave(object sender, EventArgs e)
-        {
-        }
+       
 
         private void TxtMRP_EditValueChanged(object sender, EventArgs e)
         {
@@ -675,10 +673,6 @@ namespace WindowsFormsApplication1
         private void TxtWSP_EditValueChanged(object sender, EventArgs e)
         {
             // CalculationWSP();
-        }
-
-        private void PictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
         }
 
         private void TxtWSP_KeyDown(object sender, KeyEventArgs e)

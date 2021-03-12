@@ -53,20 +53,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
         }
 
-        private void TextEdit3_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelControl5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SimpleButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
         private void GetOurwardData()
         {
             DataSet ds = ProjectFunctions.GetDataSet("select CHOTYPE,CHONO,CHODATE from CHOUTMain Where CHOPARTYCODE='" + txtDebitPartyCode.Text + "'");

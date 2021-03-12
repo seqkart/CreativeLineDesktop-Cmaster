@@ -138,7 +138,7 @@
             this.btnImportBarCodeForBranch.Name = "btnImportBarCodeForBranch";
             this.btnImportBarCodeForBranch.Size = new System.Drawing.Size(163, 23);
             this.btnImportBarCodeForBranch.Text = "Import BarCode For Branch";
-            this.btnImportBarCodeForBranch.Click += new System.EventHandler(this.BtnImportBarCodeForBranch_Click);
+          //  this.btnImportBarCodeForBranch.Click += new System.EventHandler(this.BtnImportBarCodeForBranch_Click);
             // 
             // btnImportBarode
             // 

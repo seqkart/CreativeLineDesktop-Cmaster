@@ -66,6 +66,27 @@
   <PropertyGroup>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <FileAlignment>2048</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Crc32C.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Crc32C.NET.1.0.5.0\lib\net20\Crc32C.NET.dll</HintPath>
@@ -852,6 +873,12 @@
     <Compile Include="FormReports\frmGridReports.Designer.cs">
       <DependentUpon>frmGridReports.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReports\frmGSTDIffReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReports\frmGSTDIffReport.Designer.cs">
+      <DependentUpon>frmGSTDIffReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReports\frmPartyAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -913,6 +940,30 @@
     <Compile Include="Master\frmCityMst.Designer.cs">
       <DependentUpon>frmCityMst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\frmContractorMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmContractorMst.Designer.cs">
+      <DependentUpon>frmContractorMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMachineBrandMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMachineBrandMst.Designer.cs">
+      <DependentUpon>frmMachineBrandMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMachineMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMachineMst.Designer.cs">
+      <DependentUpon>frmMachineMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmMachineTypeMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmMachineTypeMst.Designer.cs">
+      <DependentUpon>frmMachineTypeMst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmProcessMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -930,6 +981,12 @@
     </Compile>
     <Compile Include="Master\frmStateMst.Designer.cs">
       <DependentUpon>frmStateMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmSubProcessMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmSubProcessMst.Designer.cs">
+      <DependentUpon>frmSubProcessMst.cs</DependentUpon>
     </Compile>
     <Compile Include="Pos\frmOnlinePayment.cs">
       <SubType>Form</SubType>
@@ -954,6 +1011,12 @@
     </Compile>
     <Compile Include="Prints\PackingSlipCrossTab.Designer.cs">
       <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prints\PartyReco.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\PartyReco.Designer.cs">
+      <DependentUpon>PartyReco.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\XtraReport_EmployeesSalaryList.cs">
       <SubType>Component</SubType>
@@ -1547,6 +1610,12 @@
     <Compile Include="Transaction\frmImportSaleFromExcel.Designer.cs">
       <DependentUpon>frmImportSaleFromExcel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmImportSaleGSTDiffData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmImportSaleGSTDiffData.Designer.cs">
+      <DependentUpon>frmImportSaleGSTDiffData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmIndentMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1600,6 +1669,12 @@
     </Compile>
     <Compile Include="Transaction\frmProcessSMCommission.designer.cs">
       <DependentUpon>frmProcessSMCommission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\frmProcessWiseRateFeeding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmProcessWiseRateFeeding.Designer.cs">
+      <DependentUpon>frmProcessWiseRateFeeding.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\frmProformaMst.cs">
       <SubType>Form</SubType>
@@ -1737,6 +1812,9 @@
     <EmbeddedResource Include="FormReports\frmGridReports.resx">
       <DependentUpon>frmGridReports.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReports\frmGSTDIffReport.resx">
+      <DependentUpon>frmGSTDIffReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReports\frmPartyAccounts.resx">
       <DependentUpon>frmPartyAccounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -1767,6 +1845,18 @@
     <EmbeddedResource Include="Master\frmCityMst.resx">
       <DependentUpon>frmCityMst.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmContractorMst.resx">
+      <DependentUpon>frmContractorMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMachineBrandMst.resx">
+      <DependentUpon>frmMachineBrandMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMachineMst.resx">
+      <DependentUpon>frmMachineMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmMachineTypeMst.resx">
+      <DependentUpon>frmMachineTypeMst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\frmProcessMst.resx">
       <DependentUpon>frmProcessMst.cs</DependentUpon>
     </EmbeddedResource>
@@ -1775,6 +1865,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmStateMst.resx">
       <DependentUpon>frmStateMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmSubProcessMst.resx">
+      <DependentUpon>frmSubProcessMst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pos\frmOnlinePayment.resx">
       <DependentUpon>frmOnlinePayment.cs</DependentUpon>
@@ -1787,6 +1880,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\PackingSlipCrossTab.resx">
       <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\PartyReco.resx">
+      <DependentUpon>PartyReco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeesSalaryList.resx">
       <DependentUpon>XtraReport_EmployeesSalaryList.cs</DependentUpon>
@@ -2088,6 +2184,9 @@
     <EmbeddedResource Include="Transaction\frmImportSaleFromExcel.resx">
       <DependentUpon>frmImportSaleFromExcel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmImportSaleGSTDiffData.resx">
+      <DependentUpon>frmImportSaleGSTDiffData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmIndentMst.resx">
       <DependentUpon>frmIndentMst.cs</DependentUpon>
     </EmbeddedResource>
@@ -2114,6 +2213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmProcessSMCommission.resx">
       <DependentUpon>frmProcessSMCommission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmProcessWiseRateFeeding.resx">
+      <DependentUpon>frmProcessWiseRateFeeding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmProformaMst.resx">
       <DependentUpon>frmProformaMst.cs</DependentUpon>

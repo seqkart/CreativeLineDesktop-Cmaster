@@ -573,9 +573,6 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
-        private void BtnImportBarCodeForBranch_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

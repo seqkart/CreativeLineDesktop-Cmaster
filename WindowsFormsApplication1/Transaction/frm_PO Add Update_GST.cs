@@ -287,93 +287,93 @@ namespace WindowsFormsApplication1
 
         private void ShowHelpWindow(string Query)
         {
-            try
-            {
-                Print.Enabled = false;
-                HelpGridCtrl.DataSource = null;
-                HelpGrid.Columns.Clear();
-                HelpGridCtrl.RefreshDataSource();
-                HelpGridCtrl.Visible = true;
-                HelpGridCtrl.Focus();
-                using (DataSet Ds = ProjectFunctions.GetDataSet(Query))
-                {
-                    if (CurrentControl == "Btn_Term")
-                    {
-                        if (TacData.Rows.Count == 0)
-                        {
-                            DataTable temp = new DataTable();
-                            Ds.Tables[0].Columns.Add("Select", Type.GetType("System.Boolean"));
-                            if (Ds.Tables.Count > 1)
-                            {
-                                Ds.Tables[1].Columns.Add("Select", Type.GetType("System.Boolean"));
-                            }
+            //try
+            //{
+            //    Print.Enabled = false;
+            //    HelpGridCtrl.DataSource = null;
+            //    HelpGrid.Columns.Clear();
+            //    HelpGridCtrl.RefreshDataSource();
+            //    HelpGridCtrl.Visible = true;
+            //    HelpGridCtrl.Focus();
+            //    using (DataSet Ds = ProjectFunctions.GetDataSet(Query))
+            //    {
+            //        if (CurrentControl == "Btn_Term")
+            //        {
+            //            if (TacData.Rows.Count == 0)
+            //            {
+            //                DataTable temp = new DataTable();
+            //                Ds.Tables[0].Columns.Add("Select", Type.GetType("System.Boolean"));
+            //                if (Ds.Tables.Count > 1)
+            //                {
+            //                    Ds.Tables[1].Columns.Add("Select", Type.GetType("System.Boolean"));
+            //                }
 
-                            if (IsUpdate)
-                            {
-                                var diff = Ds.Tables[1].AsEnumerable().Except(Ds.Tables[0].AsEnumerable(),
-                                                     DataRowComparer.Default);
-                                temp = diff.CopyToDataTable();
-                                foreach (DataRow Dr in temp.Rows)
-                                {
-                                    Dr["Select"] = false;
-                                }
-                                foreach (DataRow Dr in Ds.Tables[0].Rows)
-                                {
-                                    Dr["Select"] = true;
-                                }
-                                Ds.Tables[0].Merge(temp);
-                                HelpGridCtrl.DataSource = Ds.Tables[0];
-                            }
-                            else
-                            {
-                                foreach (DataRow Dr in Ds.Tables[0].Rows)
-                                {
-                                    Dr["Select"] = false;
-                                }
-                                HelpGridCtrl.DataSource = Ds.Tables[0];
-                            }
-                        }
-                        else
-                        {
-                            HelpGridCtrl.DataSource = TacData;
-                        }
+            //                if (IsUpdate)
+            //                {
+            //                    var diff = Ds.Tables[1].AsEnumerable().Except(Ds.Tables[0].AsEnumerable(),
+            //                                         DataRowComparer.Default);
+            //                    temp = diff.CopyToDataTable();
+            //                    foreach (DataRow Dr in temp.Rows)
+            //                    {
+            //                        Dr["Select"] = false;
+            //                    }
+            //                    foreach (DataRow Dr in Ds.Tables[0].Rows)
+            //                    {
+            //                        Dr["Select"] = true;
+            //                    }
+            //                    Ds.Tables[0].Merge(temp);
+            //                    HelpGridCtrl.DataSource = Ds.Tables[0];
+            //                }
+            //                else
+            //                {
+            //                    foreach (DataRow Dr in Ds.Tables[0].Rows)
+            //                    {
+            //                        Dr["Select"] = false;
+            //                    }
+            //                    HelpGridCtrl.DataSource = Ds.Tables[0];
+            //                }
+            //            }
+            //            else
+            //            {
+            //                HelpGridCtrl.DataSource = TacData;
+            //            }
 
-                        ProjectFunctions.GirdViewVisualize(HelpGrid);
-                        HelpGrid.OptionsBehavior.Editable = true;
-                        HelpGrid.Columns[0].OptionsColumn.AllowEdit = false;
-                        HelpGrid.Columns[0].OptionsColumn.ReadOnly = true;
-                        HelpGrid.Columns[1].OptionsColumn.AllowEdit = false;
-                        HelpGrid.Columns[1].OptionsColumn.ReadOnly = true;
-                        HelpGrid.Columns[0].Width = 35;
-                        HelpGrid.Columns[2].Width = 45;
-                    }
-                    else
-                    {
-                        HelpGridCtrl.DataSource = Ds.Tables[0];
-                        ProjectFunctions.GirdViewVisualize(HelpGrid);
-                        HelpGrid.Columns[1].BestFit();
-                    }
-                }
-                if (CurrentControl.Equals(TextProdCode.Name))
-                {
-                    HelpGrid.Columns["Product Name"].Width = 110;
+            //            ProjectFunctions.GirdViewVisualize(HelpGrid);
+            //            HelpGrid.OptionsBehavior.Editable = true;
+            //            HelpGrid.Columns[0].OptionsColumn.AllowEdit = false;
+            //            HelpGrid.Columns[0].OptionsColumn.ReadOnly = true;
+            //            HelpGrid.Columns[1].OptionsColumn.AllowEdit = false;
+            //            HelpGrid.Columns[1].OptionsColumn.ReadOnly = true;
+            //            HelpGrid.Columns[0].Width = 35;
+            //            HelpGrid.Columns[2].Width = 45;
+            //        }
+            //        else
+            //        {
+            //            HelpGridCtrl.DataSource = Ds.Tables[0];
+            //            ProjectFunctions.GirdViewVisualize(HelpGrid);
+            //            HelpGrid.Columns[1].BestFit();
+            //        }
+            //    }
+            //    if (CurrentControl.Equals(TextProdCode.Name))
+            //    {
+            //        HelpGrid.Columns["Product Name"].Width = 110;
 
-                    HelpGrid.Columns["UOM"].Visible = false;
-                    HelpGrid.Columns["Rate"].Visible = false;
-                    //HelpGrid.Columns["Ac Code"].Visible = false;
-                    //HelpGrid.Columns["Ac Name"].Visible = false;
+            //        HelpGrid.Columns["UOM"].Visible = false;
+            //        HelpGrid.Columns["Rate"].Visible = false;
+            //        //HelpGrid.Columns["Ac Code"].Visible = false;
+            //        //HelpGrid.Columns["Ac Name"].Visible = false;
 
-                }
-                if (CurrentControl.Equals(TextPartyCode.Name))
-                {
-                    HelpGrid.Columns["AccPSTCST"].Visible = false;
-                }
+            //    }
+            //    if (CurrentControl.Equals(TextPartyCode.Name))
+            //    {
+            //        HelpGrid.Columns["AccPSTCST"].Visible = false;
+            //    }
 
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError("Unable to fetch Data please Contact IT Department.\n" + ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError("Unable to fetch Data please Contact IT Department.\n" + ex.Message);
+            //}
         }
 
         private void TextPartyCode_KeyDown(object sender, KeyEventArgs e)
@@ -1010,17 +1010,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private static void ResetControls(Control C)
-        {
-            foreach (Control ctrl in C.Controls)
-            {
-                if (ctrl.GetType() == typeof(TextEdit))
-                {
-                    ctrl.ResetText();
-                }
-            }
-        }
-
         private void TextDutyRate_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -1098,10 +1087,6 @@ namespace WindowsFormsApplication1
             {
 
             }
-        }
-
-        private void POTabControl_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
         }
 
         private void Validate_Click(object sender, EventArgs e)
@@ -1354,11 +1339,6 @@ namespace WindowsFormsApplication1
         }
 
         private void DtEntry_Validating(object sender, CancelEventArgs e)
-        {
-
-        }
-
-        private void POTabControl_Click(object sender, EventArgs e)
         {
 
         }

@@ -47,6 +47,46 @@ namespace WindowsFormsApplication1
 
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG229")
+                {
+                    WindowsFormsApplication1.Master.frmSubProcessMst frm = new WindowsFormsApplication1.Master.frmSubProcessMst()
+                    { s1 = btnAdd.Text, Text = "Sub Process Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG228")
+                {
+                    WindowsFormsApplication1.Master.frmMachineTypeMst frm = new WindowsFormsApplication1.Master.frmMachineTypeMst()
+                    { s1 = btnAdd.Text, Text = "Machine Type Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG227")
+                {
+                    WindowsFormsApplication1.Master.frmMachineBrandMst frm = new WindowsFormsApplication1.Master.frmMachineBrandMst()
+                    { s1 = btnAdd.Text, Text = "Machine Brand Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG226")
+                {
+                    WindowsFormsApplication1.Master.frmMachineMst frm = new WindowsFormsApplication1.Master.frmMachineMst()
+                    { s1 = btnAdd.Text, Text = "Machine Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG225")
+                {
+                    WindowsFormsApplication1.Master.frmContractorMst frm = new WindowsFormsApplication1.Master.frmContractorMst()
+                    { s1 = btnAdd.Text, Text = "Contractor Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG221")
                 {
                     WindowsFormsApplication1.Master.frmProcessMst frm = new WindowsFormsApplication1.Master.frmProcessMst()
@@ -442,6 +482,56 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG229")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmSubProcessMst frm = new WindowsFormsApplication1.Master.frmSubProcessMst()
+                    { s1 = btnEdit.Text, Text = "Sub Process Master Edition", SubProcessCode = CurrentRow["SubProcessCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG228")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmMachineTypeMst frm = new WindowsFormsApplication1.Master.frmMachineTypeMst()
+                    { s1 = btnEdit.Text, Text = "Machine Type Master Edition" , TypeCode = CurrentRow["TypeCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG227")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmMachineBrandMst frm = new WindowsFormsApplication1.Master.frmMachineBrandMst()
+                    { s1 = btnEdit.Text, Text = "Machine Brand Master Edition" , BrandCode = CurrentRow["BrandCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG226")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmMachineMst frm = new WindowsFormsApplication1.Master.frmMachineMst()
+                    { s1 = btnEdit.Text, Text = "Machine Master Edition", MachineCode = CurrentRow["MachineCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG225")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmContractorMst frm = new WindowsFormsApplication1.Master.frmContractorMst()
+                    { s1 = btnEdit.Text, Text = "Contrator Master Edition", CNTSYSID = CurrentRow["CNTSYSID"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG221")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -946,7 +1036,7 @@ namespace WindowsFormsApplication1
                                                               " - " +
                                                               CurrentRow["AccCode"].ToString() +
                                                               " ]",
-                                                          dsGetData = ds
+                                                          DsGetData = ds
                                                       };
                                                       var P = ProjectFunctions.GetPositionInForm(this);
                                                       frm.Location = new Point(P.X +

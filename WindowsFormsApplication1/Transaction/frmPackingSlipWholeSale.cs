@@ -950,12 +950,19 @@ namespace WindowsFormsApplication1.Transaction
                             {
                                 if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
                                 {
-                                    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                    txtBarCode.Focus();
-                                    txtBarCode.SelectAll();
+                                    if (chOtherPS.Checked)
+                                    {
 
-                                    e.Handled = true;
-                                    return;
+                                    }
+                                    else
+                                    {
+                                        ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                        txtBarCode.Focus();
+                                        txtBarCode.SelectAll();
+
+                                        e.Handled = true;
+                                        return;
+                                    }
                                 }
 
                                 foreach (DataRow dr in dt.Rows)
@@ -970,15 +977,20 @@ namespace WindowsFormsApplication1.Transaction
                                         return;
                                     }
                                 }
-
-                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
-                                if (dsCheck.Tables[0].Rows.Count > 0)
+                                if (chOtherPS.Checked)
+                                { 
+                                }
+                                else
                                 {
-                                    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                    txtBarCode.Focus();
-                                    txtBarCode.SelectAll();
-                                    e.Handled = true;
-                                    return;
+                                    DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
+                                    if (dsCheck.Tables[0].Rows.Count > 0)
+                                    {
+                                        ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                        txtBarCode.Focus();
+                                        txtBarCode.SelectAll();
+                                        e.Handled = true;
+                                        return;
+                                    }
                                 }
                             }
                         }
@@ -986,17 +998,22 @@ namespace WindowsFormsApplication1.Transaction
 
                          if (FixBarPartyTag == "N")
                         {
-
-                            if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                            if (chOtherPS.Checked)
                             {
-                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                txtBarCode.Focus();
-                                txtBarCode.SelectAll();
-
-                                e.Handled = true;
-                                return;
                             }
+                            else
+                            {
 
+                                if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                                {
+                                    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                    txtBarCode.Focus();
+                                    txtBarCode.SelectAll();
+
+                                    e.Handled = true;
+                                    return;
+                                }
+                            }
                             foreach(DataRow  dr in dt.Rows)
                             {
                                 if(dr["SIDBARCODE"].ToString().ToUpper()== ds.Tables[0].Rows[0]["SIDBARCODE"].ToString().ToUpper())
@@ -1009,17 +1026,21 @@ namespace WindowsFormsApplication1.Transaction
                                     return;
                                 }
                             }
-
-                            DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
-                            if (dsCheck.Tables[0].Rows.Count > 0)
+                            if (chOtherPS.Checked)
                             {
-                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                txtBarCode.Focus();
-                                txtBarCode.SelectAll();
-                                e.Handled = true;
-                                return;
                             }
-
+                            else
+                            {
+                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
+                                if (dsCheck.Tables[0].Rows.Count > 0)
+                                {
+                                    ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                    txtBarCode.Focus();
+                                    txtBarCode.SelectAll();
+                                    e.Handled = true;
+                                    return;
+                                }
+                            }
                         }
 
                         ////////////////////////MRP
@@ -1404,6 +1425,11 @@ namespace WindowsFormsApplication1.Transaction
                 //    txtStoreQty.Text = "0";
                 //}
             }
+        }
+
+        private void chOtherPS_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -9,10 +9,11 @@ namespace WindowsFormsApplication1.Transaction
     public partial class frmIndentMst : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         int rowindex;
+        public DevExpress.XtraGrid.Views.Base.BaseView KeyboardFocusView { get; set; }
 
         public frmIndentMst()
         {
@@ -30,7 +31,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        private void clear()
+        private void Clear()
         {
             BtnOK.Text = "&OK";
             txtProductACode.Text = string.Empty;
@@ -42,16 +43,16 @@ namespace WindowsFormsApplication1.Transaction
         }
 
 
-        private void frmIndentMst_Load(object sender, EventArgs e)
+        private void FrmIndentMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 dtInvoiceDate.EditValue = DateTime.Now;
-                txtSerialNo.Text = getNewInvoiceDocumentNo().PadLeft(5, '0');
+                txtSerialNo.Text = GetNewInvoiceDocumentNo().PadLeft(5, '0');
                 txtDeptCode.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 dtInvoiceDate.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet(string.Format("sp_LoadIndDataFEdit '{0}','{1}','{2}'", ImNo, ImDate.Date.ToString("yyyy-MM-dd"), GlobalVariables.CUnitID));
@@ -67,7 +68,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -160,7 +161,7 @@ namespace WindowsFormsApplication1.Transaction
             return true;
         }
 
-        private void txtProductACode_EditValueChanged(object sender, EventArgs e)
+        private void TxtProductACode_EditValueChanged(object sender, EventArgs e)
         {
             txtProductName.Text = string.Empty;
             txtProductCode.Text = string.Empty;
@@ -209,9 +210,9 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+
+            var MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
+
             if (MaxRow == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Operation");
@@ -221,11 +222,11 @@ namespace WindowsFormsApplication1.Transaction
                 InfoGridView.DeleteRow(rowindex);
                 InfoGridView.RefreshData();
                 dt.AcceptChanges();
-                clear();
+                Clear();
             }
 
         }
-        private string getNewInvoiceDocumentNo()
+        private string GetNewInvoiceDocumentNo()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(IndmNo  as int)),00000) from IndMst Where IndmDate='" + dtInvoiceDate.DateTime.ToString("yyyy-MM-dd") + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
@@ -238,9 +239,10 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void InfoGrid_DoubleClick(object sender, EventArgs e)
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+
+            // var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+            var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
+
             if (MaxRow == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Operation");
@@ -264,20 +266,23 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnUndo_Click(object sender, EventArgs e)
         {
-            clear();
+            Clear();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateDataForSaving())
             {
 
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                    var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
 
+
+#pragma warning disable S125 // Sections of code should not be commented out
+                    //var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+
+                    var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
+#pragma warning restore S125 // Sections of code should not be commented out
 
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
@@ -287,7 +292,7 @@ namespace WindowsFormsApplication1.Transaction
                     sqlcom.CommandType = CommandType.StoredProcedure;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = "[sp_IndMstAddEdit]";
                             sqlcom.Parameters.Add("@IndmNo", SqlDbType.NVarChar).Value = "000000";
@@ -300,7 +305,7 @@ namespace WindowsFormsApplication1.Transaction
                             txtSerialNo.Text = sqlcom.Parameters["@IndmNo"].Value.ToString();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = "[sp_IndMstAddEdit]";
                             sqlcom.Parameters.Add("@IndmNo", SqlDbType.NVarChar).Value = txtSerialNo.Text.Trim();
@@ -366,7 +371,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtProductACode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtProductACode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -374,7 +379,7 @@ namespace WindowsFormsApplication1.Transaction
                 HelpGrid.Text = "txtProductACode";
                 if (txtProductACode.Text.Trim().Length == 0)
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet("SELECT     PrdMst.PrdCode,PrdMst.PrdAsgnCode, PrdMst.PrdName From PrdMst Where PrdActive='Y'");
+                    DataSet ds = ProjectFunctions.GetDataSet("SELECT PrdMst.PrdCode,PrdMst.PrdAsgnCode, PrdMst.PrdName From PrdMst Where PrdActive='Y'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         HelpGrid.DataSource = ds.Tables[0];
@@ -390,7 +395,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 else
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet("SELECT     PrdMst.PrdCode,PrdMst.PrdAsgnCode, PrdMst.PrdName From PrdMst Where PrdActive='Y' And PrdAsgnCode='" + txtProductACode.Text + "'");
+                    DataSet ds = ProjectFunctions.GetDataSet("SELECT PrdMst.PrdCode,PrdMst.PrdAsgnCode, PrdMst.PrdName From PrdMst Where PrdActive='Y' And PrdAsgnCode='" + txtProductACode.Text + "'");
 
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -402,7 +407,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     else
                     {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("SELECT     PrdMst.PrdCode,PrdMst.PrdAsgnCode, PrdMst.PrdName From PrdMst Where PrdActive='Y'");
+                        DataSet ds1 = ProjectFunctions.GetDataSet("SELECT PrdMst.PrdCode,PrdMst.PrdAsgnCode, PrdMst.PrdName From PrdMst Where PrdActive='Y'");
                         if (ds1.Tables[0].Rows.Count > 0)
                         {
                             HelpGrid.DataSource = ds.Tables[0];
@@ -435,7 +440,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtProductQty_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtProductQty_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
@@ -460,15 +465,12 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtDeptCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDeptCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select DeptCode,DeptDesc from DeptMst", " Where DeptCode", txtDeptCode, txtDeptName, txtProductACode, HelpGrid, HelpGridView, e);
 
         }
 
-        private void HelpGrid_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

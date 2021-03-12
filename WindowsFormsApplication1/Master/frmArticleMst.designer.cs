@@ -336,7 +336,7 @@
             this.txtMRP.TabIndex = 0;
             this.txtMRP.EditValueChanged += new System.EventHandler(this.TxtMRP_EditValueChanged);
             this.txtMRP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMRP_KeyDown);
-            this.txtMRP.Leave += new System.EventHandler(this.TxtMRP_Leave);
+           // this.txtMRP.Leave += new System.EventHandler(this.TxtMRP_Leave);
             // 
             // txtRSP
             // 
@@ -1054,7 +1054,7 @@
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Size = new System.Drawing.Size(259, 323);
             this.ArticleImageBox.TabIndex = 707;
-            this.ArticleImageBox.EditValueChanged += new System.EventHandler(this.PictureEdit1_EditValueChanged);
+           // this.ArticleImageBox.EditValueChanged += new System.EventHandler(this.PictureEdit1_EditValueChanged);
             // 
             // frmArticleMst
             // 

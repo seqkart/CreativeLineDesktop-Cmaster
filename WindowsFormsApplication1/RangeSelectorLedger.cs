@@ -7,8 +7,6 @@ namespace WindowsFormsApplication1
     public partial class RangeSelectorLedger : XtraUserControl
     {
 
-        private string CurrentControl;
-
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
@@ -45,7 +43,7 @@ namespace WindowsFormsApplication1
         {
             Hide();
         }
-        private void fillPartyGrid()
+        private void FillPartyGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst");
             if (ds.Tables[0].Rows.Count > 0)
@@ -59,7 +57,7 @@ namespace WindowsFormsApplication1
                 HelpGridView.BestFitColumns();
             }
         }
-        private void fillLedgerGrid()
+        private void FillLedgerGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select LgrCode,LgrDesc from LgrMst");
             if (ds.Tables[0].Rows.Count > 0)
@@ -73,7 +71,7 @@ namespace WindowsFormsApplication1
                 HelpGridView.BestFitColumns();
             }
         }
-        private void fillBSGrid()
+        private void FillBSGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select BSCode,BSDesc from bshmst");
             if (ds.Tables[0].Rows.Count > 0)
@@ -87,33 +85,33 @@ namespace WindowsFormsApplication1
                 HelpGridView.BestFitColumns();
             }
         }
-        private void chParty_CheckedChanged(object sender, EventArgs e)
+        private void ChParty_CheckedChanged(object sender, EventArgs e)
         {
             if (chParty.Checked)
             {
                 chLedger.Checked = false;
                 chBSHead.Checked = false;
-                fillPartyGrid();
+                FillPartyGrid();
             }
         }
 
-        private void chBSHead_CheckedChanged(object sender, EventArgs e)
+        private void ChBSHead_CheckedChanged(object sender, EventArgs e)
         {
             if (chBSHead.Checked)
             {
                 chLedger.Checked = false;
                 chParty.Checked = false;
-                fillBSGrid();
+                FillBSGrid();
             }
         }
 
-        private void chLedger_CheckedChanged(object sender, EventArgs e)
+        private void ChLedger_CheckedChanged(object sender, EventArgs e)
         {
             if (chLedger.Checked)
             {
                 chBSHead.Checked = false;
                 chParty.Checked = false;
-                fillLedgerGrid();
+                FillLedgerGrid();
             }
         }
     }

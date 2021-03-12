@@ -459,7 +459,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnPrint.Size = new System.Drawing.Size(110, 30);
             this.btnPrint.TabIndex = 364;
             this.btnPrint.Text = "Print";
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
             // 
             // btnExportXsls
             // 

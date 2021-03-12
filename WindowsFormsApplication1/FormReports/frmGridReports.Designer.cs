@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             this.MasterGrid = new DevExpress.XtraGrid.GridControl();
             this.MasterGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGridView)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +50,16 @@
             // 
             // MasterGridView
             // 
+            this.MasterGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1});
+            gridFormatRule1.Name = "Format0";
+            gridFormatRule1.Rule = null;
+            this.MasterGridView.FormatRules.Add(gridFormatRule1);
             this.MasterGridView.GridControl = this.MasterGrid;
+            this.MasterGridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Custom, "NET AMOUNT*0.35", this.gridColumn1, ""),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, ""),
+            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
             this.MasterGridView.Name = "MasterGridView";
             this.MasterGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.MasterGridView.OptionsBehavior.Editable = false;
@@ -57,6 +68,16 @@
             this.MasterGridView.OptionsView.ShowGroupPanel = false;
             this.MasterGridView.OptionsView.ShowIndicator = false;
             this.MasterGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.MasterGridView_PopupMenuShowing);
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "NET AMOUNT";
+            this.gridColumn1.FieldName = "NET AMOUNT";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
             // 
             // frmGridReports
             // 
@@ -78,5 +99,6 @@
 
         private DevExpress.XtraGrid.GridControl MasterGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView MasterGridView;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

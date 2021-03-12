@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frm_MaterialReciept_Add_Update_GST : XtraForm, IDisposable
+    public partial class Frm_MaterialReceipt_Add_Update_GST : XtraForm, IDisposable
     {
 
         public string CurrentControl { get; set; }
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
         private int __rohandle;
         private decimal oldPOqntyord;
         private decimal oldPOqntyRcvd;
-#pragma warning disable CS0649 // Field 'frm_MaterialReciept_Add_Update_GST.oldprodpono' is never assigned to, and will always have its default value null
+#pragma warning disable CS0649 // Field 'frm_MaterialReceipt_Add_Update_GST.oldprodpono' is never assigned to, and will always have its default value null
         private string oldprodpono;
 #pragma warning restore CS0649 // Field 'frm_MaterialReciept_Add_Update_GST.oldprodpono' is never assigned to, and will always have its default value null
 #pragma warning disable CS0649 // Field 'frm_MaterialReciept_Add_Update_GST.oldprdqnty' is never assigned to, and will always have its default value 0
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
         private bool xtraflag;
 
 
-        public frm_MaterialReciept_Add_Update_GST()
+        public Frm_MaterialReceipt_Add_Update_GST()
         {
             InitializeComponent();
         }

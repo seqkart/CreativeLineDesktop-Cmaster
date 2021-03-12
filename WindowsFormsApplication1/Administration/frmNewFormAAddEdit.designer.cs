@@ -127,7 +127,6 @@
             this.txtFormDesc.Properties.MaxLength = 150;
             this.txtFormDesc.Size = new System.Drawing.Size(463, 20);
             this.txtFormDesc.TabIndex = 4;
-            this.txtFormDesc.EditValueChanged += new System.EventHandler(this.TxtFormDesc_EditValueChanged);
             // 
             // label8
             // 
@@ -326,8 +325,6 @@
             this.txtstatusTag.Properties.MaxLength = 1;
             this.txtstatusTag.Size = new System.Drawing.Size(41, 20);
             this.txtstatusTag.TabIndex = 3;
-            this.txtstatusTag.EditValueChanged += new System.EventHandler(this.TxtstatusTag_EditValueChanged);
-            this.txtstatusTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtstatusTag_KeyDown);
             this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtstatusTag_Validating);
             // 
             // txtNfaTag

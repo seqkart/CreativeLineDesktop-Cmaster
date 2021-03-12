@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG148")
                 {
                     WindowsFormsApplication1.Transaction.frmIndentMst frm = new WindowsFormsApplication1.Transaction.frmIndentMst
-                    { s1 = btnAdd.Text, Text = "Indent Addition" };
+                    { S1 = btnAdd.Text, Text = "Indent Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -207,7 +207,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG90")
                 {
-                    frm_MaterialReciept_Add_Update_GST frm = new frm_MaterialReciept_Add_Update_GST()
+                    Frm_MaterialReceipt_Add_Update_GST frm = new Frm_MaterialReceipt_Add_Update_GST()
                     { _MRI = "MRI", IsUpdate = false, Text = "Material Receipt Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG87")
                 {
                     Transaction.frmIndentMst frm = new Transaction.frmIndentMst()
-                    { s1 = btnAdd.Text, Text = "Indent Master" };
+                    { S1 = btnAdd.Text, Text = "Indent Master" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -389,27 +389,14 @@ namespace WindowsFormsApplication1
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
-                if (GlobalVariables.ProgCode == "PROG149")
-                {
-                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-
-                    WindowsFormsApplication1.frm_poAddition_GST frm = new WindowsFormsApplication1.frm_poAddition_GST
-                    {
-                        IsUpdate = true,
-                        Text = "Purchase Order Edition",
-                        PoNo = CurrentRow["PONo"].ToString(),
-                        PoDate = Convert.ToDateTime(CurrentRow["Date"])
-                    };
-                    frm.StartPosition = FormStartPosition.CenterScreen;
-                    frm.ShowDialog(Parent);
-                }
+               
                 if (GlobalVariables.ProgCode == "PROG148")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Transaction.frmIndentMst frm = new WindowsFormsApplication1.Transaction.frmIndentMst
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Indent Edition",
                         ImNo = CurrentRow["IndentNo"].ToString(),
                         ImDate = Convert.ToDateTime(CurrentRow["IndentDate"])
@@ -604,7 +591,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG90")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frm_MaterialReciept_Add_Update_GST frm = new frm_MaterialReciept_Add_Update_GST()
+                    Frm_MaterialReceipt_Add_Update_GST frm = new Frm_MaterialReceipt_Add_Update_GST()
                     {
                         Text = "Material Receipt Editing",
                         IsUpdate = true,
@@ -661,7 +648,7 @@ namespace WindowsFormsApplication1
 
                     Transaction.frmIndentMst frm = new Transaction.frmIndentMst()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "indent Editing",
                         ImNo = CurrentRow["IndentNo"].ToString(),
                         ImDate = Convert.ToDateTime(CurrentRow["IndentDate"])
