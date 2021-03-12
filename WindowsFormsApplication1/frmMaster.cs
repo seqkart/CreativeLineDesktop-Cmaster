@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG227")
                 {
-                    WindowsFormsApplication1.Master.frmMachineBrandMst frm = new WindowsFormsApplication1.Master.frmMachineBrandMst()
+                    WindowsFormsApplication1.Master.FrmMachineBrandMst frm = new WindowsFormsApplication1.Master.FrmMachineBrandMst()
                     { s1 = btnAdd.Text, Text = "Machine Brand Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -506,7 +506,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmMachineBrandMst frm = new WindowsFormsApplication1.Master.frmMachineBrandMst()
+                    WindowsFormsApplication1.Master.FrmMachineBrandMst frm = new WindowsFormsApplication1.Master.FrmMachineBrandMst()
                     { s1 = btnEdit.Text, Text = "Machine Brand Master Edition" , BrandCode = CurrentRow["BrandCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);

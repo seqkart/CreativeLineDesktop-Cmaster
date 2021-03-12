@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmProcessWiseRateFeeding
+    partial class FrmProcessWiseRateFeeding
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Transaction
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProcessWiseRateFeeding));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProcessWiseRateFeeding));
             this.lblContrator = new DevExpress.XtraEditors.LabelControl();
             this.txtContractorDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtContractorCode = new DevExpress.XtraEditors.TextEdit();
@@ -94,8 +94,8 @@ namespace WindowsFormsApplication1.Transaction
             this.txtContractorCode.Properties.MaxLength = 8;
             this.txtContractorCode.Size = new System.Drawing.Size(74, 20);
             this.txtContractorCode.TabIndex = 722;
-            this.txtContractorCode.EditValueChanged += new System.EventHandler(this.txtContractorCode_EditValueChanged);
-            this.txtContractorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContractorCode_KeyDown);
+            this.txtContractorCode.EditValueChanged += new System.EventHandler(this.TxtContractorCode_EditValueChanged);
+            this.txtContractorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtContractorCode_KeyDown);
             // 
             // chContratcor
             // 
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1.Transaction
             this.chContratcor.Properties.Caption = "Contratcot Wise";
             this.chContratcor.Size = new System.Drawing.Size(114, 19);
             this.chContratcor.TabIndex = 724;
-            this.chContratcor.CheckedChanged += new System.EventHandler(this.chContratcor_CheckedChanged);
+            this.chContratcor.CheckedChanged += new System.EventHandler(this.ChContratcor_CheckedChanged);
             // 
             // chWorker
             // 
@@ -113,7 +113,7 @@ namespace WindowsFormsApplication1.Transaction
             this.chWorker.Properties.Caption = "Worker Wise";
             this.chWorker.Size = new System.Drawing.Size(114, 19);
             this.chWorker.TabIndex = 725;
-            this.chWorker.CheckedChanged += new System.EventHandler(this.chWorker_CheckedChanged);
+            this.chWorker.CheckedChanged += new System.EventHandler(this.ChWorker_CheckedChanged);
             // 
             // lblWorker
             // 
@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1.Transaction
             this.txtWorkerCode.Properties.MaxLength = 8;
             this.txtWorkerCode.Size = new System.Drawing.Size(74, 20);
             this.txtWorkerCode.TabIndex = 727;
-            this.txtWorkerCode.EditValueChanged += new System.EventHandler(this.txtWorkerCode_EditValueChanged);
+            this.txtWorkerCode.EditValueChanged += new System.EventHandler(this.TxtWorkerCode_EditValueChanged);
             this.txtWorkerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWorkerCode_KeyDown);
             // 
             // HelpGrid

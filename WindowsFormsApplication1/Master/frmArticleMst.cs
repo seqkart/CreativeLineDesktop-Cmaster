@@ -302,11 +302,15 @@ namespace WindowsFormsApplication1
 
                         if (ds.Tables[0].Rows[0]["ARTGENMODAUTO"].ToString() == "1")
                         {
-                            RBMANUART.Checked = true;
+                            RBMANUART.Checked = false;
+                            RBARTINDVI.Checked = false;
+                            RBAUTOART.Checked = true;
                         }
                         else
                         {
-                            RBMANUART.Checked = false;
+                            RBMANUART.Checked = true;
+                            RBARTINDVI.Checked = true;
+                            RBAUTOART.Checked = false;
                         }
                         if (ds.Tables[0].Rows[0]["ARTIDENTMOD"].ToString() == "1")
                         {

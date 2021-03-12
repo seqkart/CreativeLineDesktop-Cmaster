@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmMachineBrandMst
+    partial class FrmMachineBrandMst
     {
         /// <summary>
         /// Required designer variable.

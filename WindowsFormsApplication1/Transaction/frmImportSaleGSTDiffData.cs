@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraReports.UI;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
@@ -13,7 +12,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             InitializeComponent();
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -55,14 +54,14 @@ namespace WindowsFormsApplication1.Transaction
             }
             return true;
         }
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
 
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             dt.Rows.Clear();
             var xlConn = string.Empty;
@@ -76,7 +75,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -107,11 +106,11 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.GetDataSet(Query);
                     }
                 }
-                ProjectFunctions.SpeakError("Pura Ho gya");
+                ProjectFunctions.SpeakError("Process Complete");
             }
         }
 
-        private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDebitPartyName.Text = String.Empty;
         }
@@ -175,7 +174,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtDebitPartyCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtDebitPartyCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -252,15 +251,15 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void frmImportSaleGSTDiffData_Load(object sender, EventArgs e)
+        private void FrmImportSaleGSTDiffData_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
         }
 
-        private void simpleButton4_Click(object sender, EventArgs e)
+        private void SimpleButton4_Click(object sender, EventArgs e)
         {
-            DataSet ds= ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '','',''");
-            if(ds.Tables[0].Rows.Count>0)
+            DataSet ds = ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '','',''");
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 InfoGrid.DataSource = ds.Tables[0];
                 InfoGridView.BestFitColumns();
@@ -292,7 +291,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void SimpleButton2_Click(object sender, EventArgs e)
         {
             try
             {

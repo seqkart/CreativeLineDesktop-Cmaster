@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(595, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(518, 26);
             this.Menu_ToolStrip.TabIndex = 746;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1.Master
             // txtIDNo
             // 
             this.txtIDNo.EnterMoveNextControl = true;
-            this.txtIDNo.Location = new System.Drawing.Point(380, 162);
+            this.txtIDNo.Location = new System.Drawing.Point(342, 137);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIDNo.Size = new System.Drawing.Size(157, 20);
@@ -108,7 +108,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtIDType
             // 
-            this.txtIDType.Location = new System.Drawing.Point(127, 162);
+            this.txtIDType.Location = new System.Drawing.Point(89, 137);
             this.txtIDType.Name = "txtIDType";
             this.txtIDType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1.Master
             // txtOtherNo
             // 
             this.txtOtherNo.EnterMoveNextControl = true;
-            this.txtOtherNo.Location = new System.Drawing.Point(380, 110);
+            this.txtOtherNo.Location = new System.Drawing.Point(342, 85);
             this.txtOtherNo.Name = "txtOtherNo";
             this.txtOtherNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOtherNo.Size = new System.Drawing.Size(157, 20);
@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtContCode.Enabled = false;
             this.txtContCode.EnterMoveNextControl = true;
-            this.txtContCode.Location = new System.Drawing.Point(127, 58);
+            this.txtContCode.Location = new System.Drawing.Point(89, 33);
             this.txtContCode.Name = "txtContCode";
             this.txtContCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContCode.Properties.MaxLength = 8;
@@ -147,7 +147,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(71, 140);
+            this.Label3.Location = new System.Drawing.Point(33, 115);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(51, 13);
             this.Label3.TabIndex = 757;
@@ -156,7 +156,7 @@ namespace WindowsFormsApplication1.Master
             // txtEMailId
             // 
             this.txtEMailId.EnterMoveNextControl = true;
-            this.txtEMailId.Location = new System.Drawing.Point(127, 136);
+            this.txtEMailId.Location = new System.Drawing.Point(89, 111);
             this.txtEMailId.Name = "txtEMailId";
             this.txtEMailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEMailId.Size = new System.Drawing.Size(410, 20);
@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1.Master
             // txtMobileNo
             // 
             this.txtMobileNo.EnterMoveNextControl = true;
-            this.txtMobileNo.Location = new System.Drawing.Point(127, 110);
+            this.txtMobileNo.Location = new System.Drawing.Point(89, 85);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobileNo.Size = new System.Drawing.Size(171, 20);
@@ -175,7 +175,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(315, 114);
+            this.Label4.Location = new System.Drawing.Point(277, 89);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(60, 13);
             this.Label4.TabIndex = 758;
@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1.Master
             // txtContName
             // 
             this.txtContName.EnterMoveNextControl = true;
-            this.txtContName.Location = new System.Drawing.Point(127, 84);
+            this.txtContName.Location = new System.Drawing.Point(89, 59);
             this.txtContName.Name = "txtContName";
             this.txtContName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContName.Size = new System.Drawing.Size(410, 20);
@@ -194,7 +194,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.LBDEPNAME.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPNAME.Appearance.Options.UseFont = true;
-            this.LBDEPNAME.Location = new System.Drawing.Point(85, 88);
+            this.LBDEPNAME.Location = new System.Drawing.Point(47, 63);
             this.LBDEPNAME.Name = "LBDEPNAME";
             this.LBDEPNAME.Size = new System.Drawing.Size(37, 13);
             this.LBDEPNAME.TabIndex = 755;
@@ -204,7 +204,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(45, 166);
+            this.Label7.Location = new System.Drawing.Point(7, 141);
             this.Label7.Name = "Label7";
             this.Label7.Size = new System.Drawing.Size(77, 13);
             this.Label7.TabIndex = 754;
@@ -214,7 +214,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(87, 62);
+            this.LBDEPCODE.Location = new System.Drawing.Point(49, 37);
             this.LBDEPCODE.Name = "LBDEPCODE";
             this.LBDEPCODE.Size = new System.Drawing.Size(35, 13);
             this.LBDEPCODE.TabIndex = 756;
@@ -224,7 +224,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label6.Appearance.Options.UseFont = true;
-            this.Label6.Location = new System.Drawing.Point(58, 114);
+            this.Label6.Location = new System.Drawing.Point(20, 89);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(64, 13);
             this.Label6.TabIndex = 753;
@@ -234,7 +234,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 237);
+            this.ClientSize = new System.Drawing.Size(518, 174);
             this.ControlBox = false;
             this.Controls.Add(this.txtIDNo);
             this.Controls.Add(this.txtIDType);

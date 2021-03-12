@@ -193,7 +193,7 @@ namespace WindowsFormsApplication1
             switch (myitem)
             {
                 case "PROG230":
-                    var PROG230 = new Transaction.frmProcessWiseRateFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG230 = new Transaction.FrmProcessWiseRateFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG230.Show();
                     PROG230.BringToFront();
                     PROG230.Parent = Page;

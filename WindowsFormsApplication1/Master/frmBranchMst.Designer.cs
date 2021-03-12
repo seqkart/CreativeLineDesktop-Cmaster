@@ -190,11 +190,11 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(29, 199);
+            this.label2.Location = new System.Drawing.Point(64, 199);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(19, 13);
             this.label2.TabIndex = 424;
-            this.label2.Text = "Under City";
+            this.label2.Text = "City";
             // 
             // txtCityName
             // 

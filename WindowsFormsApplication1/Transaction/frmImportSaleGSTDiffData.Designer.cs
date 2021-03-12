@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnLoad
             // 
@@ -148,7 +148,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(69, 23);
             this.btnLoad.Text = "Load Excel";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // btnSave
             // 
@@ -158,12 +158,12 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // splitContainerControl1
             // 
@@ -201,7 +201,7 @@ namespace WindowsFormsApplication1.Transaction
             this.simpleButton4.Size = new System.Drawing.Size(100, 23);
             this.simpleButton4.TabIndex = 538;
             this.simpleButton4.Text = "PROCESS REPORT";
-            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
+            this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
             // 
             // simpleButton3
             // 
@@ -218,7 +218,7 @@ namespace WindowsFormsApplication1.Transaction
             this.simpleButton2.Size = new System.Drawing.Size(100, 23);
             this.simpleButton2.TabIndex = 538;
             this.simpleButton2.Text = "PRINT REPORT";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -256,8 +256,8 @@ namespace WindowsFormsApplication1.Transaction
             this.txtDebitPartyCode.Properties.MaxLength = 6;
             this.txtDebitPartyCode.Size = new System.Drawing.Size(73, 20);
             this.txtDebitPartyCode.TabIndex = 536;
-            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.txtDebitPartyCode_EditValueChanged);
-            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitPartyCode_KeyDown);
+            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
+            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
             // 
             // EOSSGrid
             // 
@@ -370,7 +370,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Name = "frmImportSaleGSTDiffData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmImportSaleGSTDiffData_Load);
+            this.Load += new System.EventHandler(this.FrmImportSaleGSTDiffData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();

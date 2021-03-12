@@ -138,10 +138,10 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(131, 119);
+            this.HelpGrid.Location = new System.Drawing.Point(61, 40);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(470, 173);
+            this.HelpGrid.Size = new System.Drawing.Size(453, 173);
             this.HelpGrid.TabIndex = 744;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});

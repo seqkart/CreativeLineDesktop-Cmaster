@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1
 
                     Hide();
                     //  BtnBackup_Click(null, null);
-                    ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString());
+                    ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString() + drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString());
                     frm.ShowDialog(Parent);
                     frm.BringToFront();
 
@@ -312,7 +312,7 @@ namespace WindowsFormsApplication1
 
 
             {
-                NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@123");
+                NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@12345");
                 if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
                 {
 
@@ -334,7 +334,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@1234");
+                    NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@12345");
                     System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
                     ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
                     string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
@@ -351,7 +351,7 @@ namespace WindowsFormsApplication1
                     Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
                     SplashScreenManager.CloseForm();
                 }
-             
+
 
 
                 ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());

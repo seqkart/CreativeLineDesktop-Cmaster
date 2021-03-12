@@ -139,11 +139,11 @@
             // 
             this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(52, 39);
+            this.LBDEPCODE.Location = new System.Drawing.Point(83, 39);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(84, 13);
+            this.LBDEPCODE.Size = new System.Drawing.Size(53, 13);
             this.LBDEPCODE.TabIndex = 756;
-            this.LBDEPCODE.Text = "Sys Color Code :";
+            this.LBDEPCODE.Text = "Sys Code :";
             // 
             // frmColors
             // 

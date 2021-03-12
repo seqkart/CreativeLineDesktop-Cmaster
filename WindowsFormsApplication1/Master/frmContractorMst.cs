@@ -1,9 +1,6 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
@@ -126,7 +123,7 @@ namespace WindowsFormsApplication1.Master
         }
 
         private bool ValidateData()
-        { 
+        {
             if (txtContName.Text.Trim().Length == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Contractor Name");

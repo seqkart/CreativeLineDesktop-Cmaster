@@ -1,16 +1,5 @@
 ﻿using DevExpress.XtraEditors;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using DevExpress.XtraBars.Docking2010;
-using DevExpress.XtraEditors;
-using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
