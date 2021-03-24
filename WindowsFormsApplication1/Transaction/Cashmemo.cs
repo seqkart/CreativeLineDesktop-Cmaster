@@ -28,8 +28,8 @@ namespace WindowsFormsApplication1.Transaction
         {
             InitializeComponent();
 
-            chall.Checked = false
-                ;
+            chall.Checked = false;
+                
             dt.Columns.Add("SIDBARCODE", typeof(string));
             dt.Columns.Add("SIDARTNO", typeof(string));
             dt.Columns.Add("SIDARTDESC", typeof(string));

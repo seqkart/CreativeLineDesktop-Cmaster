@@ -119,7 +119,9 @@ namespace WindowsFormsApplication1
             TaxCodeWiseSummary();
             HSNWiseSummary();
 
-            labelControl6.Text = dt.Rows.Count.ToString();
+            labelControl6.Text= Convert.ToDecimal(dt.Compute("SUM(SIDSCANQTY)", string.Empty)).ToString("0");
+
+           
         }
         private void TaxCodeWiseSummary()
         {

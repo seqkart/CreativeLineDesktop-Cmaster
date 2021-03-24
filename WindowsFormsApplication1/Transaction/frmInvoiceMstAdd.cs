@@ -26,6 +26,8 @@ namespace WindowsFormsApplication1
         decimal AccMRPMarkDown = 0;
 #pragma warning restore CS0169 // The field 'frmInvoiceMstAdd.SearchField' is never used
         DataSet dsPopUps = new DataSet();
+
+        int rowindex;
         public FrmInvoiceMstAdd()
         {
             InitializeComponent();
@@ -248,12 +250,13 @@ namespace WindowsFormsApplication1
             decimal SumCGSTAmount = 0;
             decimal SumSGSTAmount = 0;
             decimal SumIGSTAmount = 0;
+            DataSet dsActMst = ProjectFunctions.GetDataSet("Select AccFixBarCodeTag,isnull(AccMrpMarkDown,0) as AccMrpMarkDown from ActMst inner join ActMstAddInf on ActMst.AccCode=ActMstAddInf.AccCode where ActMst.AccCode='" + txtDebitPartyCode.Text + "'");
+
             foreach (DataRow dr in dt.Rows)
             {
 
 
-                DataSet dsActMst = ProjectFunctions.GetDataSet("Select AccFixBarCodeTag,isnull(AccMrpMarkDown,0) as AccMrpMarkDown from ActMst inner join ActMstAddInf on ActMst.AccCode=ActMstAddInf.AccCode where ActMst.AccCode='" + txtDebitPartyCode.Text + "'");
-
+               
 
 
                 decimal WSP = 0;
@@ -273,6 +276,7 @@ namespace WindowsFormsApplication1
 
                 else
                 {
+                    
                     if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" )
                     {
                         WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
@@ -1829,6 +1833,9 @@ namespace WindowsFormsApplication1
         private void InfoGridView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
 
+          
+                
+            
             BtnRecalculate_Click(null, e);
 
         }
@@ -2144,13 +2151,35 @@ namespace WindowsFormsApplication1
             {
                 if (InfoGrid.DataSource != null)
                 {
+                   
+                    if (e.Column.FieldName == "SIDITMDISCPRCN")
+                    {
+                        // Code to apply discount on all the rows
+                        DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
+                        foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
+                        {
+
+                            if (currentrow["SIDARTID"].ToString() == dr["SIDARTID"].ToString())
+                            {
+                                dr["SIDITMDISCPRCN"] = currentrow["SIDITMDISCPRCN"];
+                            }
+                        }
+
+                        BtnRecalculate_Click(null, e);
+                        // End of code to apply discount to all rows
+                    }
                     if (e.Column.FieldName == "SIDSCANQTY")
                     {
                         InfoGridView.CloseEditor();
                         InfoGridView.UpdateCurrentRow();
+
+
+                      
+
                         BtnRecalculate_Click(null, e);
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -2248,6 +2277,130 @@ namespace WindowsFormsApplication1
         private void TxtDelieveryCode_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void txtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
+        {
+            //try
+            //{
+            //    if (e.KeyCode == Keys.Enter)
+            //    {
+            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
+            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
+            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
+            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
+            //        Calculation();
+
+            //        InfoGridView.Focus();
+
+
+
+
+
+            //        txtItemDiscAMount.EditValue = Convert.ToDecimal("0");
+            //        txtItemDiscPer.EditValue = Convert.ToDecimal("0");
+            //        txtItemMRP.EditValue = Convert.ToDecimal("0");
+            //        txtItemFlatRate.EditValue = Convert.ToDecimal("0");
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    XtraMessageBox.Show(ex.Message);
+            //}
+        }
+
+        private void txtItemFlatRate_EditValueChanged(object sender, EventArgs e)
+        {
+            //try
+            //{
+            //    if (txtItemFlatRate.Enabled && Convert.ToDecimal(txtItemFlatRate.Text) > 0)
+            //    {
+            //        txtItemDiscAMount.EditValue = (Convert.ToDecimal(txtItemMRP.Text) - Convert.ToDecimal(txtItemFlatRate.Text));
+            //        txtItemDiscPer.EditValue = 100 - ((Convert.ToDecimal(txtItemFlatRate.Text) / Convert.ToDecimal(txtItemMRP.Text)) * 100);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    XtraMessageBox.Show(ex.Message);
+            //}
+        }
+
+        private void txtItemDiscPer_EditValueChanged(object sender, EventArgs e)
+        {
+            //if (txtItemDiscPer.Enabled && Convert.ToDecimal(txtItemDiscPer.Text) > 0)
+            //{
+            //    txtItemDiscAMount.EditValue = ((Convert.ToDecimal(txtItemMRP.Text) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
+            //    txtItemFlatRate.EditValue = Convert.ToDecimal(txtItemMRP.Text) - Convert.ToDecimal(txtItemDiscAMount.Text);
+            //}
+        }
+
+        private void txtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
+        {
+            //////try
+            //////{
+            //////    if (e.KeyCode == Keys.Enter)
+            //////    {
+
+            //////        if (chall.Checked)
+            //////        {
+            //////            foreach (DataRow dr in dt.Rows)
+            //////            {
+            //////                if (txtItemDiscPer.Enabled)
+            //////                {
+            //////                    dr["SIDITMDISCAMT"] = ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
+            //////                    dr["SIDITMDISCPRCN"] = Convert.ToDecimal(txtItemDiscPer.Text);
+
+            //////                    Calculation();
+            //////                }
+            //////            }
+            //////        }
+            //////        else
+            //////        {
+            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
+            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
+            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
+            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
+            //////            Calculation();
+            //////        }
+
+
+
+            //////        InfoGridView.Focus();
+
+            //////        txtItemDiscAMount.EditValue = Convert.ToDecimal("0");
+            //////        txtItemDiscPer.EditValue = Convert.ToDecimal("0");
+            //////        txtItemMRP.EditValue = Convert.ToDecimal("0");
+            //////        txtItemFlatRate.EditValue = Convert.ToDecimal("0");
+            //////    }
+            //////}
+            //////catch (Exception ex)
+            //////{
+            //////    XtraMessageBox.Show(ex.Message);
+            //////}
+        }
+
+        private void InfoGrid_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dt.Rows.Count > 0)
+                {
+                    if (InfoGrid.DataSource != null)
+                    {
+                        DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
+                        rowindex = InfoGridView.FocusedRowHandle;
+                        txtItemMRP.EditValue = currentrow["SIDARTMRP"];
+                        txtItemDiscAMount.EditValue = currentrow["SIDITMDISCAMT"];
+                        txtItemDiscPer.EditValue = currentrow["SIDITMDISCPRCN"];
+                        txtItemFlatRate.EditValue = currentrow["SIDITMNETAMT"];
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
         }
     }
 }
