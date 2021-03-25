@@ -947,6 +947,12 @@
     <Compile Include="Master\frmContractorMst.Designer.cs">
       <DependentUpon>frmContractorMst.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\frmEWayBillGener.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmEWayBillGener.Designer.cs">
+      <DependentUpon>frmEWayBillGener.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmMachineBrandMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1849,6 +1855,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmContractorMst.resx">
       <DependentUpon>frmContractorMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmEWayBillGener.resx">
+      <DependentUpon>frmEWayBillGener.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMachineBrandMst.resx">
       <DependentUpon>frmMachineBrandMst.cs</DependentUpon>

@@ -336,9 +336,6 @@ namespace WindowsFormsApplication1
 
                 DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadCRMstFEDit] '" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + ImNo + "','" + ImSeries + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 
-
-
-
                 dtInvoiceDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("yyyy-MM-dd");
                 txtSerialNo.Text = ds.Tables[0].Rows[0]["BillNo"].ToString();
                 txtserial.Text = ds.Tables[0].Rows[0]["BillSeries"].ToString();

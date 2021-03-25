@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         {
             //Task.Run(async () => { await FillGrid_1(); });
 
-            
+
             if (_RangeSelector.DtFrom.Text.Length == 0 || _RangeSelector.DtEnd.Text.Length == 0)
             {
                 _RangeSelector.DtFrom.EditValue = DateTime.Now.AddDays(-1);
@@ -389,7 +389,7 @@ namespace WindowsFormsApplication1
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
-               
+
                 if (GlobalVariables.ProgCode == "PROG148")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -1175,12 +1175,12 @@ namespace WindowsFormsApplication1
                     //e.Menu.Items
                     //   .Add(new DevExpress.Utils.Menu.DXMenuItem("Export PDF Invoice", (o1, e1) =>
                     //                                             {
-                                                                 
+
                     //                                                 DataTable dt = new DataTable();
                     //                                                 dt.Columns.Add("CopyText", typeof(string));
                     //                                                 dt.Columns.Add("Select", typeof(bool));
 
-                                                                    
+
                     //                                                 dt.Rows.Add("Original For Buyer", false);
                     //                                                 dt.Rows.Add("Office Copy", false);
                     //                                                 dt.Rows.Add("Transporter Copy", false);
@@ -1998,9 +1998,6 @@ namespace WindowsFormsApplication1
                                 {
                                     pt.ShowRibbonPreviewDialog();
                                 }
-
-
-
                             }
                         }
                     }
@@ -2072,6 +2069,8 @@ namespace WindowsFormsApplication1
                                                                          rpt);
                                     }
                                 }
+
+
                             }
                         }
                     }
@@ -2091,11 +2090,12 @@ namespace WindowsFormsApplication1
 
         private void PrintOutGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
+
             e.Menu.Items
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Export PDF",
                                                                   (o1, e1) =>
                                                                   {
-                                                                      
+
                                                                       foreach (DataRow drBills in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
                                                                           if (drBills["Select"].ToString().ToUpper() == "TRUE")
@@ -2161,15 +2161,15 @@ namespace WindowsFormsApplication1
                                                                                           }
                                                                                       }
                                                                                   }
-                                                                                 
+
                                                                               }
-                                                                              
+
                                                                           }
-                                                                          
+
                                                                       }
-                                                                                                                                            
-                                                                          ProjectFunctions.SpeakError(" PDF Files Generated Successfully ");
-                                                                      
+
+                                                                      ProjectFunctions.SpeakError(" PDF Files Generated Successfully ");
+
                                                                   }));
         }
     }

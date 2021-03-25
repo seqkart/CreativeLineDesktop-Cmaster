@@ -101,6 +101,8 @@ namespace WindowsFormsApplication1
 
             }
 
+
+
             if (txtDebitPartyCode.Text.Trim().Length == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Debit Party");
@@ -118,6 +120,13 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.SpeakError("Invalid Debit Party");
                 txtDebitPartyCode.Focus();
+                return false;
+            }
+
+            DataSet dsGSTNo= ProjectFunctions.GetDataSet("Select isnull(AccGSTNo,'') as AccGSTNo from actmst Where AccCode='" + txtDebitPartyCode.Text + "'");
+            if(dsGSTNo.Tables[0].Rows[0][0].ToString().Trim().Length<10)
+            {
+                ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
                 return false;
             }
             if (txtActualWeight.Text.Length == 0)
@@ -1345,6 +1354,11 @@ namespace WindowsFormsApplication1
                         txtBankName.Text = ds.Tables[0].Rows[0]["AccAcinBankName"].ToString();
                         txtBankAccNo.Text = ds.Tables[0].Rows[0]["AccBankAccNo"].ToString();
                         txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+
+                        if(txtGSTNo.Text.Trim().Length<10)
+                        {
+                            ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
+                        }
                         txtBankAccNo.Text = ds.Tables[0].Rows[0]["AccBankAccNo"].ToString();
                         txtCreditLimit.Text = ds.Tables[0].Rows[0]["AccCrLimit"].ToString();
                         txtTempPartyCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
@@ -1473,7 +1487,10 @@ namespace WindowsFormsApplication1
                 txtGSTNo.Text = row["AccGSTNo"].ToString();
                 txtBankAccNo.Text = row["AccBankAccNo"].ToString();
                 txtCreditLimit.Text = row["AccCrLimit"].ToString();
-
+                if (txtGSTNo.Text.Trim().Length < 10)
+                {
+                    ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
+                }
                 txtTempPartyCode.Text = row["AccCode"].ToString();
                 txtTempPartyName.Text = row["AccName"].ToString();
                 txtTempState.Text = row["STNAME"].ToString();
@@ -2279,7 +2296,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void txtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
+        private void TxtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
         {
             //try
             //{
@@ -2309,7 +2326,7 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        private void txtItemFlatRate_EditValueChanged(object sender, EventArgs e)
+        private void TxtItemFlatRate_EditValueChanged(object sender, EventArgs e)
         {
             //try
             //{
@@ -2325,7 +2342,7 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        private void txtItemDiscPer_EditValueChanged(object sender, EventArgs e)
+        private void TxtItemDiscPer_EditValueChanged(object sender, EventArgs e)
         {
             //if (txtItemDiscPer.Enabled && Convert.ToDecimal(txtItemDiscPer.Text) > 0)
             //{
@@ -2334,7 +2351,7 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        private void txtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
+        private void TxtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
         {
             //////try
             //////{

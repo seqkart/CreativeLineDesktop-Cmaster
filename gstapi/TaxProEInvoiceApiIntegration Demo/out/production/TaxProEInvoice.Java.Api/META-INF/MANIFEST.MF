@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Class-Path: java-jwt-3.3.0.jar jackson-databind-2.9.2.jar jackson-anno
+ tations-2.9.0.jar jackson-core-2.9.2.jar commons-codec-1.11.jar TaxPr
+ oEInvoice.Java.Api.jar joda-time-2.9.4.jar benchmarks-3.7.0.jar calip
+ er-1.0-beta-1.jar gson-2.2.2.jar joda-time-2.1.jar jersey-client-1.11
+ .jar jersey-core-1.11.jar guice-3.0.jar javax.inject-1.jar aopallianc
+ e-1.0.jar guice-multibindings-3.0.jar java-allocation-instrumenter-2.
+ 1.jar asm-4.0.jar asm-analysis-4.0.jar asm-commons-4.0.jar asm-tree-4
+ .0.jar asm-util-4.0.jar asm-xml-4.0.jar guava-14.0.1.jar okhttp-3.7.0
+ .jar okio-1.12.0.jar okhttp-urlconnection-3.7.0.jar mockwebserver-3.7
+ .0.jar junit-4.12.jar hamcrest-core-1.3.jar bcprov-jdk15on-1.50.jar h
+ ttpclient-4.2.2.jar httpcore-4.2.2.jar commons-logging-1.1.1.jar comm
+ ons-codec-1.6.jar netty-transport-4.0.15.Final.jar netty-buffer-4.0.1
+ 5.Final.jar netty-common-4.0.15.Final.jar netty-handler-4.0.15.Final.
+ jar netty-codec-4.0.15.Final.jar netty-codec-http-4.0.15.Final.jar jz
+ lib-1.1.2.jar core-3.3.2.jar gson-2.8.2.jar
+Name: TaxProEInvoice/Java/API
+Specification-Title: TaxPro GSP eInvoice API Library
+Specification-Version: 1.03.6
+Specification-Vendor: Chartered Information Systems Private Limited, India
+Implementation-Title: TaxProEInvoice.Java.API
+Implementation-Version: 1.03.6
+Implementation-Vendor: Chartered Information Systems Private Limited, India
+

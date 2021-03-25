@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceMstAdd));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -113,6 +113,15 @@
             this.txtSerialNo = new DevExpress.XtraEditors.TextEdit();
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.chall = new DevExpress.XtraEditors.CheckEdit();
+            this.txtItemDiscPer = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl54 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl55 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
+            this.txtItemMRP = new DevExpress.XtraEditors.TextEdit();
+            this.txtItemFlatRate = new DevExpress.XtraEditors.TextEdit();
+            this.txtItemDiscAMount = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.GridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -270,15 +279,6 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.chall = new DevExpress.XtraEditors.CheckEdit();
-            this.txtItemDiscPer = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl54 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl55 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
-            this.txtItemMRP = new DevExpress.XtraEditors.TextEdit();
-            this.txtItemFlatRate = new DevExpress.XtraEditors.TextEdit();
-            this.txtItemDiscAMount = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -340,6 +340,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtSerialNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
@@ -417,11 +422,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -1231,6 +1231,170 @@
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
             this.xtraTabPage2.Text = "Invoice Data";
+            // 
+            // chall
+            // 
+            this.chall.Location = new System.Drawing.Point(328, 137);
+            this.chall.Name = "chall";
+            this.chall.Properties.Caption = "All";
+            this.chall.Size = new System.Drawing.Size(75, 19);
+            this.chall.TabIndex = 824;
+            // 
+            // txtItemDiscPer
+            // 
+            this.txtItemDiscPer.EditValue = "0";
+            this.txtItemDiscPer.Location = new System.Drawing.Point(105, 137);
+            this.txtItemDiscPer.Name = "txtItemDiscPer";
+            this.txtItemDiscPer.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemDiscPer.Properties.Appearance.Options.UseFont = true;
+            this.txtItemDiscPer.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemDiscPer.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemDiscPer.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscPer.Properties.EditFormat.FormatString = "n2";
+            this.txtItemDiscPer.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemDiscPer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemDiscPer.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemDiscPer.Size = new System.Drawing.Size(49, 24);
+            this.txtItemDiscPer.TabIndex = 817;
+            this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.TxtItemDiscPer_EditValueChanged);
+            this.txtItemDiscPer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemDiscPer_KeyDown);
+            // 
+            // labelControl53
+            // 
+            this.labelControl53.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl53.Appearance.Options.UseFont = true;
+            this.labelControl53.Location = new System.Drawing.Point(17, 122);
+            this.labelControl53.Name = "labelControl53";
+            this.labelControl53.Size = new System.Drawing.Size(53, 15);
+            this.labelControl53.TabIndex = 822;
+            this.labelControl53.Text = "Item MRP";
+            // 
+            // labelControl54
+            // 
+            this.labelControl54.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl54.Appearance.Options.UseFont = true;
+            this.labelControl54.Location = new System.Drawing.Point(246, 122);
+            this.labelControl54.Name = "labelControl54";
+            this.labelControl54.Size = new System.Drawing.Size(70, 15);
+            this.labelControl54.TabIndex = 823;
+            this.labelControl54.Text = "Net Rate   F11";
+            // 
+            // labelControl55
+            // 
+            this.labelControl55.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl55.Appearance.Options.UseFont = true;
+            this.labelControl55.Location = new System.Drawing.Point(154, 141);
+            this.labelControl55.Name = "labelControl55";
+            this.labelControl55.Size = new System.Drawing.Size(10, 18);
+            this.labelControl55.TabIndex = 820;
+            this.labelControl55.Text = "%";
+            // 
+            // labelControl56
+            // 
+            this.labelControl56.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl56.Appearance.Options.UseFont = true;
+            this.labelControl56.Location = new System.Drawing.Point(106, 122);
+            this.labelControl56.Name = "labelControl56";
+            this.labelControl56.Size = new System.Drawing.Size(128, 15);
+            this.labelControl56.TabIndex = 821;
+            this.labelControl56.Text = "Item Discount             F9";
+            // 
+            // txtItemMRP
+            // 
+            this.txtItemMRP.EditValue = "0";
+            this.txtItemMRP.Location = new System.Drawing.Point(17, 137);
+            this.txtItemMRP.Name = "txtItemMRP";
+            this.txtItemMRP.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemMRP.Properties.Appearance.Options.UseFont = true;
+            this.txtItemMRP.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemMRP.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemMRP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemMRP.Properties.EditFormat.FormatString = "n2";
+            this.txtItemMRP.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemMRP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemMRP.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemMRP.Size = new System.Drawing.Size(72, 24);
+            this.txtItemMRP.TabIndex = 818;
+            // 
+            // txtItemFlatRate
+            // 
+            this.txtItemFlatRate.EditValue = "0";
+            this.txtItemFlatRate.Location = new System.Drawing.Point(246, 137);
+            this.txtItemFlatRate.Name = "txtItemFlatRate";
+            this.txtItemFlatRate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemFlatRate.Properties.Appearance.Options.UseFont = true;
+            this.txtItemFlatRate.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemFlatRate.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemFlatRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemFlatRate.Properties.EditFormat.FormatString = "n2";
+            this.txtItemFlatRate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemFlatRate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemFlatRate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemFlatRate.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemFlatRate.Size = new System.Drawing.Size(72, 24);
+            this.txtItemFlatRate.TabIndex = 819;
+            this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.TxtItemFlatRate_EditValueChanged);
+            this.txtItemFlatRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemFlatRate_KeyDown);
+            // 
+            // txtItemDiscAMount
+            // 
+            this.txtItemDiscAMount.EditValue = "0";
+            this.txtItemDiscAMount.Location = new System.Drawing.Point(167, 137);
+            this.txtItemDiscAMount.Name = "txtItemDiscAMount";
+            this.txtItemDiscAMount.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemDiscAMount.Properties.Appearance.Options.UseFont = true;
+            this.txtItemDiscAMount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemDiscAMount.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemDiscAMount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscAMount.Properties.EditFormat.FormatString = "n2";
+            this.txtItemDiscAMount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscAMount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemDiscAMount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemDiscAMount.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemDiscAMount.Size = new System.Drawing.Size(69, 24);
+            this.txtItemDiscAMount.TabIndex = 816;
             // 
             // panelControl1
             // 
@@ -2998,10 +3162,10 @@
             // 
             // HelpGrid
             // 
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.HelpGrid.Location = new System.Drawing.Point(760, 0);
+            gridLevelNode1});
+            this.HelpGrid.Location = new System.Drawing.Point(436, 7);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(661, 205);
@@ -3030,170 +3194,6 @@
             // 
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
-            // 
-            // chall
-            // 
-            this.chall.Location = new System.Drawing.Point(328, 137);
-            this.chall.Name = "chall";
-            this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(75, 19);
-            this.chall.TabIndex = 824;
-            // 
-            // txtItemDiscPer
-            // 
-            this.txtItemDiscPer.EditValue = "0";
-            this.txtItemDiscPer.Location = new System.Drawing.Point(105, 137);
-            this.txtItemDiscPer.Name = "txtItemDiscPer";
-            this.txtItemDiscPer.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemDiscPer.Properties.Appearance.Options.UseFont = true;
-            this.txtItemDiscPer.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemDiscPer.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemDiscPer.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscPer.Properties.EditFormat.FormatString = "n2";
-            this.txtItemDiscPer.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemDiscPer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemDiscPer.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemDiscPer.Size = new System.Drawing.Size(49, 24);
-            this.txtItemDiscPer.TabIndex = 817;
-            this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.txtItemDiscPer_EditValueChanged);
-            this.txtItemDiscPer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemDiscPer_KeyDown);
-            // 
-            // labelControl53
-            // 
-            this.labelControl53.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl53.Appearance.Options.UseFont = true;
-            this.labelControl53.Location = new System.Drawing.Point(17, 122);
-            this.labelControl53.Name = "labelControl53";
-            this.labelControl53.Size = new System.Drawing.Size(53, 15);
-            this.labelControl53.TabIndex = 822;
-            this.labelControl53.Text = "Item MRP";
-            // 
-            // labelControl54
-            // 
-            this.labelControl54.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl54.Appearance.Options.UseFont = true;
-            this.labelControl54.Location = new System.Drawing.Point(246, 122);
-            this.labelControl54.Name = "labelControl54";
-            this.labelControl54.Size = new System.Drawing.Size(70, 15);
-            this.labelControl54.TabIndex = 823;
-            this.labelControl54.Text = "Net Rate   F11";
-            // 
-            // labelControl55
-            // 
-            this.labelControl55.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl55.Appearance.Options.UseFont = true;
-            this.labelControl55.Location = new System.Drawing.Point(154, 141);
-            this.labelControl55.Name = "labelControl55";
-            this.labelControl55.Size = new System.Drawing.Size(10, 18);
-            this.labelControl55.TabIndex = 820;
-            this.labelControl55.Text = "%";
-            // 
-            // labelControl56
-            // 
-            this.labelControl56.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl56.Appearance.Options.UseFont = true;
-            this.labelControl56.Location = new System.Drawing.Point(106, 122);
-            this.labelControl56.Name = "labelControl56";
-            this.labelControl56.Size = new System.Drawing.Size(128, 15);
-            this.labelControl56.TabIndex = 821;
-            this.labelControl56.Text = "Item Discount             F9";
-            // 
-            // txtItemMRP
-            // 
-            this.txtItemMRP.EditValue = "0";
-            this.txtItemMRP.Location = new System.Drawing.Point(17, 137);
-            this.txtItemMRP.Name = "txtItemMRP";
-            this.txtItemMRP.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemMRP.Properties.Appearance.Options.UseFont = true;
-            this.txtItemMRP.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemMRP.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemMRP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemMRP.Properties.EditFormat.FormatString = "n2";
-            this.txtItemMRP.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemMRP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemMRP.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemMRP.Size = new System.Drawing.Size(72, 24);
-            this.txtItemMRP.TabIndex = 818;
-            // 
-            // txtItemFlatRate
-            // 
-            this.txtItemFlatRate.EditValue = "0";
-            this.txtItemFlatRate.Location = new System.Drawing.Point(246, 137);
-            this.txtItemFlatRate.Name = "txtItemFlatRate";
-            this.txtItemFlatRate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemFlatRate.Properties.Appearance.Options.UseFont = true;
-            this.txtItemFlatRate.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemFlatRate.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemFlatRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemFlatRate.Properties.EditFormat.FormatString = "n2";
-            this.txtItemFlatRate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemFlatRate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemFlatRate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemFlatRate.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemFlatRate.Size = new System.Drawing.Size(72, 24);
-            this.txtItemFlatRate.TabIndex = 819;
-            this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.txtItemFlatRate_EditValueChanged);
-            this.txtItemFlatRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemFlatRate_KeyDown);
-            // 
-            // txtItemDiscAMount
-            // 
-            this.txtItemDiscAMount.EditValue = "0";
-            this.txtItemDiscAMount.Location = new System.Drawing.Point(167, 137);
-            this.txtItemDiscAMount.Name = "txtItemDiscAMount";
-            this.txtItemDiscAMount.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemDiscAMount.Properties.Appearance.Options.UseFont = true;
-            this.txtItemDiscAMount.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemDiscAMount.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemDiscAMount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscAMount.Properties.EditFormat.FormatString = "n2";
-            this.txtItemDiscAMount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscAMount.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemDiscAMount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemDiscAMount.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemDiscAMount.Size = new System.Drawing.Size(69, 24);
-            this.txtItemDiscAMount.TabIndex = 816;
             // 
             // FrmInvoiceMstAdd
             // 
@@ -3280,6 +3280,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
@@ -3362,11 +3367,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

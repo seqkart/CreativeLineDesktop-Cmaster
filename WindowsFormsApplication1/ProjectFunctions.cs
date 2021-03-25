@@ -1642,8 +1642,17 @@ namespace WindowsFormsApplication1
                 
                     else
                     {
+
                         payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
                         frm.documentViewer1.DocumentSource = Report;
+
+                        if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length < 10 && DocType == "GST" && Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]) >= 50000)
+                        {
+                            ProjectFunctions.SpeakError("Kindly Update GST No To Enable Print");
+                            frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
+                            frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
+                        }
+
                         frm.ShowDialog();
                     }
 
@@ -1707,7 +1716,7 @@ namespace WindowsFormsApplication1
 
                     payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
                     frm.documentViewer1.DocumentSource = Report;
-                    frm.ShowDialog();
+                     frm.ShowDialog();
                 }
             }
             catch (Exception ex)
