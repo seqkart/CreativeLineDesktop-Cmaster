@@ -11,10 +11,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 
 using System.Net;
+using System.Net.Http;
 using System.Speech.Synthesis;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -1616,6 +1619,96 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+        public static async Task SendBillMessageAsync(String BillNo, DateTime BillDate, String BillSeries)
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("Select SIMGRANDTOT,simseries,SIMNO,SIMDATE from SALEINVMAIN where SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' And SIMNO='" + BillNo + "' And SIMSERIES='" + BillSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' ");
+            String Message;
+            if (BillSeries == "GST")
+            {
+                Message = "You have been billed for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " for Invoice No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
+            }
+            else
+            {
+                Message = "Your challan has been issued for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " against challan No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
+            }
+
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                using (var httpClient = new HttpClient())
+                {
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+                    {
+                        request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+                        request.Content = new StringContent("{\"text\":\"" + Message + "\",\"sendLinkPreview\":false}");
+                        request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
+
+                        var response = await httpClient.SendAsync(request);
+
+                        //XtraMessageBox.Show(response.StatusCode.ToString());
+                    }
+                }
+            }
+        }
+
+        public static async Task SendBillImageAsync(String MobileNo)
+        {
+            byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//abc.pdf");
+          
+            string base64String = Convert.ToBase64String(imageBytes);
+
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/"+MobileNo+"/sendMedia"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+                    request.Content = new StringContent("{\"base64data\":\""+ base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"test.txt\"}");
+                    request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                }
+            }
+
+
+
+            //DataSet ds = ProjectFunctions.GetDataSet("Select SIMGRANDTOT,simseries,SIMNO,SIMDATE from SALEINVMAIN where SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' And SIMNO='" + BillNo + "' And SIMSERIES='" + BillSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' ");
+            //String Message;
+            //if (BillSeries == "GST")
+            //{
+            //    Message = "You have been billed for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " for Invoice No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
+            //}
+            //else
+            //{
+            //    Message = "Your challan has been issued for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " against challan No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
+            //}
+
+
+            //if (ds.Tables[0].Rows.Count > 0)
+            //{
+            //    using (var httpClient = new HttpClient())
+            //    {
+            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+            //        {
+            //            request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+            //            request.Content = new StringContent("{\"text\":\"" + Message + "\",\"sendLinkPreview\":false}");
+            //            request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
+
+            //            var response = await httpClient.SendAsync(request);
+
+            //            //XtraMessageBox.Show(response.StatusCode.ToString());
+            //        }
+            //    }
+            //}
+        }
+
+        public static void GenerateEWaybill(String BillNo,DateTime BillDate)
+        {
+
+        }
         public static void PrintDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
@@ -1652,8 +1745,11 @@ namespace WindowsFormsApplication1
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
                         }
-
+                       
+                        
                         frm.ShowDialog();
+                        frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\abc.pdf");
+                        SendBillImageAsync("919855630394");
                     }
 
 

@@ -835,6 +835,28 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                if (GlobalVariables.ProgCode == "PROG131")
+                {
+                  
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Send Bill Message", (o1, e1) =>
+                    {
+                        foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                        {
+                            if (dr["Select"].ToString().ToUpper() == "TRUE")
+                            {
+                                ProjectFunctions.SendBillMessageAsync(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString());
+                            }
+                        }
+                    }));
+                }
+                if (GlobalVariables.ProgCode == "PROG131")
+                {
+                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Generate EWAY Bill", (o1, e1) =>
+                    {
+                        ProjectFunctions.GenerateEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                    }));
+                }
                 if (GlobalVariables.ProgCode == "PROG210")
                 {
                     e.Menu.Items
