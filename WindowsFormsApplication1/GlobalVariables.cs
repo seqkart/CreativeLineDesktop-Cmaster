@@ -8,7 +8,8 @@ namespace WindowsFormsApplication1
 
 
         public static int GlobalCustWindowCount = 0;
-
+        public static string WhatAppStatus { get; set; }
+        public static string WhatAppMobileNo { get; set; }
         public static string ProgCode = "MIS1";
         public static string ProgDesc = "Test";
         public static string VendorCode = "30306879";

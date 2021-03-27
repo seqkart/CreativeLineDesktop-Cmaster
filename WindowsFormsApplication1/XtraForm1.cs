@@ -10,9 +10,10 @@ using DevExpress.XtraTab;
 using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Windows.Forms;
-
 using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
@@ -20,7 +21,7 @@ using WindowsFormsApplication1.Forms_Master;
 
 namespace WindowsFormsApplication1
 {
-    public partial class XtraForm1 : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class XtraForm1 : DevExpress.XtraBars.ToolbarForm.ToolbarForm
     {
         public XtraForm1()
         {
@@ -32,6 +33,18 @@ namespace WindowsFormsApplication1
 
         private void XtraForm1_Load(object sender, EventArgs e)
         {
+            labelControl1.Text = "Disconnected";
+
+            ProjectFunctions.WhatsAppConnectionStatus();
+            ProjectFunctions.WhatsAppStatusspeak();
+
+
+
+
+            Timer timer = new Timer();
+            timer.Interval = (30 * 1000); // 10 secs
+            timer.Tick += Timer_Tick;
+            timer.Start();
 
             // DevExpress.Utils.AppearanceObject.DefaultFont = new Font(DevExpress.Utils.AppearanceObject.DefaultFont.FontFamily.Name, 10);
             Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
@@ -81,6 +94,7 @@ namespace WindowsFormsApplication1
                     MyTempTable.Dispose();
                 }
                 Refresh();
+
             }
 
 
@@ -118,6 +132,25 @@ namespace WindowsFormsApplication1
             {
                 defaultLookAndFeel1.LookAndFeel.SkinName = "The Bezier";
             }
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            ProjectFunctions.WhatsAppConnectionStatus();
+
+            if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+            {
+                pictureEdit1.Visible = false;
+            }
+            else
+            {
+                pictureEdit1.Visible = true;
+                ChangeQRData();
+
+            }
+            labelControl1.Text = GlobalVariables.WhatAppStatus;
+            labelControl2.Text = GlobalVariables.WhatAppMobileNo;
+
         }
 
         private void XtraForm1_FormClosed(object sender, FormClosedEventArgs e)
@@ -278,7 +311,8 @@ namespace WindowsFormsApplication1
                     break;
                 case "PROG213":
                     var PROG213 = new frmGridReports
-                        () { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                        ()
+                    { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG213.Show();
                     PROG213.BringToFront();
                     PROG213.Parent = Page;
@@ -1671,6 +1705,70 @@ namespace WindowsFormsApplication1
         private void XtraForm1_Enter(object sender, EventArgs e)
         {
             RemoveTab();
+        }
+
+
+
+        private async void ChangeQRData()
+        {
+
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "*/*");
+
+                    var response = await httpClient.SendAsync(request);
+
+                    if (response.IsSuccessStatusCode == true)
+                    {
+
+                        byte[] MyData = new byte[0];
+                        MyData = await response.Content.ReadAsByteArrayAsync();
+
+                        MemoryStream stream = new MemoryStream(MyData)
+                        {
+                            Position = 0
+                        };
+
+                        pictureEdit1.Image = Image.FromStream(stream);
+                        pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+
+                        //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
+                        //ProjectFunctions.SpeakError("Whatsapp status is connected on mobile no " + myDetails.user);
+
+
+                    }
+                }
+            }
+
+
+
+
+
+            //BarCode barCode = new BarCode();
+            //barCode.Symbology = Symbology.QRCode;
+
+
+
+            ////barCode.CodeBinaryData = Encoding.Default.();
+            //barCode.Options.QRCode.CompactionMode = QRCodeCompactionMode.Byte;
+            //barCode.Options.QRCode.ErrorLevel = QRCodeErrorLevel.Q;
+            //barCode.Options.QRCode.ShowCodeText = false;
+            //barCode.DpiX = 72;
+            //barCode.DpiY = 72;
+            //barCode.Module = 2f;
+            //pictureEdit1.Image = barCode.BarCodeImage;
+        }
+
+        private void btnRefreshQRCode_Click(object sender, EventArgs e)
+        {
+            ChangeQRData();
+        }
+
+        private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.WhatsAppDisConnection();
         }
     }
 }

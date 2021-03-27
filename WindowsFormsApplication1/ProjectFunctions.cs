@@ -4,9 +4,10 @@ using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Menu;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-
+using Newtonsoft.Json;
 using SeqKartLibrary;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -1620,6 +1621,81 @@ namespace WindowsFormsApplication1
 
         }
 
+
+
+        public static async Task WhatsAppConnectionStatus()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode == true)
+                    {
+                        string content = await response.Content.ReadAsStringAsync();
+
+                        var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
+                        GlobalVariables.WhatAppStatus = myDetails.state;
+                        GlobalVariables.WhatAppMobileNo = myDetails.user;
+                    }
+                    else
+                    {
+                        GlobalVariables.WhatAppStatus = "Disconnected";
+                        GlobalVariables.WhatAppMobileNo = "No User";
+                    }
+                   
+                }
+
+            }
+        }
+
+        public static async Task WhatsAppStatusspeak()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode == true)
+                    {
+                        Speak("Whats App connected");
+                    }
+                    else
+                    {
+                       
+                    }
+
+                }
+
+            }
+        }
+
+
+
+
+
+        public static async Task WhatsAppDisConnection()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://seqkartsolution:3000/disconnect"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode == true)
+                    {
+                        SpeakError("Whats App Disconnected");
+                    }
+                }
+            }
+        }
+                          
+
         public static async Task SendBillMessageAsync(String BillNo, DateTime BillDate, String BillSeries)
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMGRANDTOT,simseries,SIMNO,SIMDATE from SALEINVMAIN where SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' And SIMNO='" + BillNo + "' And SIMSERIES='" + BillSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' ");
@@ -1661,7 +1737,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/"+MobileNo+"/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo+"/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1749,7 +1825,7 @@ namespace WindowsFormsApplication1
                         
                         frm.ShowDialog();
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\abc.pdf");
-                        SendBillImageAsync("919855630394");
+                        SendBillImageAsync("918591115444");
                     }
 
 

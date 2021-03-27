@@ -628,6 +628,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
@@ -1783,6 +1784,7 @@
     <Compile Include="WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="WhatsAppClasses\WhatsAppLoginStatus.cs" />
     <Compile Include="WMPLib\WindowsMediaPlayer.cs" />
     <Compile Include="XtraForm1.cs">
       <SubType>Form</SubType>
@@ -2033,9 +2035,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\APPROVAL.resx">
       <DependentUpon>APPROVAL.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\BarPrinting.resx">
       <DependentUpon>BarPrinting.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\BoxPrinting.resx">
       <DependentUpon>BoxPrinting.cs</DependentUpon>

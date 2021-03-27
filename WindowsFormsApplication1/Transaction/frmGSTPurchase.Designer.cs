@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGSTPurchase));
-            DevExpress.Utils.Drawing.StubGlyphOptions stubGlyphOptions1 = new DevExpress.Utils.Drawing.StubGlyphOptions();
+            DevExpress.Utils.Drawing.StubGlyphOptions stubGlyphOptions4 = new DevExpress.Utils.Drawing.StubGlyphOptions();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -1824,9 +1824,9 @@
             // 
             // gridColumn14
             // 
-            stubGlyphOptions1.CaseMode = DevExpress.Utils.Drawing.GlyphTextCaseMode.UpperCase;
+            stubGlyphOptions4.CaseMode = DevExpress.Utils.Drawing.GlyphTextCaseMode.UpperCase;
             this.behaviorManager1.SetBehaviors(this.gridColumn14, new DevExpress.Utils.Behaviors.Behavior[] {
-            ((DevExpress.Utils.Behaviors.Behavior)(DevExpress.Utils.Behaviors.Common.StubGlyphBehavior.Create(typeof(DevExpress.XtraGrid.Views.Grid.BehaviorSource.StubGlyphBehaviorSourceForGridColumn), stubGlyphOptions1, new System.Drawing.Size(16, 16))))});
+            ((DevExpress.Utils.Behaviors.Behavior)(DevExpress.Utils.Behaviors.Common.StubGlyphBehavior.Create(typeof(DevExpress.XtraGrid.Views.Grid.BehaviorSource.StubGlyphBehaviorSourceForGridColumn), stubGlyphOptions4, new System.Drawing.Size(16, 16))))});
             this.gridColumn14.Caption = "Attach";
             this.gridColumn14.CustomizationCaption = "Attach";
             this.gridColumn14.Name = "gridColumn14";
