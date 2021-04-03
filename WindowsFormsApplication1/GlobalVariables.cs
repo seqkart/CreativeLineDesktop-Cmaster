@@ -6,6 +6,16 @@ namespace WindowsFormsApplication1
         public static string BarCodePreFix = "V";
 
 
+        public static string GSPName { get; set; }
+        public static string ASPNetUser { get; set; }
+        public static string ASPPassword { get; set; }
+        public static string BaseUrl { get; set; }
+        public static string EWBGSTIN { get; set; }
+        public static string EWBUserID { get; set; }
+
+        public static string EWBPassword { get; set; }
+       
+
 
         public static int GlobalCustWindowCount = 0;
         public static string WhatAppStatus { get; set; }

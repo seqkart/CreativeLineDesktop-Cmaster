@@ -21,6 +21,8 @@ using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaxProEInvoice.API;
+using TaxProEWB.API;
 
 namespace WindowsFormsApplication1
 {
@@ -1221,7 +1223,7 @@ namespace WindowsFormsApplication1
                     ReportGridView.BestFitColumns();
 
 
-                  
+
                 }
                 else
                 {
@@ -1386,7 +1388,7 @@ namespace WindowsFormsApplication1
 
         public static bool CheckAllPossible(string ArticleID, decimal MRP, string ColorID, string SizeID)
         {
-            DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData '" + ArticleID + "','"+ ColorID + "','"+ SizeID + "' ");
+            DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData '" + ArticleID + "','" + ColorID + "','" + SizeID + "' ");
             if (dsCheckART.Tables[0].Rows.Count > 0)
             {
                 if (MRP == Convert.ToDecimal(dsCheckART.Tables[0].Rows[0]["ARTMRP"]))
@@ -1645,7 +1647,7 @@ namespace WindowsFormsApplication1
                         GlobalVariables.WhatAppStatus = "Disconnected";
                         GlobalVariables.WhatAppMobileNo = "No User";
                     }
-                   
+
                 }
 
             }
@@ -1666,7 +1668,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                       
+
                     }
 
                 }
@@ -1694,7 +1696,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-                          
+
 
         public static async Task SendBillMessageAsync(String BillNo, DateTime BillDate, String BillSeries)
         {
@@ -1714,7 +1716,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918558880662/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1732,16 +1734,16 @@ namespace WindowsFormsApplication1
         public static async Task SendBillImageAsync(String MobileNo)
         {
             byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//abc.pdf");
-          
+
             string base64String = Convert.ToBase64String(imageBytes);
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo+"/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
-                    request.Content = new StringContent("{\"base64data\":\""+ base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"test.txt\"}");
+                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"test.pdf\"}");
                     request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
@@ -1781,8 +1783,140 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        public static void GenerateEWaybill(String BillNo,DateTime BillDate)
+        public static async void GenerateAPIToken()
         {
+            if (MessageBox.Show("Calling any API method will internally check for valid AuthToken and would try to obtain AuthToken if its is expired.  You don't need to explicitly call GetAuthTokenAsync method. Do you want to proceed?", "AuthToken is Automatic", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+
+                TxnRespWithObjAndInfo<EWBSession> TxnResp = await EWBAPI.GetAuthTokenAsync(EwbSession);
+
+                //// Below is the code to call Api Synchroniously
+                //TxnRespWithObjAndInfo<EWBSession> TxnResp = Task.Run(() => EWBAPI.GetAuthTokenAsync(EwbSession)).Result;
+
+                if (TxnResp.IsSuccess)
+                {
+                    ProjectFunctions.Speak("Got Token");
+                }
+                else
+                {
+                    ProjectFunctions.Speak("Token not found ! Check Server");
+                }
+            }
+
+        }
+
+        public static async void GenerateEWaybill(String BillNo,DateTime BillDate)
+        {
+
+            DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceMstFEDit] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
+
+
+
+
+            ReqGenEwbPl ewbGen = new ReqGenEwbPl();
+            ewbGen.supplyType = "O";
+            ewbGen.subSupplyType = "1";
+            ewbGen.subSupplyDesc = "";
+            ewbGen.docType = "GST";
+            ewbGen.docNo = ds.Tables[0].Rows[0]["BillNo"].ToString();
+            ewbGen.docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd-MM-yyyy");
+            ewbGen.fromGstin = GlobalVariables.CmpGSTNo;
+            ewbGen.fromTrdName = GlobalVariables.CompanyName;
+            ewbGen.fromAddr1 = GlobalVariables.CAddress1;
+            ewbGen.fromAddr2 = GlobalVariables.CAddress2;
+            ewbGen.fromPlace = "";
+            ewbGen.fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode);
+            ewbGen.fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
+            ewbGen.actFromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
+            ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+            ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
+            ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
+            ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
+            ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
+            ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
+            ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
+            ewbGen.actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
+            ewbGen.transactionType = 1;
+            ewbGen.dispatchFromGSTIN = GlobalVariables.CmpGSTNo;
+            ewbGen.dispatchFromTradeName = GlobalVariables.CompanyName;
+            ewbGen.shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+            ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
+            ewbGen.otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]);
+            ewbGen.totalValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]);
+            ewbGen.cgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]);
+            ewbGen.sgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]);
+            ewbGen.igstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]);
+            ewbGen.cessValue = Convert.ToDouble("0");
+            ewbGen.cessNonAdvolValue = Convert.ToDouble("0"); ;
+            ewbGen.transporterId = "";
+            ewbGen.transporterName = ds.Tables[0].Rows[0]["TRPRNAME"].ToString();
+            ewbGen.transDocNo = "";
+            ewbGen.totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]); ;
+            ewbGen.transMode = "1";//1
+            ewbGen.transDistance = "1200"; /*1200*/
+            ewbGen.transDocDate = "";
+            ewbGen.vehicleNo = "";                  
+            ewbGen.vehicleType = "R";//R
+            ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
+
+            foreach (DataRow dr in ds.Tables[0].Rows)
+            {
+                ewbGen.itemList.Add(new ReqGenEwbPl.ItemListInReqEWBpl
+                {
+                    productName = dr["SIDARTDESC"].ToString(),
+                    productDesc = dr["SIDARTDESC"].ToString(),
+                    hsnCode = Convert.ToInt32(dr["GrpHSNCode"]),
+                    quantity = Convert.ToDouble(dr["SIDSCANQTY"]),
+                    qtyUnit = "PCS",
+                    cgstRate = Convert.ToDouble(dr["SIDCGSTPER"]),
+                    sgstRate = Convert.ToDouble(dr["SIDSGSTPER"]),
+                    igstRate = Convert.ToDouble(dr["SIDIGSTPER"]),
+                    cessRate = 0,
+                    cessNonAdvol = 0,
+                    taxableAmount = Convert.ToDouble(dr["SIDITMNETAMT"]),
+                }
+             );
+            }
+
+           
+           
+            //string a = JsonConvert.SerializeObject(ewbGen);
+            //TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
+            //if (TxnResp.IsSuccess)
+            //    rtbResponce.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+            //else
+            //{
+
+            //    rtbResponce.Text = TxnResp.TxnOutcome;
+            //    //Check for error "The distance between the pincodes given is too high"
+
+
+
+            //    if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
+            //    {
+            //        RespInfoPl respInfoPl = new RespInfoPl();
+
+            //        respInfoPl = JsonConvert.DeserializeObject<RespInfoPl>(TxnResp.Info);
+            //        //You can retrive respInfoPl attributes here
+            //        ewbGen.transDistance = respInfoPl.distance;
+            //        //Call GenEWB API again
+            //        TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
+            //        if (TxnResp.IsSuccess)
+            //            rtbResponce.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+            //        else
+            //            rtbResponce.Text = TxnResp.TxnOutcome;
+            //    }
+
+            //}
+
+
+            //txtHeading.Text = "Generate e-Way Bill Responce";
+
+
+
+
+
+
 
         }
         public static void PrintDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
@@ -1825,7 +1959,7 @@ namespace WindowsFormsApplication1
                         
                         frm.ShowDialog();
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\abc.pdf");
-                        SendBillImageAsync("918591115444");
+                        SendBillImageAsync("918558880662");
                     }
 
 

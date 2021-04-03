@@ -127,6 +127,20 @@ namespace WindowsFormsApplication1
                     GlobalVariables.BarCodePreFix = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_UNITS(GlobalVariables.CUnitID)).Tables[0].Rows[0][0].ToString();
 
 
+                    DataSet dsAPI = ProjectFunctions.GetDataSet("Select * from APIIntegrationSetting Where Active='Y'");
+                    if (dsAPI.Tables[0].Rows.Count > 0)
+                    {
+                        GlobalVariables.GSPName = dsAPI.Tables[0].Rows[0]["GSPName"].ToString();
+                        GlobalVariables.ASPNetUser = dsAPI.Tables[0].Rows[0]["ASPNetUser"].ToString();
+                        GlobalVariables.ASPPassword = dsAPI.Tables[0].Rows[0]["ASPPassword"].ToString();
+                        GlobalVariables.BaseUrl = dsAPI.Tables[0].Rows[0]["BaseUrl"].ToString();
+                        GlobalVariables.EWBGSTIN = dsAPI.Tables[0].Rows[0]["EWBGSTIN"].ToString();
+                        GlobalVariables.EWBUserID = dsAPI.Tables[0].Rows[0]["EWBUserID"].ToString();
+                        GlobalVariables.EWBPassword = dsAPI.Tables[0].Rows[0]["EWBPassword"].ToString();
+                    }
+
+
+
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
 
                     Hide();

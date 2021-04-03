@@ -3165,7 +3165,7 @@
             gridLevelNode1.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
             gridLevelNode1});
-            this.HelpGrid.Location = new System.Drawing.Point(436, 7);
+            this.HelpGrid.Location = new System.Drawing.Point(279, -27);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(661, 205);
