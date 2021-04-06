@@ -12,16 +12,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.IO;
 using System.Linq;
 
 using System.Net;
 using System.Net.Http;
 using System.Speech.Synthesis;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TaxProEInvoice.API;
 using TaxProEWB.API;
 
 namespace WindowsFormsApplication1
@@ -1785,27 +1782,27 @@ namespace WindowsFormsApplication1
 
         public static async void GenerateAPIToken()
         {
-            if (MessageBox.Show("Calling any API method will internally check for valid AuthToken and would try to obtain AuthToken if its is expired.  You don't need to explicitly call GetAuthTokenAsync method. Do you want to proceed?", "AuthToken is Automatic", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
+            //if (MessageBox.Show("Calling any API method will internally check for valid AuthToken and would try to obtain AuthToken if its is expired.  You don't need to explicitly call GetAuthTokenAsync method. Do you want to proceed?", "AuthToken is Automatic", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //{
 
-                TxnRespWithObjAndInfo<EWBSession> TxnResp = await EWBAPI.GetAuthTokenAsync(EwbSession);
+            //    TxnRespWithObjAndInfo<EWBSession> TxnResp = await EWBAPI.GetAuthTokenAsync(EwbSession);
 
-                //// Below is the code to call Api Synchroniously
-                //TxnRespWithObjAndInfo<EWBSession> TxnResp = Task.Run(() => EWBAPI.GetAuthTokenAsync(EwbSession)).Result;
+            //    //// Below is the code to call Api Synchroniously
+            //    //TxnRespWithObjAndInfo<EWBSession> TxnResp = Task.Run(() => EWBAPI.GetAuthTokenAsync(EwbSession)).Result;
 
-                if (TxnResp.IsSuccess)
-                {
-                    ProjectFunctions.Speak("Got Token");
-                }
-                else
-                {
-                    ProjectFunctions.Speak("Token not found ! Check Server");
-                }
-            }
+            //    if (TxnResp.IsSuccess)
+            //    {
+            //        ProjectFunctions.Speak("Got Token");
+            //    }
+            //    else
+            //    {
+            //        ProjectFunctions.Speak("Token not found ! Check Server");
+            //    }
+            //}
 
         }
 
-        public static async void GenerateEWaybill(String BillNo,DateTime BillDate)
+        public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
         {
 
             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceMstFEDit] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
@@ -1855,7 +1852,7 @@ namespace WindowsFormsApplication1
             ewbGen.transMode = "1";//1
             ewbGen.transDistance = "1200"; /*1200*/
             ewbGen.transDocDate = "";
-            ewbGen.vehicleNo = "";                  
+            ewbGen.vehicleNo = "";
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
 
@@ -1878,8 +1875,8 @@ namespace WindowsFormsApplication1
              );
             }
 
-           
-           
+
+
             //string a = JsonConvert.SerializeObject(ewbGen);
             //TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
             //if (TxnResp.IsSuccess)
@@ -1934,7 +1931,7 @@ namespace WindowsFormsApplication1
                         sub.ReportSource.DataSource = ds;
                     }
                     Report.CreateDocument();
-                    
+
 
 
                     if (GlobalVariables.ProgCode == "PROG132")
@@ -1942,7 +1939,7 @@ namespace WindowsFormsApplication1
                         Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
                         SendToDirectPrint("C:\\Application\\CashMemo.pdf");
                     }
-                
+
                     else
                     {
 
@@ -1955,8 +1952,8 @@ namespace WindowsFormsApplication1
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
                         }
-                       
-                        
+
+
                         frm.ShowDialog();
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\abc.pdf");
                         SendBillImageAsync("918558880662");
@@ -2022,7 +2019,7 @@ namespace WindowsFormsApplication1
 
                     payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
                     frm.documentViewer1.DocumentSource = Report;
-                     frm.ShowDialog();
+                    frm.ShowDialog();
                 }
             }
             catch (Exception ex)

@@ -1506,40 +1506,42 @@ namespace WindowsFormsApplication1
                     InvoiceGridView.UpdateCurrentRow();
 
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-
-                    PrintOutGridView.Columns.Clear();
-                    DataTable dt = new DataTable();
-                    dt.Columns.Add("SKUPRODUCTCODE", typeof(string));
-                    dt.Columns.Add("SKUPARTYBARCODE", typeof(string));
-                    dt.Columns.Add("SKUFIXBARCODE", typeof(string));
-                    dt.Columns.Add("SKUARTNO", typeof(string));
-                    dt.Columns.Add("ARTDESC", typeof(string));
-                    dt.Columns.Add("SKUCOLN", typeof(string));
-                    dt.Columns.Add("SKUSIZN", typeof(string));
-                    dt.Columns.Add("SKUFEDQTY", typeof(decimal));
-                    dt.Columns.Add("SKUMRP", typeof(string));
-                    dt.Columns.Add("SKUWSP", typeof(string));
-                    dt.Columns.Add("SKUMRPVAL", typeof(decimal));
-                    dt.Columns.Add("SKUWSPVAL", typeof(decimal));
-                    dt.Columns.Add("SKUARTID", typeof(string));
-                    dt.Columns.Add("SKUCOLID", typeof(string));
-                    dt.Columns.Add("SKUSIZID", typeof(string));
-                    dt.Columns.Add("SKUSIZINDX", typeof(string));
-                    dt.Columns.Add("SKUCODE", typeof(string));
-                    dt.Columns.Add("SKUVOUCHNO", typeof(string));
-                    dt.Columns.Add("SKUFNYR", typeof(string));
-                    dt.Columns.Add("DISCPRCN", typeof(string));
-                    dt.Columns.Add("FLATMRP", typeof(string));
-                    dt.Columns.Add("SKUPPRICE", typeof(string));
-                    dt.Columns.Add("GrpHSNCode", typeof(string));
-
-
-                    DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersPrint] '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
-                    if (ds.Tables[0].Rows.Count > 0)
+                    if (currentrow != null)
                     {
-                        dt = ds.Tables[0];
-                        PrintOutGrid.DataSource = dt;
-                        PrintOutGridView.BestFitColumns();
+                        PrintOutGridView.Columns.Clear();
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("SKUPRODUCTCODE", typeof(string));
+                        dt.Columns.Add("SKUPARTYBARCODE", typeof(string));
+                        dt.Columns.Add("SKUFIXBARCODE", typeof(string));
+                        dt.Columns.Add("SKUARTNO", typeof(string));
+                        dt.Columns.Add("ARTDESC", typeof(string));
+                        dt.Columns.Add("SKUCOLN", typeof(string));
+                        dt.Columns.Add("SKUSIZN", typeof(string));
+                        dt.Columns.Add("SKUFEDQTY", typeof(decimal));
+                        dt.Columns.Add("SKUMRP", typeof(string));
+                        dt.Columns.Add("SKUWSP", typeof(string));
+                        dt.Columns.Add("SKUMRPVAL", typeof(decimal));
+                        dt.Columns.Add("SKUWSPVAL", typeof(decimal));
+                        dt.Columns.Add("SKUARTID", typeof(string));
+                        dt.Columns.Add("SKUCOLID", typeof(string));
+                        dt.Columns.Add("SKUSIZID", typeof(string));
+                        dt.Columns.Add("SKUSIZINDX", typeof(string));
+                        dt.Columns.Add("SKUCODE", typeof(string));
+                        dt.Columns.Add("SKUVOUCHNO", typeof(string));
+                        dt.Columns.Add("SKUFNYR", typeof(string));
+                        dt.Columns.Add("DISCPRCN", typeof(string));
+                        dt.Columns.Add("FLATMRP", typeof(string));
+                        dt.Columns.Add("SKUPPRICE", typeof(string));
+                        dt.Columns.Add("GrpHSNCode", typeof(string));
+
+
+                        DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersPrint] '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            dt = ds.Tables[0];
+                            PrintOutGrid.DataSource = dt;
+                            PrintOutGridView.BestFitColumns();
+                        }
                     }
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode", (o1, e1) =>
@@ -1548,18 +1550,18 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Sticker.btw");
                         PrintOutGrid.DataSource = null;
-                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                            //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
-                    }));
+                        }));
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EAN Tag", (o1, e1) =>
                     {
 
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\EAN.btw");
                         PrintOutGrid.DataSource = null;
-                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                            //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
-                    }));
+                        }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
                     {
@@ -1567,8 +1569,8 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Tag.btw");
                         PrintOutGrid.DataSource = null;
-                        // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
-                    }));
+                            // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler", (o1, e1) =>
                     {
@@ -1576,8 +1578,8 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Muffler.btw");
                         PrintOutGrid.DataSource = null;
-                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
-                    }));
+                            //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        }));
 
                     //e.Menu.Items
                     //    .Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode",
@@ -2012,7 +2014,7 @@ namespace WindowsFormsApplication1
                                     GlobalVariables.CUnitID +
                                     "'");
                                 ds.WriteXmlSchema("C://Temp//abc.xml");
-                                challanoutward rpt = new challanoutward { DataSource = ds.Tables[0] };
+                                Challanoutward rpt = new Challanoutward { DataSource = ds.Tables[0] };
                                 rpt.lblCopy.Text = CopyText;
                                 rpt.lblGrossWeight.Text = ds.Tables[1].Rows[0]["GrossWeight"].ToString();
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();

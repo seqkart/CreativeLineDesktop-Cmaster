@@ -597,7 +597,7 @@ namespace WindowsFormsApplication1.Transaction
                                 dtFinal.Rows.Clear();
 
 
-                                foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
+                               foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
                                     if (Convert.ToDecimal(dr["SKUFEDQTY"]) > 0)
                                     {

@@ -74,7 +74,7 @@ namespace WindowsFormsApplication1
             }
             if (DateTime.Now.Date <= GlobalVariables.LicenseToExpireDate.Date)
             {
-                if (DateTime.Now.Date >= Convert.ToDateTime("2020-04-1").Date && DateTime.Now.Date <= Convert.ToDateTime("2022-03-31").Date)
+                if (DateTime.Now.Date >= Convert.ToDateTime("2019-04-1").Date && DateTime.Now.Date <= Convert.ToDateTime("2026-03-31").Date)
                 {
                     if (Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) < 30)
                     {
@@ -291,7 +291,7 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 txtFNYear.Focus();
-                txtFNYear.Text = "2020-2021";
+                txtFNYear.Text = "2021-2022";
             }
         }
 

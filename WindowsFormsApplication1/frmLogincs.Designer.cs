@@ -326,7 +326,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::WindowsFormsApplication1.Properties.Resources.login;
-            this.ClientSize = new System.Drawing.Size(551, 299);
+            this.ClientSize = new System.Drawing.Size(552, 302);
             this.ControlBox = false;
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label8);

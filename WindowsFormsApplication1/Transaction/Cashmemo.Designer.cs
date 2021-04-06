@@ -259,7 +259,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(58, 246);
+            this.HelpGrid.Location = new System.Drawing.Point(69, 193);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(865, 306);
@@ -644,7 +644,7 @@
             // 
             // txtBarCode
             // 
-            this.txtBarCode.Location = new System.Drawing.Point(58, 281);
+            this.txtBarCode.Location = new System.Drawing.Point(69, 193);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.Appearance.BackColor = System.Drawing.Color.MistyRose;
             this.txtBarCode.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

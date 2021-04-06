@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewFormAAddEdit));
             this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.txtFormName = new DevExpress.XtraEditors.TextEdit();
@@ -57,6 +58,15 @@
             this.txtNfaTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtPrinters = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtRadialTag = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.svgImageBox1 = new DevExpress.XtraEditors.SvgImageBox();
+            this.svgImageBox2 = new DevExpress.XtraEditors.SvgImageBox();
+            this.svgImageBox3 = new DevExpress.XtraEditors.SvgImageBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.imageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).BeginInit();
@@ -72,6 +82,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinters.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRadialTag.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -183,7 +198,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(110, 51);
+            this.HelpGrid.Location = new System.Drawing.Point(56, 285);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(470, 269);
@@ -219,7 +234,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(637, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(768, 26);
             this.Menu_ToolStrip.TabIndex = 365;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -359,14 +374,95 @@
             this.txtPrinters.Size = new System.Drawing.Size(324, 20);
             this.txtPrinters.TabIndex = 399;
             // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
+            this.labelControl2.Appearance.Options.UseForeColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(394, 93);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(54, 13);
+            this.labelControl2.TabIndex = 401;
+            this.labelControl2.Text = "Radial Tag";
+            // 
+            // txtRadialTag
+            // 
+            this.txtRadialTag.Location = new System.Drawing.Point(454, 91);
+            this.txtRadialTag.Name = "txtRadialTag";
+            this.txtRadialTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtRadialTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtRadialTag.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.txtRadialTag.Properties.MaxLength = 1;
+            this.txtRadialTag.Size = new System.Drawing.Size(41, 20);
+            this.txtRadialTag.TabIndex = 400;
+            // 
+            // svgImageBox1
+            // 
+            this.svgImageBox1.Location = new System.Drawing.Point(586, 105);
+            this.svgImageBox1.Name = "svgImageBox1";
+            this.svgImageBox1.Size = new System.Drawing.Size(32, 32);
+            this.svgImageBox1.TabIndex = 402;
+            this.svgImageBox1.Text = "svgImageBox1";
+            // 
+            // svgImageBox2
+            // 
+            this.svgImageBox2.Location = new System.Drawing.Point(586, 137);
+            this.svgImageBox2.Name = "svgImageBox2";
+            this.svgImageBox2.Size = new System.Drawing.Size(32, 32);
+            this.svgImageBox2.TabIndex = 402;
+            this.svgImageBox2.Text = "svgImageBox1";
+            // 
+            // svgImageBox3
+            // 
+            this.svgImageBox3.Location = new System.Drawing.Point(586, 169);
+            this.svgImageBox3.Name = "svgImageBox3";
+            this.svgImageBox3.Size = new System.Drawing.Size(32, 32);
+            this.svgImageBox3.TabIndex = 402;
+            this.svgImageBox3.Text = "svgImageBox1";
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(624, 116);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(44, 23);
+            this.simpleButton1.TabIndex = 403;
+            this.simpleButton1.Text = "...";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Location = new System.Drawing.Point(624, 143);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(44, 23);
+            this.simpleButton2.TabIndex = 403;
+            this.simpleButton2.Text = "...";
+            // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Location = new System.Drawing.Point(624, 175);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(44, 23);
+            this.simpleButton3.TabIndex = 403;
+            this.simpleButton3.Text = "...";
+            // 
             // frmNewFormAAddEdit
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 332);
+            this.ClientSize = new System.Drawing.Size(768, 566);
             this.ControlBox = false;
+            this.Controls.Add(this.simpleButton3);
+            this.Controls.Add(this.simpleButton2);
+            this.Controls.Add(this.simpleButton1);
+            this.Controls.Add(this.svgImageBox3);
+            this.Controls.Add(this.svgImageBox2);
+            this.Controls.Add(this.svgImageBox1);
+            this.Controls.Add(this.labelControl2);
+            this.Controls.Add(this.txtRadialTag);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtPrinters);
             this.Controls.Add(this.label2);
@@ -414,6 +510,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNfaTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPrinters.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRadialTag.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,5 +549,14 @@
         private DevExpress.XtraEditors.ComboBoxEdit txtNfaTag;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.ComboBoxEdit txtPrinters;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.ComboBoxEdit txtRadialTag;
+        private DevExpress.XtraEditors.SvgImageBox svgImageBox1;
+        private DevExpress.XtraEditors.SvgImageBox svgImageBox2;
+        private DevExpress.XtraEditors.SvgImageBox svgImageBox3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.Utils.SvgImageCollection imageCollection1;
     }
 }

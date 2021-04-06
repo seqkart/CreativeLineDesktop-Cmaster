@@ -1,8 +1,8 @@
 ﻿namespace DevExpress.XtraReports.Import.Import.PRINTS
 {
-    public partial class challanoutward : DevExpress.XtraReports.UI.XtraReport
+    public partial class Challanoutward : DevExpress.XtraReports.UI.XtraReport
     {
-        public challanoutward()
+        public Challanoutward()
         {
             InitializeComponent();
         }

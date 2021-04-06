@@ -4,6 +4,7 @@
 //     Copyright (c) . All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
@@ -65,6 +66,9 @@ namespace WindowsFormsApplication1
                         {
                             Text = NameItemPage.ToString()
                         };
+
+                        OuterElement.ImageOptions.ImageUri = "Copy;Size16x16";
+                        
                         accordionControl1.Elements.Add(OuterElement);
 
                         var ProginMenuGroup = (from DataRow dRow in MyTempTable.Select("ProginMenu='" + OuterElement.Text + "'")
@@ -75,6 +79,8 @@ namespace WindowsFormsApplication1
                             {
                                 Text = NameSubItem.ToUpper()
                             };
+
+                            InnerElement.ImageOptions.ImageUri = "Copy;Size16x16";
                             OuterElement.Elements.Add(InnerElement);
 
                             var Drs = MyTempTable.Select(string.Format("ProginMenu='{0}' and ProginMenuGroup='{1}'", OuterElement.Text, NameSubItem));
@@ -83,7 +89,9 @@ namespace WindowsFormsApplication1
                                 DevExpress.XtraBars.Navigation.AccordionControlElement InnerMostElement = new DevExpress.XtraBars.Navigation.AccordionControlElement
                                 {
                                     Text = R["ProgDesc"].ToString(),
-                                    Name = R["ProgCode"].ToString()
+                                    Name = R["ProgCode"].ToString(),
+                                    ImageUri= "Copy;Size16x16"
+                               
                                 };
                                 InnerElement.Elements.Add(InnerMostElement);
                                 InnerMostElement.Click += InnerMostElement_Click;
@@ -95,6 +103,27 @@ namespace WindowsFormsApplication1
                 }
                 Refresh();
 
+
+
+
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        if (dr["ProgRadialTag"].ToString().ToUpper() == "Y")
+                        {
+                            BarItem btnCopy = new BarButtonItem();
+                            btnCopy.Caption = dr["ProgDesc"].ToString();
+                            btnCopy.Name = dr["ProgCode"].ToString();
+                            btnCopy.ItemClick += BtnCopy_ItemClick;
+                            btnCopy.ImageOptions.ImageUri.Uri = "Copy;Size16x16";
+                            radialMenu1.AddItem(btnCopy);
+                        }
+                    }
+                }
             }
 
 
@@ -126,6 +155,7 @@ namespace WindowsFormsApplication1
             DataSet dsUserTheme = ProjectFunctions.GetDataSet("select isnull(UserTheme,'') as UserTheme from UserMaster where UserName='" + GlobalVariables.CurrentUser + "'");
             if (dsUserTheme.Tables[0].Rows[0][0].ToString().Length > 0)
             {
+                
                 defaultLookAndFeel1.LookAndFeel.SkinName = dsUserTheme.Tables[0].Rows[0][0].ToString();
             }
             else
@@ -134,23 +164,36 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void BtnCopy_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            RunProgAccordin(e.Item.Name, e.Item.Caption);
+           
+
+        }
+
         private void Timer_Tick(object sender, EventArgs e)
         {
-            ProjectFunctions.WhatsAppConnectionStatus();
-
-            if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+            try
             {
-                pictureEdit1.Visible = false;
+                ProjectFunctions.WhatsAppConnectionStatus();
+
+                if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+                {
+                    pictureEdit1.Visible = false;
+                }
+                else
+                {
+                    pictureEdit1.Visible = true;
+                    ChangeQRData();
+
+                }
+                labelControl1.Text = GlobalVariables.WhatAppStatus;
+                labelControl2.Text = GlobalVariables.WhatAppMobileNo;
             }
-            else
+            catch(Exception ex)
             {
-                pictureEdit1.Visible = true;
-                ChangeQRData();
 
             }
-            labelControl1.Text = GlobalVariables.WhatAppStatus;
-            labelControl2.Text = GlobalVariables.WhatAppMobileNo;
-
         }
 
         private void XtraForm1_FormClosed(object sender, FormClosedEventArgs e)
@@ -1769,6 +1812,18 @@ namespace WindowsFormsApplication1
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             ProjectFunctions.WhatsAppDisConnection();
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+
+            
+        }
+
+        private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
+        {
+            radialMenu1.ShowPopup(new Point(750, 400));
         }
     }
 }

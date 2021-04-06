@@ -72,6 +72,9 @@ namespace WindowsFormsApplication1
                         txtRoleDesc.Text = ds.Tables[0].Rows[0]["RoleDesc"].ToString();
                         txtOrderBy.Text = ds.Tables[0].Rows[0]["OrderBy"].ToString();
                         txtPrinters.SelectedItem= ds.Tables[0].Rows[0]["ProgPrinterName"].ToString();
+                        txtRadialTag.Text = ds.Tables[0].Rows[0]["ProgRadialTag"].ToString();
+                       
+
                     }
                 }
             }
@@ -235,7 +238,7 @@ namespace WindowsFormsApplication1
                     {
                         if (ValidateData())
                         {
-                            var str = "Insert Into ProgramMaster(OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName,ProgPrinterName)values(";
+                            var str = "Insert Into ProgramMaster(OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName,ProgPrinterName,ProgRadialTag)values(";
                             str = str + "'" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtRoleCode.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtFormCode.Text.Trim()) + "',";
@@ -246,7 +249,8 @@ namespace WindowsFormsApplication1
                             str = str + "'" + ProjectFunctions.SqlString(txtstatusTag.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtNfaTag.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtProcName.Text.Trim()) + "',";
-                            str = str + "'" + ProjectFunctions.SqlString(txtPrinters.Text.Trim()) + "')";
+                            str = str + "'" + ProjectFunctions.SqlString(txtPrinters.Text.Trim()) + "',";
+                            str = str + "'" + ProjectFunctions.SqlString(txtRadialTag.Text.Trim()) + "')";
                             ProjectFunctions.GetDataSet(str);
                             ProjectFunctions.SpeakError("Entry Added Successfully");
                         }
@@ -258,6 +262,7 @@ namespace WindowsFormsApplication1
                     {
                         var str = " UPDATE    ProgramMaster";
                         str += " SET  ";
+                        str = str + "ProgRadialTag ='" + ProjectFunctions.SqlString(txtRadialTag.Text.Trim()) + "',";
                         str = str + "OrderBy ='" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
                         str = str + "RoleCode ='" + ProjectFunctions.SqlString(txtRoleCode.Text.Trim()) + "',";
                         str = str + "ProgCode ='" + ProjectFunctions.SqlString(txtFormCode.Text.Trim()) + "',";
@@ -337,6 +342,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-      
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            //simpleButton1.imageCollection1.SvgImage = svgImageBox1.SvgImage;
+            //simpleButton1 = imageCollection1();
+        }
     }
 }
