@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1
 
         public static extern IntPtr FindWindow(IntPtr ZeroOnly, string lpWindowName);
 
-
+        public string UserName { get; set; }
 
         [DllImport("user32.dll")]
         public static extern void Keybd_event(byte bVk, byte bScan, uint dwFlags, IntPtr dwExtraInfo);
@@ -313,9 +313,9 @@ namespace WindowsFormsApplication1
 
 
         }
-
+        
         private void BtnBackup_Click(object sender, EventArgs e)
-
+        
 
         {
 
@@ -324,9 +324,15 @@ namespace WindowsFormsApplication1
             DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("Backing Up Initialized");
 
 
-
+            
             {
-                NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@12345");
+
+                //NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@123456");
+                NetworkCredential myCredentials = new NetworkCredential("", "", "");
+                myCredentials.Domain = "cserver";
+                myCredentials.UserName = "c server";
+                myCredentials.Password = "Rohit@12345";
+
                 if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
                 {
 
@@ -348,7 +354,11 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@12345");
+                    // NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@12345");
+                    NetworkCredential myCredentials1 = new NetworkCredential("", "", "");
+                    myCredentials1.Domain = "cserver";
+                    myCredentials1.UserName = "c server";
+                    myCredentials1.Password = "Rohit@12345";
                     System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
                     ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
                     string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();

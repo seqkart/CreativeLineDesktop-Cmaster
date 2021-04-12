@@ -1802,10 +1802,9 @@ namespace WindowsFormsApplication1
 
         }
 
-        public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
+        public static async void  GenerateEWaybill(String BillNo, DateTime BillDate)
         {
-
-            DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceMstFEDit] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
+                    DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 
 
 
@@ -1856,61 +1855,88 @@ namespace WindowsFormsApplication1
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
 
-            foreach (DataRow dr in ds.Tables[0].Rows)
+            foreach (DataRow dr in ds.Tables[1].Rows)
             {
                 ewbGen.itemList.Add(new ReqGenEwbPl.ItemListInReqEWBpl
                 {
-                    productName = dr["SIDARTDESC"].ToString(),
-                    productDesc = dr["SIDARTDESC"].ToString(),
+                    productName = dr["GrpSubDesc"].ToString(),
+                    productDesc = dr["GrpSubDesc"].ToString(),
                     hsnCode = Convert.ToInt32(dr["GrpHSNCode"]),
                     quantity = Convert.ToDouble(dr["SIDSCANQTY"]),
-                    qtyUnit = "PCS",
-                    cgstRate = Convert.ToDouble(dr["SIDCGSTPER"]),
-                    sgstRate = Convert.ToDouble(dr["SIDSGSTPER"]),
-                    igstRate = Convert.ToDouble(dr["SIDIGSTPER"]),
+                    qtyUnit = dr["UomDesc"].ToString(),
+                    cgstRate = Convert.ToDouble(dr["SIDCGSTPRCN"]),
+                    sgstRate = Convert.ToDouble(dr["SIDSGSTPRCN"]),
+                    igstRate = Convert.ToDouble(dr["SIDIGSTPRCN"]),
                     cessRate = 0,
                     cessNonAdvol = 0,
                     taxableAmount = Convert.ToDouble(dr["SIDITMNETAMT"]),
+                });
+                
+            }
+
+            //calculation done
+
+             EWBSession EwbSession = new EWBSession();
+
+
+            EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+            EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+            EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+          
+            EwbSession.EwbApiLoginDetails.EwbAuthToken = EwbSession.EwbApiLoginDetails.EwbAuthToken;
+            EwbSession.EwbApiLoginDetails.EwbTokenExp = EwbSession.EwbApiLoginDetails.EwbTokenExp;
+            EwbSession.EwbApiLoginDetails.EwbSEK = EwbSession.EwbApiLoginDetails.EwbSEK;
+
+
+
+            EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+            EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+            EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+            EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+         
+         
+
+
+
+
+            string a = JsonConvert.SerializeObject(ewbGen);
+
+           
+            TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
+            if (TxnResp.IsSuccess)
+            {
+                XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+            }
+               
+            else
+            {
+
+                XtraMessageBox.Show(TxnResp.TxnOutcome);
+                //Check for error "The distance between the pincodes given is too high"
+                if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
+                {
+                    RespInfoPl respInfoPl = new RespInfoPl();
+
+                    respInfoPl = JsonConvert.DeserializeObject<RespInfoPl>(TxnResp.Info);
+                    //You can retrive respInfoPl attributes here
+                    ewbGen.transDistance = respInfoPl.distance;
+                    //Call GenEWB API again
+                    TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
+                    if (TxnResp.IsSuccess)
+                    {
+                        XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+                    }
+
+                    else
+                    {
+                        XtraMessageBox.Show(TxnResp.TxnOutcome);
+                    }
                 }
-             );
+
             }
 
 
-
-            //string a = JsonConvert.SerializeObject(ewbGen);
-            //TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
-            //if (TxnResp.IsSuccess)
-            //    rtbResponce.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
-            //else
-            //{
-
-            //    rtbResponce.Text = TxnResp.TxnOutcome;
-            //    //Check for error "The distance between the pincodes given is too high"
-
-
-
-            //    if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
-            //    {
-            //        RespInfoPl respInfoPl = new RespInfoPl();
-
-            //        respInfoPl = JsonConvert.DeserializeObject<RespInfoPl>(TxnResp.Info);
-            //        //You can retrive respInfoPl attributes here
-            //        ewbGen.transDistance = respInfoPl.distance;
-            //        //Call GenEWB API again
-            //        TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
-            //        if (TxnResp.IsSuccess)
-            //            rtbResponce.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
-            //        else
-            //            rtbResponce.Text = TxnResp.TxnOutcome;
-            //    }
-
-            //}
-
-
-            //txtHeading.Text = "Generate e-Way Bill Responce";
-
-
-
+           XtraMessageBox.Show("Generate e-Way Bill Responce");
 
 
 

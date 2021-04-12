@@ -380,8 +380,7 @@
             this.txtGRDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtGRDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtGRDate.Size = new System.Drawing.Size(111, 20);
-            this.txtGRDate.TabIndex = 555;
-            this.txtGRDate.TabStop = false;
+            this.txtGRDate.TabIndex = 7;
             // 
             // labelControl6
             // 
@@ -410,7 +409,7 @@
             this.txtbox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtbox.Properties.MaxLength = 30;
             this.txtbox.Size = new System.Drawing.Size(126, 20);
-            this.txtbox.TabIndex = 569;
+            this.txtbox.TabIndex = 8;
             // 
             // txtReason
             // 
@@ -424,7 +423,7 @@
             "SOR",
             "OTHERS"});
             this.txtReason.Size = new System.Drawing.Size(323, 20);
-            this.txtReason.TabIndex = 567;
+            this.txtReason.TabIndex = 4;
             this.txtReason.SelectedIndexChanged += new System.EventHandler(this.TxtReason_SelectedIndexChanged);
             // 
             // txtDEbitNoteDate
@@ -443,8 +442,7 @@
             this.txtDEbitNoteDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.txtDEbitNoteDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtDEbitNoteDate.Size = new System.Drawing.Size(111, 20);
-            this.txtDEbitNoteDate.TabIndex = 566;
-            this.txtDEbitNoteDate.TabStop = false;
+            this.txtDEbitNoteDate.TabIndex = 1;
             // 
             // labelControl9
             // 
@@ -477,7 +475,7 @@
             this.txtGRNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGRNo.Properties.MaxLength = 15;
             this.txtGRNo.Size = new System.Drawing.Size(126, 20);
-            this.txtGRNo.TabIndex = 554;
+            this.txtGRNo.TabIndex = 6;
             // 
             // labelControl24
             // 
@@ -500,7 +498,7 @@
             this.txtDebitNoteAmount.Location = new System.Drawing.Point(305, 60);
             this.txtDebitNoteAmount.Name = "txtDebitNoteAmount";
             this.txtDebitNoteAmount.Size = new System.Drawing.Size(111, 20);
-            this.txtDebitNoteAmount.TabIndex = 541;
+            this.txtDebitNoteAmount.TabIndex = 3;
             // 
             // labelControl16
             // 
@@ -539,7 +537,7 @@
             this.txtDEbitNoteQty.Location = new System.Drawing.Point(93, 60);
             this.txtDEbitNoteQty.Name = "txtDEbitNoteQty";
             this.txtDEbitNoteQty.Size = new System.Drawing.Size(97, 20);
-            this.txtDEbitNoteQty.TabIndex = 539;
+            this.txtDEbitNoteQty.TabIndex = 2;
             // 
             // txtDebitNoteNo
             // 
@@ -548,7 +546,8 @@
             this.txtDebitNoteNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitNoteNo.Properties.MaxLength = 50;
             this.txtDebitNoteNo.Size = new System.Drawing.Size(97, 20);
-            this.txtDebitNoteNo.TabIndex = 502;
+            this.txtDebitNoteNo.TabIndex = 0;
+            this.txtDebitNoteNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitNoteNo_KeyDown);
             // 
             // txtTransporterName
             // 
@@ -568,7 +567,7 @@
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterCode.Properties.MaxLength = 6;
             this.txtTransporterCode.Size = new System.Drawing.Size(65, 20);
-            this.txtTransporterCode.TabIndex = 533;
+            this.txtTransporterCode.TabIndex = 5;
             this.txtTransporterCode.EditValueChanged += new System.EventHandler(this.TxtTransporterCode_EditValueChanged);
             this.txtTransporterCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTransporterCode_KeyDown);
             // 
@@ -811,10 +810,12 @@
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             this.HelpGridView.Name = "HelpGridView";
             this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.AutoSelectAllInEditor = false;
             this.HelpGridView.OptionsBehavior.Editable = false;
             this.HelpGridView.OptionsView.ShowGroupPanel = false;
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.HelpGridView_PopupMenuShowing);
             // 
             // gridView1
             // 
@@ -1693,7 +1694,7 @@
             this.xtraTabPage6.Controls.Add(this.TaxCodeGrid);
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(563, 154);
+            this.xtraTabPage6.Size = new System.Drawing.Size(561, 154);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -1702,7 +1703,7 @@
             this.TaxCodeGrid.Location = new System.Drawing.Point(0, 0);
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(563, 154);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(561, 154);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1812,7 +1813,7 @@
             // 
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(563, 154);
+            this.xtraTabPage9.Size = new System.Drawing.Size(561, 154);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -1821,7 +1822,7 @@
             this.HSNGrid.Location = new System.Drawing.Point(0, 0);
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(563, 154);
+            this.HSNGrid.Size = new System.Drawing.Size(561, 154);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1934,7 +1935,7 @@
             this.xtraTabPage7.Controls.Add(this.TXMAINREMARKS);
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(563, 154);
+            this.xtraTabPage7.Size = new System.Drawing.Size(561, 154);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -2012,7 +2013,7 @@
             // 
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(371, 157);
+            this.xtraTabPage1.Size = new System.Drawing.Size(369, 157);
             this.xtraTabPage1.Text = "View Docs";
             // 
             // DocsGrid
@@ -2021,7 +2022,7 @@
             this.DocsGrid.Location = new System.Drawing.Point(0, 0);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(371, 157);
+            this.DocsGrid.Size = new System.Drawing.Size(369, 157);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {

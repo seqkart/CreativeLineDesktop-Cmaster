@@ -8,6 +8,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
+using SeqKartLibrary;
 using System;
 using System.Data;
 using System.Drawing;
@@ -46,6 +47,19 @@ namespace WindowsFormsApplication1
             timer.Interval = (30 * 1000); // 10 secs
             timer.Tick += Timer_Tick;
             timer.Start();
+
+
+
+
+
+            DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
+            if (ComparisonUtils.IsNotNull_DataSet(dsFNYear))
+            {
+                HelpGrid.DataSource = dsFNYear.Tables[0];
+                HelpGridView.BestFitColumns();
+            }
+
+
 
             // DevExpress.Utils.AppearanceObject.DefaultFont = new Font(DevExpress.Utils.AppearanceObject.DefaultFont.FontFamily.Name, 10);
             Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
@@ -1824,6 +1838,30 @@ namespace WindowsFormsApplication1
         private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
         {
             radialMenu1.ShowPopup(new Point(750, 400));
+        }
+
+        private void HelpGrid_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow row = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
+
+
+            DataSet dsFY = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_FN_YEAR(row[0].ToString()));
+            DataRow drFY = dsFY.Tables[0].Rows[0];
+
+            //GlobalVariables.CUnitID = txtUnit.SelectedValue.ToString().PadLeft(2, '0');
+
+
+            GlobalVariables.FinancialYear = drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString();
+            GlobalVariables.FinYearStartDate = Convert.ToDateTime(drFY[SQL_COLUMNS.FN_YEAR._FNStartDate]).Date;
+            GlobalVariables.FinYearEndDate = Convert.ToDateTime(drFY[SQL_COLUMNS.FN_YEAR._FNEndDate]).Date;
+            HelpGrid.Visible = false;
+            Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
+
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            HelpGrid.Visible = true;
         }
     }
 }

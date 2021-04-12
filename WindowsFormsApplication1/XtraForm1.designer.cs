@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup13 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup14 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup15 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Navigation.AccordionContextButton accordionContextButton1 = new DevExpress.XtraBars.Navigation.AccordionContextButton();
-            DevExpress.Utils.Animation.CombTransition combTransition1 = new DevExpress.Utils.Animation.CombTransition();
+            DevExpress.Utils.Animation.CombTransition combTransition5 = new DevExpress.Utils.Animation.CombTransition();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this._ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
@@ -60,6 +60,7 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.accordionContentContainer1 = new DevExpress.XtraBars.Navigation.AccordionContentContainer();
+            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.hyperlinkLabelControl1 = new DevExpress.XtraEditors.HyperlinkLabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -84,7 +85,10 @@
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.skinDropDownButtonItem2 = new DevExpress.XtraBars.SkinDropDownButtonItem();
-            this.hyperlinkLabelControl2 = new DevExpress.XtraEditors.HyperlinkLabelControl();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
@@ -102,6 +106,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // _ribbonControl
@@ -207,11 +214,11 @@
             // 
             // 
             // 
-            galleryItemGroup1.Caption = "Group2";
-            galleryItemGroup2.Caption = "Group3";
+            galleryItemGroup13.Caption = "Group2";
+            galleryItemGroup14.Caption = "Group3";
             this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1,
-            galleryItemGroup2});
+            galleryItemGroup13,
+            galleryItemGroup14});
             this.ribbonGalleryBarItem2.Id = 82;
             this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
             // 
@@ -221,12 +228,12 @@
             // 
             // 
             // 
-            galleryItemGroup3.Caption = "Group4";
-            galleryItem1.Caption = "Item6";
-            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1});
+            galleryItemGroup15.Caption = "Group4";
+            galleryItem5.Caption = "Item6";
+            galleryItemGroup15.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem5});
             this.ribbonGalleryBarItem3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup15});
             this.ribbonGalleryBarItem3.GalleryDropDown = this.galleryDropDown1;
             this.ribbonGalleryBarItem3.Id = 83;
             this.ribbonGalleryBarItem3.Name = "ribbonGalleryBarItem3";
@@ -332,6 +339,15 @@
             this.accordionContentContainer1.Size = new System.Drawing.Size(212, 183);
             this.accordionContentContainer1.TabIndex = 3;
             // 
+            // hyperlinkLabelControl2
+            // 
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(142, 162);
+            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
+            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(64, 13);
+            this.hyperlinkLabelControl2.TabIndex = 3;
+            this.hyperlinkLabelControl2.Text = "Show Radial";
+            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
+            // 
             // hyperlinkLabelControl1
             // 
             this.hyperlinkLabelControl1.Location = new System.Drawing.Point(142, 82);
@@ -416,7 +432,7 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(760, 632);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
-            this.xtraTabControl1.Transition.TransitionType = combTransition1;
+            this.xtraTabControl1.Transition.TransitionType = combTransition5;
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_SelectedPageChanged);
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.XtraTabControl1_CloseButtonClick);
             this.xtraTabControl1.Validating += new System.ComponentModel.CancelEventHandler(this.XtraTabControl1_Validating);
@@ -471,6 +487,7 @@
             this.toolbarFormControl1.TabIndex = 5;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem2);
+            this.toolbarFormControl1.TitleItemLinks.Add(this.barButtonItem4);
             this.toolbarFormControl1.ToolbarForm = this;
             // 
             // toolbarFormManager1
@@ -484,8 +501,9 @@
             this.barToolbarsListItem1,
             this.skinBarSubItem1,
             this.skinPaletteDropDownButtonItem1,
-            this.skinDropDownButtonItem2});
-            this.toolbarFormManager1.MaxItemId = 4;
+            this.skinDropDownButtonItem2,
+            this.barButtonItem4});
+            this.toolbarFormManager1.MaxItemId = 5;
             // 
             // barDockControlTop
             // 
@@ -546,20 +564,52 @@
             this.skinDropDownButtonItem2.Id = 3;
             this.skinDropDownButtonItem2.Name = "skinDropDownButtonItem2";
             // 
-            // hyperlinkLabelControl2
+            // HelpGrid
             // 
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(142, 162);
-            this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(64, 13);
-            this.hyperlinkLabelControl2.TabIndex = 3;
-            this.hyperlinkLabelControl2.Text = "Show Radial";
-            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
+            this.HelpGrid.Location = new System.Drawing.Point(580, 33);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(388, 123);
+            this.HelpGrid.TabIndex = 300;
+            this.HelpGrid.TabStop = false;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
+            // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barButtonItem4.Caption = "Financial Year";
+            this.barButtonItem4.Id = 4;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // XtraForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 780);
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this._ribbonControl);
             this.Controls.Add(this.barDockControlLeft);
@@ -599,6 +649,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -655,5 +708,9 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraEditors.HyperlinkLabelControl hyperlinkLabelControl2;
+        private DevExpress.XtraGrid.GridControl HelpGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
     }
 }

@@ -420,20 +420,25 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG141")
                 {
-                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    
 
-                    WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
-                    {
-                        S1 = btnEdit.Text,
-                        Text = "Credit Note Edition",
-                        ImDate = Convert.ToDateTime(CurrentRow["CRDate"]),
-                        ImNo = CurrentRow["CRNo"].ToString(),
-                        ImSeries = CurrentRow["CRSeries"].ToString()
-                    };
-                    frm.StartPosition = FormStartPosition.CenterScreen;
-                    frm.ShowDialog(Parent);
+                        DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                        WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
+                        {
+                            S1 = btnEdit.Text,
+                            Text = "Credit Note Edition",
+                            ImDate = Convert.ToDateTime(CurrentRow["CRDate"]),
+                            ImNo = CurrentRow["CRNo"].ToString(),
+                            ImSeries = CurrentRow["CRSeries"].ToString()
+                        };
+
+                        frm.StartPosition = FormStartPosition.CenterScreen;
+                        frm.ShowDialog(Parent);
+
+                                 
                 }
-                if (GlobalVariables.ProgCode == "PROG138")
+                    if (GlobalVariables.ProgCode == "PROG138")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
@@ -835,10 +840,94 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                if (GlobalVariables.ProgCode == "PROG141")
+                {
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To Excel (Busy)", (o1, e1) =>
+                    {
+                        DataTable dt = new DataTable();
+                        int i = 0;
+                        foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                        {
+                            if (dr["Select"].ToString().ToUpper() == "TRUE")
+                            {
+                                DataSet ds = ProjectFunctions.GetDataSet("sp_ExportCreditNoteVouFBusy '" + Convert.ToDateTime(dr["CRDate"]).ToString("yyyy-MM-dd") + "','" + dr["CRNo"].ToString() + "','" + dr["CRSeries"].ToString() + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
+                                if (ds.Tables[0].Rows.Count > 0)
+                                {
+                                    if (i == 0)
+                                    {
+                                        dt = ds.Tables[0];
+                                        i++;
+                                    }
+                                    else
+                                    {
+                                        foreach (DataRow innerrow in ds.Tables[0].Rows)
+                                        {
+                                            dt.ImportRow(innerrow);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            PrintOutGridView.Columns.Clear();
+                            PrintOutGrid.DataSource = dt;
+                            PrintOutGridView.BestFitColumns();
+                            PrintOutGridView.ExportToText("C:\\ERP To Busy\\CR.txt");
+                            PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\CR.xlsx");
+                            PrintOutGrid.DataSource = null;
+                        }
+                    }));
+
+                }
+
+
+
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
-                  
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Send Bill Message", (o1, e1) =>
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To Excel (Busy)", (o1, e1) =>
+                    {
+                        DataTable dt = new DataTable();
+                        int i = 0;
+                        foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                        {
+                            if (dr["Select"].ToString().ToUpper() == "TRUE")
+                            {
+                                DataSet ds = ProjectFunctions.GetDataSet("sp_ExportSalesVouFBusy '" + Convert.ToDateTime(dr["BillDate"]).ToString("yyyy-MM-dd") + "','" + dr["BillNo"].ToString() + "','" + dr["BillSeries"].ToString() + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
+                                if (ds.Tables[0].Rows.Count > 0)
+                                {
+                                    if (i == 0)
+                                    {
+                                        dt = ds.Tables[0];
+                                        i++;
+                                    }
+                                    else
+                                    {
+                                        foreach (DataRow innerrow in ds.Tables[0].Rows)
+                                        {
+                                            dt.ImportRow(innerrow);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            PrintOutGridView.Columns.Clear();
+                            PrintOutGrid.DataSource = dt;
+                            PrintOutGridView.BestFitColumns();
+                            PrintOutGridView.ExportToText("C:\\ERP To Busy\\GST.txt");
+                            PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\GST.xlsx");
+                            PrintOutGrid.DataSource = null;
+                        }
+                    }));
+
+                }
+                    if (GlobalVariables.ProgCode == "PROG131")
+                {
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem(" Send Bill Message ", (o1, e1) =>
                     {
                         foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                         {

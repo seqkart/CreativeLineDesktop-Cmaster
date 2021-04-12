@@ -59,7 +59,7 @@
             this.InvoiceGrid.Name = "InvoiceGrid";
             this.InvoiceGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.InvoiceGrid.Size = new System.Drawing.Size(937, 464);
+            this.InvoiceGrid.Size = new System.Drawing.Size(707, 464);
             this.InvoiceGrid.TabIndex = 200;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});
@@ -102,7 +102,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(937, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(707, 26);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -182,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(937, 490);
+            this.ClientSize = new System.Drawing.Size(707, 490);
             this.ControlBox = false;
             this.Controls.Add(this.PrintOutGrid);
             this.Controls.Add(this.InvoiceGrid);

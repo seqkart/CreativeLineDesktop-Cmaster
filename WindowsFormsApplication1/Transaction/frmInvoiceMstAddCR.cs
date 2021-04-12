@@ -69,10 +69,10 @@ namespace WindowsFormsApplication1
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.TextBoxVisualize(groupControl1);
-
+            ProjectFunctions.DatePickerVisualize(groupControl2);
             ProjectFunctions.ButtonVisualize(this);
             //ProjectFunctions.GirdViewVisualize(InfoGridView);
-            ProjectFunctions.GirdViewVisualize(HelpGridView);
+            //ProjectFunctions.GirdViewVisualize(HelpGridView);
             ProjectFunctions.TextBoxVisualize(groupControl2);
         }
 
@@ -119,9 +119,9 @@ namespace WindowsFormsApplication1
             TaxCodeWiseSummary();
             HSNWiseSummary();
 
-            labelControl6.Text= Convert.ToDecimal(dt.Compute("SUM(SIDSCANQTY)", string.Empty)).ToString("0");
+            labelControl6.Text = Convert.ToDecimal(dt.Compute("SUM(SIDSCANQTY)", string.Empty)).ToString("0");
 
-           
+
         }
         private void TaxCodeWiseSummary()
         {
@@ -295,13 +295,13 @@ namespace WindowsFormsApplication1
             }
             if (txtDebitNoteNo.Text.Trim().Length == 0)
             {
-                ProjectFunctions.SpeakError("Invalid Debit NOte No");
+                ProjectFunctions.SpeakError("Invalid Debit Note No");
                 txtDebitNoteNo.Focus();
                 return false;
             }
             if (txtDEbitNoteDate.Text.Trim().Length == 0)
             {
-                ProjectFunctions.SpeakError("Invalid Debit NOte Date");
+                ProjectFunctions.SpeakError("Invalid Debit Note Date");
                 txtDEbitNoteDate.Focus();
                 return false;
             }
@@ -348,7 +348,7 @@ namespace WindowsFormsApplication1
                 txtBillingState.Text = ds.Tables[0].Rows[0]["DebitStateName"].ToString();
                 txtBillingZip.Text = ds.Tables[0].Rows[0]["DebitPartyZipCode"].ToString();
 
-                FixPartyTag= ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
+                FixPartyTag = ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
 
 
 
@@ -778,7 +778,7 @@ namespace WindowsFormsApplication1
                         AccMRPMarkDown = Convert.ToDecimal(ds.Tables[0].Rows[0]["AccMrpMarkDown"]);
                         StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
 
-                        FixPartyTag= ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
+                        FixPartyTag = ds.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString();
                     }
 
                     else
@@ -859,6 +859,8 @@ namespace WindowsFormsApplication1
                 txtTransporterCode.Text = row["TRPRSYSID"].ToString();
                 txtTransporterName.Text = row["TRPRNAME"].ToString();
                 HelpGrid.Visible = false;
+                txtGRNo.Focus();
+
             }
 
             if (HelpGrid.Text == "txtDebitPartyCode")
@@ -880,9 +882,10 @@ namespace WindowsFormsApplication1
 
                 StkTransfer = row["AccStkTrf"].ToString();
                 FixPartyTag = row["AccFixBarCodeTag"].ToString();
-                
+
 
                 HelpGrid.Visible = false;
+                txtDebitNoteNo.Focus();
             }
 
         }
@@ -893,9 +896,23 @@ namespace WindowsFormsApplication1
             {
                 HelpGrid_DoubleClick(null, e);
             }
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Escape)
             {
                 HelpGrid.Visible = false;
+                if (HelpGrid.Text == "txtTransporterCode")
+                {
+                    txtTransporterCode.Focus();
+                }
+                if (HelpGrid.Text == "txtDebitPartyCode")
+                {
+
+                    txtDebitPartyCode.Focus();
+                }
+
+                if (HelpGrid.Text == "Load")
+                {
+                    txtBarCode.Focus();
+                }
             }
         }
 
@@ -906,7 +923,60 @@ namespace WindowsFormsApplication1
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
-            ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterCode, HelpGrid, HelpGridView, e);
+            if (e.KeyCode == Keys.Enter)
+            {
+
+
+                HelpGridView.Columns.Clear();
+                HelpGrid.Text = "txtTransporterCode";
+                if (txtTransporterCode.Text.Trim().Length == 0)
+                {
+                    DataSet ds = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = ds.Tables[0];
+                        HelpGrid.Show();
+                        HelpGrid.Visible = true;
+                        HelpGrid.Focus();
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        ProjectFunctions.SpeakError("No Records To Display");
+                    }
+                }
+                else
+                {
+                    DataSet ds = ProjectFunctions.GetDataSet(" select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER Where TRPRSYSID= '" + txtTransporterCode.Text.Trim() + "'");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        txtTransporterCode.Text = ds.Tables[0].Rows[0]["TRPRSYSID"].ToString();
+                        txtTransporterName.Text = ds.Tables[0].Rows[0]["TRPRNAME"].ToString();
+                        txtGRNo.Focus();
+                    }
+
+                    else
+                    {
+                        DataSet ds1 = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER");
+                        if (ds1.Tables[0].Rows.Count > 0)
+                        {
+                            HelpGrid.DataSource = ds.Tables[0];
+                            HelpGrid.Show();
+                            HelpGrid.Visible = true;
+                            HelpGrid.Focus();
+                            HelpGridView.BestFitColumns();
+                        }
+                        else
+                        {
+                            ProjectFunctions.SpeakError("No Records To Display");
+                        }
+                    }
+                }
+            }
+            e.Handled = true;
+
+
+
         }
 
         private void BtnRecalculate_Click(object sender, EventArgs e)
@@ -973,14 +1043,14 @@ namespace WindowsFormsApplication1
                                 foreach (DataRow drRows in dt.Rows)
                                 {
                                     if (ds.Tables[0].Rows[0]["SIDBARCODE"].ToString() == drRows["SIDBARCODE"].ToString())
-                                    { 
+                                    {
                                         ProjectFunctions.SpeakError("This BarCode Already Loaded In This Document");
                                         txtBarCode.SelectAll();
                                         txtBarCode.Focus();
                                         e.Handled = true;
                                         return;
                                     }
-                                   
+
                                 }
                                 dt.Merge(ds.Tables[0]);
                             }
@@ -1000,17 +1070,17 @@ namespace WindowsFormsApplication1
                                         i++;
                                     }
                                 }
-                                if(i==0)
+                                if (i == 0)
                                 {
-                                    dt.Merge(ds.Tables[0]); 
+                                    dt.Merge(ds.Tables[0]);
                                 }
                             }
-                            
+
                         }
                     }
                     else
 
-                    
+
                     {
                         if (ds.Tables.Count > 2)
                         {
@@ -1284,7 +1354,59 @@ namespace WindowsFormsApplication1
 
         private void GroupControl1_Paint(object sender, PaintEventArgs e)
         {
-       
+
+        }
+
+        private void txtDebitNoteNo_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+                this.txtDEbitNoteDate.Focus();
+        }
+
+        private void txtDEbitNoteDate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtDEbitNoteQty.Focus();
+        }
+        private void txtDEbitNoteQty_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtDebitNoteAmount.Focus();
+        }
+        private void txtDebitNoteAmount_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtReason.Focus();
+        }
+        private void TxtReason_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtTransporterCode.Focus();
+        }
+
+        private void TxtGRNo_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtGRDate.Focus();
+        }
+        private void TxtGRDate_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtbox.Focus();
+        }
+        private void Txtbox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtBarCode.Focus();
+        }
+
+        private void HelpGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        {
+            //HelpGrid.MainView = View1;
+            //View.GridControl = HelpGrid;
+            //View1.Name = "HelpGridView";
+            //View1.OptionsBehavior.Editable = false;
         }
     }
 }
