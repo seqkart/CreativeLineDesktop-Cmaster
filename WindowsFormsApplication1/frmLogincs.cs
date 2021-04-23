@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -39,7 +40,7 @@ namespace WindowsFormsApplication1
             dTP1.Text = DateTime.Now.ToLongDateString();
 
         }
-
+        
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
@@ -313,10 +314,17 @@ namespace WindowsFormsApplication1
 
 
         }
+        [ServiceContract]
+        [ServiceKnownType(typeof(NetworkCredential))]
+        public interface IService
+        {
+            [OperationContract]
+            string GetData(ICredentials value);
+        }
 
         private void BtnBackup_Click(object sender, EventArgs e)
 
-
+            
         {
 
 
@@ -328,10 +336,14 @@ namespace WindowsFormsApplication1
             {
 
                 //NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@123456");
+
+
+
+
                 NetworkCredential myCredentials = new NetworkCredential("", "", "");
-                myCredentials.Domain = "cserver";
+                myCredentials.Domain = "192.168.1.15";
                 myCredentials.UserName = "c server";
-                myCredentials.Password = "Rohit@12345";
+                myCredentials.Password = "Rohit@1234";
 
                 if (System.IO.Directory.Exists(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
                 {
@@ -355,10 +367,14 @@ namespace WindowsFormsApplication1
                 else
                 {
                     // NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@12345");
+
+
+
+
                     NetworkCredential myCredentials1 = new NetworkCredential("", "", "");
-                    myCredentials1.Domain = "cserver";
+                    myCredentials1.Domain = "192.168.1.15";
                     myCredentials1.UserName = "c server";
-                    myCredentials1.Password = "Rohit@12345";
+                    myCredentials1.Password = "Rohit@1234";
                     System.IO.Directory.CreateDirectory(@"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
                     ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
                     string srcDir = @"\\cserver\F\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();

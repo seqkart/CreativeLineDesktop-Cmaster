@@ -1144,8 +1144,6 @@ namespace WindowsFormsApplication1
         }
 
 
-
-
         private void PackingSlipUpdations()
         {
 
@@ -1214,10 +1212,6 @@ namespace WindowsFormsApplication1
             txtBankAccNo.Text = string.Empty;
             txtCreditLimit.Text = string.Empty;
         }
-
-
-
-
 
 
         private void PrepareActMstHelpGrid()

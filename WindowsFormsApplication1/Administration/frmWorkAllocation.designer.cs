@@ -80,7 +80,7 @@
             // cmbSelectUser
             // 
             this.cmbSelectUser.FormattingEnabled = true;
-            this.cmbSelectUser.Location = new System.Drawing.Point(124, 31);
+            this.cmbSelectUser.Location = new System.Drawing.Point(124, 30);
             this.cmbSelectUser.Name = "cmbSelectUser";
             this.cmbSelectUser.Size = new System.Drawing.Size(121, 21);
             this.cmbSelectUser.TabIndex = 313;
@@ -98,7 +98,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(933, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(894, 25);
             this.Menu_ToolStrip.TabIndex = 314;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -114,10 +114,11 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.Options.UseFont = true;
             this.label1.Location = new System.Drawing.Point(57, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 315;
             this.label1.Text = "Select User";
             // 
@@ -137,7 +138,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 25);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Padding = new System.Windows.Forms.Padding(15);
-            this.panelControl1.Size = new System.Drawing.Size(933, 595);
+            this.panelControl1.Size = new System.Drawing.Size(894, 503);
             this.panelControl1.TabIndex = 317;
             this.panelControl1.Text = "Work Allocation";
             // 
@@ -148,6 +149,7 @@
             this.btnSaveOpts.Size = new System.Drawing.Size(75, 23);
             this.btnSaveOpts.TabIndex = 319;
             this.btnSaveOpts.Text = "Save";
+            this.btnSaveOpts.Visible = false;
             this.btnSaveOpts.Click += new System.EventHandler(this.BtnSaveOpts_Click);
             // 
             // btnCancle
@@ -157,6 +159,7 @@
             this.btnCancle.Size = new System.Drawing.Size(75, 23);
             this.btnCancle.TabIndex = 318;
             this.btnCancle.Text = "Cancel";
+            this.btnCancle.Visible = false;
             this.btnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
             // 
             // OptionsGrid
@@ -467,18 +470,18 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // frmWorkAllocation
+            // FrmWorkAllocation
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 620);
+            this.ClientSize = new System.Drawing.Size(894, 528);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmWorkAllocation";
+            this.Name = "FrmWorkAllocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmWorkAllocation_Load);

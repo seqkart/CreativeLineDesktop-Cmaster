@@ -12,6 +12,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 
 using System.Net;
@@ -605,22 +606,22 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                //DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
-                //if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
-                //{
-                //    Byte[] MyData = new byte[0];
-                //    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
-                //    MemoryStream stream = new MemoryStream(MyData)
-                //    {
-                //        Position = 0
-                //    };
+                DataSet dsImage = ProjectFunctions.GetDataSet("Select ARTIMAGE from ARTICLE Where ARTSYSID='" + ArticleID + "'");
+                if (dsImage.Tables[0].Rows[0]["ARTIMAGE"].ToString().Trim() != string.Empty)
+                {
+                    Byte[] MyData = new byte[0];
+                    MyData = (Byte[])dsImage.Tables[0].Rows[0]["ARTIMAGE"];
+                    MemoryStream stream = new MemoryStream(MyData)
+                    {
+                        Position = 0
+                    };
 
-                //    PictureBox.Image = System.Drawing.Image.FromStream(stream);
-                //}
-                //else
-                //{
-                //    PictureBox.Image = null;
-                //}
+                    PictureBox.Image = System.Drawing.Image.FromStream(stream);
+                }
+                else
+                {
+                    PictureBox.Image = null;
+                }
             }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
@@ -1802,7 +1803,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        public static async void  GenerateEWaybill(String BillNo, DateTime BillDate)
+        public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
         {
             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 
@@ -1878,18 +1879,18 @@ namespace WindowsFormsApplication1
                     cessNonAdvol = 0,
                     taxableAmount = Convert.ToDouble(dr["SIDITMNETAMT"]),
                 });
-                
+
             }
 
             //calculation done
 
-             EWBSession EwbSession = new EWBSession();
+            EWBSession EwbSession = new EWBSession();
 
 
             EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
             EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
             EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
-          
+
             EwbSession.EwbApiLoginDetails.EwbAuthToken = EwbSession.EwbApiLoginDetails.EwbAuthToken;
             EwbSession.EwbApiLoginDetails.EwbTokenExp = EwbSession.EwbApiLoginDetails.EwbTokenExp;
             EwbSession.EwbApiLoginDetails.EwbSEK = EwbSession.EwbApiLoginDetails.EwbSEK;
@@ -1900,15 +1901,15 @@ namespace WindowsFormsApplication1
             EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
             EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
             EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
-         
-         
+
+
 
 
 
 
             string a = JsonConvert.SerializeObject(ewbGen);
 
-           
+
             TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
             if (TxnResp.IsSuccess)
             {
@@ -1943,7 +1944,7 @@ namespace WindowsFormsApplication1
             }
 
 
-           XtraMessageBox.Show("Generate e-Way Bill Responce");
+            XtraMessageBox.Show("Generate e-Way Bill Responce");
 
 
 
@@ -1984,7 +1985,7 @@ namespace WindowsFormsApplication1
                             if (ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Trim().Length < 10)
                             {
                                 ProjectFunctions.SpeakError("Kindly Update GST No First");
-                             
+
                             }
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
@@ -1993,7 +1994,7 @@ namespace WindowsFormsApplication1
 
                         frm.ShowDialog();
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
-                       
+
                         ///////////mobile number from fetch
                         SendBillImageAsync("  ");
                     }

@@ -1357,7 +1357,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void txtDebitNoteNo_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDebitNoteNo_KeyDown(object sender, KeyEventArgs e)
         {
 
             if (e.KeyCode == Keys.Enter)
@@ -1407,6 +1407,14 @@ namespace WindowsFormsApplication1
             //View.GridControl = HelpGrid;
             //View1.Name = "HelpGridView";
             //View1.OptionsBehavior.Editable = false;
+        }
+
+        private void txtPKGFrt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                Calculation();
+            }
         }
     }
 }

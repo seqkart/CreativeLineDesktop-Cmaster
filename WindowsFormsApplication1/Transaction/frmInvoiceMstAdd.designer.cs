@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceMstAdd));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -437,7 +437,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1190, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1175, 26);
             this.Menu_ToolStrip.TabIndex = 210;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -494,10 +494,11 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 29);
+            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.xtraTabControl1.Location = new System.Drawing.Point(0, 26);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1222, 617);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1175, 617);
             this.xtraTabControl1.TabIndex = 475;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -520,7 +521,7 @@
             this.xtraTabPage1.Controls.Add(this.txtserial);
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1220, 589);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1188, 589);
             this.xtraTabPage1.Text = "Main Invoice Details";
             // 
             // groupControl4
@@ -1229,7 +1230,7 @@
             this.xtraTabPage2.Controls.Add(this.groupControl10);
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1220, 589);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1173, 589);
             this.xtraTabPage2.Text = "Invoice Data";
             // 
             // chall
@@ -1964,11 +1965,11 @@
             // 
             // ArticleImageBox
             // 
-            this.ArticleImageBox.Location = new System.Drawing.Point(979, 89);
+            this.ArticleImageBox.Location = new System.Drawing.Point(979, 143);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.ArticleImageBox.Size = new System.Drawing.Size(229, 289);
+            this.ArticleImageBox.Size = new System.Drawing.Size(184, 235);
             this.ArticleImageBox.TabIndex = 709;
             // 
             // xtraTabControl3
@@ -3162,9 +3163,9 @@
             // 
             // HelpGrid
             // 
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
+            gridLevelNode1});
             this.HelpGrid.Location = new System.Drawing.Point(279, 25);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
@@ -3201,7 +3202,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1190, 643);
+            this.ClientSize = new System.Drawing.Size(1175, 643);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.xtraTabControl1);
