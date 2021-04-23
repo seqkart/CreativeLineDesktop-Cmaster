@@ -42,6 +42,7 @@
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -158,6 +159,8 @@
             this.gridColumn2});
             this.PrintOutGridView.GridControl = this.PrintOutGrid;
             this.PrintOutGridView.Name = "PrintOutGridView";
+            this.PrintOutGridView.OptionsCustomization.AllowSort = false;
+            this.PrintOutGridView.OptionsView.ShowFooter = true;
             this.PrintOutGridView.OptionsView.ShowGroupPanel = false;
             this.PrintOutGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.PrintOutGridView_PopupMenuShowing);
             // 
@@ -177,6 +180,10 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog1_FileOk);
             // 
             // FrmTransaction
             // 
@@ -219,6 +226,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

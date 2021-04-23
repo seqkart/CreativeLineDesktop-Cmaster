@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
@@ -21,6 +22,9 @@ namespace WindowsFormsApplication1
         private void FillGrid()
         {
             //Task.Run(async () => { await FillGrid_1(); });
+
+            // SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
+            //SplashScreenManager.Default.SetWaitFormDescription("Fetching Data");
 
 
             if (_RangeSelector.DtFrom.Text.Length == 0 || _RangeSelector.DtEnd.Text.Length == 0)
@@ -55,10 +59,16 @@ namespace WindowsFormsApplication1
                 " To " +
                 _RangeSelector.EndDate.Date.ToString("dd-MM-yyyy");
             PrintLogWin.PrintLog("ProcedureName : " + ProcedureName);
+
+            // SplashScreenManager.CloseForm();
         }
 
         private void FrmTransaction_Load(object sender, EventArgs e)
         {
+
+            //PrintOutGridView.OptionsView.allo
+
+
             PrintLogWin.PrintLog("frmTransaction_Load ********** " + GlobalVariables.ProgCode);
 
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
@@ -420,25 +430,25 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG141")
                 {
-                    
 
-                        DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                        WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
-                        {
-                            S1 = btnEdit.Text,
-                            Text = "Credit Note Edition",
-                            ImDate = Convert.ToDateTime(CurrentRow["CRDate"]),
-                            ImNo = CurrentRow["CRNo"].ToString(),
-                            ImSeries = CurrentRow["CRSeries"].ToString()
-                        };
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                        frm.StartPosition = FormStartPosition.CenterScreen;
-                        frm.ShowDialog(Parent);
+                    WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
+                    {
+                        S1 = btnEdit.Text,
+                        Text = "Credit Note Edition",
+                        ImDate = Convert.ToDateTime(CurrentRow["CRDate"]),
+                        ImNo = CurrentRow["CRNo"].ToString(),
+                        ImSeries = CurrentRow["CRSeries"].ToString()
+                    };
 
-                                 
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+
+
                 }
-                    if (GlobalVariables.ProgCode == "PROG138")
+                if (GlobalVariables.ProgCode == "PROG138")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
@@ -842,6 +852,20 @@ namespace WindowsFormsApplication1
             {
                 if (GlobalVariables.ProgCode == "PROG141")
                 {
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Report To Excel ", (o1, e1) =>
+                    {
+
+                        saveFileDialog1.ShowDialog();
+                        MakePrintGrid();
+                        PrintOutGrid.Visible = false;
+
+                    }));
+
+
+
+
+
+
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To Excel (Busy)", (o1, e1) =>
                     {
                         DataTable dt = new DataTable();
@@ -877,6 +901,8 @@ namespace WindowsFormsApplication1
                             PrintOutGridView.ExportToText("C:\\ERP To Busy\\CR.txt");
                             PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\CR.xlsx");
                             PrintOutGrid.DataSource = null;
+                            MakePrintGrid();
+                            PrintOutGrid.Visible = false;
                         }
                     }));
 
@@ -921,11 +947,13 @@ namespace WindowsFormsApplication1
                             PrintOutGridView.ExportToText("C:\\ERP To Busy\\GST.txt");
                             PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\GST.xlsx");
                             PrintOutGrid.DataSource = null;
+                            MakePrintGrid();
+                            PrintOutGrid.Visible = false;
                         }
                     }));
 
                 }
-                    if (GlobalVariables.ProgCode == "PROG131")
+                if (GlobalVariables.ProgCode == "PROG131")
                 {
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem(" Send Bill Message ", (o1, e1) =>
                     {
@@ -993,6 +1021,8 @@ namespace WindowsFormsApplication1
                                                                                  PrintOutGridView.BestFitColumns();
 
                                                                                  PrintOutGridView.ExportToXlsx(Application.StartupPath + @"\PI\PI.xlsx");
+                                                                                 MakePrintGrid();
+                                                                                 PrintOutGrid.Visible = false;
                                                                              }
 
                                                                          }
@@ -1007,14 +1037,7 @@ namespace WindowsFormsApplication1
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Challan",
                                                                   (o1, e1) =>
                                                                   {
-                                                                      DataTable dt = new DataTable();
-                                                                      dt.Columns.Add("CopyText", typeof(string));
-                                                                      dt.Columns.Add("Select", typeof(bool));
-                                                                      dt.Rows.Add("Party Copy", false);
-                                                                      dt.Rows.Add("Gate Copy", false);
-                                                                      dt.Rows.Add("Extra Copy", false);
-                                                                      PrintOutGrid.DataSource = dt;
-                                                                      PrintOutGridView.BestFitColumns();
+                                                                      MakePrintGrid();
                                                                       PrintOutGrid.Visible = true;
                                                                   }));
                 }
@@ -1269,17 +1292,7 @@ namespace WindowsFormsApplication1
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Invoice",
                                                                   (o1, e1) =>
                                                                   {
-                                                                      DataTable dt = new DataTable();
-                                                                      dt.Columns.Add("CopyText", typeof(string));
-                                                                      dt.Columns.Add("Select", typeof(bool));
-
-                                                                      dt.Rows.Add("Original For Buyer", false);
-                                                                      dt.Rows.Add("Office Copy", false);
-                                                                      dt.Rows.Add("Transporter Copy", false);
-                                                                      dt.Rows.Add("Extra Copy", false);
-
-                                                                      PrintOutGrid.DataSource = dt;
-                                                                      PrintOutGridView.BestFitColumns();
+                                                                      MakePrintGrid();
                                                                       PrintOutGrid.Visible = true;
                                                                       //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                   }));
@@ -1358,7 +1371,8 @@ namespace WindowsFormsApplication1
                                                                                   PrintOutGridView.BestFitColumns();
                                                                                   PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                                   PrintOutGridView.ExportToXlsx(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".xlsx");
-
+                                                                                  MakePrintGrid();
+                                                                                  PrintOutGrid.Visible = false;
                                                                                   //Close();
                                                                               }
                                                                               else
@@ -1561,9 +1575,9 @@ namespace WindowsFormsApplication1
                                                                   (o1, e1) =>
                                                                   {
 
-#pragma warning disable CS0219 // The variable 'i' is assigned but its value is never used
+
                                                                       int i = 0;
-#pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
+
                                                                       foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {
                                                                           if (dr["Select"].ToString().ToUpper() == "TRUE")
@@ -1630,6 +1644,8 @@ namespace WindowsFormsApplication1
                             dt = ds.Tables[0];
                             PrintOutGrid.DataSource = dt;
                             PrintOutGridView.BestFitColumns();
+                            MakePrintGrid();
+                            PrintOutGrid.Visible = false;
                         }
                     }
 
@@ -1639,18 +1655,17 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Sticker.btw");
                         PrintOutGrid.DataSource = null;
-                            //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
-                        }));
+                    }));
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EAN Tag", (o1, e1) =>
                     {
 
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\EAN.btw");
                         PrintOutGrid.DataSource = null;
-                            //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
-                        }));
+                    }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
                     {
@@ -1658,8 +1673,8 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Tag.btw");
                         PrintOutGrid.DataSource = null;
-                            // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
-                        }));
+                        // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                    }));
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler", (o1, e1) =>
                     {
@@ -1667,8 +1682,8 @@ namespace WindowsFormsApplication1
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
                         System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Muffler.btw");
                         PrintOutGrid.DataSource = null;
-                            //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
-                        }));
+                        //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                    }));
 
                     //e.Menu.Items
                     //    .Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode",
@@ -1982,11 +1997,26 @@ namespace WindowsFormsApplication1
             }
         }
 
+
+        private void MakePrintGrid()
+        {
+            PreparePrintGrid();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CopyText", typeof(string));
+            dt.Columns.Add("Select", typeof(bool));
+            dt.Rows.Add("Original For Buyer", false);
+            dt.Rows.Add("Office Copy", false);
+            dt.Rows.Add("Transporter Copy", false);
+            dt.Rows.Add("Extra Copy", false);
+            PrintOutGrid.DataSource = dt;
+            PrintOutGridView.BestFitColumns();
+
+        }
         private void DeleteVouchers()
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+
+            var MaxRow = (InvoiceGrid.KeyboardFocusView as GridView).RowCount;
+
             for (var i = 0; i < MaxRow; i++)
             {
                 DataRow CurrentRow = InvoiceGridView.GetDataRow(i);
@@ -2067,6 +2097,7 @@ namespace WindowsFormsApplication1
         {
             PrintOutGridView.CloseEditor();
             PrintOutGridView.UpdateCurrentRow();
+            XtraReport ReportToExport = new XtraReport();
             if (GlobalVariables.ProgCode == "PROG142")
             {
                 foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
@@ -2107,15 +2138,18 @@ namespace WindowsFormsApplication1
                                 rpt.lblCopy.Text = CopyText;
                                 rpt.lblGrossWeight.Text = ds.Tables[1].Rows[0]["GrossWeight"].ToString();
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();
-                                using (var pt = new ReportPrintTool(rpt))
-                                {
-                                    pt.ShowRibbonPreviewDialog();
-                                }
+                                rpt.CreateDocument();
+
+                                ReportToExport.Pages.AddRange(rpt.Pages);
+
+
+
                             }
                         }
                     }
                 }
             }
+
             else
             {
                 foreach (DataRow drBills in (InvoiceGrid.DataSource as DataTable).Rows)
@@ -2154,20 +2188,35 @@ namespace WindowsFormsApplication1
                                     {
                                         Prints.GSTINVOICE rpt = new Prints.GSTINVOICE();
                                         rpt.lblCopy.Text = CopyText;
-
-                                        ProjectFunctions.PrintDocument(drBills["BillNo"].ToString(),
-                                                                       Convert.ToDateTime(drBills["BillDate"]),
-                                                                       drBills["BillSeries"].ToString(),
-                                                                       rpt);
+                                        DataSet ds = ProjectFunctions.GetDataSet("sp_DocPrint '" + drBills["BillNo"].ToString() + "','" + Convert.ToDateTime(drBills["BillDate"]).Date.ToString("yyyy-MM-dd") + "','" + drBills["BillSeries"].ToString() + "','" + GlobalVariables.CUnitID + "'");
+                                        if (ds.Tables[0].Rows.Count > 0)
+                                        {
+                                            ds.WriteXmlSchema("C://Temp//abc.xml");
+                                            rpt.DataSource = ds;
+                                            foreach (XRSubreport sub in rpt.AllControls<XRSubreport>())
+                                            {
+                                                sub.ReportSource.DataSource = ds;
+                                            }
+                                            rpt.CreateDocument();
+                                            ReportToExport.Pages.AddRange(rpt.Pages);
+                                        }
                                     }
                                     if (drBills["BillSeries"].ToString().ToUpper() == "DCO")
                                     {
                                         Prints.InvoicePrintBT rpt = new Prints.InvoicePrintBT();
                                         rpt.lblCopy.Text = CopyText;
-                                        ProjectFunctions.PrintDocument(drBills["BillNo"].ToString(),
-                                                                       Convert.ToDateTime(drBills["BillDate"]),
-                                                                       drBills["BillSeries"].ToString(),
-                                                                       rpt);
+                                        DataSet ds = ProjectFunctions.GetDataSet("sp_DocPrint '" + drBills["BillNo"].ToString() + "','" + Convert.ToDateTime(drBills["BillDate"]).Date.ToString("yyyy-MM-dd") + "','" + drBills["BillSeries"].ToString() + "','" + GlobalVariables.CUnitID + "'");
+                                        if (ds.Tables[0].Rows.Count > 0)
+                                        {
+                                            ds.WriteXmlSchema("C://Temp//abc.xml");
+                                            rpt.DataSource = ds;
+                                            foreach (XRSubreport sub in rpt.AllControls<XRSubreport>())
+                                            {
+                                                sub.ReportSource.DataSource = ds;
+                                            }
+                                            rpt.CreateDocument();
+                                            ReportToExport.Pages.AddRange(rpt.Pages);
+                                        }
                                     }
                                 }
                                 if (GlobalVariables.ProgCode == "PROG141")
@@ -2176,21 +2225,48 @@ namespace WindowsFormsApplication1
                                     {
                                         Prints.GSTCRINVOICE rpt = new Prints.GSTCRINVOICE();
                                         rpt.lblCopy.Text = CopyText;
-                                        ProjectFunctions.CRPrintDocument(drBills["CRNo"].ToString(),
-                                                                         Convert.ToDateTime(drBills["CRDate"]),
-                                                                         drBills["CRSeries"].ToString(),
-                                                                         rpt);
+
+                                        DataSet ds = ProjectFunctions.GetDataSet(" [sp_CRPrint] '" + drBills["CRNo"].ToString() + "','" + Convert.ToDateTime(drBills["CRDate"]).Date.ToString("yyyy-MM-dd") + "','" + drBills["CRSeries"].ToString() + "','" + GlobalVariables.CUnitID + "'");
+                                        if (ds.Tables[0].Rows.Count > 0)
+                                        {
+                                            ds.WriteXmlSchema("C://Temp//abc.xml");
+                                            rpt.DataSource = ds;
+                                            foreach (XRSubreport sub in rpt.AllControls<XRSubreport>())
+                                            {
+                                                sub.ReportSource.DataSource = ds;
+                                            }
+                                            rpt.CreateDocument();
+                                            ReportToExport.Pages.AddRange(rpt.Pages);
+                                        }
                                     }
                                 }
-
-
                             }
                         }
                     }
                 }
+
+
+
+
+
+
             }
 
-            PrintOutGrid.Visible = false;
+            if (GlobalVariables.ProgCode == "PROG131" || GlobalVariables.ProgCode == "PROG141" || GlobalVariables.ProgCode == "PROG142")
+            {
+
+                payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                frm.documentViewer1.DocumentSource = ReportToExport;
+                frm.ShowDialog();
+            }
+            //PdfSharp.Pdf rpt_Doc;
+            //rpt_Doc.
+            //rpt_Doc.Pages.Add();
+            //payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+            //frm.documentViewer1.DocumentSource = rpt_Doc;
+            //frm.ShowDialog();
+
+            //PrintOutGrid.Visible = false;
         }
 
         private void PrintOutGrid_KeyDown(object sender, KeyEventArgs e)
@@ -2199,6 +2275,28 @@ namespace WindowsFormsApplication1
             {
                 PrintOutGrid.Visible = false;
             }
+        }
+
+
+        private void PreparePrintGrid()
+        {
+            PrintOutGridView.Columns.Clear();
+
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            PrintOutGridView.Columns.Add(col1);
+            PrintOutGridView.Columns[0].OptionsColumn.AllowEdit = false;
+            PrintOutGridView.Columns[0].Visible = true;
+            PrintOutGridView.Columns[0].Caption = "CopyText";
+            PrintOutGridView.Columns[0].FieldName = "CopyText";
+
+
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            PrintOutGridView.Columns.Add(col2);
+            PrintOutGridView.Columns[1].OptionsColumn.AllowEdit = true;
+            PrintOutGridView.Columns[1].Visible = true;
+            PrintOutGridView.Columns[1].Caption = "Select";
+            PrintOutGridView.Columns[1].FieldName = "Select";
+
         }
 
         private void PrintOutGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
@@ -2284,6 +2382,49 @@ namespace WindowsFormsApplication1
                                                                       ProjectFunctions.SpeakError(" PDF Files Generated Successfully ");
 
                                                                   }));
+        }
+
+        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (GlobalVariables.ProgCode == "PROG141")
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadCRMst2]  '" + Convert.ToDateTime(_RangeSelector.DtFrom.EditValue).ToString("yyyy-MM-dd") + "','" + Convert.ToDateTime(_RangeSelector.DtEnd.EditValue).ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    PrintOutGridView.Columns.Clear();
+                    PrintOutGrid.DataSource = ds.Tables[0];
+
+
+                    PrintOutGridView.Columns["SIMGRANDTOT"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SIMGRANDTOT", "{0}") });
+                    PrintOutGridView.Columns["SIMDebitNoteAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SIMDebitNoteAmount", "{0}") });
+                    PrintOutGridView.Columns["FeededQty"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "FeededQty", "{0}") });
+                    PrintOutGridView.Columns["DebitNoteQty"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "DebitNoteQty", "{0}") });
+                    //PrintOutGridView.Columns["DebitNoteQty"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SIMGRANDTOT", "{0}") });
+
+
+                    PrintOutGridView.ActiveFilterString = InvoiceGridView.ActiveFilterString;
+
+                    PrintOutGridView.BestFitColumns();
+
+
+                    XlsExportOptions ExportToXls = new XlsExportOptions()
+                    {
+                        ExportMode = XlsExportMode.SingleFile,
+                        //RawDataMode = true,
+                        ShowGridLines = true,
+                        FitToPrintedPageHeight = true,
+                        TextExportMode = TextExportMode.Text
+
+                    };
+
+
+                    PrintOutGridView.ExportToXls(saveFileDialog1.FileName, ExportToXls);
+                    PrintOutGrid.DataSource = null;
+
+
+                    System.Diagnostics.Process.Start(saveFileDialog1.FileName);
+                }
+            }
         }
     }
 }

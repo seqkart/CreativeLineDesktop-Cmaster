@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+
 
             if (btnAdd.Enabled)
             {
@@ -497,7 +497,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Master.frmMachineTypeMst frm = new WindowsFormsApplication1.Master.frmMachineTypeMst()
-                    { s1 = btnEdit.Text, Text = "Machine Type Master Edition" , TypeCode = CurrentRow["TypeCode"].ToString() };
+                    { s1 = btnEdit.Text, Text = "Machine Type Master Edition", TypeCode = CurrentRow["TypeCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -507,7 +507,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Master.FrmMachineBrandMst frm = new WindowsFormsApplication1.Master.FrmMachineBrandMst()
-                    { s1 = btnEdit.Text, Text = "Machine Brand Master Edition" , BrandCode = CurrentRow["BrandCode"].ToString() };
+                    { s1 = btnEdit.Text, Text = "Machine Brand Master Edition", BrandCode = CurrentRow["BrandCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -1144,7 +1144,7 @@ namespace WindowsFormsApplication1
 
         private void InvoiceGrid_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void FrmMaster_KeyDown(object sender, KeyEventArgs e)
@@ -1177,7 +1177,7 @@ namespace WindowsFormsApplication1
 
         private void Menu_ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-         
+
         }
     }
 }

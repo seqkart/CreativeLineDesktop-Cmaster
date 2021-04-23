@@ -67,6 +67,8 @@
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.imageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).BeginInit();
@@ -87,6 +89,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -429,7 +432,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(44, 23);
             this.simpleButton1.TabIndex = 403;
             this.simpleButton1.Text = "...";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // simpleButton2
             // 
@@ -438,6 +441,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(44, 23);
             this.simpleButton2.TabIndex = 403;
             this.simpleButton2.Text = "...";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton3
             // 
@@ -446,6 +450,12 @@
             this.simpleButton3.Size = new System.Drawing.Size(44, 23);
             this.simpleButton3.TabIndex = 403;
             this.simpleButton3.Text = "...";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // frmNewFormAAddEdit
             // 
@@ -515,6 +525,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -558,5 +569,7 @@
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.Utils.SvgImageCollection imageCollection1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private DevExpress.Utils.SvgImageCollection svgImageCollection1;
     }
 }

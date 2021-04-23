@@ -1358,6 +1358,13 @@ namespace WindowsFormsApplication1
                         if(txtGSTNo.Text.Trim().Length<10)
                         {
                             ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
+                           
+                            frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                            { s1 = "Edit", Text = "Account Editing", AccCode = txtDebitPartyCode.Text };
+                            frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                            frm.ShowDialog(Parent);
                         }
                         txtBankAccNo.Text = ds.Tables[0].Rows[0]["AccBankAccNo"].ToString();
                         txtCreditLimit.Text = ds.Tables[0].Rows[0]["AccCrLimit"].ToString();
@@ -1490,6 +1497,12 @@ namespace WindowsFormsApplication1
                 if (txtGSTNo.Text.Trim().Length < 10)
                 {
                     ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
+                    frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                    { s1 = "Edit", Text = "Account Editing", AccCode = txtDebitPartyCode.Text };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
                 }
                 txtTempPartyCode.Text = row["AccCode"].ToString();
                 txtTempPartyName.Text = row["AccName"].ToString();

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup13 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup14 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup15 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem5 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Navigation.AccordionContextButton accordionContextButton1 = new DevExpress.XtraBars.Navigation.AccordionContextButton();
-            DevExpress.Utils.Animation.CombTransition combTransition5 = new DevExpress.Utils.Animation.CombTransition();
+            DevExpress.Utils.Animation.CombTransition combTransition1 = new DevExpress.Utils.Animation.CombTransition();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this._ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
@@ -85,10 +85,10 @@
             this.skinBarSubItem1 = new DevExpress.XtraBars.SkinBarSubItem();
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.skinDropDownButtonItem2 = new DevExpress.XtraBars.SkinDropDownButtonItem();
+            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
@@ -214,11 +214,11 @@
             // 
             // 
             // 
-            galleryItemGroup13.Caption = "Group2";
-            galleryItemGroup14.Caption = "Group3";
+            galleryItemGroup1.Caption = "Group2";
+            galleryItemGroup2.Caption = "Group3";
             this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup13,
-            galleryItemGroup14});
+            galleryItemGroup1,
+            galleryItemGroup2});
             this.ribbonGalleryBarItem2.Id = 82;
             this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
             // 
@@ -228,12 +228,12 @@
             // 
             // 
             // 
-            galleryItemGroup15.Caption = "Group4";
-            galleryItem5.Caption = "Item6";
-            galleryItemGroup15.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem5});
+            galleryItemGroup3.Caption = "Group4";
+            galleryItem1.Caption = "Item6";
+            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem1});
             this.ribbonGalleryBarItem3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup15});
+            galleryItemGroup3});
             this.ribbonGalleryBarItem3.GalleryDropDown = this.galleryDropDown1;
             this.ribbonGalleryBarItem3.Id = 83;
             this.ribbonGalleryBarItem3.Name = "ribbonGalleryBarItem3";
@@ -432,7 +432,7 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(760, 632);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
-            this.xtraTabControl1.Transition.TransitionType = combTransition5;
+            this.xtraTabControl1.Transition.TransitionType = combTransition1;
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_SelectedPageChanged);
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.XtraTabControl1_CloseButtonClick);
             this.xtraTabControl1.Validating += new System.ComponentModel.CancelEventHandler(this.XtraTabControl1_Validating);
@@ -564,6 +564,15 @@
             this.skinDropDownButtonItem2.Id = 3;
             this.skinDropDownButtonItem2.Name = "skinDropDownButtonItem2";
             // 
+            // barButtonItem4
+            // 
+            this.barButtonItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.barButtonItem4.Caption = "Financial Year";
+            this.barButtonItem4.Id = 4;
+            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            // 
             // HelpGrid
             // 
             this.HelpGrid.Location = new System.Drawing.Point(580, 33);
@@ -594,15 +603,6 @@
             // 
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
-            // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
-            this.barButtonItem4.Caption = "Financial Year";
-            this.barButtonItem4.Id = 4;
-            this.barButtonItem4.Name = "barButtonItem4";
-            this.barButtonItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
             // 
             // XtraForm1
             // 

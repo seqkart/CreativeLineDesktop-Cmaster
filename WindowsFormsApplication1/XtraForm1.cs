@@ -1683,6 +1683,13 @@ namespace WindowsFormsApplication1
                     PROG171.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
+                case "PROG231":
+                    var PROG231 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG231.Show();
+                    PROG231.BringToFront();
+                    PROG231.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 default:
 
 

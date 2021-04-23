@@ -1,6 +1,11 @@
-﻿using System;
+﻿using DevExpress.Utils;
+using DevExpress.XtraEditors;
+using System;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
@@ -8,6 +13,8 @@ namespace WindowsFormsApplication1
     {
         public string S1 { get; set; }
         public string ProgCode { get; set; }
+
+        String FileType;
         public frmNewFormAAddEdit()
         {
             InitializeComponent();
@@ -73,8 +80,36 @@ namespace WindowsFormsApplication1
                         txtOrderBy.Text = ds.Tables[0].Rows[0]["OrderBy"].ToString();
                         txtPrinters.SelectedItem= ds.Tables[0].Rows[0]["ProgPrinterName"].ToString();
                         txtRadialTag.Text = ds.Tables[0].Rows[0]["ProgRadialTag"].ToString();
-                       
 
+
+
+
+                        if (ds.Tables[0].Rows[0]["ProgSVG1"].ToString().Trim().Length > 0)
+                        {
+                            Byte[] MyData = new byte[0];
+                            MyData = (Byte[])ds.Tables[0].Rows[0]["ProgSVG1"];
+                            MemoryStream stream = new MemoryStream(MyData);
+                            stream.Position = 0;
+                            svgImageBox1.SvgImage = DevExpress.Utils.Svg.SvgImage.FromStream(stream);
+                        }
+
+                        if (ds.Tables[0].Rows[0]["ProgSVG2"].ToString().Trim().Length > 0)
+                        {
+                            Byte[] MyData = new byte[0];
+                            MyData = (Byte[])ds.Tables[0].Rows[0]["ProgSVG2"];
+                            MemoryStream stream = new MemoryStream(MyData);
+                            stream.Position = 0;
+                            svgImageBox2.SvgImage = DevExpress.Utils.Svg.SvgImage.FromStream(stream);
+                        }
+
+                        if (ds.Tables[0].Rows[0]["ProgSVG3"].ToString().Trim().Length > 0)
+                        {
+                            Byte[] MyData = new byte[0];
+                            MyData = (Byte[])ds.Tables[0].Rows[0]["ProgSVG3"];
+                            MemoryStream stream = new MemoryStream(MyData);
+                            stream.Position = 0;
+                            svgImageBox3.SvgImage = DevExpress.Utils.Svg.SvgImage.FromStream(stream);
+                        }
                     }
                 }
             }
@@ -253,6 +288,9 @@ namespace WindowsFormsApplication1
                             str = str + "'" + ProjectFunctions.SqlString(txtRadialTag.Text.Trim()) + "')";
                             ProjectFunctions.GetDataSet(str);
                             ProjectFunctions.SpeakError("Entry Added Successfully");
+                            CaptureSVG1Screen();
+                        CaptureSVG2Screen();
+                        CaptureSVG3Screen();
                         }
                     }
                 }
@@ -277,6 +315,9 @@ namespace WindowsFormsApplication1
                         str = str + " Where ProgCode='" + ProgCode + "'";
                         ProjectFunctions.GetDataSet(str);
                         ProjectFunctions.SpeakError("Entry Updated Successfully");
+                        CaptureSVG1Screen();
+                        CaptureSVG2Screen();
+                        CaptureSVG3Screen();
                     }
                 }
                 Close();
@@ -311,7 +352,92 @@ namespace WindowsFormsApplication1
                 txtNfaTag.Focus();
             }
         }
+        private void CaptureSVG1Screen()
+        {
+            try
+            {
+                System.IO.MemoryStream ms = new MemoryStream();
+                svgImageBox1.SvgImage.Save(ms);                
+                byte[] photo = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo, 0, photo.Length);
+                using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+                {
+                    sqlcon.Open();
+                    String  str = "update ProgramMaster Set ProgSVG1= @photo Where ProgCode='" + txtFormCode.Text + "'";
 
+                    var sqlcom = new SqlCommand(str, sqlcon);
+                    sqlcom.Parameters.AddWithValue("@photo", photo);
+                    sqlcom.CommandType = CommandType.Text;
+                    sqlcom.ExecuteNonQuery();
+                    sqlcon.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+
+        }
+
+        private void CaptureSVG2Screen()
+        {
+            try
+            {
+                System.IO.MemoryStream ms = new MemoryStream();
+                svgImageBox2.SvgImage.Save(ms);
+                byte[] photo = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo, 0, photo.Length);
+                using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+                {
+                    sqlcon.Open();
+                    String str = "update ProgramMaster Set ProgSVG2= @photo Where ProgCode='" + txtFormCode.Text + "'";
+
+                    var sqlcom = new SqlCommand(str, sqlcon);
+                    sqlcom.Parameters.AddWithValue("@photo", photo);
+                    sqlcom.CommandType = CommandType.Text;
+                    sqlcom.ExecuteNonQuery();
+                    sqlcon.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+
+        }
+
+        private void CaptureSVG3Screen()
+        {
+            try
+            {
+                System.IO.MemoryStream ms = new MemoryStream();
+                svgImageBox3.SvgImage.Save(ms);
+                byte[] photo = new byte[ms.Length];
+                ms.Position = 0;
+                ms.Read(photo, 0, photo.Length);
+                using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+                {
+                    sqlcon.Open();
+                    String str = "update ProgramMaster Set ProgSVG3= @photo Where ProgCode='" + txtFormCode.Text + "'";
+
+                    var sqlcom = new SqlCommand(str, sqlcon);
+                    sqlcom.Parameters.AddWithValue("@photo", photo);
+                    sqlcom.CommandType = CommandType.Text;
+                    sqlcom.ExecuteNonQuery();
+                    sqlcon.Close();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+
+        }
         private void TxtstatusTag_Validating(object sender, CancelEventArgs e)
         {
             if (txtstatusTag.Text.ToUpper() == "Y" || (txtstatusTag.Text.ToUpper() == "N"))
@@ -342,10 +468,42 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
-            //simpleButton1.imageCollection1.SvgImage = svgImageBox1.SvgImage;
-            //simpleButton1 = imageCollection1();
+            FileType = "1";
+            
+            openFileDialog1.ShowDialog();
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            //if(FileType=="1")
+            //{
+            //    svgImageBox1.SvgImage = DevExpress.Utils.Svg.SvgImage.FromResources ()
+                    
+                    
+            //       // .FromFile(openFileDialog1.FileName);
+            //}
+            //if (FileType == "2")
+            //{
+            //    svgImageBox2.SvgImage = DevExpress.Utils.Svg.SvgImage.FromFile(openFileDialog1.FileName);
+            //}
+            //if (FileType == "3")
+            //{
+            //    svgImageBox3.SvgImage = DevExpress.Utils.Svg.SvgImage.FromFile(openFileDialog1.FileName);
+            //}
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            FileType = "2";
+            openFileDialog1.ShowDialog();
+        }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            FileType = "3";
+            openFileDialog1.ShowDialog();
         }
     }
 }

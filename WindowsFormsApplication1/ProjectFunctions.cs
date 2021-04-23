@@ -1804,9 +1804,16 @@ namespace WindowsFormsApplication1
 
         public static async void  GenerateEWaybill(String BillNo, DateTime BillDate)
         {
-                    DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
+            DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 
-
+            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length < 10 && ds.Tables[0].Rows[0]["BillSeries"].ToString() == "GST" && Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]) >= 50000)
+            {
+                if (ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Trim().Length < 10)
+                {
+                    ProjectFunctions.SpeakError("Kindly Update GST No First");
+                    return;
+                }
+            }
 
 
             ReqGenEwbPl ewbGen = new ReqGenEwbPl();
@@ -1907,7 +1914,7 @@ namespace WindowsFormsApplication1
             {
                 XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
             }
-               
+
             else
             {
 
@@ -1974,15 +1981,21 @@ namespace WindowsFormsApplication1
 
                         if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length < 10 && DocType == "GST" && Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]) >= 50000)
                         {
-                            ProjectFunctions.SpeakError("Kindly Update GST No To Enable Print");
+                            if (ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Trim().Length < 10)
+                            {
+                                ProjectFunctions.SpeakError("Kindly Update GST No First");
+                             
+                            }
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
                         }
 
 
                         frm.ShowDialog();
-                        frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\abc.pdf");
-                        SendBillImageAsync("918558880662");
+                        frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
+                       
+                        ///////////mobile number from fetch
+                        SendBillImageAsync("  ");
                     }
 
 
