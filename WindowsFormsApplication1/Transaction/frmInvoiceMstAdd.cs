@@ -123,8 +123,8 @@ namespace WindowsFormsApplication1
                 return false;
             }
 
-            DataSet dsGSTNo= ProjectFunctions.GetDataSet("Select isnull(AccGSTNo,'') as AccGSTNo from actmst Where AccCode='" + txtDebitPartyCode.Text + "'");
-            if(dsGSTNo.Tables[0].Rows[0][0].ToString().Trim().Length<10)
+            DataSet dsGSTNo = ProjectFunctions.GetDataSet("Select isnull(AccGSTNo,'') as AccGSTNo from actmst Where AccCode='" + txtDebitPartyCode.Text + "'");
+            if (dsGSTNo.Tables[0].Rows[0][0].ToString().Trim().Length < 10)
             {
                 ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
                 return false;
@@ -265,13 +265,13 @@ namespace WindowsFormsApplication1
             {
 
 
-               
+
 
 
                 decimal WSP = 0;
                 if (chInclusive.Checked)
                 {
-                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P") 
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P")
                     {
                         WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
                     }
@@ -285,8 +285,8 @@ namespace WindowsFormsApplication1
 
                 else
                 {
-                    
-                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" )
+
+                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P")
                     {
                         WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
                     }
@@ -769,7 +769,7 @@ namespace WindowsFormsApplication1
 
 
 
-               BtnRecalculate_Click(null, e);
+                BtnRecalculate_Click(null, e);
                 ShowPendingPSlips();
 
                 LoadDocs();
@@ -1355,10 +1355,10 @@ namespace WindowsFormsApplication1
                         txtBankAccNo.Text = ds.Tables[0].Rows[0]["AccBankAccNo"].ToString();
                         txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
 
-                        if(txtGSTNo.Text.Trim().Length<10)
+                        if (txtGSTNo.Text.Trim().Length < 10)
                         {
                             ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
-                           
+
                             frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
                             { s1 = "Edit", Text = "Account Editing", AccCode = txtDebitPartyCode.Text };
                             frm.StartPosition = FormStartPosition.CenterScreen;
@@ -1574,7 +1574,7 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter)
             {
 
-               
+
                 HelpGridView.Columns.Clear();
                 HelpGrid.Text = "txtTransporterCode";
                 if (txtTransporterCode.Text.Trim().Length == 0)
@@ -1863,9 +1863,9 @@ namespace WindowsFormsApplication1
         private void InfoGridView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
 
-          
-                
-            
+
+
+
             BtnRecalculate_Click(null, e);
 
         }
@@ -1949,7 +1949,7 @@ namespace WindowsFormsApplication1
                             dtNewRow["ARTMARGIN"] = dr["ARTMARGIN"];
 
 
-                            
+
 
                             //if (i == 0)
                             //{
@@ -2181,7 +2181,7 @@ namespace WindowsFormsApplication1
             {
                 if (InfoGrid.DataSource != null)
                 {
-                   
+
                     if (e.Column.FieldName == "SIDITMDISCPRCN")
                     {
                         // Code to apply discount on all the rows
@@ -2204,7 +2204,7 @@ namespace WindowsFormsApplication1
                         InfoGridView.UpdateCurrentRow();
 
 
-                      
+
 
                         BtnRecalculate_Click(null, e);
                     }
