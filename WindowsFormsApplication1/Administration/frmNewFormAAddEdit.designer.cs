@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewFormAAddEdit));
             this.label12 = new DevExpress.XtraEditors.LabelControl();
-            this.txtFormName = new DevExpress.XtraEditors.TextEdit();
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtMenuName = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new DevExpress.XtraEditors.LabelControl();
@@ -69,7 +68,9 @@
             this.imageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).BeginInit();
+            this.txtFormName = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtSubFormName = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormCode.Properties)).BeginInit();
@@ -90,6 +91,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubFormName.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -99,15 +102,6 @@
             this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 332;
             this.label12.Text = "Form Name";
-            // 
-            // txtFormName
-            // 
-            this.txtFormName.EnterMoveNextControl = true;
-            this.txtFormName.Location = new System.Drawing.Point(117, 63);
-            this.txtFormName.Name = "txtFormName";
-            this.txtFormName.Properties.MaxLength = 50;
-            this.txtFormName.Size = new System.Drawing.Size(463, 20);
-            this.txtFormName.TabIndex = 1;
             // 
             // label4
             // 
@@ -201,10 +195,10 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(56, 285);
+            this.HelpGrid.Location = new System.Drawing.Point(56, 327);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(470, 269);
+            this.HelpGrid.Size = new System.Drawing.Size(470, 227);
             this.HelpGrid.TabIndex = 358;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -457,6 +451,40 @@
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
+            // txtFormName
+            // 
+            this.txtFormName.Location = new System.Drawing.Point(115, 64);
+            this.txtFormName.Name = "txtFormName";
+            this.txtFormName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFormName.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.txtFormName.Properties.MaxLength = 1;
+            this.txtFormName.Size = new System.Drawing.Size(465, 20);
+            this.txtFormName.TabIndex = 404;
+            // 
+            // txtSubFormName
+            // 
+            this.txtSubFormName.Location = new System.Drawing.Point(117, 279);
+            this.txtSubFormName.Name = "txtSubFormName";
+            this.txtSubFormName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSubFormName.Properties.Items.AddRange(new object[] {
+            "Y",
+            "N"});
+            this.txtSubFormName.Properties.MaxLength = 1;
+            this.txtSubFormName.Size = new System.Drawing.Size(465, 20);
+            this.txtSubFormName.TabIndex = 406;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(30, 282);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(81, 13);
+            this.labelControl3.TabIndex = 405;
+            this.labelControl3.Text = "Sub Form Name";
+            // 
             // frmNewFormAAddEdit
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
@@ -465,6 +493,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 566);
             this.ControlBox = false;
+            this.Controls.Add(this.txtSubFormName);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.txtFormName);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.simpleButton1);
@@ -494,7 +525,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.txtFormName);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtstatusTag);
             this.Controls.Add(this.txtNfaTag);
@@ -504,7 +534,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmNewFormAAddEdit_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmNewFormAAddEdit_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMenuName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFormCode.Properties)).EndInit();
@@ -526,6 +555,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageCollection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFormName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubFormName.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,7 +564,6 @@
 
         #endregion
         private DevExpress.XtraEditors.LabelControl label12;
-        private DevExpress.XtraEditors.TextEdit txtFormName;
         private DevExpress.XtraEditors.LabelControl label4;
         private DevExpress.XtraEditors.TextEdit txtMenuName;
         private DevExpress.XtraEditors.LabelControl label7;
@@ -571,5 +601,8 @@
         private DevExpress.Utils.SvgImageCollection imageCollection1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.Utils.SvgImageCollection svgImageCollection1;
+        private DevExpress.XtraEditors.ComboBoxEdit txtFormName;
+        private DevExpress.XtraEditors.ComboBoxEdit txtSubFormName;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
     }
 }

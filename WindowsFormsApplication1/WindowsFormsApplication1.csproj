@@ -800,12 +800,9 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="TaxProEInvoice.API">
-      <HintPath>..\gstapi\TaxProEinvoiceApiIntigrationDemo.NET\TaxProEinvoiceApiIntigrationDemo.NET\bin\Debug\TaxProEInvoice.API.dll</HintPath>
-    </Reference>
     <Reference Include="TaxProEWB.API, Version=2.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Seqkart Solutions\Downloads\TaxProEWBApiIntigrationDemo (1)\TaxProEWBApiIntigrationDemo.NET\bin\x86\Debug\TaxProEWB.API.dll</HintPath>
+      <HintPath>C:\Users\Seqkart Solutions\Downloads\TaxProEWBApiIntigrationDemo (2)\TaxProEWBApiIntigrationDemo.NET\bin\x86\Debug\TaxProEWB.API.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.JustMock">
       <HintPath>../JustMock/Telerik.JustMock.dll</HintPath>

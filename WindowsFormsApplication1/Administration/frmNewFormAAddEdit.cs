@@ -7,6 +7,9 @@ using System.Data.SqlClient;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
+using System.Collections.Generic;
+using System.Reflection;
+
 namespace WindowsFormsApplication1
 {
     public partial class frmNewFormAAddEdit : DevExpress.XtraEditors.XtraForm
@@ -28,9 +31,9 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                ProjectFunctions.TextBoxVisualize(this);
+               //ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.DatePickerVisualize(this);
-                ProjectFunctions.TextBoxVisualize(this);
+                //ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(this);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             }
@@ -40,7 +43,20 @@ namespace WindowsFormsApplication1
             }
         }
 
-
+        private void GetAllForminCurrentProject()
+        {
+            txtFormName.Properties.Items.Clear();
+            txtSubFormName.Properties.Items.Clear();
+            Type formType = typeof(XtraForm);
+            foreach (Type t in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                if (formType.IsAssignableFrom(t))
+                {
+                    txtFormName.Properties.Items.Add(t.FullName);
+                    txtSubFormName.Properties.Items.Add(t.FullName);
+                }
+            }
+        }
         private void LoadPrinters()
         {
             foreach (string printer in System.Drawing.Printing.PrinterSettings.InstalledPrinters)
@@ -52,6 +68,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                GetAllForminCurrentProject();
                 LoadPrinters();
                 SetMyControls();
                 if (S1 == "&Add")
@@ -62,7 +79,7 @@ namespace WindowsFormsApplication1
                 if (S1 == "Edit")
                 {
                     txtFormCode.Enabled = false;
-                    txtFormName.Enabled = false;
+                   // txtFormName.Enabled = false;
                     txtstatusTag.Focus();
                     DataSet ds = ProjectFunctions.GetDataSet(string.Format(" sp_LoadProgMstFEdit '" + ProgCode + "'"));
                     if (ds.Tables[0].Rows.Count > 0)
@@ -80,6 +97,7 @@ namespace WindowsFormsApplication1
                         txtOrderBy.Text = ds.Tables[0].Rows[0]["OrderBy"].ToString();
                         txtPrinters.SelectedItem= ds.Tables[0].Rows[0]["ProgPrinterName"].ToString();
                         txtRadialTag.Text = ds.Tables[0].Rows[0]["ProgRadialTag"].ToString();
+                        txtSubFormName.Text = ds.Tables[0].Rows[0]["ProgSubMainForm"].ToString();
 
 
 
@@ -273,7 +291,9 @@ namespace WindowsFormsApplication1
                     {
                         if (ValidateData())
                         {
-                            var str = "Insert Into ProgramMaster(OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName,ProgPrinterName,ProgRadialTag)values(";
+                          
+                            var str = "Insert Into ProgramMaster(ProgSubMainForm,OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName,ProgPrinterName,ProgRadialTag)values(";
+                            str = str + "'" + ProjectFunctions.SqlString(txtSubFormName.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtRoleCode.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtFormCode.Text.Trim()) + "',";
@@ -300,6 +320,8 @@ namespace WindowsFormsApplication1
                     {
                         var str = " UPDATE    ProgramMaster";
                         str += " SET  ";
+                     
+                        str = str + "ProgSubMainForm ='" + ProjectFunctions.SqlString(txtSubFormName.Text.Trim()) + "',";
                         str = str + "ProgRadialTag ='" + ProjectFunctions.SqlString(txtRadialTag.Text.Trim()) + "',";
                         str = str + "OrderBy ='" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
                         str = str + "RoleCode ='" + ProjectFunctions.SqlString(txtRoleCode.Text.Trim()) + "',";
@@ -380,6 +402,8 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+       
 
         private void CaptureSVG2Screen()
         {
