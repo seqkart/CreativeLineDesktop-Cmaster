@@ -502,6 +502,16 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG232")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Administration.frmAPIIntergrationInfo frm = new WindowsFormsApplication1.Administration.frmAPIIntergrationInfo()
+                    { Text = "API Intergration Edition", TransId = CurrentRow["TransId"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG229")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

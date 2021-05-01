@@ -745,6 +745,7 @@ namespace WindowsFormsApplication1
 
                 txtDelAccName.Text = ds.Tables[0].Rows[0]["DelAccName"].ToString();
                 txtDelZipCode.Text = ds.Tables[0].Rows[0]["DelZipCode"].ToString();
+                txtTransporterKey.Text = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString();
 
                 AccMRPMarkDown = Convert.ToDecimal(ds.Tables[0].Rows[0]["AccMRPMarkDown"]);
                 groupControl8.Select();
@@ -1447,6 +1448,8 @@ namespace WindowsFormsApplication1
             {
                 txtTransporterCode.Text = row["TRPRSYSID"].ToString();
                 txtTransporterName.Text = row["TRPRNAME"].ToString();
+                txtTransporterKey.Text = row["TRPGSTNo"].ToString();
+                txtEWayBillNO.Focus();
                 HelpGrid.Visible = false;
                 //txtArticlSysID.Focus();
             }
@@ -1561,6 +1564,7 @@ namespace WindowsFormsApplication1
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTransporterName.Text = string.Empty;
+            txtTransporterKey.Text= string.Empty;
         }
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
@@ -1573,7 +1577,7 @@ namespace WindowsFormsApplication1
                 HelpGrid.Text = "txtTransporterCode";
                 if (txtTransporterCode.Text.Trim().Length == 0)
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER");
+                    DataSet ds = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD,TRPGSTNo from TRANSPORTMASTER");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         HelpGrid.DataSource = ds.Tables[0];
@@ -1589,17 +1593,18 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    DataSet ds = ProjectFunctions.GetDataSet(" select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER Where TRPRSYSID= '" + txtTransporterCode.Text.Trim() + "'");
+                    DataSet ds = ProjectFunctions.GetDataSet(" select TRPRNAME,TRPRSYSID,TRPRADD,TRPGSTNo from TRANSPORTMASTER Where TRPRSYSID= '" + txtTransporterCode.Text.Trim() + "'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         txtTransporterCode.Text = ds.Tables[0].Rows[0]["TRPRSYSID"].ToString();
                         txtTransporterName.Text = ds.Tables[0].Rows[0]["TRPRNAME"].ToString();
-                        txtTransporterKey.Focus();
+                        txtTransporterKey.Text = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString();
+                        txtEWayBillNO.Focus();
                     }
 
                     else
                     {
-                        DataSet ds1 = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD from TRANSPORTMASTER");
+                        DataSet ds1 = ProjectFunctions.GetDataSet("select TRPRNAME,TRPRSYSID,TRPRADD,TRPGSTNo from TRANSPORTMASTER");
                         if (ds1.Tables[0].Rows.Count > 0)
                         {
                             HelpGrid.DataSource = ds.Tables[0];

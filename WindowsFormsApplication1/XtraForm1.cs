@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
 
 
             Timer timer = new Timer();
-            timer.Interval = (30 * 1000); // 10 secs
+            timer.Interval = (10 * 1000); // 10 secs
             timer.Tick += Timer_Tick;
             timer.Start();
 
@@ -305,7 +305,13 @@ namespace WindowsFormsApplication1
 
 
 
-
+                    case "PROG232":
+                        var PROG232 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                        PROG232.Show();
+                        PROG232.BringToFront();
+                        PROG232.Parent = Page;
+                        xtraTabControl1.SelectedTabPage = Page;
+                        break;
                     case "PROG230":
                         var PROG230 = new Transaction.FrmProcessWiseRateFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                         PROG230.Show();
@@ -1894,6 +1900,11 @@ namespace WindowsFormsApplication1
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
             HelpGrid.Visible = true;
+        }
+
+        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
