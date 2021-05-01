@@ -5,6 +5,7 @@ using DevExpress.XtraGrid.Menu;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using SeqKartLibrary;
 using System;
 using System.Collections.Generic;
@@ -1714,7 +1715,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918558880662/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1803,6 +1804,130 @@ namespace WindowsFormsApplication1
 
         }
 
+        public static async void CancelEWaybill(String BillNo, DateTime BillDate)
+        {
+            EWBSession EwbSession = new EWBSession();
+            EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+            EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+            EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+            EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+            EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+            EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+            EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+            DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            if(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length>0)
+            {
+                ReqCancelEwbPl reqCancelEWB = new ReqCancelEwbPl();
+                //reqCancelEWB.ewbNo = 101008701277; 
+                reqCancelEWB.ewbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
+                reqCancelEWB.cancelRsnCode = 2;
+                reqCancelEWB.cancelRmrk = "Cancelled the order";
+
+                TxnRespWithObjAndInfo<RespCancelEwbPl> respCancelEWB = await EWBAPI.CancelEWBAsync(EwbSession, reqCancelEWB);
+                if (respCancelEWB.IsSuccess)
+                {
+                    XtraMessageBox.Show(JsonConvert.SerializeObject(respCancelEWB.RespObj));
+                    ProjectFunctions.GetDataSet("update SALEINVMAIN Set SIMTRDPRMWYBLNO=null  where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+                }
+
+                else
+                {
+                    XtraMessageBox.Show(respCancelEWB.TxnOutcome);
+                }
+           
+            }
+            else
+            {
+                XtraMessageBox.Show("EWay Bill is not generated then how to cancel");
+                return;
+            }
+
+
+
+
+
+
+
+        }
+        public static async void PrintEWaybill(String BillNo, DateTime BillDate)
+        {
+
+
+
+            DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
+            {
+                EWBSession EwbSession = new EWBSession();
+                EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+                EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+                EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+                EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+                EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+                EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+                EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+                long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
+                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
+
+                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+                if (TxnResp.IsSuccess == true)
+                {
+                    string pdfFolderPath = @"C:\\Application\\EWayBill.pdf";
+
+                    EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, true, false);
+
+                    //System.Diagnostics.Process.Start("C:\\Application\\EWayBill.pdf");
+                }
+                else
+                {
+                    XtraMessageBox.Show(TxnResp.TxnOutcome);
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("EWay Bill is not generated then how to print");
+                return;
+            }
+        }
+        public static async void PrintEWaybillDetail(String BillNo, DateTime BillDate)
+        {
+
+
+
+            DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
+            {
+                EWBSession EwbSession = new EWBSession();
+                EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+                EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+                EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+                EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+                EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+                EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+                EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+                long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
+                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
+
+                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+                if (TxnResp.IsSuccess == true)
+                {
+                    string pdfFolderPath = @"C:\\Application\\EWayBill.pdf";
+
+                    EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, true, true);
+                 
+
+                    //System.Diagnostics.Process.Start("C:\\Application\\EWayBill.pdf");
+                }
+                else
+                {
+                    XtraMessageBox.Show(TxnResp.TxnOutcome);
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("EWay Bill is not generated then how to print");
+                return;
+            }
+        }
         public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
         {
             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
@@ -1859,7 +1984,7 @@ namespace WindowsFormsApplication1
             ewbGen.subSupplyType = "1";
             ewbGen.subSupplyDesc = "";
             ewbGen.docType = "INV";
-            ewbGen.docNo = "225";
+            ewbGen.docNo = "230";
             ewbGen.docDate = "21/04/2018";
             ewbGen.fromGstin = "34AACCC1596Q002";//"07AACCC1596Q1Z4";
             ewbGen.fromTrdName = "welton";
@@ -1946,11 +2071,6 @@ namespace WindowsFormsApplication1
             EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
             EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
             EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
-
-
-
-
-
             EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
             EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
             EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
@@ -1959,7 +2079,17 @@ namespace WindowsFormsApplication1
             string a = JsonConvert.SerializeObject(ewbGen);
             TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
             if (TxnResp.IsSuccess)
+            {
                 XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+
+
+                TextEdit t = new TextEdit();
+                t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+
+                var details = JObject.Parse(t.Text);
+
+                ProjectFunctions.GetDataSet("update SALEINVMAIN Set SIMTRDPRMWYBLNO='"+ details["ewayBillNo"].ToString() + "'  where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            }
             else
             {
 
@@ -1978,7 +2108,14 @@ namespace WindowsFormsApplication1
                     //Call GenEWB API again
                     TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
                     if (TxnResp.IsSuccess)
+                    {
+
+
+                        //String EWauBillNo= details[""]
+
+
                         XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+                    }
                     else
                         XtraMessageBox.Show(TxnResp.TxnOutcome);
                 }
@@ -1986,7 +2123,7 @@ namespace WindowsFormsApplication1
             }
 
 
-            XtraMessageBox.Show("Generate e-Way Bill Responce");
+           // XtraMessageBox.Show("Generate e-Way Bill Responce");
 
 
 

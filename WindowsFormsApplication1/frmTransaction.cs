@@ -962,6 +962,7 @@ namespace WindowsFormsApplication1
                             if (dr["Select"].ToString().ToUpper() == "TRUE")
                             {
                                 ProjectFunctions.SendBillMessageAsync(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString());
+                                ProjectFunctions.SendBillImageAsync("918591115444");
                             }
                         }
                     }));
@@ -972,6 +973,30 @@ namespace WindowsFormsApplication1
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Generate EWAY Bill", (o1, e1) =>
                     {
                         ProjectFunctions.GenerateEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                    }));
+                }
+                if (GlobalVariables.ProgCode == "PROG131")
+                {
+                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Cancel EWAY Bill", (o1, e1) =>
+                    {
+                        ProjectFunctions.CancelEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                    }));
+                }
+                if (GlobalVariables.ProgCode == "PROG131")
+                {
+                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EWAY Bill", (o1, e1) =>
+                    {
+                        ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                    }));
+                }
+                if (GlobalVariables.ProgCode == "PROG131")
+                {
+                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EWAY Bill Detailed", (o1, e1) =>
+                    {
+                        ProjectFunctions.PrintEWaybillDetail(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
                     }));
                 }
                 if (GlobalVariables.ProgCode == "PROG210")

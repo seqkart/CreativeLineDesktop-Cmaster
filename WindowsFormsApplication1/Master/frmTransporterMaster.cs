@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             txtLandlineNo.Properties.MaxLength = 12;
             txtMobileNo.Properties.MaxLength = 12;
             txtTransporterCode.Enabled = false;
-
+            txtGSTNo.Properties.MaxLength = 20;
         }
         private void FrmTransporterMaster_Load(object sender, EventArgs e)
         {
@@ -60,7 +60,8 @@ namespace WindowsFormsApplication1
                     txtMobileNo.Text = ds.Tables[0].Rows[0]["TRPRMOBNO"].ToString();
                     txtEmailId.Text = ds.Tables[0].Rows[0]["TRPREMAILID"].ToString();
                     txtWebSite.Text = ds.Tables[0].Rows[0]["TRPRWEBSITE"].ToString();
-
+                    txtGSTNo.Text = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString();
+                  
                 }
                 txtTransporterName.Focus();
             }
@@ -73,37 +74,43 @@ namespace WindowsFormsApplication1
                 txtTransporterName.Focus();
                 return false;
             }
-            if (txtAddress2.Text.Trim().Length == 0)
+            if (txtGSTNo.Text.Trim().Length == 0)
             {
-                ProjectFunctions.SpeakError("Invalid x Address");
-                txtAddress2.Focus();
+                ProjectFunctions.SpeakError("Invalid Transporter GST No");
+                txtGSTNo.Focus();
                 return false;
             }
+            //if (txtAddress2.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid x Address");
+            //    txtAddress2.Focus();
+            //    return false;
+            //}
 
-            if (txtContactPerson.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Transporter Contact Person");
-                txtContactPerson.Focus();
-                return false;
-            }
-            if (txtMobileNo.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Transporter Mobile No");
-                txtMobileNo.Focus();
-                return false;
-            }
-            if (txtCityCode.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Transporter City");
-                txtCityCode.Focus();
-                return false;
-            }
-            if (txtState.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Transporter State");
-                txtState.Focus();
-                return false;
-            }
+            //if (txtContactPerson.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Transporter Contact Person");
+            //    txtContactPerson.Focus();
+            //    return false;
+            //}
+            //if (txtMobileNo.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Transporter Mobile No");
+            //    txtMobileNo.Focus();
+            //    return false;
+            //}
+            //if (txtCityCode.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Transporter City");
+            //    txtCityCode.Focus();
+            //    return false;
+            //}
+            //if (txtState.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Transporter State");
+            //    txtState.Focus();
+            //    return false;
+            //}
 
             return true;
         }
@@ -142,16 +149,16 @@ namespace WindowsFormsApplication1
                         {
                             sqlcom.CommandText = " Insert into TRANSPORTMASTER"
                                                  + " (TRPRNAME,TRPRADD, TRPRADD1, TRPRCITY, TRPRSTATE,"
-                                                 + " TRPRCONTPRSN, TRPRLANDLINO, TRPRMOBNO, TRPREMAILID, TRPRWEBSITE)"
+                                                 + " TRPRCONTPRSN, TRPRLANDLINO, TRPRMOBNO, TRPREMAILID, TRPRWEBSITE,TRPGSTNo)"
                                                  + " values(@TRPRNAME,@TRPRADD, @TRPRADD1, @TRPRCITY, @TRPRSTATE,"
-                                                 + " @TRPRCONTPRSN, @TRPRLANDLINO, @TRPRMOBNO, @TRPREMAILID, @TRPRWEBSITE)";
+                                                 + " @TRPRCONTPRSN, @TRPRLANDLINO, @TRPRMOBNO, @TRPREMAILID, @TRPRWEBSITE,@TRPGSTNo)";
 
 
                         }
                         if (s1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE TRANSPORTMASTER SET "
-                                                + " TRPRNAME=@TRPRNAME,TRPRADD=@TRPRADD,TRPRADD1=@TRPRADD1,TRPRCITY=@TRPRCITY,TRPRSTATE=@TRPRSTATE, "
+                                                + " TRPGSTNo=@TRPGSTNo,TRPRNAME=@TRPRNAME,TRPRADD=@TRPRADD,TRPRADD1=@TRPRADD1,TRPRCITY=@TRPRCITY,TRPRSTATE=@TRPRSTATE, "
                                                 + " TRPRCONTPRSN=@TRPRCONTPRSN,TRPRLANDLINO=@TRPRLANDLINO,TRPRMOBNO=@TRPRMOBNO,TRPREMAILID=@TRPREMAILID, "
                                                 + " TRPRWEBSITE=@TRPRWEBSITE"
                                                 + " Where TRPRSYSID=@TRPRSYSID";
@@ -168,6 +175,7 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@TRPRMOBNO", txtMobileNo.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@TRPREMAILID", txtEmailId.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@TRPRWEBSITE", txtWebSite.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@TRPGSTNo", txtGSTNo.Text.Trim());
 
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();

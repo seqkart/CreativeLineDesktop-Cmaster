@@ -59,6 +59,8 @@
             this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtGSTNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransporterName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransporterCode.Properties)).BeginInit();
@@ -75,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Label8
@@ -363,7 +366,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(12, 28);
+            this.HelpGrid.Location = new System.Drawing.Point(33, 32);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.Size = new System.Drawing.Size(556, 294);
@@ -387,12 +390,33 @@
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
+            // txtGSTNo
+            // 
+            this.txtGSTNo.Location = new System.Drawing.Point(176, 328);
+            this.txtGSTNo.Name = "txtGSTNo";
+            this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtGSTNo.Properties.MaxLength = 100;
+            this.txtGSTNo.Size = new System.Drawing.Size(387, 20);
+            this.txtGSTNo.TabIndex = 377;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(120, 332);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(44, 13);
+            this.labelControl1.TabIndex = 376;
+            this.labelControl1.Text = "GST No :";
+            // 
             // frmTransporterMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(589, 334);
+            this.ClientSize = new System.Drawing.Size(589, 369);
             this.ControlBox = false;
+            this.Controls.Add(this.txtGSTNo);
+            this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.label12);
@@ -443,6 +467,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,5 +504,7 @@
         internal DevExpress.XtraEditors.LabelControl label12;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
+        private DevExpress.XtraEditors.TextEdit txtGSTNo;
+        internal DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }
