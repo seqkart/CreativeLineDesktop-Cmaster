@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 
 namespace WindowsFormsApplication1.Administration
@@ -19,7 +20,7 @@ namespace WindowsFormsApplication1.Administration
             {
                 //ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-
+               
 
                 txtTransId.Enabled = false;
             }
@@ -104,7 +105,7 @@ namespace WindowsFormsApplication1.Administration
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM APIIntegrationSetting Where TransId='" + TransId + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-
+                    
                     txtGSPName.Text = ds.Tables[0].Rows[0]["GSPName"].ToString();
                     txtASPNetUser.Text = ds.Tables[0].Rows[0]["ASPNetUser"].ToString();
                     txtASPPassword.Text = ds.Tables[0].Rows[0]["ASPPassword"].ToString();
@@ -139,8 +140,8 @@ namespace WindowsFormsApplication1.Administration
                     try
                     {
                         sqlcom.CommandText = " UPDATE APIIntegrationSetting SET "
-                                            + " GSPName=@GSPName,ASPNetUser=@ASPNetUser,ASPPassword=@ASPPassword,BaseUrl=@BaseUrl,"
-                                            + " EWBGSTIN=@EWBGSTIN,EWBUserID=@EWBUserID,"
+                                            + " GSPName=@GSPName,ASPNetUser=@ASPNetUser,ASPPassword=@ASPPassword,BaseUrl=@BaseUrl," 
+                                            + " EWBGSTIN=@EWBGSTIN,EWBUserID=@EWBUserID," 
                                             + " EWBPassword=@EWBPassword "
                                             + " Where TransId=@TransId ";
                         sqlcom.Parameters.AddWithValue("@TransId", txtTransId.Text.Trim());
