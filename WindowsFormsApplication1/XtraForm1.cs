@@ -1809,7 +1809,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://localhost:3000/qrcode"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "*/*");
 
@@ -1856,7 +1856,7 @@ namespace WindowsFormsApplication1
             //pictureEdit1.Image = barCode.BarCodeImage;
         }
 
-        private void btnRefreshQRCode_Click(object sender, EventArgs e)
+        private void BtnRefreshQRCode_Click(object sender, EventArgs e)
         {
             ChangeQRData();
         }
