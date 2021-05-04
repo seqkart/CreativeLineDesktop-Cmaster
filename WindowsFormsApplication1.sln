@@ -20,7 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeqkartWebApi", "WEBAPISample\SeqkartWebApi.csproj", "{9E635E01-58FA-455A-A63C-797E33B7C472}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBAPISample", "WEBAPISample\WEBAPISample.csproj", "{9E635E01-58FA-455A-A63C-797E33B7C472}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

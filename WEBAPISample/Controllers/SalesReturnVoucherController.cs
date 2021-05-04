@@ -1,8 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 
 namespace WEBAPISample.Controllers
@@ -43,12 +46,12 @@ namespace WEBAPISample.Controllers
         }
 
         // POST: api/SalesReturnVoucher
-        public void Post([FromBody] string value)
+        public void Post([FromBody]string value)
         {
         }
 
         // PUT: api/SalesReturnVoucher/5
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody]string value)
         {
         }
 

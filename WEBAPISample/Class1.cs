@@ -7,7 +7,7 @@ namespace WEBAPISample
     {
         public static string GetConnection()
         {
-            return (@"Data Source=seqkart.ddns.net;Initial Catalog=SEQKARTnew;User ID=sa;pwd=Seq@2021");
+            return (@"Data Source=cserver;Initial Catalog=SEQKARTnew;User ID=sa;pwd=Seq@2021");
         }
     }
 }
