@@ -2240,7 +2240,7 @@
             this.ActiveGlowColor = System.Drawing.Color.Lime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1334, 711);
+            this.ClientSize = new System.Drawing.Size(1028, 711);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.chall);
