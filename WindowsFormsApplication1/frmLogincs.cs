@@ -345,10 +345,10 @@ namespace WindowsFormsApplication1
                 myCredentials.UserName = "clserver";
                 myCredentials.Password = "Seq@1234";
 
-                if (System.IO.Directory.Exists(@"cserver\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
+                if (System.IO.Directory.Exists(@"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
                 {
 
-                    string srcDir = @"cserver\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+                    string srcDir = @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
                     string[] bakList = Directory.GetFiles(srcDir, "*.bak");
 
                     if (Directory.Exists(srcDir))
@@ -360,8 +360,8 @@ namespace WindowsFormsApplication1
 
                     }
 
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"e\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"e\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
                     SplashScreenManager.CloseForm();
                 }
                 else
@@ -375,9 +375,9 @@ namespace WindowsFormsApplication1
                     myCredentials1.Domain = "seqkart.ddns.net";
                     myCredentials1.UserName = "clserver";
                     myCredentials1.Password = "Seq@1234";
-                    System.IO.Directory.CreateDirectory(@"cserver\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
+                    System.IO.Directory.CreateDirectory(@"\\CServer\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
                     ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
-                    string srcDir = @"cserver\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+                    string srcDir = @"\\CServer\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
                     string[] bakList = Directory.GetFiles(srcDir, "*.bak");
                     if (Directory.Exists(srcDir))
                     {
@@ -387,8 +387,8 @@ namespace WindowsFormsApplication1
                         }
 
                     }
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"cserver\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"cserver\\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
                     SplashScreenManager.CloseForm();
                 }
 
