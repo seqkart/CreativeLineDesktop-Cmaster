@@ -143,7 +143,6 @@ namespace WindowsFormsApplication1
 
 
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
-
                     Hide();
                     //  BtnBackup_Click(null, null);
                     ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString() + drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString());
