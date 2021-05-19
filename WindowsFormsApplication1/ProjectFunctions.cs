@@ -395,7 +395,7 @@ namespace WindowsFormsApplication1
         /*
                         public static void sendsmsviagatepass(String Message)
                         {
-                            string serverURL1 = "167.114.117.218";//eg IP or Domain     
+                            string serverURL1 = "167.114.117.218";//eg IP or Domain
                             string authkey1 = "d93f366bc185af6158755201ab143ab"; // "Sample Auth key" 'eg -- 16 digits alphanumeric;
                             string message1 = "Sample message"; //eg "message hello ";
                             string senderId1 = "testing";//eg -- TestinG 6 Alphabet'
@@ -1818,7 +1818,7 @@ namespace WindowsFormsApplication1
             if(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length>0)
             {
                 ReqCancelEwbPl reqCancelEWB = new ReqCancelEwbPl();
-                //reqCancelEWB.ewbNo = 101008701277; 
+                //reqCancelEWB.ewbNo = 101008701277;
                 reqCancelEWB.ewbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
                 reqCancelEWB.cancelRsnCode = 2;
                 reqCancelEWB.cancelRmrk = "Cancelled the order";
@@ -1834,7 +1834,7 @@ namespace WindowsFormsApplication1
                 {
                     XtraMessageBox.Show(respCancelEWB.TxnOutcome);
                 }
-           
+
             }
             else
             {
@@ -1871,11 +1871,25 @@ namespace WindowsFormsApplication1
                 var a = JsonConvert.SerializeObject(TxnResp.RespObj);
                 if (TxnResp.IsSuccess == true)
                 {
-                    string pdfFolderPath = @"C:\\Application\\EWayBill.pdf";
+                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+                    {
+                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
 
-                    EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, true, false);
+                    }
+                    else
+                    {
+                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
 
-                    //System.Diagnostics.Process.Start("C:\\Application\\EWayBill.pdf");
+                    }
+
+                    //if (System.IO.File.Exists(Application.StartupPath + "\\EWAY\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
+                    //{
+                    //    System.IO.File.Copy(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWAY\\GST-" + BillNo + ".pdf");
+                    //   //// System.IO.File.Delete(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
+                    //}
                 }
                 else
                 {
@@ -1910,12 +1924,22 @@ namespace WindowsFormsApplication1
                 var a = JsonConvert.SerializeObject(TxnResp.RespObj);
                 if (TxnResp.IsSuccess == true)
                 {
-                    string pdfFolderPath = @"C:\\Application\\EWayBill.pdf";
-
-                    EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, true, true);
-                 
-
-                    //System.Diagnostics.Process.Start("C:\\Application\\EWayBill.pdf");
+                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWayDetailed"))
+                    {
+                        string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
+                    }
+                    else
+                    {
+                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWayDetailed");
+                        string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
+                    }
+                    //if (System.IO.File.Exists(Application.StartupPath + "\\EWayDetailed\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
+                    //{
+                    //    System.IO.File.Copy(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWayDetailed\\GST-" + BillNo + ".pdf");
+                    //   // System.IO.File.Delete(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
+                    //}
                 }
                 else
                 {
@@ -1984,8 +2008,8 @@ namespace WindowsFormsApplication1
             ewbGen.subSupplyType = "1";
             ewbGen.subSupplyDesc = "";
             ewbGen.docType = "INV";
-            ewbGen.docNo = "230";
-            ewbGen.docDate = "21/04/2018";
+            ewbGen.docNo = "235";
+            ewbGen.docDate = "21/04/2021";
             ewbGen.fromGstin = "34AACCC1596Q002";//"07AACCC1596Q1Z4";
             ewbGen.fromTrdName = "welton";
             ewbGen.fromAddr1 = "2ND CROSS NO 59  19  A";
@@ -2081,7 +2105,6 @@ namespace WindowsFormsApplication1
             if (TxnResp.IsSuccess)
             {
                 XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
-
 
                 TextEdit t = new TextEdit();
                 t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);

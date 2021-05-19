@@ -1,0 +1,1545 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="https://webservice.CSPService/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:ax23="http://ws.service.cryptosignservercsp.realsec.com/xsd" xmlns:ax21="http://beans.service.cryptosignservercsp.realsec.com/xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="https://webservice.CSPService/">
+    <wsdl:documentation>wsCSP</wsdl:documentation>
+    <wsdl:types>
+        <xs:schema xmlns:ax24="http://ws.service.cryptosignservercsp.realsec.com/xsd" xmlns:ax22="http://beans.service.cryptosignservercsp.realsec.com/xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="https://webservice.CSPService/">
+            <xs:import namespace="http://beans.service.cryptosignservercsp.realsec.com/xsd"/>
+            <xs:import namespace="http://ws.service.cryptosignservercsp.realsec.com/xsd"/>
+            <xs:element name="createUser">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="sendEmail" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="createUserResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getXMLdSignSignature">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getXMLdSignSignatureResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getXAdESSignature">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="format" type="xs:int"/>
+                        <xs:element minOccurs="0" name="packaging" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getXAdESSignatureResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPAdESSignature">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="format" type="xs:int"/>
+                        <xs:element minOccurs="0" name="packaging" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPAdESSignatureResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="deleteProtectedCertificate">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="deleteProtectedCertificateResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:GeneralData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getDecryption">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="encryptedData" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="processInfo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getDecryptionResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:DecryptionInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getDecryptionProtected">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="encryptedData" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="processInfo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getDecryptionProtectedResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:DecryptionInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureWithModulus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="modulus" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="hash" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="processInfo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureWithModulusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCAdESSignature">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="format" type="xs:int"/>
+                        <xs:element minOccurs="0" name="packaging" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCAdESSignatureResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPAdESSignatureProtected">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="format" type="xs:int"/>
+                        <xs:element minOccurs="0" name="packaging" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getPAdESSignatureProtectedResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCAdESSignatureProtected">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="format" type="xs:int"/>
+                        <xs:element minOccurs="0" name="packaging" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getCAdESSignatureProtectedResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getXAdESSignatureProtected">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="format" type="xs:int"/>
+                        <xs:element minOccurs="0" name="packaging" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getXAdESSignatureProtectedResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getP10Request">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="keyLength" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="subjectBuilder" nillable="true" type="ax23:SubjectBuilder"/>
+                        <xs:element minOccurs="0" name="comments" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getP10RequestResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadUserCertId">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="base64Cert" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="certDescription" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="userId" type="xs:int"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadUserCertIdResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadUserCert">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="base64Cert" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="certDescription" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadUserCertResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadAssignUserCert">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="base64Cert" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="certDescription" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="exclusive" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadAssignUserCertResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUserCertificateChainWithModulus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="modulus" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUserCertificateChainWithModulusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:CertificateList"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="changePassword">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="newPassword" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="changePasswordResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:GeneralData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="requestPassword">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="requestPasswordResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:GeneralData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadProtectedCertificate">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="pkcs12" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="pkcs12Password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="uploadProtectedCertificateResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:GeneralData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="changeProtectingPassword">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="newProtectingPassword" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="changeProtectingPasswordResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:GeneralData"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureProtected">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="hash" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="processInfo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureProtectedResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUserCertificates">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUserCertificatesResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:CertificateList"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getTest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="testMs" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getTestResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUserCertificateChain">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getUserCertificateChainResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:CertificateList"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureProtectedWithModulus">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="modulus" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="protectingPassword" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="hash" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="processInfo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureProtectedWithModulusResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignature">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="keyId" nillable="true" type="xs:string"/>
+                        <xs:element minOccurs="0" name="hash" nillable="true" type="xs:base64Binary"/>
+                        <xs:element minOccurs="0" name="processInfo" nillable="true" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="getSignatureResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="return" nillable="true" type="ax21:SignatureInfo"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://ws.service.cryptosignservercsp.realsec.com/xsd">
+            <xs:complexType name="SubjectBuilder">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="c" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="cn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="completeSubject" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="email" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="l" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="o" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="ou" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="sn" nillable="true" type="xs:string"/>
+                    <xs:element minOccurs="0" name="st" nillable="true" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://beans.service.cryptosignservercsp.realsec.com/xsd">
+            <xs:complexType name="GeneralData">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="error" type="xs:long"/>
+                    <xs:element minOccurs="0" name="fail" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="SignatureInfo">
+                <xs:complexContent>
+                    <xs:extension base="ax21:GeneralData">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="signature" nillable="true" type="xs:base64Binary"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="DecryptionInfo">
+                <xs:complexContent>
+                    <xs:extension base="ax21:GeneralData">
+                        <xs:sequence>
+                            <xs:element minOccurs="0" name="decrypted" nillable="true" type="xs:base64Binary"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+            <xs:complexType name="CertificateList">
+                <xs:complexContent>
+                    <xs:extension base="ax21:GeneralData">
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" minOccurs="0" name="certificates" nillable="true" type="xs:string"/>
+                            <xs:element minOccurs="0" name="notifyDays" type="xs:int"/>
+                        </xs:sequence>
+                    </xs:extension>
+                </xs:complexContent>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="changePasswordRequest">
+        <wsdl:part name="parameters" element="ns:changePassword"/>
+    </wsdl:message>
+    <wsdl:message name="changePasswordResponse">
+        <wsdl:part name="parameters" element="ns:changePasswordResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getXAdESSignatureRequest">
+        <wsdl:part name="parameters" element="ns:getXAdESSignature"/>
+    </wsdl:message>
+    <wsdl:message name="getXAdESSignatureResponse">
+        <wsdl:part name="parameters" element="ns:getXAdESSignatureResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureRequest">
+        <wsdl:part name="parameters" element="ns:getSignature"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureResponse">
+        <wsdl:part name="parameters" element="ns:getSignatureResponse"/>
+    </wsdl:message>
+    <wsdl:message name="deleteProtectedCertificateRequest">
+        <wsdl:part name="parameters" element="ns:deleteProtectedCertificate"/>
+    </wsdl:message>
+    <wsdl:message name="deleteProtectedCertificateResponse">
+        <wsdl:part name="parameters" element="ns:deleteProtectedCertificateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureProtectedRequest">
+        <wsdl:part name="parameters" element="ns:getSignatureProtected"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureProtectedResponse">
+        <wsdl:part name="parameters" element="ns:getSignatureProtectedResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getUserCertificatesRequest">
+        <wsdl:part name="parameters" element="ns:getUserCertificates"/>
+    </wsdl:message>
+    <wsdl:message name="getUserCertificatesResponse">
+        <wsdl:part name="parameters" element="ns:getUserCertificatesResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getPAdESSignatureRequest">
+        <wsdl:part name="parameters" element="ns:getPAdESSignature"/>
+    </wsdl:message>
+    <wsdl:message name="getPAdESSignatureResponse">
+        <wsdl:part name="parameters" element="ns:getPAdESSignatureResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getUserCertificateChainRequest">
+        <wsdl:part name="parameters" element="ns:getUserCertificateChain"/>
+    </wsdl:message>
+    <wsdl:message name="getUserCertificateChainResponse">
+        <wsdl:part name="parameters" element="ns:getUserCertificateChainResponse"/>
+    </wsdl:message>
+    <wsdl:message name="createUserRequest">
+        <wsdl:part name="parameters" element="ns:createUser"/>
+    </wsdl:message>
+    <wsdl:message name="createUserResponse">
+        <wsdl:part name="parameters" element="ns:createUserResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getXAdESSignatureProtectedRequest">
+        <wsdl:part name="parameters" element="ns:getXAdESSignatureProtected"/>
+    </wsdl:message>
+    <wsdl:message name="getXAdESSignatureProtectedResponse">
+        <wsdl:part name="parameters" element="ns:getXAdESSignatureProtectedResponse"/>
+    </wsdl:message>
+    <wsdl:message name="uploadProtectedCertificateRequest">
+        <wsdl:part name="parameters" element="ns:uploadProtectedCertificate"/>
+    </wsdl:message>
+    <wsdl:message name="uploadProtectedCertificateResponse">
+        <wsdl:part name="parameters" element="ns:uploadProtectedCertificateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="uploadUserCertIdRequest">
+        <wsdl:part name="parameters" element="ns:uploadUserCertId"/>
+    </wsdl:message>
+    <wsdl:message name="uploadUserCertIdResponse">
+        <wsdl:part name="parameters" element="ns:uploadUserCertIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getCAdESSignatureRequest">
+        <wsdl:part name="parameters" element="ns:getCAdESSignature"/>
+    </wsdl:message>
+    <wsdl:message name="getCAdESSignatureResponse">
+        <wsdl:part name="parameters" element="ns:getCAdESSignatureResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getPAdESSignatureProtectedRequest">
+        <wsdl:part name="parameters" element="ns:getPAdESSignatureProtected"/>
+    </wsdl:message>
+    <wsdl:message name="getPAdESSignatureProtectedResponse">
+        <wsdl:part name="parameters" element="ns:getPAdESSignatureProtectedResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getXMLdSignSignatureRequest">
+        <wsdl:part name="parameters" element="ns:getXMLdSignSignature"/>
+    </wsdl:message>
+    <wsdl:message name="getXMLdSignSignatureResponse">
+        <wsdl:part name="parameters" element="ns:getXMLdSignSignatureResponse"/>
+    </wsdl:message>
+    <wsdl:message name="requestPasswordRequest">
+        <wsdl:part name="parameters" element="ns:requestPassword"/>
+    </wsdl:message>
+    <wsdl:message name="requestPasswordResponse">
+        <wsdl:part name="parameters" element="ns:requestPasswordResponse"/>
+    </wsdl:message>
+    <wsdl:message name="uploadAssignUserCertRequest">
+        <wsdl:part name="parameters" element="ns:uploadAssignUserCert"/>
+    </wsdl:message>
+    <wsdl:message name="uploadAssignUserCertResponse">
+        <wsdl:part name="parameters" element="ns:uploadAssignUserCertResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureWithModulusRequest">
+        <wsdl:part name="parameters" element="ns:getSignatureWithModulus"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureWithModulusResponse">
+        <wsdl:part name="parameters" element="ns:getSignatureWithModulusResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getDecryptionProtectedRequest">
+        <wsdl:part name="parameters" element="ns:getDecryptionProtected"/>
+    </wsdl:message>
+    <wsdl:message name="getDecryptionProtectedResponse">
+        <wsdl:part name="parameters" element="ns:getDecryptionProtectedResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getTestRequest">
+        <wsdl:part name="parameters" element="ns:getTest"/>
+    </wsdl:message>
+    <wsdl:message name="getTestResponse">
+        <wsdl:part name="parameters" element="ns:getTestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="uploadUserCertRequest">
+        <wsdl:part name="parameters" element="ns:uploadUserCert"/>
+    </wsdl:message>
+    <wsdl:message name="uploadUserCertResponse">
+        <wsdl:part name="parameters" element="ns:uploadUserCertResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getUserCertificateChainWithModulusRequest">
+        <wsdl:part name="parameters" element="ns:getUserCertificateChainWithModulus"/>
+    </wsdl:message>
+    <wsdl:message name="getUserCertificateChainWithModulusResponse">
+        <wsdl:part name="parameters" element="ns:getUserCertificateChainWithModulusResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureProtectedWithModulusRequest">
+        <wsdl:part name="parameters" element="ns:getSignatureProtectedWithModulus"/>
+    </wsdl:message>
+    <wsdl:message name="getSignatureProtectedWithModulusResponse">
+        <wsdl:part name="parameters" element="ns:getSignatureProtectedWithModulusResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getDecryptionRequest">
+        <wsdl:part name="parameters" element="ns:getDecryption"/>
+    </wsdl:message>
+    <wsdl:message name="getDecryptionResponse">
+        <wsdl:part name="parameters" element="ns:getDecryptionResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getP10RequestRequest">
+        <wsdl:part name="parameters" element="ns:getP10Request"/>
+    </wsdl:message>
+    <wsdl:message name="getP10RequestResponse">
+        <wsdl:part name="parameters" element="ns:getP10RequestResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getCAdESSignatureProtectedRequest">
+        <wsdl:part name="parameters" element="ns:getCAdESSignatureProtected"/>
+    </wsdl:message>
+    <wsdl:message name="getCAdESSignatureProtectedResponse">
+        <wsdl:part name="parameters" element="ns:getCAdESSignatureProtectedResponse"/>
+    </wsdl:message>
+    <wsdl:message name="changeProtectingPasswordRequest">
+        <wsdl:part name="parameters" element="ns:changeProtectingPassword"/>
+    </wsdl:message>
+    <wsdl:message name="changeProtectingPasswordResponse">
+        <wsdl:part name="parameters" element="ns:changeProtectingPasswordResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="wsCSPPortType">
+        <wsdl:operation name="changePassword">
+            <wsdl:input message="ns:changePasswordRequest" wsaw:Action="urn:changePassword"/>
+            <wsdl:output message="ns:changePasswordResponse" wsaw:Action="urn:changePasswordResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignature">
+            <wsdl:input message="ns:getXAdESSignatureRequest" wsaw:Action="urn:getXAdESSignature"/>
+            <wsdl:output message="ns:getXAdESSignatureResponse" wsaw:Action="urn:getXAdESSignatureResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSignature">
+            <wsdl:input message="ns:getSignatureRequest" wsaw:Action="urn:getSignature"/>
+            <wsdl:output message="ns:getSignatureResponse" wsaw:Action="urn:getSignatureResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="deleteProtectedCertificate">
+            <wsdl:input message="ns:deleteProtectedCertificateRequest" wsaw:Action="urn:deleteProtectedCertificate"/>
+            <wsdl:output message="ns:deleteProtectedCertificateResponse" wsaw:Action="urn:deleteProtectedCertificateResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtected">
+            <wsdl:input message="ns:getSignatureProtectedRequest" wsaw:Action="urn:getSignatureProtected"/>
+            <wsdl:output message="ns:getSignatureProtectedResponse" wsaw:Action="urn:getSignatureProtectedResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificates">
+            <wsdl:input message="ns:getUserCertificatesRequest" wsaw:Action="urn:getUserCertificates"/>
+            <wsdl:output message="ns:getUserCertificatesResponse" wsaw:Action="urn:getUserCertificatesResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignature">
+            <wsdl:input message="ns:getPAdESSignatureRequest" wsaw:Action="urn:getPAdESSignature"/>
+            <wsdl:output message="ns:getPAdESSignatureResponse" wsaw:Action="urn:getPAdESSignatureResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChain">
+            <wsdl:input message="ns:getUserCertificateChainRequest" wsaw:Action="urn:getUserCertificateChain"/>
+            <wsdl:output message="ns:getUserCertificateChainResponse" wsaw:Action="urn:getUserCertificateChainResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="createUser">
+            <wsdl:input message="ns:createUserRequest" wsaw:Action="urn:createUser"/>
+            <wsdl:output message="ns:createUserResponse" wsaw:Action="urn:createUserResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignatureProtected">
+            <wsdl:input message="ns:getXAdESSignatureProtectedRequest" wsaw:Action="urn:getXAdESSignatureProtected"/>
+            <wsdl:output message="ns:getXAdESSignatureProtectedResponse" wsaw:Action="urn:getXAdESSignatureProtectedResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="uploadProtectedCertificate">
+            <wsdl:input message="ns:uploadProtectedCertificateRequest" wsaw:Action="urn:uploadProtectedCertificate"/>
+            <wsdl:output message="ns:uploadProtectedCertificateResponse" wsaw:Action="urn:uploadProtectedCertificateResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCertId">
+            <wsdl:input message="ns:uploadUserCertIdRequest" wsaw:Action="urn:uploadUserCertId"/>
+            <wsdl:output message="ns:uploadUserCertIdResponse" wsaw:Action="urn:uploadUserCertIdResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignature">
+            <wsdl:input message="ns:getCAdESSignatureRequest" wsaw:Action="urn:getCAdESSignature"/>
+            <wsdl:output message="ns:getCAdESSignatureResponse" wsaw:Action="urn:getCAdESSignatureResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignatureProtected">
+            <wsdl:input message="ns:getPAdESSignatureProtectedRequest" wsaw:Action="urn:getPAdESSignatureProtected"/>
+            <wsdl:output message="ns:getPAdESSignatureProtectedResponse" wsaw:Action="urn:getPAdESSignatureProtectedResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getXMLdSignSignature">
+            <wsdl:input message="ns:getXMLdSignSignatureRequest" wsaw:Action="urn:getXMLdSignSignature"/>
+            <wsdl:output message="ns:getXMLdSignSignatureResponse" wsaw:Action="urn:getXMLdSignSignatureResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="requestPassword">
+            <wsdl:input message="ns:requestPasswordRequest" wsaw:Action="urn:requestPassword"/>
+            <wsdl:output message="ns:requestPasswordResponse" wsaw:Action="urn:requestPasswordResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="uploadAssignUserCert">
+            <wsdl:input message="ns:uploadAssignUserCertRequest" wsaw:Action="urn:uploadAssignUserCert"/>
+            <wsdl:output message="ns:uploadAssignUserCertResponse" wsaw:Action="urn:uploadAssignUserCertResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureWithModulus">
+            <wsdl:input message="ns:getSignatureWithModulusRequest" wsaw:Action="urn:getSignatureWithModulus"/>
+            <wsdl:output message="ns:getSignatureWithModulusResponse" wsaw:Action="urn:getSignatureWithModulusResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryptionProtected">
+            <wsdl:input message="ns:getDecryptionProtectedRequest" wsaw:Action="urn:getDecryptionProtected"/>
+            <wsdl:output message="ns:getDecryptionProtectedResponse" wsaw:Action="urn:getDecryptionProtectedResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getTest">
+            <wsdl:input message="ns:getTestRequest" wsaw:Action="urn:getTest"/>
+            <wsdl:output message="ns:getTestResponse" wsaw:Action="urn:getTestResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCert">
+            <wsdl:input message="ns:uploadUserCertRequest" wsaw:Action="urn:uploadUserCert"/>
+            <wsdl:output message="ns:uploadUserCertResponse" wsaw:Action="urn:uploadUserCertResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChainWithModulus">
+            <wsdl:input message="ns:getUserCertificateChainWithModulusRequest" wsaw:Action="urn:getUserCertificateChainWithModulus"/>
+            <wsdl:output message="ns:getUserCertificateChainWithModulusResponse" wsaw:Action="urn:getUserCertificateChainWithModulusResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtectedWithModulus">
+            <wsdl:input message="ns:getSignatureProtectedWithModulusRequest" wsaw:Action="urn:getSignatureProtectedWithModulus"/>
+            <wsdl:output message="ns:getSignatureProtectedWithModulusResponse" wsaw:Action="urn:getSignatureProtectedWithModulusResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryption">
+            <wsdl:input message="ns:getDecryptionRequest" wsaw:Action="urn:getDecryption"/>
+            <wsdl:output message="ns:getDecryptionResponse" wsaw:Action="urn:getDecryptionResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getP10Request">
+            <wsdl:input message="ns:getP10RequestRequest" wsaw:Action="urn:getP10Request"/>
+            <wsdl:output message="ns:getP10RequestResponse" wsaw:Action="urn:getP10RequestResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignatureProtected">
+            <wsdl:input message="ns:getCAdESSignatureProtectedRequest" wsaw:Action="urn:getCAdESSignatureProtected"/>
+            <wsdl:output message="ns:getCAdESSignatureProtectedResponse" wsaw:Action="urn:getCAdESSignatureProtectedResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="changeProtectingPassword">
+            <wsdl:input message="ns:changeProtectingPasswordRequest" wsaw:Action="urn:changeProtectingPassword"/>
+            <wsdl:output message="ns:changeProtectingPasswordResponse" wsaw:Action="urn:changeProtectingPasswordResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="wsCSPSoap11Binding" type="ns:wsCSPPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="changePassword">
+            <soap:operation soapAction="urn:changePassword" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignature">
+            <soap:operation soapAction="urn:getXAdESSignature" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignature">
+            <soap:operation soapAction="urn:getSignature" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteProtectedCertificate">
+            <soap:operation soapAction="urn:deleteProtectedCertificate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtected">
+            <soap:operation soapAction="urn:getSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificates">
+            <soap:operation soapAction="urn:getUserCertificates" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignature">
+            <soap:operation soapAction="urn:getPAdESSignature" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChain">
+            <soap:operation soapAction="urn:getUserCertificateChain" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUser">
+            <soap:operation soapAction="urn:createUser" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignatureProtected">
+            <soap:operation soapAction="urn:getXAdESSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCertId">
+            <soap:operation soapAction="urn:uploadUserCertId" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadProtectedCertificate">
+            <soap:operation soapAction="urn:uploadProtectedCertificate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignature">
+            <soap:operation soapAction="urn:getCAdESSignature" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignatureProtected">
+            <soap:operation soapAction="urn:getPAdESSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadAssignUserCert">
+            <soap:operation soapAction="urn:uploadAssignUserCert" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="requestPassword">
+            <soap:operation soapAction="urn:requestPassword" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXMLdSignSignature">
+            <soap:operation soapAction="urn:getXMLdSignSignature" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureWithModulus">
+            <soap:operation soapAction="urn:getSignatureWithModulus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryptionProtected">
+            <soap:operation soapAction="urn:getDecryptionProtected" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTest">
+            <soap:operation soapAction="urn:getTest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCert">
+            <soap:operation soapAction="urn:uploadUserCert" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChainWithModulus">
+            <soap:operation soapAction="urn:getUserCertificateChainWithModulus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtectedWithModulus">
+            <soap:operation soapAction="urn:getSignatureProtectedWithModulus" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryption">
+            <soap:operation soapAction="urn:getDecryption" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getP10Request">
+            <soap:operation soapAction="urn:getP10Request" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignatureProtected">
+            <soap:operation soapAction="urn:getCAdESSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="changeProtectingPassword">
+            <soap:operation soapAction="urn:changeProtectingPassword" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="wsCSPSoap12Binding" type="ns:wsCSPPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="changePassword">
+            <soap12:operation soapAction="urn:changePassword" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignature">
+            <soap12:operation soapAction="urn:getXAdESSignature" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignature">
+            <soap12:operation soapAction="urn:getSignature" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteProtectedCertificate">
+            <soap12:operation soapAction="urn:deleteProtectedCertificate" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtected">
+            <soap12:operation soapAction="urn:getSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificates">
+            <soap12:operation soapAction="urn:getUserCertificates" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignature">
+            <soap12:operation soapAction="urn:getPAdESSignature" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChain">
+            <soap12:operation soapAction="urn:getUserCertificateChain" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUser">
+            <soap12:operation soapAction="urn:createUser" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignatureProtected">
+            <soap12:operation soapAction="urn:getXAdESSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCertId">
+            <soap12:operation soapAction="urn:uploadUserCertId" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadProtectedCertificate">
+            <soap12:operation soapAction="urn:uploadProtectedCertificate" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignature">
+            <soap12:operation soapAction="urn:getCAdESSignature" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignatureProtected">
+            <soap12:operation soapAction="urn:getPAdESSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadAssignUserCert">
+            <soap12:operation soapAction="urn:uploadAssignUserCert" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="requestPassword">
+            <soap12:operation soapAction="urn:requestPassword" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXMLdSignSignature">
+            <soap12:operation soapAction="urn:getXMLdSignSignature" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureWithModulus">
+            <soap12:operation soapAction="urn:getSignatureWithModulus" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryptionProtected">
+            <soap12:operation soapAction="urn:getDecryptionProtected" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTest">
+            <soap12:operation soapAction="urn:getTest" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCert">
+            <soap12:operation soapAction="urn:uploadUserCert" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChainWithModulus">
+            <soap12:operation soapAction="urn:getUserCertificateChainWithModulus" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtectedWithModulus">
+            <soap12:operation soapAction="urn:getSignatureProtectedWithModulus" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryption">
+            <soap12:operation soapAction="urn:getDecryption" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getP10Request">
+            <soap12:operation soapAction="urn:getP10Request" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignatureProtected">
+            <soap12:operation soapAction="urn:getCAdESSignatureProtected" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="changeProtectingPassword">
+            <soap12:operation soapAction="urn:changeProtectingPassword" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="wsCSPHttpBinding" type="ns:wsCSPPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="changePassword">
+            <http:operation location="changePassword"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignature">
+            <http:operation location="getXAdESSignature"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignature">
+            <http:operation location="getSignature"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="deleteProtectedCertificate">
+            <http:operation location="deleteProtectedCertificate"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtected">
+            <http:operation location="getSignatureProtected"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificates">
+            <http:operation location="getUserCertificates"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignature">
+            <http:operation location="getPAdESSignature"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChain">
+            <http:operation location="getUserCertificateChain"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="createUser">
+            <http:operation location="createUser"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXAdESSignatureProtected">
+            <http:operation location="getXAdESSignatureProtected"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCertId">
+            <http:operation location="uploadUserCertId"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadProtectedCertificate">
+            <http:operation location="uploadProtectedCertificate"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignature">
+            <http:operation location="getCAdESSignature"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPAdESSignatureProtected">
+            <http:operation location="getPAdESSignatureProtected"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadAssignUserCert">
+            <http:operation location="uploadAssignUserCert"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="requestPassword">
+            <http:operation location="requestPassword"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getXMLdSignSignature">
+            <http:operation location="getXMLdSignSignature"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureWithModulus">
+            <http:operation location="getSignatureWithModulus"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryptionProtected">
+            <http:operation location="getDecryptionProtected"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTest">
+            <http:operation location="getTest"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="uploadUserCert">
+            <http:operation location="uploadUserCert"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUserCertificateChainWithModulus">
+            <http:operation location="getUserCertificateChainWithModulus"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSignatureProtectedWithModulus">
+            <http:operation location="getSignatureProtectedWithModulus"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDecryption">
+            <http:operation location="getDecryption"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getP10Request">
+            <http:operation location="getP10Request"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getCAdESSignatureProtected">
+            <http:operation location="getCAdESSignatureProtected"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="changeProtectingPassword">
+            <http:operation location="changeProtectingPassword"/>
+            <wsdl:input>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="application/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="wsCSP">
+        <wsdl:port name="wsCSPHttpsSoap11Endpoint" binding="ns:wsCSPSoap11Binding">
+            <soap:address location="https://hq.realsec.com/services/wsCSP.wsCSPHttpsSoap11Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="wsCSPHttpsSoap12Endpoint" binding="ns:wsCSPSoap12Binding">
+            <soap12:address location="https://hq.realsec.com/services/wsCSP.wsCSPHttpsSoap12Endpoint/"/>
+        </wsdl:port>
+        <wsdl:port name="wsCSPHttpsEndpoint" binding="ns:wsCSPHttpBinding">
+            <http:address location="https://hq.realsec.com/services/wsCSP.wsCSPHttpsEndpoint/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

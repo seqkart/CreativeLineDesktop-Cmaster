@@ -955,7 +955,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem(" Send Bill Message ", (o1, e1) =>
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Send Bill Message", (o1, e1) =>
                     {
                         foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                         {
@@ -983,14 +983,14 @@ namespace WindowsFormsApplication1
                         ProjectFunctions.CancelEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
                     }));
                 }
-                if (GlobalVariables.ProgCode == "PROG131")
-                {
-                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EWAY Bill", (o1, e1) =>
-                    {
-                        ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
-                    }));
-                }
+                //if (GlobalVariables.ProgCode == "PROG131")
+                //{
+                //    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                //    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EWAY Bill", (o1, e1) =>
+                //    {
+                //        ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                //    }));
+                //}
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -1071,7 +1071,7 @@ namespace WindowsFormsApplication1
                     InvoiceGridView.CloseEditor();
                     InvoiceGridView.UpdateCurrentRow();
                     e.Menu.Items
-                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Seletcted Voucher",
+                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Selected Voucher",
                                                                   (o1, e1) =>
                                                                   {
                                                                       foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
@@ -1317,61 +1317,13 @@ namespace WindowsFormsApplication1
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Invoice",
                                                                   (o1, e1) =>
                                                                   {
+                                                                      DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                                                                       MakePrintGrid();
+                                                                      ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
                                                                       PrintOutGrid.Visible = true;
                                                                       //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                   }));
-                    //e.Menu.Items
-                    //   .Add(new DevExpress.Utils.Menu.DXMenuItem("Export PDF Invoice", (o1, e1) =>
-                    //                                             {
-
-                    //                                                 DataTable dt = new DataTable();
-                    //                                                 dt.Columns.Add("CopyText", typeof(string));
-                    //                                                 dt.Columns.Add("Select", typeof(bool));
-
-
-                    //                                                 dt.Rows.Add("Original For Buyer", false);
-                    //                                                 dt.Rows.Add("Office Copy", false);
-                    //                                                 dt.Rows.Add("Transporter Copy", false);
-                    //                                                 dt.Rows.Add("Extra Copy", false);
-
-                    //                                                 PrintOutGrid.DataSource = dt;
-                    //                                                    PrintOutGridView.BestFitColumns();
-                    //                                                    PrintOutGrid.Visible = true;
-                    //                                           //
-                    //                                                 //PrintOutGrid.ExportToPdf("C:\\APPLICATION\\GST_.pdf");
-
-
-
-                    //                                             //{
-                    //                                             //    DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + "BillNo".ToString() + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
-                    //                                             //    if (ds.Tables[0].Rows.Count > 0)
-                    //                                             //    {
-                    //                                             //        ds.WriteXmlSchema("C://Temp//abc.xml");
-                    //                                             //        Report.DataSource = ds;
-                    //                                             //        foreach (XRSubreport sub in Report.AllControls<XRSubreport>())
-                    //                                             //        {
-                    //                                             //            sub.ReportSource.DataSource = ds;
-                    //                                             //        }
-                    //                                             //        Report.CreateDocument();
-                    //                                             //        Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
-
-
-                    //                                                     //foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
-                    //                                                     //{
-                    //                                                     //    if (dr["Select"].ToString().ToUpper() == "TRUE")
-                    //                                                     //    {
-                    //                                                     //        if (dr["BillSeries"].ToString().ToUpper() == "GST")
-                    //                                                     //        {
-                    //                                                     //            Prints.GSTINVOICE rpt = new Prints.GSTINVOICE();
-                    //                                                     //            ProjectFunctions.PrintDocument(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString(), rpt);
-                    //                                                     //            ProjectFunctions.SendToDirectPrint(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".pdf");
-                    //                                                     //            //ProjectFunctions.print(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".pdf");
-                    //                                                     //        }
-                    //                                                     //    }
-                    //                                                     //}
-                    //                                                 }
-                    //                                             ));
+                   
                     e.Menu.Items
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Generate PT File",
                                                                   (o1, e1) =>
@@ -1415,32 +1367,7 @@ namespace WindowsFormsApplication1
                                                                   }));
                 }
 
-                //if (GlobalVariables.ProgCode == "PROG131")
-                //{
-                //    InvoiceGridView.CloseEditor();
-                //    InvoiceGridView.UpdateCurrentRow();
-                //    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Invoice", (o1, e1) =>
-                //    {
-                //        foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
-                //        {
-                //            if (dr["Select"].ToString().ToUpper() == "TRUE")
-                //            {
-                //                if (dr["BillSeries"].ToString().ToUpper() == "GST")
-                //                {
-                //                    Prints.GSTINVOICE rpt = new Prints.GSTINVOICE();
-                //                    ProjectFunctions.PrintDocument(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString(), rpt);
-
-                //                }
-                //                if (dr["BillSeries"].ToString().ToUpper() == "DCO")
-                //                {
-                //                    Prints.InvoicePrintBT rpt = new Prints.InvoicePrintBT();
-                //                    ProjectFunctions.PrintDocument(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString(), rpt);
-                //                }
-
-                //            }
-                //        }
-                //    }));
-                //}
+               
 
                 if (GlobalVariables.ProgCode == "PROG130")
                 {
@@ -2218,6 +2145,7 @@ namespace WindowsFormsApplication1
                                         {
                                             ds.WriteXmlSchema("C://Temp//abc.xml");
                                             rpt.DataSource = ds;
+                                            rpt.xrPdfContent2.SourceUrl = Application.StartupPath + "//EWAY//" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf";
                                             foreach (XRSubreport sub in rpt.AllControls<XRSubreport>())
                                             {
                                                 sub.ReportSource.DataSource = ds;
