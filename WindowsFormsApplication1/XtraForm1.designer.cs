@@ -135,18 +135,20 @@
             this.barButtonItem3,
             this.barButtonItem6,
             this.barButtonItem2});
-            this._ribbonControl.Location = new System.Drawing.Point(0, 33);
+            this._ribbonControl.Location = new System.Drawing.Point(0, 39);
+            this._ribbonControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this._ribbonControl.MaxItemId = 91;
             this._ribbonControl.MdiMergeStyle = DevExpress.XtraBars.Ribbon.RibbonMdiMergeStyle.Always;
             this._ribbonControl.Name = "_ribbonControl";
             this._ribbonControl.OptionsAnimation.PageCategoryShowAnimation = DevExpress.Utils.DefaultBoolean.True;
+            this._ribbonControl.OptionsMenuMinWidth = 385;
             this._ribbonControl.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage,
             this.ribbonPage1,
             this.ribbonPage2});
             this._ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this._ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this._ribbonControl.Size = new System.Drawing.Size(993, 115);
+            this._ribbonControl.Size = new System.Drawing.Size(1172, 155);
             this._ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // skinDropDownButtonItem1
@@ -315,13 +317,14 @@
             accordionContextButton1.Name = "SKIN";
             this.accordionControl1.ItemContextButtons.Add(accordionContextButton1);
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsFooter.ActiveGroupDisplayMode = DevExpress.XtraBars.Navigation.ActiveGroupDisplayMode.GroupHeaderAndContent;
             this._ribbonControl.SetPopupContextMenu(this.accordionControl1, this.galleryDropDown1);
             this.accordionControl1.ResizeMode = DevExpress.XtraBars.Navigation.AccordionControlResizeMode.OuterResizeZone;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(229, 632);
+            this.accordionControl1.Size = new System.Drawing.Size(270, 833);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -335,24 +338,27 @@
             this.accordionContentContainer1.Controls.Add(this.labelControl2);
             this.accordionContentContainer1.Controls.Add(this.labelControl1);
             this.accordionContentContainer1.Controls.Add(this.pictureEdit1);
+            this.accordionContentContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionContentContainer1.Name = "accordionContentContainer1";
-            this.accordionContentContainer1.Size = new System.Drawing.Size(212, 183);
+            this.accordionContentContainer1.Size = new System.Drawing.Size(247, 239);
             this.accordionContentContainer1.TabIndex = 3;
             // 
             // hyperlinkLabelControl2
             // 
-            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(142, 162);
+            this.hyperlinkLabelControl2.Location = new System.Drawing.Point(166, 212);
+            this.hyperlinkLabelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(64, 13);
+            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(71, 17);
             this.hyperlinkLabelControl2.TabIndex = 3;
             this.hyperlinkLabelControl2.Text = "Show Radial";
             this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
             // 
             // hyperlinkLabelControl1
             // 
-            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(142, 82);
+            this.hyperlinkLabelControl1.Location = new System.Drawing.Point(166, 107);
+            this.hyperlinkLabelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(57, 13);
+            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(63, 17);
             this.hyperlinkLabelControl1.TabIndex = 2;
             this.hyperlinkLabelControl1.Text = "Disconnect";
             this.hyperlinkLabelControl1.Click += new System.EventHandler(this.HyperlinkLabelControl1_Click);
@@ -361,34 +367,38 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(38, 0);
+            this.labelControl3.Location = new System.Drawing.Point(44, 0);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(138, 21);
+            this.labelControl3.Size = new System.Drawing.Size(171, 28);
             this.labelControl3.TabIndex = 1;
             this.labelControl3.Text = "Whatsapp QrCode";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(142, 47);
+            this.labelControl2.Location = new System.Drawing.Point(166, 61);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(0, 13);
+            this.labelControl2.Size = new System.Drawing.Size(0, 17);
             this.labelControl2.TabIndex = 1;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(142, 31);
+            this.labelControl1.Location = new System.Drawing.Point(166, 41);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(0, 13);
+            this.labelControl1.Size = new System.Drawing.Size(0, 17);
             this.labelControl1.TabIndex = 0;
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(3, 31);
+            this.pictureEdit1.Location = new System.Drawing.Point(3, 41);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit1.MenuManager = this._ribbonControl;
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(139, 144);
+            this.pictureEdit1.Size = new System.Drawing.Size(162, 188);
             this.pictureEdit1.TabIndex = 0;
             this.pictureEdit1.EditValueChanged += new System.EventHandler(this.pictureEdit1_EditValueChanged);
             // 
@@ -428,9 +438,10 @@
             this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Center;
-            this.xtraTabControl1.Size = new System.Drawing.Size(760, 632);
+            this.xtraTabControl1.Size = new System.Drawing.Size(897, 833);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
             this.xtraTabControl1.Transition.TransitionType = combTransition1;
@@ -438,14 +449,11 @@
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.XtraTabControl1_CloseButtonClick);
             this.xtraTabControl1.Validating += new System.ComponentModel.CancelEventHandler(this.XtraTabControl1_Validating);
             // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013 Dark Gray";
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 148);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 194);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -457,16 +465,18 @@
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.xtraTabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(993, 632);
-            this.splitContainer1.SplitterDistance = 229;
+            this.splitContainer1.Size = new System.Drawing.Size(1172, 833);
+            this.splitContainer1.SplitterDistance = 270;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(-84, 43);
+            this.textEdit1.Location = new System.Drawing.Point(-98, 56);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.MenuManager = this._ribbonControl;
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(100, 20);
+            this.textEdit1.Size = new System.Drawing.Size(117, 24);
             this.textEdit1.TabIndex = 4;
             // 
             // popupMenu1
@@ -483,8 +493,9 @@
             // 
             this.toolbarFormControl1.Location = new System.Drawing.Point(0, 0);
             this.toolbarFormControl1.Manager = this.toolbarFormManager1;
+            this.toolbarFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.toolbarFormControl1.Name = "toolbarFormControl1";
-            this.toolbarFormControl1.Size = new System.Drawing.Size(993, 33);
+            this.toolbarFormControl1.Size = new System.Drawing.Size(1172, 39);
             this.toolbarFormControl1.TabIndex = 5;
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem2);
@@ -510,33 +521,37 @@
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 33);
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 39);
             this.barDockControlTop.Manager = this.toolbarFormManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(993, 0);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1172, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 780);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 1027);
             this.barDockControlBottom.Manager = this.toolbarFormManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(993, 0);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1172, 0);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 33);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 39);
             this.barDockControlLeft.Manager = this.toolbarFormManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 747);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 988);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(993, 33);
+            this.barDockControlRight.Location = new System.Drawing.Point(1172, 39);
             this.barDockControlRight.Manager = this.toolbarFormManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 747);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 988);
             // 
             // barToolbarsListItem1
             // 
@@ -576,10 +591,12 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(580, 33);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(677, 43);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(388, 123);
+            this.HelpGrid.Size = new System.Drawing.Size(453, 161);
             this.HelpGrid.TabIndex = 300;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -590,6 +607,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -602,14 +620,15 @@
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
             // 
             // XtraForm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 780);
+            this.ClientSize = new System.Drawing.Size(1172, 1027);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this._ribbonControl);
@@ -621,6 +640,7 @@
             this.IconOptions.Image = global::WindowsFormsApplication1.Properties.Resources.logo1;
             this.IsMdiContainer = true;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "XtraForm1";
             this.ToolbarFormControl = this.toolbarFormControl1;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -2431,5 +2431,10 @@ namespace WindowsFormsApplication1
                 XtraMessageBox.Show(ex.Message);
             }
         }
+
+        private void GridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

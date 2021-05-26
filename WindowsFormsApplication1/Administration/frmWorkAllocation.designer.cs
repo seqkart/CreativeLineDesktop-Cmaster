@@ -80,9 +80,10 @@
             // cmbSelectUser
             // 
             this.cmbSelectUser.FormattingEnabled = true;
-            this.cmbSelectUser.Location = new System.Drawing.Point(124, 30);
+            this.cmbSelectUser.Location = new System.Drawing.Point(145, 41);
+            this.cmbSelectUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSelectUser.Name = "cmbSelectUser";
-            this.cmbSelectUser.Size = new System.Drawing.Size(121, 21);
+            this.cmbSelectUser.Size = new System.Drawing.Size(140, 25);
             this.cmbSelectUser.TabIndex = 313;
             this.cmbSelectUser.SelectedIndexChanged += new System.EventHandler(this.CmbSelectUser_SelectedIndexChanged);
             // 
@@ -92,13 +93,14 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(894, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1043, 27);
             this.Menu_ToolStrip.TabIndex = 314;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -108,7 +110,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -116,9 +118,10 @@
             // 
             this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(57, 34);
+            this.label1.Location = new System.Drawing.Point(66, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(74, 19);
             this.label1.TabIndex = 315;
             this.label1.Text = "Select User";
             // 
@@ -135,18 +138,20 @@
             this.panelControl1.Controls.Add(this.OptionsGrid);
             this.panelControl1.Controls.Add(this.WorkAllocationGrid);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelControl1.Location = new System.Drawing.Point(0, 25);
+            this.panelControl1.Location = new System.Drawing.Point(0, 27);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Padding = new System.Windows.Forms.Padding(15);
-            this.panelControl1.Size = new System.Drawing.Size(894, 503);
+            this.panelControl1.Padding = new System.Windows.Forms.Padding(17, 20, 17, 20);
+            this.panelControl1.Size = new System.Drawing.Size(1043, 663);
             this.panelControl1.TabIndex = 317;
             this.panelControl1.Text = "Work Allocation";
             // 
             // btnSaveOpts
             // 
-            this.btnSaveOpts.Location = new System.Drawing.Point(727, 29);
+            this.btnSaveOpts.Location = new System.Drawing.Point(848, 38);
+            this.btnSaveOpts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveOpts.Name = "btnSaveOpts";
-            this.btnSaveOpts.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveOpts.Size = new System.Drawing.Size(87, 30);
             this.btnSaveOpts.TabIndex = 319;
             this.btnSaveOpts.Text = "Save";
             this.btnSaveOpts.Visible = false;
@@ -154,9 +159,10 @@
             // 
             // btnCancle
             // 
-            this.btnCancle.Location = new System.Drawing.Point(808, 29);
+            this.btnCancle.Location = new System.Drawing.Point(943, 38);
+            this.btnCancle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(75, 23);
+            this.btnCancle.Size = new System.Drawing.Size(87, 30);
             this.btnCancle.TabIndex = 318;
             this.btnCancle.Text = "Cancel";
             this.btnCancle.Visible = false;
@@ -164,13 +170,15 @@
             // 
             // OptionsGrid
             // 
+            this.OptionsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptionsGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionsGrid.Location = new System.Drawing.Point(14, 72);
+            this.OptionsGrid.Location = new System.Drawing.Point(16, 94);
             this.OptionsGrid.MainView = this.OptionsGridView;
+            this.OptionsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OptionsGrid.Name = "OptionsGrid";
             this.OptionsGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit2});
-            this.OptionsGrid.Size = new System.Drawing.Size(866, 389);
+            this.OptionsGrid.Size = new System.Drawing.Size(1010, 509);
             this.OptionsGrid.TabIndex = 318;
             this.OptionsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.OptionsGridView});
@@ -191,6 +199,7 @@
             this.gridColumn32,
             this.gridColumn33,
             this.gridColumn34});
+            this.OptionsGridView.DetailHeight = 458;
             this.OptionsGridView.GridControl = this.OptionsGrid;
             this.OptionsGridView.Name = "OptionsGridView";
             this.OptionsGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -210,102 +219,115 @@
             // 
             this.gridColumn18.Caption = "ProgCode";
             this.gridColumn18.FieldName = "ProgCode";
+            this.gridColumn18.MinWidth = 23;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
             this.gridColumn18.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ProgCode", "Count={0}")});
             this.gridColumn18.Visible = true;
             this.gridColumn18.VisibleIndex = 0;
-            this.gridColumn18.Width = 92;
+            this.gridColumn18.Width = 107;
             // 
             // gridColumn35
             // 
             this.gridColumn35.Caption = "Username";
             this.gridColumn35.FieldName = "UserName";
+            this.gridColumn35.MinWidth = 23;
             this.gridColumn35.Name = "gridColumn35";
             this.gridColumn35.OptionsColumn.AllowEdit = false;
             this.gridColumn35.Visible = true;
             this.gridColumn35.VisibleIndex = 1;
-            this.gridColumn35.Width = 76;
+            this.gridColumn35.Width = 89;
             // 
             // gridColumn36
             // 
             this.gridColumn36.Caption = "ACCESS";
             this.gridColumn36.FieldName = "SELECTFIELD";
+            this.gridColumn36.MinWidth = 23;
             this.gridColumn36.Name = "gridColumn36";
             this.gridColumn36.Visible = true;
             this.gridColumn36.VisibleIndex = 2;
+            this.gridColumn36.Width = 87;
             // 
             // gridColumn37
             // 
             this.gridColumn37.Caption = "&Add";
             this.gridColumn37.FieldName = "&Add";
+            this.gridColumn37.MinWidth = 23;
             this.gridColumn37.Name = "gridColumn37";
             this.gridColumn37.Visible = true;
             this.gridColumn37.VisibleIndex = 4;
+            this.gridColumn37.Width = 87;
             // 
             // gridColumn22
             // 
             this.gridColumn22.Caption = "EDIT";
             this.gridColumn22.FieldName = "EDIT";
+            this.gridColumn22.MinWidth = 23;
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 3;
-            this.gridColumn22.Width = 36;
+            this.gridColumn22.Width = 42;
             // 
             // gridColumn23
             // 
             this.gridColumn23.Caption = "DEL";
             this.gridColumn23.FieldName = "DELETE";
+            this.gridColumn23.MinWidth = 23;
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 5;
-            this.gridColumn23.Width = 35;
+            this.gridColumn23.Width = 41;
             // 
             // gridColumn29
             // 
             this.gridColumn29.Caption = "SPL_Rts.";
             this.gridColumn29.FieldName = "SPLRIGHTS";
+            this.gridColumn29.MinWidth = 23;
             this.gridColumn29.Name = "gridColumn29";
             this.gridColumn29.Visible = true;
             this.gridColumn29.VisibleIndex = 6;
-            this.gridColumn29.Width = 58;
+            this.gridColumn29.Width = 68;
             // 
             // gridColumn31
             // 
             this.gridColumn31.Caption = "M";
             this.gridColumn31.FieldName = "MASTER";
+            this.gridColumn31.MinWidth = 23;
             this.gridColumn31.Name = "gridColumn31";
             this.gridColumn31.Visible = true;
             this.gridColumn31.VisibleIndex = 7;
-            this.gridColumn31.Width = 29;
+            this.gridColumn31.Width = 34;
             // 
             // gridColumn32
             // 
             this.gridColumn32.Caption = "T";
             this.gridColumn32.FieldName = "TRANSACTION";
+            this.gridColumn32.MinWidth = 23;
             this.gridColumn32.Name = "gridColumn32";
             this.gridColumn32.Visible = true;
             this.gridColumn32.VisibleIndex = 8;
-            this.gridColumn32.Width = 26;
+            this.gridColumn32.Width = 30;
             // 
             // gridColumn33
             // 
             this.gridColumn33.Caption = "R";
             this.gridColumn33.FieldName = "REPORT";
+            this.gridColumn33.MinWidth = 23;
             this.gridColumn33.Name = "gridColumn33";
             this.gridColumn33.Visible = true;
             this.gridColumn33.VisibleIndex = 9;
-            this.gridColumn33.Width = 23;
+            this.gridColumn33.Width = 27;
             // 
             // gridColumn34
             // 
             this.gridColumn34.Caption = "A";
             this.gridColumn34.FieldName = "ADMIN";
+            this.gridColumn34.MinWidth = 23;
             this.gridColumn34.Name = "gridColumn34";
             this.gridColumn34.Visible = true;
             this.gridColumn34.VisibleIndex = 10;
-            this.gridColumn34.Width = 20;
+            this.gridColumn34.Width = 23;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -315,13 +337,15 @@
             // 
             // WorkAllocationGrid
             // 
+            this.WorkAllocationGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkAllocationGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WorkAllocationGrid.Location = new System.Drawing.Point(14, 72);
+            this.WorkAllocationGrid.Location = new System.Drawing.Point(16, 94);
             this.WorkAllocationGrid.MainView = this.UserGridView;
+            this.WorkAllocationGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.WorkAllocationGrid.Name = "WorkAllocationGrid";
             this.WorkAllocationGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.WorkAllocationGrid.Size = new System.Drawing.Size(866, 418);
+            this.WorkAllocationGrid.Size = new System.Drawing.Size(1010, 547);
             this.WorkAllocationGrid.TabIndex = 317;
             this.WorkAllocationGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.UserGridView});
@@ -341,6 +365,7 @@
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11});
+            this.UserGridView.DetailHeight = 458;
             this.UserGridView.GridControl = this.WorkAllocationGrid;
             this.UserGridView.Name = "UserGridView";
             this.UserGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -361,104 +386,115 @@
             // 
             this.gridColumn1.Caption = "ProgCode";
             this.gridColumn1.FieldName = "ProgCode";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ProgCode", "Count={0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 74;
+            this.gridColumn1.Width = 86;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "ProgDesc";
             this.gridColumn2.FieldName = "ProgDesc";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 103;
+            this.gridColumn2.Width = 120;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "ACCESS";
             this.gridColumn3.FieldName = "SELECTFIELD";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 51;
+            this.gridColumn3.Width = 59;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "&Add";
             this.gridColumn4.FieldName = "&Add";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 33;
+            this.gridColumn4.Width = 38;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "EDIT";
             this.gridColumn5.FieldName = "EDIT";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 37;
+            this.gridColumn5.Width = 43;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "DEL";
             this.gridColumn6.FieldName = "DELETE";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 30;
+            this.gridColumn6.Width = 35;
             // 
             // gridColumn17
             // 
             this.gridColumn17.Caption = "SPLR";
             this.gridColumn17.FieldName = "SPLRIGHTS";
+            this.gridColumn17.MinWidth = 23;
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.Visible = true;
             this.gridColumn17.VisibleIndex = 6;
-            this.gridColumn17.Width = 35;
+            this.gridColumn17.Width = 41;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "M";
             this.gridColumn8.FieldName = "MASTER";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
-            this.gridColumn8.Width = 20;
+            this.gridColumn8.Width = 23;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "T";
             this.gridColumn9.FieldName = "TRANSACTION";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
-            this.gridColumn9.Width = 20;
+            this.gridColumn9.Width = 23;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "R";
             this.gridColumn10.FieldName = "REPORT";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 9;
-            this.gridColumn10.Width = 20;
+            this.gridColumn10.Width = 23;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "A";
             this.gridColumn11.FieldName = "ADMIN";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 10;
-            this.gridColumn11.Width = 20;
+            this.gridColumn11.Width = 23;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -474,13 +510,14 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 528);
+            this.ClientSize = new System.Drawing.Size(1043, 690);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmWorkAllocation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

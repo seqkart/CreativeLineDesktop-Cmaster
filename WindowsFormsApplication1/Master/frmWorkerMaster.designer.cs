@@ -70,9 +70,10 @@
             // 
             this.Label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label2.Appearance.Options.UseFont = true;
-            this.Label2.Location = new System.Drawing.Point(19, 67);
+            this.Label2.Location = new System.Drawing.Point(14, 85);
+            this.Label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(77, 13);
+            this.Label2.Size = new System.Drawing.Size(101, 19);
             this.Label2.TabIndex = 628;
             this.Label2.Text = "CONTRACTOR :";
             // 
@@ -80,9 +81,10 @@
             // 
             this.Label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(289, 119);
+            this.Label4.Location = new System.Drawing.Point(332, 153);
+            this.Label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(60, 13);
+            this.Label4.Size = new System.Drawing.Size(78, 19);
             this.Label4.TabIndex = 605;
             this.Label4.Text = "OTHER NO :";
             // 
@@ -90,9 +92,10 @@
             // 
             this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(45, 145);
+            this.Label3.Location = new System.Drawing.Point(50, 187);
+            this.Label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(51, 13);
+            this.Label3.Size = new System.Drawing.Size(65, 19);
             this.Label3.TabIndex = 597;
             this.Label3.Text = "EMAIL ID :";
             // 
@@ -100,9 +103,10 @@
             // 
             this.LBDEPNAME.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPNAME.Appearance.Options.UseFont = true;
-            this.LBDEPNAME.Location = new System.Drawing.Point(59, 93);
+            this.LBDEPNAME.Location = new System.Drawing.Point(68, 119);
+            this.LBDEPNAME.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBDEPNAME.Name = "LBDEPNAME";
-            this.LBDEPNAME.Size = new System.Drawing.Size(37, 13);
+            this.LBDEPNAME.Size = new System.Drawing.Size(47, 19);
             this.LBDEPNAME.TabIndex = 32;
             this.LBDEPNAME.Text = "NAME :";
             // 
@@ -110,9 +114,10 @@
             // 
             this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(19, 171);
+            this.Label7.Location = new System.Drawing.Point(16, 221);
+            this.Label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(77, 13);
+            this.Label7.Size = new System.Drawing.Size(99, 19);
             this.Label7.TabIndex = 32;
             this.Label7.Text = "ID TYPE && NO. :";
             // 
@@ -120,9 +125,10 @@
             // 
             this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(61, 41);
+            this.LBDEPCODE.Location = new System.Drawing.Point(71, 51);
+            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(35, 13);
+            this.LBDEPCODE.Size = new System.Drawing.Size(44, 19);
             this.LBDEPCODE.TabIndex = 32;
             this.LBDEPCODE.Text = "CODE :";
             // 
@@ -130,18 +136,21 @@
             // 
             this.Label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label6.Appearance.Options.UseFont = true;
-            this.Label6.Location = new System.Drawing.Point(32, 119);
+            this.Label6.Location = new System.Drawing.Point(32, 153);
+            this.Label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(64, 13);
+            this.Label6.Size = new System.Drawing.Size(83, 19);
             this.Label6.TabIndex = 32;
             this.Label6.Text = "MOBILE NO :";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(61, 40);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(68, 51);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(453, 173);
+            this.HelpGrid.Size = new System.Drawing.Size(528, 226);
             this.HelpGrid.TabIndex = 744;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -151,6 +160,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -165,41 +175,45 @@
             // 
             this.txtWorkerCode.Enabled = false;
             this.txtWorkerCode.EnterMoveNextControl = true;
-            this.txtWorkerCode.Location = new System.Drawing.Point(101, 37);
+            this.txtWorkerCode.Location = new System.Drawing.Point(118, 48);
+            this.txtWorkerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWorkerCode.Name = "txtWorkerCode";
             this.txtWorkerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWorkerCode.Properties.MaxLength = 8;
-            this.txtWorkerCode.Size = new System.Drawing.Size(74, 20);
+            this.txtWorkerCode.Size = new System.Drawing.Size(86, 24);
             this.txtWorkerCode.TabIndex = 718;
             this.txtWorkerCode.TabStop = false;
             // 
             // txtEMailId
             // 
             this.txtEMailId.EnterMoveNextControl = true;
-            this.txtEMailId.Location = new System.Drawing.Point(101, 141);
+            this.txtEMailId.Location = new System.Drawing.Point(118, 184);
+            this.txtEMailId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEMailId.Name = "txtEMailId";
             this.txtEMailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEMailId.Size = new System.Drawing.Size(410, 20);
+            this.txtEMailId.Size = new System.Drawing.Size(478, 24);
             this.txtEMailId.TabIndex = 726;
             // 
             // txtMobileNo
             // 
             this.txtMobileNo.EnterMoveNextControl = true;
-            this.txtMobileNo.Location = new System.Drawing.Point(101, 115);
+            this.txtMobileNo.Location = new System.Drawing.Point(118, 150);
+            this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMobileNo.Size = new System.Drawing.Size(171, 20);
+            this.txtMobileNo.Size = new System.Drawing.Size(199, 24);
             this.txtMobileNo.TabIndex = 725;
             // 
             // txtContractorDesc
             // 
             this.txtContractorDesc.Enabled = false;
             this.txtContractorDesc.EnterMoveNextControl = true;
-            this.txtContractorDesc.Location = new System.Drawing.Point(181, 63);
+            this.txtContractorDesc.Location = new System.Drawing.Point(211, 82);
+            this.txtContractorDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContractorDesc.Name = "txtContractorDesc";
             this.txtContractorDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorDesc.Properties.MaxLength = 8;
-            this.txtContractorDesc.Size = new System.Drawing.Size(330, 20);
+            this.txtContractorDesc.Size = new System.Drawing.Size(385, 24);
             this.txtContractorDesc.TabIndex = 720;
             this.txtContractorDesc.TabStop = false;
             // 
@@ -209,6 +223,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -216,7 +231,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(526, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(614, 31);
             this.Menu_ToolStrip.TabIndex = 745;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -228,7 +243,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -240,27 +255,29 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtWorkerName
             // 
             this.txtWorkerName.EnterMoveNextControl = true;
-            this.txtWorkerName.Location = new System.Drawing.Point(101, 89);
+            this.txtWorkerName.Location = new System.Drawing.Point(118, 116);
+            this.txtWorkerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWorkerName.Name = "txtWorkerName";
             this.txtWorkerName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtWorkerName.Size = new System.Drawing.Size(306, 20);
+            this.txtWorkerName.Size = new System.Drawing.Size(357, 24);
             this.txtWorkerName.TabIndex = 724;
             // 
             // txtContractorCode
             // 
             this.txtContractorCode.EnterMoveNextControl = true;
-            this.txtContractorCode.Location = new System.Drawing.Point(101, 63);
+            this.txtContractorCode.Location = new System.Drawing.Point(118, 82);
+            this.txtContractorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContractorCode.Name = "txtContractorCode";
             this.txtContractorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorCode.Properties.MaxLength = 8;
-            this.txtContractorCode.Size = new System.Drawing.Size(74, 20);
+            this.txtContractorCode.Size = new System.Drawing.Size(86, 24);
             this.txtContractorCode.TabIndex = 719;
             this.txtContractorCode.EditValueChanged += new System.EventHandler(this.TxtContractorCode_EditValueChanged);
             this.txtContractorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtContractorCode_KeyDown);
@@ -268,24 +285,27 @@
             // txtOtherNo
             // 
             this.txtOtherNo.EnterMoveNextControl = true;
-            this.txtOtherNo.Location = new System.Drawing.Point(354, 115);
+            this.txtOtherNo.Location = new System.Drawing.Point(413, 150);
+            this.txtOtherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherNo.Name = "txtOtherNo";
             this.txtOtherNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOtherNo.Size = new System.Drawing.Size(157, 20);
+            this.txtOtherNo.Size = new System.Drawing.Size(183, 24);
             this.txtOtherNo.TabIndex = 749;
             // 
             // txtFloorCode
             // 
             this.txtFloorCode.EnterMoveNextControl = true;
-            this.txtFloorCode.Location = new System.Drawing.Point(413, 89);
+            this.txtFloorCode.Location = new System.Drawing.Point(482, 116);
+            this.txtFloorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFloorCode.Name = "txtFloorCode";
             this.txtFloorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFloorCode.Size = new System.Drawing.Size(98, 20);
+            this.txtFloorCode.Size = new System.Drawing.Size(114, 24);
             this.txtFloorCode.TabIndex = 750;
             // 
             // txtIDType
             // 
-            this.txtIDType.Location = new System.Drawing.Point(101, 167);
+            this.txtIDType.Location = new System.Drawing.Point(118, 218);
+            this.txtIDType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDType.Name = "txtIDType";
             this.txtIDType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -296,23 +316,24 @@
             "PASSPORT",
             "OTHER ID",
             "LISCENSE"});
-            this.txtIDType.Size = new System.Drawing.Size(171, 20);
+            this.txtIDType.Size = new System.Drawing.Size(199, 24);
             this.txtIDType.TabIndex = 751;
             // 
             // txtIDNo
             // 
             this.txtIDNo.EnterMoveNextControl = true;
-            this.txtIDNo.Location = new System.Drawing.Point(354, 167);
+            this.txtIDNo.Location = new System.Drawing.Point(413, 218);
+            this.txtIDNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIDNo.Size = new System.Drawing.Size(157, 20);
+            this.txtIDNo.Size = new System.Drawing.Size(183, 24);
             this.txtIDNo.TabIndex = 752;
             // 
             // frmWorkerMaster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 216);
+            this.ClientSize = new System.Drawing.Size(614, 282);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtIDNo);
@@ -335,6 +356,7 @@
             this.Controls.Add(this.Label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmWorkerMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmWorkerMaster_Load);

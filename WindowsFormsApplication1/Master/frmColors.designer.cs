@@ -47,21 +47,23 @@
             // txtColorName
             // 
             this.txtColorName.EnterMoveNextControl = true;
-            this.txtColorName.Location = new System.Drawing.Point(140, 87);
+            this.txtColorName.Location = new System.Drawing.Point(163, 114);
+            this.txtColorName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtColorName.Name = "txtColorName";
             this.txtColorName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtColorName.Size = new System.Drawing.Size(271, 20);
+            this.txtColorName.Size = new System.Drawing.Size(316, 24);
             this.txtColorName.TabIndex = 771;
             // 
             // txtSysColorID
             // 
             this.txtSysColorID.Enabled = false;
             this.txtSysColorID.EnterMoveNextControl = true;
-            this.txtSysColorID.Location = new System.Drawing.Point(140, 35);
+            this.txtSysColorID.Location = new System.Drawing.Point(163, 46);
+            this.txtSysColorID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysColorID.Name = "txtSysColorID";
             this.txtSysColorID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysColorID.Properties.MaxLength = 8;
-            this.txtSysColorID.Size = new System.Drawing.Size(74, 20);
+            this.txtSysColorID.Size = new System.Drawing.Size(86, 24);
             this.txtSysColorID.TabIndex = 760;
             this.txtSysColorID.TabStop = false;
             // 
@@ -69,19 +71,21 @@
             // 
             this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(72, 65);
+            this.Label3.Location = new System.Drawing.Point(83, 83);
+            this.Label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(64, 13);
+            this.Label3.Size = new System.Drawing.Size(77, 19);
             this.Label3.TabIndex = 757;
             this.Label3.Text = "Color Code :";
             // 
             // txtColorCode
             // 
             this.txtColorCode.EnterMoveNextControl = true;
-            this.txtColorCode.Location = new System.Drawing.Point(140, 61);
+            this.txtColorCode.Location = new System.Drawing.Point(163, 80);
+            this.txtColorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtColorCode.Size = new System.Drawing.Size(271, 20);
+            this.txtColorCode.Size = new System.Drawing.Size(316, 24);
             this.txtColorCode.TabIndex = 765;
             // 
             // Menu_ToolStrip
@@ -90,6 +94,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -97,7 +102,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(460, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(537, 31);
             this.Menu_ToolStrip.TabIndex = 767;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -109,7 +114,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -121,7 +126,7 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -129,9 +134,10 @@
             // 
             this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(69, 91);
+            this.Label7.Location = new System.Drawing.Point(79, 117);
+            this.Label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(67, 13);
+            this.Label7.Size = new System.Drawing.Size(82, 19);
             this.Label7.TabIndex = 754;
             this.Label7.Text = "Color Name :";
             // 
@@ -139,17 +145,18 @@
             // 
             this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(83, 39);
+            this.LBDEPCODE.Location = new System.Drawing.Point(96, 49);
+            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(53, 13);
+            this.LBDEPCODE.Size = new System.Drawing.Size(64, 19);
             this.LBDEPCODE.TabIndex = 756;
             this.LBDEPCODE.Text = "Sys Code :";
             // 
             // frmColors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 123);
+            this.ClientSize = new System.Drawing.Size(537, 161);
             this.ControlBox = false;
             this.Controls.Add(this.txtColorName);
             this.Controls.Add(this.txtSysColorID);
@@ -160,6 +167,7 @@
             this.Controls.Add(this.LBDEPCODE);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmColors";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmColors_Load);

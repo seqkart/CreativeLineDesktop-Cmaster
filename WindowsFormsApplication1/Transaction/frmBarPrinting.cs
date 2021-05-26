@@ -53,6 +53,7 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("SKUPPRICE", typeof(string));
             dt.Columns.Add("GrpHSNCode", typeof(string));
             dt.Columns.Add("VARIANTART", typeof(string));
+            dt.Columns.Add("SizeMappingTransID", typeof(string));
 
             dsPopUps = ProjectFunctions.GetDataSet("[sp_LoadBarPrintPopUps2]");
 
@@ -175,6 +176,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SKUSIZID"], row["SZSYSID"].ToString());
                         BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SKUSIZN"], row["SZNAME"].ToString());
+                        BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SizeMappingTransID"], row["SizeMappingTransID"].ToString());
                         panelControl1.Visible = false;
                         BarCodeGridView.Focus();
 
@@ -594,6 +596,9 @@ namespace WindowsFormsApplication1.Transaction
                                 dtFinal.Columns.Add("SKUARTSIZSET", typeof(string));
                                 dtFinal.Columns.Add("SKUSIZINDX", typeof(string));
                                 dtFinal.Columns.Add("UnitCode", typeof(string));
+                                dtFinal.Columns.Add("SizeMappingTransID", typeof(string));
+
+                                
                                 dtFinal.Rows.Clear();
 
 
@@ -623,17 +628,19 @@ namespace WindowsFormsApplication1.Transaction
                                         drRow["SKUARTSIZSET"] = "0";
                                         drRow["SKUSIZINDX"] = dr["SKUSIZINDX"].ToString();
                                         drRow["UnitCode"] = GlobalVariables.CUnitID;
+                                        drRow["SizeMappingTransID"] = dr["SizeMappingTransID"].ToString();
+                                        
                                         dtFinal.Rows.Add(drRow);
                                     }
                                 }
 
                                 dtFinal.AcceptChanges();
                                 sqlcom.CommandType = CommandType.StoredProcedure;
-                                sqlcom.CommandText = "sp_InsertBarCodeData";
+                                sqlcom.CommandText = "sp_InsertBarCodeData2";
                                 sqlcom.CommandTimeout = 600000;
                                 SqlParameter param = new SqlParameter
                                 {
-                                    ParameterName = "@BarCodeTable",
+                                    ParameterName = "@BarCodeTable2",
                                     Value = dtFinal
                                 };
                                 sqlcom.Parameters.Add(param);
@@ -810,7 +817,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersEdit2] '" + SKUVOUCHNO + "','" + GlobalVariables.FinancialYear + "','" + Tag + "'");
+                DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersEdit3] '" + SKUVOUCHNO + "','" + GlobalVariables.FinancialYear + "','" + Tag + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     txtSysID.Text = SKUVOUCHNO;
@@ -904,6 +911,8 @@ namespace WindowsFormsApplication1.Transaction
                         NewRow["SZNAME"] = dr["SZNAME"];
                         NewRow["SZSYSID"] = dr["SZSYSID"];
                         NewRow["SZINDEX"] = dr["SZINDEX"];
+                        NewRow["SizeMappingTransID"] = dr["SizeMappingTransID"];
+
                         dtNew.Rows.Add(NewRow);
                     }
                     if (dtNew.Rows.Count > 0)

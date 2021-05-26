@@ -113,6 +113,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave,
@@ -122,7 +123,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1087, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1596, 31);
             this.Menu_ToolStrip.TabIndex = 3;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -133,7 +134,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -144,7 +145,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 23);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -154,7 +155,7 @@
             this.btnValidate.Image = ((System.Drawing.Image)(resources.GetObject("btnValidate.Image")));
             this.btnValidate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnValidate.Name = "btnValidate";
-            this.btnValidate.Size = new System.Drawing.Size(55, 23);
+            this.btnValidate.Size = new System.Drawing.Size(69, 28);
             this.btnValidate.Text = "Validate";
             this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
             // 
@@ -163,7 +164,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPassword.Size = new System.Drawing.Size(100, 26);
+            this.txtPassword.Size = new System.Drawing.Size(116, 31);
             this.txtPassword.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // gridView3
@@ -172,10 +173,12 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(73, 39);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(889, 438);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(590, 311);
+            this.HelpGrid.Size = new System.Drawing.Size(688, 407);
             this.HelpGrid.TabIndex = 391;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -188,6 +191,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -200,20 +204,23 @@
             // 
             // gridView2
             // 
+            this.gridView2.DetailHeight = 458;
             this.gridView2.GridControl = this.HelpGrid;
             this.gridView2.Name = "gridView2";
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
             // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.InvoiceGridCtrl);
-            this.groupControl2.Location = new System.Drawing.Point(12, 163);
+            this.groupControl2.Location = new System.Drawing.Point(14, 213);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(681, 236);
+            this.groupControl2.Size = new System.Drawing.Size(794, 309);
             this.groupControl2.TabIndex = 393;
             this.groupControl2.Text = "Invoice";
             // 
@@ -222,13 +229,15 @@
             this.InvoiceGridCtrl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.InvoiceGridCtrl.Location = new System.Drawing.Point(6, 23);
+            this.InvoiceGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InvoiceGridCtrl.Location = new System.Drawing.Point(7, 30);
             this.InvoiceGridCtrl.MainView = this.InvoiceGridView;
+            this.InvoiceGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGridCtrl.Name = "InvoiceGridCtrl";
             this.InvoiceGridCtrl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit2,
             this.repositoryItemMemoEdit2});
-            this.InvoiceGridCtrl.Size = new System.Drawing.Size(669, 207);
+            this.InvoiceGridCtrl.Size = new System.Drawing.Size(780, 271);
             this.InvoiceGridCtrl.TabIndex = 404;
             this.InvoiceGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});
@@ -247,7 +256,8 @@
             this.gridColumnPrdAmt,
             this.gridColumnSelect,
             this.gridColumnAdjustment});
-            this.InvoiceGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 216, 178);
+            this.InvoiceGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 252, 233);
+            this.InvoiceGridView.DetailHeight = 458;
             this.InvoiceGridView.GridControl = this.InvoiceGridCtrl;
             this.InvoiceGridView.Name = "InvoiceGridView";
             this.InvoiceGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
@@ -265,66 +275,78 @@
             // 
             this.gridColumn6.Caption = "IdType";
             this.gridColumn6.FieldName = "IdType";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 0;
+            this.gridColumn6.Width = 87;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Iddate";
             this.gridColumn7.FieldName = "Iddate";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 1;
+            this.gridColumn7.Width = 87;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "IdNo";
             this.gridColumn8.FieldName = "IdNo";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 2;
+            this.gridColumn8.Width = 87;
             // 
             // gridColumnPrdAmt
             // 
             this.gridColumnPrdAmt.Caption = "IdPrdAmt";
             this.gridColumnPrdAmt.FieldName = "IdPrdAmt";
+            this.gridColumnPrdAmt.MinWidth = 23;
             this.gridColumnPrdAmt.Name = "gridColumnPrdAmt";
             this.gridColumnPrdAmt.OptionsColumn.AllowEdit = false;
             this.gridColumnPrdAmt.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "IdPrdAmt", "{0:0.##}")});
             this.gridColumnPrdAmt.Visible = true;
             this.gridColumnPrdAmt.VisibleIndex = 3;
+            this.gridColumnPrdAmt.Width = 87;
             // 
             // gridColumnSelect
             // 
             this.gridColumnSelect.Caption = "Select";
             this.gridColumnSelect.FieldName = "Select";
+            this.gridColumnSelect.MinWidth = 23;
             this.gridColumnSelect.Name = "gridColumnSelect";
             this.gridColumnSelect.Visible = true;
             this.gridColumnSelect.VisibleIndex = 5;
+            this.gridColumnSelect.Width = 87;
             // 
             // gridColumnAdjustment
             // 
             this.gridColumnAdjustment.Caption = "AdjustAmt";
             this.gridColumnAdjustment.FieldName = "AmdAdjustAmt";
+            this.gridColumnAdjustment.MinWidth = 23;
             this.gridColumnAdjustment.Name = "gridColumnAdjustment";
             this.gridColumnAdjustment.OptionsColumn.AllowEdit = false;
             this.gridColumnAdjustment.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AmdAdjustAmt", "{0:0.##}")});
             this.gridColumnAdjustment.Visible = true;
             this.gridColumnAdjustment.VisibleIndex = 4;
+            this.gridColumnAdjustment.Width = 87;
             // 
             // repositoryItemLookUpEdit2
             // 
             this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptDesc", "DeptName", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptCode", "DeptCode", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptDesc", "DeptName", 93, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptCode", "DeptCode", 47, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.repositoryItemLookUpEdit2.DisplayMember = "DeptDesc";
             this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
             this.repositoryItemLookUpEdit2.ValueMember = "DeptCode";
@@ -335,33 +357,37 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(40, 69);
+            this.labelControl1.Location = new System.Drawing.Point(47, 90);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(36, 13);
+            this.labelControl1.Size = new System.Drawing.Size(42, 17);
             this.labelControl1.TabIndex = 394;
             this.labelControl1.Text = "Dealer ";
             // 
             // Txt_DealerCode
             // 
-            this.Txt_DealerCode.Location = new System.Drawing.Point(110, 66);
+            this.Txt_DealerCode.Location = new System.Drawing.Point(128, 86);
+            this.Txt_DealerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Txt_DealerCode.Name = "Txt_DealerCode";
-            this.Txt_DealerCode.Size = new System.Drawing.Size(99, 20);
+            this.Txt_DealerCode.Size = new System.Drawing.Size(115, 24);
             this.Txt_DealerCode.TabIndex = 0;
             this.Txt_DealerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_DealerCode_KeyDown);
             // 
             // Txt_Dealer
             // 
-            this.Txt_Dealer.Location = new System.Drawing.Point(215, 66);
+            this.Txt_Dealer.Location = new System.Drawing.Point(251, 86);
+            this.Txt_Dealer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Txt_Dealer.Name = "Txt_Dealer";
             this.Txt_Dealer.Properties.ReadOnly = true;
-            this.Txt_Dealer.Size = new System.Drawing.Size(360, 20);
+            this.Txt_Dealer.Size = new System.Drawing.Size(420, 24);
             this.Txt_Dealer.TabIndex = 396;
             // 
             // BtnRefreshGridData
             // 
-            this.BtnRefreshGridData.Location = new System.Drawing.Point(370, 135);
+            this.BtnRefreshGridData.Location = new System.Drawing.Point(432, 177);
+            this.BtnRefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnRefreshGridData.Name = "BtnRefreshGridData";
-            this.BtnRefreshGridData.Size = new System.Drawing.Size(75, 23);
+            this.BtnRefreshGridData.Size = new System.Drawing.Size(87, 30);
             this.BtnRefreshGridData.TabIndex = 4;
             this.BtnRefreshGridData.Text = "Refresh";
             this.BtnRefreshGridData.Click += new System.EventHandler(this.BtnRefreshGridData_Click);
@@ -369,43 +395,47 @@
             // DtEndDate
             // 
             this.DtEndDate.EditValue = null;
-            this.DtEndDate.Location = new System.Drawing.Point(264, 137);
+            this.DtEndDate.Location = new System.Drawing.Point(308, 179);
+            this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtEndDate.Size = new System.Drawing.Size(100, 20);
+            this.DtEndDate.Size = new System.Drawing.Size(117, 24);
             this.DtEndDate.TabIndex = 3;
             this.DtEndDate.Visible = false;
             // 
             // DtAdvanceVuDt
             // 
             this.DtAdvanceVuDt.EditValue = null;
-            this.DtAdvanceVuDt.Location = new System.Drawing.Point(215, 91);
+            this.DtAdvanceVuDt.Location = new System.Drawing.Point(251, 119);
+            this.DtAdvanceVuDt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtAdvanceVuDt.Name = "DtAdvanceVuDt";
             this.DtAdvanceVuDt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtAdvanceVuDt.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtAdvanceVuDt.Properties.ReadOnly = true;
-            this.DtAdvanceVuDt.Size = new System.Drawing.Size(100, 20);
+            this.DtAdvanceVuDt.Size = new System.Drawing.Size(117, 24);
             this.DtAdvanceVuDt.TabIndex = 2;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(240, 140);
+            this.labelControl2.Location = new System.Drawing.Point(280, 183);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(13, 13);
+            this.labelControl2.Size = new System.Drawing.Size(15, 17);
             this.labelControl2.TabIndex = 398;
             this.labelControl2.Text = "To";
             this.labelControl2.Visible = false;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(41, 140);
+            this.labelControl3.Location = new System.Drawing.Point(48, 183);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(26, 13);
+            this.labelControl3.Size = new System.Drawing.Size(30, 17);
             this.labelControl3.TabIndex = 397;
             this.labelControl3.Text = "From";
             this.labelControl3.Visible = false;
@@ -415,13 +445,15 @@
             this.AdvanceGridCtrl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdvanceGridCtrl.Location = new System.Drawing.Point(6, 23);
+            this.AdvanceGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AdvanceGridCtrl.Location = new System.Drawing.Point(7, 30);
             this.AdvanceGridCtrl.MainView = this.AdvanceGridView;
+            this.AdvanceGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdvanceGridCtrl.Name = "AdvanceGridCtrl";
             this.AdvanceGridCtrl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemLookUpEdit1,
             this.repositoryItemMemoEdit1});
-            this.AdvanceGridCtrl.Size = new System.Drawing.Size(669, 196);
+            this.AdvanceGridCtrl.Size = new System.Drawing.Size(780, 256);
             this.AdvanceGridCtrl.TabIndex = 404;
             this.AdvanceGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.AdvanceGridView,
@@ -442,7 +474,8 @@
             this.gridColumn11,
             this.gridColumn12,
             this.gridColumn10});
-            this.AdvanceGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 216, 178);
+            this.AdvanceGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 252, 233);
+            this.AdvanceGridView.DetailHeight = 458;
             this.AdvanceGridView.GridControl = this.AdvanceGridCtrl;
             this.AdvanceGridView.Name = "AdvanceGridView";
             this.AdvanceGridView.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
@@ -459,75 +492,91 @@
             // 
             this.gridColumn1.Caption = "AccCode";
             this.gridColumn1.FieldName = "AccCode";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "DealerName";
             this.gridColumn2.FieldName = "DealerName";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "DealerCode";
             this.gridColumn3.FieldName = "DealerCode";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "AdvVutAmt";
             this.gridColumn4.FieldName = "AdvVutAmt";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "AdvVutAmt", "{0:0.##}")});
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "AdvVutDate";
             this.gridColumn5.FieldName = "AdvVutDate";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "AdvVutNo";
             this.gridColumn11.FieldName = "AdvVutNo";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 5;
+            this.gridColumn11.Width = 87;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "AdvVutType";
             this.gridColumn12.FieldName = "AdvVutType";
+            this.gridColumn12.MinWidth = 23;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 6;
+            this.gridColumn12.Width = 87;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Select";
             this.gridColumn10.FieldName = "Select";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 7;
+            this.gridColumn10.Width = 87;
             // 
             // repositoryItemLookUpEdit1
             // 
             this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptDesc", "DeptName", 80, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptCode", "DeptCode", 40, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptDesc", "DeptName", 93, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("DeptCode", "DeptCode", 47, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Default, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
             this.repositoryItemLookUpEdit1.DisplayMember = "DeptDesc";
             this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
             this.repositoryItemLookUpEdit1.ValueMember = "DeptCode";
@@ -538,64 +587,71 @@
             // 
             // gridView4
             // 
+            this.gridView4.DetailHeight = 458;
             this.gridView4.GridControl = this.AdvanceGridCtrl;
             this.gridView4.Name = "gridView4";
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.AdvanceGridCtrl);
-            this.groupControl1.Location = new System.Drawing.Point(677, 89);
+            this.groupControl1.Location = new System.Drawing.Point(790, 116);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(681, 225);
+            this.groupControl1.Size = new System.Drawing.Size(794, 294);
             this.groupControl1.TabIndex = 392;
             this.groupControl1.Text = "Advance Vouhcers";
             this.groupControl1.Visible = false;
             // 
             // Txt_AdvVoucherNo
             // 
-            this.Txt_AdvVoucherNo.Location = new System.Drawing.Point(110, 91);
+            this.Txt_AdvVoucherNo.Location = new System.Drawing.Point(128, 119);
+            this.Txt_AdvVoucherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Txt_AdvVoucherNo.Name = "Txt_AdvVoucherNo";
-            this.Txt_AdvVoucherNo.Size = new System.Drawing.Size(99, 20);
+            this.Txt_AdvVoucherNo.Size = new System.Drawing.Size(115, 24);
             this.Txt_AdvVoucherNo.TabIndex = 1;
             this.Txt_AdvVoucherNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txt_AdvVoucherNo_KeyDown);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(40, 95);
+            this.labelControl4.Location = new System.Drawing.Point(47, 124);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 13);
+            this.labelControl4.Size = new System.Drawing.Size(78, 17);
             this.labelControl4.TabIndex = 402;
             this.labelControl4.Text = "Adv Voucher ";
             // 
             // Txt_AdvVoucherType
             // 
-            this.Txt_AdvVoucherType.Location = new System.Drawing.Point(320, 91);
+            this.Txt_AdvVoucherType.Location = new System.Drawing.Point(373, 119);
+            this.Txt_AdvVoucherType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Txt_AdvVoucherType.Name = "Txt_AdvVoucherType";
             this.Txt_AdvVoucherType.Properties.ReadOnly = true;
-            this.Txt_AdvVoucherType.Size = new System.Drawing.Size(99, 20);
+            this.Txt_AdvVoucherType.Size = new System.Drawing.Size(115, 24);
             this.Txt_AdvVoucherType.TabIndex = 405;
             // 
             // Txt_AdvAmt
             // 
-            this.Txt_AdvAmt.Location = new System.Drawing.Point(110, 114);
+            this.Txt_AdvAmt.Location = new System.Drawing.Point(128, 149);
+            this.Txt_AdvAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Txt_AdvAmt.Name = "Txt_AdvAmt";
             this.Txt_AdvAmt.Properties.ReadOnly = true;
-            this.Txt_AdvAmt.Size = new System.Drawing.Size(99, 20);
+            this.Txt_AdvAmt.Size = new System.Drawing.Size(115, 24);
             this.Txt_AdvAmt.TabIndex = 407;
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(40, 117);
+            this.labelControl5.Location = new System.Drawing.Point(47, 153);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(42, 13);
+            this.labelControl5.Size = new System.Drawing.Size(49, 17);
             this.labelControl5.TabIndex = 406;
             this.labelControl5.Text = "Adv Amt";
             // 
             // frm_AdvMappingAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 404);
+            this.ClientSize = new System.Drawing.Size(1596, 528);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.Txt_AdvAmt);
@@ -615,6 +671,7 @@
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_AdvMappingAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmBomMstAddEdit_Load);

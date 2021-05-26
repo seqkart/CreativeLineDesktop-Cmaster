@@ -274,9 +274,10 @@
             this.groupControl1.Controls.Add(this.txtTot500);
             this.groupControl1.Controls.Add(this.txtTot1000);
             this.groupControl1.Controls.Add(this.txtTot2000);
-            this.groupControl1.Location = new System.Drawing.Point(7, 6);
+            this.groupControl1.Location = new System.Drawing.Point(8, 8);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(778, 96);
+            this.groupControl1.Size = new System.Drawing.Size(908, 126);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Total Cash In Hand ";
             // 
@@ -284,9 +285,10 @@
             // 
             this.labelControl46.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl46.Appearance.Options.UseFont = true;
-            this.labelControl46.Location = new System.Drawing.Point(13, 38);
+            this.labelControl46.Location = new System.Drawing.Point(15, 50);
+            this.labelControl46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(36, 20);
+            this.labelControl46.Size = new System.Drawing.Size(44, 25);
             this.labelControl46.TabIndex = 2;
             this.labelControl46.Text = "2000";
             // 
@@ -294,9 +296,10 @@
             // 
             this.labelControl45.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl45.Appearance.Options.UseFont = true;
-            this.labelControl45.Location = new System.Drawing.Point(70, 38);
+            this.labelControl45.Location = new System.Drawing.Point(82, 50);
+            this.labelControl45.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl45.Name = "labelControl45";
-            this.labelControl45.Size = new System.Drawing.Size(36, 20);
+            this.labelControl45.Size = new System.Drawing.Size(44, 25);
             this.labelControl45.TabIndex = 2;
             this.labelControl45.Text = "1000";
             // 
@@ -304,9 +307,10 @@
             // 
             this.labelControl44.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl44.Appearance.Options.UseFont = true;
-            this.labelControl44.Location = new System.Drawing.Point(132, 38);
+            this.labelControl44.Location = new System.Drawing.Point(154, 50);
+            this.labelControl44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(27, 20);
+            this.labelControl44.Size = new System.Drawing.Size(33, 25);
             this.labelControl44.TabIndex = 2;
             this.labelControl44.Text = "500";
             // 
@@ -314,9 +318,10 @@
             // 
             this.labelControl43.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl43.Appearance.Options.UseFont = true;
-            this.labelControl43.Location = new System.Drawing.Point(189, 38);
+            this.labelControl43.Location = new System.Drawing.Point(220, 50);
+            this.labelControl43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(27, 20);
+            this.labelControl43.Size = new System.Drawing.Size(33, 25);
             this.labelControl43.TabIndex = 2;
             this.labelControl43.Text = "200";
             // 
@@ -324,9 +329,10 @@
             // 
             this.labelControl42.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl42.Appearance.Options.UseFont = true;
-            this.labelControl42.Location = new System.Drawing.Point(246, 38);
+            this.labelControl42.Location = new System.Drawing.Point(287, 50);
+            this.labelControl42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl42.Name = "labelControl42";
-            this.labelControl42.Size = new System.Drawing.Size(27, 20);
+            this.labelControl42.Size = new System.Drawing.Size(33, 25);
             this.labelControl42.TabIndex = 2;
             this.labelControl42.Text = "100";
             // 
@@ -334,9 +340,10 @@
             // 
             this.labelControl41.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl41.Appearance.Options.UseFont = true;
-            this.labelControl41.Location = new System.Drawing.Point(307, 38);
+            this.labelControl41.Location = new System.Drawing.Point(358, 50);
+            this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(18, 20);
+            this.labelControl41.Size = new System.Drawing.Size(22, 25);
             this.labelControl41.TabIndex = 2;
             this.labelControl41.Text = "50";
             // 
@@ -344,9 +351,10 @@
             // 
             this.labelControl40.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl40.Appearance.Options.UseFont = true;
-            this.labelControl40.Location = new System.Drawing.Point(364, 38);
+            this.labelControl40.Location = new System.Drawing.Point(425, 50);
+            this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(18, 20);
+            this.labelControl40.Size = new System.Drawing.Size(22, 25);
             this.labelControl40.TabIndex = 2;
             this.labelControl40.Text = "20";
             // 
@@ -354,9 +362,10 @@
             // 
             this.labelControl39.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl39.Appearance.Options.UseFont = true;
-            this.labelControl39.Location = new System.Drawing.Point(421, 38);
+            this.labelControl39.Location = new System.Drawing.Point(491, 50);
+            this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(18, 20);
+            this.labelControl39.Size = new System.Drawing.Size(22, 25);
             this.labelControl39.TabIndex = 2;
             this.labelControl39.Text = "10";
             // 
@@ -364,9 +373,10 @@
             // 
             this.labelControl38.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl38.Appearance.Options.UseFont = true;
-            this.labelControl38.Location = new System.Drawing.Point(483, 38);
+            this.labelControl38.Location = new System.Drawing.Point(563, 50);
+            this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(9, 20);
+            this.labelControl38.Size = new System.Drawing.Size(11, 25);
             this.labelControl38.TabIndex = 2;
             this.labelControl38.Text = "5";
             // 
@@ -374,9 +384,10 @@
             // 
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl37.Appearance.Options.UseFont = true;
-            this.labelControl37.Location = new System.Drawing.Point(540, 38);
+            this.labelControl37.Location = new System.Drawing.Point(630, 50);
+            this.labelControl37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(9, 20);
+            this.labelControl37.Size = new System.Drawing.Size(11, 25);
             this.labelControl37.TabIndex = 2;
             this.labelControl37.Text = "2";
             // 
@@ -384,9 +395,10 @@
             // 
             this.labelControl36.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl36.Appearance.Options.UseFont = true;
-            this.labelControl36.Location = new System.Drawing.Point(597, 38);
+            this.labelControl36.Location = new System.Drawing.Point(696, 50);
+            this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(9, 20);
+            this.labelControl36.Size = new System.Drawing.Size(11, 25);
             this.labelControl36.TabIndex = 2;
             this.labelControl36.Text = "1";
             // 
@@ -394,9 +406,10 @@
             // 
             this.labelControl35.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl35.Appearance.Options.UseFont = true;
-            this.labelControl35.Location = new System.Drawing.Point(700, 38);
+            this.labelControl35.Location = new System.Drawing.Point(817, 50);
+            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(36, 20);
+            this.labelControl35.Size = new System.Drawing.Size(45, 25);
             this.labelControl35.TabIndex = 2;
             this.labelControl35.Text = "Total";
             // 
@@ -404,7 +417,8 @@
             // 
             this.txtTotTotal.EditValue = "0";
             this.txtTotTotal.Enabled = false;
-            this.txtTotTotal.Location = new System.Drawing.Point(669, 65);
+            this.txtTotTotal.Location = new System.Drawing.Point(780, 85);
+            this.txtTotTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotTotal.Name = "txtTotTotal";
             this.txtTotTotal.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotTotal.Properties.Appearance.Options.UseFont = true;
@@ -425,14 +439,15 @@
             this.txtTotTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTotTotal.Size = new System.Drawing.Size(98, 24);
+            this.txtTotTotal.Size = new System.Drawing.Size(114, 28);
             this.txtTotTotal.TabIndex = 3;
             // 
             // txtTot1
             // 
             this.txtTot1.EditValue = "0";
             this.txtTot1.Enabled = false;
-            this.txtTot1.Location = new System.Drawing.Point(573, 65);
+            this.txtTot1.Location = new System.Drawing.Point(668, 85);
+            this.txtTot1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot1.Name = "txtTot1";
             this.txtTot1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot1.Properties.Appearance.Options.UseFont = true;
@@ -453,14 +468,15 @@
             this.txtTot1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot1.Size = new System.Drawing.Size(57, 22);
+            this.txtTot1.Size = new System.Drawing.Size(66, 26);
             this.txtTot1.TabIndex = 3;
             // 
             // txtTot2
             // 
             this.txtTot2.EditValue = "0";
             this.txtTot2.Enabled = false;
-            this.txtTot2.Location = new System.Drawing.Point(516, 65);
+            this.txtTot2.Location = new System.Drawing.Point(602, 85);
+            this.txtTot2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot2.Name = "txtTot2";
             this.txtTot2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot2.Properties.Appearance.Options.UseFont = true;
@@ -481,14 +497,15 @@
             this.txtTot2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot2.Size = new System.Drawing.Size(57, 22);
+            this.txtTot2.Size = new System.Drawing.Size(66, 26);
             this.txtTot2.TabIndex = 3;
             // 
             // txtTot5
             // 
             this.txtTot5.EditValue = "0";
             this.txtTot5.Enabled = false;
-            this.txtTot5.Location = new System.Drawing.Point(459, 65);
+            this.txtTot5.Location = new System.Drawing.Point(535, 85);
+            this.txtTot5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot5.Name = "txtTot5";
             this.txtTot5.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot5.Properties.Appearance.Options.UseFont = true;
@@ -509,14 +526,15 @@
             this.txtTot5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot5.Size = new System.Drawing.Size(57, 22);
+            this.txtTot5.Size = new System.Drawing.Size(66, 26);
             this.txtTot5.TabIndex = 3;
             // 
             // txtTot10
             // 
             this.txtTot10.EditValue = "0";
             this.txtTot10.Enabled = false;
-            this.txtTot10.Location = new System.Drawing.Point(402, 65);
+            this.txtTot10.Location = new System.Drawing.Point(469, 85);
+            this.txtTot10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot10.Name = "txtTot10";
             this.txtTot10.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot10.Properties.Appearance.Options.UseFont = true;
@@ -537,14 +555,15 @@
             this.txtTot10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot10.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot10.Size = new System.Drawing.Size(57, 22);
+            this.txtTot10.Size = new System.Drawing.Size(66, 26);
             this.txtTot10.TabIndex = 3;
             // 
             // txtTot20
             // 
             this.txtTot20.EditValue = "0";
             this.txtTot20.Enabled = false;
-            this.txtTot20.Location = new System.Drawing.Point(345, 65);
+            this.txtTot20.Location = new System.Drawing.Point(402, 85);
+            this.txtTot20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot20.Name = "txtTot20";
             this.txtTot20.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot20.Properties.Appearance.Options.UseFont = true;
@@ -565,14 +584,15 @@
             this.txtTot20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot20.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot20.Size = new System.Drawing.Size(57, 22);
+            this.txtTot20.Size = new System.Drawing.Size(66, 26);
             this.txtTot20.TabIndex = 3;
             // 
             // txtTot50
             // 
             this.txtTot50.EditValue = "0";
             this.txtTot50.Enabled = false;
-            this.txtTot50.Location = new System.Drawing.Point(288, 65);
+            this.txtTot50.Location = new System.Drawing.Point(336, 85);
+            this.txtTot50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot50.Name = "txtTot50";
             this.txtTot50.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot50.Properties.Appearance.Options.UseFont = true;
@@ -593,14 +613,15 @@
             this.txtTot50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot50.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot50.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot50.Size = new System.Drawing.Size(57, 22);
+            this.txtTot50.Size = new System.Drawing.Size(66, 26);
             this.txtTot50.TabIndex = 3;
             // 
             // txtTot100
             // 
             this.txtTot100.EditValue = "0";
             this.txtTot100.Enabled = false;
-            this.txtTot100.Location = new System.Drawing.Point(231, 65);
+            this.txtTot100.Location = new System.Drawing.Point(269, 85);
+            this.txtTot100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot100.Name = "txtTot100";
             this.txtTot100.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot100.Properties.Appearance.Options.UseFont = true;
@@ -621,14 +642,15 @@
             this.txtTot100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot100.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot100.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot100.Size = new System.Drawing.Size(57, 22);
+            this.txtTot100.Size = new System.Drawing.Size(66, 26);
             this.txtTot100.TabIndex = 3;
             // 
             // txtTot200
             // 
             this.txtTot200.EditValue = "0";
             this.txtTot200.Enabled = false;
-            this.txtTot200.Location = new System.Drawing.Point(174, 65);
+            this.txtTot200.Location = new System.Drawing.Point(203, 85);
+            this.txtTot200.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot200.Name = "txtTot200";
             this.txtTot200.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot200.Properties.Appearance.Options.UseFont = true;
@@ -649,14 +671,15 @@
             this.txtTot200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot200.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot200.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot200.Size = new System.Drawing.Size(57, 22);
+            this.txtTot200.Size = new System.Drawing.Size(66, 26);
             this.txtTot200.TabIndex = 3;
             // 
             // txtTot500
             // 
             this.txtTot500.EditValue = "0";
             this.txtTot500.Enabled = false;
-            this.txtTot500.Location = new System.Drawing.Point(117, 65);
+            this.txtTot500.Location = new System.Drawing.Point(136, 85);
+            this.txtTot500.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot500.Name = "txtTot500";
             this.txtTot500.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot500.Properties.Appearance.Options.UseFont = true;
@@ -677,14 +700,15 @@
             this.txtTot500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot500.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot500.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot500.Size = new System.Drawing.Size(57, 22);
+            this.txtTot500.Size = new System.Drawing.Size(66, 26);
             this.txtTot500.TabIndex = 3;
             // 
             // txtTot1000
             // 
             this.txtTot1000.EditValue = "0";
             this.txtTot1000.Enabled = false;
-            this.txtTot1000.Location = new System.Drawing.Point(60, 65);
+            this.txtTot1000.Location = new System.Drawing.Point(70, 85);
+            this.txtTot1000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot1000.Name = "txtTot1000";
             this.txtTot1000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot1000.Properties.Appearance.Options.UseFont = true;
@@ -705,14 +729,15 @@
             this.txtTot1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot1000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot1000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot1000.Size = new System.Drawing.Size(57, 22);
+            this.txtTot1000.Size = new System.Drawing.Size(66, 26);
             this.txtTot1000.TabIndex = 3;
             // 
             // txtTot2000
             // 
             this.txtTot2000.EditValue = "0";
             this.txtTot2000.Enabled = false;
-            this.txtTot2000.Location = new System.Drawing.Point(3, 65);
+            this.txtTot2000.Location = new System.Drawing.Point(3, 85);
+            this.txtTot2000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTot2000.Name = "txtTot2000";
             this.txtTot2000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTot2000.Properties.Appearance.Options.UseFont = true;
@@ -733,7 +758,7 @@
             this.txtTot2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTot2000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTot2000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTot2000.Size = new System.Drawing.Size(57, 22);
+            this.txtTot2000.Size = new System.Drawing.Size(66, 26);
             this.txtTot2000.TabIndex = 3;
             // 
             // groupControl2
@@ -787,9 +812,10 @@
             this.groupControl2.Controls.Add(this.labelControl2);
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl2.Location = new System.Drawing.Point(7, 104);
+            this.groupControl2.Location = new System.Drawing.Point(8, 136);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(224, 335);
+            this.groupControl2.Size = new System.Drawing.Size(261, 438);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Cash IN";
             this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupControl2_Paint);
@@ -798,7 +824,8 @@
             // 
             this.txtCashInTotal.EditValue = "0";
             this.txtCashInTotal.Enabled = false;
-            this.txtCashInTotal.Location = new System.Drawing.Point(115, 304);
+            this.txtCashInTotal.Location = new System.Drawing.Point(134, 398);
+            this.txtCashInTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInTotal.Name = "txtCashInTotal";
             this.txtCashInTotal.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInTotal.Properties.Appearance.Options.UseFont = true;
@@ -819,14 +846,15 @@
             this.txtCashInTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInTotal.Size = new System.Drawing.Size(104, 24);
+            this.txtCashInTotal.Size = new System.Drawing.Size(121, 28);
             this.txtCashInTotal.TabIndex = 3;
             // 
             // txtCashInAmount1
             // 
             this.txtCashInAmount1.EditValue = "0";
             this.txtCashInAmount1.Enabled = false;
-            this.txtCashInAmount1.Location = new System.Drawing.Point(155, 274);
+            this.txtCashInAmount1.Location = new System.Drawing.Point(181, 358);
+            this.txtCashInAmount1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount1.Name = "txtCashInAmount1";
             this.txtCashInAmount1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount1.Properties.Appearance.Options.UseFont = true;
@@ -847,14 +875,15 @@
             this.txtCashInAmount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount1.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount1.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount1.TabIndex = 3;
             // 
             // txtCashInCount1
             // 
             this.txtCashInCount1.EditValue = "0";
             this.txtCashInCount1.EnterMoveNextControl = true;
-            this.txtCashInCount1.Location = new System.Drawing.Point(79, 274);
+            this.txtCashInCount1.Location = new System.Drawing.Point(92, 358);
+            this.txtCashInCount1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount1.Name = "txtCashInCount1";
             this.txtCashInCount1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount1.Properties.Appearance.Options.UseFont = true;
@@ -875,7 +904,7 @@
             this.txtCashInCount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount1.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount1.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount1.TabIndex = 13;
             this.txtCashInCount1.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -883,9 +912,10 @@
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl22.Appearance.Options.UseFont = true;
-            this.labelControl22.Location = new System.Drawing.Point(136, 276);
+            this.labelControl22.Location = new System.Drawing.Point(159, 361);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(11, 20);
+            this.labelControl22.Size = new System.Drawing.Size(13, 25);
             this.labelControl22.TabIndex = 2;
             this.labelControl22.Text = "=";
             // 
@@ -893,9 +923,10 @@
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Location = new System.Drawing.Point(136, 252);
+            this.labelControl21.Location = new System.Drawing.Point(159, 330);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(11, 20);
+            this.labelControl21.Size = new System.Drawing.Size(13, 25);
             this.labelControl21.TabIndex = 2;
             this.labelControl21.Text = "=";
             // 
@@ -903,9 +934,10 @@
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(136, 228);
+            this.labelControl20.Location = new System.Drawing.Point(159, 298);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(11, 20);
+            this.labelControl20.Size = new System.Drawing.Size(13, 25);
             this.labelControl20.TabIndex = 2;
             this.labelControl20.Text = "=";
             // 
@@ -913,9 +945,10 @@
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(136, 204);
+            this.labelControl19.Location = new System.Drawing.Point(159, 267);
+            this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(11, 20);
+            this.labelControl19.Size = new System.Drawing.Size(13, 25);
             this.labelControl19.TabIndex = 2;
             this.labelControl19.Text = "=";
             // 
@@ -923,9 +956,10 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(136, 180);
+            this.labelControl18.Location = new System.Drawing.Point(159, 235);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(11, 20);
+            this.labelControl18.Size = new System.Drawing.Size(13, 25);
             this.labelControl18.TabIndex = 2;
             this.labelControl18.Text = "=";
             // 
@@ -933,9 +967,10 @@
             // 
             this.labelControl17.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl17.Appearance.Options.UseFont = true;
-            this.labelControl17.Location = new System.Drawing.Point(136, 156);
+            this.labelControl17.Location = new System.Drawing.Point(159, 204);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(11, 20);
+            this.labelControl17.Size = new System.Drawing.Size(13, 25);
             this.labelControl17.TabIndex = 2;
             this.labelControl17.Text = "=";
             // 
@@ -943,9 +978,10 @@
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(136, 132);
+            this.labelControl16.Location = new System.Drawing.Point(159, 173);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(11, 20);
+            this.labelControl16.Size = new System.Drawing.Size(13, 25);
             this.labelControl16.TabIndex = 2;
             this.labelControl16.Text = "=";
             // 
@@ -953,9 +989,10 @@
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(136, 108);
+            this.labelControl15.Location = new System.Drawing.Point(159, 141);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(11, 20);
+            this.labelControl15.Size = new System.Drawing.Size(13, 25);
             this.labelControl15.TabIndex = 2;
             this.labelControl15.Text = "=";
             // 
@@ -963,9 +1000,10 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(136, 84);
+            this.labelControl14.Location = new System.Drawing.Point(159, 110);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(11, 20);
+            this.labelControl14.Size = new System.Drawing.Size(13, 25);
             this.labelControl14.TabIndex = 2;
             this.labelControl14.Text = "=";
             // 
@@ -973,9 +1011,10 @@
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(136, 60);
+            this.labelControl13.Location = new System.Drawing.Point(159, 78);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(11, 20);
+            this.labelControl13.Size = new System.Drawing.Size(13, 25);
             this.labelControl13.TabIndex = 2;
             this.labelControl13.Text = "=";
             // 
@@ -983,9 +1022,10 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(136, 36);
+            this.labelControl12.Location = new System.Drawing.Point(159, 47);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(11, 20);
+            this.labelControl12.Size = new System.Drawing.Size(13, 25);
             this.labelControl12.TabIndex = 2;
             this.labelControl12.Text = "=";
             // 
@@ -993,7 +1033,8 @@
             // 
             this.txtCashInAmount2.EditValue = "0";
             this.txtCashInAmount2.Enabled = false;
-            this.txtCashInAmount2.Location = new System.Drawing.Point(155, 250);
+            this.txtCashInAmount2.Location = new System.Drawing.Point(181, 327);
+            this.txtCashInAmount2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount2.Name = "txtCashInAmount2";
             this.txtCashInAmount2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount2.Properties.Appearance.Options.UseFont = true;
@@ -1014,14 +1055,15 @@
             this.txtCashInAmount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount2.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount2.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount2.TabIndex = 3;
             // 
             // txtCashInCount2
             // 
             this.txtCashInCount2.EditValue = "0";
             this.txtCashInCount2.EnterMoveNextControl = true;
-            this.txtCashInCount2.Location = new System.Drawing.Point(79, 250);
+            this.txtCashInCount2.Location = new System.Drawing.Point(92, 327);
+            this.txtCashInCount2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount2.Name = "txtCashInCount2";
             this.txtCashInCount2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount2.Properties.Appearance.Options.UseFont = true;
@@ -1042,7 +1084,7 @@
             this.txtCashInCount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount2.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount2.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount2.TabIndex = 12;
             this.txtCashInCount2.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1050,7 +1092,8 @@
             // 
             this.txtCashInAmount5.EditValue = "0";
             this.txtCashInAmount5.Enabled = false;
-            this.txtCashInAmount5.Location = new System.Drawing.Point(155, 226);
+            this.txtCashInAmount5.Location = new System.Drawing.Point(181, 296);
+            this.txtCashInAmount5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount5.Name = "txtCashInAmount5";
             this.txtCashInAmount5.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount5.Properties.Appearance.Options.UseFont = true;
@@ -1071,14 +1114,15 @@
             this.txtCashInAmount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount5.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount5.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount5.TabIndex = 3;
             // 
             // txtCashInCount5
             // 
             this.txtCashInCount5.EditValue = "0";
             this.txtCashInCount5.EnterMoveNextControl = true;
-            this.txtCashInCount5.Location = new System.Drawing.Point(79, 226);
+            this.txtCashInCount5.Location = new System.Drawing.Point(92, 296);
+            this.txtCashInCount5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount5.Name = "txtCashInCount5";
             this.txtCashInCount5.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount5.Properties.Appearance.Options.UseFont = true;
@@ -1099,7 +1143,7 @@
             this.txtCashInCount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount5.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount5.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount5.TabIndex = 11;
             this.txtCashInCount5.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1107,7 +1151,8 @@
             // 
             this.txtCashInAmount10.EditValue = "0";
             this.txtCashInAmount10.Enabled = false;
-            this.txtCashInAmount10.Location = new System.Drawing.Point(155, 202);
+            this.txtCashInAmount10.Location = new System.Drawing.Point(181, 264);
+            this.txtCashInAmount10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount10.Name = "txtCashInAmount10";
             this.txtCashInAmount10.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount10.Properties.Appearance.Options.UseFont = true;
@@ -1128,14 +1173,15 @@
             this.txtCashInAmount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount10.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount10.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount10.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount10.TabIndex = 3;
             // 
             // txtCashInCount10
             // 
             this.txtCashInCount10.EditValue = "0";
             this.txtCashInCount10.EnterMoveNextControl = true;
-            this.txtCashInCount10.Location = new System.Drawing.Point(79, 202);
+            this.txtCashInCount10.Location = new System.Drawing.Point(92, 264);
+            this.txtCashInCount10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount10.Name = "txtCashInCount10";
             this.txtCashInCount10.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount10.Properties.Appearance.Options.UseFont = true;
@@ -1156,7 +1202,7 @@
             this.txtCashInCount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount10.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount10.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount10.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount10.TabIndex = 10;
             this.txtCashInCount10.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1165,7 +1211,8 @@
             this.txtCashInAmount20.AllowDrop = true;
             this.txtCashInAmount20.EditValue = "0";
             this.txtCashInAmount20.Enabled = false;
-            this.txtCashInAmount20.Location = new System.Drawing.Point(155, 178);
+            this.txtCashInAmount20.Location = new System.Drawing.Point(181, 233);
+            this.txtCashInAmount20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount20.Name = "txtCashInAmount20";
             this.txtCashInAmount20.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount20.Properties.Appearance.Options.UseFont = true;
@@ -1186,14 +1233,15 @@
             this.txtCashInAmount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount20.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount20.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount20.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount20.TabIndex = 3;
             // 
             // txtCashInCount20
             // 
             this.txtCashInCount20.EditValue = "0";
             this.txtCashInCount20.EnterMoveNextControl = true;
-            this.txtCashInCount20.Location = new System.Drawing.Point(79, 178);
+            this.txtCashInCount20.Location = new System.Drawing.Point(92, 233);
+            this.txtCashInCount20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount20.Name = "txtCashInCount20";
             this.txtCashInCount20.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount20.Properties.Appearance.Options.UseFont = true;
@@ -1214,7 +1262,7 @@
             this.txtCashInCount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount20.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount20.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount20.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount20.TabIndex = 9;
             this.txtCashInCount20.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1222,7 +1270,8 @@
             // 
             this.txtCashInAmount50.EditValue = "0";
             this.txtCashInAmount50.Enabled = false;
-            this.txtCashInAmount50.Location = new System.Drawing.Point(155, 154);
+            this.txtCashInAmount50.Location = new System.Drawing.Point(181, 201);
+            this.txtCashInAmount50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount50.Name = "txtCashInAmount50";
             this.txtCashInAmount50.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount50.Properties.Appearance.Options.UseFont = true;
@@ -1243,14 +1292,15 @@
             this.txtCashInAmount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount50.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount50.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount50.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount50.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount50.TabIndex = 3;
             // 
             // txtCashInCount50
             // 
             this.txtCashInCount50.EditValue = "0";
             this.txtCashInCount50.EnterMoveNextControl = true;
-            this.txtCashInCount50.Location = new System.Drawing.Point(79, 154);
+            this.txtCashInCount50.Location = new System.Drawing.Point(92, 201);
+            this.txtCashInCount50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount50.Name = "txtCashInCount50";
             this.txtCashInCount50.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount50.Properties.Appearance.Options.UseFont = true;
@@ -1271,7 +1321,7 @@
             this.txtCashInCount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount50.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount50.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount50.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount50.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount50.TabIndex = 8;
             this.txtCashInCount50.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1279,7 +1329,8 @@
             // 
             this.txtCashInAmount100.EditValue = "0";
             this.txtCashInAmount100.Enabled = false;
-            this.txtCashInAmount100.Location = new System.Drawing.Point(155, 130);
+            this.txtCashInAmount100.Location = new System.Drawing.Point(181, 170);
+            this.txtCashInAmount100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount100.Name = "txtCashInAmount100";
             this.txtCashInAmount100.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount100.Properties.Appearance.Options.UseFont = true;
@@ -1300,14 +1351,15 @@
             this.txtCashInAmount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount100.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount100.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount100.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount100.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount100.TabIndex = 3;
             // 
             // txtCashInCount100
             // 
             this.txtCashInCount100.EditValue = "0";
             this.txtCashInCount100.EnterMoveNextControl = true;
-            this.txtCashInCount100.Location = new System.Drawing.Point(79, 130);
+            this.txtCashInCount100.Location = new System.Drawing.Point(92, 170);
+            this.txtCashInCount100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount100.Name = "txtCashInCount100";
             this.txtCashInCount100.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount100.Properties.Appearance.Options.UseFont = true;
@@ -1328,7 +1380,7 @@
             this.txtCashInCount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount100.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount100.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount100.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount100.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount100.TabIndex = 7;
             this.txtCashInCount100.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1336,7 +1388,8 @@
             // 
             this.txtCashInAmount200.EditValue = "0";
             this.txtCashInAmount200.Enabled = false;
-            this.txtCashInAmount200.Location = new System.Drawing.Point(155, 106);
+            this.txtCashInAmount200.Location = new System.Drawing.Point(181, 139);
+            this.txtCashInAmount200.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount200.Name = "txtCashInAmount200";
             this.txtCashInAmount200.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount200.Properties.Appearance.Options.UseFont = true;
@@ -1357,14 +1410,15 @@
             this.txtCashInAmount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount200.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount200.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount200.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount200.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount200.TabIndex = 3;
             // 
             // txtCashInCount200
             // 
             this.txtCashInCount200.EditValue = "0";
             this.txtCashInCount200.EnterMoveNextControl = true;
-            this.txtCashInCount200.Location = new System.Drawing.Point(79, 106);
+            this.txtCashInCount200.Location = new System.Drawing.Point(92, 139);
+            this.txtCashInCount200.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount200.Name = "txtCashInCount200";
             this.txtCashInCount200.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount200.Properties.Appearance.Options.UseFont = true;
@@ -1385,7 +1439,7 @@
             this.txtCashInCount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount200.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount200.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount200.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount200.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount200.TabIndex = 6;
             this.txtCashInCount200.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1393,7 +1447,8 @@
             // 
             this.txtCashInAmount500.EditValue = "0";
             this.txtCashInAmount500.Enabled = false;
-            this.txtCashInAmount500.Location = new System.Drawing.Point(155, 82);
+            this.txtCashInAmount500.Location = new System.Drawing.Point(181, 107);
+            this.txtCashInAmount500.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount500.Name = "txtCashInAmount500";
             this.txtCashInAmount500.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount500.Properties.Appearance.Options.UseFont = true;
@@ -1414,14 +1469,15 @@
             this.txtCashInAmount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount500.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount500.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount500.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount500.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount500.TabIndex = 3;
             // 
             // txtCashInCount500
             // 
             this.txtCashInCount500.EditValue = "0";
             this.txtCashInCount500.EnterMoveNextControl = true;
-            this.txtCashInCount500.Location = new System.Drawing.Point(79, 82);
+            this.txtCashInCount500.Location = new System.Drawing.Point(92, 107);
+            this.txtCashInCount500.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount500.Name = "txtCashInCount500";
             this.txtCashInCount500.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount500.Properties.Appearance.Options.UseFont = true;
@@ -1442,7 +1498,7 @@
             this.txtCashInCount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount500.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount500.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount500.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount500.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount500.TabIndex = 5;
             this.txtCashInCount500.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1450,7 +1506,8 @@
             // 
             this.txtCashInAmount1000.EditValue = "0";
             this.txtCashInAmount1000.Enabled = false;
-            this.txtCashInAmount1000.Location = new System.Drawing.Point(155, 58);
+            this.txtCashInAmount1000.Location = new System.Drawing.Point(181, 76);
+            this.txtCashInAmount1000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount1000.Name = "txtCashInAmount1000";
             this.txtCashInAmount1000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount1000.Properties.Appearance.Options.UseFont = true;
@@ -1471,14 +1528,15 @@
             this.txtCashInAmount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount1000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount1000.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount1000.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount1000.TabIndex = 3;
             // 
             // txtCashInCount1000
             // 
             this.txtCashInCount1000.EditValue = "0";
             this.txtCashInCount1000.EnterMoveNextControl = true;
-            this.txtCashInCount1000.Location = new System.Drawing.Point(79, 58);
+            this.txtCashInCount1000.Location = new System.Drawing.Point(92, 76);
+            this.txtCashInCount1000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount1000.Name = "txtCashInCount1000";
             this.txtCashInCount1000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount1000.Properties.Appearance.Options.UseFont = true;
@@ -1499,7 +1557,7 @@
             this.txtCashInCount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInCount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInCount1000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount1000.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount1000.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount1000.TabIndex = 4;
             this.txtCashInCount1000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1507,7 +1565,8 @@
             // 
             this.txtCashInAmount2000.EditValue = "0";
             this.txtCashInAmount2000.Enabled = false;
-            this.txtCashInAmount2000.Location = new System.Drawing.Point(155, 34);
+            this.txtCashInAmount2000.Location = new System.Drawing.Point(181, 44);
+            this.txtCashInAmount2000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInAmount2000.Name = "txtCashInAmount2000";
             this.txtCashInAmount2000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInAmount2000.Properties.Appearance.Options.UseFont = true;
@@ -1528,14 +1587,15 @@
             this.txtCashInAmount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashInAmount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashInAmount2000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInAmount2000.Size = new System.Drawing.Size(64, 24);
+            this.txtCashInAmount2000.Size = new System.Drawing.Size(75, 28);
             this.txtCashInAmount2000.TabIndex = 3;
             // 
             // txtCashInCount2000
             // 
             this.txtCashInCount2000.EditValue = "0";
             this.txtCashInCount2000.EnterMoveNextControl = true;
-            this.txtCashInCount2000.Location = new System.Drawing.Point(79, 34);
+            this.txtCashInCount2000.Location = new System.Drawing.Point(92, 44);
+            this.txtCashInCount2000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashInCount2000.Name = "txtCashInCount2000";
             this.txtCashInCount2000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashInCount2000.Properties.Appearance.Options.UseFont = true;
@@ -1556,7 +1616,7 @@
             this.txtCashInCount2000.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
             this.txtCashInCount2000.Properties.MaskSettings.Set("mask", "n0");
             this.txtCashInCount2000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashInCount2000.Size = new System.Drawing.Size(51, 24);
+            this.txtCashInCount2000.Size = new System.Drawing.Size(59, 28);
             this.txtCashInCount2000.TabIndex = 3;
             this.txtCashInCount2000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -1564,9 +1624,10 @@
             // 
             this.labelControl23.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl23.Appearance.Options.UseFont = true;
-            this.labelControl23.Location = new System.Drawing.Point(46, 306);
+            this.labelControl23.Location = new System.Drawing.Point(54, 400);
+            this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(36, 20);
+            this.labelControl23.Size = new System.Drawing.Size(45, 25);
             this.labelControl23.TabIndex = 2;
             this.labelControl23.Text = "Total";
             // 
@@ -1574,9 +1635,10 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(46, 276);
+            this.labelControl11.Location = new System.Drawing.Point(54, 361);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(21, 20);
+            this.labelControl11.Size = new System.Drawing.Size(27, 25);
             this.labelControl11.TabIndex = 2;
             this.labelControl11.Text = "1 x";
             // 
@@ -1584,9 +1646,10 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(46, 252);
+            this.labelControl10.Location = new System.Drawing.Point(54, 330);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(21, 20);
+            this.labelControl10.Size = new System.Drawing.Size(27, 25);
             this.labelControl10.TabIndex = 2;
             this.labelControl10.Text = "2 x";
             // 
@@ -1594,9 +1657,10 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(46, 228);
+            this.labelControl9.Location = new System.Drawing.Point(54, 298);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(21, 20);
+            this.labelControl9.Size = new System.Drawing.Size(27, 25);
             this.labelControl9.TabIndex = 2;
             this.labelControl9.Text = "5 x";
             // 
@@ -1604,9 +1668,10 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(37, 204);
+            this.labelControl8.Location = new System.Drawing.Point(43, 267);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(30, 20);
+            this.labelControl8.Size = new System.Drawing.Size(38, 25);
             this.labelControl8.TabIndex = 2;
             this.labelControl8.Text = "10 x";
             // 
@@ -1614,9 +1679,10 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(37, 180);
+            this.labelControl7.Location = new System.Drawing.Point(43, 235);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(30, 20);
+            this.labelControl7.Size = new System.Drawing.Size(38, 25);
             this.labelControl7.TabIndex = 2;
             this.labelControl7.Text = "20 x";
             // 
@@ -1624,9 +1690,10 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(37, 156);
+            this.labelControl6.Location = new System.Drawing.Point(43, 204);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(30, 20);
+            this.labelControl6.Size = new System.Drawing.Size(38, 25);
             this.labelControl6.TabIndex = 2;
             this.labelControl6.Text = "50 x";
             // 
@@ -1634,9 +1701,10 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(28, 132);
+            this.labelControl5.Location = new System.Drawing.Point(33, 173);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(39, 20);
+            this.labelControl5.Size = new System.Drawing.Size(49, 25);
             this.labelControl5.TabIndex = 2;
             this.labelControl5.Text = "100 x";
             // 
@@ -1644,9 +1712,10 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(28, 108);
+            this.labelControl4.Location = new System.Drawing.Point(33, 141);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(39, 20);
+            this.labelControl4.Size = new System.Drawing.Size(49, 25);
             this.labelControl4.TabIndex = 2;
             this.labelControl4.Text = "200 x";
             // 
@@ -1654,9 +1723,10 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(28, 84);
+            this.labelControl3.Location = new System.Drawing.Point(33, 110);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(39, 20);
+            this.labelControl3.Size = new System.Drawing.Size(49, 25);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "500 x";
             // 
@@ -1664,9 +1734,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(19, 60);
+            this.labelControl2.Location = new System.Drawing.Point(22, 78);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(48, 20);
+            this.labelControl2.Size = new System.Drawing.Size(60, 25);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "1000 x";
             // 
@@ -1674,9 +1745,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(19, 36);
+            this.labelControl1.Location = new System.Drawing.Point(22, 47);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(48, 20);
+            this.labelControl1.Size = new System.Drawing.Size(60, 25);
             this.labelControl1.TabIndex = 2;
             this.labelControl1.Text = "2000 x";
             // 
@@ -1703,9 +1775,10 @@
             this.groupControl3.Controls.Add(this.txtCashMemoNo);
             this.groupControl3.Controls.Add(this.txtCashMemoDate);
             this.groupControl3.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl3.Location = new System.Drawing.Point(284, 104);
+            this.groupControl3.Location = new System.Drawing.Point(331, 136);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(255, 335);
+            this.groupControl3.Size = new System.Drawing.Size(297, 438);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Invoice Details";
             this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
@@ -1714,9 +1787,10 @@
             // 
             this.labelControl52.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl52.Appearance.Options.UseFont = true;
-            this.labelControl52.Location = new System.Drawing.Point(15, 302);
+            this.labelControl52.Location = new System.Drawing.Point(17, 395);
+            this.labelControl52.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl52.Name = "labelControl52";
-            this.labelControl52.Size = new System.Drawing.Size(98, 20);
+            this.labelControl52.Size = new System.Drawing.Size(125, 25);
             this.labelControl52.TabIndex = 2;
             this.labelControl52.Text = "Total Payback";
             // 
@@ -1724,9 +1798,10 @@
             // 
             this.labelControl51.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl51.Appearance.Options.UseFont = true;
-            this.labelControl51.Location = new System.Drawing.Point(11, 269);
+            this.labelControl51.Location = new System.Drawing.Point(14, 352);
+            this.labelControl51.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(102, 20);
+            this.labelControl51.Size = new System.Drawing.Size(128, 25);
             this.labelControl51.TabIndex = 2;
             this.labelControl51.Text = "Total Recieved";
             // 
@@ -1734,9 +1809,10 @@
             // 
             this.labelControl67.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl67.Appearance.Options.UseFont = true;
-            this.labelControl67.Location = new System.Drawing.Point(41, 236);
+            this.labelControl67.Location = new System.Drawing.Point(52, 309);
+            this.labelControl67.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl67.Name = "labelControl67";
-            this.labelControl67.Size = new System.Drawing.Size(72, 20);
+            this.labelControl67.Size = new System.Drawing.Size(90, 25);
             this.labelControl67.TabIndex = 2;
             this.labelControl67.Text = "Auto Cash";
             // 
@@ -1744,9 +1820,10 @@
             // 
             this.labelControl50.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl50.Appearance.Options.UseFont = true;
-            this.labelControl50.Location = new System.Drawing.Point(45, 203);
+            this.labelControl50.Location = new System.Drawing.Point(58, 265);
+            this.labelControl50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(68, 20);
+            this.labelControl50.Size = new System.Drawing.Size(84, 25);
             this.labelControl50.TabIndex = 2;
             this.labelControl50.Text = "Total INR";
             // 
@@ -1754,9 +1831,10 @@
             // 
             this.labelControl49.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl49.Appearance.Options.UseFont = true;
-            this.labelControl49.Location = new System.Drawing.Point(27, 170);
+            this.labelControl49.Location = new System.Drawing.Point(33, 222);
+            this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(86, 20);
+            this.labelControl49.Size = new System.Drawing.Size(109, 25);
             this.labelControl49.TabIndex = 2;
             this.labelControl49.Text = "PG Payment";
             // 
@@ -1764,9 +1842,10 @@
             // 
             this.labelControl48.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl48.Appearance.Options.UseFont = true;
-            this.labelControl48.Location = new System.Drawing.Point(15, 137);
+            this.labelControl48.Location = new System.Drawing.Point(17, 179);
+            this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(98, 20);
+            this.labelControl48.Size = new System.Drawing.Size(125, 25);
             this.labelControl48.TabIndex = 2;
             this.labelControl48.Text = "Card Payment";
             // 
@@ -1774,9 +1853,10 @@
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(22, 38);
+            this.labelControl25.Location = new System.Drawing.Point(27, 50);
+            this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(91, 20);
+            this.labelControl25.Size = new System.Drawing.Size(115, 25);
             this.labelControl25.TabIndex = 2;
             this.labelControl25.Text = "Memo Dated";
             // 
@@ -1784,9 +1864,10 @@
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(39, 71);
+            this.labelControl24.Location = new System.Drawing.Point(48, 93);
+            this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(74, 20);
+            this.labelControl24.Size = new System.Drawing.Size(94, 25);
             this.labelControl24.TabIndex = 2;
             this.labelControl24.Text = "Memo No.";
             // 
@@ -1794,16 +1875,18 @@
             // 
             this.labelControl47.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl47.Appearance.Options.UseFont = true;
-            this.labelControl47.Location = new System.Drawing.Point(6, 104);
+            this.labelControl47.Location = new System.Drawing.Point(7, 136);
+            this.labelControl47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(107, 20);
+            this.labelControl47.Size = new System.Drawing.Size(135, 25);
             this.labelControl47.TabIndex = 2;
             this.labelControl47.Text = "Memo Amount";
             // 
             // txtTotalPayBack
             // 
             this.txtTotalPayBack.EditValue = "0";
-            this.txtTotalPayBack.Location = new System.Drawing.Point(124, 300);
+            this.txtTotalPayBack.Location = new System.Drawing.Point(145, 392);
+            this.txtTotalPayBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalPayBack.Name = "txtTotalPayBack";
             this.txtTotalPayBack.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalPayBack.Properties.Appearance.Options.UseFont = true;
@@ -1829,14 +1912,15 @@
             this.txtTotalPayBack.Properties.MaskSettings.Set("mask", "n0");
             this.txtTotalPayBack.Properties.ReadOnly = true;
             this.txtTotalPayBack.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTotalPayBack.Size = new System.Drawing.Size(115, 24);
+            this.txtTotalPayBack.Size = new System.Drawing.Size(134, 28);
             this.txtTotalPayBack.TabIndex = 3;
             this.txtTotalPayBack.TabStop = false;
             // 
             // txtTotalReceived
             // 
             this.txtTotalReceived.EditValue = "0";
-            this.txtTotalReceived.Location = new System.Drawing.Point(124, 267);
+            this.txtTotalReceived.Location = new System.Drawing.Point(145, 349);
+            this.txtTotalReceived.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalReceived.Name = "txtTotalReceived";
             this.txtTotalReceived.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTotalReceived.Properties.Appearance.Options.UseFont = true;
@@ -1858,14 +1942,15 @@
             this.txtTotalReceived.Properties.MaskSettings.Set("mask", "n0");
             this.txtTotalReceived.Properties.ReadOnly = true;
             this.txtTotalReceived.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTotalReceived.Size = new System.Drawing.Size(115, 24);
+            this.txtTotalReceived.Size = new System.Drawing.Size(134, 28);
             this.txtTotalReceived.TabIndex = 3;
             this.txtTotalReceived.TabStop = false;
             // 
             // txtAutoCash
             // 
             this.txtAutoCash.EditValue = "0";
-            this.txtAutoCash.Location = new System.Drawing.Point(125, 234);
+            this.txtAutoCash.Location = new System.Drawing.Point(146, 306);
+            this.txtAutoCash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAutoCash.Name = "txtAutoCash";
             this.txtAutoCash.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAutoCash.Properties.Appearance.Options.UseFont = true;
@@ -1887,14 +1972,15 @@
             this.txtAutoCash.Properties.MaskSettings.Set("mask", "n0");
             this.txtAutoCash.Properties.ReadOnly = true;
             this.txtAutoCash.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtAutoCash.Size = new System.Drawing.Size(115, 24);
+            this.txtAutoCash.Size = new System.Drawing.Size(134, 28);
             this.txtAutoCash.TabIndex = 3;
             this.txtAutoCash.TabStop = false;
             // 
             // txtBillBalanceAmount
             // 
             this.txtBillBalanceAmount.EditValue = "0";
-            this.txtBillBalanceAmount.Location = new System.Drawing.Point(124, 201);
+            this.txtBillBalanceAmount.Location = new System.Drawing.Point(145, 263);
+            this.txtBillBalanceAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillBalanceAmount.Name = "txtBillBalanceAmount";
             this.txtBillBalanceAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBillBalanceAmount.Properties.Appearance.Options.UseFont = true;
@@ -1916,14 +2002,15 @@
             this.txtBillBalanceAmount.Properties.MaskSettings.Set("mask", "n0");
             this.txtBillBalanceAmount.Properties.ReadOnly = true;
             this.txtBillBalanceAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtBillBalanceAmount.Size = new System.Drawing.Size(115, 24);
+            this.txtBillBalanceAmount.Size = new System.Drawing.Size(134, 28);
             this.txtBillBalanceAmount.TabIndex = 3;
             this.txtBillBalanceAmount.TabStop = false;
             // 
             // txtPGPayment
             // 
             this.txtPGPayment.EditValue = "0";
-            this.txtPGPayment.Location = new System.Drawing.Point(124, 168);
+            this.txtPGPayment.Location = new System.Drawing.Point(145, 220);
+            this.txtPGPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPGPayment.Name = "txtPGPayment";
             this.txtPGPayment.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPGPayment.Properties.Appearance.Options.UseFont = true;
@@ -1945,14 +2032,15 @@
             this.txtPGPayment.Properties.MaskSettings.Set("mask", "n0");
             this.txtPGPayment.Properties.ReadOnly = true;
             this.txtPGPayment.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPGPayment.Size = new System.Drawing.Size(115, 24);
+            this.txtPGPayment.Size = new System.Drawing.Size(134, 28);
             this.txtPGPayment.TabIndex = 3;
             this.txtPGPayment.TabStop = false;
             // 
             // txtCardPayment
             // 
             this.txtCardPayment.EditValue = "0";
-            this.txtCardPayment.Location = new System.Drawing.Point(124, 135);
+            this.txtCardPayment.Location = new System.Drawing.Point(145, 177);
+            this.txtCardPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCardPayment.Name = "txtCardPayment";
             this.txtCardPayment.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardPayment.Properties.Appearance.Options.UseFont = true;
@@ -1974,14 +2062,15 @@
             this.txtCardPayment.Properties.MaskSettings.Set("mask", "n0");
             this.txtCardPayment.Properties.ReadOnly = true;
             this.txtCardPayment.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCardPayment.Size = new System.Drawing.Size(115, 24);
+            this.txtCardPayment.Size = new System.Drawing.Size(134, 28);
             this.txtCardPayment.TabIndex = 3;
             this.txtCardPayment.TabStop = false;
             // 
             // txtCashMemoAmount
             // 
             this.txtCashMemoAmount.EditValue = "0";
-            this.txtCashMemoAmount.Location = new System.Drawing.Point(124, 102);
+            this.txtCashMemoAmount.Location = new System.Drawing.Point(145, 133);
+            this.txtCashMemoAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashMemoAmount.Name = "txtCashMemoAmount";
             this.txtCashMemoAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoAmount.Properties.Appearance.Options.UseFont = true;
@@ -2003,29 +2092,31 @@
             this.txtCashMemoAmount.Properties.MaskSettings.Set("mask", "n0");
             this.txtCashMemoAmount.Properties.ReadOnly = true;
             this.txtCashMemoAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashMemoAmount.Size = new System.Drawing.Size(115, 24);
+            this.txtCashMemoAmount.Size = new System.Drawing.Size(134, 28);
             this.txtCashMemoAmount.TabIndex = 3;
             this.txtCashMemoAmount.TabStop = false;
             // 
             // txtCashMemoNo
             // 
-            this.txtCashMemoNo.Location = new System.Drawing.Point(124, 69);
+            this.txtCashMemoNo.Location = new System.Drawing.Point(145, 90);
+            this.txtCashMemoNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashMemoNo.Name = "txtCashMemoNo";
             this.txtCashMemoNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoNo.Properties.Appearance.Options.UseFont = true;
             this.txtCashMemoNo.Properties.ReadOnly = true;
-            this.txtCashMemoNo.Size = new System.Drawing.Size(115, 24);
+            this.txtCashMemoNo.Size = new System.Drawing.Size(134, 28);
             this.txtCashMemoNo.TabIndex = 3;
             this.txtCashMemoNo.TabStop = false;
             // 
             // txtCashMemoDate
             // 
-            this.txtCashMemoDate.Location = new System.Drawing.Point(124, 36);
+            this.txtCashMemoDate.Location = new System.Drawing.Point(145, 47);
+            this.txtCashMemoDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashMemoDate.Name = "txtCashMemoDate";
             this.txtCashMemoDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashMemoDate.Properties.Appearance.Options.UseFont = true;
             this.txtCashMemoDate.Properties.ReadOnly = true;
-            this.txtCashMemoDate.Size = new System.Drawing.Size(115, 24);
+            this.txtCashMemoDate.Size = new System.Drawing.Size(134, 28);
             this.txtCashMemoDate.TabIndex = 3;
             this.txtCashMemoDate.TabStop = false;
             // 
@@ -2080,9 +2171,10 @@
             this.groupControl4.Controls.Add(this.labelControl65);
             this.groupControl4.Controls.Add(this.labelControl66);
             this.groupControl4.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl4.Location = new System.Drawing.Point(561, 104);
+            this.groupControl4.Location = new System.Drawing.Point(654, 136);
+            this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(224, 335);
+            this.groupControl4.Size = new System.Drawing.Size(261, 438);
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Cash OUT";
             // 
@@ -2090,7 +2182,8 @@
             // 
             this.txtCashOutCount50.EditValue = "0";
             this.txtCashOutCount50.EnterMoveNextControl = true;
-            this.txtCashOutCount50.Location = new System.Drawing.Point(79, 154);
+            this.txtCashOutCount50.Location = new System.Drawing.Point(92, 201);
+            this.txtCashOutCount50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount50.Name = "txtCashOutCount50";
             this.txtCashOutCount50.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount50.Properties.Appearance.Options.UseFont = true;
@@ -2111,7 +2204,7 @@
             this.txtCashOutCount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount50.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount50.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount50.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount50.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount50.TabIndex = 19;
             this.txtCashOutCount50.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2119,7 +2212,8 @@
             // 
             this.txtCashOutTotal.EditValue = "0";
             this.txtCashOutTotal.Enabled = false;
-            this.txtCashOutTotal.Location = new System.Drawing.Point(115, 304);
+            this.txtCashOutTotal.Location = new System.Drawing.Point(134, 398);
+            this.txtCashOutTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutTotal.Name = "txtCashOutTotal";
             this.txtCashOutTotal.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutTotal.Properties.Appearance.Options.UseFont = true;
@@ -2140,14 +2234,15 @@
             this.txtCashOutTotal.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutTotal.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutTotal.Size = new System.Drawing.Size(104, 24);
+            this.txtCashOutTotal.Size = new System.Drawing.Size(121, 28);
             this.txtCashOutTotal.TabIndex = 3;
             // 
             // txtCashOutAmount1
             // 
             this.txtCashOutAmount1.EditValue = "0";
             this.txtCashOutAmount1.Enabled = false;
-            this.txtCashOutAmount1.Location = new System.Drawing.Point(155, 274);
+            this.txtCashOutAmount1.Location = new System.Drawing.Point(181, 358);
+            this.txtCashOutAmount1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount1.Name = "txtCashOutAmount1";
             this.txtCashOutAmount1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount1.Properties.Appearance.Options.UseFont = true;
@@ -2168,14 +2263,15 @@
             this.txtCashOutAmount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount1.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount1.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount1.TabIndex = 3;
             // 
             // txtCashOutCount1
             // 
             this.txtCashOutCount1.EditValue = "0";
             this.txtCashOutCount1.EnterMoveNextControl = true;
-            this.txtCashOutCount1.Location = new System.Drawing.Point(79, 274);
+            this.txtCashOutCount1.Location = new System.Drawing.Point(92, 358);
+            this.txtCashOutCount1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount1.Name = "txtCashOutCount1";
             this.txtCashOutCount1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount1.Properties.Appearance.Options.UseFont = true;
@@ -2196,7 +2292,7 @@
             this.txtCashOutCount1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount1.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount1.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount1.TabIndex = 24;
             this.txtCashOutCount1.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2204,9 +2300,10 @@
             // 
             this.labelControl26.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl26.Appearance.Options.UseFont = true;
-            this.labelControl26.Location = new System.Drawing.Point(136, 276);
+            this.labelControl26.Location = new System.Drawing.Point(159, 361);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(11, 20);
+            this.labelControl26.Size = new System.Drawing.Size(13, 25);
             this.labelControl26.TabIndex = 2;
             this.labelControl26.Text = "=";
             // 
@@ -2214,9 +2311,10 @@
             // 
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl27.Appearance.Options.UseFont = true;
-            this.labelControl27.Location = new System.Drawing.Point(136, 252);
+            this.labelControl27.Location = new System.Drawing.Point(159, 330);
+            this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(11, 20);
+            this.labelControl27.Size = new System.Drawing.Size(13, 25);
             this.labelControl27.TabIndex = 2;
             this.labelControl27.Text = "=";
             // 
@@ -2224,9 +2322,10 @@
             // 
             this.labelControl28.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl28.Appearance.Options.UseFont = true;
-            this.labelControl28.Location = new System.Drawing.Point(136, 228);
+            this.labelControl28.Location = new System.Drawing.Point(159, 298);
+            this.labelControl28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(11, 20);
+            this.labelControl28.Size = new System.Drawing.Size(13, 25);
             this.labelControl28.TabIndex = 2;
             this.labelControl28.Text = "=";
             // 
@@ -2234,9 +2333,10 @@
             // 
             this.labelControl29.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl29.Appearance.Options.UseFont = true;
-            this.labelControl29.Location = new System.Drawing.Point(136, 204);
+            this.labelControl29.Location = new System.Drawing.Point(159, 267);
+            this.labelControl29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(11, 20);
+            this.labelControl29.Size = new System.Drawing.Size(13, 25);
             this.labelControl29.TabIndex = 2;
             this.labelControl29.Text = "=";
             // 
@@ -2244,9 +2344,10 @@
             // 
             this.labelControl30.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl30.Appearance.Options.UseFont = true;
-            this.labelControl30.Location = new System.Drawing.Point(136, 180);
+            this.labelControl30.Location = new System.Drawing.Point(159, 235);
+            this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(11, 20);
+            this.labelControl30.Size = new System.Drawing.Size(13, 25);
             this.labelControl30.TabIndex = 2;
             this.labelControl30.Text = "=";
             // 
@@ -2254,9 +2355,10 @@
             // 
             this.labelControl31.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl31.Appearance.Options.UseFont = true;
-            this.labelControl31.Location = new System.Drawing.Point(136, 156);
+            this.labelControl31.Location = new System.Drawing.Point(159, 204);
+            this.labelControl31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(11, 20);
+            this.labelControl31.Size = new System.Drawing.Size(13, 25);
             this.labelControl31.TabIndex = 2;
             this.labelControl31.Text = "=";
             // 
@@ -2264,9 +2366,10 @@
             // 
             this.labelControl32.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl32.Appearance.Options.UseFont = true;
-            this.labelControl32.Location = new System.Drawing.Point(136, 132);
+            this.labelControl32.Location = new System.Drawing.Point(159, 173);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(11, 20);
+            this.labelControl32.Size = new System.Drawing.Size(13, 25);
             this.labelControl32.TabIndex = 2;
             this.labelControl32.Text = "=";
             // 
@@ -2274,9 +2377,10 @@
             // 
             this.labelControl33.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl33.Appearance.Options.UseFont = true;
-            this.labelControl33.Location = new System.Drawing.Point(136, 108);
+            this.labelControl33.Location = new System.Drawing.Point(159, 141);
+            this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(11, 20);
+            this.labelControl33.Size = new System.Drawing.Size(13, 25);
             this.labelControl33.TabIndex = 2;
             this.labelControl33.Text = "=";
             // 
@@ -2284,9 +2388,10 @@
             // 
             this.labelControl34.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl34.Appearance.Options.UseFont = true;
-            this.labelControl34.Location = new System.Drawing.Point(136, 84);
+            this.labelControl34.Location = new System.Drawing.Point(159, 110);
+            this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(11, 20);
+            this.labelControl34.Size = new System.Drawing.Size(13, 25);
             this.labelControl34.TabIndex = 2;
             this.labelControl34.Text = "=";
             // 
@@ -2294,9 +2399,10 @@
             // 
             this.labelControl53.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl53.Appearance.Options.UseFont = true;
-            this.labelControl53.Location = new System.Drawing.Point(136, 60);
+            this.labelControl53.Location = new System.Drawing.Point(159, 78);
+            this.labelControl53.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl53.Name = "labelControl53";
-            this.labelControl53.Size = new System.Drawing.Size(11, 20);
+            this.labelControl53.Size = new System.Drawing.Size(13, 25);
             this.labelControl53.TabIndex = 2;
             this.labelControl53.Text = "=";
             // 
@@ -2304,9 +2410,10 @@
             // 
             this.labelControl54.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl54.Appearance.Options.UseFont = true;
-            this.labelControl54.Location = new System.Drawing.Point(136, 36);
+            this.labelControl54.Location = new System.Drawing.Point(159, 47);
+            this.labelControl54.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl54.Name = "labelControl54";
-            this.labelControl54.Size = new System.Drawing.Size(11, 20);
+            this.labelControl54.Size = new System.Drawing.Size(13, 25);
             this.labelControl54.TabIndex = 2;
             this.labelControl54.Text = "=";
             // 
@@ -2314,7 +2421,8 @@
             // 
             this.txtCashOutAmount2.EditValue = "0";
             this.txtCashOutAmount2.Enabled = false;
-            this.txtCashOutAmount2.Location = new System.Drawing.Point(155, 250);
+            this.txtCashOutAmount2.Location = new System.Drawing.Point(181, 327);
+            this.txtCashOutAmount2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount2.Name = "txtCashOutAmount2";
             this.txtCashOutAmount2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount2.Properties.Appearance.Options.UseFont = true;
@@ -2335,14 +2443,15 @@
             this.txtCashOutAmount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount2.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount2.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount2.TabIndex = 3;
             // 
             // txtCashOutCount2
             // 
             this.txtCashOutCount2.EditValue = "0";
             this.txtCashOutCount2.EnterMoveNextControl = true;
-            this.txtCashOutCount2.Location = new System.Drawing.Point(79, 250);
+            this.txtCashOutCount2.Location = new System.Drawing.Point(92, 327);
+            this.txtCashOutCount2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount2.Name = "txtCashOutCount2";
             this.txtCashOutCount2.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount2.Properties.Appearance.Options.UseFont = true;
@@ -2363,7 +2472,7 @@
             this.txtCashOutCount2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount2.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount2.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount2.TabIndex = 23;
             this.txtCashOutCount2.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2371,7 +2480,8 @@
             // 
             this.txtCashOutAmount5.EditValue = "0";
             this.txtCashOutAmount5.Enabled = false;
-            this.txtCashOutAmount5.Location = new System.Drawing.Point(155, 226);
+            this.txtCashOutAmount5.Location = new System.Drawing.Point(181, 296);
+            this.txtCashOutAmount5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount5.Name = "txtCashOutAmount5";
             this.txtCashOutAmount5.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount5.Properties.Appearance.Options.UseFont = true;
@@ -2392,14 +2502,15 @@
             this.txtCashOutAmount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount5.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount5.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount5.TabIndex = 3;
             // 
             // txtCashOutCount5
             // 
             this.txtCashOutCount5.EditValue = "0";
             this.txtCashOutCount5.EnterMoveNextControl = true;
-            this.txtCashOutCount5.Location = new System.Drawing.Point(79, 226);
+            this.txtCashOutCount5.Location = new System.Drawing.Point(92, 296);
+            this.txtCashOutCount5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount5.Name = "txtCashOutCount5";
             this.txtCashOutCount5.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount5.Properties.Appearance.Options.UseFont = true;
@@ -2420,7 +2531,7 @@
             this.txtCashOutCount5.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount5.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount5.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount5.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount5.TabIndex = 22;
             this.txtCashOutCount5.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2428,7 +2539,8 @@
             // 
             this.txtCashOutAmount10.EditValue = "0";
             this.txtCashOutAmount10.Enabled = false;
-            this.txtCashOutAmount10.Location = new System.Drawing.Point(155, 202);
+            this.txtCashOutAmount10.Location = new System.Drawing.Point(181, 264);
+            this.txtCashOutAmount10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount10.Name = "txtCashOutAmount10";
             this.txtCashOutAmount10.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount10.Properties.Appearance.Options.UseFont = true;
@@ -2449,14 +2561,15 @@
             this.txtCashOutAmount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount10.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount10.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount10.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount10.TabIndex = 3;
             // 
             // txtCashOutCount10
             // 
             this.txtCashOutCount10.EditValue = "0";
             this.txtCashOutCount10.EnterMoveNextControl = true;
-            this.txtCashOutCount10.Location = new System.Drawing.Point(79, 202);
+            this.txtCashOutCount10.Location = new System.Drawing.Point(92, 264);
+            this.txtCashOutCount10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount10.Name = "txtCashOutCount10";
             this.txtCashOutCount10.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount10.Properties.Appearance.Options.UseFont = true;
@@ -2477,7 +2590,7 @@
             this.txtCashOutCount10.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount10.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount10.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount10.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount10.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount10.TabIndex = 21;
             this.txtCashOutCount10.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2485,7 +2598,8 @@
             // 
             this.txtCashOutAmount20.EditValue = "0";
             this.txtCashOutAmount20.Enabled = false;
-            this.txtCashOutAmount20.Location = new System.Drawing.Point(155, 178);
+            this.txtCashOutAmount20.Location = new System.Drawing.Point(181, 233);
+            this.txtCashOutAmount20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount20.Name = "txtCashOutAmount20";
             this.txtCashOutAmount20.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount20.Properties.Appearance.Options.UseFont = true;
@@ -2506,14 +2620,15 @@
             this.txtCashOutAmount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount20.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount20.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount20.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount20.TabIndex = 3;
             // 
             // txtCashOutCount20
             // 
             this.txtCashOutCount20.EditValue = "0";
             this.txtCashOutCount20.EnterMoveNextControl = true;
-            this.txtCashOutCount20.Location = new System.Drawing.Point(79, 178);
+            this.txtCashOutCount20.Location = new System.Drawing.Point(92, 233);
+            this.txtCashOutCount20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount20.Name = "txtCashOutCount20";
             this.txtCashOutCount20.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount20.Properties.Appearance.Options.UseFont = true;
@@ -2534,7 +2649,7 @@
             this.txtCashOutCount20.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount20.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount20.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount20.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount20.TabIndex = 20;
             this.txtCashOutCount20.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2542,7 +2657,8 @@
             // 
             this.txtCashOutAmount50.EditValue = "0";
             this.txtCashOutAmount50.Enabled = false;
-            this.txtCashOutAmount50.Location = new System.Drawing.Point(155, 154);
+            this.txtCashOutAmount50.Location = new System.Drawing.Point(181, 201);
+            this.txtCashOutAmount50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount50.Name = "txtCashOutAmount50";
             this.txtCashOutAmount50.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount50.Properties.Appearance.Options.UseFont = true;
@@ -2563,14 +2679,15 @@
             this.txtCashOutAmount50.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount50.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount50.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount50.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount50.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount50.TabIndex = 3;
             // 
             // txtCashOutAmount100
             // 
             this.txtCashOutAmount100.EditValue = "0";
             this.txtCashOutAmount100.Enabled = false;
-            this.txtCashOutAmount100.Location = new System.Drawing.Point(155, 130);
+            this.txtCashOutAmount100.Location = new System.Drawing.Point(181, 170);
+            this.txtCashOutAmount100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount100.Name = "txtCashOutAmount100";
             this.txtCashOutAmount100.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount100.Properties.Appearance.Options.UseFont = true;
@@ -2591,14 +2708,15 @@
             this.txtCashOutAmount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount100.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount100.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount100.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount100.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount100.TabIndex = 3;
             // 
             // txtCashOutCount100
             // 
             this.txtCashOutCount100.EditValue = "0";
             this.txtCashOutCount100.EnterMoveNextControl = true;
-            this.txtCashOutCount100.Location = new System.Drawing.Point(79, 130);
+            this.txtCashOutCount100.Location = new System.Drawing.Point(92, 170);
+            this.txtCashOutCount100.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount100.Name = "txtCashOutCount100";
             this.txtCashOutCount100.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount100.Properties.Appearance.Options.UseFont = true;
@@ -2619,7 +2737,7 @@
             this.txtCashOutCount100.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount100.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount100.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount100.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount100.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount100.TabIndex = 18;
             this.txtCashOutCount100.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2627,7 +2745,8 @@
             // 
             this.txtCashOutAmount200.EditValue = "0";
             this.txtCashOutAmount200.Enabled = false;
-            this.txtCashOutAmount200.Location = new System.Drawing.Point(155, 106);
+            this.txtCashOutAmount200.Location = new System.Drawing.Point(181, 139);
+            this.txtCashOutAmount200.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount200.Name = "txtCashOutAmount200";
             this.txtCashOutAmount200.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount200.Properties.Appearance.Options.UseFont = true;
@@ -2648,14 +2767,15 @@
             this.txtCashOutAmount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount200.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount200.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount200.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount200.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount200.TabIndex = 3;
             // 
             // txtCashOutCount200
             // 
             this.txtCashOutCount200.EditValue = "0";
             this.txtCashOutCount200.EnterMoveNextControl = true;
-            this.txtCashOutCount200.Location = new System.Drawing.Point(79, 106);
+            this.txtCashOutCount200.Location = new System.Drawing.Point(92, 139);
+            this.txtCashOutCount200.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount200.Name = "txtCashOutCount200";
             this.txtCashOutCount200.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount200.Properties.Appearance.Options.UseFont = true;
@@ -2676,7 +2796,7 @@
             this.txtCashOutCount200.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount200.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount200.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount200.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount200.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount200.TabIndex = 17;
             this.txtCashOutCount200.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2684,7 +2804,8 @@
             // 
             this.txtCashOutAmount500.EditValue = "0";
             this.txtCashOutAmount500.Enabled = false;
-            this.txtCashOutAmount500.Location = new System.Drawing.Point(155, 82);
+            this.txtCashOutAmount500.Location = new System.Drawing.Point(181, 107);
+            this.txtCashOutAmount500.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount500.Name = "txtCashOutAmount500";
             this.txtCashOutAmount500.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount500.Properties.Appearance.Options.UseFont = true;
@@ -2705,14 +2826,15 @@
             this.txtCashOutAmount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount500.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount500.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount500.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount500.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount500.TabIndex = 3;
             // 
             // txtCashOutCount500
             // 
             this.txtCashOutCount500.EditValue = "0";
             this.txtCashOutCount500.EnterMoveNextControl = true;
-            this.txtCashOutCount500.Location = new System.Drawing.Point(79, 82);
+            this.txtCashOutCount500.Location = new System.Drawing.Point(92, 107);
+            this.txtCashOutCount500.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount500.Name = "txtCashOutCount500";
             this.txtCashOutCount500.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount500.Properties.Appearance.Options.UseFont = true;
@@ -2733,7 +2855,7 @@
             this.txtCashOutCount500.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount500.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount500.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount500.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount500.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount500.TabIndex = 16;
             this.txtCashOutCount500.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2741,7 +2863,8 @@
             // 
             this.txtCashOutAmount1000.EditValue = "0";
             this.txtCashOutAmount1000.Enabled = false;
-            this.txtCashOutAmount1000.Location = new System.Drawing.Point(155, 58);
+            this.txtCashOutAmount1000.Location = new System.Drawing.Point(181, 76);
+            this.txtCashOutAmount1000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount1000.Name = "txtCashOutAmount1000";
             this.txtCashOutAmount1000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount1000.Properties.Appearance.Options.UseFont = true;
@@ -2762,14 +2885,15 @@
             this.txtCashOutAmount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount1000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount1000.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount1000.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount1000.TabIndex = 3;
             // 
             // txtCashOutCount1000
             // 
             this.txtCashOutCount1000.EditValue = "0";
             this.txtCashOutCount1000.EnterMoveNextControl = true;
-            this.txtCashOutCount1000.Location = new System.Drawing.Point(79, 58);
+            this.txtCashOutCount1000.Location = new System.Drawing.Point(92, 76);
+            this.txtCashOutCount1000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount1000.Name = "txtCashOutCount1000";
             this.txtCashOutCount1000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount1000.Properties.Appearance.Options.UseFont = true;
@@ -2790,7 +2914,7 @@
             this.txtCashOutCount1000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount1000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount1000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount1000.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount1000.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount1000.TabIndex = 15;
             this.txtCashOutCount1000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2798,7 +2922,8 @@
             // 
             this.txtCashOutAmount2000.EditValue = "0";
             this.txtCashOutAmount2000.Enabled = false;
-            this.txtCashOutAmount2000.Location = new System.Drawing.Point(155, 34);
+            this.txtCashOutAmount2000.Location = new System.Drawing.Point(181, 44);
+            this.txtCashOutAmount2000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutAmount2000.Name = "txtCashOutAmount2000";
             this.txtCashOutAmount2000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutAmount2000.Properties.Appearance.Options.UseFont = true;
@@ -2819,14 +2944,15 @@
             this.txtCashOutAmount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutAmount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutAmount2000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutAmount2000.Size = new System.Drawing.Size(64, 24);
+            this.txtCashOutAmount2000.Size = new System.Drawing.Size(75, 28);
             this.txtCashOutAmount2000.TabIndex = 3;
             // 
             // txtCashOutCount2000
             // 
             this.txtCashOutCount2000.EditValue = "0";
             this.txtCashOutCount2000.EnterMoveNextControl = true;
-            this.txtCashOutCount2000.Location = new System.Drawing.Point(79, 34);
+            this.txtCashOutCount2000.Location = new System.Drawing.Point(92, 44);
+            this.txtCashOutCount2000.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCashOutCount2000.Name = "txtCashOutCount2000";
             this.txtCashOutCount2000.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCashOutCount2000.Properties.Appearance.Options.UseFont = true;
@@ -2847,7 +2973,7 @@
             this.txtCashOutCount2000.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtCashOutCount2000.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCashOutCount2000.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtCashOutCount2000.Size = new System.Drawing.Size(51, 24);
+            this.txtCashOutCount2000.Size = new System.Drawing.Size(59, 28);
             this.txtCashOutCount2000.TabIndex = 14;
             this.txtCashOutCount2000.EditValueChanged += new System.EventHandler(this.TxtCashInCount1_EditValueChanged);
             // 
@@ -2855,9 +2981,10 @@
             // 
             this.labelControl55.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl55.Appearance.Options.UseFont = true;
-            this.labelControl55.Location = new System.Drawing.Point(46, 306);
+            this.labelControl55.Location = new System.Drawing.Point(54, 400);
+            this.labelControl55.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl55.Name = "labelControl55";
-            this.labelControl55.Size = new System.Drawing.Size(36, 20);
+            this.labelControl55.Size = new System.Drawing.Size(45, 25);
             this.labelControl55.TabIndex = 2;
             this.labelControl55.Text = "Total";
             // 
@@ -2865,9 +2992,10 @@
             // 
             this.labelControl56.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl56.Appearance.Options.UseFont = true;
-            this.labelControl56.Location = new System.Drawing.Point(46, 276);
+            this.labelControl56.Location = new System.Drawing.Point(54, 361);
+            this.labelControl56.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl56.Name = "labelControl56";
-            this.labelControl56.Size = new System.Drawing.Size(21, 20);
+            this.labelControl56.Size = new System.Drawing.Size(27, 25);
             this.labelControl56.TabIndex = 2;
             this.labelControl56.Text = "1 x";
             // 
@@ -2875,9 +3003,10 @@
             // 
             this.labelControl57.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl57.Appearance.Options.UseFont = true;
-            this.labelControl57.Location = new System.Drawing.Point(46, 252);
+            this.labelControl57.Location = new System.Drawing.Point(54, 330);
+            this.labelControl57.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl57.Name = "labelControl57";
-            this.labelControl57.Size = new System.Drawing.Size(21, 20);
+            this.labelControl57.Size = new System.Drawing.Size(27, 25);
             this.labelControl57.TabIndex = 2;
             this.labelControl57.Text = "2 x";
             // 
@@ -2885,9 +3014,10 @@
             // 
             this.labelControl58.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl58.Appearance.Options.UseFont = true;
-            this.labelControl58.Location = new System.Drawing.Point(46, 228);
+            this.labelControl58.Location = new System.Drawing.Point(54, 298);
+            this.labelControl58.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl58.Name = "labelControl58";
-            this.labelControl58.Size = new System.Drawing.Size(21, 20);
+            this.labelControl58.Size = new System.Drawing.Size(27, 25);
             this.labelControl58.TabIndex = 2;
             this.labelControl58.Text = "5 x";
             // 
@@ -2895,9 +3025,10 @@
             // 
             this.labelControl59.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl59.Appearance.Options.UseFont = true;
-            this.labelControl59.Location = new System.Drawing.Point(37, 204);
+            this.labelControl59.Location = new System.Drawing.Point(43, 267);
+            this.labelControl59.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl59.Name = "labelControl59";
-            this.labelControl59.Size = new System.Drawing.Size(30, 20);
+            this.labelControl59.Size = new System.Drawing.Size(38, 25);
             this.labelControl59.TabIndex = 2;
             this.labelControl59.Text = "10 x";
             // 
@@ -2905,9 +3036,10 @@
             // 
             this.labelControl60.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl60.Appearance.Options.UseFont = true;
-            this.labelControl60.Location = new System.Drawing.Point(37, 180);
+            this.labelControl60.Location = new System.Drawing.Point(43, 235);
+            this.labelControl60.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl60.Name = "labelControl60";
-            this.labelControl60.Size = new System.Drawing.Size(30, 20);
+            this.labelControl60.Size = new System.Drawing.Size(38, 25);
             this.labelControl60.TabIndex = 2;
             this.labelControl60.Text = "20 x";
             // 
@@ -2915,9 +3047,10 @@
             // 
             this.labelControl61.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl61.Appearance.Options.UseFont = true;
-            this.labelControl61.Location = new System.Drawing.Point(37, 156);
+            this.labelControl61.Location = new System.Drawing.Point(43, 204);
+            this.labelControl61.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl61.Name = "labelControl61";
-            this.labelControl61.Size = new System.Drawing.Size(30, 20);
+            this.labelControl61.Size = new System.Drawing.Size(38, 25);
             this.labelControl61.TabIndex = 2;
             this.labelControl61.Text = "50 x";
             // 
@@ -2925,9 +3058,10 @@
             // 
             this.labelControl62.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl62.Appearance.Options.UseFont = true;
-            this.labelControl62.Location = new System.Drawing.Point(28, 132);
+            this.labelControl62.Location = new System.Drawing.Point(33, 173);
+            this.labelControl62.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl62.Name = "labelControl62";
-            this.labelControl62.Size = new System.Drawing.Size(39, 20);
+            this.labelControl62.Size = new System.Drawing.Size(49, 25);
             this.labelControl62.TabIndex = 2;
             this.labelControl62.Text = "100 x";
             // 
@@ -2935,9 +3069,10 @@
             // 
             this.labelControl63.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl63.Appearance.Options.UseFont = true;
-            this.labelControl63.Location = new System.Drawing.Point(28, 108);
+            this.labelControl63.Location = new System.Drawing.Point(33, 141);
+            this.labelControl63.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl63.Name = "labelControl63";
-            this.labelControl63.Size = new System.Drawing.Size(39, 20);
+            this.labelControl63.Size = new System.Drawing.Size(49, 25);
             this.labelControl63.TabIndex = 2;
             this.labelControl63.Text = "200 x";
             // 
@@ -2945,9 +3080,10 @@
             // 
             this.labelControl64.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl64.Appearance.Options.UseFont = true;
-            this.labelControl64.Location = new System.Drawing.Point(28, 84);
+            this.labelControl64.Location = new System.Drawing.Point(33, 110);
+            this.labelControl64.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl64.Name = "labelControl64";
-            this.labelControl64.Size = new System.Drawing.Size(39, 20);
+            this.labelControl64.Size = new System.Drawing.Size(49, 25);
             this.labelControl64.TabIndex = 2;
             this.labelControl64.Text = "500 x";
             // 
@@ -2955,9 +3091,10 @@
             // 
             this.labelControl65.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl65.Appearance.Options.UseFont = true;
-            this.labelControl65.Location = new System.Drawing.Point(19, 60);
+            this.labelControl65.Location = new System.Drawing.Point(22, 78);
+            this.labelControl65.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl65.Name = "labelControl65";
-            this.labelControl65.Size = new System.Drawing.Size(48, 20);
+            this.labelControl65.Size = new System.Drawing.Size(60, 25);
             this.labelControl65.TabIndex = 2;
             this.labelControl65.Text = "1000 x";
             // 
@@ -2965,18 +3102,20 @@
             // 
             this.labelControl66.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl66.Appearance.Options.UseFont = true;
-            this.labelControl66.Location = new System.Drawing.Point(19, 36);
+            this.labelControl66.Location = new System.Drawing.Point(22, 47);
+            this.labelControl66.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl66.Name = "labelControl66";
-            this.labelControl66.Size = new System.Drawing.Size(48, 20);
+            this.labelControl66.Size = new System.Drawing.Size(60, 25);
             this.labelControl66.TabIndex = 2;
             this.labelControl66.Text = "2000 x";
             // 
             // btnSave
             // 
             this.btnSave.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSave.ImageOptions.SvgImage")));
-            this.btnSave.Location = new System.Drawing.Point(10, 443);
+            this.btnSave.Location = new System.Drawing.Point(12, 579);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(127, 36);
+            this.btnSave.Size = new System.Drawing.Size(148, 47);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save && Print";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -2984,9 +3123,10 @@
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(141, 443);
+            this.simpleButton2.Location = new System.Drawing.Point(164, 579);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(127, 36);
+            this.simpleButton2.Size = new System.Drawing.Size(148, 47);
             this.simpleButton2.TabIndex = 2;
             this.simpleButton2.Text = "Revert";
             this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
@@ -2994,18 +3134,19 @@
             // btnSaveOnly
             // 
             this.btnSaveOnly.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveOnly.ImageOptions.SvgImage")));
-            this.btnSaveOnly.Location = new System.Drawing.Point(272, 443);
+            this.btnSaveOnly.Location = new System.Drawing.Point(317, 579);
+            this.btnSaveOnly.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveOnly.Name = "btnSaveOnly";
-            this.btnSaveOnly.Size = new System.Drawing.Size(90, 36);
+            this.btnSaveOnly.Size = new System.Drawing.Size(105, 47);
             this.btnSaveOnly.TabIndex = 3;
             this.btnSaveOnly.Text = "Save";
             this.btnSaveOnly.Click += new System.EventHandler(this.BtnSaveOnly_Click);
             // 
             // CashTender
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 492);
+            this.ClientSize = new System.Drawing.Size(926, 643);
             this.ControlBox = false;
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.simpleButton2);
@@ -3018,6 +3159,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.ShowIcon = false;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CashTender";

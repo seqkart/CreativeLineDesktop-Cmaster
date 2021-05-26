@@ -62,6 +62,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -69,7 +70,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(518, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(604, 31);
             this.Menu_ToolStrip.TabIndex = 746;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -81,7 +82,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -93,22 +94,24 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtIDNo
             // 
             this.txtIDNo.EnterMoveNextControl = true;
-            this.txtIDNo.Location = new System.Drawing.Point(342, 137);
+            this.txtIDNo.Location = new System.Drawing.Point(399, 179);
+            this.txtIDNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIDNo.Size = new System.Drawing.Size(157, 20);
+            this.txtIDNo.Size = new System.Drawing.Size(183, 24);
             this.txtIDNo.TabIndex = 770;
             // 
             // txtIDType
             // 
-            this.txtIDType.Location = new System.Drawing.Point(89, 137);
+            this.txtIDType.Location = new System.Drawing.Point(104, 179);
+            this.txtIDType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDType.Name = "txtIDType";
             this.txtIDType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -119,27 +122,29 @@ namespace WindowsFormsApplication1.Master
             "PASSPORT",
             "OTHER ID",
             "LISCENSE"});
-            this.txtIDType.Size = new System.Drawing.Size(171, 20);
+            this.txtIDType.Size = new System.Drawing.Size(199, 24);
             this.txtIDType.TabIndex = 769;
             // 
             // txtOtherNo
             // 
             this.txtOtherNo.EnterMoveNextControl = true;
-            this.txtOtherNo.Location = new System.Drawing.Point(342, 85);
+            this.txtOtherNo.Location = new System.Drawing.Point(399, 111);
+            this.txtOtherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherNo.Name = "txtOtherNo";
             this.txtOtherNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOtherNo.Size = new System.Drawing.Size(157, 20);
+            this.txtOtherNo.Size = new System.Drawing.Size(183, 24);
             this.txtOtherNo.TabIndex = 767;
             // 
             // txtContCode
             // 
             this.txtContCode.Enabled = false;
             this.txtContCode.EnterMoveNextControl = true;
-            this.txtContCode.Location = new System.Drawing.Point(89, 33);
+            this.txtContCode.Location = new System.Drawing.Point(104, 43);
+            this.txtContCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContCode.Name = "txtContCode";
             this.txtContCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContCode.Properties.MaxLength = 8;
-            this.txtContCode.Size = new System.Drawing.Size(74, 20);
+            this.txtContCode.Size = new System.Drawing.Size(86, 24);
             this.txtContCode.TabIndex = 760;
             this.txtContCode.TabStop = false;
             // 
@@ -147,56 +152,62 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(33, 115);
+            this.Label3.Location = new System.Drawing.Point(37, 148);
+            this.Label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(51, 13);
+            this.Label3.Size = new System.Drawing.Size(65, 19);
             this.Label3.TabIndex = 757;
             this.Label3.Text = "EMAIL ID :";
             // 
             // txtEMailId
             // 
             this.txtEMailId.EnterMoveNextControl = true;
-            this.txtEMailId.Location = new System.Drawing.Point(89, 111);
+            this.txtEMailId.Location = new System.Drawing.Point(104, 145);
+            this.txtEMailId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEMailId.Name = "txtEMailId";
             this.txtEMailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEMailId.Size = new System.Drawing.Size(410, 20);
+            this.txtEMailId.Size = new System.Drawing.Size(478, 24);
             this.txtEMailId.TabIndex = 765;
             // 
             // txtMobileNo
             // 
             this.txtMobileNo.EnterMoveNextControl = true;
-            this.txtMobileNo.Location = new System.Drawing.Point(89, 85);
+            this.txtMobileNo.Location = new System.Drawing.Point(104, 111);
+            this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMobileNo.Size = new System.Drawing.Size(171, 20);
+            this.txtMobileNo.Size = new System.Drawing.Size(199, 24);
             this.txtMobileNo.TabIndex = 764;
             // 
             // Label4
             // 
             this.Label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(277, 89);
+            this.Label4.Location = new System.Drawing.Point(319, 114);
+            this.Label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(60, 13);
+            this.Label4.Size = new System.Drawing.Size(78, 19);
             this.Label4.TabIndex = 758;
             this.Label4.Text = "OTHER NO :";
             // 
             // txtContName
             // 
             this.txtContName.EnterMoveNextControl = true;
-            this.txtContName.Location = new System.Drawing.Point(89, 59);
+            this.txtContName.Location = new System.Drawing.Point(104, 77);
+            this.txtContName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContName.Name = "txtContName";
             this.txtContName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtContName.Size = new System.Drawing.Size(410, 20);
+            this.txtContName.Size = new System.Drawing.Size(478, 24);
             this.txtContName.TabIndex = 763;
             // 
             // LBDEPNAME
             // 
             this.LBDEPNAME.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPNAME.Appearance.Options.UseFont = true;
-            this.LBDEPNAME.Location = new System.Drawing.Point(47, 63);
+            this.LBDEPNAME.Location = new System.Drawing.Point(55, 80);
+            this.LBDEPNAME.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBDEPNAME.Name = "LBDEPNAME";
-            this.LBDEPNAME.Size = new System.Drawing.Size(37, 13);
+            this.LBDEPNAME.Size = new System.Drawing.Size(47, 19);
             this.LBDEPNAME.TabIndex = 755;
             this.LBDEPNAME.Text = "NAME :";
             // 
@@ -204,9 +215,10 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label7.Appearance.Options.UseFont = true;
-            this.Label7.Location = new System.Drawing.Point(7, 141);
+            this.Label7.Location = new System.Drawing.Point(3, 182);
+            this.Label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(77, 13);
+            this.Label7.Size = new System.Drawing.Size(99, 19);
             this.Label7.TabIndex = 754;
             this.Label7.Text = "ID TYPE && NO. :";
             // 
@@ -214,9 +226,10 @@ namespace WindowsFormsApplication1.Master
             // 
             this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(49, 37);
+            this.LBDEPCODE.Location = new System.Drawing.Point(58, 46);
+            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(35, 13);
+            this.LBDEPCODE.Size = new System.Drawing.Size(44, 19);
             this.LBDEPCODE.TabIndex = 756;
             this.LBDEPCODE.Text = "CODE :";
             // 
@@ -224,17 +237,18 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label6.Appearance.Options.UseFont = true;
-            this.Label6.Location = new System.Drawing.Point(20, 89);
+            this.Label6.Location = new System.Drawing.Point(19, 114);
+            this.Label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(64, 13);
+            this.Label6.Size = new System.Drawing.Size(83, 19);
             this.Label6.TabIndex = 753;
             this.Label6.Text = "MOBILE NO :";
             // 
             // frmContractorMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 174);
+            this.ClientSize = new System.Drawing.Size(604, 228);
             this.ControlBox = false;
             this.Controls.Add(this.txtIDNo);
             this.Controls.Add(this.txtIDType);
@@ -252,6 +266,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmContractorMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmContractorMst_Load);

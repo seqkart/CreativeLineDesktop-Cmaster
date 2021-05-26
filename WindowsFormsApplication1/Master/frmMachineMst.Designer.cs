@@ -58,10 +58,12 @@ namespace WindowsFormsApplication1.Master
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(550, 208);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(642, 272);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(462, 362);
+            this.HelpGrid.Size = new System.Drawing.Size(539, 473);
             this.HelpGrid.TabIndex = 416;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -71,6 +73,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -85,11 +88,12 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtMachineCode.Enabled = false;
             this.txtMachineCode.EnterMoveNextControl = true;
-            this.txtMachineCode.Location = new System.Drawing.Point(134, 77);
+            this.txtMachineCode.Location = new System.Drawing.Point(156, 101);
+            this.txtMachineCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMachineCode.Name = "txtMachineCode";
             this.txtMachineCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMachineCode.Properties.MaxLength = 8;
-            this.txtMachineCode.Size = new System.Drawing.Size(74, 20);
+            this.txtMachineCode.Size = new System.Drawing.Size(86, 24);
             this.txtMachineCode.TabIndex = 399;
             this.txtMachineCode.TabStop = false;
             // 
@@ -99,9 +103,10 @@ namespace WindowsFormsApplication1.Master
             this.label3.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Appearance.Options.UseFont = true;
             this.label3.Appearance.Options.UseForeColor = true;
-            this.label3.Location = new System.Drawing.Point(57, 80);
+            this.label3.Location = new System.Drawing.Point(63, 103);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 418;
             this.label3.Text = "Machine Code";
             // 
@@ -109,11 +114,12 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtTypeDesc.Enabled = false;
             this.txtTypeDesc.EnterMoveNextControl = true;
-            this.txtTypeDesc.Location = new System.Drawing.Point(214, 103);
+            this.txtTypeDesc.Location = new System.Drawing.Point(250, 135);
+            this.txtTypeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTypeDesc.Name = "txtTypeDesc";
             this.txtTypeDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTypeDesc.Properties.MaxLength = 8;
-            this.txtTypeDesc.Size = new System.Drawing.Size(330, 20);
+            this.txtTypeDesc.Size = new System.Drawing.Size(385, 24);
             this.txtTypeDesc.TabIndex = 401;
             this.txtTypeDesc.TabStop = false;
             // 
@@ -123,6 +129,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -130,7 +137,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(683, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(797, 31);
             this.Menu_ToolStrip.TabIndex = 417;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -142,7 +149,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -154,27 +161,29 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtGauge
             // 
             this.txtGauge.EnterMoveNextControl = true;
-            this.txtGauge.Location = new System.Drawing.Point(134, 155);
+            this.txtGauge.Location = new System.Drawing.Point(156, 203);
+            this.txtGauge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGauge.Name = "txtGauge";
             this.txtGauge.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtGauge.Size = new System.Drawing.Size(410, 20);
+            this.txtGauge.Size = new System.Drawing.Size(478, 24);
             this.txtGauge.TabIndex = 404;
             // 
             // txtTypeCode
             // 
             this.txtTypeCode.EnterMoveNextControl = true;
-            this.txtTypeCode.Location = new System.Drawing.Point(134, 103);
+            this.txtTypeCode.Location = new System.Drawing.Point(156, 135);
+            this.txtTypeCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTypeCode.Name = "txtTypeCode";
             this.txtTypeCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTypeCode.Properties.MaxLength = 8;
-            this.txtTypeCode.Size = new System.Drawing.Size(74, 20);
+            this.txtTypeCode.Size = new System.Drawing.Size(86, 24);
             this.txtTypeCode.TabIndex = 400;
             this.txtTypeCode.EditValueChanged += new System.EventHandler(this.txtTypeCode_EditValueChanged);
             this.txtTypeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTypeCode_KeyDown);
@@ -185,9 +194,10 @@ namespace WindowsFormsApplication1.Master
             this.label19.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Appearance.Options.UseFont = true;
             this.label19.Appearance.Options.UseForeColor = true;
-            this.label19.Location = new System.Drawing.Point(57, 158);
+            this.label19.Location = new System.Drawing.Point(111, 205);
+            this.label19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.Size = new System.Drawing.Size(40, 19);
             this.label19.TabIndex = 415;
             this.label19.Text = "Gauge";
             // 
@@ -197,9 +207,10 @@ namespace WindowsFormsApplication1.Master
             this.label22.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Appearance.Options.UseFont = true;
             this.label22.Appearance.Options.UseForeColor = true;
-            this.label22.Location = new System.Drawing.Point(57, 106);
+            this.label22.Location = new System.Drawing.Point(66, 137);
+            this.label22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(71, 13);
+            this.label22.Size = new System.Drawing.Size(85, 19);
             this.label22.TabIndex = 409;
             this.label22.Text = "Machine Type";
             // 
@@ -207,22 +218,24 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtBrandDesc.Enabled = false;
             this.txtBrandDesc.EnterMoveNextControl = true;
-            this.txtBrandDesc.Location = new System.Drawing.Point(214, 129);
+            this.txtBrandDesc.Location = new System.Drawing.Point(250, 169);
+            this.txtBrandDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrandDesc.Name = "txtBrandDesc";
             this.txtBrandDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandDesc.Properties.MaxLength = 8;
-            this.txtBrandDesc.Size = new System.Drawing.Size(330, 20);
+            this.txtBrandDesc.Size = new System.Drawing.Size(385, 24);
             this.txtBrandDesc.TabIndex = 422;
             this.txtBrandDesc.TabStop = false;
             // 
             // txtBrandCode
             // 
             this.txtBrandCode.EnterMoveNextControl = true;
-            this.txtBrandCode.Location = new System.Drawing.Point(134, 129);
+            this.txtBrandCode.Location = new System.Drawing.Point(156, 169);
+            this.txtBrandCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrandCode.Name = "txtBrandCode";
             this.txtBrandCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandCode.Properties.MaxLength = 8;
-            this.txtBrandCode.Size = new System.Drawing.Size(74, 20);
+            this.txtBrandCode.Size = new System.Drawing.Size(86, 24);
             this.txtBrandCode.TabIndex = 421;
             this.txtBrandCode.EditValueChanged += new System.EventHandler(this.txtBrandCode_EditValueChanged);
             this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBrandCode_KeyDown);
@@ -233,17 +246,18 @@ namespace WindowsFormsApplication1.Master
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(57, 132);
+            this.labelControl1.Location = new System.Drawing.Point(115, 171);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 13);
+            this.labelControl1.Size = new System.Drawing.Size(36, 19);
             this.labelControl1.TabIndex = 423;
             this.labelControl1.Text = "Brand";
             // 
             // frmMachineMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 418);
+            this.ClientSize = new System.Drawing.Size(797, 547);
             this.ControlBox = false;
             this.Controls.Add(this.txtBrandDesc);
             this.Controls.Add(this.txtBrandCode);
@@ -259,6 +273,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.label22);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMachineMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmMachineMst_Load);

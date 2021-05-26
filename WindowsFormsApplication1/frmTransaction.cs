@@ -1590,7 +1590,7 @@ namespace WindowsFormsApplication1
                         dt.Columns.Add("GrpHSNCode", typeof(string));
 
 
-                        DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersPrint] '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
+                        DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadBarCodeVouchersPrint2] '" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
                         if (ds.Tables[0].Rows.Count > 0)
                         {
                             dt = ds.Tables[0];

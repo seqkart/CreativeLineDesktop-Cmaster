@@ -55,35 +55,39 @@
             // 
             // txtstatusTag
             // 
-            this.txtstatusTag.Location = new System.Drawing.Point(311, 50);
+            this.txtstatusTag.Location = new System.Drawing.Point(363, 65);
+            this.txtstatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtstatusTag.Name = "txtstatusTag";
             this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtstatusTag.Size = new System.Drawing.Size(104, 20);
+            this.txtstatusTag.Size = new System.Drawing.Size(121, 24);
             this.txtstatusTag.TabIndex = 2;
             this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtstatusTag_Validating);
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(275, 54);
+            this.label12.Location = new System.Drawing.Point(321, 71);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 13);
+            this.label12.Size = new System.Drawing.Size(34, 17);
             this.label12.TabIndex = 329;
             this.label12.Text = "Active";
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(135, 130);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(157, 170);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Properties.MaxLength = 8;
             this.txtConfirmPassword.Properties.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(280, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(327, 24);
             this.txtConfirmPassword.TabIndex = 5;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(29, 132);
+            this.label4.Location = new System.Drawing.Point(46, 173);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 13);
+            this.label4.Size = new System.Drawing.Size(106, 17);
             this.label4.TabIndex = 313;
             this.label4.Text = "Confirm Password";
             // 
@@ -93,6 +97,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -100,7 +105,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(462, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(539, 27);
             this.Menu_ToolStrip.TabIndex = 312;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -110,7 +115,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(47, 22);
+            this.btnQuit.Size = new System.Drawing.Size(58, 24);
             this.btnQuit.Text = "&Cancel";
             this.btnQuit.ToolTipText = "Cancel";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
@@ -121,72 +126,80 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(135, 78);
+            this.txtUserName.Location = new System.Drawing.Point(157, 102);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.MaxLength = 8;
-            this.txtUserName.Size = new System.Drawing.Size(280, 20);
+            this.txtUserName.Size = new System.Drawing.Size(327, 24);
             this.txtUserName.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(135, 104);
+            this.txtPassword.Location = new System.Drawing.Point(157, 136);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.MaxLength = 8;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(280, 20);
+            this.txtPassword.Size = new System.Drawing.Size(327, 24);
             this.txtPassword.TabIndex = 4;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(70, 80);
+            this.label3.Location = new System.Drawing.Point(90, 105);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 310;
             this.label3.Text = "UserName";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(73, 106);
+            this.label2.Location = new System.Drawing.Point(96, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 308;
             this.label2.Text = "Password";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(78, 54);
+            this.label1.Location = new System.Drawing.Point(102, 71);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(50, 17);
             this.label1.TabIndex = 307;
             this.label1.Text = "LogInAs ";
             // 
             // cmbLoginAs
             // 
             this.cmbLoginAs.FormattingEnabled = true;
-            this.cmbLoginAs.Location = new System.Drawing.Point(135, 51);
+            this.cmbLoginAs.Location = new System.Drawing.Point(157, 67);
+            this.cmbLoginAs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbLoginAs.Name = "cmbLoginAs";
-            this.cmbLoginAs.Size = new System.Drawing.Size(121, 21);
+            this.cmbLoginAs.Size = new System.Drawing.Size(140, 25);
             this.cmbLoginAs.TabIndex = 1;
             // 
             // txtRoleCode
             // 
-            this.txtRoleCode.Location = new System.Drawing.Point(135, 156);
+            this.txtRoleCode.Location = new System.Drawing.Point(157, 204);
+            this.txtRoleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.MaxLength = 40;
-            this.txtRoleCode.Size = new System.Drawing.Size(280, 20);
+            this.txtRoleCode.Size = new System.Drawing.Size(327, 24);
             this.txtRoleCode.TabIndex = 330;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(94, 159);
+            this.label5.Location = new System.Drawing.Point(120, 208);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
+            this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 331;
             this.label5.Text = "Roles";
             // 
@@ -194,9 +207,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 224);
+            this.ClientSize = new System.Drawing.Size(539, 293);
             this.ControlBox = false;
             this.Controls.Add(this.txtRoleCode);
             this.Controls.Add(this.label5);
@@ -213,6 +226,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmUserDetails";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

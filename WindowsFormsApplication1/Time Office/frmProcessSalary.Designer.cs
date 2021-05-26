@@ -75,26 +75,29 @@
             // btnLock
             // 
             this.btnLock.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnLock.ImageOptions.SvgImage")));
-            this.btnLock.Location = new System.Drawing.Point(606, 0);
+            this.btnLock.Location = new System.Drawing.Point(707, 0);
+            this.btnLock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLock.Name = "btnLock";
-            this.btnLock.Size = new System.Drawing.Size(95, 25);
+            this.btnLock.Size = new System.Drawing.Size(111, 33);
             this.btnLock.TabIndex = 351;
             this.btnLock.Text = "Lock";
             this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
             // 
             // ChoiceSelect
             // 
-            this.ChoiceSelect.Location = new System.Drawing.Point(709, 69);
+            this.ChoiceSelect.Location = new System.Drawing.Point(827, 90);
+            this.ChoiceSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelect.Name = "ChoiceSelect";
             this.ChoiceSelect.Properties.Caption = "Select &All";
-            this.ChoiceSelect.Size = new System.Drawing.Size(75, 19);
+            this.ChoiceSelect.Size = new System.Drawing.Size(87, 24);
             this.ChoiceSelect.TabIndex = 349;
             this.ChoiceSelect.Visible = false;
             this.ChoiceSelect.CheckedChanged += new System.EventHandler(this.ChoiceSelect_CheckedChanged);
             // 
             // DtStartDate
             // 
-            this.DtStartDate.Location = new System.Drawing.Point(103, 36);
+            this.DtStartDate.Location = new System.Drawing.Point(120, 47);
+            this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtStartDate.Properties.Appearance.Options.UseFont = true;
@@ -104,16 +107,17 @@
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DtStartDate.Properties.MaxLength = 15;
-            this.DtStartDate.Size = new System.Drawing.Size(102, 24);
+            this.DtStartDate.Size = new System.Drawing.Size(119, 28);
             this.DtStartDate.TabIndex = 0;
             // 
             // label13
             // 
             this.label13.Appearance.BackColor = System.Drawing.Color.White;
             this.label13.Appearance.Options.UseBackColor = true;
-            this.label13.Location = new System.Drawing.Point(4, 42);
+            this.label13.Location = new System.Drawing.Point(5, 55);
+            this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 13);
+            this.label13.Size = new System.Drawing.Size(107, 17);
             this.label13.TabIndex = 347;
             this.label13.Text = "Select Month/Year";
             // 
@@ -122,22 +126,25 @@
             this.btnLoad.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoad.Appearance.Options.UseFont = true;
             this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(208, 32);
+            this.btnLoad.Location = new System.Drawing.Point(243, 42);
+            this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(116, 32);
+            this.btnLoad.Size = new System.Drawing.Size(135, 42);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Load";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // SalaryGrid
             // 
+            this.SalaryGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SalaryGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalaryGrid.Location = new System.Drawing.Point(467, 393);
+            this.SalaryGrid.Location = new System.Drawing.Point(545, 514);
             this.SalaryGrid.LookAndFeel.SkinName = "Seven Classic";
             this.SalaryGrid.LookAndFeel.UseDefaultLookAndFeel = false;
             this.SalaryGrid.MainView = this.SalaryGridView;
+            this.SalaryGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SalaryGrid.Name = "SalaryGrid";
-            this.SalaryGrid.Size = new System.Drawing.Size(325, 199);
+            this.SalaryGrid.Size = new System.Drawing.Size(379, 260);
             this.SalaryGrid.TabIndex = 2;
             this.SalaryGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.SalaryGridView});
@@ -156,6 +163,7 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn10});
+            this.SalaryGridView.DetailHeight = 458;
             this.SalaryGridView.GridControl = this.SalaryGrid;
             this.SalaryGridView.Name = "SalaryGridView";
             this.SalaryGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -175,105 +183,117 @@
             // 
             this.gridColumn11.Caption = "UnitName";
             this.gridColumn11.FieldName = "UnitName";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "UnitName", "{0}")});
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 0;
+            this.gridColumn11.Width = 87;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "DeptDesc";
             this.gridColumn1.FieldName = "DeptDesc";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "DeptDesc", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 160;
+            this.gridColumn1.Width = 187;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "EmpCode";
             this.gridColumn2.FieldName = "EmpCode";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 97;
+            this.gridColumn2.Width = 113;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "EmpName";
             this.gridColumn3.FieldName = "EmpName";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 158;
+            this.gridColumn3.Width = 184;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "\'F/H\'";
             this.gridColumn4.FieldName = "F/H";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 53;
+            this.gridColumn4.Width = 62;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "\'F/H Name\'";
             this.gridColumn5.FieldName = "F/H Name";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 147;
+            this.gridColumn5.Width = 171;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "NetPaid";
             this.gridColumn9.FieldName = "EmpNetPaid";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "EmpNetPaid", "{0:0.##}")});
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
-            this.gridColumn9.Width = 84;
+            this.gridColumn9.Width = 98;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "IsLock";
             this.gridColumn6.FieldName = "IsLock";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 8;
-            this.gridColumn6.Width = 85;
+            this.gridColumn6.Width = 99;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Sel";
             this.gridColumn7.FieldName = "Sel";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 9;
-            this.gridColumn7.Width = 45;
+            this.gridColumn7.Width = 52;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Locked";
             this.gridColumn8.FieldName = "Locked";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 10;
-            this.gridColumn8.Width = 112;
+            this.gridColumn8.Width = 131;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Pymt Mode";
             this.gridColumn10.FieldName = "EmpPymtMode";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 7;
-            this.gridColumn10.Width = 144;
+            this.gridColumn10.Width = 168;
             // 
             // Menu_ToolStrip
             // 
@@ -281,13 +301,14 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAdd});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(804, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 25);
             this.Menu_ToolStrip.TabIndex = 194;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -300,7 +321,7 @@
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd.Size = new System.Drawing.Size(63, 23);
+            this.btnAdd.Size = new System.Drawing.Size(76, 28);
             this.btnAdd.Text = "&Process";
             this.btnAdd.Visible = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -310,18 +331,21 @@
             this.splitter1.BackColor = System.Drawing.Color.White;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 25);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(804, 75);
+            this.splitter1.Size = new System.Drawing.Size(938, 98);
             this.splitter1.TabIndex = 196;
             this.splitter1.TabStop = false;
             // 
             // gridControl_SalaryProcess
             // 
             this.gridControl_SalaryProcess.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_SalaryProcess.Location = new System.Drawing.Point(0, 100);
+            this.gridControl_SalaryProcess.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl_SalaryProcess.Location = new System.Drawing.Point(0, 123);
             this.gridControl_SalaryProcess.MainView = this.gridView_SalaryProcess;
+            this.gridControl_SalaryProcess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl_SalaryProcess.Name = "gridControl_SalaryProcess";
-            this.gridControl_SalaryProcess.Size = new System.Drawing.Size(804, 504);
+            this.gridControl_SalaryProcess.Size = new System.Drawing.Size(938, 667);
             this.gridControl_SalaryProcess.TabIndex = 352;
             this.gridControl_SalaryProcess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_SalaryProcess});
@@ -329,6 +353,7 @@
             // 
             // gridView_SalaryProcess
             // 
+            this.gridView_SalaryProcess.DetailHeight = 458;
             this.gridView_SalaryProcess.GridControl = this.gridControl_SalaryProcess;
             this.gridView_SalaryProcess.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView_SalaryProcess.Name = "gridView_SalaryProcess";
@@ -349,9 +374,10 @@
             this.btnProcessSalary.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcessSalary.Appearance.Options.UseFont = true;
             this.btnProcessSalary.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProcessSalary.ImageOptions.Image")));
-            this.btnProcessSalary.Location = new System.Drawing.Point(324, 32);
+            this.btnProcessSalary.Location = new System.Drawing.Point(378, 42);
+            this.btnProcessSalary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnProcessSalary.Name = "btnProcessSalary";
-            this.btnProcessSalary.Size = new System.Drawing.Size(117, 32);
+            this.btnProcessSalary.Size = new System.Drawing.Size(136, 42);
             this.btnProcessSalary.TabIndex = 353;
             this.btnProcessSalary.Text = "Process Salary";
             this.btnProcessSalary.Click += new System.EventHandler(this.btnProcessSalary_Click);
@@ -361,9 +387,10 @@
             this.btnPrintPreview.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintPreview.Appearance.Options.UseFont = true;
             this.btnPrintPreview.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintPreview.ImageOptions.Image")));
-            this.btnPrintPreview.Location = new System.Drawing.Point(441, 32);
+            this.btnPrintPreview.Location = new System.Drawing.Point(514, 42);
+            this.btnPrintPreview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPrintPreview.Name = "btnPrintPreview";
-            this.btnPrintPreview.Size = new System.Drawing.Size(116, 32);
+            this.btnPrintPreview.Size = new System.Drawing.Size(135, 42);
             this.btnPrintPreview.TabIndex = 354;
             this.btnPrintPreview.Text = "Print Preview";
             this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
@@ -373,9 +400,10 @@
             this.btnPrintReport.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintReport.Appearance.Options.UseFont = true;
             this.btnPrintReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintReport.ImageOptions.Image")));
-            this.btnPrintReport.Location = new System.Drawing.Point(557, 32);
+            this.btnPrintReport.Location = new System.Drawing.Point(650, 42);
+            this.btnPrintReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(116, 32);
+            this.btnPrintReport.Size = new System.Drawing.Size(135, 42);
             this.btnPrintReport.TabIndex = 355;
             this.btnPrintReport.Text = "Print";
             this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
@@ -385,18 +413,19 @@
             this.btnExportXsls.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportXsls.Appearance.Options.UseFont = true;
             this.btnExportXsls.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnExportXsls.ImageOptions.Image")));
-            this.btnExportXsls.Location = new System.Drawing.Point(673, 32);
+            this.btnExportXsls.Location = new System.Drawing.Point(785, 42);
+            this.btnExportXsls.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExportXsls.Name = "btnExportXsls";
-            this.btnExportXsls.Size = new System.Drawing.Size(116, 32);
+            this.btnExportXsls.Size = new System.Drawing.Size(135, 42);
             this.btnExportXsls.TabIndex = 356;
             this.btnExportXsls.Text = "Export To XLS";
             this.btnExportXsls.Click += new System.EventHandler(this.btnExportXsls_Click);
             // 
             // frmProcessSalary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 604);
+            this.ClientSize = new System.Drawing.Size(938, 790);
             this.ControlBox = false;
             this.Controls.Add(this.btnExportXsls);
             this.Controls.Add(this.btnPrintReport);
@@ -413,6 +442,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmProcessSalary";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmProcessSalary_Load);

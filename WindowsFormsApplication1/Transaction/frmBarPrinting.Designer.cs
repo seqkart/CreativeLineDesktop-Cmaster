@@ -57,6 +57,7 @@
             this.gridColumn21 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn26 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -112,10 +113,12 @@
             this.BarCodeGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BarCodeGrid.Location = new System.Drawing.Point(12, 186);
+            this.BarCodeGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BarCodeGrid.Location = new System.Drawing.Point(14, 243);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
+            this.BarCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BarCodeGrid.Name = "BarCodeGrid";
-            this.BarCodeGrid.Size = new System.Drawing.Size(1096, 387);
+            this.BarCodeGrid.Size = new System.Drawing.Size(1430, 502);
             this.BarCodeGrid.TabIndex = 682;
             this.BarCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BarCodeGridView});
@@ -168,7 +171,9 @@
             this.gridColumn20,
             this.gridColumn21,
             this.gridColumn23,
-            this.gridColumn26});
+            this.gridColumn26,
+            this.gridColumn27});
+            this.BarCodeGridView.DetailHeight = 458;
             this.BarCodeGridView.GridControl = this.BarCodeGrid;
             this.BarCodeGridView.Name = "BarCodeGridView";
             this.BarCodeGridView.OptionsEditForm.ShowOnF2Key = DevExpress.Utils.DefaultBoolean.False;
@@ -202,75 +207,84 @@
             this.gridColumn25.Caption = "EAN CODE";
             this.gridColumn25.FieldName = "SKUPARTYBARCODE";
             this.gridColumn25.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn25.ImageOptions.SvgImage")));
+            this.gridColumn25.MinWidth = 23;
             this.gridColumn25.Name = "gridColumn25";
             this.gridColumn25.Visible = true;
             this.gridColumn25.VisibleIndex = 0;
+            this.gridColumn25.Width = 87;
             // 
             // gridColumn24
             // 
             this.gridColumn24.Caption = "FIX CODE";
             this.gridColumn24.FieldName = "SKUFIXBARCODE";
             this.gridColumn24.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn24.ImageOptions.SvgImage")));
+            this.gridColumn24.MinWidth = 23;
             this.gridColumn24.Name = "gridColumn24";
             this.gridColumn24.Visible = true;
             this.gridColumn24.VisibleIndex = 1;
+            this.gridColumn24.Width = 87;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "UNIQUE CODE";
             this.gridColumn1.FieldName = "SKUPRODUCTCODE";
             this.gridColumn1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn1.ImageOptions.SvgImage")));
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsEditForm.UseEditorColRowSpan = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "SKUPRODUCTCODE", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 90;
+            this.gridColumn1.Width = 105;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "ARTICLE NO";
             this.gridColumn2.FieldName = "SKUARTNO";
             this.gridColumn2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn2.ImageOptions.SvgImage")));
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 70;
+            this.gridColumn2.Width = 82;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "DESCRIPTION";
             this.gridColumn3.FieldName = "ARTDESC";
             this.gridColumn3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn3.ImageOptions.SvgImage")));
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
-            this.gridColumn3.Width = 78;
+            this.gridColumn3.Width = 91;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "COLOUR";
             this.gridColumn4.FieldName = "SKUCOLN";
             this.gridColumn4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn4.ImageOptions.SvgImage")));
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
-            this.gridColumn4.Width = 67;
+            this.gridColumn4.Width = 78;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "SIZE";
             this.gridColumn5.FieldName = "SKUSIZN";
             this.gridColumn5.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn5.ImageOptions.SvgImage")));
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 67;
+            this.gridColumn5.Width = 78;
             // 
             // gridColumn6
             // 
@@ -278,173 +292,213 @@
             this.gridColumn6.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn6.FieldName = "SKUFEDQTY";
             this.gridColumn6.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn6.ImageOptions.SvgImage")));
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SKUFEDQTY", "{0:0.##}")});
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
-            this.gridColumn6.Width = 67;
+            this.gridColumn6.Width = 78;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "MRP";
             this.gridColumn7.FieldName = "SKUMRP";
             this.gridColumn7.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn7.ImageOptions.SvgImage")));
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 8;
-            this.gridColumn7.Width = 67;
+            this.gridColumn7.Width = 78;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "WSP";
             this.gridColumn8.FieldName = "SKUWSP";
             this.gridColumn8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("gridColumn8.ImageOptions.SvgImage")));
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 9;
-            this.gridColumn8.Width = 67;
+            this.gridColumn8.Width = 78;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "MRP VAL";
             this.gridColumn9.FieldName = "SKUMRPVAL";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SKUMRPVAL", "{0:0.##}")});
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 10;
-            this.gridColumn9.Width = 67;
+            this.gridColumn9.Width = 78;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "WSP VAL";
             this.gridColumn10.FieldName = "SKUWSPVAL";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SKUWSPVAL", "{0:0.##}")});
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 11;
-            this.gridColumn10.Width = 67;
+            this.gridColumn10.Width = 78;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "SKUARTID";
             this.gridColumn11.FieldName = "SKUARTID";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 15;
+            this.gridColumn11.Width = 87;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "SKUCOLID";
             this.gridColumn12.FieldName = "SKUCOLID";
+            this.gridColumn12.MinWidth = 23;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 16;
+            this.gridColumn12.Width = 87;
             // 
             // gridColumn13
             // 
             this.gridColumn13.Caption = "SKUSIZID";
             this.gridColumn13.FieldName = "SKUSIZID";
+            this.gridColumn13.MinWidth = 23;
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 17;
+            this.gridColumn13.Width = 87;
             // 
             // gridColumn14
             // 
             this.gridColumn14.Caption = "SKUARTCOLSET";
             this.gridColumn14.FieldName = "SKUARTCOLSET";
+            this.gridColumn14.MinWidth = 23;
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.OptionsColumn.AllowEdit = false;
+            this.gridColumn14.Width = 87;
             // 
             // gridColumn15
             // 
             this.gridColumn15.Caption = "SKUARTSIZSET";
             this.gridColumn15.FieldName = "SKUARTSIZSET";
+            this.gridColumn15.MinWidth = 23;
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
+            this.gridColumn15.Width = 87;
             // 
             // gridColumn16
             // 
             this.gridColumn16.Caption = "SKUSIZINDX";
             this.gridColumn16.FieldName = "SKUSIZINDX";
+            this.gridColumn16.MinWidth = 23;
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.OptionsColumn.AllowEdit = false;
+            this.gridColumn16.Width = 87;
             // 
             // gridColumn17
             // 
             this.gridColumn17.Caption = "SKUCODE";
             this.gridColumn17.FieldName = "SKUCODE";
+            this.gridColumn17.MinWidth = 23;
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.OptionsColumn.AllowEdit = false;
+            this.gridColumn17.Width = 87;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "SKUVOUCHNO";
             this.gridColumn18.FieldName = "SKUVOUCHNO";
+            this.gridColumn18.MinWidth = 23;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
+            this.gridColumn18.Width = 87;
             // 
             // gridColumn19
             // 
             this.gridColumn19.Caption = "SKUFNYR";
             this.gridColumn19.FieldName = "SKUFNYR";
+            this.gridColumn19.MinWidth = 23;
             this.gridColumn19.Name = "gridColumn19";
             this.gridColumn19.OptionsColumn.AllowEdit = false;
+            this.gridColumn19.Width = 87;
             // 
             // gridColumn22
             // 
             this.gridColumn22.Caption = "DISC%";
             this.gridColumn22.FieldName = "DISCPRCN";
+            this.gridColumn22.MinWidth = 23;
             this.gridColumn22.Name = "gridColumn22";
             this.gridColumn22.OptionsColumn.AllowEdit = false;
             this.gridColumn22.Visible = true;
             this.gridColumn22.VisibleIndex = 12;
-            this.gridColumn22.Width = 67;
+            this.gridColumn22.Width = 78;
             // 
             // gridColumn20
             // 
             this.gridColumn20.Caption = "FLAT RATE";
             this.gridColumn20.FieldName = "FLATMRP";
+            this.gridColumn20.MinWidth = 23;
             this.gridColumn20.Name = "gridColumn20";
             this.gridColumn20.OptionsColumn.AllowEdit = false;
             this.gridColumn20.Visible = true;
             this.gridColumn20.VisibleIndex = 13;
-            this.gridColumn20.Width = 67;
+            this.gridColumn20.Width = 78;
             // 
             // gridColumn21
             // 
             this.gridColumn21.Caption = "PUR_PRICE";
             this.gridColumn21.FieldName = "SKUPPRICE";
+            this.gridColumn21.MinWidth = 23;
             this.gridColumn21.Name = "gridColumn21";
             this.gridColumn21.OptionsColumn.AllowEdit = false;
             this.gridColumn21.Visible = true;
             this.gridColumn21.VisibleIndex = 14;
-            this.gridColumn21.Width = 88;
+            this.gridColumn21.Width = 103;
             // 
             // gridColumn23
             // 
             this.gridColumn23.Caption = "GrpHSNCode";
             this.gridColumn23.FieldName = "GrpHSNCode";
+            this.gridColumn23.MinWidth = 23;
             this.gridColumn23.Name = "gridColumn23";
             this.gridColumn23.Visible = true;
             this.gridColumn23.VisibleIndex = 18;
+            this.gridColumn23.Width = 87;
             // 
             // gridColumn26
             // 
             this.gridColumn26.Caption = "VARIANTART";
             this.gridColumn26.FieldName = "VARIANTART";
+            this.gridColumn26.MinWidth = 23;
             this.gridColumn26.Name = "gridColumn26";
             this.gridColumn26.Visible = true;
             this.gridColumn26.VisibleIndex = 19;
+            this.gridColumn26.Width = 87;
+            // 
+            // gridColumn27
+            // 
+            this.gridColumn27.Caption = "SizeMappingTransID";
+            this.gridColumn27.FieldName = "SizeMappingTransID";
+            this.gridColumn27.MinWidth = 25;
+            this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 20;
+            this.gridColumn27.Width = 94;
             // 
             // Menu_ToolStrip
             // 
@@ -452,6 +506,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -459,7 +514,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1028, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1456, 31);
             this.Menu_ToolStrip.TabIndex = 685;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -471,7 +526,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -483,17 +538,19 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // HelpGrid
             // 
             this.HelpGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.HelpGrid.Location = new System.Drawing.Point(2, 22);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(2, 26);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(626, 287);
+            this.HelpGrid.Size = new System.Drawing.Size(731, 379);
             this.HelpGrid.TabIndex = 245;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -502,6 +559,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -516,9 +574,10 @@
             // 
             this.panelControl1.Controls.Add(this.HelpGrid);
             this.panelControl1.Controls.Add(this.txtSearchBox);
-            this.panelControl1.Location = new System.Drawing.Point(142, 215);
+            this.panelControl1.Location = new System.Drawing.Point(166, 281);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(630, 311);
+            this.panelControl1.Size = new System.Drawing.Size(735, 407);
             this.panelControl1.TabIndex = 686;
             // 
             // txtSearchBox
@@ -526,10 +585,11 @@
             this.txtSearchBox.Dock = System.Windows.Forms.DockStyle.Top;
             this.txtSearchBox.EnterMoveNextControl = true;
             this.txtSearchBox.Location = new System.Drawing.Point(2, 2);
+            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSearchBox.Properties.MaxLength = 400;
-            this.txtSearchBox.Size = new System.Drawing.Size(626, 20);
+            this.txtSearchBox.Size = new System.Drawing.Size(731, 24);
             this.txtSearchBox.TabIndex = 246;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
@@ -537,11 +597,12 @@
             // ArticleImageBox
             // 
             this.ArticleImageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ArticleImageBox.Location = new System.Drawing.Point(970, 29);
+            this.ArticleImageBox.Location = new System.Drawing.Point(1267, 38);
+            this.ArticleImageBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.ArticleImageBox.Size = new System.Drawing.Size(138, 151);
+            this.ArticleImageBox.Size = new System.Drawing.Size(161, 197);
             this.ArticleImageBox.TabIndex = 708;
             // 
             // groupControl1
@@ -569,18 +630,20 @@
             this.groupControl1.Controls.Add(this.RBBATCH);
             this.groupControl1.Controls.Add(this.RBDIRECT);
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(12, 29);
+            this.groupControl1.Location = new System.Drawing.Point(14, 38);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(736, 151);
+            this.groupControl1.Size = new System.Drawing.Size(868, 197);
             this.groupControl1.TabIndex = 709;
             this.groupControl1.Text = "Generate Mode";
             // 
             // BTNIMPORT2
             // 
             this.BTNIMPORT2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BTNIMPORT2.ImageOptions.SvgImage")));
-            this.BTNIMPORT2.Location = new System.Drawing.Point(436, 88);
+            this.BTNIMPORT2.Location = new System.Drawing.Point(509, 115);
+            this.BTNIMPORT2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTNIMPORT2.Name = "BTNIMPORT2";
-            this.BTNIMPORT2.Size = new System.Drawing.Size(180, 33);
+            this.BTNIMPORT2.Size = new System.Drawing.Size(210, 43);
             this.BTNIMPORT2.TabIndex = 710;
             this.BTNIMPORT2.Text = "IMPORT RELIANCE SHEET 2";
             this.BTNIMPORT2.Click += new System.EventHandler(this.SimpleButton1_Click);
@@ -590,18 +653,20 @@
             this.btnImport.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImport.Appearance.Options.UseFont = true;
             this.btnImport.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnImport.ImageOptions.SvgImage")));
-            this.btnImport.Location = new System.Drawing.Point(436, 55);
+            this.btnImport.Location = new System.Drawing.Point(509, 72);
+            this.btnImport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(180, 33);
+            this.btnImport.Size = new System.Drawing.Size(210, 43);
             this.btnImport.TabIndex = 709;
             this.btnImport.Text = "IMPORT RELIANCE SHEET 1";
             this.btnImport.Click += new System.EventHandler(this.BtnImport_Click);
             // 
             // btnLoadEANs
             // 
-            this.btnLoadEANs.Location = new System.Drawing.Point(642, 18);
+            this.btnLoadEANs.Location = new System.Drawing.Point(749, 24);
+            this.btnLoadEANs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoadEANs.Name = "btnLoadEANs";
-            this.btnLoadEANs.Size = new System.Drawing.Size(90, 40);
+            this.btnLoadEANs.Size = new System.Drawing.Size(105, 52);
             this.btnLoadEANs.TabIndex = 708;
             this.btnLoadEANs.Text = "Load";
             this.btnLoadEANs.UseVisualStyleBackColor = true;
@@ -609,26 +674,29 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(44, 122);
+            this.label2.Location = new System.Drawing.Point(51, 160);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(57, 17);
             this.label2.TabIndex = 707;
             this.label2.Text = "BARCODE";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(34, 93);
+            this.labelControl1.Location = new System.Drawing.Point(40, 122);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 13);
+            this.labelControl1.Size = new System.Drawing.Size(69, 17);
             this.labelControl1.TabIndex = 706;
             this.labelControl1.Text = "ORDER NO.";
             // 
             // btnPrint
             // 
             this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
-            this.btnPrint.Location = new System.Drawing.Point(319, 115);
+            this.btnPrint.Location = new System.Drawing.Point(372, 150);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(87, 27);
+            this.btnPrint.Size = new System.Drawing.Size(101, 35);
             this.btnPrint.TabIndex = 705;
             this.btnPrint.Text = "Print";
             this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
@@ -636,20 +704,22 @@
             // txtBarCode
             // 
             this.txtBarCode.EnterMoveNextControl = true;
-            this.txtBarCode.Location = new System.Drawing.Point(96, 118);
+            this.txtBarCode.Location = new System.Drawing.Point(112, 154);
+            this.txtBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarCode.Properties.MaxLength = 40;
-            this.txtBarCode.Size = new System.Drawing.Size(217, 20);
+            this.txtBarCode.Size = new System.Drawing.Size(253, 24);
             this.txtBarCode.TabIndex = 704;
             this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
             // 
             // RBBYFLTRT
             // 
             this.RBBYFLTRT.AutoSize = true;
-            this.RBBYFLTRT.Location = new System.Drawing.Point(642, 79);
+            this.RBBYFLTRT.Location = new System.Drawing.Point(749, 103);
+            this.RBBYFLTRT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBBYFLTRT.Name = "RBBYFLTRT";
-            this.RBBYFLTRT.Size = new System.Drawing.Size(90, 17);
+            this.RBBYFLTRT.Size = new System.Drawing.Size(113, 23);
             this.RBBYFLTRT.TabIndex = 702;
             this.RBBYFLTRT.TabStop = true;
             this.RBBYFLTRT.Text = "BY FLAT RATE";
@@ -659,9 +729,10 @@
             // RBBYDSCPRCN
             // 
             this.RBBYDSCPRCN.AutoSize = true;
-            this.RBBYDSCPRCN.Location = new System.Drawing.Point(642, 57);
+            this.RBBYDSCPRCN.Location = new System.Drawing.Point(749, 75);
+            this.RBBYDSCPRCN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBBYDSCPRCN.Name = "RBBYDSCPRCN";
-            this.RBBYDSCPRCN.Size = new System.Drawing.Size(72, 17);
+            this.RBBYDSCPRCN.Size = new System.Drawing.Size(91, 23);
             this.RBBYDSCPRCN.TabIndex = 701;
             this.RBBYDSCPRCN.TabStop = true;
             this.RBBYDSCPRCN.Text = "BY DISC%";
@@ -670,9 +741,10 @@
             // 
             // btnReCalculate
             // 
-            this.btnReCalculate.Location = new System.Drawing.Point(641, 102);
+            this.btnReCalculate.Location = new System.Drawing.Point(748, 133);
+            this.btnReCalculate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReCalculate.Name = "btnReCalculate";
-            this.btnReCalculate.Size = new System.Drawing.Size(90, 40);
+            this.btnReCalculate.Size = new System.Drawing.Size(105, 52);
             this.btnReCalculate.TabIndex = 700;
             this.btnReCalculate.Text = "RE-CALCULATE";
             this.btnReCalculate.UseVisualStyleBackColor = true;
@@ -681,21 +753,23 @@
             // txtOrderNo
             // 
             this.txtOrderNo.EnterMoveNextControl = true;
-            this.txtOrderNo.Location = new System.Drawing.Point(96, 89);
+            this.txtOrderNo.Location = new System.Drawing.Point(112, 116);
+            this.txtOrderNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderNo.Properties.MaxLength = 4;
-            this.txtOrderNo.Size = new System.Drawing.Size(217, 20);
+            this.txtOrderNo.Size = new System.Drawing.Size(253, 24);
             this.txtOrderNo.TabIndex = 697;
             // 
             // txtDeptCode
             // 
             this.txtDeptCode.EnterMoveNextControl = true;
-            this.txtDeptCode.Location = new System.Drawing.Point(96, 62);
+            this.txtDeptCode.Location = new System.Drawing.Point(112, 81);
+            this.txtDeptCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
-            this.txtDeptCode.Size = new System.Drawing.Size(58, 20);
+            this.txtDeptCode.Size = new System.Drawing.Size(68, 24);
             this.txtDeptCode.TabIndex = 694;
             this.txtDeptCode.EditValueChanged += new System.EventHandler(this.TxtDeptCode_EditValueChanged);
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
@@ -703,21 +777,23 @@
             // txtDeptDesc
             // 
             this.txtDeptDesc.EnterMoveNextControl = true;
-            this.txtDeptDesc.Location = new System.Drawing.Point(155, 62);
+            this.txtDeptDesc.Location = new System.Drawing.Point(181, 81);
+            this.txtDeptDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
-            this.txtDeptDesc.Size = new System.Drawing.Size(158, 20);
+            this.txtDeptDesc.Size = new System.Drawing.Size(184, 24);
             this.txtDeptDesc.TabIndex = 695;
             this.txtDeptDesc.TabStop = false;
             // 
             // txtSysID
             // 
             this.txtSysID.Enabled = false;
-            this.txtSysID.Location = new System.Drawing.Point(553, 29);
+            this.txtSysID.Location = new System.Drawing.Point(645, 38);
+            this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSysID.Size = new System.Drawing.Size(83, 20);
+            this.txtSysID.Size = new System.Drawing.Size(97, 24);
             this.txtSysID.TabIndex = 699;
             this.txtSysID.Visible = false;
             // 
@@ -725,7 +801,8 @@
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(494, 30);
+            this.Label15.Location = new System.Drawing.Point(576, 39);
+            this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(45, 18);
             this.Label15.TabIndex = 698;
@@ -734,9 +811,10 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(27, 66);
+            this.labelControl6.Location = new System.Drawing.Point(31, 86);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(67, 13);
+            this.labelControl6.Size = new System.Drawing.Size(77, 17);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "STORE CODE";
             // 
@@ -745,9 +823,10 @@
             this.RBPUR.AutoSize = true;
             this.RBPUR.Enabled = false;
             this.RBPUR.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBPUR.Location = new System.Drawing.Point(252, 41);
+            this.RBPUR.Location = new System.Drawing.Point(294, 54);
+            this.RBPUR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBPUR.Name = "RBPUR";
-            this.RBPUR.Size = new System.Drawing.Size(111, 18);
+            this.RBPUR.Size = new System.Drawing.Size(117, 19);
             this.RBPUR.TabIndex = 691;
             this.RBPUR.TabStop = true;
             this.RBPUR.Text = "THRU PURCHASE";
@@ -757,9 +836,10 @@
             // 
             this.ChkFixedBarCode.AutoSize = true;
             this.ChkFixedBarCode.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.ChkFixedBarCode.Location = new System.Drawing.Point(319, 90);
+            this.ChkFixedBarCode.Location = new System.Drawing.Point(372, 118);
+            this.ChkFixedBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChkFixedBarCode.Name = "ChkFixedBarCode";
-            this.ChkFixedBarCode.Size = new System.Drawing.Size(108, 18);
+            this.ChkFixedBarCode.Size = new System.Drawing.Size(114, 19);
             this.ChkFixedBarCode.TabIndex = 690;
             this.ChkFixedBarCode.Text = "FIXED BARCODE";
             this.ChkFixedBarCode.UseVisualStyleBackColor = true;
@@ -769,9 +849,10 @@
             // 
             this.RBIMPORT.AutoSize = true;
             this.RBIMPORT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBIMPORT.Location = new System.Drawing.Point(181, 41);
+            this.RBIMPORT.Location = new System.Drawing.Point(211, 54);
+            this.RBIMPORT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBIMPORT.Name = "RBIMPORT";
-            this.RBIMPORT.Size = new System.Drawing.Size(65, 18);
+            this.RBIMPORT.Size = new System.Drawing.Size(71, 19);
             this.RBIMPORT.TabIndex = 686;
             this.RBIMPORT.TabStop = true;
             this.RBIMPORT.Text = "IMPORT";
@@ -783,9 +864,10 @@
             this.RBBATCH.AutoSize = true;
             this.RBBATCH.Enabled = false;
             this.RBBATCH.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBBATCH.Location = new System.Drawing.Point(107, 41);
+            this.RBBATCH.Location = new System.Drawing.Point(125, 54);
+            this.RBBATCH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBBATCH.Name = "RBBATCH";
-            this.RBBATCH.Size = new System.Drawing.Size(58, 18);
+            this.RBBATCH.Size = new System.Drawing.Size(63, 19);
             this.RBBATCH.TabIndex = 687;
             this.RBBATCH.TabStop = true;
             this.RBBATCH.Text = "BATCH";
@@ -795,9 +877,10 @@
             // 
             this.RBDIRECT.AutoSize = true;
             this.RBDIRECT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.RBDIRECT.Location = new System.Drawing.Point(33, 41);
+            this.RBDIRECT.Location = new System.Drawing.Point(38, 54);
+            this.RBDIRECT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBDIRECT.Name = "RBDIRECT";
-            this.RBDIRECT.Size = new System.Drawing.Size(61, 18);
+            this.RBDIRECT.Size = new System.Drawing.Size(65, 19);
             this.RBDIRECT.TabIndex = 688;
             this.RBDIRECT.TabStop = true;
             this.RBDIRECT.Text = "DIRECT";
@@ -816,9 +899,9 @@
             // 
             // frmBarPrinting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 585);
+            this.ClientSize = new System.Drawing.Size(1456, 761);
             this.ControlBox = false;
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panelControl1);
@@ -827,6 +910,7 @@
             this.Controls.Add(this.BarCodeGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBarPrinting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmBarPrinting_Load);
@@ -915,5 +999,6 @@
         private DevExpress.XtraEditors.SimpleButton BTNIMPORT2;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
     }
 }

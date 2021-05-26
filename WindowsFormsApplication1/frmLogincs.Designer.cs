@@ -59,13 +59,14 @@
             // txtUserName
             // 
             this.txtUserName.EnterMoveNextControl = true;
-            this.txtUserName.Location = new System.Drawing.Point(165, 19);
+            this.txtUserName.Location = new System.Drawing.Point(192, 25);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.txtUserName.Properties.Appearance.Options.UseFont = true;
             this.txtUserName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUserName.Properties.MaxLength = 30;
-            this.txtUserName.Size = new System.Drawing.Size(229, 22);
+            this.txtUserName.Size = new System.Drawing.Size(267, 26);
             this.txtUserName.TabIndex = 0;
             this.txtUserName.DoubleClick += new System.EventHandler(this.TxtUserName_DoubleClick);
             this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUserName_KeyDown);
@@ -76,23 +77,25 @@
             this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label3.Appearance.Options.UseBackColor = true;
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(131, 23);
+            this.label3.Location = new System.Drawing.Point(150, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 15);
+            this.label3.Size = new System.Drawing.Size(38, 20);
             this.label3.TabIndex = 21;
             this.label3.Text = "Login";
             // 
             // txtPassword
             // 
             this.txtPassword.EnterMoveNextControl = true;
-            this.txtPassword.Location = new System.Drawing.Point(165, 46);
+            this.txtPassword.Location = new System.Drawing.Point(192, 60);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPassword.Properties.MaxLength = 30;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(229, 22);
+            this.txtPassword.Size = new System.Drawing.Size(267, 26);
             this.txtPassword.TabIndex = 1;
             // 
             // label1
@@ -101,9 +104,10 @@
             this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Appearance.Options.UseBackColor = true;
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(111, 50);
+            this.label1.Location = new System.Drawing.Point(124, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 15);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Password";
             // 
@@ -116,12 +120,13 @@
             this.btnClose.Appearance.Options.UseFont = true;
             this.btnClose.Appearance.Options.UseForeColor = true;
             this.btnClose.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.ImageOptions.Image")));
-            this.btnClose.Location = new System.Drawing.Point(256, 237);
+            this.btnClose.Location = new System.Drawing.Point(299, 310);
             this.btnClose.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnClose.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnClose.Size = new System.Drawing.Size(85, 25);
+            this.btnClose.Size = new System.Drawing.Size(99, 33);
             this.btnClose.TabIndex = 45;
             this.btnClose.Text = "Exit";
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
@@ -135,19 +140,20 @@
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.Appearance.Options.UseForeColor = true;
             this.btnLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLogin.ImageOptions.Image")));
-            this.btnLogin.Location = new System.Drawing.Point(165, 237);
+            this.btnLogin.Location = new System.Drawing.Point(192, 310);
             this.btnLogin.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnLogin.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnLogin.Size = new System.Drawing.Size(85, 25);
+            this.btnLogin.Size = new System.Drawing.Size(99, 33);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013 Dark Gray";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "The Bezier";
             // 
             // label2
             // 
@@ -155,9 +161,10 @@
             this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseBackColor = true;
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(110, 126);
+            this.label2.Location = new System.Drawing.Point(123, 163);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 15);
+            this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Company";
             // 
@@ -167,9 +174,10 @@
             this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Appearance.Options.UseBackColor = true;
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(139, 154);
+            this.label4.Location = new System.Drawing.Point(159, 199);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 15);
+            this.label4.Size = new System.Drawing.Size(29, 20);
             this.label4.TabIndex = 23;
             this.label4.Text = "Unit";
             // 
@@ -179,9 +187,10 @@
             this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Appearance.Options.UseBackColor = true;
             this.label5.Appearance.Options.UseFont = true;
-            this.label5.Location = new System.Drawing.Point(88, 182);
+            this.label5.Location = new System.Drawing.Point(92, 236);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 15);
+            this.label5.Size = new System.Drawing.Size(96, 20);
             this.label5.TabIndex = 23;
             this.label5.Text = "Financial Year";
             // 
@@ -191,21 +200,24 @@
             this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Appearance.Options.UseBackColor = true;
             this.label6.Appearance.Options.UseFont = true;
-            this.label6.Location = new System.Drawing.Point(103, 210);
+            this.label6.Location = new System.Drawing.Point(114, 273);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 15);
+            this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 23;
             this.label6.Text = "Login Date";
             // 
             // dTP1
             // 
             this.dTP1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 10F);
+            this.dTP1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dTP1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.dTP1.Location = new System.Drawing.Point(165, 206);
+            this.dTP1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dTP1.Location = new System.Drawing.Point(192, 269);
             this.dTP1.Margin = new System.Windows.Forms.Padding(0);
             this.dTP1.MinDate = new System.DateTime(2015, 1, 1, 0, 0, 0, 0);
             this.dTP1.Name = "dTP1";
-            this.dTP1.Size = new System.Drawing.Size(229, 23);
+            this.dTP1.Size = new System.Drawing.Size(266, 27);
             this.dTP1.TabIndex = 55;
             this.dTP1.Value = new System.DateTime(2020, 9, 9, 17, 48, 0, 0);
             // 
@@ -214,9 +226,10 @@
             this.txtCompany.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtCompany.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.txtCompany.FormattingEnabled = true;
-            this.txtCompany.Location = new System.Drawing.Point(165, 122);
+            this.txtCompany.Location = new System.Drawing.Point(192, 160);
+            this.txtCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(229, 23);
+            this.txtCompany.Size = new System.Drawing.Size(266, 28);
             this.txtCompany.TabIndex = 2;
             this.txtCompany.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCompany_KeyDown);
             // 
@@ -225,9 +238,10 @@
             this.txtUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtUnit.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.txtUnit.FormattingEnabled = true;
-            this.txtUnit.Location = new System.Drawing.Point(165, 150);
+            this.txtUnit.Location = new System.Drawing.Point(192, 196);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(229, 23);
+            this.txtUnit.Size = new System.Drawing.Size(266, 28);
             this.txtUnit.TabIndex = 3;
             this.txtUnit.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUnit_KeyDown);
             // 
@@ -236,9 +250,10 @@
             this.txtFNYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtFNYear.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.txtFNYear.FormattingEnabled = true;
-            this.txtFNYear.Location = new System.Drawing.Point(165, 178);
+            this.txtFNYear.Location = new System.Drawing.Point(192, 233);
+            this.txtFNYear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFNYear.Name = "txtFNYear";
-            this.txtFNYear.Size = new System.Drawing.Size(229, 23);
+            this.txtFNYear.Size = new System.Drawing.Size(266, 28);
             this.txtFNYear.TabIndex = 4;
             this.txtFNYear.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFNYear_KeyDown);
             // 
@@ -251,11 +266,12 @@
             this.btnBackup.Appearance.Options.UseFont = true;
             this.btnBackup.Appearance.Options.UseForeColor = true;
             this.btnBackup.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnBackup.ImageOptions.SvgImage")));
-            this.btnBackup.Location = new System.Drawing.Point(21, 249);
+            this.btnBackup.Location = new System.Drawing.Point(24, 326);
             this.btnBackup.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.btnBackup.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.btnBackup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(83, 39);
+            this.btnBackup.Size = new System.Drawing.Size(97, 51);
             this.btnBackup.TabIndex = 56;
             this.btnBackup.Text = "BackUp";
             this.btnBackup.Click += new System.EventHandler(this.BtnBackup_Click);
@@ -268,14 +284,15 @@
             // textEdit1
             // 
             this.textEdit1.EnterMoveNextControl = true;
-            this.textEdit1.Location = new System.Drawing.Point(165, 95);
+            this.textEdit1.Location = new System.Drawing.Point(192, 124);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textEdit1.Properties.MaxLength = 30;
             this.textEdit1.Properties.PasswordChar = '*';
-            this.textEdit1.Size = new System.Drawing.Size(136, 22);
+            this.textEdit1.Size = new System.Drawing.Size(159, 26);
             this.textEdit1.TabIndex = 57;
             // 
             // label7
@@ -284,9 +301,10 @@
             this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.Appearance.Options.UseBackColor = true;
             this.label7.Appearance.Options.UseFont = true;
-            this.label7.Location = new System.Drawing.Point(141, 99);
+            this.label7.Location = new System.Drawing.Point(163, 127);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(20, 15);
+            this.label7.Size = new System.Drawing.Size(25, 20);
             this.label7.TabIndex = 58;
             this.label7.Text = "Otp";
             // 
@@ -296,9 +314,10 @@
             this.label8.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label8.Appearance.Options.UseBackColor = true;
             this.label8.Appearance.Options.UseFont = true;
-            this.label8.Location = new System.Drawing.Point(265, 73);
+            this.label8.Location = new System.Drawing.Point(309, 95);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(17, 15);
+            this.label8.Size = new System.Drawing.Size(21, 20);
             this.label8.TabIndex = 59;
             this.label8.Text = "OR";
             // 
@@ -310,11 +329,12 @@
             this.simpleButton1.Appearance.Options.UseBackColor = true;
             this.simpleButton1.Appearance.Options.UseFont = true;
             this.simpleButton1.Appearance.Options.UseForeColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(309, 95);
+            this.simpleButton1.Location = new System.Drawing.Point(360, 122);
             this.simpleButton1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.simpleButton1.LookAndFeel.UseDefaultLookAndFeel = false;
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(85, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(99, 27);
             this.simpleButton1.TabIndex = 60;
             this.simpleButton1.Text = "Send OTP";
             // 
@@ -322,11 +342,11 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = global::WindowsFormsApplication1.Properties.Resources.login;
-            this.ClientSize = new System.Drawing.Size(552, 302);
+            this.ClientSize = new System.Drawing.Size(644, 395);
             this.ControlBox = false;
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.label8);
@@ -348,6 +368,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmLogins";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmLogincs_Load);

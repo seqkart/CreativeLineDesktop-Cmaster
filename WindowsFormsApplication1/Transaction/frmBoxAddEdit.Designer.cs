@@ -91,6 +91,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave,
@@ -100,7 +101,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1121, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1285, 31);
             this.Menu_ToolStrip.TabIndex = 687;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -112,7 +113,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(50, 23);
+            this.btnQuit.Size = new System.Drawing.Size(60, 28);
             this.btnQuit.Text = "Close";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -124,7 +125,7 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -136,9 +137,8 @@
             this.btnImportBarCodeForBranch.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBarCodeForBranch.Image")));
             this.btnImportBarCodeForBranch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImportBarCodeForBranch.Name = "btnImportBarCodeForBranch";
-            this.btnImportBarCodeForBranch.Size = new System.Drawing.Size(163, 23);
+            this.btnImportBarCodeForBranch.Size = new System.Drawing.Size(205, 28);
             this.btnImportBarCodeForBranch.Text = "Import BarCode For Branch";
-          //  this.btnImportBarCodeForBranch.Click += new System.EventHandler(this.BtnImportBarCodeForBranch_Click);
             // 
             // btnImportBarode
             // 
@@ -148,16 +148,18 @@
             this.btnImportBarode.Image = ((System.Drawing.Image)(resources.GetObject("btnImportBarode.Image")));
             this.btnImportBarode.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnImportBarode.Name = "btnImportBarode";
-            this.btnImportBarode.Size = new System.Drawing.Size(100, 23);
+            this.btnImportBarode.Size = new System.Drawing.Size(125, 28);
             this.btnImportBarode.Text = "Import BarCode";
             this.btnImportBarode.Click += new System.EventHandler(this.BtnImportBarode_Click);
             // 
             // BarCodeGrid
             // 
-            this.BarCodeGrid.Location = new System.Drawing.Point(11, 203);
+            this.BarCodeGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BarCodeGrid.Location = new System.Drawing.Point(13, 265);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
+            this.BarCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BarCodeGrid.Name = "BarCodeGrid";
-            this.BarCodeGrid.Size = new System.Drawing.Size(869, 316);
+            this.BarCodeGrid.Size = new System.Drawing.Size(1014, 413);
             this.BarCodeGrid.TabIndex = 688;
             this.BarCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BarCodeGridView});
@@ -180,6 +182,7 @@
             this.gridColumn16,
             this.gridColumn17,
             this.gridColumn18});
+            this.BarCodeGridView.DetailHeight = 458;
             this.BarCodeGridView.GridControl = this.BarCodeGrid;
             this.BarCodeGridView.Name = "BarCodeGridView";
             this.BarCodeGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -195,121 +198,149 @@
             // 
             this.gridColumn1.Caption = "BOX NO";
             this.gridColumn1.FieldName = "SFDBOXNO";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "SFDBOXNO", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 8;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "ITEMCODE";
             this.gridColumn2.FieldName = "SFDBARCODE";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "ARTICLE";
             this.gridColumn3.FieldName = "SFDARTNO";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "DESCRIPTION";
             this.gridColumn4.FieldName = "SFDARTDESC";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
+            this.gridColumn4.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "COLOUR";
             this.gridColumn5.FieldName = "SFDCOLN";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "SIZE";
             this.gridColumn6.FieldName = "SFDSIZN";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
+            this.gridColumn6.Width = 87;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "QTY";
             this.gridColumn7.FieldName = "SFDSCANQTY";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SFDSCANQTY", "{0:0.##}")});
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
+            this.gridColumn7.Width = 87;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "MRP";
             this.gridColumn9.FieldName = "SFDARTMRP";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 6;
+            this.gridColumn9.Width = 87;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "WSP";
             this.gridColumn10.FieldName = "SFDARTWSP";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 7;
+            this.gridColumn10.Width = 87;
             // 
             // gridColumn15
             // 
             this.gridColumn15.Caption = "SFDARTID";
             this.gridColumn15.FieldName = "SFDARTID";
+            this.gridColumn15.MinWidth = 23;
             this.gridColumn15.Name = "gridColumn15";
             this.gridColumn15.OptionsColumn.AllowEdit = false;
+            this.gridColumn15.Width = 87;
             // 
             // gridColumn16
             // 
             this.gridColumn16.Caption = "SFDCOLID";
             this.gridColumn16.FieldName = "SFDCOLID";
+            this.gridColumn16.MinWidth = 23;
             this.gridColumn16.Name = "gridColumn16";
             this.gridColumn16.OptionsColumn.AllowEdit = false;
+            this.gridColumn16.Width = 87;
             // 
             // gridColumn17
             // 
             this.gridColumn17.Caption = "SFDSIZID";
             this.gridColumn17.FieldName = "SFDSIZID";
+            this.gridColumn17.MinWidth = 23;
             this.gridColumn17.Name = "gridColumn17";
             this.gridColumn17.OptionsColumn.AllowEdit = false;
+            this.gridColumn17.Width = 87;
             // 
             // gridColumn18
             // 
             this.gridColumn18.Caption = "SFDBOXQTY";
             this.gridColumn18.FieldName = "SFDBOXQTY";
+            this.gridColumn18.MinWidth = 23;
             this.gridColumn18.Name = "gridColumn18";
             this.gridColumn18.OptionsColumn.AllowEdit = false;
+            this.gridColumn18.Width = 87;
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(117, 117);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(136, 153);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(693, 356);
+            this.HelpGrid.Size = new System.Drawing.Size(808, 466);
             this.HelpGrid.TabIndex = 693;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -320,6 +351,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -332,15 +364,17 @@
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
             // 
             // txtMemoNo
             // 
             this.txtMemoNo.Enabled = false;
-            this.txtMemoNo.Location = new System.Drawing.Point(264, 45);
+            this.txtMemoNo.Location = new System.Drawing.Point(297, 58);
+            this.txtMemoNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemoNo.Name = "txtMemoNo";
-            this.txtMemoNo.Size = new System.Drawing.Size(98, 20);
+            this.txtMemoNo.Size = new System.Drawing.Size(114, 24);
             this.txtMemoNo.TabIndex = 692;
             this.txtMemoNo.TabStop = false;
             // 
@@ -348,7 +382,8 @@
             // 
             this.dateEdit1.EditValue = null;
             this.dateEdit1.Enabled = false;
-            this.dateEdit1.Location = new System.Drawing.Point(-159, 73);
+            this.dateEdit1.Location = new System.Drawing.Point(-185, 95);
+            this.dateEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -356,7 +391,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEdit1.Properties.Mask.EditMask = "";
             this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit1.Size = new System.Drawing.Size(79, 20);
+            this.dateEdit1.Size = new System.Drawing.Size(92, 24);
             this.dateEdit1.TabIndex = 694;
             this.dateEdit1.TabStop = false;
             // 
@@ -364,7 +399,8 @@
             // 
             this.txtMemoDate.EditValue = null;
             this.txtMemoDate.Enabled = false;
-            this.txtMemoDate.Location = new System.Drawing.Point(86, 45);
+            this.txtMemoDate.Location = new System.Drawing.Point(103, 58);
+            this.txtMemoDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemoDate.Name = "txtMemoDate";
             this.txtMemoDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -372,17 +408,18 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtMemoDate.Properties.Mask.EditMask = "";
             this.txtMemoDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtMemoDate.Size = new System.Drawing.Size(98, 20);
+            this.txtMemoDate.Size = new System.Drawing.Size(114, 24);
             this.txtMemoDate.TabIndex = 697;
             this.txtMemoDate.TabStop = false;
             // 
             // txtBarCode
             // 
-            this.txtBarCode.Location = new System.Drawing.Point(77, 173);
+            this.txtBarCode.Location = new System.Drawing.Point(90, 226);
+            this.txtBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBarCode.Properties.Appearance.Options.UseFont = true;
-            this.txtBarCode.Size = new System.Drawing.Size(195, 24);
+            this.txtBarCode.Size = new System.Drawing.Size(227, 28);
             this.txtBarCode.TabIndex = 0;
             this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
             // 
@@ -392,17 +429,19 @@
             this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBox.Appearance.Options.UseBackColor = true;
             this.lblBox.Appearance.Options.UseFont = true;
-            this.lblBox.Location = new System.Drawing.Point(388, 68);
+            this.lblBox.Location = new System.Drawing.Point(453, 89);
+            this.lblBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblBox.Name = "lblBox";
-            this.lblBox.Size = new System.Drawing.Size(57, 112);
+            this.lblBox.Size = new System.Drawing.Size(71, 141);
             this.lblBox.TabIndex = 700;
             this.lblBox.Text = "0";
             // 
             // txtRemarks
             // 
-            this.txtRemarks.Location = new System.Drawing.Point(77, 525);
+            this.txtRemarks.Location = new System.Drawing.Point(90, 687);
+            this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(803, 20);
+            this.txtRemarks.Size = new System.Drawing.Size(937, 24);
             this.txtRemarks.TabIndex = 702;
             this.txtRemarks.TabStop = false;
             // 
@@ -410,7 +449,8 @@
             // 
             this.label4.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(15, 528);
+            this.label4.Location = new System.Drawing.Point(17, 690);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 15);
             this.label4.TabIndex = 701;
@@ -418,9 +458,10 @@
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(438, 45);
+            this.txtLocation.Location = new System.Drawing.Point(477, 58);
+            this.txtLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(171, 20);
+            this.txtLocation.Size = new System.Drawing.Size(199, 24);
             this.txtLocation.TabIndex = 704;
             this.txtLocation.TabStop = false;
             // 
@@ -428,9 +469,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(269, 102);
+            this.labelControl1.Location = new System.Drawing.Point(314, 133);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(113, 45);
+            this.labelControl1.Size = new System.Drawing.Size(139, 54);
             this.labelControl1.TabIndex = 705;
             this.labelControl1.Text = "Box No";
             // 
@@ -438,9 +480,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(524, 102);
+            this.labelControl2.Location = new System.Drawing.Point(611, 133);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(49, 45);
+            this.labelControl2.Size = new System.Drawing.Size(62, 54);
             this.labelControl2.TabIndex = 706;
             this.labelControl2.Text = "Pcs";
             // 
@@ -450,28 +493,31 @@
             this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotQty.Appearance.Options.UseBackColor = true;
             this.lblTotQty.Appearance.Options.UseFont = true;
-            this.lblTotQty.Location = new System.Drawing.Point(593, 68);
+            this.lblTotQty.Location = new System.Drawing.Point(692, 89);
+            this.lblTotQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotQty.Name = "lblTotQty";
-            this.lblTotQty.Size = new System.Drawing.Size(57, 112);
+            this.lblTotQty.Size = new System.Drawing.Size(71, 141);
             this.lblTotQty.TabIndex = 707;
             this.lblTotQty.Text = "0";
             // 
             // ArticleImageBox
             // 
-            this.ArticleImageBox.Location = new System.Drawing.Point(886, 214);
+            this.ArticleImageBox.Location = new System.Drawing.Point(1034, 280);
+            this.ArticleImageBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.ArticleImageBox.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.ArticleImageBox.Size = new System.Drawing.Size(231, 250);
+            this.ArticleImageBox.Size = new System.Drawing.Size(242, 327);
             this.ArticleImageBox.TabIndex = 729;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(12, 48);
+            this.labelControl3.Location = new System.Drawing.Point(14, 60);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(72, 17);
+            this.labelControl3.Size = new System.Drawing.Size(89, 21);
             this.labelControl3.TabIndex = 730;
             this.labelControl3.Text = "Memo Date";
             // 
@@ -479,9 +525,10 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(186, 46);
+            this.labelControl4.Location = new System.Drawing.Point(217, 60);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(65, 17);
+            this.labelControl4.Size = new System.Drawing.Size(80, 21);
             this.labelControl4.TabIndex = 730;
             this.labelControl4.Text = "Memo No.";
             // 
@@ -489,9 +536,10 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(367, 46);
+            this.labelControl5.Location = new System.Drawing.Point(411, 60);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(53, 17);
+            this.labelControl5.Size = new System.Drawing.Size(66, 21);
             this.labelControl5.TabIndex = 730;
             this.labelControl5.Text = "Location";
             // 
@@ -499,17 +547,18 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(18, 176);
+            this.labelControl6.Location = new System.Drawing.Point(21, 230);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(49, 17);
+            this.labelControl6.Size = new System.Drawing.Size(62, 21);
             this.labelControl6.TabIndex = 730;
             this.labelControl6.Text = "Barcode";
             // 
             // FrmBoxAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1121, 567);
+            this.ClientSize = new System.Drawing.Size(1285, 741);
             this.ControlBox = false;
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.labelControl5);
@@ -532,6 +581,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmBoxAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmBoxAddEdit_Load);
