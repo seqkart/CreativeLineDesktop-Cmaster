@@ -1691,6 +1691,12 @@
     <Compile Include="Transaction\frmLoanMstAddEdit.designer.cs">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmMessageBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmMessageBuilder.Designer.cs">
+      <DependentUpon>frmMessageBuilder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmPackingSlipWholeSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2253,6 +2259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmLoanMstAddEdit.resx">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmMessageBuilder.resx">
+      <DependentUpon>frmMessageBuilder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmPackingSlipWholeSale.resx">
       <DependentUpon>frmPackingSlipWholeSale.cs</DependentUpon>

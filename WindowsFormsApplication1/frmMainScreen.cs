@@ -143,6 +143,13 @@ namespace WindowsFormsApplication1
             GlobalVariables.ProgCode = myitem;
             switch (myitem)
             {
+
+                case "PROG233":
+                    var PROG233 = new Transaction.frmMessageBuilder() { Dock = DockStyle.Fill, TopLevel = false };
+                    _WorkAreaPanel.Controls.Add(PROG233);
+                    PROG233.Show();
+                    PROG233.BringToFront();
+                    break;
                 case "PROG200":
                     var PROG200 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG200);

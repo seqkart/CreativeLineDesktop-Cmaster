@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
             }
             if (S1 == "Edit")
             {
-                
+
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT DesgCode,DesgDesc FROM DesgMst Where DesgCode='" + DesgCode + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
 
             return true;
         }
-       
+
         private void FrmDesignationAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1
                 }
                 Close();
 
-               
+
             }
         }
     }

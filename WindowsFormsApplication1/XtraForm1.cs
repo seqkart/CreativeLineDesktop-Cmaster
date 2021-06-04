@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="D:\SeqkartnewHar\WindowsFormsApplication1\XtraForm1.cs" company="">
-//     Author:  
+//     Author:
 //     Copyright (c) . All rights reserved.
 // </copyright>
 //-----------------------------------------------------------------------
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1
                         };
 
                         OuterElement.ImageOptions.ImageUri = "Copy;Size16x16";
-                        
+
                         accordionControl1.Elements.Add(OuterElement);
 
                         var ProginMenuGroup = (from DataRow dRow in MyTempTable.Select("ProginMenu='" + OuterElement.Text + "'")
@@ -105,7 +105,7 @@ namespace WindowsFormsApplication1
                                     Text = R["ProgDesc"].ToString(),
                                     Name = R["ProgCode"].ToString(),
                                     ImageUri= "Copy;Size16x16"
-                               
+
                                 };
                                 InnerElement.Elements.Add(InnerMostElement);
                                 InnerMostElement.Click += InnerMostElement_Click;
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1
             DataSet dsUserTheme = ProjectFunctions.GetDataSet("select isnull(UserTheme,'') as UserTheme from UserMaster where UserName='" + GlobalVariables.CurrentUser + "'");
             if (dsUserTheme.Tables[0].Rows[0][0].ToString().Length > 0)
             {
-                
+
                 defaultLookAndFeel1.LookAndFeel.SkinName = dsUserTheme.Tables[0].Rows[0][0].ToString();
             }
             else
@@ -181,7 +181,7 @@ namespace WindowsFormsApplication1
         private void BtnCopy_ItemClick(object sender, ItemClickEventArgs e)
         {
             RunProgAccordin(e.Item.Name, e.Item.Caption);
-           
+
 
         }
 
@@ -285,16 +285,7 @@ namespace WindowsFormsApplication1
             if (dsFormToCall.Tables[0].Rows[0][0].ToString().Trim().Length > 0)
             {
                 //string FormToCall = "WindowsFormsApplication1.frmMaster";
-                string FormToCall = dsFormToCall.Tables[0].Rows[0]["ProgFormLink"].ToString();
-                var frm = System.Reflection.Assembly.GetExecutingAssembly().CreateInstance(FormToCall);
-                (frm as DevExpress.XtraEditors.XtraForm).Dock = DockStyle.Fill;
-                (frm as DevExpress.XtraEditors.XtraForm).TopLevel = false;
-                (frm as DevExpress.XtraEditors.XtraForm).StartPosition = FormStartPosition.Manual;
-                (frm as DevExpress.XtraEditors.XtraForm).WindowState = System.Windows.Forms.FormWindowState.Normal;
-                (frm as DevExpress.XtraEditors.XtraForm).Show();
-                (frm as DevExpress.XtraEditors.XtraForm).BringToFront();
-                (frm as DevExpress.XtraEditors.XtraForm).Parent = Page;
-                xtraTabControl1.SelectedTabPage = Page;
+
             }
             else
             {
@@ -302,7 +293,13 @@ namespace WindowsFormsApplication1
                 switch (myitem)
                 {
 
-
+                    case "PROG233":
+                        var PROG233 = new Transaction.frmMessageBuilder() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                        PROG233.Show();
+                        PROG233.BringToFront();
+                        PROG233.Parent = Page;
+                        xtraTabControl1.SelectedTabPage = Page;
+                        break;
 
 
                     case "PROG232":
@@ -1870,7 +1867,7 @@ namespace WindowsFormsApplication1
         {
 
 
-            
+
         }
 
         private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
