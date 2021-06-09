@@ -1628,7 +1628,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://localhost:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1656,7 +1656,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://localhost:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1683,7 +1683,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://103.223.12.170:3000/disconnect"))
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://localhost:3000/disconnect"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1715,7 +1715,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1738,7 +1738,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 

@@ -180,5 +180,22 @@ namespace WindowsFormsApplication1.Forms_Transaction
         {
 
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (GlobalVariables.ProgCode == "PROG152")
+            {
+                var confirmResult = XtraMessageBox.Show("Are you sure to delete this item ??",
+                                     "Confirm Delete!!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    var row = ReplGridView.GetDataRow(ReplGridView.FocusedRowHandle);
+                    ProjectFunctions.GetDataSet("Delete from ExMst Where ExNo ='" + row["ExNo"].ToString() + "'");
+                    fillGrid();
+
+                }
+            }
+        }
     }
 }

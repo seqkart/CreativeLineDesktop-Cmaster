@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdvanceMst));
             this.ReplGrid = new DevExpress.XtraGrid.GridControl();
             this.ReplGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -75,12 +75,14 @@
             // ReplGrid
             // 
             this.ReplGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ReplGrid.Location = new System.Drawing.Point(0, 102);
+            this.ReplGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ReplGrid.Location = new System.Drawing.Point(0, 130);
             this.ReplGrid.MainView = this.ReplGridView;
+            this.ReplGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ReplGrid.Name = "ReplGrid";
             this.ReplGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.ReplGrid.Size = new System.Drawing.Size(804, 502);
+            this.ReplGrid.Size = new System.Drawing.Size(938, 660);
             this.ReplGrid.TabIndex = 194;
             this.ReplGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ReplGridView});
@@ -98,6 +100,7 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6});
+            this.ReplGridView.DetailHeight = 458;
             this.ReplGridView.GridControl = this.ReplGrid;
             this.ReplGridView.Name = "ReplGridView";
             this.ReplGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -110,17 +113,21 @@
             // 
             this.gridColumn8.Caption = "UnitName";
             this.gridColumn8.FieldName = "UnitName";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 0;
+            this.gridColumn8.Width = 87;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "ExNo";
             this.gridColumn7.FieldName = "ExNo";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 1;
+            this.gridColumn7.Width = 87;
             // 
             // gridColumn1
             // 
@@ -128,12 +135,13 @@
             this.gridColumn1.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.gridColumn1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn1.FieldName = "ExDate";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ExDate", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
-            this.gridColumn1.Width = 76;
+            this.gridColumn1.Width = 89;
             // 
             // gridColumn2
             // 
@@ -141,47 +149,53 @@
             this.gridColumn2.DisplayFormat.FormatString = "MM-yyyy";
             this.gridColumn2.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn2.FieldName = "ExDatePost";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 88;
+            this.gridColumn2.Width = 103;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "ExEmpCode";
             this.gridColumn3.FieldName = "ExEmpCode";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
-            this.gridColumn3.Width = 74;
+            this.gridColumn3.Width = 86;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Amount";
             this.gridColumn4.FieldName = "ExAmt";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ExAmt", "{0}")});
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 7;
+            this.gridColumn4.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "ExTag";
             this.gridColumn5.FieldName = "ExTag";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 68;
+            this.gridColumn5.Width = 79;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "EmpName";
             this.gridColumn6.FieldName = "EmpName";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 204;
+            this.gridColumn6.Width = 238;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -191,25 +205,28 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(31, 59);
+            this.labelControl1.Location = new System.Drawing.Point(36, 77);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(26, 13);
+            this.labelControl1.Size = new System.Drawing.Size(30, 17);
             this.labelControl1.TabIndex = 193;
             this.labelControl1.Text = "From";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(161, 59);
+            this.labelControl2.Location = new System.Drawing.Point(188, 77);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(13, 13);
+            this.labelControl2.Size = new System.Drawing.Size(15, 17);
             this.labelControl2.TabIndex = 192;
             this.labelControl2.Text = "To";
             // 
             // Btn_RefreshGridData
             // 
-            this.Btn_RefreshGridData.Location = new System.Drawing.Point(279, 56);
+            this.Btn_RefreshGridData.Location = new System.Drawing.Point(325, 73);
+            this.Btn_RefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshGridData.Name = "Btn_RefreshGridData";
-            this.Btn_RefreshGridData.Size = new System.Drawing.Size(75, 20);
+            this.Btn_RefreshGridData.Size = new System.Drawing.Size(87, 26);
             this.Btn_RefreshGridData.TabIndex = 2;
             this.Btn_RefreshGridData.Text = "Refresh";
             this.Btn_RefreshGridData.Click += new System.EventHandler(this.Btn_RefreshGridData_Click);
@@ -217,10 +234,11 @@
             // DtEndDate
             // 
             this.DtEndDate.EditValue = null;
-            this.DtEndDate.Location = new System.Drawing.Point(179, 56);
+            this.DtEndDate.Location = new System.Drawing.Point(209, 73);
+            this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.DtEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtEndDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
@@ -229,16 +247,17 @@
             this.DtEndDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtEndDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtEndDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.DtEndDate.Size = new System.Drawing.Size(81, 20);
+            this.DtEndDate.Size = new System.Drawing.Size(94, 24);
             this.DtEndDate.TabIndex = 1;
             // 
             // DtStartDate
             // 
             this.DtStartDate.EditValue = null;
-            this.DtStartDate.Location = new System.Drawing.Point(63, 56);
+            this.DtStartDate.Location = new System.Drawing.Point(73, 73);
+            this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.DtStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtStartDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
@@ -247,7 +266,7 @@
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtStartDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.DtStartDate.Size = new System.Drawing.Size(81, 20);
+            this.DtStartDate.Size = new System.Drawing.Size(94, 24);
             this.DtStartDate.TabIndex = 0;
             this.DtStartDate.Validating += new System.ComponentModel.CancelEventHandler(this.DtStartDate_Validating);
             // 
@@ -257,6 +276,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnPrint,
@@ -267,7 +287,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(804, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 31);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -279,7 +299,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Visible = false;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
@@ -292,7 +312,7 @@
             this.btnPrint.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnPrint.Size = new System.Drawing.Size(48, 23);
+            this.btnPrint.Size = new System.Drawing.Size(57, 28);
             this.btnPrint.Text = "Print";
             // 
             // btnDelete
@@ -303,8 +323,9 @@
             this.btnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnDelete.Size = new System.Drawing.Size(59, 23);
+            this.btnDelete.Size = new System.Drawing.Size(68, 28);
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
@@ -314,7 +335,7 @@
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnEdit.Size = new System.Drawing.Size(42, 23);
+            this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -326,24 +347,25 @@
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd.Size = new System.Drawing.Size(43, 23);
+            this.btnAdd.Size = new System.Drawing.Size(52, 28);
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 26);
+            this.splitter1.Location = new System.Drawing.Point(0, 31);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(804, 76);
+            this.splitter1.Size = new System.Drawing.Size(938, 99);
             this.splitter1.TabIndex = 201;
             this.splitter1.TabStop = false;
             // 
             // frmAdvanceMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 604);
+            this.ClientSize = new System.Drawing.Size(938, 790);
             this.ControlBox = false;
             this.Controls.Add(this.ReplGrid);
             this.Controls.Add(this.Btn_RefreshGridData);
@@ -354,6 +376,7 @@
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdvanceMst";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdvanceMst_Load);

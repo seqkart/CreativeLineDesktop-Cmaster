@@ -961,6 +961,12 @@
     </Compile>
     <Compile Include="HelperClass\CustomArguments.cs" />
     <Compile Include="HRMS\GlobalClassBase.cs" />
+    <Compile Include="Master\frmAttendenceStatusMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmAttendenceStatusMst.Designer.cs">
+      <DependentUpon>frmAttendenceStatusMst.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmBranchMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -984,6 +990,12 @@
     </Compile>
     <Compile Include="Master\frmEWayBillGener.Designer.cs">
       <DependentUpon>frmEWayBillGener.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmHOlidayMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmHOlidayMst.Designer.cs">
+      <DependentUpon>frmHOlidayMst.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmMachineBrandMst.cs">
       <SubType>Form</SubType>
@@ -1889,6 +1901,9 @@
     <EmbeddedResource Include="Administration\frmFYCreation.resx">
       <DependentUpon>frmFYCreation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmAttendenceStatusMst.resx">
+      <DependentUpon>frmAttendenceStatusMst.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\frmBranchMst.resx">
       <DependentUpon>frmBranchMst.cs</DependentUpon>
     </EmbeddedResource>
@@ -1900,6 +1915,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmEWayBillGener.resx">
       <DependentUpon>frmEWayBillGener.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmHOlidayMst.resx">
+      <DependentUpon>frmHOlidayMst.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmMachineBrandMst.resx">
       <DependentUpon>frmMachineBrandMst.cs</DependentUpon>

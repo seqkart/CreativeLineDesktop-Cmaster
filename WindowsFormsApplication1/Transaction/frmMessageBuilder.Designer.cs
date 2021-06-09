@@ -45,6 +45,11 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.txtMessage = new DevExpress.XtraEditors.MemoEdit();
             this.txtQuery = new DevExpress.XtraEditors.MemoEdit();
+            this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.txtQueryNo = new DevExpress.XtraEditors.TextEdit();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ColumnGrid)).BeginInit();
@@ -55,6 +60,8 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.ParameterGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMessage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuery.Properties)).BeginInit();
+            this.Menu_ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueryNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -65,7 +72,7 @@ namespace WindowsFormsApplication1.Transaction
             this.groupControl1.Controls.Add(this.ColumnGrid);
             this.groupControl1.Controls.Add(this.TableGrid);
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(50, 19);
+            this.groupControl1.Location = new System.Drawing.Point(64, 77);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(450, 912);
@@ -220,7 +227,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.txtMessage.Location = new System.Drawing.Point(520, 18);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(443, 239);
+            this.txtMessage.Size = new System.Drawing.Size(421, 239);
             this.txtMessage.TabIndex = 555;
             // 
             // txtQuery
@@ -230,19 +237,82 @@ namespace WindowsFormsApplication1.Transaction
             this.txtQuery.Size = new System.Drawing.Size(443, 239);
             this.txtQuery.TabIndex = 556;
             // 
+            // Menu_ToolStrip
+            // 
+            this.Menu_ToolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(236)))), ((int)(((byte)(239)))));
+            this.Menu_ToolStrip.CanOverflow = false;
+            this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnQuit,
+            this.btnSave});
+            this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.Menu_ToolStrip.Name = "Menu_ToolStrip";
+            this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1317, 31);
+            this.Menu_ToolStrip.TabIndex = 559;
+            this.Menu_ToolStrip.Text = "Options";
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
+            this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // txtQueryNo
+            // 
+            this.txtQueryNo.Enabled = false;
+            this.txtQueryNo.Location = new System.Drawing.Point(64, 45);
+            this.txtQueryNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQueryNo.Name = "txtQueryNo";
+            this.txtQueryNo.Size = new System.Drawing.Size(173, 24);
+            this.txtQueryNo.TabIndex = 558;
+            this.txtQueryNo.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(282, 406);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.TabIndex = 557;
+            this.label1.Text = "Indent No";
+            // 
             // frmMessageBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1317, 772);
+            this.ControlBox = false;
+            this.Controls.Add(this.Menu_ToolStrip);
+            this.Controls.Add(this.txtQueryNo);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtQuery);
             this.Controls.Add(this.txtMessage);
             this.Controls.Add(this.ParameterGrid);
             this.Controls.Add(this.groupControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "frmMessageBuilder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMessageBuilder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ColumnGrid)).EndInit();
@@ -253,7 +323,11 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.ParameterGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMessage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuery.Properties)).EndInit();
+            this.Menu_ToolStrip.ResumeLayout(false);
+            this.Menu_ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQueryNo.Properties)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -274,5 +348,10 @@ namespace WindowsFormsApplication1.Transaction
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraEditors.MemoEdit txtMessage;
         private DevExpress.XtraEditors.MemoEdit txtQuery;
+        private System.Windows.Forms.ToolStrip Menu_ToolStrip;
+        private System.Windows.Forms.ToolStripButton btnQuit;
+        private System.Windows.Forms.ToolStripButton btnSave;
+        private DevExpress.XtraEditors.TextEdit txtQueryNo;
+        private DevExpress.XtraEditors.LabelControl label1;
     }
 }

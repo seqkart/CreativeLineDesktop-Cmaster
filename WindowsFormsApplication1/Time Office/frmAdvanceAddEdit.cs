@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 DtDateforMonth.EditValue = DateTime.Now;
                 txtAdvanceNo.Text = getNewLoanPassNo().PadLeft(6, '0');
                 txtType.Text = "A";
-                txtEmpCode.Focus();
+                DtDate.Focus();
             }
             if (s1 == "Edit")
             {
@@ -138,6 +138,12 @@ string.Empty;
                 DtDate.Focus();
                 return false;
             }
+            if(Convert.ToDateTime(DtDate.Text).Date>DateTime.Now.Date)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show("Wrong Date Selected", "Save", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                DtDate.Focus();
+                return false;
+            }
             if (DtDateforMonth.Text.Trim().Length == 0)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Invalid Date Of Month", "Save", MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -156,9 +162,18 @@ string.Empty;
                 txtEmpCode.Focus();
                 return false;
             }
+            if (s1 == "Add")
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("Select * from ExMst Where ExEmpCode='" + txtEmpCode.Text + "' And ExDate='" + Convert.ToDateTime(DtDate.Text).ToString("yyyy-MM-dd") + "'");
+                if(ds.Tables[0].Rows.Count>0)
+                {
+                    DevExpress.XtraEditors.XtraMessageBox.Show("Advance Already Feeded", "Save", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    txtEmpCode.Focus();
+                    return false;
+                }
+            }
 
-
-            if (txtAmount.Text.Length == 0)
+                if (txtAmount.Text.Length == 0)
             {
                 txtAmount.Text = "0";
             }
@@ -185,6 +200,14 @@ string.Empty;
             {
                 if (s1 == "Add")
                 {
+                    if (Convert.ToDateTime(DtDate.Text).Date.Day <= 10)
+                    {
+                        DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text).AddMonths(-1);
+                    }
+                    else
+                    {
+                        DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text);
+                    }
                     if (ValidateData())
                     {
                         string DocNo = getNewLoanPassNo().PadLeft(6, '0');
@@ -209,7 +232,10 @@ string.Empty;
                             sqlcom.Parameters.Clear();
 
                             sqlcon.Close();
-                            //clear();
+                            txtEmpCode.Text = string.Empty;
+                            txtEmpCodeDesc.Text = string.Empty;
+                            txtAmount.Text = string.Empty;
+
                         }
                         ProjectFunctions.SpeakError("Data has been saved.");
                         //this.Close();
@@ -238,6 +264,9 @@ string.Empty;
 
 
                             sqlcon.Close();
+                            txtEmpCode.Text = string.Empty;
+                            txtEmpCodeDesc.Text = string.Empty;
+                            txtAmount.Text = string.Empty;
                             //clear();
                         }
                         ProjectFunctions.SpeakError("Data has been saved.");
@@ -466,6 +495,42 @@ string.Empty;
         private void txtPassword_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DtDate_EditValueChanged(object sender, EventArgs e)
+        {
+            if(Convert.ToDateTime(DtDate.Text).Date.Day<=10)
+            {
+                DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text).AddMonths(-1);
+            }
+            else
+            {
+                DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text);
+            }
+        }
+
+        private void DtDate_Validating(object sender, CancelEventArgs e)
+        {
+            if (Convert.ToDateTime(DtDate.Text).Date.Day <= 10)
+            {
+                DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text).AddMonths(-1);
+            }
+            else
+            {
+                DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text);
+            }
+        }
+
+        private void DtDateforMonth_Enter(object sender, EventArgs e)
+        {
+            if (Convert.ToDateTime(DtDate.Text).Date.Day <= 10)
+            {
+                DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text).AddMonths(-1);
+            }
+            else
+            {
+                DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text);
+            }
         }
     }
 }

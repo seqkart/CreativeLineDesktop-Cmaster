@@ -323,7 +323,7 @@ namespace WindowsFormsApplication1.Time_Office
 
                 SetEditValue_NullTag(totalWorkingHours_Text, query_attendance.working_hours);
                 SetEditValue(timeEdit_GatePassTime, query_attendance.gate_pass_time);
-                SetEditValue_NullTag(txtOvertimeHours, query_attendance.ot_deducton_time);
+                SetEditValue_NullTag(txtOverTImeHOurs, query_attendance.ot_deducton_time);
 
 
                 if (query_attendance.attendance_date != null)
@@ -362,11 +362,11 @@ namespace WindowsFormsApplication1.Time_Office
                 SetEditValue(txtSerial_ID, 0);
 
 
-                labelDate_Current.Text = ConvertTo.DateFormatApp(DateTime.Now);//culture                
+                labelDate_Current.Text = ConvertTo.DateFormatApp(DateTime.Now);//culture
 
                 SetEditValue_NullTag(totalWorkingHours_Text, 0);
                 SetEditValue(timeEdit_GatePassTime, 0);
-                SetEditValue_NullTag(txtOvertimeHours, 0);
+                SetEditValue_NullTag(txtOverTImeHOurs, 0);
 
                 if (next_date_after_save)
                 {
@@ -387,6 +387,7 @@ namespace WindowsFormsApplication1.Time_Office
 
 
                 SetStatusByWeekdays();
+                SetStatusByHoliday();
                 SetComboSelectedValue(comboBox_Shift, "1");
 
 
@@ -397,6 +398,18 @@ namespace WindowsFormsApplication1.Time_Office
 
             windowsUIButtonPanelMain.Enabled = true;
 
+        }
+
+        private void SetStatusByHoliday()
+        {
+            int status_id = 3;
+            DateTime today = dateAttendance.Value;
+
+            DataSet ds = ProjectFunctions.GetDataSet("select * from HolidaysMaster Where holiday_date='" + Convert.ToDateTime(dateAttendance.Value).ToString("yyyy-MM-dd") + "'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                comboBox_Status.SelectedValue = status_id;
+            }
         }
 
         private void SetStatusByWeekdays()
@@ -414,7 +427,7 @@ namespace WindowsFormsApplication1.Time_Office
                         break;
                     }
                 }
-                
+
 
                 if (next_date_after_save)
                 {
@@ -433,7 +446,7 @@ namespace WindowsFormsApplication1.Time_Office
             {
                 if (next_date_after_save)
                 {
-                   
+
                     if (input_fields_empty)
                     {
                         SetComboSelectedValue_NullTag(comboBox_Status, "1");
@@ -487,7 +500,9 @@ namespace WindowsFormsApplication1.Time_Office
             SetEditValue(timeEdit_Time_In_Last, null);
             SetEditValue(timeEdit_Time_Out_Last, null);
 
-
+            SetEditValue(txtNightIn, null);
+            SetEditValue(txtNightOut, null);
+            txtNightOverTimeHours.Text = string.Empty;
             ProjectFunctions.TimeSpanVisualize
                 (grpBoxEmployee);
             ProjectFunctions.TimeSpanVisualize(grpBoxDailyWager);
@@ -713,7 +728,7 @@ namespace WindowsFormsApplication1.Time_Office
                     int att_source = AttendanceSource(radioButtonManual.Checked, radioButtonMachine.Checked);
                     employeeAttendance.attendance_source = att_source;
                     employeeAttendance.gate_pass_time = ConvertTo.IntVal(timeEdit_GatePassTime.EditValue);
-                    employeeAttendance.ot_deducton_time = ConvertTo.IntVal(txtOvertimeHours.EditValue);
+                    employeeAttendance.ot_deducton_time = ConvertTo.IntVal(txtOverTImeHOurs.EditValue);
 
 
                     string str = "sp_EmployeeAttendance_AddEdit";
@@ -772,7 +787,7 @@ namespace WindowsFormsApplication1.Time_Office
                     PrintLogWin.PrintLog("Insert => timeEdit_Time_Out_Last : " + ConvertTo.TimeSpanVal_Null(timeEdit_Time_Out_Last.EditValue));
 
                 }
-                
+
                 if (ConvertTo.IntVal(GetEditValue(txtSerial_ID)) != 0)
                 {
 
@@ -808,7 +823,7 @@ namespace WindowsFormsApplication1.Time_Office
                     int att_source = AttendanceSource(radioButtonManual.Checked, radioButtonMachine.Checked);
                     employeeAttendance.attendance_source = att_source;
                     employeeAttendance.gate_pass_time = ConvertTo.IntVal(timeEdit_GatePassTime.EditValue);
-                    employeeAttendance.ot_deducton_time = ConvertTo.IntVal(txtOvertimeHours.EditValue);
+                    employeeAttendance.ot_deducton_time = ConvertTo.IntVal(txtOverTImeHOurs.EditValue);
 
                     RepGen reposGen = new RepGen();
                     DynamicParameters param = new DynamicParameters();
@@ -1302,9 +1317,9 @@ namespace WindowsFormsApplication1.Time_Office
                         ConvertTo.TimeSpanVal_Null(timeEdit_Time_Out_DW.EditValue) == null)
                     {
                         //txtOvertimeHours.EditValue = 0;
-                        SetEditValue_NullTag(txtOvertimeHours, 0);
+                        SetEditValue_NullTag(txtOverTImeHOurs, 0);
 
-                        PrintLogWin.PrintLog("========= txtOvertimeHours A : " + txtOvertimeHours.EditValue);
+                        PrintLogWin.PrintLog("========= txtOvertimeHours A : " + txtOverTImeHOurs.EditValue);
                     }
                     else
                     {
@@ -1312,9 +1327,9 @@ namespace WindowsFormsApplication1.Time_Office
                         {
 
                             //txtOvertimeHours.EditValue = ConvertTo.IntVal(totalWorkingHours_Text_DW.EditValue) - ConvertTo.IntVal(txtDutyHours_DW.EditValue);
-                            SetEditValue_NullTag(txtOvertimeHours, ConvertTo.IntVal(totalWorkingHours_Text_DW.EditValue) - ConvertTo.IntVal(txtDutyHours_DW.EditValue));
+                            SetEditValue_NullTag(txtOverTImeHOurs, ConvertTo.IntVal(totalWorkingHours_Text_DW.EditValue) - ConvertTo.IntVal(txtDutyHours_DW.EditValue));
 
-                            PrintLogWin.PrintLog("========= txtOvertimeHours B : " + txtOvertimeHours.EditValue);
+                            PrintLogWin.PrintLog("========= txtOvertimeHours B : " + txtOverTImeHOurs.EditValue);
                         }
                     }
                 }
@@ -1462,7 +1477,7 @@ namespace WindowsFormsApplication1.Time_Office
                         PrintLogWin.PrintLog("%%%%%%%%%%%%%%%% totalHrs_FullDay => B");
                         if (totalHrs_First > 0 && totalHrs_Last > 0)
                         {
-                            
+
                             DateTime dateTime_In_First_DailyWager = ConvertTo.TimeToDate(timeEdit_Time_In_First.Text + "");
                             DateTime dateTime_Out_Last_DailyWager = ConvertTo.TimeToDate(timeEdit_Time_Out_Last.Text + "");
 
@@ -1531,9 +1546,9 @@ namespace WindowsFormsApplication1.Time_Office
                         ConvertTo.TimeSpanVal_Null(timeEdit_Time_Out_Last.EditValue) == null)
                     {
                         //txtOvertimeHours.EditValue = 0;
-                        SetEditValue_NullTag(txtOvertimeHours, 0);
+                        SetEditValue_NullTag(txtOverTImeHOurs, 0);
 
-                        PrintLogWin.PrintLog("========= txtOvertimeHours A : " + txtOvertimeHours.EditValue);
+                        PrintLogWin.PrintLog("========= txtOvertimeHours A : " + txtOverTImeHOurs.EditValue);
                     }
                     else
                     {
@@ -1550,7 +1565,7 @@ namespace WindowsFormsApplication1.Time_Office
 
                             if (IsString.IsEqualTo(clearStr, "0000"))
                             {
-                                SetEditValue_NullTag(txtOvertimeHours, totalHrs_FullDay);
+                                SetEditValue_NullTag(txtOverTImeHOurs, totalHrs_FullDay);
                             }
                             else
                             {
@@ -1563,10 +1578,10 @@ namespace WindowsFormsApplication1.Time_Office
                                 {
 
                                 }
-                                SetEditValue_NullTag(txtOvertimeHours, ConvertTo.IntVal(totalWorkingHours_Text.EditValue) - (ConvertTo.IntVal(totalWorkingHours_Text_Main.EditValue) * 60));
+                                SetEditValue_NullTag(txtOverTImeHOurs, ConvertTo.IntVal(totalWorkingHours_Text.EditValue) - (ConvertTo.IntVal(totalWorkingHours_Text_Main.EditValue) * 60));
                             }
 
-                            PrintLogWin.PrintLog("========= txtOvertimeHours B : " + txtOvertimeHours.EditValue);
+                            PrintLogWin.PrintLog("========= txtOvertimeHours B : " + txtOverTImeHOurs.EditValue);
                         }
                     }
 
@@ -1611,7 +1626,7 @@ namespace WindowsFormsApplication1.Time_Office
             if ((sender as System.Windows.Forms.ComboBox).Tag == null)
             {
                 SetEditValue_NullTag(totalWorkingHours_Text, null);
-                SetEditValue_NullTag(txtOvertimeHours, null);
+                SetEditValue_NullTag(txtOverTImeHOurs, null);
                 SetEditValue(timeEdit_GatePassTime, null);
 
                 timeEdit_Time_Out_First.Enabled = true;
@@ -1921,7 +1936,7 @@ namespace WindowsFormsApplication1.Time_Office
         {
             if ((sender as BaseEdit).Tag == null)
             {
-                lblOvertimeHours.Text = ConvertTo.MinutesToHours(txtOvertimeHours.EditValue);
+                lblOvertimeHours.Text = ConvertTo.MinutesToHours(txtOverTImeHOurs.EditValue);
             }
 
         }
@@ -2090,8 +2105,25 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
+        private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
+        {
 
-        
+        }
+
+        private void txtNightOut_EditValueChanged(object sender, EventArgs e)
+        {
+
+
+
+            TimeSpan t = txtNightOut.TimeSpan- txtNightIn.TimeSpan;
+            txtNightOverTimeHours.Text = t.TotalHours.ToString().Replace("-", "");
+            if(txtOverTImeHOurs.Text.Trim().Length==0)
+            {
+                txtOverTImeHOurs.Text = "0";
+            }
+
+            txtOverTImeHOurs.Text =(Convert.ToDecimal( txtOverTImeHOurs.Text) + (Convert.ToDecimal(txtNightOverTimeHours.Text)*60)).ToString();
+        }
     }
 
 

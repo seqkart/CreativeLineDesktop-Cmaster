@@ -526,7 +526,7 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 781);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 779);
             this.xtraTabPage1.Text = "Main Invoice Details";
             // 
             // groupControl4
@@ -706,7 +706,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(147, 21);
+            this.chInclusive.Size = new System.Drawing.Size(147, 24);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -716,7 +716,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(147, 21);
+            this.chExclusive.Size = new System.Drawing.Size(147, 24);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -740,7 +740,7 @@
             this.chLot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "LOT";
-            this.chLot.Size = new System.Drawing.Size(147, 21);
+            this.chLot.Size = new System.Drawing.Size(147, 24);
             this.chLot.TabIndex = 534;
             // 
             // CHSOR
@@ -749,7 +749,7 @@
             this.CHSOR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CHSOR.Name = "CHSOR";
             this.CHSOR.Properties.Caption = "SOR";
-            this.CHSOR.Size = new System.Drawing.Size(147, 21);
+            this.CHSOR.Size = new System.Drawing.Size(147, 24);
             this.CHSOR.TabIndex = 533;
             this.CHSOR.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
@@ -759,7 +759,7 @@
             this.chRegular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(147, 21);
+            this.chRegular.Size = new System.Drawing.Size(147, 24);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -782,7 +782,7 @@
             this.chDirect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(147, 21);
+            this.chDirect.Size = new System.Drawing.Size(147, 24);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
@@ -792,7 +792,7 @@
             this.chPackingSlip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(147, 21);
+            this.chPackingSlip.Size = new System.Drawing.Size(147, 24);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -1358,7 +1358,7 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 21);
+            this.chall.Size = new System.Drawing.Size(87, 24);
             this.chall.TabIndex = 824;
             // 
             // txtItemDiscPer
@@ -2226,7 +2226,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(603, 209);
+            this.xtraTabPage5.Size = new System.Drawing.Size(603, 207);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -3017,7 +3017,7 @@
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(469, 209);
+            this.xtraTabPage3.Size = new System.Drawing.Size(469, 207);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -3044,7 +3044,7 @@
             this.chToPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(71, 21);
+            this.chToPay.Size = new System.Drawing.Size(71, 24);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
@@ -3054,7 +3054,7 @@
             this.chPaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(55, 21);
+            this.chPaid.Size = new System.Drawing.Size(55, 24);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 

@@ -203,6 +203,25 @@ namespace WindowsFormsApplication1.Forms_Master
 
             fillGrid();
         }
+
+        private void gridView3_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            var confirmResult = XtraMessageBox.Show("Are you sure you want to close ??",
+                                     "Confirm Delete!!",
+                                     MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                var row = gridView3.GetDataRow(gridView3.FocusedRowHandle);
+                ProjectFunctions.GetDataSet("update LoanMst Set LoanCloseTag='Y' from LoanMst Where LoanANo ='" + row["LoanANo"].ToString() + "'");
+                fillGrid();
+
+            }
+        }
     }
 }
 
