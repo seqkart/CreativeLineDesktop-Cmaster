@@ -148,10 +148,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
         private void gridControl_SalaryProcess_DoubleClick(object sender, EventArgs e)
         {
             /*
-            //Sender is actually of type GridControl  
+            //Sender is actually of type GridControl
             GridControl gridControl = (GridControl)sender;
 
-            //Get a reference to the GridView from the GridControl  
+            //Get a reference to the GridView from the GridControl
             GridView view = (gridControl.FocusedView) as GridView;
 
             var dr = view.GetFocusedDataRow();
@@ -185,7 +185,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             clearGrid();
 
             //DECLARE @Salary_Month DATETIME = '2020-06-01 00:00:00';
-            var str = "sp_Salary_Process '','" + ConvertTo.DateFormatDb(ConvertTo.DateTimeVal(DtStartDate.EditValue)) + "', 1, 1";
+            var str = "sp_Salary_Process '','" + ConvertTo.DateFormatDb(ConvertTo.DateTimeVal(DtStartDate.EditValue)) + "', 1, 1,'1','" + txtteatrate.Text + "','0'";
 
             PrintLogWin.PrintLog(str);
 
@@ -221,6 +221,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     gridView_SalaryProcess.Columns["SalaryPaid"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "SalaryPaid", string.Empty);
                     gridView_SalaryProcess.Columns["Balance"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "Balance", string.Empty);
                     gridView_SalaryProcess.Columns["Arrears"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "Arrears", string.Empty);
+                    gridView_SalaryProcess.Columns["TotalTeaAmount"].Summary.Add(DevExpress.Data.SummaryItemType.Sum, "TotalTeaAmount", string.Empty);
                     //gridView_SalaryProcess.Columns["EmpSalary"].Summary.Add(DevExpress.Data.SummaryItemType.Custom);
 
                     gridView_SalaryProcess.UpdateTotalSummary();
@@ -245,7 +246,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             unbColumn.OptionsColumn.AllowEdit = false;
             // Specify format settings.
             unbColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            
+
             //Rupees Currency Sign
 
             //unbColumn.DisplayFormat.FormatString = "c";
@@ -270,7 +271,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             foreach (DevExpress.XtraGrid.Columns.GridColumn Col in gridView_SalaryProcess.Columns)
             {
-                if (Col.FieldName == "LoanIntsallment" || Col.FieldName == "SalaryPaid" || Col.FieldName == "Loan")
+                if (Col.FieldName == "LoanIntsallment" || Col.FieldName == "SalaryPaid" || Col.FieldName == "Loan"|| Col.FieldName == "NoOfCups")
                 {
 
                 }
@@ -311,10 +312,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
                             //gc.AppearanceCell.BackColor = Color.Transparent;
                         }
                     }
-                    
+
 
                 }
-                    
+
             }
             */
 
@@ -383,7 +384,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     //View.GetDataRow(e.RowHandle).Field("Loan",)
                     //dr["SalaryPaid"].
                     //string cellValue = View.GetRowCellValue(e.RowHandle, View.Columns["SalaryLocked"]).ToString();
-                    
+
                     //e.Cache.DrawImage(warningImage, e.Bounds.Location);
                 }
                 else
@@ -543,6 +544,45 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             var focusRowView = (DataRowView)view.GetFocusedRow();
 
+
+
+
+            if (view.FocusedColumn.FieldName.ToUpper() == "NOOFCUPS")
+            {
+                int salary_locked = ConvertTo.IntVal(focusRowView["SalaryLocked"]);
+
+                if (salary_locked == 0)
+                {
+                    //decimal balance_old = ConvertTo.DecimalVal(focusRowView["Balance_1"]);
+                    //decimal arrears_old = ConvertTo.DecimalVal(focusRowView["Arrears_1"]);
+                    decimal noofcups = ConvertTo.DecimalVal(e.Value);
+                    decimal tearate = Convert.ToDecimal(txtteatrate.Text);
+                    decimal totalteaamount = noofcups * tearate;
+                    decimal salary_calculated = ConvertTo.DecimalVal(focusRowView["SalaryCalculated_1"]);
+
+                    decimal salary_calculated_new = salary_calculated - totalteaamount;
+
+                    view.SetRowCellValue(view.FocusedRowHandle, view.Columns["TotalTeaAmount"], totalteaamount);
+                    if(totalteaamount>0)
+                    {
+                        view.SetRowCellValue(view.FocusedRowHandle, view.Columns["SalaryCalculated"], salary_calculated_new);
+                    }
+                    else
+                    {
+                        view.SetRowCellValue(view.FocusedRowHandle, view.Columns["SalaryCalculated"], salary_calculated);
+                    }
+
+
+
+                }
+                else
+                {
+                    //view.SetRowCellValue(view.FocusedRowHandle, view.Columns["SalaryPaid"], balance_new);
+                }
+            }
+
+
+
             if (view.FocusedColumn.FieldName == "SalaryPaid")
             {
                 int salary_locked = ConvertTo.IntVal(focusRowView["SalaryLocked"]);
@@ -668,7 +708,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
             */
             /*
-             * 
+             *
             if (view.FocusedColumn.FieldName == "SalaryPaid")
             {
                 //gridView_SalaryProcess.CellValueChanging -= new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(gridView_SalaryProcess_CellValueChanging);
@@ -815,6 +855,9 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     dtProcessSalary.Columns.Add("SalaryPaid", typeof(decimal));
                     dtProcessSalary.Columns.Add("LoanInstallment", typeof(decimal));
                     dtProcessSalary.Columns.Add("SalaryCalculated", typeof(decimal));
+                    dtProcessSalary.Columns.Add("TeaRate", typeof(decimal));
+                    dtProcessSalary.Columns.Add("NoOfCups", typeof(decimal));
+                    dtProcessSalary.Columns.Add("TotalTeaAmount", typeof(decimal));
 
 
                     for (int rowIndex = 0; rowIndex != gridView_SalaryProcess.RowCount; rowIndex++)
@@ -826,12 +869,16 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         string strLoanInstallment = gridView_SalaryProcess.GetRowCellValue(intRow, "Loan").ToString();
                         string strSalaryCalculated = gridView_SalaryProcess.GetRowCellValue(intRow, "SalaryCalculated").ToString();
 
+                        string strTeaRate = gridView_SalaryProcess.GetRowCellValue(intRow, "TeaRate").ToString();
+                        string strNoOfCups = gridView_SalaryProcess.GetRowCellValue(intRow, "NoOfCups").ToString();
+                        string strTotalTeaAmount = gridView_SalaryProcess.GetRowCellValue(intRow, "TotalTeaAmount").ToString();
+
 
                         PrintLogWin.PrintLog("----- btnProcessSalary_Click => strSalaryMonth: " + strSalaryMonth);
                         PrintLogWin.PrintLog("----- btnProcessSalary_Click => strEmpCode: " + strEmpCode);
 
-                        if (strSalaryPaid != null && strEmpCode.Equals("0030") && ConvertTo.DateTimeVal(strSalaryMonth).Month == 6)
-                        //if (strSalaryPaid != null)
+                        //if (strSalaryPaid != null && strEmpCode.Equals("0030") && ConvertTo.DateTimeVal(strSalaryMonth).Month == 6)
+                        if (strSalaryPaid != null)
                         {
                             if (ConvertTo.DecimalVal(strSalaryPaid) > 0)
                             {
@@ -848,7 +895,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
                                 ConvertTo.DateFormatDb(strSalaryMonth),
                                 ConvertTo.DecimalVal(strSalaryPaid),
                                 ConvertTo.DecimalVal(strLoanInstallment),
-                                ConvertTo.DecimalVal(strSalaryCalculated)
+                                ConvertTo.DecimalVal(strSalaryCalculated),
+                                ConvertTo.DecimalVal(strTeaRate),
+                                ConvertTo.DecimalVal(strNoOfCups),
+                                ConvertTo.DecimalVal(strTotalTeaAmount)
                                 );
 
                                 PrintLogWin.PrintLog("***** btnProcessSalary_Click => strSalaryMonth: " + strSalaryMonth);
@@ -866,7 +916,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     using (SqlConnection con = new SqlConnection(ProjectFunctionsUtils.ConnectionString))
                     {
                         con.Open();
-                        using (SqlCommand com = new SqlCommand("sp_LockSalaryPaid", con))
+                        using (SqlCommand com = new SqlCommand("sp_UpdateSalaryPaid", con))
                         {
                             com.CommandType = CommandType.StoredProcedure;
                             com.Parameters.AddWithValue("@TableParam", dtProcessSalary);
@@ -886,7 +936,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 }
             }
             /*
-            
+
             */
         }
 
@@ -903,7 +953,9 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     dtProcessSalary.Columns.Add("SalaryPaid", typeof(decimal));
                     dtProcessSalary.Columns.Add("LoanInstallment", typeof(decimal));
                     dtProcessSalary.Columns.Add("SalaryCalculated", typeof(decimal));
-
+                    dtProcessSalary.Columns.Add("TeaRate", typeof(decimal));
+                    dtProcessSalary.Columns.Add("NoOfCups", typeof(decimal));
+                    dtProcessSalary.Columns.Add("TotalTeaAmount", typeof(decimal));
 
                     for (int rowIndex = 0; rowIndex != gridView_SalaryProcess.RowCount; rowIndex++)
                     {
@@ -913,6 +965,9 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         string strSalaryPaid = gridView_SalaryProcess.GetRowCellValue(intRow, "SalaryPaid").ToString();
                         string strLoanInstallment = gridView_SalaryProcess.GetRowCellValue(intRow, "Loan").ToString();
                         string strSalaryCalculated = gridView_SalaryProcess.GetRowCellValue(intRow, "SalaryCalculated").ToString();
+                        string strTeaRate = gridView_SalaryProcess.GetRowCellValue(intRow, "TeaRate").ToString();
+                        string strNoOfCups = gridView_SalaryProcess.GetRowCellValue(intRow, "NoOfCups").ToString();
+                        string strTotalTeaAmount = gridView_SalaryProcess.GetRowCellValue(intRow, "TotalTeaAmount").ToString();
 
                         //PrintLogWin.PrintLog("strSalaryMonth => " + strSalaryMonth);
                         //PrintLogWin.PrintLog("strEmpCode => " + strEmpCode);
@@ -942,7 +997,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
                                 ConvertTo.DateFormatDb(strSalaryMonth),
                                 ConvertTo.DecimalVal(strSalaryPaid),
                                 ConvertTo.DecimalVal(strLoanInstallment),
-                                ConvertTo.DecimalVal(strSalaryCalculated)
+                                ConvertTo.DecimalVal(strSalaryCalculated),
+                                ConvertTo.DecimalVal(strTeaRate),
+                                ConvertTo.DecimalVal(strNoOfCups),
+                                ConvertTo.DecimalVal(strTotalTeaAmount)
                                 );
 
                                 PrintLogWin.PrintLog("***** btnProcessSalary_Click => strSalaryMonth: " + strSalaryMonth);
@@ -980,7 +1038,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 }
             }
             /*
-            
+
             */
 
         }
@@ -1284,12 +1342,15 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             }
 
-            //or  
-            //e.Formatting.NumberFormat = XlNumberFormat.Text;  
+            //or
+            //e.Formatting.NumberFormat = XlNumberFormat.Text;
 
         }
 
+        private void Menu_ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
 
+        }
     }
 
 }

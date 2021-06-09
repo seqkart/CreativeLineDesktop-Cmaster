@@ -60,6 +60,8 @@
             this.salaryInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnExportXsls = new DevExpress.XtraEditors.SimpleButton();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.txtteatrate = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.ChoiceSelect.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalaryGrid)).BeginInit();
@@ -70,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryInfoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtteatrate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLock
@@ -89,7 +92,7 @@
             this.ChoiceSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelect.Name = "ChoiceSelect";
             this.ChoiceSelect.Properties.Caption = "Select &All";
-            this.ChoiceSelect.Size = new System.Drawing.Size(87, 24);
+            this.ChoiceSelect.Size = new System.Drawing.Size(87, 21);
             this.ChoiceSelect.TabIndex = 349;
             this.ChoiceSelect.Visible = false;
             this.ChoiceSelect.CheckedChanged += new System.EventHandler(this.ChoiceSelect_CheckedChanged);
@@ -308,9 +311,10 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1154, 25);
             this.Menu_ToolStrip.TabIndex = 194;
             this.Menu_ToolStrip.Text = "Options";
+            this.Menu_ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ToolStrip_ItemClicked);
             // 
             // btnAdd
             // 
@@ -333,7 +337,7 @@
             this.splitter1.Location = new System.Drawing.Point(0, 25);
             this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(938, 98);
+            this.splitter1.Size = new System.Drawing.Size(1154, 98);
             this.splitter1.TabIndex = 196;
             this.splitter1.TabStop = false;
             // 
@@ -345,7 +349,7 @@
             this.gridControl_SalaryProcess.MainView = this.gridView_SalaryProcess;
             this.gridControl_SalaryProcess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl_SalaryProcess.Name = "gridControl_SalaryProcess";
-            this.gridControl_SalaryProcess.Size = new System.Drawing.Size(938, 667);
+            this.gridControl_SalaryProcess.Size = new System.Drawing.Size(1154, 667);
             this.gridControl_SalaryProcess.TabIndex = 352;
             this.gridControl_SalaryProcess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_SalaryProcess});
@@ -421,12 +425,32 @@
             this.btnExportXsls.Text = "Export To XLS";
             this.btnExportXsls.Click += new System.EventHandler(this.btnExportXsls_Click);
             // 
+            // txtteatrate
+            // 
+            this.txtteatrate.EditValue = "5";
+            this.txtteatrate.Location = new System.Drawing.Point(1060, 53);
+            this.txtteatrate.Name = "txtteatrate";
+            this.txtteatrate.Size = new System.Drawing.Size(73, 24);
+            this.txtteatrate.TabIndex = 357;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(993, 55);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(61, 20);
+            this.labelControl1.TabIndex = 358;
+            this.labelControl1.Text = "Tea Rate";
+            // 
             // frmProcessSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 790);
+            this.ClientSize = new System.Drawing.Size(1154, 790);
             this.ControlBox = false;
+            this.Controls.Add(this.labelControl1);
+            this.Controls.Add(this.txtteatrate);
             this.Controls.Add(this.btnExportXsls);
             this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.btnPrintPreview);
@@ -457,6 +481,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.salaryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryInfoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtteatrate.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -493,5 +518,7 @@
         private System.Windows.Forms.BindingSource salaryInfoBindingSource;
         private DevExpress.XtraEditors.SimpleButton btnExportXsls;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.TextEdit txtteatrate;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

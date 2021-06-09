@@ -138,13 +138,14 @@
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.TextAuthenticate,
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(518, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(606, 27);
             this.Menu_ToolStrip.TabIndex = 2;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -157,7 +158,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -167,7 +168,7 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(100, 25);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 27);
             // 
             // btnSave
             // 
@@ -178,15 +179,16 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // lblDocCode
             // 
-            this.lblDocCode.Location = new System.Drawing.Point(12, 42);
+            this.lblDocCode.Location = new System.Drawing.Point(14, 55);
+            this.lblDocCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDocCode.Name = "lblDocCode";
-            this.lblDocCode.Size = new System.Drawing.Size(35, 13);
+            this.lblDocCode.Size = new System.Drawing.Size(38, 17);
             this.lblDocCode.TabIndex = 29;
             this.lblDocCode.Text = "Month";
             // 
@@ -202,23 +204,26 @@
             this.panelControl2.Controls.Add(this.labelControl2);
             this.panelControl2.Controls.Add(this.TextCode);
             this.panelControl2.Controls.Add(this.labelControl1);
-            this.panelControl2.Location = new System.Drawing.Point(17, 61);
+            this.panelControl2.Location = new System.Drawing.Point(20, 80);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(487, 113);
+            this.panelControl2.Size = new System.Drawing.Size(568, 148);
             this.panelControl2.TabIndex = 1;
             this.panelControl2.Text = "Employee Information";
             // 
             // label27
             // 
-            this.label27.Location = new System.Drawing.Point(121, 89);
+            this.label27.Location = new System.Drawing.Point(141, 116);
+            this.label27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.Size = new System.Drawing.Size(88, 17);
             this.label27.TabIndex = 253;
             this.label27.Text = "Payment Mode";
             // 
             // txtPaymentMode
             // 
-            this.txtPaymentMode.Location = new System.Drawing.Point(205, 86);
+            this.txtPaymentMode.Location = new System.Drawing.Point(239, 112);
+            this.txtPaymentMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPaymentMode.Name = "txtPaymentMode";
             this.txtPaymentMode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -227,16 +232,17 @@
             "By Cheque",
             "By Transfer"});
             this.txtPaymentMode.Properties.MaxLength = 20;
-            this.txtPaymentMode.Size = new System.Drawing.Size(120, 20);
+            this.txtPaymentMode.Size = new System.Drawing.Size(140, 24);
             this.txtPaymentMode.TabIndex = 252;
             // 
             // simpleButton1
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.Location = new System.Drawing.Point(415, 31);
+            this.simpleButton1.Location = new System.Drawing.Point(484, 41);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(18, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(21, 30);
             this.simpleButton1.TabIndex = 31;
             this.simpleButton1.TabStop = false;
             this.simpleButton1.Text = "+";
@@ -246,19 +252,21 @@
             // 
             this.TextCodeDesc.Enabled = false;
             this.TextCodeDesc.EnterMoveNextControl = true;
-            this.TextCodeDesc.Location = new System.Drawing.Point(119, 32);
+            this.TextCodeDesc.Location = new System.Drawing.Point(139, 42);
+            this.TextCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCodeDesc.Name = "TextCodeDesc";
             this.TextCodeDesc.Properties.MaxLength = 6;
-            this.TextCodeDesc.Size = new System.Drawing.Size(291, 20);
+            this.TextCodeDesc.Size = new System.Drawing.Size(339, 24);
             this.TextCodeDesc.TabIndex = 36;
             // 
             // TextPrePaidTag
             // 
             this.TextPrePaidTag.EnterMoveNextControl = true;
-            this.TextPrePaidTag.Location = new System.Drawing.Point(407, 85);
+            this.TextPrePaidTag.Location = new System.Drawing.Point(475, 111);
+            this.TextPrePaidTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextPrePaidTag.Name = "TextPrePaidTag";
             this.TextPrePaidTag.Properties.MaxLength = 6;
-            this.TextPrePaidTag.Size = new System.Drawing.Size(26, 20);
+            this.TextPrePaidTag.Size = new System.Drawing.Size(30, 24);
             this.TextPrePaidTag.TabIndex = 2;
             this.TextPrePaidTag.EditValueChanged += new System.EventHandler(this.TextPrePaidTag_EditValueChanged);
             this.TextPrePaidTag.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -267,9 +275,10 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(331, 89);
+            this.labelControl3.Location = new System.Drawing.Point(386, 116);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(70, 13);
+            this.labelControl3.Size = new System.Drawing.Size(86, 17);
             this.labelControl3.TabIndex = 35;
             this.labelControl3.Text = "Pre Paid Tag";
             // 
@@ -277,48 +286,54 @@
             // 
             this.TextDepartment.Enabled = false;
             this.TextDepartment.EnterMoveNextControl = true;
-            this.TextDepartment.Location = new System.Drawing.Point(68, 60);
+            this.TextDepartment.Location = new System.Drawing.Point(79, 78);
+            this.TextDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDepartment.Name = "TextDepartment";
             this.TextDepartment.Properties.MaxLength = 6;
-            this.TextDepartment.Size = new System.Drawing.Size(365, 20);
+            this.TextDepartment.Size = new System.Drawing.Size(426, 24);
             this.TextDepartment.TabIndex = 32;
             this.TextDepartment.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(5, 64);
+            this.labelControl2.Location = new System.Drawing.Point(6, 84);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 13);
+            this.labelControl2.Size = new System.Drawing.Size(69, 17);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "Department";
             // 
             // TextCode
             // 
             this.TextCode.EnterMoveNextControl = true;
-            this.TextCode.Location = new System.Drawing.Point(68, 32);
+            this.TextCode.Location = new System.Drawing.Point(79, 42);
+            this.TextCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCode.Name = "TextCode";
             this.TextCode.Properties.EditFormat.FormatString = "N2";
             this.TextCode.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextCode.Properties.MaxLength = 6;
-            this.TextCode.Size = new System.Drawing.Size(45, 20);
+            this.TextCode.Size = new System.Drawing.Size(52, 24);
             this.TextCode.TabIndex = 0;
             this.TextCode.EditValueChanged += new System.EventHandler(this.TextCode_EditValueChanged);
             this.TextCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCode_KeyDown);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(5, 36);
+            this.labelControl1.Location = new System.Drawing.Point(6, 47);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(27, 13);
+            this.labelControl1.Size = new System.Drawing.Size(31, 17);
             this.labelControl1.TabIndex = 31;
             this.labelControl1.Text = "Code";
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(45, 0);
+            this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(52, 0);
             this.HelpGridCtrl.MainView = this.HelpGrid;
+            this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(444, 345);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(518, 451);
             this.HelpGridCtrl.TabIndex = 80;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -328,6 +343,7 @@
             // 
             // HelpGrid
             // 
+            this.HelpGrid.DetailHeight = 458;
             this.HelpGrid.GridControl = this.HelpGridCtrl;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.OptionsBehavior.AllowIncrementalSearch = true;
@@ -344,16 +360,18 @@
             this.panelControl1.Controls.Add(this.labelControl5);
             this.panelControl1.Controls.Add(this.TextWorked);
             this.panelControl1.Controls.Add(this.labelControl4);
-            this.panelControl1.Location = new System.Drawing.Point(17, 198);
+            this.panelControl1.Location = new System.Drawing.Point(20, 259);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(121, 175);
+            this.panelControl1.Size = new System.Drawing.Size(141, 229);
             this.panelControl1.TabIndex = 2;
             this.panelControl1.Text = "Working Inf.";
             // 
             // txtTotalDays
             // 
             this.txtTotalDays.EnterMoveNextControl = true;
-            this.txtTotalDays.Location = new System.Drawing.Point(12, 139);
+            this.txtTotalDays.Location = new System.Drawing.Point(14, 182);
+            this.txtTotalDays.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalDays.Name = "txtTotalDays";
             this.txtTotalDays.Properties.EditFormat.FormatString = "N2";
             this.txtTotalDays.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -363,21 +381,23 @@
             this.txtTotalDays.Properties.MaxLength = 5;
             this.txtTotalDays.Properties.NullText = "0";
             this.txtTotalDays.Properties.NullValuePrompt = "0";
-            this.txtTotalDays.Size = new System.Drawing.Size(45, 20);
+            this.txtTotalDays.Size = new System.Drawing.Size(52, 24);
             this.txtTotalDays.TabIndex = 36;
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(12, 123);
+            this.labelControl25.Location = new System.Drawing.Point(14, 161);
+            this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(53, 13);
+            this.labelControl25.Size = new System.Drawing.Size(61, 17);
             this.labelControl25.TabIndex = 37;
             this.labelControl25.Text = "Total Days";
             // 
             // TextOverTime
             // 
             this.TextOverTime.EnterMoveNextControl = true;
-            this.TextOverTime.Location = new System.Drawing.Point(72, 139);
+            this.TextOverTime.Location = new System.Drawing.Point(84, 182);
+            this.TextOverTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextOverTime.Name = "TextOverTime";
             this.TextOverTime.Properties.EditFormat.FormatString = "N2";
             this.TextOverTime.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -387,23 +407,25 @@
             this.TextOverTime.Properties.MaxLength = 5;
             this.TextOverTime.Properties.NullText = "0";
             this.TextOverTime.Properties.NullValuePrompt = "0";
-            this.TextOverTime.Size = new System.Drawing.Size(41, 20);
+            this.TextOverTime.Size = new System.Drawing.Size(48, 24);
             this.TextOverTime.TabIndex = 5;
             this.TextOverTime.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextOverTime.Leave += new System.EventHandler(this.TextOverTime_Leave);
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(66, 123);
+            this.labelControl6.Location = new System.Drawing.Point(77, 161);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(47, 13);
+            this.labelControl6.Size = new System.Drawing.Size(56, 17);
             this.labelControl6.TabIndex = 35;
             this.labelControl6.Text = "Xtra Days";
             // 
             // TextPaidHolidays
             // 
             this.TextPaidHolidays.EnterMoveNextControl = true;
-            this.TextPaidHolidays.Location = new System.Drawing.Point(12, 95);
+            this.TextPaidHolidays.Location = new System.Drawing.Point(14, 124);
+            this.TextPaidHolidays.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextPaidHolidays.Name = "TextPaidHolidays";
             this.TextPaidHolidays.Properties.EditFormat.FormatString = "N2";
             this.TextPaidHolidays.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -413,23 +435,25 @@
             this.TextPaidHolidays.Properties.MaxLength = 5;
             this.TextPaidHolidays.Properties.NullText = "0";
             this.TextPaidHolidays.Properties.NullValuePrompt = "0";
-            this.TextPaidHolidays.Size = new System.Drawing.Size(45, 20);
+            this.TextPaidHolidays.Size = new System.Drawing.Size(52, 24);
             this.TextPaidHolidays.TabIndex = 4;
             this.TextPaidHolidays.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPaidHolidays.Leave += new System.EventHandler(this.TextSick_Leave);
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(12, 79);
+            this.labelControl5.Location = new System.Drawing.Point(14, 103);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(69, 13);
+            this.labelControl5.Size = new System.Drawing.Size(79, 17);
             this.labelControl5.TabIndex = 33;
             this.labelControl5.Text = "Paid Holidays";
             // 
             // TextWorked
             // 
             this.TextWorked.EnterMoveNextControl = true;
-            this.TextWorked.Location = new System.Drawing.Point(12, 50);
+            this.TextWorked.Location = new System.Drawing.Point(14, 65);
+            this.TextWorked.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextWorked.Name = "TextWorked";
             this.TextWorked.Properties.EditFormat.FormatString = "N2";
             this.TextWorked.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -439,7 +463,7 @@
             this.TextWorked.Properties.MaxLength = 5;
             this.TextWorked.Properties.NullText = "0";
             this.TextWorked.Properties.NullValuePrompt = "0";
-            this.TextWorked.Size = new System.Drawing.Size(45, 20);
+            this.TextWorked.Size = new System.Drawing.Size(52, 24);
             this.TextWorked.TabIndex = 3;
             this.TextWorked.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextWorked.Leave += new System.EventHandler(this.TextSick_Leave);
@@ -447,9 +471,10 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(12, 34);
+            this.labelControl4.Location = new System.Drawing.Point(14, 44);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(55, 13);
+            this.labelControl4.Size = new System.Drawing.Size(63, 17);
             this.labelControl4.TabIndex = 31;
             this.labelControl4.Text = "Worked(D)";
             // 
@@ -465,16 +490,18 @@
             this.panelControl4.Controls.Add(this.labelControl11);
             this.panelControl4.Controls.Add(this.TextMisc1);
             this.panelControl4.Controls.Add(this.labelControl10);
-            this.panelControl4.Location = new System.Drawing.Point(248, 198);
+            this.panelControl4.Location = new System.Drawing.Point(289, 259);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(133, 175);
+            this.panelControl4.Size = new System.Drawing.Size(155, 229);
             this.panelControl4.TabIndex = 4;
             this.panelControl4.Text = "Arrears";
             // 
             // TextFlexiAlw
             // 
             this.TextFlexiAlw.EnterMoveNextControl = true;
-            this.TextFlexiAlw.Location = new System.Drawing.Point(61, 95);
+            this.TextFlexiAlw.Location = new System.Drawing.Point(71, 124);
+            this.TextFlexiAlw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextFlexiAlw.Name = "TextFlexiAlw";
             this.TextFlexiAlw.Properties.DisplayFormat.FormatString = "N2";
             this.TextFlexiAlw.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -486,21 +513,23 @@
             this.TextFlexiAlw.Properties.MaxLength = 10;
             this.TextFlexiAlw.Properties.NullText = "0";
             this.TextFlexiAlw.Properties.NullValuePrompt = "0";
-            this.TextFlexiAlw.Size = new System.Drawing.Size(64, 20);
+            this.TextFlexiAlw.Size = new System.Drawing.Size(75, 24);
             this.TextFlexiAlw.TabIndex = 42;
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(61, 80);
+            this.labelControl35.Location = new System.Drawing.Point(71, 105);
+            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(64, 13);
+            this.labelControl35.Size = new System.Drawing.Size(72, 17);
             this.labelControl35.TabIndex = 43;
             this.labelControl35.Text = "Variable Alw";
             // 
             // txtFood
             // 
             this.txtFood.EnterMoveNextControl = true;
-            this.txtFood.Location = new System.Drawing.Point(9, 139);
+            this.txtFood.Location = new System.Drawing.Point(10, 182);
+            this.txtFood.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFood.Name = "txtFood";
             this.txtFood.Properties.DisplayFormat.FormatString = "N2";
             this.txtFood.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -512,21 +541,23 @@
             this.txtFood.Properties.MaxLength = 10;
             this.txtFood.Properties.NullText = "0";
             this.txtFood.Properties.NullValuePrompt = "0";
-            this.txtFood.Size = new System.Drawing.Size(46, 20);
+            this.txtFood.Size = new System.Drawing.Size(54, 24);
             this.txtFood.TabIndex = 39;
             // 
             // labelControl27
             // 
-            this.labelControl27.Location = new System.Drawing.Point(12, 123);
+            this.labelControl27.Location = new System.Drawing.Point(14, 161);
+            this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(27, 13);
+            this.labelControl27.Size = new System.Drawing.Size(30, 17);
             this.labelControl27.TabIndex = 38;
             this.labelControl27.Text = "Food";
             // 
             // TextMisc3
             // 
             this.TextMisc3.EnterMoveNextControl = true;
-            this.TextMisc3.Location = new System.Drawing.Point(9, 95);
+            this.TextMisc3.Location = new System.Drawing.Point(10, 124);
+            this.TextMisc3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextMisc3.Name = "TextMisc3";
             this.TextMisc3.Properties.DisplayFormat.FormatString = "N2";
             this.TextMisc3.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -538,22 +569,24 @@
             this.TextMisc3.Properties.MaxLength = 10;
             this.TextMisc3.Properties.NullText = "0";
             this.TextMisc3.Properties.NullValuePrompt = "0";
-            this.TextMisc3.Size = new System.Drawing.Size(46, 20);
+            this.TextMisc3.Size = new System.Drawing.Size(54, 24);
             this.TextMisc3.TabIndex = 2;
             this.TextMisc3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(9, 80);
+            this.labelControl12.Location = new System.Drawing.Point(10, 105);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(32, 13);
+            this.labelControl12.Size = new System.Drawing.Size(37, 17);
             this.labelControl12.TabIndex = 37;
             this.labelControl12.Text = "Misc.3";
             // 
             // TextMisc2
             // 
             this.TextMisc2.EnterMoveNextControl = true;
-            this.TextMisc2.Location = new System.Drawing.Point(61, 50);
+            this.TextMisc2.Location = new System.Drawing.Point(71, 65);
+            this.TextMisc2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextMisc2.Name = "TextMisc2";
             this.TextMisc2.Properties.EditFormat.FormatString = "N2";
             this.TextMisc2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -563,22 +596,24 @@
             this.TextMisc2.Properties.MaxLength = 10;
             this.TextMisc2.Properties.NullText = "0";
             this.TextMisc2.Properties.NullValuePrompt = "0";
-            this.TextMisc2.Size = new System.Drawing.Size(64, 20);
+            this.TextMisc2.Size = new System.Drawing.Size(75, 24);
             this.TextMisc2.TabIndex = 1;
             this.TextMisc2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(61, 34);
+            this.labelControl11.Location = new System.Drawing.Point(71, 44);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(32, 13);
+            this.labelControl11.Size = new System.Drawing.Size(37, 17);
             this.labelControl11.TabIndex = 35;
             this.labelControl11.Text = "Misc.2";
             // 
             // TextMisc1
             // 
             this.TextMisc1.EnterMoveNextControl = true;
-            this.TextMisc1.Location = new System.Drawing.Point(9, 50);
+            this.TextMisc1.Location = new System.Drawing.Point(10, 65);
+            this.TextMisc1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextMisc1.Name = "TextMisc1";
             this.TextMisc1.Properties.EditFormat.FormatString = "N2";
             this.TextMisc1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -588,15 +623,16 @@
             this.TextMisc1.Properties.MaxLength = 10;
             this.TextMisc1.Properties.NullText = "0";
             this.TextMisc1.Properties.NullValuePrompt = "0";
-            this.TextMisc1.Size = new System.Drawing.Size(46, 20);
+            this.TextMisc1.Size = new System.Drawing.Size(54, 24);
             this.TextMisc1.TabIndex = 0;
             this.TextMisc1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(9, 34);
+            this.labelControl10.Location = new System.Drawing.Point(10, 44);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(32, 13);
+            this.labelControl10.Size = new System.Drawing.Size(37, 17);
             this.labelControl10.TabIndex = 33;
             this.labelControl10.Text = "Misc.1";
             // 
@@ -612,16 +648,18 @@
             this.panelControl5.Controls.Add(this.labelControl14);
             this.panelControl5.Controls.Add(this.TextAdvances);
             this.panelControl5.Controls.Add(this.labelControl13);
-            this.panelControl5.Location = new System.Drawing.Point(379, 198);
+            this.panelControl5.Location = new System.Drawing.Point(442, 259);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(125, 175);
+            this.panelControl5.Size = new System.Drawing.Size(146, 229);
             this.panelControl5.TabIndex = 5;
             this.panelControl5.Text = "Deductions";
             // 
             // txtMiscDedNew
             // 
             this.txtMiscDedNew.EnterMoveNextControl = true;
-            this.txtMiscDedNew.Location = new System.Drawing.Point(66, 95);
+            this.txtMiscDedNew.Location = new System.Drawing.Point(77, 124);
+            this.txtMiscDedNew.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMiscDedNew.Name = "txtMiscDedNew";
             this.txtMiscDedNew.Properties.EditFormat.FormatString = "N2";
             this.txtMiscDedNew.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -631,21 +669,23 @@
             this.txtMiscDedNew.Properties.MaxLength = 10;
             this.txtMiscDedNew.Properties.NullText = "0";
             this.txtMiscDedNew.Properties.NullValuePrompt = "0";
-            this.txtMiscDedNew.Size = new System.Drawing.Size(51, 20);
+            this.txtMiscDedNew.Size = new System.Drawing.Size(59, 24);
             this.txtMiscDedNew.TabIndex = 4;
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(66, 80);
+            this.labelControl30.Location = new System.Drawing.Point(77, 105);
+            this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(47, 13);
+            this.labelControl30.Size = new System.Drawing.Size(55, 17);
             this.labelControl30.TabIndex = 41;
             this.labelControl30.Text = "Misc Ded";
             // 
             // TextTdsAmt
             // 
             this.TextTdsAmt.EnterMoveNextControl = true;
-            this.TextTdsAmt.Location = new System.Drawing.Point(66, 49);
+            this.TextTdsAmt.Location = new System.Drawing.Point(77, 64);
+            this.TextTdsAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextTdsAmt.Name = "TextTdsAmt";
             this.TextTdsAmt.Properties.EditFormat.FormatString = "N2";
             this.TextTdsAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -655,15 +695,16 @@
             this.TextTdsAmt.Properties.MaxLength = 10;
             this.TextTdsAmt.Properties.NullText = "0";
             this.TextTdsAmt.Properties.NullValuePrompt = "0";
-            this.TextTdsAmt.Size = new System.Drawing.Size(51, 20);
+            this.TextTdsAmt.Size = new System.Drawing.Size(59, 24);
             this.TextTdsAmt.TabIndex = 3;
             this.TextTdsAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(66, 34);
+            this.labelControl16.Location = new System.Drawing.Point(77, 44);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(44, 13);
+            this.labelControl16.Size = new System.Drawing.Size(51, 17);
             this.labelControl16.TabIndex = 39;
             this.labelControl16.Text = "Tds Amt.";
             // 
@@ -671,7 +712,8 @@
             // 
             this.TextDeducMisc.EditValue = "5.00";
             this.TextDeducMisc.EnterMoveNextControl = true;
-            this.TextDeducMisc.Location = new System.Drawing.Point(12, 139);
+            this.TextDeducMisc.Location = new System.Drawing.Point(14, 182);
+            this.TextDeducMisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDeducMisc.Name = "TextDeducMisc";
             this.TextDeducMisc.Properties.EditFormat.FormatString = "N2";
             this.TextDeducMisc.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -681,22 +723,24 @@
             this.TextDeducMisc.Properties.MaxLength = 10;
             this.TextDeducMisc.Properties.NullText = "0";
             this.TextDeducMisc.Properties.NullValuePrompt = "0";
-            this.TextDeducMisc.Size = new System.Drawing.Size(51, 20);
+            this.TextDeducMisc.Size = new System.Drawing.Size(59, 24);
             this.TextDeducMisc.TabIndex = 2;
             this.TextDeducMisc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(12, 124);
+            this.labelControl15.Location = new System.Drawing.Point(14, 162);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(22, 13);
+            this.labelControl15.Size = new System.Drawing.Size(24, 17);
             this.labelControl15.TabIndex = 37;
             this.labelControl15.Text = "LWF";
             // 
             // TextLoanAmt
             // 
             this.TextLoanAmt.EnterMoveNextControl = true;
-            this.TextLoanAmt.Location = new System.Drawing.Point(12, 95);
+            this.TextLoanAmt.Location = new System.Drawing.Point(14, 124);
+            this.TextLoanAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextLoanAmt.Name = "TextLoanAmt";
             this.TextLoanAmt.Properties.EditFormat.FormatString = "N2";
             this.TextLoanAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -706,22 +750,24 @@
             this.TextLoanAmt.Properties.MaxLength = 10;
             this.TextLoanAmt.Properties.NullText = "0";
             this.TextLoanAmt.Properties.NullValuePrompt = "0";
-            this.TextLoanAmt.Size = new System.Drawing.Size(51, 20);
+            this.TextLoanAmt.Size = new System.Drawing.Size(59, 24);
             this.TextLoanAmt.TabIndex = 1;
             this.TextLoanAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(12, 79);
+            this.labelControl14.Location = new System.Drawing.Point(14, 103);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(51, 13);
+            this.labelControl14.Size = new System.Drawing.Size(58, 17);
             this.labelControl14.TabIndex = 35;
             this.labelControl14.Text = "Loan Amt.";
             // 
             // TextAdvances
             // 
             this.TextAdvances.EnterMoveNextControl = true;
-            this.TextAdvances.Location = new System.Drawing.Point(12, 50);
+            this.TextAdvances.Location = new System.Drawing.Point(14, 65);
+            this.TextAdvances.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAdvances.Name = "TextAdvances";
             this.TextAdvances.Properties.EditFormat.FormatString = "N2";
             this.TextAdvances.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -731,23 +777,25 @@
             this.TextAdvances.Properties.MaxLength = 10;
             this.TextAdvances.Properties.NullText = "0";
             this.TextAdvances.Properties.NullValuePrompt = "0";
-            this.TextAdvances.Size = new System.Drawing.Size(51, 20);
+            this.TextAdvances.Size = new System.Drawing.Size(59, 24);
             this.TextAdvances.TabIndex = 0;
             this.TextAdvances.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(12, 34);
+            this.labelControl13.Location = new System.Drawing.Point(14, 44);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(48, 13);
+            this.labelControl13.Size = new System.Drawing.Size(55, 17);
             this.labelControl13.TabIndex = 33;
             this.labelControl13.Text = "Advances";
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(22, 180);
+            this.labelControl17.Location = new System.Drawing.Point(26, 235);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(84, 13);
+            this.labelControl17.Size = new System.Drawing.Size(99, 17);
             this.labelControl17.TabIndex = 42;
             this.labelControl17.Text = "Last Saved Emp :";
             // 
@@ -761,16 +809,18 @@
             this.panelControl3.Controls.Add(this.labelControl20);
             this.panelControl3.Controls.Add(this.TextEarned);
             this.panelControl3.Controls.Add(this.labelControl21);
-            this.panelControl3.Location = new System.Drawing.Point(144, 198);
+            this.panelControl3.Location = new System.Drawing.Point(168, 259);
+            this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(98, 175);
+            this.panelControl3.Size = new System.Drawing.Size(114, 229);
             this.panelControl3.TabIndex = 3;
             this.panelControl3.Text = "Leaves";
             // 
             // txtMaternityLeave
             // 
             this.txtMaternityLeave.EnterMoveNextControl = true;
-            this.txtMaternityLeave.Location = new System.Drawing.Point(53, 139);
+            this.txtMaternityLeave.Location = new System.Drawing.Point(62, 182);
+            this.txtMaternityLeave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaternityLeave.Name = "txtMaternityLeave";
             this.txtMaternityLeave.Properties.EditFormat.FormatString = "N2";
             this.txtMaternityLeave.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -780,21 +830,23 @@
             this.txtMaternityLeave.Properties.MaxLength = 5;
             this.txtMaternityLeave.Properties.NullText = "0";
             this.txtMaternityLeave.Properties.NullValuePrompt = "0";
-            this.txtMaternityLeave.Size = new System.Drawing.Size(34, 20);
+            this.txtMaternityLeave.Size = new System.Drawing.Size(40, 24);
             this.txtMaternityLeave.TabIndex = 38;
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(53, 124);
+            this.labelControl26.Location = new System.Drawing.Point(62, 162);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(21, 13);
+            this.labelControl26.Size = new System.Drawing.Size(24, 17);
             this.labelControl26.TabIndex = 39;
             this.labelControl26.Text = "M.L.";
             // 
             // TextSick
             // 
             this.TextSick.EnterMoveNextControl = true;
-            this.TextSick.Location = new System.Drawing.Point(12, 139);
+            this.TextSick.Location = new System.Drawing.Point(14, 182);
+            this.TextSick.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextSick.Name = "TextSick";
             this.TextSick.Properties.EditFormat.FormatString = "N2";
             this.TextSick.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -804,23 +856,25 @@
             this.TextSick.Properties.MaxLength = 5;
             this.TextSick.Properties.NullText = "0";
             this.TextSick.Properties.NullValuePrompt = "0";
-            this.TextSick.Size = new System.Drawing.Size(34, 20);
+            this.TextSick.Size = new System.Drawing.Size(40, 24);
             this.TextSick.TabIndex = 2;
             this.TextSick.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextSick.Leave += new System.EventHandler(this.TextSick_Leave_1);
             // 
             // labelControl19
             // 
-            this.labelControl19.Location = new System.Drawing.Point(12, 124);
+            this.labelControl19.Location = new System.Drawing.Point(14, 162);
+            this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(20, 13);
+            this.labelControl19.Size = new System.Drawing.Size(23, 17);
             this.labelControl19.TabIndex = 37;
             this.labelControl19.Text = "Sick";
             // 
             // TextCasual
             // 
             this.TextCasual.EnterMoveNextControl = true;
-            this.TextCasual.Location = new System.Drawing.Point(12, 95);
+            this.TextCasual.Location = new System.Drawing.Point(14, 124);
+            this.TextCasual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCasual.Name = "TextCasual";
             this.TextCasual.Properties.EditFormat.FormatString = "N2";
             this.TextCasual.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -830,23 +884,25 @@
             this.TextCasual.Properties.MaxLength = 5;
             this.TextCasual.Properties.NullText = "0";
             this.TextCasual.Properties.NullValuePrompt = "0";
-            this.TextCasual.Size = new System.Drawing.Size(77, 20);
+            this.TextCasual.Size = new System.Drawing.Size(90, 24);
             this.TextCasual.TabIndex = 1;
             this.TextCasual.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextCasual.Leave += new System.EventHandler(this.TextSick_Leave_1);
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(12, 79);
+            this.labelControl20.Location = new System.Drawing.Point(14, 103);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(34, 13);
+            this.labelControl20.Size = new System.Drawing.Size(38, 17);
             this.labelControl20.TabIndex = 35;
             this.labelControl20.Text = "Casual";
             // 
             // TextEarned
             // 
             this.TextEarned.EnterMoveNextControl = true;
-            this.TextEarned.Location = new System.Drawing.Point(12, 50);
+            this.TextEarned.Location = new System.Drawing.Point(14, 65);
+            this.TextEarned.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextEarned.Name = "TextEarned";
             this.TextEarned.Properties.EditFormat.FormatString = "N2";
             this.TextEarned.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -856,22 +912,24 @@
             this.TextEarned.Properties.MaxLength = 5;
             this.TextEarned.Properties.NullText = "0";
             this.TextEarned.Properties.NullValuePrompt = "0";
-            this.TextEarned.Size = new System.Drawing.Size(77, 20);
+            this.TextEarned.Size = new System.Drawing.Size(90, 24);
             this.TextEarned.TabIndex = 0;
             this.TextEarned.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextEarned.Leave += new System.EventHandler(this.TextSick_Leave_1);
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(12, 34);
+            this.labelControl21.Location = new System.Drawing.Point(14, 44);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(36, 13);
+            this.labelControl21.Size = new System.Drawing.Size(41, 17);
             this.labelControl21.TabIndex = 33;
             this.labelControl21.Text = "Earned";
             // 
             // TextMonth
             // 
-            this.TextMonth.Location = new System.Drawing.Point(52, 39);
+            this.TextMonth.Location = new System.Drawing.Point(61, 51);
+            this.TextMonth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextMonth.Name = "TextMonth";
             this.TextMonth.Properties.EditFormat.FormatString = "MM-yyyy";
             this.TextMonth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -879,7 +937,7 @@
             this.TextMonth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.TextMonth.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextMonth.Properties.MaxLength = 6;
-            this.TextMonth.Size = new System.Drawing.Size(73, 20);
+            this.TextMonth.Size = new System.Drawing.Size(85, 24);
             this.TextMonth.TabIndex = 0;
             conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule1.ErrorText = "This value is not valid";
@@ -896,9 +954,9 @@
             // 
             // frm_EmpSalAddUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 393);
+            this.ClientSize = new System.Drawing.Size(606, 522);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.labelControl17);
@@ -911,6 +969,7 @@
             this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.panelControl2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_EmpSalAddUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "  ";

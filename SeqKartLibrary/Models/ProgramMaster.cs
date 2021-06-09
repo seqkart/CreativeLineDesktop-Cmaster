@@ -30,5 +30,10 @@ namespace SeqKartLibrary.Models
         public string ProgPrinterName { get; set; }
         public Nullable<System.DateTime> SuncDate { get; set; }
         public Nullable<System.DateTime> SyncDate { get; set; }
+        public string ProgRadialTag { get; set; }
+        public byte[] ProgSVG1 { get; set; }
+        public byte[] ProgSVG2 { get; set; }
+        public byte[] ProgSVG3 { get; set; }
+        public string ProgSubMainForm { get; set; }
     }
 }

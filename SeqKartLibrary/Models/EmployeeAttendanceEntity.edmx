@@ -5,6 +5,8 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="SEQKARTNewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SeqKartNew.dbo.AttendanceSource' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AttendanceSource">
           <Key>
             <PropertyRef Name="serial_id" />
@@ -14,13 +16,15 @@
           <Property Name="source_id" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'SEQKARTNew.dbo.AttendanceStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SeqKartNew.dbo.AttendanceStatus' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="AttendanceStatus">
           <Key>
             <PropertyRef Name="status_id" />
           </Key>
           <Property Name="status_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="status" Type="varchar" MaxLength="10" />
+          <Property Name="status" Type="varchar" MaxLength="50" />
+          <Property Name="status_code" Type="varchar" MaxLength="10" />
+          <Property Name="status_type" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="CatgMst">
           <Key>
@@ -33,16 +37,14 @@ warning 6002: The table/view 'SEQKARTNew.dbo.AttendanceStatus' does not have a p
           <Property Name="SyncDate" Type="date" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'SEQKARTNew.dbo.DailyShifts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SeqKartNew.dbo.DailyShifts' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DailyShifts">
           <Key>
             <PropertyRef Name="shift_id" />
           </Key>
           <Property Name="shift_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="shift_name" Type="varchar" MaxLength="10" />
+          <Property Name="shift_name" Type="varchar" MaxLength="50" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'SEQKARTNew.dbo.DeptMst' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="DeptMst">
           <Key>
             <PropertyRef Name="DeptID" />
@@ -61,7 +63,7 @@ warning 6002: The table/view 'SEQKARTNew.dbo.DeptMst' does not have a primary ke
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="bigint" Nullable="false" />
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DesgCode" Type="varchar" MaxLength="4" />
           <Property Name="DesgDesc" Type="varchar" MaxLength="100" />
           <Property Name="SuncDate" Type="date" />
@@ -80,6 +82,7 @@ warning 6002: The table/view 'SEQKARTNew.dbo.DeptMst' does not have a primary ke
           <Property Name="attendance_out_first" Type="time" Precision="0" />
           <Property Name="attendance_in_last" Type="time" Precision="0" />
           <Property Name="attendance_out_last" Type="time" Precision="0" />
+          <Property Name="working_hours" Type="int" />
           <Property Name="shift_id" Type="int" />
           <Property Name="attendance_source" Type="int" />
           <Property Name="gate_pass_time" Type="int" />
@@ -92,12 +95,12 @@ warning 6002: The table/view 'SEQKARTNew.dbo.DeptMst' does not have a primary ke
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EmpCode" Type="varchar" MaxLength="5" />
           <Property Name="EmpName" Type="varchar" MaxLength="40" />
-          <Property Name="EmpDeptCode" Type="varchar" MaxLength="10" />
-          <Property Name="EmpDeptCodeSpl" Type="varchar" MaxLength="10" />
-          <Property Name="EmpDesgCode" Type="varchar" MaxLength="10" />
-          <Property Name="UnitCode" Type="varchar" MaxLength="10" />
           <Property Name="EmpFHRelationTag" Type="varchar" MaxLength="1" />
           <Property Name="EmpFHName" Type="varchar" MaxLength="40" />
+          <Property Name="EmpDeptCode" Type="varchar" MaxLength="4" />
+          <Property Name="EmpDeptCodeSpl" Type="varchar" MaxLength="4" />
+          <Property Name="EmpDesgCode" Type="varchar" MaxLength="4" />
+          <Property Name="UnitCode" Type="varchar" MaxLength="4" />
           <Property Name="EmpSex" Type="varchar" MaxLength="1" />
           <Property Name="EmpAge" Type="varchar" MaxLength="4" />
           <Property Name="EmpDOJ" Type="datetime" />
@@ -221,7 +224,25 @@ warning 6002: The table/view 'SEQKARTNew.dbo.DeptMst' does not have a primary ke
           <Property Name="TimeInLast" Type="time" Precision="0" />
           <Property Name="TimeOutLast" Type="time" Precision="0" />
           <Property Name="WorkingHours" Type="int" />
+          <Property Name="DailyWage" Type="bit" />
+          <Property Name="DailyWageRate" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="DailyWageMinutes" Type="int" />
+          <Property Name="EmpImage" Type="varbinary(max)" />
+          <Property Name="EmpDDate" Type="date" />
+          <Property Name="EmpDFUserID" Type="varchar" MaxLength="20" />
+          <Property Name="EmDFDt" Type="datetime" />
+          <Property Name="EmpPassbyUser" Type="varchar" MaxLength="20" />
+          <Property Name="EmpDUUserID" Type="varchar" MaxLength="20" />
+          <Property Name="EmDUDt" Type="datetime" />
+          <Property Name="LunchBreak" Type="int" />
+          <Property Name="TeaBreak" Type="int" />
+          <Property Name="TeaBreakTime" Type="int" />
+          <Property Name="OT_Extra" Type="int" />
+          <Property Name="EmpTeaTag" Type="varchar" MaxLength="2" />
+          <Property Name="TeaAmount" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SeqKartNew.dbo.ProgramMaster' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="ProgramMaster">
           <Key>
             <PropertyRef Name="ProgAid" />
@@ -242,9 +263,14 @@ warning 6002: The table/view 'SEQKARTNew.dbo.DeptMst' does not have a primary ke
           <Property Name="ProgPrinterName" Type="varchar" MaxLength="500" />
           <Property Name="SuncDate" Type="date" />
           <Property Name="SyncDate" Type="date" />
+          <Property Name="ProgRadialTag" Type="varchar" MaxLength="2" />
+          <Property Name="ProgSVG1" Type="image" />
+          <Property Name="ProgSVG2" Type="image" />
+          <Property Name="ProgSVG3" Type="image" />
+          <Property Name="ProgSubMainForm" Type="varchar" MaxLength="100" />
         </EntityType>
         <!--Errors Found During Generation:
-warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+warning 6002: The table/view 'SeqKartNew.dbo.WORKER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="WORKER">
           <Key>
             <PropertyRef Name="WRKSYSID" />
@@ -278,16 +304,24 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <Property Name="SyncDate" Type="date" />
         </EntityType>
         <EntityContainer Name="SEQKARTNewModelStoreContainer">
-          <EntitySet Name="AttendanceSource" EntityType="Self.AttendanceSource" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CatgMst" EntityType="Self.CatgMst" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeptMst" EntityType="Self.DeptMst" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DesgMst" EntityType="Self.DesgMst" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmployeeAttendance" EntityType="Self.EmployeeAttendance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EmpMST" EntityType="Self.EmpMST" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="ProgramMaster" EntityType="Self.ProgramMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AttendanceSource" EntityType="Self.AttendanceSource" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [AttendanceSource].[serial_id] AS [serial_id], 
+    [AttendanceSource].[source_name] AS [source_name], 
+    [AttendanceSource].[source_id] AS [source_id]
+    FROM [dbo].[AttendanceSource] AS [AttendanceSource]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="AttendanceStatus" EntityType="Self.AttendanceStatus" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [AttendanceStatus].[status_id] AS [status_id], 
-    [AttendanceStatus].[status] AS [status]
+    [AttendanceStatus].[status] AS [status], 
+    [AttendanceStatus].[status_code] AS [status_code], 
+    [AttendanceStatus].[status_type] AS [status_type]
     FROM [dbo].[AttendanceStatus] AS [AttendanceStatus]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="DailyShifts" EntityType="Self.DailyShifts" store:Type="Tables" store:Schema="dbo">
@@ -296,18 +330,30 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
     [DailyShifts].[shift_name] AS [shift_name]
     FROM [dbo].[DailyShifts] AS [DailyShifts]</DefiningQuery>
           </EntitySet>
-          <EntitySet Name="DeptMst" EntityType="Self.DeptMst" store:Type="Tables" store:Schema="dbo">
+          <EntitySet Name="ProgramMaster" EntityType="Self.ProgramMaster" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
-    [DeptMst].[DeptID] AS [DeptID], 
-    [DeptMst].[DeptCode] AS [DeptCode], 
-    [DeptMst].[DeptDesc] AS [DeptDesc], 
-    [DeptMst].[Remarks] AS [Remarks], 
-    [DeptMst].[UpDtUser] AS [UpDtUser], 
-    [DeptMst].[FeedDt] AS [FeedDt], 
-    [DeptMst].[UpDateDt] AS [UpDateDt], 
-    [DeptMst].[SuncDate] AS [SuncDate], 
-    [DeptMst].[SyncDate] AS [SyncDate]
-    FROM [dbo].[DeptMst] AS [DeptMst]</DefiningQuery>
+    [ProgramMaster].[ProgCode] AS [ProgCode], 
+    [ProgramMaster].[ProgDesc] AS [ProgDesc], 
+    [ProgramMaster].[ProgInMenu] AS [ProgInMenu], 
+    [ProgramMaster].[ProgInMenuGroup] AS [ProgInMenuGroup], 
+    [ProgramMaster].[ProgActive] AS [ProgActive], 
+    [ProgramMaster].[ProgOptsType] AS [ProgOptsType], 
+    [ProgramMaster].[ProgAid] AS [ProgAid], 
+    [ProgramMaster].[ProgProcName] AS [ProgProcName], 
+    [ProgramMaster].[ProgFormLink] AS [ProgFormLink], 
+    [ProgramMaster].[ProgNFA] AS [ProgNFA], 
+    [ProgramMaster].[ProCaption] AS [ProCaption], 
+    [ProgramMaster].[RoleCode] AS [RoleCode], 
+    [ProgramMaster].[OrderBy] AS [OrderBy], 
+    [ProgramMaster].[ProgPrinterName] AS [ProgPrinterName], 
+    [ProgramMaster].[SuncDate] AS [SuncDate], 
+    [ProgramMaster].[SyncDate] AS [SyncDate], 
+    [ProgramMaster].[ProgRadialTag] AS [ProgRadialTag], 
+    [ProgramMaster].[ProgSVG1] AS [ProgSVG1], 
+    [ProgramMaster].[ProgSVG2] AS [ProgSVG2], 
+    [ProgramMaster].[ProgSVG3] AS [ProgSVG3], 
+    [ProgramMaster].[ProgSubMainForm] AS [ProgSubMainForm]
+    FROM [dbo].[ProgramMaster] AS [ProgramMaster]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="WORKER" EntityType="Self.WORKER" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -362,6 +408,7 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <Property Name="attendance_out_first" Type="Time" Precision="0" />
           <Property Name="attendance_in_last" Type="Time" Precision="0" />
           <Property Name="attendance_out_last" Type="Time" Precision="0" />
+          <Property Name="working_hours" Type="Int32" />
         </EntityType>
         <EntityContainer Name="SEQKARTNewEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EmployeeAttendances" EntityType="Self.EmployeeAttendance" />
@@ -412,14 +459,16 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
             <PropertyRef Name="status_id" />
           </Key>
           <Property Name="status_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="status" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="status_code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="status_type" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="DailyShift">
           <Key>
             <PropertyRef Name="shift_id" />
           </Key>
           <Property Name="shift_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="shift_name" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="shift_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="AttendanceSource">
           <Key>
@@ -449,6 +498,11 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <Property Name="ProgPrinterName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
           <Property Name="SuncDate" Type="DateTime" Precision="0" />
           <Property Name="SyncDate" Type="DateTime" Precision="0" />
+          <Property Name="ProgRadialTag" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ProgSVG1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProgSVG2" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProgSVG3" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProgSubMainForm" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="EmpMST">
           <Key>
@@ -457,10 +511,10 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EmpCode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
           <Property Name="EmpName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Name="EmpDeptCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="EmpDeptCodeSpl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="EmpDesgCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="UnitCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="EmpDeptCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="EmpDeptCodeSpl" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="EmpDesgCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="UnitCode" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
           <Property Name="EmpFHRelationTag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="EmpFHName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
           <Property Name="EmpSex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
@@ -586,6 +640,22 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <Property Name="TimeInLast" Type="Time" Precision="0" />
           <Property Name="TimeOutLast" Type="Time" Precision="0" />
           <Property Name="WorkingHours" Type="Int32" />
+          <Property Name="DailyWage" Type="Boolean" />
+          <Property Name="DailyWageRate" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="DailyWageMinutes" Type="Int32" />
+          <Property Name="EmpImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="EmpDDate" Type="DateTime" Precision="0" />
+          <Property Name="EmpDFUserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EmDFDt" Type="DateTime" Precision="3" />
+          <Property Name="EmpPassbyUser" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EmpDUUserID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EmDUDt" Type="DateTime" Precision="3" />
+          <Property Name="LunchBreak" Type="Int32" />
+          <Property Name="TeaBreak" Type="Int32" />
+          <Property Name="TeaBreakTime" Type="Int32" />
+          <Property Name="OT_Extra" Type="Int32" />
+          <Property Name="EmpTeaTag" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="TeaAmount" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="CatgMst">
           <Key>
@@ -630,6 +700,7 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <EntitySetMapping Name="EmployeeAttendances">
             <EntityTypeMapping TypeName="SEQKARTNewModel.EmployeeAttendance">
               <MappingFragment StoreEntitySet="EmployeeAttendance">
+                <ScalarProperty Name="working_hours" ColumnName="working_hours" />
                 <ScalarProperty Name="attendance_out_last" ColumnName="attendance_out_last" />
                 <ScalarProperty Name="attendance_in_last" ColumnName="attendance_in_last" />
                 <ScalarProperty Name="attendance_out_first" ColumnName="attendance_out_first" />
@@ -682,6 +753,8 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <EntitySetMapping Name="AttendanceStatus">
             <EntityTypeMapping TypeName="SEQKARTNewModel.AttendanceStatu">
               <MappingFragment StoreEntitySet="AttendanceStatus">
+                <ScalarProperty Name="status_type" ColumnName="status_type" />
+                <ScalarProperty Name="status_code" ColumnName="status_code" />
                 <ScalarProperty Name="status" ColumnName="status" />
                 <ScalarProperty Name="status_id" ColumnName="status_id" />
               </MappingFragment>
@@ -707,6 +780,11 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <EntitySetMapping Name="ProgramMasters">
             <EntityTypeMapping TypeName="SEQKARTNewModel.ProgramMaster">
               <MappingFragment StoreEntitySet="ProgramMaster">
+                <ScalarProperty Name="ProgSubMainForm" ColumnName="ProgSubMainForm" />
+                <ScalarProperty Name="ProgSVG3" ColumnName="ProgSVG3" />
+                <ScalarProperty Name="ProgSVG2" ColumnName="ProgSVG2" />
+                <ScalarProperty Name="ProgSVG1" ColumnName="ProgSVG1" />
+                <ScalarProperty Name="ProgRadialTag" ColumnName="ProgRadialTag" />
                 <ScalarProperty Name="SyncDate" ColumnName="SyncDate" />
                 <ScalarProperty Name="SuncDate" ColumnName="SuncDate" />
                 <ScalarProperty Name="ProgPrinterName" ColumnName="ProgPrinterName" />
@@ -729,6 +807,22 @@ warning 6002: The table/view 'SEQKARTNew.dbo.WORKER' does not have a primary key
           <EntitySetMapping Name="EmpMSTs">
             <EntityTypeMapping TypeName="SEQKARTNewModel.EmpMST">
               <MappingFragment StoreEntitySet="EmpMST">
+                <ScalarProperty Name="TeaAmount" ColumnName="TeaAmount" />
+                <ScalarProperty Name="EmpTeaTag" ColumnName="EmpTeaTag" />
+                <ScalarProperty Name="OT_Extra" ColumnName="OT_Extra" />
+                <ScalarProperty Name="TeaBreakTime" ColumnName="TeaBreakTime" />
+                <ScalarProperty Name="TeaBreak" ColumnName="TeaBreak" />
+                <ScalarProperty Name="LunchBreak" ColumnName="LunchBreak" />
+                <ScalarProperty Name="EmDUDt" ColumnName="EmDUDt" />
+                <ScalarProperty Name="EmpDUUserID" ColumnName="EmpDUUserID" />
+                <ScalarProperty Name="EmpPassbyUser" ColumnName="EmpPassbyUser" />
+                <ScalarProperty Name="EmDFDt" ColumnName="EmDFDt" />
+                <ScalarProperty Name="EmpDFUserID" ColumnName="EmpDFUserID" />
+                <ScalarProperty Name="EmpDDate" ColumnName="EmpDDate" />
+                <ScalarProperty Name="EmpImage" ColumnName="EmpImage" />
+                <ScalarProperty Name="DailyWageMinutes" ColumnName="DailyWageMinutes" />
+                <ScalarProperty Name="DailyWageRate" ColumnName="DailyWageRate" />
+                <ScalarProperty Name="DailyWage" ColumnName="DailyWage" />
                 <ScalarProperty Name="WorkingHours" ColumnName="WorkingHours" />
                 <ScalarProperty Name="TimeOutLast" ColumnName="TimeOutLast" />
                 <ScalarProperty Name="TimeInLast" ColumnName="TimeInLast" />

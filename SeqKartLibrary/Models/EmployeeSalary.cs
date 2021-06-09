@@ -37,6 +37,9 @@ namespace SeqKartLibrary.Models
         public string CatgDesc { get; set; }
         public string DeptCode { get; set; }
         public string DeptDesc { get; set; }
+        public double TeaRate { get; set; }
+        public double NoOfCups { get; set; }
+         public double TotalTeaAmount { get; set; }
 
 
     }

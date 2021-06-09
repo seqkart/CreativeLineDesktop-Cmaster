@@ -10,13 +10,13 @@
 namespace SeqKartLibrary.Models
 {
     using System;
-
+    using System.Collections.Generic;
+    
     public partial class AttendanceStatu
     {
-        public string status_type;
-        public string status_code;
-
         public int status_id { get; set; }
         public string status { get; set; }
+        public string status_code { get; set; }
+        public string status_type { get; set; }
     }
 }

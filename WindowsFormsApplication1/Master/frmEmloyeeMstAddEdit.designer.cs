@@ -35,8 +35,6 @@
             this.RelationShipGrid123 = new DevExpress.XtraTab.XtraTabControl();
             this.BasicInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
             this.lblFilename = new DevExpress.XtraEditors.LabelControl();
             this.btnOpen = new System.Windows.Forms.Button();
@@ -144,6 +142,8 @@
             this.txtTeaBreakTime = new DevExpress.XtraEditors.TextEdit();
             this.labelControl27 = new DevExpress.XtraEditors.LabelControl();
             this.chkTeaBreak = new System.Windows.Forms.CheckBox();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtDesgCode = new DevExpress.XtraEditors.TextEdit();
             this.txtDesgDesc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -182,8 +182,6 @@
             this.BasicInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNationality.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMotherName.Properties)).BeginInit();
@@ -241,6 +239,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textEdit10.Properties)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeaBreakTime.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesgDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDeptCode.Properties)).BeginInit();
@@ -317,34 +317,6 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(696, 357);
             this.panelControl1.TabIndex = 0;
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(188, 373);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(490, 358);
-            this.HelpGrid.TabIndex = 244;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.DetailHeight = 458;
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // labelControl23
             // 
@@ -424,7 +396,7 @@
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(14, 184);
+            this.labelControl25.Location = new System.Drawing.Point(13, 183);
             this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(93, 19);
@@ -474,7 +446,7 @@
             // 
             this.labelControl43.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl43.Appearance.Options.UseFont = true;
-            this.labelControl43.Location = new System.Drawing.Point(65, 262);
+            this.labelControl43.Location = new System.Drawing.Point(64, 261);
             this.labelControl43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl43.Name = "labelControl43";
             this.labelControl43.Size = new System.Drawing.Size(42, 19);
@@ -485,7 +457,7 @@
             // 
             this.labelControl42.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl42.Appearance.Options.UseFont = true;
-            this.labelControl42.Location = new System.Drawing.Point(32, 223);
+            this.labelControl42.Location = new System.Drawing.Point(31, 222);
             this.labelControl42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl42.Name = "labelControl42";
             this.labelControl42.Size = new System.Drawing.Size(75, 19);
@@ -496,7 +468,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(49, 301);
+            this.labelControl3.Location = new System.Drawing.Point(48, 300);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(58, 19);
@@ -543,7 +515,7 @@
             // 
             this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(39, 105);
+            this.label3.Location = new System.Drawing.Point(38, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(68, 19);
@@ -554,7 +526,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(83, 66);
+            this.labelControl9.Location = new System.Drawing.Point(82, 65);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(24, 19);
@@ -565,7 +537,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(20, 27);
+            this.labelControl8.Location = new System.Drawing.Point(19, 26);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(87, 19);
@@ -576,7 +548,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(52, 144);
+            this.labelControl7.Location = new System.Drawing.Point(51, 143);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(55, 19);
@@ -588,7 +560,7 @@
             this.AdditionalInfoTab.Controls.Add(this.panelControl2);
             this.AdditionalInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfoTab.Name = "AdditionalInfoTab";
-            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 357);
+            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 363);
             this.AdditionalInfoTab.Text = "Details";
             // 
             // panelControl2
@@ -630,7 +602,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(696, 357);
+            this.panelControl2.Size = new System.Drawing.Size(696, 363);
             this.panelControl2.TabIndex = 248;
             // 
             // labelControl22
@@ -841,7 +813,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(33, 192);
+            this.labelControl4.Location = new System.Drawing.Point(43, 192);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(49, 17);
@@ -868,7 +840,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(513, 116);
+            this.labelControl2.Location = new System.Drawing.Point(522, 120);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(55, 17);
@@ -877,7 +849,7 @@
             // 
             // label35
             // 
-            this.label35.Location = new System.Drawing.Point(461, 43);
+            this.label35.Location = new System.Drawing.Point(481, 47);
             this.label35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(96, 17);
@@ -915,7 +887,7 @@
             // 
             // labelControl40
             // 
-            this.labelControl40.Location = new System.Drawing.Point(42, 158);
+            this.labelControl40.Location = new System.Drawing.Point(53, 158);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
             this.labelControl40.Size = new System.Drawing.Size(39, 17);
@@ -935,7 +907,7 @@
             // 
             // labelControl41
             // 
-            this.labelControl41.Location = new System.Drawing.Point(38, 124);
+            this.labelControl41.Location = new System.Drawing.Point(50, 124);
             this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
             this.labelControl41.Size = new System.Drawing.Size(42, 17);
@@ -944,7 +916,7 @@
             // 
             // labelControl39
             // 
-            this.labelControl39.Location = new System.Drawing.Point(23, 90);
+            this.labelControl39.Location = new System.Drawing.Point(32, 90);
             this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
             this.labelControl39.Size = new System.Drawing.Size(60, 17);
@@ -965,7 +937,7 @@
             // 
             // labelControl38
             // 
-            this.labelControl38.Location = new System.Drawing.Point(22, 56);
+            this.labelControl38.Location = new System.Drawing.Point(32, 56);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(60, 17);
@@ -985,7 +957,7 @@
             // 
             // labelControl36
             // 
-            this.labelControl36.Location = new System.Drawing.Point(29, 20);
+            this.labelControl36.Location = new System.Drawing.Point(38, 20);
             this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
             this.labelControl36.Size = new System.Drawing.Size(54, 17);
@@ -1012,7 +984,7 @@
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(546, 81);
+            this.labelControl34.Location = new System.Drawing.Point(554, 85);
             this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(23, 17);
@@ -1062,7 +1034,7 @@
             this.AdditionalInfo1Tab.Controls.Add(this.panelControl3);
             this.AdditionalInfo1Tab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfo1Tab.Name = "AdditionalInfo1Tab";
-            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 357);
+            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 363);
             this.AdditionalInfo1Tab.Text = "Additional";
             // 
             // panelControl3
@@ -1098,7 +1070,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(696, 357);
+            this.panelControl3.Size = new System.Drawing.Size(696, 363);
             this.panelControl3.TabIndex = 172;
             // 
             // txtBankBranchCode
@@ -1114,7 +1086,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(57, 226);
+            this.label9.Location = new System.Drawing.Point(58, 224);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 17);
@@ -1134,7 +1106,7 @@
             // 
             // label34
             // 
-            this.label34.Location = new System.Drawing.Point(62, 158);
+            this.label34.Location = new System.Drawing.Point(63, 156);
             this.label34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(100, 17);
@@ -1154,7 +1126,7 @@
             // 
             // label31
             // 
-            this.label31.Location = new System.Drawing.Point(407, 124);
+            this.label31.Location = new System.Drawing.Point(422, 122);
             this.label31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(104, 17);
@@ -1181,7 +1153,7 @@
             // 
             // label32
             // 
-            this.label32.Location = new System.Drawing.Point(420, 158);
+            this.label32.Location = new System.Drawing.Point(434, 156);
             this.label32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(92, 17);
@@ -1201,7 +1173,7 @@
             // 
             // label33
             // 
-            this.label33.Location = new System.Drawing.Point(48, 124);
+            this.label33.Location = new System.Drawing.Point(49, 122);
             this.label33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(114, 17);
@@ -1221,7 +1193,7 @@
             // 
             // label30
             // 
-            this.label30.Location = new System.Drawing.Point(96, 90);
+            this.label30.Location = new System.Drawing.Point(97, 88);
             this.label30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(66, 17);
@@ -1241,7 +1213,7 @@
             // 
             // label29
             // 
-            this.label29.Location = new System.Drawing.Point(412, 56);
+            this.label29.Location = new System.Drawing.Point(427, 54);
             this.label29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(99, 17);
@@ -1261,7 +1233,7 @@
             // 
             // label28
             // 
-            this.label28.Location = new System.Drawing.Point(454, 90);
+            this.label28.Location = new System.Drawing.Point(467, 88);
             this.label28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(59, 17);
@@ -1270,7 +1242,7 @@
             // 
             // label27
             // 
-            this.label27.Location = new System.Drawing.Point(74, 56);
+            this.label27.Location = new System.Drawing.Point(75, 54);
             this.label27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(88, 17);
@@ -1279,7 +1251,7 @@
             // 
             // label26
             // 
-            this.label26.Location = new System.Drawing.Point(432, 22);
+            this.label26.Location = new System.Drawing.Point(446, 20);
             this.label26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(80, 17);
@@ -1288,7 +1260,7 @@
             // 
             // label22
             // 
-            this.label22.Location = new System.Drawing.Point(54, 22);
+            this.label22.Location = new System.Drawing.Point(55, 20);
             this.label22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(108, 17);
@@ -1308,7 +1280,7 @@
             // 
             // label20
             // 
-            this.label20.Location = new System.Drawing.Point(442, 192);
+            this.label20.Location = new System.Drawing.Point(453, 190);
             this.label20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(73, 17);
@@ -1317,7 +1289,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(119, 192);
+            this.label12.Location = new System.Drawing.Point(120, 190);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 17);
@@ -1397,7 +1369,7 @@
             this.OtherSpecinfoTab.Controls.Add(this.textEdit10);
             this.OtherSpecinfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OtherSpecinfoTab.Name = "OtherSpecinfoTab";
-            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 357);
+            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 363);
             this.OtherSpecinfoTab.Text = "Address ";
             // 
             // panelControl4
@@ -1421,7 +1393,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(696, 357);
+            this.panelControl4.Size = new System.Drawing.Size(696, 363);
             this.panelControl4.TabIndex = 153;
             // 
             // txtCountry
@@ -1481,7 +1453,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(59, 180);
+            this.label6.Location = new System.Drawing.Point(71, 178);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 17);
@@ -1490,7 +1462,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(68, 148);
+            this.label2.Location = new System.Drawing.Point(79, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(21, 17);
@@ -1499,7 +1471,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(35, 116);
+            this.label8.Location = new System.Drawing.Point(45, 114);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 17);
@@ -1508,7 +1480,7 @@
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(35, 48);
+            this.labelControl30.Location = new System.Drawing.Point(45, 46);
             this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
             this.labelControl30.Size = new System.Drawing.Size(55, 17);
@@ -1559,7 +1531,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(35, 82);
+            this.label4.Location = new System.Drawing.Point(45, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 17);
@@ -1612,7 +1584,7 @@
             this.xtraTabPage1.Controls.Add(this.chkTeaBreak);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(696, 357);
+            this.xtraTabPage1.Size = new System.Drawing.Size(696, 363);
             this.xtraTabPage1.Text = "Employee Timing";
             // 
             // labelControl29
@@ -1630,7 +1602,7 @@
             // 
             this.txtTeaBreakTime.EditValue = "30";
             this.txtTeaBreakTime.EnterMoveNextControl = true;
-            this.txtTeaBreakTime.Location = new System.Drawing.Point(300, 34);
+            this.txtTeaBreakTime.Location = new System.Drawing.Point(300, 36);
             this.txtTeaBreakTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTeaBreakTime.Name = "txtTeaBreakTime";
             this.txtTeaBreakTime.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1643,7 +1615,7 @@
             // 
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl27.Appearance.Options.UseFont = true;
-            this.labelControl27.Location = new System.Drawing.Point(192, 36);
+            this.labelControl27.Location = new System.Drawing.Point(192, 39);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(104, 19);
@@ -1662,6 +1634,34 @@
             this.chkTeaBreak.Text = "Tea Break";
             this.chkTeaBreak.UseVisualStyleBackColor = true;
             this.chkTeaBreak.CheckedChanged += new System.EventHandler(this.chkTeaBreak_CheckedChanged);
+            // 
+            // HelpGrid
+            // 
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(207, 375);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(490, 358);
+            this.HelpGrid.TabIndex = 244;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.DetailHeight = 458;
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // txtDesgCode
             // 
@@ -1786,7 +1786,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(442, 77);
+            this.labelControl5.Location = new System.Drawing.Point(438, 75);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(103, 19);
@@ -1811,7 +1811,7 @@
             // 
             this.labelControl15.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl15.Appearance.Options.UseFont = true;
-            this.labelControl15.Location = new System.Drawing.Point(465, 111);
+            this.labelControl15.Location = new System.Drawing.Point(461, 109);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
             this.labelControl15.Size = new System.Drawing.Size(80, 19);
@@ -1860,7 +1860,7 @@
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Location = new System.Drawing.Point(480, 145);
+            this.labelControl21.Location = new System.Drawing.Point(476, 143);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(65, 19);
@@ -1910,12 +1910,12 @@
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 822);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 825);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 78);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 78);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(838, 78);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(840, 78);
             this.windowsUIButtonPanelMain.TabIndex = 55;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -1938,7 +1938,7 @@
             this.windowsUIButtonPanelCloseButton.Name = "windowsUIButtonPanelCloseButton";
             this.windowsUIButtonPanelCloseButton.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.windowsUIButtonPanelCloseButton.Padding = new System.Windows.Forms.Padding(6, 7, 0, 0);
-            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 822);
+            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 825);
             this.windowsUIButtonPanelCloseButton.TabIndex = 247;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
@@ -1958,7 +1958,7 @@
             this.labelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(12, 7, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(786, 39);
+            this.labelControl.Size = new System.Drawing.Size(788, 39);
             this.labelControl.TabIndex = 248;
             this.labelControl.Text = "Employee Master";
             // 
@@ -2125,7 +2125,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 900);
+            this.ClientSize = new System.Drawing.Size(840, 903);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -2148,8 +2148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNationality.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMotherName.Properties)).EndInit();
@@ -2212,6 +2210,8 @@
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTeaBreakTime.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesgCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesgDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDeptCode.Properties)).EndInit();

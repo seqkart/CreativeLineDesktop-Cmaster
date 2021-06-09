@@ -29,11 +29,8 @@ namespace SeqKartLibrary.Models
         public Nullable<System.TimeSpan> attendance_out_last { get; set; }
         public Nullable<int> working_hours { get; set; }
 
-        public bool DailyWage { get; set; }
-
         public int LunchBreak { get; set; }
-        public int OT_Extra { get; set; }
-
         public string status_type { get; set; }
+        public bool DailyWage { get; set; }
     }
 }

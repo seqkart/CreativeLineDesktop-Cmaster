@@ -70,9 +70,10 @@
             // 
             // Btn_RefreshGridData
             // 
-            this.Btn_RefreshGridData.Location = new System.Drawing.Point(300, 53);
+            this.Btn_RefreshGridData.Location = new System.Drawing.Point(350, 69);
+            this.Btn_RefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshGridData.Name = "Btn_RefreshGridData";
-            this.Btn_RefreshGridData.Size = new System.Drawing.Size(93, 20);
+            this.Btn_RefreshGridData.Size = new System.Drawing.Size(108, 26);
             this.Btn_RefreshGridData.TabIndex = 2;
             this.Btn_RefreshGridData.Text = "&Refresh";
             this.Btn_RefreshGridData.Click += new System.EventHandler(this.Btn_RefreshGridData_Click);
@@ -81,7 +82,8 @@
             // 
             this.DtEndDate.EditValue = null;
             this.DtEndDate.EnterMoveNextControl = true;
-            this.DtEndDate.Location = new System.Drawing.Point(178, 53);
+            this.DtEndDate.Location = new System.Drawing.Point(208, 69);
+            this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.DtEndDate.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -102,14 +104,15 @@
             this.DtEndDate.Properties.Mask.BeepOnError = true;
             this.DtEndDate.Properties.Mask.EditMask = "dd/MM/yy";
             this.DtEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtEndDate.Size = new System.Drawing.Size(93, 20);
+            this.DtEndDate.Size = new System.Drawing.Size(108, 24);
             this.DtEndDate.TabIndex = 1;
             // 
             // DtStartDate
             // 
             this.DtStartDate.EditValue = null;
             this.DtStartDate.EnterMoveNextControl = true;
-            this.DtStartDate.Location = new System.Drawing.Point(61, 53);
+            this.DtStartDate.Location = new System.Drawing.Point(71, 69);
+            this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.DtStartDate.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -130,34 +133,38 @@
             this.DtStartDate.Properties.Mask.BeepOnError = true;
             this.DtStartDate.Properties.Mask.EditMask = "dd/MM/yy";
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtStartDate.Size = new System.Drawing.Size(93, 20);
+            this.DtStartDate.Size = new System.Drawing.Size(108, 24);
             this.DtStartDate.TabIndex = 0;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 56);
+            this.labelControl1.Location = new System.Drawing.Point(34, 73);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(26, 13);
+            this.labelControl1.Size = new System.Drawing.Size(30, 17);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "From";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(160, 56);
+            this.labelControl2.Location = new System.Drawing.Point(187, 73);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(13, 13);
+            this.labelControl2.Size = new System.Drawing.Size(15, 17);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "To";
             // 
             // InvoiceGrid
             // 
             this.InvoiceGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InvoiceGrid.Location = new System.Drawing.Point(0, 95);
+            this.InvoiceGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InvoiceGrid.Location = new System.Drawing.Point(0, 117);
             this.InvoiceGrid.MainView = this.InvoiceGridView;
+            this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
             this.InvoiceGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.InvoiceGrid.Size = new System.Drawing.Size(804, 450);
+            this.InvoiceGrid.Size = new System.Drawing.Size(938, 596);
             this.InvoiceGrid.TabIndex = 5;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});
@@ -178,6 +185,7 @@
             this.gridColumn7,
             this.gridColumn11,
             this.gridColumn8});
+            this.InvoiceGridView.DetailHeight = 458;
             this.InvoiceGridView.GridControl = this.InvoiceGrid;
             this.InvoiceGridView.Name = "InvoiceGridView";
             this.InvoiceGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -189,101 +197,123 @@
             // 
             this.gridColumn12.Caption = "UnitName";
             this.gridColumn12.FieldName = "UnitName";
+            this.gridColumn12.MinWidth = 23;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 0;
+            this.gridColumn12.Width = 87;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "EmpDDate";
             this.gridColumn10.FieldName = "EmpDDate";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "EmpDDate", "{0}")});
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.Width = 87;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "EmpCode";
             this.gridColumn1.FieldName = "EmpCode";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "EmpName";
             this.gridColumn2.FieldName = "EmpName";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "EmpFHName";
             this.gridColumn3.FieldName = "EmpFHName";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "EmpBasic";
             this.gridColumn4.FieldName = "EmpBasic";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "EmpHRA";
             this.gridColumn5.FieldName = "EmpHRA";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Convence";
             this.gridColumn6.FieldName = "EmpConv";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
+            this.gridColumn6.Width = 87;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Petrol";
             this.gridColumn7.FieldName = "EmpPET";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.Width = 87;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Passby";
             this.gridColumn11.FieldName = "EmpPassbyUser";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 10;
+            this.gridColumn11.Width = 87;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "EmpSplAlw";
             this.gridColumn8.FieldName = "EmpSplAlw";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.Width = 87;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -298,11 +328,12 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(804, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 25);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -310,16 +341,17 @@
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
             this.splitter1.Location = new System.Drawing.Point(0, 25);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(804, 70);
+            this.splitter1.Size = new System.Drawing.Size(938, 92);
             this.splitter1.TabIndex = 201;
             this.splitter1.TabStop = false;
             // 
             // frmEmployeeMDataPassing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 545);
+            this.ClientSize = new System.Drawing.Size(938, 713);
             this.ControlBox = false;
             this.Controls.Add(this.InvoiceGrid);
             this.Controls.Add(this.Btn_RefreshGridData);
@@ -330,6 +362,7 @@
             this.Controls.Add(this.splitter1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmEmployeeMDataPassing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;

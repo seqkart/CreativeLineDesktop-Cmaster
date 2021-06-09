@@ -146,5 +146,21 @@ namespace SeqKartLibrary.Models
         public Nullable<System.TimeSpan> TimeInLast { get; set; }
         public Nullable<System.TimeSpan> TimeOutLast { get; set; }
         public Nullable<int> WorkingHours { get; set; }
+        public Nullable<bool> DailyWage { get; set; }
+        public Nullable<decimal> DailyWageRate { get; set; }
+        public Nullable<int> DailyWageMinutes { get; set; }
+        public byte[] EmpImage { get; set; }
+        public Nullable<System.DateTime> EmpDDate { get; set; }
+        public string EmpDFUserID { get; set; }
+        public Nullable<System.DateTime> EmDFDt { get; set; }
+        public string EmpPassbyUser { get; set; }
+        public string EmpDUUserID { get; set; }
+        public Nullable<System.DateTime> EmDUDt { get; set; }
+        public Nullable<int> LunchBreak { get; set; }
+        public Nullable<int> TeaBreak { get; set; }
+        public Nullable<int> TeaBreakTime { get; set; }
+        public Nullable<int> OT_Extra { get; set; }
+        public string EmpTeaTag { get; set; }
+        public Nullable<decimal> TeaAmount { get; set; }
     }
 }

@@ -29,17 +29,21 @@
         ///
         private void InitializeComponent()
         {
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions13 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions14 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions15 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions16 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions17 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions18 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions5 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions6 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm_EmployeeAttendance));
             this.windowsUIButtonPanelCloseButton = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new DevExpress.XtraEditors.GroupControl();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lblDayName = new DevExpress.XtraEditors.LabelControl();
             this.textEmpType = new DevExpress.XtraEditors.TextEdit();
             this.label20 = new DevExpress.XtraEditors.LabelControl();
@@ -58,10 +62,6 @@
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxEmployee = new DevExpress.XtraEditors.GroupControl();
             this.txtNightOverTimeHours = new DevExpress.XtraEditors.TextEdit();
@@ -137,6 +137,10 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmpType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUnit.Properties)).BeginInit();
@@ -144,10 +148,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpBoxEmployee)).BeginInit();
             this.grpBoxEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNightOverTimeHours.Properties)).BeginInit();
@@ -193,9 +193,9 @@
             // windowsUIButtonPanelCloseButton
             // 
             this.windowsUIButtonPanelCloseButton.ButtonInterval = 0;
-            windowsUIButtonImageOptions13.ImageUri.Uri = "Backward;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions1.ImageUri.Uri = "Backward;Size32x32;GrayScaled";
             this.windowsUIButtonPanelCloseButton.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions13, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "back_arrow_exit", -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "back_arrow_exit", -1, false)});
             this.windowsUIButtonPanelCloseButton.ContentAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.windowsUIButtonPanelCloseButton.Dock = System.Windows.Forms.DockStyle.Left;
             this.windowsUIButtonPanelCloseButton.ForeColor = System.Drawing.Color.Gray;
@@ -206,7 +206,7 @@
             this.windowsUIButtonPanelCloseButton.Name = "windowsUIButtonPanelCloseButton";
             this.windowsUIButtonPanelCloseButton.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.windowsUIButtonPanelCloseButton.Padding = new System.Windows.Forms.Padding(6, 7, 0, 0);
-            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 939);
+            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 942);
             this.windowsUIButtonPanelCloseButton.TabIndex = 2;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
@@ -229,30 +229,30 @@
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseFont = true;
             this.windowsUIButtonPanelMain.AppearanceButton.Pressed.Options.UseForeColor = true;
             this.windowsUIButtonPanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            windowsUIButtonImageOptions14.ImageUri.Uri = "Save";
-            windowsUIButtonImageOptions15.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
-            windowsUIButtonImageOptions16.ImageUri.Uri = "icon%20builder/actions_trash";
-            windowsUIButtonImageOptions17.ImageUri.Uri = "icon%20builder/actions_add";
-            windowsUIButtonImageOptions18.ImageUri.Uri = "Close";
+            windowsUIButtonImageOptions2.ImageUri.Uri = "Save";
+            windowsUIButtonImageOptions3.ImageUri.Uri = "Reset;Size32x32;GrayScaled";
+            windowsUIButtonImageOptions4.ImageUri.Uri = "icon%20builder/actions_trash";
+            windowsUIButtonImageOptions5.ImageUri.Uri = "icon%20builder/actions_add";
+            windowsUIButtonImageOptions6.ImageUri.Uri = "Close";
             this.windowsUIButtonPanelMain.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", true, windowsUIButtonImageOptions14, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "save", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Save", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "save", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", true, windowsUIButtonImageOptions15, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "reset", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Reset Changes", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "reset", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions16, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "delete", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "delete", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add New", true, windowsUIButtonImageOptions17, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "add_new", -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add New", true, windowsUIButtonImageOptions5, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "add_new", -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUISeparator(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", true, windowsUIButtonImageOptions18, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "close", -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Close", true, windowsUIButtonImageOptions6, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, "close", -1, false)});
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 939);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 942);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 78);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 78);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(828, 78);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(830, 78);
             this.windowsUIButtonPanelMain.TabIndex = 0;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -274,7 +274,7 @@
             this.labelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(12, 7, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(776, 39);
+            this.labelControl.Size = new System.Drawing.Size(778, 39);
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Attendance";
             // 
@@ -305,6 +305,56 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(712, 314);
             this.groupBox1.TabIndex = 4;
+            // 
+            // HelpGrid
+            // 
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(234, 137);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(456, 258);
+            this.HelpGrid.TabIndex = 369;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView4,
+            this.gridView5});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.DetailHeight = 458;
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView4
+            // 
+            this.gridView4.DetailHeight = 458;
+            this.gridView4.GridControl = this.HelpGrid;
+            this.gridView4.Name = "gridView4";
+            // 
+            // gridView5
+            // 
+            this.gridView5.DetailHeight = 458;
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.GridControl = this.HelpGrid;
+            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
+            this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gridView5.OptionsView.ShowIndicator = false;
+            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // lblDayName
             // 
@@ -547,56 +597,6 @@
             this.label2.Size = new System.Drawing.Size(59, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Att Date:";
-            // 
-            // HelpGrid
-            // 
-            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(234, 137);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(456, 258);
-            this.HelpGrid.TabIndex = 369;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView4,
-            this.gridView5});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
-            // 
-            // HelpGridView
-            // 
-            this.HelpGridView.DetailHeight = 458;
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // gridView4
-            // 
-            this.gridView4.DetailHeight = 458;
-            this.gridView4.GridControl = this.HelpGrid;
-            this.gridView4.Name = "gridView4";
-            // 
-            // gridView5
-            // 
-            this.gridView5.DetailHeight = 458;
-            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView5.GridControl = this.HelpGrid;
-            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
-            this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ColumnAutoWidth = false;
-            this.gridView5.OptionsView.ShowGroupPanel = false;
-            this.gridView5.OptionsView.ShowIndicator = false;
-            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
             // label25
             // 
@@ -1565,7 +1565,7 @@
             // labelDate_Current
             // 
             this.labelDate_Current.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelDate_Current.Location = new System.Drawing.Point(567, 98);
+            this.labelDate_Current.Location = new System.Drawing.Point(569, 100);
             this.labelDate_Current.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelDate_Current.Name = "labelDate_Current";
             this.labelDate_Current.Size = new System.Drawing.Size(201, 17);
@@ -1759,7 +1759,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(828, 1017);
+            this.ClientSize = new System.Drawing.Size(830, 1020);
             this.Controls.Add(this.labelDate_Current);
             this.Controls.Add(this.panelControlMachine);
             this.Controls.Add(this.panelControlManual);
@@ -1776,6 +1776,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmpType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUnit.Properties)).EndInit();
@@ -1783,10 +1787,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpBoxEmployee)).EndInit();
             this.grpBoxEmployee.ResumeLayout(false);
             this.grpBoxEmployee.PerformLayout();
