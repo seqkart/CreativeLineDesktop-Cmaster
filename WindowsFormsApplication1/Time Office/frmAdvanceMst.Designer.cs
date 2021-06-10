@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions3 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject9 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdvanceMst));
             this.ReplGrid = new DevExpress.XtraGrid.GridControl();
             this.ReplGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -76,13 +76,13 @@
             // 
             this.ReplGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReplGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ReplGrid.Location = new System.Drawing.Point(0, 130);
+            this.ReplGrid.Location = new System.Drawing.Point(0, 86);
             this.ReplGrid.MainView = this.ReplGridView;
             this.ReplGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ReplGrid.Name = "ReplGrid";
             this.ReplGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.ReplGrid.Size = new System.Drawing.Size(938, 660);
+            this.ReplGrid.Size = new System.Drawing.Size(938, 704);
             this.ReplGrid.TabIndex = 194;
             this.ReplGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ReplGridView});
@@ -205,7 +205,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(36, 77);
+            this.labelControl1.Location = new System.Drawing.Point(38, 52);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(30, 17);
@@ -214,7 +214,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(188, 77);
+            this.labelControl2.Location = new System.Drawing.Point(175, 52);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(15, 17);
@@ -223,7 +223,7 @@
             // 
             // Btn_RefreshGridData
             // 
-            this.Btn_RefreshGridData.Location = new System.Drawing.Point(325, 73);
+            this.Btn_RefreshGridData.Location = new System.Drawing.Point(312, 47);
             this.Btn_RefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshGridData.Name = "Btn_RefreshGridData";
             this.Btn_RefreshGridData.Size = new System.Drawing.Size(87, 26);
@@ -234,30 +234,30 @@
             // DtEndDate
             // 
             this.DtEndDate.EditValue = null;
-            this.DtEndDate.Location = new System.Drawing.Point(209, 73);
+            this.DtEndDate.Location = new System.Drawing.Point(196, 48);
             this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.DtEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtEndDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.DtEndDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtEndDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.DtEndDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DtEndDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtEndDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.DtEndDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.DtEndDate.Size = new System.Drawing.Size(94, 24);
             this.DtEndDate.TabIndex = 1;
             // 
             // DtStartDate
             // 
             this.DtStartDate.EditValue = null;
-            this.DtStartDate.Location = new System.Drawing.Point(73, 73);
+            this.DtStartDate.Location = new System.Drawing.Point(75, 48);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.DtStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtStartDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
@@ -357,7 +357,7 @@
             this.splitter1.Location = new System.Drawing.Point(0, 31);
             this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(938, 99);
+            this.splitter1.Size = new System.Drawing.Size(938, 55);
             this.splitter1.TabIndex = 201;
             this.splitter1.TabStop = false;
             // 

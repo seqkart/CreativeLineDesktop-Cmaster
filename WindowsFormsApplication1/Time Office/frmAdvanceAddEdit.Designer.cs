@@ -81,7 +81,7 @@
             this.txtPassword});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(549, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(549, 27);
             this.Menu_ToolStrip.TabIndex = 16;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -94,7 +94,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(50, 28);
+            this.btnQuit.Size = new System.Drawing.Size(50, 24);
             this.btnQuit.Text = "Close";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -303,7 +303,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(38, 53);
+            this.HelpGrid.Location = new System.Drawing.Point(51, 53);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
