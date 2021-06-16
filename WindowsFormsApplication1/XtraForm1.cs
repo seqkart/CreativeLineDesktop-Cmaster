@@ -20,15 +20,43 @@ using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Forms_Master;
-
+using System.Collections.Generic;
+using System.Speech;
+using System.Speech.Synthesis;
+using System.Speech.Recognition;
+using System.Windows;
+using System.Diagnostics;
 namespace WindowsFormsApplication1
 {
     public partial class XtraForm1 : DevExpress.XtraBars.ToolbarForm.ToolbarForm
     {
+        //static SpeechRecognitionEngine engine = new SpeechRecognitionEngine();
+        //SpeechSynthesizer reader = new SpeechSynthesizer();
         public XtraForm1()
         {
             InitializeComponent();
+
+
+            //engine.SetInputToDefaultAudioDevice();
+            //GrammarBuilder gb = new GrammarBuilder(new Choices(new string[]
+            //{
+            //    "HELLO SEQKART",
+            //    "COLOR",
+            //    "SIZE",
+            //}));
+            //Grammar g = new Grammar(gb);
+            //engine.LoadGrammar(g);
+            //engine.RecognizeAsync(RecognizeMode.Multiple);
+            //engine.SpeechRecognized += Engine_SpeechRecognized;
         }
+
+        //private void Engine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        //{
+        //    if (e.Result.ToString().Contains("HELLO") || e.Result.ToString().Contains("SEQKART") || e.Result.ToString().Contains("COLOR"))
+        //    {
+        //        ProjectFunctions.SpeakError("HELLO SEQKART");
+        //    }
+        //}
 
         [System.ComponentModel.Browsable(false)]
         public override Image BackgroundImage { get; set; }
@@ -191,18 +219,27 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.WhatsAppConnectionStatus();
 
-                if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+
+                if (GlobalVariables.WhatAppStatus != null)
                 {
-                    pictureEdit1.Visible = false;
+                    if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+                    {
+                        pictureEdit1.Visible = false;
+                        labelControl1.Text = GlobalVariables.WhatAppStatus;
+                        labelControl2.Text = GlobalVariables.WhatAppMobileNo;
+                    }
+                    else
+                    {
+                        pictureEdit1.Visible = true;
+                        ChangeQRData();
+
+                    }
                 }
                 else
                 {
-                    pictureEdit1.Visible = true;
-                    ChangeQRData();
-
+                    labelControl1.Text = "Disconnected";
                 }
-                labelControl1.Text = GlobalVariables.WhatAppStatus;
-                labelControl2.Text = GlobalVariables.WhatAppMobileNo;
+
             }
             catch(Exception ex)
             {
@@ -284,6 +321,20 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG237":
+                    var PROG237 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG237.Show();
+                    PROG237.BringToFront();
+                    PROG237.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG236":
+                    var PROG236 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG236.Show();
+                    PROG236.BringToFront();
+                    PROG236.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG235":
                     var PROG235 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG235.Show();
@@ -1810,7 +1861,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://localhost:3000/qrcode"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "*/*");
 
@@ -1876,7 +1927,7 @@ namespace WindowsFormsApplication1
 
         private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
         {
-            radialMenu1.ShowPopup(new Point(750, 400));
+            radialMenu1.ShowPopup(new System.Drawing.Point(750, 400));
         }
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
@@ -1903,9 +1954,6 @@ namespace WindowsFormsApplication1
             HelpGrid.Visible = true;
         }
 
-        private void pictureEdit1_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }

@@ -58,9 +58,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(101, 6);
+            this.labelControl1.Location = new System.Drawing.Point(226, 8);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(157, 20);
+            this.labelControl1.Size = new System.Drawing.Size(199, 24);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Select Report Data Range";
             // 
@@ -68,49 +69,54 @@
             // 
             this.DtFrom.EditValue = null;
             this.DtFrom.EnterMoveNextControl = true;
-            this.DtFrom.Location = new System.Drawing.Point(76, 44);
+            this.DtFrom.Location = new System.Drawing.Point(89, 58);
+            this.DtFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtFrom.Size = new System.Drawing.Size(100, 20);
+            this.DtFrom.Size = new System.Drawing.Size(117, 24);
             this.DtFrom.TabIndex = 1;
             // 
             // DtEnd
             // 
             this.DtEnd.EditValue = null;
             this.DtEnd.EnterMoveNextControl = true;
-            this.DtEnd.Location = new System.Drawing.Point(233, 44);
+            this.DtEnd.Location = new System.Drawing.Point(272, 58);
+            this.DtEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEnd.Name = "DtEnd";
             this.DtEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtEnd.Size = new System.Drawing.Size(116, 20);
+            this.DtEnd.Size = new System.Drawing.Size(135, 24);
             this.DtEnd.TabIndex = 2;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(35, 48);
+            this.labelControl2.Location = new System.Drawing.Point(41, 63);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(26, 13);
+            this.labelControl2.Size = new System.Drawing.Size(30, 17);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "From";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(206, 48);
+            this.labelControl3.Location = new System.Drawing.Point(240, 63);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(13, 13);
+            this.labelControl3.Size = new System.Drawing.Size(15, 17);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "To";
             // 
             // BtnLoad
             // 
-            this.BtnLoad.Location = new System.Drawing.Point(381, 41);
+            this.BtnLoad.Location = new System.Drawing.Point(444, 54);
+            this.BtnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnLoad.Name = "BtnLoad";
-            this.BtnLoad.Size = new System.Drawing.Size(116, 28);
+            this.BtnLoad.Size = new System.Drawing.Size(135, 37);
             this.BtnLoad.TabIndex = 3;
             this.BtnLoad.Text = "Load Report";
             // 
@@ -120,52 +126,59 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(516, 6);
+            this.simpleButton1.Location = new System.Drawing.Point(602, 8);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(20, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(23, 30);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "X";
             this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // chParty
             // 
-            this.chParty.Location = new System.Drawing.Point(20, 109);
+            this.chParty.Location = new System.Drawing.Point(23, 143);
+            this.chParty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chParty.Name = "chParty";
             this.chParty.Properties.Caption = "Party";
-            this.chParty.Size = new System.Drawing.Size(75, 18);
+            this.chParty.Size = new System.Drawing.Size(87, 24);
             this.chParty.TabIndex = 6;
             this.chParty.CheckedChanged += new System.EventHandler(this.ChParty_CheckedChanged);
             // 
             // chBSHead
             // 
-            this.chBSHead.Location = new System.Drawing.Point(101, 109);
+            this.chBSHead.Location = new System.Drawing.Point(110, 143);
+            this.chBSHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chBSHead.Name = "chBSHead";
             this.chBSHead.Properties.Caption = "BSHead";
-            this.chBSHead.Size = new System.Drawing.Size(75, 18);
+            this.chBSHead.Size = new System.Drawing.Size(87, 24);
             this.chBSHead.TabIndex = 7;
             this.chBSHead.CheckedChanged += new System.EventHandler(this.ChBSHead_CheckedChanged);
             // 
             // chLedger
             // 
-            this.chLedger.Location = new System.Drawing.Point(182, 109);
+            this.chLedger.Location = new System.Drawing.Point(197, 143);
+            this.chLedger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chLedger.Name = "chLedger";
             this.chLedger.Properties.Caption = "Group";
-            this.chLedger.Size = new System.Drawing.Size(75, 18);
+            this.chLedger.Size = new System.Drawing.Size(87, 24);
             this.chLedger.TabIndex = 8;
             this.chLedger.CheckedChanged += new System.EventHandler(this.ChLedger_CheckedChanged);
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(20, 147);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(23, 192);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(516, 275);
+            this.HelpGrid.Size = new System.Drawing.Size(602, 360);
             this.HelpGrid.TabIndex = 205;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.Name = "HelpGridView";
             this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -175,7 +188,7 @@
             // 
             // RangeSelectorLedger
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.HelpGrid);
@@ -189,8 +202,9 @@
             this.Controls.Add(this.DtEnd);
             this.Controls.Add(this.DtFrom);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RangeSelectorLedger";
-            this.Size = new System.Drawing.Size(557, 443);
+            this.Size = new System.Drawing.Size(650, 579);
             this.Load += new System.EventHandler(this.RangeSelector_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties)).EndInit();

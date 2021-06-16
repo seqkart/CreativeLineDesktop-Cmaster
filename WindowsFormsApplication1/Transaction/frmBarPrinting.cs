@@ -404,6 +404,21 @@ namespace WindowsFormsApplication1.Transaction
                         dtNewRow["SKUMRPVAL"] = Convert.ToDecimal(row["SKUFEDQTY"]) * Convert.ToDecimal(row["SKUMRP"]);
                         dtNewRow["SKUWSPVAL"] = Convert.ToDecimal(row["SKUFEDQTY"]) * Convert.ToDecimal(row["SKUWSP"]);
 
+                        DataSet dsSizeTransID = ProjectFunctions.GetDataSet("sp_LoadSizeMappingID '" + row["SKUARTID"].ToString() + "','" + dsNewSize.Tables[0].Rows[0]["SZSYSID"].ToString() + "','" + row["SizeMappingTransID"].ToString() + "'");
+
+                        if(dsSizeTransID.Tables[0].Rows.Count>0)
+                        {
+                            dtNewRow["SizeMappingTransID"] = dsSizeTransID.Tables[0].Rows[0][0].ToString();
+                        }
+
+                        else
+                        {
+                            ProjectFunctions.SpeakError("Size Not mapped further kindly update mapping");
+                            return;
+                        }
+
+
+
                         dt.Rows.Add(dtNewRow);
                         if (dt.Rows.Count > 0)
                         {
@@ -489,7 +504,7 @@ namespace WindowsFormsApplication1.Transaction
 
                     if (dsCheckART.Tables[0].Rows.Count > 0)
                     {
-                      
+
 
                         foreach (DataRow drInner in dsCheckART.Tables[0].Rows)
                         {
@@ -598,7 +613,7 @@ namespace WindowsFormsApplication1.Transaction
                                 dtFinal.Columns.Add("UnitCode", typeof(string));
                                 dtFinal.Columns.Add("SizeMappingTransID", typeof(string));
 
-                                
+
                                 dtFinal.Rows.Clear();
 
 
@@ -629,7 +644,7 @@ namespace WindowsFormsApplication1.Transaction
                                         drRow["SKUSIZINDX"] = dr["SKUSIZINDX"].ToString();
                                         drRow["UnitCode"] = GlobalVariables.CUnitID;
                                         drRow["SizeMappingTransID"] = dr["SizeMappingTransID"].ToString();
-                                        
+
                                         dtFinal.Rows.Add(drRow);
                                     }
                                 }
@@ -1037,7 +1052,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-     
+
 
         private void BarCodeGrid_EditorKeyDown(object sender, KeyEventArgs e)
         {
@@ -1135,8 +1150,8 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-     
-       
+
+
         private void BarCodeGridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
 

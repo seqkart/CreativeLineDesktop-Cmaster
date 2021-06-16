@@ -92,7 +92,7 @@
             this.ChoiceSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelect.Name = "ChoiceSelect";
             this.ChoiceSelect.Properties.Caption = "Select &All";
-            this.ChoiceSelect.Size = new System.Drawing.Size(87, 21);
+            this.ChoiceSelect.Size = new System.Drawing.Size(87, 24);
             this.ChoiceSelect.TabIndex = 349;
             this.ChoiceSelect.Visible = false;
             this.ChoiceSelect.CheckedChanged += new System.EventHandler(this.ChoiceSelect_CheckedChanged);

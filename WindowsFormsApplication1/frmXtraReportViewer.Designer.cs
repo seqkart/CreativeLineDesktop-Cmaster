@@ -265,10 +265,11 @@
             // documentViewer1
             // 
             this.documentViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.documentViewer1.IsMetric = false;
-            this.documentViewer1.Location = new System.Drawing.Point(0, 140);
+            this.documentViewer1.IsMetric = true;
+            this.documentViewer1.Location = new System.Drawing.Point(0, 198);
+            this.documentViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.documentViewer1.Name = "documentViewer1";
-            this.documentViewer1.Size = new System.Drawing.Size(718, 373);
+            this.documentViewer1.Size = new System.Drawing.Size(840, 480);
             this.documentViewer1.TabIndex = 0;
             // 
             // documentViewerRibbonController1
@@ -280,6 +281,7 @@
             // ribbonControl1
             // 
             this.ribbonControl1.AutoHideEmptyItems = true;
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 39, 35, 39);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -341,14 +343,17 @@
             this.printPreviewStaticItem2,
             this.zoomTrackBarEditItem1});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonControl1.MaxItemId = 57;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 385;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1});
             this.ribbonControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemProgressBar1,
             this.repositoryItemZoomTrackBar1});
-            this.ribbonControl1.Size = new System.Drawing.Size(718, 140);
+            this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
+            this.ribbonControl1.Size = new System.Drawing.Size(840, 198);
             this.ribbonControl1.StatusBar = this.ribbonStatusBar1;
             this.ribbonControl1.TransparentEditorsMode = DevExpress.Utils.DefaultBoolean.True;
             // 
@@ -1453,19 +1458,21 @@
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewBarItem52);
             this.ribbonStatusBar1.ItemLinks.Add(this.printPreviewStaticItem2);
             this.ribbonStatusBar1.ItemLinks.Add(this.zoomTrackBarEditItem1);
-            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 513);
+            this.ribbonStatusBar1.Location = new System.Drawing.Point(0, 678);
+            this.ribbonStatusBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ribbonStatusBar1.Name = "ribbonStatusBar1";
             this.ribbonStatusBar1.Ribbon = this.ribbonControl1;
-            this.ribbonStatusBar1.Size = new System.Drawing.Size(718, 28);
+            this.ribbonStatusBar1.Size = new System.Drawing.Size(840, 32);
             // 
             // frmXtraReportViewer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 541);
+            this.ClientSize = new System.Drawing.Size(840, 710);
             this.Controls.Add(this.documentViewer1);
             this.Controls.Add(this.ribbonStatusBar1);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmXtraReportViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

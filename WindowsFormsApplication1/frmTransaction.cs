@@ -1596,7 +1596,7 @@ namespace WindowsFormsApplication1
                             dt = ds.Tables[0];
                             PrintOutGrid.DataSource = dt;
                             PrintOutGridView.BestFitColumns();
-                            MakePrintGrid();
+                            //MakePrintGrid();
                             PrintOutGrid.Visible = false;
                         }
                     }

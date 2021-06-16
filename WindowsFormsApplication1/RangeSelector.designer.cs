@@ -49,9 +49,10 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(101, 6);
+            this.labelControl1.Location = new System.Drawing.Point(118, 8);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(157, 20);
+            this.labelControl1.Size = new System.Drawing.Size(199, 24);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Select Report Data Range";
             // 
@@ -59,7 +60,8 @@
             // 
             this.DtFrom.EditValue = null;
             this.DtFrom.EnterMoveNextControl = true;
-            this.DtFrom.Location = new System.Drawing.Point(64, 44);
+            this.DtFrom.Location = new System.Drawing.Point(75, 58);
+            this.DtFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtFrom.Properties.Appearance.Options.UseFont = true;
@@ -72,14 +74,15 @@
             this.DtFrom.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.DtFrom.Properties.MaskSettings.Set("spinWithCarry", true);
             this.DtFrom.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.DtFrom.Size = new System.Drawing.Size(116, 22);
+            this.DtFrom.Size = new System.Drawing.Size(135, 26);
             this.DtFrom.TabIndex = 1;
             // 
             // DtEnd
             // 
             this.DtEnd.EditValue = null;
             this.DtEnd.EnterMoveNextControl = true;
-            this.DtEnd.Location = new System.Drawing.Point(221, 44);
+            this.DtEnd.Location = new System.Drawing.Point(258, 58);
+            this.DtEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEnd.Name = "DtEnd";
             this.DtEnd.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtEnd.Properties.Appearance.Options.UseFont = true;
@@ -92,16 +95,17 @@
             this.DtEnd.Properties.MaskSettings.Set("spinWithCarry", true);
             this.DtEnd.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.DtEnd.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.DtEnd.Size = new System.Drawing.Size(116, 22);
+            this.DtEnd.Size = new System.Drawing.Size(135, 26);
             this.DtEnd.TabIndex = 2;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(23, 48);
+            this.labelControl2.Location = new System.Drawing.Point(27, 63);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(28, 15);
+            this.labelControl2.Size = new System.Drawing.Size(36, 20);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "From";
             // 
@@ -109,18 +113,20 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(194, 48);
+            this.labelControl3.Location = new System.Drawing.Point(226, 63);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(14, 15);
+            this.labelControl3.Size = new System.Drawing.Size(17, 20);
             this.labelControl3.TabIndex = 2;
             this.labelControl3.Text = "To";
             // 
             // BtnLoad
             // 
             this.BtnLoad.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("BtnLoad.ImageOptions.SvgImage")));
-            this.BtnLoad.Location = new System.Drawing.Point(221, 89);
+            this.BtnLoad.Location = new System.Drawing.Point(258, 116);
+            this.BtnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnLoad.Name = "BtnLoad";
-            this.BtnLoad.Size = new System.Drawing.Size(116, 28);
+            this.BtnLoad.Size = new System.Drawing.Size(135, 37);
             this.BtnLoad.TabIndex = 3;
             this.BtnLoad.Text = "Load Report";
             this.BtnLoad.Click += new System.EventHandler(this.SimpleButton1_Click);
@@ -134,17 +140,18 @@
             this.simpleButton1.AutoSize = true;
             this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(308, 7);
+            this.simpleButton1.Location = new System.Drawing.Point(389, 4);
             this.simpleButton1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton1.Size = new System.Drawing.Size(22, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(22, 27);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // RangeSelector
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.simpleButton1);
@@ -154,8 +161,9 @@
             this.Controls.Add(this.DtEnd);
             this.Controls.Add(this.DtFrom);
             this.Controls.Add(this.labelControl1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RangeSelector";
-            this.Size = new System.Drawing.Size(370, 132);
+            this.Size = new System.Drawing.Size(432, 173);
             this.Load += new System.EventHandler(this.RangeSelector_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties)).EndInit();

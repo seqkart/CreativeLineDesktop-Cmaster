@@ -572,8 +572,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         view.SetRowCellValue(view.FocusedRowHandle, view.Columns["SalaryCalculated"], salary_calculated);
                     }
 
-
-
+                    ProjectFunctions.GetDataTable(" update tbl_Process_Salary Set NoOfCups = '" + noofcups + "' Where MONTH(SalaryMonth)= '" + Convert.ToDateTime(DtStartDate.EditValue).Month + "' and YEAR(SalaryMonth) = '" + Convert.ToDateTime(DtStartDate.EditValue).Year + "' and EmpCode = '" + ConvertTo.StringVal(focusRowView["EmpCode"]) + "'");
                 }
                 else
                 {

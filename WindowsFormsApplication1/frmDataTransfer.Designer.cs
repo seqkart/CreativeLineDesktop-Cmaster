@@ -119,7 +119,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1469, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1471, 27);
             this.Menu_ToolStrip.TabIndex = 208;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -164,7 +164,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(958, 119);
             this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(434, 330);
+            this.richTextBox1.Size = new System.Drawing.Size(434, 202);
             this.richTextBox1.TabIndex = 209;
             this.richTextBox1.Text = "";
             // 
@@ -663,7 +663,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1469, 977);
+            this.ClientSize = new System.Drawing.Size(1471, 980);
             this.Controls.Add(this.lblTotalRecordsToTransfer);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDestinationConnection);

@@ -63,13 +63,14 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(694, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(810, 31);
             this.Menu_ToolStrip.TabIndex = 686;
             this.Menu_ToolStrip.Text = "Options";
             this.Menu_ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ToolStrip_ItemClicked);
@@ -82,7 +83,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -90,9 +91,10 @@
             // 
             this.label1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(512, 38);
+            this.label1.Location = new System.Drawing.Point(597, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 23);
+            this.label1.Size = new System.Drawing.Size(134, 29);
             this.label1.TabIndex = 692;
             this.label1.Text = "TOTAL SALE";
             // 
@@ -100,9 +102,10 @@
             // 
             this.label2.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(512, 94);
+            this.label2.Location = new System.Drawing.Point(597, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 23);
+            this.label2.Size = new System.Drawing.Size(181, 29);
             this.label2.TabIndex = 693;
             this.label2.Text = "TOTAL QTY SOLD";
             // 
@@ -110,9 +113,10 @@
             // 
             this.label3.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(512, 207);
+            this.label3.Location = new System.Drawing.Point(597, 271);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 23);
+            this.label3.Size = new System.Drawing.Size(171, 29);
             this.label3.TabIndex = 694;
             this.label3.Text = "AVERAGE SALE";
             // 
@@ -120,24 +124,28 @@
             // 
             this.label4.Appearance.Font = new System.Drawing.Font("Bahnschrift", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(512, 150);
+            this.label4.Location = new System.Drawing.Point(597, 196);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 23);
+            this.label4.Size = new System.Drawing.Size(140, 29);
             this.label4.TabIndex = 695;
             this.label4.Text = "TOTAL BILLS";
             // 
             // CmpGrid
             // 
-            this.CmpGrid.Location = new System.Drawing.Point(12, 38);
+            this.CmpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CmpGrid.Location = new System.Drawing.Point(14, 50);
             this.CmpGrid.MainView = this.CmpGridView;
+            this.CmpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CmpGrid.Name = "CmpGrid";
-            this.CmpGrid.Size = new System.Drawing.Size(251, 228);
+            this.CmpGrid.Size = new System.Drawing.Size(293, 298);
             this.CmpGrid.TabIndex = 691;
             this.CmpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CmpGridView});
             // 
             // CmpGridView
             // 
+            this.CmpGridView.DetailHeight = 458;
             this.CmpGridView.GridControl = this.CmpGrid;
             this.CmpGridView.Name = "CmpGridView";
             this.CmpGridView.OptionsView.ShowGroupPanel = false;
@@ -145,10 +153,12 @@
             // 
             // CmpUnitGrid
             // 
-            this.CmpUnitGrid.Location = new System.Drawing.Point(269, 38);
+            this.CmpUnitGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.CmpUnitGrid.Location = new System.Drawing.Point(314, 50);
             this.CmpUnitGrid.MainView = this.CmpUnitGridView;
+            this.CmpUnitGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CmpUnitGrid.Name = "CmpUnitGrid";
-            this.CmpUnitGrid.Size = new System.Drawing.Size(234, 228);
+            this.CmpUnitGrid.Size = new System.Drawing.Size(273, 298);
             this.CmpUnitGrid.TabIndex = 696;
             this.CmpUnitGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.CmpUnitGridView});
@@ -159,6 +169,7 @@
             this.gridColumn1,
             this.gridColumn3,
             this.gridColumn2});
+            this.CmpUnitGridView.DetailHeight = 458;
             this.CmpUnitGridView.GridControl = this.CmpUnitGrid;
             this.CmpUnitGridView.Name = "CmpUnitGridView";
             this.CmpUnitGridView.OptionsView.ShowGroupPanel = false;
@@ -169,32 +180,40 @@
             // 
             this.gridColumn1.Caption = "UNITNAME";
             this.gridColumn1.FieldName = "UNITNAME";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "UNITID";
             this.gridColumn3.FieldName = "UNITID";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Select";
             this.gridColumn2.FieldName = "Select";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // InfoGrid
             // 
-            this.InfoGrid.Location = new System.Drawing.Point(12, 274);
+            this.InfoGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InfoGrid.Location = new System.Drawing.Point(14, 358);
             this.InfoGrid.MainView = this.InfoGridView;
+            this.InfoGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InfoGrid.Name = "InfoGrid";
-            this.InfoGrid.Size = new System.Drawing.Size(677, 206);
+            this.InfoGrid.Size = new System.Drawing.Size(790, 269);
             this.InfoGrid.TabIndex = 697;
             this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InfoGridView});
@@ -202,6 +221,7 @@
             // 
             // InfoGridView
             // 
+            this.InfoGridView.DetailHeight = 458;
             this.InfoGridView.GridControl = this.InfoGrid;
             this.InfoGridView.Name = "InfoGridView";
             this.InfoGridView.OptionsView.ShowFooter = true;
@@ -214,9 +234,10 @@
             this.lblAverageBillSale.Appearance.ForeColor = System.Drawing.Color.Green;
             this.lblAverageBillSale.Appearance.Options.UseFont = true;
             this.lblAverageBillSale.Appearance.Options.UseForeColor = true;
-            this.lblAverageBillSale.Location = new System.Drawing.Point(512, 230);
+            this.lblAverageBillSale.Location = new System.Drawing.Point(597, 301);
+            this.lblAverageBillSale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblAverageBillSale.Name = "lblAverageBillSale";
-            this.lblAverageBillSale.Size = new System.Drawing.Size(15, 33);
+            this.lblAverageBillSale.Size = new System.Drawing.Size(18, 40);
             this.lblAverageBillSale.TabIndex = 698;
             this.lblAverageBillSale.Text = "0";
             // 
@@ -226,9 +247,10 @@
             this.lblNoOfBills.Appearance.ForeColor = System.Drawing.Color.Green;
             this.lblNoOfBills.Appearance.Options.UseFont = true;
             this.lblNoOfBills.Appearance.Options.UseForeColor = true;
-            this.lblNoOfBills.Location = new System.Drawing.Point(512, 173);
+            this.lblNoOfBills.Location = new System.Drawing.Point(597, 226);
+            this.lblNoOfBills.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblNoOfBills.Name = "lblNoOfBills";
-            this.lblNoOfBills.Size = new System.Drawing.Size(15, 33);
+            this.lblNoOfBills.Size = new System.Drawing.Size(18, 40);
             this.lblNoOfBills.TabIndex = 698;
             this.lblNoOfBills.Text = "0";
             // 
@@ -238,9 +260,10 @@
             this.lblTotalSaleQty.Appearance.ForeColor = System.Drawing.Color.Green;
             this.lblTotalSaleQty.Appearance.Options.UseFont = true;
             this.lblTotalSaleQty.Appearance.Options.UseForeColor = true;
-            this.lblTotalSaleQty.Location = new System.Drawing.Point(512, 117);
+            this.lblTotalSaleQty.Location = new System.Drawing.Point(597, 153);
+            this.lblTotalSaleQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalSaleQty.Name = "lblTotalSaleQty";
-            this.lblTotalSaleQty.Size = new System.Drawing.Size(15, 33);
+            this.lblTotalSaleQty.Size = new System.Drawing.Size(18, 40);
             this.lblTotalSaleQty.TabIndex = 698;
             this.lblTotalSaleQty.Text = "0";
             // 
@@ -260,17 +283,18 @@
             this.lblTotalSale.AppearancePressed.Options.UseTextOptions = true;
             this.lblTotalSale.AppearancePressed.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.lblTotalSale.LineLocation = DevExpress.XtraEditors.LineLocation.Bottom;
-            this.lblTotalSale.Location = new System.Drawing.Point(512, 61);
+            this.lblTotalSale.Location = new System.Drawing.Point(597, 80);
+            this.lblTotalSale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalSale.Name = "lblTotalSale";
-            this.lblTotalSale.Size = new System.Drawing.Size(15, 33);
+            this.lblTotalSale.Size = new System.Drawing.Size(18, 40);
             this.lblTotalSale.TabIndex = 698;
             this.lblTotalSale.Text = "0";
             // 
             // frmSaleReportF2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 488);
+            this.ClientSize = new System.Drawing.Size(810, 638);
             this.ControlBox = false;
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -286,6 +310,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSaleReportF2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmSaleReportF2_Load);

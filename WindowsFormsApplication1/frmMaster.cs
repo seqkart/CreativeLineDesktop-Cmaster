@@ -45,8 +45,22 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
-
-
+                if (GlobalVariables.ProgCode == "PROG237")
+                {
+                    WindowsFormsApplication1.Production.frmYarnTypeMst frm = new WindowsFormsApplication1.Production.frmYarnTypeMst()
+                    { s1 = btnAdd.Text, Text = "Yarn Type Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG236")
+                {
+                    WindowsFormsApplication1.Production.frmYarnMaster frm = new WindowsFormsApplication1.Production.frmYarnMaster()
+                    { s1 = btnAdd.Text, Text = "Yarn Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG235")
                 {
                     WindowsFormsApplication1.Master.frmHOlidayMst frm = new WindowsFormsApplication1.Master.frmHOlidayMst()
@@ -57,8 +71,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG234")
                 {
-                    WindowsFormsApplication1.Master.frmAttendenceStatusMst frm = new WindowsFormsApplication1.Master.frmAttendenceStatusMst()
-                    { s1 = btnAdd.Text, Text = "Attendance Status  Addition" };
+                    WindowsFormsApplication1.Master.frmAttendanceStatusMst frm = new WindowsFormsApplication1.Master.frmAttendanceStatusMst()
+                    { S1 = btnAdd.Text, Text = "Attendance Status  Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -505,6 +519,26 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG237")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Production.frmYarnTypeMst frm = new WindowsFormsApplication1.Production.frmYarnTypeMst()
+                    { s1 = btnEdit.Text, Text = "Yarn Type Edition",YarnTypeCode=CurrentRow["YarnTypeCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG236")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Production.frmYarnMaster frm = new WindowsFormsApplication1.Production.frmYarnMaster()
+                    { s1 = btnEdit.Text, Text = "Yarn Master Edition",YarnCode = CurrentRow["YarnCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG235")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -519,8 +553,8 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmAttendenceStatusMst frm = new WindowsFormsApplication1.Master.frmAttendenceStatusMst()
-                    { s1 = btnEdit.Text, Text = "Attendance Status  Edition", StatusID = CurrentRow["status_id"].ToString() };
+                    WindowsFormsApplication1.Master.frmAttendanceStatusMst frm = new WindowsFormsApplication1.Master.frmAttendanceStatusMst()
+                    { S1 = btnEdit.Text, Text = "Attendance Status  Edition", StatusID = CurrentRow["status_id"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();

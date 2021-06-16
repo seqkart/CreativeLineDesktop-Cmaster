@@ -1628,7 +1628,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://localhost:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1656,7 +1656,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://localhost:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1675,15 +1675,11 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-
-
-
         public static async Task WhatsAppDisConnection()
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://localhost:3000/disconnect"))
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://seqkartsolution:3000/disconnect"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1715,7 +1711,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1738,7 +1734,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1767,7 +1763,7 @@ namespace WindowsFormsApplication1
             //{
             //    using (var httpClient = new HttpClient())
             //    {
-            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://localhost:3000/918591115444/sendText"))
+            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
             //        {
             //            request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1815,7 +1811,7 @@ namespace WindowsFormsApplication1
             EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
             EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
-            if(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length>0)
+            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
             {
                 ReqCancelEwbPl reqCancelEWB = new ReqCancelEwbPl();
                 //reqCancelEWB.ewbNo = 101008701277;
@@ -1841,10 +1837,6 @@ namespace WindowsFormsApplication1
                 XtraMessageBox.Show("EWay Bill is not generated then how to cancel");
                 return;
             }
-
-
-
-
 
 
 
@@ -2111,7 +2103,7 @@ namespace WindowsFormsApplication1
 
                 var details = JObject.Parse(t.Text);
 
-                ProjectFunctions.GetDataSet("update SALEINVMAIN Set SIMTRDPRMWYBLNO='"+ details["ewayBillNo"].ToString() + "'  where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+                ProjectFunctions.GetDataSet("update SALEINVMAIN Set SIMTRDPRMWYBLNO='" + details["ewayBillNo"].ToString() + "'  where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
             }
             else
             {
@@ -2146,7 +2138,7 @@ namespace WindowsFormsApplication1
             }
 
 
-           // XtraMessageBox.Show("Generate e-Way Bill Responce");
+            // XtraMessageBox.Show("Generate e-Way Bill Responce");
 
 
 

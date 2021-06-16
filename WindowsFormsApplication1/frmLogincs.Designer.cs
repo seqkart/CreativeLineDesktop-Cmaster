@@ -271,7 +271,7 @@
             this.btnBackup.LookAndFeel.UseDefaultLookAndFeel = false;
             this.btnBackup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBackup.Name = "btnBackup";
-            this.btnBackup.Size = new System.Drawing.Size(97, 51);
+            this.btnBackup.Size = new System.Drawing.Size(114, 51);
             this.btnBackup.TabIndex = 56;
             this.btnBackup.Text = "BackUp";
             this.btnBackup.Click += new System.EventHandler(this.BtnBackup_Click);
