@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
                 txtSurName.Focus();
                 return false;
             }
-            
+
             if (txtState.Text.Trim().Length == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Customer State");
@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1
                 txtCity.Focus();
                 return false;
             }
-            
+
             if (txtDuringNormalSale.Text.Length == 0)
             {
                 txtDuringNormalSale.Text = "0";

@@ -121,7 +121,7 @@ namespace WindowsFormsApplication1.Production
             }
         }
 
-                private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
+        private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -189,10 +189,10 @@ namespace WindowsFormsApplication1.Production
 
         private void txtYarnCode_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode==Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadFabricMstFHelp");
-                if(ds.Tables[0].Rows.Count>0)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
                     HelpGridView.Columns.Clear();
                     HelpGrid.DataSource = ds.Tables[0];

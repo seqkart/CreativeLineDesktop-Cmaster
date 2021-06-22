@@ -519,7 +519,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@PSWSTORECODE", SqlDbType.NVarChar).Value = txtStoreCode.Text;
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
-                            
+
                         }
 
 
@@ -638,7 +638,7 @@ namespace WindowsFormsApplication1.Transaction
                             drRow["SIDARTMRP"] = dr["SIDARTMRP"].ToString();
                             drRow["SIDARTWSP"] = dr["SIDARTWSP"].ToString();
                             drRow["SIDBOXQTY"] = dr["SIDSCANQTY"].ToString();
-                            if(dr["SIDARTWSP"].ToString().Trim()=="")
+                            if (dr["SIDARTWSP"].ToString().Trim() == string.Empty)
                             {
                                 drRow["SIDBOXWSPVAL"] = "0";
                             }
@@ -646,8 +646,8 @@ namespace WindowsFormsApplication1.Transaction
                             {
                                 drRow["SIDBOXWSPVAL"] = dr["SIDARTWSP"].ToString();
                             }
-                           drRow["SIDBOXMRPVAL"] = dr["SIDARTMRP"].ToString();
-                          
+                            drRow["SIDBOXMRPVAL"] = dr["SIDARTMRP"].ToString();
+
                             drRow["SIDPONO"] = txtPONo.Text;
                             drRow["UnitCode"] = GlobalVariables.CUnitID;
                             drRow["SIDPartyC"] = txtAccCode.Text.Trim();
@@ -805,7 +805,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-       
+
 
         private void TxtBarCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -926,7 +926,7 @@ namespace WindowsFormsApplication1.Transaction
                                     Qty = Qty + Convert.ToInt32(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
                                 }
                             }
-                            Qty += Convert.ToInt32(ProjectFunctions.GetDataSet("Select isnull(sum(SIDSCANQTY),0) from PSWSLDET where SIDPARTYC='" + txtAccCode.Text.Trim() + "' And SIDBARCODE='"+txtBarCode.Text+ "' ").Tables[0].Rows[0][0]);
+                            Qty += Convert.ToInt32(ProjectFunctions.GetDataSet("Select isnull(sum(SIDSCANQTY),0) from PSWSLDET where SIDPARTYC='" + txtAccCode.Text.Trim() + "' And SIDBARCODE='" + txtBarCode.Text + "' ").Tables[0].Rows[0][0]);
                             if (Qty < Convert.ToDecimal(txtStoreQty.Text))
                             {
 
@@ -978,7 +978,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
                                 }
                                 if (chOtherPS.Checked)
-                                { 
+                                {
                                 }
                                 else
                                 {
@@ -996,7 +996,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
 
-                         if (FixBarPartyTag == "N")
+                        if (FixBarPartyTag == "N")
                         {
                             if (chOtherPS.Checked)
                             {
@@ -1014,9 +1014,9 @@ namespace WindowsFormsApplication1.Transaction
                                     return;
                                 }
                             }
-                            foreach(DataRow  dr in dt.Rows)
+                            foreach (DataRow dr in dt.Rows)
                             {
-                                if(dr["SIDBARCODE"].ToString().ToUpper()== ds.Tables[0].Rows[0]["SIDBARCODE"].ToString().ToUpper())
+                                if (dr["SIDBARCODE"].ToString().ToUpper() == ds.Tables[0].Rows[0]["SIDBARCODE"].ToString().ToUpper())
                                 {
                                     ProjectFunctions.SpeakError("BarCode Already Used In This PS");
                                     txtBarCode.Focus();
@@ -1096,9 +1096,9 @@ namespace WindowsFormsApplication1.Transaction
                             }
                             else
                             {
-                                if(FixBarPartyTag == "M")
+                                if (FixBarPartyTag == "M")
                                 {
-                                    if(ds.Tables[0].Rows[0]["BarCodeType"].ToString().ToUpper()=="FIX")
+                                    if (ds.Tables[0].Rows[0]["BarCodeType"].ToString().ToUpper() == "FIX")
                                     {
                                         int i = 0;
                                         foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
@@ -1152,7 +1152,7 @@ namespace WindowsFormsApplication1.Transaction
                                     dt.Merge(ds.Tables[0]);
                                 }
 
-                              
+
                             }
                         }
 

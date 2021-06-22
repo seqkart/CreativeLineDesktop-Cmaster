@@ -20,12 +20,6 @@ using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Forms_Master;
-using System.Collections.Generic;
-using System.Speech;
-using System.Speech.Synthesis;
-using System.Speech.Recognition;
-using System.Windows;
-using System.Diagnostics;
 namespace WindowsFormsApplication1
 {
     public partial class XtraForm1 : DevExpress.XtraBars.ToolbarForm.ToolbarForm
@@ -132,7 +126,7 @@ namespace WindowsFormsApplication1
                                 {
                                     Text = R["ProgDesc"].ToString(),
                                     Name = R["ProgCode"].ToString(),
-                                    ImageUri= "Copy;Size16x16"
+                                    ImageUri = "Copy;Size16x16"
 
                                 };
                                 InnerElement.Elements.Add(InnerMostElement);
@@ -241,7 +235,7 @@ namespace WindowsFormsApplication1
                 }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }

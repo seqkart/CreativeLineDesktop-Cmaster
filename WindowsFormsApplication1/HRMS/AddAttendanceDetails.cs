@@ -74,7 +74,7 @@ namespace HumanResourceManagementSystem
 
             catch (Exception ex)
             {
-                MessageBox.Show("Record not found "+ ex.Message);
+                MessageBox.Show("Record not found " + ex.Message);
             }
 
         }

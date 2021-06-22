@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             return true;
         }
-   
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1.Transaction
                     Query = Query + "'" + Convert.ToDecimal(dr["DISCOUNT"]) + "',";
                     Query = Query + "'" + Convert.ToDecimal(dr["NET SALE AFTER ADJ"]) + "')";
                     ProjectFunctions.GetDataSet(Query);
-               }
+                }
                 Close();
             }
         }

@@ -1,14 +1,11 @@
-﻿using DevExpress.Utils;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using System;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing.Imaging;
 using System.IO;
-using System.Windows.Forms;
-using System.Collections.Generic;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
@@ -31,7 +28,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-               //ProjectFunctions.TextBoxVisualize(this);
+                //ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.DatePickerVisualize(this);
                 //ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ButtonVisualize(this);
@@ -74,12 +71,12 @@ namespace WindowsFormsApplication1
                 if (S1 == "&Add")
                 {
                     txtFormCode.Focus();
-                   
+
                 }
                 if (S1 == "Edit")
                 {
                     txtFormCode.Enabled = false;
-                   // txtFormName.Enabled = false;
+                    // txtFormName.Enabled = false;
                     txtstatusTag.Focus();
                     DataSet ds = ProjectFunctions.GetDataSet(string.Format(" sp_LoadProgMstFEdit '" + ProgCode + "'"));
                     if (ds.Tables[0].Rows.Count > 0)
@@ -95,7 +92,7 @@ namespace WindowsFormsApplication1
                         txtRoleCode.Text = ds.Tables[0].Rows[0]["RoleCode"].ToString();
                         txtRoleDesc.Text = ds.Tables[0].Rows[0]["RoleDesc"].ToString();
                         txtOrderBy.Text = ds.Tables[0].Rows[0]["OrderBy"].ToString();
-                        txtPrinters.SelectedItem= ds.Tables[0].Rows[0]["ProgPrinterName"].ToString();
+                        txtPrinters.SelectedItem = ds.Tables[0].Rows[0]["ProgPrinterName"].ToString();
                         txtRadialTag.Text = ds.Tables[0].Rows[0]["ProgRadialTag"].ToString();
                         txtSubFormName.Text = ds.Tables[0].Rows[0]["ProgSubMainForm"].ToString();
 
@@ -291,7 +288,7 @@ namespace WindowsFormsApplication1
                     {
                         if (ValidateData())
                         {
-                          
+
                             var str = "Insert Into ProgramMaster(ProgSubMainForm,OrderBy,RoleCode,ProgCode,ProgDesc,ProgFormLink,ProgInMenu,ProgInMenuGroup,ProgActive,ProgNFA,ProgProcName,ProgPrinterName,ProgRadialTag)values(";
                             str = str + "'" + ProjectFunctions.SqlString(txtSubFormName.Text.Trim()) + "',";
                             str = str + "'" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
@@ -309,8 +306,8 @@ namespace WindowsFormsApplication1
                             ProjectFunctions.GetDataSet(str);
                             ProjectFunctions.SpeakError("Entry Added Successfully");
                             CaptureSVG1Screen();
-                        CaptureSVG2Screen();
-                        CaptureSVG3Screen();
+                            CaptureSVG2Screen();
+                            CaptureSVG3Screen();
                         }
                     }
                 }
@@ -320,7 +317,7 @@ namespace WindowsFormsApplication1
                     {
                         var str = " UPDATE    ProgramMaster";
                         str += " SET  ";
-                     
+
                         str = str + "ProgSubMainForm ='" + ProjectFunctions.SqlString(txtSubFormName.Text.Trim()) + "',";
                         str = str + "ProgRadialTag ='" + ProjectFunctions.SqlString(txtRadialTag.Text.Trim()) + "',";
                         str = str + "OrderBy ='" + ProjectFunctions.SqlString(txtOrderBy.Text.Trim()) + "',";
@@ -379,14 +376,14 @@ namespace WindowsFormsApplication1
             try
             {
                 System.IO.MemoryStream ms = new MemoryStream();
-                svgImageBox1.SvgImage.Save(ms);                
+                svgImageBox1.SvgImage.Save(ms);
                 byte[] photo = new byte[ms.Length];
                 ms.Position = 0;
                 ms.Read(photo, 0, photo.Length);
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
                 {
                     sqlcon.Open();
-                    String  str = "update ProgramMaster Set ProgSVG1= @photo Where ProgCode='" + txtFormCode.Text + "'";
+                    String str = "update ProgramMaster Set ProgSVG1= @photo Where ProgCode='" + txtFormCode.Text + "'";
 
                     var sqlcom = new SqlCommand(str, sqlcon);
                     sqlcom.Parameters.AddWithValue("@photo", photo);
@@ -403,7 +400,7 @@ namespace WindowsFormsApplication1
 
         }
 
-       
+
 
         private void CaptureSVG2Screen()
         {
@@ -495,7 +492,7 @@ namespace WindowsFormsApplication1
         private void SimpleButton1_Click(object sender, EventArgs e)
         {
             FileType = "1";
-            
+
             openFileDialog1.ShowDialog();
         }
 
@@ -504,8 +501,8 @@ namespace WindowsFormsApplication1
             //if(FileType=="1")
             //{
             //    svgImageBox1.SvgImage = DevExpress.Utils.Svg.SvgImage.FromResources ()
-                    
-                    
+
+
             //       // .FromFile(openFileDialog1.FileName);
             //}
             //if (FileType == "2")

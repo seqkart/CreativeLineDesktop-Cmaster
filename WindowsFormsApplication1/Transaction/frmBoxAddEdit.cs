@@ -573,6 +573,6 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
-       
+
     }
 }

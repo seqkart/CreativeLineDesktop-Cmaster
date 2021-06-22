@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1
                     txtEmailId.Text = ds.Tables[0].Rows[0]["TRPREMAILID"].ToString();
                     txtWebSite.Text = ds.Tables[0].Rows[0]["TRPRWEBSITE"].ToString();
                     txtGSTNo.Text = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString();
-                  
+
                 }
                 txtTransporterName.Focus();
             }

@@ -604,7 +604,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Production.frmYarnTypeMst frm = new WindowsFormsApplication1.Production.frmYarnTypeMst()
-                    { s1 = btnEdit.Text, Text = "Yarn Type Edition",YarnTypeCode=CurrentRow["YarnTypeCode"].ToString() };
+                    { s1 = btnEdit.Text, Text = "Yarn Type Edition", YarnTypeCode = CurrentRow["YarnTypeCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -614,7 +614,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Production.frmYarnMaster frm = new WindowsFormsApplication1.Production.frmYarnMaster()
-                    { s1 = btnEdit.Text, Text = "Yarn Master Edition",YarnCode = CurrentRow["YarnCode"].ToString() };
+                    { s1 = btnEdit.Text, Text = "Yarn Master Edition", YarnCode = CurrentRow["YarnCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();

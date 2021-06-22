@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
                         _RangeSelector.Hide();
                         break;
                     case "PROG165":
-                        if (Currentrow!=null)
+                        if (Currentrow != null)
                         {
                             DataSet dsLedger = ProjectFunctions.GetDataSet(string.Format("[sp_ZoomPartyAct] '{0:yyyy-MM-dd}', '{1:yyyy-MM-dd}','{2}'", StartDate.Date, EndDate.Date, Currentrow["AccCode"].ToString()));
                             PartyLedger RptLedger = new PartyLedger();
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
                         else
                         {
                             ProjectFunctions.SpeakError("Plz Select Party First");
-                            
+
                         }
                         break;
                     default:

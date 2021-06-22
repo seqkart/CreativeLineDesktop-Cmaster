@@ -206,7 +206,7 @@ namespace WindowsFormsApplication1
                 ms.Read(photo, 0, photo.Length);
 
 
-               
+
                 using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
                 {
                     sqlcon.Open();
@@ -667,7 +667,7 @@ namespace WindowsFormsApplication1
                 (100 - Convert.ToDecimal(txtMargin.Text)) * 100));
         }
 
-       
+
 
         private void TxtMRP_EditValueChanged(object sender, EventArgs e)
         {

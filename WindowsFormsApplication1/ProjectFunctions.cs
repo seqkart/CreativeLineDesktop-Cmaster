@@ -1998,7 +1998,7 @@ namespace WindowsFormsApplication1
 
             ewbGen.supplyType = "O";
             ewbGen.subSupplyType = "1";
-            ewbGen.subSupplyDesc = "";
+            ewbGen.subSupplyDesc = string.Empty;
             ewbGen.docType = "INV";
             ewbGen.docNo = "235";
             ewbGen.docDate = "21/04/2021";
@@ -2019,7 +2019,7 @@ namespace WindowsFormsApplication1
             ewbGen.toStateCode = 05;
             ewbGen.actToStateCode = 05;
             ewbGen.transactionType = 1;
-            ewbGen.dispatchFromGSTIN = ""; /*29AAAAA1303P1ZV*/
+            ewbGen.dispatchFromGSTIN = string.Empty; /*29AAAAA1303P1ZV*/
             ewbGen.dispatchFromTradeName = "ABC Traders";
             ewbGen.shipToGSTIN = "05AAACG0904A1ZL"; //29ALSPR1722R1Z3
             ewbGen.shipToTradeName = "XYZ Traders";
@@ -2050,13 +2050,13 @@ namespace WindowsFormsApplication1
             ewbGen.igstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["IGSTAmount"]);
             ewbGen.cessValue = Convert.ToDouble("0");
             ewbGen.cessNonAdvolValue = Convert.ToDouble("0");
-            ewbGen.transporterId = "";
-            ewbGen.transporterName = "";
-            ewbGen.transDocNo = "";
+            ewbGen.transporterId = string.Empty;
+            ewbGen.transporterName = string.Empty;
+            ewbGen.transDocNo = string.Empty;
             ewbGen.totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]); ;
             ewbGen.transMode = "1";//1
             ewbGen.transDistance = "0"; /*1200*/
-            ewbGen.transDocDate = "";
+            ewbGen.transDocDate = string.Empty;
             ewbGen.vehicleNo = "PVC1234";
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();

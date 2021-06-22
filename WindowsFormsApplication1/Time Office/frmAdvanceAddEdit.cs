@@ -138,7 +138,7 @@ string.Empty;
                 DtDate.Focus();
                 return false;
             }
-            if(Convert.ToDateTime(DtDate.Text).Date>DateTime.Now.Date)
+            if (Convert.ToDateTime(DtDate.Text).Date > DateTime.Now.Date)
             {
                 DevExpress.XtraEditors.XtraMessageBox.Show("Wrong Date Selected", "Save", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 DtDate.Focus();
@@ -165,7 +165,7 @@ string.Empty;
             if (s1 == "Add")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from ExMst Where ExEmpCode='" + txtEmpCode.Text + "' And ExDate='" + Convert.ToDateTime(DtDate.Text).ToString("yyyy-MM-dd") + "'");
-                if(ds.Tables[0].Rows.Count>0)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
                     DevExpress.XtraEditors.XtraMessageBox.Show("Advance Already Feeded", "Save", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     txtEmpCode.Focus();
@@ -173,7 +173,7 @@ string.Empty;
                 }
             }
 
-                if (txtAmount.Text.Length == 0)
+            if (txtAmount.Text.Length == 0)
             {
                 txtAmount.Text = "0";
             }
@@ -499,7 +499,7 @@ string.Empty;
 
         private void DtDate_EditValueChanged(object sender, EventArgs e)
         {
-            if(Convert.ToDateTime(DtDate.Text).Date.Day<=10)
+            if (Convert.ToDateTime(DtDate.Text).Date.Day <= 10)
             {
                 DtDateforMonth.EditValue = Convert.ToDateTime(DtDate.Text).AddMonths(-1);
             }

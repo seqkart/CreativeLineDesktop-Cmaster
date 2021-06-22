@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Pos
                     txtUPID.Text = ds.Tables[0].Rows[0]["UPIDAddress"].ToString();
 
 
-                    
+
 
 
                     txtAmountPaid.EditValue = ds.Tables[0].Rows[0]["CATPGAMT"].ToString();
@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1.Pos
                         DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from CASHTENDER where CATMEMONO='" + lblMemoNo.Text + "' And CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                         if (dsCheck.Tables[0].Rows.Count == 0)
                         {
-                            
+
                             sqlcom.CommandText = "Insert into CASHTENDER(UPIDType,UPIDMobileNo,UPIDName,UPIDAddress,CATMEMONO,CATMEMODATE,CATMEMOAMT,CATCARDAMT,CATPGAMT,CURIN2000,CURIN1000,CURIN200,CURIN500,CURIN100,CURIN50,CURIN20,CURIN10,CURIN5," +
                                 "  CURIN2,CURIN1,CURINTOT,CUROUT2000,CUROUT1000,CUROUT200,CUROUT500,CUROUT100,CUROUT50,CUROUT20,CUROUT10,CUROUT5,CUROUT2,CUROUT1,CUROUTTOT,CATCARDTYPE,CATCARDNO,CATCARDNAME,CATCARDSLIPNO,UnitCode,CASHAmount,AutoCashAmount)values(" +
                                 "@UPIDType,@UPIDMobileNo,@UPIDName,@UPIDAddress,@CATMEMONO,@CATMEMODATE,@CATMEMOAMT,@CATCARDAMT,@CATPGAMT,@CURIN2000,@CURIN1000,@CURIN200,@CURIN500,@CURIN100,@CURIN50,@CURIN20,@CURIN10,@CURIN5," +
@@ -123,9 +123,9 @@ namespace WindowsFormsApplication1.Pos
                             sqlcom.Parameters.Add("@CUROUT2", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CUROUT1", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CUROUTTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
-                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = "";
-                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = "";
-                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = "";
+                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = string.Empty;
+                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = string.Empty;
+                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = string.Empty;
                             sqlcom.Parameters.Add("@CATCARDSLIPNO", SqlDbType.NVarChar).Value = txtSLipNo.Text.Trim();
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@CASHAmount", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
@@ -147,11 +147,11 @@ namespace WindowsFormsApplication1.Pos
                             sqlcom.Parameters.Add("@CATMEMODATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = TotalMemoAmount.ToString("0.00");
                             sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAmountPaid.Text);
-                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = "";
-                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = "";
-                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = "";
+                            sqlcom.Parameters.Add("@CATCARDTYPE", SqlDbType.NVarChar).Value = string.Empty;
+                            sqlcom.Parameters.Add("@CATCARDNO", SqlDbType.NVarChar).Value = string.Empty;
+                            sqlcom.Parameters.Add("@CATCARDNAME", SqlDbType.NVarChar).Value = string.Empty;
                             sqlcom.Parameters.Add("@CATCARDSLIPNO", SqlDbType.NVarChar).Value = txtSLipNo.Text.Trim();
-                         
+
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN200", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");

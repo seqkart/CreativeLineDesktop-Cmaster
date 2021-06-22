@@ -339,7 +339,7 @@ namespace WindowsFormsApplication1
 
 
 
-                NetworkCredential myCredentials = new NetworkCredential("", "", "");
+                NetworkCredential myCredentials = new NetworkCredential(string.Empty, string.Empty, string.Empty);
                 myCredentials.Domain = "seqkart.ddns.net";
                 myCredentials.UserName = "clserver";
                 myCredentials.Password = "Seq@1234";
@@ -370,7 +370,7 @@ namespace WindowsFormsApplication1
 
 
 
-                    NetworkCredential myCredentials1 = new NetworkCredential("", "", "");
+                    NetworkCredential myCredentials1 = new NetworkCredential(string.Empty, string.Empty, string.Empty);
                     myCredentials1.Domain = "seqkart.ddns.net";
                     myCredentials1.UserName = "clserver";
                     myCredentials1.Password = "Seq@1234";

@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
         public static string EWBUserID { get; set; }
 
         public static string EWBPassword { get; set; }
-       
+
 
 
         public static int GlobalCustWindowCount = 0;

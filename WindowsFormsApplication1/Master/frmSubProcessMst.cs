@@ -1,13 +1,7 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
@@ -15,7 +9,7 @@ namespace WindowsFormsApplication1.Master
     public partial class frmSubProcessMst : DevExpress.XtraEditors.XtraForm
     {
         public String s1 { get; set; }
-        public  String SubProcessCode { get; set; }
+        public String SubProcessCode { get; set; }
         public frmSubProcessMst()
         {
             InitializeComponent();
@@ -28,7 +22,7 @@ namespace WindowsFormsApplication1.Master
             ProjectFunctions.ButtonVisualize(this);
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             txtSubProcessName.Properties.MaxLength = 100;
-          
+
             txtSubProcessCode.Enabled = false;
 
         }
@@ -79,7 +73,7 @@ namespace WindowsFormsApplication1.Master
                 txtProcessCode.Focus();
                 return false;
             }
-           
+
 
             return true;
         }
@@ -184,7 +178,7 @@ namespace WindowsFormsApplication1.Master
                     txtSubProcessName.Text = ds.Tables[0].Rows[0]["SubProcessName"].ToString();
                     txtProcessCode.Text = ds.Tables[0].Rows[0]["ProcessCode"].ToString();
                     txtProcessName.Text = ds.Tables[0].Rows[0]["ProcessName"].ToString();
-                  
+
 
                 }
                 txtSubProcessName.Select();
