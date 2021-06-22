@@ -321,6 +321,34 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG241":
+                    var PROG241 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG241.Show();
+                    PROG241.BringToFront();
+                    PROG241.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG240":
+                    var PROG240 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG240.Show();
+                    PROG240.BringToFront();
+                    PROG240.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG239":
+                    var PROG239 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG239.Show();
+                    PROG239.BringToFront();
+                    PROG239.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG238":
+                    var PROG238 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG238.Show();
+                    PROG238.BringToFront();
+                    PROG238.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG237":
                     var PROG237 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG237.Show();

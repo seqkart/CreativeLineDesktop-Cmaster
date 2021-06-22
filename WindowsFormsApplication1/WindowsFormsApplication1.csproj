@@ -117,7 +117,7 @@
       <HintPath>c:\program files (x86)\sap businessobjects\crystal reports for .net framework 4.0\common\sap businessobjects enterprise xi 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+      <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -353,8 +353,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraVerticalGrid.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DnsClient, Version=1.4.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
-      <HintPath>..\packages\DnsClient.1.4.0\lib\net471\DnsClient.dll</HintPath>
+    <Reference Include="DnsClient, Version=1.5.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.5.0\lib\net471\DnsClient.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -566,6 +566,9 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\BNPL\nEzee\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
     <Reference Include="MigraDoc.DocumentObjectModel-gdi, Version=1.50.5147.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
       <HintPath>..\packages\PDFsharp-MigraDoc-gdi.1.50.5147\lib\net20\MigraDoc.DocumentObjectModel-gdi.dll</HintPath>
@@ -1455,6 +1458,30 @@
     <Compile Include="Prints\XtraReport_Salary.Designer.cs">
       <DependentUpon>XtraReport_Salary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Production\frmFabricMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmFabricMaster.Designer.cs">
+      <DependentUpon>frmFabricMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmFabricStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmFabricStock.Designer.cs">
+      <DependentUpon>frmFabricStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmFabricTypeMst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmFabricTypeMst.Designer.cs">
+      <DependentUpon>frmFabricTypeMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Production\frmYarnStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Production\frmYarnStock.Designer.cs">
+      <DependentUpon>frmYarnStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Production\frmYarnTypeMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2163,6 +2190,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_Salary.resx">
       <DependentUpon>XtraReport_Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmFabricMaster.resx">
+      <DependentUpon>frmFabricMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmFabricStock.resx">
+      <DependentUpon>frmFabricStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmFabricTypeMst.resx">
+      <DependentUpon>frmFabricTypeMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Production\frmYarnStock.resx">
+      <DependentUpon>frmYarnStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Production\frmYarnTypeMst.resx">
       <DependentUpon>frmYarnTypeMst.cs</DependentUpon>

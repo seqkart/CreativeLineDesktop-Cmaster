@@ -704,7 +704,7 @@
             // txtBarCode
             // 
             this.txtBarCode.EnterMoveNextControl = true;
-            this.txtBarCode.Location = new System.Drawing.Point(112, 154);
+            this.txtBarCode.Location = new System.Drawing.Point(112, 156);
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;

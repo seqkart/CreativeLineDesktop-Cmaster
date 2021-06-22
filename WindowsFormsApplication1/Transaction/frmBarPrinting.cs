@@ -404,6 +404,7 @@ namespace WindowsFormsApplication1.Transaction
                         dtNewRow["SKUMRPVAL"] = Convert.ToDecimal(row["SKUFEDQTY"]) * Convert.ToDecimal(row["SKUMRP"]);
                         dtNewRow["SKUWSPVAL"] = Convert.ToDecimal(row["SKUFEDQTY"]) * Convert.ToDecimal(row["SKUWSP"]);
 
+
                         DataSet dsSizeTransID = ProjectFunctions.GetDataSet("sp_LoadSizeMappingID '" + row["SKUARTID"].ToString() + "','" + dsNewSize.Tables[0].Rows[0]["SZSYSID"].ToString() + "','" + row["SizeMappingTransID"].ToString() + "'");
 
                         if(dsSizeTransID.Tables[0].Rows.Count>0)

@@ -31,12 +31,12 @@ namespace WindowsFormsApplication1.Production
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmYarnTypeMst));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.Label17 = new DevExpress.XtraEditors.LabelControl();
+            this.Label15 = new DevExpress.XtraEditors.LabelControl();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtYarnTypeDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtYarnTypeCode = new DevExpress.XtraEditors.TextEdit();
-            this.Label17 = new DevExpress.XtraEditors.LabelControl();
-            this.Label15 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtYarnTypeDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtYarnTypeCode.Properties)).BeginInit();
@@ -59,6 +59,28 @@ namespace WindowsFormsApplication1.Production
             this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 27);
             this.Menu_ToolStrip.TabIndex = 394;
             this.Menu_ToolStrip.Text = "Options";
+            // 
+            // Label17
+            // 
+            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label17.Appearance.Options.UseFont = true;
+            this.Label17.Location = new System.Drawing.Point(57, 148);
+            this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Label17.Name = "Label17";
+            this.Label17.Size = new System.Drawing.Size(110, 19);
+            this.Label17.TabIndex = 393;
+            this.Label17.Text = "YARN TYPE DESC";
+            // 
+            // Label15
+            // 
+            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label15.Appearance.Options.UseFont = true;
+            this.Label15.Location = new System.Drawing.Point(60, 105);
+            this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(113, 19);
+            this.Label15.TabIndex = 392;
+            this.Label15.Text = "YARN TYPE CODE";
             // 
             // btnQuit
             // 
@@ -99,29 +121,7 @@ namespace WindowsFormsApplication1.Production
             this.txtYarnTypeCode.Size = new System.Drawing.Size(97, 24);
             this.txtYarnTypeCode.TabIndex = 390;
             // 
-            // Label17
-            // 
-            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(57, 148);
-            this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(110, 19);
-            this.Label17.TabIndex = 393;
-            this.Label17.Text = "YARN TYPE DESC";
-            // 
-            // Label15
-            // 
-            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(60, 105);
-            this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(113, 19);
-            this.Label15.TabIndex = 392;
-            this.Label15.Text = "YARN TYPE CODE";
-            // 
-            // frmLotTypeMst
+            // frmYarnTypeMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1.Production
             this.Controls.Add(this.Label15);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmLotTypeMst";
+            this.Name = "frmYarnTypeMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmLotTypeMst_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

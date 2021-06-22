@@ -45,6 +45,44 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+
+
+                if (GlobalVariables.ProgCode == "PROG241")
+                {
+                    WindowsFormsApplication1.Production.frmFabricStock frm = new WindowsFormsApplication1.Production.frmFabricStock()
+                    { s1 = btnAdd.Text, Text = "Fabric Stock Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG240")
+                {
+                    WindowsFormsApplication1.Production.frmFabricTypeMst frm = new WindowsFormsApplication1.Production.frmFabricTypeMst()
+                    { s1 = btnAdd.Text, Text = "Fabric Type Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG239")
+                {
+                    WindowsFormsApplication1.Production.frmFabricMaster frm = new WindowsFormsApplication1.Production.frmFabricMaster()
+                    { s1 = btnAdd.Text, Text = "Fabric Master Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+
+
+
+                if (GlobalVariables.ProgCode == "PROG238")
+                {
+                    WindowsFormsApplication1.Production.frmYarnStock frm = new WindowsFormsApplication1.Production.frmYarnStock()
+                    { s1 = btnAdd.Text, Text = "Yarn Stock Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG237")
                 {
                     WindowsFormsApplication1.Production.frmYarnTypeMst frm = new WindowsFormsApplication1.Production.frmYarnTypeMst()
@@ -519,6 +557,48 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG241")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Production.frmFabricStock frm = new WindowsFormsApplication1.Production.frmFabricStock()
+                    { s1 = btnEdit.Text, Text = "Fabric Stock Edition", FabricCode = CurrentRow["FabricCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG240")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Production.frmFabricTypeMst frm = new WindowsFormsApplication1.Production.frmFabricTypeMst()
+                    { s1 = btnEdit.Text, Text = "Fabric Type Edition", FabricTypeCode = CurrentRow["FabricTypeCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+                if (GlobalVariables.ProgCode == "PROG239")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Production.frmFabricMaster frm = new WindowsFormsApplication1.Production.frmFabricMaster()
+                    { s1 = btnEdit.Text, Text = "Fabric Master Edition", FabricCode = CurrentRow["FabricCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
+
+
+                if (GlobalVariables.ProgCode == "PROG238")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Production.frmYarnStock frm = new WindowsFormsApplication1.Production.frmYarnStock()
+                    { s1 = btnEdit.Text, Text = "Yarn Stock Edition", YarnCode = CurrentRow["YarnCode"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG237")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
