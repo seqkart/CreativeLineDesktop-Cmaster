@@ -407,7 +407,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         DataSet dsSizeTransID = ProjectFunctions.GetDataSet("sp_LoadSizeMappingID '" + row["SKUARTID"].ToString() + "','" + dsNewSize.Tables[0].Rows[0]["SZSYSID"].ToString() + "','" + row["SizeMappingTransID"].ToString() + "'");
 
-                        if(dsSizeTransID.Tables[0].Rows.Count>0)
+                        if (dsSizeTransID.Tables[0].Rows.Count > 0)
                         {
                             dtNewRow["SizeMappingTransID"] = dsSizeTransID.Tables[0].Rows[0][0].ToString();
                         }
@@ -618,7 +618,7 @@ namespace WindowsFormsApplication1.Transaction
                                 dtFinal.Rows.Clear();
 
 
-                               foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
+                                foreach (DataRow dr in (BarCodeGrid.DataSource as DataTable).Rows)
                                 {
                                     if (Convert.ToDecimal(dr["SKUFEDQTY"]) > 0)
                                     {
@@ -631,7 +631,7 @@ namespace WindowsFormsApplication1.Transaction
                                         drRow["SKUCOLID"] = dr["SKUCOLID"].ToString();
                                         drRow["SKUSIZN"] = dr["SKUSIZN"].ToString();
                                         drRow["SKUSIZID"] = dr["SKUSIZID"].ToString();
-                                        drRow["SKUFEDQTY"] = dr["SKUFEDQTY"].ToString() ;
+                                        drRow["SKUFEDQTY"] = dr["SKUFEDQTY"].ToString();
                                         drRow["SKUGENMODAUTO"] = "0";
                                         drRow["SKUCODSCHEM"] = "0";
                                         drRow["SKUWSP"] = Convert.ToDecimal(dr["SKUWSP"]);

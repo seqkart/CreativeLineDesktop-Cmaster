@@ -1323,7 +1323,7 @@ namespace WindowsFormsApplication1
                                                                       PrintOutGrid.Visible = true;
                                                                       //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                   }));
-                   
+
                     e.Menu.Items
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Generate PT File",
                                                                   (o1, e1) =>
@@ -1367,7 +1367,7 @@ namespace WindowsFormsApplication1
                                                                   }));
                 }
 
-               
+
 
                 if (GlobalVariables.ProgCode == "PROG130")
                 {

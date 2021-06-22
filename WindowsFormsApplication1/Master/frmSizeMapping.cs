@@ -19,10 +19,10 @@ namespace WindowsFormsApplication1.Master
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
             DataSet dsGroup = ProjectFunctions.GetDataSet("Select * from GrpMst");
-            if(dsGroup.Tables[0].Rows.Count>0)
+            if (dsGroup.Tables[0].Rows.Count > 0)
             {
                 dsGroup.Tables[0].Columns.Add("Select", typeof(bool));
-                foreach(DataRow dr in dsGroup.Tables[0].Rows)
+                foreach (DataRow dr in dsGroup.Tables[0].Rows)
                 {
                     dr["Select"] = false;
                 }
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1.Master
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+
 
             SizeGridView.CloseEditor();
             SizeGridView.UpdateCurrentRow();
@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1.Master
             GroupGridView.UpdateCurrentRow();
             foreach (DataRow drGroup in (GroupGrid.DataSource as DataTable).Rows)
             {
-                if(drGroup["Select"].ToString().ToUpper()=="TRUE")
+                if (drGroup["Select"].ToString().ToUpper() == "TRUE")
                 {
                     foreach (DataRow drSize in (SizeGrid.DataSource as DataTable).Rows)
                     {

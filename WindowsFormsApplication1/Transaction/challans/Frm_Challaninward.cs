@@ -53,14 +53,14 @@ namespace WindowsFormsApplication1.Transaction.challans
             dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_LoadBarPrintPopUps");
         }
 
-       
+
         private void GetOurwardData()
         {
             DataSet ds = ProjectFunctions.GetDataSet("select CHOTYPE,CHONO,CHODATE from CHOUTMain Where CHOPARTYCODE='" + txtDebitPartyCode.Text + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 ds.Tables[0].Columns.Add("Select", typeof(bool));
-                foreach(DataRow dr in ds.Tables[0].Rows)
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     dr["Select"] = false;
                 }
@@ -84,7 +84,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             {
                 if (drchallan["Select"].ToString().ToUpper() == "TRUE")
                 {
-                    
+
                     DataSet ds = ProjectFunctions.GetDataSet("sp_LoadChallanDataFProcess '" + drchallan["CHOTYPE"].ToString() + "','" + drchallan["CHONO"].ToString() + "','" + Convert.ToDateTime(drchallan["CHODATE"]).ToString("yyyy-MM-dd") + "'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
@@ -96,8 +96,8 @@ namespace WindowsFormsApplication1.Transaction.challans
                     }
                 }
             }
-            if(dt.Rows.Count>0)
-            { 
+            if (dt.Rows.Count > 0)
+            {
 
                 BarCodeGrid.DataSource = dt;
                 BarCodeGridView.BestFitColumns();
@@ -116,14 +116,14 @@ namespace WindowsFormsApplication1.Transaction.challans
             ProjectFunctions.TextBoxVisualize(groupControl1);
             if (S1 == "&Add")
             {
-               
+
                 txtTransDate.EditValue = DateTime.Now;
                 txtReceivingDate.EditValue = DateTime.Now;
                 txtGateEntryNo.Focus();
             }
             if (S1 == "Edit")
             {
-                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadCHINDataFEdit '" + ImNo + "','" + ImDate.Date.ToString("yyyy-MM-dd") + "','"+GlobalVariables.CUnitID+"'");
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadCHINDataFEdit '" + ImNo + "','" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     txtDocNo.Text = ds.Tables[0].Rows[0]["DocNo"].ToString();
@@ -145,7 +145,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
                     txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
 
-                    if(ds.Tables[1].Rows.Count>0)
+                    if (ds.Tables[1].Rows.Count > 0)
                     {
                         dt = ds.Tables[1];
                         BarCodeGrid.DataSource = dt;
@@ -1058,7 +1058,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                             sqlcom.Parameters.Add("@CHIPARTYCODE", SqlDbType.NVarChar).Value = txtDebitPartyCode.Text;
                             sqlcom.Parameters.Add("@CHOREMARKS", SqlDbType.NVarChar).Value = txtRemarks.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
-                            sqlcom.Parameters.Add("@CHOTRPID", SqlDbType.NVarChar).Value =txtTransporterCode.Text;
+                            sqlcom.Parameters.Add("@CHOTRPID", SqlDbType.NVarChar).Value = txtTransporterCode.Text;
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -1117,7 +1117,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                 sqlcom.Parameters.Add("@ActualQty", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ActualQty"]);
                                 sqlcom.Parameters.Add("@ActualQtyInKgs", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["ActualQtyInKgs"]);
                                 sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
-                                sqlcom.Parameters.Add("@CHOUTTransID", SqlDbType.NVarChar).Value = dr["TransID"].ToString() ;
+                                sqlcom.Parameters.Add("@CHOUTTransID", SqlDbType.NVarChar).Value = dr["TransID"].ToString();
 
                                 sqlcom.ExecuteNonQuery();
                                 sqlcom.Parameters.Clear();

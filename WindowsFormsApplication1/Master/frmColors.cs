@@ -121,7 +121,7 @@ namespace WindowsFormsApplication1
                             ProjectFunctions.SpeakError("Something Wrong. \n Roll Back Failed." + ex2.Message);
                         }
                     }
-                    ProjectFunctions.SpeakError("COLOUR SAVED SUCCESSFULLY" );
+                    ProjectFunctions.SpeakError("COLOUR SAVED SUCCESSFULLY");
                 }
 
             }

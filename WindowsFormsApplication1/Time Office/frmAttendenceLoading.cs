@@ -701,9 +701,9 @@ namespace WindowsFormsApplication1.Forms_Master
             paramSalary.Add("@Salary_Month", DtStartDate.EditValue);
             paramSalary.Add("@Deduct_Advance", 1);
             paramSalary.Add("@Deduct_Loan", 1);
-            paramSalary.Add("@TeaRate", 0); 
+            paramSalary.Add("@TeaRate", 0);
             paramSalary.Add("@NoOfCups", 0);
-         
+
 
             DynamicParameters param = new DynamicParameters();
             param.Add("@EmpCode", txtEmpCode.EditValue);

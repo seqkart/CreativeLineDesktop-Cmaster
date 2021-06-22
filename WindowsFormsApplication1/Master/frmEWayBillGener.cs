@@ -1,13 +1,5 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
@@ -20,7 +12,7 @@ namespace WindowsFormsApplication1.Master
 
         private void frmEWayBillGener_Load(object sender, EventArgs e)
         {
-           
+
         }
     }
 }

@@ -271,7 +271,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             foreach (DevExpress.XtraGrid.Columns.GridColumn Col in gridView_SalaryProcess.Columns)
             {
-                if (Col.FieldName == "LoanIntsallment" || Col.FieldName == "SalaryPaid" || Col.FieldName == "Loan"|| Col.FieldName == "NoOfCups")
+                if (Col.FieldName == "LoanIntsallment" || Col.FieldName == "SalaryPaid" || Col.FieldName == "Loan" || Col.FieldName == "NoOfCups")
                 {
 
                 }
@@ -563,7 +563,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     decimal salary_calculated_new = salary_calculated - totalteaamount;
 
                     view.SetRowCellValue(view.FocusedRowHandle, view.Columns["TotalTeaAmount"], totalteaamount);
-                    if(totalteaamount>0)
+                    if (totalteaamount > 0)
                     {
                         view.SetRowCellValue(view.FocusedRowHandle, view.Columns["SalaryCalculated"], salary_calculated_new);
                     }

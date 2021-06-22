@@ -1564,7 +1564,7 @@ namespace WindowsFormsApplication1
         private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTransporterName.Text = string.Empty;
-            txtTransporterKey.Text= string.Empty;
+            txtTransporterKey.Text = string.Empty;
         }
 
         private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)

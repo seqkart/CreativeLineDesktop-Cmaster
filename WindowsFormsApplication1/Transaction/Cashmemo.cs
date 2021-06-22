@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Transaction
             InitializeComponent();
 
             chall.Checked = false;
-                
+
             dt.Columns.Add("SIDBARCODE", typeof(string));
             dt.Columns.Add("SIDARTNO", typeof(string));
             dt.Columns.Add("SIDARTDESC", typeof(string));
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void SetMyControls()
         {
-          
+
             ProjectFunctions.TextBoxVisualize(groupControl1);
             ProjectFunctions.TextBoxVisualize(groupControl2);
             ProjectFunctions.TextBoxVisualize(groupControl3);
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1.Transaction
         private bool ValidateDataForSaving()
         {
 
-         
+
 
             if (InfoGrid.DataSource == null)
             {
@@ -774,15 +774,15 @@ namespace WindowsFormsApplication1.Transaction
                 else
                 {
                     if (Convert.ToDecimal(lblNetPayable.Text) % 5 < Convert.ToDecimal("2.5"))
-                    { 
+                    {
                         lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((-Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
                     }
                     else
                     {
-                        lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((5-Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
+                        lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((5 - Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
                     }
 
-                   
+
                 }
 
                 txtRoundOff.Text = (Convert.ToDecimal(lblNetPayable.Text) - TempNetPayable).ToString("0.00");
@@ -921,7 +921,7 @@ namespace WindowsFormsApplication1.Transaction
                 lblTotalTaxExclusive.Text = txtTotalTax.Text;
 
                 txtMainDiscVal.Text = MainDiscAmount.ToString("0.00");
-                
+
 
                 txtSubTotal.Text = SumValueOfGoods.ToString("0.00");
                 lblTotalDisc.Text = SumRowDiscAmount.ToString("0.00");
@@ -935,7 +935,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 else
                 {
-                    lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((5-Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
+                    lblNetPayable.Text = (Convert.ToDecimal(lblNetPayable.Text) + ((5 - Convert.ToDecimal(lblNetPayable.Text) % 5))).ToString("0");
                 }
                 txtRoundOff.Text = (Convert.ToDecimal(lblNetPayable.Text) - TempNetPayable).ToString("0.00");
 
@@ -1240,10 +1240,10 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnAddCashMemo_Click(object sender, EventArgs e)
         {
-            
+
             try
             {
-                
+
                 dt.Clear();
                 S1 = "&Add";
                 Text = "Cash Memo Addition";
@@ -1444,7 +1444,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             lblPaymentMode.Text = string.Empty;
             lblCashTenderAmount.Text = string.Empty;
-            lblPAyBackAmount.Text= string.Empty;
+            lblPAyBackAmount.Text = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("sp_PreviousBillDetails '" + lblCashMemoNo.Text + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -1663,7 +1663,7 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         foreach (DataRow dr in dt.Rows)
                         {
-                            if (txtItemDiscPer.Enabled )
+                            if (txtItemDiscPer.Enabled)
                             {
                                 dr["SIDITMDISCAMT"] = ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
                                 dr["SIDITMDISCPRCN"] = Convert.ToDecimal(txtItemDiscPer.Text);
@@ -1681,7 +1681,7 @@ namespace WindowsFormsApplication1.Transaction
                         Calculation();
                     }
 
-                   
+
 
                     InfoGridView.Focus();
 

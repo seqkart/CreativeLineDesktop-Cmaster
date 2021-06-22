@@ -350,7 +350,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 panelControl1.Visible = false;
                 txtTransporterCode.Focus();
             }
-            
+
             if (HelpGrid.Text == "txtDebitPartyCode")
             {
                 txtDebitPartyCode.Text = row["AccCode"].ToString();

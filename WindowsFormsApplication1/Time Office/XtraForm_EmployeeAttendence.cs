@@ -988,7 +988,7 @@ namespace WindowsFormsApplication1.Time_Office
                         //timeEdit_Time_In_Last.EditValue = null;
                         //timeEdit_Time_Out_Last.EditValue = null;
                         SetEditValue(timeEdit_Time_In_Last, null);
-                       SetEditValue(timeEdit_Time_Out_Last, null);
+                        SetEditValue(timeEdit_Time_Out_Last, null);
                         ProjectFunctionsUtils.SpeakError("Please Enter Time In First and Time Out First");
                         timeEdit_Time_In_First.Focus();
 
@@ -1771,7 +1771,7 @@ namespace WindowsFormsApplication1.Time_Office
                         SetEditValue(timeEdit_Time_In_First, timeEdit_Time_In_First_Main.EditValue);
                         SetEditValue(timeEdit_Time_Out_First, timeEdit_Time_Out_First_Main.EditValue);
                         SetEditValue(timeEdit_Time_In_Last, null);
-                       SetEditValue(timeEdit_Time_Out_Last, null);
+                        SetEditValue(timeEdit_Time_Out_Last, null);
 
                         timeEdit_Time_In_First.Enabled = true;
                         timeEdit_Time_Out_First.Enabled = true;
@@ -2115,14 +2115,14 @@ namespace WindowsFormsApplication1.Time_Office
 
 
 
-            TimeSpan t = txtNightOut.TimeSpan- txtNightIn.TimeSpan;
-            txtNightOverTimeHours.Text = t.TotalHours.ToString().Replace("-", "");
-            if(txtOverTImeHOurs.Text.Trim().Length==0)
+            TimeSpan t = txtNightOut.TimeSpan - txtNightIn.TimeSpan;
+            txtNightOverTimeHours.Text = t.TotalHours.ToString().Replace("-", string.Empty);
+            if (txtOverTImeHOurs.Text.Trim().Length == 0)
             {
                 txtOverTImeHOurs.Text = "0";
             }
 
-            txtOverTImeHOurs.Text =(Convert.ToDecimal( txtOverTImeHOurs.Text) + (Convert.ToDecimal(txtNightOverTimeHours.Text)*60)).ToString();
+            txtOverTImeHOurs.Text = (Convert.ToDecimal(txtOverTImeHOurs.Text) + (Convert.ToDecimal(txtNightOverTimeHours.Text) * 60)).ToString();
         }
     }
 

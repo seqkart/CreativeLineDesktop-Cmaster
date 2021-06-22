@@ -100,7 +100,7 @@ namespace WindowsFormsApplication1.Transaction
                     txtCashInCount2.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["CURIN2"]) / 2).ToString();
                     txtCashInCount1.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0]["CURIN1"]) / 1).ToString();
 
-                    if(ds.Tables[0].Rows[0]["AutoCashAmount"].ToString().Trim()=="")
+                    if (ds.Tables[0].Rows[0]["AutoCashAmount"].ToString().Trim() == string.Empty)
                     {
                         ds.Tables[0].Rows[0]["AutoCashAmount"] = 0;
                     }
@@ -159,9 +159,9 @@ namespace WindowsFormsApplication1.Transaction
                 txtCashInAmount2.Text = (Convert.ToDecimal(txtCashInCount2.Text) * 2).ToString("0.00");
                 txtCashInAmount1.Text = (Convert.ToDecimal(txtCashInCount1.Text) * 1).ToString("0.00");
 
-              
+
                 txtCashInTotal.Text = (Convert.ToDecimal(txtCashInAmount2000.Text) + Convert.ToDecimal(txtCashInAmount1000.Text) + Convert.ToDecimal(txtCashInAmount500.Text) + Convert.ToDecimal(txtCashInAmount200.Text) + Convert.ToDecimal(txtCashInAmount100.Text) + Convert.ToDecimal(txtCashInAmount50.Text) + Convert.ToDecimal(txtCashInAmount20.Text) + Convert.ToDecimal(txtCashInAmount10.Text) + Convert.ToDecimal(txtCashInAmount5.Text) + Convert.ToDecimal(txtCashInAmount2.Text) + Convert.ToDecimal(txtCashInAmount1.Text)).ToString("0.00");
-                if(Convert.ToDecimal(txtCashInTotal.Text)==0)
+                if (Convert.ToDecimal(txtCashInTotal.Text) == 0)
                 {
                     txtAutoCash.Text = txtCashMemoAmount.Text;
                     txtCashInTotal.Text = txtAutoCash.Text;
@@ -170,7 +170,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     txtAutoCash.Text = "0";
                 }
-                
+
                 txtCashOutAmount2000.Text = (Convert.ToDecimal(txtCashOutCount2000.Text) * 2000).ToString("0.00");
                 txtCashOutAmount1000.Text = (Convert.ToDecimal(txtCashOutCount1000.Text) * 1000).ToString("0.00");
                 txtCashOutAmount500.Text = (Convert.ToDecimal(txtCashOutCount500.Text) * 500).ToString("0.00");
@@ -202,7 +202,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
                 txtTotalReceived.Text = txtCashInTotal.Text;
-                txtTotalPayBack.Text = (Convert.ToDecimal(txtCashMemoAmount.Text) - Convert.ToDecimal(txtTotalReceived.Text) - Convert.ToDecimal(txtPGPayment.Text)-Convert.ToDecimal(txtCardPayment.Text) + Convert.ToDecimal(txtCashOutTotal.Text)).ToString("0.00");
+                txtTotalPayBack.Text = (Convert.ToDecimal(txtCashMemoAmount.Text) - Convert.ToDecimal(txtTotalReceived.Text) - Convert.ToDecimal(txtPGPayment.Text) - Convert.ToDecimal(txtCardPayment.Text) + Convert.ToDecimal(txtCashOutTotal.Text)).ToString("0.00");
             }
             catch (Exception ex)
             {

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsFormsApplication1.WhatsAppClasses
 {
@@ -13,7 +10,7 @@ namespace WindowsFormsApplication1.WhatsAppClasses
         public string state { get; set; }
         public string user { get; set; }
         public string server { get; set; }
-      
+
 
     }
 }

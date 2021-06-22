@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1.Master
                         txtStatusID.Text = ds.Tables[0].Rows[0]["status_id"].ToString();
                         txtStatusCode.Text = ds.Tables[0].Rows[0]["status_code"].ToString();
                         txtStatusDesc.Text = ds.Tables[0].Rows[0]["status"].ToString();
-                        txtatttype.Text= ds.Tables[0].Rows[0]["status_Type"].ToString();
+                        txtatttype.Text = ds.Tables[0].Rows[0]["status_Type"].ToString();
                         txtatttype.Focus();
                     }
                 }

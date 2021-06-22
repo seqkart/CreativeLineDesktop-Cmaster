@@ -647,7 +647,7 @@ namespace WindowsFormsApplication1.Transaction
 
                     {
                         ProjectFunctions.SpeakError(ex.Message);
-                        
+
                     }
                     Close();
                 }

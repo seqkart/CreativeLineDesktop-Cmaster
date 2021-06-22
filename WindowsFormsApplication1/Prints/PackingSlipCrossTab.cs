@@ -4,7 +4,7 @@ namespace WindowsFormsApplication1.Prints
 {
     public partial class PackingSlipCrossTab : DevExpress.XtraReports.UI.XtraReport
     {
-        public DataSet  Ds { get; set; }
+        public DataSet Ds { get; set; }
         public PackingSlipCrossTab()
         {
             InitializeComponent();
