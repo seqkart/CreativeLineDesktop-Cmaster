@@ -418,8 +418,6 @@ namespace WindowsFormsApplication1.Transaction
                             return;
                         }
 
-
-
                         dt.Rows.Add(dtNewRow);
                         if (dt.Rows.Count > 0)
                         {
