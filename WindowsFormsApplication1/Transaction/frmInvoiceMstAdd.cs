@@ -9,7 +9,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-
+using TaxProEWB.API;
 
 namespace WindowsFormsApplication1
 {
@@ -61,6 +61,32 @@ namespace WindowsFormsApplication1
             dt.Columns.Add("TAXCODE", typeof(string));
             dt.Columns.Add("GRPHSNCODE", typeof(string));
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
+
+
+
+
+
+            txtSupplyType.DataSource = SharedLists.SupplyTypes;
+            txtSupplyType.DisplayMember = "Description";
+            txtSupplyType.ValueMember = "Code";
+
+            txtSubSupplyType.DataSource = SharedLists.SubSupplyTypes;
+            txtSubSupplyType.DisplayMember = "Description";
+            txtSubSupplyType.ValueMember = "Code";
+
+            txtTransMode.DataSource = SharedLists.TransportationModes;
+            txtTransMode.DisplayMember = "Description";
+            txtTransMode.ValueMember = "Code";
+
+            txtUnits.DataSource = SharedLists.UnitList;
+            txtUnits.DisplayMember = "Description";
+            txtUnits.ValueMember = "Code";
+
+            txtVehicleUpdateReason.DataSource = SharedLists.VehicleUpdateReasonCodes;
+            txtVehicleUpdateReason.DisplayMember = "Description";
+            txtVehicleUpdateReason.ValueMember = "Code";
+
+
         }
         private void SetMyControls()
         {
@@ -2433,6 +2459,16 @@ namespace WindowsFormsApplication1
         }
 
         private void GridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

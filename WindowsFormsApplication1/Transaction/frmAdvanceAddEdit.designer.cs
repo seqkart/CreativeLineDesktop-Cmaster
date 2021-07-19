@@ -70,12 +70,13 @@
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(696, 27);
             this.Menu_ToolStrip.TabIndex = 16;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -88,7 +89,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -101,81 +102,89 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtAmount
             // 
             this.txtAmount.EnterMoveNextControl = true;
-            this.txtAmount.Location = new System.Drawing.Point(106, 195);
+            this.txtAmount.Location = new System.Drawing.Point(124, 255);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.MaxLength = 6;
-            this.txtAmount.Size = new System.Drawing.Size(100, 20);
+            this.txtAmount.Size = new System.Drawing.Size(117, 24);
             this.txtAmount.TabIndex = 11;
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // txtType
             // 
             this.txtType.EnterMoveNextControl = true;
-            this.txtType.Location = new System.Drawing.Point(106, 164);
+            this.txtType.Location = new System.Drawing.Point(124, 214);
+            this.txtType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtType.Name = "txtType";
             this.txtType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtType.Properties.MaxLength = 6;
-            this.txtType.Size = new System.Drawing.Size(100, 20);
+            this.txtType.Size = new System.Drawing.Size(117, 24);
             this.txtType.TabIndex = 10;
             this.txtType.Validating += new System.ComponentModel.CancelEventHandler(this.txtType_Validating);
             // 
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(106, 134);
+            this.txtEmpCode.Location = new System.Drawing.Point(124, 175);
+            this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(100, 20);
+            this.txtEmpCode.Size = new System.Drawing.Size(117, 24);
             this.txtEmpCode.TabIndex = 8;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(76, 168);
+            this.labelControl35.Location = new System.Drawing.Point(89, 220);
+            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(24, 13);
+            this.labelControl35.Size = new System.Drawing.Size(28, 17);
             this.labelControl35.TabIndex = 29;
             this.labelControl35.Text = "Type";
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(76, 109);
+            this.labelControl33.Location = new System.Drawing.Point(89, 143);
+            this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(24, 13);
+            this.labelControl33.Size = new System.Drawing.Size(27, 17);
             this.labelControl33.TabIndex = 30;
             this.labelControl33.Text = "Date";
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(48, 137);
+            this.labelControl34.Location = new System.Drawing.Point(56, 179);
+            this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(52, 13);
+            this.labelControl34.Size = new System.Drawing.Size(61, 17);
             this.labelControl34.TabIndex = 27;
             this.labelControl34.Text = "Emp Code";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(59, 199);
+            this.labelControl3.Location = new System.Drawing.Point(69, 260);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(41, 13);
+            this.labelControl3.Size = new System.Drawing.Size(45, 17);
             this.labelControl3.TabIndex = 31;
             this.labelControl3.Text = "Amount";
             // 
             // txtEmpCodeDesc
             // 
             this.txtEmpCodeDesc.Enabled = false;
-            this.txtEmpCodeDesc.Location = new System.Drawing.Point(214, 133);
+            this.txtEmpCodeDesc.Location = new System.Drawing.Point(250, 174);
+            this.txtEmpCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCodeDesc.Name = "txtEmpCodeDesc";
             this.txtEmpCodeDesc.Properties.MaxLength = 6;
-            this.txtEmpCodeDesc.Size = new System.Drawing.Size(330, 20);
+            this.txtEmpCodeDesc.Size = new System.Drawing.Size(385, 24);
             this.txtEmpCodeDesc.TabIndex = 9;
             this.txtEmpCodeDesc.TabStop = false;
             // 
@@ -183,7 +192,8 @@
             // 
             this.DtDate.EditValue = null;
             this.DtDate.EnterMoveNextControl = true;
-            this.DtDate.Location = new System.Drawing.Point(106, 106);
+            this.DtDate.Location = new System.Drawing.Point(124, 139);
+            this.DtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDate.Name = "DtDate";
             this.DtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -195,14 +205,15 @@
             this.DtDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DtDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
-            this.DtDate.Size = new System.Drawing.Size(102, 20);
+            this.DtDate.Size = new System.Drawing.Size(119, 24);
             this.DtDate.TabIndex = 32;
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(363, 109);
+            this.labelControl8.Location = new System.Drawing.Point(423, 143);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(80, 13);
+            this.labelControl8.Size = new System.Drawing.Size(90, 17);
             this.labelControl8.TabIndex = 30;
             this.labelControl8.Text = "Date for Month";
             // 
@@ -210,7 +221,8 @@
             // 
             this.DtDateforMonth.EditValue = null;
             this.DtDateforMonth.EnterMoveNextControl = true;
-            this.DtDateforMonth.Location = new System.Drawing.Point(442, 106);
+            this.DtDateforMonth.Location = new System.Drawing.Point(516, 139);
+            this.DtDateforMonth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDateforMonth.Name = "DtDateforMonth";
             this.DtDateforMonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -222,23 +234,26 @@
             this.DtDateforMonth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.DtDateforMonth.Properties.Mask.EditMask = "MM-yyyy";
             this.DtDateforMonth.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.DtDateforMonth.Size = new System.Drawing.Size(102, 20);
+            this.DtDateforMonth.Size = new System.Drawing.Size(119, 24);
             this.DtDateforMonth.TabIndex = 1;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(216, 168);
+            this.labelControl7.Location = new System.Drawing.Point(252, 220);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(154, 13);
+            this.labelControl7.Size = new System.Drawing.Size(174, 17);
             this.labelControl7.TabIndex = 30;
             this.labelControl7.Text = "A= Adv , C=Coupon , F = Fine";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(208, 28);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(243, 37);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(397, 234);
+            this.HelpGrid.Size = new System.Drawing.Size(463, 306);
             this.HelpGrid.TabIndex = 368;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView,
@@ -250,6 +265,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -262,11 +278,13 @@
             // 
             // gridView4
             // 
+            this.gridView4.DetailHeight = 458;
             this.gridView4.GridControl = this.HelpGrid;
             this.gridView4.Name = "gridView4";
             // 
             // gridView5
             // 
+            this.gridView5.DetailHeight = 458;
             this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView5.GridControl = this.HelpGrid;
             this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -282,26 +300,28 @@
             // 
             this.txtAdvanceNo.Enabled = false;
             this.txtAdvanceNo.EnterMoveNextControl = true;
-            this.txtAdvanceNo.Location = new System.Drawing.Point(106, 80);
+            this.txtAdvanceNo.Location = new System.Drawing.Point(124, 105);
+            this.txtAdvanceNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAdvanceNo.Name = "txtAdvanceNo";
             this.txtAdvanceNo.Properties.MaxLength = 6;
-            this.txtAdvanceNo.Size = new System.Drawing.Size(102, 20);
+            this.txtAdvanceNo.Size = new System.Drawing.Size(119, 24);
             this.txtAdvanceNo.TabIndex = 369;
             this.txtAdvanceNo.TabStop = false;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(39, 84);
+            this.labelControl1.Location = new System.Drawing.Point(45, 110);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(61, 13);
+            this.labelControl1.Size = new System.Drawing.Size(71, 17);
             this.labelControl1.TabIndex = 370;
             this.labelControl1.Text = "Advance No";
             // 
             // frmAdvanceAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 252);
+            this.ClientSize = new System.Drawing.Size(696, 330);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtAdvanceNo);
@@ -321,6 +341,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdvanceAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmAdvanceAddEdit_Load);

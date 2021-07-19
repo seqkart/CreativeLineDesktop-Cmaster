@@ -533,11 +533,11 @@
             this.xrPanel2.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrPanel2.CanGrow = false;
             this.xrPanel2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel4,
             this.xrLabel71,
             this.xrLabel108,
             this.xrLabel65,
             this.xrLabel66,
-            this.xrLabel4,
             this.xrShape1,
             this.xrLabel2,
             this.xrLabel3});
@@ -2442,7 +2442,7 @@
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PaperName = "A4";
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "20.2";
+            this.Version = "21.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

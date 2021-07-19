@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceMstAdd));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -279,6 +279,19 @@
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.groupControl7 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl57 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtTransMode = new System.Windows.Forms.ComboBox();
+            this.txtUnits = new System.Windows.Forms.ComboBox();
+            this.txtSubSupplyType = new System.Windows.Forms.ComboBox();
+            this.txtSupplyType = new System.Windows.Forms.ComboBox();
+            this.txtVehicleUpdateReason = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -422,6 +435,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).BeginInit();
+            this.groupControl7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -511,6 +527,7 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.groupControl7);
             this.xtraTabPage1.Controls.Add(this.groupControl4);
             this.xtraTabPage1.Controls.Add(this.groupControl8);
             this.xtraTabPage1.Controls.Add(this.groupControl6);
@@ -526,8 +543,9 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 779);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 775);
             this.xtraTabPage1.Text = "Main Invoice Details";
+            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
             // 
             // groupControl4
             // 
@@ -912,7 +930,6 @@
             this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
             this.groupControl2.Controls.Add(this.labelControl52);
             this.groupControl2.Controls.Add(this.txtDelAccName);
-            this.groupControl2.Controls.Add(this.txtDelTransID);
             this.groupControl2.Controls.Add(this.labelControl15);
             this.groupControl2.Controls.Add(this.labelControl16);
             this.groupControl2.Controls.Add(this.labelControl17);
@@ -926,6 +943,7 @@
             this.groupControl2.Controls.Add(this.labelControl19);
             this.groupControl2.Controls.Add(this.txtDelieveryName);
             this.groupControl2.Controls.Add(this.txtDelieveryCode);
+            this.groupControl2.Controls.Add(this.txtDelTransID);
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl2.Location = new System.Drawing.Point(705, 4);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1065,12 +1083,12 @@
             // 
             this.txtDelieveryName.Enabled = false;
             this.txtDelieveryName.EnterMoveNextControl = true;
-            this.txtDelieveryName.Location = new System.Drawing.Point(185, 58);
+            this.txtDelieveryName.Location = new System.Drawing.Point(194, 58);
             this.txtDelieveryName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDelieveryName.Name = "txtDelieveryName";
             this.txtDelieveryName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDelieveryName.Properties.ReadOnly = true;
-            this.txtDelieveryName.Size = new System.Drawing.Size(386, 24);
+            this.txtDelieveryName.Size = new System.Drawing.Size(436, 24);
             this.txtDelieveryName.TabIndex = 532;
             this.txtDelieveryName.TabStop = false;
             // 
@@ -1316,9 +1334,9 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.HelpGrid.Location = new System.Drawing.Point(91, 165);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -2226,7 +2244,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(603, 207);
+            this.xtraTabPage5.Size = new System.Drawing.Size(603, 203);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -3017,7 +3035,7 @@
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(469, 207);
+            this.xtraTabPage3.Size = new System.Drawing.Size(469, 203);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -3504,6 +3522,138 @@
             this.gridView8.GridControl = this.PSGrid;
             this.gridView8.Name = "gridView8";
             // 
+            // groupControl7
+            // 
+            this.groupControl7.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("groupControl7.CaptionImageOptions.Image")));
+            this.groupControl7.Controls.Add(this.labelControl57);
+            this.groupControl7.Controls.Add(this.textEdit1);
+            this.groupControl7.Controls.Add(this.txtTransMode);
+            this.groupControl7.Controls.Add(this.txtUnits);
+            this.groupControl7.Controls.Add(this.txtSubSupplyType);
+            this.groupControl7.Controls.Add(this.txtSupplyType);
+            this.groupControl7.Controls.Add(this.txtVehicleUpdateReason);
+            this.groupControl7.Controls.Add(this.label26);
+            this.groupControl7.Controls.Add(this.label24);
+            this.groupControl7.Controls.Add(this.label22);
+            this.groupControl7.Controls.Add(this.label21);
+            this.groupControl7.Controls.Add(this.label20);
+            this.groupControl7.GroupStyle = DevExpress.Utils.GroupStyle.Light;
+            this.groupControl7.Location = new System.Drawing.Point(705, 481);
+            this.groupControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupControl7.Name = "groupControl7";
+            this.groupControl7.Size = new System.Drawing.Size(679, 128);
+            this.groupControl7.TabIndex = 558;
+            this.groupControl7.Text = "EWAY DATA";
+            // 
+            // labelControl57
+            // 
+            this.labelControl57.Location = new System.Drawing.Point(78, 34);
+            this.labelControl57.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl57.Name = "labelControl57";
+            this.labelControl57.Size = new System.Drawing.Size(63, 17);
+            this.labelControl57.TabIndex = 554;
+            this.labelControl57.Text = "Vehicle No";
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(145, 30);
+            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textEdit1.Properties.MaxLength = 6;
+            this.textEdit1.Size = new System.Drawing.Size(199, 24);
+            this.textEdit1.TabIndex = 552;
+            // 
+            // txtTransMode
+            // 
+            this.txtTransMode.FormattingEnabled = true;
+            this.txtTransMode.Location = new System.Drawing.Point(145, 86);
+            this.txtTransMode.Name = "txtTransMode";
+            this.txtTransMode.Size = new System.Drawing.Size(197, 25);
+            this.txtTransMode.TabIndex = 562;
+            // 
+            // txtUnits
+            // 
+            this.txtUnits.FormattingEnabled = true;
+            this.txtUnits.Location = new System.Drawing.Point(505, 86);
+            this.txtUnits.Name = "txtUnits";
+            this.txtUnits.Size = new System.Drawing.Size(152, 25);
+            this.txtUnits.TabIndex = 561;
+            // 
+            // txtSubSupplyType
+            // 
+            this.txtSubSupplyType.FormattingEnabled = true;
+            this.txtSubSupplyType.Location = new System.Drawing.Point(506, 58);
+            this.txtSubSupplyType.Name = "txtSubSupplyType";
+            this.txtSubSupplyType.Size = new System.Drawing.Size(152, 25);
+            this.txtSubSupplyType.TabIndex = 560;
+            // 
+            // txtSupplyType
+            // 
+            this.txtSupplyType.FormattingEnabled = true;
+            this.txtSupplyType.Location = new System.Drawing.Point(505, 30);
+            this.txtSupplyType.Name = "txtSupplyType";
+            this.txtSupplyType.Size = new System.Drawing.Size(152, 25);
+            this.txtSupplyType.TabIndex = 559;
+            // 
+            // txtVehicleUpdateReason
+            // 
+            this.txtVehicleUpdateReason.FormattingEnabled = true;
+            this.txtVehicleUpdateReason.Location = new System.Drawing.Point(145, 58);
+            this.txtVehicleUpdateReason.Name = "txtVehicleUpdateReason";
+            this.txtVehicleUpdateReason.Size = new System.Drawing.Size(199, 25);
+            this.txtVehicleUpdateReason.TabIndex = 558;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(7, 61);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(134, 19);
+            this.label26.TabIndex = 557;
+            this.label26.Text = "Vehicle Updt Reason";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(61, 89);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(80, 19);
+            this.label24.TabIndex = 556;
+            this.label24.Text = "Trans.Mode";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(462, 89);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(41, 19);
+            this.label22.TabIndex = 555;
+            this.label22.Text = "Units";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(394, 61);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(109, 19);
+            this.label21.TabIndex = 553;
+            this.label21.Text = "Sub Supply Type";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(421, 33);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(82, 19);
+            this.label20.TabIndex = 551;
+            this.label20.Text = "Supply Type";
+            // 
             // FrmInvoiceMstAdd
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -3676,6 +3826,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl7)).EndInit();
+            this.groupControl7.ResumeLayout(false);
+            this.groupControl7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3930,5 +4084,18 @@
         private DevExpress.XtraEditors.TextEdit txtItemMRP;
         private DevExpress.XtraEditors.TextEdit txtItemFlatRate;
         private DevExpress.XtraEditors.TextEdit txtItemDiscAMount;
+        private DevExpress.XtraEditors.GroupControl groupControl7;
+        private DevExpress.XtraEditors.LabelControl labelControl57;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.ComboBox txtTransMode;
+        private System.Windows.Forms.ComboBox txtUnits;
+        private System.Windows.Forms.ComboBox txtSubSupplyType;
+        private System.Windows.Forms.ComboBox txtSupplyType;
+        private System.Windows.Forms.ComboBox txtVehicleUpdateReason;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
     }
 }

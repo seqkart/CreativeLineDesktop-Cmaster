@@ -1,9 +1,13 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using TaxProEWB.API;
 
 namespace WindowsFormsApplication1
 {
@@ -720,6 +724,56 @@ namespace WindowsFormsApplication1
         private void BtnUndo_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+
+        private async Task GetGSTINDataAsync()
+        {
+            EWBSession EwbSession = new EWBSession();
+            EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+            EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+            EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+            EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+            EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+            EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+            EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+
+
+            TxnRespWithObjAndInfo<EWBSession> TxnResp2 = await EWBAPI.GetAuthTokenAsync(EwbSession);
+            if (TxnResp2.IsSuccess)
+            {
+                //TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
+
+                TxnRespWithObjAndInfo<GSTINDetail> TxnResp = await EWBAPI.GetGSTNDetailAsync(EwbSession, txtGSTNo.Text);
+
+
+                if (TxnResp.IsSuccess)
+                {
+                    TextEdit t = new TextEdit();
+                    t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+                    var details = JObject.Parse(t.Text);
+
+
+                    if (details["status"].ToString().ToUpper() == "ACT")
+                    {
+                        lblGstInfo.Text = "Status - Active As on Date - " + DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+                    }
+                    txtGSTType.Text = details["txpType"].ToString();
+
+                    txtGSTStateCode.Text = details["stateCode"].ToString().PadLeft(2, '0');
+
+
+                    XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+                }
+                else
+                {
+                    XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.TxnOutcome));
+                }
+            }
+        }
+        private   void btnValidate_Click(object sender, EventArgs e)
+        {
+            GetGSTINDataAsync();
         }
     }
 }

@@ -216,6 +216,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // LBDEPCODE
             // 
@@ -245,7 +246,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(62, 103);
+            this.HelpGrid.Location = new System.Drawing.Point(78, 35);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";

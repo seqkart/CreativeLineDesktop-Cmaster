@@ -71,6 +71,8 @@
             this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
             this.DetailReport1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Detail2 = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel46 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
@@ -84,6 +86,7 @@
             this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
@@ -91,9 +94,6 @@
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource_EmpMST)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -490,7 +490,9 @@
             this.xrLabel20.SizeF = new System.Drawing.SizeF(89.16664F, 25F);
             this.xrLabel20.StylePriority.UseFont = false;
             this.xrLabel20.StylePriority.UsePadding = false;
+            this.xrLabel20.StylePriority.UseTextAlignment = false;
             this.xrLabel20.Text = "Date";
+            this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrLabel20.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel20_BeforePrint);
             // 
             // xrLabel21
@@ -503,7 +505,9 @@
             this.xrLabel21.SizeF = new System.Drawing.SizeF(89.16664F, 25F);
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.StylePriority.UsePadding = false;
+            this.xrLabel21.StylePriority.UseTextAlignment = false;
             this.xrLabel21.Text = "Status";
+            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel22
             // 
@@ -515,7 +519,9 @@
             this.xrLabel22.SizeF = new System.Drawing.SizeF(89.16664F, 25F);
             this.xrLabel22.StylePriority.UseFont = false;
             this.xrLabel22.StylePriority.UsePadding = false;
+            this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.Text = "TimeIn First";
+            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel23
             // 
@@ -527,7 +533,9 @@
             this.xrLabel23.SizeF = new System.Drawing.SizeF(89.16664F, 25F);
             this.xrLabel23.StylePriority.UseFont = false;
             this.xrLabel23.StylePriority.UsePadding = false;
+            this.xrLabel23.StylePriority.UseTextAlignment = false;
             this.xrLabel23.Text = "TimeIn Last";
+            this.xrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel24
             // 
@@ -541,7 +549,7 @@
             this.xrLabel24.StylePriority.UsePadding = false;
             this.xrLabel24.StylePriority.UseTextAlignment = false;
             this.xrLabel24.Text = "Working Hours";
-            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel25
             // 
@@ -555,7 +563,7 @@
             this.xrLabel25.StylePriority.UsePadding = false;
             this.xrLabel25.StylePriority.UseTextAlignment = false;
             this.xrLabel25.Text = "Over Time";
-            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel28
             // 
@@ -567,7 +575,9 @@
             this.xrLabel28.SizeF = new System.Drawing.SizeF(89.16664F, 25F);
             this.xrLabel28.StylePriority.UseFont = false;
             this.xrLabel28.StylePriority.UsePadding = false;
+            this.xrLabel28.StylePriority.UseTextAlignment = false;
             this.xrLabel28.Text = "TimeOut First";
+            this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel29
             // 
@@ -579,7 +589,9 @@
             this.xrLabel29.SizeF = new System.Drawing.SizeF(89.16664F, 25F);
             this.xrLabel29.StylePriority.UseFont = false;
             this.xrLabel29.StylePriority.UsePadding = false;
+            this.xrLabel29.StylePriority.UseTextAlignment = false;
             this.xrLabel29.Text = "TimeOut Last";
+            this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // xrLabel53
             // 
@@ -593,7 +605,7 @@
             this.xrLabel53.StylePriority.UsePadding = false;
             this.xrLabel53.StylePriority.UseTextAlignment = false;
             this.xrLabel53.Text = "Gate Pass";
-            this.xrLabel53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // DetailReport1
             // 
@@ -624,6 +636,34 @@
             this.xrLabel39});
             this.Detail2.HeightF = 59.5417F;
             this.Detail2.Name = "Detail2";
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NoOfCups]")});
+            this.xrLabel4.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(590.1666F, 0F);
+            this.xrLabel4.Multiline = true;
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(70.83337F, 23F);
+            this.xrLabel4.StylePriority.UseFont = false;
+            this.xrLabel4.Text = "xrLabel4";
+            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TotalTeaAmount]")});
+            this.xrLabel1.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(589.3334F, 23.33802F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(70.83331F, 23F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.Text = "xrLabel1";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel46
             // 
@@ -820,6 +860,19 @@
             this.ReportHeader.HeightF = 34.83333F;
             this.ReportHeader.Name = "ReportHeader";
             // 
+            // xrLabel5
+            // 
+            this.xrLabel5.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(581.6667F, 0.8333333F);
+            this.xrLabel5.Multiline = true;
+            this.xrLabel5.Name = "xrLabel5";
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(86.66669F, 34F);
+            this.xrLabel5.StylePriority.UseFont = false;
+            this.xrLabel5.StylePriority.UseTextAlignment = false;
+            this.xrLabel5.Text = "TOTAL CUP\r\nTEA AMT";
+            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // xrLabel36
             // 
             this.xrLabel36.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
@@ -917,47 +970,6 @@
             this.xrLabel30.Text = "SALARY\r\nAREARS";
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             this.xrLabel30.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel_All_BeforePrint);
-            // 
-            // xrLabel1
-            // 
-            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TotalTeaAmount]")});
-            this.xrLabel1.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(589.3334F, 23.33802F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(70.83331F, 23F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "xrLabel1";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NoOfCups]")});
-            this.xrLabel4.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(590.1666F, 0F);
-            this.xrLabel4.Multiline = true;
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(70.83337F, 23F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.Text = "xrLabel4";
-            this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrLabel5
-            // 
-            this.xrLabel5.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold);
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(581.6667F, 0.8333333F);
-            this.xrLabel5.Multiline = true;
-            this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(86.66669F, 34F);
-            this.xrLabel5.StylePriority.UseFont = false;
-            this.xrLabel5.StylePriority.UseTextAlignment = false;
-            this.xrLabel5.Text = "TOTAL CUP\r\nTEA AMT";
-            this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // XtraReport_EmployeeAttendance
             // 

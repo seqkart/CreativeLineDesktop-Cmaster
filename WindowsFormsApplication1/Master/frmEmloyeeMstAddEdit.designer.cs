@@ -1910,12 +1910,12 @@
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 825);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 837);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 78);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 78);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(840, 78);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(848, 78);
             this.windowsUIButtonPanelMain.TabIndex = 55;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
@@ -1938,7 +1938,7 @@
             this.windowsUIButtonPanelCloseButton.Name = "windowsUIButtonPanelCloseButton";
             this.windowsUIButtonPanelCloseButton.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.windowsUIButtonPanelCloseButton.Padding = new System.Windows.Forms.Padding(6, 7, 0, 0);
-            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 825);
+            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 837);
             this.windowsUIButtonPanelCloseButton.TabIndex = 247;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
@@ -1958,7 +1958,7 @@
             this.labelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(12, 7, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(788, 39);
+            this.labelControl.Size = new System.Drawing.Size(796, 39);
             this.labelControl.TabIndex = 248;
             this.labelControl.Text = "Employee Master";
             // 
@@ -2125,7 +2125,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 903);
+            this.ClientSize = new System.Drawing.Size(848, 915);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

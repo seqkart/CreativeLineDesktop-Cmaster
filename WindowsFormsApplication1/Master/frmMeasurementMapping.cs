@@ -116,11 +116,7 @@ namespace WindowsFormsApplication1.Master
                         sqlcom.Parameters.AddWithValue("@MCode", txtMCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@MDesc", txtMDesc.Text.Trim());
                         sqlcom.ExecuteNonQuery();
-                        //ProjectFunctions.GetDataSet("Delete from Measurements Where MCode='" + txtMCode.Text + "'");
-                        //foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
-                        //{
-                        //    ProjectFunctions.GetDataSet("Insert into Measurements(MCode,SZSYSID,Measurement)values('" + txtMCode.Text + "','" + dr["SZSYSID"].ToString() + "','" + dr["Measurement"].ToString() + "')");
-                        //}
+                 
                         sqlcon.Close();
                         Close();
                     }

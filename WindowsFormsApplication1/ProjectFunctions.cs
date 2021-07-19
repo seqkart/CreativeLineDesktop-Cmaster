@@ -1899,50 +1899,102 @@ namespace WindowsFormsApplication1
 
 
 
-            DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
-            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
-            {
-                EWBSession EwbSession = new EWBSession();
-                EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
-                EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
-                EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
-                EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
-                EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
-                EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
-                EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
-                long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
-                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
+            //DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            //if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
+            //{
+            //    EWBSession EwbSession = new EWBSession();
+            //    EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+            //    EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+            //    EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+            //    EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+            //    EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+            //    EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+            //    EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+            //    long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
 
-                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
-                if (TxnResp.IsSuccess == true)
-                {
-                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWayDetailed"))
-                    {
-                        string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
-                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
-                    }
-                    else
-                    {
-                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWayDetailed");
-                        string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
-                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
-                    }
-                    //if (System.IO.File.Exists(Application.StartupPath + "\\EWayDetailed\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
-                    //{
-                    //    System.IO.File.Copy(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWayDetailed\\GST-" + BillNo + ".pdf");
-                    //   // System.IO.File.Delete(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
-                    //}
-                }
-                else
-                {
-                    XtraMessageBox.Show(TxnResp.TxnOutcome);
-                }
+
+
+
+            //    var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+            //    if (TxnResp.IsSuccess == true)
+            //    {
+            //        if (System.IO.Directory.Exists(Application.StartupPath + "\\EWayDetailed"))
+            //        {
+            //            string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
+            //            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
+            //        }
+            //        else
+            //        {
+            //            System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWayDetailed");
+            //            string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
+            //            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
+            //        }
+            //        //if (System.IO.File.Exists(Application.StartupPath + "\\EWayDetailed\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
+            //        //{
+            //        //    System.IO.File.Copy(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWayDetailed\\GST-" + BillNo + ".pdf");
+            //        //   // System.IO.File.Delete(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
+            //        //}
+            //    }
+            //    else
+            //    {
+            //        XtraMessageBox.Show(TxnResp.TxnOutcome);
+            //    }
+            //}
+            //else
+            //{
+            //    XtraMessageBox.Show("EWay Bill is not generated then how to print");
+            //    return;
+            //}
+        }
+
+        public static async Task GetAPIPendingHitsAsync()
+        {
+            EWBSession EwbSession = new EWBSession();
+            EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+            EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+            EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+            EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+            EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+            EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+            EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+            TxnRespWithObjAndInfo<EwbApiBalance> TxnResp = await EWBAPI.GetApiBalance(EwbSession);
+            if (TxnResp.IsSuccess == true)
+            {
+                XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+                TextEdit t = new TextEdit();
+                t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+                var details = JObject.Parse(t.Text);
+                ProjectFunctions.SpeakError("Pending EWayBill  API Hits - " + details["EWBApiBal"].ToString() + " And Expiry Date is " + Convert.ToDateTime(details["EWBApiBalExpDt"]).ToString("dd-MM-yyyy"));
             }
+
             else
             {
-                XtraMessageBox.Show("EWay Bill is not generated then how to print");
-                return;
+                XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.TxnOutcome));
             }
+
+
+        }
+        public static async Task GetAPIHSNCodeInfo(String HSNCode)
+        {
+            EWBSession EwbSession = new EWBSession();
+            EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+            EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+            EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+            EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+            EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+            EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+            EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+
+            TxnRespWithObjAndInfo<HSNDetail> TxnResp = await EWBAPI.GetHSNDetailAsync(EwbSession, HSNCode);
+            if (TxnResp.IsSuccess)
+                XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+            else
+                XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.TxnOutcome));
+        }
+        public static async void ValidateGSTNo(String GSTNo,XtraForm form)
+        {
+            //GSTNo = "06AAACS0628K1ZH";
+
         }
         public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
         {
@@ -1957,72 +2009,69 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            //GlobalVariables.CmpGSTNo = "34AACCC1596Q002";
-            //ReqGenEwbPl ewbGen = new ReqGenEwbPl();
-            //ewbGen.supplyType = "O";
-            //ewbGen.subSupplyType = "1";
-            //ewbGen.subSupplyDesc = "";
-            //ewbGen.docType = "INV";
-            //ewbGen.docNo = "GST-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
-            ////ewbGen.docDate = Convert.ToDateTime("2021-04-23").ToString("dd/MM/yyyy");
-            //ewbGen.docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd/MM/yyyy");
-            ////ewbGen.fromGstin = GlobalVariables.CmpGSTNo;
-            //ewbGen.fromGstin = "34AACCC1596Q002";
-            //ewbGen.fromTrdName = GlobalVariables.CompanyName;
-            //ewbGen.fromAddr1 = GlobalVariables.CAddress1;
-            //ewbGen.fromAddr2 = GlobalVariables.CAddress2;
-            //ewbGen.fromPlace = "ludhiana";
-            ////ewbGen.fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode);
-            //ewbGen.fromPincode = 605001;
-            ////ewbGen.fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
-            ////ewbGen.actFromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
-            //ewbGen.fromStateCode = 34;
-            //ewbGen.actFromStateCode = 34;
-            //ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            //ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
-            //ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
-            //ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
-            //ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
-            //ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
-            //ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
-            //ewbGen.actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
-            //ewbGen.transactionType = 1;
-            //ewbGen.dispatchFromGSTIN = "";
-            //ewbGen.dispatchFromTradeName = GlobalVariables.CompanyName;
-            //ewbGen.shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            //ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
-
-
-
+            GlobalVariables.CmpGSTNo = GlobalVariables.EWBGSTIN;
             ReqGenEwbPl ewbGen = new ReqGenEwbPl();
-
             ewbGen.supplyType = "O";
             ewbGen.subSupplyType = "1";
-            ewbGen.subSupplyDesc = string.Empty;
+            ewbGen.subSupplyDesc = "";
             ewbGen.docType = "INV";
-            ewbGen.docNo = "235";
-            ewbGen.docDate = "21/04/2021";
-            ewbGen.fromGstin = "34AACCC1596Q002";//"07AACCC1596Q1Z4";
-            ewbGen.fromTrdName = "welton";
-            ewbGen.fromAddr1 = "2ND CROSS NO 59  19  A";
-            ewbGen.fromAddr2 = "GROUND FLOOR OSBORNE ROAD";
-            ewbGen.fromPlace = "FRAZER TOWN";
-            ewbGen.fromPincode = 605001;//263652;/*110001;*/
-            ewbGen.fromStateCode = 34;
-            ewbGen.actFromStateCode = 34;
-            ewbGen.toGstin = "05AAACG0904A1ZL";
-            ewbGen.toTrdName = "sthuthya";
-            ewbGen.toAddr1 = "Shree Nilaya";
-            ewbGen.toAddr2 = "Dasarahosahalli";
-            ewbGen.toPlace = "Beml Nagar";
-            ewbGen.toPincode = 263652;/*110005;*/
-            ewbGen.toStateCode = 05;
-            ewbGen.actToStateCode = 05;
+            ewbGen.docNo = "GST-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
+
+            ewbGen.docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd/MM/yyyy");
+            ewbGen.fromGstin = GlobalVariables.CmpGSTNo;
+            ewbGen.fromTrdName = GlobalVariables.CompanyName;
+            ewbGen.fromAddr1 = GlobalVariables.CAddress1;
+            ewbGen.fromAddr2 = GlobalVariables.CAddress2;
+            ewbGen.fromPlace = "ludhiana";
+            ewbGen.fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode);
+            ewbGen.fromPincode = 605001;
+            ewbGen.fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
+            ewbGen.actFromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
+            ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+            ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
+            ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
+            ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
+            ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
+            ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
+            ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
+            ewbGen.actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
             ewbGen.transactionType = 1;
-            ewbGen.dispatchFromGSTIN = string.Empty; /*29AAAAA1303P1ZV*/
-            ewbGen.dispatchFromTradeName = "ABC Traders";
-            ewbGen.shipToGSTIN = "05AAACG0904A1ZL"; //29ALSPR1722R1Z3
-            ewbGen.shipToTradeName = "XYZ Traders";
+            ewbGen.dispatchFromGSTIN = GlobalVariables.CmpGSTNo;
+            ewbGen.dispatchFromTradeName = GlobalVariables.CompanyName;
+            ewbGen.shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+            ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
+
+
+
+            //ReqGenEwbPl ewbGen = new ReqGenEwbPl();
+
+            //ewbGen.supplyType = "O";
+            //ewbGen.subSupplyType = "1";
+            //ewbGen.subSupplyDesc = string.Empty;
+            //ewbGen.docType = "INV";
+            //ewbGen.docNo = "235";
+            //ewbGen.docDate = "21/04/2021";
+            //ewbGen.fromGstin = "34AACCC1596Q002";//"07AACCC1596Q1Z4";
+            //ewbGen.fromTrdName = "welton";
+            //ewbGen.fromAddr1 = "2ND CROSS NO 59  19  A";
+            //ewbGen.fromAddr2 = "GROUND FLOOR OSBORNE ROAD";
+            //ewbGen.fromPlace = "FRAZER TOWN";
+            //ewbGen.fromPincode = 605001;//263652;/*110001;*/
+            //ewbGen.fromStateCode = 34;
+            //ewbGen.actFromStateCode = 34;
+            //ewbGen.toGstin = "05AAACG0904A1ZL";
+            //ewbGen.toTrdName = "sthuthya";
+            //ewbGen.toAddr1 = "Shree Nilaya";
+            //ewbGen.toAddr2 = "Dasarahosahalli";
+            //ewbGen.toPlace = "Beml Nagar";
+            //ewbGen.toPincode = 263652;/*110005;*/
+            //ewbGen.toStateCode = 05;
+            //ewbGen.actToStateCode = 05;
+            //ewbGen.transactionType = 1;
+            //ewbGen.dispatchFromGSTIN = string.Empty; /*29AAAAA1303P1ZV*/
+            //ewbGen.dispatchFromTradeName = "ABC Traders";
+            //ewbGen.shipToGSTIN = "05AAACG0904A1ZL"; //29ALSPR1722R1Z3
+            //ewbGen.shipToTradeName = "XYZ Traders";
 
 
             //ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
@@ -2057,7 +2106,7 @@ namespace WindowsFormsApplication1
             ewbGen.transMode = "1";//1
             ewbGen.transDistance = "0"; /*1200*/
             ewbGen.transDocDate = string.Empty;
-            ewbGen.vehicleNo = "PVC1234";
+            ewbGen.vehicleNo = "";
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
 
@@ -2083,7 +2132,7 @@ namespace WindowsFormsApplication1
 
 
             EWBSession EwbSession = new EWBSession();
-            //calculation done
+
             EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
             EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
             EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
@@ -2111,28 +2160,20 @@ namespace WindowsFormsApplication1
                 XtraMessageBox.Show(TxnResp.TxnOutcome);
                 //Check for error "The distance between the pincodes given is too high"
 
-
-
                 if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
                 {
                     RespInfoPl respInfoPl = new RespInfoPl();
-
                     respInfoPl = JsonConvert.DeserializeObject<RespInfoPl>(TxnResp.Info);
-                    //You can retrive respInfoPl attributes here
                     ewbGen.transDistance = respInfoPl.distance;
-                    //Call GenEWB API again
                     TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
                     if (TxnResp.IsSuccess)
                     {
-
-
-                        //String EWauBillNo= details[""]
-
-
                         XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
                     }
                     else
+                    {
                         XtraMessageBox.Show(TxnResp.TxnOutcome);
+                    }
                 }
 
             }

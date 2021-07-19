@@ -62,6 +62,8 @@
             this.txtSLDesc = new DevExpress.XtraEditors.TextEdit();
             this.BInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.lblGstInfo = new DevExpress.XtraEditors.LabelControl();
+            this.btnValidate = new DevExpress.XtraEditors.SimpleButton();
             this.txtCountry = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtCityName = new DevExpress.XtraEditors.TextEdit();
@@ -591,6 +593,8 @@
             // 
             // panelControl2
             // 
+            this.panelControl2.Controls.Add(this.lblGstInfo);
+            this.panelControl2.Controls.Add(this.btnValidate);
             this.panelControl2.Controls.Add(this.txtCountry);
             this.panelControl2.Controls.Add(this.label5);
             this.panelControl2.Controls.Add(this.txtCityName);
@@ -640,6 +644,23 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(793, 492);
             this.panelControl2.TabIndex = 0;
+            // 
+            // lblGstInfo
+            // 
+            this.lblGstInfo.Location = new System.Drawing.Point(472, 406);
+            this.lblGstInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblGstInfo.Name = "lblGstInfo";
+            this.lblGstInfo.Size = new System.Drawing.Size(0, 17);
+            this.lblGstInfo.TabIndex = 455;
+            // 
+            // btnValidate
+            // 
+            this.btnValidate.Location = new System.Drawing.Point(472, 370);
+            this.btnValidate.Name = "btnValidate";
+            this.btnValidate.Size = new System.Drawing.Size(94, 29);
+            this.btnValidate.TabIndex = 454;
+            this.btnValidate.Text = "Validate";
+            this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
             // 
             // txtCountry
             // 
@@ -1372,7 +1393,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(72, 71);
+            this.HelpGrid.Location = new System.Drawing.Point(187, 43);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -1831,5 +1852,7 @@
         private DevExpress.XtraEditors.TextEdit txtDelAccName;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.TextEdit txtDelZipCode;
+        private DevExpress.XtraEditors.SimpleButton btnValidate;
+        private DevExpress.XtraEditors.LabelControl lblGstInfo;
     }
 }

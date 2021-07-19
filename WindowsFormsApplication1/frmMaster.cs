@@ -1193,7 +1193,8 @@ namespace WindowsFormsApplication1
                 DXMenuItem PartyAccount;
                 DXMenuItem XMLData;
                 DXMenuItem XMLSCHEMA;
-
+                DXMenuItem APICount;
+                DXMenuItem HSNCodeInfo;
                 DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                 PartyAccount = new DXMenuItem("View Party Account",
                                               (o1, e1) =>
@@ -1296,6 +1297,16 @@ namespace WindowsFormsApplication1
                                         {
                                             (InvoiceGridView.DataSource as DataTable).WriteXmlSchema("C:\\Temp\\Data.xml");
                                         });
+                APICount = new DXMenuItem("API PENDING HITS",
+                                       (o1, e1) =>
+                                       {
+                                           ProjectFunctions.GetAPIPendingHitsAsync();
+                                       });
+                HSNCodeInfo = new DXMenuItem("HSN Code Imformation",
+                                       (o1, e1) =>
+                                       {
+                                           ProjectFunctions.GetAPIHSNCodeInfo(CurrentRow["GrpHSNCode"].ToString());
+                                       });
 
 
                 e.Menu.Items.Add(Copy);
@@ -1311,6 +1322,16 @@ namespace WindowsFormsApplication1
                 {
                     e.Menu.Items.Add(PartyAccount);
                 }
+
+                if (GlobalVariables.ProgCode == "PROG232")
+                {
+                    e.Menu.Items.Add(APICount);
+                }
+                if (GlobalVariables.ProgCode == "PROG16")
+                {
+                    e.Menu.Items.Add(HSNCodeInfo);
+                }
+
             }
             catch (Exception ex)
 
