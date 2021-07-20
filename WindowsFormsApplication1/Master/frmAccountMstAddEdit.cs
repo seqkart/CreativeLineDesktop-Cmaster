@@ -746,8 +746,7 @@ namespace WindowsFormsApplication1
 
                 TxnRespWithObjAndInfo<GSTINDetail> TxnResp = await EWBAPI.GetGSTNDetailAsync(EwbSession, txtGSTNo.Text);
 
-
-                if (TxnResp.IsSuccess)
+                                if (TxnResp.IsSuccess)
                 {
                     TextEdit t = new TextEdit();
                     t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
