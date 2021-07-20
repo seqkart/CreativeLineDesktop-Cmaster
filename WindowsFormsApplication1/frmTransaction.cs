@@ -972,7 +972,7 @@ namespace WindowsFormsApplication1
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Generate EWAY Bill", (o1, e1) =>
                     {
-                        ProjectFunctions.GenerateEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                        //ProjectFunctions.GenerateEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
                     }));
                 }
                 if (GlobalVariables.ProgCode == "PROG131")

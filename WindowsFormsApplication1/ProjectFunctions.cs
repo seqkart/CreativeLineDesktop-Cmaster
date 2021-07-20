@@ -1996,7 +1996,7 @@ namespace WindowsFormsApplication1
             //GSTNo = "06AAACS0628K1ZH";
 
         }
-        public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
+        public static async void GenerateEWaybill(String BillNo, DateTime BillDate,String SupplyType,String SubSupplyType,String SubSupplyDesc)
         {
             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 

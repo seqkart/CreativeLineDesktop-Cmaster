@@ -734,14 +734,28 @@ namespace WindowsFormsApplication1
                 {
                     chPackingSlip.Checked = true;
                 }
-                if (ds.Tables[0].Rows[0]["SIMINVLOT"].ToString().ToUpper() == "Y")
+                if (ds.Tables[0].Rows[0]["SIMINVLOT"].ToString().ToUpper() == "R")
                 {
-                    CHSOR.Checked = true;
+                    chRegular.Checked = true;
+                    CHSOR.Checked = false;
+                    chLot.Checked = false;
 
                 }
                 else
                 {
-                    chRegular.Checked = true;
+                    if (ds.Tables[0].Rows[0]["SIMINVLOT"].ToString().ToUpper() == "L")
+                    {
+                        chRegular.Checked = false;
+                        CHSOR.Checked = false;
+                        chLot.Checked = true;
+
+                    }
+                    else
+                    {
+                        chRegular.Checked = false;
+                        CHSOR.Checked = true;
+                        chLot.Checked = false;
+                    }
                 }
 
                 txtTotalBoxes.Text = ds.Tables[0].Rows[0]["SIMTOTBOXES"].ToString();
@@ -922,11 +936,18 @@ namespace WindowsFormsApplication1
                             }
                             if (CHSOR.Checked)
                             {
-                                sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "Y";
+                                sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "S";
                             }
                             else
                             {
-                                sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "N";
+                                if (chRegular.Checked)
+                                {
+                                    sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "R";
+                                }
+                                else
+                                {
+                                    sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "L";
+                                }
                             }
                             if (chExclusive.Checked)
                             {
@@ -1023,11 +1044,18 @@ namespace WindowsFormsApplication1
                             }
                             if (CHSOR.Checked)
                             {
-                                sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "Y";
+                                sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "S";
                             }
                             else
                             {
-                                sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "N";
+                                if (chRegular.Checked)
+                                {
+                                    sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "R";
+                                }
+                                else
+                                {
+                                    sqlcom.Parameters.Add("@SIMINVLOT", SqlDbType.NVarChar).Value = "L";
+                                }
                             }
                             if (chExclusive.Checked)
                             {
@@ -1072,11 +1100,11 @@ namespace WindowsFormsApplication1
                                                         + " (SIDSYSDATE,SIDFNYR,SIDDATE,SIDNO,SIDSERIES,SIDPartyC,"
                                                         + " SIDPSNO,SIDBOXNO,SIDBARCODE,SIDARTNO,SIDARTID,SIDCOLID,"
                                                         + " SIDSIZID,SIDSCANQTY,SIDARTMRP,SIDARTWSP,SIDBOXQTY,SIDBOXMRPVAL,SIDBOXWSPVAL,SIDITMDISCPRCN,"
-                                                        + "SIDITMDISCAMT,SIDITMNETAMT,SIDPONO,SIDSGSTPRCN,SIDSGSTAMT,SIDCGSTPRCN,SIDCGSTAMT,SIDIGSTPRCN,SIDIGSTAMT,TAXCODE,UnitCode  )"
+                                                        + "SIDITMDISCAMT,SIDITMNETAMT,SIDPONO,SIDSGSTPRCN,SIDSGSTAMT,SIDCGSTPRCN,SIDCGSTAMT,SIDIGSTPRCN,SIDIGSTAMT,TAXCODE,UnitCode,SaleType  )"
                                                         + " values(@SIDSYSDATE,@SIDFNYR,@SIDDATE,@SIDNO,@SIDSERIES,@SIDPartyC,"
                                                         + " @SIDPSNO,@SIDBOXNO,@SIDBARCODE,@SIDARTNO,@SIDARTID,@SIDCOLID,"
                                                         + " @SIDSIZID,@SIDSCANQTY,@SIDARTMRP,@SIDARTWSP,@SIDBOXQTY,@SIDBOXMRPVAL,@SIDBOXWSPVAL,@SIDITMDISCPRCN,@SIDITMDISCAMT,"
-                                                        + " @SIDITMNETAMT,@SIDPONO,@SIDSGSTPRCN,@SIDSGSTAMT,@SIDCGSTPRCN,@SIDCGSTAMT,@SIDIGSTPRCN,@SIDIGSTAMT,@TAXCODE,@UnitCode)";
+                                                        + " @SIDITMNETAMT,@SIDPONO,@SIDSGSTPRCN,@SIDSGSTAMT,@SIDCGSTPRCN,@SIDCGSTAMT,@SIDIGSTPRCN,@SIDIGSTAMT,@TAXCODE,@UnitCode,@SaleType)";
                             sqlcom.Parameters.Add("@SIDSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@SIDFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
                             sqlcom.Parameters.Add("@SIDDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd");
@@ -1139,6 +1167,21 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIDIGSTAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(currentrow["SIDIGSTAMT"]);
                             sqlcom.Parameters.Add("@TAXCODE", SqlDbType.NVarChar).Value = currentrow["TAXCODE"].ToString();
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
+                            if (CHSOR.Checked)
+                            {
+                                sqlcom.Parameters.Add("@SaleType", SqlDbType.NVarChar).Value = "S";
+                            }
+                            else
+                            {
+                                if (chRegular.Checked)
+                                {
+                                    sqlcom.Parameters.Add("@SaleType", SqlDbType.NVarChar).Value = "R";
+                                }
+                                else
+                                {
+                                    sqlcom.Parameters.Add("@SaleType", SqlDbType.NVarChar).Value = "L";
+                                }
+                            }
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -1933,9 +1976,6 @@ namespace WindowsFormsApplication1
             PSGridView.UpdateCurrentRow();
 
             DataSet Ds = new DataSet();
-#pragma warning disable CS0219 // The variable 'i' is assigned but its value is never used
-            int i = 0;
-#pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
 
             string LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0][0].ToString();
 
@@ -1976,8 +2016,7 @@ namespace WindowsFormsApplication1
 
 
 
-                            //if (i == 0)
-                            //{
+                            
                             var str = "Exec [sp_LoadTaxMstFInvoice] @PrdCode='" + dr["SIDARTID"].ToString() + "',";
                             str = str + "@LCTag='" + LCTag + "',@ValueOfGoods='" + Convert.ToDecimal(dr["SIDARTMRP"]) + "'";
                             Ds = ProjectFunctions.GetDataSet(str);
@@ -2148,8 +2187,9 @@ namespace WindowsFormsApplication1
         {
             if (chRegular.Checked)
             {
+                chLot.Checked = false;
                 CHSOR.Checked = false;
-                dt.Clear();
+
             }
 
         }
@@ -2160,7 +2200,7 @@ namespace WindowsFormsApplication1
             {
                 chRegular.Checked = false;
                 CHSOR.Checked = false;
-                dt.Clear();
+
             }
         }
 
@@ -2469,6 +2509,21 @@ namespace WindowsFormsApplication1
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CHSOR_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CHSOR.Checked)
+            {
+                chLot.Checked = false;
+                chRegular.Checked = false;
+
+            }
+        }
+
+        private void textEdit1_EditValueChanged(object sender, EventArgs e)
         {
 
         }

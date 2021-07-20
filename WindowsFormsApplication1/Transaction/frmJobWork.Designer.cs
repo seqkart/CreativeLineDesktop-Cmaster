@@ -631,7 +631,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1464, 881);
+            this.ClientSize = new System.Drawing.Size(1466, 884);
             this.ControlBox = false;
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.groupControl1);

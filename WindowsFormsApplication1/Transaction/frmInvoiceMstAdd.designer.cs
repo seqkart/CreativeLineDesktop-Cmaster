@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceMstAdd));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -572,7 +572,7 @@
             // 
             // labelControl57
             // 
-            this.labelControl57.Location = new System.Drawing.Point(78, 34);
+            this.labelControl57.Location = new System.Drawing.Point(72, 34);
             this.labelControl57.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl57.Name = "labelControl57";
             this.labelControl57.Size = new System.Drawing.Size(63, 17);
@@ -588,13 +588,14 @@
             this.textEdit1.Properties.MaxLength = 6;
             this.textEdit1.Size = new System.Drawing.Size(199, 24);
             this.textEdit1.TabIndex = 552;
+            this.textEdit1.EditValueChanged += new System.EventHandler(this.textEdit1_EditValueChanged);
             // 
             // txtTransMode
             // 
             this.txtTransMode.FormattingEnabled = true;
             this.txtTransMode.Location = new System.Drawing.Point(145, 86);
             this.txtTransMode.Name = "txtTransMode";
-            this.txtTransMode.Size = new System.Drawing.Size(197, 25);
+            this.txtTransMode.Size = new System.Drawing.Size(199, 25);
             this.txtTransMode.TabIndex = 562;
             // 
             // txtUnits
@@ -608,7 +609,7 @@
             // txtSubSupplyType
             // 
             this.txtSubSupplyType.FormattingEnabled = true;
-            this.txtSubSupplyType.Location = new System.Drawing.Point(506, 58);
+            this.txtSubSupplyType.Location = new System.Drawing.Point(505, 58);
             this.txtSubSupplyType.Name = "txtSubSupplyType";
             this.txtSubSupplyType.Size = new System.Drawing.Size(152, 25);
             this.txtSubSupplyType.TabIndex = 560;
@@ -652,7 +653,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(462, 89);
+            this.label22.Location = new System.Drawing.Point(460, 89);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 19);
@@ -662,7 +663,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(394, 61);
+            this.label21.Location = new System.Drawing.Point(392, 61);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(109, 19);
@@ -672,7 +673,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(421, 33);
+            this.label20.Location = new System.Drawing.Point(419, 33);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(82, 19);
@@ -892,6 +893,7 @@
             this.chLot.Properties.Caption = "LOT";
             this.chLot.Size = new System.Drawing.Size(147, 24);
             this.chLot.TabIndex = 534;
+            this.chLot.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
             // CHSOR
             // 
@@ -901,7 +903,7 @@
             this.CHSOR.Properties.Caption = "SOR";
             this.CHSOR.Size = new System.Drawing.Size(147, 24);
             this.CHSOR.TabIndex = 533;
-            this.CHSOR.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
+            this.CHSOR.CheckedChanged += new System.EventHandler(this.CHSOR_CheckedChanged);
             // 
             // chRegular
             // 
@@ -1407,7 +1409,7 @@
             // dtInvoiceDate
             // 
             this.dtInvoiceDate.EditValue = null;
-            this.dtInvoiceDate.Location = new System.Drawing.Point(103, 12);
+            this.dtInvoiceDate.Location = new System.Drawing.Point(103, 13);
             this.dtInvoiceDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1421,7 +1423,7 @@
             // 
             // txtSerialNo
             // 
-            this.txtSerialNo.Location = new System.Drawing.Point(386, 12);
+            this.txtSerialNo.Location = new System.Drawing.Point(386, 13);
             this.txtSerialNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSerialNo.Name = "txtSerialNo";
             this.txtSerialNo.Size = new System.Drawing.Size(159, 24);
@@ -1431,7 +1433,7 @@
             // txtserial
             // 
             this.txtserial.Enabled = false;
-            this.txtserial.Location = new System.Drawing.Point(299, 12);
+            this.txtserial.Location = new System.Drawing.Point(299, 13);
             this.txtserial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtserial.Name = "txtserial";
             this.txtserial.Size = new System.Drawing.Size(80, 24);
@@ -1466,9 +1468,9 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.HelpGrid.Location = new System.Drawing.Point(91, 165);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1680,7 +1682,7 @@
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.HotFlat;
             this.panelControl1.Controls.Add(this.txtSearchBox);
             this.panelControl1.Controls.Add(this.GridControl1);
-            this.panelControl1.Location = new System.Drawing.Point(285, 445);
+            this.panelControl1.Location = new System.Drawing.Point(1205, 556);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(664, 326);
@@ -2193,7 +2195,7 @@
             // 
             this.txtTempInvoiceDate.Enabled = false;
             this.txtTempInvoiceDate.EnterMoveNextControl = true;
-            this.txtTempInvoiceDate.Location = new System.Drawing.Point(374, 64);
+            this.txtTempInvoiceDate.Location = new System.Drawing.Point(374, 76);
             this.txtTempInvoiceDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempInvoiceDate.Name = "txtTempInvoiceDate";
             this.txtTempInvoiceDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2206,7 +2208,7 @@
             // 
             this.txtTempInvoiceSeries.Enabled = false;
             this.txtTempInvoiceSeries.EnterMoveNextControl = true;
-            this.txtTempInvoiceSeries.Location = new System.Drawing.Point(96, 64);
+            this.txtTempInvoiceSeries.Location = new System.Drawing.Point(96, 76);
             this.txtTempInvoiceSeries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempInvoiceSeries.Name = "txtTempInvoiceSeries";
             this.txtTempInvoiceSeries.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2219,7 +2221,7 @@
             // 
             this.txtTempState.Enabled = false;
             this.txtTempState.EnterMoveNextControl = true;
-            this.txtTempState.Location = new System.Drawing.Point(374, 94);
+            this.txtTempState.Location = new System.Drawing.Point(374, 106);
             this.txtTempState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempState.Name = "txtTempState";
             this.txtTempState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2232,7 +2234,7 @@
             // 
             this.txtTempCity.Enabled = false;
             this.txtTempCity.EnterMoveNextControl = true;
-            this.txtTempCity.Location = new System.Drawing.Point(96, 94);
+            this.txtTempCity.Location = new System.Drawing.Point(96, 106);
             this.txtTempCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempCity.Name = "txtTempCity";
             this.txtTempCity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2245,7 +2247,7 @@
             // 
             this.txtTempInvoiceNo.Enabled = false;
             this.txtTempInvoiceNo.EnterMoveNextControl = true;
-            this.txtTempInvoiceNo.Location = new System.Drawing.Point(174, 64);
+            this.txtTempInvoiceNo.Location = new System.Drawing.Point(174, 76);
             this.txtTempInvoiceNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempInvoiceNo.Name = "txtTempInvoiceNo";
             this.txtTempInvoiceNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2256,7 +2258,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(336, 99);
+            this.labelControl5.Location = new System.Drawing.Point(336, 110);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(29, 17);
@@ -2265,7 +2267,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(69, 99);
+            this.labelControl6.Location = new System.Drawing.Point(69, 110);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(21, 17);
@@ -2274,7 +2276,7 @@
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(330, 69);
+            this.labelControl9.Location = new System.Drawing.Point(330, 80);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(35, 17);
@@ -2283,7 +2285,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(25, 69);
+            this.labelControl7.Location = new System.Drawing.Point(25, 80);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(65, 17);
@@ -2292,7 +2294,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(22, 37);
+            this.labelControl8.Location = new System.Drawing.Point(22, 49);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(68, 17);
@@ -2303,18 +2305,18 @@
             // 
             this.txtTempPartyName.Enabled = false;
             this.txtTempPartyName.EnterMoveNextControl = true;
-            this.txtTempPartyName.Location = new System.Drawing.Point(185, 34);
+            this.txtTempPartyName.Location = new System.Drawing.Point(192, 45);
             this.txtTempPartyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempPartyName.Name = "txtTempPartyName";
             this.txtTempPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTempPartyName.Properties.ReadOnly = true;
-            this.txtTempPartyName.Size = new System.Drawing.Size(369, 24);
+            this.txtTempPartyName.Size = new System.Drawing.Size(362, 24);
             this.txtTempPartyName.TabIndex = 532;
             this.txtTempPartyName.TabStop = false;
             // 
             // txtTempPartyCode
             // 
-            this.txtTempPartyCode.Location = new System.Drawing.Point(96, 34);
+            this.txtTempPartyCode.Location = new System.Drawing.Point(96, 45);
             this.txtTempPartyCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempPartyCode.Name = "txtTempPartyCode";
             this.txtTempPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2411,7 +2413,7 @@
             // 
             // labelControl42
             // 
-            this.labelControl42.Location = new System.Drawing.Point(412, 42);
+            this.labelControl42.Location = new System.Drawing.Point(412, 41);
             this.labelControl42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl42.Name = "labelControl42";
             this.labelControl42.Size = new System.Drawing.Size(9, 17);
@@ -2420,7 +2422,7 @@
             // 
             // labelControl41
             // 
-            this.labelControl41.Location = new System.Drawing.Point(328, 42);
+            this.labelControl41.Location = new System.Drawing.Point(328, 41);
             this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
             this.labelControl41.Size = new System.Drawing.Size(11, 17);
@@ -2449,7 +2451,7 @@
             // 
             // labelControl48
             // 
-            this.labelControl48.Location = new System.Drawing.Point(384, 97);
+            this.labelControl48.Location = new System.Drawing.Point(384, 99);
             this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
             this.labelControl48.Size = new System.Drawing.Size(36, 17);
@@ -2467,7 +2469,7 @@
             // 
             // labelControl40
             // 
-            this.labelControl40.Location = new System.Drawing.Point(111, 42);
+            this.labelControl40.Location = new System.Drawing.Point(111, 41);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
             this.labelControl40.Size = new System.Drawing.Size(82, 17);
@@ -2512,7 +2514,7 @@
             // 
             // txtValueOfGoods
             // 
-            this.txtValueOfGoods.Location = new System.Drawing.Point(111, 8);
+            this.txtValueOfGoods.Location = new System.Drawing.Point(111, 9);
             this.txtValueOfGoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtValueOfGoods.Name = "txtValueOfGoods";
             this.txtValueOfGoods.Properties.Appearance.Options.UseTextOptions = true;
@@ -2533,7 +2535,7 @@
             // 
             // txtTotalTaxAmount
             // 
-            this.txtTotalTaxAmount.Location = new System.Drawing.Point(111, 65);
+            this.txtTotalTaxAmount.Location = new System.Drawing.Point(111, 67);
             this.txtTotalTaxAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalTaxAmount.Name = "txtTotalTaxAmount";
             this.txtTotalTaxAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -2575,7 +2577,7 @@
             // 
             // txtRoundOffAmount
             // 
-            this.txtRoundOffAmount.Location = new System.Drawing.Point(428, 123);
+            this.txtRoundOffAmount.Location = new System.Drawing.Point(428, 122);
             this.txtRoundOffAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoundOffAmount.Name = "txtRoundOffAmount";
             this.txtRoundOffAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -2599,7 +2601,7 @@
             0,
             0,
             131072});
-            this.txtOctoriAmount.Location = new System.Drawing.Point(428, 94);
+            this.txtOctoriAmount.Location = new System.Drawing.Point(428, 95);
             this.txtOctoriAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOctoriAmount.Name = "txtOctoriAmount";
             this.txtOctoriAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -2626,7 +2628,7 @@
             // 
             // txtTotalDisc
             // 
-            this.txtTotalDisc.Location = new System.Drawing.Point(428, 8);
+            this.txtTotalDisc.Location = new System.Drawing.Point(428, 9);
             this.txtTotalDisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalDisc.Name = "txtTotalDisc";
             this.txtTotalDisc.Properties.Appearance.Options.UseTextOptions = true;
@@ -2652,7 +2654,7 @@
             0,
             0,
             131072});
-            this.txtPKGFrt.Location = new System.Drawing.Point(202, 94);
+            this.txtPKGFrt.Location = new System.Drawing.Point(202, 95);
             this.txtPKGFrt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPKGFrt.Name = "txtPKGFrt";
             this.txtPKGFrt.Properties.Appearance.Options.UseTextOptions = true;
@@ -2679,7 +2681,7 @@
             // 
             // txtRNetAmount
             // 
-            this.txtRNetAmount.Location = new System.Drawing.Point(428, 152);
+            this.txtRNetAmount.Location = new System.Drawing.Point(428, 151);
             this.txtRNetAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRNetAmount.Name = "txtRNetAmount";
             this.txtRNetAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2707,7 +2709,7 @@
             0,
             0,
             131072});
-            this.txtInsurancePer.Location = new System.Drawing.Point(344, 65);
+            this.txtInsurancePer.Location = new System.Drawing.Point(344, 67);
             this.txtInsurancePer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInsurancePer.Name = "txtInsurancePer";
             this.txtInsurancePer.Properties.Appearance.Options.UseTextOptions = true;
@@ -2768,7 +2770,7 @@
             // 
             // txtInsuranceAmount
             // 
-            this.txtInsuranceAmount.Location = new System.Drawing.Point(428, 65);
+            this.txtInsuranceAmount.Location = new System.Drawing.Point(428, 67);
             this.txtInsuranceAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInsuranceAmount.Name = "txtInsuranceAmount";
             this.txtInsuranceAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -3219,7 +3221,7 @@
             // 
             // txtGateEntryNo
             // 
-            this.txtGateEntryNo.Location = new System.Drawing.Point(115, 128);
+            this.txtGateEntryNo.Location = new System.Drawing.Point(115, 129);
             this.txtGateEntryNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGateEntryNo.Name = "txtGateEntryNo";
             this.txtGateEntryNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -3230,7 +3232,7 @@
             // 
             // txtBuiltyAmount
             // 
-            this.txtBuiltyAmount.Location = new System.Drawing.Point(329, 99);
+            this.txtBuiltyAmount.Location = new System.Drawing.Point(329, 101);
             this.txtBuiltyAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBuiltyAmount.Name = "txtBuiltyAmount";
             this.txtBuiltyAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -3243,7 +3245,7 @@
             // 
             // txtTotalBoxes
             // 
-            this.txtTotalBoxes.Location = new System.Drawing.Point(329, 71);
+            this.txtTotalBoxes.Location = new System.Drawing.Point(329, 72);
             this.txtTotalBoxes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalBoxes.Name = "txtTotalBoxes";
             this.txtTotalBoxes.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -3254,7 +3256,7 @@
             // 
             // txtCHGWeight
             // 
-            this.txtCHGWeight.Location = new System.Drawing.Point(115, 71);
+            this.txtCHGWeight.Location = new System.Drawing.Point(115, 72);
             this.txtCHGWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCHGWeight.Name = "txtCHGWeight";
             this.txtCHGWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -3283,7 +3285,7 @@
             // 
             // txtActualWeight
             // 
-            this.txtActualWeight.Location = new System.Drawing.Point(115, 41);
+            this.txtActualWeight.Location = new System.Drawing.Point(115, 42);
             this.txtActualWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtActualWeight.Name = "txtActualWeight";
             this.txtActualWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -3304,7 +3306,7 @@
             // BTBXWT
             // 
             this.BTBXWT.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.BTBXWT.Location = new System.Drawing.Point(262, 39);
+            this.BTBXWT.Location = new System.Drawing.Point(262, 40);
             this.BTBXWT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BTBXWT.Name = "BTBXWT";
             this.BTBXWT.Size = new System.Drawing.Size(139, 29);
@@ -3353,7 +3355,7 @@
             // 
             this.txtEntryDate.EditValue = null;
             this.txtEntryDate.Enabled = false;
-            this.txtEntryDate.Location = new System.Drawing.Point(329, 128);
+            this.txtEntryDate.Location = new System.Drawing.Point(329, 129);
             this.txtEntryDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEntryDate.Name = "txtEntryDate";
             this.txtEntryDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -3369,7 +3371,7 @@
             // txtGRDate
             // 
             this.txtGRDate.EditValue = null;
-            this.txtGRDate.Location = new System.Drawing.Point(329, 10);
+            this.txtGRDate.Location = new System.Drawing.Point(329, 12);
             this.txtGRDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGRDate.Name = "txtGRDate";
             this.txtGRDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -3388,7 +3390,7 @@
             // 
             // txtGRNo
             // 
-            this.txtGRNo.Location = new System.Drawing.Point(115, 10);
+            this.txtGRNo.Location = new System.Drawing.Point(115, 12);
             this.txtGRNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGRNo.Name = "txtGRNo";
             this.txtGRNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
