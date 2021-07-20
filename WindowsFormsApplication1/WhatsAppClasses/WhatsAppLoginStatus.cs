@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace WindowsFormsApplication1.WhatsAppClasses
+﻿namespace WindowsFormsApplication1.WhatsAppClasses
 {
     class WhatsAppLoginStatus
     {

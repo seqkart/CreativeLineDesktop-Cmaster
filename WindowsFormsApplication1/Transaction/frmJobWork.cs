@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.Sql;
-using System.Data.SqlClient;
 namespace WindowsFormsApplication1.Transaction
 {
     public partial class frmJobWork : DevExpress.XtraEditors.XtraForm
@@ -91,7 +89,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void HelpGrid_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if(e.KeyCode==System.Windows.Forms.Keys.Escape)
+            if (e.KeyCode == System.Windows.Forms.Keys.Escape)
             {
                 HelpGrid.Visible = false;
             }

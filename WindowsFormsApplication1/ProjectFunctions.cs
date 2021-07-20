@@ -1991,12 +1991,12 @@ namespace WindowsFormsApplication1
             else
                 XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.TxnOutcome));
         }
-        public static async void ValidateGSTNo(String GSTNo,XtraForm form)
+        public static async void ValidateGSTNo(String GSTNo, XtraForm form)
         {
             //GSTNo = "06AAACS0628K1ZH";
 
         }
-        public static async void GenerateEWaybill(String BillNo, DateTime BillDate,String SupplyType,String SubSupplyType,String SubSupplyDesc)
+        public static async void GenerateEWaybill(String BillNo, DateTime BillDate, String SupplyType, String SubSupplyType, String SubSupplyDesc)
         {
             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 

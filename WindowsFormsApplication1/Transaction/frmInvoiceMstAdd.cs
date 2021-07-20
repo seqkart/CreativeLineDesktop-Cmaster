@@ -2016,7 +2016,7 @@ namespace WindowsFormsApplication1
 
 
 
-                            
+
                             var str = "Exec [sp_LoadTaxMstFInvoice] @PrdCode='" + dr["SIDARTID"].ToString() + "',";
                             str = str + "@LCTag='" + LCTag + "',@ValueOfGoods='" + Convert.ToDecimal(dr["SIDARTMRP"]) + "'";
                             Ds = ProjectFunctions.GetDataSet(str);

@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1.Master
                         sqlcom.Parameters.AddWithValue("@MCode", txtMCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@MDesc", txtMDesc.Text.Trim());
                         sqlcom.ExecuteNonQuery();
-                 
+
                         sqlcon.Close();
                         Close();
                     }
