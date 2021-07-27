@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1
 
 
             Timer timer = new Timer();
-            timer.Interval = (10 * 1000); // 10 secs
+            timer.Interval = (10 * 10000); // 10 secs
             timer.Tick += Timer_Tick;
             timer.Start();
 
@@ -232,6 +232,8 @@ namespace WindowsFormsApplication1
                 else
                 {
                     labelControl1.Text = "Disconnected";
+                    pictureEdit1.Visible = true;
+                    ChangeQRData();
                 }
 
             }
@@ -315,6 +317,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG242":
+                    var PROG242 = new frmSaleReportParameterised() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG242.Show();
+                    PROG242.BringToFront();
+                    PROG242.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG241":
                     var PROG241 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG241.Show();

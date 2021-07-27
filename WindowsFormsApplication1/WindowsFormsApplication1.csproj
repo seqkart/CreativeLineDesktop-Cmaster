@@ -932,6 +932,12 @@
     <Compile Include="FormReports\frmPrintReportDesigner.Designer.cs">
       <DependentUpon>frmPrintReportDesigner.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormReports\frmSaleReportParameterised.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReports\frmSaleReportParameterised.Designer.cs">
+      <DependentUpon>frmSaleReportParameterised.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormReports\frmshowroomreport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -961,6 +967,12 @@
     </Compile>
     <Compile Include="Administration\frmFYCreation.Designer.cs">
       <DependentUpon>frmFYCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRangeNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="frmSelectRangeNew.Designer.cs">
+      <DependentUpon>frmSelectRangeNew.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperClass\CustomArguments.cs" />
     <Compile Include="HRMS\GlobalClassBase.cs" />
@@ -1925,6 +1937,9 @@
     <EmbeddedResource Include="FormReports\frmPrintReportDesigner.resx">
       <DependentUpon>frmPrintReportDesigner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReports\frmSaleReportParameterised.resx">
+      <DependentUpon>frmSaleReportParameterised.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormReports\frmshowroomreport.resx">
       <DependentUpon>frmshowroomreport.cs</DependentUpon>
     </EmbeddedResource>
@@ -1939,6 +1954,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Administration\frmFYCreation.resx">
       <DependentUpon>frmFYCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRangeNew.resx">
+      <DependentUpon>frmSelectRangeNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmAttendenceStatusMst.resx">
       <DependentUpon>frmAttendenceStatusMst.cs</DependentUpon>

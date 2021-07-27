@@ -55,12 +55,14 @@
             // InvoiceGrid
             // 
             this.InvoiceGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InvoiceGrid.Location = new System.Drawing.Point(0, 26);
+            this.InvoiceGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InvoiceGrid.Location = new System.Drawing.Point(0, 31);
             this.InvoiceGrid.MainView = this.InvoiceGridView;
+            this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
             this.InvoiceGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.InvoiceGrid.Size = new System.Drawing.Size(707, 464);
+            this.InvoiceGrid.Size = new System.Drawing.Size(825, 610);
             this.InvoiceGrid.TabIndex = 200;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});
@@ -70,6 +72,7 @@
             // 
             // InvoiceGridView
             // 
+            this.InvoiceGridView.DetailHeight = 458;
             this.InvoiceGridView.GridControl = this.InvoiceGrid;
             this.InvoiceGridView.Name = "InvoiceGridView";
             this.InvoiceGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -95,6 +98,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnEdit,
             this.btnAdd,
@@ -103,7 +107,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(707, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(825, 31);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -115,7 +119,7 @@
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnEdit.Size = new System.Drawing.Size(42, 23);
+            this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
@@ -127,7 +131,7 @@
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd.Size = new System.Drawing.Size(43, 23);
+            this.btnAdd.Size = new System.Drawing.Size(52, 28);
             this.btnAdd.Text = "&Add";
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
@@ -136,15 +140,17 @@
             this.lbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(26, 23);
+            this.lbl.Size = new System.Drawing.Size(34, 28);
             this.lbl.Text = "dsd";
             // 
             // PrintOutGrid
             // 
-            this.PrintOutGrid.Location = new System.Drawing.Point(94, 189);
+            this.PrintOutGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.PrintOutGrid.Location = new System.Drawing.Point(120, 130);
             this.PrintOutGrid.MainView = this.PrintOutGridView;
+            this.PrintOutGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PrintOutGrid.Name = "PrintOutGrid";
-            this.PrintOutGrid.Size = new System.Drawing.Size(462, 227);
+            this.PrintOutGrid.Size = new System.Drawing.Size(539, 297);
             this.PrintOutGrid.TabIndex = 201;
             this.PrintOutGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.PrintOutGridView});
@@ -157,6 +163,7 @@
             this.PrintOutGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2});
+            this.PrintOutGridView.DetailHeight = 458;
             this.PrintOutGridView.GridControl = this.PrintOutGrid;
             this.PrintOutGridView.Name = "PrintOutGridView";
             this.PrintOutGridView.OptionsCustomization.AllowSort = false;
@@ -168,18 +175,22 @@
             // 
             this.gridColumn1.Caption = "CopyText";
             this.gridColumn1.FieldName = "CopyText";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Select";
             this.gridColumn2.FieldName = "Select";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // saveFileDialog1
             // 
@@ -187,15 +198,16 @@
             // 
             // FrmTransaction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(707, 490);
+            this.ClientSize = new System.Drawing.Size(825, 641);
             this.ControlBox = false;
             this.Controls.Add(this.PrintOutGrid);
             this.Controls.Add(this.InvoiceGrid);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Glow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmTransaction";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTransaction_Load);

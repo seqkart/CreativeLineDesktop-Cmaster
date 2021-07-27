@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1
             {
                 txtAcCode.Enabled = false;
                 ProjectFunctions.TextBoxVisualize(this);
-                ProjectFunctions.DatePickerVisualize(this);
+
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.TextBoxVisualize(panelControl2);

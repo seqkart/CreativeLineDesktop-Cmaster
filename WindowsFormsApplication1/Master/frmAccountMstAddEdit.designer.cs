@@ -588,7 +588,7 @@
             this.BInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BInfoTab.Name = "BInfoTab";
             this.BInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.BInfoTab.Size = new System.Drawing.Size(817, 524);
+            this.BInfoTab.Size = new System.Drawing.Size(817, 518);
             this.BInfoTab.Text = "&Billing Info";
             // 
             // panelControl2
@@ -642,7 +642,7 @@
             this.panelControl2.Location = new System.Drawing.Point(12, 13);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(793, 498);
+            this.panelControl2.Size = new System.Drawing.Size(793, 492);
             this.panelControl2.TabIndex = 0;
             // 
             // lblGstInfo
@@ -1140,7 +1140,7 @@
             this.xtraTabPage1.Controls.Add(this.txtDelCitycode);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(817, 524);
+            this.xtraTabPage1.Size = new System.Drawing.Size(817, 518);
             this.xtraTabPage1.Text = "Addresses";
             // 
             // labelControl2
@@ -1393,7 +1393,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(187, 43);
+            this.HelpGrid.Location = new System.Drawing.Point(312, 31);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";

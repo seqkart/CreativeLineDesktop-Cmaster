@@ -665,6 +665,8 @@ namespace WindowsFormsApplication1
 
                 StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
 
+
+
                 dtInvoiceDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("yyyy-MM-dd");
                 txtSerialNo.Text = ds.Tables[0].Rows[0]["BillNo"].ToString();
                 txtserial.Text = ds.Tables[0].Rows[0]["BillSeries"].ToString();
@@ -801,6 +803,18 @@ namespace WindowsFormsApplication1
                     chInclusive.Checked = true;
                     chExclusive.Checked = false;
                 }
+
+
+                txtVehicleNo.Text = ds.Tables[0].Rows[0]["VehicleNo"].ToString();
+                txtSupplyType.SelectedValue = ds.Tables[0].Rows[0]["SupplyType"].ToString();
+                txtSubSupplyType.SelectedValue = ds.Tables[0].Rows[0]["SubSupplyType"].ToString();
+                txtUnits.SelectedValue = ds.Tables[0].Rows[0]["Units"].ToString();
+                txtTransMode.SelectedValue = ds.Tables[0].Rows[0]["TransMode"].ToString();
+
+
+
+
+
                 dt = ds.Tables[1];
                 InfoGrid.DataSource = dt;
                 InfoGridView.BestFitColumns();
@@ -872,12 +886,12 @@ namespace WindowsFormsApplication1
                                 "SIMPartyDANO,SIMPartyORDNO,SIMTRANSPORTERID,SIMPartyPONO,SIMTRANSPORTERKEY,SIMGRNRRNO,SIMGRNRRDATE," +
                                 "SIMBUILTYPAID,SIMBUILTYPAIDAMT,SIMGATENTRYNO,SIMGATENTRYDATE,SIMBANKN,SIMBANKADD,SIMINVDIRECT,SIMINVLOT," +
                                 "SIMINVTAXTYPE,SIMTOTBOXES,SIMSUBTOTVAL,SIMDISCTYPE,SIMDISCPRCN,SIMDISCAMT,SIMINSURPRCN,SIMINSURANCEAMT, " +
-                                "SIMFREIGHTAMT,SIMOCTORIAMT,SIMROFFAMT,SIMGRANDTOT,SIMTOTWEIGHT,SIMCHRGWEIGHT,SIMDISPPCODE,UnitCode ,SIMTRDPRMWYBLNO,SIMDISPCODE )values(" +
+                                "SIMFREIGHTAMT,SIMOCTORIAMT,SIMROFFAMT,SIMGRANDTOT,SIMTOTWEIGHT,SIMCHRGWEIGHT,SIMDISPPCODE,UnitCode ,SIMTRDPRMWYBLNO,SIMDISPCODE,VehicleNo,SupplyType,SubSupplyType,Units,TransMode )values(" +
                                 "@SIMSYSDATE,@SIMFNYR,@SIMDATE,@SIMNO,@SIMSERIES,@SIMPartyC," +
                                 "@SIMPartyDANO,@SIMPartyORDNO,@SIMTRANSPORTERID,@SIMPartyPONO,@SIMTRANSPORTERKEY,@SIMGRNRRNO,@SIMGRNRRDATE," +
                                 "@SIMBUILTYPAID,@SIMBUILTYPAIDAMT,@SIMGATENTRYNO,@SIMGATENTRYDATE,@SIMBANKN,@SIMBANKADD,@SIMINVDIRECT,@SIMINVLOT," +
                                 "@SIMINVTAXTYPE,@SIMTOTBOXES,@SIMSUBTOTVAL,@SIMDISCTYPE,@SIMDISCPRCN,@SIMDISCAMT,@SIMINSURPRCN,@SIMINSURANCEAMT, " +
-                                "@SIMFREIGHTAMT,@SIMOCTORIAMT,@SIMROFFAMT,@SIMGRANDTOT,@SIMTOTWEIGHT,@SIMCHRGWEIGHT,@SIMDISPPCODE,@UnitCode,@SIMTRDPRMWYBLNO,@SIMDISPCODE)";
+                                "@SIMFREIGHTAMT,@SIMOCTORIAMT,@SIMROFFAMT,@SIMGRANDTOT,@SIMTOTWEIGHT,@SIMCHRGWEIGHT,@SIMDISPPCODE,@UnitCode,@SIMTRDPRMWYBLNO,@SIMDISPCODE,@VehicleNo,@SupplyType,@SubSupplyType,@Units,@TransMode)";
                             sqlcom.Parameters.Add("@SIMSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@SIMFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
                             sqlcom.Parameters.Add("@SIMDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd");
@@ -973,6 +987,11 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
+                            sqlcom.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = txtVehicleNo.Text;
+                            sqlcom.Parameters.Add("@SupplyType", SqlDbType.NVarChar).Value = txtSupplyType.SelectedValue;
+                            sqlcom.Parameters.Add("@SubSupplyType", SqlDbType.NVarChar).Value = txtSubSupplyType.SelectedValue;
+                            sqlcom.Parameters.Add("@Units", SqlDbType.NVarChar).Value = txtUnits.SelectedValue;
+                            sqlcom.Parameters.Add("@TransMode", SqlDbType.NVarChar).Value = txtTransMode.SelectedValue;
 
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
@@ -983,7 +1002,7 @@ namespace WindowsFormsApplication1
                                 "SIMPartyDANO=@SIMPartyDANO,SIMPartyORDNO=@SIMPartyORDNO,SIMPartyPONO=@SIMPartyPONO,SIMTRANSPORTERID=@SIMTRANSPORTERID,SIMTRANSPORTERKEY=@SIMTRANSPORTERKEY,SIMGRNRRNO=@SIMGRNRRNO,SIMGRNRRDATE=@SIMGRNRRDATE," +
                                 "SIMBUILTYPAID=@SIMBUILTYPAID,SIMBUILTYPAIDAMT=@SIMBUILTYPAIDAMT,SIMGATENTRYNO=@SIMGATENTRYNO,SIMGATENTRYDATE=@SIMGATENTRYDATE,SIMBANKN=@SIMBANKN,SIMBANKADD=@SIMBANKADD,SIMINVDIRECT=@SIMINVDIRECT,SIMINVLOT=@SIMINVLOT,SIMINVTAXTYPE=@SIMINVTAXTYPE," +
                                 "SIMTOTBOXES=@SIMTOTBOXES,SIMSUBTOTVAL=@SIMSUBTOTVAL,SIMDISCTYPE=@SIMDISCTYPE,SIMDISCPRCN=@SIMDISCPRCN,SIMDISCAMT=@SIMDISCAMT,SIMINSURPRCN=@SIMINSURPRCN,SIMINSURANCEAMT=@SIMINSURANCEAMT, " +
-                                "SIMFREIGHTAMT=@SIMFREIGHTAMT,SIMOCTORIAMT=@SIMOCTORIAMT,SIMROFFAMT=@SIMROFFAMT,SIMGRANDTOT=@SIMGRANDTOT,SIMTOTWEIGHT=@SIMTOTWEIGHT,SIMCHRGWEIGHT=@SIMCHRGWEIGHT,SIMDISPPCODE=@SIMDISPPCODE,UnitCode=@UnitCode,SIMTRDPRMWYBLNO=@SIMTRDPRMWYBLNO,SIMDISPCODE=@SIMDISPCODE Where SIMDATE='" + Convert.ToDateTime(ImDate).ToString("yyyy-MM-dd") + "' And SIMNO='" + ImNo + "' And SIMSERIES='" + ImSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "'";
+                                "SIMFREIGHTAMT=@SIMFREIGHTAMT,SIMOCTORIAMT=@SIMOCTORIAMT,SIMROFFAMT=@SIMROFFAMT,SIMGRANDTOT=@SIMGRANDTOT,SIMTOTWEIGHT=@SIMTOTWEIGHT,SIMCHRGWEIGHT=@SIMCHRGWEIGHT,SIMDISPPCODE=@SIMDISPPCODE,UnitCode=@UnitCode,SIMTRDPRMWYBLNO=@SIMTRDPRMWYBLNO,SIMDISPCODE=@SIMDISPCODE,VehicleNo=@VehicleNo,SupplyType=@SupplyType,SubSupplyType=@SubSupplyType,Units=@Units,TransMode=@TransMode Where SIMDATE='" + Convert.ToDateTime(ImDate).ToString("yyyy-MM-dd") + "' And SIMNO='" + ImNo + "' And SIMSERIES='" + ImSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' And SIMFNYR='" + GlobalVariables.FinancialYear + "'";
 
                             sqlcom.Parameters.Add("@SIMSYSDATE", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@SIMFNYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
@@ -1081,6 +1100,13 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
+                            sqlcom.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = txtVehicleNo.Text;
+                            sqlcom.Parameters.Add("@SupplyType", SqlDbType.NVarChar).Value = txtSupplyType.SelectedValue;
+                            sqlcom.Parameters.Add("@SubSupplyType", SqlDbType.NVarChar).Value = txtSubSupplyType.SelectedValue;
+                            sqlcom.Parameters.Add("@Units", SqlDbType.NVarChar).Value = txtUnits.SelectedValue;
+                            sqlcom.Parameters.Add("@TransMode", SqlDbType.NVarChar).Value = txtTransMode.SelectedValue;
+
+
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
 
@@ -1110,7 +1136,11 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIDDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@SIDNO", SqlDbType.NVarChar).Value = txtSerialNo.Text;
 
-                            sqlcom.Parameters.Add("@SIDSERIES", SqlDbType.NVarChar).Value = txtserial.Text.Trim();
+                            sqlcom.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = txtVehicleNo.Text;
+                            sqlcom.Parameters.Add("@SupplyType", SqlDbType.NVarChar).Value = txtSupplyType.SelectedValue;
+                            sqlcom.Parameters.Add("@SubSupplyType", SqlDbType.NVarChar).Value = txtSubSupplyType.SelectedValue;
+                            sqlcom.Parameters.Add("@Units", SqlDbType.NVarChar).Value = txtUnits.SelectedValue;
+                            sqlcom.Parameters.Add("@TransMode", SqlDbType.NVarChar).Value = txtTransMode.SelectedValue; sqlcom.Parameters.Add("@SIDSERIES", SqlDbType.NVarChar).Value = txtserial.Text.Trim();
                             sqlcom.Parameters.Add("@SIDPartyC", SqlDbType.NVarChar).Value = txtDebitPartyCode.Text.Trim();
                             sqlcom.Parameters.Add("@SIDPSNO", SqlDbType.NVarChar).Value = currentrow["SIDPSNO"].ToString();
                             sqlcom.Parameters.Add("@SIDBOXNO", SqlDbType.NVarChar).Value = "0";

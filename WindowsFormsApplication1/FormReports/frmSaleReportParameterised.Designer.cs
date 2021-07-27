@@ -1,6 +1,7 @@
-﻿namespace WindowsFormsApplication1.FormReports
+﻿
+namespace WindowsFormsApplication1.FormReports
 {
-    partial class frmGridReports
+    partial class frmSaleReportParameterised
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +32,6 @@
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             this.MasterGrid = new DevExpress.XtraGrid.GridControl();
             this.MasterGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGridView)).BeginInit();
             this.SuspendLayout();
@@ -44,23 +44,19 @@
             this.MasterGrid.MainView = this.MasterGridView;
             this.MasterGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MasterGrid.Name = "MasterGrid";
-            this.MasterGrid.Size = new System.Drawing.Size(1297, 702);
-            this.MasterGrid.TabIndex = 1;
+            this.MasterGrid.Size = new System.Drawing.Size(646, 417);
+            this.MasterGrid.TabIndex = 2;
             this.MasterGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MasterGridView});
-            this.MasterGrid.DoubleClick += new System.EventHandler(this.MasterGrid_DoubleClick);
             // 
             // MasterGridView
             // 
-            this.MasterGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1});
             this.MasterGridView.DetailHeight = 458;
             gridFormatRule1.Name = "Format0";
             gridFormatRule1.Rule = null;
             this.MasterGridView.FormatRules.Add(gridFormatRule1);
             this.MasterGridView.GridControl = this.MasterGrid;
             this.MasterGridView.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Custom, "NET AMOUNT*0.35", this.gridColumn1, ""),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, ""),
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.None, "", null, "")});
             this.MasterGridView.Name = "MasterGridView";
@@ -72,29 +68,14 @@
             this.MasterGridView.OptionsView.ShowIndicator = false;
             this.MasterGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.MasterGridView_PopupMenuShowing);
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "NET AMOUNT";
-            this.gridColumn1.FieldName = "NET AMOUNT";
-            this.gridColumn1.MinWidth = 23;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 87;
-            // 
-            // frmGridReports
+            // frmSaleReportParameterised
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1297, 702);
+            this.ClientSize = new System.Drawing.Size(646, 417);
             this.Controls.Add(this.MasterGrid);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmGridReports";
+            this.Name = "frmSaleReportParameterised";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmGridReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGridView)).EndInit();
             this.ResumeLayout(false);
@@ -105,6 +86,5 @@
 
         private DevExpress.XtraGrid.GridControl MasterGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView MasterGridView;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

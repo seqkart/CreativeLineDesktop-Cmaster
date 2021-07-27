@@ -29,30 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeasurementMapping));
-            this.txtMCode = new DevExpress.XtraEditors.TextEdit();
             this.Label3 = new DevExpress.XtraEditors.LabelControl();
-            this.txtMDesc = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
+            this.txtMCode = new DevExpress.XtraEditors.TextEdit();
+            this.txtMDesc = new DevExpress.XtraEditors.TextEdit();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
+            this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMDesc.Properties)).BeginInit();
-            this.Menu_ToolStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtMCode
-            // 
-            this.txtMCode.Enabled = false;
-            this.txtMCode.EnterMoveNextControl = true;
-            this.txtMCode.Location = new System.Drawing.Point(215, 66);
-            this.txtMCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMCode.Name = "txtMCode";
-            this.txtMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMCode.Properties.MaxLength = 8;
-            this.txtMCode.Size = new System.Drawing.Size(86, 24);
-            this.txtMCode.TabIndex = 770;
-            this.txtMCode.TabStop = false;
             // 
             // Label3
             // 
@@ -64,16 +51,6 @@
             this.Label3.Size = new System.Drawing.Size(113, 15);
             this.Label3.TabIndex = 769;
             this.Label3.Text = "Measurement Desc :";
-            // 
-            // txtMDesc
-            // 
-            this.txtMDesc.EnterMoveNextControl = true;
-            this.txtMDesc.Location = new System.Drawing.Point(215, 98);
-            this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMDesc.Name = "txtMDesc";
-            this.txtMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMDesc.Size = new System.Drawing.Size(316, 24);
-            this.txtMDesc.TabIndex = 771;
             // 
             // Menu_ToolStrip
             // 
@@ -92,6 +69,40 @@
             this.Menu_ToolStrip.Size = new System.Drawing.Size(609, 31);
             this.Menu_ToolStrip.TabIndex = 772;
             this.Menu_ToolStrip.Text = "Options";
+            // 
+            // LBDEPCODE
+            // 
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.LBDEPCODE.Appearance.Options.UseFont = true;
+            this.LBDEPCODE.Location = new System.Drawing.Point(64, 68);
+            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LBDEPCODE.Name = "LBDEPCODE";
+            this.LBDEPCODE.Size = new System.Drawing.Size(116, 15);
+            this.LBDEPCODE.TabIndex = 768;
+            this.LBDEPCODE.Text = "Measurement Code :";
+            // 
+            // txtMCode
+            // 
+            this.txtMCode.Enabled = false;
+            this.txtMCode.EnterMoveNextControl = true;
+            this.txtMCode.Location = new System.Drawing.Point(215, 66);
+            this.txtMCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMCode.Name = "txtMCode";
+            this.txtMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMCode.Properties.MaxLength = 8;
+            this.txtMCode.Size = new System.Drawing.Size(86, 24);
+            this.txtMCode.TabIndex = 770;
+            this.txtMCode.TabStop = false;
+            // 
+            // txtMDesc
+            // 
+            this.txtMDesc.EnterMoveNextControl = true;
+            this.txtMDesc.Location = new System.Drawing.Point(215, 98);
+            this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMDesc.Name = "txtMDesc";
+            this.txtMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMDesc.Size = new System.Drawing.Size(316, 24);
+            this.txtMDesc.TabIndex = 771;
             // 
             // btnQuit
             // 
@@ -117,17 +128,6 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // LBDEPCODE
-            // 
-            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Calibri", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(64, 68);
-            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(116, 15);
-            this.LBDEPCODE.TabIndex = 768;
-            this.LBDEPCODE.Text = "Measurement Code :";
-            // 
             // frmMeasurementMapping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -146,10 +146,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmMeasurementMapping_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMeasurementMapping_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.txtMCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMDesc.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMDesc.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

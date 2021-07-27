@@ -1726,9 +1726,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public static async Task SendBillImageAsync(String MobileNo)
+        public static async Task SendBillImageAsync(String MobileNo,String DocNo,DateTime DocDate)
         {
-            byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//abc.pdf");
+            byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//GST//" + DocNo + ".pdf");
 
             string base64String = Convert.ToBase64String(imageBytes);
 
@@ -1738,7 +1738,7 @@ namespace WindowsFormsApplication1
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
-                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"test.pdf\"}");
+                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"GST - " + DocNo + " Date - " + DocDate.Date.ToString("dd-MM-yyyy") + ".pdf\"}");
                     request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
@@ -1899,52 +1899,53 @@ namespace WindowsFormsApplication1
 
 
 
-            //DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
-            //if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
-            //{
-            //    EWBSession EwbSession = new EWBSession();
-            //    EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
-            //    EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
-            //    EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
-            //    EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
-            //    EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
-            //    EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
-            //    EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
-            //    long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
+            DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
+            {
+                EWBSession EwbSession = new EWBSession();
+                EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+                EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+                EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+                EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+                EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+                EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+                EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+                long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
 
 
 
+                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
 
-            //    var a = JsonConvert.SerializeObject(TxnResp.RespObj);
-            //    if (TxnResp.IsSuccess == true)
-            //    {
-            //        if (System.IO.Directory.Exists(Application.StartupPath + "\\EWayDetailed"))
-            //        {
-            //            string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
-            //            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
-            //        }
-            //        else
-            //        {
-            //            System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWayDetailed");
-            //            string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
-            //            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
-            //        }
-            //        //if (System.IO.File.Exists(Application.StartupPath + "\\EWayDetailed\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
-            //        //{
-            //        //    System.IO.File.Copy(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWayDetailed\\GST-" + BillNo + ".pdf");
-            //        //   // System.IO.File.Delete(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
-            //        //}
-            //    }
-            //    else
-            //    {
-            //        XtraMessageBox.Show(TxnResp.TxnOutcome);
-            //    }
-            //}
-            //else
-            //{
-            //    XtraMessageBox.Show("EWay Bill is not generated then how to print");
-            //    return;
-            //}
+                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+                if (TxnResp.IsSuccess == true)
+                {
+                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWayDetailed"))
+                    {
+                        string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
+                    }
+                    else
+                    {
+                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWayDetailed");
+                        string pdfFolderPath = Application.StartupPath + "\\EWayDetailed";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, true);
+                    }
+                    //if (System.IO.File.Exists(Application.StartupPath + "\\EWayDetailed\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
+                    //{
+                    //    System.IO.File.Copy(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWayDetailed\\GST-" + BillNo + ".pdf");
+                    //   // System.IO.File.Delete(Application.StartupPath + "\\EWayDetailed\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
+                    //}
+                }
+                else
+                {
+                    XtraMessageBox.Show(TxnResp.TxnOutcome);
+                }
+            }
+            else
+            {
+                XtraMessageBox.Show("EWay Bill is not generated then how to print");
+                return;
+            }
         }
 
         public static async Task GetAPIPendingHitsAsync()
@@ -1996,7 +1997,7 @@ namespace WindowsFormsApplication1
             //GSTNo = "06AAACS0628K1ZH";
 
         }
-        public static async void GenerateEWaybill(String BillNo, DateTime BillDate, String SupplyType, String SubSupplyType, String SubSupplyDesc)
+        public static async void GenerateEWaybill(String BillNo, DateTime BillDate)
         {
             DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceFEWayBill] '" + BillDate.Date.ToString("yyyy-MM-dd") + "','" + BillNo + "','GST','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 
@@ -2011,20 +2012,20 @@ namespace WindowsFormsApplication1
 
             GlobalVariables.CmpGSTNo = GlobalVariables.EWBGSTIN;
             ReqGenEwbPl ewbGen = new ReqGenEwbPl();
-            ewbGen.supplyType = "O";
-            ewbGen.subSupplyType = "1";
+            ewbGen.supplyType = ds.Tables[0].Rows[0]["SupplyType"].ToString();
+            ewbGen.subSupplyType = ds.Tables[0].Rows[0]["SubSupplyType"].ToString();
             ewbGen.subSupplyDesc = "";
             ewbGen.docType = "INV";
-            ewbGen.docNo = "GST-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
+            ewbGen.docNo = ds.Tables[0].Rows[0]["BillSeries"].ToString()+"-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
 
             ewbGen.docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd/MM/yyyy");
             ewbGen.fromGstin = GlobalVariables.CmpGSTNo;
             ewbGen.fromTrdName = GlobalVariables.CompanyName;
             ewbGen.fromAddr1 = GlobalVariables.CAddress1;
             ewbGen.fromAddr2 = GlobalVariables.CAddress2;
-            ewbGen.fromPlace = "ludhiana";
+        //    ewbGen.fromPlace = "ludhiana";
             ewbGen.fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode);
-            ewbGen.fromPincode = 605001;
+
             ewbGen.fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
             ewbGen.actFromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
             ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
@@ -2089,9 +2090,9 @@ namespace WindowsFormsApplication1
             //ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
 
 
+            //txtPKGFrt.Text = ds.Tables[0].Rows[0]["SIMFREIGHTAMT"].ToString();
 
-
-            ewbGen.otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]);
+            ewbGen.otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"])+ Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"])+ Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"])+ Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]);
             // ewbGen.totalValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]);
             ewbGen.totalValue = Convert.ToDouble("0");
             ewbGen.cgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["CGSTAmount"]);
@@ -2103,10 +2104,10 @@ namespace WindowsFormsApplication1
             ewbGen.transporterName = string.Empty;
             ewbGen.transDocNo = string.Empty;
             ewbGen.totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]); ;
-            ewbGen.transMode = "1";//1
+            ewbGen.transMode = ds.Tables[0].Rows[0]["TransMode"].ToString();//1
             ewbGen.transDistance = "0"; /*1200*/
             ewbGen.transDocDate = string.Empty;
-            ewbGen.vehicleNo = "";
+            ewbGen.vehicleNo = ds.Tables[0].Rows[0]["VehicleNo"].ToString(); ;
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
 
@@ -2140,42 +2141,45 @@ namespace WindowsFormsApplication1
             EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
             EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
             EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
-
-            string a = JsonConvert.SerializeObject(ewbGen);
-            TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
-            if (TxnResp.IsSuccess)
+            TxnRespWithObjAndInfo<EWBSession> TxnResp2 = await EWBAPI.GetAuthTokenAsync(EwbSession);
+            if (TxnResp2.IsSuccess)
             {
-                XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
-
-                TextEdit t = new TextEdit();
-                t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
-
-                var details = JObject.Parse(t.Text);
-
-                ProjectFunctions.GetDataSet("update SALEINVMAIN Set SIMTRDPRMWYBLNO='" + details["ewayBillNo"].ToString() + "'  where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
-            }
-            else
-            {
-
-                XtraMessageBox.Show(TxnResp.TxnOutcome);
-                //Check for error "The distance between the pincodes given is too high"
-
-                if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
+                string a = JsonConvert.SerializeObject(ewbGen);
+                TxnRespWithObjAndInfo<RespGenEwbPl> TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
+                if (TxnResp.IsSuccess)
                 {
-                    RespInfoPl respInfoPl = new RespInfoPl();
-                    respInfoPl = JsonConvert.DeserializeObject<RespInfoPl>(TxnResp.Info);
-                    ewbGen.transDistance = respInfoPl.distance;
-                    TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
-                    if (TxnResp.IsSuccess)
-                    {
-                        XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
-                    }
-                    else
-                    {
-                        XtraMessageBox.Show(TxnResp.TxnOutcome);
-                    }
-                }
+                    XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
 
+                    TextEdit t = new TextEdit();
+                    t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+
+                    var details = JObject.Parse(t.Text);
+
+                    ProjectFunctions.GetDataSet("update SALEINVMAIN Set SIMTRDPRMWYBLNO='" + details["ewayBillNo"].ToString() + "'  where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+                }
+                else
+                {
+
+                    XtraMessageBox.Show(TxnResp.TxnOutcome);
+                    //Check for error "The distance between the pincodes given is too high"
+
+                    if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
+                    {
+                        RespInfoPl respInfoPl = new RespInfoPl();
+                        respInfoPl = JsonConvert.DeserializeObject<RespInfoPl>(TxnResp.Info);
+                        ewbGen.transDistance = respInfoPl.distance;
+                        TxnResp = await EWBAPI.GenEWBAsync(EwbSession, ewbGen);
+                        if (TxnResp.IsSuccess)
+                        {
+                            XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
+                        }
+                        else
+                        {
+                            XtraMessageBox.Show(TxnResp.TxnOutcome);
+                        }
+                    }
+
+                }
             }
 
 
@@ -2188,7 +2192,6 @@ namespace WindowsFormsApplication1
         public static void PrintDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
-
             {
                 DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + DocNo + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -2199,10 +2202,10 @@ namespace WindowsFormsApplication1
                     {
                         sub.ReportSource.DataSource = ds;
                     }
+
+
+              
                     Report.CreateDocument();
-
-
-
                     if (GlobalVariables.ProgCode == "PROG132")
                     {
                         Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
@@ -2231,7 +2234,7 @@ namespace WindowsFormsApplication1
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
 
                         ///////////mobile number from fetch
-                        SendBillImageAsync("  ");
+                        SendBillImageAsync("918591115444", DocNo,DocDate);
                     }
 
 
