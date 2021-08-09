@@ -30,9 +30,15 @@ namespace WindowsFormsApplication1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelectRangeNew));
+            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
             this.BtnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -42,11 +48,23 @@ namespace WindowsFormsApplication1
             this.DtFrom = new DevExpress.XtraEditors.DateEdit();
             this.txtParty = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtGroups = new DevExpress.XtraEditors.CheckedComboBoxEdit();
+            this.chArticle = new DevExpress.XtraEditors.CheckEdit();
+            this.chParty = new DevExpress.XtraEditors.CheckEdit();
+            this.chLedger = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtLedger = new DevExpress.XtraEditors.CheckedComboBoxEdit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroups.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chArticle.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chParty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chLedger.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedger.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnLoad
@@ -85,7 +103,7 @@ namespace WindowsFormsApplication1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(134, 26);
+            this.labelControl1.Location = new System.Drawing.Point(214, 25);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(199, 24);
@@ -97,7 +115,7 @@ namespace WindowsFormsApplication1
             this.simpleButton1.AutoSize = true;
             this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(405, 22);
+            this.simpleButton1.Location = new System.Drawing.Point(607, 25);
             this.simpleButton1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
@@ -160,13 +178,13 @@ namespace WindowsFormsApplication1
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtParty.Properties.SelectAllItemVisible = false;
             this.txtParty.Size = new System.Drawing.Size(493, 24);
-            toolTipTitleItem1.Text = "Help";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+            toolTipTitleItem4.Text = "Help";
+            toolTipItem4.LeftIndent = 6;
+            toolTipItem4.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
     "elect Items.\r\nAtlast Press Enter Save Choice.";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.txtParty.SuperTip = superToolTip1;
+            superToolTip4.Items.Add(toolTipTitleItem4);
+            superToolTip4.Items.Add(toolTipItem4);
+            this.txtParty.SuperTip = superToolTip4;
             this.txtParty.TabIndex = 788;
             // 
             // labelControl4
@@ -180,10 +198,109 @@ namespace WindowsFormsApplication1
             this.labelControl4.TabIndex = 789;
             this.labelControl4.Text = "Party";
             // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(29, 199);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(49, 20);
+            this.labelControl5.TabIndex = 791;
+            this.labelControl5.Text = "Groups";
+            // 
+            // txtGroups
+            // 
+            this.txtGroups.EditValue = "";
+            this.txtGroups.EnterMoveNextControl = true;
+            this.txtGroups.Location = new System.Drawing.Point(91, 198);
+            this.txtGroups.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtGroups.Name = "txtGroups";
+            this.txtGroups.Properties.AllowMultiSelect = true;
+            this.txtGroups.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtGroups.Properties.SelectAllItemVisible = false;
+            this.txtGroups.Size = new System.Drawing.Size(493, 24);
+            toolTipTitleItem1.Text = "Help";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+    "elect Items.\r\nAtlast Press Enter Save Choice.";
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txtGroups.SuperTip = superToolTip1;
+            this.txtGroups.TabIndex = 790;
+            // 
+            // chArticle
+            // 
+            this.chArticle.Location = new System.Drawing.Point(595, 197);
+            this.chArticle.Name = "chArticle";
+            this.chArticle.Properties.Caption = "All";
+            this.chArticle.Size = new System.Drawing.Size(94, 21);
+            this.chArticle.TabIndex = 792;
+            this.chArticle.CheckedChanged += new System.EventHandler(this.chArticle_CheckedChanged);
+            // 
+            // chParty
+            // 
+            this.chParty.Location = new System.Drawing.Point(595, 156);
+            this.chParty.Name = "chParty";
+            this.chParty.Properties.Caption = "All";
+            this.chParty.Size = new System.Drawing.Size(94, 21);
+            this.chParty.TabIndex = 793;
+            this.chParty.CheckedChanged += new System.EventHandler(this.chParty_CheckedChanged);
+            // 
+            // chLedger
+            // 
+            this.chLedger.Location = new System.Drawing.Point(594, 238);
+            this.chLedger.Name = "chLedger";
+            this.chLedger.Properties.Caption = "All";
+            this.chLedger.Size = new System.Drawing.Size(94, 21);
+            this.chLedger.TabIndex = 796;
+            this.chLedger.CheckedChanged += new System.EventHandler(this.chLedger_CheckedChanged);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl6.Appearance.Options.UseFont = true;
+            this.labelControl6.Location = new System.Drawing.Point(32, 240);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(47, 20);
+            this.labelControl6.TabIndex = 795;
+            this.labelControl6.Text = "Ledger";
+            // 
+            // txtLedger
+            // 
+            this.txtLedger.EditValue = "";
+            this.txtLedger.EnterMoveNextControl = true;
+            this.txtLedger.Location = new System.Drawing.Point(94, 239);
+            this.txtLedger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLedger.Name = "txtLedger";
+            this.txtLedger.Properties.AllowMultiSelect = true;
+            this.txtLedger.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtLedger.Properties.SelectAllItemVisible = false;
+            this.txtLedger.Size = new System.Drawing.Size(490, 24);
+            toolTipTitleItem2.Text = "Help";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+    "elect Items.\r\nAtlast Press Enter Save Choice.";
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.txtLedger.SuperTip = superToolTip2;
+            this.txtLedger.TabIndex = 794;
+            // 
             // frmSelectRangeNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.chLedger);
+            this.Controls.Add(this.labelControl6);
+            this.Controls.Add(this.txtLedger);
+            this.Controls.Add(this.chParty);
+            this.Controls.Add(this.chArticle);
+            this.Controls.Add(this.labelControl5);
+            this.Controls.Add(this.txtGroups);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtParty);
             this.Controls.Add(this.simpleButton1);
@@ -194,13 +311,18 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.DtFrom);
             this.Controls.Add(this.labelControl1);
             this.Name = "frmSelectRangeNew";
-            this.Size = new System.Drawing.Size(641, 331);
+            this.Size = new System.Drawing.Size(686, 337);
             this.Load += new System.EventHandler(this.frmSelectRangeNew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtParty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtGroups.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chArticle.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chParty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chLedger.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedger.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,5 +339,12 @@ namespace WindowsFormsApplication1
         private DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.CheckedComboBoxEdit txtParty;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        public DevExpress.XtraEditors.CheckedComboBoxEdit txtGroups;
+        private DevExpress.XtraEditors.CheckEdit chArticle;
+        private DevExpress.XtraEditors.CheckEdit chParty;
+        private DevExpress.XtraEditors.CheckEdit chLedger;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        public DevExpress.XtraEditors.CheckedComboBoxEdit txtLedger;
     }
 }

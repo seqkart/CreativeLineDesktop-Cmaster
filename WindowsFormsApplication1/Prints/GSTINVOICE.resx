@@ -221,6 +221,7 @@
               &lt;xs:element name="CATCARDSLIPNO" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="TRPRNAME" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIMDISPCODE" type="xs:long" minOccurs="0" /&gt;
+              &lt;xs:element name="FileName" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="DelAddress1" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="DelAddress2" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="DelAddress3" type="xs:string" minOccurs="0" /&gt;
@@ -228,6 +229,7 @@
               &lt;xs:element name="CityCode" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="DelCity" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="AccDCCode" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="VehicleNo" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;
@@ -247,8 +249,6 @@
               &lt;xs:element name="SIDARTUOM" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="SIDARTMRP" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="SIDARTWSP" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXMRPVAL" type="xs:decimal" minOccurs="0" /&gt;
-              &lt;xs:element name="SIDBOXWSPVAL" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="SIDSCHMAPP" type="xs:boolean" minOccurs="0" /&gt;
               &lt;xs:element name="SIDSCHMID" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="SIDITMDISCPRCN" type="xs:decimal" minOccurs="0" /&gt;
@@ -296,7 +296,7 @@
               &lt;xs:element name="SIMNO" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="SIMSERIES" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="UNITNAME" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="UNITCODE" type="xs:long" minOccurs="0" /&gt;
+              &lt;xs:element name="UnitCode" type="xs:long" minOccurs="0" /&gt;
               &lt;xs:element name="UNITADDRESS" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="UnitGSTNo" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;

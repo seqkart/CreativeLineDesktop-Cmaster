@@ -123,7 +123,7 @@
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel85 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel49 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtvehicleNo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
@@ -144,6 +144,7 @@
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrPdfContent2 = new DevExpress.XtraReports.UI.XRPdfContent();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -210,7 +211,6 @@
             this.TAX = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrPdfContent1 = new DevExpress.XtraReports.UI.XRPdfContent();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1441,7 +1441,7 @@
             this.xrLabel9,
             this.xrLabel85,
             this.xrLabel49,
-            this.xrLabel48,
+            this.txtvehicleNo,
             this.xrLabel8,
             this.xrLabel51,
             this.xrLabel52,
@@ -1500,19 +1500,18 @@
             this.xrLabel49.Text = "TRANSPORT :";
             this.xrLabel49.WordWrap = false;
             // 
-            // xrLabel48
+            // txtvehicleNo
             // 
-            this.xrLabel48.CanGrow = false;
-            this.xrLabel48.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.txtvehicleNo.CanGrow = false;
+            this.txtvehicleNo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[TRPRNAME]")});
-            this.xrLabel48.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(834.3749F, 0F);
-            this.xrLabel48.Name = "xrLabel48";
-            this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel48.SizeF = new System.Drawing.SizeF(260.4166F, 17.00002F);
-            this.xrLabel48.StylePriority.UseFont = false;
-            this.xrLabel48.Text = "TRANSPORT:";
-            this.xrLabel48.WordWrap = false;
+            this.txtvehicleNo.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
+            this.txtvehicleNo.LocationFloat = new DevExpress.Utils.PointFloat(834.3748F, 1.666656F);
+            this.txtvehicleNo.Name = "txtvehicleNo";
+            this.txtvehicleNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.txtvehicleNo.SizeF = new System.Drawing.SizeF(260.4166F, 17.00002F);
+            this.txtvehicleNo.StylePriority.UseFont = false;
+            this.txtvehicleNo.WordWrap = false;
             // 
             // xrLabel8
             // 
@@ -1774,6 +1773,13 @@
             this.xrPdfContent2.SizeF = new System.Drawing.SizeF(1113F, 12.83334F);
             this.xrPdfContent2.SourceSerializable = resources.GetString("xrPdfContent2.SourceSerializable");
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 149.75F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
+            // 
             // xrLabel27
             // 
             this.xrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1891,15 +1897,16 @@
             this.xrLabel69.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel69.CanGrow = false;
             this.xrLabel69.Font = new System.Drawing.Font("Calibri", 8F);
-            this.xrLabel69.LocationFloat = new DevExpress.Utils.PointFloat(6.804577F, 24.84853F);
+            this.xrLabel69.LocationFloat = new DevExpress.Utils.PointFloat(6.804581F, 24.84853F);
             this.xrLabel69.Name = "xrLabel69";
             this.xrLabel69.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel69.SizeF = new System.Drawing.SizeF(377.1769F, 12.42427F);
+            this.xrLabel69.SizeF = new System.Drawing.SizeF(795.5103F, 12.42427F);
             this.xrLabel69.StylePriority.UseBorders = false;
             this.xrLabel69.StylePriority.UseFont = false;
             this.xrLabel69.StylePriority.UseTextAlignment = false;
             this.xrLabel69.Text = "2. Our responsibility ceases as soon as the goods are loaded / delivered to carri" +
-    "er.";
+    "er. Incase of any shortage short certificate is required from the carrier for cl" +
+    "aiming shortage.";
             this.xrLabel69.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrLabel69.WordWrap = false;
             // 
@@ -2692,13 +2699,6 @@
             this.xrPdfContent1.Name = "xrPdfContent1";
             this.xrPdfContent1.SizeF = new System.Drawing.SizeF(100F, 23F);
             // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 149.75F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
-            // 
             // GSTINVOICE
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2744,7 +2744,7 @@
             this.ShowPrintMarginsWarning = false;
             this.SnapGridStepCount = 1;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "20.2";
+            this.Version = "21.1";
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.GSTINVOICE_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -2826,7 +2826,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel51;
         private DevExpress.XtraReports.UI.XRLabel xrLabel50;
         private DevExpress.XtraReports.UI.XRLabel xrLabel49;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel48;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.XRLabel xrLabel85;
@@ -2928,5 +2927,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel120;
         public DevExpress.XtraReports.UI.XRPdfContent xrPdfContent2;
         private DevExpress.XtraReports.UI.XRPdfContent xrPdfContent1;
+        public DevExpress.XtraReports.UI.XRLabel txtvehicleNo;
     }
 }

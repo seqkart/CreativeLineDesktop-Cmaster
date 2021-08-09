@@ -1002,14 +1002,14 @@ namespace WindowsFormsApplication1
                         ProjectFunctions.CancelEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
                     }));
                 }
-                //if (GlobalVariables.ProgCode == "PROG131")
-                //{
-                //    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                //    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EWAY Bill", (o1, e1) =>
-                //    {
-                //        ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
-                //    }));
-                //}
+                if (GlobalVariables.ProgCode == "PROG131")
+                {
+                    DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EWAY Bill", (o1, e1) =>
+                    {
+                        ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                    }));
+                }
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -1338,9 +1338,19 @@ namespace WindowsFormsApplication1
                             .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Invoice",
                                                                       (o1, e1) =>
                                                                       {
-                                                                          DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
                                                                           MakePrintGrid();
-                                                                          ProjectFunctions.PrintEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+
+                                                                          foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                          {
+                                                                              if(dr["Select"].ToString().ToUpper()=="TRUE")
+                                                                              {
+                                                                                  ProjectFunctions.PrintEWaybill(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]));
+                                                                              }
+                                                                          }
+
+
+
                                                                           PrintOutGrid.Visible = true;
                                                                       //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
                                                                   }));
@@ -1961,7 +1971,14 @@ namespace WindowsFormsApplication1
                                             {
                                                 sub.ReportSource.DataSource = ds;
                                             }
+
+                                            rpt.txtvehicleNo.Text = ds.Tables[0].Rows[0]["VehicleNo"].ToString();
                                             rpt.CreateDocument();
+                                            rpt.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + drBills["BillNo"].ToString() + ".pdf");
+
+                                            ///////////mobile number from fetch
+                                            ProjectFunctions.SendBillImageAsync("918591115444", drBills["BillNo"].ToString(), Convert.ToDateTime(drBills["BillDate"]));
+
                                             ReportToExport.Pages.AddRange(rpt.Pages);
                                         }
                                     }

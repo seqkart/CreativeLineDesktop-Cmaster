@@ -32,7 +32,7 @@ namespace WindowsFormsApplication1
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
         // public static String ImageConnectionString = "Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
 
-
+        public static EWBSession EwbSession = new EWBSession();
         public static string ConnectionString = ProjectFunctionsUtils.ConnectionString;
         public static string ImageConnectionString = ProjectFunctionsUtils.ImageConnectionString;
         ////@"Data Source=cserver;Initial Catalog=SEQKART;User ID=sa;pwd=Seq@2021";
@@ -1802,7 +1802,7 @@ namespace WindowsFormsApplication1
 
         public static async void CancelEWaybill(String BillNo, DateTime BillDate)
         {
-            EWBSession EwbSession = new EWBSession();
+
             EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
             EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
             EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
@@ -1849,7 +1849,7 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
             if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
             {
-                EWBSession EwbSession = new EWBSession();
+
                 EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
                 EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
                 EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
@@ -1902,7 +1902,7 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
             if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
             {
-                EWBSession EwbSession = new EWBSession();
+
                 EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
                 EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
                 EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
@@ -2204,7 +2204,7 @@ namespace WindowsFormsApplication1
                     }
 
 
-              
+
                     Report.CreateDocument();
                     if (GlobalVariables.ProgCode == "PROG132")
                     {

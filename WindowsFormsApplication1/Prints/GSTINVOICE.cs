@@ -2,7 +2,7 @@
 {
     public partial class GSTINVOICE : DevExpress.XtraReports.UI.XtraReport
     {
-
+        public string VehicleNo { get; set; }
         public GSTINVOICE()
         {
             InitializeComponent();
@@ -12,6 +12,10 @@
         {
 
             txtVendorCode.Text = GlobalVariables.VendorCode;
+           // txtvehicleNo.Text = VehicleNo;
+
+
+
         }
     }
 }

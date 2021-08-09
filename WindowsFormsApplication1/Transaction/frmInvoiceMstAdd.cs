@@ -654,7 +654,8 @@ namespace WindowsFormsApplication1
                 panelControl1.Visible = false;
                 chRegular.Checked = true;
                 chExclusive.Checked = true;
-
+                txtUnits.Text = "PIECES";
+                txtSupplyType.Text = "Outward";
             }
             if (S1 == "Edit")
             {

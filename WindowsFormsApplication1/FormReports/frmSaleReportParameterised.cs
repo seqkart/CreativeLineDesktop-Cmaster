@@ -1,14 +1,9 @@
 ﻿using DevExpress.Utils.Menu;
-using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.FormReports
@@ -25,7 +20,9 @@ namespace WindowsFormsApplication1.FormReports
         void BtnLoad_Click(object sender, EventArgs e)
         {
             //ProjectFunctions.BindReportToGrid(ProjectFunctions.GetDataSet("Select ProgProcName from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'").Tables[0].Rows[0]["ProgProcName"].ToString(), _RangeSelector.DtFrom.DateTime.Date, _RangeSelector.DtEnd.DateTime.Date, MasterGrid, MasterGridView);
-            String PartyString=String.Empty;
+            String PartyString = String.Empty;
+            String ArticleString = String.Empty;
+            String LedgerString = String.Empty;
             int i = 0;
             foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in _RangeSelector.txtParty.Properties.Items)
             {
@@ -33,7 +30,7 @@ namespace WindowsFormsApplication1.FormReports
                 {
                     if (i == 0)
                     {
-                        PartyString =  item.Value.ToString() + ",";
+                        PartyString = item.Value.ToString() + ",";
                     }
                     else
                     {
@@ -42,15 +39,55 @@ namespace WindowsFormsApplication1.FormReports
                     i++;
                 }
             }
-            PartyString = PartyString.Remove(PartyString.Length-1, 1);
+            PartyString = PartyString.Remove(PartyString.Length - 1, 1);
 
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSaleDataParm '" + _RangeSelector.DtFrom.DateTime.Date.ToString("yyy-MM-dd") + "','" + _RangeSelector.DtEnd.DateTime.Date.ToString("yyy-MM-dd") + "','01'");
+
+
+
+            i = 0;
+            foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in _RangeSelector.txtGroups.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    if (i == 0)
+                    {
+                        ArticleString = item.Value.ToString() + ",";
+                    }
+                    else
+                    {
+                        ArticleString = ArticleString + item.Value.ToString() + ",";
+                    }
+                    i++;
+                }
+            }
+            ArticleString = ArticleString.Remove(ArticleString.Length - 1, 1);
+
+
+            i = 0;
+            foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in _RangeSelector.txtLedger.Properties.Items)
+            {
+                if (item.CheckState == CheckState.Checked)
+                {
+                    if (i == 0)
+                    {
+                        LedgerString = item.Value.ToString() + ",";
+                    }
+                    else
+                    {
+                        LedgerString = LedgerString + item.Value.ToString() + ",";
+                    }
+                    i++;
+                }
+            }
+            LedgerString = LedgerString.Remove(LedgerString.Length - 1, 1);
+
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSaleDataParm '" + _RangeSelector.DtFrom.DateTime.Date.ToString("yyy-MM-dd") + "','" + _RangeSelector.DtEnd.DateTime.Date.ToString("yyy-MM-dd") + "','01','" + PartyString + "','" + ArticleString + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 MasterGrid.DataSource = ds.Tables[0];
                 MasterGridView.BestFitColumns();
 
-                MasterGridView.ActiveFilterString = "([SIDPARTYC] IS ANY OF " + PartyString + ")";
+                //MasterGridView.ActiveFilterString = "([SIDPARTYC] IS ANY OF " + PartyString + ")";
             }
             else
             {
