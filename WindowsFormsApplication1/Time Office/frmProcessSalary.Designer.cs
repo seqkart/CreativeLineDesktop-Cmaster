@@ -311,7 +311,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1154, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1154, 25);
             this.Menu_ToolStrip.TabIndex = 194;
             this.Menu_ToolStrip.Text = "Options";
             this.Menu_ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ToolStrip_ItemClicked);
@@ -334,7 +334,7 @@
             // 
             this.splitter1.BackColor = System.Drawing.Color.White;
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 31);
+            this.splitter1.Location = new System.Drawing.Point(0, 25);
             this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(1154, 98);
@@ -345,11 +345,11 @@
             // 
             this.gridControl_SalaryProcess.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl_SalaryProcess.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gridControl_SalaryProcess.Location = new System.Drawing.Point(0, 129);
+            this.gridControl_SalaryProcess.Location = new System.Drawing.Point(0, 123);
             this.gridControl_SalaryProcess.MainView = this.gridView_SalaryProcess;
             this.gridControl_SalaryProcess.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl_SalaryProcess.Name = "gridControl_SalaryProcess";
-            this.gridControl_SalaryProcess.Size = new System.Drawing.Size(1154, 661);
+            this.gridControl_SalaryProcess.Size = new System.Drawing.Size(1154, 667);
             this.gridControl_SalaryProcess.TabIndex = 352;
             this.gridControl_SalaryProcess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_SalaryProcess});

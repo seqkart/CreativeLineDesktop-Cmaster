@@ -1849,7 +1849,7 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
             if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
             {
-
+                EWBSession EwbSession = new EWBSession();
                 EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
                 EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
                 EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
@@ -1858,34 +1858,38 @@ namespace WindowsFormsApplication1
                 EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
                 EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
                 long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
-                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
-
-                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
-                if (TxnResp.IsSuccess == true)
+                TxnRespWithObjAndInfo<EWBSession> TxnResp2 = await EWBAPI.GetAuthTokenAsync(EwbSession);
+                if (TxnResp2.IsSuccess)
                 {
-                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
-                    {
-                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
-                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
+                    TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
 
+                    var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+                    if (TxnResp.IsSuccess == true)
+                    {
+                        if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+                        {
+                            string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
+
+                        }
+                        else
+                        {
+                            System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+                            string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
+
+                        }
+
+                        //if (System.IO.File.Exists(Application.StartupPath + "\\EWAY\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
+                        //{
+                        //    System.IO.File.Copy(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWAY\\GST-" + BillNo + ".pdf");
+                        //   //// System.IO.File.Delete(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
+                        //}
                     }
                     else
                     {
-                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
-                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
-                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
-
+                        XtraMessageBox.Show(TxnResp.TxnOutcome);
                     }
-
-                    //if (System.IO.File.Exists(Application.StartupPath + "\\EWAY\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
-                    //{
-                    //    System.IO.File.Copy(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWAY\\GST-" + BillNo + ".pdf");
-                    //   //// System.IO.File.Delete(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
-                    //}
-                }
-                else
-                {
-                    XtraMessageBox.Show(TxnResp.TxnOutcome);
                 }
             }
             else

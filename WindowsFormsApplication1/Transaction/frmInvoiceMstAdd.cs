@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
         public string ImSeries { get; set; }
         string StkTransfer = string.Empty;
         decimal AccMRPMarkDown = 0;
-#pragma warning restore CS0169 // The field 'frmInvoiceMstAdd.SearchField' is never used
+
         DataSet dsPopUps = new DataSet();
 
         int rowindex;
@@ -61,9 +61,6 @@ namespace WindowsFormsApplication1
             dt.Columns.Add("TAXCODE", typeof(string));
             dt.Columns.Add("GRPHSNCODE", typeof(string));
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
-
-
-
 
 
             txtSupplyType.DataSource = SharedLists.SupplyTypes;
@@ -126,8 +123,6 @@ namespace WindowsFormsApplication1
             {
 
             }
-
-
 
             if (txtDebitPartyCode.Text.Trim().Length == 0)
             {
@@ -238,7 +233,6 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-
         private void PrepareDirectInvoice()
         {
             if (chDirect.Checked)
@@ -260,7 +254,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-
         private void Calculation()
         {
             InfoGridView.CloseEditor();
@@ -273,9 +266,7 @@ namespace WindowsFormsApplication1
 
             string LCTag = ProjectFunctions.GetDataSet("Select AccLcTag from ActMst Where AccCode='" + txtDebitPartyCode.Text + "'").Tables[0].Rows[0]["AccLcTag"].ToString();
 
-
             int i = 0;
-
 
             DataSet ds = new DataSet();
             decimal MainDiscAmount = i;
@@ -289,11 +280,6 @@ namespace WindowsFormsApplication1
 
             foreach (DataRow dr in dt.Rows)
             {
-
-
-
-
-
                 decimal WSP = 0;
                 if (chInclusive.Checked)
                 {
@@ -303,7 +289,6 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-
                         decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
                         WSP = Convert.ToDecimal(dr["SIDARTMRP"]) - ((Convert.ToDecimal(dr["SIDARTMRP"]) * TaxRate) / (100 + TaxRate));
                     }
@@ -322,8 +307,6 @@ namespace WindowsFormsApplication1
                     }
                 }
 
-
-
                 if (AccMRPMarkDown > 0)
                 {
                     WSP = WSP - ((WSP * AccMRPMarkDown) / 100);
@@ -338,7 +321,6 @@ namespace WindowsFormsApplication1
                     {
                         WSP = WSP - ((WSP * Convert.ToDecimal(dr["ARTMARGIN"])) / 100);
                     }
-
 
                 }
                 dr["SIDARTWSP"] = Math.Round(WSP, 2);
@@ -380,9 +362,6 @@ namespace WindowsFormsApplication1
                 decimal SGSTAmount = 0;
                 decimal IGSTAmount = 0;
 
-
-                //if (i == 0)
-                //{
                 var str = "Exec [sp_LoadTaxMstFInvoice] @PrdCode='" + dr["SIDARTID"].ToString() + "',";
                 str = str + "@LCTag='" + LCTag + "',@ValueOfGoods='" + ValueOfGoods / Convert.ToDecimal(dr["SIDSCANQTY"]) + "'";
 
@@ -393,15 +372,6 @@ namespace WindowsFormsApplication1
                     dr["SIDSGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxSGSTRate"]);
                     dr["SIDIGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxIGSTRate"]);
                 }
-                //    i++;
-                //}
-                //else
-                //{
-                //    dr["SIDCGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxCGSTRate"]);
-                //    dr["SIDSGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxSGSTRate"]);
-                //    dr["SIDIGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxIGSTRate"]);
-                //}
-
 
                 if (StkTransfer.ToString().ToUpper() == "Y")
                 {
@@ -426,8 +396,6 @@ namespace WindowsFormsApplication1
                 dr["SIDSGSTAMT"] = SGSTAmount;
                 dr["SIDIGSTAMT"] = IGSTAmount;
 
-
-
             }
 
 
@@ -440,8 +408,6 @@ namespace WindowsFormsApplication1
             txtRNetAmount.Text = Math.Round(Convert.ToDecimal(txtNetAmount.Text), 0).ToString("0.00");
 
             txtRoundOffAmount.Text = (Convert.ToDecimal(txtRNetAmount.Text) - Convert.ToDecimal(txtNetAmount.Text)).ToString("0.00");
-
-
 
             TaxCodeWiseSummary();
             HSNWiseSummary();
@@ -662,11 +628,7 @@ namespace WindowsFormsApplication1
 
                 DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadInvoiceMstFEDit] '" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + ImNo + "','" + ImSeries + "','" + GlobalVariables.CUnitID + "','" + GlobalVariables.FinancialYear + "'");
 
-
-
                 StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
-
-
 
                 dtInvoiceDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("yyyy-MM-dd");
                 txtSerialNo.Text = ds.Tables[0].Rows[0]["BillNo"].ToString();
@@ -699,7 +661,6 @@ namespace WindowsFormsApplication1
                 if (ds.Tables[0].Rows[0]["SIMGRNRRDATE"].ToString().Trim().Length == 0)
                 {
 
-
                 }
                 else
                 {
@@ -719,7 +680,6 @@ namespace WindowsFormsApplication1
                 if (ds.Tables[0].Rows[0]["SIMGATENTRYDATE"].ToString().Trim().Length == 0)
                 {
 
-
                 }
                 else
                 {
@@ -731,7 +691,6 @@ namespace WindowsFormsApplication1
                 if (ds.Tables[0].Rows[0]["SIMINVDIRECT"].ToString().ToUpper() == "Y")
                 {
                     chDirect.Checked = true;
-
                 }
                 else
                 {
@@ -812,18 +771,12 @@ namespace WindowsFormsApplication1
                 txtUnits.SelectedValue = ds.Tables[0].Rows[0]["Units"].ToString();
                 txtTransMode.SelectedValue = ds.Tables[0].Rows[0]["TransMode"].ToString();
 
-
-
-
-
                 dt = ds.Tables[1];
                 InfoGrid.DataSource = dt;
                 InfoGridView.BestFitColumns();
                 txtDebitPartyCode.Focus();
 
                 GetPartyBalances();
-
-
 
                 BtnRecalculate_Click(null, e);
                 ShowPendingPSlips();
@@ -833,9 +786,6 @@ namespace WindowsFormsApplication1
 
             }
         }
-
-
-
 
         private void LoadDocs()
         {
@@ -851,7 +801,6 @@ namespace WindowsFormsApplication1
                 DocsGridView.BestFitColumns();
             }
         }
-
 
         private void SaveInvoice()
         {
@@ -924,8 +873,6 @@ namespace WindowsFormsApplication1
                             {
                                 sqlcom.Parameters.Add("@SIMBUILTYPAID", SqlDbType.NVarChar).Value = "N";
                             }
-
-
 
                             sqlcom.Parameters.Add("@SIMBUILTYPAIDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtBuiltyAmount.Text);
                             sqlcom.Parameters.Add("@SIMGATENTRYNO", SqlDbType.NVarChar).Value = txtGateEntryNo.Text;
@@ -1037,8 +984,6 @@ namespace WindowsFormsApplication1
                             {
                                 sqlcom.Parameters.Add("@SIMBUILTYPAID", SqlDbType.NVarChar).Value = "N";
                             }
-
-
 
                             sqlcom.Parameters.Add("@SIMBUILTYPAIDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtBuiltyAmount.Text);
                             sqlcom.Parameters.Add("@SIMGATENTRYNO", SqlDbType.NVarChar).Value = txtGateEntryNo.Text;
@@ -1163,8 +1108,6 @@ namespace WindowsFormsApplication1
                                 sqlcom.Parameters.Add("@SIDBOXQTY", SqlDbType.NVarChar).Value = Convert.ToDecimal(currentrow["SIDBOXQTY"]);
                             }
 
-
-
                             if (currentrow["SIDBOXMRPVAL"].ToString() == string.Empty)
                             {
                                 sqlcom.Parameters.Add("@SIDBOXMRPVAL", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
@@ -1182,8 +1125,6 @@ namespace WindowsFormsApplication1
                             {
                                 sqlcom.Parameters.Add("@SIDBOXWSPVAL", SqlDbType.NVarChar).Value = Convert.ToDecimal(currentrow["SIDBOXWSPVAL"]);
                             }
-
-
 
                             sqlcom.Parameters.Add("@SIDITMDISCPRCN", SqlDbType.NVarChar).Value = Convert.ToDecimal(currentrow["SIDITMDISCPRCN"]);
                             sqlcom.Parameters.Add("@SIDITMDISCAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(currentrow["SIDITMDISCAMT"]);
@@ -1218,13 +1159,6 @@ namespace WindowsFormsApplication1
                         }
                         PackingSlipUpdations();
 
-
-                        //sqlcom.CommandType = CommandType.StoredProcedure;
-                        //sqlcom.CommandText = "SP_SLVPosting";
-                        //sqlcom.Parameters.Add("@DocNo", SqlDbType.VarChar).Value = txtSerialNo.Text.Trim();
-                        //sqlcom.Parameters.Add("@DocDate", SqlDbType.DateTime).Value = Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd");
-                        //sqlcom.ExecuteNonQuery();
-                        //sqlcom.Parameters.Clear();
                         if (StkTransfer.ToUpper() == "Y")
                         {
                             ProjectFunctions.GetDataSet("sp_SinkDCOWithOnline");
@@ -1261,8 +1195,6 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.GetDataSet("Update PSWSLMAIN Set Used='Y'  Where PSWSNO='" + v.ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
             }
 
-
-
             foreach (DataRow dr in dtWeight.Rows)
             {
                 ProjectFunctions.GetDataSet("Update PSWSLMAIN Set PSWEIGHT='" + Convert.ToDecimal(dr["Weight"]) + "' Where PSWSNO='" + dr["PSWSNO"].ToString() + "' And PSWSTOTBOXES='" + dr["BoxNo"].ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
@@ -1273,8 +1205,6 @@ namespace WindowsFormsApplication1
 
             SaveInvoice();
         }
-
-
 
         private void FrmInvoiceMstAdd_KeyDown(object sender, KeyEventArgs e)
         {
@@ -1314,7 +1244,6 @@ namespace WindowsFormsApplication1
             txtCreditLimit.Text = string.Empty;
         }
 
-
         private void PrepareActMstHelpGrid()
 
         {
@@ -1330,7 +1259,6 @@ namespace WindowsFormsApplication1
             };
             HelpGridView.Columns.Add(col1);
 
-            // HelpGridView.Columns.ColumnByName("'Acc Name'").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
 
             DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
             {
@@ -1345,7 +1273,7 @@ namespace WindowsFormsApplication1
                 FieldName = "AccAddress1",
                 Visible = false
             };
-            //col3.VisibleIndex = 2;
+
             HelpGridView.Columns.Add(col3);
 
             DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
@@ -1353,7 +1281,7 @@ namespace WindowsFormsApplication1
                 FieldName = "AccAddress2",
                 Visible = false
             };
-            //col4.VisibleIndex = 3;
+
             HelpGridView.Columns.Add(col4);
 
             DevExpress.XtraGrid.Columns.GridColumn col5 = new DevExpress.XtraGrid.Columns.GridColumn
@@ -1361,7 +1289,7 @@ namespace WindowsFormsApplication1
                 FieldName = "AccAddress3",
                 Visible = false
             };
-            //col5.VisibleIndex = 4;
+
             HelpGridView.Columns.Add(col5);
 
 
@@ -1370,37 +1298,13 @@ namespace WindowsFormsApplication1
                 FieldName = "CTNAME",
                 Visible = false
             };
-            //col6.VisibleIndex = 5;
+
             HelpGridView.Columns.Add(col6);
 
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
-
-
-
 
             if (e.KeyCode == Keys.Enter)
             {
@@ -1438,14 +1342,6 @@ namespace WindowsFormsApplication1
                         txtBillingState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
                         txtBillingCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
                         txtBillingZip.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
-                        //txtDelieveryCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
-                        //txtDelieveryName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-                        //txtDelieveryAddress1.Text = ds.Tables[0].Rows[0]["AccAddress1"].ToString();
-                        //txtDelieveryAddress2.Text = ds.Tables[0].Rows[0]["AccAddress2"].ToString();
-                        //txtDelieveryAddress3.Text = ds.Tables[0].Rows[0]["AccAddress3"].ToString();
-                        //txtDelieveryState.Text = ds.Tables[0].Rows[0]["STNAME"].ToString();
-                        //txtDelieveryCity.Text = ds.Tables[0].Rows[0]["CTNAME"].ToString();
-                        //txtDelieveryZipCode.Text = ds.Tables[0].Rows[0]["AccZipCode"].ToString();
                         txtBankName.Text = ds.Tables[0].Rows[0]["AccAcinBankName"].ToString();
                         txtBankAccNo.Text = ds.Tables[0].Rows[0]["AccBankAccNo"].ToString();
                         txtGSTNo.Text = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
@@ -1517,10 +1413,7 @@ namespace WindowsFormsApplication1
             }
             e.Handled = true;
 
-
-
         }
-
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
         {
@@ -1580,12 +1473,6 @@ namespace WindowsFormsApplication1
                 txtBillingZip.Text = row["AccZipCode"].ToString();
                 txtDelieveryCode.Text = row["AccCode"].ToString();
                 txtDelieveryName.Text = row["AccName"].ToString();
-                //txtDelieveryAddress1.Text = row["AccAddress1"].ToString();
-                //txtDelieveryAddress2.Text = row["AccAddress2"].ToString();
-                //txtDelieveryAddress3.Text = row["AccAddress3"].ToString();
-                //txtDelieveryState.Text = row["STNAME"].ToString();
-                //txtDelieveryCity.Text = row["CTNAME"].ToString();
-                //txtDelieveryZipCode.Text = row["AccZipCode"].ToString();
                 txtBankName.Text = row["AccAcinBankName"].ToString();
                 txtBankAccNo.Text = row["AccBankAccNo"].ToString();
                 txtGSTNo.Text = row["AccGSTNo"].ToString();
@@ -1671,7 +1558,6 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.Enter)
             {
-
 
                 HelpGridView.Columns.Clear();
                 HelpGrid.Text = "txtTransporterCode";
@@ -1957,19 +1843,10 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-
         private void InfoGridView_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
-
-
-
-
             BtnRecalculate_Click(null, e);
-
         }
-
-
 
         private void TxtMainDisc_EditValueChanged(object sender, EventArgs e)
         {
@@ -1991,8 +1868,6 @@ namespace WindowsFormsApplication1
             if (chInclusive.Checked)
             {
                 chExclusive.Checked = false;
-
-
 
                 //calculation();
             }
@@ -2044,10 +1919,6 @@ namespace WindowsFormsApplication1
                             dtNewRow["SIDIGSTAMT"] = dr["SIDIGSTAMT"];
                             dtNewRow["ARTMARGIN"] = dr["ARTMARGIN"];
 
-
-
-
-
                             var str = "Exec [sp_LoadTaxMstFInvoice] @PrdCode='" + dr["SIDARTID"].ToString() + "',";
                             str = str + "@LCTag='" + LCTag + "',@ValueOfGoods='" + Convert.ToDecimal(dr["SIDARTMRP"]) + "'";
                             Ds = ProjectFunctions.GetDataSet(str);
@@ -2057,15 +1928,6 @@ namespace WindowsFormsApplication1
                                 dtNewRow["SIDSGSTPER"] = Convert.ToDecimal(Ds.Tables[0].Rows[0]["TaxSGSTRate"]);
                                 dtNewRow["SIDIGSTPER"] = Convert.ToDecimal(Ds.Tables[0].Rows[0]["TaxIGSTRate"]);
                             }
-                            //    i++;
-                            //}
-                            //else
-                            //{
-                            //    dtNewRow["SIDCGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxCGSTRate"]);
-                            //    dtNewRow["SIDSGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxSGSTRate"]);
-                            //    dtNewRow["SIDIGSTPER"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["TaxIGSTRate"]);
-                            //}
-
 
                             dtNewRow["SIDPSDATE"] = Convert.ToDateTime("2001-01-01");
                             dtNewRow["TAXCODE"] = Ds.Tables[0].Rows[0]["TAXCODE"].ToString();
@@ -2299,9 +2161,6 @@ namespace WindowsFormsApplication1
                         InfoGridView.CloseEditor();
                         InfoGridView.UpdateCurrentRow();
 
-
-
-
                         BtnRecalculate_Click(null, e);
                     }
                 }
@@ -2407,102 +2266,22 @@ namespace WindowsFormsApplication1
 
         private void TxtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
         {
-            //try
-            //{
-            //    if (e.KeyCode == Keys.Enter)
-            //    {
-            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
-            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
-            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
-            //        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
-            //        Calculation();
 
-            //        InfoGridView.Focus();
-
-
-
-
-
-            //        txtItemDiscAMount.EditValue = Convert.ToDecimal("0");
-            //        txtItemDiscPer.EditValue = Convert.ToDecimal("0");
-            //        txtItemMRP.EditValue = Convert.ToDecimal("0");
-            //        txtItemFlatRate.EditValue = Convert.ToDecimal("0");
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    XtraMessageBox.Show(ex.Message);
-            //}
         }
 
         private void TxtItemFlatRate_EditValueChanged(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (txtItemFlatRate.Enabled && Convert.ToDecimal(txtItemFlatRate.Text) > 0)
-            //    {
-            //        txtItemDiscAMount.EditValue = (Convert.ToDecimal(txtItemMRP.Text) - Convert.ToDecimal(txtItemFlatRate.Text));
-            //        txtItemDiscPer.EditValue = 100 - ((Convert.ToDecimal(txtItemFlatRate.Text) / Convert.ToDecimal(txtItemMRP.Text)) * 100);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    XtraMessageBox.Show(ex.Message);
-            //}
+
         }
 
         private void TxtItemDiscPer_EditValueChanged(object sender, EventArgs e)
         {
-            //if (txtItemDiscPer.Enabled && Convert.ToDecimal(txtItemDiscPer.Text) > 0)
-            //{
-            //    txtItemDiscAMount.EditValue = ((Convert.ToDecimal(txtItemMRP.Text) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
-            //    txtItemFlatRate.EditValue = Convert.ToDecimal(txtItemMRP.Text) - Convert.ToDecimal(txtItemDiscAMount.Text);
-            //}
+
         }
 
         private void TxtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
         {
-            //////try
-            //////{
-            //////    if (e.KeyCode == Keys.Enter)
-            //////    {
 
-            //////        if (chall.Checked)
-            //////        {
-            //////            foreach (DataRow dr in dt.Rows)
-            //////            {
-            //////                if (txtItemDiscPer.Enabled)
-            //////                {
-            //////                    dr["SIDITMDISCAMT"] = ((Convert.ToDecimal(dr["SIDARTMRP"]) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
-            //////                    dr["SIDITMDISCPRCN"] = Convert.ToDecimal(txtItemDiscPer.Text);
-
-            //////                    Calculation();
-            //////                }
-            //////            }
-            //////        }
-            //////        else
-            //////        {
-            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
-            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
-            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTMRP"], Convert.ToDecimal(txtItemMRP.Text));
-            //////            InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
-            //////            Calculation();
-            //////        }
-
-
-
-            //////        InfoGridView.Focus();
-
-            //////        txtItemDiscAMount.EditValue = Convert.ToDecimal("0");
-            //////        txtItemDiscPer.EditValue = Convert.ToDecimal("0");
-            //////        txtItemMRP.EditValue = Convert.ToDecimal("0");
-            //////        txtItemFlatRate.EditValue = Convert.ToDecimal("0");
-            //////    }
-            //////}
-            //////catch (Exception ex)
-            //////{
-            //////    XtraMessageBox.Show(ex.Message);
-            //////}
         }
 
         private void InfoGrid_Click(object sender, EventArgs e)
@@ -2554,7 +2333,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void textEdit1_EditValueChanged(object sender, EventArgs e)
+        private void TextEdit1_EditValueChanged(object sender, EventArgs e)
         {
 
         }

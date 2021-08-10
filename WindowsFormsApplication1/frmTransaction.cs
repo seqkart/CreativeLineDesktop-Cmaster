@@ -853,7 +853,7 @@ namespace WindowsFormsApplication1
 
 
 
-                    if (GlobalVariables.ProgCode == "PROG141")
+                if (GlobalVariables.ProgCode == "PROG141")
                 {
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Report To Excel ", (o1, e1) =>
                     {
@@ -977,9 +977,14 @@ namespace WindowsFormsApplication1
                             {
                                 Prints.GSTINVOICE rpt = new Prints.GSTINVOICE();
 
-
-                                rpt.xrPdfContent2.SourceUrl = Application.StartupPath + "//EWAY//" + dr["SIMTRDPRMWYBLNO"].ToString() + ".pdf";
-
+                                if (System.IO.File.Exists(Application.StartupPath + "//EWAY//" + dr["SIMTRDPRMWYBLNO"].ToString() + ".pdf"))
+                                {
+                                    rpt.xrPdfContent2.SourceUrl = Application.StartupPath + "//EWAY//" + dr["SIMTRDPRMWYBLNO"].ToString() + ".pdf";
+                                }
+                                else
+                                {
+                                    rpt.xrPdfContent2.Source = null;
+                                }
                                 ProjectFunctions.PrintDocument(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]), dr["BillSeries"].ToString(), rpt);
 
                             }
@@ -1343,7 +1348,7 @@ namespace WindowsFormsApplication1
 
                                                                           foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                           {
-                                                                              if(dr["Select"].ToString().ToUpper()=="TRUE")
+                                                                              if (dr["Select"].ToString().ToUpper() == "TRUE")
                                                                               {
                                                                                   ProjectFunctions.PrintEWaybill(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]));
                                                                               }
@@ -1352,8 +1357,8 @@ namespace WindowsFormsApplication1
 
 
                                                                           PrintOutGrid.Visible = true;
-                                                                      //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
-                                                                  }));
+                                                                          //PrintOutGridView.ExportToCsv(Application.StartupPath + @"\PTFile\" + dr["DebitPartyName"].ToString() + "_GST_" + dr["BillNo"].ToString() + ".csv");
+                                                                      }));
                     }
                     if (GlobalVariables.ProgCode == "PROG141")
                     {
@@ -1767,6 +1772,7 @@ namespace WindowsFormsApplication1
             catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1915,8 +1921,6 @@ namespace WindowsFormsApplication1
 
                                 ReportToExport.Pages.AddRange(rpt.Pages);
 
-
-
                             }
                         }
                     }
@@ -1966,7 +1970,15 @@ namespace WindowsFormsApplication1
                                         {
                                             ds.WriteXmlSchema("C://Temp//abc.xml");
                                             rpt.DataSource = ds;
-                                            rpt.xrPdfContent2.SourceUrl = Application.StartupPath + "//EWAY//" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf";
+                                            if (System.IO.File.Exists(Application.StartupPath + "//EWAY//" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf"))
+                                            {
+                                                rpt.xrPdfContent2.SourceUrl = Application.StartupPath + "//EWAY//" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf";
+                                            }
+                                            else
+                                            {
+                                                rpt.xrPdfContent2.Source = null;
+                                            }
+                                            //rpt.xrPdfContent2.SourceUrl = Application.StartupPath + "//EWAY//" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf";
                                             foreach (XRSubreport sub in rpt.AllControls<XRSubreport>())
                                             {
                                                 sub.ReportSource.DataSource = ds;
@@ -2025,12 +2037,6 @@ namespace WindowsFormsApplication1
                         }
                     }
                 }
-
-
-
-
-
-
             }
 
             if (GlobalVariables.ProgCode == "PROG131" || GlobalVariables.ProgCode == "PROG141" || GlobalVariables.ProgCode == "PROG142")
@@ -2040,14 +2046,7 @@ namespace WindowsFormsApplication1
                 frm.documentViewer1.DocumentSource = ReportToExport;
                 frm.ShowDialog();
             }
-            //PdfSharp.Pdf rpt_Doc;
-            //rpt_Doc.
-            //rpt_Doc.Pages.Add();
-            //payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
-            //frm.documentViewer1.DocumentSource = rpt_Doc;
-            //frm.ShowDialog();
 
-            //PrintOutGrid.Visible = false;
         }
 
         private void PrintOutGrid_KeyDown(object sender, KeyEventArgs e)
