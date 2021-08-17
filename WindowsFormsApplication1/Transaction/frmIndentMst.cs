@@ -6,16 +6,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmIndentMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmIndentMst : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
         public string S1 { get; set; }
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         int rowindex;
-        public DevExpress.XtraGrid.Views.Base.BaseView KeyboardFocusView { get; set; }
+        private DevExpress.XtraGrid.Views.Base.BaseView focusedView;
 
-        public frmIndentMst()
+        public DevExpress.XtraGrid.Views.Base.BaseView GetFocusedView()
+        {
+            return focusedView;
+        }
+
+        public void SetFocusedView(DevExpress.XtraGrid.Views.Base.BaseView value)
+        {
+            focusedView = value;
+        }
+
+        public FrmIndentMst()
         {
             InitializeComponent();
             dt.Columns.Add("PrdAsgnCode", typeof(string));
@@ -240,7 +250,7 @@ namespace WindowsFormsApplication1.Transaction
         private void InfoGrid_DoubleClick(object sender, EventArgs e)
         {
 
-            // var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+            // var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
             var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
 
             if (MaxRow == 0)
@@ -279,7 +289,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
 #pragma warning disable S125 // Sections of code should not be commented out
-                    //var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+                    //var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
 
                     var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
 #pragma warning restore S125 // Sections of code should not be commented out

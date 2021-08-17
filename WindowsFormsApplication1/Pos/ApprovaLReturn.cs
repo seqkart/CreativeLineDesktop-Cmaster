@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction.Pos
 {
-    public partial class ApprovaLReturn : DevExpress.XtraEditors.XtraForm
+    public partial class ApprovalLReturn : DevExpress.XtraEditors.XtraForm
     {
         public string s1 { get; set; }
         DataTable dt = new DataTable();
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public string ImSeries { get; set; }
-        public ApprovaLReturn()
+        public ApprovalLReturn()
         {
 
             InitializeComponent();
@@ -155,9 +155,9 @@ namespace WindowsFormsApplication1.Transaction.Pos
             {
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                    var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+#pragma warning disable CS0618 // 'GridControl.FocusedView' is obsolete: 'Use the FocusedView property instead.'
+                    var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
+#pragma warning restore CS0618 // 'GridControl.FocusedView' is obsolete: 'Use the FocusedView property instead.'
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
                     sqlcom.Connection = sqlcon;

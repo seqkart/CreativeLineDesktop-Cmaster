@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG148")
                 {
-                    WindowsFormsApplication1.Transaction.frmIndentMst frm = new WindowsFormsApplication1.Transaction.frmIndentMst
+                    WindowsFormsApplication1.Transaction.FrmIndentMst frm = new WindowsFormsApplication1.Transaction.FrmIndentMst
                     { S1 = btnAdd.Text, Text = "Indent Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG133")
                 {
-                    Transaction.Pos.ApprovaLReturn frm = new Transaction.Pos.ApprovaLReturn()
+                    Transaction.Pos.ApprovalLReturn frm = new Transaction.Pos.ApprovalLReturn()
                     { s1 = btnAdd.Text, Text = "Approval Return Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -246,7 +246,7 @@ namespace WindowsFormsApplication1
                 //}
                 if (GlobalVariables.ProgCode == "PROG87")
                 {
-                    Transaction.frmIndentMst frm = new Transaction.frmIndentMst()
+                    Transaction.FrmIndentMst frm = new Transaction.FrmIndentMst()
                     { S1 = btnAdd.Text, Text = "Indent Master" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -404,7 +404,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Transaction.frmIndentMst frm = new WindowsFormsApplication1.Transaction.frmIndentMst
+                    WindowsFormsApplication1.Transaction.FrmIndentMst frm = new WindowsFormsApplication1.Transaction.FrmIndentMst
                     {
                         S1 = btnEdit.Text,
                         Text = "Indent Edition",
@@ -481,7 +481,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.Pos.ApprovaLReturn frm = new Transaction.Pos.ApprovaLReturn()
+                    Transaction.Pos.ApprovalLReturn frm = new Transaction.Pos.ApprovalLReturn()
                     {
                         s1 = btnEdit.Text,
                         Text = "Approval Return Edition",
@@ -661,7 +661,7 @@ namespace WindowsFormsApplication1
                         }
                     }
 
-                    Transaction.frmIndentMst frm = new Transaction.frmIndentMst()
+                    Transaction.FrmIndentMst frm = new Transaction.FrmIndentMst()
                     {
                         S1 = btnEdit.Text,
                         Text = "indent Editing",
@@ -1348,11 +1348,20 @@ namespace WindowsFormsApplication1
 
                                                                           foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                           {
-                                                                              if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                              if (dr["Select"].ToString().ToUpper() == "TRUE" && dr["BillSeries"].ToString().ToUpper() == "GST")
                                                                               {
-                                                                                  ProjectFunctions.PrintEWaybill(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]));
+                                                                                  if (System.IO.File.Exists(Application.StartupPath + "//EWAY//" + dr["SIMTRDPRMWYBLNO"].ToString() + ".pdf"))
+                                                                                  {
+
+                                                                                  }
+                                                                                  else
+                                                                                  {
+                                                                                      ProjectFunctions.PrintEWaybill(dr["BillNo"].ToString(), Convert.ToDateTime(dr["BillDate"]));
+                                                                                  }
+
                                                                               }
                                                                           }
+
 
 
 
@@ -1707,7 +1716,8 @@ namespace WindowsFormsApplication1
                                                               (o1, e1) =>
                                                               {
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                                                                  var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
+                                                                  var MaxRow = ((InvoiceGrid.FocusedView as GridView).RowCount);
+                                                                  // var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
 #pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                                                                   for (var i = 0; i < MaxRow; i++)
                                                                   {
@@ -1721,7 +1731,8 @@ namespace WindowsFormsApplication1
                                                               (o1, e1) =>
                                                               {
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                                                                  var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
+                                                                  var MaxRow = ((InvoiceGrid.FocusedView as GridView).RowCount);
+                                                                  //     var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
 #pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                                                                   for (var i = 0; i < MaxRow; i++)
                                                                   {
@@ -1768,14 +1779,11 @@ namespace WindowsFormsApplication1
                                                                   }));
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-
 
         private void MakePrintGrid()
         {
@@ -1876,7 +1884,9 @@ namespace WindowsFormsApplication1
         {
             PrintOutGridView.CloseEditor();
             PrintOutGridView.UpdateCurrentRow();
+
             XtraReport ReportToExport = new XtraReport();
+
             if (GlobalVariables.ProgCode == "PROG142")
             {
                 foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
@@ -1910,8 +1920,7 @@ namespace WindowsFormsApplication1
                                     "','" +
                                     Convert.ToDateTime(dr["CHODATE"]).ToString("yyyy-MM-dd") +
                                     "','" +
-                                    GlobalVariables.CUnitID +
-                                    "'");
+                                    GlobalVariables.CUnitID + "'");
                                 ds.WriteXmlSchema("C://Temp//abc.xml");
                                 Challanoutward rpt = new Challanoutward { DataSource = ds.Tables[0] };
                                 rpt.lblCopy.Text = CopyText;
@@ -1919,7 +1928,11 @@ namespace WindowsFormsApplication1
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();
                                 rpt.CreateDocument();
 
-                                ReportToExport.Pages.AddRange(rpt.Pages);
+
+                                //ReportToExport.Pages.AddRange(rpt.Pages);
+                                payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                frm.documentViewer1.DocumentSource = rpt;
+                                frm.ShowDialog();
 
                             }
                         }
@@ -1984,6 +1997,7 @@ namespace WindowsFormsApplication1
                                                 sub.ReportSource.DataSource = ds;
                                             }
 
+
                                             rpt.txtvehicleNo.Text = ds.Tables[0].Rows[0]["VehicleNo"].ToString();
                                             rpt.CreateDocument();
                                             rpt.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + drBills["BillNo"].ToString() + ".pdf");
@@ -1991,7 +2005,10 @@ namespace WindowsFormsApplication1
                                             ///////////mobile number from fetch
                                             ProjectFunctions.SendBillImageAsync("918591115444", drBills["BillNo"].ToString(), Convert.ToDateTime(drBills["BillDate"]));
 
-                                            ReportToExport.Pages.AddRange(rpt.Pages);
+                                            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                            frm.documentViewer1.DocumentSource = rpt;
+                                            frm.ShowDialog();
+                                            //ReportToExport.Pages.AddRange(rpt.Pages);
                                         }
                                     }
                                     if (drBills["BillSeries"].ToString().ToUpper() == "DCO")
@@ -2008,7 +2025,10 @@ namespace WindowsFormsApplication1
                                                 sub.ReportSource.DataSource = ds;
                                             }
                                             rpt.CreateDocument();
-                                            ReportToExport.Pages.AddRange(rpt.Pages);
+                                            //ReportToExport.Pages.AddRange(rpt.Pages);
+                                            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                            frm.documentViewer1.DocumentSource = rpt;
+                                            frm.ShowDialog();
                                         }
                                     }
                                 }
@@ -2029,7 +2049,10 @@ namespace WindowsFormsApplication1
                                                 sub.ReportSource.DataSource = ds;
                                             }
                                             rpt.CreateDocument();
-                                            ReportToExport.Pages.AddRange(rpt.Pages);
+                                            //ReportToExport.Pages.AddRange(rpt.Pages);
+                                            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                            frm.documentViewer1.DocumentSource = rpt;
+                                            frm.ShowDialog();
                                         }
                                     }
                                 }
@@ -2039,16 +2062,15 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            if (GlobalVariables.ProgCode == "PROG131" || GlobalVariables.ProgCode == "PROG141" || GlobalVariables.ProgCode == "PROG142")
-            {
+            //if (GlobalVariables.ProgCode == "PROG131" || GlobalVariables.ProgCode == "PROG141" || GlobalVariables.ProgCode == "PROG142")
+            //{
 
-                payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
-                frm.documentViewer1.DocumentSource = ReportToExport;
-                frm.ShowDialog();
-            }
+            //    payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+            //    frm.documentViewer1.DocumentSource = ReportToExport;
+            //    frm.ShowDialog();
+            //}
 
         }
-
         private void PrintOutGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -2056,8 +2078,6 @@ namespace WindowsFormsApplication1
                 PrintOutGrid.Visible = false;
             }
         }
-
-
         private void PreparePrintGrid()
         {
             PrintOutGridView.Columns.Clear();
@@ -2164,7 +2184,7 @@ namespace WindowsFormsApplication1
                                                                   }));
         }
 
-        private void saveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void SaveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (GlobalVariables.ProgCode == "PROG141")
             {
@@ -2200,7 +2220,6 @@ namespace WindowsFormsApplication1
 
                     PrintOutGridView.ExportToXls(saveFileDialog1.FileName, ExportToXls);
                     PrintOutGrid.DataSource = null;
-
 
                     System.Diagnostics.Process.Start(saveFileDialog1.FileName);
                 }

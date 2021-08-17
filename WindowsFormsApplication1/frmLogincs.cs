@@ -138,6 +138,8 @@ namespace WindowsFormsApplication1
                         GlobalVariables.EWBGSTIN = dsAPI.Tables[0].Rows[0]["EWBGSTIN"].ToString();
                         GlobalVariables.EWBUserID = dsAPI.Tables[0].Rows[0]["EWBUserID"].ToString();
                         GlobalVariables.EWBPassword = dsAPI.Tables[0].Rows[0]["EWBPassword"].ToString();
+                        GlobalVariables.AuthToken = dsAPI.Tables[0].Rows[0]["EayBillAuthToken"].ToString();
+                        GlobalVariables.AuthTokenTimeStamp = Convert.ToDateTime(dsAPI.Tables[0].Rows[0]["AuthTokenGenDate"]);
                     }
 
 
@@ -201,6 +203,24 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory(Application.StartupPath + "\\PI");
             }
+            if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+            {
+
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+            }
+            if (System.IO.Directory.Exists("C:\\Temp\\GST"))
+            {
+
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory("C:\\Temp\\GST");
+            }
+
+            
 
             defaultLookAndFeel1.LookAndFeel.SkinName = "McSkin";
             ProjectFunctions.TextBoxVisualize(this);

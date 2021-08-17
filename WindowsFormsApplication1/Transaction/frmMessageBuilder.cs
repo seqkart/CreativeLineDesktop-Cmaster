@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtMessage.Text.Length == 0)
             {
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1.Transaction
             using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
             {
 
-                var MaxRow = (ParameterGrid.KeyboardFocusView as GridView).RowCount;
+                var MaxRow = (ParameterGrid.FocusedView as GridView).RowCount;
                 //(InfoGrid.FocusedView as GridView).RowCount;
                 sqlcon.Open();
                 var sqlcom = sqlcon.CreateCommand();

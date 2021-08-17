@@ -5,7 +5,9 @@ namespace WindowsFormsApplication1
     {
         public static string BarCodePreFix = "V";
 
+        public static string AuthToken { get; set; }
 
+        public static DateTime AuthTokenTimeStamp { get; set; }
         public static string GSPName { get; set; }
         public static string ASPNetUser { get; set; }
         public static string ASPPassword { get; set; }

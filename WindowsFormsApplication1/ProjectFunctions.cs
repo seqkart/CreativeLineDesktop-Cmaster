@@ -1858,39 +1858,56 @@ namespace WindowsFormsApplication1
                 EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
                 EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
                 long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
-                TxnRespWithObjAndInfo<EWBSession> TxnResp2 = await EWBAPI.GetAuthTokenAsync(EwbSession);
-                if (TxnResp2.IsSuccess)
+
+
+                EwbSession.EwbApiLoginDetails.EwbAuthToken = GlobalVariables.AuthToken;
+                EwbSession.EwbApiLoginDetails.EwbTokenExp = GlobalVariables.AuthTokenTimeStamp;
+
+                if (DateTime.Now > GlobalVariables.AuthTokenTimeStamp)
                 {
-                    TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
-
-                    var a = JsonConvert.SerializeObject(TxnResp.RespObj);
-                    if (TxnResp.IsSuccess == true)
+                    TxnRespWithObjAndInfo<EWBSession> TxnResp2 = await EWBAPI.GetAuthTokenAsync(EwbSession);
+                    if (TxnResp2.IsSuccess)
                     {
-                        if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
-                        {
-                            string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
-                            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
 
-                        }
-                        else
-                        {
-                            System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
-                            string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
-                            EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
-
-                        }
-
-                        //if (System.IO.File.Exists(Application.StartupPath + "\\EWAY\\" + (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf")))
-                        //{
-                        //    System.IO.File.Copy(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf", Application.StartupPath + "\\EWAY\\GST-" + BillNo + ".pdf");
-                        //   //// System.IO.File.Delete(Application.StartupPath + "\\EWAY\\" + ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString() + ".pdf");
-                        //}
+                        String AuthToken = EwbSession.EwbApiLoginDetails.EwbAuthToken;
+                        String TokenExpiry = Convert.ToDateTime(EwbSession.EwbApiLoginDetails.EwbTokenExp).ToString("dd/MM/yyyy HH:mm:ss");
+                        ProjectFunctions.GetDataSet("Update APIIntegrationSetting Set EayBillAuthToken='" + AuthToken + "' ,AuthTokenGenDate='" + Convert.ToDateTime(TokenExpiry).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+                        GlobalVariables.AuthToken = AuthToken;
+                        GlobalVariables.AuthTokenTimeStamp = Convert.ToDateTime(TokenExpiry);
                     }
                     else
                     {
-                        XtraMessageBox.Show(TxnResp.TxnOutcome);
+                        XtraMessageBox.Show("Unable To Generate Auth Token");
+                        return;
                     }
+
                 }
+
+                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
+
+                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+                if (TxnResp.IsSuccess == true)
+                {
+                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+                    {
+                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
+                    }
+                    else
+                    {
+                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
+
+                    }
+
+
+                }
+                else
+                {
+                    XtraMessageBox.Show(TxnResp.TxnOutcome);
+                }
+
             }
             else
             {
