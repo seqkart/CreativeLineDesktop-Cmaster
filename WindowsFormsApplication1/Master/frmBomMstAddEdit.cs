@@ -30,12 +30,12 @@ namespace WindowsFormsApplication1
             get => _bomno;
             set => _bomno = value;
         }
-        public string bomPrdId
+        public string BomPrdId
         {
             get => _bomPrdId;
             set => _bomPrdId = value;
         }
-        public string s1
+        public string S1
         {
             get => _s1;
             set => _s1 = value;
@@ -56,12 +56,12 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void txtPadAsgnCode1_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPadAsgnCode1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -82,9 +82,9 @@ namespace WindowsFormsApplication1
                         txtPrdAsgnCode1.Text = ds.Tables[0].Rows[0]["PrdAsgnCode"].ToString();
                         txtProductName1.Text = ds.Tables[0].Rows[0]["PrdName"].ToString();
                         txtProductCode1.Text = ds.Tables[0].Rows[0]["PrdCode"].ToString();
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
-                            txtBomNo.Text = getNewInvoiceDocumentNo().PadLeft(4, '0');
+                            txtBomNo.Text = GetNewInvoiceDocumentNo().PadLeft(4, '0');
                         }
                         txtPrdAsgnCode2.Focus();
                     }
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtPrdAsgnCode2_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPrdAsgnCode2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtReqQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtReqQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
@@ -162,9 +162,9 @@ namespace WindowsFormsApplication1
                 txtPrdAsgnCode1.Text = row["PrdAsgnCode"].ToString();
                 txtProductName1.Text = row["PrdName"].ToString();
                 txtProductCode1.Text = row["PrdCode"].ToString();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
-                    txtBomNo.Text = getNewInvoiceDocumentNo().PadLeft(4, '0');
+                    txtBomNo.Text = GetNewInvoiceDocumentNo().PadLeft(4, '0');
                 }
                 txtPrdAsgnCode2.Focus();
                 HelpGrid.Visible = false;
@@ -179,18 +179,18 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtPrdAsgnCode1_EditValueChanged(object sender, EventArgs e)
+        private void TxtPrdAsgnCode1_EditValueChanged(object sender, EventArgs e)
         {
             txtProductCode1.Text = string.Empty;
             txtProductName1.Text = string.Empty;
         }
 
-        private void txtPrdAsgnCode2_EditValueChanged(object sender, EventArgs e)
+        private void TxtPrdAsgnCode2_EditValueChanged(object sender, EventArgs e)
         {
             txtProductCode2.Text = string.Empty;
             txtProductName2.Text = string.Empty;
         }
-        private string getNewInvoiceDocumentNo()
+        private string GetNewInvoiceDocumentNo()
         {
             var s2 = string.Empty;
             var strsql = string.Empty;
@@ -205,21 +205,21 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-        private void frmBomMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmBomMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
             txtBomNo.Properties.ReadOnly = true;
 
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtProductionBag.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtPrdAsgnCode1.Properties.ReadOnly = true;
                 txtPrdAsgnCode1.TabStop = false;
                 txtProductionBag.Focus();
-                var str = "sp_LoadBomMstDataFEditing '" + bomno + "','" + bomPrdId + "'";
+                var str = "sp_LoadBomMstDataFEditing '" + bomno + "','" + BomPrdId + "'";
                 var ds = ProjectFunctions.GetDataSet(str);
                 txtBomNo.Text = ds.Tables[0].Rows[0]["bomNo"].ToString();
                 txtPrdAsgnCode1.Text = ds.Tables[0].Rows[0]["bomPrdCode"].ToString();
@@ -237,11 +237,11 @@ namespace WindowsFormsApplication1
         {
         }
 
-        private void txtProductionBag_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtProductionBag_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
-        private bool validateData()
+        private bool ValidateData()
         {
             if (txtPrdAsgnCode2.Text.Trim().Length == 0)
             {
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnOK_Click(object sender, EventArgs e)
         {
-            if (validateData())
+            if (ValidateData())
             {
                 if (BtnOK.Text.ToUpper() == "&OK")
                 {
@@ -300,7 +300,7 @@ namespace WindowsFormsApplication1
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            if (validateData())
+            if (ValidateData())
             {
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                 var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
@@ -333,9 +333,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+                var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
                 if (MaxRow == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid Operation");
@@ -359,9 +357,7 @@ namespace WindowsFormsApplication1
         }
         private bool ValidateDataForSaving()
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+            var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
             if (MaxRow == 0)
             {
                 ProjectFunctions.SpeakError("Empty Entry Cannot Be Saved");
@@ -400,15 +396,15 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateDataForSaving())
             {
                 using (var con = new SqlConnection(ProjectFunctions.ConnectionString))
                 {
-                    if (s1 == "&Add")
+                    if (S1 == "&Add")
                     {
-                        txtBomNo.Text = getNewInvoiceDocumentNo().PadLeft(4, '0');
+                        txtBomNo.Text = GetNewInvoiceDocumentNo().PadLeft(4, '0');
                     }
                     con.Open();
                     var cmd = new SqlCommand
@@ -448,7 +444,7 @@ namespace WindowsFormsApplication1
 
         private void txtPrdAsgnCode1_Enter(object sender, EventArgs e)
         {
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                 var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);

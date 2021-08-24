@@ -824,7 +824,7 @@ namespace WindowsFormsApplication1
                         "'");
                     if (dsCheck.Tables[0].Rows[0]["CPassTag"].ToString() == "Y")
                     {
-                        ProjectFunctions.SpeakError("Please Unpass First");
+                        ProjectFunctions.SpeakError("Please Un pass First");
                     }
                     else
                     {
@@ -851,8 +851,6 @@ namespace WindowsFormsApplication1
             try
             {
 
-
-
                 if (GlobalVariables.ProgCode == "PROG141")
                 {
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Report To Excel ", (o1, e1) =>
@@ -863,10 +861,6 @@ namespace WindowsFormsApplication1
                         PrintOutGrid.Visible = false;
 
                     }));
-
-
-
-
 
 
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Export To Excel (Busy)", (o1, e1) =>
@@ -901,8 +895,10 @@ namespace WindowsFormsApplication1
                             PrintOutGridView.Columns.Clear();
                             PrintOutGrid.DataSource = dt;
                             PrintOutGridView.BestFitColumns();
-                            PrintOutGridView.ExportToText("C:\\ERP To Busy\\CR.txt");
-                            PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\CR.xlsx");
+                       
+                          //  PrintOutGridView.ExportToText("C:\\ERP To Busy\\CR.txt");
+                            PrintOutGridView.ExportToXls("C:\\ERP To Busy\\CR.xls");
+                            //PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\CR.xlsx");
                             PrintOutGrid.DataSource = null;
                             MakePrintGrid();
                             PrintOutGrid.Visible = false;
@@ -947,8 +943,9 @@ namespace WindowsFormsApplication1
                             PrintOutGridView.Columns.Clear();
                             PrintOutGrid.DataSource = dt;
                             PrintOutGridView.BestFitColumns();
-                            PrintOutGridView.ExportToText("C:\\ERP To Busy\\GST.txt");
-                            PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\GST.xlsx");
+                           // PrintOutGridView.ExportToText("C:\\ERP To Busy\\GST.txt");
+                            PrintOutGridView.ExportToXls("C:\\ERP To Busy\\GST.xls");
+                           // PrintOutGridView.ExportToXls("C:\\ERP To Busy\\GST.xlsx");
                             PrintOutGrid.DataSource = null;
                             MakePrintGrid();
                             PrintOutGrid.Visible = false;
@@ -1802,7 +1799,7 @@ namespace WindowsFormsApplication1
         private void DeleteVouchers()
         {
 
-            var MaxRow = (InvoiceGrid.KeyboardFocusView as GridView).RowCount;
+            var MaxRow = (InvoiceGrid.FocusedView as GridView).RowCount;
 
             for (var i = 0; i < MaxRow; i++)
             {

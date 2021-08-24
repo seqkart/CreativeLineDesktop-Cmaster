@@ -14,7 +14,7 @@ namespace WindowsFormsApplication1
     public partial class frmAccountMstAddEdit : XtraForm
     {
         string TransID;
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string AccCode { get; set; }
         public frmAccountMstAddEdit()
         {
@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1
             txtDelAccName.Text = string.Empty;
             txtDelZipCode.Text = string.Empty;
         }
-        private void txtSLCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtSLCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSLDesc.Text = string.Empty;
         }
@@ -68,27 +68,27 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void txtBCCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtBCCode_EditValueChanged(object sender, EventArgs e)
         {
             txtBSDesc.Text = string.Empty;
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpName.Text = string.Empty;
         }
 
-        private void frmAccountMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmAccountMstAddEdit_Load(object sender, EventArgs e)
         {
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtAcCategory.Focus();
                     txtAcCode.Text = ProjectFunctions.GetNewTransactionCode("select max(Cast(AccCode as int)) from ActMst");
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     //txtAcName.Enabled = false;
                     DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstFEditing '" + AccCode + "'");
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frmAccountMstAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmAccountMstAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1
                 }
                 if (e.Control && e.KeyCode == Keys.S)
                 {
-                    btnSave_Click(null, e);
+                    BtnSave_Click(null, e);
                 }
             }
             catch (Exception ex)
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -279,7 +279,7 @@ namespace WindowsFormsApplication1
                 return false;
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -293,14 +293,14 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ActMst"
                             + " (AccTaxType,AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag)"
                             + " values(@AccTaxType,@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag)";
                             txtAcCode.Text = ProjectFunctions.GetNewTransactionCode("select max(Cast(AccCode as int)) from ActMst");
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE    ActMst SET "
                                                      + " AccTaxType=@AccTaxType,AccActive=@AccActive, AccType=@AccType,AccName=@AccName,AccLedger=@AccLedger,ActOpBal=@ActOpBal,"
@@ -327,7 +327,7 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@AccFixBarCodeTag", txtFixBArCodeTag.Text.Trim());
                         sqlcom.ExecuteNonQuery();
                         sqlcom.Parameters.Clear();
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ActMstAddInf"
                                                    + " (AccCode,AccName,AccType,AccAddress1,AccAddress2,AccAddress3,AccTeleFax,AccEmail,AccContactPerson,"
@@ -341,7 +341,7 @@ namespace WindowsFormsApplication1
                             + " @AccAltMobNo,@AccBrokerID,@AccMobNo,"
                             + " @AccZipCode,@AccCityCode,@AccTDSEnable,@AccMrpMarkDown,@AccDCCode)";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE    ActMstAddInf SET  "
                                                 + "AccName=@AccName,AccType=@AccType,AccAddress1=@AccAddress1,AccAddress2=@AccAddress2,"
@@ -402,7 +402,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        private void txtSLCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSLCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -414,7 +414,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtBSCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtBSCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -510,7 +510,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -522,7 +522,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtAcCategory_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void TxtAcCategory_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (txtAcCategory.Text.ToUpper() == "A" || (txtAcCategory.Text.ToUpper() == "L") || txtAcCategory.Text.ToUpper() == "S" || (txtAcCategory.Text.ToUpper() == "P") || txtAcCategory.Text.ToUpper() == "E" || (txtAcCategory.Text.ToUpper() == "I"))
             {
@@ -536,22 +536,22 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtOBalance_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtOBalance_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtEmpCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmpCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.TextOnly(e);
         }
 
-        private void txtGSTStateCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtGSTStateCode_EditValueChanged(object sender, EventArgs e)
         {
             txtGSTStateDesc.Text = string.Empty;
         }
 
-        private void txtGSTStateCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtGSTStateCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -609,19 +609,19 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtAcName_EditValueChanged(object sender, EventArgs e)
+        private void TxtAcName_EditValueChanged(object sender, EventArgs e)
         {
             txtChequeName.Text = txtAcName.Text;
             txtBillingName.Text = txtAcName.Text;
             txtNameAsOnBankAcc.Text = txtAcName.Text;
         }
 
-        private void txtDelCitycode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDelCitycode_EditValueChanged(object sender, EventArgs e)
         {
             txtDelCityName.Text = string.Empty;
         }
 
-        private void txtDelCitycode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDelCitycode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select CTSYSID,CTNAME from CITYMASTER", " Where CTSYSID", txtDelCitycode, txtDelCityName, txtDelGSTNo, HelpGrid, HelpGridView, e);
         }
@@ -707,7 +707,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        private void clear()
+        private void Clear()
         {
             BtnOK.Text = "&OK";
             txtDelAddress1.Text = string.Empty;
@@ -723,7 +723,7 @@ namespace WindowsFormsApplication1
 
         private void BtnUndo_Click(object sender, EventArgs e)
         {
-            clear();
+            Clear();
         }
 
 
@@ -770,7 +770,7 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        private void btnValidate_Click(object sender, EventArgs e)
+        private void BtnValidate_Click(object sender, EventArgs e)
         {
             GetGSTINDataAsync();
         }

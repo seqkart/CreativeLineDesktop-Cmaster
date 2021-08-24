@@ -1,8 +1,6 @@
-﻿using DevExpress.XtraSplashScreen;
-using SeqKartLibrary;
+﻿using SeqKartLibrary;
 using System;
 using System.Data;
-using System.IO;
 using System.Net;
 using System.Runtime.InteropServices;
 using System.ServiceModel;
@@ -178,6 +176,14 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory("C:\\Temp");
             }
+            if (System.IO.Directory.Exists("C:\\ERP To Busy"))
+            {
+
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory("C:\\ERP To Busy");
+            }
 
             if (System.IO.Directory.Exists(Application.StartupPath + "\\PTFile"))
             {
@@ -187,6 +193,23 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory(Application.StartupPath + "\\PTFile");
             }
+            if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+            {
+
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+            }
+            if (System.IO.Directory.Exists(Application.StartupPath + "\\EWayDetailed"))
+            {
+
+            }
+            else
+            {
+                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWayDetailed");
+            }
+
             if (System.IO.Directory.Exists(Application.StartupPath + "\\LABEL"))
             {
 
@@ -220,7 +243,9 @@ namespace WindowsFormsApplication1
                 System.IO.Directory.CreateDirectory("C:\\Temp\\GST");
             }
 
-            
+            //ProjectFunctions.ConnectionString = ProjectFunctions.DecryptedConnectionFile();
+            //ProjectFunctions.ImageConnectionString = ProjectFunctions.DecryptedConnectionFileImage();
+            //string ConnectionString_Encrypted = ProjectFunctions.EncryptConnectionFileImage();  
 
             defaultLookAndFeel1.LookAndFeel.SkinName = "McSkin";
             ProjectFunctions.TextBoxVisualize(this);
@@ -342,80 +367,114 @@ namespace WindowsFormsApplication1
         }
 
         private void BtnBackup_Click(object sender, EventArgs e)
-
-
         {
+            Task.Run(() => ProjectFunctions.GetDataSet("msdb.dbo.sp_start_job 'BackUp'"));
+            //Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+            //      DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, true);
+            //      DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("Backing Up Initialized");
+            //      {
+            //          Dim Filename As String;
+            //          ServerName1 = cmbServerName1.Text.Trim();
+            //          UserID1 = txtUserName1.Text.Trim();
+            //          Password1 = txtPassword1.Text.Trim();
+            //          database = cmbDataBase1.Text;
 
 
-            DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false, true);
-            DevExpress.XtraSplashScreen.SplashScreenManager.Default.SetWaitFormDescription("Backing Up Initialized");
+            //  If cmbAuthe1.SelectedIndex = 0 Then
+            //      strConn = "Data Source=" & ServerName1 & ";Initial Catalog="' & cmbDataBase1.Text &'";Integrated Security=True"
+            //  Else
+            //      strConn = "Data Source=" & ServerName1 & "; Initial Catalog=" & cmbDataBase1.Text & ";user id="' & UserID1 & '";password="' & Password1 & '";Integrated Security=false"
+            //  End If
+            //  con = New SqlConnection(strConn)
+            //  con.Open()
 
 
+            //          ServerConnection conBackup = new ServerConnection(@"clserver","Seq@1234");
 
-            {
+            //          Server ServerBackup = new Server(conBackup);
+            //          Backup BackupObject = new Backup();
 
-                //NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@123456");
+            //          BackupObject.Action = BackupActionType.Database;
+            //          BackupObject.Database = "SEQKARTnew";
 
+            //          //string srcDir = @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+            //          //string[] bakList = Directory.GetFiles(srcDir, "*.bak");
+            //          BackupDeviceItem destination = new BackupDeviceItem(@"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString(),DeviceType.File);
 
+            //          BackupObject.Devices.Add(destination);
+            //          BackupObject.SqlBackup(ServerBackup);
 
-
-                NetworkCredential myCredentials = new NetworkCredential(string.Empty, string.Empty, string.Empty);
-                myCredentials.Domain = "seqkart.ddns.net";
-                myCredentials.UserName = "clserver";
-                myCredentials.Password = "Seq@1234";
-
-                if (System.IO.Directory.Exists(@"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
-                {
-
-                    string srcDir = @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
-                    string[] bakList = Directory.GetFiles(srcDir, "*.bak");
-
-                    if (Directory.Exists(srcDir))
-                    {
-                        foreach (string f in bakList)
-                        {
-                            File.Delete(f);
-                        }
-
-                    }
-
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                    SplashScreenManager.CloseForm();
-                }
-                else
-                {
-                    // NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@12345");
+            //          conBackup.Disconnect();
+            //      }
 
 
+            //                  {
 
-
-                    NetworkCredential myCredentials1 = new NetworkCredential(string.Empty, string.Empty, string.Empty);
-                    myCredentials1.Domain = "seqkart.ddns.net";
-                    myCredentials1.UserName = "clserver";
-                    myCredentials1.Password = "Seq@1234";
-                    System.IO.Directory.CreateDirectory(@"\\CServer\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
-                    ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
-                    string srcDir = @"\\CServer\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
-                    string[] bakList = Directory.GetFiles(srcDir, "*.bak");
-                    if (Directory.Exists(srcDir))
-                    {
-                        foreach (string f in bakList)
-                        {
-                            File.Delete(f);
-                        }
-
-                    }
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
-                    SplashScreenManager.CloseForm();
-                }
+            //                      //NetworkCredential theNetworkCredential = new NetworkCredential(@"cserver\c server", "Rohit@123456");
 
 
 
-                ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
 
-            }
+            //                      NetworkCredential myCredentials = new NetworkCredential(string.Empty, string.Empty, string.Empty);
+            //                      myCredentials.Domain = "seqkart.ddns.net";
+            //                      myCredentials.UserName = "clserver";
+            //                      myCredentials.Password = "Seq@1234";
+
+            //                      if (System.IO.Directory.Exists(@"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString()))
+            //                      {
+
+            //                          string srcDir = @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+            //                          string[] bakList = Directory.GetFiles(srcDir, "*.bak");
+
+            //                          if (Directory.Exists(srcDir))
+            //                          {
+            //                              foreach (string f in bakList)
+            //                              {
+            //                                  File.Delete(f);
+            //                              }
+
+            //                          }
+
+            //                          Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+            //                          Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+            //                          SplashScreenManager.CloseForm();
+            //                      }
+            //                      else
+            //                      {
+            //                          // NetworkCredential theNetworkCredential1 = new NetworkCredential(@"cserver\c server", "Rohit@12345");
+
+
+
+
+            //                          NetworkCredential myCredentials1 = new NetworkCredential(string.Empty, string.Empty, string.Empty);
+            //                          myCredentials1.Domain = "seqkart.ddns.net";
+            //                          myCredentials1.UserName = "clserver";
+            //                          myCredentials1.Password = "Seq@1234";
+            //                          System.IO.Directory.CreateDirectory(@"\\CServer\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString());
+            //                          ProjectFunctions.Speak("BACKUP FOLDER CREATED SUCCESSFULLY");
+            //                          string srcDir = @"\\CServer\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString();
+            //                          string[] bakList = Directory.GetFiles(srcDir, "*.bak");
+            //                          if (Directory.Exists(srcDir))
+            //    */
+            //}
+            ////*/
+            ////                    {
+            ////                        foreach (string f in bakList)
+            ////                        {
+            ////                            File.Delete(f);
+            ////                        }
+
+            ////                    }
+            //Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE SEQKARTNew TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\SEQ_" + DateTime.Now.ToShortDateString() + ".bak'"));
+            //    Task.Run(() => ProjectFunctions.GetDataSet("BACKUP DATABASE EFileSeqKart TO DISK ='" + @"\\cserver\Backupseqkart\" + DateTime.Now.DayOfWeek.ToString() + @"\Efile_" + DateTime.Now.ToShortDateString() + ".bak'"));
+            //    SplashScreenManager.CloseForm();
+
+            //}
+
+
+
+            // ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
+
         }
     }
 }

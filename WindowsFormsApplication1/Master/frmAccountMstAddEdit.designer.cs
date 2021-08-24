@@ -233,7 +233,7 @@
             this.txtAcCategory.TabIndex = 2;
             this.txtAcCategory.TabStop = false;
             this.txtAcCategory.Visible = false;
-            this.txtAcCategory.Validating += new System.ComponentModel.CancelEventHandler(this.txtAcCategory_Validating);
+            this.txtAcCategory.Validating += new System.ComponentModel.CancelEventHandler(this.TxtAcCategory_Validating);
             // 
             // label27
             // 
@@ -255,7 +255,7 @@
             this.txtAcName.Properties.MaxLength = 60;
             this.txtAcName.Size = new System.Drawing.Size(692, 24);
             this.txtAcName.TabIndex = 6;
-            this.txtAcName.EditValueChanged += new System.EventHandler(this.txtAcName_EditValueChanged);
+            this.txtAcName.EditValueChanged += new System.EventHandler(this.TxtAcName_EditValueChanged);
             // 
             // txtAcCode
             // 
@@ -494,9 +494,9 @@
             this.txtBSCode.Properties.MaxLength = 4;
             this.txtBSCode.Size = new System.Drawing.Size(80, 24);
             this.txtBSCode.TabIndex = 1;
-            this.txtBSCode.EditValueChanged += new System.EventHandler(this.txtBCCode_EditValueChanged);
-            this.txtBSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBSCode_KeyDown);
-            this.txtBSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpCode_KeyPress);
+            this.txtBSCode.EditValueChanged += new System.EventHandler(this.TxtBCCode_EditValueChanged);
+            this.txtBSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBSCode_KeyDown);
+            this.txtBSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpCode_KeyPress);
             // 
             // txtBSDesc
             // 
@@ -520,9 +520,9 @@
             this.txtEmpCode.Size = new System.Drawing.Size(80, 24);
             this.txtEmpCode.TabIndex = 14;
             this.txtEmpCode.Visible = false;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
-            this.txtEmpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpCode_KeyPress);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
+            this.txtEmpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpCode_KeyPress);
             // 
             // label22
             // 
@@ -558,9 +558,9 @@
             this.txtSLCode.Properties.MaxLength = 4;
             this.txtSLCode.Size = new System.Drawing.Size(80, 24);
             this.txtSLCode.TabIndex = 0;
-            this.txtSLCode.EditValueChanged += new System.EventHandler(this.txtSLCode_EditValueChanged);
-            this.txtSLCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSLCode_KeyDown);
-            this.txtSLCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmpCode_KeyPress);
+            this.txtSLCode.EditValueChanged += new System.EventHandler(this.TxtSLCode_EditValueChanged);
+            this.txtSLCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSLCode_KeyDown);
+            this.txtSLCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpCode_KeyPress);
             // 
             // label13
             // 
@@ -660,7 +660,7 @@
             this.btnValidate.Size = new System.Drawing.Size(94, 29);
             this.btnValidate.TabIndex = 454;
             this.btnValidate.Text = "Validate";
-            this.btnValidate.Click += new System.EventHandler(this.btnValidate_Click);
+            this.btnValidate.Click += new System.EventHandler(this.BtnValidate_Click);
             // 
             // txtCountry
             // 
@@ -912,8 +912,8 @@
             this.txtGSTStateCode.Properties.MaxLength = 4;
             this.txtGSTStateCode.Size = new System.Drawing.Size(80, 24);
             this.txtGSTStateCode.TabIndex = 9;
-            this.txtGSTStateCode.EditValueChanged += new System.EventHandler(this.txtGSTStateCode_EditValueChanged);
-            this.txtGSTStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGSTStateCode_KeyDown);
+            this.txtGSTStateCode.EditValueChanged += new System.EventHandler(this.TxtGSTStateCode_EditValueChanged);
+            this.txtGSTStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtGSTStateCode_KeyDown);
             // 
             // label4
             // 
@@ -1387,8 +1387,8 @@
             this.txtDelCitycode.Properties.MaxLength = 8;
             this.txtDelCitycode.Size = new System.Drawing.Size(91, 24);
             this.txtDelCitycode.TabIndex = 450;
-            this.txtDelCitycode.EditValueChanged += new System.EventHandler(this.txtDelCitycode_EditValueChanged);
-            this.txtDelCitycode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelCitycode_KeyDown);
+            this.txtDelCitycode.EditValueChanged += new System.EventHandler(this.TxtDelCitycode_EditValueChanged);
+            this.txtDelCitycode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDelCitycode_KeyDown);
             // 
             // HelpGrid
             // 
@@ -1465,7 +1465,7 @@
             this.txtOBalance.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOBalance.Size = new System.Drawing.Size(118, 24);
             this.txtOBalance.TabIndex = 4;
-            this.txtOBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOBalance_KeyPress);
+            this.txtOBalance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtOBalance_KeyPress);
             // 
             // label29
             // 
@@ -1485,7 +1485,7 @@
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Size = new System.Drawing.Size(43, 24);
             this.BtnQuit.Text = "&Quit";
-            this.BtnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // BtnSave
             // 
@@ -1496,7 +1496,7 @@
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(45, 24);
             this.BtnSave.Text = "&Save";
-            this.BtnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Menu_ToolStrip
             // 
@@ -1650,8 +1650,8 @@
             this.Name = "frmAccountMstAddEdit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmAccountMstAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmAccountMstAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmAccountMstAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAccountMstAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCategory.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCode.Properties)).EndInit();

@@ -15,10 +15,11 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
-
 using System.Net;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Speech.Synthesis;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxProEWB.API;
@@ -28,16 +29,94 @@ namespace WindowsFormsApplication1
 
     class ProjectFunctions
     {
-
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
-        // public static String ImageConnectionString = "Data Source = seqkart.ddns.net; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
-
         public static EWBSession EwbSession = new EWBSession();
+        // public static string ConnectionString;
+        // public static string ImageConnectionString;
         public static string ConnectionString = ProjectFunctionsUtils.ConnectionString;
         public static string ImageConnectionString = ProjectFunctionsUtils.ImageConnectionString;
-        ////@"Data Source=cserver;Initial Catalog=SEQKART;User ID=sa;pwd=Seq@2021";
 
 
+
+
+        public static string IV = " ";
+        public static string Key = "1a1a1a1a1a1a1a1a1a1a1a1a1a1a1a13";
+        public static string Encrypt(string decrypted)
+        {
+            byte[] textbytes = ASCIIEncoding.ASCII.GetBytes(decrypted);
+            AesCryptoServiceProvider endec = new AesCryptoServiceProvider
+            {
+                BlockSize = 128,
+                KeySize = 256,
+                IV = ASCIIEncoding.ASCII.GetBytes(IV),
+                Key = ASCIIEncoding.ASCII.GetBytes(Key),
+                Padding = PaddingMode.PKCS7,
+                Mode = CipherMode.CBC
+            };
+            ICryptoTransform icrypt = endec.CreateEncryptor(endec.Key, endec.IV);
+            byte[] enc = icrypt.TransformFinalBlock(textbytes, 0, textbytes.Length);
+            icrypt.Dispose();
+            return Convert.ToBase64String(enc);
+        }
+
+        public static string Decrypted(string encrypted)
+        {
+            byte[] textbytes = ASCIIEncoding.ASCII.GetBytes(encrypted);
+            AesCryptoServiceProvider endec = new AesCryptoServiceProvider
+            {
+                BlockSize = 128,
+                KeySize = 256,
+                IV = ASCIIEncoding.ASCII.GetBytes(IV),
+                Key = ASCIIEncoding.ASCII.GetBytes(Key),
+                Padding = PaddingMode.PKCS7,
+                Mode = CipherMode.CBC
+            };
+            ICryptoTransform icrypt = endec.CreateEncryptor(endec.Key, endec.IV);
+            byte[] enc = icrypt.TransformFinalBlock(textbytes, 0, textbytes.Length);
+            icrypt.Dispose();
+            return ASCIIEncoding.ASCII.GetString(enc);
+        }
+
+
+        public static string EncryptConnectionFile()
+        {
+            StreamReader sr = new StreamReader(Application.StartupPath + @"\RohitDataConn.txt");
+            String ActualConnectionString = sr.ReadLine();
+            String EncrypedConnectionString = Encrypt(Convert.ToString(ActualConnectionString));
+
+
+            return Encrypt(Convert.ToString(ActualConnectionString));
+        }
+        public static string DecryptedConnectionFile()
+        {
+            StreamReader sr = new StreamReader(Application.StartupPath + @"\RohitDataConn.txt");
+            String EncryptedConnectionString = sr.ReadLine();
+
+            String DecryptedConnectionString = Decrypted(EncryptedConnectionString);
+            return DecryptedConnectionString;
+        }
+
+
+
+        public static string DecryptedConnectionFileImage()
+        {
+            StreamReader sr = new StreamReader(Application.StartupPath + @"\RohitImageConn.txt");
+            String EncryptedConnectionString = sr.ReadLine();
+
+            String DecryptedConnectionString = Decrypted(EncryptedConnectionString);
+            return DecryptedConnectionString;
+        }
+
+
+        public static string EncryptConnectionFileImage()
+        {
+            StreamReader sr = new StreamReader(Application.StartupPath + @"\RohitImageConn.txt");
+            String ActualConnectionString = sr.ReadLine();
+            String EncrypedConnectionString = Encrypt(Convert.ToString(ActualConnectionString));
+
+
+            return Encrypt(Convert.ToString(ActualConnectionString));
+        }
         //public static void SendSMS(string uid, string password, string message, string no)
         //{
         //    HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create("http://ubaid.tk/sms/sms.aspx?uid=" + uid + "&pwd=" + password + "&msg=" + message + "&phone=" + no + "&provider=way2sms");
@@ -97,9 +176,6 @@ namespace WindowsFormsApplication1
             Task.Run(() => _synthesizer.Speak(MSG));
 
         }
-
-
-
 
         public static string CheckNull(string Value)
         {
@@ -172,8 +248,6 @@ namespace WindowsFormsApplication1
         public static string GetConnection()
         {
 
-
-
             return ConnectionString;
 
         }
@@ -201,10 +275,6 @@ namespace WindowsFormsApplication1
 
         public static void SalePopUPForAllWindows(XtraForm frmUpper, KeyEventArgs e)
         {
-            //if (e.KeyCode == Keys.Escape)
-            //{
-            //    frmUpper.Close();
-            //}
             if (e.KeyCode == Keys.F2)
             {
                 frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Today" };
@@ -391,7 +461,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-#pragma warning disable S125 // Sections of code should not be commented out
         /*
                         public static void sendsmsviagatepass(String Message)
                         {
@@ -414,7 +483,6 @@ namespace WindowsFormsApplication1
                         }
                 */
         public static DataSet GetMasterFormAdd()
-#pragma warning restore S125 // Sections of code should not be commented out
         {
             DataSet dsMaster = GetDataSet("Select ProgCode,Mode,Caption,FormName from MasterAddEdit Where ProgCode='" + GlobalVariables.ProgCode + "' And Mode='ADD'");
             if (dsMaster.Tables[0].Rows.Count > 0)
@@ -624,11 +692,9 @@ namespace WindowsFormsApplication1
                     PictureBox.Image = null;
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
         public static void BindReportToPivotGrid(string ProcedureName, DateTime From, DateTime To, DevExpress.XtraPivotGrid.PivotGridControl ReportGrid)
@@ -768,7 +834,6 @@ namespace WindowsFormsApplication1
 
             }
         }
-
 
         static void ThisItem_MouseLeave(object sender, EventArgs e)
         {
@@ -1032,8 +1097,6 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-
-
         public static void CreatePopUpForThreeBoxes(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -1220,8 +1283,6 @@ namespace WindowsFormsApplication1
                 {
                     ReportGrid.DataSource = dsMaster.Tables[0];
                     ReportGridView.BestFitColumns();
-
-
 
                 }
                 else
@@ -1527,9 +1588,7 @@ namespace WindowsFormsApplication1
             if (e.Button == System.Windows.Forms.MouseButtons.Right)
             {
                 DXMenuItem Copy;
-#pragma warning disable CS0168 // The variable 'Print' is declared but never used
-                DXMenuItem Print;
-#pragma warning restore CS0168 // The variable 'Print' is declared but never used
+                // DXMenuItem Print;
                 DXMenuItem SAR;
                 Copy = new DXMenuItem("Copy", (o1, e1) =>
                 {
@@ -1640,10 +1699,12 @@ namespace WindowsFormsApplication1
                         var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
                         GlobalVariables.WhatAppStatus = myDetails.state;
                         GlobalVariables.WhatAppMobileNo = myDetails.user;
+
+                        // Speak(myDetails.state);
                     }
                     else
                     {
-                        GlobalVariables.WhatAppStatus = "Disconnected";
+                        GlobalVariables.WhatAppStatus = "";
                         GlobalVariables.WhatAppMobileNo = "No User";
                     }
 
@@ -1652,28 +1713,34 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public static async Task WhatsAppStatusspeak()
-        {
-            using (var httpClient = new HttpClient())
-            {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
-                {
-                    request.Headers.TryAddWithoutValidation("accept", "application/json");
+        //public static async Task WhatsAppStatusSpeak()
+        //{
+        //    using (var httpClient = new HttpClient())
+        //    {
+        //        using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+        //        {
+        //            request.Headers.TryAddWithoutValidation("accept", "application/json");
 
-                    var response = await httpClient.SendAsync(request);
-                    if (response.IsSuccessStatusCode == true)
-                    {
-                        Speak("Whats App connected");
-                    }
-                    else
-                    {
+        //            var response = await httpClient.SendAsync(request);
+        //            if (response.IsSuccessStatusCode == true)
+        //            {
 
-                    }
+        //                string content = await response.Content.ReadAsStringAsync();
+        //                TextEdit t = new TextEdit();
+        //                t.Text = JsonConvert.SerializeObject(content);
+        //                var details = JObject.Parse(t.Text);
 
-                }
+        //                Speak(details["Connected"].ToString());
+        //            }
+        //            else
+        //            {
 
-            }
-        }
+        //            }
+
+        //        }
+
+        //    }
+        //}
 
         public static async Task WhatsAppDisConnection()
         {
@@ -1726,7 +1793,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public static async Task SendBillImageAsync(String MobileNo,String DocNo,DateTime DocDate)
+        public static async Task SendBillImageAsync(String MobileNo, String DocNo, DateTime DocDate)
         {
             byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//GST//" + DocNo + ".pdf");
 
@@ -1838,13 +1905,9 @@ namespace WindowsFormsApplication1
                 return;
             }
 
-
-
         }
         public static async void PrintEWaybill(String BillNo, DateTime BillDate)
         {
-
-
 
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
             if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
@@ -1917,7 +1980,6 @@ namespace WindowsFormsApplication1
         }
         public static async void PrintEWaybillDetail(String BillNo, DateTime BillDate)
         {
-
 
 
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
@@ -2013,7 +2075,7 @@ namespace WindowsFormsApplication1
             else
                 XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.TxnOutcome));
         }
-        public static async void ValidateGSTNo(String GSTNo, XtraForm form)
+        public static void ValidateGSTNo(String GSTNo, XtraForm form)
         {
             //GSTNo = "06AAACS0628K1ZH";
 
@@ -2037,14 +2099,14 @@ namespace WindowsFormsApplication1
             ewbGen.subSupplyType = ds.Tables[0].Rows[0]["SubSupplyType"].ToString();
             ewbGen.subSupplyDesc = "";
             ewbGen.docType = "INV";
-            ewbGen.docNo = ds.Tables[0].Rows[0]["BillSeries"].ToString()+"-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
+            ewbGen.docNo = ds.Tables[0].Rows[0]["BillSeries"].ToString() + "-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
 
             ewbGen.docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd/MM/yyyy");
             ewbGen.fromGstin = GlobalVariables.CmpGSTNo;
             ewbGen.fromTrdName = GlobalVariables.CompanyName;
             ewbGen.fromAddr1 = GlobalVariables.CAddress1;
             ewbGen.fromAddr2 = GlobalVariables.CAddress2;
-        //    ewbGen.fromPlace = "ludhiana";
+            //    ewbGen.fromPlace = "ludhiana";
             ewbGen.fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode);
 
             ewbGen.fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
@@ -2113,7 +2175,7 @@ namespace WindowsFormsApplication1
 
             //txtPKGFrt.Text = ds.Tables[0].Rows[0]["SIMFREIGHTAMT"].ToString();
 
-            ewbGen.otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"])+ Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"])+ Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"])+ Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]);
+            ewbGen.otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]);
             // ewbGen.totalValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]);
             ewbGen.totalValue = Convert.ToDouble("0");
             ewbGen.cgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["CGSTAmount"]);
@@ -2255,7 +2317,7 @@ namespace WindowsFormsApplication1
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
 
                         ///////////mobile number from fetch
-                        SendBillImageAsync("918591115444", DocNo,DocDate);
+                        SendBillImageAsync("918591115444", DocNo, DocDate);
                     }
 
 

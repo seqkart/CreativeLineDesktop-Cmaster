@@ -5,11 +5,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmAPIIntergrationInfo : DevExpress.XtraEditors.XtraForm
+    public partial class frmAPIIntegrationInfo : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string TransId { get; set; }
-        public frmAPIIntergrationInfo()
+        public frmAPIIntegrationInfo()
         {
             InitializeComponent();
         }
@@ -104,7 +104,6 @@ namespace WindowsFormsApplication1.Administration
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM APIIntegrationSetting Where TransId='" + TransId + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-
                     txtGSPName.Text = ds.Tables[0].Rows[0]["GSPName"].ToString();
                     txtASPNetUser.Text = ds.Tables[0].Rows[0]["ASPNetUser"].ToString();
                     txtASPPassword.Text = ds.Tables[0].Rows[0]["ASPPassword"].ToString();
@@ -123,7 +122,7 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
             if (ValidateData())
@@ -172,7 +171,7 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

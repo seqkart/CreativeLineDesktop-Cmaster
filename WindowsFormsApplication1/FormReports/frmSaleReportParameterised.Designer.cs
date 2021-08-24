@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.FormReports
 {
-    partial class frmSaleReportParameterised
+    partial class FrmSaleReportParameterised
     {
         /// <summary>
         /// Required designer variable.

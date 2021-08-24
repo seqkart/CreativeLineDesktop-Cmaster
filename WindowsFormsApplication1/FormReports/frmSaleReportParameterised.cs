@@ -2,18 +2,17 @@
 using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.FormReports
 {
-    public partial class frmSaleReportParameterised : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSaleReportParameterised : DevExpress.XtraEditors.XtraForm
     {
         frmSelectRangeNew _RangeSelector = new frmSelectRangeNew() { StartDate = GlobalVariables.FinYearStartDate, EndDate = GlobalVariables.FinYearEndDate };
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public frmSaleReportParameterised()
+        public FrmSaleReportParameterised()
         {
             InitializeComponent();
         }

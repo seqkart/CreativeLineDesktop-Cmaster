@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
             FillGrid();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
@@ -372,7 +372,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG106")
                 {
                     frmBomMstAddEdit frm = new frmBomMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Bill Of Material Addition" };
+                    { S1 = btnAdd.Text, Text = "Bill Of Material Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -398,7 +398,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG8")
                 {
                     frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Account Addition" };
+                    { S1 = btnAdd.Text, Text = "Account Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -416,7 +416,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG10")
                 {
                     FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
-                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
+                    { S1 = btnAdd.Text, Text = "Designation Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -543,7 +543,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG157")
                 {
                     FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
-                    { S1 = btnAdd.Text, Text = "Desgination Addition" };
+                    { S1 = btnAdd.Text, Text = "Designation Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -653,8 +653,8 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Administration.frmAPIIntergrationInfo frm = new WindowsFormsApplication1.Administration.frmAPIIntergrationInfo()
-                    { Text = "API Intergration Edition", TransId = CurrentRow["TransId"].ToString() };
+                    WindowsFormsApplication1.Administration.frmAPIIntegrationInfo frm = new WindowsFormsApplication1.Administration.frmAPIIntegrationInfo()
+                    { Text = "API Integration Edition", TransId = CurrentRow["TransId"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -704,7 +704,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
                     WindowsFormsApplication1.Master.frmContractorMst frm = new WindowsFormsApplication1.Master.frmContractorMst()
-                    { s1 = btnEdit.Text, Text = "Contrator Master Edition", CNTSYSID = CurrentRow["CNTSYSID"].ToString() };
+                    { s1 = btnEdit.Text, Text = "Contractor Master Edition", CNTSYSID = CurrentRow["CNTSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -937,10 +937,10 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmBomMstAddEdit frm = new frmBomMstAddEdit()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Bill Of Material Editing",
                         bomno = CurrentRow["bomNo"].ToString(),
-                        bomPrdId = CurrentRow["bomPrdId"].ToString()
+                        BomPrdId = CurrentRow["bomPrdId"].ToString()
                     };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -975,7 +975,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
-                    { s1 = btnEdit.Text, Text = "Account Editing", AccCode = CurrentRow["AccCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Account Editing", AccCode = CurrentRow["AccCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -995,7 +995,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
-                    { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Designation Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
 
 
                     frm.ShowDialog(Parent);
@@ -1132,7 +1132,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     FrmDesignationAddEdit frm = new FrmDesignationAddEdit()
-                    { S1 = btnEdit.Text, Text = "Desgination Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Designation Editing", DesgCode = CurrentRow["DesgCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -1302,7 +1302,7 @@ namespace WindowsFormsApplication1
                                        {
                                            ProjectFunctions.GetAPIPendingHitsAsync();
                                        });
-                HSNCodeInfo = new DXMenuItem("HSN Code Imformation",
+                HSNCodeInfo = new DXMenuItem("HSN Code Information",
                                        (o1, e1) =>
                                        {
                                            ProjectFunctions.GetAPIHSNCodeInfo(CurrentRow["GrpHSNCode"].ToString());

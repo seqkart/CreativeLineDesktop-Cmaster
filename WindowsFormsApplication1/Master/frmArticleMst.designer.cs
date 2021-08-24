@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArticleMst));
             this.CHKARTNONMAINT = new System.Windows.Forms.CheckBox();
             this.GroupBox16 = new DevExpress.XtraEditors.GroupControl();
@@ -201,6 +202,14 @@
             this.DGVSIZSET.AllowUserToAddRows = false;
             this.DGVSIZSET.AllowUserToDeleteRows = false;
             this.DGVSIZSET.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 7.8F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(70)))), ((int)(((byte)(68)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVSIZSET.DefaultCellStyle = dataGridViewCellStyle1;
             this.DGVSIZSET.Location = new System.Drawing.Point(19, 27);
             this.DGVSIZSET.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DGVSIZSET.Name = "DGVSIZSET";

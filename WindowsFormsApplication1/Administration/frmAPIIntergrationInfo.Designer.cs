@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmAPIIntergrationInfo
+    partial class frmAPIIntegrationInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Administration
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAPIIntergrationInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAPIIntegrationInfo));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             this.imageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -113,7 +113,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtASPPassword
             // 

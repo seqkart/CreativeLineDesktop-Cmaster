@@ -341,9 +341,9 @@
             this.txtDebitPartyCode.Properties.MaxLength = 6;
             this.txtDebitPartyCode.Size = new System.Drawing.Size(73, 20);
             this.txtDebitPartyCode.TabIndex = 543;
-            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.txtDebitPartyCode_EditValueChanged);
-            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitPartyCode_KeyDown);
-            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDebitPartyCode_KeyPress);
+            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
+            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
+            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDebitPartyCode_KeyPress);
             // 
             // labelControl11
             // 
@@ -551,8 +551,8 @@
             this.txtDelieveryCode.Properties.MaxLength = 6;
             this.txtDelieveryCode.Size = new System.Drawing.Size(77, 20);
             this.txtDelieveryCode.TabIndex = 549;
-            this.txtDelieveryCode.EditValueChanged += new System.EventHandler(this.txtDelieveryCode_EditValueChanged);
-            this.txtDelieveryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDelieveryCode_KeyDown);
+            this.txtDelieveryCode.EditValueChanged += new System.EventHandler(this.TxtDelieveryCode_EditValueChanged);
+            this.txtDelieveryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDelieveryCode_KeyDown);
             // 
             // panelControl1
             // 
@@ -576,7 +576,7 @@
             this.txtSearchBox.Size = new System.Drawing.Size(565, 20);
             this.txtSearchBox.TabIndex = 246;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
-            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
             // 
             // GridControl1
             // 
@@ -639,7 +639,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(88, 36);
             this.simpleButton1.TabIndex = 10;
             this.simpleButton1.Text = "Import Order";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // txtTaxType
             // 
@@ -1064,7 +1064,7 @@
             this.txtFreight.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtFreight.Size = new System.Drawing.Size(128, 20);
             this.txtFreight.TabIndex = 16;
-            this.txtFreight.EditValueChanged += new System.EventHandler(this.txtFreight_EditValueChanged);
+            this.txtFreight.EditValueChanged += new System.EventHandler(this.TxtFreight_EditValueChanged);
             // 
             // labelControl27
             // 
@@ -1292,7 +1292,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // Menu_ToolStrip
             // 
@@ -1320,7 +1320,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -1330,7 +1330,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // TXTDC
             // 

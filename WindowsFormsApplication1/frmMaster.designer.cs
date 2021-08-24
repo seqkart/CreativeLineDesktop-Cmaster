@@ -99,7 +99,7 @@
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd.Size = new System.Drawing.Size(43, 23);
             this.btnAdd.Text = "&Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Menu_ToolStrip
             // 

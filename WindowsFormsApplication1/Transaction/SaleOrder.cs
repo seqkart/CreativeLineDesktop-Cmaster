@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDebitPartyName.Text = string.Empty;
             txtBillingAddress1.Text = string.Empty;
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1.Transaction
             txtGSTNo.Text = string.Empty;
         }
 
-        private void txtDebitPartyCode_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void TxtDebitPartyCode_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
 
         }
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtDebitPartyCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtDebitPartyCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -191,7 +191,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtDelieveryCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDelieveryCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDelieveryName.Text = string.Empty;
             txtDelAddress1.Text = string.Empty;
@@ -220,7 +220,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
         }
-        private void txtDelieveryCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDelieveryCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -403,17 +403,16 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             InfoGrid.Refresh();
             DataTable ExcelTable = new DataTable();
-            var xlConn = string.Empty;
-            xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
+            string xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
             using (var myCommand = new OleDbDataAdapter("SELECT * FROM [Sheet1$]", xlConn))
             {
                 myCommand.Fill(ExcelTable);
@@ -500,7 +499,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -528,7 +527,7 @@ namespace WindowsFormsApplication1.Transaction
                 return false;
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateDataForSaving())
             {
@@ -536,7 +535,7 @@ namespace WindowsFormsApplication1.Transaction
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
 
-                    var MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                    var MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
                     sqlcom.Connection = sqlcon;
@@ -804,7 +803,6 @@ namespace WindowsFormsApplication1.Transaction
                                             }
                                         }
 
-
                                         dt.AcceptChanges();
                                     }
                                 }
@@ -863,10 +861,6 @@ namespace WindowsFormsApplication1.Transaction
                         InfoGridView.Focus();
                         panelControl1.Visible = false;
 
-
-
-
-
                         InfoGridView.FocusedColumn = InfoGridView.Columns["SizeId"];
                         InfoGridView.FocusedRowHandle = RowIndex;
                         txtSearchBox.Text = string.Empty;
@@ -891,8 +885,6 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }
 
-
-
             }
             catch (Exception ex)
             {
@@ -904,11 +896,6 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-
-
-
-
-
                 GridControl1.Show();
                 if (GridControl1.Text == "ArtNo")
                 {
@@ -989,7 +976,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             try
 
@@ -1016,7 +1003,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtFreight_EditValueChanged(object sender, EventArgs e)
+        private void TxtFreight_EditValueChanged(object sender, EventArgs e)
         {
             Calculation();
         }

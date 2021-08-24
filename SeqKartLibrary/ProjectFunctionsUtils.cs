@@ -17,46 +17,11 @@ namespace SeqKartLibrary
     {
         public static SpeechSynthesizer _synthesizer = new SpeechSynthesizer();
         public static string ConnectionString = ConnectionStringsDb.DefaultConnectionString;
+
+
         public static string ImageConnectionString = ConnectionStringsDb.DefaultConnectionString;
-        //@"Data Source=seqkart.ddns.net;Initial Catalog=SEQKARTNew;User ID=sa;pwd=Seq@2021";
-        //public static String ConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\server.txt");
 
-        //public static void SendSMS(string uid, string password, string message, string no)
-        //{
-        //    HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create("http://ubaid.tk/sms/sms.aspx?uid=" + uid + "&pwd=" + password + "&msg=" + message + "&phone=" + no + "&provider=way2sms");
-        //    myReq.Credentials = CredentialCache.DefaultNetworkCredentials;
-        //    HttpWebResponse myResp = (HttpWebResponse)myReq.GetResponse();
-        //    System.IO.StreamReader respStreamReader = new System.IO.StreamReader(myResp.GetResponseStream());
-        //    string responseString = respStreamReader.ReadToEnd();
-        //    respStreamReader.Close();
-        //    myResp.Close();
-        //}
-        //public static GsmCommMain comm;
-        //public static SmsServer;
-        //public static void ConnectModem()
-        //{
-        //    comm = new GsmCommMain(GlobalVariables.PortNo, 9600, 150);
-        //    Cursor.Current = Cursors.Default;
-        //    bool retry;
-        //    do
-        //    {
-        //        retry = false;
-        //        try
-        //        {
-        //            Cursor.Current = Cursors.WaitCursor;
-        //            comm.Open();
-        //            Cursor.Current = Cursors.Default;
 
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            ProjectFunctionsUtils.SpeakError(ex.Message);
-        //            comm.Close();
-        //        }
-        //    }
-        //    while (retry);
-
-        //}
 
         public static void SpeakError(string Error)
         {

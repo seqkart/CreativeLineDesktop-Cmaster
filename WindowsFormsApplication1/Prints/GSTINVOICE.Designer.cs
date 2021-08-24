@@ -53,6 +53,7 @@
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.txtPageNo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel104 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -143,7 +144,9 @@
             this.BILLNO = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.xrPageBreak1 = new DevExpress.XtraReports.UI.XRPageBreak();
             this.xrPdfContent2 = new DevExpress.XtraReports.UI.XRPdfContent();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -210,10 +213,6 @@
             this.TAX = new DevExpress.XtraReports.UI.CalculatedField();
             this.TAX1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrPdfContent1 = new DevExpress.XtraReports.UI.XRPdfContent();
-            this.xrLabel121 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtPageNo = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrPageBreak1 = new DevExpress.XtraReports.UI.XRPageBreak();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -488,6 +487,14 @@
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // txtPageNo
+            // 
+            this.txtPageNo.LocationFloat = new DevExpress.Utils.PointFloat(969.5F, 1.833331F);
+            this.txtPageNo.Multiline = true;
+            this.txtPageNo.Name = "txtPageNo";
+            this.txtPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.txtPageNo.SizeF = new System.Drawing.SizeF(100F, 23F);
             // 
             // xrLabel104
             // 
@@ -1771,12 +1778,24 @@
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.PrintAtBottom = true;
             // 
+            // xrPageBreak1
+            // 
+            this.xrPageBreak1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 242F);
+            this.xrPageBreak1.Name = "xrPageBreak1";
+            // 
             // xrPdfContent2
             // 
             this.xrPdfContent2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 241.9613F);
             this.xrPdfContent2.Name = "xrPdfContent2";
             this.xrPdfContent2.SizeF = new System.Drawing.SizeF(1113F, 12.83334F);
             this.xrPdfContent2.SourceSerializable = resources.GetString("xrPdfContent2.SourceSerializable");
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 149.75F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
             // 
             // xrLabel27
             // 
@@ -2383,7 +2402,6 @@
             // PageFooter
             // 
             this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel121,
             this.xrLabel107,
             this.xrLabel106,
             this.xrLabel44,
@@ -2698,35 +2716,6 @@
             this.xrPdfContent1.Name = "xrPdfContent1";
             this.xrPdfContent1.SizeF = new System.Drawing.SizeF(100F, 23F);
             // 
-            // xrLabel121
-            // 
-            this.xrLabel121.LocationFloat = new DevExpress.Utils.PointFloat(222F, 35.90485F);
-            this.xrLabel121.Multiline = true;
-            this.xrLabel121.Name = "xrLabel121";
-            this.xrLabel121.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel121.SizeF = new System.Drawing.SizeF(100F, 23F);
-            this.xrLabel121.Text = "xrLabel121";
-            // 
-            // txtPageNo
-            // 
-            this.txtPageNo.LocationFloat = new DevExpress.Utils.PointFloat(969.5F, 1.833331F);
-            this.txtPageNo.Multiline = true;
-            this.txtPageNo.Name = "txtPageNo";
-            this.txtPageNo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtPageNo.SizeF = new System.Drawing.SizeF(100F, 23F);
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 149.75F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
-            // 
-            // xrPageBreak1
-            // 
-            this.xrPageBreak1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 242F);
-            this.xrPageBreak1.Name = "xrPageBreak1";
-            // 
             // GSTINVOICE
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2957,7 +2946,6 @@
         private DevExpress.XtraReports.UI.XRPdfContent xrPdfContent1;
         public DevExpress.XtraReports.UI.XRLabel txtvehicleNo;
         private DevExpress.XtraReports.UI.XRLabel txtPageNo;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel121;
         private DevExpress.XtraReports.UI.XRPageBreak xrPageBreak1;
     }
 }

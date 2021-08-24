@@ -117,7 +117,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -127,7 +127,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtPassword
             // 
@@ -318,8 +318,8 @@
             this.txtPrdAsgnCode2.Properties.MaxLength = 8;
             this.txtPrdAsgnCode2.Size = new System.Drawing.Size(72, 20);
             this.txtPrdAsgnCode2.TabIndex = 391;
-            this.txtPrdAsgnCode2.EditValueChanged += new System.EventHandler(this.txtPrdAsgnCode2_EditValueChanged);
-            this.txtPrdAsgnCode2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrdAsgnCode2_KeyDown);
+            this.txtPrdAsgnCode2.EditValueChanged += new System.EventHandler(this.TxtPrdAsgnCode2_EditValueChanged);
+            this.txtPrdAsgnCode2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPrdAsgnCode2_KeyDown);
             // 
             // BtnUndo
             // 
@@ -418,9 +418,9 @@
             this.txtPrdAsgnCode1.Properties.MaxLength = 8;
             this.txtPrdAsgnCode1.Size = new System.Drawing.Size(72, 20);
             this.txtPrdAsgnCode1.TabIndex = 2;
-            this.txtPrdAsgnCode1.EditValueChanged += new System.EventHandler(this.txtPrdAsgnCode1_EditValueChanged);
+            this.txtPrdAsgnCode1.EditValueChanged += new System.EventHandler(this.TxtPrdAsgnCode1_EditValueChanged);
             this.txtPrdAsgnCode1.Enter += new System.EventHandler(this.txtPrdAsgnCode1_Enter);
-            this.txtPrdAsgnCode1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPadAsgnCode1_KeyDown);
+            this.txtPrdAsgnCode1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPadAsgnCode1_KeyDown);
             // 
             // label1
             // 
@@ -448,7 +448,7 @@
             this.txtProductionBag.Properties.MaxLength = 8;
             this.txtProductionBag.Size = new System.Drawing.Size(41, 20);
             this.txtProductionBag.TabIndex = 1;
-            this.txtProductionBag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductionBag_KeyPress);
+            this.txtProductionBag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProductionBag_KeyPress);
             // 
             // label5
             // 
@@ -529,7 +529,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmBomMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmBomMstAddEdit_Load);
+            this.Load += new System.EventHandler(this.FrmBomMstAddEdit_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

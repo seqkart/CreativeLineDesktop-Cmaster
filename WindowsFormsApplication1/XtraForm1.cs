@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
             labelControl1.Text = "Disconnected";
 
             ProjectFunctions.WhatsAppConnectionStatus();
-            ProjectFunctions.WhatsAppStatusspeak();
+           // ProjectFunctions.WhatsAppStatusSpeak();
 
 
 
@@ -318,7 +318,7 @@ namespace WindowsFormsApplication1
             switch (myitem)
             {
                 case "PROG242":
-                    var PROG242 = new frmSaleReportParameterised() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG242 = new FrmSaleReportParameterised() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG242.Show();
                     PROG242.BringToFront();
                     PROG242.Parent = Page;
