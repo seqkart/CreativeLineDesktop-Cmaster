@@ -57,12 +57,12 @@ namespace WindowsFormsApplication1.Forms_Master
 
 
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frmExcelDataLoading_Load(object sender, EventArgs e)
+        private void FrmExcelDataLoading_Load(object sender, EventArgs e)
         {
             PrintLogWin.PrintLog("*[ frmExcelDataLoading_Load ]*");
             //SetMyControls();
