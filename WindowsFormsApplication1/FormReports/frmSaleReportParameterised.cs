@@ -111,8 +111,6 @@ namespace WindowsFormsApplication1.FormReports
                 }));
 
 
-
-
                 var formatRulesMenu = new DXPopupMenu();
                 var view = sender as GridView;
 

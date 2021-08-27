@@ -66,7 +66,6 @@ namespace WindowsFormsApplication1.Transaction.Pos
                             SendKeys.Send("{Enter}");
                         }
 
-
                     }
                     else
                     {
