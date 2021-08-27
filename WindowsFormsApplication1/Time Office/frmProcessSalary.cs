@@ -294,7 +294,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
         private void GridView_SalaryProcess_CustomDrawCell(object sender, RowCellCustomDrawEventArgs e)
         {
-            
+
         }
 
         private void gridView_SalaryProcess_ShowingEditor(object sender, System.ComponentModel.CancelEventArgs e)
@@ -314,12 +314,6 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
                 e.Cancel = true;
             }
-        }
-
-        
-        private void gridView_SalaryProcess_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
-        {
-
         }
 
         private void SetGridViewStyle()
@@ -560,103 +554,6 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             }
 
-        }
-
-        private void gridView_SalaryProcess_CellValueChanging(object sender, CellValueChangedEventArgs e)
-        {
-            /*
-            var view = sender as GridView;
-            var focusRowView = (DataRowView)gridView_SalaryProcess.GetFocusedRow();
-            if (view == null)
-            {
-                return;
-            }
-
-            if (view.FocusedColumn.FieldName == "Loan")
-            {
-
-                decimal oldValue = ConvertTo.DecimalVal(focusRowView["Loan"]);
-                decimal newValue = ConvertTo.DecimalVal(e.Value);
-
-                decimal salary_calculated = ConvertTo.DecimalVal(gridView_SalaryProcess.GetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["SalaryCalculated"]).ToString());
-
-                decimal new_salary_calculated = (salary_calculated + oldValue) - newValue;
-
-                PrintLogWin.PrintLog("******* oldValue " + oldValue);
-                PrintLogWin.PrintLog("******* newValue " + newValue);
-
-                PrintLogWin.PrintLog("******* salary_calculated " + salary_calculated);
-                PrintLogWin.PrintLog("******* new_salary_calculated " + new_salary_calculated);
-
-                gridView_SalaryProcess.SetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["SalaryCalculated"], new_salary_calculated);
-            }
-            */
-            /*
-             *
-            if (view.FocusedColumn.FieldName == "SalaryPaid")
-            {
-                //gridView_SalaryProcess.CellValueChanging -= new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(gridView_SalaryProcess_CellValueChanging);
-
-                decimal arrears_old = ConvertTo.DecimalVal(focusRowView["Arrears"]);
-                decimal salary_paying = ConvertTo.DecimalVal(e.Value);
-
-                decimal salary_calculated = ConvertTo.DecimalVal(gridView_SalaryProcess.GetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["SalaryCalculated"]).ToString());
-                //decimal arrears_old = ConvertTo.DecimalVal(gridView_SalaryProcess.GetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["Arrears"]).ToString());
-
-                decimal salary_calculated_and_paying_difference = salary_calculated - salary_paying;
-
-                decimal arrears_new = arrears_old + salary_calculated_and_paying_difference;
-                //
-
-                //PrintLogWin.PrintLog("******* oldValue " + oldValue);
-                PrintLogWin.PrintLog("******* salary_paying " + salary_paying);
-
-                PrintLogWin.PrintLog("******* salary_calculated " + salary_calculated);
-                PrintLogWin.PrintLog("******* salary_calculated_and_paying_difference " + salary_calculated_and_paying_difference);
-                PrintLogWin.PrintLog("******* arrears_new " + arrears_new);
-
-                gridView_SalaryProcess.SetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["Arrears"], arrears_new);
-
-                //gridView_SalaryProcess.CellValueChanging += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(gridView_SalaryProcess_CellValueChanging);
-            }
-            */
-            //PrintLogWin.PrintLog("******* A1");
-            //if (e.Column.FieldName == "Loan")
-            //{
-            //    gridView_SalaryProcess.CellValueChanged -= new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(gridView_SalaryProcess_CellValueChanged);
-
-
-
-            //    decimal salary_calculated = ConvertTo.DecimalVal(gridView_SalaryProcess.GetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["SalaryCalculated"]).ToString());
-
-            //    //gridView_SalaryProcess.SetRowCellValue(e.RowHandle, e.Column, salary_calculated - (decimal)(e.Value));
-            //    gridView_SalaryProcess.SetRowCellValue(e.RowHandle, gridView_SalaryProcess.Columns["SalaryCalculated"], salary_calculated - (decimal)(e.Value));
-
-            //    gridView_SalaryProcess.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(gridView_SalaryProcess_CellValueChanged);
-            //}
-        }
-
-        private void gridView_SalaryProcess_CellValueChanged(object sender, CellValueChangedEventArgs e)
-        {
-
-
-            /*BandedGridView view = sender as BandedGridView;
-            if (view == null)
-            {
-                return;
-            }
-            PrintLogWin.PrintLog("******* B1");
-
-            if (e.Column.Caption != "Loan")
-            {
-                return;
-            }
-            PrintLogWin.PrintLog("******* C1");
-            decimal cellValue = ConvertTo.DecimalVal(view.GetRowCellValue(e.RowHandle, view.Columns["SalaryPaid"])) - ConvertTo.DecimalVal(e.Value);// e.Value.ToString() + " " + ConvertTo.DecimalVal(view.GetRowCellValue(e.RowHandle, view.Columns["SalaryPaid"]));
-            view.SetRowCellValue(e.RowHandle, view.Columns["SalaryPaid"], cellValue);
-
-            PrintLogWin.PrintLog("******* D1");
-            */
         }
 
         private void gridView_SalaryProcess_CustomColumnDisplayText(object sender, CustomColumnDisplayTextEventArgs e)
@@ -926,56 +823,6 @@ namespace WindowsFormsApplication1.Forms_Transaction
             */
 
         }
-        /*
-        private void gridControl_SalaryProcess_ProcessGridKey(object sender, KeyEventArgs e)
-        {
-
-        }
-
-        // Fires when no in-place editor is active
-        private void gridView_SalaryProcess_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-        // Fires when an in-place editor is active
-        private void gridControl_SalaryProcess_EditorKeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-        */
-        private void fillGrid_OLD()
-        {
-            _Mnthyr = string.Format("{0}{1}", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
-
-            var ds = new DataSet();
-            //var str = "SELECT DeptMst.DeptDesc,payFinal.EmpCode,EmpName,RTrim(EmpFHRelationTag) As 'F/H',empFHname As 'F/H Name', payFinal.EmpNetPaid,B.EmpPymtMode,payFinal.EmpLockTag As IsLock, Cast(0 As Bit) As Sel,payFinal.EmpSalLocTag as Locked from PayFinal INNER JOIN  DeptMst ON payFinal.EmpDeptCode = DeptMst.DeptCode inner join AtnData B on payfinal.EmpCode=B.EmpCode and B.MonthYear= '" + _Mnthyr + "'";
-            //str = str + " where PayFinal.monthyear= '" + _Mnthyr + "'  Union select DeptMst.DeptDesc,EmpMst.EmpCode,EmpMst.EmpName,EmpFHRelationTag,EmpMst.empFHname, '' as EmpNetPaid,C.EmpPymtMode,";
-            //str = str + "  '' as EmpLockTag, Cast(0 As Bit) As Sel,'' as Locked from empmst INNER JOIN  DeptMst ON EmpMst.EmpDeptCode = DeptMst.DeptCode  inner join AtnData C on EmpMst.EmpCode=C.EmpCode and C.MonthYear= '" + _Mnthyr + "' WHERE EmpMst.empcode NOT IN (SELECT empcode from PayFinal    where monthyear= '" + _Mnthyr + "' )  ";
-            //str = str + " And EmpMst.empcode IN (SELECT empcode from AtnData    where monthyear='" + _Mnthyr + "' )  ";
-            //str = str + "   and (empleft<>'Y' or empleft is null or EmpDOL>'" + Convert.ToDateTime(DtStartDate.EditValue).ToString("yyyy-MM-dd") + "')  ";
-            //str = str + " order by PayFinal.EmpLockTag DESC ,PayFinal.empcode ";
-            var str = "sp_LoadSalaryMstFProcess '" + _Mnthyr + "','" + Convert.ToDateTime(DtStartDate.EditValue).ToString("yyyy-MM-dd") + "'";
-
-            PrintLogWin.PrintLog(str);
-
-
-            ds = ProjectFunctions.GetDataSet(str);
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                SalaryGrid.DataSource = ds.Tables[0];
-                SalaryGridView.BestFitColumns();
-            }
-            SalaryGridView.OptionsBehavior.Editable = true;
-
-            foreach (DevExpress.XtraGrid.Columns.GridColumn Col in SalaryGridView.Columns)
-
-            {
-                if (Col.FieldName != "Sel")
-                {
-                    Col.OptionsColumn.AllowEdit = false;
-                }
-            }
-        }
 
 
         private void ChoiceSelect_CheckedChanged(object sender, EventArgs e)
@@ -1093,35 +940,6 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 .Count();
 
             return answer;
-        }
-
-        private void btnLock_Click_OLD(object sender, EventArgs e)
-        {
-            _Mnthyr = string.Format("{0}{1}", DtStartDate.Text.Substring(0, 2), DtStartDate.Text.Substring(DtStartDate.Text.Length - 2, 2));
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            int MaxRow = ((SalaryGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            for (int i = 0; i < MaxRow; i++)
-            {
-                DataRow currentrow = SalaryGridView.GetDataRow(i);
-                if (currentrow["Sel"].ToString().ToUpper() == "TRUE")
-                {
-                    DataSet ds = ProjectFunctions.GetDataSet("Select * from PayFinal Where MonthYear='" + _Mnthyr + "' And EmpCode='" + currentrow["EmpCode"].ToString() + "'");
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        if (ds.Tables[0].Rows[0]["EmpSalLocTag"].ToString().Trim() == "Y")
-                        {
-
-                        }
-
-                        else
-                        {
-                            ProjectFunctions.GetDataSet("update payfinal set  EmpSalLocTag = 'Y' , EmpSalLocDt='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "',EmpSalLocUser='" + GlobalVariables.CurrentUser + "' where empcode='" + currentrow["EmpCode"].ToString() + "' And monthyear='" + _Mnthyr + "' And EmpSalLocTag is null ");
-                        }
-                    }
-                }
-            }
-            FillGrid();
         }
 
         private void Report_Print_Preview(string action)
