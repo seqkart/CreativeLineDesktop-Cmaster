@@ -672,11 +672,8 @@ namespace WindowsFormsApplication1.Transaction
                         ValueOfGoods = TempValueOfGoods - TempMainDisc;
 
 
-
-
                         SumRowDiscAmount = SumRowDiscAmount + RowDiscAmount;
                         dr["SIDITMDISCAMT"] = RowDiscAmount;
-
 
 
                         decimal CGSTAmount = 0;
