@@ -864,7 +864,7 @@ namespace WindowsFormsApplication1.Transaction
                 HelpGrid.Show();
                 if (HelpGrid.Text == "SKUARTNO")
                 {
-                  DataTable dtNew = dsPopUps.Tables[0].Clone();
+                    DataTable dtNew = dsPopUps.Tables[0].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[0].Select("ARTNO like '" + txtSearchBox.Text + "%'");
                     foreach (DataRow dr in dtRow)
                     {

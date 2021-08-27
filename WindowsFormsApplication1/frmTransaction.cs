@@ -895,8 +895,8 @@ namespace WindowsFormsApplication1
                             PrintOutGridView.Columns.Clear();
                             PrintOutGrid.DataSource = dt;
                             PrintOutGridView.BestFitColumns();
-                       
-                          //  PrintOutGridView.ExportToText("C:\\ERP To Busy\\CR.txt");
+
+                            //  PrintOutGridView.ExportToText("C:\\ERP To Busy\\CR.txt");
                             PrintOutGridView.ExportToXls("C:\\ERP To Busy\\CR.xls");
                             //PrintOutGridView.ExportToXlsx("C:\\ERP To Busy\\CR.xlsx");
                             PrintOutGrid.DataSource = null;
@@ -943,9 +943,9 @@ namespace WindowsFormsApplication1
                             PrintOutGridView.Columns.Clear();
                             PrintOutGrid.DataSource = dt;
                             PrintOutGridView.BestFitColumns();
-                           // PrintOutGridView.ExportToText("C:\\ERP To Busy\\GST.txt");
+                            // PrintOutGridView.ExportToText("C:\\ERP To Busy\\GST.txt");
                             PrintOutGridView.ExportToXls("C:\\ERP To Busy\\GST.xls");
-                           // PrintOutGridView.ExportToXls("C:\\ERP To Busy\\GST.xlsx");
+                            // PrintOutGridView.ExportToXls("C:\\ERP To Busy\\GST.xlsx");
                             PrintOutGrid.DataSource = null;
                             MakePrintGrid();
                             PrintOutGrid.Visible = false;

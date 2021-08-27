@@ -60,7 +60,7 @@ namespace WindowsFormsApplication1
             labelControl1.Text = "Disconnected";
 
             ProjectFunctions.WhatsAppConnectionStatus();
-           // ProjectFunctions.WhatsAppStatusSpeak();
+            // ProjectFunctions.WhatsAppStatusSpeak();
 
 
 
