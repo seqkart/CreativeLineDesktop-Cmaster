@@ -1364,43 +1364,6 @@ namespace WindowsFormsApplication1
                 this.txtDEbitNoteDate.Focus();
         }
 
-        private void txtDEbitNoteDate_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtDEbitNoteQty.Focus();
-        }
-        private void txtDEbitNoteQty_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtDebitNoteAmount.Focus();
-        }
-        private void txtDebitNoteAmount_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtReason.Focus();
-        }
-        private void TxtReason_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtTransporterCode.Focus();
-        }
-
-        private void TxtGRNo_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtGRDate.Focus();
-        }
-        private void TxtGRDate_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtbox.Focus();
-        }
-        private void Txtbox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-                txtBarCode.Focus();
-        }
-
         private void HelpGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
             //HelpGrid.MainView = View1;

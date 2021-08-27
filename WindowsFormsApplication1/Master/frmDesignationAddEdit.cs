@@ -33,7 +33,7 @@ namespace WindowsFormsApplication1
             if (S1 == "Edit")
             {
 
-                DataSet ds = ProjectFunctions.GetDataSet("SELECT DesgCode,DesgDesc FROM DesgMst Where DesgCode='" + DesgCode + "'");
+                DataSet ds = ProjectFunctions.GetDataSet("SELECT DesgCode, DesgDesc FROM DesgMst Where DesgCode='" + DesgCode + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     txtDesgCode.Text = ds.Tables[0].Rows[0]["DesgCode"].ToString();
@@ -46,13 +46,13 @@ namespace WindowsFormsApplication1
         {
             if (txtDesgCode.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Invalid Desgination Code", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                XtraMessageBox.Show("Invalid Designation Code", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtDesgCode.Focus();
                 return false;
             }
             if (txtDesc.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Invalid Desgination Description", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                XtraMessageBox.Show("Invalid Designation Description", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtDesc.Focus();
                 return false;
             }

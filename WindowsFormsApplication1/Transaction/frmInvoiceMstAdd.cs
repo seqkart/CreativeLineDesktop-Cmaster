@@ -2318,11 +2318,6 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void CHSOR_CheckedChanged(object sender, EventArgs e)
         {
             if (CHSOR.Checked)
