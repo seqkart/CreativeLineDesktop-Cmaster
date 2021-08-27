@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmAPIIntegrationInfo
+    partial class FrmAPIIntegrationInfo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Administration
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAPIIntegrationInfo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAPIIntegrationInfo));
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.svgImageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);
             this.imageCollection1 = new DevExpress.Utils.SvgImageCollection(this.components);

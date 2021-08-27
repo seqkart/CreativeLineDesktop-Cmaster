@@ -496,7 +496,7 @@ namespace WindowsFormsApplication1
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             //if(FileType=="1")
             //{
@@ -515,13 +515,13 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void SimpleButton2_Click(object sender, EventArgs e)
         {
             FileType = "2";
             openFileDialog1.ShowDialog();
         }
 
-        private void simpleButton3_Click(object sender, EventArgs e)
+        private void SimpleButton3_Click(object sender, EventArgs e)
         {
             FileType = "3";
             openFileDialog1.ShowDialog();

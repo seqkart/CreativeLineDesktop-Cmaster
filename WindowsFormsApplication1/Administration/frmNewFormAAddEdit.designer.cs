@@ -435,7 +435,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(44, 23);
             this.simpleButton2.TabIndex = 403;
             this.simpleButton2.Text = "...";
-            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // simpleButton3
             // 
@@ -444,12 +444,12 @@
             this.simpleButton3.Size = new System.Drawing.Size(44, 23);
             this.simpleButton3.TabIndex = 403;
             this.simpleButton3.Text = "...";
-            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // txtFormName
             // 

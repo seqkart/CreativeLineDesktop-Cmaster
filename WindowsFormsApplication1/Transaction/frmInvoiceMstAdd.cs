@@ -1350,7 +1350,7 @@ namespace WindowsFormsApplication1
                         {
                             ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
 
-                            frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                            FrmAccountMstAddEdit frm = new FrmAccountMstAddEdit()
                             { S1 = "Edit", Text = "Account Editing", AccCode = txtDebitPartyCode.Text };
                             frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -1481,7 +1481,7 @@ namespace WindowsFormsApplication1
                 if (txtGSTNo.Text.Trim().Length < 10)
                 {
                     ProjectFunctions.SpeakError("No G.S.T. Number Defined For The Party");
-                    frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                    FrmAccountMstAddEdit frm = new FrmAccountMstAddEdit()
                     { S1 = "Edit", Text = "Account Editing", AccCode = txtDebitPartyCode.Text };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 

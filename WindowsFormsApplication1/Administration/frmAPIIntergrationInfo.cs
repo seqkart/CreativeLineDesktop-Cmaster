@@ -5,11 +5,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmAPIIntegrationInfo : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAPIIntegrationInfo : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string TransId { get; set; }
-        public frmAPIIntegrationInfo()
+        public FrmAPIIntegrationInfo()
         {
             InitializeComponent();
         }

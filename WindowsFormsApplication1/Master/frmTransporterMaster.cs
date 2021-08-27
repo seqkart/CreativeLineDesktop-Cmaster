@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmTransporterMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmTransporterMaster : DevExpress.XtraEditors.XtraForm
     {
         public string s1 { get; set; }
         public string TRPRSYSID { get; set; }
-        public frmTransporterMaster()
+        public FrmTransporterMaster()
         {
             InitializeComponent();
         }
@@ -80,37 +80,7 @@ namespace WindowsFormsApplication1
                 txtGSTNo.Focus();
                 return false;
             }
-            //if (txtAddress2.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid x Address");
-            //    txtAddress2.Focus();
-            //    return false;
-            //}
-
-            //if (txtContactPerson.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Transporter Contact Person");
-            //    txtContactPerson.Focus();
-            //    return false;
-            //}
-            //if (txtMobileNo.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Transporter Mobile No");
-            //    txtMobileNo.Focus();
-            //    return false;
-            //}
-            //if (txtCityCode.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Transporter City");
-            //    txtCityCode.Focus();
-            //    return false;
-            //}
-            //if (txtState.Text.Trim().Length == 0)
-            //{
-            //    ProjectFunctions.SpeakError("Invalid Transporter State");
-            //    txtState.Focus();
-            //    return false;
-            //}
+           
 
             return true;
         }

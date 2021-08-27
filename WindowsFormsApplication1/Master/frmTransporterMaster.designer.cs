@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmTransporterMaster
+    partial class FrmTransporterMaster
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTransporterMaster));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTransporterMaster));
             this.Label8 = new DevExpress.XtraEditors.LabelControl();
             this.Label5 = new DevExpress.XtraEditors.LabelControl();
             this.Label10 = new DevExpress.XtraEditors.LabelControl();

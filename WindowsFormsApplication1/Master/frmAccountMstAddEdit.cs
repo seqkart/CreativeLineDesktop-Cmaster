@@ -11,12 +11,12 @@ using TaxProEWB.API;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmAccountMstAddEdit : XtraForm
+    public partial class FrmAccountMstAddEdit : XtraForm
     {
         string TransID;
         public string S1 { get; set; }
         public string AccCode { get; set; }
-        public frmAccountMstAddEdit()
+        public FrmAccountMstAddEdit()
         {
             InitializeComponent();
 
@@ -209,30 +209,7 @@ namespace WindowsFormsApplication1
                 {
                     txtMRPMarkDown.Text = "0";
                 }
-                //if (txtBSCode.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid Balance Sheet Head");
-                //    txtBSCode.Focus();
-                //    return false;
-                //}
-                //if (txtBSDesc.Text.Trim().Length == 0)
-
-                //    ProjectFunctions.SpeakError("Invalid Balance Sheet Head");
-                //    txtBSCode.Focus();
-                //    return false;
-                //}
-                //if (txtSLCode.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid Sub Ledger Code");
-                //    txtSLCode.Focus();
-                //    return false;
-                //}
-                //if (txtSLDesc.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid Sub Ledger Desc");
-                //    txtSLCode.Focus();
-                //    return false;
-                //}
+               
 
 
                 if (txtLCTag.Text.ToUpper() == "L" || (txtLCTag.Text.ToUpper() == "C"))
@@ -259,18 +236,7 @@ namespace WindowsFormsApplication1
                     return false;
                 }
 
-                //if (txtInTime.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid In Time");
-                //    txtInTime.Focus();
-                //    return false;
-                //}
-                //if (txtOutTime.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid Out Time");
-                //    txtOutTime.Focus();
-                //    return false;
-                //}
+               
                 return true;
             }
             catch (Exception ex)

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmAccountMstAddEdit
+    partial class FrmAccountMstAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccountMstAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccountMstAddEdit));
             this.txtAcCategory = new DevExpress.XtraEditors.TextEdit();
             this.label27 = new DevExpress.XtraEditors.LabelControl();
             this.txtAcName = new DevExpress.XtraEditors.TextEdit();

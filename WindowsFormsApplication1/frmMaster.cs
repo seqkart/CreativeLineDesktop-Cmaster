@@ -335,7 +335,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG119")
                 {
-                    frmTransporterMaster frm = new frmTransporterMaster()
+                    FrmTransporterMaster frm = new FrmTransporterMaster()
                     { s1 = btnAdd.Text, Text = "Transporter Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -397,7 +397,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG8")
                 {
-                    frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                    FrmAccountMstAddEdit frm = new FrmAccountMstAddEdit()
                     { S1 = btnAdd.Text, Text = "Account Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -653,7 +653,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Administration.frmAPIIntegrationInfo frm = new WindowsFormsApplication1.Administration.frmAPIIntegrationInfo()
+                    WindowsFormsApplication1.Administration.FrmAPIIntegrationInfo frm = new WindowsFormsApplication1.Administration.FrmAPIIntegrationInfo()
                     { Text = "API Integration Edition", TransId = CurrentRow["TransId"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -885,7 +885,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG119")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmTransporterMaster frm = new frmTransporterMaster()
+                    FrmTransporterMaster frm = new FrmTransporterMaster()
                     { s1 = btnEdit.Text, Text = "Transporter Edition", TRPRSYSID = CurrentRow["TRPRSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -974,7 +974,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG8")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmAccountMstAddEdit frm = new frmAccountMstAddEdit()
+                    FrmAccountMstAddEdit frm = new FrmAccountMstAddEdit()
                     { S1 = btnEdit.Text, Text = "Account Editing", AccCode = CurrentRow["AccCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
