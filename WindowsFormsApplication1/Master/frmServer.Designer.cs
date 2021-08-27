@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmServer
+    partial class FrmServer
     {
         /// <summary>
         /// Required designer variable.
@@ -50,7 +50,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(117, 78);
+            this.labelControl1.Location = new System.Drawing.Point(97, 78);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(76, 17);
             this.labelControl1.TabIndex = 0;
@@ -64,6 +64,7 @@ namespace WindowsFormsApplication1.Master
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtServerName.Size = new System.Drawing.Size(328, 24);
             this.txtServerName.TabIndex = 1;
+            this.txtServerName.SelectedIndexChanged += new System.EventHandler(this.TxtServerName_SelectedIndexChanged);
             // 
             // txtLoginType
             // 
@@ -72,14 +73,15 @@ namespace WindowsFormsApplication1.Master
             this.txtLoginType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtLoginType.Properties.Items.AddRange(new object[] {
-            "WINDOW",
-            "SQLSERVER"});
+            "SQLSERVER",
+            "WINDOW"});
             this.txtLoginType.Size = new System.Drawing.Size(328, 24);
             this.txtLoginType.TabIndex = 3;
+            this.txtLoginType.SelectedIndexChanged += new System.EventHandler(this.TxtLoginType_SelectedIndexChanged);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(117, 108);
+            this.labelControl2.Location = new System.Drawing.Point(109, 108);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(64, 17);
             this.labelControl2.TabIndex = 2;
@@ -87,7 +89,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtDataBaseName
             // 
-            this.txtDataBaseName.Location = new System.Drawing.Point(211, 135);
+            this.txtDataBaseName.Location = new System.Drawing.Point(211, 192);
             this.txtDataBaseName.Name = "txtDataBaseName";
             this.txtDataBaseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -99,7 +101,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(117, 138);
+            this.labelControl3.Location = new System.Drawing.Point(118, 195);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(55, 17);
             this.labelControl3.TabIndex = 4;
@@ -107,22 +109,23 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(211, 165);
+            this.txtUserName.Location = new System.Drawing.Point(211, 134);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(328, 24);
             this.txtUserName.TabIndex = 6;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(211, 199);
+            this.txtPassword.Location = new System.Drawing.Point(211, 163);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(328, 24);
             this.txtPassword.TabIndex = 7;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(117, 168);
+            this.labelControl4.Location = new System.Drawing.Point(114, 137);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(59, 17);
             this.labelControl4.TabIndex = 8;
@@ -130,7 +133,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(117, 202);
+            this.labelControl5.Location = new System.Drawing.Point(117, 165);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(56, 17);
             this.labelControl5.TabIndex = 9;
@@ -138,12 +141,12 @@ namespace WindowsFormsApplication1.Master
             // 
             // btnTestConnection
             // 
-            this.btnTestConnection.Location = new System.Drawing.Point(268, 264);
+            this.btnTestConnection.Location = new System.Drawing.Point(233, 264);
             this.btnTestConnection.Name = "btnTestConnection";
-            this.btnTestConnection.Size = new System.Drawing.Size(123, 29);
+            this.btnTestConnection.Size = new System.Drawing.Size(175, 29);
             this.btnTestConnection.TabIndex = 10;
-            this.btnTestConnection.Text = "Test Connection";
-            this.btnTestConnection.Click += new System.EventHandler(this.btnTestConnection_Click);
+            this.btnTestConnection.Text = "Save Connection And Login";
+            this.btnTestConnection.Click += new System.EventHandler(this.BtnTestConnection_Click);
             // 
             // btnConnect
             // 
@@ -151,14 +154,14 @@ namespace WindowsFormsApplication1.Master
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(94, 29);
             this.btnConnect.TabIndex = 11;
-            this.btnConnect.Text = "Connect";
+            this.btnConnect.Text = "Exit";
+            this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
             // 
             // frmServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 350);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(717, 341);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnTestConnection);
             this.Controls.Add(this.labelControl5);
@@ -173,8 +176,11 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.labelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmServer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Load += new System.EventHandler(this.FrmServer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtServerName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLoginType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDataBaseName.Properties)).EndInit();

@@ -2334,5 +2334,10 @@ namespace WindowsFormsApplication1
         {
 
         }
+
+        private void CNGroupCtrl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -12,7 +12,7 @@
         {
 
             txtVendorCode.Text = GlobalVariables.VendorCode;
-           // txtvehicleNo.Text = VehicleNo;
+            // txtvehicleNo.Text = VehicleNo;
 
 
 

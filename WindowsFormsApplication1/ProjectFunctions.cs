@@ -98,6 +98,7 @@ namespace WindowsFormsApplication1
 
 
 
+
         public static string DecryptedConnectionFileImage()
         {
             StreamReader sr = new StreamReader(Application.StartupPath + @"\RohitImageConn.txt");
@@ -368,7 +369,27 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-
+        public static DataSet GetDataSetServer(string Query, string ConnectionString)
+        {
+            using (var _VarDataSet = new DataSet())
+            {
+                try
+                {
+                    using (var _VarSqlDataAdapter = new SqlDataAdapter(Query, new SqlConnection(ConnectionString)))
+                    {
+                        _VarSqlDataAdapter.SelectCommand.CommandTimeout = 1200;
+                        _VarSqlDataAdapter.Fill(_VarDataSet);
+                    }
+                    return _VarDataSet;
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine("ProjectFunction => GetDataSet => " + Query);
+                    System.Diagnostics.Debug.WriteLine("ProjectFunction => GetDataSet => " + ex);
+                    return null;
+                }
+            }
+        }
 
         public static DataSet GetDataSet(string Query, string ConnectionString)
         {
@@ -1704,7 +1725,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        GlobalVariables.WhatAppStatus = "";
+                        GlobalVariables.WhatAppStatus = string.Empty;
                         GlobalVariables.WhatAppMobileNo = "No User";
                     }
 
@@ -2097,7 +2118,7 @@ namespace WindowsFormsApplication1
             ReqGenEwbPl ewbGen = new ReqGenEwbPl();
             ewbGen.supplyType = ds.Tables[0].Rows[0]["SupplyType"].ToString();
             ewbGen.subSupplyType = ds.Tables[0].Rows[0]["SubSupplyType"].ToString();
-            ewbGen.subSupplyDesc = "";
+            ewbGen.subSupplyDesc = string.Empty;
             ewbGen.docType = "INV";
             ewbGen.docNo = ds.Tables[0].Rows[0]["BillSeries"].ToString() + "-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
 
