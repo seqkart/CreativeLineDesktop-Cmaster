@@ -17,7 +17,6 @@ using System.Windows.Forms;
 using WindowsFormsApplication1.Forms_Master;
 
 
-
 namespace WindowsFormsApplication1.Time_Office
 {
     public partial class XtraForm_EmployeeAttendance : DevExpress.XtraEditors.XtraForm
@@ -45,7 +44,6 @@ namespace WindowsFormsApplication1.Time_Office
             selected_attendance_date = _selected_attendance_date;
 
             come_from = _come_from;
-
 
             PrintLogWin.PrintLog("selected_serial_id 1 => " + selected_serial_id);
 

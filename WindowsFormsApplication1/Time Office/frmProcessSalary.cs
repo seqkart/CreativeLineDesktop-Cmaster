@@ -27,7 +27,7 @@ using WindowsFormsApplication1.Prints;
 
 namespace WindowsFormsApplication1.Forms_Transaction
 {
-    public partial class frmProcessSalary : DevExpress.XtraEditors.XtraForm
+    public partial class FrmProcessSalary : DevExpress.XtraEditors.XtraForm
     {
         private string _Mnthyr;
         private bool flagExceed;
@@ -35,26 +35,26 @@ namespace WindowsFormsApplication1.Forms_Transaction
         public DateTime EndDate { get; set; }
 
         public List<GridView_Style_Model> gridView_Style_List = new List<GridView_Style_Model>();
-        public frmProcessSalary()
+        public FrmProcessSalary()
         {
             InitializeComponent();
         }
 
-        private void frmProcessSalary_Load(object sender, EventArgs e)
+        private void FrmProcessSalary_Load(object sender, EventArgs e)
         {
             DtStartDate.EditValue = StartDate.Date;
 
             //gridView_Style_List = ProjectFunctionsUtils.GridView_Style("frmProcessSalary", "gridControl_SalaryProcess");
 
             SetMyControls();
-            fillGrid();
+            FillGrid();
         }
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
 
-        private void gridView_SalaryProcess_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
+        private void GridView_SalaryProcess_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
         {
             GridView view = sender as GridView;
             if (e.IsTotalSummary && (e.Item as GridSummaryItem).FieldName == "EmpSalary")
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         {
             return true;
         }
-        private void gridView_SalaryProcess_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
+        private void GridView_SalaryProcess_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
         {
             if (IsInvalidValue(e.Info.Value))
             {
@@ -145,7 +145,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             */
         }
 
-        private void gridControl_SalaryProcess_DoubleClick(object sender, EventArgs e)
+        private void GridControl_SalaryProcess_DoubleClick(object sender, EventArgs e)
         {
             /*
             //Sender is actually of type GridControl
@@ -174,15 +174,15 @@ namespace WindowsFormsApplication1.Forms_Transaction
             */
         }
 
-        private void clearGrid()
+        private void ClearGrid()
         {
             gridControl_SalaryProcess.DataSource = null;
             gridView_SalaryProcess.Columns.Clear();
         }
 
-        private void fillGrid()
+        private void FillGrid()
         {
-            clearGrid();
+            ClearGrid();
 
             //DECLARE @Salary_Month DATETIME = '2020-06-01 00:00:00';
             var str = "sp_Salary_Process '','" + ConvertTo.DateFormatDb(ConvertTo.DateTimeVal(DtStartDate.EditValue)) + "', 1, 1,'1','" + txtteatrate.Text + "','0'";
@@ -231,42 +231,6 @@ namespace WindowsFormsApplication1.Forms_Transaction
             {
 
             }
-
-            /////////////////////////////////////
-
-
-
-            //////////////////////////////////////////////
-            // Create an unbound column.
-            /*
-            GridColumn unbColumn = gridView_SalaryProcess.Columns.AddField("Arrears_1");
-            unbColumn.VisibleIndex = gridView_SalaryProcess.Columns.Count;
-            unbColumn.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            // Disable editing.
-            unbColumn.OptionsColumn.AllowEdit = false;
-            // Specify format settings.
-            unbColumn.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-
-            //Rupees Currency Sign
-
-            //unbColumn.DisplayFormat.FormatString = "c";
-            // Customize the appearance settings.
-            unbColumn.AppearanceCell.BackColor = Color.LemonChiffon;
-            */
-
-            /*
-            GridColumn unboundColumn = gridView_SalaryProcess.Columns.Add();
-            unboundColumn.ShowUnboundExpressionMenu = true;
-            unboundColumn.FieldName = "Arrears_1";
-            unboundColumn.Name = "Arrears_1";
-            unboundColumn.Caption = "Arrears_1";
-            unboundColumn.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
-            unboundColumn.Visible = true;
-            unboundColumn.VisibleIndex = gridView_SalaryProcess.VisibleColumns.Count;
-            unboundColumn.AppearanceCell.BackColor = Color.LemonChiffon;
-            */
-            //////////////////////////////////////////////
-            ///
             gridView_SalaryProcess.OptionsBehavior.Editable = true;
 
             foreach (DevExpress.XtraGrid.Columns.GridColumn Col in gridView_SalaryProcess.Columns)
@@ -284,40 +248,6 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
             SetGridViewStyle();
 
-            /*
-            for (int rowHandle = 0; rowHandle < gridView_SalaryProcess.RowCount; rowHandle++)
-            {
-                //DevExpress.XtraGrid.Columns.GridColumn col = View.Columns.ColumnByFieldName("Price");
-                foreach (GridColumn gc in gridView_SalaryProcess.Columns)
-                {
-
-                    //int _SalaryLocked = 0;
-                    if (gc.FieldName == "SalaryLocked")
-                    {
-                        int _SalaryLocked = ConvertTo.IntVal(gridView_SalaryProcess.GetRowCellDisplayText(rowHandle, gc));
-
-                        PrintLogWin.PrintLog("%%%%%%%%> SalaryLocked : " + _SalaryLocked);
-                        //gridView_SalaryProcess.Columns["Arrears"].OptionsColumn
-                        PrintLogWin.PrintLog("========> Loan : " + gridView_SalaryProcess.GetRowCellDisplayText(rowHandle, gridView_SalaryProcess.Columns["Loan"]));
-                        PrintLogWin.PrintLog("========> SalaryPaid : " + gridView_SalaryProcess.GetRowCellDisplayText(rowHandle, gridView_SalaryProcess.Columns["SalaryPaid"]));
-
-                        if(_SalaryLocked == 1)
-                        {
-                            string hex = "#ff0000";
-                            Color color = System.Drawing.ColorTranslator.FromHtml(hex);
-                            gc.AppearanceCell.BackColor = color;
-                        }
-                        else
-                        {
-                            //gc.AppearanceCell.BackColor = Color.Transparent;
-                        }
-                    }
-
-
-                }
-
-            }
-            */
 
         }
 
@@ -362,37 +292,9 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
         }
 
-        private void gridView_SalaryProcess_CustomDrawCell(object sender, RowCellCustomDrawEventArgs e)
+        private void GridView_SalaryProcess_CustomDrawCell(object sender, RowCellCustomDrawEventArgs e)
         {
-            /*
-            GridView View = sender as GridView;
-
-            //string cellValue = View.GetRowCellValue(View.FocusedRowHandle, gridView_SalaryProcess.Columns["SalaryLocked"]).ToString();
-
-            if (e.Column.FieldName == "SalaryLocked")
-            {
-                Color currentColor = View.Columns["SalaryPaid"].AppearanceCell.BackColor;
-                //e.DefaultDraw();
-                if (Convert.ToInt32(e.CellValue) == 1)
-                {
-                    string hex = "#eeeeee";
-                    Color color = System.Drawing.ColorTranslator.FromHtml(hex);
-                    View.Columns["SalaryPaid"].AppearanceCell.BackColor = color;
-                    View.Columns["Loan"].AppearanceCell.BackColor = color;
-
-                    //DataRow dr = View.GetDataRow(e.RowHandle);
-                    //View.GetDataRow(e.RowHandle).Field("Loan",)
-                    //dr["SalaryPaid"].
-                    //string cellValue = View.GetRowCellValue(e.RowHandle, View.Columns["SalaryLocked"]).ToString();
-
-                    //e.Cache.DrawImage(warningImage, e.Bounds.Location);
-                }
-                else
-                {
-                    View.Columns["SalaryPaid"].AppearanceCell.BackColor = currentColor;
-                }
-            }
-            */
+            
         }
 
         private void gridView_SalaryProcess_ShowingEditor(object sender, System.ComponentModel.CancelEventArgs e)
@@ -414,24 +316,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
         }
 
-        /*
-        // Returns the total amount for a specific row.
-        private object getTotalValue(int listSourceRowIndex)
-        {
-            DataRow row = gridView_SalaryProcess.GetDataRow(listSourceRowIndex);// nwindDataSet.Tables["Order Details"].Rows[listSourceRowIndex];
-            //decimal unitPrice = ConvertTo.DecimalVal(row["UnitPrice"]);
-            //decimal quantity = ConvertTo.DecimalVal(row["Quantity"]);
-            //decimal arrears = ConvertTo.DecimalVal(row["Arrears"]);
-            return row["Arrears"];
-        }
-        private void gridView_SalaryProcess_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
-        {
-            if (e.Column.FieldName == "Arrears_1" && e.IsGetData)
-            {
-                e.Value = ConvertTo.DecimalVal(getTotalValue(e.ListSourceRowIndex));
-            }
-        }
-        */
+        
         private void gridView_SalaryProcess_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
         {
 
@@ -538,7 +423,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
 
         }
-        private void gridView_SalaryProcess_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        private void GridView_SalaryProcess_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
         {
             GridView view = sender as GridView;
 
@@ -922,7 +807,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                             com.ExecuteNonQuery();
 
                             ProjectFunctions.SpeakError("Salary Has Been Locked");
-                            fillGrid();
+                            FillGrid();
                         }
 
                     }
@@ -1024,7 +909,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                             com.ExecuteNonQuery();
 
                             ProjectFunctions.SpeakError("Salary Has Been Processed");
-                            fillGrid();
+                            FillGrid();
                         }
 
                     }
@@ -1195,7 +1080,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             {
                 XtraMessageBox.Show("Unable to Process Data.\n" + ex.Message, "!Error");
             }
-            fillGrid();
+            FillGrid();
         }
         static int NumberOfParticularDaysInMonth(int year, int month, DayOfWeek dayOfWeek)
         {
@@ -1236,7 +1121,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     }
                 }
             }
-            fillGrid();
+            FillGrid();
         }
 
         private void Report_Print_Preview(string action)

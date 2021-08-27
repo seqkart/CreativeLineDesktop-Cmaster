@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Transaction
 {
-    partial class frmProcessSalary
+    partial class FrmProcessSalary
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProcessSalary));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProcessSalary));
             this.btnLock = new DevExpress.XtraEditors.SimpleButton();
             this.ChoiceSelect = new DevExpress.XtraEditors.CheckEdit();
             this.DtStartDate = new DevExpress.XtraEditors.TextEdit();
@@ -135,7 +135,7 @@
             this.btnLoad.Size = new System.Drawing.Size(135, 42);
             this.btnLoad.TabIndex = 1;
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // SalaryGrid
             // 
@@ -353,7 +353,7 @@
             this.gridControl_SalaryProcess.TabIndex = 352;
             this.gridControl_SalaryProcess.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_SalaryProcess});
-            this.gridControl_SalaryProcess.DoubleClick += new System.EventHandler(this.gridControl_SalaryProcess_DoubleClick);
+            this.gridControl_SalaryProcess.DoubleClick += new System.EventHandler(this.GridControl_SalaryProcess_DoubleClick);
             // 
             // gridView_SalaryProcess
             // 
@@ -364,14 +364,14 @@
             this.gridView_SalaryProcess.OptionsEditForm.BindingMode = DevExpress.XtraGrid.Views.Grid.EditFormBindingMode.Direct;
             this.gridView_SalaryProcess.OptionsView.ShowFooter = true;
             this.gridView_SalaryProcess.OptionsView.ShowGroupPanel = false;
-            this.gridView_SalaryProcess.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gridView_SalaryProcess_CustomDrawCell);
-            this.gridView_SalaryProcess.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.gridView_SalaryProcess_CustomDrawFooterCell);
+            this.gridView_SalaryProcess.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.GridView_SalaryProcess_CustomDrawCell);
+            this.gridView_SalaryProcess.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.GridView_SalaryProcess_CustomDrawFooterCell);
             this.gridView_SalaryProcess.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView_SalaryProcess_RowCellStyle);
             this.gridView_SalaryProcess.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_SalaryProcess_RowStyle);
-            this.gridView_SalaryProcess.CustomSummaryCalculate += new DevExpress.Data.CustomSummaryEventHandler(this.gridView_SalaryProcess_CustomSummaryCalculate);
+            this.gridView_SalaryProcess.CustomSummaryCalculate += new DevExpress.Data.CustomSummaryEventHandler(this.GridView_SalaryProcess_CustomSummaryCalculate);
             this.gridView_SalaryProcess.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.gridView_SalaryProcess_ShowingEditor);
             this.gridView_SalaryProcess.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_SalaryProcess_KeyDown);
-            this.gridView_SalaryProcess.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.gridView_SalaryProcess_ValidatingEditor);
+            this.gridView_SalaryProcess.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.GridView_SalaryProcess_ValidatingEditor);
             // 
             // btnProcessSalary
             // 
@@ -469,7 +469,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmProcessSalary";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmProcessSalary_Load);
+            this.Load += new System.EventHandler(this.FrmProcessSalary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ChoiceSelect.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalaryGrid)).EndInit();

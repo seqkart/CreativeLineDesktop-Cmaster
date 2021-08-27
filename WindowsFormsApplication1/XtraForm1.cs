@@ -1707,7 +1707,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG162":
-                    var PROG162 = new WindowsFormsApplication1.Forms_Transaction.frmProcessSalary() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG162 = new WindowsFormsApplication1.Forms_Transaction.FrmProcessSalary() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG162.Show();
                     PROG162.BringToFront();
                     PROG162.Parent = Page;
