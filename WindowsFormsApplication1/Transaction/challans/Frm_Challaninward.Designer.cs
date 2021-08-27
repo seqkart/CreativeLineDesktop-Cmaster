@@ -962,7 +962,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -972,7 +972,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Frm_Challaninward
             // 
