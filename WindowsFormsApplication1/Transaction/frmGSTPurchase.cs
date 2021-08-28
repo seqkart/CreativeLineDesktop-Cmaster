@@ -11,19 +11,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmGSTPurchase : DevExpress.XtraEditors.XtraForm
+    public partial class FrmGSTPurchase : DevExpress.XtraEditors.XtraForm
     {
         DataSet dsPopUps = new DataSet();
         int RowIndex = 0;
         string UpdateTag = "N";
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         DataTable dt = new DataTable();
 
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         public string ImSeries { get; set; }
 
-        public frmGSTPurchase()
+        public FrmGSTPurchase()
         {
             InitializeComponent();
             dt.Columns.Add("SIDPRDCODE", typeof(string));
@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1.Transaction
 
             dsPopUps = ProjectFunctions.GetDataSet("sp_LoadBarPrintPopUps");
         }
-        private void calculation()
+        private void Calculation()
         {
             InfoGridView.CloseEditor();
             InfoGridView.UpdateCurrentRow();
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGridView.MoveLast();
                     InfoGridView.FocusedColumn = InfoGridView.Columns["SIDARTNO"];
                     txtSearchBox.Text = string.Empty;
-                    calculation();
+                    Calculation();
                 }
                 if (HelpGrid.Text == "SIDARTNO")
                 {
@@ -316,12 +316,12 @@ namespace WindowsFormsApplication1.Transaction
                 return false;
             }
         }
-        private void txtTransporterCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTransporterName.Text = string.Empty;
         }
 
-        private void txtTransporterCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -379,10 +379,7 @@ namespace WindowsFormsApplication1.Transaction
             e.Handled = true;
         }
 
-        private void groupControl2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+  
         private void PrepareActMstHelpGrid()
         {
             HelpGridView.Columns.Clear();
@@ -438,7 +435,7 @@ namespace WindowsFormsApplication1.Transaction
         }
 
 
-        private void frmGSTPurchase_Load(object sender, EventArgs e)
+        private void FrmGSTPurchase_Load(object sender, EventArgs e)
         {
             try
             {
@@ -449,14 +446,14 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.GirdViewVisualize(HelpGridView);
                 ProjectFunctions.GirdViewVisualize(InfoGridView);
                 ProjectFunctions.TextBoxVisualize(this);
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     groupControl1.Focus();
                     txtDebitPartyCode.Select();
                     txtPurchaseDate.EditValue = DateTime.Now;
 
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
 
                     DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPurchaseMstFEdit '" + ImNo + "' ,'" + ImDate.ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "' ");
@@ -527,22 +524,6 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-
-        private void AttachDocs()
-        {
-            DataSet dsDocs = ProjectFunctions.GetDataSet("Select * from ImagesData Where DocType='PUR' And DocNo='" + txtPurchaseNo.Text + "' And DocDate='" + Convert.ToDateTime(txtPurchaseDate.Text).ToString("yyyy-MM-dd") + "'", ProjectFunctions.ImageConnectionString);
-            if (dsDocs.Tables[0].Rows.Count > 0)
-            {
-                DocsGrid.DataSource = dsDocs.Tables[0];
-                DocsGridView.BestFitColumns();
-            }
-            else
-            {
-                DocsGrid.DataSource = null;
-                DocsGridView.BestFitColumns();
-            }
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
@@ -557,7 +538,7 @@ namespace WindowsFormsApplication1.Transaction
                         sqlcom.Connection = sqlcon;
                         sqlcom.CommandType = CommandType.StoredProcedure;
                         sqlcom.CommandType = CommandType.Text;
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
 
                             txtPurchaseNo.Text = ProjectFunctions.GetDataSet("Select isnull(Max(SIMNO),0)+1 from PURCHASEMAIN WHere SIMFYR='" + GlobalVariables.FinancialYear + "' ANd UnitCode='" + GlobalVariables.CUnitID + "' And SIMTYPE='RM'").Tables[0].Rows[0][0].ToString();
@@ -589,7 +570,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " update PURCHASEMAIN Set  "
                                                         + "SIMFYR=@SIMFYR,SIMNO=@SIMNO,SIMDATE=@SIMDATE,"
@@ -959,7 +940,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             try
 
@@ -986,7 +967,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
+        private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
@@ -1095,7 +1076,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -1129,7 +1110,7 @@ namespace WindowsFormsApplication1.Transaction
                         currentrow["SIDIGSTAMT"] = (Convert.ToDecimal(currentrow["SIDITMNETAMT"]) * Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxIGSTRate"])) / 100;
                         currentrow["TAXCODE"] = dsTax.Tables[0].Rows[0]["TaxCode"].ToString();
                         currentrow["GRPHSNCODE"] = dsTax.Tables[0].Rows[0]["GrpHSNCode"].ToString();
-                        calculation();
+                        Calculation();
 
                     }
                 }

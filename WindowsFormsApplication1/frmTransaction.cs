@@ -127,8 +127,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG166")
                 {
-                    WindowsFormsApplication1.Transaction.frmGSTPurchase frm = new WindowsFormsApplication1.Transaction.frmGSTPurchase
-                    { s1 = btnAdd.Text, Text = "GST Purchase Addition" };
+                    WindowsFormsApplication1.Transaction.FrmGSTPurchase frm = new WindowsFormsApplication1.Transaction.FrmGSTPurchase
+                    { S1 = btnAdd.Text, Text = "GST Purchase Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -272,8 +272,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG46")
                 {
-                    frm_JournalNBankVoucher frm = new frm_JournalNBankVoucher()
-                    { s1 = btnAdd.Text, Text = "Voucher Addition" };
+                    WindowsFormsApplication1.Transaction.FrmVouchers frm = new WindowsFormsApplication1.Transaction.FrmVouchers()
+                    { S1 = btnAdd.Text, Text = "Voucher Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -375,9 +375,9 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Transaction.frmGSTPurchase frm = new WindowsFormsApplication1.Transaction.frmGSTPurchase
+                    WindowsFormsApplication1.Transaction.FrmGSTPurchase frm = new WindowsFormsApplication1.Transaction.FrmGSTPurchase
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "GST Purchase Edition",
                         ImNo = CurrentRow["SIMNO"].ToString(),
                         ImDate = Convert.ToDateTime(CurrentRow["SIMDATE"])

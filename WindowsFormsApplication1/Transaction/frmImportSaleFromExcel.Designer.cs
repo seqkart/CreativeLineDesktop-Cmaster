@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(45, 23);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnLoad
             // 
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(69, 23);
             this.btnLoad.Text = "Load Excel";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // btnSave
             // 
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(38, 23);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // InfoGrid
             // 
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1.Transaction
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // gridColumn1
             // 

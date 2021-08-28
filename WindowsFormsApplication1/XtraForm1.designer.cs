@@ -256,7 +256,7 @@
             this.barButtonItem2.Caption = "barButtonItem2";
             this.barButtonItem2.Id = 90;
             this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem2_ItemClick);
             // 
             // ribbonPage
             // 
@@ -351,7 +351,7 @@
             this.hyperlinkLabelControl2.Size = new System.Drawing.Size(71, 17);
             this.hyperlinkLabelControl2.TabIndex = 3;
             this.hyperlinkLabelControl2.Text = "Show Radial";
-            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.hyperlinkLabelControl2_Click);
+            this.hyperlinkLabelControl2.Click += new System.EventHandler(this.HyperlinkLabelControl2_Click);
             // 
             // hyperlinkLabelControl1
             // 
@@ -590,7 +590,7 @@
             this.barButtonItem4.Id = 4;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
-            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
+            this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem4_ItemClick);
             // 
             // HelpGrid
             // 

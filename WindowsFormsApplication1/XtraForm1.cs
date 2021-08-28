@@ -65,8 +65,10 @@ namespace WindowsFormsApplication1
 
 
 
-            Timer timer = new Timer();
-            timer.Interval = (10 * 10000); // 10 secs
+            Timer timer = new Timer
+            {
+                Interval = (5 * 10000) // 10 secs
+            };
             timer.Tick += Timer_Tick;
             timer.Start();
 
@@ -151,9 +153,11 @@ namespace WindowsFormsApplication1
                     {
                         if (dr["ProgRadialTag"].ToString().ToUpper() == "Y")
                         {
-                            BarItem btnCopy = new BarButtonItem();
-                            btnCopy.Caption = dr["ProgDesc"].ToString();
-                            btnCopy.Name = dr["ProgCode"].ToString();
+                            BarItem btnCopy = new BarButtonItem
+                            {
+                                Caption = dr["ProgDesc"].ToString(),
+                                Name = dr["ProgCode"].ToString(),
+                            };
                             btnCopy.ItemClick += BtnCopy_ItemClick;
                             btnCopy.ImageOptions.ImageUri.Uri = "Copy;Size16x16";
                             radialMenu1.AddItem(btnCopy);
@@ -211,7 +215,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                ProjectFunctions.WhatsAppConnectionStatus();
+                _ = ProjectFunctions.WhatsAppConnectionStatus();
 
 
                 if (GlobalVariables.WhatAppStatus != null)
@@ -239,7 +243,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -252,8 +256,6 @@ namespace WindowsFormsApplication1
         {
             xtraTabControl1.TabPages.Remove(xtraTabControl1.SelectedTabPage);
         }
-
-
 
         private void XtraTabControl1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -1939,24 +1941,19 @@ namespace WindowsFormsApplication1
             //pictureEdit1.Image = barCode.BarCodeImage;
         }
 
-        private void BtnRefreshQRCode_Click(object sender, EventArgs e)
-        {
-            ChangeQRData();
-        }
-
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             ProjectFunctions.WhatsAppDisConnection();
         }
 
-        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void BarButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
 
 
         }
 
-        private void hyperlinkLabelControl2_Click(object sender, EventArgs e)
+        private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
         {
             radialMenu1.ShowPopup(new System.Drawing.Point(750, 400));
         }
@@ -1980,7 +1977,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        private void BarButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
             HelpGrid.Visible = true;
         }

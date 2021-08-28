@@ -157,11 +157,11 @@ namespace WindowsFormsApplication1.Master
             this.btnConnect.Text = "Exit";
             this.btnConnect.Click += new System.EventHandler(this.BtnConnect_Click);
             // 
-            // frmServer
+            // FrmServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 341);
+            this.ClientSize = new System.Drawing.Size(719, 344);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnTestConnection);
             this.Controls.Add(this.labelControl5);
@@ -178,7 +178,7 @@ namespace WindowsFormsApplication1.Master
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmServer";
+            this.Name = "FrmServer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmServer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtServerName.Properties)).EndInit();

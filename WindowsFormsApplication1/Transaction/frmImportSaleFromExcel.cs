@@ -13,18 +13,18 @@ namespace WindowsFormsApplication1.Transaction
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             dt.Rows.Clear();
             var xlConn = string.Empty;
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1.Transaction
             return true;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {

@@ -15,7 +15,6 @@ using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Security.Cryptography;
 using System.Speech.Synthesis;
@@ -118,42 +117,7 @@ namespace WindowsFormsApplication1
 
             return Encrypt(Convert.ToString(ActualConnectionString));
         }
-        //public static void SendSMS(string uid, string password, string message, string no)
-        //{
-        //    HttpWebRequest myReq = (HttpWebRequest)WebRequest.Create("http://ubaid.tk/sms/sms.aspx?uid=" + uid + "&pwd=" + password + "&msg=" + message + "&phone=" + no + "&provider=way2sms");
-        //    myReq.Credentials = CredentialCache.DefaultNetworkCredentials;
-        //    HttpWebResponse myResp = (HttpWebResponse)myReq.GetResponse();
-        //    System.IO.StreamReader respStreamReader = new System.IO.StreamReader(myResp.GetResponseStream());
-        //    string responseString = respStreamReader.ReadToEnd();
-        //    respStreamReader.Close();
-        //    myResp.Close();
-        //}
-        //public static GsmCommMain comm;
-        //public static SmsServer;
-        //public static void ConnectModem()
-        //{
-        //    comm = new GsmCommMain(GlobalVariables.PortNo, 9600, 150);
-        //    Cursor.Current = Cursors.Default;
-        //    bool retry;
-        //    do
-        //    {
-        //        retry = false;
-        //        try
-        //        {
-        //            Cursor.Current = Cursors.WaitCursor;
-        //            comm.Open();
-        //            Cursor.Current = Cursors.Default;
 
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            ProjectFunctions.SpeakError(ex.Message);
-        //            comm.Close();
-        //        }
-        //    }
-        //    while (retry);
-
-        //}
         public static DialogResult SpeakConfirmation(string message, string caption, MessageBoxButtons messageBoxButtons)
         {
 
@@ -226,25 +190,6 @@ namespace WindowsFormsApplication1
         {
             throw new NotImplementedException();
         }
-
-        //public static void SendSMS(String sms,String MobileNo)
-        //{
-        //    try
-        //    {
-
-        //        SmsSubmitPdu pdu;
-        //        byte dcs = (byte)DataCodingScheme.GeneralCoding.Alpha7BitDefault;
-        //        pdu = new SmsSubmitPdu(sms, MobileNo, "");
-
-        //        comm.SendMessage(pdu);
-        //        comm.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        ProjectFunctions.SpeakError(ex.Message);
-        //        comm.Close();
-        //    }
-        //}
 
         public static string GetConnection()
         {
@@ -438,71 +383,7 @@ namespace WindowsFormsApplication1
 
         public static void SendMessage(string smsMessage, string SenderId, string MobileNos)
         {
-            smsMessage.Replace('#', '_');
-
-            //////////////-----   //http://msg.smscluster.com/rest/services/sendSMS/sendGroupSms?AUTH_KEY=YourAuthKey&message=message&senderId=dddddd&routeId=1&mobileNos=9999999999&smsContentType=english
-
-
-            var uri = @"http://msg.smscluster.com/rest/services/sendSMS/sendGroupSms?AUTH_KEY=8ef012ac2bbcaaf804bd6e9c7a5712b&message=" + smsMessage + "&senderId=" + SenderId + "&routeId=1&mobileNos=" + MobileNos + "&smsContentType=english";
-
-            var request = HttpWebRequest.Create(uri) as HttpWebRequest;
-            try
-            {
-                //request.Method = "GET";
-                //if (request.Method == "GET")
-                //{
-                //    var response = (HttpWebResponse)request.GetResponse();
-                //    var receiveStream = response.GetResponseStream();
-
-                //    var readStream = new StreamReader(receiveStream, Encoding.UTF8);
-                //    if (readStream.ReadToEnd().ToString().Contains("3001"))
-                //    {
-                //        ProjectFunctions.SpeakError(smsMessage + "/ Message Send Successfully");
-
-                //    }
-                //    else
-                //    {
-                //ProjectFunctions.SpeakError(smsMessage + "/ Unable To Send Message");
-
-                //    }
-                //    response.Close();
-                //    readStream.Close();
-                //}
-
-                ProjectFunctions.SpeakError("Unable To Send Message");
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
-            finally
-            {
-                request = null;
-                GC.Collect();
-            }
         }
-
-        /*
-                        public static void sendsmsviagatepass(String Message)
-                        {
-                            string serverURL1 = "167.114.117.218";//eg IP or Domain
-                            string authkey1 = "d93f366bc185af6158755201ab143ab"; // "Sample Auth key" 'eg -- 16 digits alphanumeric;
-                            string message1 = "Sample message"; //eg "message hello ";
-                            string senderId1 = "testing";//eg -- TestinG 6 Alphabet'
-                            string routeId1 = "1";// eg 1;
-                            string mobileNos1 = "9855630394";//eg '99999999xx,99999998xx
-                            string smsContentType1 = "english";//or Unicode
-                            string groupId1 = "1";// eg 1
-
-                            string scheduledate1 = string.Empty; //optional if(scheduledate  eg “26/08/2015 17:00”);
-                            string signature1 = string.Empty; //optional if(signature available  eg “1”);
-                            string groupName = string.Empty;//optional if(groupName available eg “1”);
-
-                            Sendsms.HitApi hitAPI = new Sendsms.HitApi();
-                            hitAPI.hitGetApi(serverURL1, authkey1, Message, senderId1, routeId1, mobileNos1, smsContentType1, groupId1, null, signature1, groupName);
-
-                        }
-                */
         public static DataSet GetMasterFormAdd()
         {
             DataSet dsMaster = GetDataSet("Select ProgCode,Mode,Caption,FormName from MasterAddEdit Where ProgCode='" + GlobalVariables.ProgCode + "' And Mode='ADD'");
@@ -563,9 +444,6 @@ namespace WindowsFormsApplication1
             //}
         }
 
-
-
-
         public static bool ControlsToValidate(Control[] A)
         {
             foreach (Control a in A)
@@ -612,7 +490,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-
         public static void SaveDataTable(string ProcedureName, DataTable dtFinal)
         {
             DataSet dsMaster = GetDataSet("select PARAMETER_NAME from information_schema.parameters where specific_name='" + ProcedureName + "'");
@@ -646,7 +523,6 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-
 
         public static string ValidateKeysForSearchBox(KeyEventArgs e)
         {
@@ -690,7 +566,6 @@ namespace WindowsFormsApplication1
             }
             return Value;
         }
-
 
         public static void ShowImage(string ArticleID, DevExpress.XtraEditors.PictureEdit PictureBox)
         {
@@ -1702,13 +1577,11 @@ namespace WindowsFormsApplication1
 
         }
 
-
-
         public static async Task WhatsAppConnectionStatus()
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1721,7 +1594,7 @@ namespace WindowsFormsApplication1
                         GlobalVariables.WhatAppStatus = myDetails.state;
                         GlobalVariables.WhatAppMobileNo = myDetails.user;
 
-                        // Speak(myDetails.state);
+                        Speak(myDetails.state);
                     }
                     else
                     {
@@ -1738,7 +1611,7 @@ namespace WindowsFormsApplication1
         //{
         //    using (var httpClient = new HttpClient())
         //    {
-        //        using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+        //        using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
         //        {
         //            request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1767,7 +1640,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://seqkartsolution:3000/disconnect"))
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://103.223.12.170:3000/disconnect"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1799,7 +1672,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1822,7 +1695,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1851,7 +1724,7 @@ namespace WindowsFormsApplication1
             //{
             //    using (var httpClient = new HttpClient())
             //    {
-            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
             //        {
             //            request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -2290,8 +2163,95 @@ namespace WindowsFormsApplication1
             // XtraMessageBox.Show("Generate e-Way Bill Responce");
 
 
+        }
 
 
+
+
+        public static void CreateRohitStylePopUpGridHelp(DevExpress.XtraGrid.GridControl VoucherGrid, DevExpress.XtraGrid.Views.Grid.GridView VoucherGridView, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, String SourceFieldName, TextEdit SearchBox, DevExpress.XtraEditors.PanelControl Panel1, KeyEventArgs e)
+        {
+            try
+            {
+                ReportGridView.Columns.Clear();
+                DataRow currentrow = ReportGridView.GetDataRow(ReportGridView.FocusedRowHandle);
+
+                if (e.KeyCode != Keys.Up)
+                {
+                    if (e.KeyCode != Keys.Down)
+                    {
+                        if (e.KeyCode != Keys.Left)
+                        {
+                            if (e.KeyCode != Keys.Right)
+                            {
+                                if (e.KeyCode != Keys.F12)
+                                {
+                                    if (e.KeyCode != Keys.Enter)
+                                    {
+                                        if (VoucherGridView.FocusedColumn.FieldName == SourceFieldName)
+                                        {
+                                            if (currentrow == null)
+                                            {
+                                                ReportGrid.Text = SourceFieldName;
+
+                                                SearchBox.Text = SearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                Panel1.Visible = true;
+                                                Panel1.Select();
+                                                SearchBox.Focus();
+                                                SearchBox.SelectionStart = SearchBox.Text.Length;
+                                                SearchBox.SelectionLength = 0;
+                                            }
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+        }
+        public static void CreateRohitStylePopUpTwoInputs(DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, TextEdit SearchBox, TextEdit T1, DevExpress.XtraEditors.PanelControl Panel1, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Back)
+            {
+                if (e.KeyCode != Keys.Delete)
+                {
+                    if (e.KeyCode != Keys.Up)
+                    {
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+
+                                            ReportGrid.Text = T1.Name;
+                                            SearchBox.Text = string.Empty;
+                                            SearchBox.Text = SearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            ReportGrid.Show();
+                                            Panel1.Visible = true;
+                                            ReportGrid.Visible = true;
+
+                                            SearchBox.Focus();
+                                            SearchBox.SelectionStart = SearchBox.Text.Length;
+                                            SearchBox.SelectionLength = 0;
+                                            T1.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         public static void PrintDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
@@ -2306,8 +2266,6 @@ namespace WindowsFormsApplication1
                     {
                         sub.ReportSource.DataSource = ds;
                     }
-
-
 
                     Report.CreateDocument();
                     if (GlobalVariables.ProgCode == "PROG132")
@@ -2332,7 +2290,6 @@ namespace WindowsFormsApplication1
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
                         }
-
 
                         frm.ShowDialog();
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
@@ -2410,8 +2367,6 @@ namespace WindowsFormsApplication1
             }
 
         }
-
-
 
         public static void TimePickerVisualize(Control C)
         {
