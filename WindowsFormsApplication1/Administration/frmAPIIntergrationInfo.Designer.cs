@@ -280,10 +280,10 @@ namespace WindowsFormsApplication1.Administration
             this.txtstatusTag.Size = new System.Drawing.Size(48, 24);
             this.txtstatusTag.TabIndex = 434;
             // 
-            // frmAPIIntergrationInfo
+            // FrmAPIIntegrationInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(668, 364);
             this.ControlBox = false;
             this.Controls.Add(this.txtstatusTag);
@@ -307,7 +307,7 @@ namespace WindowsFormsApplication1.Administration
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmAPIIntergrationInfo";
+            this.Name = "FrmAPIIntegrationInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmAPIIntergrationInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.svgImageCollection1)).EndInit();

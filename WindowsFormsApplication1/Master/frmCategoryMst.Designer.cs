@@ -54,7 +54,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(448, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(353, 27);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -79,7 +79,7 @@
             // 
             // txtCatgDesc
             // 
-            this.txtCatgDesc.Location = new System.Drawing.Point(132, 124);
+            this.txtCatgDesc.Location = new System.Drawing.Point(98, 89);
             this.txtCatgDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCatgDesc.Name = "txtCatgDesc";
             this.txtCatgDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -89,7 +89,7 @@
             // 
             // txtCatgCode
             // 
-            this.txtCatgCode.Location = new System.Drawing.Point(132, 75);
+            this.txtCatgCode.Location = new System.Drawing.Point(98, 40);
             this.txtCatgCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCatgCode.Name = "txtCatgCode";
             this.txtCatgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -98,7 +98,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(55, 128);
+            this.label3.Location = new System.Drawing.Point(21, 93);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
@@ -107,7 +107,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(92, 78);
+            this.label1.Location = new System.Drawing.Point(58, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 17);
@@ -118,9 +118,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 207);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(353, 133);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtCatgDesc);

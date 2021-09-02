@@ -53,10 +53,12 @@ namespace WindowsFormsApplication1.Master
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(408, 22);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(33, 35);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(462, 163);
+            this.HelpGrid.Size = new System.Drawing.Size(539, 213);
             this.HelpGrid.TabIndex = 397;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -66,6 +68,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -80,11 +83,12 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtSubProcessCode.Enabled = false;
             this.txtSubProcessCode.EnterMoveNextControl = true;
-            this.txtSubProcessCode.Location = new System.Drawing.Point(160, 62);
+            this.txtSubProcessCode.Location = new System.Drawing.Point(187, 81);
+            this.txtSubProcessCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubProcessCode.Name = "txtSubProcessCode";
             this.txtSubProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSubProcessCode.Properties.MaxLength = 8;
-            this.txtSubProcessCode.Size = new System.Drawing.Size(74, 20);
+            this.txtSubProcessCode.Size = new System.Drawing.Size(86, 24);
             this.txtSubProcessCode.TabIndex = 394;
             this.txtSubProcessCode.TabStop = false;
             // 
@@ -94,9 +98,10 @@ namespace WindowsFormsApplication1.Master
             this.label3.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Appearance.Options.UseFont = true;
             this.label3.Appearance.Options.UseForeColor = true;
-            this.label3.Location = new System.Drawing.Point(63, 65);
+            this.label3.Location = new System.Drawing.Point(73, 85);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
+            this.label3.Size = new System.Drawing.Size(109, 19);
             this.label3.TabIndex = 399;
             this.label3.Text = "Sub Process Code";
             // 
@@ -104,11 +109,12 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtProcessName.Enabled = false;
             this.txtProcessName.EnterMoveNextControl = true;
-            this.txtProcessName.Location = new System.Drawing.Point(240, 114);
+            this.txtProcessName.Location = new System.Drawing.Point(280, 149);
+            this.txtProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProcessName.Name = "txtProcessName";
             this.txtProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProcessName.Properties.MaxLength = 8;
-            this.txtProcessName.Size = new System.Drawing.Size(222, 20);
+            this.txtProcessName.Size = new System.Drawing.Size(259, 24);
             this.txtProcessName.TabIndex = 396;
             this.txtProcessName.TabStop = false;
             // 
@@ -118,6 +124,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -125,7 +132,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(523, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(610, 31);
             this.Menu_ToolStrip.TabIndex = 398;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -137,7 +144,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -149,18 +156,19 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtProcessCode
             // 
             this.txtProcessCode.EnterMoveNextControl = true;
-            this.txtProcessCode.Location = new System.Drawing.Point(160, 114);
+            this.txtProcessCode.Location = new System.Drawing.Point(187, 149);
+            this.txtProcessCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProcessCode.Name = "txtProcessCode";
             this.txtProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProcessCode.Properties.MaxLength = 8;
-            this.txtProcessCode.Size = new System.Drawing.Size(74, 20);
+            this.txtProcessCode.Size = new System.Drawing.Size(86, 24);
             this.txtProcessCode.TabIndex = 395;
             this.txtProcessCode.EditValueChanged += new System.EventHandler(this.txtProcessCode_EditValueChanged);
             this.txtProcessCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProcessCode_KeyDown);
@@ -168,10 +176,11 @@ namespace WindowsFormsApplication1.Master
             // txtSubProcessName
             // 
             this.txtSubProcessName.EnterMoveNextControl = true;
-            this.txtSubProcessName.Location = new System.Drawing.Point(160, 88);
+            this.txtSubProcessName.Location = new System.Drawing.Point(187, 115);
+            this.txtSubProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubProcessName.Name = "txtSubProcessName";
             this.txtSubProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSubProcessName.Size = new System.Drawing.Size(302, 20);
+            this.txtSubProcessName.Size = new System.Drawing.Size(352, 24);
             this.txtSubProcessName.TabIndex = 400;
             // 
             // label19
@@ -180,9 +189,10 @@ namespace WindowsFormsApplication1.Master
             this.label19.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Appearance.Options.UseFont = true;
             this.label19.Appearance.Options.UseForeColor = true;
-            this.label19.Location = new System.Drawing.Point(61, 91);
+            this.label19.Location = new System.Drawing.Point(71, 119);
+            this.label19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 13);
+            this.label19.Size = new System.Drawing.Size(113, 19);
             this.label19.TabIndex = 401;
             this.label19.Text = "Sub Process Name";
             // 
@@ -192,17 +202,18 @@ namespace WindowsFormsApplication1.Master
             this.labelControl1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labelControl1.Appearance.Options.UseFont = true;
             this.labelControl1.Appearance.Options.UseForeColor = true;
-            this.labelControl1.Location = new System.Drawing.Point(81, 117);
+            this.labelControl1.Location = new System.Drawing.Point(94, 153);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(73, 13);
+            this.labelControl1.Size = new System.Drawing.Size(88, 19);
             this.labelControl1.TabIndex = 402;
             this.labelControl1.Text = "Under Process";
             // 
             // frmSubProcessMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 197);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(610, 258);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.labelControl1);
@@ -215,6 +226,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.txtProcessCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmSubProcessMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmSubProcessMst_Load);

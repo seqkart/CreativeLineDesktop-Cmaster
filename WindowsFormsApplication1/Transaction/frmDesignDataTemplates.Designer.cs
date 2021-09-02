@@ -85,28 +85,32 @@
             this.groupControl2.Controls.Add(this.btnLoadExcel);
             this.groupControl2.Controls.Add(this.DColumnGrid);
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl2.Location = new System.Drawing.Point(415, 108);
+            this.groupControl2.Location = new System.Drawing.Point(484, 141);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(384, 490);
+            this.groupControl2.Size = new System.Drawing.Size(448, 641);
             this.groupControl2.TabIndex = 213;
             // 
             // btnLoadExcel
             // 
-            this.btnLoadExcel.Location = new System.Drawing.Point(282, 22);
+            this.btnLoadExcel.Location = new System.Drawing.Point(329, 29);
+            this.btnLoadExcel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoadExcel.Name = "btnLoadExcel";
-            this.btnLoadExcel.Size = new System.Drawing.Size(97, 32);
+            this.btnLoadExcel.Size = new System.Drawing.Size(113, 42);
             this.btnLoadExcel.TabIndex = 209;
             this.btnLoadExcel.Text = "Load Excel";
             this.btnLoadExcel.Click += new System.EventHandler(this.btnLoadExcel_Click);
             // 
             // DColumnGrid
             // 
-            this.DColumnGrid.Location = new System.Drawing.Point(5, 63);
+            this.DColumnGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.DColumnGrid.Location = new System.Drawing.Point(6, 82);
             this.DColumnGrid.MainView = this.DColumnGridVIew;
+            this.DColumnGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DColumnGrid.Name = "DColumnGrid";
             this.DColumnGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1});
-            this.DColumnGrid.Size = new System.Drawing.Size(374, 409);
+            this.DColumnGrid.Size = new System.Drawing.Size(436, 535);
             this.DColumnGrid.TabIndex = 209;
             this.DColumnGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.DColumnGridVIew});
@@ -117,6 +121,7 @@
             this.gridColumn5,
             this.gridColumn10,
             this.cmbSourceColumns});
+            this.DColumnGridVIew.DetailHeight = 458;
             this.DColumnGridVIew.GridControl = this.DColumnGrid;
             this.DColumnGridVIew.Name = "DColumnGridVIew";
             this.DColumnGridVIew.OptionsBehavior.AllowIncrementalSearch = true;
@@ -127,29 +132,35 @@
             // 
             this.gridColumn5.Caption = "ColumnName";
             this.gridColumn5.FieldName = "ColumnName";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ColumnName", "{0}")});
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 0;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Value";
             this.gridColumn10.FieldName = "Value";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 1;
+            this.gridColumn10.Width = 87;
             // 
             // cmbSourceColumns
             // 
             this.cmbSourceColumns.Caption = "Source";
             this.cmbSourceColumns.ColumnEdit = this.repositoryItemComboBox1;
             this.cmbSourceColumns.FieldName = "Source";
+            this.cmbSourceColumns.MinWidth = 23;
             this.cmbSourceColumns.Name = "cmbSourceColumns";
             this.cmbSourceColumns.Visible = true;
             this.cmbSourceColumns.VisibleIndex = 2;
+            this.cmbSourceColumns.Width = 87;
             // 
             // repositoryItemComboBox1
             // 
@@ -164,18 +175,21 @@
             this.groupControl1.Controls.Add(this.SColumnGrid);
             this.groupControl1.Controls.Add(this.STableGrid);
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(24, 118);
+            this.groupControl1.Location = new System.Drawing.Point(28, 154);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(385, 480);
+            this.groupControl1.Size = new System.Drawing.Size(449, 628);
             this.groupControl1.TabIndex = 212;
             this.groupControl1.Text = "Source Db";
             // 
             // SColumnGrid
             // 
-            this.SColumnGrid.Location = new System.Drawing.Point(12, 221);
+            this.SColumnGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SColumnGrid.Location = new System.Drawing.Point(14, 289);
             this.SColumnGrid.MainView = this.SColumnGridView;
+            this.SColumnGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SColumnGrid.Name = "SColumnGrid";
-            this.SColumnGrid.Size = new System.Drawing.Size(368, 251);
+            this.SColumnGrid.Size = new System.Drawing.Size(429, 328);
             this.SColumnGrid.TabIndex = 208;
             this.SColumnGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.SColumnGridView});
@@ -184,6 +198,7 @@
             // 
             this.SColumnGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn7});
+            this.SColumnGridView.DetailHeight = 458;
             this.SColumnGridView.GridControl = this.SColumnGrid;
             this.SColumnGridView.Name = "SColumnGridView";
             this.SColumnGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -195,19 +210,23 @@
             // 
             this.gridColumn7.Caption = "ColumnName";
             this.gridColumn7.FieldName = "ColumnName";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ColumnName", "{0}")});
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
+            this.gridColumn7.Width = 87;
             // 
             // STableGrid
             // 
-            this.STableGrid.Location = new System.Drawing.Point(12, 60);
+            this.STableGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.STableGrid.Location = new System.Drawing.Point(14, 78);
             this.STableGrid.MainView = this.STableGridView;
+            this.STableGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.STableGrid.Name = "STableGrid";
-            this.STableGrid.Size = new System.Drawing.Size(368, 155);
+            this.STableGrid.Size = new System.Drawing.Size(429, 203);
             this.STableGrid.TabIndex = 207;
             this.STableGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.STableGridView});
@@ -217,6 +236,7 @@
             // 
             this.STableGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1});
+            this.STableGridView.DetailHeight = 458;
             this.STableGridView.GridControl = this.STableGrid;
             this.STableGridView.Name = "STableGridView";
             this.STableGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -228,12 +248,14 @@
             // 
             this.gridColumn1.Caption = "TableName";
             this.gridColumn1.FieldName = "TableName";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "TableName", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // Menu_ToolStrip
             // 
@@ -241,6 +263,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -248,7 +271,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(811, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(946, 27);
             this.Menu_ToolStrip.TabIndex = 214;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -258,7 +281,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -268,7 +291,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -279,9 +302,10 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(28, 42);
+            this.labelControl4.Location = new System.Drawing.Point(33, 55);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(57, 13);
+            this.labelControl4.Size = new System.Drawing.Size(68, 17);
             this.labelControl4.TabIndex = 537;
             this.labelControl4.Text = "Party Name";
             // 
@@ -289,21 +313,23 @@
             // 
             this.txtDebitPartyName.Enabled = false;
             this.txtDebitPartyName.EnterMoveNextControl = true;
-            this.txtDebitPartyName.Location = new System.Drawing.Point(166, 40);
+            this.txtDebitPartyName.Location = new System.Drawing.Point(194, 52);
+            this.txtDebitPartyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDebitPartyName.Name = "txtDebitPartyName";
             this.txtDebitPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyName.Properties.ReadOnly = true;
-            this.txtDebitPartyName.Size = new System.Drawing.Size(381, 20);
+            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 24);
             this.txtDebitPartyName.TabIndex = 535;
             this.txtDebitPartyName.TabStop = false;
             // 
             // txtDebitPartyCode
             // 
-            this.txtDebitPartyCode.Location = new System.Drawing.Point(89, 40);
+            this.txtDebitPartyCode.Location = new System.Drawing.Point(104, 52);
+            this.txtDebitPartyCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDebitPartyCode.Name = "txtDebitPartyCode";
             this.txtDebitPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyCode.Properties.MaxLength = 6;
-            this.txtDebitPartyCode.Size = new System.Drawing.Size(73, 20);
+            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 24);
             this.txtDebitPartyCode.TabIndex = 536;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.txtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitPartyCode_KeyDown);
@@ -311,30 +337,34 @@
             // 
             // txtDocType
             // 
-            this.txtDocType.Location = new System.Drawing.Point(638, 40);
+            this.txtDocType.Location = new System.Drawing.Point(744, 52);
+            this.txtDocType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDocType.Name = "txtDocType";
             this.txtDocType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDocType.Properties.Items.AddRange(new object[] {
             "Sale",
             "Purchase"});
-            this.txtDocType.Size = new System.Drawing.Size(100, 20);
+            this.txtDocType.Size = new System.Drawing.Size(117, 24);
             this.txtDocType.TabIndex = 538;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(553, 42);
+            this.labelControl1.Location = new System.Drawing.Point(645, 55);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(80, 13);
+            this.labelControl1.Size = new System.Drawing.Size(91, 17);
             this.labelControl1.TabIndex = 539;
             this.labelControl1.Text = "Document Type";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(714, 28);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(269, 55);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(490, 205);
+            this.HelpGrid.Size = new System.Drawing.Size(572, 268);
             this.HelpGrid.TabIndex = 540;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -346,6 +376,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -358,35 +389,38 @@
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
             // 
             // txtTemplateName
             // 
-            this.txtTemplateName.Location = new System.Drawing.Point(89, 66);
+            this.txtTemplateName.Location = new System.Drawing.Point(104, 86);
+            this.txtTemplateName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTemplateName.Name = "txtTemplateName";
             this.txtTemplateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTemplateName.Properties.MaxLength = 100;
-            this.txtTemplateName.Size = new System.Drawing.Size(458, 20);
+            this.txtTemplateName.Size = new System.Drawing.Size(534, 24);
             this.txtTemplateName.TabIndex = 541;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(10, 69);
+            this.labelControl2.Location = new System.Drawing.Point(12, 90);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(76, 13);
+            this.labelControl2.Size = new System.Drawing.Size(89, 17);
             this.labelControl2.TabIndex = 542;
             this.labelControl2.Text = "TemplateName";
             // 
             // frmDesignDataTemplates
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 663);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(946, 867);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.txtTemplateName);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtDocType);
             this.Controls.Add(this.labelControl4);
@@ -396,6 +430,7 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDesignDataTemplates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmDesignDataTemplates_Load);

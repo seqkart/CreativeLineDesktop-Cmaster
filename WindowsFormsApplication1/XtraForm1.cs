@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="D:\SeqkartnewHar\WindowsFormsApplication1\XtraForm1.cs" company="">
+// <copyright file="D:\SeqkartnewHar\WindowsFormsApplication1\XtraForm1.cs" company="CREATIVE LINE INTERNATIONAL PVT. LTD.">
 //     Author:
 //     Copyright (c) . All rights reserved.
 // </copyright>
@@ -20,6 +20,8 @@ using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Forms_Master;
+
+
 namespace WindowsFormsApplication1
 {
     public partial class XtraForm1 : DevExpress.XtraBars.ToolbarForm.ToolbarForm
@@ -60,20 +62,15 @@ namespace WindowsFormsApplication1
             labelControl1.Text = "Disconnected";
 
             ProjectFunctions.WhatsAppConnectionStatus();
-            // ProjectFunctions.WhatsAppStatusSpeak();
-
-
+            ProjectFunctions.WhatsAppStatusSpeak();
 
 
             Timer timer = new Timer
             {
-                Interval = (5 * 10000) // 10 secs
+                Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
             timer.Start();
-
-
-
 
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
@@ -140,8 +137,6 @@ namespace WindowsFormsApplication1
                     MyTempTable.Dispose();
                 }
                 Refresh();
-
-
 
 
 
@@ -1737,7 +1732,7 @@ namespace WindowsFormsApplication1
                 //    xtraTabControl1.SelectedTabPage = Page;
                 //    break;
                 case "PROG153":
-                    var PROG153 = new WindowsFormsApplication1.Forms_Master.frmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG153 = new WindowsFormsApplication1.Forms_Master.FrmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG153.Show();
                     PROG153.BringToFront();
                     PROG153.Parent = Page;
@@ -1921,24 +1916,6 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-
-
-
-
-
-            //BarCode barCode = new BarCode();
-            //barCode.Symbology = Symbology.QRCode;
-
-
-
-            ////barCode.CodeBinaryData = Encoding.Default.();
-            //barCode.Options.QRCode.CompactionMode = QRCodeCompactionMode.Byte;
-            //barCode.Options.QRCode.ErrorLevel = QRCodeErrorLevel.Q;
-            //barCode.Options.QRCode.ShowCodeText = false;
-            //barCode.DpiX = 72;
-            //barCode.DpiY = 72;
-            //barCode.Module = 2f;
-            //pictureEdit1.Image = barCode.BarCodeImage;
         }
 
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
@@ -1946,12 +1923,7 @@ namespace WindowsFormsApplication1
             ProjectFunctions.WhatsAppDisConnection();
         }
 
-        private void BarButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-
-
-
-        }
+       
 
         private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
         {

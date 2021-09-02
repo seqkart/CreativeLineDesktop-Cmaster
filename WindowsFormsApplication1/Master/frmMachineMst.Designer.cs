@@ -59,11 +59,11 @@ namespace WindowsFormsApplication1.Master
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(642, 272);
+            this.HelpGrid.Location = new System.Drawing.Point(84, 51);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(539, 473);
+            this.HelpGrid.Size = new System.Drawing.Size(539, 209);
             this.HelpGrid.TabIndex = 416;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(797, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(683, 31);
             this.Menu_ToolStrip.TabIndex = 417;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -255,14 +255,14 @@ namespace WindowsFormsApplication1.Master
             // 
             // frmMachineMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 547);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(683, 284);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtBrandDesc);
             this.Controls.Add(this.txtBrandCode);
             this.Controls.Add(this.labelControl1);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtMachineCode);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtTypeDesc);

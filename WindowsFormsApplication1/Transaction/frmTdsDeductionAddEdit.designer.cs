@@ -94,33 +94,36 @@
             // txtReference
             // 
             this.txtReference.EnterMoveNextControl = true;
-            this.txtReference.Location = new System.Drawing.Point(315, 140);
+            this.txtReference.Location = new System.Drawing.Point(367, 183);
+            this.txtReference.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReference.Name = "txtReference";
             this.txtReference.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtReference.Size = new System.Drawing.Size(397, 20);
+            this.txtReference.Size = new System.Drawing.Size(463, 24);
             this.txtReference.TabIndex = 6;
             this.txtReference.Leave += new System.EventHandler(this.txtReference_Leave);
             // 
             // txtTDSDesc
             // 
             this.txtTDSDesc.Enabled = false;
-            this.txtTDSDesc.Location = new System.Drawing.Point(252, 108);
+            this.txtTDSDesc.Location = new System.Drawing.Point(294, 141);
+            this.txtTDSDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTDSDesc.Name = "txtTDSDesc";
             this.txtTDSDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSDesc.Properties.ReadOnly = true;
-            this.txtTDSDesc.Size = new System.Drawing.Size(459, 20);
+            this.txtTDSDesc.Size = new System.Drawing.Size(535, 24);
             this.txtTDSDesc.TabIndex = 208;
             // 
             // txtOnAmount
             // 
             this.txtOnAmount.EnterMoveNextControl = true;
-            this.txtOnAmount.Location = new System.Drawing.Point(121, 140);
+            this.txtOnAmount.Location = new System.Drawing.Point(141, 183);
+            this.txtOnAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOnAmount.Name = "txtOnAmount";
             this.txtOnAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOnAmount.Properties.Mask.BeepOnError = true;
             this.txtOnAmount.Properties.Mask.EditMask = "N2";
             this.txtOnAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtOnAmount.Size = new System.Drawing.Size(110, 20);
+            this.txtOnAmount.Size = new System.Drawing.Size(128, 24);
             this.txtOnAmount.TabIndex = 5;
             this.txtOnAmount.EditValueChanged += new System.EventHandler(this.txtOnAmount_EditValueChanged);
             this.txtOnAmount.Leave += new System.EventHandler(this.txtOnAmount_Leave);
@@ -128,53 +131,59 @@
             // txtTTNo
             // 
             this.txtTTNo.EnterMoveNextControl = true;
-            this.txtTTNo.Location = new System.Drawing.Point(121, 46);
+            this.txtTTNo.Location = new System.Drawing.Point(141, 60);
+            this.txtTTNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTTNo.Name = "txtTTNo";
             this.txtTTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTTNo.Properties.ReadOnly = true;
-            this.txtTTNo.Size = new System.Drawing.Size(110, 20);
+            this.txtTTNo.Size = new System.Drawing.Size(128, 24);
             this.txtTTNo.TabIndex = 0;
             this.txtTTNo.TabStop = false;
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(249, 143);
+            this.label13.Location = new System.Drawing.Point(290, 187);
+            this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 13);
+            this.label13.Size = new System.Drawing.Size(58, 17);
             this.label13.TabIndex = 215;
             this.label13.Text = "Reference";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(532, 207);
+            this.label3.Location = new System.Drawing.Point(621, 271);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(53, 17);
             this.label3.TabIndex = 214;
             this.label3.Text = "TDS Rate";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(51, 143);
+            this.label2.Location = new System.Drawing.Point(67, 187);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 213;
             this.label2.Text = "On Amount";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(39, 49);
+            this.label1.Location = new System.Drawing.Point(51, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 212;
             this.label1.Text = "Transction No";
             // 
             // txtPCode
             // 
-            this.txtPCode.Location = new System.Drawing.Point(121, 78);
+            this.txtPCode.Location = new System.Drawing.Point(141, 102);
+            this.txtPCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPCode.Name = "txtPCode";
             this.txtPCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPCode.Properties.MaxLength = 6;
-            this.txtPCode.Size = new System.Drawing.Size(110, 20);
+            this.txtPCode.Size = new System.Drawing.Size(128, 24);
             this.txtPCode.TabIndex = 3;
             this.txtPCode.EditValueChanged += new System.EventHandler(this.txtPCode_EditValueChanged);
             this.txtPCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPCode_KeyDown);
@@ -183,90 +192,100 @@
             // txtPDesc
             // 
             this.txtPDesc.Enabled = false;
-            this.txtPDesc.Location = new System.Drawing.Point(252, 78);
+            this.txtPDesc.Location = new System.Drawing.Point(294, 102);
+            this.txtPDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPDesc.Name = "txtPDesc";
             this.txtPDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPDesc.Properties.ReadOnly = true;
-            this.txtPDesc.Size = new System.Drawing.Size(459, 20);
+            this.txtPDesc.Size = new System.Drawing.Size(535, 24);
             this.txtPDesc.TabIndex = 220;
             this.txtPDesc.TabStop = false;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(86, 81);
+            this.label4.Location = new System.Drawing.Point(104, 106);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 13);
+            this.label4.Size = new System.Drawing.Size(29, 17);
             this.label4.TabIndex = 221;
             this.label4.Text = "Party";
             // 
             // txtTDSCode
             // 
-            this.txtTDSCode.Location = new System.Drawing.Point(121, 108);
+            this.txtTDSCode.Location = new System.Drawing.Point(141, 141);
+            this.txtTDSCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTDSCode.Name = "txtTDSCode";
             this.txtTDSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSCode.Properties.MaxLength = 4;
-            this.txtTDSCode.Size = new System.Drawing.Size(110, 20);
+            this.txtTDSCode.Size = new System.Drawing.Size(128, 24);
             this.txtTDSCode.TabIndex = 4;
             this.txtTDSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTDSCode_KeyDown);
             this.txtTDSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPCode_KeyPress);
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(61, 111);
+            this.label5.Location = new System.Drawing.Point(75, 145);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.Size = new System.Drawing.Size(58, 17);
             this.label5.TabIndex = 223;
             this.label5.Text = "TDS Code";
             // 
             // txtTDSRate
             // 
             this.txtTDSRate.Enabled = false;
-            this.txtTDSRate.Location = new System.Drawing.Point(593, 204);
+            this.txtTDSRate.Location = new System.Drawing.Point(692, 267);
+            this.txtTDSRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTDSRate.Name = "txtTDSRate";
             this.txtTDSRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTDSRate.Size = new System.Drawing.Size(118, 20);
+            this.txtTDSRate.Size = new System.Drawing.Size(138, 24);
             this.txtTDSRate.TabIndex = 8;
             // 
             // txtTDSSurcharge
             // 
             this.txtTDSSurcharge.Enabled = false;
-            this.txtTDSSurcharge.Location = new System.Drawing.Point(593, 236);
+            this.txtTDSSurcharge.Location = new System.Drawing.Point(692, 309);
+            this.txtTDSSurcharge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTDSSurcharge.Name = "txtTDSSurcharge";
             this.txtTDSSurcharge.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSSurcharge.Properties.NullText = "0";
             this.txtTDSSurcharge.Properties.NullValuePrompt = "0";
-            this.txtTDSSurcharge.Size = new System.Drawing.Size(118, 20);
+            this.txtTDSSurcharge.Size = new System.Drawing.Size(138, 24);
             this.txtTDSSurcharge.TabIndex = 10;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(506, 239);
+            this.label6.Location = new System.Drawing.Point(590, 313);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.Size = new System.Drawing.Size(86, 17);
             this.label6.TabIndex = 225;
             this.label6.Text = "TDS Surcharge";
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(35, 218);
+            this.label7.Location = new System.Drawing.Point(41, 285);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 13);
+            this.label7.Size = new System.Drawing.Size(0, 17);
             this.label7.TabIndex = 228;
             // 
             // txtRemarks
             // 
             this.txtRemarks.EnterMoveNextControl = true;
-            this.txtRemarks.Location = new System.Drawing.Point(121, 268);
+            this.txtRemarks.Location = new System.Drawing.Point(141, 350);
+            this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRemarks.Size = new System.Drawing.Size(592, 20);
+            this.txtRemarks.Size = new System.Drawing.Size(691, 24);
             this.txtRemarks.TabIndex = 11;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(68, 271);
+            this.label8.Location = new System.Drawing.Point(83, 354);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.Size = new System.Drawing.Size(50, 17);
             this.label8.TabIndex = 230;
             this.label8.Text = "Remarks";
             // 
@@ -276,6 +295,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave,
@@ -284,7 +304,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(760, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(887, 27);
             this.Menu_ToolStrip.TabIndex = 231;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -294,7 +314,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -304,7 +324,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -315,13 +335,14 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(100, 25);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 31);
             // 
             // dtTransDate
             // 
             this.dtTransDate.EditValue = null;
             this.dtTransDate.EnterMoveNextControl = true;
-            this.dtTransDate.Location = new System.Drawing.Point(614, 46);
+            this.dtTransDate.Location = new System.Drawing.Point(716, 60);
+            this.dtTransDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtTransDate.Name = "dtTransDate";
             this.dtTransDate.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtTransDate.Properties.Appearance.Options.UseBorderColor = true;
@@ -343,21 +364,23 @@
             this.dtTransDate.Properties.Mask.BeepOnError = true;
             this.dtTransDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.dtTransDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dtTransDate.Size = new System.Drawing.Size(98, 20);
+            this.dtTransDate.Size = new System.Drawing.Size(114, 24);
             this.dtTransDate.TabIndex = 1;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(578, 49);
+            this.label9.Location = new System.Drawing.Point(674, 64);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 13);
+            this.label9.Size = new System.Drawing.Size(27, 17);
             this.label9.TabIndex = 233;
             this.label9.Text = "Date";
             // 
             // txtTDSAmount
             // 
             this.txtTDSAmount.Enabled = false;
-            this.txtTDSAmount.Location = new System.Drawing.Point(121, 204);
+            this.txtTDSAmount.Location = new System.Drawing.Point(141, 267);
+            this.txtTDSAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTDSAmount.Name = "txtTDSAmount";
             this.txtTDSAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSAmount.Properties.Mask.BeepOnError = true;
@@ -366,21 +389,23 @@
             this.txtTDSAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTDSAmount.Properties.NullText = "0";
             this.txtTDSAmount.Properties.NullValuePrompt = "0";
-            this.txtTDSAmount.Size = new System.Drawing.Size(110, 20);
+            this.txtTDSAmount.Size = new System.Drawing.Size(128, 24);
             this.txtTDSAmount.TabIndex = 7;
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(47, 207);
+            this.label10.Location = new System.Drawing.Point(61, 271);
+            this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 13);
+            this.label10.Size = new System.Drawing.Size(72, 17);
             this.label10.TabIndex = 235;
             this.label10.Text = "TDS Amount";
             // 
             // txtSurcOnTDS
             // 
             this.txtSurcOnTDS.Enabled = false;
-            this.txtSurcOnTDS.Location = new System.Drawing.Point(121, 236);
+            this.txtSurcOnTDS.Location = new System.Drawing.Point(141, 309);
+            this.txtSurcOnTDS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSurcOnTDS.Name = "txtSurcOnTDS";
             this.txtSurcOnTDS.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSurcOnTDS.Properties.Mask.BeepOnError = true;
@@ -389,14 +414,15 @@
             this.txtSurcOnTDS.Properties.MaskSettings.Set("mask", "N0");
             this.txtSurcOnTDS.Properties.NullText = "0";
             this.txtSurcOnTDS.Properties.NullValuePrompt = "0";
-            this.txtSurcOnTDS.Size = new System.Drawing.Size(110, 20);
+            this.txtSurcOnTDS.Size = new System.Drawing.Size(128, 24);
             this.txtSurcOnTDS.TabIndex = 9;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(23, 239);
+            this.label11.Location = new System.Drawing.Point(32, 313);
+            this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 13);
+            this.label11.Size = new System.Drawing.Size(101, 17);
             this.label11.TabIndex = 237;
             this.label11.Text = "Surchare on TDS ";
             // 
@@ -404,17 +430,19 @@
             // 
             this.txtUnderSection.Enabled = false;
             this.txtUnderSection.EnterMoveNextControl = true;
-            this.txtUnderSection.Location = new System.Drawing.Point(121, 172);
+            this.txtUnderSection.Location = new System.Drawing.Point(141, 225);
+            this.txtUnderSection.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnderSection.Name = "txtUnderSection";
             this.txtUnderSection.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUnderSection.Size = new System.Drawing.Size(591, 20);
+            this.txtUnderSection.Size = new System.Drawing.Size(689, 24);
             this.txtUnderSection.TabIndex = 295;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(38, 175);
+            this.label12.Location = new System.Drawing.Point(51, 229);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.Size = new System.Drawing.Size(82, 17);
             this.label12.TabIndex = 296;
             this.label12.Text = "Under Section";
             // 
@@ -428,10 +456,12 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(252, 28);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(225, 31);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(508, 296);
+            this.HelpGrid.Size = new System.Drawing.Size(593, 387);
             this.HelpGrid.TabIndex = 369;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView,
@@ -442,6 +472,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -454,11 +485,13 @@
             // 
             // gridView4
             // 
+            this.gridView4.DetailHeight = 458;
             this.gridView4.GridControl = this.HelpGrid;
             this.gridView4.Name = "gridView4";
             // 
             // gridView5
             // 
+            this.gridView5.DetailHeight = 458;
             this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView5.GridControl = this.HelpGrid;
             this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -472,9 +505,9 @@
             // 
             // frmTdsDeductionAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(760, 324);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(887, 424);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtUnderSection);
@@ -507,6 +540,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTdsDeductionAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmTdsDeductionAddEdit_Load);

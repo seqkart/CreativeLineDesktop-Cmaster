@@ -59,13 +59,14 @@ namespace WindowsFormsApplication1.Administration
             // toolStrip_lbl
             // 
             this.toolStrip_lbl.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip_lbl.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip_lbl.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnEdit,
             this.btnAdd});
             this.toolStrip_lbl.Location = new System.Drawing.Point(0, 0);
             this.toolStrip_lbl.Name = "toolStrip_lbl";
             this.toolStrip_lbl.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip_lbl.Size = new System.Drawing.Size(735, 25);
+            this.toolStrip_lbl.Size = new System.Drawing.Size(857, 31);
             this.toolStrip_lbl.TabIndex = 0;
             this.toolStrip_lbl.Text = "toolStrip1";
             // 
@@ -77,7 +78,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnEdit.Image")));
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(31, 22);
+            this.btnEdit.Size = new System.Drawing.Size(39, 28);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -88,7 +89,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(33, 22);
+            this.btnAdd.Size = new System.Drawing.Size(41, 28);
             this.btnAdd.Text = "&Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -96,12 +97,14 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.gridControl_UserMaster.DataSource = this.userMasterBindingSource;
             this.gridControl_UserMaster.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_UserMaster.Location = new System.Drawing.Point(0, 25);
+            this.gridControl_UserMaster.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl_UserMaster.Location = new System.Drawing.Point(0, 31);
             this.gridControl_UserMaster.MainView = this.gridView_UserMaster;
+            this.gridControl_UserMaster.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl_UserMaster.Name = "gridControl_UserMaster";
             this.gridControl_UserMaster.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.button_delete});
-            this.gridControl_UserMaster.Size = new System.Drawing.Size(735, 443);
+            this.gridControl_UserMaster.Size = new System.Drawing.Size(857, 581);
             this.gridControl_UserMaster.TabIndex = 1;
             this.gridControl_UserMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_UserMaster});
@@ -119,6 +122,7 @@ namespace WindowsFormsApplication1.Administration
             this.gridColumn_Login_As,
             this.gridColumn_UserActive,
             this.gridColumn_Edit_Link});
+            this.gridView_UserMaster.DetailHeight = 458;
             this.gridView_UserMaster.GridControl = this.gridControl_UserMaster;
             this.gridView_UserMaster.Name = "gridView_UserMaster";
             this.gridView_UserMaster.OptionsView.ShowGroupPanel = false;
@@ -128,38 +132,46 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.gridColumn_UserName.Caption = "UserName";
             this.gridColumn_UserName.FieldName = "UserName";
+            this.gridColumn_UserName.MinWidth = 23;
             this.gridColumn_UserName.Name = "gridColumn_UserName";
             this.gridColumn_UserName.OptionsColumn.AllowEdit = false;
             this.gridColumn_UserName.Visible = true;
             this.gridColumn_UserName.VisibleIndex = 0;
+            this.gridColumn_UserName.Width = 87;
             // 
             // gridColumn_Login_As
             // 
             this.gridColumn_Login_As.Caption = "Login_As";
             this.gridColumn_Login_As.FieldName = "Login_As";
+            this.gridColumn_Login_As.MinWidth = 23;
             this.gridColumn_Login_As.Name = "gridColumn_Login_As";
             this.gridColumn_Login_As.OptionsColumn.AllowEdit = false;
             this.gridColumn_Login_As.Visible = true;
             this.gridColumn_Login_As.VisibleIndex = 1;
+            this.gridColumn_Login_As.Width = 87;
             // 
             // gridColumn_UserActive
             // 
             this.gridColumn_UserActive.Caption = "UserActive";
             this.gridColumn_UserActive.FieldName = "UserActive";
+            this.gridColumn_UserActive.MinWidth = 23;
             this.gridColumn_UserActive.Name = "gridColumn_UserActive";
             this.gridColumn_UserActive.OptionsColumn.AllowEdit = false;
             this.gridColumn_UserActive.Visible = true;
             this.gridColumn_UserActive.VisibleIndex = 2;
+            this.gridColumn_UserActive.Width = 87;
             // 
             // gridColumn_Edit_Link
             // 
             this.gridColumn_Edit_Link.Caption = "button";
             this.gridColumn_Edit_Link.ColumnEdit = this.button_delete;
             this.gridColumn_Edit_Link.FieldName = "Edit_Link";
+            this.gridColumn_Edit_Link.MinWidth = 23;
             this.gridColumn_Edit_Link.Name = "gridColumn_Edit_Link";
             this.gridColumn_Edit_Link.OptionsColumn.AllowEdit = false;
             this.gridColumn_Edit_Link.Visible = true;
             this.gridColumn_Edit_Link.VisibleIndex = 3;
+            this.gridColumn_Edit_Link.Width = 87;
             // 
             // button_delete
             // 
@@ -186,13 +198,14 @@ namespace WindowsFormsApplication1.Administration
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(735, 468);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(857, 612);
             this.ControlBox = false;
             this.Controls.Add(this.gridControl_UserMaster);
             this.Controls.Add(this.toolStrip_lbl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "XtraForm_UserMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

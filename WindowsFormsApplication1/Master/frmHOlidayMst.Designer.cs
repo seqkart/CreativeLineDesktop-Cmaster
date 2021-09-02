@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtHolidayName
             // 
-            this.txtHolidayName.Location = new System.Drawing.Point(159, 148);
+            this.txtHolidayName.Location = new System.Drawing.Point(110, 120);
             this.txtHolidayName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHolidayName.Name = "txtHolidayName";
             this.txtHolidayName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(642, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(535, 31);
             this.Menu_ToolStrip.TabIndex = 389;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtHolidayDate
             // 
-            this.txtHolidayDate.Location = new System.Drawing.Point(159, 105);
+            this.txtHolidayDate.Location = new System.Drawing.Point(110, 77);
             this.txtHolidayDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHolidayDate.Name = "txtHolidayDate";
             this.txtHolidayDate.Properties.BeepOnError = false;
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(72, 107);
+            this.Label17.Location = new System.Drawing.Point(23, 79);
             this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label17.Name = "Label17";
             this.Label17.Size = new System.Drawing.Size(81, 19);
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label16.Appearance.Options.UseFont = true;
-            this.Label16.Location = new System.Drawing.Point(62, 151);
+            this.Label16.Location = new System.Drawing.Point(15, 123);
             this.Label16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(89, 19);
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(108, 65);
+            this.Label15.Location = new System.Drawing.Point(55, 37);
             this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(49, 19);
@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtSysID
             // 
-            this.txtSysID.Location = new System.Drawing.Point(159, 62);
+            this.txtSysID.Location = new System.Drawing.Point(110, 34);
             this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -155,9 +155,9 @@ namespace WindowsFormsApplication1.Master
             // 
             // frmHOlidayMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 217);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(535, 162);
             this.ControlBox = false;
             this.Controls.Add(this.txtHolidayName);
             this.Controls.Add(this.Menu_ToolStrip);

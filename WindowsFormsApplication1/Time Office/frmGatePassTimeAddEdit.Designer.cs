@@ -79,13 +79,14 @@
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave,
             this.txtPassword});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(558, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(651, 27);
             this.Menu_ToolStrip.TabIndex = 16;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -98,7 +99,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(40, 22);
+            this.btnQuit.Size = new System.Drawing.Size(50, 24);
             this.btnQuit.Text = "Close";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -112,7 +113,7 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -122,7 +123,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPassword.Size = new System.Drawing.Size(100, 25);
+            this.txtPassword.Size = new System.Drawing.Size(116, 27);
             this.txtPassword.Visible = false;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
@@ -130,11 +131,12 @@
             // txtStatusCode
             // 
             this.txtStatusCode.EnterMoveNextControl = true;
-            this.txtStatusCode.Location = new System.Drawing.Point(82, 127);
+            this.txtStatusCode.Location = new System.Drawing.Point(96, 166);
+            this.txtStatusCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatusCode.Name = "txtStatusCode";
             this.txtStatusCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStatusCode.Properties.MaxLength = 6;
-            this.txtStatusCode.Size = new System.Drawing.Size(100, 20);
+            this.txtStatusCode.Size = new System.Drawing.Size(117, 24);
             this.txtStatusCode.TabIndex = 13;
             this.txtStatusCode.EditValueChanged += new System.EventHandler(this.txtStatusCode_EditValueChanged);
             this.txtStatusCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStatusCode_KeyDown);
@@ -142,45 +144,50 @@
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(82, 98);
+            this.txtEmpCode.Location = new System.Drawing.Point(96, 128);
+            this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(100, 20);
+            this.txtEmpCode.Size = new System.Drawing.Size(117, 24);
             this.txtEmpCode.TabIndex = 11;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
             // 
             // lblStatusCode
             // 
-            this.lblStatusCode.Location = new System.Drawing.Point(42, 131);
+            this.lblStatusCode.Location = new System.Drawing.Point(57, 171);
+            this.lblStatusCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblStatusCode.Name = "lblStatusCode";
-            this.lblStatusCode.Size = new System.Drawing.Size(32, 13);
+            this.lblStatusCode.Size = new System.Drawing.Size(35, 17);
             this.lblStatusCode.TabIndex = 29;
             this.lblStatusCode.Text = "Status";
             // 
             // lblDate
             // 
-            this.lblDate.Location = new System.Drawing.Point(50, 72);
+            this.lblDate.Location = new System.Drawing.Point(65, 94);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(24, 13);
+            this.lblDate.Size = new System.Drawing.Size(27, 17);
             this.lblDate.TabIndex = 30;
             this.lblDate.Text = "Date";
             // 
             // lblEmpCode
             // 
-            this.lblEmpCode.Location = new System.Drawing.Point(22, 101);
+            this.lblEmpCode.Location = new System.Drawing.Point(31, 132);
+            this.lblEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblEmpCode.Name = "lblEmpCode";
-            this.lblEmpCode.Size = new System.Drawing.Size(52, 13);
+            this.lblEmpCode.Size = new System.Drawing.Size(61, 17);
             this.lblEmpCode.TabIndex = 27;
             this.lblEmpCode.Text = "Emp Code";
             // 
             // txtEmpCodeDesc
             // 
             this.txtEmpCodeDesc.Enabled = false;
-            this.txtEmpCodeDesc.Location = new System.Drawing.Point(188, 98);
+            this.txtEmpCodeDesc.Location = new System.Drawing.Point(219, 128);
+            this.txtEmpCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCodeDesc.Name = "txtEmpCodeDesc";
             this.txtEmpCodeDesc.Properties.MaxLength = 6;
-            this.txtEmpCodeDesc.Size = new System.Drawing.Size(200, 20);
+            this.txtEmpCodeDesc.Size = new System.Drawing.Size(233, 24);
             this.txtEmpCodeDesc.TabIndex = 12;
             this.txtEmpCodeDesc.TabStop = false;
             // 
@@ -188,7 +195,8 @@
             // 
             this.DtDate.EditValue = null;
             this.DtDate.EnterMoveNextControl = true;
-            this.DtDate.Location = new System.Drawing.Point(82, 69);
+            this.DtDate.Location = new System.Drawing.Point(96, 90);
+            this.DtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDate.Name = "DtDate";
             this.DtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -200,16 +208,18 @@
             this.DtDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.DtDate.Size = new System.Drawing.Size(100, 20);
+            this.DtDate.Size = new System.Drawing.Size(117, 24);
             this.DtDate.TabIndex = 10;
             this.DtDate.EditValueChanged += new System.EventHandler(this.DtDate_EditValueChanged);
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(27, 222);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(31, 290);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(391, 197);
+            this.HelpGrid.Size = new System.Drawing.Size(456, 258);
             this.HelpGrid.TabIndex = 368;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView,
@@ -221,6 +231,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -233,11 +244,13 @@
             // 
             // gridView4
             // 
+            this.gridView4.DetailHeight = 458;
             this.gridView4.GridControl = this.HelpGrid;
             this.gridView4.Name = "gridView4";
             // 
             // gridView5
             // 
+            this.gridView5.DetailHeight = 458;
             this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridView5.GridControl = this.HelpGrid;
             this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -252,7 +265,8 @@
             // timeEdit_Time_In
             // 
             this.timeEdit_Time_In.EditValue = "00:00";
-            this.timeEdit_Time_In.Location = new System.Drawing.Point(256, 155);
+            this.timeEdit_Time_In.Location = new System.Drawing.Point(299, 203);
+            this.timeEdit_Time_In.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In.Name = "timeEdit_Time_In";
             this.timeEdit_Time_In.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.timeEdit_Time_In.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -268,16 +282,17 @@
             this.timeEdit_Time_In.Properties.EditFormat.FormatString = "HH:mm";
             this.timeEdit_Time_In.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_Time_In.Size = new System.Drawing.Size(100, 20);
+            this.timeEdit_Time_In.Size = new System.Drawing.Size(117, 26);
             this.timeEdit_Time_In.TabIndex = 16;
             // 
             // lblTimeIn
             // 
             this.lblTimeIn.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblTimeIn.Appearance.Options.UseFont = true;
-            this.lblTimeIn.Location = new System.Drawing.Point(210, 158);
+            this.lblTimeIn.Location = new System.Drawing.Point(245, 207);
+            this.lblTimeIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTimeIn.Name = "lblTimeIn";
-            this.lblTimeIn.Size = new System.Drawing.Size(38, 13);
+            this.lblTimeIn.Size = new System.Drawing.Size(49, 19);
             this.lblTimeIn.TabIndex = 370;
             this.lblTimeIn.Text = "Time In";
             // 
@@ -285,16 +300,18 @@
             // 
             this.lblTimeOut.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblTimeOut.Appearance.Options.UseFont = true;
-            this.lblTimeOut.Location = new System.Drawing.Point(27, 158);
+            this.lblTimeOut.Location = new System.Drawing.Point(31, 207);
+            this.lblTimeOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTimeOut.Name = "lblTimeOut";
-            this.lblTimeOut.Size = new System.Drawing.Size(47, 13);
+            this.lblTimeOut.Size = new System.Drawing.Size(61, 19);
             this.lblTimeOut.TabIndex = 371;
             this.lblTimeOut.Text = "Time Out";
             // 
             // timeEdit_Time_Out
             // 
             this.timeEdit_Time_Out.EditValue = "00:00";
-            this.timeEdit_Time_Out.Location = new System.Drawing.Point(82, 155);
+            this.timeEdit_Time_Out.Location = new System.Drawing.Point(96, 203);
+            this.timeEdit_Time_Out.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_Out.Name = "timeEdit_Time_Out";
             this.timeEdit_Time_Out.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.timeEdit_Time_Out.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -312,26 +329,29 @@
             this.timeEdit_Time_Out.Properties.NullText = "00:00";
             this.timeEdit_Time_Out.Properties.NullValuePrompt = "00:00";
             this.timeEdit_Time_Out.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
-            this.timeEdit_Time_Out.Size = new System.Drawing.Size(100, 20);
+            this.timeEdit_Time_Out.Size = new System.Drawing.Size(117, 26);
             this.timeEdit_Time_Out.TabIndex = 15;
             // 
             // txtStatusCodeDesc
             // 
             this.txtStatusCodeDesc.Enabled = false;
-            this.txtStatusCodeDesc.Location = new System.Drawing.Point(188, 127);
+            this.txtStatusCodeDesc.Location = new System.Drawing.Point(219, 166);
+            this.txtStatusCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatusCodeDesc.Name = "txtStatusCodeDesc";
             this.txtStatusCodeDesc.Properties.MaxLength = 6;
-            this.txtStatusCodeDesc.Size = new System.Drawing.Size(200, 20);
+            this.txtStatusCodeDesc.Size = new System.Drawing.Size(233, 24);
             this.txtStatusCodeDesc.TabIndex = 14;
             this.txtStatusCodeDesc.TabStop = false;
             // 
             // gridControl_GatePassData
             // 
             this.gridControl_GatePassData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl_GatePassData.Location = new System.Drawing.Point(0, 245);
+            this.gridControl_GatePassData.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl_GatePassData.Location = new System.Drawing.Point(0, 321);
             this.gridControl_GatePassData.MainView = this.gridView_GatePassData;
+            this.gridControl_GatePassData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl_GatePassData.Name = "gridControl_GatePassData";
-            this.gridControl_GatePassData.Size = new System.Drawing.Size(558, 303);
+            this.gridControl_GatePassData.Size = new System.Drawing.Size(651, 396);
             this.gridControl_GatePassData.TabIndex = 374;
             this.gridControl_GatePassData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_GatePassData});
@@ -339,14 +359,16 @@
             // 
             // gridView_GatePassData
             // 
+            this.gridView_GatePassData.DetailHeight = 458;
             this.gridView_GatePassData.GridControl = this.gridControl_GatePassData;
             this.gridView_GatePassData.Name = "gridView_GatePassData";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(13, 203);
+            this.label1.Location = new System.Drawing.Point(15, 265);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 375;
             // 
             // pictureBox1
@@ -355,9 +377,10 @@
             this.pictureBox1.ErrorImage = global::WindowsFormsApplication1.Properties.Resources.Add;
             this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.profile_icon;
             this.pictureBox1.InitialImage = global::WindowsFormsApplication1.Properties.Resources.Previous;
-            this.pictureBox1.Location = new System.Drawing.Point(406, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(474, 60);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(130, 170);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 222);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 376;
             this.pictureBox1.TabStop = false;
@@ -366,9 +389,10 @@
             // 
             this.PrintPrivewButton.Image = global::WindowsFormsApplication1.Properties.Resources.Preview_16x16;
             this.PrintPrivewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintPrivewButton.Location = new System.Drawing.Point(236, 193);
+            this.PrintPrivewButton.Location = new System.Drawing.Point(275, 252);
+            this.PrintPrivewButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PrintPrivewButton.Name = "PrintPrivewButton";
-            this.PrintPrivewButton.Size = new System.Drawing.Size(73, 23);
+            this.PrintPrivewButton.Size = new System.Drawing.Size(85, 30);
             this.PrintPrivewButton.TabIndex = 377;
             this.PrintPrivewButton.Text = "Preview";
             this.PrintPrivewButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -379,9 +403,10 @@
             // 
             this.PrintButton.Image = global::WindowsFormsApplication1.Properties.Resources.Print_16x16;
             this.PrintButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.PrintButton.Location = new System.Drawing.Point(329, 193);
+            this.PrintButton.Location = new System.Drawing.Point(384, 252);
+            this.PrintButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PrintButton.Name = "PrintButton";
-            this.PrintButton.Size = new System.Drawing.Size(59, 23);
+            this.PrintButton.Size = new System.Drawing.Size(69, 30);
             this.PrintButton.TabIndex = 378;
             this.PrintButton.Text = "Print";
             this.PrintButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -404,9 +429,9 @@
             // 
             // frmGatePassTimeAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 548);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(651, 717);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.PrintButton);
@@ -429,6 +454,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGatePassTimeAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmGatePassTimeAddEdit_Load);

@@ -66,9 +66,10 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.lblContrator.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblContrator.Appearance.Options.UseFont = true;
-            this.lblContrator.Location = new System.Drawing.Point(61, 84);
+            this.lblContrator.Location = new System.Drawing.Point(69, 108);
+            this.lblContrator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblContrator.Name = "lblContrator";
-            this.lblContrator.Size = new System.Drawing.Size(54, 13);
+            this.lblContrator.Size = new System.Drawing.Size(67, 19);
             this.lblContrator.TabIndex = 721;
             this.lblContrator.Text = "Contractor";
             this.lblContrator.Click += new System.EventHandler(this.lblContrator_Click);
@@ -77,41 +78,45 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.txtContractorDesc.Enabled = false;
             this.txtContractorDesc.EnterMoveNextControl = true;
-            this.txtContractorDesc.Location = new System.Drawing.Point(201, 81);
+            this.txtContractorDesc.Location = new System.Drawing.Point(234, 106);
+            this.txtContractorDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContractorDesc.Name = "txtContractorDesc";
             this.txtContractorDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorDesc.Properties.MaxLength = 8;
-            this.txtContractorDesc.Size = new System.Drawing.Size(330, 20);
+            this.txtContractorDesc.Size = new System.Drawing.Size(385, 24);
             this.txtContractorDesc.TabIndex = 723;
             this.txtContractorDesc.TabStop = false;
             // 
             // txtContractorCode
             // 
             this.txtContractorCode.EnterMoveNextControl = true;
-            this.txtContractorCode.Location = new System.Drawing.Point(121, 81);
+            this.txtContractorCode.Location = new System.Drawing.Point(141, 106);
+            this.txtContractorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContractorCode.Name = "txtContractorCode";
             this.txtContractorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorCode.Properties.MaxLength = 8;
-            this.txtContractorCode.Size = new System.Drawing.Size(74, 20);
+            this.txtContractorCode.Size = new System.Drawing.Size(86, 24);
             this.txtContractorCode.TabIndex = 722;
             this.txtContractorCode.EditValueChanged += new System.EventHandler(this.TxtContractorCode_EditValueChanged);
             this.txtContractorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtContractorCode_KeyDown);
             // 
             // chContratcor
             // 
-            this.chContratcor.Location = new System.Drawing.Point(110, 45);
+            this.chContratcor.Location = new System.Drawing.Point(128, 59);
+            this.chContratcor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chContratcor.Name = "chContratcor";
             this.chContratcor.Properties.Caption = "Contratcot Wise";
-            this.chContratcor.Size = new System.Drawing.Size(114, 19);
+            this.chContratcor.Size = new System.Drawing.Size(133, 24);
             this.chContratcor.TabIndex = 724;
             this.chContratcor.CheckedChanged += new System.EventHandler(this.ChContratcor_CheckedChanged);
             // 
             // chWorker
             // 
-            this.chWorker.Location = new System.Drawing.Point(230, 45);
+            this.chWorker.Location = new System.Drawing.Point(268, 59);
+            this.chWorker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chWorker.Name = "chWorker";
             this.chWorker.Properties.Caption = "Worker Wise";
-            this.chWorker.Size = new System.Drawing.Size(114, 19);
+            this.chWorker.Size = new System.Drawing.Size(133, 24);
             this.chWorker.TabIndex = 725;
             this.chWorker.CheckedChanged += new System.EventHandler(this.ChWorker_CheckedChanged);
             // 
@@ -119,9 +124,10 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.lblWorker.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.lblWorker.Appearance.Options.UseFont = true;
-            this.lblWorker.Location = new System.Drawing.Point(61, 110);
+            this.lblWorker.Location = new System.Drawing.Point(90, 142);
+            this.lblWorker.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblWorker.Name = "lblWorker";
-            this.lblWorker.Size = new System.Drawing.Size(38, 13);
+            this.lblWorker.Size = new System.Drawing.Size(46, 19);
             this.lblWorker.TabIndex = 726;
             this.lblWorker.Text = "Worker";
             // 
@@ -129,32 +135,36 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.txtWorkerName.Enabled = false;
             this.txtWorkerName.EnterMoveNextControl = true;
-            this.txtWorkerName.Location = new System.Drawing.Point(201, 107);
+            this.txtWorkerName.Location = new System.Drawing.Point(234, 140);
+            this.txtWorkerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWorkerName.Name = "txtWorkerName";
             this.txtWorkerName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWorkerName.Properties.MaxLength = 8;
-            this.txtWorkerName.Size = new System.Drawing.Size(330, 20);
+            this.txtWorkerName.Size = new System.Drawing.Size(385, 24);
             this.txtWorkerName.TabIndex = 728;
             this.txtWorkerName.TabStop = false;
             // 
             // txtWorkerCode
             // 
             this.txtWorkerCode.EnterMoveNextControl = true;
-            this.txtWorkerCode.Location = new System.Drawing.Point(121, 107);
+            this.txtWorkerCode.Location = new System.Drawing.Point(141, 140);
+            this.txtWorkerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWorkerCode.Name = "txtWorkerCode";
             this.txtWorkerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWorkerCode.Properties.MaxLength = 8;
-            this.txtWorkerCode.Size = new System.Drawing.Size(74, 20);
+            this.txtWorkerCode.Size = new System.Drawing.Size(86, 24);
             this.txtWorkerCode.TabIndex = 727;
             this.txtWorkerCode.EditValueChanged += new System.EventHandler(this.TxtWorkerCode_EditValueChanged);
             this.txtWorkerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWorkerCode_KeyDown);
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(190, 38);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(141, 48);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(506, 246);
+            this.HelpGrid.Size = new System.Drawing.Size(590, 322);
             this.HelpGrid.TabIndex = 745;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -164,6 +174,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -176,10 +187,12 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // InforGrid
             // 
-            this.InforGrid.Location = new System.Drawing.Point(12, 133);
+            this.InforGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InforGrid.Location = new System.Drawing.Point(14, 174);
             this.InforGrid.MainView = this.InforGridView;
+            this.InforGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InforGrid.Name = "InforGrid";
-            this.InforGrid.Size = new System.Drawing.Size(672, 248);
+            this.InforGrid.Size = new System.Drawing.Size(784, 324);
             this.InforGrid.TabIndex = 746;
             this.InforGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InforGridView});
@@ -191,6 +204,7 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
+            this.InforGridView.DetailHeight = 458;
             this.InforGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.InforGridView.GridControl = this.InforGrid;
             this.InforGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -204,28 +218,34 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.gridColumn1.Caption = "ProcessName";
             this.gridColumn1.FieldName = "ProcessName";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "SubProcessCode";
             this.gridColumn2.FieldName = "SubProcessCode";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "SubProcessName";
             this.gridColumn3.FieldName = "SubProcessName";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
@@ -233,9 +253,11 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn4.DisplayFormat.FormatString = "n2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "ProcessRate";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 87;
             // 
             // Menu_ToolStrip
             // 
@@ -243,6 +265,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -250,7 +273,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(696, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(812, 31);
             this.Menu_ToolStrip.TabIndex = 747;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -262,7 +285,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -274,15 +297,15 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // frmProcessWiseRateFeeding
+            // FrmProcessWiseRateFeeding
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 393);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(812, 514);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.Menu_ToolStrip);
@@ -298,7 +321,8 @@ namespace WindowsFormsApplication1.Transaction
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmProcessWiseRateFeeding";
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FrmProcessWiseRateFeeding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmProcessWiseRateFeeding_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtContractorDesc.Properties)).EndInit();

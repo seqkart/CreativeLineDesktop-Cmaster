@@ -79,6 +79,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave,
@@ -91,7 +92,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(804, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 31);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -102,9 +103,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 24);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -113,9 +114,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 24);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // toolStripButton1
             // 
@@ -125,9 +126,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 24);
+            this.toolStripButton1.Size = new System.Drawing.Size(79, 28);
             this.toolStripButton1.Text = "Validate";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // btnRefresh
             // 
@@ -137,9 +138,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnRefresh.Size = new System.Drawing.Size(65, 24);
+            this.btnRefresh.Size = new System.Drawing.Size(77, 28);
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnLoad
             // 
@@ -149,9 +150,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnLoad.Size = new System.Drawing.Size(47, 24);
+            this.btnLoad.Size = new System.Drawing.Size(57, 28);
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // btnAdd
             // 
@@ -159,9 +160,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd.Size = new System.Drawing.Size(59, 24);
+            this.btnAdd.Size = new System.Drawing.Size(72, 28);
             this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnAdd2
             // 
@@ -169,16 +170,18 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnAdd2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd2.Size = new System.Drawing.Size(66, 24);
+            this.btnAdd2.Size = new System.Drawing.Size(81, 28);
             this.btnAdd2.Text = "Add2";
-            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
+            this.btnAdd2.Click += new System.EventHandler(this.BtnAdd2_Click);
             // 
             // SFeedingGrid
             // 
-            this.SFeedingGrid.Location = new System.Drawing.Point(349, 172);
+            this.SFeedingGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SFeedingGrid.Location = new System.Drawing.Point(407, 225);
             this.SFeedingGrid.MainView = this.SFeedingGridView;
+            this.SFeedingGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SFeedingGrid.Name = "SFeedingGrid";
-            this.SFeedingGrid.Size = new System.Drawing.Size(428, 293);
+            this.SFeedingGrid.Size = new System.Drawing.Size(499, 383);
             this.SFeedingGrid.TabIndex = 11;
             this.SFeedingGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.SFeedingGridView,
@@ -197,6 +200,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9});
+            this.SFeedingGridView.DetailHeight = 458;
             this.SFeedingGridView.GridControl = this.SFeedingGrid;
             this.SFeedingGridView.Name = "SFeedingGridView";
             this.SFeedingGridView.OptionsBehavior.Editable = false;
@@ -209,113 +213,137 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             this.gridColumn1.Caption = "MonthYear";
             this.gridColumn1.FieldName = "MonthYear";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "EmpCode";
             this.gridColumn2.FieldName = "EmpCode";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "EmpName";
             this.gridColumn3.FieldName = "EmpName";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "EmpDW";
             this.gridColumn4.FieldName = "EmpDW";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
+            this.gridColumn4.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "EmpPH";
             this.gridColumn5.FieldName = "EmpPH";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "EmpEL";
             this.gridColumn6.FieldName = "EmpEL";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
+            this.gridColumn6.Width = 87;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "EmpCL";
             this.gridColumn7.FieldName = "EmpCL";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 6;
+            this.gridColumn7.Width = 87;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "EmpSL";
             this.gridColumn8.FieldName = "EmpSL";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 7;
+            this.gridColumn8.Width = 87;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "EmpPymtMode";
             this.gridColumn9.FieldName = "EmpPymtMode";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 8;
+            this.gridColumn9.Width = 87;
             // 
             // gridView3
             // 
+            this.gridView3.DetailHeight = 458;
             this.gridView3.GridControl = this.SFeedingGrid;
             this.gridView3.Name = "gridView3";
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // gridView_AttendanceData
             // 
+            this.gridView_AttendanceData.DetailHeight = 458;
             this.gridView_AttendanceData.GridControl = this.gridControl_AttendanceData;
             this.gridView_AttendanceData.Name = "gridView_AttendanceData";
             // 
             // gridControl_AttendanceData
             // 
             this.gridControl_AttendanceData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_AttendanceData.Location = new System.Drawing.Point(0, 102);
+            this.gridControl_AttendanceData.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl_AttendanceData.Location = new System.Drawing.Point(0, 129);
             this.gridControl_AttendanceData.MainView = this.gridView_AttendanceData;
+            this.gridControl_AttendanceData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl_AttendanceData.Name = "gridControl_AttendanceData";
-            this.gridControl_AttendanceData.Size = new System.Drawing.Size(804, 375);
+            this.gridControl_AttendanceData.Size = new System.Drawing.Size(938, 495);
             this.gridControl_AttendanceData.TabIndex = 352;
             this.gridControl_AttendanceData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AttendanceData});
-            this.gridControl_AttendanceData.DoubleClick += new System.EventHandler(this.gridControl_AttendanceData_DoubleClick);
+            this.gridControl_AttendanceData.DoubleClick += new System.EventHandler(this.GridControl_AttendanceData_DoubleClick);
             // 
             // btnLoad_Data
             // 
-            this.btnLoad_Data.Location = new System.Drawing.Point(395, 52);
+            this.btnLoad_Data.Location = new System.Drawing.Point(461, 68);
+            this.btnLoad_Data.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad_Data.Name = "btnLoad_Data";
-            this.btnLoad_Data.Size = new System.Drawing.Size(95, 20);
+            this.btnLoad_Data.Size = new System.Drawing.Size(111, 26);
             this.btnLoad_Data.TabIndex = 3;
             this.btnLoad_Data.Text = "Load";
-            this.btnLoad_Data.Click += new System.EventHandler(this.btnLoad_Data_Click);
+            this.btnLoad_Data.Click += new System.EventHandler(this.BtnLoad_Data_Click);
             // 
             // DtStartDate
             // 
-            this.DtStartDate.Location = new System.Drawing.Point(110, 52);
+            this.DtStartDate.Location = new System.Drawing.Point(128, 68);
+            this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.EditFormat.FormatString = "MM-yyyy";
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -323,52 +351,58 @@ namespace WindowsFormsApplication1.Forms_Master
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DtStartDate.Properties.MaxLength = 6;
-            this.DtStartDate.Size = new System.Drawing.Size(90, 20);
+            this.DtStartDate.Size = new System.Drawing.Size(105, 24);
             this.DtStartDate.TabIndex = 1;
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(4, 56);
+            this.label13.Location = new System.Drawing.Point(5, 73);
+            this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 13);
+            this.label13.Size = new System.Drawing.Size(107, 17);
             this.label13.TabIndex = 357;
             this.label13.Text = "Select Month/Year";
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 27);
+            this.splitter1.Location = new System.Drawing.Point(0, 31);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(804, 75);
+            this.splitter1.Size = new System.Drawing.Size(938, 98);
             this.splitter1.TabIndex = 196;
             this.splitter1.TabStop = false;
             // 
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(285, 52);
+            this.txtEmpCode.Location = new System.Drawing.Point(332, 68);
+            this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(90, 20);
+            this.txtEmpCode.Size = new System.Drawing.Size(105, 24);
             this.txtEmpCode.TabIndex = 2;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(223, 56);
+            this.label1.Location = new System.Drawing.Point(260, 73);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 359;
             this.label1.Text = "EmpCode";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(285, 76);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(332, 99);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(359, 160);
+            this.HelpGrid.Size = new System.Drawing.Size(419, 209);
             this.HelpGrid.TabIndex = 360;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -379,6 +413,7 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -391,9 +426,9 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // FrmGatePassLoading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 477);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(938, 624);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.label1);
@@ -406,9 +441,10 @@ namespace WindowsFormsApplication1.Forms_Master
             this.Controls.Add(this.SFeedingGrid);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmGatePassLoading";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmGatePassLaoding_Load);
+            this.Load += new System.EventHandler(this.FrmGatePassLaoding_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SFeedingGrid)).EndInit();

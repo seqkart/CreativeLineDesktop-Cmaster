@@ -1295,12 +1295,6 @@
     <Compile Include="HelperClass\ImageUtils.cs" />
     <Compile Include="HelperClass\MessageBox_Debug.cs" />
     <Compile Include="HelperClass\PrintLogWin.cs" />
-    <Compile Include="HRMS\AddAttendanceDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HRMS\AddAttendanceDetails.designer.cs">
-      <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="HRMS\GlobalClass.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -1887,6 +1881,12 @@
     <Compile Include="Transaction\frmJobWork.Designer.cs">
       <DependentUpon>frmJobWork.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmJournalVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmJournalVoucher.Designer.cs">
+      <DependentUpon>frmJournalVoucher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmLoanMstAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1935,12 +1935,6 @@
     <Compile Include="Transaction\frmPurchaseFromHO.Designer.cs">
       <DependentUpon>frmPurchaseFromHO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\frmSchemeMstAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\frmSchemeMstAddEdit.designer.cs">
-      <DependentUpon>frmSchemeMstAddEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transaction\frmTdsDeductionAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1958,12 +1952,6 @@
     </Compile>
     <Compile Include="Transaction\FrmVouchers.Designer.cs">
       <DependentUpon>FrmVouchers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Transaction\frm_AdvMappingAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\frm_AdvMappingAddEdit.Designer.cs">
-      <DependentUpon>frm_AdvMappingAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\frm_Asset_AddUpd.cs">
       <SubType>Form</SubType>
@@ -2193,9 +2181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmXtraReportViewer.resx">
       <DependentUpon>frmXtraReportViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRMS\AddAttendanceDetails.resx">
-      <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -2498,6 +2483,9 @@
     <EmbeddedResource Include="Transaction\frmJobWork.resx">
       <DependentUpon>frmJobWork.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmJournalVoucher.resx">
+      <DependentUpon>frmJournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmLoanMstAddEdit.resx">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -2522,9 +2510,6 @@
     <EmbeddedResource Include="Transaction\frmPurchaseFromHO.resx">
       <DependentUpon>frmPurchaseFromHO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\frmSchemeMstAddEdit.resx">
-      <DependentUpon>frmSchemeMstAddEdit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmTdsDeductionAddEdit.resx">
       <DependentUpon>frmTdsDeductionAddEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -2533,9 +2518,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\FrmVouchers.resx">
       <DependentUpon>FrmVouchers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\frm_AdvMappingAddEdit.resx">
-      <DependentUpon>frm_AdvMappingAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frm_Asset_AddUpd.resx">
       <DependentUpon>frm_Asset_AddUpd.cs</DependentUpon>

@@ -61,6 +61,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnLoad,
@@ -69,7 +70,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(738, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(861, 31);
             this.Menu_ToolStrip.TabIndex = 437;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -80,7 +81,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -91,7 +92,7 @@
             this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
             this.btnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(69, 23);
+            this.btnLoad.Size = new System.Drawing.Size(86, 28);
             this.btnLoad.Text = "Load Excel";
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
@@ -101,24 +102,27 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 23);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(20, 49);
+            this.label4.Location = new System.Drawing.Point(23, 64);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.Size = new System.Drawing.Size(41, 17);
             this.label4.TabIndex = 448;
             this.label4.Text = "PI Date";
             // 
             // InfoGrid
             // 
-            this.InfoGrid.Location = new System.Drawing.Point(12, 114);
+            this.InfoGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InfoGrid.Location = new System.Drawing.Point(14, 149);
             this.InfoGrid.MainView = this.InfoGridView;
+            this.InfoGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InfoGrid.Name = "InfoGrid";
-            this.InfoGrid.Size = new System.Drawing.Size(714, 352);
+            this.InfoGrid.Size = new System.Drawing.Size(833, 460);
             this.InfoGrid.TabIndex = 445;
             this.InfoGrid.TabStop = false;
             this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -127,7 +131,8 @@
             // 
             // InfoGridView
             // 
-            this.InfoGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 216, 178);
+            this.InfoGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 252, 233);
+            this.InfoGridView.DetailHeight = 458;
             this.InfoGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.InfoGridView.GridControl = this.InfoGrid;
             this.InfoGridView.Name = "InfoGridView";
@@ -142,55 +147,61 @@
             // 
             // gridView4
             // 
+            this.gridView4.DetailHeight = 458;
             this.gridView4.GridControl = this.InfoGrid;
             this.gridView4.Name = "gridView4";
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(148, 49);
+            this.label5.Location = new System.Drawing.Point(173, 64);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
+            this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 446;
             this.label5.Text = "PI No";
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(29, 75);
+            this.label15.Location = new System.Drawing.Point(34, 98);
+            this.label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(27, 13);
+            this.label15.Size = new System.Drawing.Size(31, 17);
             this.label15.TabIndex = 451;
             this.label15.Text = "Store";
             // 
             // txtPINo
             // 
             this.txtPINo.Enabled = false;
-            this.txtPINo.Location = new System.Drawing.Point(178, 45);
+            this.txtPINo.Location = new System.Drawing.Point(208, 59);
+            this.txtPINo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPINo.Name = "txtPINo";
-            this.txtPINo.Size = new System.Drawing.Size(148, 20);
+            this.txtPINo.Size = new System.Drawing.Size(173, 24);
             this.txtPINo.TabIndex = 449;
             this.txtPINo.TabStop = false;
             // 
             // txtStoreCode
             // 
-            this.txtStoreCode.Location = new System.Drawing.Point(62, 71);
+            this.txtStoreCode.Location = new System.Drawing.Point(72, 93);
+            this.txtStoreCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStoreCode.Name = "txtStoreCode";
             this.txtStoreCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStoreCode.Properties.MaxLength = 6;
-            this.txtStoreCode.Size = new System.Drawing.Size(79, 20);
+            this.txtStoreCode.Size = new System.Drawing.Size(92, 24);
             this.txtStoreCode.TabIndex = 444;
             // 
             // txtPIDate
             // 
             this.txtPIDate.EditValue = null;
             this.txtPIDate.Enabled = false;
-            this.txtPIDate.Location = new System.Drawing.Point(62, 45);
+            this.txtPIDate.Location = new System.Drawing.Point(72, 59);
+            this.txtPIDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPIDate.Name = "txtPIDate";
             this.txtPIDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtPIDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtPIDate.Properties.MaskSettings.Set("mask", "");
-            this.txtPIDate.Size = new System.Drawing.Size(79, 20);
+            this.txtPIDate.Size = new System.Drawing.Size(92, 24);
             this.txtPIDate.TabIndex = 447;
             this.txtPIDate.TabStop = false;
             // 
@@ -202,17 +213,18 @@
             // txtAddress
             // 
             this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(141, 71);
+            this.txtAddress.Location = new System.Drawing.Point(164, 93);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(551, 20);
+            this.txtAddress.Size = new System.Drawing.Size(643, 24);
             this.txtAddress.TabIndex = 452;
             this.txtAddress.TabStop = false;
             // 
             // frmPIGeneration2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(738, 478);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(861, 625);
             this.ControlBox = false;
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label4);
@@ -225,6 +237,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmPIGeneration2";
             this.Load += new System.EventHandler(this.frmPIGeneration2_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

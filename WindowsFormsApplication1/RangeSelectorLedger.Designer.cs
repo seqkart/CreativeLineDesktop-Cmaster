@@ -140,13 +140,13 @@
             this.chParty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chParty.Name = "chParty";
             this.chParty.Properties.Caption = "Party";
-            this.chParty.Size = new System.Drawing.Size(87, 24);
+            this.chParty.Size = new System.Drawing.Size(61, 24);
             this.chParty.TabIndex = 6;
             this.chParty.CheckedChanged += new System.EventHandler(this.ChParty_CheckedChanged);
             // 
             // chBSHead
             // 
-            this.chBSHead.Location = new System.Drawing.Point(110, 143);
+            this.chBSHead.Location = new System.Drawing.Point(97, 143);
             this.chBSHead.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chBSHead.Name = "chBSHead";
             this.chBSHead.Properties.Caption = "BSHead";

@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1
             this.simpleButton1.AutoSize = true;
             this.simpleButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(607, 25);
+            this.simpleButton1.Location = new System.Drawing.Point(641, 25);
             this.simpleButton1.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1
             // 
             this.DtEnd.EditValue = null;
             this.DtEnd.EnterMoveNextControl = true;
-            this.DtEnd.Location = new System.Drawing.Point(274, 76);
+            this.DtEnd.Location = new System.Drawing.Point(274, 78);
             this.DtEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEnd.Name = "DtEnd";
             this.DtEnd.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1
             // 
             this.DtFrom.EditValue = null;
             this.DtFrom.EnterMoveNextControl = true;
-            this.DtFrom.Location = new System.Drawing.Point(91, 76);
+            this.DtFrom.Location = new System.Drawing.Point(94, 78);
             this.DtFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,14 +170,14 @@ namespace WindowsFormsApplication1
             // 
             this.txtParty.EditValue = "";
             this.txtParty.EnterMoveNextControl = true;
-            this.txtParty.Location = new System.Drawing.Point(91, 153);
+            this.txtParty.Location = new System.Drawing.Point(94, 153);
             this.txtParty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtParty.Name = "txtParty";
             this.txtParty.Properties.AllowMultiSelect = true;
             this.txtParty.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtParty.Properties.SelectAllItemVisible = false;
-            this.txtParty.Size = new System.Drawing.Size(493, 24);
+            this.txtParty.Size = new System.Drawing.Size(490, 24);
             toolTipTitleItem4.Text = "Help";
             toolTipItem4.LeftIndent = 6;
             toolTipItem4.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
@@ -191,7 +191,7 @@ namespace WindowsFormsApplication1
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(43, 154);
+            this.labelControl4.Location = new System.Drawing.Point(43, 155);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(36, 20);
@@ -202,7 +202,7 @@ namespace WindowsFormsApplication1
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(29, 199);
+            this.labelControl5.Location = new System.Drawing.Point(30, 199);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(49, 20);
@@ -213,14 +213,14 @@ namespace WindowsFormsApplication1
             // 
             this.txtGroups.EditValue = "";
             this.txtGroups.EnterMoveNextControl = true;
-            this.txtGroups.Location = new System.Drawing.Point(91, 198);
+            this.txtGroups.Location = new System.Drawing.Point(94, 197);
             this.txtGroups.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroups.Name = "txtGroups";
             this.txtGroups.Properties.AllowMultiSelect = true;
             this.txtGroups.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtGroups.Properties.SelectAllItemVisible = false;
-            this.txtGroups.Size = new System.Drawing.Size(493, 24);
+            this.txtGroups.Size = new System.Drawing.Size(490, 24);
             toolTipTitleItem1.Text = "Help";
             toolTipItem1.LeftIndent = 6;
             toolTipItem1.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
@@ -235,16 +235,16 @@ namespace WindowsFormsApplication1
             this.chArticle.Location = new System.Drawing.Point(595, 197);
             this.chArticle.Name = "chArticle";
             this.chArticle.Properties.Caption = "All";
-            this.chArticle.Size = new System.Drawing.Size(94, 21);
+            this.chArticle.Size = new System.Drawing.Size(94, 24);
             this.chArticle.TabIndex = 792;
             this.chArticle.CheckedChanged += new System.EventHandler(this.chArticle_CheckedChanged);
             // 
             // chParty
             // 
-            this.chParty.Location = new System.Drawing.Point(595, 156);
+            this.chParty.Location = new System.Drawing.Point(594, 153);
             this.chParty.Name = "chParty";
             this.chParty.Properties.Caption = "All";
-            this.chParty.Size = new System.Drawing.Size(94, 21);
+            this.chParty.Size = new System.Drawing.Size(94, 24);
             this.chParty.TabIndex = 793;
             this.chParty.CheckedChanged += new System.EventHandler(this.chParty_CheckedChanged);
             // 
@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1
             this.chLedger.Location = new System.Drawing.Point(594, 238);
             this.chLedger.Name = "chLedger";
             this.chLedger.Properties.Caption = "All";
-            this.chLedger.Size = new System.Drawing.Size(94, 21);
+            this.chLedger.Size = new System.Drawing.Size(94, 24);
             this.chLedger.TabIndex = 796;
             this.chLedger.CheckedChanged += new System.EventHandler(this.chLedger_CheckedChanged);
             // 
@@ -272,7 +272,7 @@ namespace WindowsFormsApplication1
             // 
             this.txtLedger.EditValue = "";
             this.txtLedger.EnterMoveNextControl = true;
-            this.txtLedger.Location = new System.Drawing.Point(94, 239);
+            this.txtLedger.Location = new System.Drawing.Point(94, 238);
             this.txtLedger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLedger.Name = "txtLedger";
             this.txtLedger.Properties.AllowMultiSelect = true;
@@ -291,8 +291,8 @@ namespace WindowsFormsApplication1
             // 
             // frmSelectRangeNew
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.chLedger);
             this.Controls.Add(this.labelControl6);

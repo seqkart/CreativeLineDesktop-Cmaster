@@ -428,10 +428,10 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // frmIndentMst
+            // FrmIndentMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(805, 527);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
@@ -459,7 +459,7 @@
             this.Controls.Add(this.txtDeptCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmIndentMst";
+            this.Name = "FrmIndentMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmIndentMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();

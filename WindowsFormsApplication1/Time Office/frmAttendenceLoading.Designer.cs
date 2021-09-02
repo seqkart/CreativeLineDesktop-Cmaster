@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmAttendanceLoading
+    partial class FrmAttendanceLoading
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAttendanceLoading));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAttendanceLoading));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd.Size = new System.Drawing.Size(72, 28);
             this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnAdd2
             // 
@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnAdd2.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd2.Size = new System.Drawing.Size(81, 28);
             this.btnAdd2.Text = "Add2";
-            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
+            this.btnAdd2.Click += new System.EventHandler(this.BtnAdd2_Click);
             // 
             // SFeedingGrid
             // 
@@ -327,9 +327,9 @@ namespace WindowsFormsApplication1.Forms_Master
             this.gridView_AttendanceData.Name = "gridView_AttendanceData";
             this.gridView_AttendanceData.OptionsView.ShowFooter = true;
             this.gridView_AttendanceData.OptionsView.ShowGroupPanel = false;
-            this.gridView_AttendanceData.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.gridView_AttendanceData_CustomDrawFooterCell);
-            this.gridView_AttendanceData.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_AttendanceData_RowStyle);
-            this.gridView_AttendanceData.CustomSummaryCalculate += new DevExpress.Data.CustomSummaryEventHandler(this.gridView_AttendanceData_CustomSummaryCalculate);
+            this.gridView_AttendanceData.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.GridView_AttendanceData_CustomDrawFooterCell);
+            this.gridView_AttendanceData.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.GridView_AttendanceData_RowStyle);
+            this.gridView_AttendanceData.CustomSummaryCalculate += new DevExpress.Data.CustomSummaryEventHandler(this.GridView_AttendanceData_CustomSummaryCalculate);
             // 
             // gridControl_AttendanceData
             // 
@@ -343,7 +343,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.gridControl_AttendanceData.TabIndex = 352;
             this.gridControl_AttendanceData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_AttendanceData});
-            this.gridControl_AttendanceData.DoubleClick += new System.EventHandler(this.gridControl_AttendanceData_DoubleClick);
+            this.gridControl_AttendanceData.DoubleClick += new System.EventHandler(this.GridControl_AttendanceData_DoubleClick);
             // 
             // btnLoad_Data
             // 
@@ -528,8 +528,8 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // frmAttendanceLoading
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1252, 624);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);

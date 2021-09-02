@@ -43,9 +43,10 @@
             // cmbSelectUser
             // 
             this.cmbSelectUser.FormattingEnabled = true;
-            this.cmbSelectUser.Location = new System.Drawing.Point(75, 40);
+            this.cmbSelectUser.Location = new System.Drawing.Point(87, 52);
+            this.cmbSelectUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSelectUser.Name = "cmbSelectUser";
-            this.cmbSelectUser.Size = new System.Drawing.Size(262, 21);
+            this.cmbSelectUser.Size = new System.Drawing.Size(305, 25);
             this.cmbSelectUser.TabIndex = 0;
             // 
             // Menu_ToolStrip
@@ -54,6 +55,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -61,7 +63,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(359, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(419, 31);
             this.Menu_ToolStrip.TabIndex = 7;
             this.Menu_ToolStrip.TabStop = true;
             this.Menu_ToolStrip.Text = "Options";
@@ -73,7 +75,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.MergeIndex = 1;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Visible = false;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
@@ -86,41 +88,45 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.MergeIndex = 0;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Visible = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(17, 43);
+            this.label3.Location = new System.Drawing.Point(20, 56);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(62, 17);
             this.label3.TabIndex = 336;
             this.label3.Text = "UserName";
             // 
             // cmbSelectFY
             // 
             this.cmbSelectFY.FormattingEnabled = true;
-            this.cmbSelectFY.Location = new System.Drawing.Point(75, 66);
+            this.cmbSelectFY.Location = new System.Drawing.Point(87, 86);
+            this.cmbSelectFY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSelectFY.Name = "cmbSelectFY";
-            this.cmbSelectFY.Size = new System.Drawing.Size(262, 21);
+            this.cmbSelectFY.Size = new System.Drawing.Size(305, 25);
             this.cmbSelectFY.TabIndex = 2;
             this.cmbSelectFY.SelectedIndexChanged += new System.EventHandler(this.cmbSelectFY_SelectedIndexChanged);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(25, 69);
+            this.label1.Location = new System.Drawing.Point(29, 90);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(51, 17);
             this.label1.TabIndex = 341;
             this.label1.Text = "Select FY";
             // 
             // btnSaveFY
             // 
-            this.btnSaveFY.Location = new System.Drawing.Point(261, 106);
+            this.btnSaveFY.Location = new System.Drawing.Point(304, 139);
+            this.btnSaveFY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveFY.Name = "btnSaveFY";
-            this.btnSaveFY.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveFY.Size = new System.Drawing.Size(87, 30);
             this.btnSaveFY.TabIndex = 342;
             this.btnSaveFY.Text = "SAVE";
             this.btnSaveFY.UseVisualStyleBackColor = true;
@@ -130,9 +136,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(359, 143);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(419, 187);
             this.ControlBox = false;
             this.Controls.Add(this.btnSaveFY);
             this.Controls.Add(this.label1);
@@ -141,6 +147,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmUserFinancialYearAddition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frmUserFinancialYearAddition_Load);

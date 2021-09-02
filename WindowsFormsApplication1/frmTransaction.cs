@@ -218,7 +218,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG90")
                 {
                     Frm_MaterialReceipt_Add_Update_GST frm = new Frm_MaterialReceipt_Add_Update_GST()
-                    { _MRI = "MRI", IsUpdate = false, Text = "Material Receipt Addition" };
+                    { MRI = "MRI", IsUpdate = false, Text = "Material Receipt Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -612,7 +612,7 @@ namespace WindowsFormsApplication1
                         IsUpdate = true,
                         MMDocDate = Convert.ToDateTime(CurrentRow["MMDocDate"]),
                         MMDocNo = CurrentRow["MMDocNo"].ToString(),
-                        _MRI = "MRI"
+                        MRI = "MRI"
                     };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -747,14 +747,14 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG46")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frm_JournalNBankVoucher frm = new frm_JournalNBankVoucher()
+                    WindowsFormsApplication1.Transaction.FrmVouchers frm = new WindowsFormsApplication1.Transaction.FrmVouchers()
                     {
-                        isupdate = true,
-                        s1 = btnEdit.Text,
+                        
+                        S1 = btnEdit.Text,
                         Text = "Voucher Editing",
                         VoucherNo = CurrentRow["Voucher No."].ToString(),
                         VoucherDate = Convert.ToDateTime(CurrentRow["Voucher Date"]),
-                        VoucherType = CurrentRow["Type"].ToString()
+                        //VoucherType = CurrentRow["Type"].ToString()
                     };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);

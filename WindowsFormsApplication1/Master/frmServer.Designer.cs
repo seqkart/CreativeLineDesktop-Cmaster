@@ -50,15 +50,17 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(97, 78);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(25, 23);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(76, 17);
+            this.labelControl1.Size = new System.Drawing.Size(89, 20);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Server Name";
             // 
             // txtServerName
             // 
-            this.txtServerName.Location = new System.Drawing.Point(211, 75);
+            this.txtServerName.Location = new System.Drawing.Point(139, 20);
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -68,7 +70,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtLoginType
             // 
-            this.txtLoginType.Location = new System.Drawing.Point(211, 105);
+            this.txtLoginType.Location = new System.Drawing.Point(139, 50);
             this.txtLoginType.Name = "txtLoginType";
             this.txtLoginType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -81,15 +83,17 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(109, 108);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(37, 53);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(64, 17);
+            this.labelControl2.Size = new System.Drawing.Size(75, 20);
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Login Type";
             // 
             // txtDataBaseName
             // 
-            this.txtDataBaseName.Location = new System.Drawing.Point(211, 192);
+            this.txtDataBaseName.Location = new System.Drawing.Point(139, 137);
             this.txtDataBaseName.Name = "txtDataBaseName";
             this.txtDataBaseName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -101,22 +105,24 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(118, 195);
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(46, 140);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(55, 17);
+            this.labelControl3.Size = new System.Drawing.Size(63, 20);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Database";
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(211, 134);
+            this.txtUserName.Location = new System.Drawing.Point(139, 79);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(328, 24);
             this.txtUserName.TabIndex = 6;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(211, 163);
+            this.txtPassword.Location = new System.Drawing.Point(139, 108);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(328, 24);
@@ -125,23 +131,27 @@ namespace WindowsFormsApplication1.Master
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(114, 137);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(42, 82);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(59, 17);
+            this.labelControl4.Size = new System.Drawing.Size(69, 20);
             this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "Username";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(117, 165);
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(45, 110);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(56, 17);
+            this.labelControl5.Size = new System.Drawing.Size(64, 20);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "Password";
             // 
             // btnTestConnection
             // 
-            this.btnTestConnection.Location = new System.Drawing.Point(233, 264);
+            this.btnTestConnection.Location = new System.Drawing.Point(161, 209);
             this.btnTestConnection.Name = "btnTestConnection";
             this.btnTestConnection.Size = new System.Drawing.Size(175, 29);
             this.btnTestConnection.TabIndex = 10;
@@ -150,7 +160,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(445, 264);
+            this.btnConnect.Location = new System.Drawing.Point(373, 209);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(94, 29);
             this.btnConnect.TabIndex = 11;
@@ -159,9 +169,9 @@ namespace WindowsFormsApplication1.Master
             // 
             // FrmServer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 344);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(505, 267);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.btnTestConnection);
             this.Controls.Add(this.labelControl5);

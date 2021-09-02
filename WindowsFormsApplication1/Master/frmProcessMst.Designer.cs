@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(519, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(519, 31);
             this.Menu_ToolStrip.TabIndex = 389;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 24);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -117,7 +117,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(50, 126);
+            this.Label17.Location = new System.Drawing.Point(45, 126);
             this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label17.Name = "Label17";
             this.Label17.Size = new System.Drawing.Size(108, 19);
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label16.Appearance.Options.UseFont = true;
-            this.Label16.Location = new System.Drawing.Point(61, 169);
+            this.Label16.Location = new System.Drawing.Point(56, 169);
             this.Label16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label16.Name = "Label16";
             this.Label16.Size = new System.Drawing.Size(97, 19);
@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(53, 83);
+            this.Label15.Location = new System.Drawing.Point(48, 83);
             this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(105, 19);
@@ -148,8 +148,8 @@ namespace WindowsFormsApplication1.Master
             // 
             // frmProcessMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(519, 237);
             this.ControlBox = false;
             this.Controls.Add(this.txtProcessRate);

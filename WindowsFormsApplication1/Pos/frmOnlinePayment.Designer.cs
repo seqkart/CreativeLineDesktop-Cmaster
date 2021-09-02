@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(91, 196);
+            this.labelControl4.Location = new System.Drawing.Point(106, 196);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(42, 25);
@@ -292,7 +292,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(10, 268);
+            this.labelControl3.Location = new System.Drawing.Point(25, 268);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(123, 25);
@@ -347,7 +347,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(-3, 231);
+            this.labelControl2.Location = new System.Drawing.Point(12, 231);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(136, 25);
@@ -358,7 +358,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(64, 162);
+            this.labelControl1.Location = new System.Drawing.Point(79, 162);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(69, 25);
@@ -367,7 +367,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             // txtUPID
             // 
-            this.txtUPID.Location = new System.Drawing.Point(139, 195);
+            this.txtUPID.Location = new System.Drawing.Point(154, 195);
             this.txtUPID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUPID.Name = "txtUPID";
             this.txtUPID.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,7 +377,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             // txtNameOnUPID
             // 
-            this.txtNameOnUPID.Location = new System.Drawing.Point(139, 265);
+            this.txtNameOnUPID.Location = new System.Drawing.Point(154, 265);
             this.txtNameOnUPID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNameOnUPID.Name = "txtNameOnUPID";
             this.txtNameOnUPID.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,7 +387,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             // txtUPIDMobileNo
             // 
-            this.txtUPIDMobileNo.Location = new System.Drawing.Point(139, 230);
+            this.txtUPIDMobileNo.Location = new System.Drawing.Point(154, 230);
             this.txtUPIDMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUPIDMobileNo.Name = "txtUPIDMobileNo";
             this.txtUPIDMobileNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -397,7 +397,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             // txtUPIDType
             // 
-            this.txtUPIDType.Location = new System.Drawing.Point(139, 161);
+            this.txtUPIDType.Location = new System.Drawing.Point(154, 161);
             this.txtUPIDType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUPIDType.Name = "txtUPIDType";
             this.txtUPIDType.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -443,8 +443,8 @@ namespace WindowsFormsApplication1.Pos
             // 
             // frmOnlinePayment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(712, 384);
             this.ControlBox = false;
             this.Controls.Add(this.btnSaveOnly);

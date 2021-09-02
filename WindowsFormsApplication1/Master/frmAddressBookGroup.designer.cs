@@ -47,6 +47,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -54,7 +55,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(479, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(520, 27);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -64,7 +65,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -74,48 +75,52 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtGroupDesc
             // 
-            this.txtGroupDesc.Location = new System.Drawing.Point(173, 88);
+            this.txtGroupDesc.Location = new System.Drawing.Point(190, 84);
+            this.txtGroupDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroupDesc.Name = "txtGroupDesc";
             this.txtGroupDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGroupDesc.Properties.MaxLength = 100;
-            this.txtGroupDesc.Size = new System.Drawing.Size(271, 20);
+            this.txtGroupDesc.Size = new System.Drawing.Size(316, 24);
             this.txtGroupDesc.TabIndex = 197;
             // 
             // txtGroupCode
             // 
-            this.txtGroupCode.Location = new System.Drawing.Point(173, 54);
+            this.txtGroupCode.Location = new System.Drawing.Point(190, 40);
+            this.txtGroupCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroupCode.Name = "txtGroupCode";
             this.txtGroupCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtGroupCode.Size = new System.Drawing.Size(83, 20);
+            this.txtGroupCode.Size = new System.Drawing.Size(97, 24);
             this.txtGroupCode.TabIndex = 196;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(27, 91);
+            this.label3.Location = new System.Drawing.Point(19, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 13);
+            this.label3.Size = new System.Drawing.Size(154, 17);
             this.label3.TabIndex = 199;
             this.label3.Text = "Address Book Group Desc";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(24, 57);
+            this.label1.Location = new System.Drawing.Point(16, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 13);
+            this.label1.Size = new System.Drawing.Size(157, 17);
             this.label1.TabIndex = 198;
             this.label1.Text = "Address Book Group Code";
             // 
             // frmAddressBookGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(479, 151);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(520, 119);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtGroupDesc);
@@ -124,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAddressBookGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmAddressBookGroup_Load);

@@ -1018,8 +1018,6 @@ namespace WindowsFormsApplication1.Transaction
             //            }
         }
 
-
-
         private void FrmBarPrinting_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.SalePopUPForAllWindows(this, e);
@@ -1146,11 +1144,6 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
         }
-
-
-
-
-
         private void BarCodeGridView_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
 
@@ -1350,13 +1343,9 @@ namespace WindowsFormsApplication1.Transaction
 
         private void RBIMPORT_CheckedChanged(object sender, EventArgs e)
         {
-
             btnImport.Visible = true;
             BTNIMPORT2.Visible = true;
-
-
         }
-
         private void RBDIRECT_CheckedChanged(object sender, EventArgs e)
         {
             btnImport.Visible = false;

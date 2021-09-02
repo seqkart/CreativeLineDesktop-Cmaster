@@ -246,8 +246,8 @@ namespace WindowsFormsApplication1.Master
             // 
             // frmContractorMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(604, 228);
             this.ControlBox = false;
             this.Controls.Add(this.txtIDNo);

@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtLongNarration = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherTypeCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountName.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLongNarration.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl2
@@ -187,10 +187,12 @@ namespace WindowsFormsApplication1.Transaction
             this.VoucherGridView.OptionsView.ShowIndicator = false;
             this.VoucherGridView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
             this.VoucherGridView.PaintStyleName = "Skin";
+            this.VoucherGridView.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.VoucherGridView_ValidatingEditor);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Cr/Dr";
+            this.gridColumn1.FieldName = "CRDR";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -457,17 +459,17 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // textEdit2
+            // txtLongNarration
             // 
-            this.textEdit2.EditValue = " ";
-            this.textEdit2.EnterMoveNextControl = true;
-            this.textEdit2.Location = new System.Drawing.Point(118, 672);
-            this.textEdit2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit2.Properties.MaxLength = 15;
-            this.textEdit2.Size = new System.Drawing.Size(895, 24);
-            this.textEdit2.TabIndex = 733;
+            this.txtLongNarration.EditValue = " ";
+            this.txtLongNarration.EnterMoveNextControl = true;
+            this.txtLongNarration.Location = new System.Drawing.Point(118, 672);
+            this.txtLongNarration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLongNarration.Name = "txtLongNarration";
+            this.txtLongNarration.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLongNarration.Properties.MaxLength = 15;
+            this.txtLongNarration.Size = new System.Drawing.Size(895, 24);
+            this.txtLongNarration.TabIndex = 733;
             // 
             // labelControl2
             // 
@@ -482,11 +484,11 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // FrmVouchers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1040, 708);
             this.ControlBox = false;
-            this.Controls.Add(this.textEdit2);
+            this.Controls.Add(this.txtLongNarration);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.panelControl1);
@@ -518,7 +520,7 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountName.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLongNarration.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -549,7 +551,7 @@ namespace WindowsFormsApplication1.Transaction
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtLongNarration;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         public DevExpress.XtraEditors.DateEdit txtVoucherDate;

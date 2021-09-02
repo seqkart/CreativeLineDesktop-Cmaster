@@ -36,20 +36,6 @@
             this.panelControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSaveOpts = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancle = new DevExpress.XtraEditors.SimpleButton();
-            this.OptionsGrid = new DevExpress.XtraGrid.GridControl();
-            this.OptionsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.WorkAllocationGrid = new DevExpress.XtraGrid.GridControl();
             this.UserGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -66,15 +52,29 @@
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.repositoryItemCheckEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.OptionsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn18 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn35 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn36 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn37 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn22 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn23 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn31 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn33 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn34 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.OptionsGrid = new DevExpress.XtraGrid.GridControl();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OptionsGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OptionsGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WorkAllocationGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OptionsGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OptionsGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbSelectUser
@@ -167,173 +167,6 @@
             this.btnCancle.Text = "Cancel";
             this.btnCancle.Visible = false;
             this.btnCancle.Click += new System.EventHandler(this.BtnCancle_Click);
-            // 
-            // OptionsGrid
-            // 
-            this.OptionsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OptionsGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OptionsGrid.Location = new System.Drawing.Point(16, 94);
-            this.OptionsGrid.MainView = this.OptionsGridView;
-            this.OptionsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.OptionsGrid.Name = "OptionsGrid";
-            this.OptionsGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemCheckEdit2});
-            this.OptionsGrid.Size = new System.Drawing.Size(1010, 509);
-            this.OptionsGrid.TabIndex = 318;
-            this.OptionsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.OptionsGridView});
-            this.OptionsGrid.Click += new System.EventHandler(this.OptionsGrid_Click);
-            this.OptionsGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OptionsGrid_KeyDown);
-            // 
-            // OptionsGridView
-            // 
-            this.OptionsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn18,
-            this.gridColumn35,
-            this.gridColumn36,
-            this.gridColumn37,
-            this.gridColumn22,
-            this.gridColumn23,
-            this.gridColumn29,
-            this.gridColumn31,
-            this.gridColumn32,
-            this.gridColumn33,
-            this.gridColumn34});
-            this.OptionsGridView.DetailHeight = 458;
-            this.OptionsGridView.GridControl = this.OptionsGrid;
-            this.OptionsGridView.Name = "OptionsGridView";
-            this.OptionsGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.OptionsGridView.OptionsBehavior.AutoUpdateTotalSummary = false;
-            this.OptionsGridView.OptionsDetail.EnableDetailToolTip = true;
-            this.OptionsGridView.OptionsMenu.ShowGroupSummaryEditorItem = true;
-            this.OptionsGridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
-            this.OptionsGridView.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
-            this.OptionsGridView.OptionsView.ShowDetailButtons = false;
-            this.OptionsGridView.OptionsView.ShowFooter = true;
-            this.OptionsGridView.OptionsView.ShowGroupPanel = false;
-            this.OptionsGridView.OptionsView.ShowIndicator = false;
-            this.OptionsGridView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.OptionsGridView_RowCellStyle);
-            this.OptionsGridView.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.OptionsGridView_ValidatingEditor);
-            // 
-            // gridColumn18
-            // 
-            this.gridColumn18.Caption = "ProgCode";
-            this.gridColumn18.FieldName = "ProgCode";
-            this.gridColumn18.MinWidth = 23;
-            this.gridColumn18.Name = "gridColumn18";
-            this.gridColumn18.OptionsColumn.AllowEdit = false;
-            this.gridColumn18.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ProgCode", "Count={0}")});
-            this.gridColumn18.Visible = true;
-            this.gridColumn18.VisibleIndex = 0;
-            this.gridColumn18.Width = 107;
-            // 
-            // gridColumn35
-            // 
-            this.gridColumn35.Caption = "Username";
-            this.gridColumn35.FieldName = "UserName";
-            this.gridColumn35.MinWidth = 23;
-            this.gridColumn35.Name = "gridColumn35";
-            this.gridColumn35.OptionsColumn.AllowEdit = false;
-            this.gridColumn35.Visible = true;
-            this.gridColumn35.VisibleIndex = 1;
-            this.gridColumn35.Width = 89;
-            // 
-            // gridColumn36
-            // 
-            this.gridColumn36.Caption = "ACCESS";
-            this.gridColumn36.FieldName = "SELECTFIELD";
-            this.gridColumn36.MinWidth = 23;
-            this.gridColumn36.Name = "gridColumn36";
-            this.gridColumn36.Visible = true;
-            this.gridColumn36.VisibleIndex = 2;
-            this.gridColumn36.Width = 87;
-            // 
-            // gridColumn37
-            // 
-            this.gridColumn37.Caption = "&Add";
-            this.gridColumn37.FieldName = "&Add";
-            this.gridColumn37.MinWidth = 23;
-            this.gridColumn37.Name = "gridColumn37";
-            this.gridColumn37.Visible = true;
-            this.gridColumn37.VisibleIndex = 4;
-            this.gridColumn37.Width = 87;
-            // 
-            // gridColumn22
-            // 
-            this.gridColumn22.Caption = "EDIT";
-            this.gridColumn22.FieldName = "EDIT";
-            this.gridColumn22.MinWidth = 23;
-            this.gridColumn22.Name = "gridColumn22";
-            this.gridColumn22.Visible = true;
-            this.gridColumn22.VisibleIndex = 3;
-            this.gridColumn22.Width = 42;
-            // 
-            // gridColumn23
-            // 
-            this.gridColumn23.Caption = "DEL";
-            this.gridColumn23.FieldName = "DELETE";
-            this.gridColumn23.MinWidth = 23;
-            this.gridColumn23.Name = "gridColumn23";
-            this.gridColumn23.Visible = true;
-            this.gridColumn23.VisibleIndex = 5;
-            this.gridColumn23.Width = 41;
-            // 
-            // gridColumn29
-            // 
-            this.gridColumn29.Caption = "SPL_Rts.";
-            this.gridColumn29.FieldName = "SPLRIGHTS";
-            this.gridColumn29.MinWidth = 23;
-            this.gridColumn29.Name = "gridColumn29";
-            this.gridColumn29.Visible = true;
-            this.gridColumn29.VisibleIndex = 6;
-            this.gridColumn29.Width = 68;
-            // 
-            // gridColumn31
-            // 
-            this.gridColumn31.Caption = "M";
-            this.gridColumn31.FieldName = "MASTER";
-            this.gridColumn31.MinWidth = 23;
-            this.gridColumn31.Name = "gridColumn31";
-            this.gridColumn31.Visible = true;
-            this.gridColumn31.VisibleIndex = 7;
-            this.gridColumn31.Width = 34;
-            // 
-            // gridColumn32
-            // 
-            this.gridColumn32.Caption = "T";
-            this.gridColumn32.FieldName = "TRANSACTION";
-            this.gridColumn32.MinWidth = 23;
-            this.gridColumn32.Name = "gridColumn32";
-            this.gridColumn32.Visible = true;
-            this.gridColumn32.VisibleIndex = 8;
-            this.gridColumn32.Width = 30;
-            // 
-            // gridColumn33
-            // 
-            this.gridColumn33.Caption = "R";
-            this.gridColumn33.FieldName = "REPORT";
-            this.gridColumn33.MinWidth = 23;
-            this.gridColumn33.Name = "gridColumn33";
-            this.gridColumn33.Visible = true;
-            this.gridColumn33.VisibleIndex = 9;
-            this.gridColumn33.Width = 27;
-            // 
-            // gridColumn34
-            // 
-            this.gridColumn34.Caption = "A";
-            this.gridColumn34.FieldName = "ADMIN";
-            this.gridColumn34.MinWidth = 23;
-            this.gridColumn34.Name = "gridColumn34";
-            this.gridColumn34.Visible = true;
-            this.gridColumn34.VisibleIndex = 10;
-            this.gridColumn34.Width = 23;
-            // 
-            // repositoryItemCheckEdit2
-            // 
-            this.repositoryItemCheckEdit2.AutoHeight = false;
-            this.repositoryItemCheckEdit2.Caption = "Check";
-            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
             // 
             // WorkAllocationGrid
             // 
@@ -506,12 +339,179 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // repositoryItemCheckEdit2
+            // 
+            this.repositoryItemCheckEdit2.AutoHeight = false;
+            this.repositoryItemCheckEdit2.Caption = "Check";
+            this.repositoryItemCheckEdit2.Name = "repositoryItemCheckEdit2";
+            // 
+            // OptionsGridView
+            // 
+            this.OptionsGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn18,
+            this.gridColumn35,
+            this.gridColumn36,
+            this.gridColumn37,
+            this.gridColumn22,
+            this.gridColumn23,
+            this.gridColumn29,
+            this.gridColumn31,
+            this.gridColumn32,
+            this.gridColumn33,
+            this.gridColumn34});
+            this.OptionsGridView.DetailHeight = 458;
+            this.OptionsGridView.GridControl = this.OptionsGrid;
+            this.OptionsGridView.Name = "OptionsGridView";
+            this.OptionsGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.OptionsGridView.OptionsBehavior.AutoUpdateTotalSummary = false;
+            this.OptionsGridView.OptionsDetail.EnableDetailToolTip = true;
+            this.OptionsGridView.OptionsMenu.ShowGroupSummaryEditorItem = true;
+            this.OptionsGridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.OptionsGridView.OptionsView.GroupFooterShowMode = DevExpress.XtraGrid.Views.Grid.GroupFooterShowMode.VisibleAlways;
+            this.OptionsGridView.OptionsView.ShowDetailButtons = false;
+            this.OptionsGridView.OptionsView.ShowFooter = true;
+            this.OptionsGridView.OptionsView.ShowGroupPanel = false;
+            this.OptionsGridView.OptionsView.ShowIndicator = false;
+            this.OptionsGridView.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.OptionsGridView_RowCellStyle);
+            this.OptionsGridView.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.OptionsGridView_ValidatingEditor);
+            // 
+            // gridColumn18
+            // 
+            this.gridColumn18.Caption = "ProgCode";
+            this.gridColumn18.FieldName = "ProgCode";
+            this.gridColumn18.MinWidth = 23;
+            this.gridColumn18.Name = "gridColumn18";
+            this.gridColumn18.OptionsColumn.AllowEdit = false;
+            this.gridColumn18.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ProgCode", "Count={0}")});
+            this.gridColumn18.Visible = true;
+            this.gridColumn18.VisibleIndex = 0;
+            this.gridColumn18.Width = 107;
+            // 
+            // gridColumn35
+            // 
+            this.gridColumn35.Caption = "Username";
+            this.gridColumn35.FieldName = "UserName";
+            this.gridColumn35.MinWidth = 23;
+            this.gridColumn35.Name = "gridColumn35";
+            this.gridColumn35.OptionsColumn.AllowEdit = false;
+            this.gridColumn35.Visible = true;
+            this.gridColumn35.VisibleIndex = 1;
+            this.gridColumn35.Width = 89;
+            // 
+            // gridColumn36
+            // 
+            this.gridColumn36.Caption = "ACCESS";
+            this.gridColumn36.FieldName = "SELECTFIELD";
+            this.gridColumn36.MinWidth = 23;
+            this.gridColumn36.Name = "gridColumn36";
+            this.gridColumn36.Visible = true;
+            this.gridColumn36.VisibleIndex = 2;
+            this.gridColumn36.Width = 87;
+            // 
+            // gridColumn37
+            // 
+            this.gridColumn37.Caption = "&Add";
+            this.gridColumn37.FieldName = "&Add";
+            this.gridColumn37.MinWidth = 23;
+            this.gridColumn37.Name = "gridColumn37";
+            this.gridColumn37.Visible = true;
+            this.gridColumn37.VisibleIndex = 4;
+            this.gridColumn37.Width = 87;
+            // 
+            // gridColumn22
+            // 
+            this.gridColumn22.Caption = "EDIT";
+            this.gridColumn22.FieldName = "EDIT";
+            this.gridColumn22.MinWidth = 23;
+            this.gridColumn22.Name = "gridColumn22";
+            this.gridColumn22.Visible = true;
+            this.gridColumn22.VisibleIndex = 3;
+            this.gridColumn22.Width = 42;
+            // 
+            // gridColumn23
+            // 
+            this.gridColumn23.Caption = "DEL";
+            this.gridColumn23.FieldName = "DELETE";
+            this.gridColumn23.MinWidth = 23;
+            this.gridColumn23.Name = "gridColumn23";
+            this.gridColumn23.Visible = true;
+            this.gridColumn23.VisibleIndex = 5;
+            this.gridColumn23.Width = 41;
+            // 
+            // gridColumn29
+            // 
+            this.gridColumn29.Caption = "SPL_Rts.";
+            this.gridColumn29.FieldName = "SPLRIGHTS";
+            this.gridColumn29.MinWidth = 23;
+            this.gridColumn29.Name = "gridColumn29";
+            this.gridColumn29.Visible = true;
+            this.gridColumn29.VisibleIndex = 6;
+            this.gridColumn29.Width = 68;
+            // 
+            // gridColumn31
+            // 
+            this.gridColumn31.Caption = "M";
+            this.gridColumn31.FieldName = "MASTER";
+            this.gridColumn31.MinWidth = 23;
+            this.gridColumn31.Name = "gridColumn31";
+            this.gridColumn31.Visible = true;
+            this.gridColumn31.VisibleIndex = 7;
+            this.gridColumn31.Width = 34;
+            // 
+            // gridColumn32
+            // 
+            this.gridColumn32.Caption = "T";
+            this.gridColumn32.FieldName = "TRANSACTION";
+            this.gridColumn32.MinWidth = 23;
+            this.gridColumn32.Name = "gridColumn32";
+            this.gridColumn32.Visible = true;
+            this.gridColumn32.VisibleIndex = 8;
+            this.gridColumn32.Width = 30;
+            // 
+            // gridColumn33
+            // 
+            this.gridColumn33.Caption = "R";
+            this.gridColumn33.FieldName = "REPORT";
+            this.gridColumn33.MinWidth = 23;
+            this.gridColumn33.Name = "gridColumn33";
+            this.gridColumn33.Visible = true;
+            this.gridColumn33.VisibleIndex = 9;
+            this.gridColumn33.Width = 27;
+            // 
+            // gridColumn34
+            // 
+            this.gridColumn34.Caption = "A";
+            this.gridColumn34.FieldName = "ADMIN";
+            this.gridColumn34.MinWidth = 23;
+            this.gridColumn34.Name = "gridColumn34";
+            this.gridColumn34.Visible = true;
+            this.gridColumn34.VisibleIndex = 10;
+            this.gridColumn34.Width = 23;
+            // 
+            // OptionsGrid
+            // 
+            this.OptionsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OptionsGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionsGrid.Location = new System.Drawing.Point(16, 94);
+            this.OptionsGrid.MainView = this.OptionsGridView;
+            this.OptionsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.OptionsGrid.Name = "OptionsGrid";
+            this.OptionsGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemCheckEdit2});
+            this.OptionsGrid.Size = new System.Drawing.Size(1010, 509);
+            this.OptionsGrid.TabIndex = 318;
+            this.OptionsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.OptionsGridView});
+            this.OptionsGrid.Click += new System.EventHandler(this.OptionsGrid_Click);
+            this.OptionsGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OptionsGrid_KeyDown);
+            // 
             // FrmWorkAllocation
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1043, 690);
             this.ControlBox = false;
             this.Controls.Add(this.panelControl1);
@@ -527,12 +527,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OptionsGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.OptionsGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.WorkAllocationGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OptionsGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OptionsGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,10 +561,14 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit1;
+        private DevExpress.XtraEditors.SimpleButton btnCancle;
+        private DevExpress.XtraEditors.SimpleButton btnSaveOpts;
         private DevExpress.XtraGrid.GridControl OptionsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView OptionsGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
@@ -573,9 +577,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn33;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit repositoryItemCheckEdit2;
-        private DevExpress.XtraEditors.SimpleButton btnCancle;
-        private DevExpress.XtraEditors.SimpleButton btnSaveOpts;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
     }
 }

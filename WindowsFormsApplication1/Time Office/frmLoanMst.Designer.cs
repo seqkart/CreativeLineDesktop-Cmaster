@@ -59,8 +59,8 @@
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.btnView = new System.Windows.Forms.ToolStripButton();
-            this.splitter1 = new System.Windows.Forms.Splitter();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.splitter1 = new System.Windows.Forms.Splitter();
             ((System.ComponentModel.ISupportInitialize)(this.DtEndDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEndDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties.CalendarTimeProperties)).BeginInit();
@@ -72,7 +72,7 @@
             // 
             // Btn_RefreshGridData
             // 
-            this.Btn_RefreshGridData.Location = new System.Drawing.Point(309, 68);
+            this.Btn_RefreshGridData.Location = new System.Drawing.Point(309, 46);
             this.Btn_RefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshGridData.Name = "Btn_RefreshGridData";
             this.Btn_RefreshGridData.Size = new System.Drawing.Size(108, 26);
@@ -84,7 +84,7 @@
             // 
             this.DtEndDate.EditValue = null;
             this.DtEndDate.EnterMoveNextControl = true;
-            this.DtEndDate.Location = new System.Drawing.Point(189, 68);
+            this.DtEndDate.Location = new System.Drawing.Point(189, 47);
             this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -113,7 +113,7 @@
             // 
             this.DtStartDate.EditValue = null;
             this.DtStartDate.EnterMoveNextControl = true;
-            this.DtStartDate.Location = new System.Drawing.Point(63, 68);
+            this.DtStartDate.Location = new System.Drawing.Point(63, 47);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
@@ -133,14 +133,15 @@
             this.DtStartDate.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.DtStartDate.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.DtStartDate.Properties.Mask.BeepOnError = true;
-            this.DtStartDate.Properties.Mask.EditMask = "dd/MM/yy";
-            this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
+            this.DtStartDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtStartDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "dd/MM/yy");
             this.DtStartDate.Size = new System.Drawing.Size(98, 24);
             this.DtStartDate.TabIndex = 194;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(26, 72);
+            this.labelControl1.Location = new System.Drawing.Point(26, 51);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(30, 17);
@@ -149,7 +150,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(168, 72);
+            this.labelControl2.Location = new System.Drawing.Point(168, 51);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(15, 17);
@@ -161,13 +162,13 @@
             this.EmployeeGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EmployeeGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmployeeGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeGrid.Location = new System.Drawing.Point(0, 138);
+            this.EmployeeGrid.Location = new System.Drawing.Point(0, 90);
             this.EmployeeGrid.LookAndFeel.SkinName = "Seven Classic";
             this.EmployeeGrid.LookAndFeel.UseDefaultLookAndFeel = false;
             this.EmployeeGrid.MainView = this.gridView3;
             this.EmployeeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmployeeGrid.Name = "EmployeeGrid";
-            this.EmployeeGrid.Size = new System.Drawing.Size(938, 645);
+            this.EmployeeGrid.Size = new System.Drawing.Size(938, 693);
             this.EmployeeGrid.TabIndex = 191;
             this.EmployeeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -348,16 +349,6 @@
             this.btnView.Text = "View";
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // splitter1
-            // 
-            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 31);
-            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(938, 107);
-            this.splitter1.TabIndex = 196;
-            this.splitter1.TabStop = false;
-            // 
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -368,10 +359,20 @@
             this.toolStripButton1.Text = "Close Loan";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
+            // splitter1
+            // 
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(0, 31);
+            this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(938, 59);
+            this.splitter1.TabIndex = 196;
+            this.splitter1.TabStop = false;
+            // 
             // frmLoanMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(938, 783);
             this.ControlBox = false;
             this.Controls.Add(this.EmployeeGrid);

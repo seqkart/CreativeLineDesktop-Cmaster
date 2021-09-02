@@ -49,13 +49,15 @@
             // EmployeeGrid
             // 
             this.EmployeeGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmployeeGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmployeeGrid.Location = new System.Drawing.Point(0, 26);
+            this.EmployeeGrid.Location = new System.Drawing.Point(0, 31);
             this.EmployeeGrid.LookAndFeel.SkinName = "Seven Classic";
             this.EmployeeGrid.LookAndFeel.UseDefaultLookAndFeel = false;
             this.EmployeeGrid.MainView = this.EmployeeGridView;
+            this.EmployeeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EmployeeGrid.Name = "EmployeeGrid";
-            this.EmployeeGrid.Size = new System.Drawing.Size(804, 552);
+            this.EmployeeGrid.Size = new System.Drawing.Size(938, 725);
             this.EmployeeGrid.TabIndex = 191;
             this.EmployeeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.EmployeeGridView});
@@ -71,6 +73,7 @@
             this.gridColumn3,
             this.gridColumn4,
             this.gridColumn5});
+            this.EmployeeGridView.DetailHeight = 458;
             this.EmployeeGridView.GridControl = this.EmployeeGrid;
             this.EmployeeGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.EmployeeGridView.Name = "EmployeeGridView";
@@ -91,56 +94,63 @@
             // 
             this.gridColumn6.Caption = "UnitName";
             this.gridColumn6.FieldName = "UnitName";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 0;
+            this.gridColumn6.Width = 87;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Emp Code";
             this.gridColumn1.FieldName = "EmpCode";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "EmpCode", "Count={0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
-            this.gridColumn1.Width = 82;
+            this.gridColumn1.Width = 96;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Emp Name";
             this.gridColumn2.FieldName = "EmpName";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 2;
-            this.gridColumn2.Width = 185;
+            this.gridColumn2.Width = 216;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Emp Father Name";
             this.gridColumn3.FieldName = "EmpFHName";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 152;
+            this.gridColumn3.Width = 177;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Dept";
             this.gridColumn4.FieldName = "DeptDesc";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 92;
+            this.gridColumn4.Width = 107;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Date Of Leaving";
             this.gridColumn5.FieldName = "EmpDOL";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 5;
-            this.gridColumn5.Width = 92;
+            this.gridColumn5.Width = 107;
             // 
             // Menu_ToolStrip
             // 
@@ -148,6 +158,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnEdit,
             this.btnAdd,
@@ -156,7 +167,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(804, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 31);
             this.Menu_ToolStrip.TabIndex = 194;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -167,7 +178,7 @@
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnEdit.Size = new System.Drawing.Size(42, 23);
+            this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
@@ -178,7 +189,7 @@
             this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd.Size = new System.Drawing.Size(43, 23);
+            this.btnAdd.Size = new System.Drawing.Size(52, 28);
             this.btnAdd.Text = "Add";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
@@ -189,19 +200,20 @@
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnRefresh.Size = new System.Drawing.Size(65, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(77, 28);
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // frmEmployeeSalaryMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 578);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(938, 756);
             this.ControlBox = false;
             this.Controls.Add(this.EmployeeGrid);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmEmployeeSalaryMst";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmEmployeeSalaryMst_Load);

@@ -42,7 +42,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(14, 111);
+            this.label3.Location = new System.Drawing.Point(15, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 17);
@@ -51,7 +51,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(47, 61);
+            this.label1.Location = new System.Drawing.Point(50, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 17);
@@ -72,7 +72,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(414, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(366, 31);
             this.Menu_ToolStrip.TabIndex = 195;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -97,7 +97,7 @@
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(104, 107);
+            this.txtDesc.Location = new System.Drawing.Point(86, 91);
             this.txtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -107,7 +107,7 @@
             // 
             // txtDesgCode
             // 
-            this.txtDesgCode.Location = new System.Drawing.Point(104, 58);
+            this.txtDesgCode.Location = new System.Drawing.Point(86, 42);
             this.txtDesgCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDesgCode.Name = "txtDesgCode";
             this.txtDesgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -116,9 +116,9 @@
             // 
             // FrmDesignationAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 178);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(366, 152);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtDesc);

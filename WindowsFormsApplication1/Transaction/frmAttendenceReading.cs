@@ -53,5 +53,10 @@ namespace WindowsFormsApplication1.Transaction
         {
             ConnectMachine();
         }
+
+        private void HelpGrid_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

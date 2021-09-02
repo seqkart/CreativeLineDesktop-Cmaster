@@ -7,7 +7,6 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-using HumanResourceManagementSystem;
 using SeqKartLibrary;
 using SeqKartLibrary.CrudTask;
 using SeqKartLibrary.HelperClass;
@@ -27,10 +26,10 @@ using WindowsFormsApplication1.Time_Office;
 namespace WindowsFormsApplication1.Forms_Master
 {
 
-    public partial class frmAttendanceLoading : XtraForm
+    public partial class FrmAttendanceLoading : XtraForm
     {
         private DataTable dt = new DataTable();
-        public frmAttendanceLoading()
+        public FrmAttendanceLoading()
         {
             InitializeComponent();
 
@@ -179,7 +178,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void gridView_AttendanceData_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
+        private void GridView_AttendanceData_CustomSummaryCalculate(object sender, DevExpress.Data.CustomSummaryEventArgs e)
         {
             GridView view = sender as GridView;
             if (e.IsTotalSummary && (e.Item as GridSummaryItem).FieldName == "OverTime")
@@ -197,7 +196,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             return true;
         }
-        private void gridView_AttendanceData_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
+        private void GridView_AttendanceData_CustomDrawFooterCell(object sender, DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventArgs e)
         {
             if (IsInvalidValue(e.Info.Value))
             {
@@ -311,7 +310,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void gridControl_AttendanceData_DoubleClick(object sender, EventArgs e)
+        private void GridControl_AttendanceData_DoubleClick(object sender, EventArgs e)
         {
 
             //gridView_AttendanceData.SetMasterRowExpanded(0, false);
@@ -323,7 +322,7 @@ namespace WindowsFormsApplication1.Forms_Master
             OnClickRow();
         }
 
-        private void gridView_AttendanceData_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        private void GridView_AttendanceData_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
         {
             try
             {
@@ -375,18 +374,18 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             OpenAttendanceForm(0, string.Empty, string.Empty);
         }
 
-        private void btnAdd2_Click(object sender, EventArgs e)
+        private void BtnAdd2_Click(object sender, EventArgs e)
         {
 
             //XtraForm_EmployeeAttendence xtraForm_EmployeeAttendence = new XtraForm_EmployeeAttendence() { s1 = btnAdd.Text, Text = "User Addition" }; ;
 
 
-            AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { s1 = btnAdd2.Text, Text = "Add Addendance Details" }; ;
+            AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { s1 = btnAdd2.Text, Text = "Add Attendance Details" }; 
             addAttendanceDetails.StartPosition = FormStartPosition.CenterScreen;
 
             addAttendanceDetails.ShowDialog(Parent);
@@ -645,7 +644,7 @@ namespace WindowsFormsApplication1.Forms_Master
             //gridView_UserMaster.DoubleClick += gridView_DoubleClick;
 
             //gridControl_AttendanceData.DoubleClick += gridControl_AttendanceData_DoubleClick;
-            gridView_AttendanceData.DoubleClick += gridControl_AttendanceData_DoubleClick;
+            gridView_AttendanceData.DoubleClick += GridControl_AttendanceData_DoubleClick;
 
 
         }

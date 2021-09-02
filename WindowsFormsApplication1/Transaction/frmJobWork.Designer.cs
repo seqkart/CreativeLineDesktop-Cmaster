@@ -172,7 +172,7 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(54, 111);
+            this.labelControl14.Location = new System.Drawing.Point(61, 111);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(34, 17);
@@ -212,7 +212,7 @@
             // txtArtID
             // 
             this.txtArtID.Enabled = false;
-            this.txtArtID.Location = new System.Drawing.Point(556, 72);
+            this.txtArtID.Location = new System.Drawing.Point(556, 73);
             this.txtArtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtID.Name = "txtArtID";
             this.txtArtID.Size = new System.Drawing.Size(153, 24);
@@ -229,7 +229,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(58, 79);
+            this.labelControl3.Location = new System.Drawing.Point(56, 77);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(39, 17);
@@ -247,7 +247,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(23, 45);
+            this.labelControl1.Location = new System.Drawing.Point(25, 45);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(70, 17);
@@ -274,7 +274,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(28, 155);
+            this.labelControl8.Location = new System.Drawing.Point(20, 155);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(75, 17);
@@ -307,7 +307,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(236, 78);
+            this.labelControl5.Location = new System.Drawing.Point(236, 77);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(66, 17);
@@ -325,7 +325,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(744, 76);
+            this.labelControl12.Location = new System.Drawing.Point(744, 77);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(88, 17);
@@ -335,7 +335,7 @@
             // txtArtNo
             // 
             this.txtArtNo.Enabled = false;
-            this.txtArtNo.Location = new System.Drawing.Point(104, 75);
+            this.txtArtNo.Location = new System.Drawing.Point(104, 73);
             this.txtArtNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtNo.Name = "txtArtNo";
             this.txtArtNo.Size = new System.Drawing.Size(126, 24);
@@ -366,7 +366,7 @@
             // txtArtDesc
             // 
             this.txtArtDesc.Enabled = false;
-            this.txtArtDesc.Location = new System.Drawing.Point(308, 72);
+            this.txtArtDesc.Location = new System.Drawing.Point(308, 73);
             this.txtArtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtDesc.Name = "txtArtDesc";
             this.txtArtDesc.Size = new System.Drawing.Size(232, 24);
@@ -375,7 +375,7 @@
             // txtSampleWeight
             // 
             this.txtSampleWeight.Enabled = false;
-            this.txtSampleWeight.Location = new System.Drawing.Point(844, 71);
+            this.txtSampleWeight.Location = new System.Drawing.Point(844, 73);
             this.txtSampleWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSampleWeight.Name = "txtSampleWeight";
             this.txtSampleWeight.Size = new System.Drawing.Size(110, 24);
@@ -490,7 +490,7 @@
             this.tabNavigationPage1.Controls.Add(this.HelpGrid);
             this.tabNavigationPage1.Controls.Add(this.MeasurementGird);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1432, 605);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1432, 618);
             // 
             // HelpGrid
             // 
@@ -548,7 +548,7 @@
             this.MeasurementGird.Location = new System.Drawing.Point(0, 0);
             this.MeasurementGird.MainView = this.MeasurementGirdView;
             this.MeasurementGird.Name = "MeasurementGird";
-            this.MeasurementGird.Size = new System.Drawing.Size(1432, 605);
+            this.MeasurementGird.Size = new System.Drawing.Size(1432, 618);
             this.MeasurementGird.TabIndex = 0;
             this.MeasurementGird.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MeasurementGirdView});
@@ -629,8 +629,8 @@
             // 
             // frmJobWork
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1466, 884);
             this.ControlBox = false;
             this.Controls.Add(this.tabPane1);

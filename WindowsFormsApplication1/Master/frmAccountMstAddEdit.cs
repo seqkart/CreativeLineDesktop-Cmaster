@@ -522,7 +522,10 @@ namespace WindowsFormsApplication1
             try
             {
                 ProjectFunctions.CreatePopUpForTwoBoxes("Select GSTStateCode,GSTStateDesc from GSTStateMst", " Where GSTStateCode", txtGSTStateCode, txtGSTStateDesc, txtGSTStateCode, HelpGrid, HelpGridView, e);
+              
+
             }
+
             catch (Exception ex)
             {
                 ProjectFunctions.SpeakError(ex.Message);
@@ -533,7 +536,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                ProjectFunctions.CreatePopUpForFourBoxes("SELECT        CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME,STATEMASTER.UNDERRG FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID", " Where CTSYSID", txtCityCode, txtCityName, txtState, txtCountry, txtContactPerson, HelpGrid, HelpGridView, e);
+                ProjectFunctions.CreatePopUpForFourBoxes("SELECT CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME,STATEMASTER.UNDERRG FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID", " Where CTSYSID", txtCityCode, txtCityName, txtState, txtCountry, txtContactPerson, HelpGrid, HelpGridView, e);
             }
             catch (Exception ex)
             {
@@ -713,6 +716,9 @@ namespace WindowsFormsApplication1
                 TxnRespWithObjAndInfo<GSTINDetail> TxnResp = await EWBAPI.GetGSTNDetailAsync(EwbSession, txtGSTNo.Text);
 
                 if (TxnResp.IsSuccess)
+                
+                
+                
                 {
                     TextEdit t = new TextEdit();
                     t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
@@ -726,6 +732,10 @@ namespace WindowsFormsApplication1
                     txtGSTType.Text = details["txpType"].ToString();
 
                     txtGSTStateCode.Text = details["stateCode"].ToString().PadLeft(2, '0');
+                    txtGSTStateDesc.Text = ProjectFunctions.GetDataSet("select GSTStateDesc from GSTStateMst where GSTStateCode='" + details["stateCode"].ToString().PadLeft(2, '0') + "' ").Tables[0].Rows[0][0].ToString();
+
+
+                    
 
 
                     XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));

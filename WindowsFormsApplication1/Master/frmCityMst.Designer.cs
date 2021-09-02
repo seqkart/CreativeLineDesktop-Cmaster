@@ -64,7 +64,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(486, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(486, 31);
             this.Menu_ToolStrip.TabIndex = 204;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -74,7 +74,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -84,14 +84,14 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 24);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtCItyName
             // 
             this.txtCItyName.EnterMoveNextControl = true;
-            this.txtCItyName.Location = new System.Drawing.Point(90, 111);
+            this.txtCItyName.Location = new System.Drawing.Point(85, 70);
             this.txtCItyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCItyName.Name = "txtCItyName";
             this.txtCItyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -101,7 +101,7 @@
             // 
             // txtCityCode
             // 
-            this.txtCityCode.Location = new System.Drawing.Point(90, 77);
+            this.txtCityCode.Location = new System.Drawing.Point(85, 36);
             this.txtCityCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -111,7 +111,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(21, 115);
+            this.label3.Location = new System.Drawing.Point(16, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 17);
@@ -120,7 +120,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(23, 81);
+            this.label1.Location = new System.Drawing.Point(18, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
@@ -130,7 +130,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(274, 150);
+            this.HelpGrid.Location = new System.Drawing.Point(40, 40);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -158,7 +158,7 @@
             // txtStateCode
             // 
             this.txtStateCode.EnterMoveNextControl = true;
-            this.txtStateCode.Location = new System.Drawing.Point(90, 145);
+            this.txtStateCode.Location = new System.Drawing.Point(85, 104);
             this.txtStateCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStateCode.Name = "txtStateCode";
             this.txtStateCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
@@ -171,7 +171,7 @@
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(9, 150);
+            this.label13.Location = new System.Drawing.Point(4, 109);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 17);
@@ -180,7 +180,7 @@
             // 
             // txtStateName
             // 
-            this.txtStateName.Location = new System.Drawing.Point(162, 145);
+            this.txtStateName.Location = new System.Drawing.Point(157, 104);
             this.txtStateName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStateName.Name = "txtStateName";
             this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -191,8 +191,8 @@
             // 
             // frmCityMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(486, 237);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);

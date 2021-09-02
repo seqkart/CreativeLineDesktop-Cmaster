@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Time_Office
 {
     public partial class XtraForm_EmployeeAttendance : DevExpress.XtraEditors.XtraForm
     {
-        private frmAttendanceLoading _frmAttendenceLaoding = null;
+        private FrmAttendanceLoading _frmAttendenceLaoding = null;
 
 
         public int selected_serial_id = 0;
@@ -34,7 +34,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         private bool input_fields_empty = false;
 
-        public XtraForm_EmployeeAttendance(frmAttendanceLoading parent, int _selected_serial_id, string _come_from, string _selected_employee_code, string _selected_attendance_date)
+        public XtraForm_EmployeeAttendance(FrmAttendanceLoading parent, int _selected_serial_id, string _come_from, string _selected_employee_code, string _selected_attendance_date)
         {
             InitializeComponent();
 

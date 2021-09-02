@@ -1615,8 +1615,8 @@
             // 
             // frm_JournalNBankVoucher
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(920, 530);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);

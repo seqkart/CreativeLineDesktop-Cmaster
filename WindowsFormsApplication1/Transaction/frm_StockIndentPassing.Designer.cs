@@ -81,12 +81,13 @@
             // 
             this.gridColumn13.Caption = "Est. Cost";
             this.gridColumn13.FieldName = "IndEstAmt";
+            this.gridColumn13.MinWidth = 23;
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.OptionsColumn.AllowEdit = false;
             this.gridColumn13.OptionsColumn.ReadOnly = true;
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 10;
-            this.gridColumn13.Width = 76;
+            this.gridColumn13.Width = 89;
             // 
             // Menu_ToolStrip
             // 
@@ -94,6 +95,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnQuit,
             this.BtnUnPassSelected,
@@ -104,7 +106,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(947, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1105, 31);
             this.Menu_ToolStrip.TabIndex = 64;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -116,7 +118,7 @@
             this.BtnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnQuit.Name = "BtnQuit";
             this.BtnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.BtnQuit.Size = new System.Drawing.Size(45, 23);
+            this.BtnQuit.Size = new System.Drawing.Size(53, 28);
             this.BtnQuit.Text = "&Quit";
             this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -128,7 +130,7 @@
             this.BtnUnPassSelected.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnUnPassSelected.Name = "BtnUnPassSelected";
             this.BtnUnPassSelected.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.BtnUnPassSelected.Size = new System.Drawing.Size(63, 23);
+            this.BtnUnPassSelected.Size = new System.Drawing.Size(78, 28);
             this.BtnUnPassSelected.Text = "Un Pass";
             this.BtnUnPassSelected.Click += new System.EventHandler(this.BtnUnPassSelected_Click);
             // 
@@ -140,7 +142,7 @@
             this.Btn_Pass_Selected.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Btn_Pass_Selected.Name = "Btn_Pass_Selected";
             this.Btn_Pass_Selected.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.Btn_Pass_Selected.Size = new System.Drawing.Size(44, 23);
+            this.Btn_Pass_Selected.Size = new System.Drawing.Size(54, 28);
             this.Btn_Pass_Selected.Text = "Pass";
             this.Btn_Pass_Selected.Click += new System.EventHandler(this.Btn_Pass_Selected_Click);
             // 
@@ -151,7 +153,7 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(100, 26);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 31);
             // 
             // BtnCalc
             // 
@@ -161,16 +163,18 @@
             this.BtnCalc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCalc.Name = "BtnCalc";
             this.BtnCalc.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.BtnCalc.Size = new System.Drawing.Size(76, 23);
+            this.BtnCalc.Size = new System.Drawing.Size(93, 28);
             this.BtnCalc.Text = "&Calculator";
             // 
             // InPassGridCtrl
             // 
             this.InPassGridCtrl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.InPassGridCtrl.Location = new System.Drawing.Point(2, 69);
+            this.InPassGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InPassGridCtrl.Location = new System.Drawing.Point(2, 91);
             this.InPassGridCtrl.MainView = this.IndentPassGrd;
+            this.InPassGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InPassGridCtrl.Name = "InPassGridCtrl";
-            this.InPassGridCtrl.Size = new System.Drawing.Size(943, 328);
+            this.InPassGridCtrl.Size = new System.Drawing.Size(1101, 429);
             this.InPassGridCtrl.TabIndex = 199;
             this.InPassGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.IndentPassGrd});
@@ -192,6 +196,7 @@
             this.gridColumn13,
             this.gridColumn11,
             this.gridColumn14});
+            this.IndentPassGrd.DetailHeight = 458;
             styleFormatCondition4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             styleFormatCondition4.Appearance.Options.UseBackColor = true;
             styleFormatCondition4.ApplyToRow = true;
@@ -245,150 +250,167 @@
             // 
             this.gridColumn1.Caption = "Id";
             this.gridColumn1.FieldName = "IndID";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.OptionsColumn.ReadOnly = true;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Ind. No.";
             this.gridColumn2.FieldName = "IndDNo";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.OptionsColumn.ReadOnly = true;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            this.gridColumn2.Width = 56;
+            this.gridColumn2.Width = 65;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Date";
             this.gridColumn3.FieldName = "IndDDate";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.OptionsColumn.ReadOnly = true;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 1;
-            this.gridColumn3.Width = 88;
+            this.gridColumn3.Width = 103;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Item Code";
             this.gridColumn4.FieldName = "IndDItemCode";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.OptionsColumn.ReadOnly = true;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 80;
+            this.gridColumn4.Width = 93;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Item";
             this.gridColumn5.FieldName = "PrdName";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.OptionsColumn.ReadOnly = true;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 157;
+            this.gridColumn5.Width = 183;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Qty.";
             this.gridColumn6.FieldName = "IndDItemQty";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.OptionsColumn.ReadOnly = true;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 4;
-            this.gridColumn6.Width = 62;
+            this.gridColumn6.Width = 72;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Remarks";
             this.gridColumn7.FieldName = "IndDRemarks";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.OptionsColumn.ReadOnly = true;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 5;
-            this.gridColumn7.Width = 111;
+            this.gridColumn7.Width = 129;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Target Dt.";
             this.gridColumn8.FieldName = "IndDItemReqDDate";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.OptionsColumn.AllowEdit = false;
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 6;
-            this.gridColumn8.Width = 69;
+            this.gridColumn8.Width = 80;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Status";
             this.gridColumn9.FieldName = "IndPassTag";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.OptionsColumn.AllowEdit = false;
             this.gridColumn9.OptionsColumn.ReadOnly = true;
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 7;
-            this.gridColumn9.Width = 51;
+            this.gridColumn9.Width = 59;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Pass Dt.";
             this.gridColumn10.FieldName = "IndPassDt";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.OptionsColumn.ReadOnly = true;
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 8;
-            this.gridColumn10.Width = 80;
+            this.gridColumn10.Width = 93;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "Pass Qty.";
             this.gridColumn12.FieldName = "IndDItemQtyPass";
+            this.gridColumn12.MinWidth = 23;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.OptionsColumn.AllowEdit = false;
             this.gridColumn12.OptionsColumn.ReadOnly = true;
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 9;
-            this.gridColumn12.Width = 47;
+            this.gridColumn12.Width = 55;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Po No";
             this.gridColumn11.FieldName = "IndPoMadeNo";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.OptionsColumn.AllowEdit = false;
             this.gridColumn11.OptionsColumn.ReadOnly = true;
-            this.gridColumn11.Width = 61;
+            this.gridColumn11.Width = 71;
             // 
             // gridColumn14
             // 
             this.gridColumn14.Caption = "Pass";
             this.gridColumn14.FieldName = "Pass";
+            this.gridColumn14.MinWidth = 23;
             this.gridColumn14.Name = "gridColumn14";
             this.gridColumn14.Visible = true;
             this.gridColumn14.VisibleIndex = 11;
+            this.gridColumn14.Width = 87;
             // 
             // ChoiceSelectAll
             // 
-            this.ChoiceSelectAll.Location = new System.Drawing.Point(864, 34);
+            this.ChoiceSelectAll.Location = new System.Drawing.Point(1008, 44);
+            this.ChoiceSelectAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelectAll.Name = "ChoiceSelectAll";
             this.ChoiceSelectAll.Properties.Caption = "Select All";
-            this.ChoiceSelectAll.Size = new System.Drawing.Size(75, 19);
+            this.ChoiceSelectAll.Size = new System.Drawing.Size(87, 24);
             this.ChoiceSelectAll.TabIndex = 200;
             this.ChoiceSelectAll.CheckedChanged += new System.EventHandler(this.ChoiceSelectAll_CheckedChanged);
             // 
             // DtIndentPass
             // 
             this.DtIndentPass.EditValue = null;
-            this.DtIndentPass.Location = new System.Drawing.Point(737, 34);
+            this.DtIndentPass.Location = new System.Drawing.Point(860, 44);
+            this.DtIndentPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtIndentPass.Name = "DtIndentPass";
             this.DtIndentPass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -396,38 +418,42 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtIndentPass.Properties.Mask.EditMask = "";
             this.DtIndentPass.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtIndentPass.Size = new System.Drawing.Size(100, 20);
+            this.DtIndentPass.Size = new System.Drawing.Size(117, 24);
             this.DtIndentPass.TabIndex = 195;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(630, 33);
+            this.labelControl3.Location = new System.Drawing.Point(735, 43);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(103, 13);
+            this.labelControl3.Size = new System.Drawing.Size(115, 17);
             this.labelControl3.TabIndex = 197;
             this.labelControl3.Text = "Indent Passing Date";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(7, 33);
+            this.labelControl1.Location = new System.Drawing.Point(8, 43);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(26, 13);
+            this.labelControl1.Size = new System.Drawing.Size(30, 17);
             this.labelControl1.TabIndex = 205;
             this.labelControl1.Text = "From";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(165, 33);
+            this.labelControl2.Location = new System.Drawing.Point(192, 43);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(13, 13);
+            this.labelControl2.Size = new System.Drawing.Size(15, 17);
             this.labelControl2.TabIndex = 204;
             this.labelControl2.Text = "To";
             // 
             // Btn_RefreshGridData
             // 
-            this.Btn_RefreshGridData.Location = new System.Drawing.Point(314, 33);
+            this.Btn_RefreshGridData.Location = new System.Drawing.Point(366, 43);
+            this.Btn_RefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshGridData.Name = "Btn_RefreshGridData";
-            this.Btn_RefreshGridData.Size = new System.Drawing.Size(75, 20);
+            this.Btn_RefreshGridData.Size = new System.Drawing.Size(87, 26);
             this.Btn_RefreshGridData.TabIndex = 203;
             this.Btn_RefreshGridData.Text = "Refresh";
             this.Btn_RefreshGridData.Click += new System.EventHandler(this.Btn_RefreshGridData_Click);
@@ -435,7 +461,8 @@
             // DtEndDate
             // 
             this.DtEndDate.EditValue = null;
-            this.DtEndDate.Location = new System.Drawing.Point(183, 34);
+            this.DtEndDate.Location = new System.Drawing.Point(213, 44);
+            this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -443,13 +470,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtEndDate.Properties.Mask.EditMask = "";
             this.DtEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtEndDate.Size = new System.Drawing.Size(100, 20);
+            this.DtEndDate.Size = new System.Drawing.Size(117, 24);
             this.DtEndDate.TabIndex = 202;
             // 
             // DtStartDate
             // 
             this.DtStartDate.EditValue = null;
-            this.DtStartDate.Location = new System.Drawing.Point(37, 34);
+            this.DtStartDate.Location = new System.Drawing.Point(43, 44);
+            this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -457,7 +485,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtStartDate.Properties.Mask.EditMask = "";
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtStartDate.Size = new System.Drawing.Size(100, 20);
+            this.DtStartDate.Size = new System.Drawing.Size(117, 24);
             this.DtStartDate.TabIndex = 201;
             // 
             // panelControl1
@@ -471,20 +499,22 @@
             this.panelControl1.Controls.Add(this.ChoiceSelectAll);
             this.panelControl1.Controls.Add(this.DtEndDate);
             this.panelControl1.Controls.Add(this.DtStartDate);
-            this.panelControl1.Location = new System.Drawing.Point(0, 49);
+            this.panelControl1.Location = new System.Drawing.Point(0, 64);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(947, 399);
+            this.panelControl1.Size = new System.Drawing.Size(1105, 522);
             this.panelControl1.TabIndex = 206;
             this.panelControl1.Text = "Passing Indent Items for Purchase Order...";
             // 
             // frm_StockIndentPassing
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(947, 447);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1105, 585);
             this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_StockIndentPassing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frm_StockIndentPassing_Load);

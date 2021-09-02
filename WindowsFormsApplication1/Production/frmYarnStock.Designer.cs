@@ -64,11 +64,11 @@ namespace WindowsFormsApplication1.Production
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(752, 275);
+            this.HelpGrid.Location = new System.Drawing.Point(50, 31);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(613, 340);
+            this.HelpGrid.Size = new System.Drawing.Size(613, 177);
             this.HelpGrid.TabIndex = 424;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1.Production
             // txtColorName
             // 
             this.txtColorName.Enabled = false;
-            this.txtColorName.Location = new System.Drawing.Point(334, 169);
+            this.txtColorName.Location = new System.Drawing.Point(258, 137);
             this.txtColorName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtColorName.Name = "txtColorName";
             this.txtColorName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(49, 172);
+            this.labelControl3.Location = new System.Drawing.Point(6, 140);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(141, 17);
@@ -113,7 +113,7 @@ namespace WindowsFormsApplication1.Production
             // txtColorCode
             // 
             this.txtColorCode.Enabled = false;
-            this.txtColorCode.Location = new System.Drawing.Point(231, 169);
+            this.txtColorCode.Location = new System.Drawing.Point(155, 137);
             this.txtColorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -123,7 +123,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(373, 74);
+            this.labelControl2.Location = new System.Drawing.Point(297, 42);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 17);
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1.Production
             // txtYarnLotNo
             // 
             this.txtYarnLotNo.Enabled = false;
-            this.txtYarnLotNo.Location = new System.Drawing.Point(483, 71);
+            this.txtYarnLotNo.Location = new System.Drawing.Point(407, 38);
             this.txtYarnLotNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYarnLotNo.Name = "txtYarnLotNo";
             this.txtYarnLotNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1.Production
             // txtYarnTypeDesc
             // 
             this.txtYarnTypeDesc.Enabled = false;
-            this.txtYarnTypeDesc.Location = new System.Drawing.Point(334, 103);
+            this.txtYarnTypeDesc.Location = new System.Drawing.Point(258, 71);
             this.txtYarnTypeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYarnTypeDesc.Name = "txtYarnTypeDesc";
             this.txtYarnTypeDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(133, 106);
+            this.labelControl1.Location = new System.Drawing.Point(89, 74);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(58, 17);
@@ -165,7 +165,7 @@ namespace WindowsFormsApplication1.Production
             // txtYarnTypeCode
             // 
             this.txtYarnTypeCode.Enabled = false;
-            this.txtYarnTypeCode.Location = new System.Drawing.Point(231, 103);
+            this.txtYarnTypeCode.Location = new System.Drawing.Point(155, 71);
             this.txtYarnTypeCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYarnTypeCode.Name = "txtYarnTypeCode";
             this.txtYarnTypeCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -187,7 +187,7 @@ namespace WindowsFormsApplication1.Production
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(872, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(674, 27);
             this.Menu_ToolStrip.TabIndex = 420;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -196,7 +196,7 @@ namespace WindowsFormsApplication1.Production
             this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(70, 24);
+            this.btnQuit.Size = new System.Drawing.Size(70, 28);
             this.btnQuit.Text = "Close";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -206,13 +206,13 @@ namespace WindowsFormsApplication1.Production
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(65, 24);
+            this.btnSave.Size = new System.Drawing.Size(65, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(116, 140);
+            this.label3.Location = new System.Drawing.Point(72, 108);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 17);
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(130, 74);
+            this.label1.Location = new System.Drawing.Point(86, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
@@ -231,7 +231,7 @@ namespace WindowsFormsApplication1.Production
             // txtYarnContent
             // 
             this.txtYarnContent.Enabled = false;
-            this.txtYarnContent.Location = new System.Drawing.Point(231, 137);
+            this.txtYarnContent.Location = new System.Drawing.Point(155, 105);
             this.txtYarnContent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYarnContent.Name = "txtYarnContent";
             this.txtYarnContent.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -241,7 +241,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // txtYarnCode
             // 
-            this.txtYarnCode.Location = new System.Drawing.Point(231, 71);
+            this.txtYarnCode.Location = new System.Drawing.Point(155, 38);
             this.txtYarnCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtYarnCode.Name = "txtYarnCode";
             this.txtYarnCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -252,7 +252,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(121, 204);
+            this.labelControl4.Location = new System.Drawing.Point(127, 172);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(20, 17);
@@ -262,7 +262,7 @@ namespace WindowsFormsApplication1.Production
             // txtQty
             // 
             this.txtQty.Enabled = false;
-            this.txtQty.Location = new System.Drawing.Point(231, 201);
+            this.txtQty.Location = new System.Drawing.Point(155, 169);
             this.txtQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtQty.Name = "txtQty";
             this.txtQty.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -273,13 +273,13 @@ namespace WindowsFormsApplication1.Production
             // 
             // frmYarnStock
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 353);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(674, 221);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.txtQty);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtColorName);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtColorCode);

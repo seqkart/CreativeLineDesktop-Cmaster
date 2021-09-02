@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Production
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(472, 27);
             this.Menu_ToolStrip.TabIndex = 394;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1.Production
             // 
             this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(57, 148);
+            this.Label17.Location = new System.Drawing.Point(36, 86);
             this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label17.Name = "Label17";
             this.Label17.Size = new System.Drawing.Size(119, 19);
@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1.Production
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(60, 105);
+            this.Label15.Location = new System.Drawing.Point(33, 43);
             this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(122, 19);
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // txtFabricTypeDesc
             // 
-            this.txtFabricTypeDesc.Location = new System.Drawing.Point(167, 145);
+            this.txtFabricTypeDesc.Location = new System.Drawing.Point(161, 84);
             this.txtFabricTypeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFabricTypeDesc.Name = "txtFabricTypeDesc";
             this.txtFabricTypeDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -111,7 +111,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // txtFabricTypeCode
             // 
-            this.txtFabricTypeCode.Location = new System.Drawing.Point(167, 102);
+            this.txtFabricTypeCode.Location = new System.Drawing.Point(161, 41);
             this.txtFabricTypeCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFabricTypeCode.Name = "txtFabricTypeCode";
             this.txtFabricTypeCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -120,9 +120,9 @@ namespace WindowsFormsApplication1.Production
             // 
             // frmFabricTypeMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 270);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(472, 126);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtFabricTypeDesc);

@@ -23,6 +23,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxProEWB.API;
 
+
 namespace WindowsFormsApplication1
 {
 
@@ -135,10 +136,16 @@ namespace WindowsFormsApplication1
 
         }
 
-        public static void Speak(string MSG)
+        public static void Speak(string MSG1)
         {
+            try
+            {
+                Task.Run(() => _synthesizer.Speak(MSG1));
+            }
+            catch (Exception ex)
+            {
 
-            Task.Run(() => _synthesizer.Speak(MSG));
+            }
 
         }
 
@@ -1594,7 +1601,7 @@ namespace WindowsFormsApplication1
                         GlobalVariables.WhatAppStatus = myDetails.state;
                         GlobalVariables.WhatAppMobileNo = myDetails.user;
 
-                        Speak(myDetails.state);
+                       //ProjectFunctions.Speak(myDetails.state);
                     }
                     else
                     {
@@ -1607,34 +1614,34 @@ namespace WindowsFormsApplication1
             }
         }
 
-        //public static async Task WhatsAppStatusSpeak()
-        //{
-        //    using (var httpClient = new HttpClient())
-        //    {
-        //        using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
-        //        {
-        //            request.Headers.TryAddWithoutValidation("accept", "application/json");
+        public static async Task WhatsAppStatusSpeak()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
 
-        //            var response = await httpClient.SendAsync(request);
-        //            if (response.IsSuccessStatusCode == true)
-        //            {
+                    var response = await httpClient.SendAsync(request);
+                    if (response.IsSuccessStatusCode == true)
+                    {
 
-        //                string content = await response.Content.ReadAsStringAsync();
-        //                TextEdit t = new TextEdit();
-        //                t.Text = JsonConvert.SerializeObject(content);
-        //                var details = JObject.Parse(t.Text);
+                        string content = await response.Content.ReadAsStringAsync();
+                        TextEdit t = new TextEdit();
+                        t.Text = JsonConvert.SerializeObject(content);
+                        var details = JObject.Parse(t.Text);
 
-        //                Speak(details["Connected"].ToString());
-        //            }
-        //            else
-        //            {
+                        Speak(details["Connected"].ToString());
+                    }
+                    else
+                    {
 
-        //            }
+                    }
 
-        //        }
+                }
 
-        //    }
-        //}
+            }
+        }
 
         public static async Task WhatsAppDisConnection()
         {
@@ -2189,17 +2196,16 @@ namespace WindowsFormsApplication1
                                     {
                                         if (VoucherGridView.FocusedColumn.FieldName == SourceFieldName)
                                         {
-                                            if (currentrow == null)
-                                            {
-                                                ReportGrid.Text = SourceFieldName;
 
-                                                SearchBox.Text = SearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                Panel1.Visible = true;
-                                                Panel1.Select();
-                                                SearchBox.Focus();
-                                                SearchBox.SelectionStart = SearchBox.Text.Length;
-                                                SearchBox.SelectionLength = 0;
-                                            }
+                                            ReportGrid.Text = SourceFieldName;
+
+                                            SearchBox.Text = SearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            Panel1.Visible = true;
+                                            Panel1.Select();
+                                            SearchBox.Focus();
+                                            SearchBox.SelectionStart = SearchBox.Text.Length;
+                                            SearchBox.SelectionLength = 0;
+
                                         }
 
                                     }

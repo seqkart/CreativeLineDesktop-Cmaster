@@ -58,10 +58,12 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(107, 29);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(125, 38);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(409, 155);
+            this.HelpGrid.Size = new System.Drawing.Size(477, 203);
             this.HelpGrid.TabIndex = 256;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -71,6 +73,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -84,11 +87,12 @@
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(107, 96);
+            this.txtEmpCode.Location = new System.Drawing.Point(125, 126);
+            this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(64, 20);
+            this.txtEmpCode.Size = new System.Drawing.Size(75, 24);
             this.txtEmpCode.TabIndex = 1;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
@@ -96,57 +100,63 @@
             // txtEmpName
             // 
             this.txtEmpName.Enabled = false;
-            this.txtEmpName.Location = new System.Drawing.Point(177, 96);
+            this.txtEmpName.Location = new System.Drawing.Point(206, 126);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpName.Properties.ReadOnly = true;
-            this.txtEmpName.Size = new System.Drawing.Size(293, 20);
+            this.txtEmpName.Size = new System.Drawing.Size(342, 24);
             this.txtEmpName.TabIndex = 2;
             this.txtEmpName.TabStop = false;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(44, 99);
+            this.label2.Location = new System.Drawing.Point(51, 129);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 253;
             this.label2.Text = "EmpName";
             // 
             // txtLoanAmount
             // 
             this.txtLoanAmount.EnterMoveNextControl = true;
-            this.txtLoanAmount.Location = new System.Drawing.Point(107, 126);
+            this.txtLoanAmount.Location = new System.Drawing.Point(125, 165);
+            this.txtLoanAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoanAmount.Name = "txtLoanAmount";
             this.txtLoanAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLoanAmount.Properties.MaxLength = 30;
-            this.txtLoanAmount.Size = new System.Drawing.Size(64, 20);
+            this.txtLoanAmount.Size = new System.Drawing.Size(75, 24);
             this.txtLoanAmount.TabIndex = 5;
             this.txtLoanAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoanAmount_KeyPress);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(50, 128);
+            this.label4.Location = new System.Drawing.Point(58, 167);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 13);
+            this.label4.Size = new System.Drawing.Size(51, 17);
             this.label4.TabIndex = 259;
             this.label4.Text = "LoanAmt";
             // 
             // txtLoanInstlmnt
             // 
             this.txtLoanInstlmnt.EnterMoveNextControl = true;
-            this.txtLoanInstlmnt.Location = new System.Drawing.Point(402, 125);
+            this.txtLoanInstlmnt.Location = new System.Drawing.Point(469, 163);
+            this.txtLoanInstlmnt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoanInstlmnt.Name = "txtLoanInstlmnt";
             this.txtLoanInstlmnt.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLoanInstlmnt.Properties.MaxLength = 30;
-            this.txtLoanInstlmnt.Size = new System.Drawing.Size(68, 20);
+            this.txtLoanInstlmnt.Size = new System.Drawing.Size(79, 24);
             this.txtLoanInstlmnt.TabIndex = 7;
             this.txtLoanInstlmnt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoanInstlmnt_KeyPress);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(324, 127);
+            this.label1.Location = new System.Drawing.Point(378, 166);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
+            this.label1.Size = new System.Drawing.Size(77, 17);
             this.label1.TabIndex = 263;
             this.label1.Text = "Loan Instlmnt";
             // 
@@ -156,6 +166,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -163,7 +174,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(517, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(603, 31);
             this.Menu_ToolStrip.TabIndex = 269;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -174,7 +185,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -185,26 +196,28 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtLoanNo
             // 
             this.txtLoanNo.Enabled = false;
-            this.txtLoanNo.Location = new System.Drawing.Point(402, 70);
+            this.txtLoanNo.Location = new System.Drawing.Point(469, 92);
+            this.txtLoanNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoanNo.Name = "txtLoanNo";
             this.txtLoanNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLoanNo.Properties.MaxLength = 30;
-            this.txtLoanNo.Size = new System.Drawing.Size(68, 20);
+            this.txtLoanNo.Size = new System.Drawing.Size(79, 24);
             this.txtLoanNo.TabIndex = 272;
             this.txtLoanNo.TabStop = false;
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(350, 73);
+            this.label10.Location = new System.Drawing.Point(408, 95);
+            this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.Size = new System.Drawing.Size(50, 17);
             this.label10.TabIndex = 273;
             this.label10.Text = "Loan No";
             // 
@@ -212,7 +225,8 @@
             // 
             this.txtLoanDate.Enabled = false;
             this.txtLoanDate.EnterMoveNextControl = true;
-            this.txtLoanDate.Location = new System.Drawing.Point(107, 70);
+            this.txtLoanDate.Location = new System.Drawing.Point(125, 92);
+            this.txtLoanDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoanDate.Name = "txtLoanDate";
             this.txtLoanDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLoanDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
@@ -222,23 +236,24 @@
             this.txtLoanDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.txtLoanDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtLoanDate.Properties.MaxLength = 30;
-            this.txtLoanDate.Size = new System.Drawing.Size(64, 20);
+            this.txtLoanDate.Size = new System.Drawing.Size(75, 24);
             this.txtLoanDate.TabIndex = 274;
             this.txtLoanDate.TabStop = false;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(43, 73);
+            this.label11.Location = new System.Drawing.Point(50, 95);
+            this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 13);
+            this.label11.Size = new System.Drawing.Size(59, 17);
             this.label11.TabIndex = 275;
             this.label11.Text = "Loan Date";
             // 
             // frmLoanMstAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 184);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(603, 241);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtLoanDate);
@@ -254,6 +269,7 @@
             this.Controls.Add(this.txtEmpName);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoanMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmLoanMstAddEdit_Load);

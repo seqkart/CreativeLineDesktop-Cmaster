@@ -47,6 +47,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -54,7 +55,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(466, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(544, 31);
             this.Menu_ToolStrip.TabIndex = 210;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -63,7 +64,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(56, 22);
+            this.btnQuit.Size = new System.Drawing.Size(70, 28);
             this.btnQuit.Text = "Close";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -73,48 +74,52 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(54, 22);
+            this.btnSave.Size = new System.Drawing.Size(65, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(56, 113);
+            this.label3.Location = new System.Drawing.Point(65, 148);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 13);
+            this.label3.Size = new System.Drawing.Size(120, 17);
             this.label3.TabIndex = 209;
             this.label3.Text = "Machine Type Name";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(56, 75);
+            this.label1.Location = new System.Drawing.Point(65, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 13);
+            this.label1.Size = new System.Drawing.Size(116, 17);
             this.label1.TabIndex = 208;
             this.label1.Text = "Machine Type Code";
             // 
             // txtTypeName
             // 
-            this.txtTypeName.Location = new System.Drawing.Point(173, 110);
+            this.txtTypeName.Location = new System.Drawing.Point(202, 144);
+            this.txtTypeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTypeName.Name = "txtTypeName";
             this.txtTypeName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTypeName.Properties.MaxLength = 100;
-            this.txtTypeName.Size = new System.Drawing.Size(209, 20);
+            this.txtTypeName.Size = new System.Drawing.Size(244, 24);
             this.txtTypeName.TabIndex = 207;
             // 
             // txtTypeCode
             // 
-            this.txtTypeCode.Location = new System.Drawing.Point(173, 72);
+            this.txtTypeCode.Location = new System.Drawing.Point(202, 94);
+            this.txtTypeCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTypeCode.Name = "txtTypeCode";
             this.txtTypeCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTypeCode.Size = new System.Drawing.Size(83, 20);
+            this.txtTypeCode.Size = new System.Drawing.Size(97, 24);
             this.txtTypeCode.TabIndex = 206;
             // 
             // frmMachineTypeMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(466, 178);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(544, 233);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.label3);
@@ -123,6 +128,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.txtTypeCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMachineTypeMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmMachineTypeMst_Load);

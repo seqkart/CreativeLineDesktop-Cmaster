@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.Production
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(882, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(681, 27);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -97,7 +97,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(102, 150);
+            this.label3.Location = new System.Drawing.Point(136, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 17);
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(116, 84);
+            this.label1.Location = new System.Drawing.Point(150, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(61, 17);
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(119, 116);
+            this.labelControl1.Location = new System.Drawing.Point(153, 116);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(58, 17);
@@ -167,7 +167,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(107, 182);
+            this.labelControl2.Location = new System.Drawing.Point(141, 182);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(70, 17);
@@ -198,7 +198,7 @@ namespace WindowsFormsApplication1.Production
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(36, 214);
+            this.labelControl3.Location = new System.Drawing.Point(70, 214);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(141, 17);
@@ -220,11 +220,11 @@ namespace WindowsFormsApplication1.Production
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(426, 275);
+            this.HelpGrid.Location = new System.Drawing.Point(49, 31);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(613, 340);
+            this.HelpGrid.Size = new System.Drawing.Size(613, 204);
             this.HelpGrid.TabIndex = 410;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -247,9 +247,9 @@ namespace WindowsFormsApplication1.Production
             // 
             // frmYarnMaster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 506);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(681, 254);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtColorName);

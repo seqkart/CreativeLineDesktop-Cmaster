@@ -18,19 +18,12 @@ namespace WindowsFormsApplication1
         public DateTime FStartDate { get; set; }
         public bool IsUpdate { get; set; }
         public bool IsUpdate_View { get; set; }
-        public string _MRI { get; set; }
-#pragma warning disable CS0169 // The field 'frm_MaterialReciept_Add_Update_GST.DocID' is never used
-        private string DocID;
-#pragma warning restore CS0169 // The field 'frm_MaterialReciept_Add_Update_GST.DocID' is never used
-#pragma warning disable CS0169 // The field 'frm_MaterialReciept_Add_Update_GST.DocLoc' is never used
-        private string DocLoc;
+        public string MRI { get; set; }
 #pragma warning restore CS0169 // The field 'frm_MaterialReciept_Add_Update_GST.DocLoc' is never used
 
         private string oldtDocNum;
         DataTable Record = new DataTable();
         string currentprodCode = string.Empty;
-#pragma warning disable CS0169 // The field 'frm_MaterialReciept_Add_Update_GST.selected_Record' is never used
-        private int selected_Record;
 #pragma warning restore CS0169 // The field 'frm_MaterialReciept_Add_Update_GST.selected_Record' is never used
 
         DataRow ThisRecord;
@@ -118,7 +111,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                string Query = string.Format("Sp_GetData4MRR_MRI_UPDGST '{0}','{1:yyyy-MM-dd}','" + _MRI + "';", MMDocNo, MMDocDate);
+                string Query = string.Format("Sp_GetData4MRR_MRI_UPDGST '{0}','{1:yyyy-MM-dd}','" + MRI + "';", MMDocNo, MMDocDate);
                 using (DataSet ds = ProjectFunctions.GetDataSet(Query))
                 {
                     if (ds != null)
@@ -209,8 +202,8 @@ namespace WindowsFormsApplication1
             SetMyControls();
             SetMyValidations();
             // TODO: This line of code loads data into the 'tr.V_MrDataPurchase' table. You can move, or remove it, as needed.
-            TextEntryDocType.Text = _MRI;
-            if (_MRI == "SVC")
+            TextEntryDocType.Text = MRI;
+            if (MRI == "SVC")
             {
                 labelControl34.Visible = false;
                 labelControl6.Visible = false;
@@ -255,7 +248,7 @@ namespace WindowsFormsApplication1
             DtEntry.EditValue = (DateTime.Now >= GlobalVariables.FinYearStartDate && DateTime.Now <= GlobalVariables.FinYearEndDate) ? DateTime.Now.Date : GlobalVariables.FinYearEndDate.Date;
             DtDocDate.EditValue = (DateTime.Now >= GlobalVariables.FinYearStartDate && DateTime.Now <= GlobalVariables.FinYearEndDate) ? DateTime.Now.Date : GlobalVariables.FinYearEndDate.Date;
             //FStartDate = new DateTime(2013, 04, 01);
-            Text = _MRI == "SVC" ? "Service Receipt Addition" : "Material Receipt Addition";
+            Text = MRI == "SVC" ? "Service Receipt Addition" : "Material Receipt Addition";
             if (!IsUpdate)
             { EntryInfo_GridCtrl.DataSource = ProjectFunctions.GetDataSet("Select * From V_MrDataPurchase Where 1=2").Tables[0]; }
             if (IsUpdate) { Setting4Updation(); }
@@ -408,7 +401,7 @@ namespace WindowsFormsApplication1
                     if (TextProdCode.Text.Trim().Length == 0)
                     {
                         TextPrdHSNCd.Enabled = false;
-                        if (_MRI == "SVC")
+                        if (MRI == "SVC")
                         {
                             ShowHelpWindow(SQuery);
                         }
@@ -426,7 +419,7 @@ namespace WindowsFormsApplication1
                             //Checking whether Value  is Existing or not!
                             string Pquery = string.Format("SELECT     PrdMst.PrdName AS 'Product Name', PrdMst.PrdCode AS 'Code', PrdMst.PrdAsgnCode AS 'Assigned Code', uOmMst.UomDesc AS 'UOM',PrdMst.PrdRate AS 'Rate', PrdHSNCode FROM         PrdMst LEFT OUTER JOIN uOmMst ON PrdMst.PrdUOM = uOmMst.UomCode  where   [PrdCode]='{0}' And ISNull(PrdHSNItemType,'G')<>'S' ORDER BY PrdMst.PrdName;", int.Parse(TextProdCode.Text.Trim()));
                             string Squery = string.Format("SELECT     PrdMst.PrdName AS 'Product Name', PrdMst.PrdCode AS 'Code', PrdMst.PrdAsgnCode AS 'Assigned Code', uOmMst.UomDesc AS 'UOM',PrdMst.PrdRate AS 'Rate', PrdHSNCode FROM         PrdMst LEFT OUTER JOIN uOmMst ON PrdMst.PrdUOM = uOmMst.UomCode  where   [PrdCode]='{0}' And ISNull(PrdHSNItemType,'G')='S' ORDER BY PrdMst.PrdName;", int.Parse(TextProdCode.Text.Trim()));
-                            DataSet ds = ProjectFunctions.GetDataSet(_MRI == "SVC" ? Squery : Pquery);
+                            DataSet ds = ProjectFunctions.GetDataSet(MRI == "SVC" ? Squery : Pquery);
                             if (ds.Tables[0].Rows.Count > 0)
                             {
                                 TextProdCode.Text = ds.Tables[0].Rows[0]["Code"].ToString();
@@ -446,7 +439,7 @@ namespace WindowsFormsApplication1
                             else
                             {
                                 // Display Help Window
-                                if (_MRI == "SVC")
+                                if (MRI == "SVC")
                                 {
                                     ShowHelpWindow(SQuery);
                                 }
@@ -612,7 +605,7 @@ namespace WindowsFormsApplication1
         private void TextRemarks_KeyDown(object sender, KeyEventArgs e)
         {
 
-            if (((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up) && _MRI == "MRI" && ((TextEdit)sender).Name == "TextInvAmount")
+            if (((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up) && MRI == "MRI" && ((TextEdit)sender).Name == "TextInvAmount")
             {
                 e.SuppressKeyPress = true;
                 SelectNextControl(ActiveControl, false, true, true, true);
@@ -783,11 +776,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void HelpGridCtrl_Leave(object sender, EventArgs e)
-        {
-            HelpGridCtrl_DoubleClick(sender, e);
-        }
-
         private void RestoreFocus()
         {
             switch (CurrentControl)
@@ -836,7 +824,7 @@ namespace WindowsFormsApplication1
             {
                 string s = DtDocDate.DateTime.ToString("dd/MM/yyyy");
                 s = s.Replace('-', '/');
-                string query = string.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMdocType='" + _MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
+                string query = string.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMdocType='" + MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
 
                 using (DataSet ds = ProjectFunctions.GetDataSet(query))
                 {
@@ -1109,7 +1097,7 @@ namespace WindowsFormsApplication1
                 TextProdRate.Focus();
                 return;
             }
-            else if (_MRI == "SVC")
+            else if (MRI == "SVC")
             {
                 using (DataSet Dsx = ProjectFunctions.GetDataSet("Select IsNull(PrdSplTag,'') From PrdMst where PrdCode='" + TextProdCode.Text + "'"))
                 {
@@ -1131,7 +1119,7 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            else if (!IsUpdate && !(TextProdDesc.Text.ToUpper().Contains("FREIGHT") || _MRI == "SVC"))
+            else if (!IsUpdate && !(TextProdDesc.Text.ToUpper().Contains("FREIGHT") || MRI == "SVC"))
             {
                 using (DataSet Dsx = ProjectFunctions.GetDataSet(string.Format("SELECT         [PO Date], PrdCode, PrdName, [Qnty. Ord.], [Qnty. Rcvd.], Party, Rate, PartyCode FROM " + (TextChoiceRCO.Text == "R" ? "V_Pending_PO" : "V_Pending_Indent") + " WHERE        (PrdCode = '{0}') And [PO No]='{1}' And [Sub No.]='{2}'", TextProdCode.Text, TextProdPONO.Text, textEdit1.Text)))
                 {
@@ -1777,26 +1765,9 @@ namespace WindowsFormsApplication1
             finally { DtEntry.Focus(); }
         }
 
-
-
-        private static void ResetControls(Control C)
-        {
-            foreach (Control ctrl in C.Controls)
-            {
-                if (ctrl.GetType() == typeof(TextEdit))
-                {
-                    ctrl.ResetText();
-                }
-            }
-        }
-
         private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void MaterialRecp_TabCtrl_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
         }
 
         private void TextRegNo_Validated(object sender, EventArgs e)
@@ -1805,29 +1776,6 @@ namespace WindowsFormsApplication1
             {
                 TextIsCash.Focus();
             }
-        }
-
-        private void BtnAttach_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Attachments_GridCtrl_DoubleClick(object sender, EventArgs e)
-        {
-        }
-
-        private void Attachments_Grid_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-
-        }
-
-        private void btnAttachDel_Click(object sender, EventArgs e)
-        {
         }
 
         private void Pend_Po_Btn_Click(object sender, EventArgs e)
@@ -1857,7 +1805,7 @@ namespace WindowsFormsApplication1
 
         private void TextProdRate_Enter(object sender, EventArgs e)
         {
-            if (_MRI == "MRI")
+            if (MRI == "MRI")
             {
                 TextProdRate.Properties.Mask.EditMask = "N5";
             }
@@ -1967,7 +1915,7 @@ namespace WindowsFormsApplication1
             {
                 string s = DtDocDate.DateTime.ToString("dd/MM/yyyy");
                 s = s.Replace('-', '/');
-                string query = string.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMDocType='" + _MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
+                string query = string.Format("SELECT [MmRDocNo] FROM [dbo].[MrMst]  where MMDocType='" + MRI + "' And MmFinYear='{4}'  and MmAccCode='{1}'  and MmRDocNo='{3}'  and MmRDocNo<>'{6}'; ", s, TextSuppCode.Text.Trim(), string.Empty, TextDocNumber.Text.Trim(), ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear), TextDocType.Text, !IsUpdate ? "0" : oldtDocNum);
 
                 using (DataSet ds = ProjectFunctions.GetDataSet(query))
                 {
@@ -2033,23 +1981,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void TextProdAmount_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            TextMdPrdTxbAmt.Text = (Convert.ToDecimal(TextProdAmount.Text) + Convert.ToDecimal(TextPrdPackingAmt.Text) + Convert.ToDecimal(TextPrdPlusAmt.Text) + (Convert.ToDecimal(TextPrdSGSTAmt.Text)) + Convert.ToDecimal(TextPrdCGSTAmt.Text) + (Convert.ToDecimal(TextPrdIGSTAmt.Text))).ToString();
-        }
-
-        private void TextProdRate_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            try
-            {
-                if (Convert.ToDecimal(TextProdRate.Text) <= 0)
-                {
-                    e.Cancel = true;
-                }
-            }
-            catch (Exception) { e.Cancel = true; }
-        }
-
         private void TextFrtCode_KeyDown(object sender, KeyEventArgs e)
         {
             if ((Convert.ToDecimal(TextFreightAmt.Text) != 0) && (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab || e.KeyCode == Keys.LButton || e.KeyCode == Keys.LButton || e.KeyCode == Keys.Escape))
@@ -2085,17 +2016,6 @@ namespace WindowsFormsApplication1
             if ((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up)
             {
                 TextFreightAmt.Focus();
-            }
-        }
-
-        private void TextFreightAmt_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            //if (Convert.ToDecimal(TextFreightAmt.Text) < 0)
-            //    e.Cancel = true;
-            if (Convert.ToDecimal(TextFreightAmt.Text) > 0)
-            {
-                e.Cancel = false;
-                TextFrtCode.Focus();
             }
         }
 
@@ -2144,22 +2064,6 @@ namespace WindowsFormsApplication1
             View.EndInit();
         }
 
-        private void TextPlusAmt_Validating_1(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            try
-            {
-                TextMdPrdTxbAmt.Text = (Convert.ToDecimal(TextProdAmount.Text) + Convert.ToDecimal(TextPrdPackingAmt.Text) + Convert.ToDecimal(TextPrdPlusAmt.Text) + (Convert.ToDecimal(TextPrdSGSTAmt.Text)) + Convert.ToDecimal(TextPrdCGSTAmt.Text) + (Convert.ToDecimal(TextPrdIGSTAmt.Text))).ToString();
-            }
-            catch (Exception) { e.Cancel = true; }
-
-
-        }
-
-        private void TextProdTotalAmt_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            //TextProdTotalAmt.Text = (Convert.ToDecimal(TextMdPrdTxbAmt.Text) + Convert.ToDecimal(TextMdPrdTaxAmt.Text) + Convert.ToDecimal(TextPrdSTaxAmt.Text)).ToString();
-        }
-
         private void TextAsPerBill_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             try
@@ -2181,19 +2085,6 @@ namespace WindowsFormsApplication1
                 }
             }
             catch (Exception) { e.Cancel = true; }
-        }
-
-
-
-
-        private void TextInvAmount_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (Convert.ToDecimal(TextInvAmount.Text) != Convert.ToDecimal(TextAsPerBill.Text))
-            {
-                ProjectFunctions.SpeakError("Diff. " + (Convert.ToDecimal(TextInvAmount.Text) - Convert.ToDecimal(TextAsPerBill.Text)));
-                TextFreightAmt.Text = (Convert.ToDecimal(TextFreightAmt.Text) + (Convert.ToDecimal(TextInvAmount.Text) - Convert.ToDecimal(TextAsPerBill.Text))).ToString();
-                TextFreightAmt.Focus();
-            }
         }
 
         private void TextInvAmount_Validating_1(object sender, System.ComponentModel.CancelEventArgs e)
@@ -2265,7 +2156,7 @@ namespace WindowsFormsApplication1
                         TextAcPostDesc.Text = ds.Tables[0].Rows[0]["AC Name"].ToString();
                         TextAcPostingCode.Text = ds.Tables[0].Rows[0]["AC Code"].ToString();
                         BtnOK.Enabled = true;
-                        if (_MRI == "SVC")
+                        if (MRI == "SVC")
                         {
                             CheckService();
 
@@ -2547,11 +2438,6 @@ namespace WindowsFormsApplication1
             {
                 BtnOK.Focus();
             }
-
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
     }

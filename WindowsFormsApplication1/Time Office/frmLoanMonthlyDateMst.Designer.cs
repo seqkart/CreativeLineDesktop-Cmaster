@@ -65,16 +65,19 @@
             // 
             this.gridColumn3.Caption = "MonthYear";
             this.gridColumn3.FieldName = "MonthYear";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
+            this.gridColumn3.Width = 87;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(14, 42);
+            this.labelControl1.Location = new System.Drawing.Point(16, 55);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(26, 13);
+            this.labelControl1.Size = new System.Drawing.Size(30, 17);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "From";
             // 
@@ -87,7 +90,7 @@
             this.btn_Quit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Quit.Image")));
             this.btn_Quit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(35, 22);
+            this.btn_Quit.Size = new System.Drawing.Size(43, 24);
             this.btn_Quit.Text = "&Quit";
             this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
@@ -95,13 +98,14 @@
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_Quit,
             this.btn_Edit,
             this.btn_Add});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(804, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 27);
             this.Menu_ToolStrip.TabIndex = 10;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -114,7 +118,7 @@
             this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
             this.btn_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(32, 22);
+            this.btn_Edit.Size = new System.Drawing.Size(40, 28);
             this.btn_Edit.Text = "&Edit";
             this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
@@ -127,7 +131,7 @@
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(33, 22);
+            this.btn_Add.Size = new System.Drawing.Size(42, 28);
             this.btn_Add.Text = "&Add";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
@@ -137,19 +141,22 @@
             // 
             // txtaid
             // 
-            this.txtaid.Location = new System.Drawing.Point(740, 385);
+            this.txtaid.Location = new System.Drawing.Point(863, 503);
+            this.txtaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtaid.Name = "txtaid";
-            this.txtaid.Size = new System.Drawing.Size(10, 20);
+            this.txtaid.Size = new System.Drawing.Size(12, 24);
             this.txtaid.TabIndex = 4;
             // 
             // LoanGrid
             // 
             this.LoanGrid.Cursor = System.Windows.Forms.Cursors.Default;
             this.LoanGrid.DataSource = this.vRLMstBindingSource2;
-            this.LoanGrid.Location = new System.Drawing.Point(14, 79);
+            this.LoanGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LoanGrid.Location = new System.Drawing.Point(16, 103);
             this.LoanGrid.MainView = this.LoanGridView;
+            this.LoanGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LoanGrid.Name = "LoanGrid";
-            this.LoanGrid.Size = new System.Drawing.Size(736, 326);
+            this.LoanGrid.Size = new System.Drawing.Size(859, 426);
             this.LoanGrid.TabIndex = 3;
             this.LoanGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.LoanGridView});
@@ -167,6 +174,7 @@
             this.gridColumn3,
             this.gridColumn2,
             this.gridColumn5});
+            this.LoanGridView.DetailHeight = 458;
             this.LoanGridView.GridControl = this.LoanGrid;
             this.LoanGridView.Name = "LoanGridView";
             this.LoanGridView.OptionsView.ShowFooter = true;
@@ -177,39 +185,47 @@
             // 
             this.gridColumn1.Caption = "EmpCode";
             this.gridColumn1.FieldName = "EmpCode";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "EmpCode", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "EmpName";
             this.gridColumn6.FieldName = "EmpName";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 1;
+            this.gridColumn6.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "LoanInstlmnt";
             this.gridColumn2.FieldName = "LoanInstlmnt";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "TransID";
             this.gridColumn5.FieldName = "TransID";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
+            this.gridColumn5.Width = 87;
             // 
             // panelControl1
             // 
@@ -218,15 +234,17 @@
             this.panelControl1.Controls.Add(this.LoanGrid);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.Btn_RefreshRateL);
-            this.panelControl1.Location = new System.Drawing.Point(12, 38);
+            this.panelControl1.Location = new System.Drawing.Point(14, 50);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(768, 424);
+            this.panelControl1.Size = new System.Drawing.Size(896, 554);
             this.panelControl1.TabIndex = 11;
             this.panelControl1.Text = "Loan Monthly Data Mst";
             // 
             // DtStartDate
             // 
-            this.DtStartDate.Location = new System.Drawing.Point(55, 38);
+            this.DtStartDate.Location = new System.Drawing.Point(64, 50);
+            this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.EditFormat.FormatString = "MM-yyyy";
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -234,14 +252,15 @@
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DtStartDate.Properties.MaxLength = 6;
-            this.DtStartDate.Size = new System.Drawing.Size(84, 20);
+            this.DtStartDate.Size = new System.Drawing.Size(98, 24);
             this.DtStartDate.TabIndex = 45;
             // 
             // Btn_RefreshRateL
             // 
-            this.Btn_RefreshRateL.Location = new System.Drawing.Point(145, 38);
+            this.Btn_RefreshRateL.Location = new System.Drawing.Point(169, 50);
+            this.Btn_RefreshRateL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshRateL.Name = "Btn_RefreshRateL";
-            this.Btn_RefreshRateL.Size = new System.Drawing.Size(75, 21);
+            this.Btn_RefreshRateL.Size = new System.Drawing.Size(87, 27);
             this.Btn_RefreshRateL.TabIndex = 2;
             this.Btn_RefreshRateL.Text = "Refresh";
             this.Btn_RefreshRateL.Click += new System.EventHandler(this.Btn_RefreshRateL_Click);
@@ -253,13 +272,14 @@
             // 
             // frmLoanMonthlyDateMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 516);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(938, 675);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoanMonthlyDateMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

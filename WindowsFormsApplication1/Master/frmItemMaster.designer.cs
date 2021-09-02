@@ -86,7 +86,7 @@
             // 
             this.Label4.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Label4.Appearance.Options.UseFont = true;
-            this.Label4.Location = new System.Drawing.Point(66, 318);
+            this.Label4.Location = new System.Drawing.Point(66, 316);
             this.Label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(85, 14);
@@ -97,7 +97,7 @@
             // 
             this.Label13.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Label13.Appearance.Options.UseFont = true;
-            this.Label13.Location = new System.Drawing.Point(60, 349);
+            this.Label13.Location = new System.Drawing.Point(60, 350);
             this.Label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label13.Name = "Label13";
             this.Label13.Size = new System.Drawing.Size(91, 14);
@@ -108,7 +108,7 @@
             // 
             this.Label11.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Label11.Appearance.Options.UseFont = true;
-            this.Label11.Location = new System.Drawing.Point(67, 454);
+            this.Label11.Location = new System.Drawing.Point(67, 452);
             this.Label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label11.Name = "Label11";
             this.Label11.Size = new System.Drawing.Size(84, 14);
@@ -119,7 +119,7 @@
             // 
             this.Label6.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Label6.Appearance.Options.UseFont = true;
-            this.Label6.Location = new System.Drawing.Point(44, 390);
+            this.Label6.Location = new System.Drawing.Point(44, 384);
             this.Label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label6.Name = "Label6";
             this.Label6.Size = new System.Drawing.Size(107, 14);
@@ -130,7 +130,7 @@
             // 
             this.Label2.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.Label2.Appearance.Options.UseFont = true;
-            this.Label2.Location = new System.Drawing.Point(46, 424);
+            this.Label2.Location = new System.Drawing.Point(46, 418);
             this.Label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(105, 14);
@@ -185,7 +185,7 @@
             // 
             this.LBITMWIEGHTINFO.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.LBITMWIEGHTINFO.Appearance.Options.UseFont = true;
-            this.LBITMWIEGHTINFO.Location = new System.Drawing.Point(81, 281);
+            this.LBITMWIEGHTINFO.Location = new System.Drawing.Point(81, 282);
             this.LBITMWIEGHTINFO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBITMWIEGHTINFO.Name = "LBITMWIEGHTINFO";
             this.LBITMWIEGHTINFO.Size = new System.Drawing.Size(70, 14);
@@ -289,7 +289,7 @@
             // 
             this.label10.Appearance.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label10.Appearance.Options.UseFont = true;
-            this.label10.Location = new System.Drawing.Point(352, 281);
+            this.label10.Location = new System.Drawing.Point(352, 282);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(19, 14);
@@ -310,7 +310,7 @@
             // txtPurchasePrice
             // 
             this.txtPurchasePrice.EnterMoveNextControl = true;
-            this.txtPurchasePrice.Location = new System.Drawing.Point(162, 314);
+            this.txtPurchasePrice.Location = new System.Drawing.Point(162, 311);
             this.txtPurchasePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPurchasePrice.Name = "txtPurchasePrice";
             this.txtPurchasePrice.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -332,7 +332,7 @@
             // txtMaxLevel
             // 
             this.txtMaxLevel.EnterMoveNextControl = true;
-            this.txtMaxLevel.Location = new System.Drawing.Point(376, 348);
+            this.txtMaxLevel.Location = new System.Drawing.Point(376, 345);
             this.txtMaxLevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaxLevel.Name = "txtMaxLevel";
             this.txtMaxLevel.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -343,7 +343,7 @@
             // txtOpBal
             // 
             this.txtOpBal.EnterMoveNextControl = true;
-            this.txtOpBal.Location = new System.Drawing.Point(162, 382);
+            this.txtOpBal.Location = new System.Drawing.Point(162, 379);
             this.txtOpBal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOpBal.Name = "txtOpBal";
             this.txtOpBal.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -354,7 +354,7 @@
             // txtOPBalDate
             // 
             this.txtOPBalDate.EnterMoveNextControl = true;
-            this.txtOPBalDate.Location = new System.Drawing.Point(376, 382);
+            this.txtOPBalDate.Location = new System.Drawing.Point(376, 379);
             this.txtOPBalDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOPBalDate.Name = "txtOPBalDate";
             this.txtOPBalDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -371,7 +371,7 @@
             // txtTotalIssued
             // 
             this.txtTotalIssued.EnterMoveNextControl = true;
-            this.txtTotalIssued.Location = new System.Drawing.Point(376, 416);
+            this.txtTotalIssued.Location = new System.Drawing.Point(376, 413);
             this.txtTotalIssued.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalIssued.Name = "txtTotalIssued";
             this.txtTotalIssued.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -382,7 +382,7 @@
             // txtTotalReceived
             // 
             this.txtTotalReceived.EnterMoveNextControl = true;
-            this.txtTotalReceived.Location = new System.Drawing.Point(162, 416);
+            this.txtTotalReceived.Location = new System.Drawing.Point(162, 413);
             this.txtTotalReceived.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalReceived.Name = "txtTotalReceived";
             this.txtTotalReceived.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -393,7 +393,7 @@
             // txtCurrentStock
             // 
             this.txtCurrentStock.EnterMoveNextControl = true;
-            this.txtCurrentStock.Location = new System.Drawing.Point(162, 450);
+            this.txtCurrentStock.Location = new System.Drawing.Point(162, 447);
             this.txtCurrentStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCurrentStock.Name = "txtCurrentStock";
             this.txtCurrentStock.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -466,8 +466,8 @@
             // 
             // frmItemMaster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(625, 522);
             this.ControlBox = false;
             this.Controls.Add(this.txtItemCode);

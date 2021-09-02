@@ -76,7 +76,7 @@
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(696, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(644, 27);
             this.Menu_ToolStrip.TabIndex = 16;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -109,7 +109,7 @@
             // txtAmount
             // 
             this.txtAmount.EnterMoveNextControl = true;
-            this.txtAmount.Location = new System.Drawing.Point(124, 255);
+            this.txtAmount.Location = new System.Drawing.Point(92, 187);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.MaxLength = 6;
@@ -120,7 +120,7 @@
             // txtType
             // 
             this.txtType.EnterMoveNextControl = true;
-            this.txtType.Location = new System.Drawing.Point(124, 214);
+            this.txtType.Location = new System.Drawing.Point(92, 146);
             this.txtType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtType.Name = "txtType";
             this.txtType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -132,7 +132,7 @@
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(124, 175);
+            this.txtEmpCode.Location = new System.Drawing.Point(92, 107);
             this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.MaxLength = 6;
@@ -143,7 +143,7 @@
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(89, 220);
+            this.labelControl35.Location = new System.Drawing.Point(57, 152);
             this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(28, 17);
@@ -152,7 +152,7 @@
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(89, 143);
+            this.labelControl33.Location = new System.Drawing.Point(57, 75);
             this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
             this.labelControl33.Size = new System.Drawing.Size(27, 17);
@@ -161,7 +161,7 @@
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(56, 179);
+            this.labelControl34.Location = new System.Drawing.Point(24, 111);
             this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(61, 17);
@@ -170,7 +170,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(69, 260);
+            this.labelControl3.Location = new System.Drawing.Point(37, 192);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(45, 17);
@@ -180,7 +180,7 @@
             // txtEmpCodeDesc
             // 
             this.txtEmpCodeDesc.Enabled = false;
-            this.txtEmpCodeDesc.Location = new System.Drawing.Point(250, 174);
+            this.txtEmpCodeDesc.Location = new System.Drawing.Point(218, 106);
             this.txtEmpCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCodeDesc.Name = "txtEmpCodeDesc";
             this.txtEmpCodeDesc.Properties.MaxLength = 6;
@@ -192,7 +192,7 @@
             // 
             this.DtDate.EditValue = null;
             this.DtDate.EnterMoveNextControl = true;
-            this.DtDate.Location = new System.Drawing.Point(124, 139);
+            this.DtDate.Location = new System.Drawing.Point(92, 71);
             this.DtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDate.Name = "DtDate";
             this.DtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -210,7 +210,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(423, 143);
+            this.labelControl8.Location = new System.Drawing.Point(391, 75);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(90, 17);
@@ -221,7 +221,7 @@
             // 
             this.DtDateforMonth.EditValue = null;
             this.DtDateforMonth.EnterMoveNextControl = true;
-            this.DtDateforMonth.Location = new System.Drawing.Point(516, 139);
+            this.DtDateforMonth.Location = new System.Drawing.Point(484, 71);
             this.DtDateforMonth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDateforMonth.Name = "DtDateforMonth";
             this.DtDateforMonth.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -239,7 +239,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(252, 220);
+            this.labelControl7.Location = new System.Drawing.Point(220, 152);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(174, 17);
@@ -249,11 +249,11 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(243, 37);
+            this.HelpGrid.Location = new System.Drawing.Point(57, 31);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(463, 306);
+            this.HelpGrid.Size = new System.Drawing.Size(463, 212);
             this.HelpGrid.TabIndex = 368;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView,
@@ -300,7 +300,7 @@
             // 
             this.txtAdvanceNo.Enabled = false;
             this.txtAdvanceNo.EnterMoveNextControl = true;
-            this.txtAdvanceNo.Location = new System.Drawing.Point(124, 105);
+            this.txtAdvanceNo.Location = new System.Drawing.Point(92, 37);
             this.txtAdvanceNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAdvanceNo.Name = "txtAdvanceNo";
             this.txtAdvanceNo.Properties.MaxLength = 6;
@@ -310,7 +310,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(45, 110);
+            this.labelControl1.Location = new System.Drawing.Point(13, 42);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(71, 17);
@@ -319,9 +319,9 @@
             // 
             // frmAdvanceAddEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 330);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(644, 257);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtAdvanceNo);

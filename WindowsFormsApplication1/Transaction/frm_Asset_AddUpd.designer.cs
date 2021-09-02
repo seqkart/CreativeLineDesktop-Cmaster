@@ -229,6 +229,7 @@
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave,
@@ -236,7 +237,7 @@
             this.TextAuthenticate});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(898, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1048, 27);
             this.Menu_ToolStrip.TabIndex = 15;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -249,7 +250,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(35, 22);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -262,7 +263,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 22);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -275,7 +276,7 @@
             this.btn_Validate.Image = ((System.Drawing.Image)(resources.GetObject("btn_Validate.Image")));
             this.btn_Validate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Validate.Name = "btn_Validate";
-            this.btn_Validate.Size = new System.Drawing.Size(55, 22);
+            this.btn_Validate.Size = new System.Drawing.Size(69, 24);
             this.btn_Validate.Text = "&Validate";
             this.btn_Validate.Click += new System.EventHandler(this.btn_Validate_Click);
             // 
@@ -285,26 +286,28 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(100, 25);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 27);
             this.TextAuthenticate.Visible = false;
             // 
             // TextDesc
             // 
             this.TextDesc.EnterMoveNextControl = true;
-            this.TextDesc.Location = new System.Drawing.Point(278, 35);
+            this.TextDesc.Location = new System.Drawing.Point(324, 46);
+            this.TextDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDesc.Name = "TextDesc";
             this.TextDesc.Properties.MaxLength = 50;
-            this.TextDesc.Size = new System.Drawing.Size(362, 20);
+            this.TextDesc.Size = new System.Drawing.Size(422, 24);
             this.TextDesc.TabIndex = 1;
             this.TextDesc.Validating += new System.ComponentModel.CancelEventHandler(this.TextAssetNumber_Validating);
             // 
             // TextModel
             // 
             this.TextModel.EnterMoveNextControl = true;
-            this.TextModel.Location = new System.Drawing.Point(123, 210);
+            this.TextModel.Location = new System.Drawing.Point(143, 275);
+            this.TextModel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextModel.Name = "TextModel";
             this.TextModel.Properties.MaxLength = 30;
-            this.TextModel.Size = new System.Drawing.Size(518, 20);
+            this.TextModel.Size = new System.Drawing.Size(604, 24);
             this.TextModel.TabIndex = 15;
             this.TextModel.Enter += new System.EventHandler(this.TextModel_Enter);
             this.TextModel.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
@@ -312,20 +315,22 @@
             // TextBrand
             // 
             this.TextBrand.EnterMoveNextControl = true;
-            this.TextBrand.Location = new System.Drawing.Point(123, 185);
+            this.TextBrand.Location = new System.Drawing.Point(143, 242);
+            this.TextBrand.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBrand.Name = "TextBrand";
             this.TextBrand.Properties.MaxLength = 30;
-            this.TextBrand.Size = new System.Drawing.Size(84, 20);
+            this.TextBrand.Size = new System.Drawing.Size(98, 24);
             this.TextBrand.TabIndex = 12;
             this.TextBrand.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // TextManufacturer
             // 
             this.TextManufacturer.EnterMoveNextControl = true;
-            this.TextManufacturer.Location = new System.Drawing.Point(123, 160);
+            this.TextManufacturer.Location = new System.Drawing.Point(143, 209);
+            this.TextManufacturer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextManufacturer.Name = "TextManufacturer";
             this.TextManufacturer.Properties.MaxLength = 50;
-            this.TextManufacturer.Size = new System.Drawing.Size(518, 20);
+            this.TextManufacturer.Size = new System.Drawing.Size(604, 24);
             this.TextManufacturer.TabIndex = 11;
             this.TextManufacturer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -336,27 +341,30 @@
             this.panelControl1.Controls.Add(this.TextAssetNumber);
             this.panelControl1.Controls.Add(this.radioButton2);
             this.panelControl1.Controls.Add(this.radioButton1);
-            this.panelControl1.Location = new System.Drawing.Point(679, 38);
+            this.panelControl1.Location = new System.Drawing.Point(792, 50);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(203, 192);
+            this.panelControl1.Size = new System.Drawing.Size(237, 251);
             this.panelControl1.TabIndex = 2;
             this.panelControl1.Text = "Asset Number";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(61, 148);
+            this.progressBar1.Location = new System.Drawing.Point(71, 194);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Size = new System.Drawing.Size(117, 30);
             this.progressBar1.TabIndex = 10;
             // 
             // barCodeControl1
             // 
             this.barCodeControl1.AutoModule = true;
-            this.barCodeControl1.Location = new System.Drawing.Point(14, 50);
+            this.barCodeControl1.Location = new System.Drawing.Point(16, 65);
+            this.barCodeControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.barCodeControl1.Name = "barCodeControl1";
-            this.barCodeControl1.Padding = new System.Windows.Forms.Padding(10, 2, 10, 0);
+            this.barCodeControl1.Padding = new System.Windows.Forms.Padding(12, 3, 12, 0);
             this.barCodeControl1.ShowText = false;
-            this.barCodeControl1.Size = new System.Drawing.Size(174, 137);
+            this.barCodeControl1.Size = new System.Drawing.Size(203, 179);
             qrCodeGenerator1.ErrorCorrectionLevel = DevExpress.XtraPrinting.BarCode.QRCodeErrorCorrectionLevel.H;
             qrCodeGenerator1.Version = DevExpress.XtraPrinting.BarCode.QRCodeVersion.Version1;
             this.barCodeControl1.Symbology = qrCodeGenerator1;
@@ -365,10 +373,11 @@
             // TextAssetNumber
             // 
             this.TextAssetNumber.EnterMoveNextControl = true;
-            this.TextAssetNumber.Location = new System.Drawing.Point(14, 25);
+            this.TextAssetNumber.Location = new System.Drawing.Point(16, 33);
+            this.TextAssetNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetNumber.Name = "TextAssetNumber";
             this.TextAssetNumber.Properties.MaxLength = 20;
-            this.TextAssetNumber.Size = new System.Drawing.Size(174, 20);
+            this.TextAssetNumber.Size = new System.Drawing.Size(203, 24);
             this.TextAssetNumber.TabIndex = 0;
             this.TextAssetNumber.Enter += new System.EventHandler(this.TextAssetNumber_Enter);
             this.TextAssetNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAssetNumber_KeyDown);
@@ -379,9 +388,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Checked = true;
             this.radioButton2.Enabled = false;
-            this.radioButton2.Location = new System.Drawing.Point(113, 72);
+            this.radioButton2.Location = new System.Drawing.Point(132, 94);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(64, 17);
+            this.radioButton2.Size = new System.Drawing.Size(76, 23);
             this.radioButton2.TabIndex = 9;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Manual";
@@ -392,9 +402,10 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Enabled = false;
-            this.radioButton1.Location = new System.Drawing.Point(26, 72);
+            this.radioButton1.Location = new System.Drawing.Point(30, 94);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(77, 17);
+            this.radioButton1.Size = new System.Drawing.Size(93, 23);
             this.radioButton1.TabIndex = 8;
             this.radioButton1.Text = "Automatic";
             this.radioButton1.UseVisualStyleBackColor = true;
@@ -402,10 +413,12 @@
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(345, 35);
+            this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(402, 46);
             this.HelpGridCtrl.MainView = this.HelpGrid;
+            this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(363, 240);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(423, 314);
             this.HelpGridCtrl.TabIndex = 17;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -416,6 +429,7 @@
             // 
             // HelpGrid
             // 
+            this.HelpGrid.DetailHeight = 458;
             this.HelpGrid.GridControl = this.HelpGridCtrl;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.OptionsBehavior.AllowIncrementalSearch = true;
@@ -423,50 +437,56 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(92, 214);
+            this.labelControl6.Location = new System.Drawing.Point(107, 280);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(33, 13);
+            this.labelControl6.Size = new System.Drawing.Size(38, 17);
             this.labelControl6.TabIndex = 18;
             this.labelControl6.Text = "Model";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(92, 189);
+            this.labelControl5.Location = new System.Drawing.Point(107, 247);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(30, 13);
+            this.labelControl5.Size = new System.Drawing.Size(34, 17);
             this.labelControl5.TabIndex = 17;
             this.labelControl5.Text = "Brand";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(55, 164);
+            this.labelControl4.Location = new System.Drawing.Point(64, 214);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(70, 13);
+            this.labelControl4.Size = new System.Drawing.Size(78, 17);
             this.labelControl4.TabIndex = 16;
             this.labelControl4.Text = "Manufacturer";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(30, 139);
+            this.labelControl3.Location = new System.Drawing.Point(35, 182);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(96, 13);
+            this.labelControl3.Size = new System.Drawing.Size(109, 17);
             this.labelControl3.TabIndex = 21;
             this.labelControl3.Text = "Purchase Location ";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(219, 39);
+            this.labelControl1.Location = new System.Drawing.Point(255, 51);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(59, 13);
+            this.labelControl1.Size = new System.Drawing.Size(66, 17);
             this.labelControl1.TabIndex = 19;
             this.labelControl1.Text = "Description";
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(11, 248);
+            this.xtraTabControl1.Location = new System.Drawing.Point(13, 324);
+            this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(879, 311);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1025, 407);
             this.xtraTabControl1.TabIndex = 16;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -479,8 +499,9 @@
             // xtraTabPage1
             // 
             this.xtraTabPage1.Controls.Add(this.panelControl5);
+            this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(877, 286);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage1.Text = "General";
             // 
             // panelControl5
@@ -496,93 +517,104 @@
             this.panelControl5.Controls.Add(this.labelControl22);
             this.panelControl5.Controls.Add(this.ComboBoxCondition);
             this.panelControl5.Controls.Add(this.ComboBoxStatus);
-            this.panelControl5.Location = new System.Drawing.Point(3, 3);
+            this.panelControl5.Location = new System.Drawing.Point(3, 4);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl5.Name = "panelControl5";
-            this.panelControl5.Size = new System.Drawing.Size(867, 277);
+            this.panelControl5.Size = new System.Drawing.Size(1011, 362);
             this.panelControl5.TabIndex = 0;
             // 
             // TextOtherNumber
             // 
             this.TextOtherNumber.EnterMoveNextControl = true;
-            this.TextOtherNumber.Location = new System.Drawing.Point(134, 49);
+            this.TextOtherNumber.Location = new System.Drawing.Point(156, 64);
+            this.TextOtherNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextOtherNumber.Name = "TextOtherNumber";
             this.TextOtherNumber.Properties.MaxLength = 50;
-            this.TextOtherNumber.Size = new System.Drawing.Size(373, 20);
+            this.TextOtherNumber.Size = new System.Drawing.Size(435, 24);
             this.TextOtherNumber.TabIndex = 1;
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(42, 53);
+            this.labelControl7.Location = new System.Drawing.Point(64, 67);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(74, 13);
+            this.labelControl7.Size = new System.Drawing.Size(85, 17);
             this.labelControl7.TabIndex = 21;
             this.labelControl7.Text = "Other Number";
             // 
             // AssetImage
             // 
-            this.AssetImage.Location = new System.Drawing.Point(555, 11);
+            this.AssetImage.Location = new System.Drawing.Point(647, 14);
+            this.AssetImage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssetImage.Name = "AssetImage";
             this.AssetImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.AssetImage.Size = new System.Drawing.Size(271, 255);
+            this.AssetImage.Size = new System.Drawing.Size(316, 333);
             this.AssetImage.TabIndex = 5;
             this.AssetImage.ImageChanged += new System.EventHandler(this.AssetImage_ImageChanged);
             // 
             // TextNotes
             // 
-            this.TextNotes.Location = new System.Drawing.Point(134, 145);
+            this.TextNotes.Location = new System.Drawing.Point(156, 190);
+            this.TextNotes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextNotes.MaxLength = 250;
             this.TextNotes.Multiline = true;
             this.TextNotes.Name = "TextNotes";
-            this.TextNotes.Size = new System.Drawing.Size(373, 108);
+            this.TextNotes.Size = new System.Drawing.Size(434, 140);
             this.TextNotes.TabIndex = 4;
             this.TextNotes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // TextSerialNumber
             // 
             this.TextSerialNumber.EnterMoveNextControl = true;
-            this.TextSerialNumber.Location = new System.Drawing.Point(134, 14);
+            this.TextSerialNumber.Location = new System.Drawing.Point(156, 18);
+            this.TextSerialNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextSerialNumber.Name = "TextSerialNumber";
             this.TextSerialNumber.Properties.MaxLength = 50;
-            this.TextSerialNumber.Size = new System.Drawing.Size(373, 20);
+            this.TextSerialNumber.Size = new System.Drawing.Size(435, 24);
             this.TextSerialNumber.TabIndex = 0;
             this.TextSerialNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(42, 145);
+            this.labelControl23.Location = new System.Drawing.Point(114, 188);
+            this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(30, 13);
+            this.labelControl23.Size = new System.Drawing.Size(35, 17);
             this.labelControl23.TabIndex = 8;
             this.labelControl23.Text = "Notes";
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(308, 88);
+            this.labelControl20.Location = new System.Drawing.Point(387, 113);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(52, 13);
+            this.labelControl20.Size = new System.Drawing.Size(56, 17);
             this.labelControl20.TabIndex = 7;
             this.labelControl20.Text = "Condition";
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(42, 88);
+            this.labelControl21.Location = new System.Drawing.Point(114, 113);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(32, 13);
+            this.labelControl21.Size = new System.Drawing.Size(35, 17);
             this.labelControl21.TabIndex = 5;
             this.labelControl21.Text = "Status";
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(42, 18);
+            this.labelControl22.Location = new System.Drawing.Point(65, 22);
+            this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(72, 13);
+            this.labelControl22.Size = new System.Drawing.Size(84, 17);
             this.labelControl22.TabIndex = 6;
             this.labelControl22.Text = "Serial Number";
             // 
             // ComboBoxCondition
             // 
             this.ComboBoxCondition.EnterMoveNextControl = true;
-            this.ComboBoxCondition.Location = new System.Drawing.Point(384, 84);
+            this.ComboBoxCondition.Location = new System.Drawing.Point(448, 110);
+            this.ComboBoxCondition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ComboBoxCondition.Name = "ComboBoxCondition";
             this.ComboBoxCondition.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -590,7 +622,7 @@
             "NEW",
             "OLD"});
             this.ComboBoxCondition.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.ComboBoxCondition.Size = new System.Drawing.Size(123, 20);
+            this.ComboBoxCondition.Size = new System.Drawing.Size(143, 24);
             this.ComboBoxCondition.TabIndex = 3;
             this.ComboBoxCondition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -598,7 +630,8 @@
             // 
             this.ComboBoxStatus.EditValue = "";
             this.ComboBoxStatus.EnterMoveNextControl = true;
-            this.ComboBoxStatus.Location = new System.Drawing.Point(134, 84);
+            this.ComboBoxStatus.Location = new System.Drawing.Point(156, 110);
+            this.ComboBoxStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ComboBoxStatus.Name = "ComboBoxStatus";
             this.ComboBoxStatus.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -606,15 +639,16 @@
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("Act", "Active"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("NAct", "Non- Active"),
             new DevExpress.XtraEditors.Controls.CheckedListBoxItem("UN", "Un-Known")});
-            this.ComboBoxStatus.Size = new System.Drawing.Size(123, 20);
+            this.ComboBoxStatus.Size = new System.Drawing.Size(143, 24);
             this.ComboBoxStatus.TabIndex = 2;
             this.ComboBoxStatus.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.panelControl4);
+            this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(877, 286);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage2.Text = "Finance";
             // 
             // panelControl4
@@ -660,16 +694,18 @@
             this.panelControl4.Controls.Add(this.DtWarrantyExpires);
             this.panelControl4.Controls.Add(this.DtEMI);
             this.panelControl4.Controls.Add(this.DtPoDate);
-            this.panelControl4.Location = new System.Drawing.Point(3, 3);
+            this.panelControl4.Location = new System.Drawing.Point(3, 4);
+            this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(867, 277);
+            this.panelControl4.Size = new System.Drawing.Size(1011, 362);
             this.panelControl4.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(15, 186);
+            this.label1.Location = new System.Drawing.Point(17, 243);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(670, 13);
+            this.label1.Size = new System.Drawing.Size(671, 17);
             this.label1.TabIndex = 30;
             this.label1.Text = "_________________________________________________________________________________" +
     "_____________________________________________________";
@@ -678,7 +714,8 @@
             // 
             this.TextScrapValue.EditValue = "0";
             this.TextScrapValue.EnterMoveNextControl = true;
-            this.TextScrapValue.Location = new System.Drawing.Point(719, 126);
+            this.TextScrapValue.Location = new System.Drawing.Point(839, 165);
+            this.TextScrapValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextScrapValue.Name = "TextScrapValue";
             this.TextScrapValue.Properties.DisplayFormat.FormatString = "N2";
             this.TextScrapValue.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -689,7 +726,7 @@
             this.TextScrapValue.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextScrapValue.Properties.NullText = "0.00";
             this.TextScrapValue.Properties.NullValuePrompt = "0.00";
-            this.TextScrapValue.Size = new System.Drawing.Size(103, 20);
+            this.TextScrapValue.Size = new System.Drawing.Size(120, 24);
             this.TextScrapValue.TabIndex = 40;
             this.TextScrapValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -697,7 +734,8 @@
             // 
             this.TextEMI.EditValue = "0";
             this.TextEMI.EnterMoveNextControl = true;
-            this.TextEMI.Location = new System.Drawing.Point(493, 126);
+            this.TextEMI.Location = new System.Drawing.Point(575, 165);
+            this.TextEMI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextEMI.Name = "TextEMI";
             this.TextEMI.Properties.EditFormat.FormatString = "N2";
             this.TextEMI.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -708,7 +746,7 @@
             this.TextEMI.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextEMI.Properties.NullText = "0.00";
             this.TextEMI.Properties.NullValuePrompt = "0.00";
-            this.TextEMI.Size = new System.Drawing.Size(103, 20);
+            this.TextEMI.Size = new System.Drawing.Size(120, 24);
             this.TextEMI.TabIndex = 33;
             this.TextEMI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -716,7 +754,8 @@
             // 
             this.TextNoofEMI.EditValue = "0";
             this.TextNoofEMI.EnterMoveNextControl = true;
-            this.TextNoofEMI.Location = new System.Drawing.Point(329, 153);
+            this.TextNoofEMI.Location = new System.Drawing.Point(384, 200);
+            this.TextNoofEMI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextNoofEMI.Name = "TextNoofEMI";
             this.TextNoofEMI.Properties.EditFormat.FormatString = "N2";
             this.TextNoofEMI.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -727,7 +766,7 @@
             this.TextNoofEMI.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextNoofEMI.Properties.NullText = "0.00";
             this.TextNoofEMI.Properties.NullValuePrompt = "0.00";
-            this.TextNoofEMI.Size = new System.Drawing.Size(102, 20);
+            this.TextNoofEMI.Size = new System.Drawing.Size(119, 24);
             this.TextNoofEMI.TabIndex = 35;
             this.TextNoofEMI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -735,7 +774,8 @@
             // 
             this.TextDownPymt.EditValue = "0";
             this.TextDownPymt.EnterMoveNextControl = true;
-            this.TextDownPymt.Location = new System.Drawing.Point(329, 126);
+            this.TextDownPymt.Location = new System.Drawing.Point(384, 165);
+            this.TextDownPymt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDownPymt.Name = "TextDownPymt";
             this.TextDownPymt.Properties.EditFormat.FormatString = "N2";
             this.TextDownPymt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -746,7 +786,7 @@
             this.TextDownPymt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextDownPymt.Properties.NullText = "0.00";
             this.TextDownPymt.Properties.NullValuePrompt = "0.00";
-            this.TextDownPymt.Size = new System.Drawing.Size(102, 20);
+            this.TextDownPymt.Size = new System.Drawing.Size(119, 24);
             this.TextDownPymt.TabIndex = 32;
             this.TextDownPymt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -754,7 +794,8 @@
             // 
             this.TextLoanAmt.EditValue = "0";
             this.TextLoanAmt.EnterMoveNextControl = true;
-            this.TextLoanAmt.Location = new System.Drawing.Point(112, 126);
+            this.TextLoanAmt.Location = new System.Drawing.Point(131, 165);
+            this.TextLoanAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextLoanAmt.Name = "TextLoanAmt";
             this.TextLoanAmt.Properties.EditFormat.FormatString = "N2";
             this.TextLoanAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -765,7 +806,7 @@
             this.TextLoanAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextLoanAmt.Properties.NullText = "0.00";
             this.TextLoanAmt.Properties.NullValuePrompt = "0.00";
-            this.TextLoanAmt.Size = new System.Drawing.Size(103, 20);
+            this.TextLoanAmt.Size = new System.Drawing.Size(120, 24);
             this.TextLoanAmt.TabIndex = 31;
             this.TextLoanAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -773,7 +814,8 @@
             // 
             this.TextCurrentValue.EditValue = "0";
             this.TextCurrentValue.EnterMoveNextControl = true;
-            this.TextCurrentValue.Location = new System.Drawing.Point(719, 100);
+            this.TextCurrentValue.Location = new System.Drawing.Point(839, 131);
+            this.TextCurrentValue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCurrentValue.Name = "TextCurrentValue";
             this.TextCurrentValue.Properties.EditFormat.FormatString = "N2";
             this.TextCurrentValue.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -784,7 +826,7 @@
             this.TextCurrentValue.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextCurrentValue.Properties.NullText = "0.00";
             this.TextCurrentValue.Properties.NullValuePrompt = "0.00";
-            this.TextCurrentValue.Size = new System.Drawing.Size(103, 20);
+            this.TextCurrentValue.Size = new System.Drawing.Size(120, 24);
             this.TextCurrentValue.TabIndex = 39;
             this.TextCurrentValue.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -792,7 +834,8 @@
             // 
             this.TextAssPriIncAllTaxes.EditValue = "0";
             this.TextAssPriIncAllTaxes.EnterMoveNextControl = true;
-            this.TextAssPriIncAllTaxes.Location = new System.Drawing.Point(719, 207);
+            this.TextAssPriIncAllTaxes.Location = new System.Drawing.Point(839, 271);
+            this.TextAssPriIncAllTaxes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssPriIncAllTaxes.Name = "TextAssPriIncAllTaxes";
             this.TextAssPriIncAllTaxes.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.TextAssPriIncAllTaxes.Properties.Appearance.Options.UseFont = true;
@@ -805,7 +848,7 @@
             this.TextAssPriIncAllTaxes.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextAssPriIncAllTaxes.Properties.NullText = "0.00";
             this.TextAssPriIncAllTaxes.Properties.NullValuePrompt = "0.00";
-            this.TextAssPriIncAllTaxes.Size = new System.Drawing.Size(103, 22);
+            this.TextAssPriIncAllTaxes.Size = new System.Drawing.Size(120, 26);
             this.TextAssPriIncAllTaxes.TabIndex = 42;
             this.TextAssPriIncAllTaxes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -813,7 +856,8 @@
             // 
             this.TextPurchasePrice.EditValue = "0";
             this.TextPurchasePrice.EnterMoveNextControl = true;
-            this.TextPurchasePrice.Location = new System.Drawing.Point(719, 74);
+            this.TextPurchasePrice.Location = new System.Drawing.Point(839, 97);
+            this.TextPurchasePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextPurchasePrice.Name = "TextPurchasePrice";
             this.TextPurchasePrice.Properties.DisplayFormat.FormatString = "N2";
             this.TextPurchasePrice.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
@@ -824,7 +868,7 @@
             this.TextPurchasePrice.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPurchasePrice.Properties.NullText = "0.00";
             this.TextPurchasePrice.Properties.NullValuePrompt = "0.00";
-            this.TextPurchasePrice.Size = new System.Drawing.Size(103, 20);
+            this.TextPurchasePrice.Size = new System.Drawing.Size(120, 24);
             this.TextPurchasePrice.TabIndex = 38;
             this.TextPurchasePrice.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -832,19 +876,21 @@
             // 
             this.TextFinByDesc.Enabled = false;
             this.TextFinByDesc.EnterMoveNextControl = true;
-            this.TextFinByDesc.Location = new System.Drawing.Point(244, 100);
+            this.TextFinByDesc.Location = new System.Drawing.Point(285, 131);
+            this.TextFinByDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextFinByDesc.Name = "TextFinByDesc";
-            this.TextFinByDesc.Size = new System.Drawing.Size(352, 20);
+            this.TextFinByDesc.Size = new System.Drawing.Size(411, 24);
             this.TextFinByDesc.TabIndex = 30;
             this.TextFinByDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // TextFinanceBy
             // 
             this.TextFinanceBy.EnterMoveNextControl = true;
-            this.TextFinanceBy.Location = new System.Drawing.Point(112, 100);
+            this.TextFinanceBy.Location = new System.Drawing.Point(131, 131);
+            this.TextFinanceBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextFinanceBy.Name = "TextFinanceBy";
             this.TextFinanceBy.Properties.MaxLength = 6;
-            this.TextFinanceBy.Size = new System.Drawing.Size(103, 20);
+            this.TextFinanceBy.Size = new System.Drawing.Size(120, 24);
             this.TextFinanceBy.TabIndex = 29;
             this.TextFinanceBy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextFinanceBy_KeyDown);
             // 
@@ -852,39 +898,43 @@
             // 
             this.TextSupplierDesc.Enabled = false;
             this.TextSupplierDesc.EnterMoveNextControl = true;
-            this.TextSupplierDesc.Location = new System.Drawing.Point(244, 74);
+            this.TextSupplierDesc.Location = new System.Drawing.Point(285, 97);
+            this.TextSupplierDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextSupplierDesc.Name = "TextSupplierDesc";
-            this.TextSupplierDesc.Size = new System.Drawing.Size(352, 20);
+            this.TextSupplierDesc.Size = new System.Drawing.Size(411, 24);
             this.TextSupplierDesc.TabIndex = 28;
             this.TextSupplierDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // TextSupplier
             // 
             this.TextSupplier.EnterMoveNextControl = true;
-            this.TextSupplier.Location = new System.Drawing.Point(112, 74);
+            this.TextSupplier.Location = new System.Drawing.Point(131, 97);
+            this.TextSupplier.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextSupplier.Name = "TextSupplier";
             this.TextSupplier.Properties.MaxLength = 6;
-            this.TextSupplier.Size = new System.Drawing.Size(103, 20);
+            this.TextSupplier.Size = new System.Drawing.Size(120, 24);
             this.TextSupplier.TabIndex = 27;
             this.TextSupplier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextSupplier_KeyDown);
             // 
             // TextBillNo
             // 
             this.TextBillNo.EnterMoveNextControl = true;
-            this.TextBillNo.Location = new System.Drawing.Point(493, 46);
+            this.TextBillNo.Location = new System.Drawing.Point(575, 60);
+            this.TextBillNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBillNo.Name = "TextBillNo";
             this.TextBillNo.Properties.MaxLength = 20;
-            this.TextBillNo.Size = new System.Drawing.Size(103, 20);
+            this.TextBillNo.Size = new System.Drawing.Size(120, 24);
             this.TextBillNo.TabIndex = 26;
             this.TextBillNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // TextPONumber
             // 
             this.TextPONumber.EnterMoveNextControl = true;
-            this.TextPONumber.Location = new System.Drawing.Point(112, 46);
+            this.TextPONumber.Location = new System.Drawing.Point(131, 60);
+            this.TextPONumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextPONumber.Name = "TextPONumber";
             this.TextPONumber.Properties.MaxLength = 10;
-            this.TextPONumber.Size = new System.Drawing.Size(103, 20);
+            this.TextPONumber.Size = new System.Drawing.Size(120, 24);
             this.TextPONumber.TabIndex = 24;
             this.TextPONumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -892,66 +942,74 @@
             // 
             this.TextAcCodeDesc.Enabled = false;
             this.TextAcCodeDesc.EnterMoveNextControl = true;
-            this.TextAcCodeDesc.Location = new System.Drawing.Point(244, 19);
+            this.TextAcCodeDesc.Location = new System.Drawing.Point(285, 25);
+            this.TextAcCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAcCodeDesc.Name = "TextAcCodeDesc";
-            this.TextAcCodeDesc.Size = new System.Drawing.Size(352, 20);
+            this.TextAcCodeDesc.Size = new System.Drawing.Size(411, 24);
             this.TextAcCodeDesc.TabIndex = 23;
             // 
             // labelControl29
             // 
-            this.labelControl29.Location = new System.Drawing.Point(455, 130);
+            this.labelControl29.Location = new System.Drawing.Point(531, 170);
+            this.labelControl29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(19, 13);
+            this.labelControl29.Size = new System.Drawing.Size(22, 17);
             this.labelControl29.TabIndex = 0;
             this.labelControl29.Text = "EMI";
             // 
             // labelControl31
             // 
-            this.labelControl31.Location = new System.Drawing.Point(244, 157);
+            this.labelControl31.Location = new System.Drawing.Point(285, 205);
+            this.labelControl31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(60, 13);
+            this.labelControl31.Size = new System.Drawing.Size(70, 17);
             this.labelControl31.TabIndex = 0;
             this.labelControl31.Text = "No. of EMIS";
             // 
             // TextAcCode
             // 
             this.TextAcCode.EnterMoveNextControl = true;
-            this.TextAcCode.Location = new System.Drawing.Point(112, 19);
+            this.TextAcCode.Location = new System.Drawing.Point(131, 25);
+            this.TextAcCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAcCode.Name = "TextAcCode";
             this.TextAcCode.Properties.MaxLength = 6;
-            this.TextAcCode.Size = new System.Drawing.Size(103, 20);
+            this.TextAcCode.Size = new System.Drawing.Size(120, 24);
             this.TextAcCode.TabIndex = 22;
             this.TextAcCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAcCode_KeyDown);
             // 
             // labelControl28
             // 
-            this.labelControl28.Location = new System.Drawing.Point(244, 130);
+            this.labelControl28.Location = new System.Drawing.Point(285, 170);
+            this.labelControl28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(77, 13);
+            this.labelControl28.Size = new System.Drawing.Size(86, 17);
             this.labelControl28.TabIndex = 0;
             this.labelControl28.Text = "Down Payment";
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(625, 157);
+            this.labelControl17.Location = new System.Drawing.Point(735, 205);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(86, 13);
+            this.labelControl17.Size = new System.Drawing.Size(99, 17);
             this.labelControl17.TabIndex = 0;
             this.labelControl17.Text = "Warranty Expires";
             // 
             // labelControl27
             // 
-            this.labelControl27.Location = new System.Drawing.Point(18, 130);
+            this.labelControl27.Location = new System.Drawing.Point(47, 170);
+            this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(69, 13);
+            this.labelControl27.Size = new System.Drawing.Size(77, 17);
             this.labelControl27.TabIndex = 0;
             this.labelControl27.Text = "Loan Amount";
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(625, 130);
+            this.labelControl16.Location = new System.Drawing.Point(765, 170);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(60, 13);
+            this.labelControl16.Size = new System.Drawing.Size(69, 17);
             this.labelControl16.TabIndex = 0;
             this.labelControl16.Text = "Scrap Value";
             // 
@@ -959,9 +1017,10 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(546, 210);
+            this.labelControl2.Location = new System.Drawing.Point(637, 275);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(163, 16);
+            this.labelControl2.Size = new System.Drawing.Size(207, 19);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Asset Price Inc. All Taxes";
             // 
@@ -969,18 +1028,20 @@
             // 
             this.panelControl2.Controls.Add(this.rdbNo);
             this.panelControl2.Controls.Add(this.rdbYes);
-            this.panelControl2.Location = new System.Drawing.Point(18, 204);
+            this.panelControl2.Location = new System.Drawing.Point(21, 267);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(203, 68);
+            this.panelControl2.Size = new System.Drawing.Size(237, 89);
             this.panelControl2.TabIndex = 22;
             this.panelControl2.Text = "Financed";
             // 
             // rdbNo
             // 
             this.rdbNo.AutoSize = true;
-            this.rdbNo.Location = new System.Drawing.Point(101, 36);
+            this.rdbNo.Location = new System.Drawing.Point(118, 47);
+            this.rdbNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbNo.Name = "rdbNo";
-            this.rdbNo.Size = new System.Drawing.Size(40, 17);
+            this.rdbNo.Size = new System.Drawing.Size(48, 23);
             this.rdbNo.TabIndex = 9;
             this.rdbNo.Text = "No";
             this.rdbNo.UseVisualStyleBackColor = true;
@@ -991,9 +1052,10 @@
             // 
             this.rdbYes.AutoSize = true;
             this.rdbYes.Checked = true;
-            this.rdbYes.Location = new System.Drawing.Point(14, 36);
+            this.rdbYes.Location = new System.Drawing.Point(16, 47);
+            this.rdbYes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rdbYes.Name = "rdbYes";
-            this.rdbYes.Size = new System.Drawing.Size(40, 17);
+            this.rdbYes.Size = new System.Drawing.Size(50, 23);
             this.rdbYes.TabIndex = 8;
             this.rdbYes.TabStop = true;
             this.rdbYes.Text = "Yes";
@@ -1003,89 +1065,100 @@
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(625, 104);
+            this.labelControl15.Location = new System.Drawing.Point(755, 136);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(71, 13);
+            this.labelControl15.Size = new System.Drawing.Size(79, 17);
             this.labelControl15.TabIndex = 0;
             this.labelControl15.Text = "Current Value";
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(625, 78);
+            this.labelControl14.Location = new System.Drawing.Point(750, 102);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(73, 13);
+            this.labelControl14.Size = new System.Drawing.Size(84, 17);
             this.labelControl14.TabIndex = 0;
             this.labelControl14.Text = "Purchase Price";
             // 
             // labelControl13
             // 
-            this.labelControl13.Location = new System.Drawing.Point(625, 50);
+            this.labelControl13.Location = new System.Drawing.Point(779, 65);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(48, 13);
+            this.labelControl13.Size = new System.Drawing.Size(55, 17);
             this.labelControl13.TabIndex = 0;
             this.labelControl13.Text = "In Service";
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(18, 104);
+            this.labelControl26.Location = new System.Drawing.Point(64, 136);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(54, 13);
+            this.labelControl26.Size = new System.Drawing.Size(60, 17);
             this.labelControl26.TabIndex = 0;
             this.labelControl26.Text = "Finance By";
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(625, 23);
+            this.labelControl12.Location = new System.Drawing.Point(751, 30);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(73, 13);
+            this.labelControl12.Size = new System.Drawing.Size(83, 17);
             this.labelControl12.TabIndex = 0;
             this.labelControl12.Text = "Purchase Date";
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(18, 78);
+            this.labelControl24.Location = new System.Drawing.Point(76, 102);
+            this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(43, 13);
+            this.labelControl24.Size = new System.Drawing.Size(48, 17);
             this.labelControl24.TabIndex = 0;
             this.labelControl24.Text = "Supplier";
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(455, 50);
+            this.labelControl11.Location = new System.Drawing.Point(531, 65);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(36, 13);
+            this.labelControl11.Size = new System.Drawing.Size(41, 17);
             this.labelControl11.TabIndex = 0;
             this.labelControl11.Text = "Bill No.";
             // 
             // labelControl30
             // 
-            this.labelControl30.Location = new System.Drawing.Point(18, 157);
+            this.labelControl30.Location = new System.Drawing.Point(71, 205);
+            this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(46, 13);
+            this.labelControl30.Size = new System.Drawing.Size(53, 17);
             this.labelControl30.TabIndex = 0;
             this.labelControl30.Text = "EMI Date";
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(244, 50);
+            this.labelControl25.Location = new System.Drawing.Point(285, 65);
+            this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(42, 13);
+            this.labelControl25.Size = new System.Drawing.Size(48, 17);
             this.labelControl25.TabIndex = 0;
             this.labelControl25.Text = "PO Date";
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(18, 50);
+            this.labelControl10.Location = new System.Drawing.Point(55, 65);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(59, 13);
+            this.labelControl10.Size = new System.Drawing.Size(69, 17);
             this.labelControl10.TabIndex = 0;
             this.labelControl10.Text = "PO Number";
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(18, 23);
+            this.labelControl9.Location = new System.Drawing.Point(43, 30);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(72, 13);
+            this.labelControl9.Size = new System.Drawing.Size(81, 17);
             this.labelControl9.TabIndex = 0;
             this.labelControl9.Text = "Account Code";
             // 
@@ -1093,7 +1166,8 @@
             // 
             this.DtPurchased.EditValue = null;
             this.DtPurchased.EnterMoveNextControl = true;
-            this.DtPurchased.Location = new System.Drawing.Point(719, 19);
+            this.DtPurchased.Location = new System.Drawing.Point(839, 25);
+            this.DtPurchased.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtPurchased.Name = "DtPurchased";
             this.DtPurchased.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1101,7 +1175,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtPurchased.Properties.Mask.EditMask = "";
             this.DtPurchased.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtPurchased.Size = new System.Drawing.Size(103, 20);
+            this.DtPurchased.Size = new System.Drawing.Size(120, 24);
             this.DtPurchased.TabIndex = 36;
             this.DtPurchased.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -1109,7 +1183,8 @@
             // 
             this.DtInService.EditValue = null;
             this.DtInService.EnterMoveNextControl = true;
-            this.DtInService.Location = new System.Drawing.Point(719, 46);
+            this.DtInService.Location = new System.Drawing.Point(839, 60);
+            this.DtInService.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtInService.Name = "DtInService";
             this.DtInService.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1117,7 +1192,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtInService.Properties.Mask.EditMask = "";
             this.DtInService.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtInService.Size = new System.Drawing.Size(103, 20);
+            this.DtInService.Size = new System.Drawing.Size(120, 24);
             this.DtInService.TabIndex = 37;
             this.DtInService.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -1125,7 +1200,8 @@
             // 
             this.DtWarrantyExpires.EditValue = null;
             this.DtWarrantyExpires.EnterMoveNextControl = true;
-            this.DtWarrantyExpires.Location = new System.Drawing.Point(719, 153);
+            this.DtWarrantyExpires.Location = new System.Drawing.Point(839, 200);
+            this.DtWarrantyExpires.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtWarrantyExpires.Name = "DtWarrantyExpires";
             this.DtWarrantyExpires.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1133,7 +1209,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtWarrantyExpires.Properties.Mask.EditMask = "";
             this.DtWarrantyExpires.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtWarrantyExpires.Size = new System.Drawing.Size(103, 20);
+            this.DtWarrantyExpires.Size = new System.Drawing.Size(120, 24);
             this.DtWarrantyExpires.TabIndex = 41;
             this.DtWarrantyExpires.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -1141,7 +1217,8 @@
             // 
             this.DtEMI.EditValue = null;
             this.DtEMI.EnterMoveNextControl = true;
-            this.DtEMI.Location = new System.Drawing.Point(112, 153);
+            this.DtEMI.Location = new System.Drawing.Point(131, 200);
+            this.DtEMI.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEMI.Name = "DtEMI";
             this.DtEMI.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1149,7 +1226,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtEMI.Properties.Mask.BeepOnError = true;
             this.DtEMI.Properties.Mask.EditMask = "m";
-            this.DtEMI.Size = new System.Drawing.Size(102, 20);
+            this.DtEMI.Size = new System.Drawing.Size(119, 24);
             this.DtEMI.TabIndex = 34;
             this.DtEMI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
@@ -1157,7 +1234,8 @@
             // 
             this.DtPoDate.EditValue = null;
             this.DtPoDate.EnterMoveNextControl = true;
-            this.DtPoDate.Location = new System.Drawing.Point(329, 46);
+            this.DtPoDate.Location = new System.Drawing.Point(384, 60);
+            this.DtPoDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtPoDate.Name = "DtPoDate";
             this.DtPoDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1165,31 +1243,35 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtPoDate.Properties.Mask.EditMask = "";
             this.DtPoDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtPoDate.Size = new System.Drawing.Size(102, 20);
+            this.DtPoDate.Size = new System.Drawing.Size(119, 24);
             this.DtPoDate.TabIndex = 25;
             this.DtPoDate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextManufacturer_KeyDown);
             // 
             // xtraTabPage3
             // 
+            this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(877, 286);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage3.Text = "Service";
             // 
             // xtraTabPage5
             // 
             this.xtraTabPage5.Controls.Add(this.Attachments_GridCtrl);
             this.xtraTabPage5.Controls.Add(this.AttachmentToolStrip);
+            this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(877, 286);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage5.Text = "Attachments";
             // 
             // Attachments_GridCtrl
             // 
             this.Attachments_GridCtrl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Attachments_GridCtrl.Location = new System.Drawing.Point(0, 25);
+            this.Attachments_GridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Attachments_GridCtrl.Location = new System.Drawing.Point(0, 27);
             this.Attachments_GridCtrl.MainView = this.Attachments_Grid;
+            this.Attachments_GridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Attachments_GridCtrl.Name = "Attachments_GridCtrl";
-            this.Attachments_GridCtrl.Size = new System.Drawing.Size(877, 261);
+            this.Attachments_GridCtrl.Size = new System.Drawing.Size(1023, 345);
             this.Attachments_GridCtrl.TabIndex = 9;
             this.Attachments_GridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.Attachments_Grid});
@@ -1197,6 +1279,7 @@
             // 
             // Attachments_Grid
             // 
+            this.Attachments_Grid.DetailHeight = 458;
             this.Attachments_Grid.GridControl = this.Attachments_GridCtrl;
             this.Attachments_Grid.Name = "Attachments_Grid";
             this.Attachments_Grid.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.Attachments_Grid_FocusedRowChanged);
@@ -1207,6 +1290,7 @@
             this.AttachmentToolStrip.CanOverflow = false;
             this.AttachmentToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AttachmentToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.AttachmentToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.AttachmentToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnAttach,
             this.btnOpen,
@@ -1214,7 +1298,7 @@
             this.AttachmentToolStrip.Location = new System.Drawing.Point(0, 0);
             this.AttachmentToolStrip.Name = "AttachmentToolStrip";
             this.AttachmentToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.AttachmentToolStrip.Size = new System.Drawing.Size(877, 25);
+            this.AttachmentToolStrip.Size = new System.Drawing.Size(1023, 27);
             this.AttachmentToolStrip.TabIndex = 8;
             this.AttachmentToolStrip.Text = "Options";
             // 
@@ -1225,7 +1309,7 @@
             this.btnAttach.Image = ((System.Drawing.Image)(resources.GetObject("btnAttach.Image")));
             this.btnAttach.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAttach.Name = "btnAttach";
-            this.btnAttach.Size = new System.Drawing.Size(48, 22);
+            this.btnAttach.Size = new System.Drawing.Size(60, 24);
             this.btnAttach.Text = "Attach";
             this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
             // 
@@ -1236,7 +1320,7 @@
             this.btnOpen.Image = ((System.Drawing.Image)(resources.GetObject("btnOpen.Image")));
             this.btnOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(41, 22);
+            this.btnOpen.Size = new System.Drawing.Size(50, 24);
             this.btnOpen.Text = "Open";
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
@@ -1247,7 +1331,7 @@
             this.btnAttachDel.Image = ((System.Drawing.Image)(resources.GetObject("btnAttachDel.Image")));
             this.btnAttachDel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnAttachDel.Name = "btnAttachDel";
-            this.btnAttachDel.Size = new System.Drawing.Size(49, 22);
+            this.btnAttachDel.Size = new System.Drawing.Size(58, 24);
             this.btnAttachDel.Text = "Delete";
             this.btnAttachDel.Click += new System.EventHandler(this.btnAttachDel_Click);
             // 
@@ -1262,16 +1346,19 @@
             this.xtraTabPage6.Controls.Add(this.DtCheckedODate);
             this.xtraTabPage6.Controls.Add(this.TextCheckedOutTo);
             this.xtraTabPage6.Controls.Add(this.labelControl8);
+            this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(877, 286);
+            this.xtraTabPage6.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage6.Text = "History";
             // 
             // HistoryGridControl
             // 
-            this.HistoryGridControl.Location = new System.Drawing.Point(22, 76);
+            this.HistoryGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HistoryGridControl.Location = new System.Drawing.Point(26, 99);
             this.HistoryGridControl.MainView = this.HistoryGridView;
+            this.HistoryGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HistoryGridControl.Name = "HistoryGridControl";
-            this.HistoryGridControl.Size = new System.Drawing.Size(833, 191);
+            this.HistoryGridControl.Size = new System.Drawing.Size(972, 250);
             this.HistoryGridControl.TabIndex = 25;
             this.HistoryGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HistoryGridView});
@@ -1283,6 +1370,7 @@
             this.Location,
             this.MovedDate,
             this.MovedforPerson});
+            this.HistoryGridView.DetailHeight = 458;
             this.HistoryGridView.GridControl = this.HistoryGridControl;
             this.HistoryGridView.Name = "HistoryGridView";
             // 
@@ -1290,34 +1378,41 @@
             // 
             this.Location.Caption = "Location";
             this.Location.FieldName = "Cityname";
+            this.Location.MinWidth = 23;
             this.Location.Name = "Location";
             this.Location.OptionsColumn.AllowEdit = false;
             this.Location.Visible = true;
             this.Location.VisibleIndex = 2;
+            this.Location.Width = 87;
             // 
             // MovedDate
             // 
             this.MovedDate.Caption = "MovedDate";
             this.MovedDate.FieldName = "AMMovedonDate";
+            this.MovedDate.MinWidth = 23;
             this.MovedDate.Name = "MovedDate";
             this.MovedDate.OptionsColumn.AllowEdit = false;
             this.MovedDate.Visible = true;
             this.MovedDate.VisibleIndex = 0;
+            this.MovedDate.Width = 87;
             // 
             // MovedforPerson
             // 
             this.MovedforPerson.Caption = "MovedforPerson";
             this.MovedforPerson.FieldName = "AMMovedforPerson";
+            this.MovedforPerson.MinWidth = 23;
             this.MovedforPerson.Name = "MovedforPerson";
             this.MovedforPerson.OptionsColumn.AllowEdit = false;
             this.MovedforPerson.Visible = true;
             this.MovedforPerson.VisibleIndex = 1;
+            this.MovedforPerson.Width = 87;
             // 
             // BtnHSave
             // 
-            this.BtnHSave.Location = new System.Drawing.Point(780, 33);
+            this.BtnHSave.Location = new System.Drawing.Point(910, 43);
+            this.BtnHSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnHSave.Name = "BtnHSave";
-            this.BtnHSave.Size = new System.Drawing.Size(75, 23);
+            this.BtnHSave.Size = new System.Drawing.Size(87, 30);
             this.BtnHSave.TabIndex = 24;
             this.BtnHSave.Text = "&Save";
             this.BtnHSave.Click += new System.EventHandler(this.BtnHSave_Click);
@@ -1325,32 +1420,36 @@
             // CLocDesc
             // 
             this.CLocDesc.Enabled = false;
-            this.CLocDesc.Location = new System.Drawing.Point(227, 39);
+            this.CLocDesc.Location = new System.Drawing.Point(265, 51);
+            this.CLocDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CLocDesc.Name = "CLocDesc";
-            this.CLocDesc.Size = new System.Drawing.Size(371, 20);
+            this.CLocDesc.Size = new System.Drawing.Size(433, 24);
             this.CLocDesc.TabIndex = 23;
             // 
             // TextCurrentLocation
             // 
-            this.TextCurrentLocation.Location = new System.Drawing.Point(146, 39);
+            this.TextCurrentLocation.Location = new System.Drawing.Point(170, 51);
+            this.TextCurrentLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCurrentLocation.Name = "TextCurrentLocation";
-            this.TextCurrentLocation.Size = new System.Drawing.Size(65, 20);
+            this.TextCurrentLocation.Size = new System.Drawing.Size(76, 24);
             this.TextCurrentLocation.TabIndex = 23;
             this.TextCurrentLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCurrentLocation_KeyDown);
             // 
             // labelControl36
             // 
-            this.labelControl36.Location = new System.Drawing.Point(403, 17);
+            this.labelControl36.Location = new System.Drawing.Point(470, 22);
+            this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(94, 13);
+            this.labelControl36.Size = new System.Drawing.Size(105, 17);
             this.labelControl36.TabIndex = 21;
             this.labelControl36.Text = "Checked Out Date";
             // 
             // labelControl37
             // 
-            this.labelControl37.Location = new System.Drawing.Point(22, 43);
+            this.labelControl37.Location = new System.Drawing.Point(26, 56);
+            this.labelControl37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(114, 13);
+            this.labelControl37.Size = new System.Drawing.Size(127, 17);
             this.labelControl37.TabIndex = 20;
             this.labelControl37.Text = "Checked Out Location";
             // 
@@ -1358,7 +1457,8 @@
             // 
             this.DtCheckedODate.EditValue = null;
             this.DtCheckedODate.EnterMoveNextControl = true;
-            this.DtCheckedODate.Location = new System.Drawing.Point(495, 13);
+            this.DtCheckedODate.Location = new System.Drawing.Point(577, 17);
+            this.DtCheckedODate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtCheckedODate.Name = "DtCheckedODate";
             this.DtCheckedODate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1366,24 +1466,26 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtCheckedODate.Properties.Mask.EditMask = "";
             this.DtCheckedODate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtCheckedODate.Size = new System.Drawing.Size(103, 20);
+            this.DtCheckedODate.Size = new System.Drawing.Size(120, 24);
             this.DtCheckedODate.TabIndex = 22;
             // 
             // TextCheckedOutTo
             // 
             this.TextCheckedOutTo.EnterMoveNextControl = true;
-            this.TextCheckedOutTo.Location = new System.Drawing.Point(146, 13);
+            this.TextCheckedOutTo.Location = new System.Drawing.Point(170, 17);
+            this.TextCheckedOutTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCheckedOutTo.Name = "TextCheckedOutTo";
             this.TextCheckedOutTo.Properties.MaxLength = 50;
-            this.TextCheckedOutTo.Size = new System.Drawing.Size(251, 20);
+            this.TextCheckedOutTo.Size = new System.Drawing.Size(293, 24);
             this.TextCheckedOutTo.TabIndex = 19;
             this.TextCheckedOutTo.Enter += new System.EventHandler(this.TextCheckedOutTo_Enter);
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(22, 16);
+            this.labelControl8.Location = new System.Drawing.Point(26, 21);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(83, 13);
+            this.labelControl8.Size = new System.Drawing.Size(93, 17);
             this.labelControl8.TabIndex = 18;
             this.labelControl8.Text = "Checked Out To";
             // 
@@ -1391,36 +1493,40 @@
             // 
             this.TextAssetCode.Enabled = false;
             this.TextAssetCode.EnterMoveNextControl = true;
-            this.TextAssetCode.Location = new System.Drawing.Point(123, 32);
+            this.TextAssetCode.Location = new System.Drawing.Point(143, 42);
+            this.TextAssetCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetCode.Name = "TextAssetCode";
             this.TextAssetCode.Properties.MaxLength = 6;
-            this.TextAssetCode.Size = new System.Drawing.Size(84, 20);
+            this.TextAssetCode.Size = new System.Drawing.Size(98, 24);
             this.TextAssetCode.TabIndex = 0;
             this.TextAssetCode.Validating += new System.ComponentModel.CancelEventHandler(this.TextAssetNumber_Validating);
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(66, 64);
+            this.labelControl32.Location = new System.Drawing.Point(77, 84);
+            this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(54, 13);
+            this.labelControl32.Size = new System.Drawing.Size(63, 17);
             this.labelControl32.TabIndex = 20;
             this.labelControl32.Text = "Asset Type";
             // 
             // TextAssetType
             // 
             this.TextAssetType.EnterMoveNextControl = true;
-            this.TextAssetType.Location = new System.Drawing.Point(123, 60);
+            this.TextAssetType.Location = new System.Drawing.Point(143, 78);
+            this.TextAssetType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetType.Name = "TextAssetType";
             this.TextAssetType.Properties.MaxLength = 6;
-            this.TextAssetType.Size = new System.Drawing.Size(84, 20);
+            this.TextAssetType.Size = new System.Drawing.Size(98, 24);
             this.TextAssetType.TabIndex = 3;
             this.TextAssetType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAssetType_KeyDown);
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(65, 39);
+            this.labelControl33.Location = new System.Drawing.Point(76, 51);
+            this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(57, 13);
+            this.labelControl33.Size = new System.Drawing.Size(66, 17);
             this.labelControl33.TabIndex = 20;
             this.labelControl33.Text = "Asset Code";
             // 
@@ -1428,26 +1534,29 @@
             // 
             this.TextAssetTypeDesc.Enabled = false;
             this.TextAssetTypeDesc.EnterMoveNextControl = true;
-            this.TextAssetTypeDesc.Location = new System.Drawing.Point(219, 60);
+            this.TextAssetTypeDesc.Location = new System.Drawing.Point(255, 78);
+            this.TextAssetTypeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetTypeDesc.Name = "TextAssetTypeDesc";
-            this.TextAssetTypeDesc.Size = new System.Drawing.Size(421, 20);
+            this.TextAssetTypeDesc.Size = new System.Drawing.Size(491, 24);
             this.TextAssetTypeDesc.TabIndex = 4;
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(45, 89);
+            this.labelControl34.Location = new System.Drawing.Point(52, 116);
+            this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(76, 13);
+            this.labelControl34.Size = new System.Drawing.Size(88, 17);
             this.labelControl34.TabIndex = 20;
             this.labelControl34.Text = "Asset Category";
             // 
             // TextAssetCategory
             // 
             this.TextAssetCategory.EnterMoveNextControl = true;
-            this.TextAssetCategory.Location = new System.Drawing.Point(123, 85);
+            this.TextAssetCategory.Location = new System.Drawing.Point(143, 111);
+            this.TextAssetCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetCategory.Name = "TextAssetCategory";
             this.TextAssetCategory.Properties.MaxLength = 6;
-            this.TextAssetCategory.Size = new System.Drawing.Size(84, 20);
+            this.TextAssetCategory.Size = new System.Drawing.Size(98, 24);
             this.TextAssetCategory.TabIndex = 5;
             this.TextAssetCategory.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAssetCategory_KeyDown);
             // 
@@ -1455,26 +1564,29 @@
             // 
             this.TextAssetCategoryDesc.Enabled = false;
             this.TextAssetCategoryDesc.EnterMoveNextControl = true;
-            this.TextAssetCategoryDesc.Location = new System.Drawing.Point(219, 85);
+            this.TextAssetCategoryDesc.Location = new System.Drawing.Point(255, 111);
+            this.TextAssetCategoryDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetCategoryDesc.Name = "TextAssetCategoryDesc";
-            this.TextAssetCategoryDesc.Size = new System.Drawing.Size(421, 20);
+            this.TextAssetCategoryDesc.Size = new System.Drawing.Size(491, 24);
             this.TextAssetCategoryDesc.TabIndex = 6;
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(24, 114);
+            this.labelControl35.Location = new System.Drawing.Point(28, 149);
+            this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(99, 13);
+            this.labelControl35.Size = new System.Drawing.Size(114, 17);
             this.labelControl35.TabIndex = 20;
             this.labelControl35.Text = "Asset Sub Category";
             // 
             // TextAstSubCat
             // 
             this.TextAstSubCat.EnterMoveNextControl = true;
-            this.TextAstSubCat.Location = new System.Drawing.Point(123, 110);
+            this.TextAstSubCat.Location = new System.Drawing.Point(143, 144);
+            this.TextAstSubCat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAstSubCat.Name = "TextAstSubCat";
             this.TextAstSubCat.Properties.MaxLength = 6;
-            this.TextAstSubCat.Size = new System.Drawing.Size(84, 20);
+            this.TextAstSubCat.Size = new System.Drawing.Size(98, 24);
             this.TextAstSubCat.TabIndex = 7;
             this.TextAstSubCat.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAstSubCat_KeyDown);
             // 
@@ -1482,18 +1594,20 @@
             // 
             this.TextSubCatDesc.Enabled = false;
             this.TextSubCatDesc.EnterMoveNextControl = true;
-            this.TextSubCatDesc.Location = new System.Drawing.Point(219, 110);
+            this.TextSubCatDesc.Location = new System.Drawing.Point(255, 144);
+            this.TextSubCatDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextSubCatDesc.Name = "TextSubCatDesc";
-            this.TextSubCatDesc.Size = new System.Drawing.Size(421, 20);
+            this.TextSubCatDesc.Size = new System.Drawing.Size(491, 24);
             this.TextSubCatDesc.TabIndex = 8;
             // 
             // TextAssetLocation
             // 
             this.TextAssetLocation.EnterMoveNextControl = true;
-            this.TextAssetLocation.Location = new System.Drawing.Point(123, 136);
+            this.TextAssetLocation.Location = new System.Drawing.Point(143, 178);
+            this.TextAssetLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetLocation.Name = "TextAssetLocation";
             this.TextAssetLocation.Properties.MaxLength = 6;
-            this.TextAssetLocation.Size = new System.Drawing.Size(84, 20);
+            this.TextAssetLocation.Size = new System.Drawing.Size(98, 24);
             this.TextAssetLocation.TabIndex = 9;
             this.TextAssetLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAssetLocation_KeyDown);
             // 
@@ -1501,27 +1615,30 @@
             // 
             this.AssetLocDesc.Enabled = false;
             this.AssetLocDesc.EnterMoveNextControl = true;
-            this.AssetLocDesc.Location = new System.Drawing.Point(219, 136);
+            this.AssetLocDesc.Location = new System.Drawing.Point(255, 178);
+            this.AssetLocDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssetLocDesc.Name = "AssetLocDesc";
-            this.AssetLocDesc.Size = new System.Drawing.Size(421, 20);
+            this.AssetLocDesc.Size = new System.Drawing.Size(491, 24);
             this.AssetLocDesc.TabIndex = 10;
             this.AssetLocDesc.Validating += new System.ComponentModel.CancelEventHandler(this.TextAssetNumber_Validating);
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(219, 188);
+            this.labelControl18.Location = new System.Drawing.Point(255, 246);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(45, 13);
+            this.labelControl18.Size = new System.Drawing.Size(51, 17);
             this.labelControl18.TabIndex = 21;
             this.labelControl18.Text = "Refrence";
             // 
             // VehicleCode
             // 
             this.VehicleCode.EnterMoveNextControl = true;
-            this.VehicleCode.Location = new System.Drawing.Point(278, 185);
+            this.VehicleCode.Location = new System.Drawing.Point(324, 242);
+            this.VehicleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.VehicleCode.Name = "VehicleCode";
             this.VehicleCode.Properties.MaxLength = 6;
-            this.VehicleCode.Size = new System.Drawing.Size(84, 20);
+            this.VehicleCode.Size = new System.Drawing.Size(98, 24);
             this.VehicleCode.TabIndex = 13;
             this.VehicleCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextVehicleCode_KeyDown);
             // 
@@ -1529,16 +1646,17 @@
             // 
             this.VehicleDesc.Enabled = false;
             this.VehicleDesc.EnterMoveNextControl = true;
-            this.VehicleDesc.Location = new System.Drawing.Point(368, 185);
+            this.VehicleDesc.Location = new System.Drawing.Point(429, 242);
+            this.VehicleDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.VehicleDesc.Name = "VehicleDesc";
-            this.VehicleDesc.Size = new System.Drawing.Size(272, 20);
+            this.VehicleDesc.Size = new System.Drawing.Size(317, 24);
             this.VehicleDesc.TabIndex = 14;
             // 
             // frm_Asset_AddUpd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(898, 568);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1048, 743);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.xtraTabControl1);
@@ -1570,6 +1688,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Asset_AddUpd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frm_Assetmanager_Load);

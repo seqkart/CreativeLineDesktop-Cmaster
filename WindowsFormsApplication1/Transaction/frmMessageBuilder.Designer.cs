@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1.Transaction
             this.groupControl1.Location = new System.Drawing.Point(64, 77);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(450, 912);
+            this.groupControl1.Size = new System.Drawing.Size(450, 502);
             this.groupControl1.TabIndex = 211;
             this.groupControl1.Text = "Source Db";
             // 
@@ -225,16 +225,16 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(520, 18);
+            this.txtMessage.Location = new System.Drawing.Point(520, 50);
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(421, 239);
             this.txtMessage.TabIndex = 555;
             // 
             // txtQuery
             // 
-            this.txtQuery.Location = new System.Drawing.Point(520, 541);
+            this.txtQuery.Location = new System.Drawing.Point(520, 518);
             this.txtQuery.Name = "txtQuery";
-            this.txtQuery.Size = new System.Drawing.Size(443, 239);
+            this.txtQuery.Size = new System.Drawing.Size(421, 239);
             this.txtQuery.TabIndex = 556;
             // 
             // Menu_ToolStrip
@@ -251,7 +251,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1317, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(980, 31);
             this.Menu_ToolStrip.TabIndex = 559;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -297,9 +297,9 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // frmMessageBuilder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 772);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(980, 772);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtQueryNo);

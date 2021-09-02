@@ -280,6 +280,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelDate_Current);
             this.groupBox1.Controls.Add(this.HelpGrid);
             this.groupBox1.Controls.Add(this.lblDayName);
             this.groupBox1.Controls.Add(this.textEmpType);
@@ -1565,7 +1566,7 @@
             // labelDate_Current
             // 
             this.labelDate_Current.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelDate_Current.Location = new System.Drawing.Point(569, 100);
+            this.labelDate_Current.Location = new System.Drawing.Point(468, 27);
             this.labelDate_Current.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelDate_Current.Name = "labelDate_Current";
             this.labelDate_Current.Size = new System.Drawing.Size(201, 17);
@@ -1756,11 +1757,10 @@
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(830, 1020);
-            this.Controls.Add(this.labelDate_Current);
             this.Controls.Add(this.panelControlMachine);
             this.Controls.Add(this.panelControlManual);
             this.Controls.Add(this.groupBox4);
@@ -1833,7 +1833,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_DW.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_DW.Properties)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -158,7 +158,7 @@
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(460, 170);
+            this.labelControl24.Location = new System.Drawing.Point(461, 170);
             this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(69, 17);
@@ -621,7 +621,7 @@
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(891, 51);
+            this.labelControl7.Location = new System.Drawing.Point(903, 51);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(48, 17);
@@ -631,7 +631,7 @@
             // txtDocDate
             // 
             this.txtDocDate.EditValue = null;
-            this.txtDocDate.Location = new System.Drawing.Point(759, 46);
+            this.txtDocDate.Location = new System.Drawing.Point(759, 47);
             this.txtDocDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDocDate.Name = "txtDocDate";
             this.txtDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -643,7 +643,7 @@
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(678, 50);
+            this.labelControl14.Location = new System.Drawing.Point(702, 51);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(54, 17);
@@ -652,7 +652,7 @@
             // 
             // txtDocNo
             // 
-            this.txtDocNo.Location = new System.Drawing.Point(955, 43);
+            this.txtDocNo.Location = new System.Drawing.Point(955, 47);
             this.txtDocNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDocNo.Name = "txtDocNo";
             this.txtDocNo.Size = new System.Drawing.Size(117, 24);
@@ -771,7 +771,7 @@
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(72, 190);
+            this.labelControl12.Location = new System.Drawing.Point(69, 190);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(21, 17);
@@ -804,7 +804,7 @@
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(47, 111);
+            this.labelControl11.Location = new System.Drawing.Point(42, 111);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(48, 17);
@@ -837,7 +837,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(28, 85);
+            this.labelControl4.Location = new System.Drawing.Point(22, 85);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(68, 17);
@@ -870,7 +870,7 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(1300, 48);
+            this.labelControl10.Location = new System.Drawing.Point(1300, 51);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(57, 17);
@@ -879,7 +879,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(232, 50);
+            this.labelControl3.Location = new System.Drawing.Point(232, 51);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(85, 17);
@@ -888,7 +888,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(447, 50);
+            this.labelControl1.Location = new System.Drawing.Point(447, 51);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(98, 17);
@@ -899,7 +899,7 @@
             // 
             this.txtTransDate.EditValue = null;
             this.txtTransDate.Enabled = false;
-            this.txtTransDate.Location = new System.Drawing.Point(1168, 43);
+            this.txtTransDate.Location = new System.Drawing.Point(1168, 47);
             this.txtTransDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransDate.Name = "txtTransDate";
             this.txtTransDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -912,7 +912,7 @@
             // txtReceivingDate
             // 
             this.txtReceivingDate.EditValue = null;
-            this.txtReceivingDate.Location = new System.Drawing.Point(96, 44);
+            this.txtReceivingDate.Location = new System.Drawing.Point(96, 47);
             this.txtReceivingDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReceivingDate.Name = "txtReceivingDate";
             this.txtReceivingDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -924,7 +924,7 @@
             // 
             // txtDocType
             // 
-            this.txtDocType.Location = new System.Drawing.Point(554, 44);
+            this.txtDocType.Location = new System.Drawing.Point(554, 47);
             this.txtDocType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDocType.Name = "txtDocType";
             this.txtDocType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -936,7 +936,7 @@
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(1097, 48);
+            this.labelControl8.Location = new System.Drawing.Point(1097, 51);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(63, 17);
@@ -946,15 +946,15 @@
             // txtTransNo
             // 
             this.txtTransNo.Enabled = false;
-            this.txtTransNo.Location = new System.Drawing.Point(1352, 43);
+            this.txtTransNo.Location = new System.Drawing.Point(1363, 47);
             this.txtTransNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransNo.Name = "txtTransNo";
-            this.txtTransNo.Size = new System.Drawing.Size(117, 24);
+            this.txtTransNo.Size = new System.Drawing.Size(106, 24);
             this.txtTransNo.TabIndex = 2;
             // 
             // txtGateEntryNo
             // 
-            this.txtGateEntryNo.Location = new System.Drawing.Point(325, 44);
+            this.txtGateEntryNo.Location = new System.Drawing.Point(325, 47);
             this.txtGateEntryNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGateEntryNo.Name = "txtGateEntryNo";
             this.txtGateEntryNo.Size = new System.Drawing.Size(117, 24);
@@ -962,7 +962,7 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(6, 50);
+            this.labelControl2.Location = new System.Drawing.Point(4, 51);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(86, 17);
@@ -1071,8 +1071,8 @@
             // 
             // Frm_Challaninward
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1505, 785);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);

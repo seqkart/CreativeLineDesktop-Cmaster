@@ -19,6 +19,7 @@ namespace WindowsFormsApplication1.Transaction
         public FrmVouchers()
         {
             InitializeComponent();
+            dt.Columns.Add("CRDR", typeof(String));
             dt.Columns.Add("AccCode", typeof(String));
             dt.Columns.Add("AccName", typeof(String));
             dt.Columns.Add("Amount", typeof(Decimal));
@@ -78,22 +79,22 @@ namespace WindowsFormsApplication1.Transaction
                 return false;
             }
 
-            decimal DebitAmt = 0;
-            decimal CreditAmt = 0;
-            foreach (DataRow dr in dt.Rows)
-            {
-                DebitAmt = DebitAmt + Convert.ToDecimal(dr["Debit"]);
-                CreditAmt = CreditAmt + Convert.ToDecimal(dr["Credit"]);
-            }
-            if (DebitAmt == CreditAmt)
-            {
-                //  VoucherAmount = DebitAmt;
-            }
-            else
-            {
-                ProjectFunctions.SpeakError("Debit Amount Should Be Equal To Credit Amount");
-                return false;
-            }
+            //decimal DebitAmt = 0;
+            //decimal CreditAmt = 0;
+            //foreach (DataRow dr in dt.Rows)
+            //{
+            //    DebitAmt = DebitAmt + Convert.ToDecimal(dr["Debit"]);
+            //    CreditAmt = CreditAmt + Convert.ToDecimal(dr["Credit"]);
+            //}
+            //if (DebitAmt == CreditAmt)
+            //{
+            //    //  VoucherAmount = DebitAmt;
+            //}
+            //else
+            //{
+            //    ProjectFunctions.SpeakError("Debit Amount Should Be Equal To Credit Amount");
+            //    return false;
+            //}
 
             return true;
         }
@@ -118,16 +119,18 @@ namespace WindowsFormsApplication1.Transaction
                 txtVoucherDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["VumDate"]).ToString("yyyy-MM-dd");
                 txtVoucherTypeCode.Text = ds.Tables[0].Rows[0]["VumType"].ToString();
                 txtVoucherTypeDesc.Text = ds.Tables[0].Rows[0]["VouDesc"].ToString();
+                txtAccountCode.Text = ds.Tables[0].Rows[0]["VumBcode"].ToString();
+                txtAccountName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
 
                 foreach (DataRow dr in ds.Tables[1].Rows)
                 {
                     if (Convert.ToDecimal(dr["Amount"]) < 0)
                     {
-                        dr["CrDr"] = "CR";
+                        dr["CRDR"] = "CR";
                     }
                     if (Convert.ToDecimal(dr["Amount"]) > 0)
                     {
-                        dr["CrDr"] = "DR";
+                        dr["CRDR"] = "DR";
                     }
                 }
 
@@ -219,6 +222,7 @@ namespace WindowsFormsApplication1.Transaction
                     dtNewRow["AccName"] = row["AccName"].ToString();
                     dtNewRow["Amount"] = Convert.ToDecimal("0.00");
                     dtNewRow["Narration"] = string.Empty;
+                    dtNewRow["CRDR"] = SetCrDrValue();
 
                     dt.Rows.Add(dtNewRow);
                     if (dt.Rows.Count > 0)
@@ -275,19 +279,63 @@ namespace WindowsFormsApplication1.Transaction
                         HelpGridView.BestFitColumns();
                     }
                 }
-                if (HelpGrid.Text == "txtAccountCode" || HelpGrid.Text == "AccCode")
+         
+                if (HelpGrid.Text == "txtAccountCode")
+                {
+
+                    DataTable dtNew = new DataTable();
+                    DataRow[] dtRow;
+
+                    if (txtVoucherTypeCode.Text.Trim() == "BR" || txtVoucherTypeCode.Text.Trim() == "BP")
+                    {
+                        dtNew = dsPopUps.Tables[2].Clone();
+                        dtRow = dsPopUps.Tables[2].Select("AccName like '" + txtSearchBox.Text + "%'");
+                    }
+                    else
+                    {
+                        if (txtVoucherTypeCode.Text.Trim() == "CR" || txtVoucherTypeCode.Text.Trim() == "CP")
+                        {
+                            dtNew = dsPopUps.Tables[3].Clone();
+                            dtRow = dsPopUps.Tables[3].Select("AccName like '" + txtSearchBox.Text + "%'");
+                        }
+                        else
+                        {
+                            dtNew = dsPopUps.Tables[1].Clone();
+                            dtRow = dsPopUps.Tables[1].Select("AccName like '" + txtSearchBox.Text + "%'");
+                        }
+                    }
+
+                    
+                    foreach (DataRow dr in dtRow)
+                    {
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["AccCode"] = dr["AccCode"];
+                        NewRow["AccName"] = dr["AccName"];
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGridView.Columns.Clear();
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+
+                if (HelpGrid.Text == "AccCode")
                 {
 
                     DataTable dtNew = dsPopUps.Tables[1].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[1].Select("AccName like '" + txtSearchBox.Text + "%'");
                     foreach (DataRow dr in dtRow)
                     {
-
                         DataRow NewRow = dtNew.NewRow();
                         NewRow["AccCode"] = dr["AccCode"];
                         NewRow["AccName"] = dr["AccName"];
-
-
                         dtNew.Rows.Add(NewRow);
                     }
                     if (dtNew.Rows.Count > 0)
@@ -324,7 +372,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BarCodeGrid_KeyDown(object sender, KeyEventArgs e)
         {
-            ProjectFunctions.CreateRohitStylePopUpGridHelp(VoucherGrid, VoucherGridView, HelpGrid, HelpGridView, "AccCode", txtSearchBox, panelControl2, e);
+           ProjectFunctions.CreateRohitStylePopUpGridHelp(VoucherGrid, VoucherGridView, HelpGrid, HelpGridView, "AccCode", txtSearchBox, panelControl2, e);
         }
 
         private void BtnQuit_Click(object sender, EventArgs e)
@@ -333,6 +381,13 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void AddInvoice()
         {
+            Decimal VoucherAmount = 0;
+            foreach(DataRow dr in dt.Rows)
+            {
+                VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Amount"]);
+            }
+
+
             using (var con = new SqlConnection(ProjectFunctions.GetConnection()))
             {
                 con.Open();
@@ -345,26 +400,28 @@ namespace WindowsFormsApplication1.Transaction
                 try
                 {
                     string DocNo = getNewInvoiceDocumentNo().ToString().PadLeft(7, '0');
-                    string str = "Insert Into VuMst(VumNo,VumDate,VumType,VumAmt,VumAutoGen)values(";
+                    string str = "Insert Into VuMst(VumNo,VumDate,VumType,VumAmt,VumAutoGen,VumBCode)values(";
                     str = str + "'" + DocNo + "',";
                     str = str + "'" + Convert.ToDateTime(txtVoucherDate.EditValue).ToString("yyyy-MM-dd") + "',";
                     str = str + "'" + txtVoucherTypeCode.Text.Trim() + "',";
-                    //   str = str + "'" + VoucherAmount + "','N')";
+                    str = str + "'" + VoucherAmount + "','N','" + txtAccountCode.Text.Trim() + "')";
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
                     cmd.ExecuteNonQuery();
                     cmd.Parameters.Clear();
 
 
+                    String DRCR = String.Empty;
+
                     foreach (DataRow dr in dt.Rows)
                     {
                         string str1 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart)values(";
-                        str1 = str1 + "'" + VoucherNo + "',";
-                        str1 = str1 + "'" + Convert.ToDateTime(VoucherDate).ToString("yyyy-MM-dd") + "',";
+                        str1 = str1 + "'" + DocNo + "',";
+                        str1 = str1 + "'" + Convert.ToDateTime(txtVoucherDate.EditValue).ToString("yyyy-MM-dd") + "',";
                         str1 = str1 + "'" + txtVoucherTypeCode.Text.Trim() + "',";
-                        if (dr["CrDr"].ToString().ToUpper() == "CR")
+                        if (dr["CRDR"].ToString().ToUpper() == "CR")
                             str1 = str1 + "'" + -Convert.ToDecimal(dr["Amount"]) + "',";
-                        if (dr["CrDr"].ToString().ToUpper() == "DR")
+                        if (dr["CRDR"].ToString().ToUpper() == "DR")
                             str1 = str1 + "'" + Convert.ToDecimal(dr["Amount"]) + "',";
                         str1 = str1 + "'" + dr["AccCode"].ToString() + "',";
                         str1 = str1 + "'" + dr["Narration"].ToString() + "')";
@@ -375,7 +432,31 @@ namespace WindowsFormsApplication1.Transaction
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
 
+                        DRCR = dr["CRDR"].ToString().ToUpper();
+
                     }
+
+                    string str2 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart)values(";
+                    str2 = str2 + "'" + DocNo + "',";
+                    str2 = str2 + "'" + Convert.ToDateTime(txtVoucherDate.EditValue).ToString("yyyy-MM-dd") + "',";
+                    str2 = str2 + "'" + txtVoucherTypeCode.Text.Trim() + "',";
+                    if (DRCR == "CR")
+                    {
+                        str2 = str2 + "'" + VoucherAmount + "',";
+                    }
+                    if (DRCR == "DR")
+                    {
+                        str2 = str2 + "'" + -VoucherAmount + "',";
+                    }
+                    str2 = str2 + "'" + txtAccountCode.Text + "',";
+                    str2 = str2 + "'" + txtLongNarration + "')";
+
+
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = str2;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+
                     transaction.Commit();
                     Close();
                 }
@@ -389,6 +470,12 @@ namespace WindowsFormsApplication1.Transaction
 
         private void EditInvoice()
         {
+            Decimal VoucherAmount = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Amount"]);
+            }
+
             using (var con = new SqlConnection(ProjectFunctions.GetConnection()))
             {
                 con.Open();
@@ -402,7 +489,7 @@ namespace WindowsFormsApplication1.Transaction
                 {
 
                     string str = "Update VuMst Set ";
-                    // str = str + " VumAmt='" + VoucherAmount + "'";
+                    str = str + " VumAmt='" + VoucherAmount + "',VumBCode='" + txtAccountCode.Text + "'";
                     str = str + " Where VumNo='" + VoucherNo + "' And VumDate='" + Convert.ToDateTime(VoucherDate).ToString("yyyy-MM-dd") + "'";
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = str;
@@ -416,18 +503,20 @@ namespace WindowsFormsApplication1.Transaction
                     cmd.Parameters.Clear();
 
 
+                    String DRCR = String.Empty;
+
 
                     foreach (DataRow dr in dt.Rows)
                     {
                         string str1 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart)values(";
                         str1 = str1 + "'" + VoucherNo + "',";
-                        str1 = str1 + "'" + Convert.ToDateTime(VoucherDate).ToString("yyyy-MM-dd") + "',";
+                        str1 = str1 + "'" + Convert.ToDateTime(txtVoucherDate.EditValue).ToString("yyyy-MM-dd") + "',";
                         str1 = str1 + "'" + txtVoucherTypeCode.Text.Trim() + "',";
-                        if (dr["CrDr"].ToString().ToUpper() == "CR")
+                        if (dr["CRDR"].ToString().ToUpper() == "CR")
                         {
                             str1 = str1 + "'" + -Convert.ToDecimal(dr["Amount"]) + "',";
                         }
-                        if (dr["CrDr"].ToString().ToUpper() == "DR")
+                        if (dr["CRDR"].ToString().ToUpper() == "DR")
                         {
                             str1 = str1 + "'" + Convert.ToDecimal(dr["Amount"]) + "',";
                         }
@@ -440,7 +529,42 @@ namespace WindowsFormsApplication1.Transaction
                         cmd.ExecuteNonQuery();
                         cmd.Parameters.Clear();
 
+                        DRCR = dr["CRDR"].ToString().ToUpper();
+
+
                     }
+
+
+
+
+
+
+                    string str2 = "Insert Into VuData(VutNo,VutDate,VutType,VutAmt,VutACode,VutNart)values(";
+                    str2 = str2 + "'" + VoucherNo + "',";
+                    str2 = str2 + "'" + Convert.ToDateTime(txtVoucherDate.EditValue).ToString("yyyy-MM-dd") + "',";
+                    str2 = str2 + "'" + txtVoucherTypeCode.Text.Trim() + "',";
+                    if (DRCR == "CR")
+                    {
+                        str2 = str2 + "'" + VoucherAmount + "',";
+                    }
+                    if (DRCR == "DR")
+                    {
+                        str2 = str2 + "'" + -VoucherAmount + "',";
+                    }
+                    str2 = str2 + "'" + txtAccountCode.Text + "',";
+                    str2 = str2 + "'" + txtLongNarration + "')";
+
+
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = str2;
+                    cmd.ExecuteNonQuery();
+                    cmd.Parameters.Clear();
+
+
+                   
+
+
+
                     transaction.Commit();
                     Close();
                 }
@@ -449,6 +573,29 @@ namespace WindowsFormsApplication1.Transaction
                     transaction.Rollback();
                 }
             }
+        }
+
+        private string SetCrDrValue()
+        {
+            String DrCrVariable = string.Empty;
+            if (txtVoucherTypeCode.Text == "CP")
+            {
+                DrCrVariable = "DR";
+            }
+            if (txtVoucherTypeCode.Text == "CR")
+            {
+                DrCrVariable = "CR";
+            }
+            
+            if (txtVoucherTypeCode.Text == "BP")
+            {
+                DrCrVariable = "DR";
+            }
+            if (txtVoucherTypeCode.Text == "BR")
+            {
+                DrCrVariable = "CR";
+            }
+            return DrCrVariable;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -462,6 +609,15 @@ namespace WindowsFormsApplication1.Transaction
                 {
                     EditInvoice();
                 }
+            }
+        }
+
+        private void VoucherGridView_ValidatingEditor(object sender, DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventArgs e)
+        {
+            DataRow currentrow = VoucherGridView.GetDataRow(VoucherGridView.FocusedRowHandle);
+            if (VoucherGridView.FocusedColumn.FieldName == "AccCode")
+            {
+                VoucherGridView.SetRowCellValue(VoucherGridView.FocusedRowHandle, VoucherGridView.Columns["CRDR"], SetCrDrValue());
             }
         }
     }

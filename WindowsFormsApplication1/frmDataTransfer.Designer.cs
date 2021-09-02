@@ -661,8 +661,8 @@
             // 
             // frmDataTransfer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1471, 980);
             this.Controls.Add(this.lblTotalRecordsToTransfer);
             this.Controls.Add(this.label10);

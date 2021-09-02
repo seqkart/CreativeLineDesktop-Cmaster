@@ -560,7 +560,7 @@
             this.AdditionalInfoTab.Controls.Add(this.panelControl2);
             this.AdditionalInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfoTab.Name = "AdditionalInfoTab";
-            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 363);
+            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 357);
             this.AdditionalInfoTab.Text = "Details";
             // 
             // panelControl2
@@ -602,7 +602,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(696, 363);
+            this.panelControl2.Size = new System.Drawing.Size(696, 357);
             this.panelControl2.TabIndex = 248;
             // 
             // labelControl22
@@ -1034,7 +1034,7 @@
             this.AdditionalInfo1Tab.Controls.Add(this.panelControl3);
             this.AdditionalInfo1Tab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfo1Tab.Name = "AdditionalInfo1Tab";
-            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 363);
+            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 357);
             this.AdditionalInfo1Tab.Text = "Additional";
             // 
             // panelControl3
@@ -1070,7 +1070,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(696, 363);
+            this.panelControl3.Size = new System.Drawing.Size(696, 357);
             this.panelControl3.TabIndex = 172;
             // 
             // txtBankBranchCode
@@ -1369,7 +1369,7 @@
             this.OtherSpecinfoTab.Controls.Add(this.textEdit10);
             this.OtherSpecinfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OtherSpecinfoTab.Name = "OtherSpecinfoTab";
-            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 363);
+            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 357);
             this.OtherSpecinfoTab.Text = "Address ";
             // 
             // panelControl4
@@ -1393,7 +1393,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(696, 363);
+            this.panelControl4.Size = new System.Drawing.Size(696, 357);
             this.panelControl4.TabIndex = 153;
             // 
             // txtCountry
@@ -1584,7 +1584,7 @@
             this.xtraTabPage1.Controls.Add(this.chkTeaBreak);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(696, 363);
+            this.xtraTabPage1.Size = new System.Drawing.Size(696, 357);
             this.xtraTabPage1.Text = "Employee Timing";
             // 
             // labelControl29
@@ -2123,8 +2123,8 @@
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Appearance.Options.UseBackColor = true;
             this.Appearance.Options.UseForeColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(850, 918);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupBox2);

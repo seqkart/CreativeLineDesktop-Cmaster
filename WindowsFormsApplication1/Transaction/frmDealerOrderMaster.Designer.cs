@@ -71,10 +71,12 @@
             // 
             // InfoGrid
             // 
-            this.InfoGrid.Location = new System.Drawing.Point(12, 111);
+            this.InfoGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InfoGrid.Location = new System.Drawing.Point(14, 145);
             this.InfoGrid.MainView = this.InfoGridView;
+            this.InfoGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InfoGrid.Name = "InfoGrid";
-            this.InfoGrid.Size = new System.Drawing.Size(850, 337);
+            this.InfoGrid.Size = new System.Drawing.Size(992, 441);
             this.InfoGrid.TabIndex = 419;
             this.InfoGrid.TabStop = false;
             this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -89,7 +91,8 @@
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
-            this.InfoGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 216, 178);
+            this.InfoGridView.CustomizationFormBounds = new System.Drawing.Rectangle(580, 341, 252, 233);
+            this.InfoGridView.DetailHeight = 458;
             this.InfoGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.InfoGridView.GridControl = this.InfoGrid;
             this.InfoGridView.Name = "InfoGridView";
@@ -106,38 +109,46 @@
             // 
             this.gridColumn5.Caption = "GrpSubDesc";
             this.gridColumn5.FieldName = "GrpSubDesc";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 2;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "PrdCode";
             this.gridColumn1.FieldName = "OrdDPrdCode";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "OrdDPrdCode", "{0}")});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "PrdAsgnCode";
             this.gridColumn2.FieldName = "PrdAsgnCode";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "PrdName";
             this.gridColumn3.FieldName = "PrdName";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
@@ -145,6 +156,7 @@
             this.gridColumn4.DisplayFormat.FormatString = "n2";
             this.gridColumn4.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.gridColumn4.FieldName = "OrdDPrdQuantity";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "OrdDPrdQuantity", "SUM={0:0.##}")});
@@ -152,19 +164,22 @@
             this.gridColumn4.UnboundType = DevExpress.Data.UnboundColumnType.Decimal;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 87;
             // 
             // gridView4
             // 
+            this.gridView4.DetailHeight = 458;
             this.gridView4.GridControl = this.InfoGrid;
             this.gridView4.Name = "gridView4";
             // 
             // txtSUSType
             // 
             this.txtSUSType.EnterMoveNextControl = true;
-            this.txtSUSType.Location = new System.Drawing.Point(168, -25);
+            this.txtSUSType.Location = new System.Drawing.Point(196, -33);
+            this.txtSUSType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSUSType.Name = "txtSUSType";
             this.txtSUSType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSUSType.Size = new System.Drawing.Size(26, 20);
+            this.txtSUSType.Size = new System.Drawing.Size(30, 24);
             this.txtSUSType.TabIndex = 411;
             this.txtSUSType.TabStop = false;
             // 
@@ -174,6 +189,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -181,7 +197,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(879, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1025, 31);
             this.Menu_ToolStrip.TabIndex = 416;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -192,7 +208,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -202,15 +218,16 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(38, 23);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(-19, -22);
+            this.label2.Location = new System.Drawing.Point(-22, -29);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 13);
+            this.label2.Size = new System.Drawing.Size(27, 17);
             this.label2.TabIndex = 410;
             this.label2.Text = "Date";
             // 
@@ -218,7 +235,8 @@
             // 
             this.dtOrderDate.EditValue = null;
             this.dtOrderDate.Enabled = false;
-            this.dtOrderDate.Location = new System.Drawing.Point(88, 38);
+            this.dtOrderDate.Location = new System.Drawing.Point(103, 50);
+            this.dtOrderDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtOrderDate.Name = "dtOrderDate";
             this.dtOrderDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -226,61 +244,67 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dtOrderDate.Properties.Mask.EditMask = "";
             this.dtOrderDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtOrderDate.Size = new System.Drawing.Size(79, 20);
+            this.dtOrderDate.Size = new System.Drawing.Size(92, 24);
             this.dtOrderDate.TabIndex = 421;
             this.dtOrderDate.TabStop = false;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(17, 40);
+            this.label4.Location = new System.Drawing.Point(20, 52);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.Size = new System.Drawing.Size(62, 17);
             this.label4.TabIndex = 423;
             this.label4.Text = "OrderDate";
             // 
             // txtOrderNo
             // 
             this.txtOrderNo.Enabled = false;
-            this.txtOrderNo.Location = new System.Drawing.Point(247, 39);
+            this.txtOrderNo.Location = new System.Drawing.Point(288, 51);
+            this.txtOrderNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderNo.Name = "txtOrderNo";
-            this.txtOrderNo.Size = new System.Drawing.Size(148, 20);
+            this.txtOrderNo.Size = new System.Drawing.Size(173, 24);
             this.txtOrderNo.TabIndex = 425;
             this.txtOrderNo.TabStop = false;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(189, 41);
+            this.label5.Location = new System.Drawing.Point(220, 54);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 420;
             this.label5.Text = "OrderNo";
             // 
             // txtDealerName
             // 
             this.txtDealerName.EnterMoveNextControl = true;
-            this.txtDealerName.Location = new System.Drawing.Point(187, 65);
+            this.txtDealerName.Location = new System.Drawing.Point(218, 85);
+            this.txtDealerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDealerName.Name = "txtDealerName";
             this.txtDealerName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDealerName.Properties.ReadOnly = true;
-            this.txtDealerName.Size = new System.Drawing.Size(651, 20);
+            this.txtDealerName.Size = new System.Drawing.Size(759, 24);
             this.txtDealerName.TabIndex = 427;
             this.txtDealerName.TabStop = false;
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(38, 68);
+            this.label15.Location = new System.Drawing.Point(44, 89);
+            this.label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(33, 13);
+            this.label15.Size = new System.Drawing.Size(38, 17);
             this.label15.TabIndex = 428;
             this.label15.Text = "Dealer";
             // 
             // txtDealerCode
             // 
-            this.txtDealerCode.Location = new System.Drawing.Point(89, 65);
+            this.txtDealerCode.Location = new System.Drawing.Point(104, 85);
+            this.txtDealerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDealerCode.Name = "txtDealerCode";
             this.txtDealerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDealerCode.Properties.MaxLength = 6;
-            this.txtDealerCode.Size = new System.Drawing.Size(79, 20);
+            this.txtDealerCode.Size = new System.Drawing.Size(92, 24);
             this.txtDealerCode.TabIndex = 1;
             this.txtDealerCode.EditValueChanged += new System.EventHandler(this.txtDealerCode_EditValueChanged);
             this.txtDealerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDealerCode_KeyDown);
@@ -289,7 +313,8 @@
             // 
             this.dtOrderForDate.EditValue = null;
             this.dtOrderForDate.EnterMoveNextControl = true;
-            this.dtOrderForDate.Location = new System.Drawing.Point(759, 39);
+            this.dtOrderForDate.Location = new System.Drawing.Point(885, 51);
+            this.dtOrderForDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtOrderForDate.Name = "dtOrderForDate";
             this.dtOrderForDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -301,23 +326,26 @@
             this.dtOrderForDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.dtOrderForDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.dtOrderForDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.dtOrderForDate.Size = new System.Drawing.Size(79, 20);
+            this.dtOrderForDate.Size = new System.Drawing.Size(92, 24);
             this.dtOrderForDate.TabIndex = 0;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(660, 42);
+            this.label3.Location = new System.Drawing.Point(770, 55);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 430;
             this.label3.Text = "Order For Date";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(190, 29);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(222, 38);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(670, 405);
+            this.HelpGrid.Size = new System.Drawing.Size(782, 530);
             this.HelpGrid.TabIndex = 431;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -327,6 +355,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -339,9 +368,9 @@
             // 
             // frmDealerOrderMaster
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 464);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1025, 607);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.InfoGrid);
@@ -358,6 +387,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDealerOrderMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmDealerOrderMaster_Load);

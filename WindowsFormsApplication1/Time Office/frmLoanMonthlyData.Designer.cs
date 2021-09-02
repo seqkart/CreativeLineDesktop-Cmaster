@@ -61,10 +61,12 @@
             // HelpGridCtrl
             // 
             this.HelpGridCtrl.Cursor = System.Windows.Forms.Cursors.Default;
-            this.HelpGridCtrl.Location = new System.Drawing.Point(50, 28);
+            this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(58, 37);
             this.HelpGridCtrl.MainView = this.HelpGrid;
+            this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(313, 119);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(365, 156);
             this.HelpGridCtrl.TabIndex = 43;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -75,6 +77,7 @@
             // 
             // HelpGrid
             // 
+            this.HelpGrid.DetailHeight = 458;
             this.HelpGrid.GridControl = this.HelpGridCtrl;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.OptionsView.ShowGroupPanel = false;
@@ -84,12 +87,13 @@
             // 
             this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_Quit,
             this.btn_Save});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(399, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(465, 27);
             this.Menu_ToolStrip.TabIndex = 42;
             this.Menu_ToolStrip.Text = "toolStrip2";
             // 
@@ -102,7 +106,7 @@
             this.btn_Quit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Quit.Image")));
             this.btn_Quit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(35, 22);
+            this.btn_Quit.Size = new System.Drawing.Size(43, 24);
             this.btn_Quit.Text = "&Quit";
             this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
@@ -115,15 +119,16 @@
             this.btn_Save.Image = ((System.Drawing.Image)(resources.GetObject("btn_Save.Image")));
             this.btn_Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(38, 22);
+            this.btn_Save.Size = new System.Drawing.Size(45, 28);
             this.btn_Save.Text = "&Save";
             this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(626, 50);
+            this.labelControl2.Location = new System.Drawing.Point(730, 65);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(40, 13);
+            this.labelControl2.Size = new System.Drawing.Size(45, 17);
             this.labelControl2.TabIndex = 40;
             this.labelControl2.Text = "Date Of";
             this.labelControl2.Visible = false;
@@ -132,7 +137,8 @@
             // 
             this.DtDateOff.EditValue = null;
             this.DtDateOff.EnterMoveNextControl = true;
-            this.DtDateOff.Location = new System.Drawing.Point(655, 43);
+            this.DtDateOff.Location = new System.Drawing.Point(764, 56);
+            this.DtDateOff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDateOff.Name = "DtDateOff";
             this.DtDateOff.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -140,7 +146,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtDateOff.Properties.Mask.EditMask = "";
             this.DtDateOff.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtDateOff.Size = new System.Drawing.Size(10, 20);
+            this.DtDateOff.Size = new System.Drawing.Size(12, 24);
             this.DtDateOff.TabIndex = 35;
             this.DtDateOff.Visible = false;
             // 
@@ -149,11 +155,12 @@
             this.txtSplTag.EditValue = "D";
             this.txtSplTag.Enabled = false;
             this.txtSplTag.EnterMoveNextControl = true;
-            this.txtSplTag.Location = new System.Drawing.Point(655, 47);
+            this.txtSplTag.Location = new System.Drawing.Point(764, 61);
+            this.txtSplTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSplTag.Name = "txtSplTag";
             this.txtSplTag.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtSplTag.Properties.MaxLength = 4;
-            this.txtSplTag.Size = new System.Drawing.Size(10, 20);
+            this.txtSplTag.Size = new System.Drawing.Size(12, 24);
             this.txtSplTag.TabIndex = 32;
             this.txtSplTag.Visible = false;
             // 
@@ -161,45 +168,50 @@
             // 
             this.txtEmpCode.EditValue = "";
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(86, 80);
+            this.txtEmpCode.Location = new System.Drawing.Point(100, 105);
+            this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtEmpCode.Properties.MaxLength = 5;
-            this.txtEmpCode.Size = new System.Drawing.Size(84, 20);
+            this.txtEmpCode.Size = new System.Drawing.Size(98, 24);
             this.txtEmpCode.TabIndex = 2;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(17, 109);
+            this.labelControl3.Location = new System.Drawing.Point(20, 143);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(67, 13);
+            this.labelControl3.Size = new System.Drawing.Size(73, 17);
             this.labelControl3.TabIndex = 38;
             this.labelControl3.Text = "LoanInstlmnt";
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(32, 83);
+            this.labelControl12.Location = new System.Drawing.Point(37, 109);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(52, 13);
+            this.labelControl12.Size = new System.Drawing.Size(61, 17);
             this.labelControl12.TabIndex = 39;
             this.labelControl12.Text = "Emp Code";
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(28, 57);
+            this.labelControl26.Location = new System.Drawing.Point(33, 75);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(56, 13);
+            this.labelControl26.Size = new System.Drawing.Size(64, 17);
             this.labelControl26.TabIndex = 37;
             this.labelControl26.Text = "MonthYear";
             // 
             // txt
             // 
             this.txt.EnterMoveNextControl = true;
-            this.txt.Location = new System.Drawing.Point(655, 47);
+            this.txt.Location = new System.Drawing.Point(764, 61);
+            this.txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(10, 20);
+            this.txt.Size = new System.Drawing.Size(12, 24);
             this.txt.TabIndex = 36;
             this.txt.Visible = false;
             // 
@@ -207,17 +219,19 @@
             // 
             this.txtLoanInt.EditValue = "";
             this.txtLoanInt.EnterMoveNextControl = true;
-            this.txtLoanInt.Location = new System.Drawing.Point(86, 106);
+            this.txtLoanInt.Location = new System.Drawing.Point(100, 139);
+            this.txtLoanInt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoanInt.Name = "txtLoanInt";
             this.txtLoanInt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtLoanInt.Properties.MaxLength = 5;
-            this.txtLoanInt.Size = new System.Drawing.Size(84, 20);
+            this.txtLoanInt.Size = new System.Drawing.Size(98, 24);
             this.txtLoanInt.TabIndex = 4;
             this.txtLoanInt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoanInt_KeyPress);
             // 
             // DtMonthYear
             // 
-            this.DtMonthYear.Location = new System.Drawing.Point(86, 54);
+            this.DtMonthYear.Location = new System.Drawing.Point(100, 71);
+            this.DtMonthYear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtMonthYear.Name = "DtMonthYear";
             this.DtMonthYear.Properties.DisplayFormat.FormatString = "MM-yyyy";
             this.DtMonthYear.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -227,7 +241,7 @@
             this.DtMonthYear.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtMonthYear.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DtMonthYear.Properties.MaxLength = 6;
-            this.DtMonthYear.Size = new System.Drawing.Size(84, 20);
+            this.DtMonthYear.Size = new System.Drawing.Size(98, 24);
             this.DtMonthYear.TabIndex = 1;
             // 
             // txtEmpName
@@ -235,19 +249,20 @@
             this.txtEmpName.EditValue = "";
             this.txtEmpName.Enabled = false;
             this.txtEmpName.EnterMoveNextControl = true;
-            this.txtEmpName.Location = new System.Drawing.Point(190, 80);
+            this.txtEmpName.Location = new System.Drawing.Point(222, 105);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtEmpName.Properties.MaxLength = 5;
-            this.txtEmpName.Size = new System.Drawing.Size(187, 20);
+            this.txtEmpName.Size = new System.Drawing.Size(218, 24);
             this.txtEmpName.TabIndex = 3;
             this.txtEmpName.TabStop = false;
             // 
             // frmLoanMonthlyData
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 151);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(465, 197);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.txtEmpName);
@@ -263,6 +278,7 @@
             this.Controls.Add(this.labelControl26);
             this.Controls.Add(this.txt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoanMonthlyData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmLoanMonthlyData_Load);

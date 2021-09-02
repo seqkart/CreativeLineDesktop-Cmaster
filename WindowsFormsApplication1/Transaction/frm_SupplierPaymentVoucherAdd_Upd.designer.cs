@@ -155,7 +155,8 @@
             // 
             this.TextBnkChgs.EditValue = "0.00";
             this.TextBnkChgs.EnterMoveNextControl = true;
-            this.TextBnkChgs.Location = new System.Drawing.Point(503, 99);
+            this.TextBnkChgs.Location = new System.Drawing.Point(587, 129);
+            this.TextBnkChgs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBnkChgs.Name = "TextBnkChgs";
             this.TextBnkChgs.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextBnkChgs.Properties.Appearance.Options.UseBorderColor = true;
@@ -171,30 +172,33 @@
             this.TextBnkChgs.Properties.Mask.EditMask = "f";
             this.TextBnkChgs.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextBnkChgs.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextBnkChgs.Size = new System.Drawing.Size(83, 20);
+            this.TextBnkChgs.Size = new System.Drawing.Size(97, 24);
             this.TextBnkChgs.TabIndex = 10;
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(424, 103);
+            this.labelControl18.Location = new System.Drawing.Point(495, 135);
+            this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(70, 13);
+            this.labelControl18.Size = new System.Drawing.Size(79, 17);
             this.labelControl18.TabIndex = 25;
             this.labelControl18.Text = "Bank Charges";
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(254, 132);
+            this.labelControl17.Location = new System.Drawing.Point(296, 173);
+            this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(29, 13);
+            this.labelControl17.Size = new System.Drawing.Size(35, 17);
             this.labelControl17.TabIndex = 23;
             this.labelControl17.Text = "Name";
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(254, 77);
+            this.labelControl16.Location = new System.Drawing.Point(296, 101);
+            this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(29, 13);
+            this.labelControl16.Size = new System.Drawing.Size(35, 17);
             this.labelControl16.TabIndex = 22;
             this.labelControl16.Text = "Name";
             // 
@@ -202,7 +206,8 @@
             // 
             this.TextCreditAcName.Enabled = false;
             this.TextCreditAcName.EnterMoveNextControl = true;
-            this.TextCreditAcName.Location = new System.Drawing.Point(290, 72);
+            this.TextCreditAcName.Location = new System.Drawing.Point(338, 94);
+            this.TextCreditAcName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCreditAcName.Name = "TextCreditAcName";
             this.TextCreditAcName.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextCreditAcName.Properties.Appearance.Options.UseBorderColor = true;
@@ -213,13 +218,14 @@
             this.TextCreditAcName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCreditAcName.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCreditAcName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCreditAcName.Size = new System.Drawing.Size(493, 20);
+            this.TextCreditAcName.Size = new System.Drawing.Size(575, 24);
             this.TextCreditAcName.TabIndex = 7;
             // 
             // TextCreditAc
             // 
             this.TextCreditAc.EnterMoveNextControl = true;
-            this.TextCreditAc.Location = new System.Drawing.Point(107, 72);
+            this.TextCreditAc.Location = new System.Drawing.Point(125, 94);
+            this.TextCreditAc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextCreditAc.Name = "TextCreditAc";
             this.TextCreditAc.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextCreditAc.Properties.Appearance.Options.UseBorderColor = true;
@@ -230,15 +236,16 @@
             this.TextCreditAc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCreditAc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCreditAc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCreditAc.Size = new System.Drawing.Size(79, 20);
+            this.TextCreditAc.Size = new System.Drawing.Size(92, 24);
             this.TextCreditAc.TabIndex = 6;
             this.TextCreditAc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCreditAc_KeyDown);
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(37, 132);
+            this.labelControl15.Location = new System.Drawing.Point(45, 173);
+            this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(62, 13);
+            this.labelControl15.Size = new System.Drawing.Size(71, 17);
             this.labelControl15.TabIndex = 21;
             this.labelControl15.Text = "Supplier A/c";
             // 
@@ -246,7 +253,8 @@
             // 
             this.TextDebitAcName.Enabled = false;
             this.TextDebitAcName.EnterMoveNextControl = true;
-            this.TextDebitAcName.Location = new System.Drawing.Point(290, 129);
+            this.TextDebitAcName.Location = new System.Drawing.Point(338, 169);
+            this.TextDebitAcName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDebitAcName.Name = "TextDebitAcName";
             this.TextDebitAcName.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDebitAcName.Properties.Appearance.Options.UseBorderColor = true;
@@ -257,14 +265,15 @@
             this.TextDebitAcName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDebitAcName.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDebitAcName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDebitAcName.Size = new System.Drawing.Size(458, 20);
+            this.TextDebitAcName.Size = new System.Drawing.Size(534, 24);
             this.TextDebitAcName.TabIndex = 13;
             // 
             // TextVoucherDesc
             // 
             this.TextVoucherDesc.Enabled = false;
             this.TextVoucherDesc.EnterMoveNextControl = true;
-            this.TextVoucherDesc.Location = new System.Drawing.Point(352, 44);
+            this.TextVoucherDesc.Location = new System.Drawing.Point(411, 58);
+            this.TextVoucherDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextVoucherDesc.Name = "TextVoucherDesc";
             this.TextVoucherDesc.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextVoucherDesc.Properties.Appearance.Options.UseBorderColor = true;
@@ -275,13 +284,14 @@
             this.TextVoucherDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextVoucherDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextVoucherDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextVoucherDesc.Size = new System.Drawing.Size(138, 20);
+            this.TextVoucherDesc.Size = new System.Drawing.Size(161, 24);
             this.TextVoucherDesc.TabIndex = 3;
             // 
             // TextVoucherType
             // 
             this.TextVoucherType.EnterMoveNextControl = true;
-            this.TextVoucherType.Location = new System.Drawing.Point(290, 44);
+            this.TextVoucherType.Location = new System.Drawing.Point(338, 58);
+            this.TextVoucherType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextVoucherType.Name = "TextVoucherType";
             this.TextVoucherType.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextVoucherType.Properties.Appearance.Options.UseBorderColor = true;
@@ -293,7 +303,7 @@
             this.TextVoucherType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextVoucherType.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextVoucherType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextVoucherType.Size = new System.Drawing.Size(46, 20);
+            this.TextVoucherType.Size = new System.Drawing.Size(54, 24);
             this.TextVoucherType.TabIndex = 2;
             this.TextVoucherType.TextChanged += new System.EventHandler(this.TextVoucherType_TextChanged);
             this.TextVoucherType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextVoucherType_KeyDown);
@@ -301,16 +311,18 @@
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(254, 48);
+            this.labelControl2.Location = new System.Drawing.Point(303, 63);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(24, 13);
+            this.labelControl2.Size = new System.Drawing.Size(28, 17);
             this.labelControl2.TabIndex = 17;
             this.labelControl2.Text = "Type";
             // 
             // TextInstrumentNo
             // 
             this.TextInstrumentNo.EnterMoveNextControl = true;
-            this.TextInstrumentNo.Location = new System.Drawing.Point(290, 100);
+            this.TextInstrumentNo.Location = new System.Drawing.Point(338, 131);
+            this.TextInstrumentNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextInstrumentNo.Name = "TextInstrumentNo";
             this.TextInstrumentNo.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextInstrumentNo.Properties.Appearance.Options.UseBorderColor = true;
@@ -321,22 +333,24 @@
             this.TextInstrumentNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextInstrumentNo.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextInstrumentNo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextInstrumentNo.Size = new System.Drawing.Size(110, 20);
+            this.TextInstrumentNo.Size = new System.Drawing.Size(128, 24);
             this.TextInstrumentNo.TabIndex = 9;
             this.TextInstrumentNo.Validated += new System.EventHandler(this.TextInstrumentNo_Validated);
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(208, 104);
+            this.labelControl6.Location = new System.Drawing.Point(245, 136);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(77, 13);
+            this.labelControl6.Size = new System.Drawing.Size(86, 17);
             this.labelControl6.TabIndex = 17;
             this.labelControl6.Text = "Instrument No.";
             // 
             // TextInstrumentType
             // 
             this.TextInstrumentType.EnterMoveNextControl = true;
-            this.TextInstrumentType.Location = new System.Drawing.Point(107, 100);
+            this.TextInstrumentType.Location = new System.Drawing.Point(125, 131);
+            this.TextInstrumentType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextInstrumentType.Name = "TextInstrumentType";
             this.TextInstrumentType.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextInstrumentType.Properties.Appearance.Options.UseBorderColor = true;
@@ -348,16 +362,17 @@
             this.TextInstrumentType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextInstrumentType.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextInstrumentType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextInstrumentType.Size = new System.Drawing.Size(79, 20);
+            this.TextInstrumentType.Size = new System.Drawing.Size(92, 24);
             this.TextInstrumentType.TabIndex = 8;
             this.TextInstrumentType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextInstrumentType_KeyDown);
             this.TextInstrumentType.Validated += new System.EventHandler(this.TextInstrumentType_Validated);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(16, 104);
+            this.labelControl4.Location = new System.Drawing.Point(23, 136);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(83, 13);
+            this.labelControl4.Size = new System.Drawing.Size(93, 17);
             this.labelControl4.TabIndex = 17;
             this.labelControl4.Text = "Instrument Type";
             // 
@@ -365,7 +380,8 @@
             // 
             this.TextPaymentToLoad.EditValue = "0.00";
             this.TextPaymentToLoad.EnterMoveNextControl = true;
-            this.TextPaymentToLoad.Location = new System.Drawing.Point(688, 101);
+            this.TextPaymentToLoad.Location = new System.Drawing.Point(803, 132);
+            this.TextPaymentToLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextPaymentToLoad.Name = "TextPaymentToLoad";
             this.TextPaymentToLoad.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextPaymentToLoad.Properties.Appearance.Options.UseBorderColor = true;
@@ -381,23 +397,25 @@
             this.TextPaymentToLoad.Properties.Mask.EditMask = "f";
             this.TextPaymentToLoad.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPaymentToLoad.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextPaymentToLoad.Size = new System.Drawing.Size(95, 20);
+            this.TextPaymentToLoad.Size = new System.Drawing.Size(111, 24);
             this.TextPaymentToLoad.TabIndex = 11;
             this.TextPaymentToLoad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextPaymentToLoad_KeyPress);
             this.TextPaymentToLoad.Validated += new System.EventHandler(this.TextPaymentToLoad_Validated);
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(601, 105);
+            this.labelControl5.Location = new System.Drawing.Point(701, 137);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(85, 13);
+            this.labelControl5.Size = new System.Drawing.Size(98, 17);
             this.labelControl5.TabIndex = 17;
             this.labelControl5.Text = "Payment to Load";
             // 
             // TextDebitAc
             // 
             this.TextDebitAc.EnterMoveNextControl = true;
-            this.TextDebitAc.Location = new System.Drawing.Point(107, 128);
+            this.TextDebitAc.Location = new System.Drawing.Point(125, 167);
+            this.TextDebitAc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDebitAc.Name = "TextDebitAc";
             this.TextDebitAc.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDebitAc.Properties.Appearance.Options.UseBorderColor = true;
@@ -408,15 +426,16 @@
             this.TextDebitAc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDebitAc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDebitAc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDebitAc.Size = new System.Drawing.Size(79, 20);
+            this.TextDebitAc.Size = new System.Drawing.Size(92, 24);
             this.TextDebitAc.TabIndex = 12;
             this.TextDebitAc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextDebitAc_KeyDown);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(46, 74);
+            this.labelControl3.Location = new System.Drawing.Point(54, 97);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(53, 13);
+            this.labelControl3.Size = new System.Drawing.Size(62, 17);
             this.labelControl3.TabIndex = 17;
             this.labelControl3.Text = "Credit A/c ";
             // 
@@ -424,7 +443,8 @@
             // 
             this.TextVoucherNo.Enabled = false;
             this.TextVoucherNo.EnterMoveNextControl = true;
-            this.TextVoucherNo.Location = new System.Drawing.Point(568, 44);
+            this.TextVoucherNo.Location = new System.Drawing.Point(663, 58);
+            this.TextVoucherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextVoucherNo.Name = "TextVoucherNo";
             this.TextVoucherNo.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextVoucherNo.Properties.Appearance.Options.UseBorderColor = true;
@@ -435,22 +455,24 @@
             this.TextVoucherNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextVoucherNo.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextVoucherNo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextVoucherNo.Size = new System.Drawing.Size(53, 20);
+            this.TextVoucherNo.Size = new System.Drawing.Size(62, 24);
             this.TextVoucherNo.TabIndex = 4;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(503, 48);
+            this.labelControl1.Location = new System.Drawing.Point(587, 63);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(64, 13);
+            this.labelControl1.Size = new System.Drawing.Size(73, 17);
             this.labelControl1.TabIndex = 17;
             this.labelControl1.Text = "Voucher No.";
             // 
             // labelControl26
             // 
-            this.labelControl26.Location = new System.Drawing.Point(29, 48);
+            this.labelControl26.Location = new System.Drawing.Point(37, 63);
+            this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(70, 13);
+            this.labelControl26.Size = new System.Drawing.Size(79, 17);
             this.labelControl26.TabIndex = 15;
             this.labelControl26.Text = "Voucher Date";
             // 
@@ -458,7 +480,8 @@
             // 
             this.DtVoucher.EditValue = null;
             this.DtVoucher.EnterMoveNextControl = true;
-            this.DtVoucher.Location = new System.Drawing.Point(107, 44);
+            this.DtVoucher.Location = new System.Drawing.Point(125, 58);
+            this.DtVoucher.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtVoucher.Name = "DtVoucher";
             this.DtVoucher.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DtVoucher.Properties.Appearance.Options.UseBorderColor = true;
@@ -476,7 +499,7 @@
             this.DtVoucher.Properties.Mask.BeepOnError = true;
             this.DtVoucher.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.DtVoucher.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
-            this.DtVoucher.Size = new System.Drawing.Size(79, 20);
+            this.DtVoucher.Size = new System.Drawing.Size(92, 24);
             this.DtVoucher.TabIndex = 1;
             this.DtVoucher.EditValueChanged += new System.EventHandler(this.DtVoucher_EditValueChanged);
             this.DtVoucher.Enter += new System.EventHandler(this.DtVoucher_Enter);
@@ -485,10 +508,12 @@
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(344, 338);
+            this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(401, 442);
             this.HelpGridCtrl.MainView = this.HelpGrid;
+            this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(635, 368);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(741, 481);
             this.HelpGridCtrl.TabIndex = 0;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -499,6 +524,7 @@
             // 
             // HelpGrid
             // 
+            this.HelpGrid.DetailHeight = 458;
             this.HelpGrid.GridControl = this.HelpGridCtrl;
             this.HelpGrid.Name = "HelpGrid";
             // 
@@ -506,9 +532,10 @@
             // 
             this.labelControl8.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelControl8.Appearance.Options.UseForeColor = true;
-            this.labelControl8.Location = new System.Drawing.Point(232, 189);
+            this.labelControl8.Location = new System.Drawing.Point(271, 247);
+            this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(83, 13);
+            this.labelControl8.Size = new System.Drawing.Size(93, 17);
             this.labelControl8.TabIndex = 20;
             this.labelControl8.Text = "Bill/Ref  Amount";
             // 
@@ -516,7 +543,8 @@
             // 
             this.TextMmBillPassID.Enabled = false;
             this.TextMmBillPassID.EnterMoveNextControl = true;
-            this.TextMmBillPassID.Location = new System.Drawing.Point(107, 212);
+            this.TextMmBillPassID.Location = new System.Drawing.Point(125, 277);
+            this.TextMmBillPassID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextMmBillPassID.Name = "TextMmBillPassID";
             this.TextMmBillPassID.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextMmBillPassID.Properties.Appearance.Options.UseBorderColor = true;
@@ -527,14 +555,15 @@
             this.TextMmBillPassID.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextMmBillPassID.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextMmBillPassID.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextMmBillPassID.Size = new System.Drawing.Size(79, 20);
+            this.TextMmBillPassID.Size = new System.Drawing.Size(92, 24);
             this.TextMmBillPassID.TabIndex = 20;
             // 
             // TextMMDocNo
             // 
             this.TextMMDocNo.Enabled = false;
             this.TextMMDocNo.EnterMoveNextControl = true;
-            this.TextMMDocNo.Location = new System.Drawing.Point(192, 212);
+            this.TextMMDocNo.Location = new System.Drawing.Point(224, 277);
+            this.TextMMDocNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextMMDocNo.Name = "TextMMDocNo";
             this.TextMMDocNo.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextMMDocNo.Properties.Appearance.Options.UseBorderColor = true;
@@ -545,14 +574,15 @@
             this.TextMMDocNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextMMDocNo.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextMMDocNo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextMMDocNo.Size = new System.Drawing.Size(67, 20);
+            this.TextMMDocNo.Size = new System.Drawing.Size(78, 24);
             this.TextMMDocNo.TabIndex = 21;
             // 
             // TextBill_Ref_Amt
             // 
             this.TextBill_Ref_Amt.Enabled = false;
             this.TextBill_Ref_Amt.EnterMoveNextControl = true;
-            this.TextBill_Ref_Amt.Location = new System.Drawing.Point(317, 185);
+            this.TextBill_Ref_Amt.Location = new System.Drawing.Point(370, 242);
+            this.TextBill_Ref_Amt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBill_Ref_Amt.Name = "TextBill_Ref_Amt";
             this.TextBill_Ref_Amt.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextBill_Ref_Amt.Properties.Appearance.Options.UseBorderColor = true;
@@ -568,23 +598,25 @@
             this.TextBill_Ref_Amt.Properties.Mask.EditMask = "f";
             this.TextBill_Ref_Amt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextBill_Ref_Amt.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextBill_Ref_Amt.Size = new System.Drawing.Size(109, 20);
+            this.TextBill_Ref_Amt.Size = new System.Drawing.Size(127, 24);
             this.TextBill_Ref_Amt.TabIndex = 18;
             // 
             // BtnUndo
             // 
-            this.BtnUndo.Location = new System.Drawing.Point(688, 217);
+            this.BtnUndo.Location = new System.Drawing.Point(803, 284);
+            this.BtnUndo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnUndo.Name = "BtnUndo";
-            this.BtnUndo.Size = new System.Drawing.Size(75, 20);
+            this.BtnUndo.Size = new System.Drawing.Size(87, 26);
             this.BtnUndo.TabIndex = 26;
             this.BtnUndo.Text = "&Undo";
             this.BtnUndo.Click += new System.EventHandler(this.BtnUndo_Click);
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(688, 191);
+            this.BtnDelete.Location = new System.Drawing.Point(803, 250);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 20);
+            this.BtnDelete.Size = new System.Drawing.Size(87, 26);
             this.BtnDelete.TabIndex = 25;
             this.BtnDelete.Text = "&Delete";
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
@@ -592,9 +624,10 @@
             // BtnOk
             // 
             this.BtnOk.Enabled = false;
-            this.BtnOk.Location = new System.Drawing.Point(688, 165);
+            this.BtnOk.Location = new System.Drawing.Point(803, 216);
+            this.BtnOk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnOk.Name = "BtnOk";
-            this.BtnOk.Size = new System.Drawing.Size(75, 20);
+            this.BtnOk.Size = new System.Drawing.Size(87, 26);
             this.BtnOk.TabIndex = 24;
             this.BtnOk.Text = "&Ok";
             this.BtnOk.Click += new System.EventHandler(this.BtnOk_Click);
@@ -603,9 +636,10 @@
             // 
             this.labelControl9.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelControl9.Appearance.Options.UseForeColor = true;
-            this.labelControl9.Location = new System.Drawing.Point(58, 216);
+            this.labelControl9.Location = new System.Drawing.Point(68, 282);
+            this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(41, 13);
+            this.labelControl9.Size = new System.Drawing.Size(48, 17);
             this.labelControl9.TabIndex = 17;
             this.labelControl9.Text = "MM AID";
             // 
@@ -613,9 +647,10 @@
             // 
             this.labelControl13.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelControl13.Appearance.Options.UseForeColor = true;
-            this.labelControl13.Location = new System.Drawing.Point(36, 189);
+            this.labelControl13.Location = new System.Drawing.Point(45, 247);
+            this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(63, 13);
+            this.labelControl13.Size = new System.Drawing.Size(71, 17);
             this.labelControl13.TabIndex = 17;
             this.labelControl13.Text = "Bill/Ref Date";
             // 
@@ -623,24 +658,27 @@
             // 
             this.labelControl11.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelControl11.Appearance.Options.UseForeColor = true;
-            this.labelControl11.Location = new System.Drawing.Point(259, 158);
+            this.labelControl11.Location = new System.Drawing.Point(302, 207);
+            this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(54, 13);
+            this.labelControl11.Size = new System.Drawing.Size(62, 17);
             this.labelControl11.TabIndex = 17;
             this.labelControl11.Text = "Bill/Ref No";
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(58, 158);
+            this.labelControl7.Location = new System.Drawing.Point(70, 207);
+            this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(41, 13);
+            this.labelControl7.Size = new System.Drawing.Size(46, 17);
             this.labelControl7.TabIndex = 17;
             this.labelControl7.Text = "Method";
             // 
             // TextBill_Ref_No
             // 
             this.TextBill_Ref_No.EnterMoveNextControl = true;
-            this.TextBill_Ref_No.Location = new System.Drawing.Point(317, 154);
+            this.TextBill_Ref_No.Location = new System.Drawing.Point(370, 201);
+            this.TextBill_Ref_No.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBill_Ref_No.Name = "TextBill_Ref_No";
             this.TextBill_Ref_No.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextBill_Ref_No.Properties.Appearance.Options.UseBorderColor = true;
@@ -651,14 +689,15 @@
             this.TextBill_Ref_No.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextBill_Ref_No.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextBill_Ref_No.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextBill_Ref_No.Size = new System.Drawing.Size(109, 20);
+            this.TextBill_Ref_No.Size = new System.Drawing.Size(127, 24);
             this.TextBill_Ref_No.TabIndex = 15;
             this.TextBill_Ref_No.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBill_Ref_No_KeyDown);
             // 
             // TextPaymentMethod
             // 
             this.TextPaymentMethod.EnterMoveNextControl = true;
-            this.TextPaymentMethod.Location = new System.Drawing.Point(107, 156);
+            this.TextPaymentMethod.Location = new System.Drawing.Point(125, 204);
+            this.TextPaymentMethod.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextPaymentMethod.Name = "TextPaymentMethod";
             this.TextPaymentMethod.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextPaymentMethod.Properties.Appearance.Options.UseBorderColor = true;
@@ -669,7 +708,7 @@
             this.TextPaymentMethod.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextPaymentMethod.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextPaymentMethod.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextPaymentMethod.Size = new System.Drawing.Size(79, 20);
+            this.TextPaymentMethod.Size = new System.Drawing.Size(92, 24);
             this.TextPaymentMethod.TabIndex = 14;
             this.TextPaymentMethod.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextPaymentMethod_KeyDown);
             // 
@@ -679,9 +718,10 @@
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelControl14.Appearance.Options.UseFont = true;
             this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(433, 189);
+            this.labelControl14.Location = new System.Drawing.Point(505, 247);
+            this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(88, 13);
+            this.labelControl14.Size = new System.Drawing.Size(107, 17);
             this.labelControl14.TabIndex = 17;
             this.labelControl14.Text = "Bill/Ref Balance";
             // 
@@ -689,17 +729,19 @@
             // 
             this.labelControl12.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.labelControl12.Appearance.Options.UseForeColor = true;
-            this.labelControl12.Location = new System.Drawing.Point(400, 220);
+            this.labelControl12.Location = new System.Drawing.Point(467, 288);
+            this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(127, 13);
+            this.labelControl12.Size = new System.Drawing.Size(146, 17);
             this.labelControl12.TabIndex = 17;
             this.labelControl12.Text = "Payment to Load Balance";
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(484, 158);
+            this.labelControl10.Location = new System.Drawing.Point(565, 207);
+            this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(41, 13);
+            this.labelControl10.Size = new System.Drawing.Size(45, 17);
             this.labelControl10.TabIndex = 17;
             this.labelControl10.Text = "Amount";
             // 
@@ -708,7 +750,8 @@
             this.TextBalanceLeft.EditValue = "0.00";
             this.TextBalanceLeft.Enabled = false;
             this.TextBalanceLeft.EnterMoveNextControl = true;
-            this.TextBalanceLeft.Location = new System.Drawing.Point(527, 217);
+            this.TextBalanceLeft.Location = new System.Drawing.Point(615, 284);
+            this.TextBalanceLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBalanceLeft.Name = "TextBalanceLeft";
             this.TextBalanceLeft.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextBalanceLeft.Properties.Appearance.Options.UseBorderColor = true;
@@ -725,7 +768,7 @@
             this.TextBalanceLeft.Properties.Mask.EditMask = "f";
             this.TextBalanceLeft.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextBalanceLeft.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextBalanceLeft.Size = new System.Drawing.Size(109, 20);
+            this.TextBalanceLeft.Size = new System.Drawing.Size(127, 24);
             this.TextBalanceLeft.TabIndex = 23;
             // 
             // TextRefBalance
@@ -733,7 +776,8 @@
             this.TextRefBalance.EditValue = "0.00";
             this.TextRefBalance.Enabled = false;
             this.TextRefBalance.EnterMoveNextControl = true;
-            this.TextRefBalance.Location = new System.Drawing.Point(527, 185);
+            this.TextRefBalance.Location = new System.Drawing.Point(615, 242);
+            this.TextRefBalance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextRefBalance.Name = "TextRefBalance";
             this.TextRefBalance.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextRefBalance.Properties.Appearance.Options.UseBorderColor = true;
@@ -750,14 +794,15 @@
             this.TextRefBalance.Properties.Mask.EditMask = "f";
             this.TextRefBalance.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextRefBalance.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextRefBalance.Size = new System.Drawing.Size(109, 20);
+            this.TextRefBalance.Size = new System.Drawing.Size(127, 24);
             this.TextRefBalance.TabIndex = 19;
             // 
             // TextRefPayment
             // 
             this.TextRefPayment.EditValue = "0.00";
             this.TextRefPayment.EnterMoveNextControl = true;
-            this.TextRefPayment.Location = new System.Drawing.Point(527, 154);
+            this.TextRefPayment.Location = new System.Drawing.Point(615, 201);
+            this.TextRefPayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextRefPayment.Name = "TextRefPayment";
             this.TextRefPayment.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextRefPayment.Properties.Appearance.Options.UseBorderColor = true;
@@ -774,7 +819,7 @@
             this.TextRefPayment.Properties.Mask.EditMask = "f";
             this.TextRefPayment.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextRefPayment.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextRefPayment.Size = new System.Drawing.Size(109, 20);
+            this.TextRefPayment.Size = new System.Drawing.Size(127, 24);
             this.TextRefPayment.TabIndex = 16;
             this.TextRefPayment.Enter += new System.EventHandler(this.TextRefPayment_Enter);
             this.TextRefPayment.Validated += new System.EventHandler(this.TextRefPayment_Validated);
@@ -784,7 +829,8 @@
             this.DtMMDoc.EditValue = null;
             this.DtMMDoc.Enabled = false;
             this.DtMMDoc.EnterMoveNextControl = true;
-            this.DtMMDoc.Location = new System.Drawing.Point(265, 212);
+            this.DtMMDoc.Location = new System.Drawing.Point(309, 277);
+            this.DtMMDoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtMMDoc.Name = "DtMMDoc";
             this.DtMMDoc.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DtMMDoc.Properties.Appearance.Options.UseBorderColor = true;
@@ -802,7 +848,7 @@
             this.DtMMDoc.Properties.Mask.BeepOnError = true;
             this.DtMMDoc.Properties.Mask.EditMask = "dd/MM/yy";
             this.DtMMDoc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtMMDoc.Size = new System.Drawing.Size(109, 20);
+            this.DtMMDoc.Size = new System.Drawing.Size(127, 24);
             this.DtMMDoc.TabIndex = 22;
             // 
             // DtBillRef
@@ -810,7 +856,8 @@
             this.DtBillRef.EditValue = null;
             this.DtBillRef.Enabled = false;
             this.DtBillRef.EnterMoveNextControl = true;
-            this.DtBillRef.Location = new System.Drawing.Point(107, 184);
+            this.DtBillRef.Location = new System.Drawing.Point(125, 241);
+            this.DtBillRef.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtBillRef.Name = "DtBillRef";
             this.DtBillRef.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.DtBillRef.Properties.Appearance.Options.UseBorderColor = true;
@@ -828,17 +875,19 @@
             this.DtBillRef.Properties.Mask.BeepOnError = true;
             this.DtBillRef.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.DtBillRef.Properties.MaskSettings.Set("mask", "dd/MM/yy");
-            this.DtBillRef.Size = new System.Drawing.Size(79, 20);
+            this.DtBillRef.Size = new System.Drawing.Size(92, 24);
             this.DtBillRef.TabIndex = 17;
             // 
             // EntryInfo_GridCtrl
             // 
-            this.EntryInfo_GridCtrl.Location = new System.Drawing.Point(17, 252);
+            this.EntryInfo_GridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.EntryInfo_GridCtrl.Location = new System.Drawing.Point(20, 330);
             this.EntryInfo_GridCtrl.LookAndFeel.SkinName = "Office 2010 Blue";
             this.EntryInfo_GridCtrl.LookAndFeel.UseDefaultLookAndFeel = false;
             this.EntryInfo_GridCtrl.MainView = this.EntryInfo_Grid;
+            this.EntryInfo_GridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EntryInfo_GridCtrl.Name = "EntryInfo_GridCtrl";
-            this.EntryInfo_GridCtrl.Size = new System.Drawing.Size(1082, 221);
+            this.EntryInfo_GridCtrl.Size = new System.Drawing.Size(1262, 289);
             this.EntryInfo_GridCtrl.TabIndex = 2;
             this.EntryInfo_GridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.EntryInfo_Grid});
@@ -860,6 +909,7 @@
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9});
+            this.EntryInfo_Grid.DetailHeight = 458;
             this.EntryInfo_Grid.GridControl = this.EntryInfo_GridCtrl;
             this.EntryInfo_Grid.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.EntryInfo_Grid.Name = "EntryInfo_Grid";
@@ -872,36 +922,43 @@
             // 
             this.gridColumn10.Caption = "A/C Name";
             this.gridColumn10.FieldName = "AcName";
+            this.gridColumn10.MinWidth = 23;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 0;
-            this.gridColumn10.Width = 161;
+            this.gridColumn10.Width = 188;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Method";
             this.gridColumn1.FieldName = "Method";
+            this.gridColumn1.MinWidth = 23;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 1;
+            this.gridColumn1.Width = 87;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Ref. Payment";
             this.gridColumn11.FieldName = "RefPayment";
+            this.gridColumn11.MinWidth = 23;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 2;
+            this.gridColumn11.Width = 87;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "BillRefNo";
             this.gridColumn2.FieldName = "BillRefNo";
+            this.gridColumn2.MinWidth = 23;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.Width = 87;
             // 
             // gridColumn3
             // 
@@ -909,48 +966,57 @@
             this.gridColumn3.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.gridColumn3.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn3.FieldName = "BillRefDate";
+            this.gridColumn3.MinWidth = 23;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count)});
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.Width = 87;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "BillRefAmount";
             this.gridColumn4.FieldName = "BillRefAmount";
+            this.gridColumn4.MinWidth = 23;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
+            this.gridColumn4.Width = 87;
             // 
             // gridColumn5
             // 
             this.gridColumn5.Caption = "BillRefBalance";
             this.gridColumn5.FieldName = "BillRefBalance";
+            this.gridColumn5.MinWidth = 23;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum)});
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.Width = 87;
             // 
             // gridColumn6
             // 
             this.gridColumn6.Caption = "MmBillPassID";
             this.gridColumn6.FieldName = "MmBillPassID";
+            this.gridColumn6.MinWidth = 23;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 7;
-            this.gridColumn6.Width = 47;
+            this.gridColumn6.Width = 55;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "MmDocNo";
             this.gridColumn7.FieldName = "MmDocNo";
+            this.gridColumn7.MinWidth = 23;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 8;
+            this.gridColumn7.Width = 87;
             // 
             // gridColumn8
             // 
@@ -958,21 +1024,26 @@
             this.gridColumn8.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.gridColumn8.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn8.FieldName = "MmDocDate";
+            this.gridColumn8.MinWidth = 23;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 9;
+            this.gridColumn8.Width = 87;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "EntryId";
             this.gridColumn9.FieldName = "EntryId";
+            this.gridColumn9.MinWidth = 23;
             this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Width = 87;
             // 
             // TextDNNarr5
             // 
             this.TextDNNarr5.Enabled = false;
             this.TextDNNarr5.EnterMoveNextControl = true;
-            this.TextDNNarr5.Location = new System.Drawing.Point(796, 226);
+            this.TextDNNarr5.Location = new System.Drawing.Point(929, 296);
+            this.TextDNNarr5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDNNarr5.Name = "TextDNNarr5";
             this.TextDNNarr5.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDNNarr5.Properties.Appearance.Options.UseBorderColor = true;
@@ -983,14 +1054,15 @@
             this.TextDNNarr5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDNNarr5.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDNNarr5.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDNNarr5.Size = new System.Drawing.Size(280, 20);
+            this.TextDNNarr5.Size = new System.Drawing.Size(327, 24);
             this.TextDNNarr5.TabIndex = 6;
             // 
             // TextDNNarr3
             // 
             this.TextDNNarr3.Enabled = false;
             this.TextDNNarr3.EnterMoveNextControl = true;
-            this.TextDNNarr3.Location = new System.Drawing.Point(796, 178);
+            this.TextDNNarr3.Location = new System.Drawing.Point(929, 233);
+            this.TextDNNarr3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDNNarr3.Name = "TextDNNarr3";
             this.TextDNNarr3.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDNNarr3.Properties.Appearance.Options.UseBorderColor = true;
@@ -1001,14 +1073,15 @@
             this.TextDNNarr3.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDNNarr3.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDNNarr3.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDNNarr3.Size = new System.Drawing.Size(280, 20);
+            this.TextDNNarr3.Size = new System.Drawing.Size(327, 24);
             this.TextDNNarr3.TabIndex = 4;
             // 
             // TextDNNarr4
             // 
             this.TextDNNarr4.Enabled = false;
             this.TextDNNarr4.EnterMoveNextControl = true;
-            this.TextDNNarr4.Location = new System.Drawing.Point(796, 202);
+            this.TextDNNarr4.Location = new System.Drawing.Point(929, 264);
+            this.TextDNNarr4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDNNarr4.Name = "TextDNNarr4";
             this.TextDNNarr4.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDNNarr4.Properties.Appearance.Options.UseBorderColor = true;
@@ -1019,13 +1092,14 @@
             this.TextDNNarr4.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDNNarr4.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDNNarr4.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDNNarr4.Size = new System.Drawing.Size(280, 20);
+            this.TextDNNarr4.Size = new System.Drawing.Size(327, 24);
             this.TextDNNarr4.TabIndex = 5;
             // 
             // TextDNNarr1
             // 
             this.TextDNNarr1.EnterMoveNextControl = true;
-            this.TextDNNarr1.Location = new System.Drawing.Point(796, 128);
+            this.TextDNNarr1.Location = new System.Drawing.Point(929, 167);
+            this.TextDNNarr1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDNNarr1.Name = "TextDNNarr1";
             this.TextDNNarr1.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDNNarr1.Properties.Appearance.Options.UseBorderColor = true;
@@ -1036,7 +1110,7 @@
             this.TextDNNarr1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDNNarr1.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDNNarr1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDNNarr1.Size = new System.Drawing.Size(281, 20);
+            this.TextDNNarr1.Size = new System.Drawing.Size(328, 24);
             this.TextDNNarr1.TabIndex = 1;
             this.TextDNNarr1.EditValueChanged += new System.EventHandler(this.TextDNNarr1_EditValueChanged);
             // 
@@ -1044,7 +1118,8 @@
             // 
             this.TextDNNarr2.Enabled = false;
             this.TextDNNarr2.EnterMoveNextControl = true;
-            this.TextDNNarr2.Location = new System.Drawing.Point(796, 154);
+            this.TextDNNarr2.Location = new System.Drawing.Point(929, 201);
+            this.TextDNNarr2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDNNarr2.Name = "TextDNNarr2";
             this.TextDNNarr2.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextDNNarr2.Properties.Appearance.Options.UseBorderColor = true;
@@ -1055,14 +1130,15 @@
             this.TextDNNarr2.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDNNarr2.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDNNarr2.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDNNarr2.Size = new System.Drawing.Size(280, 20);
+            this.TextDNNarr2.Size = new System.Drawing.Size(327, 24);
             this.TextDNNarr2.TabIndex = 2;
             // 
             // labelControl20
             // 
-            this.labelControl20.Location = new System.Drawing.Point(867, 102);
+            this.labelControl20.Location = new System.Drawing.Point(1011, 133);
+            this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(113, 13);
+            this.labelControl20.Size = new System.Drawing.Size(129, 17);
             this.labelControl20.TabIndex = 23;
             this.labelControl20.Text = "Voucher Dr. Narration";
             // 
@@ -1070,7 +1146,8 @@
             // 
             this.TextVouchNarration.Enabled = false;
             this.TextVouchNarration.EnterMoveNextControl = true;
-            this.TextVouchNarration.Location = new System.Drawing.Point(796, 70);
+            this.TextVouchNarration.Location = new System.Drawing.Point(929, 92);
+            this.TextVouchNarration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextVouchNarration.Name = "TextVouchNarration";
             this.TextVouchNarration.Properties.Appearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.TextVouchNarration.Properties.Appearance.Options.UseBorderColor = true;
@@ -1081,14 +1158,15 @@
             this.TextVouchNarration.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextVouchNarration.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextVouchNarration.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextVouchNarration.Size = new System.Drawing.Size(281, 20);
+            this.TextVouchNarration.Size = new System.Drawing.Size(328, 24);
             this.TextVouchNarration.TabIndex = 0;
             // 
             // labelControl19
             // 
-            this.labelControl19.Location = new System.Drawing.Point(867, 51);
+            this.labelControl19.Location = new System.Drawing.Point(1011, 67);
+            this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(112, 13);
+            this.labelControl19.Size = new System.Drawing.Size(128, 17);
             this.labelControl19.TabIndex = 23;
             this.labelControl19.Text = "Voucher Cr. Narration";
             // 
@@ -1098,6 +1176,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnClose,
             this.Save,
@@ -1110,7 +1189,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1099, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1282, 31);
             this.Menu_ToolStrip.TabIndex = 2;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1122,7 +1201,7 @@
             this.BtnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.BtnClose.Size = new System.Drawing.Size(45, 23);
+            this.BtnClose.Size = new System.Drawing.Size(53, 28);
             this.BtnClose.Text = "&Quit";
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
@@ -1135,7 +1214,7 @@
             this.Save.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Save.Name = "Save";
             this.Save.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.Save.Size = new System.Drawing.Size(48, 23);
+            this.Save.Size = new System.Drawing.Size(55, 28);
             this.Save.Text = "&Save";
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
@@ -1148,7 +1227,7 @@
             this.Print.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Print.Name = "Print";
             this.Print.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.Print.Size = new System.Drawing.Size(48, 23);
+            this.Print.Size = new System.Drawing.Size(57, 28);
             this.Print.Text = "&Print";
             // 
             // Validate
@@ -1159,7 +1238,7 @@
             this.Validate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Validate.Name = "Validate";
             this.Validate.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.Validate.Size = new System.Drawing.Size(65, 23);
+            this.Validate.Size = new System.Drawing.Size(79, 28);
             this.Validate.Text = "&Validate";
             this.Validate.Click += new System.EventHandler(this.Validate_Click);
             // 
@@ -1170,7 +1249,7 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(100, 26);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 31);
             this.TextAuthenticate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAuthenticate_KeyDown);
             // 
             // BtnCalc
@@ -1181,7 +1260,7 @@
             this.BtnCalc.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnCalc.Name = "BtnCalc";
             this.BtnCalc.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.BtnCalc.Size = new System.Drawing.Size(76, 23);
+            this.BtnCalc.Size = new System.Drawing.Size(93, 28);
             this.BtnCalc.Text = "&Calculator";
             this.BtnCalc.Click += new System.EventHandler(this.BtnCalc_Click);
             // 
@@ -1190,7 +1269,7 @@
             this.savemsg.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.savemsg.ForeColor = System.Drawing.Color.White;
             this.savemsg.Name = "savemsg";
-            this.savemsg.Size = new System.Drawing.Size(0, 23);
+            this.savemsg.Size = new System.Drawing.Size(0, 28);
             // 
             // Error
             // 
@@ -1203,16 +1282,18 @@
             // labelControl21
             // 
             this.labelControl21.Enabled = false;
-            this.labelControl21.Location = new System.Drawing.Point(649, 47);
+            this.labelControl21.Location = new System.Drawing.Point(757, 61);
+            this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(35, 13);
+            this.labelControl21.Size = new System.Drawing.Size(39, 17);
             this.labelControl21.TabIndex = 17;
             this.labelControl21.Text = "Branch";
             // 
             // Branch_CmBx
             // 
             this.Branch_CmBx.Enabled = false;
-            this.Branch_CmBx.Location = new System.Drawing.Point(688, 44);
+            this.Branch_CmBx.Location = new System.Drawing.Point(803, 58);
+            this.Branch_CmBx.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Branch_CmBx.Name = "Branch_CmBx";
             this.Branch_CmBx.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -1220,24 +1301,25 @@
             "Meerut",
             "Jammu",
             "Choice"});
-            this.Branch_CmBx.Size = new System.Drawing.Size(95, 20);
+            this.Branch_CmBx.Size = new System.Drawing.Size(111, 24);
             this.Branch_CmBx.TabIndex = 5;
             // 
             // BtnShowLedger
             // 
             this.BtnShowLedger.Appearance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.BtnShowLedger.Appearance.Options.UseFont = true;
-            this.BtnShowLedger.Location = new System.Drawing.Point(755, 129);
+            this.BtnShowLedger.Location = new System.Drawing.Point(881, 169);
+            this.BtnShowLedger.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnShowLedger.Name = "BtnShowLedger";
-            this.BtnShowLedger.Size = new System.Drawing.Size(28, 20);
+            this.BtnShowLedger.Size = new System.Drawing.Size(33, 26);
             this.BtnShowLedger.TabIndex = 27;
             this.BtnShowLedger.Text = "+";
             // 
             // frm_SupplierPaymentVoucherAdd_Upd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1099, 485);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1282, 634);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.EntryInfo_GridCtrl);
@@ -1298,6 +1380,7 @@
             this.Controls.Add(this.TextBnkChgs);
             this.Controls.Add(this.Branch_CmBx);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_SupplierPaymentVoucherAdd_Upd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Supplier Payment Addition Module";

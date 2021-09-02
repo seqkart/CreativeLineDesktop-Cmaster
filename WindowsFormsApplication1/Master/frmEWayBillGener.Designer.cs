@@ -1440,9 +1440,9 @@ namespace WindowsFormsApplication1.Master
             this.commandBarGalleryDropDown1.Gallery.AllowFilter = false;
             this.commandBarGalleryDropDown1.Gallery.ColumnCount = 1;
             this.commandBarGalleryDropDown1.Gallery.DrawImageBackground = false;
-            this.commandBarGalleryDropDown1.Gallery.ImageSize = new System.Drawing.Size(76, 60);
+            this.commandBarGalleryDropDown1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
             this.commandBarGalleryDropDown1.Gallery.ItemAutoSizeMode = DevExpress.XtraBars.Ribbon.Gallery.GalleryItemAutoSizeMode.None;
-            this.commandBarGalleryDropDown1.Gallery.ItemSize = new System.Drawing.Size(198, 42);
+            this.commandBarGalleryDropDown1.Gallery.ItemSize = new System.Drawing.Size(170, 32);
             this.commandBarGalleryDropDown1.Gallery.RowCount = 14;
             this.commandBarGalleryDropDown1.Gallery.ShowGroupCaption = false;
             this.commandBarGalleryDropDown1.Gallery.ShowItemText = true;
@@ -1975,7 +1975,7 @@ namespace WindowsFormsApplication1.Master
             this.commandBarGalleryDropDown2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup1,
             spreadsheetCommandGalleryItemGroup2});
-            this.commandBarGalleryDropDown2.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown2.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown2.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown2.Name = "commandBarGalleryDropDown2";
             this.commandBarGalleryDropDown2.Ribbon = this.ribbonControl1;
@@ -2022,7 +2022,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem35});
             this.commandBarGalleryDropDown3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup3});
-            this.commandBarGalleryDropDown3.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown3.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown3.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown3.Name = "commandBarGalleryDropDown3";
             this.commandBarGalleryDropDown3.Ribbon = this.ribbonControl1;
@@ -2094,7 +2094,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItemGroup5,
             spreadsheetCommandGalleryItemGroup6,
             spreadsheetCommandGalleryItemGroup7});
-            this.commandBarGalleryDropDown4.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown4.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown4.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown4.Name = "commandBarGalleryDropDown4";
             this.commandBarGalleryDropDown4.Ribbon = this.ribbonControl1;
@@ -2724,7 +2724,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItemGroup10,
             spreadsheetCommandGalleryItemGroup11,
             spreadsheetCommandGalleryItemGroup12});
-            this.commandBarGalleryDropDown6.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown6.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown6.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown6.Name = "commandBarGalleryDropDown6";
             this.commandBarGalleryDropDown6.Ribbon = this.ribbonControl1;
@@ -2763,7 +2763,7 @@ namespace WindowsFormsApplication1.Master
             this.commandBarGalleryDropDown7.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup13,
             spreadsheetCommandGalleryItemGroup14});
-            this.commandBarGalleryDropDown7.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown7.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown7.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown7.Name = "commandBarGalleryDropDown7";
             this.commandBarGalleryDropDown7.Ribbon = this.ribbonControl1;
@@ -2803,7 +2803,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItemGroup15,
             spreadsheetCommandGalleryItemGroup16,
             spreadsheetCommandGalleryItemGroup17});
-            this.commandBarGalleryDropDown8.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown8.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown8.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown8.Name = "commandBarGalleryDropDown8";
             this.commandBarGalleryDropDown8.Ribbon = this.ribbonControl1;
@@ -2867,7 +2867,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItemGroup20,
             spreadsheetCommandGalleryItemGroup21,
             spreadsheetCommandGalleryItemGroup22});
-            this.commandBarGalleryDropDown9.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown9.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown9.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown9.Name = "commandBarGalleryDropDown9";
             this.commandBarGalleryDropDown9.Ribbon = this.ribbonControl1;
@@ -2904,7 +2904,7 @@ namespace WindowsFormsApplication1.Master
             this.commandBarGalleryDropDown10.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup23,
             spreadsheetCommandGalleryItemGroup24});
-            this.commandBarGalleryDropDown10.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown10.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown10.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown10.Name = "commandBarGalleryDropDown10";
             this.commandBarGalleryDropDown10.Ribbon = this.ribbonControl1;
@@ -2943,7 +2943,7 @@ namespace WindowsFormsApplication1.Master
             this.commandBarGalleryDropDown11.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup25,
             spreadsheetCommandGalleryItemGroup26});
-            this.commandBarGalleryDropDown11.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown11.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown11.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown11.Name = "commandBarGalleryDropDown11";
             this.commandBarGalleryDropDown11.Ribbon = this.ribbonControl1;
@@ -2982,7 +2982,7 @@ namespace WindowsFormsApplication1.Master
             this.commandBarGalleryDropDown12.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup27,
             spreadsheetCommandGalleryItemGroup28});
-            this.commandBarGalleryDropDown12.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown12.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown12.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
             this.commandBarGalleryDropDown12.Name = "commandBarGalleryDropDown12";
             this.commandBarGalleryDropDown12.Ribbon = this.ribbonControl1;
@@ -3610,7 +3610,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem131});
             this.commandBarGalleryDropDown13.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup29});
-            this.commandBarGalleryDropDown13.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown13.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown13.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown13.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown13.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3653,7 +3653,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem140});
             this.commandBarGalleryDropDown14.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup30});
-            this.commandBarGalleryDropDown14.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown14.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown14.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown14.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown14.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3695,7 +3695,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem144});
             this.commandBarGalleryDropDown15.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup31});
-            this.commandBarGalleryDropDown15.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown15.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown15.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown15.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown15.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3728,7 +3728,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem148});
             this.commandBarGalleryDropDown16.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup32});
-            this.commandBarGalleryDropDown16.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown16.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown16.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown16.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown16.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3759,7 +3759,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem151});
             this.commandBarGalleryDropDown17.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup33});
-            this.commandBarGalleryDropDown17.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown17.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown17.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown17.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown17.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3797,7 +3797,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem153});
             this.commandBarGalleryDropDown18.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup34});
-            this.commandBarGalleryDropDown18.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown18.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown18.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown18.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown18.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3830,7 +3830,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem157});
             this.commandBarGalleryDropDown19.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup35});
-            this.commandBarGalleryDropDown19.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown19.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown19.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown19.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown19.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3869,7 +3869,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem164});
             this.commandBarGalleryDropDown20.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup36});
-            this.commandBarGalleryDropDown20.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown20.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown20.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown20.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown20.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3916,7 +3916,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem175});
             this.commandBarGalleryDropDown21.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup37});
-            this.commandBarGalleryDropDown21.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown21.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown21.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown21.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown21.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3951,7 +3951,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem180});
             this.commandBarGalleryDropDown22.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup38});
-            this.commandBarGalleryDropDown22.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown22.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown22.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown22.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown22.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -3980,7 +3980,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem182});
             this.commandBarGalleryDropDown23.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup39});
-            this.commandBarGalleryDropDown23.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown23.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown23.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown23.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown23.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -4013,7 +4013,7 @@ namespace WindowsFormsApplication1.Master
             spreadsheetCommandGalleryItem186});
             this.commandBarGalleryDropDown24.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
             spreadsheetCommandGalleryItemGroup40});
-            this.commandBarGalleryDropDown24.Gallery.ImageSize = new System.Drawing.Size(37, 42);
+            this.commandBarGalleryDropDown24.Gallery.ImageSize = new System.Drawing.Size(32, 32);
             this.commandBarGalleryDropDown24.Gallery.ItemImageLayout = DevExpress.Utils.Drawing.ImageLayoutMode.MiddleLeft;
             this.commandBarGalleryDropDown24.Gallery.ItemImageLocation = DevExpress.Utils.Locations.Left;
             this.commandBarGalleryDropDown24.Gallery.ShowScrollBar = DevExpress.XtraBars.Ribbon.Gallery.ShowScrollBar.Auto;
@@ -5427,8 +5427,8 @@ namespace WindowsFormsApplication1.Master
             // 
             // frmEWayBillGener
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1055, 611);
             this.Controls.Add(this.spreadsheetControl1);
             this.Controls.Add(this.ribbonControl1);

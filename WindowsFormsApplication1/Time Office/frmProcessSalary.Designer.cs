@@ -92,7 +92,7 @@
             this.ChoiceSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelect.Name = "ChoiceSelect";
             this.ChoiceSelect.Properties.Caption = "Select &All";
-            this.ChoiceSelect.Size = new System.Drawing.Size(87, 21);
+            this.ChoiceSelect.Size = new System.Drawing.Size(87, 24);
             this.ChoiceSelect.TabIndex = 349;
             this.ChoiceSelect.Visible = false;
             this.ChoiceSelect.CheckedChanged += new System.EventHandler(this.ChoiceSelect_CheckedChanged);
@@ -443,10 +443,10 @@
             this.labelControl1.TabIndex = 358;
             this.labelControl1.Text = "Tea Rate";
             // 
-            // frmProcessSalary
+            // FrmProcessSalary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1154, 790);
             this.ControlBox = false;
             this.Controls.Add(this.labelControl1);
@@ -467,7 +467,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmProcessSalary";
+            this.Name = "FrmProcessSalary";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmProcessSalary_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ChoiceSelect.Properties)).EndInit();

@@ -55,7 +55,7 @@
             // 
             // txtstatusTag
             // 
-            this.txtstatusTag.Location = new System.Drawing.Point(363, 65);
+            this.txtstatusTag.Location = new System.Drawing.Point(324, 58);
             this.txtstatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtstatusTag.Name = "txtstatusTag";
             this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -65,7 +65,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(321, 71);
+            this.label12.Location = new System.Drawing.Point(282, 62);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(34, 17);
@@ -74,7 +74,7 @@
             // 
             // txtConfirmPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(157, 170);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(118, 161);
             this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Properties.MaxLength = 8;
@@ -84,7 +84,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(46, 173);
+            this.label4.Location = new System.Drawing.Point(7, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 17);
@@ -105,7 +105,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(539, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(464, 31);
             this.Menu_ToolStrip.TabIndex = 312;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -115,7 +115,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(58, 24);
+            this.btnQuit.Size = new System.Drawing.Size(58, 28);
             this.btnQuit.Text = "&Cancel";
             this.btnQuit.ToolTipText = "Cancel";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
@@ -132,7 +132,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(157, 102);
+            this.txtUserName.Location = new System.Drawing.Point(118, 93);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.MaxLength = 8;
@@ -141,7 +141,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(157, 136);
+            this.txtPassword.Location = new System.Drawing.Point(118, 127);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.MaxLength = 8;
@@ -151,7 +151,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(90, 105);
+            this.label3.Location = new System.Drawing.Point(51, 97);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 17);
@@ -160,7 +160,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(96, 139);
+            this.label2.Location = new System.Drawing.Point(57, 131);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 17);
@@ -169,17 +169,17 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(102, 71);
+            this.label1.Location = new System.Drawing.Point(67, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 17);
+            this.label1.Size = new System.Drawing.Size(46, 17);
             this.label1.TabIndex = 307;
-            this.label1.Text = "LogInAs ";
+            this.label1.Text = "LogInAs";
             // 
             // cmbLoginAs
             // 
             this.cmbLoginAs.FormattingEnabled = true;
-            this.cmbLoginAs.Location = new System.Drawing.Point(157, 67);
+            this.cmbLoginAs.Location = new System.Drawing.Point(118, 58);
             this.cmbLoginAs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbLoginAs.Name = "cmbLoginAs";
             this.cmbLoginAs.Size = new System.Drawing.Size(140, 25);
@@ -187,7 +187,7 @@
             // 
             // txtRoleCode
             // 
-            this.txtRoleCode.Location = new System.Drawing.Point(157, 204);
+            this.txtRoleCode.Location = new System.Drawing.Point(118, 195);
             this.txtRoleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.MaxLength = 40;
@@ -196,7 +196,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(120, 208);
+            this.label5.Location = new System.Drawing.Point(81, 199);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(32, 17);
@@ -207,9 +207,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 293);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(464, 235);
             this.ControlBox = false;
             this.Controls.Add(this.txtRoleCode);
             this.Controls.Add(this.label5);

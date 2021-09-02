@@ -97,9 +97,10 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(51, 67);
+            this.label12.Location = new System.Drawing.Point(59, 88);
+            this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 13);
+            this.label12.Size = new System.Drawing.Size(69, 17);
             this.label12.TabIndex = 332;
             this.label12.Text = "Form Name";
             // 
@@ -107,62 +108,69 @@
             // 
             this.label4.Appearance.ForeColor = System.Drawing.Color.Red;
             this.label4.Appearance.Options.UseForeColor = true;
-            this.label4.Location = new System.Drawing.Point(69, 202);
+            this.label4.Location = new System.Drawing.Point(80, 264);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
+            this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 343;
             this.label4.Text = "NFATag";
             // 
             // txtMenuName
             // 
-            this.txtMenuName.Location = new System.Drawing.Point(117, 144);
+            this.txtMenuName.Location = new System.Drawing.Point(136, 188);
+            this.txtMenuName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMenuName.Name = "txtMenuName";
             this.txtMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMenuName.Size = new System.Drawing.Size(463, 20);
+            this.txtMenuName.Size = new System.Drawing.Size(540, 24);
             this.txtMenuName.TabIndex = 5;
             this.txtMenuName.EditValueChanged += new System.EventHandler(this.TxtMenuName_EditValueChanged);
             this.txtMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtMenuName_KeyDown);
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(47, 148);
+            this.label7.Location = new System.Drawing.Point(55, 194);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 13);
+            this.label7.Size = new System.Drawing.Size(72, 17);
             this.label7.TabIndex = 347;
             this.label7.Text = "Menu Name";
             // 
             // txtFormDesc
             // 
             this.txtFormDesc.EnterMoveNextControl = true;
-            this.txtFormDesc.Location = new System.Drawing.Point(117, 117);
+            this.txtFormDesc.Location = new System.Drawing.Point(136, 153);
+            this.txtFormDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormDesc.Name = "txtFormDesc";
             this.txtFormDesc.Properties.MaxLength = 150;
-            this.txtFormDesc.Size = new System.Drawing.Size(463, 20);
+            this.txtFormDesc.Size = new System.Drawing.Size(540, 24);
             this.txtFormDesc.TabIndex = 4;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(56, 121);
+            this.label8.Location = new System.Drawing.Point(65, 158);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(53, 13);
+            this.label8.Size = new System.Drawing.Size(62, 17);
             this.label8.TabIndex = 349;
             this.label8.Text = "Form Desc";
             // 
             // txtFormCode
             // 
             this.txtFormCode.EnterMoveNextControl = true;
-            this.txtFormCode.Location = new System.Drawing.Point(117, 90);
+            this.txtFormCode.Location = new System.Drawing.Point(136, 118);
+            this.txtFormCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormCode.Name = "txtFormCode";
             this.txtFormCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFormCode.Properties.MaxLength = 8;
-            this.txtFormCode.Size = new System.Drawing.Size(136, 20);
+            this.txtFormCode.Size = new System.Drawing.Size(159, 24);
             this.txtFormCode.TabIndex = 2;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(53, 94);
+            this.label9.Location = new System.Drawing.Point(62, 123);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 13);
+            this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 351;
             this.label9.Text = "Form Code";
             // 
@@ -170,35 +178,40 @@
             // 
             this.label5.Appearance.ForeColor = System.Drawing.Color.Red;
             this.label5.Appearance.Options.UseForeColor = true;
-            this.label5.Location = new System.Drawing.Point(501, 94);
+            this.label5.Location = new System.Drawing.Point(584, 123);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(35, 17);
             this.label5.TabIndex = 353;
             this.label5.Text = "Status";
             // 
             // txtSMenuName
             // 
-            this.txtSMenuName.Location = new System.Drawing.Point(117, 171);
+            this.txtSMenuName.Location = new System.Drawing.Point(136, 224);
+            this.txtSMenuName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSMenuName.Name = "txtSMenuName";
             this.txtSMenuName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSMenuName.Size = new System.Drawing.Size(463, 20);
+            this.txtSMenuName.Size = new System.Drawing.Size(540, 24);
             this.txtSMenuName.TabIndex = 6;
             this.txtSMenuName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSMenuName_KeyDown);
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(24, 175);
+            this.label11.Location = new System.Drawing.Point(28, 229);
+            this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(85, 13);
+            this.label11.Size = new System.Drawing.Size(98, 17);
             this.label11.TabIndex = 356;
             this.label11.Text = "Sub Menu Name";
             // 
             // HelpGrid
             // 
-            this.HelpGrid.Location = new System.Drawing.Point(56, 327);
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(65, 428);
             this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(470, 227);
+            this.HelpGrid.Size = new System.Drawing.Size(548, 297);
             this.HelpGrid.TabIndex = 358;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -208,6 +221,7 @@
             // 
             // HelpGridView
             // 
+            this.HelpGridView.DetailHeight = 458;
             this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.HelpGridView.GridControl = this.HelpGrid;
             this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -224,6 +238,7 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.btnSave});
@@ -231,7 +246,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(768, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(896, 31);
             this.Menu_ToolStrip.TabIndex = 365;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -243,7 +258,7 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -255,78 +270,86 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(48, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtProcName
             // 
             this.txtProcName.EnterMoveNextControl = true;
-            this.txtProcName.Location = new System.Drawing.Point(256, 198);
+            this.txtProcName.Location = new System.Drawing.Point(299, 259);
+            this.txtProcName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProcName.Name = "txtProcName";
             this.txtProcName.Properties.MaxLength = 150;
-            this.txtProcName.Size = new System.Drawing.Size(324, 20);
+            this.txtProcName.Size = new System.Drawing.Size(378, 24);
             this.txtProcName.TabIndex = 8;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(195, 202);
+            this.label1.Location = new System.Drawing.Point(227, 264);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(65, 17);
             this.label1.TabIndex = 367;
             this.label1.Text = "Proc Name";
             // 
             // txtRoleCode
             // 
             this.txtRoleCode.EnterMoveNextControl = true;
-            this.txtRoleCode.Location = new System.Drawing.Point(117, 225);
+            this.txtRoleCode.Location = new System.Drawing.Point(136, 294);
+            this.txtRoleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
             this.txtRoleCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoleCode.Properties.MaxLength = 4;
-            this.txtRoleCode.Size = new System.Drawing.Size(69, 20);
+            this.txtRoleCode.Size = new System.Drawing.Size(80, 24);
             this.txtRoleCode.TabIndex = 394;
             this.txtRoleCode.EditValueChanged += new System.EventHandler(this.TxtRoleCode_EditValueChanged);
             this.txtRoleCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRoleCode_KeyDown);
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(51, 229);
+            this.label13.Location = new System.Drawing.Point(59, 299);
+            this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 13);
+            this.label13.Size = new System.Drawing.Size(66, 17);
             this.label13.TabIndex = 396;
             this.label13.Text = "Under Role";
             // 
             // txtRoleDesc
             // 
-            this.txtRoleDesc.Location = new System.Drawing.Point(192, 225);
+            this.txtRoleDesc.Location = new System.Drawing.Point(224, 294);
+            this.txtRoleDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleDesc.Name = "txtRoleDesc";
             this.txtRoleDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoleDesc.Properties.ReadOnly = true;
-            this.txtRoleDesc.Size = new System.Drawing.Size(388, 20);
+            this.txtRoleDesc.Size = new System.Drawing.Size(453, 24);
             this.txtRoleDesc.TabIndex = 395;
             this.txtRoleDesc.TabStop = false;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(65, 256);
+            this.label2.Location = new System.Drawing.Point(76, 335);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(52, 17);
             this.label2.TabIndex = 398;
             this.label2.Text = "Order By";
             // 
             // txtOrderBy
             // 
-            this.txtOrderBy.Location = new System.Drawing.Point(117, 252);
+            this.txtOrderBy.Location = new System.Drawing.Point(136, 330);
+            this.txtOrderBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderBy.Name = "txtOrderBy";
             this.txtOrderBy.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderBy.Properties.MaxLength = 1;
-            this.txtOrderBy.Size = new System.Drawing.Size(69, 20);
+            this.txtOrderBy.Size = new System.Drawing.Size(80, 24);
             this.txtOrderBy.TabIndex = 397;
             // 
             // txtstatusTag
             // 
-            this.txtstatusTag.Location = new System.Drawing.Point(539, 90);
+            this.txtstatusTag.Location = new System.Drawing.Point(629, 118);
+            this.txtstatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtstatusTag.Name = "txtstatusTag";
             this.txtstatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -335,13 +358,14 @@
             "Y",
             "N"});
             this.txtstatusTag.Properties.MaxLength = 1;
-            this.txtstatusTag.Size = new System.Drawing.Size(41, 20);
+            this.txtstatusTag.Size = new System.Drawing.Size(48, 24);
             this.txtstatusTag.TabIndex = 3;
             this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtstatusTag_Validating);
             // 
             // txtNfaTag
             // 
-            this.txtNfaTag.Location = new System.Drawing.Point(117, 198);
+            this.txtNfaTag.Location = new System.Drawing.Point(136, 259);
+            this.txtNfaTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNfaTag.Name = "txtNfaTag";
             this.txtNfaTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -350,40 +374,44 @@
             "Y",
             "N"});
             this.txtNfaTag.Properties.MaxLength = 1;
-            this.txtNfaTag.Size = new System.Drawing.Size(45, 20);
+            this.txtNfaTag.Size = new System.Drawing.Size(52, 24);
             this.txtNfaTag.TabIndex = 7;
             this.txtNfaTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNfaTag_Validating);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(213, 256);
+            this.labelControl1.Location = new System.Drawing.Point(248, 335);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(34, 13);
+            this.labelControl1.Size = new System.Drawing.Size(38, 17);
             this.labelControl1.TabIndex = 332;
             this.labelControl1.Text = "Printer";
             // 
             // txtPrinters
             // 
-            this.txtPrinters.Location = new System.Drawing.Point(256, 253);
+            this.txtPrinters.Location = new System.Drawing.Point(299, 331);
+            this.txtPrinters.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrinters.Name = "txtPrinters";
             this.txtPrinters.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPrinters.Size = new System.Drawing.Size(324, 20);
+            this.txtPrinters.Size = new System.Drawing.Size(378, 24);
             this.txtPrinters.TabIndex = 399;
             // 
             // labelControl2
             // 
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Red;
             this.labelControl2.Appearance.Options.UseForeColor = true;
-            this.labelControl2.Location = new System.Drawing.Point(394, 93);
+            this.labelControl2.Location = new System.Drawing.Point(460, 122);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(54, 13);
+            this.labelControl2.Size = new System.Drawing.Size(62, 17);
             this.labelControl2.TabIndex = 401;
             this.labelControl2.Text = "Radial Tag";
             // 
             // txtRadialTag
             // 
-            this.txtRadialTag.Location = new System.Drawing.Point(454, 91);
+            this.txtRadialTag.Location = new System.Drawing.Point(530, 119);
+            this.txtRadialTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRadialTag.Name = "txtRadialTag";
             this.txtRadialTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -392,56 +420,62 @@
             "Y",
             "N"});
             this.txtRadialTag.Properties.MaxLength = 1;
-            this.txtRadialTag.Size = new System.Drawing.Size(41, 20);
+            this.txtRadialTag.Size = new System.Drawing.Size(48, 24);
             this.txtRadialTag.TabIndex = 400;
             // 
             // svgImageBox1
             // 
-            this.svgImageBox1.Location = new System.Drawing.Point(586, 105);
+            this.svgImageBox1.Location = new System.Drawing.Point(684, 137);
+            this.svgImageBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.svgImageBox1.Name = "svgImageBox1";
-            this.svgImageBox1.Size = new System.Drawing.Size(32, 32);
+            this.svgImageBox1.Size = new System.Drawing.Size(37, 42);
             this.svgImageBox1.TabIndex = 402;
             this.svgImageBox1.Text = "svgImageBox1";
             // 
             // svgImageBox2
             // 
-            this.svgImageBox2.Location = new System.Drawing.Point(586, 137);
+            this.svgImageBox2.Location = new System.Drawing.Point(684, 179);
+            this.svgImageBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.svgImageBox2.Name = "svgImageBox2";
-            this.svgImageBox2.Size = new System.Drawing.Size(32, 32);
+            this.svgImageBox2.Size = new System.Drawing.Size(37, 42);
             this.svgImageBox2.TabIndex = 402;
             this.svgImageBox2.Text = "svgImageBox1";
             // 
             // svgImageBox3
             // 
-            this.svgImageBox3.Location = new System.Drawing.Point(586, 169);
+            this.svgImageBox3.Location = new System.Drawing.Point(684, 221);
+            this.svgImageBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.svgImageBox3.Name = "svgImageBox3";
-            this.svgImageBox3.Size = new System.Drawing.Size(32, 32);
+            this.svgImageBox3.Size = new System.Drawing.Size(37, 42);
             this.svgImageBox3.TabIndex = 402;
             this.svgImageBox3.Text = "svgImageBox1";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(624, 116);
+            this.simpleButton1.Location = new System.Drawing.Point(728, 152);
+            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(44, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(51, 30);
             this.simpleButton1.TabIndex = 403;
             this.simpleButton1.Text = "...";
             this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(624, 143);
+            this.simpleButton2.Location = new System.Drawing.Point(728, 187);
+            this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(44, 23);
+            this.simpleButton2.Size = new System.Drawing.Size(51, 30);
             this.simpleButton2.TabIndex = 403;
             this.simpleButton2.Text = "...";
             this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(624, 175);
+            this.simpleButton3.Location = new System.Drawing.Point(728, 229);
+            this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(44, 23);
+            this.simpleButton3.Size = new System.Drawing.Size(51, 30);
             this.simpleButton3.TabIndex = 403;
             this.simpleButton3.Text = "...";
             this.simpleButton3.Click += new System.EventHandler(this.SimpleButton3_Click);
@@ -453,7 +487,8 @@
             // 
             // txtFormName
             // 
-            this.txtFormName.Location = new System.Drawing.Point(115, 64);
+            this.txtFormName.Location = new System.Drawing.Point(134, 84);
+            this.txtFormName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormName.Name = "txtFormName";
             this.txtFormName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -461,12 +496,13 @@
             "Y",
             "N"});
             this.txtFormName.Properties.MaxLength = 1;
-            this.txtFormName.Size = new System.Drawing.Size(465, 20);
+            this.txtFormName.Size = new System.Drawing.Size(542, 24);
             this.txtFormName.TabIndex = 404;
             // 
             // txtSubFormName
             // 
-            this.txtSubFormName.Location = new System.Drawing.Point(117, 279);
+            this.txtSubFormName.Location = new System.Drawing.Point(136, 365);
+            this.txtSubFormName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubFormName.Name = "txtSubFormName";
             this.txtSubFormName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -474,14 +510,15 @@
             "Y",
             "N"});
             this.txtSubFormName.Properties.MaxLength = 1;
-            this.txtSubFormName.Size = new System.Drawing.Size(465, 20);
+            this.txtSubFormName.Size = new System.Drawing.Size(542, 24);
             this.txtSubFormName.TabIndex = 406;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(30, 282);
+            this.labelControl3.Location = new System.Drawing.Point(35, 369);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(81, 13);
+            this.labelControl3.Size = new System.Drawing.Size(95, 17);
             this.labelControl3.TabIndex = 405;
             this.labelControl3.Text = "Sub Form Name";
             // 
@@ -489,9 +526,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(768, 566);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(896, 740);
             this.ControlBox = false;
             this.Controls.Add(this.txtSubFormName);
             this.Controls.Add(this.labelControl3);
@@ -530,6 +567,7 @@
             this.Controls.Add(this.txtNfaTag);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmNewFormAAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmNewFormAAddEdit_Load);
