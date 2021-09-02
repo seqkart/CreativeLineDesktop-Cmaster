@@ -4,6 +4,7 @@ using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using SeqKartLibrary.CrudTask;
 using SeqKartLibrary.HelperClass;
+using HumanResourceManagementSystem;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -173,7 +174,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void BtnAdd2_Click(object sender, EventArgs e)
         {
 
-            AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { s1 = btnAdd2.Text, Text = "Add Attendance Details" }; ;
+            AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { S1 = btnAdd2.Text, Text = "Add Attendance Details" }; ;
             addAttendanceDetails.StartPosition = FormStartPosition.CenterScreen;
 
             addAttendanceDetails.ShowDialog(Parent);

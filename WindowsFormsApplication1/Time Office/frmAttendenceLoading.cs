@@ -10,6 +10,7 @@ using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
 using SeqKartLibrary.CrudTask;
 using SeqKartLibrary.HelperClass;
+using HumanResourceManagementSystem;
 using SeqKartLibrary.Models;
 using System;
 using System.ComponentModel;
@@ -385,7 +386,7 @@ namespace WindowsFormsApplication1.Forms_Master
             //XtraForm_EmployeeAttendence xtraForm_EmployeeAttendence = new XtraForm_EmployeeAttendence() { s1 = btnAdd.Text, Text = "User Addition" }; ;
 
 
-            AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { s1 = btnAdd2.Text, Text = "Add Attendance Details" }; 
+            AddAttendanceDetails addAttendanceDetails = new AddAttendanceDetails() { S1 = btnAdd2.Text, Text = "Add Attendance Details" }; ;
             addAttendanceDetails.StartPosition = FormStartPosition.CenterScreen;
 
             addAttendanceDetails.ShowDialog(Parent);

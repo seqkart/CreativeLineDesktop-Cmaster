@@ -9,7 +9,7 @@ namespace HumanResourceManagementSystem
 
     public partial class AddAttendanceDetails : Form
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string UserName { get; set; }
 
         SqlConnection con;

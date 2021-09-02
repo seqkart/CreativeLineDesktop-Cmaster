@@ -286,10 +286,10 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG58")
                 {
-                    frmSchemeMstAddEdit frm = new frmSchemeMstAddEdit()
-                    { s1 = btnAdd.Text, Text = "Scheme Data Addition" };
-                    frm.StartPosition = FormStartPosition.CenterScreen;
-                    frm.ShowDialog(Parent);
+                    //frmSchemeMstAddEdit frm = new frmSchemeMstAddEdit()
+                    //{ s1 = btnAdd.Text, Text = "Scheme Data Addition" };
+                    //frm.StartPosition = FormStartPosition.CenterScreen;
+                    //frm.ShowDialog(Parent);
                 }
                 //if (GlobalVariables.ProgCode == "PROG56")
                 //{
@@ -768,16 +768,16 @@ namespace WindowsFormsApplication1
                 //}
                 if (GlobalVariables.ProgCode == "PROG58")
                 {
-                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmSchemeMstAddEdit frm = new frmSchemeMstAddEdit()
-                    {
-                        s1 = btnEdit.Text,
-                        Text = "Scheme Data Editing",
-                        ImNo = CurrentRow["ImNo"].ToString(),
-                        ImDate = Convert.ToDateTime(CurrentRow["ImDate"])
-                    };
-                    frm.StartPosition = FormStartPosition.CenterScreen;
-                    frm.ShowDialog(Parent);
+                    //DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    //frmSchemeMstAddEdit frm = new frmSchemeMstAddEdit()
+                    //{
+                    //    s1 = btnEdit.Text,
+                    //    Text = "Scheme Data Editing",
+                    //    ImNo = CurrentRow["ImNo"].ToString(),
+                    //    ImDate = Convert.ToDateTime(CurrentRow["ImDate"])
+                    //};
+                    //frm.StartPosition = FormStartPosition.CenterScreen;
+                    //frm.ShowDialog(Parent);
                 }
                 //if (GlobalVariables.ProgCode == "PROG56")
                 //{
