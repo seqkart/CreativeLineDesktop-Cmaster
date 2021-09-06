@@ -314,6 +314,27 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG245":
+                    var PROG245 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG245.Show();
+                    PROG245.BringToFront();
+                    PROG245.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG244":
+                    var PROG244 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG244.Show();
+                    PROG244.BringToFront();
+                    PROG244.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
+                case "PROG243":
+                    var PROG243 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG243.Show();
+                    PROG243.BringToFront();
+                    PROG243.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG242":
                     var PROG242 = new FrmSaleReportParameterised() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG242.Show();

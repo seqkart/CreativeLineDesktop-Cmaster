@@ -237,7 +237,7 @@
             this.TextAuthenticate});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1048, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1048, 31);
             this.Menu_ToolStrip.TabIndex = 15;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -250,7 +250,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -263,7 +263,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 24);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -276,7 +276,7 @@
             this.btn_Validate.Image = ((System.Drawing.Image)(resources.GetObject("btn_Validate.Image")));
             this.btn_Validate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Validate.Name = "btn_Validate";
-            this.btn_Validate.Size = new System.Drawing.Size(69, 24);
+            this.btn_Validate.Size = new System.Drawing.Size(69, 28);
             this.btn_Validate.Text = "&Validate";
             this.btn_Validate.Click += new System.EventHandler(this.btn_Validate_Click);
             // 
@@ -292,7 +292,7 @@
             // TextDesc
             // 
             this.TextDesc.EnterMoveNextControl = true;
-            this.TextDesc.Location = new System.Drawing.Point(324, 46);
+            this.TextDesc.Location = new System.Drawing.Point(324, 42);
             this.TextDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextDesc.Name = "TextDesc";
             this.TextDesc.Properties.MaxLength = 50;
@@ -303,7 +303,7 @@
             // TextModel
             // 
             this.TextModel.EnterMoveNextControl = true;
-            this.TextModel.Location = new System.Drawing.Point(143, 275);
+            this.TextModel.Location = new System.Drawing.Point(143, 273);
             this.TextModel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextModel.Name = "TextModel";
             this.TextModel.Properties.MaxLength = 30;
@@ -315,7 +315,7 @@
             // TextBrand
             // 
             this.TextBrand.EnterMoveNextControl = true;
-            this.TextBrand.Location = new System.Drawing.Point(143, 242);
+            this.TextBrand.Location = new System.Drawing.Point(143, 240);
             this.TextBrand.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextBrand.Name = "TextBrand";
             this.TextBrand.Properties.MaxLength = 30;
@@ -326,7 +326,7 @@
             // TextManufacturer
             // 
             this.TextManufacturer.EnterMoveNextControl = true;
-            this.TextManufacturer.Location = new System.Drawing.Point(143, 209);
+            this.TextManufacturer.Location = new System.Drawing.Point(143, 207);
             this.TextManufacturer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextManufacturer.Name = "TextManufacturer";
             this.TextManufacturer.Properties.MaxLength = 50;
@@ -414,7 +414,7 @@
             // HelpGridCtrl
             // 
             this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGridCtrl.Location = new System.Drawing.Point(402, 46);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(465, 302);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
@@ -437,7 +437,7 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(107, 280);
+            this.labelControl6.Location = new System.Drawing.Point(96, 277);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(38, 17);
@@ -446,7 +446,7 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(107, 247);
+            this.labelControl5.Location = new System.Drawing.Point(100, 244);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(34, 17);
@@ -455,7 +455,7 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(64, 214);
+            this.labelControl4.Location = new System.Drawing.Point(56, 211);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(78, 17);
@@ -464,7 +464,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(35, 182);
+            this.labelControl3.Location = new System.Drawing.Point(25, 178);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(109, 17);
@@ -473,7 +473,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(255, 51);
+            this.labelControl1.Location = new System.Drawing.Point(255, 46);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 17);
@@ -501,7 +501,7 @@
             this.xtraTabPage1.Controls.Add(this.panelControl5);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 372);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 378);
             this.xtraTabPage1.Text = "General";
             // 
             // panelControl5
@@ -648,7 +648,7 @@
             this.xtraTabPage2.Controls.Add(this.panelControl4);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1023, 372);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1023, 378);
             this.xtraTabPage2.Text = "Finance";
             // 
             // panelControl4
@@ -1251,7 +1251,7 @@
             // 
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1023, 372);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1023, 378);
             this.xtraTabPage3.Text = "Service";
             // 
             // xtraTabPage5
@@ -1260,7 +1260,7 @@
             this.xtraTabPage5.Controls.Add(this.AttachmentToolStrip);
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1023, 372);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1023, 378);
             this.xtraTabPage5.Text = "Attachments";
             // 
             // Attachments_GridCtrl
@@ -1271,7 +1271,7 @@
             this.Attachments_GridCtrl.MainView = this.Attachments_Grid;
             this.Attachments_GridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Attachments_GridCtrl.Name = "Attachments_GridCtrl";
-            this.Attachments_GridCtrl.Size = new System.Drawing.Size(1023, 345);
+            this.Attachments_GridCtrl.Size = new System.Drawing.Size(1023, 351);
             this.Attachments_GridCtrl.TabIndex = 9;
             this.Attachments_GridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.Attachments_Grid});
@@ -1348,7 +1348,7 @@
             this.xtraTabPage6.Controls.Add(this.labelControl8);
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1023, 372);
+            this.xtraTabPage6.Size = new System.Drawing.Size(1023, 378);
             this.xtraTabPage6.Text = "History";
             // 
             // HistoryGridControl
@@ -1503,7 +1503,7 @@
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(77, 84);
+            this.labelControl32.Location = new System.Drawing.Point(71, 79);
             this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
             this.labelControl32.Size = new System.Drawing.Size(63, 17);
@@ -1513,7 +1513,7 @@
             // TextAssetType
             // 
             this.TextAssetType.EnterMoveNextControl = true;
-            this.TextAssetType.Location = new System.Drawing.Point(143, 78);
+            this.TextAssetType.Location = new System.Drawing.Point(143, 75);
             this.TextAssetType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetType.Name = "TextAssetType";
             this.TextAssetType.Properties.MaxLength = 6;
@@ -1523,7 +1523,7 @@
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(76, 51);
+            this.labelControl33.Location = new System.Drawing.Point(68, 46);
             this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
             this.labelControl33.Size = new System.Drawing.Size(66, 17);
@@ -1534,7 +1534,7 @@
             // 
             this.TextAssetTypeDesc.Enabled = false;
             this.TextAssetTypeDesc.EnterMoveNextControl = true;
-            this.TextAssetTypeDesc.Location = new System.Drawing.Point(255, 78);
+            this.TextAssetTypeDesc.Location = new System.Drawing.Point(255, 75);
             this.TextAssetTypeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetTypeDesc.Name = "TextAssetTypeDesc";
             this.TextAssetTypeDesc.Size = new System.Drawing.Size(491, 24);
@@ -1542,7 +1542,7 @@
             // 
             // labelControl34
             // 
-            this.labelControl34.Location = new System.Drawing.Point(52, 116);
+            this.labelControl34.Location = new System.Drawing.Point(46, 112);
             this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
             this.labelControl34.Size = new System.Drawing.Size(88, 17);
@@ -1552,7 +1552,7 @@
             // TextAssetCategory
             // 
             this.TextAssetCategory.EnterMoveNextControl = true;
-            this.TextAssetCategory.Location = new System.Drawing.Point(143, 111);
+            this.TextAssetCategory.Location = new System.Drawing.Point(143, 108);
             this.TextAssetCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetCategory.Name = "TextAssetCategory";
             this.TextAssetCategory.Properties.MaxLength = 6;
@@ -1564,7 +1564,7 @@
             // 
             this.TextAssetCategoryDesc.Enabled = false;
             this.TextAssetCategoryDesc.EnterMoveNextControl = true;
-            this.TextAssetCategoryDesc.Location = new System.Drawing.Point(255, 111);
+            this.TextAssetCategoryDesc.Location = new System.Drawing.Point(255, 108);
             this.TextAssetCategoryDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetCategoryDesc.Name = "TextAssetCategoryDesc";
             this.TextAssetCategoryDesc.Size = new System.Drawing.Size(491, 24);
@@ -1572,7 +1572,7 @@
             // 
             // labelControl35
             // 
-            this.labelControl35.Location = new System.Drawing.Point(28, 149);
+            this.labelControl35.Location = new System.Drawing.Point(20, 145);
             this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
             this.labelControl35.Size = new System.Drawing.Size(114, 17);
@@ -1582,7 +1582,7 @@
             // TextAstSubCat
             // 
             this.TextAstSubCat.EnterMoveNextControl = true;
-            this.TextAstSubCat.Location = new System.Drawing.Point(143, 144);
+            this.TextAstSubCat.Location = new System.Drawing.Point(143, 141);
             this.TextAstSubCat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAstSubCat.Name = "TextAstSubCat";
             this.TextAstSubCat.Properties.MaxLength = 6;
@@ -1594,7 +1594,7 @@
             // 
             this.TextSubCatDesc.Enabled = false;
             this.TextSubCatDesc.EnterMoveNextControl = true;
-            this.TextSubCatDesc.Location = new System.Drawing.Point(255, 144);
+            this.TextSubCatDesc.Location = new System.Drawing.Point(255, 141);
             this.TextSubCatDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextSubCatDesc.Name = "TextSubCatDesc";
             this.TextSubCatDesc.Size = new System.Drawing.Size(491, 24);
@@ -1603,7 +1603,7 @@
             // TextAssetLocation
             // 
             this.TextAssetLocation.EnterMoveNextControl = true;
-            this.TextAssetLocation.Location = new System.Drawing.Point(143, 178);
+            this.TextAssetLocation.Location = new System.Drawing.Point(143, 174);
             this.TextAssetLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TextAssetLocation.Name = "TextAssetLocation";
             this.TextAssetLocation.Properties.MaxLength = 6;
@@ -1615,7 +1615,7 @@
             // 
             this.AssetLocDesc.Enabled = false;
             this.AssetLocDesc.EnterMoveNextControl = true;
-            this.AssetLocDesc.Location = new System.Drawing.Point(255, 178);
+            this.AssetLocDesc.Location = new System.Drawing.Point(255, 174);
             this.AssetLocDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AssetLocDesc.Name = "AssetLocDesc";
             this.AssetLocDesc.Size = new System.Drawing.Size(491, 24);
@@ -1624,7 +1624,7 @@
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(255, 246);
+            this.labelControl18.Location = new System.Drawing.Point(255, 244);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(51, 17);
@@ -1634,7 +1634,7 @@
             // VehicleCode
             // 
             this.VehicleCode.EnterMoveNextControl = true;
-            this.VehicleCode.Location = new System.Drawing.Point(324, 242);
+            this.VehicleCode.Location = new System.Drawing.Point(324, 240);
             this.VehicleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.VehicleCode.Name = "VehicleCode";
             this.VehicleCode.Properties.MaxLength = 6;
@@ -1646,7 +1646,7 @@
             // 
             this.VehicleDesc.Enabled = false;
             this.VehicleDesc.EnterMoveNextControl = true;
-            this.VehicleDesc.Location = new System.Drawing.Point(429, 242);
+            this.VehicleDesc.Location = new System.Drawing.Point(429, 240);
             this.VehicleDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.VehicleDesc.Name = "VehicleDesc";
             this.VehicleDesc.Size = new System.Drawing.Size(317, 24);

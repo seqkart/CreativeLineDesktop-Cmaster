@@ -120,21 +120,22 @@
   <data name="$this.DataSourceSchema" xml:space="preserve">
     <value>&lt;?xml version="1.0"?&gt;
 &lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
-  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:Locale="en-US" msdata:EnforceConstraints="False"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
     &lt;xs:complexType&gt;
       &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
         &lt;xs:element name="Table"&gt;
           &lt;xs:complexType&gt;
             &lt;xs:sequence&gt;
-              &lt;xs:element name="VutDate" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="VutDate" type="xs:dateTime" minOccurs="0" /&gt;
               &lt;xs:element name="VutType" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="VutNo" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="VutAcode" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="AccName" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="DrAmt" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="CrAmt" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CrAmt" type="xs:decimal" minOccurs="0" /&gt;
+              &lt;xs:element name="DrAmt" type="xs:decimal" minOccurs="0" /&gt;
               &lt;xs:element name="VutNart" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="VouDesc" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="LongNarration" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

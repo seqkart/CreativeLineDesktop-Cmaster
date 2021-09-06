@@ -90,6 +90,27 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG245")
+                {
+                    Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
+                    { S1 = btnAdd.Text, Text = "Journal Debit Voucher Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG244")
+                {
+                    Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
+                    { S1 = btnAdd.Text, Text = "Journal Credit Voucher Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG243")
+                {
+                    Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
+                    { S1 = btnAdd.Text, Text = "Journal Voucher Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG150")
                 {
                     Transaction.challans.Frm_Challaninward frm = new Transaction.challans.Frm_Challaninward()
@@ -331,6 +352,30 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG245")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
+                    { S1 = btnEdit.Text, Text = "Journal Debit Voucher Edition", VoucherNo = CurrentRow["VoucherNo"].ToString(), VoucherDate = Convert.ToDateTime(CurrentRow["VoucherDate"]) };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG244")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
+                    { S1 = btnEdit.Text, Text = "Journal Credit Voucher Edition", VoucherNo = CurrentRow["VoucherNo"].ToString(), VoucherDate = Convert.ToDateTime(CurrentRow["VoucherDate"]) };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                if (GlobalVariables.ProgCode == "PROG243")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
+                    { S1 = btnEdit.Text, Text = "Journal Voucher Edition", VoucherNo = CurrentRow["VoucherNo"].ToString(), VoucherDate = Convert.ToDateTime(CurrentRow["VoucherDate"]) };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG150")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
@@ -1137,6 +1182,57 @@ namespace WindowsFormsApplication1
                                                                       FillGrid();
                                                                   }));
                 }
+                if (GlobalVariables.ProgCode == "PROG243")
+                {
+                    InvoiceGridView.CloseEditor();
+                    InvoiceGridView.UpdateCurrentRow();
+                    e.Menu.Items
+                        .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Journal Voucher",
+                                                                  (o1, e1) =>
+                                                                  {
+                                                                      foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
+                                                                      {
+                                                                          if (dr["Select"].ToString().ToUpper() == "TRUE")
+                                                                          {
+                                                                              using (var Ds = ProjectFunctions.GetDataSet(string.Format("Select * From V_PrintCMN WHERE (((VutDate)='{0:yyyy-MM-dd}') AND ((VutType)='{1}')  AND ((VutNo)='{2}')) {3}",
+                                                                                                                                       Convert.ToDateTime(dr["VoucherDate"]),
+                                                                                                                                       dr["Type"].ToString(),
+                                                                                                                                       dr["VoucherNo"].ToString(),
+                                                                                                                                       ((dr["Type"].ToString() ==
+                                                                                      "CP" ||
+                                                                                      dr["Type"].ToString() == "CR")
+                                                                                  ? "And VutAcode<>'246'"
+                                                                                  : string.Empty))))
+                                                                              {
+                                                                                  if (Ds.Tables[0].Rows.Count > 0)
+                                                                                  {
+                                                                                      if (dr["Type"].ToString().ToUpper() ==
+                                                                                          "CP" ||
+                                                                                          dr["Type"].ToString()
+                                                                                              .ToUpper() ==
+                                                                                          "CR")
+                                                                                      {
+                                                                                          var rowToRemove = Ds.Tables[0].Select("VutAcode=246")
+                                                                                              .FirstOrDefault();
+                                                                                          if (rowToRemove != null)
+                                                                                          {
+                                                                                              Ds.Tables[0].Rows
+                                                                                                  .Remove(rowToRemove);
+                                                                                          }
+                                                                                      }
+                                                                                      using (var pt = new ReportPrintTool(new WindowsFormsApplication1.Report.Rpt_VoucherPrint()
+                                                                                      { DataSource = Ds.Tables[0] }))
+                                                                                      {
+                                                                                          Ds.Tables[0].WriteXmlSchema("C:\\Temp\\abc.xml");
+                                                                                          pt.ShowRibbonPreviewDialog();
+                                                                                      }
+                                                                                  }
+                                                                              }
+                                                                          }
+                                                                      }
+                                                                      FillGrid();
+                                                                  }));
+                }
                 if (GlobalVariables.ProgCode == "PROG131")
                 {
                     InvoiceGridView.CloseEditor();
@@ -1712,10 +1808,8 @@ namespace WindowsFormsApplication1
                     .Add(new DevExpress.Utils.Menu.DXMenuItem("Select All Records",
                                                               (o1, e1) =>
                                                               {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                                                                   var MaxRow = ((InvoiceGrid.FocusedView as GridView).RowCount);
                                                                   // var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                                                                   for (var i = 0; i < MaxRow; i++)
                                                                   {
                                                                       InvoiceGridView.SetRowCellValue(i,
@@ -1727,10 +1821,8 @@ namespace WindowsFormsApplication1
                     .Add(new DevExpress.Utils.Menu.DXMenuItem("UnSelect All Records",
                                                               (o1, e1) =>
                                                               {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                                                                   var MaxRow = ((InvoiceGrid.FocusedView as GridView).RowCount);
                                                                   //     var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
                                                                   for (var i = 0; i < MaxRow; i++)
                                                                   {
                                                                       InvoiceGridView.SetRowCellValue(i,

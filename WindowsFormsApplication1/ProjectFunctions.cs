@@ -2179,6 +2179,7 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                SearchBox.Text = string.Empty;
                 ReportGridView.Columns.Clear();
                 DataRow currentrow = ReportGridView.GetDataRow(ReportGridView.FocusedRowHandle);
 

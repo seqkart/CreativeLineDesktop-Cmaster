@@ -111,20 +111,13 @@ namespace WindowsFormsApplication1
                     GlobalVariables.CmpEmailID = dr[SQL_COLUMNS.COMCONF._COMEID].ToString();
                     GlobalVariables.CmpZipCode = dr[SQL_COLUMNS.COMCONF._COMZIP].ToString();
                     GlobalVariables.CmpWebSite = dr[SQL_COLUMNS.COMCONF._COMWEBSITE].ToString();
-
                     DataSet dsFY = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_FN_YEAR(txtFNYear.Text));
                     DataRow drFY = dsFY.Tables[0].Rows[0];
-
                     GlobalVariables.CUnitID = txtUnit.SelectedValue.ToString().PadLeft(2, '0');
-
-
                     GlobalVariables.FinancialYear = drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString();
                     GlobalVariables.FinYearStartDate = Convert.ToDateTime(drFY[SQL_COLUMNS.FN_YEAR._FNStartDate]).Date;
                     GlobalVariables.FinYearEndDate = Convert.ToDateTime(drFY[SQL_COLUMNS.FN_YEAR._FNEndDate]).Date;
-
                     GlobalVariables.BarCodePreFix = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_UNITS(GlobalVariables.CUnitID)).Tables[0].Rows[0][0].ToString();
-
-
                     DataSet dsAPI = ProjectFunctions.GetDataSet("Select * from APIIntegrationSetting Where Active='Y'");
                     if (dsAPI.Tables[0].Rows.Count > 0)
                     {
@@ -138,13 +131,11 @@ namespace WindowsFormsApplication1
                         GlobalVariables.AuthToken = dsAPI.Tables[0].Rows[0]["EayBillAuthToken"].ToString();
                         GlobalVariables.AuthTokenTimeStamp = Convert.ToDateTime(dsAPI.Tables[0].Rows[0]["AuthTokenGenDate"]);
                     }
-
                     WindowsFormsApplication1.XtraForm1 frm = new WindowsFormsApplication1.XtraForm1();
                     Hide();
                     ProjectFunctions.Speak("WELCOME TO " + dr[SQL_COLUMNS.COMCONF._COMNAME].ToString() + drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString());
                     frm.ShowDialog(Parent);
                     frm.BringToFront();
-
                 }
             }
 

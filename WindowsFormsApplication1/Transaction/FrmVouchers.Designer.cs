@@ -44,11 +44,11 @@ namespace WindowsFormsApplication1.Transaction
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtAccountCode = new DevExpress.XtraEditors.TextEdit();
             this.txtVoucherDate = new DevExpress.XtraEditors.DateEdit();
-            this.txtNarration = new DevExpress.XtraEditors.TextEdit();
+            this.txtShortNarration = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtVoucherTypeDesc = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtVoucherNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtVoucherTypeCode = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
@@ -71,9 +71,9 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNarration.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShortNarration.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherTypeDesc.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVoucherNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherTypeCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountName.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -144,6 +144,7 @@ namespace WindowsFormsApplication1.Transaction
             this.VoucherGrid.TabIndex = 730;
             this.VoucherGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.VoucherGridView});
+            this.VoucherGrid.EditorKeyDown += new System.Windows.Forms.KeyEventHandler(this.VoucherGrid_EditorKeyDown);
             this.VoucherGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarCodeGrid_KeyDown);
             // 
             // VoucherGridView
@@ -187,6 +188,7 @@ namespace WindowsFormsApplication1.Transaction
             this.VoucherGridView.OptionsView.ShowIndicator = false;
             this.VoucherGridView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
             this.VoucherGridView.PaintStyleName = "Skin";
+            this.VoucherGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.VoucherGridView_PopupMenuShowing);
             this.VoucherGridView.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.VoucherGridView_ValidatingEditor);
             // 
             // gridColumn1
@@ -253,11 +255,11 @@ namespace WindowsFormsApplication1.Transaction
             this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.panelControl1.Controls.Add(this.txtAccountCode);
             this.panelControl1.Controls.Add(this.txtVoucherDate);
-            this.panelControl1.Controls.Add(this.txtNarration);
+            this.panelControl1.Controls.Add(this.txtShortNarration);
             this.panelControl1.Controls.Add(this.label5);
             this.panelControl1.Controls.Add(this.label2);
             this.panelControl1.Controls.Add(this.txtVoucherTypeDesc);
-            this.panelControl1.Controls.Add(this.textEdit1);
+            this.panelControl1.Controls.Add(this.txtVoucherNo);
             this.panelControl1.Controls.Add(this.labelControl1);
             this.panelControl1.Controls.Add(this.txtVoucherTypeCode);
             this.panelControl1.Controls.Add(this.label1);
@@ -302,19 +304,19 @@ namespace WindowsFormsApplication1.Transaction
             this.txtVoucherDate.Size = new System.Drawing.Size(132, 26);
             this.txtVoucherDate.TabIndex = 476;
             // 
-            // txtNarration
+            // txtShortNarration
             // 
-            this.txtNarration.EditValue = " ";
-            this.txtNarration.EnterMoveNextControl = true;
-            this.txtNarration.Location = new System.Drawing.Point(622, 44);
-            this.txtNarration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNarration.Name = "txtNarration";
-            this.txtNarration.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNarration.Properties.Appearance.Options.UseFont = true;
-            this.txtNarration.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNarration.Properties.MaxLength = 15;
-            this.txtNarration.Size = new System.Drawing.Size(411, 26);
-            this.txtNarration.TabIndex = 473;
+            this.txtShortNarration.EditValue = " ";
+            this.txtShortNarration.EnterMoveNextControl = true;
+            this.txtShortNarration.Location = new System.Drawing.Point(622, 44);
+            this.txtShortNarration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtShortNarration.Name = "txtShortNarration";
+            this.txtShortNarration.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtShortNarration.Properties.Appearance.Options.UseFont = true;
+            this.txtShortNarration.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtShortNarration.Properties.MaxLength = 100;
+            this.txtShortNarration.Size = new System.Drawing.Size(411, 26);
+            this.txtShortNarration.TabIndex = 473;
             // 
             // label5
             // 
@@ -350,16 +352,17 @@ namespace WindowsFormsApplication1.Transaction
             this.txtVoucherTypeDesc.TabIndex = 470;
             this.txtVoucherTypeDesc.TabStop = false;
             // 
-            // textEdit1
+            // txtVoucherNo
             // 
-            this.textEdit1.Location = new System.Drawing.Point(622, 10);
-            this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(119, 26);
-            this.textEdit1.TabIndex = 469;
-            this.textEdit1.TabStop = false;
+            this.txtVoucherNo.Enabled = false;
+            this.txtVoucherNo.Location = new System.Drawing.Point(622, 10);
+            this.txtVoucherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtVoucherNo.Name = "txtVoucherNo";
+            this.txtVoucherNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVoucherNo.Properties.Appearance.Options.UseFont = true;
+            this.txtVoucherNo.Size = new System.Drawing.Size(119, 26);
+            this.txtVoucherNo.TabIndex = 469;
+            this.txtVoucherNo.TabStop = false;
             // 
             // labelControl1
             // 
@@ -457,7 +460,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtLongNarration
             // 
@@ -467,7 +470,7 @@ namespace WindowsFormsApplication1.Transaction
             this.txtLongNarration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLongNarration.Name = "txtLongNarration";
             this.txtLongNarration.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLongNarration.Properties.MaxLength = 15;
+            this.txtLongNarration.Properties.MaxLength = 1000;
             this.txtLongNarration.Size = new System.Drawing.Size(895, 24);
             this.txtLongNarration.TabIndex = 733;
             // 
@@ -513,9 +516,9 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNarration.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtShortNarration.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherTypeDesc.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtVoucherNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVoucherTypeCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccountName.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
@@ -537,11 +540,11 @@ namespace WindowsFormsApplication1.Transaction
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
         private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.TextEdit txtNarration;
+        private DevExpress.XtraEditors.TextEdit txtShortNarration;
         private DevExpress.XtraEditors.LabelControl label5;
         private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtVoucherTypeDesc;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtVoucherNo;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.TextEdit txtVoucherTypeCode;
         private DevExpress.XtraEditors.LabelControl label1;

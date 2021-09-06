@@ -1241,12 +1241,6 @@
     <Compile Include="Prints\XtraReport_EmployeeAttendance.Designer.cs">
       <DependentUpon>XtraReport_EmployeeAttendance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Prints\salaryregister.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>salaryregister.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Prints\XtraReportGatePass.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2162,10 +2156,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeeAttendance.resx">
       <DependentUpon>XtraReport_EmployeeAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prints\salaryregister.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>salaryregister.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReportGatePass.resx">
       <DependentUpon>XtraReportGatePass.cs</DependentUpon>
