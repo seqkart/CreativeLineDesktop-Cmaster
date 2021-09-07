@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     public partial class FrmTransporterMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string TRPRSYSID { get; set; }
         public FrmTransporterMaster()
         {
@@ -37,11 +37,11 @@ namespace WindowsFormsApplication1
         private void FrmTransporterMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtTransporterName.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtTransporterCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadTransporterMstEFdit '" + TRPRSYSID + "'");
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into TRANSPORTMASTER"
                                                  + " (TRPRNAME,TRPRADD, TRPRADD1, TRPRCITY, TRPRSTATE,"
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
 
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE TRANSPORTMASTER SET "
                                                 + " TRPGSTNo=@TRPGSTNo,TRPRNAME=@TRPRNAME,TRPRADD=@TRPRADD,TRPRADD1=@TRPRADD1,TRPRCITY=@TRPRCITY,TRPRSTATE=@TRPRSTATE, "

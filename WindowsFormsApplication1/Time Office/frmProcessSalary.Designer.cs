@@ -84,7 +84,7 @@
             this.btnLock.Size = new System.Drawing.Size(111, 33);
             this.btnLock.TabIndex = 351;
             this.btnLock.Text = "Lock";
-            this.btnLock.Click += new System.EventHandler(this.btnLock_Click);
+            this.btnLock.Click += new System.EventHandler(this.BtnLock_Click);
             // 
             // ChoiceSelect
             // 
@@ -328,7 +328,7 @@
             this.btnAdd.Size = new System.Drawing.Size(76, 28);
             this.btnAdd.Text = "&Process";
             this.btnAdd.Visible = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // splitter1
             // 
@@ -366,11 +366,11 @@
             this.gridView_SalaryProcess.OptionsView.ShowGroupPanel = false;
             this.gridView_SalaryProcess.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.GridView_SalaryProcess_CustomDrawCell);
             this.gridView_SalaryProcess.CustomDrawFooterCell += new DevExpress.XtraGrid.Views.Grid.FooterCellCustomDrawEventHandler(this.GridView_SalaryProcess_CustomDrawFooterCell);
-            this.gridView_SalaryProcess.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.gridView_SalaryProcess_RowCellStyle);
-            this.gridView_SalaryProcess.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.gridView_SalaryProcess_RowStyle);
+            this.gridView_SalaryProcess.RowCellStyle += new DevExpress.XtraGrid.Views.Grid.RowCellStyleEventHandler(this.GridView_SalaryProcess_RowCellStyle);
+            this.gridView_SalaryProcess.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.GridView_SalaryProcess_RowStyle);
             this.gridView_SalaryProcess.CustomSummaryCalculate += new DevExpress.Data.CustomSummaryEventHandler(this.GridView_SalaryProcess_CustomSummaryCalculate);
-            this.gridView_SalaryProcess.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.gridView_SalaryProcess_ShowingEditor);
-            this.gridView_SalaryProcess.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView_SalaryProcess_KeyDown);
+            this.gridView_SalaryProcess.ShowingEditor += new System.ComponentModel.CancelEventHandler(this.GridView_SalaryProcess_ShowingEditor);
+            this.gridView_SalaryProcess.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GridView_SalaryProcess_KeyDown);
             this.gridView_SalaryProcess.ValidatingEditor += new DevExpress.XtraEditors.Controls.BaseContainerValidateEditorEventHandler(this.GridView_SalaryProcess_ValidatingEditor);
             // 
             // btnProcessSalary
@@ -384,7 +384,7 @@
             this.btnProcessSalary.Size = new System.Drawing.Size(136, 42);
             this.btnProcessSalary.TabIndex = 353;
             this.btnProcessSalary.Text = "Process Salary";
-            this.btnProcessSalary.Click += new System.EventHandler(this.btnProcessSalary_Click);
+            this.btnProcessSalary.Click += new System.EventHandler(this.BtnProcessSalary_Click);
             // 
             // btnPrintPreview
             // 
@@ -397,7 +397,7 @@
             this.btnPrintPreview.Size = new System.Drawing.Size(135, 42);
             this.btnPrintPreview.TabIndex = 354;
             this.btnPrintPreview.Text = "Print Preview";
-            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
+            this.btnPrintPreview.Click += new System.EventHandler(this.BtnPrintPreview_Click);
             // 
             // btnPrintReport
             // 
@@ -410,7 +410,7 @@
             this.btnPrintReport.Size = new System.Drawing.Size(135, 42);
             this.btnPrintReport.TabIndex = 355;
             this.btnPrintReport.Text = "Print";
-            this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
+            this.btnPrintReport.Click += new System.EventHandler(this.BtnPrintReport_Click);
             // 
             // btnExportXsls
             // 
@@ -423,7 +423,7 @@
             this.btnExportXsls.Size = new System.Drawing.Size(135, 42);
             this.btnExportXsls.TabIndex = 356;
             this.btnExportXsls.Text = "Export To XLS";
-            this.btnExportXsls.Click += new System.EventHandler(this.btnExportXsls_Click);
+            this.btnExportXsls.Click += new System.EventHandler(this.BtnExportXsls_Click);
             // 
             // txtteatrate
             // 

@@ -732,7 +732,7 @@ namespace WindowsFormsApplication1
                 txtRoundOffAmount.Text = ds.Tables[0].Rows[0]["SIMROFFAMT"].ToString();
                 txtRNetAmount.Text = ds.Tables[0].Rows[0]["SIMGRANDTOT"].ToString();
                 txtCHGWeight.Text = ds.Tables[0].Rows[0]["SIMCHRGWEIGHT"].ToString();
-                txtDelieveryCode.Text = ds.Tables[0].Rows[0]["SIMPartyC"].ToString();
+                txtDeliveryCode.Text = ds.Tables[0].Rows[0]["SIMPartyC"].ToString();
                 txtDelieveryName.Text = ds.Tables[0].Rows[0]["DelieveryPartyName"].ToString();
                 txtDelAddress1.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
                 txtDelAddress2.Text = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
@@ -809,7 +809,7 @@ namespace WindowsFormsApplication1
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
 
-                    var MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                    var MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
                     //(InfoGrid.FocusedView as GridView).RowCount;
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
@@ -932,7 +932,7 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMGRANDTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtRNetAmount.Text);
                             sqlcom.Parameters.Add("@SIMTOTWEIGHT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtActualWeight.Text);
                             sqlcom.Parameters.Add("@SIMCHRGWEIGHT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCHGWeight.Text);
-                            sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
+                            sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDeliveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
                             sqlcom.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = txtVehicleNo.Text;
@@ -1043,7 +1043,7 @@ namespace WindowsFormsApplication1
                             sqlcom.Parameters.Add("@SIMGRANDTOT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtRNetAmount.Text);
                             sqlcom.Parameters.Add("@SIMTOTWEIGHT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtActualWeight.Text);
                             sqlcom.Parameters.Add("@SIMCHRGWEIGHT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtCHGWeight.Text);
-                            sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDelieveryCode.Text;
+                            sqlcom.Parameters.Add("@SIMDISPPCODE", SqlDbType.NVarChar).Value = txtDeliveryCode.Text;
                             sqlcom.Parameters.Add("@UnitCode", SqlDbType.NVarChar).Value = GlobalVariables.CUnitID;
                             sqlcom.Parameters.Add("@SIMDISPCODE", SqlDbType.NVarChar).Value = txtDelTransID.Text;
                             sqlcom.Parameters.Add("@VehicleNo", SqlDbType.NVarChar).Value = txtVehicleNo.Text;
@@ -1228,7 +1228,7 @@ namespace WindowsFormsApplication1
             txtBillingState.Text = string.Empty;
             txtBillingCity.Text = string.Empty;
             txtBillingZip.Text = string.Empty;
-            txtDelieveryCode.Text = string.Empty;
+            txtDeliveryCode.Text = string.Empty;
             txtDelieveryName.Text = string.Empty;
             txtDelAddress1.Text = string.Empty;
             txtDelAddress2.Text = string.Empty;
@@ -1368,7 +1368,7 @@ namespace WindowsFormsApplication1
                         StkTransfer = ds.Tables[0].Rows[0]["AccStkTrf"].ToString();
                         ShowPendingPSlips();
                         GetPartyBalances();
-                        txtDelieveryCode.Focus();
+                        txtDeliveryCode.Focus();
 
                         if (StkTransfer.ToUpper() == "Y")
                         {
@@ -1446,10 +1446,10 @@ namespace WindowsFormsApplication1
                 HelpGrid.Visible = false;
                 //txtArticlSysID.Focus();
             }
-            if (HelpGrid.Text == "txtDelieveryCode")
+            if (HelpGrid.Text == "txtDeliveryCode")
             {
 
-                txtDelieveryCode.Text = row["AccCode"].ToString();
+                txtDeliveryCode.Text = row["AccCode"].ToString();
                 txtDelieveryName.Text = row["AccName"].ToString();
                 txtDelAddress1.Text = row["AccAddress1"].ToString();
                 txtDelAddress2.Text = row["AccAddress2"].ToString();
@@ -1471,7 +1471,7 @@ namespace WindowsFormsApplication1
                 txtBillingState.Text = row["STNAME"].ToString();
                 txtBillingCity.Text = row["CTNAME"].ToString();
                 txtBillingZip.Text = row["AccZipCode"].ToString();
-                txtDelieveryCode.Text = row["AccCode"].ToString();
+                txtDeliveryCode.Text = row["AccCode"].ToString();
                 txtDelieveryName.Text = row["AccName"].ToString();
                 txtBankName.Text = row["AccAcinBankName"].ToString();
                 txtBankAccNo.Text = row["AccBankAccNo"].ToString();
@@ -1522,7 +1522,7 @@ namespace WindowsFormsApplication1
                 ShowPendingPSlips();
                 GetPartyBalances();
                 HelpGrid.Visible = false;
-                txtDelieveryCode.Focus();
+                txtDeliveryCode.Focus();
             }
             if (HelpGrid.Text == "txtProductACode")
             {
@@ -1959,7 +1959,7 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter)
             {
                 HelpGridView.Columns.Clear();
-                HelpGrid.Text = "txtDelieveryCode";
+                HelpGrid.Text = "txtDeliveryCode";
                 LoadDelAddresses();
             }
             e.Handled = true;
@@ -2313,7 +2313,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void xtraTabPage1_Paint(object sender, PaintEventArgs e)
+        private void XtraTabPage1_Paint(object sender, PaintEventArgs e)
         {
 
         }

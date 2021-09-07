@@ -105,7 +105,7 @@
             this.MaximizeBox = false;
             this.Name = "frmPivotGridReports";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmPivotGridReports_Load);
+            this.Load += new System.EventHandler(this.FrmPivotGridReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PivotGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();

@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 {
     public partial class ApprovaLIssue : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         DataTable dt = new DataTable();
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
@@ -167,7 +167,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                                 }
                                 if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) != Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
                                 {
-                                    ProjectFunctions.SpeakError("Difference In MRP( MRP In Articel is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
+                                    ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
                                     txtBarCode.Focus();
                                     txtBarCode.SelectAll();
 
@@ -300,7 +300,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         }
                         if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) != Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
                         {
-                            ProjectFunctions.SpeakError("Difference In MRP( MRP In Articel is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
+                            ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
                             txtBarCode.Focus();
                             txtBarCode.SelectAll();
                             e.Handled = true;
@@ -375,14 +375,14 @@ namespace WindowsFormsApplication1.Transaction.Pos
             {
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtApprovalDate.EditValue = DateTime.Now.ToString("dd-MM-yyyy");
                     txtReturnedUpTo.Text = DateTime.Now.ToString("dd-MM-yyyy");
                     txtCustMobileNo.Focus();
 
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadArticleApprovalMstFEdit] '" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + ImNo + "','" + ImSeries + "','" + GlobalVariables.CUnitID + "'");
                     txtApprovalDate.Text = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("yyyy-MM-dd");
@@ -441,7 +441,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         sqlcom.CommandType = CommandType.Text;
                         try
                         {
-                            if (s1 == "&Add")
+                            if (S1 == "&Add")
                             {
                                 string BillNo = string.Empty;
 
@@ -463,7 +463,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                                 sqlcom.ExecuteNonQuery();
                                 sqlcom.Parameters.Clear();
                             }
-                            if (s1 == "Edit")
+                            if (S1 == "Edit")
                             {
                                 sqlcom.CommandText = "Update SALEINVMAIN Set SIMSYSDATE=@SIMSYSDATE,SIMFNYR=@SIMFNYR,SIMDATE=@SIMDATE,SIMNO=@SIMNO," +
                                     " SIMSERIES=@SIMSERIES,CustCode=@CustCode,SIMRemarks=@SIMRemarks,SIMRETURNDATE=@SIMRETURNDATE,SIMGRANDTOT=@SIMGRANDTOT,SIMApprovedBy=@SIMApprovedBy Where SIMDATE='" + Convert.ToDateTime(ImDate).ToString("yyyy-MM-dd") + "' And SIMNO='" + ImNo + "' And SIMSERIES='" + ImSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "'";
@@ -587,7 +587,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
-        private void txtCustMobileNo_Enter(object sender, EventArgs e)
+        private void TxtCustMobileNo_Enter(object sender, EventArgs e)
         {
             if (txtCustMobileNo.Text.Length == 0)
             {

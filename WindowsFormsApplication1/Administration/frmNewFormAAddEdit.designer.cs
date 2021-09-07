@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmNewFormAAddEdit
+    partial class FrmNewFormAAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewFormAAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmNewFormAAddEdit));
             this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.txtMenuName = new DevExpress.XtraEditors.TextEdit();

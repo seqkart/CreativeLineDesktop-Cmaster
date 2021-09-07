@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1
                 {
                     if (Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) < 30)
                     {
-                        ProjectFunctions.SpeakError("Only " + Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) + " Days Left For Liscense To Expire,Please Recharge Immediately");
+                        ProjectFunctions.SpeakError("Only " + Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) + " Days Left For License To Expire,Please Recharge Immediately");
                     }
                 }
                 else
@@ -242,7 +242,7 @@ namespace WindowsFormsApplication1
                 cnn.Open();
                 cnn.Close();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 Master.FrmServer frm = new Master.FrmServer();
                 this.Hide();

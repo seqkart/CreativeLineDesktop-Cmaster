@@ -40,34 +40,38 @@
             // 
             this.quitBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.quitBtn.Appearance.Options.UseFont = true;
-            this.quitBtn.Location = new System.Drawing.Point(306, 1);
+            this.quitBtn.Location = new System.Drawing.Point(357, 1);
+            this.quitBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.quitBtn.Name = "quitBtn";
-            this.quitBtn.Size = new System.Drawing.Size(23, 23);
+            this.quitBtn.Size = new System.Drawing.Size(27, 30);
             this.quitBtn.TabIndex = 0;
             this.quitBtn.Text = "X";
-            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            this.quitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // FileName
             // 
-            this.FileName.Location = new System.Drawing.Point(9, 60);
+            this.FileName.Location = new System.Drawing.Point(10, 78);
+            this.FileName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FileName.Name = "FileName";
-            this.FileName.Size = new System.Drawing.Size(234, 20);
+            this.FileName.Size = new System.Drawing.Size(273, 24);
             this.FileName.TabIndex = 1;
             // 
             // SaveBtn
             // 
-            this.SaveBtn.Location = new System.Drawing.Point(262, 60);
+            this.SaveBtn.Location = new System.Drawing.Point(306, 78);
+            this.SaveBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(56, 20);
+            this.SaveBtn.Size = new System.Drawing.Size(65, 26);
             this.SaveBtn.TabIndex = 2;
             this.SaveBtn.Text = "&Save";
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(11, 39);
+            this.labelControl1.Location = new System.Drawing.Point(13, 51);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(66, 13);
+            this.labelControl1.Size = new System.Drawing.Size(77, 17);
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Layout Name";
             // 
@@ -75,23 +79,25 @@
             // 
             this.Title.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.Title.Appearance.Options.UseFont = true;
-            this.Title.Location = new System.Drawing.Point(3, 5);
+            this.Title.Location = new System.Drawing.Point(3, 7);
+            this.Title.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(76, 14);
+            this.Title.Size = new System.Drawing.Size(92, 18);
             this.Title.TabIndex = 3;
             this.Title.Text = "Save Layout";
             // 
             // ReportFormatName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Title);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.FileName);
             this.Controls.Add(this.quitBtn);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ReportFormatName";
-            this.Size = new System.Drawing.Size(332, 101);
+            this.Size = new System.Drawing.Size(387, 132);
             ((System.ComponentModel.ISupportInitialize)(this.FileName.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

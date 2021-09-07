@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
                 DtFrom.Focus();
             }
         }
-        private void frmSelectRangeNew_Load(object sender, EventArgs e)
+        private void FrmSelectRangeNew_Load(object sender, EventArgs e)
         {
             ProjectFunctions.DatePickerVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
@@ -99,12 +99,12 @@ namespace WindowsFormsApplication1
                 }
             }
         }
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
             Hide();
         }
 
-        private void chArticle_CheckedChanged(object sender, EventArgs e)
+        private void ChArticle_CheckedChanged(object sender, EventArgs e)
         {
             if (chArticle.Checked)
             {
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void chParty_CheckedChanged(object sender, EventArgs e)
+        private void ChParty_CheckedChanged(object sender, EventArgs e)
         {
             if (chParty.Checked)
             {
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void chLedger_CheckedChanged(object sender, EventArgs e)
+        private void ChLedger_CheckedChanged(object sender, EventArgs e)
         {
             if (chLedger.Checked)
             {

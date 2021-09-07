@@ -306,7 +306,7 @@ namespace WindowsFormsApplication1
             Page.Text = GlobalVariables.ProgDesc;
             Page.Name = GlobalVariables.ProgCode;
 
-            //MessageBox.Show(myitem);
+      
             Console.WriteLine("WriteLine ********** " + myitem);
             PrintLogWin.PrintLog("Write ********** " + myitem);
 
@@ -457,7 +457,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG224":
-                    var PROG224 = new frmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG224 = new FrmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG224.Show();
                     PROG224.BringToFront();
                     PROG224.Parent = Page;
@@ -492,14 +492,14 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG214":
-                    var PROG214 = new frmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG214 = new FrmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG214.Show();
                     PROG214.BringToFront();
                     PROG214.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG213":
-                    var PROG213 = new frmGridReports
+                    var PROG213 = new FrmGridReports
                         ()
                     { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG213.Show();
@@ -564,7 +564,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG201":
-                    var PROG201 = new frmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG201 = new FrmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG201.Show();
                     PROG201.BringToFront();
                     PROG201.Parent = Page;
@@ -951,13 +951,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG36":
-                    //var PROG36 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //GlobalVariables.ProgCode = "PROG36";
-
-                    //PROG36.Show();
-                    //PROG36.BringToFront();
-                    //PROG36.Parent = Page;
-                    //xtraTabControl1.SelectedTabPage = Page;
+                    
                     break;
                 case "PROG52":
                     var PROG52 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -987,13 +981,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG44":
-                    //var PROG44 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //GlobalVariables.ProgCode = "PROG44";
-
-                    //PROG44.Show();
-                    //PROG44.BringToFront();
-                    //PROG44.Parent = Page;
-                    //xtraTabControl1.SelectedTabPage = Page;
+                   
                     break;
                 case "PROG38":
                     var PROG38 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1005,13 +993,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG40":
-                    //var PROG40 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //GlobalVariables.ProgCode = "PROG40";
-
-                    //PROG40.Show();
-                    //PROG40.BringToFront();
-                    //PROG40.Parent = Page;
-                    //xtraTabControl1.SelectedTabPage = Page;
+                   
                     break;
                 case "PROG54":
                     var PROG54 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1050,30 +1032,13 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG61":
-                    //var PROG61 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //GlobalVariables.ProgCode = "PROG61";
-                    //PROG61.Show();
-                    //PROG61.BringToFront();
-                    //PROG61.Parent = Page;
-                    //xtraTabControl1.SelectedTabPage = Page;
+                   
                     break;
                 case "PROG63":
-                    //var PROG63 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //GlobalVariables.ProgCode = "PROG63";
-
-                    //PROG63.Show();
-                    //PROG63.BringToFront();
-                    //PROG63.Parent = Page;
-                    //xtraTabControl1.SelectedTabPage = Page;
+                   
                     break;
                 case "PROG64":
-                    //var PROG64 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                    //GlobalVariables.ProgCode = "PROG64";
-
-                    //PROG64.Show();
-                    //PROG64.BringToFront();
-                    //PROG64.Parent = Page;
-                    //xtraTabControl1.SelectedTabPage = Page;
+                   
                     break;
                 case "PROG55":
                     var PROG55 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1745,13 +1710,7 @@ namespace WindowsFormsApplication1
                     PROG159.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
-                //case "PROG154":
-                //    var PROG154 = new WindowsFormsApplication1.Forms_Master.frm_EmpsalMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-                //    PROG154.Show();
-                //    PROG154.BringToFront();
-                //    PROG154.Parent = Page;
-                //    xtraTabControl1.SelectedTabPage = Page;
-                //    break;
+               
                 case "PROG153":
                     var PROG153 = new WindowsFormsApplication1.Forms_Master.FrmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG153.Show();
@@ -1781,7 +1740,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG167":
-                    var PROG167 = new frmPartyAccounts() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG167 = new FrmPartyAccounts() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG167.Show();
                     PROG167.BringToFront();
                     PROG167.Parent = Page;
@@ -1910,7 +1869,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/qrcode"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "*/*");
 
@@ -1931,7 +1890,7 @@ namespace WindowsFormsApplication1
                         pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
                         //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
-                        //ProjectFunctions.SpeakError("Whatsapp status is connected on mobile no " + myDetails.user);
+                        //ProjectFunctions.SpeakError("Whats app status is connected on mobile no " + myDetails.user);
 
 
                     }

@@ -336,7 +336,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG119")
                 {
                     FrmTransporterMaster frm = new FrmTransporterMaster()
-                    { s1 = btnAdd.Text, Text = "Transporter Addition" };
+                    { S1 = btnAdd.Text, Text = "Transporter Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -380,7 +380,7 @@ namespace WindowsFormsApplication1
                 }
                 if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmNewFormAAddEdit))
                 {
-                    frmNewFormAAddEdit frm = new frmNewFormAAddEdit() { S1 = btnAdd.Text, Text = "Program Addition" };
+                    FrmNewFormAAddEdit frm = new FrmNewFormAAddEdit() { S1 = btnAdd.Text, Text = "Program Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -886,7 +886,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     FrmTransporterMaster frm = new FrmTransporterMaster()
-                    { s1 = btnEdit.Text, Text = "Transporter Edition", TRPRSYSID = CurrentRow["TRPRSYSID"].ToString() };
+                    { S1 = btnEdit.Text, Text = "Transporter Edition", TRPRSYSID = CurrentRow["TRPRSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -950,7 +950,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG1")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmNewFormAAddEdit frm = new frmNewFormAAddEdit()
+                    FrmNewFormAAddEdit frm = new FrmNewFormAAddEdit()
                     { S1 = btnEdit.Text, Text = "Program Editing", ProgCode = CurrentRow["ProgCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -1206,7 +1206,7 @@ namespace WindowsFormsApplication1
                                                       "'");
                                                   if (ds.Tables[0].Rows.Count > 0)
                                                   {
-                                                      FormReports.frmPartyAccounts frm = new FormReports.frmPartyAccounts()
+                                                      FormReports.FrmPartyAccounts frm = new FormReports.FrmPartyAccounts()
                                                       {
                                                           Text =
                                                           "Zoom Party Account - [" +

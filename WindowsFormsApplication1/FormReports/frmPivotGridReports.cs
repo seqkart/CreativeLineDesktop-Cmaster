@@ -1,5 +1,4 @@
 ﻿using DevExpress.Utils.Menu;
-using DevExpress.XtraEditors;
 using DevExpress.XtraPivotGrid;
 using System;
 using System.Drawing;
@@ -18,7 +17,6 @@ namespace WindowsFormsApplication1.FormReports
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string LayoutName = string.Empty;
-        CheckEdit ch = new CheckEdit();
 
         public frmPivotGridReports()
         {
@@ -37,7 +35,7 @@ namespace WindowsFormsApplication1.FormReports
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void frmPivotGridReports_Load(object sender, EventArgs e)
+        private void FrmPivotGridReports_Load(object sender, EventArgs e)
         {
             try
             {
@@ -130,13 +128,6 @@ namespace WindowsFormsApplication1.FormReports
                 ProjectFunctions.SpeakError(ex.Message);
             }
 
-        }
-
-
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void HelpGrid_Click(object sender, EventArgs e)

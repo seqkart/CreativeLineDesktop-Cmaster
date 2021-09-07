@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Time_Office
             DateTime today = dateAttendance.Value;
             lblDayName.Text = today.ToString("dddd");
 
-            employeeFormData_Load(selected_employee_code);
+            EmployeeFormData_Load(selected_employee_code);
 
 
         }
@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
 
         }
-        private void employeeFormData_Load(string EmpCode)
+        private void EmployeeFormData_Load(string EmpCode)
         {
             windowsUIButtonPanelMain.Enabled = false;
 
@@ -1251,7 +1251,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void timeEdit_Time_Out_Last_EditValueChanged(object sender, EventArgs e)
+        private void TimeEdit_Time_Out_Last_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as BaseEdit).Tag == null)
             {
@@ -1914,13 +1914,13 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void textEmpType_EditValueChanged(object sender, EventArgs e)
+        private void TextEmpType_EditValueChanged(object sender, EventArgs e)
         {
 
 
         }
 
-        private void totalWorkingHours_Text_EditValueChanged(object sender, EventArgs e)
+        private void TotalWorkingHours_Text_EditValueChanged(object sender, EventArgs e)
         {
 
             if ((sender as BaseEdit).Tag == null)
@@ -1973,13 +1973,13 @@ namespace WindowsFormsApplication1.Time_Office
             {
                 if (txtEmpID.Text.Length >= 4)
                 {
-                    employeeFormData_Load(txtEmpID.Text);
+                    EmployeeFormData_Load(txtEmpID.Text);
                 }
             }
 
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -2077,7 +2077,7 @@ namespace WindowsFormsApplication1.Time_Office
 
         }
 
-        private void totalWorkingHours_Text_DW_EditValueChanged(object sender, EventArgs e)
+        private void TotalWorkingHours_Text_DW_EditValueChanged(object sender, EventArgs e)
         {
             totalWorkingHours_Label_DW.Text = ConvertTo.MinutesToHours(totalWorkingHours_Text_DW.EditValue);
         }
@@ -2103,12 +2103,12 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void windowsUIButtonPanelMain_Click(object sender, EventArgs e)
+        private void WindowsUIButtonPanelMain_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtNightOut_EditValueChanged(object sender, EventArgs e)
+        private void TxtNightOut_EditValueChanged(object sender, EventArgs e)
         {
 
 

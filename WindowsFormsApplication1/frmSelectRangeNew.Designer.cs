@@ -30,15 +30,15 @@ namespace WindowsFormsApplication1
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSelectRangeNew));
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
+            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
             this.BtnLoad = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1
             this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.simpleButton1.Size = new System.Drawing.Size(22, 27);
             this.simpleButton1.TabIndex = 12;
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // DtEnd
             // 
@@ -178,13 +178,13 @@ namespace WindowsFormsApplication1
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtParty.Properties.SelectAllItemVisible = false;
             this.txtParty.Size = new System.Drawing.Size(490, 24);
-            toolTipTitleItem4.Text = "Help";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+            toolTipTitleItem1.Text = "Help";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
     "elect Items.\r\nAtlast Press Enter Save Choice.";
-            superToolTip4.Items.Add(toolTipTitleItem4);
-            superToolTip4.Items.Add(toolTipItem4);
-            this.txtParty.SuperTip = superToolTip4;
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txtParty.SuperTip = superToolTip1;
             this.txtParty.TabIndex = 788;
             // 
             // labelControl4
@@ -221,13 +221,13 @@ namespace WindowsFormsApplication1
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtGroups.Properties.SelectAllItemVisible = false;
             this.txtGroups.Size = new System.Drawing.Size(490, 24);
-            toolTipTitleItem1.Text = "Help";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+            toolTipTitleItem2.Text = "Help";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
     "elect Items.\r\nAtlast Press Enter Save Choice.";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            this.txtGroups.SuperTip = superToolTip1;
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.txtGroups.SuperTip = superToolTip2;
             this.txtGroups.TabIndex = 790;
             // 
             // chArticle
@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1
             this.chArticle.Properties.Caption = "All";
             this.chArticle.Size = new System.Drawing.Size(94, 24);
             this.chArticle.TabIndex = 792;
-            this.chArticle.CheckedChanged += new System.EventHandler(this.chArticle_CheckedChanged);
+            this.chArticle.CheckedChanged += new System.EventHandler(this.ChArticle_CheckedChanged);
             // 
             // chParty
             // 
@@ -246,7 +246,7 @@ namespace WindowsFormsApplication1
             this.chParty.Properties.Caption = "All";
             this.chParty.Size = new System.Drawing.Size(94, 24);
             this.chParty.TabIndex = 793;
-            this.chParty.CheckedChanged += new System.EventHandler(this.chParty_CheckedChanged);
+            this.chParty.CheckedChanged += new System.EventHandler(this.ChParty_CheckedChanged);
             // 
             // chLedger
             // 
@@ -255,7 +255,7 @@ namespace WindowsFormsApplication1
             this.chLedger.Properties.Caption = "All";
             this.chLedger.Size = new System.Drawing.Size(94, 24);
             this.chLedger.TabIndex = 796;
-            this.chLedger.CheckedChanged += new System.EventHandler(this.chLedger_CheckedChanged);
+            this.chLedger.CheckedChanged += new System.EventHandler(this.ChLedger_CheckedChanged);
             // 
             // labelControl6
             // 
@@ -280,13 +280,13 @@ namespace WindowsFormsApplication1
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtLedger.Properties.SelectAllItemVisible = false;
             this.txtLedger.Size = new System.Drawing.Size(490, 24);
-            toolTipTitleItem2.Text = "Help";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+            toolTipTitleItem3.Text = "Help";
+            toolTipItem3.LeftIndent = 6;
+            toolTipItem3.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
     "elect Items.\r\nAtlast Press Enter Save Choice.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.txtLedger.SuperTip = superToolTip2;
+            superToolTip3.Items.Add(toolTipTitleItem3);
+            superToolTip3.Items.Add(toolTipItem3);
+            this.txtLedger.SuperTip = superToolTip3;
             this.txtLedger.TabIndex = 794;
             // 
             // frmSelectRangeNew
@@ -312,7 +312,7 @@ namespace WindowsFormsApplication1
             this.Controls.Add(this.labelControl1);
             this.Name = "frmSelectRangeNew";
             this.Size = new System.Drawing.Size(686, 337);
-            this.Load += new System.EventHandler(this.frmSelectRangeNew_Load);
+            this.Load += new System.EventHandler(this.FrmSelectRangeNew_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties.CalendarTimeProperties)).EndInit();

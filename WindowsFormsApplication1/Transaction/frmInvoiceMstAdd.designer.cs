@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInvoiceMstAdd));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -104,7 +104,7 @@
             this.txtDelAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.txtDelieveryName = new DevExpress.XtraEditors.TextEdit();
-            this.txtDelieveryCode = new DevExpress.XtraEditors.TextEdit();
+            this.txtDeliveryCode = new DevExpress.XtraEditors.TextEdit();
             this.txtDelTransID = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
@@ -339,7 +339,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDeliveryCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelTransID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -545,7 +545,7 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1404, 775);
             this.xtraTabPage1.Text = "Main Invoice Details";
-            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
+            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.XtraTabPage1_Paint);
             // 
             // groupControl7
             // 
@@ -1076,7 +1076,7 @@
             this.groupControl2.Controls.Add(this.txtDelAddress1);
             this.groupControl2.Controls.Add(this.labelControl19);
             this.groupControl2.Controls.Add(this.txtDelieveryName);
-            this.groupControl2.Controls.Add(this.txtDelieveryCode);
+            this.groupControl2.Controls.Add(this.txtDeliveryCode);
             this.groupControl2.Controls.Add(this.txtDelTransID);
             this.groupControl2.GroupStyle = DevExpress.Utils.GroupStyle.Light;
             this.groupControl2.Location = new System.Drawing.Point(705, 4);
@@ -1216,18 +1216,18 @@
             this.txtDelieveryName.TabIndex = 532;
             this.txtDelieveryName.TabStop = false;
             // 
-            // txtDelieveryCode
+            // txtDeliveryCode
             // 
-            this.txtDelieveryCode.Location = new System.Drawing.Point(96, 58);
-            this.txtDelieveryCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDelieveryCode.Name = "txtDelieveryCode";
-            this.txtDelieveryCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDelieveryCode.Properties.MaxLength = 6;
-            this.txtDelieveryCode.Size = new System.Drawing.Size(90, 24);
-            this.txtDelieveryCode.TabIndex = 533;
-            this.txtDelieveryCode.EditValueChanged += new System.EventHandler(this.TxtDelieveryCode_EditValueChanged);
-            this.txtDelieveryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDelieveryCode_KeyDown);
-            this.txtDelieveryCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDelieveryCode_KeyPress);
+            this.txtDeliveryCode.Location = new System.Drawing.Point(96, 58);
+            this.txtDeliveryCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDeliveryCode.Name = "txtDeliveryCode";
+            this.txtDeliveryCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDeliveryCode.Properties.MaxLength = 6;
+            this.txtDeliveryCode.Size = new System.Drawing.Size(90, 24);
+            this.txtDeliveryCode.TabIndex = 533;
+            this.txtDeliveryCode.EditValueChanged += new System.EventHandler(this.TxtDelieveryCode_EditValueChanged);
+            this.txtDeliveryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDelieveryCode_KeyDown);
+            this.txtDeliveryCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDelieveryCode_KeyPress);
             // 
             // txtDelTransID
             // 
@@ -3623,10 +3623,10 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode2.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode2});
-            this.HelpGrid.Location = new System.Drawing.Point(388, 13);
+            gridLevelNode1});
+            this.HelpGrid.Location = new System.Drawing.Point(343, 13);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -3730,7 +3730,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelAddress1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDelieveryCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDeliveryCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelTransID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
@@ -3926,7 +3926,7 @@
         private DevExpress.XtraEditors.TextEdit txtDelAddress1;
         private DevExpress.XtraEditors.LabelControl labelControl19;
         private DevExpress.XtraEditors.TextEdit txtDelieveryName;
-        private DevExpress.XtraEditors.TextEdit txtDelieveryCode;
+        private DevExpress.XtraEditors.TextEdit txtDeliveryCode;
         private DevExpress.XtraEditors.LabelControl labelControl14;
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.LabelControl labelControl12;

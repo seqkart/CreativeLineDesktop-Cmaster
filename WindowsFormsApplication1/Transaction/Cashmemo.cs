@@ -443,7 +443,7 @@ namespace WindowsFormsApplication1.Transaction
                             }
                             if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) != Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
                             {
-                                ProjectFunctions.SpeakError("Difference In MRP( MRP In Articel is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
+                                ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
                             }
 
 

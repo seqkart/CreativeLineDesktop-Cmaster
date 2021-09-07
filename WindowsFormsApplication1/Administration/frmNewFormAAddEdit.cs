@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmNewFormAAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmNewFormAAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string ProgCode { get; set; }
 
-        String FileType;
-        public frmNewFormAAddEdit()
+        private string FileType;
+        public FrmNewFormAAddEdit()
         {
             InitializeComponent();
         }

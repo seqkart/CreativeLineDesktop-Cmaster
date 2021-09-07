@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG134")
                 {
                     Transaction.Pos.ApprovaLIssue frm = new Transaction.Pos.ApprovaLIssue()
-                    { s1 = btnAdd.Text, Text = "Approval Issue Addition" };
+                    { S1 = btnAdd.Text, Text = "Approval Issue Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -513,7 +513,7 @@ namespace WindowsFormsApplication1
 
                     Transaction.Pos.ApprovaLIssue frm = new Transaction.Pos.ApprovaLIssue()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Approval Issue Edition",
                         ImDate = Convert.ToDateTime(CurrentRow["BillDate"]),
                         ImNo = CurrentRow["BillNo"].ToString(),

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.FormReports
 {
-    partial class frmGridReports
+    partial class FrmGridReports
     {
         /// <summary>
         /// Required designer variable.
@@ -94,7 +94,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGridReports";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmGridReports_Load);
+            this.Load += new System.EventHandler(this.FrmGridReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGridView)).EndInit();
             this.ResumeLayout(false);

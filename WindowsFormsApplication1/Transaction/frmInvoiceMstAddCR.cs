@@ -1372,7 +1372,7 @@ namespace WindowsFormsApplication1
             //View1.OptionsBehavior.Editable = false;
         }
 
-        private void txtPKGFrt_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPKGFrt_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

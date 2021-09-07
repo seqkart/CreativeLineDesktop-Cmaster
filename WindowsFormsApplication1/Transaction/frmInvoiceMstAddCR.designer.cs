@@ -1700,7 +1700,7 @@
             this.txtPKGFrt.Properties.MaxLength = 6;
             this.txtPKGFrt.Size = new System.Drawing.Size(119, 24);
             this.txtPKGFrt.TabIndex = 552;
-            this.txtPKGFrt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPKGFrt_KeyDown);
+            this.txtPKGFrt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPKGFrt_KeyDown);
             // 
             // txtRNetAmount
             // 

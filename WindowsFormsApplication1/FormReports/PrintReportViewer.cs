@@ -6,7 +6,7 @@ namespace payroll.FormReports
     public partial class PrintReportViewer : DevExpress.XtraEditors.XtraForm
     {
 
-        public string pkInstalledPrinters { get; set; }
+        public string PkInstalledPrinters { get; set; }
         public PrintReportViewer()
         {
             InitializeComponent();
@@ -16,7 +16,7 @@ namespace payroll.FormReports
         {
             try
             {
-                pkInstalledPrinters = ProjectFunctions.GetDataSet("Select ProgPrinterName from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'").Tables[0].Rows[0]["ProgPrinterName"].ToString();
+                PkInstalledPrinters = ProjectFunctions.GetDataSet("Select ProgPrinterName from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'").Tables[0].Rows[0]["ProgPrinterName"].ToString();
             }
             catch (Exception ex)
             {
@@ -36,7 +36,7 @@ namespace payroll.FormReports
                 XtraReport rpt = new XtraReport();
                 rpt = (XtraReport)documentViewer1.DocumentSource;
                 ReportPrintTool printTool = new ReportPrintTool(rpt);
-                printTool.Print(pkInstalledPrinters);
+                printTool.Print(PkInstalledPrinters);
                 Close();
             }
             catch (Exception ex)

@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.FormReports
 {
-    public partial class frmGridReports : DevExpress.XtraEditors.XtraForm
+    public partial class FrmGridReports : DevExpress.XtraEditors.XtraForm
     {
         RangeSelector _RangeSelector = new RangeSelector() { StartDate = GlobalVariables.FinYearStartDate, EndDate = GlobalVariables.FinYearEndDate };
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public frmGridReports()
+        public FrmGridReports()
         {
             InitializeComponent();
         }
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1.FormReports
             _RangeSelector.Visible = false;
         }
 
-        private void frmGridReports_Load(object sender, EventArgs e)
+        private void FrmGridReports_Load(object sender, EventArgs e)
         {
             ProjectFunctions.GirdViewVisualize(MasterGridView);
         }

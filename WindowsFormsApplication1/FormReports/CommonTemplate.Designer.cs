@@ -123,17 +123,18 @@
             this.Menu_ToolStrip.CanOverflow = false;
             this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
             this.lbl,
             this.RefreshBtn,
             this.GenExcel,
             this.Email});
-            this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 27);
+            this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 34);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(970, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1132, 31);
             this.Menu_ToolStrip.TabIndex = 198;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -145,16 +146,16 @@
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnQuit.Size = new System.Drawing.Size(45, 23);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "&Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // lbl
             // 
             this.lbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(102, 23);
+            this.lbl.Size = new System.Drawing.Size(126, 28);
             this.lbl.Text = "WSB Sale Report";
             this.lbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -164,7 +165,7 @@
             this.RefreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("RefreshBtn.Image")));
             this.RefreshBtn.ImageTransparentColor = System.Drawing.Color.LightSeaGreen;
             this.RefreshBtn.Name = "RefreshBtn";
-            this.RefreshBtn.Size = new System.Drawing.Size(46, 23);
+            this.RefreshBtn.Size = new System.Drawing.Size(57, 28);
             this.RefreshBtn.Text = "&Range";
             this.RefreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
             // 
@@ -174,7 +175,7 @@
             this.GenExcel.Image = ((System.Drawing.Image)(resources.GetObject("GenExcel.Image")));
             this.GenExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.GenExcel.Name = "GenExcel";
-            this.GenExcel.Size = new System.Drawing.Size(96, 23);
+            this.GenExcel.Size = new System.Drawing.Size(116, 28);
             this.GenExcel.Text = "&Generate Excel";
             // 
             // Email
@@ -183,17 +184,17 @@
             this.Email.Image = ((System.Drawing.Image)(resources.GetObject("Email.Image")));
             this.Email.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.Email.Name = "Email";
-            this.Email.Size = new System.Drawing.Size(45, 23);
+            this.Email.Size = new System.Drawing.Size(57, 28);
             this.Email.Text = "E-Mail";
             this.Email.Click += new System.EventHandler(this.Email_Click);
             // 
             // Preview
             // 
             this.Preview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Preview.IsMetric = false;
-            this.Preview.Location = new System.Drawing.Point(0, 53);
+            this.Preview.Location = new System.Drawing.Point(0, 65);
+            this.Preview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Preview.Name = "Preview";
-            this.Preview.Size = new System.Drawing.Size(970, 333);
+            this.Preview.Size = new System.Drawing.Size(1132, 439);
             this.Preview.TabIndex = 199;
             // 
             // documentViewerBarManager1
@@ -704,31 +705,35 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.documentViewerBarManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(970, 27);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1132, 34);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 386);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 504);
             this.barDockControlBottom.Manager = this.documentViewerBarManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(970, 21);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1132, 28);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 27);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
             this.barDockControlLeft.Manager = this.documentViewerBarManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 359);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 470);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(970, 27);
+            this.barDockControlRight.Location = new System.Drawing.Point(1132, 34);
             this.barDockControlRight.Manager = this.documentViewerBarManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 359);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 470);
             // 
             // printPreviewSubItem1
             // 
@@ -976,10 +981,12 @@
             // 
             // HelpGridCtrl
             // 
-            this.HelpGridCtrl.Location = new System.Drawing.Point(362, 60);
+            this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(422, 78);
             this.HelpGridCtrl.MainView = this.HelpGrid;
+            this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(496, 350);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(579, 458);
             this.HelpGridCtrl.TabIndex = 204;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -989,6 +996,7 @@
             // 
             // HelpGrid
             // 
+            this.HelpGrid.DetailHeight = 458;
             this.HelpGrid.GridControl = this.HelpGridCtrl;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.OptionsBehavior.AllowIncrementalSearch = true;
@@ -1002,12 +1010,12 @@
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 53);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 65);
+            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            //this.crystalReportViewer1.PrintMode = CrystalDecisions.Windows.Forms.PrintMode.PrintOutputController;
             this.crystalReportViewer1.ShowCloseButton = false;
             this.crystalReportViewer1.ShowLogo = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(970, 333);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1132, 439);
             this.crystalReportViewer1.TabIndex = 209;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer1.Visible = false;
@@ -1018,9 +1026,9 @@
             // 
             // CommonTemplate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 407);
+            this.ClientSize = new System.Drawing.Size(1132, 532);
             this.ControlBox = false;
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.Preview);
@@ -1031,6 +1039,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CommonTemplate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

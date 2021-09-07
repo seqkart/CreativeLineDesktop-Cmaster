@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1.Crystal_Reports
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }

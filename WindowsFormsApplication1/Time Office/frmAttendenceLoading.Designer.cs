@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // toolStripButton1
             // 
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.toolStripButton1.Size = new System.Drawing.Size(79, 28);
             this.toolStripButton1.Text = "Validate";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // btnRefresh
             // 
@@ -150,7 +150,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnRefresh.Size = new System.Drawing.Size(77, 28);
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnLoad
             // 
@@ -162,7 +162,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnLoad.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnLoad.Size = new System.Drawing.Size(57, 28);
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // btnAdd
             // 
@@ -318,7 +318,7 @@ namespace WindowsFormsApplication1.Forms_Master
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // gridView_AttendanceData
             // 
@@ -354,7 +354,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnLoad_Data.Size = new System.Drawing.Size(128, 39);
             this.btnLoad_Data.TabIndex = 3;
             this.btnLoad_Data.Text = "Load";
-            this.btnLoad_Data.Click += new System.EventHandler(this.btnLoad_Data_Click);
+            this.btnLoad_Data.Click += new System.EventHandler(this.BtnLoad_Data_Click);
             // 
             // DtStartDate
             // 
@@ -396,7 +396,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.splitter1.Size = new System.Drawing.Size(1252, 98);
             this.splitter1.TabIndex = 196;
             this.splitter1.TabStop = false;
-            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.splitter1_SplitterMoved);
+            this.splitter1.SplitterMoved += new System.Windows.Forms.SplitterEventHandler(this.Splitter1_SplitterMoved);
             // 
             // txtEmpCode
             // 
@@ -410,8 +410,8 @@ namespace WindowsFormsApplication1.Forms_Master
             this.txtEmpCode.Properties.MaxLength = 6;
             this.txtEmpCode.Size = new System.Drawing.Size(105, 28);
             this.txtEmpCode.TabIndex = 2;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // label1
             // 
@@ -487,7 +487,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnPrintPreview.Size = new System.Drawing.Size(128, 39);
             this.btnPrintPreview.TabIndex = 363;
             this.btnPrintPreview.Text = "Print Preview";
-            this.btnPrintPreview.Click += new System.EventHandler(this.btnPrintPreview_Click);
+            this.btnPrintPreview.Click += new System.EventHandler(this.BtnPrintPreview_Click);
             // 
             // btnPrint
             // 
@@ -509,7 +509,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.btnExportXsls.Size = new System.Drawing.Size(128, 39);
             this.btnExportXsls.TabIndex = 365;
             this.btnExportXsls.Text = "Export To XLS";
-            this.btnExportXsls.Click += new System.EventHandler(this.btnExportXsls_Click);
+            this.btnExportXsls.Click += new System.EventHandler(this.BtnExportXsls_Click);
             // 
             // lblemp
             // 

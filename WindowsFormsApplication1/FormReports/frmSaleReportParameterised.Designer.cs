@@ -68,13 +68,13 @@ namespace WindowsFormsApplication1.FormReports
             this.MasterGridView.OptionsView.ShowIndicator = false;
             this.MasterGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.MasterGridView_PopupMenuShowing);
             // 
-            // frmSaleReportParameterised
+            // FrmSaleReportParameterised
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(646, 417);
             this.Controls.Add(this.MasterGrid);
-            this.Name = "frmSaleReportParameterised";
+            this.Name = "FrmSaleReportParameterised";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGridView)).EndInit();

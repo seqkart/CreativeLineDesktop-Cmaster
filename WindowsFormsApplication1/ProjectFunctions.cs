@@ -1746,14 +1746,14 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        public static async void GenerateAPIToken()
+        public static void GenerateAPIToken()
         {
             //if (MessageBox.Show("Calling any API method will internally check for valid AuthToken and would try to obtain AuthToken if its is expired.  You don't need to explicitly call GetAuthTokenAsync method. Do you want to proceed?", "AuthToken is Automatic", MessageBoxButtons.YesNo) == DialogResult.Yes)
             //{
 
             //    TxnRespWithObjAndInfo<EWBSession> TxnResp = await EWBAPI.GetAuthTokenAsync(EwbSession);
 
-            //    //// Below is the code to call Api Synchroniously
+            //    //// Below is the code to call Api Synchronously
             //    //TxnRespWithObjAndInfo<EWBSession> TxnResp = Task.Run(() => EWBAPI.GetAuthTokenAsync(EwbSession)).Result;
 
             //    if (TxnResp.IsSuccess)
@@ -2061,8 +2061,8 @@ namespace WindowsFormsApplication1
 
             //ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
             //ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
-            //ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
-            //ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
+            //ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DeliveryPartyAddress1"].ToString();
+            //ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DeliveryPartyAddress2"].ToString();
             //ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
             //ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
             //ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
@@ -2145,7 +2145,7 @@ namespace WindowsFormsApplication1
                 {
 
                     XtraMessageBox.Show(TxnResp.TxnOutcome);
-                    //Check for error "The distance between the pincodes given is too high"
+                   
 
                     if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
                     {
@@ -2167,7 +2167,7 @@ namespace WindowsFormsApplication1
             }
 
 
-            // XtraMessageBox.Show("Generate e-Way Bill Responce");
+          
 
 
         }

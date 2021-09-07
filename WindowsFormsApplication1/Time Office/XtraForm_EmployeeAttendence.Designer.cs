@@ -257,7 +257,7 @@
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelMain_ButtonClick);
-            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.windowsUIButtonPanelMain_Click);
+            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.WindowsUIButtonPanelMain_Click);
             // 
             // labelControl
             // 
@@ -383,7 +383,7 @@
             this.textEmpType.Properties.ReadOnly = true;
             this.textEmpType.Size = new System.Drawing.Size(233, 24);
             this.textEmpType.TabIndex = 371;
-            this.textEmpType.EditValueChanged += new System.EventHandler(this.textEmpType_EditValueChanged);
+            this.textEmpType.EditValueChanged += new System.EventHandler(this.TextEmpType_EditValueChanged);
             // 
             // label20
             // 
@@ -509,7 +509,7 @@
             this.txtEmpID.Size = new System.Drawing.Size(140, 24);
             this.txtEmpID.TabIndex = 1;
             this.txtEmpID.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
-            this.txtEmpID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // dateAttendance
             // 
@@ -704,7 +704,7 @@
             this.txtNightOut.Properties.MaskSettings.Set("mask", "HH:mm");
             this.txtNightOut.Size = new System.Drawing.Size(76, 24);
             this.txtNightOut.TabIndex = 255;
-            this.txtNightOut.EditValueChanged += new System.EventHandler(this.txtNightOut_EditValueChanged);
+            this.txtNightOut.EditValueChanged += new System.EventHandler(this.TxtNightOut_EditValueChanged);
             // 
             // txtNightIn
             // 
@@ -767,7 +767,7 @@
             this.timeEdit_Time_Out_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_Out_Last.Size = new System.Drawing.Size(76, 24);
             this.timeEdit_Time_Out_Last.TabIndex = 4;
-            this.timeEdit_Time_Out_Last.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_Last_EditValueChanged);
+            this.timeEdit_Time_Out_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_Last_EditValueChanged);
             // 
             // timeEdit_Time_In_Last
             // 
@@ -1047,7 +1047,7 @@
             this.totalWorkingHours_Text.Size = new System.Drawing.Size(76, 26);
             this.totalWorkingHours_Text.TabIndex = 15;
             this.totalWorkingHours_Text.TabStop = false;
-            this.totalWorkingHours_Text.EditValueChanged += new System.EventHandler(this.totalWorkingHours_Text_EditValueChanged);
+            this.totalWorkingHours_Text.EditValueChanged += new System.EventHandler(this.TotalWorkingHours_Text_EditValueChanged);
             // 
             // labelControl16
             // 
@@ -1674,7 +1674,7 @@
             this.totalWorkingHours_Text_DW.Size = new System.Drawing.Size(76, 26);
             this.totalWorkingHours_Text_DW.TabIndex = 253;
             this.totalWorkingHours_Text_DW.TabStop = false;
-            this.totalWorkingHours_Text_DW.EditValueChanged += new System.EventHandler(this.totalWorkingHours_Text_DW_EditValueChanged);
+            this.totalWorkingHours_Text_DW.EditValueChanged += new System.EventHandler(this.TotalWorkingHours_Text_DW_EditValueChanged);
             // 
             // labelControl2
             // 

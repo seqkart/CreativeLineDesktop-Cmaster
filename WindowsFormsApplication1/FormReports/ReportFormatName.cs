@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1.FormReports
             Hide();
         }
 
-        private void quitBtn_Click(object sender, EventArgs e)
+        private void QuitBtn_Click(object sender, EventArgs e)
         {
             Hide();
         }

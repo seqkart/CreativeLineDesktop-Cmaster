@@ -355,17 +355,7 @@ namespace WindowsFormsApplication1.Forms_Master
                             e.HighPriority = true;
                         }
                     }
-                    //GridColumn clumn = View.Columns["Status"];
-                    //if (clumn != null)
-                    //{
-                    //    string category = View.GetRowCellDisplayText(e.RowHandle, clumn);
-                    //    if (category == "RR - Sunday")
-                    //    {
-                    //        e.Appearance.BackColor = Color.Salmon;
-                    //        e.Appearance.BackColor2 = Color.SeaShell;
-                    //        e.HighPriority = true;
-                    //    }
-                    //}
+                   
                 }
             }
             catch (Exception ex)
@@ -399,7 +389,7 @@ namespace WindowsFormsApplication1.Forms_Master
         /// <param name="sender"></param>
         /// <param name="e"></param>
         /// 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             //txtEmpName.Text = string.Empty;
             //txtDept.Text = string.Empty;
@@ -409,7 +399,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -436,7 +426,7 @@ namespace WindowsFormsApplication1.Forms_Master
                         //LastInstlmnt();
                         //txtLoanAmount.Focus();
                         // btnLoad_Data.Focus();
-                        btnLoad_Data_Click(sender, e);
+                        BtnLoad_Data_Click(sender, e);
                     }
                     else
                     {
@@ -484,19 +474,19 @@ namespace WindowsFormsApplication1.Forms_Master
         ////////////////////////////////////////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
             SFeedingGrid.DataSource = null;
             dt.Clear();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             SFeedingGrid.Refresh();
             var xlConn = string.Empty;
@@ -509,12 +499,12 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             var ds1 = new DataSet();
             var ds2 = new DataSet();
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
+            var MaxRow = (SFeedingGrid.KeyboardFocusView as GridView).RowCount;
 #pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
             for (var i = 0; i < MaxRow; i++)
             {
@@ -586,7 +576,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
             return true;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 #pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
             var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
@@ -641,7 +631,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
             //gridControl_AttendanceData.Load += gridControl_AttendanceData_Load;
             //In Non-Editable Mode
-            gridView_AttendanceData.ShowingEditor += gridView_UserMaster_ShowingEditor;
+            gridView_AttendanceData.ShowingEditor += GridView_UserMaster_ShowingEditor;
             //gridView_UserMaster.DoubleClick += gridView_DoubleClick;
 
             //gridControl_AttendanceData.DoubleClick += gridControl_AttendanceData_DoubleClick;
@@ -651,7 +641,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
 
         //https://supportcenter.devexpress.com/ticket/details/a2934/how-to-handle-a-double-click-on-a-grid-row-or-cell
-        void gridView_UserMaster_ShowingEditor(object sender, CancelEventArgs e)
+        void GridView_UserMaster_ShowingEditor(object sender, CancelEventArgs e)
         {
             if (gridView_AttendanceData.FocusedColumn == gridView_AttendanceData.Columns["Action"])
             {
@@ -670,7 +660,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void btnLoad_Data_Click(object sender, EventArgs e)
+        private void BtnLoad_Data_Click(object sender, EventArgs e)
         {
             if (ValidateData_GridLoad())
             {
@@ -684,7 +674,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             if (txtEmpCode.Text.Trim().Length == 0)
             {
-                //XtraMessageBox.Show("Invalid Emp Code", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                
                 ProjectFunctions.SpeakError("Enter Employee Code");
                 txtEmpCode.Focus();
                 return false;
@@ -745,7 +735,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void btnPrintPreview_Click(object sender, EventArgs e)
+        private void BtnPrintPreview_Click(object sender, EventArgs e)
         {
             if (ComparisonUtils.IsEmpty(DtStartDate.EditValue) || ComparisonUtils.IsEmpty(txtEmpCode.EditValue))
             {
@@ -773,7 +763,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void btnExportXsls_Click(object sender, EventArgs e)
+        private void BtnExportXsls_Click(object sender, EventArgs e)
         {
             if (ComparisonUtils.IsEmpty(DtStartDate.EditValue) || ComparisonUtils.IsEmpty(txtEmpCode.EditValue))
             {
@@ -790,7 +780,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         }
 
-        private void splitter1_SplitterMoved(object sender, SplitterEventArgs e)
+        private void Splitter1_SplitterMoved(object sender, SplitterEventArgs e)
         {
 
         }

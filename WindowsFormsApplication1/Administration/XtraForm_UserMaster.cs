@@ -295,7 +295,7 @@ string.Empty);
                     DataSet ds = ProjectFunctions.GetDataSet("[sp_ZoomPartyAct] '2019-01-01','" + DateTime.Now.ToString("yyyy-MM-dd") + "','" + CurrentRow["AccCode"].ToString() + "'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
-                        FormReports.frmPartyAccounts frm = new FormReports.frmPartyAccounts() { Text = "Zoom Party Account - [" + CurrentRow["AccName"].ToString() + " - " + CurrentRow["AccCode"].ToString() + " ]", DsGetData = ds };
+                        FormReports.FrmPartyAccounts frm = new FormReports.FrmPartyAccounts() { Text = "Zoom Party Account - [" + CurrentRow["AccName"].ToString() + " - " + CurrentRow["AccCode"].ToString() + " ]", DsGetData = ds };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                         frm.ShowDialog(Parent);

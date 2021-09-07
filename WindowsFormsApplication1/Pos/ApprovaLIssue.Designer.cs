@@ -378,7 +378,7 @@
             this.txtCustMobileNo.Size = new System.Drawing.Size(148, 26);
             this.txtCustMobileNo.TabIndex = 0;
             this.txtCustMobileNo.EditValueChanged += new System.EventHandler(this.TxtCustMobileNo_EditValueChanged);
-            this.txtCustMobileNo.Enter += new System.EventHandler(this.txtCustMobileNo_Enter);
+            this.txtCustMobileNo.Enter += new System.EventHandler(this.TxtCustMobileNo_Enter);
             this.txtCustMobileNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCustMobileNo_KeyDown);
             // 
             // txtCustDetails

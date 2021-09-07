@@ -1749,11 +1749,11 @@
     <Compile Include="Time Office\frmLoanMstAddEdit.Designer.cs">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Time Office\frmProcessSalary.cs">
+    <Compile Include="Time Office\FrmProcessSalary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Time Office\frmProcessSalary.Designer.cs">
-      <DependentUpon>frmProcessSalary.cs</DependentUpon>
+    <Compile Include="Time Office\FrmProcessSalary.Designer.cs">
+      <DependentUpon>FrmProcessSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="Time Office\frm_EmpSalAddUpdate.cs">
       <SubType>Form</SubType>
@@ -2416,8 +2416,8 @@
     <EmbeddedResource Include="Time Office\frmLoanMstAddEdit.resx">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Time Office\frmProcessSalary.resx">
-      <DependentUpon>frmProcessSalary.cs</DependentUpon>
+    <EmbeddedResource Include="Time Office\FrmProcessSalary.resx">
+      <DependentUpon>FrmProcessSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Time Office\frm_EmpSalAddUpdate.resx">
       <DependentUpon>frm_EmpSalAddUpdate.cs</DependentUpon>

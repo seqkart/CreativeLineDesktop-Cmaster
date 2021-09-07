@@ -29,7 +29,121 @@ namespace WindowsFormsApplication1
             }
         }
 
+        private void PrepareActMstHelpGrid()
 
+        {
+            HelpGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+
+            {
+                FieldName = "AccName",
+
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 0
+            };
+            col1.OptionsColumn.AllowEdit = false;
+            HelpGridView.Columns.Add(col1);
+
+
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "AccCode",
+                Visible = true,
+                VisibleIndex = 1
+            };
+            col2.OptionsColumn.AllowEdit = false;
+            HelpGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "Select",
+                Visible = true,
+                VisibleIndex = 1,
+                               
+            };
+            col3.OptionsColumn.AllowEdit = true;
+            HelpGridView.Columns.Add(col3);
+
+
+
+        }
+        private void PrepareBSHMstHelpGrid()
+
+        {
+            HelpGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+
+            {
+                FieldName = "BSCode",
+
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 0
+            };
+            col1.OptionsColumn.AllowEdit = false;
+            HelpGridView.Columns.Add(col1);
+
+
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "BSDesc",
+                Visible = true,
+                VisibleIndex = 1
+            };
+            col2.OptionsColumn.AllowEdit = false;
+            HelpGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "Select",
+                Visible = true,
+                VisibleIndex = 1,
+
+            };
+            col3.OptionsColumn.AllowEdit = true;
+            HelpGridView.Columns.Add(col3);
+
+
+
+        }
+
+        private void PrepareLedgerGroupMstHelpGrid()
+
+        {
+            HelpGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+
+            {
+                FieldName = "LgrCode",
+
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 0
+            };
+            col1.OptionsColumn.AllowEdit = false;
+            HelpGridView.Columns.Add(col1);
+
+
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "LgrDesc",
+                Visible = true,
+                VisibleIndex = 1
+            };
+            col2.OptionsColumn.AllowEdit = false;
+            HelpGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "Select",
+                Visible = true,
+                VisibleIndex = 1,
+
+            };
+            col3.OptionsColumn.AllowEdit = true;
+            HelpGridView.Columns.Add(col3);
+
+
+
+        }
         private void RangeSelector_Load(object sender, EventArgs e)
         {
             ProjectFunctions.DatePickerVisualize(this);
@@ -48,6 +162,12 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
+                ds.Tables[0].Columns.Add("Select", typeof(bool));
+                foreach(DataRow dr in ds.Tables[0].Rows)
+                {
+                    dr["Select"] = false;
+                }
+                PrepareActMstHelpGrid();
                 HelpGrid.DataSource = ds.Tables[0];
                 HelpGridView.BestFitColumns();
             }
@@ -62,6 +182,12 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select LgrCode,LgrDesc from LgrMst");
             if (ds.Tables[0].Rows.Count > 0)
             {
+                ds.Tables[0].Columns.Add("Select", typeof(bool));
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dr["Select"] = false;
+                }
+                PrepareLedgerGroupMstHelpGrid();
                 HelpGrid.DataSource = ds.Tables[0];
                 HelpGridView.BestFitColumns();
             }
@@ -76,6 +202,12 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select BSCode,BSDesc from bshmst");
             if (ds.Tables[0].Rows.Count > 0)
             {
+                ds.Tables[0].Columns.Add("Select", typeof(bool));
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dr["Select"] = false;
+                }
+                PrepareBSHMstHelpGrid();
                 HelpGrid.DataSource = ds.Tables[0];
                 HelpGridView.BestFitColumns();
             }
@@ -113,6 +245,11 @@ namespace WindowsFormsApplication1
                 chParty.Checked = false;
                 FillLedgerGrid();
             }
+        }
+
+        private void BtnLoad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
