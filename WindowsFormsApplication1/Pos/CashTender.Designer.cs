@@ -1781,7 +1781,7 @@
             this.groupControl3.Size = new System.Drawing.Size(297, 438);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Invoice Details";
-            this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl3_Paint);
+            this.groupControl3.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupControl3_Paint);
             // 
             // labelControl52
             // 

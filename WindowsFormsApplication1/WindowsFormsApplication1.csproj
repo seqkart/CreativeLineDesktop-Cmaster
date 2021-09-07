@@ -2702,6 +2702,7 @@
     <None Include="Resources\fm2.jpg" />
     <None Include="Resources\google.png" />
     <None Include="Resources\google1.png" />
+    <None Include="Resources\indian.png" />
     <Content Include="Resources\Maestro.png" />
     <None Include="Resources\Mail.png" />
     <None Include="Resources\Male.png" />

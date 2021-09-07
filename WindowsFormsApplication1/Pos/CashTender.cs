@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class CashTender : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string MemoNo { get; set; }
         public DateTime MemoDate { get; set; }
         public decimal CardPayment { get; set; }
@@ -371,7 +371,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
-        private void groupControl3_Paint(object sender, PaintEventArgs e)
+        private void GroupControl3_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -390,6 +390,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.gridColumn4.Caption = "Debit";
             this.gridColumn4.FieldName = "Debit";
+            this.gridColumn4.ImageOptions.Image = global::WindowsFormsApplication1.Properties.Resources.indian;
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
