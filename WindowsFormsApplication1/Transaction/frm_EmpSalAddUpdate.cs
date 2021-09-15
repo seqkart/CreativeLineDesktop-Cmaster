@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frm_EmpSalAddUpdate : XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string MonthYear { get; set; }
         public string EmpCode { get; set; }
         public frm_EmpSalAddUpdate()
@@ -39,12 +39,12 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select EmpMst.EmpCode,EmpMst.EmpName from EmpMst", " Where EmpMst.EmpCode", txtEmpCode, txtEmpName, txtPrePaidTag, HelpGrid, HelpGridView, e);
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpName.Text = string.Empty;
         }
@@ -131,20 +131,20 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frm_EmpSalAddUpdate_Load(object sender, EventArgs e)
+        private void Frm_EmpSalAddUpdate_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtEmpCode.Focus();
                 dtMonthYear.EditValue = DateTime.Now;
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtEmpCode.Focus();
                 var ds = ProjectFunctions.GetDataSet(string.Format("sp_LoadAtnDataFEditing  '{0}','{1}'", MonthYear, EmpCode));
@@ -168,7 +168,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtPrePaidTag_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void TxtPrePaidTag_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (txtPrePaidTag.Text == "Y" || txtPrePaidTag.Text == "N")
             {
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -194,7 +194,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                  + " Insert into AtnData"
@@ -204,7 +204,7 @@ namespace WindowsFormsApplication1
                                                  + " @EmpMiscAlw1,@EmpMiscAlw2,@EmpMiscAlw3,@EmpPrePaidSal)"
                                                  + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE AtnData SET "
                                                 + " EmpDW=@EmpDW,EmpPH=@EmpPH,EmpEL=@EmpEL,EmpCL=@EmpCL,EmpSL=@EmpSL, "
@@ -249,7 +249,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtDW_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtDW_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }

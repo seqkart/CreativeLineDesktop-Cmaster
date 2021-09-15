@@ -439,7 +439,7 @@
             this.xtraTabPage1.Controls.Add(this.InvoiceGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1167, 725);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1167, 734);
             this.xtraTabPage1.Text = "Data";
             // 
             // InvoiceGrid
@@ -450,7 +450,7 @@
             this.InvoiceGrid.MainView = this.InvoiceGridView;
             this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
-            this.InvoiceGrid.Size = new System.Drawing.Size(1167, 725);
+            this.InvoiceGrid.Size = new System.Drawing.Size(1167, 734);
             this.InvoiceGrid.TabIndex = 446;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});

@@ -18,11 +18,11 @@ namespace WindowsFormsApplication1.Transaction
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
-        private void fillGrid()
+        private void FillGrid()
         {
             var str = " SELECT       VutID,VutNo,VutType, VutDate,  VutNart,(case when VutAmt < 0 then -VutAmt  END ) as Credit, ";
             str = str + "(case when VutAmt > 0 then VutAmt  END ) as Debit,vutChqClearDt";
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             using (var con = new SqlConnection(ProjectFunctions.GetConnection()))
             {
@@ -75,7 +75,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                     }
                     transaction.Commit();
-                    fillGrid();
+                    FillGrid();
                 }
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1.Transaction
         private void frmBankMarking_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-            fillGrid();
+            FillGrid();
         }
     }
 }

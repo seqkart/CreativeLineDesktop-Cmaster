@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.Transaction
             this.lblContrator.Size = new System.Drawing.Size(67, 19);
             this.lblContrator.TabIndex = 721;
             this.lblContrator.Text = "Contractor";
-            this.lblContrator.Click += new System.EventHandler(this.lblContrator_Click);
+            this.lblContrator.Click += new System.EventHandler(this.LblContrator_Click);
             // 
             // txtContractorDesc
             // 
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1.Transaction
             this.txtWorkerCode.Size = new System.Drawing.Size(86, 24);
             this.txtWorkerCode.TabIndex = 727;
             this.txtWorkerCode.EditValueChanged += new System.EventHandler(this.TxtWorkerCode_EditValueChanged);
-            this.txtWorkerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWorkerCode_KeyDown);
+            this.txtWorkerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtWorkerCode_KeyDown);
             // 
             // HelpGrid
             // 
@@ -287,7 +287,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -299,7 +299,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // FrmProcessWiseRateFeeding
             // 
@@ -324,7 +324,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmProcessWiseRateFeeding";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmProcessWiseRateFeeding_Load);
+            this.Load += new System.EventHandler(this.FrmProcessWiseRateFeeding_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtContractorDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContractorCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chContratcor.Properties)).EndInit();

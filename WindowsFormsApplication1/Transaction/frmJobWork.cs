@@ -2,16 +2,11 @@
 using System.Data;
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmJobWork : DevExpress.XtraEditors.XtraForm
+    public partial class FrmJobWork : DevExpress.XtraEditors.XtraForm
     {
-        public frmJobWork()
+        public FrmJobWork()
         {
             InitializeComponent();
-        }
-
-        private void btnRecalculate_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void LoadMeasurementDataAsPerGroup()
@@ -29,23 +24,23 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtPartyName.Text = string.Empty;
         }
 
-        private void txtArtNo_EditValueChanged(object sender, EventArgs e)
+        private void TxtArtNo_EditValueChanged(object sender, EventArgs e)
         {
             txtArtID.Text = string.Empty;
             txtArtDesc.Text = string.Empty;
         }
 
-        private void frmJobWork_Load(object sender, EventArgs e)
+        private void FrmJobWork_Load(object sender, EventArgs e)
         {
             LoadMeasurementDataAsPerGroup();
         }
 
-        private void txtArtNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtArtNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == System.Windows.Forms.Keys.Enter)
             {
@@ -117,12 +112,12 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtBrandCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtBrandCode_EditValueChanged(object sender, EventArgs e)
         {
             txtBrandName.Text = string.Empty;
         }
 
-        private void txtBrandCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtBrandCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("select BRSYSID,BRNAME from BRANDS", " Where BRSYSID", txtBrandCode, txtBrandName, txtBrandCode, HelpGrid, HelpGridView, e);
         }

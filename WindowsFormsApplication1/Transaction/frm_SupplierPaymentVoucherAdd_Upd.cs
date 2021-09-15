@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frm_SupplierPaymentVoucherAdd_Upd : DevExpress.XtraEditors.XtraForm
+    public partial class Frm_SupplierPaymentVoucherAdd_Upd : DevExpress.XtraEditors.XtraForm
     {
 
 
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1
         public DateTime VoucherDate { get; set; }
         public string VoucherType { get; set; }
         public string BnkChgsCode { get; set; }
-        public bool isupdate { get; set; }
+        public bool Isupdate { get; set; }
         private bool AuthenticateFlag = false;
         private int CurrentDataBId;
         private string lastAmt;
@@ -34,16 +34,16 @@ namespace WindowsFormsApplication1
         private string VarVumId4DCData;
         private DateTime FStartDate;
 
-        public frm_SupplierPaymentVoucherAdd_Upd()
+        public Frm_SupplierPaymentVoucherAdd_Upd()
         {
             InitializeComponent();
         }
 
-        private void frm_PaymentVoucherInfo_Load(object sender, EventArgs e)
+        private void Frm_PaymentVoucherInfo_Load(object sender, EventArgs e)
         {
             Record = new DataTable();
             SetMyControls();
-            if (isupdate)
+            if (Isupdate)
             {
                 SettingForUpdation();
                 Text = "Supplier Payment Updation Module";
@@ -176,7 +176,7 @@ namespace WindowsFormsApplication1
 
             if (DtVoucher.DateTime.Date == DateTime.Now.Date || AuthenticateFlag)
             {
-                if (!isupdate)
+                if (!Isupdate)
                 {
                     Error.Dispose();
                     var query = string.Format("select dbo.DoPadd((SELECT     isnull(max(cast(VumNo as int)),0) as 'Value' FROM VuMst WHERE     (VumType <> 'SL') and (VumType <> 'SR')and VumDate='{0}')+1) as Value;", DtVoucher.DateTime.ToString("yyyy-MM-dd"));
@@ -1155,7 +1155,7 @@ namespace WindowsFormsApplication1
                                 command.Parameters.Add("@VutRefType", SqlDbType.NVarChar, 15).Value = (EntryInfo_GridCtrl.DataSource as DataTable).Rows[0]["Method"];
                                 command.Parameters.Add("@VutFrmId", SqlDbType.VarChar, 50).Value = Name;
                                 command.Parameters.Add("@VumDcode", SqlDbType.NVarChar, 6).Value = TextDebitAc.Text;
-                                command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = isupdate ? "Y" : "N";
+                                command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = Isupdate ? "Y" : "N";
 
                                 command.Parameters["@VumNo"].Direction = ParameterDirection.InputOutput;
 
@@ -1168,7 +1168,7 @@ namespace WindowsFormsApplication1
 
                                     if (float.Parse(TextBnkChgs.Text) > 0)
                                     {
-                                        if (isupdate)
+                                        if (Isupdate)
                                         {
                                             query += " UPDATE  [vuData]";
                                             query += string.Format(" SET       [VutDate] = '{0}' ", DtVoucher.DateTime.Date.ToString("yyyy-MM-dd"));
@@ -1200,7 +1200,7 @@ namespace WindowsFormsApplication1
                                         command.ExecuteNonQuery();
                                         command.Parameters.Clear();
                                     }
-                                    if (isupdate)
+                                    if (Isupdate)
                                     {
                                         if (DS4GridOrignal.Tables[1].Rows.Count > 0)
                                         {
@@ -1259,12 +1259,12 @@ namespace WindowsFormsApplication1
                                         command.Parameters.Add("@DcUser", SqlDbType.VarChar, 8).Value = GlobalVariables.CurrentUser;
                                         command.Parameters.Add("@DcAccCode", SqlDbType.NVarChar, 6).Value = TextDebitAc.Text;
                                         command.Parameters.Add("@DcFyear", SqlDbType.VarChar, 2).Value = ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear);
-                                        command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = isupdate ? 'Y' : 'N';
+                                        command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = Isupdate ? 'Y' : 'N';
                                         command.ExecuteNonQuery();
                                     }
 
                                     transaction.Commit();
-                                    if (isupdate)
+                                    if (Isupdate)
                                     {
                                         ProjectFunctions.SpeakError("Data Saved. ");
                                         Dispose();
@@ -1370,11 +1370,6 @@ namespace WindowsFormsApplication1
             BtnDelete.Enabled = false;
         }
 
-        private void PartyPaymentModule_Tab_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
-        {
-
-        }
-
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -1472,25 +1467,25 @@ namespace WindowsFormsApplication1
 
             if (TextDebitAc.Text == string.Empty)
             {
-                ProjectFunctions.SpeakError("Acount Code can not be blank.");
+                ProjectFunctions.SpeakError("Account Code can not be blank.");
                 TextDebitAc.Focus();
                 return;
             }
             if (TextDebitAcName.Text == string.Empty)
             {
-                ProjectFunctions.SpeakError("Acount Name can not be blank.");
+                ProjectFunctions.SpeakError("Account Name can not be blank.");
                 TextDebitAc.Focus();
                 return;
             }
             if (TextCreditAc.Text == string.Empty)
             {
-                ProjectFunctions.SpeakError("Acount Code can not be blank.");
+                ProjectFunctions.SpeakError("Account Code can not be blank.");
                 TextDebitAc.Focus();
                 return;
             }
             if (TextCreditAcName.Text == string.Empty)
             {
-                ProjectFunctions.SpeakError("Acount Name can not be blank.");
+                ProjectFunctions.SpeakError("Account Name can not be blank.");
                 TextCreditAc.Focus();
                 return;
             }
@@ -1555,7 +1550,7 @@ namespace WindowsFormsApplication1
 
             if (DtVoucher.DateTime.Date == DateTime.Now.Date || AuthenticateFlag)
             {
-                if (!isupdate)
+                if (!Isupdate)
                 {
                     Error.Dispose();
                     var query = string.Format("select dbo.DoPadd((SELECT     isnull(max(cast(VumNo as int)),0) as 'Value' FROM VuMst WHERE     (VumType <> 'SL') and (VumType <> 'SR')and VumDate='{0}')+1) as Value;", DtVoucher.DateTime.ToString("yyyy-MM-dd"));
@@ -1572,11 +1567,6 @@ namespace WindowsFormsApplication1
                 TextAuthenticate.Visible = true;
                 TextAuthenticate.Focus();
             }
-        }
-
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void EntryInfo_GridCtrl_Click(object sender, EventArgs e)

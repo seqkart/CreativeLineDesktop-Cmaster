@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmTdsDeductionAddEdit : XtraForm
+    public partial class FrmTdsDeductionAddEdit : XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string TdNo { get; set; }
         public DateTime TdDate { get; set; }
 
 
-        public frmTdsDeductionAddEdit()
+        public FrmTdsDeductionAddEdit()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
             ProjectFunctions.ButtonVisualize(this);
             ProjectFunctions.DatePickerVisualize(this);
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        private void frmTdsDeductionAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmTdsDeductionAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -112,19 +112,19 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void frmTdsDeductionAddEdit_Load(object sender, EventArgs e)
+        private void FrmTdsDeductionAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtPCode.Focus();
                 txtTTNo.Text = GetNewTDSCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadTDSDataFEditing '" + TdDate.Date.ToString("yyyy-MM-dd") + "','" + TdNo + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into TDSdataMst"
@@ -171,7 +171,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('000000'+ CAST( ISNULL( max(Cast(TDNo as int)),0)+1 AS VARCHAR(7)),7) from TDSdataMst Where TdDate=@TDDate),@TDDate,@TDAcode,@TDUScode,@TDBaseAmt,@TDTdsRate,@TDTdsAmt,@TDTdsSRate,@TDTdsSAmt,@TDRefInfos,@TDRemarks)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE TDSdataMst SET "
                                                 + " TDAcode=@TDAcode,TDUScode=@TDUScode,TDBaseAmt=@TDBaseAmt,TDTdsRate=@TDTdsRate,TDTdsAmt=@TDTdsAmt,TDTdsSRate=@TDTdsSRate,TDTdsSAmt=@TDTdsSAmt,"
@@ -211,30 +211,17 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtPCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtPCode_EditValueChanged(object sender, EventArgs e)
         {
             txtPDesc.Text = string.Empty;
         }
 
-        private void txtPCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select AccCode,AccName from ActMst", " Where AccCode=", txtPCode, txtPDesc, txtTDSCode, HelpGrid, HelpGridView, e);
         }
 
-        private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                HelpGrid_DoubleClick(null, e);
-            }
-
-            if (e.KeyCode == Keys.Escape)
-            {
-                HelpGrid.Visible = false;
-            }
-        }
-
-        private void txtTDSCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtTDSCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -320,19 +307,19 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtOnAmount_EditValueChanged(object sender, EventArgs e)
+        private void TxtOnAmount_EditValueChanged(object sender, EventArgs e)
         {
             txtTDSAmount.Text = "0";
             txtSurcOnTDS.Text = "0";
         }
 
-        private void txtOnAmount_Leave(object sender, EventArgs e)
+        private void TxtOnAmount_Leave(object sender, EventArgs e)
         {
             txtTDSAmount.Text = ((Convert.ToDecimal(txtOnAmount.Text) * Convert.ToDecimal(txtTDSRate.Text)) / 100).ToString("0.00");
             txtSurcOnTDS.Text = ((Convert.ToDecimal(txtTDSAmount.Text) * Convert.ToDecimal(txtTDSSurcharge.Text)) / 100).ToString("0.00");
         }
 
-        private void txtReference_Leave(object sender, EventArgs e)
+        private void TxtReference_Leave(object sender, EventArgs e)
         {
             txtRemarks.Text = string.Empty;
             if (txtTDSRate.Text.Length == 0 || Convert.ToDecimal(txtTDSRate.EditValue) == 0)
@@ -345,7 +332,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtPCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtPCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumberOnly(e);
         }

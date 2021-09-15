@@ -629,7 +629,7 @@ namespace WindowsFormsApplication1.Transaction.challans
         {
             Close();
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
@@ -892,12 +892,12 @@ namespace WindowsFormsApplication1.Transaction.challans
             }
             catch (Exception ex)
             {
-                PrintLogWin.PrintLog("btnSave_Click => " + ex);
+                PrintLogWin.PrintLog("BtnSave_Click => " + ex);
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
         /*
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {

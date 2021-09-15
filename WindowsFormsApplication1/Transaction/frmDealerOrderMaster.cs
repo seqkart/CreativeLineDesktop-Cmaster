@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
             if (e.KeyCode == Keys.Escape)
             {
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1.Transaction
             e.Handled = true;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -280,7 +280,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }

@@ -201,7 +201,7 @@
             this.gridView3.OptionsView.ShowFooter = true;
             this.gridView3.OptionsView.ShowGroupPanel = false;
             this.gridView3.OptionsView.ShowIndicator = false;
-            this.gridView3.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView3_PopupMenuShowing);
+            this.gridView3.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.GridView3_PopupMenuShowing);
             // 
             // gridColumn3
             // 
@@ -325,7 +325,7 @@
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -335,7 +335,7 @@
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd.Size = new System.Drawing.Size(52, 28);
             this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // btnView
             // 
@@ -347,7 +347,7 @@
             this.btnView.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnView.Size = new System.Drawing.Size(57, 28);
             this.btnView.Text = "View";
-            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            this.btnView.Click += new System.EventHandler(this.BtnView_Click);
             // 
             // toolStripButton1
             // 
@@ -357,7 +357,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(88, 28);
             this.toolStripButton1.Text = "Close Loan";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // splitter1
             // 
@@ -388,7 +388,7 @@
             this.Name = "frmLoanMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmLoanMst_Load);
+            this.Load += new System.EventHandler(this.FrmLoanMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DtEndDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEndDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties.CalendarTimeProperties)).EndInit();

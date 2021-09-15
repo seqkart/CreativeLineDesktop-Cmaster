@@ -20,7 +20,7 @@ namespace WindowsFormsApplication1
             EndDate = DateTime.Now;
         }
 
-        private void fillGrid()
+        private void FillGrid()
         {
             strsql = string.Format("Sp_GetData4IndentPassing '{0:yyyy-MM-dd}','{1:yyyy-MM-dd}';", StartDate, EndDate);
             try
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
             DtStartDate.EditValue = StartDate.Date;
 
             DtIndentPass.EditValue = DateTime.Now.Date;
-            fillGrid();
+            FillGrid();
         }
 
         private void ChoiceSelectAll_CheckedChanged(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frm_StockIndentPassing_Load(object sender, EventArgs e)
+        private void Frm_StockIndentPassing_Load(object sender, EventArgs e)
         {
             SetMyControls();
             IndentPassGrd.OptionsBehavior.Editable = true;
@@ -99,14 +99,14 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.GetDataSet(string.Format(" Update indData set IndPassTag='Y',IndPassDt='{0}',IndDItemQtyPass='{1}',IndDPassUser='{3}',IndDPassedDt=GetDate() where IndID={2};", DtIndentPass.DateTime.Date.ToString("yyyy-MM-dd"), Dr["IndDItemQty"], Dr["IndID"], GlobalVariables.CurrentUser));
             }
-            fillGrid();
+            FillGrid();
         }
 
         private void Btn_RefreshGridData_Click(object sender, EventArgs e)
         {
             StartDate = DtStartDate.DateTime.Date;
             EndDate = DtEndDate.DateTime.Date;
-            fillGrid();
+            FillGrid();
         }
 
         private void BtnUnPassSelected_Click(object sender, EventArgs e)
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.GetDataSet(string.Format(" Update indData set IndPassTag=Null,IndPassDt=Null,IndDItemQtyPass=Null,IndDPassedDt=GetDate() where IndID={2};", DtIndentPass.DateTime.Date.ToString("yyyy-MM-dd"), Dr["IndDItemQty"], Dr["IndID"]));
             }
 
-            fillGrid();
+            FillGrid();
         }
     }
 }

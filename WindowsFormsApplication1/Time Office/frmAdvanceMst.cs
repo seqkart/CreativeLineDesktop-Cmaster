@@ -14,12 +14,12 @@ namespace WindowsFormsApplication1.Forms_Transaction
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void fillGrid()
+        private void FillGrid()
         {
             //DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             //SplashScreenManager.Default.SetWaitFormDescription("Fetching Data");
@@ -40,7 +40,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         }
         private void Btn_RefreshGridData_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
         private void SetMyControls()
         {
@@ -100,27 +100,27 @@ namespace WindowsFormsApplication1.Forms_Transaction
             //    }
             //}
         }
-        private void frmAdvanceMst_Load(object sender, EventArgs e)
+        private void FrmAdvanceMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
             DtEndDate.EditValue = DateTime.Now.Date;
             DtStartDate.EditValue = DateTime.Now.AddMonths(-1).Date;
-            fillGrid();
+            FillGrid();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
                 try
                 {
-                    var frm = new Forms_Transaction.frmAdvanceAddEdit() { s1 = btnAdd.Text };
+                    var frm = new Forms_Transaction.frmAdvanceAddEdit() { S1 = btnAdd.Text };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.Text = "Time Office Payment Addition";
 
                     frm.ShowDialog();
-                    fillGrid();
+                    FillGrid();
                 }
                 catch (Exception ex)
                 {
@@ -129,7 +129,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     var ds = ProjectFunctions.GetDataSet(string.Format("select * from ExMst Where ExId='" + row["ExId"].ToString() + "'"));
                     if (ds.Tables[0].Rows[0]["ExLoadTag"].ToString() == string.Empty)
                     {
-                        var frm = new Forms_Transaction.frmAdvanceAddEdit() { s1 = btnEdit.Text };
+                        var frm = new Forms_Transaction.frmAdvanceAddEdit() { S1 = btnEdit.Text };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                         frm.Text = "Time Office Payment Editing";
@@ -150,7 +150,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     {
                         XtraMessageBox.Show("Entry Has been Loaded");
                     }
-                    fillGrid();
+                    FillGrid();
                 }
                 catch (Exception ex)
                 {
@@ -159,20 +159,20 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
         }
 
-        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        private void PanelControl1_Paint(object sender, PaintEventArgs e)
         {
         }
 
         private void ReplGrid_DoubleClick(object sender, EventArgs e)
         {
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
         }
 
         private void ReplGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnEdit_Click(null, e);
+                BtnEdit_Click(null, e);
             }
         }
 
@@ -181,7 +181,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             if (GlobalVariables.ProgCode == "PROG152")
             {
@@ -192,7 +192,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 {
                     var row = ReplGridView.GetDataRow(ReplGridView.FocusedRowHandle);
                     ProjectFunctions.GetDataSet("Delete from ExMst Where ExNo ='" + row["ExNo"].ToString() + "'");
-                    fillGrid();
+                    FillGrid();
 
                 }
             }

@@ -433,7 +433,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                     using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                     {
 
-                        var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+                        var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
 
                         sqlcon.Open();
                         var sqlcom = sqlcon.CreateCommand();

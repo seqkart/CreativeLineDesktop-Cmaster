@@ -1810,7 +1810,7 @@
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage6.Size = new System.Drawing.Size(657, 209);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -1821,7 +1821,7 @@
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(657, 203);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(657, 209);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1952,7 +1952,7 @@
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage9.Size = new System.Drawing.Size(657, 209);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -1963,7 +1963,7 @@
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(657, 203);
+            this.HSNGrid.Size = new System.Drawing.Size(657, 209);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2097,7 +2097,7 @@
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage7.Size = new System.Drawing.Size(657, 209);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -2182,7 +2182,7 @@
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(433, 203);
+            this.xtraTabPage1.Size = new System.Drawing.Size(433, 209);
             this.xtraTabPage1.Text = "View Docs";
             // 
             // DocsGrid
@@ -2193,7 +2193,7 @@
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(433, 203);
+            this.DocsGrid.Size = new System.Drawing.Size(433, 209);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {

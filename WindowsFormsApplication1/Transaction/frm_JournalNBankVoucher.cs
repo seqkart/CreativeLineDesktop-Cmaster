@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1
         DataTable dt = new DataTable();
 
 
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string CurrentControl { get; set; }
@@ -24,11 +24,10 @@ namespace WindowsFormsApplication1
         public DateTime VoucherDate { get; set; }
         public string VoucherType { get; set; }
         public string BnkChgsCode { get; set; }
-        public bool isupdate { get; set; }
-#pragma warning restore CS0169 // The field 'frm_JournalNBankVoucher.AccCode' is never used
-#pragma warning disable CS0414 // The field 'frm_JournalNBankVoucher.AuthenticateFlag' is assigned but its value is never used
+        public bool Isupdate { get; set; }
+
         private bool AuthenticateFlag = false;
-#pragma warning restore CS0414 // The field 'frm_JournalNBankVoucher.AuthenticateFlag' is assigned but its value is never used
+
         private string BuCode = "NA#";
         private string BuHOAcode = "NA#";
         private string BuSelfACode = "NA#";
@@ -77,7 +76,7 @@ namespace WindowsFormsApplication1
             path = string.Format(@"C:\Application\VU_CMN_{0}.Xlsx", GlobalVariables.CurrentUser);
             DtVoucher.EditValue = (DateTime.Now.Date >= GlobalVariables.FinYearStartDate && DateTime.Now.Date <= GlobalVariables.FinYearEndDate) ? DateTime.Now : GlobalVariables.FinYearEndDate.Date;
             SetMyControls();
-            if (isupdate)
+            if (Isupdate)
             {
                 Settings4Update();
                 Text = "Journal and Bank Vouchers Update";
@@ -150,32 +149,6 @@ namespace WindowsFormsApplication1
 
         private void BtnOk_Click(object sender, EventArgs e)
         {
-            //if (TextAcCode.Text.Length < 4)
-            //    {
-            //    TextAcCode.Text = TextAcCode.Text.PadLeft(4, '0');
-            //    }
-            //if ((TextVoucherType.Text.ToUpper() == "BR" || TextVoucherType.Text.ToUpper() == "BP") && ProjectFunctions.User.ToUpper() != "RAGHAVG" && ProjectFunctions.User.ToUpper() != "ANILK")
-            //    {
-            //    var a = new int[] { 141, 1898, 3462, 1907, 2434, 7954, 84, 5844, 557, 140, 7646, 8500, 8206, 7700, 9392, 6580, 6581, 8110, 8180, 8999, 9061, 2475, 2700, 9128, 2800, 7100, 6780, 4826, 9417, 3195 };
-            //    var b = new int[] { 141, 1898, 3462, 1907, 84, 5844, 557, 140, 7646, 8500, 8206, 7700, 9392, 6580, 6581, 8110, 8180, 8999, 9061, 2475, 2700, 9128, 2800, 7100, 6780, 4826, 9417, 3195 };
-            //    if (ProjectFunctions.ConnectionString.ToLower().Contains("gendatabonnaligarh"))
-            //        {
-            //        if (b.Contains(Convert.ToInt16(TextAcCode.Text)))
-            //            {
-            //            ProjectFunctions.SpeakError("You Can't use this Party in case of BP or BR.\n Incase any Problem kindly contact 766.");
-            //            return;
-            //            }
-            //        }
-            //    else
-            //        {
-            //        if (a.Contains(Convert.ToInt16(TextAcCode.Text)))
-            //            {
-            //            ProjectFunctions.SpeakError("You Can't use this Party in case of BP or BR.\n Incase any Problem kindly contact 766.");
-            //            return;
-            //            }
-            //        }
-            //    }
-
             if (TextVoucherType.Text == "CP" && TextAcCode.Text == GlobalVariables.CashCode)
             {
                 TextSplInfo.Text = "CR";
@@ -219,22 +192,6 @@ namespace WindowsFormsApplication1
                 }
             }
 
-            //using (DataSet ds = ProjectFunctions.GetDataSet(String.Format("Select [AccName],[AccCode],AccAdvPymtTag FROM [dbo].[ActMstAddInf] where  [AccCode]='{0}' ;", TextAcCode.Text.PadLeft(4, '0'))))
-            //{
-
-
-            //    if (ds.Tables[0].Rows.Count > 0 && Txt_AdvTag.Text.ToUpper() == "N")
-            //    {
-            //        if (ds.Tables[0].Rows[0]["AccAdvPymtTag"].ToString().ToUpper() == "Y")
-            //        {
-            //            if (ProjectFunctions.SpeakError("Do you want to mark this payment as advance payment", "Validation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            //            {
-            //                Txt_AdvTag.Text = "Y";
-            //            }
-            //        }
-            //    }
-
-            //}
 
             if (BtnOk.Text == "&Ok")
             {
@@ -682,25 +639,7 @@ namespace WindowsFormsApplication1
                         //getBal();
                         TextAmount.Focus();
                         break;
-                    //case "TextDlrCode":
-
-                    //    TextDlrCode.Text = row["Code"].ToString();
-                    //    TextDlrDesc.Text = row["Name"].ToString();
-                    //    if (TextAcCode.Text == "17170")
-                    //    {
-                    //        DataSet Dsx = ProjectFunctions.GetDataSet("Select AccCode,AccName From DealerMaster inner join ActMSt on AccCode=DealerAcCode Where DealerCode='" + TextDlrCode.Text + "'");
-                    //        if (Dsx.Tables[0].Rows.Count > 0)
-                    //        {
-                    //            TextAcCode.Text = Dsx.Tables[0].Rows[0][0].ToString();
-                    //            TextAcName.Text = Dsx.Tables[0].Rows[0][1].ToString();
-                    //        }
-                    //    }
-                    //    CurrentControl = "";
-                    //    HelpGridCtrl.Visible = false;
-                    //    SubPanel.Hide();
-                    //    getBal();
-                    //    TextAmount.Focus();
-                    //    break;
+                   
                     case "TextInstrumentType":
                         TextInstrumentType.Text = row["Type"].ToString();
                         CurrentControl = string.Empty;
@@ -762,19 +701,6 @@ namespace WindowsFormsApplication1
             }
             CurrentControl = string.Empty;
         }
-
-        //private void getBal()
-        //    {
-        //    using (var Dt = ProjectFunctions.GetDataTable(string.Format("SELECT    OPBal{0}.OpBal + ISNULL(SUM(vuData.VutAmt), 0) AS CurBal " +
-        //                            "FROM vuData INNER JOIN OPBal{0} ON vuData.VutACode = OPBal{0}.AccCode " +
-        //                            "Where (vuData.VutACode = '{1}') And (vuData.VutFYear = '{2}') GROUP BY OPBal{0}.OpBal, vuData.VutFYear", ((ProjectFunctions.GlobalVariables.FinYearStartDate < new DateTime(2014, 04, 01).Date) ? ProjectFunctions.ClipFYear(FinancialYear) : ProjectFunctions.ClipFYearN(FinancialYear)), TextAcCode.Text, ProjectFunctions.ClipFYear(FinancialYear))))
-        //        {
-        //        if (Dt != null && Dt.Rows.Count > 0)
-        //            {
-        //            TextAcBal.EditValue = Convert.ToDecimal(Dt.Rows[0][0]);
-        //            }
-        //        }
-        //    }
 
         private void TextAcCode_KeyDown(object sender, KeyEventArgs e)
         {
@@ -849,87 +775,7 @@ namespace WindowsFormsApplication1
 
         private void TextDlrCode_KeyDown(object sender, KeyEventArgs e)
         {
-            //try
-            //    {
-            //    if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab || e.KeyCode == Keys.LButton || e.KeyCode == Keys.Down)
-            //        {
-            //        CurrentControl = "TextDlrCode";
-            //        string Query="";
-            //        if (Paramater == "R")
-            //        { Query = "Select RtrCode Code, RtrName As Name, RtrTelNo As Info From RetailerMst ORDER BY 2;"; }
-            //        else if(Paramater=="A")
-            //        { Query = "Select AssetCode Code, AssetDesc As Name, AssetRegNo As Info From AssetMst ORDER BY 2;"; }
-            //        else if ((Paramater == "D" || Paramater == "G" || Paramater=="P")&& !CheckCB.Checked)
-            //            Query= "SELECT      dealerCode As Code, dealerName As Name, dealerStation As DlrStn From dealerMaster ORDER BY DealerName;";
-            //        else if ((Paramater == "D" || Paramater == "G" || Paramater == "P")&& CheckCB.Checked && Cost_CmBx.Text=="NA#")
-            //            Query = string.Format("SELECT      dealerCode As Code, dealerName As Name, dealerStation As DlrStn From dealerMaster Where DealerCode In (Select VutAACode From VuData WHere (VutDate Between '{0:yyyy-MM-dd}' And '{1:yyyy-MM-dd}') And VutACode='{2}' And IsNull(VutSplTagOV,'N')='B') ORDER BY DealerName;", DtVoucher.DateTime.Date.AddDays(-30), DtVoucher.DateTime.Date, TextAcCode.Text);
-            //        else if ((Paramater == "D" || Paramater == "G" || Paramater == "P") && CheckCB.Checked && Cost_CmBx.Text != "NA#")
-            //            Query = string.Format("SELECT      dealerCode As Code, dealerName As Name, dealerStation As DlrStn From dealerMaster Where DealerCode In (Select VutAACode From VuDataPost WHere (VutDate Between '{0:yyyy-MM-dd}' And '{1:yyyy-MM-dd}') And VutACode='{2}' And VutCostHead='{3}') ORDER BY DealerName;", DtVoucher.DateTime.Date.AddDays(-30), DtVoucher.DateTime.Date, TextAcCode.Text,Cost_CmBx.Text);
-
-            //        else
-            //            if(ProjectFunctions.AllEmp)
-            //                Query = "SELECT      EmpCode As Code, EmpName As Name, EmpFHName As [Father_Husband] From EmpMst  ORDER BY EmpName";
-            //            else
-            //                Query = "SELECT      EmpCode As Code, EmpName As Name, EmpFHName As [Father_Husband] From EmpMst where isnull(empLeft,'N')='N' ORDER BY EmpName";
-            //        if (TextDlrCode.Text.Trim().Length == 0)
-            //            {
-            //            ShowHelpWindow(Query);
-            //            }
-            //        else
-            //            {
-            //            string query="";
-            //            if (Paramater == "R")
-            //            { query = String.Format("Select RtrCode Code, RtrName As Name, RtrTelNo As Info From RetailerMst where RtrCode='{0}';", TextDlrCode.Text.PadLeft(6, '0')); }
-            //            else if (Paramater == "A")
-            //            { query = String.Format("Select AssetCode Code, AssetDesc As Name, AssetRegNo As Info From AssetMst where AssetCode='{0}';", TextDlrCode.Text.PadLeft(6, '0')); }
-            //            else if ((Paramater == "D" || Paramater == "G" || Paramater == "P") && !CheckCB.Checked)
-            //                query = String.Format("SELECT     dealerCode As Code, dealerName As Name, dealerStation As DlrStn From dealerMaster  where  [dealerCode]='{0}' ;", TextDlrCode.Text.PadLeft(4, '0'));
-            //            else if ((Paramater == "D" || Paramater == "G" || Paramater == "P") && CheckCB.Checked && Cost_CmBx.Text == "NA#")
-            //                query = string.Format("SELECT      dealerCode As Code, dealerName As Name, dealerStation As DlrStn From dealerMaster  where  [dealerCode]='{3}' And DealerCode In (Select VutAACode From VuData WHere (VutDate Between '{0:yyyy-MM-dd}' And '{1:yyyy-MM-dd}') And VutACode='{2}' And IsNull(VutSplTagOV,'N')='B') ORDER BY DealerName;", DtVoucher.DateTime.Date.AddDays(-30), DtVoucher.DateTime.Date, TextAcCode.Text, TextDlrCode.Text.PadLeft(4, '0'));
-            //            else if ((Paramater == "D" || Paramater == "G" || Paramater == "P") && CheckCB.Checked && Cost_CmBx.Text != "NA#")
-            //                query = string.Format("SELECT      dealerCode As Code, dealerName As Name, dealerStation As DlrStn From dealerMaster Where [dealerCode]='{4}' And DealerCode In (Select VutAACode From VuDataPost WHere (VutDate Between '{0:yyyy-MM-dd}' And '{1:yyyy-MM-dd}') And VutACode='{2}' And VutCostHead='{3}') ORDER BY DealerName;", DtVoucher.DateTime.Date.AddDays(-30), DtVoucher.DateTime.Date, TextAcCode.Text, Cost_CmBx.Text, TextDlrCode.Text.PadLeft(4, '0'));
-
-            //            else
-            //                if (ProjectFunctions.AllEmp)
-            //                    query = String.Format("SELECT     EmpCode As Code, EmpName As Name From EmpMst where [Empcode]='{0}' ;", TextDlrCode.Text.PadLeft(5, '0'));
-            //                else
-            //                    query = String.Format("SELECT     EmpCode As Code, EmpName As Name From EmpMst where isnull(empLeft,'N')='N' And  [Empcode]='{0}' ;", TextDlrCode.Text.PadLeft(5, '0'));
-
-            //            var ds = ProjectFunctions.GetDataSet(query);
-            //            if (ds.Tables[0].Rows.Count > 0)
-            //                {
-            //                    TextDlrCode.Text = ds.Tables[0].Rows[0]["Code"].ToString();
-            //                    TextDlrDesc.Text = ds.Tables[0].Rows[0]["Name"].ToString();
-            //                    if (TextAcCode.Text == "17170")
-            //                    {
-            //                        DataSet Dsx = ProjectFunctions.GetDataSet("Select AccCode,AccName From DealerMaster inner join ActMSt on AccCode=DealerAcCode Where DealerCode='" + TextDlrCode.Text + "'");
-            //                        if (Dsx.Tables[0].Rows.Count > 0)
-            //                        {
-            //                            TextAcCode.Text = Dsx.Tables[0].Rows[0][0].ToString();
-            //                            TextAcName.Text = Dsx.Tables[0].Rows[0][1].ToString();
-            //                        }
-            //                    }
-
-            //                SubPanel.Hide();
-            //                getBal();
-            //                TextAmount.Focus();
-            //                }
-            //            else
-            //                {
-            //                ShowHelpWindow(Query);
-            //                }
-            //            }
-            //        e.Handled = true;
-            //        }
-            //    if ((e.KeyCode == Keys.Tab && e.Modifiers == Keys.Shift) || e.KeyCode == Keys.Up)
-            //        {
-            //        e.SuppressKeyPress = true;
-            //        SelectNextControl(ActiveControl, false, true, true, true);
-            //        }
-            //    }
-            //catch (Exception ex)
-            //    {
-            //    }
+           
         }
 
         private void TextExpHeadCode_KeyDown(object sender, KeyEventArgs e)
@@ -1508,7 +1354,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void gridView1_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
+        private void GridView1_CustomUnboundColumnData(object sender, CustomColumnDataEventArgs e)
         {
             try
             {
@@ -1664,7 +1510,7 @@ namespace WindowsFormsApplication1
             else
             {
 
-                if (!isupdate)
+                if (!Isupdate)
                 {
                     var query = string.Format("select dbo.DoPadd((SELECT  isnull(cast(max(VumNo)as int),0)  as 'Value' FROM VuMst WHERE UnitCode='" + GlobalVariables.CUnitID + "' And VumType='" + TextVoucherType.Text + "' And VumFYear='" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "' )+1) as Value;");
                     var ds = ProjectFunctions.GetDataSet(query);
@@ -1708,7 +1554,7 @@ namespace WindowsFormsApplication1
                                 command.Parameters.Add("@VumNoRcd", SqlDbType.Int).Value = Convert.ToUInt32(colAccCode.SummaryItem.SummaryValue);
                                 command.Parameters.Add("@VumAmt", SqlDbType.Decimal).Value = Math.Round(Convert.ToDecimal(colCredit.SummaryItem.SummaryValue), 2, MidpointRounding.AwayFromZero);
                                 command.Parameters.Add("@VumBCode", SqlDbType.VarChar, 6).Value = (TextVoucherType.Text == "CP" || TextVoucherType.Text == "CR") ? GlobalVariables.CashCode : ((TextVoucherType.Text == "BP" || TextVoucherType.Text == "BR") ? TextBankCode.Text : string.Empty);
-                                command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = isupdate ? "Y" : "N";
+                                command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = Isupdate ? "Y" : "N";
                                 command.Parameters.Add("@Vumid", SqlDbType.BigInt).Value = 0;
                                 command.Parameters.Add("@VumFYear", SqlDbType.Char, 2).Value = ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear);
                                 command.Parameters.Add("@VumUser", SqlDbType.VarChar, 8).Value = GlobalVariables.CurrentUser;
@@ -1747,7 +1593,7 @@ namespace WindowsFormsApplication1
                                         command.Parameters.Add("@DcUser", SqlDbType.VarChar, 8).Value = GlobalVariables.CurrentUser;
                                         command.Parameters.Add("@DcAccCode", SqlDbType.NVarChar, 6).Value = EntryInfo_Grid.GetRowCellValue(rowHandle, colAccCode).ToString();
                                         command.Parameters.Add("@DcFyear", SqlDbType.VarChar, 2).Value = ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear);
-                                        command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = isupdate ? "Y" : "N";
+                                        command.Parameters.Add("@IsUpdate", SqlDbType.Char, 1).Value = Isupdate ? "Y" : "N";
                                         command.Parameters.Add("@UnitCode", SqlDbType.VarChar, 2).Value = GlobalVariables.CUnitID;
 
                                         command.ExecuteNonQuery();
@@ -1813,7 +1659,7 @@ namespace WindowsFormsApplication1
 
 
                                     transaction.Commit();
-                                    if (!(isupdate))
+                                    if (!(Isupdate))
                                     {
                                         VoucherNo = TextVoucherNo.Text;
                                         VoucherType = TextVoucherType.Text;
@@ -2120,7 +1966,7 @@ namespace WindowsFormsApplication1
         private void TextVoucherType_Enter(object sender, EventArgs e)
         {
 
-            if (isupdate)
+            if (Isupdate)
             {
                 TextVoucherType.Properties.ReadOnly = true;
             }
@@ -2213,7 +2059,7 @@ namespace WindowsFormsApplication1
 
         private void Cost_CmBx_TextChanged(object sender, EventArgs e)
         {
-            if (isupdate)
+            if (Isupdate)
             {
                 if ((EntryInfo_GridCtrl.DataSource as DataTable) != null)
                 {
@@ -2319,7 +2165,7 @@ namespace WindowsFormsApplication1
             }
 
 
-            if (!isupdate)
+            if (!Isupdate)
             {
                 var query = string.Format("select dbo.DoPadd((SELECT  isnull(cast(max(VumNo)as int),0)  as 'Value' FROM VuMst WHERE UnitCode='" + GlobalVariables.CUnitID + "' And VumType='" + TextVoucherType.Text + "' And VumFYear='" + ProjectFunctions.ClipFYearN(GlobalVariables.FinancialYear) + "' )+1) as Value;");
                 var ds = ProjectFunctions.GetDataSet(query);

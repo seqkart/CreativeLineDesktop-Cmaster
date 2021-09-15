@@ -90,7 +90,7 @@
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 

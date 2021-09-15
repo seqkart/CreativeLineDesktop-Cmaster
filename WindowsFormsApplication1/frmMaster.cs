@@ -117,8 +117,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG233")
                 {
-                    WindowsFormsApplication1.Transaction.frmMessageBuilder frm = new WindowsFormsApplication1.Transaction.frmMessageBuilder()
-                    { s1 = btnAdd.Text, Text = "Message  Builder Addition" };
+                    WindowsFormsApplication1.Transaction.FrmMessageBuilder frm = new WindowsFormsApplication1.Transaction.FrmMessageBuilder()
+                    { S1 = btnAdd.Text, Text = "Message  Builder Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -189,7 +189,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG176")
                 {
-                    WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
+                    WindowsFormsApplication1.Master.FrmBranchMst frm = new WindowsFormsApplication1.Master.FrmBranchMst()
                     { S1 = btnAdd.Text, Text = "Branch Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -218,7 +218,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG200")
                 {
                     WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
-                    { s1 = btnAdd.Text, Text = "Financial Year Creation" };
+                    { S1 = btnAdd.Text, Text = "Financial Year Creation" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -371,7 +371,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG106")
                 {
-                    frmBomMstAddEdit frm = new frmBomMstAddEdit()
+                    FrmBomMstAddEdit frm = new FrmBomMstAddEdit()
                     { S1 = btnAdd.Text, Text = "Bill Of Material Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -388,7 +388,7 @@ namespace WindowsFormsApplication1
                 }
                 if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmUserDetails))
                 {
-                    frmUserDetails frm = new frmUserDetails() { s1 = btnAdd.Text, Text = "User Addition" };
+                    FrmUserDetails frm = new FrmUserDetails() { S1 = btnAdd.Text, Text = "User Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -553,7 +553,7 @@ namespace WindowsFormsApplication1
             FillGrid();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
@@ -643,8 +643,8 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Transaction.frmMessageBuilder frm = new WindowsFormsApplication1.Transaction.frmMessageBuilder()
-                    { s1 = btnEdit.Text, Text = "Message  Builder Edition", MessageCode = CurrentRow["MessageCode"].ToString() };
+                    WindowsFormsApplication1.Transaction.FrmMessageBuilder frm = new WindowsFormsApplication1.Transaction.FrmMessageBuilder()
+                    { S1 = btnEdit.Text, Text = "Message  Builder Edition", MessageCode = CurrentRow["MessageCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();
@@ -723,7 +723,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmBranchMst frm = new WindowsFormsApplication1.Master.frmBranchMst()
+                    WindowsFormsApplication1.Master.FrmBranchMst frm = new WindowsFormsApplication1.Master.FrmBranchMst()
                     { S1 = btnEdit.Text, Text = "Branch Editing", BranchCode = CurrentRow["UNITID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -755,7 +755,7 @@ namespace WindowsFormsApplication1
 
                     WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Financial Year Editing",
                         TransId = Convert.ToInt32(CurrentRow["TransID"])
                     };
@@ -935,11 +935,11 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG106")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmBomMstAddEdit frm = new frmBomMstAddEdit()
+                    FrmBomMstAddEdit frm = new FrmBomMstAddEdit()
                     {
                         S1 = btnEdit.Text,
                         Text = "Bill Of Material Editing",
-                        bomno = CurrentRow["bomNo"].ToString(),
+                        Bomno = CurrentRow["bomNo"].ToString(),
                         BomPrdId = CurrentRow["bomPrdId"].ToString()
                     };
                     frm.StartPosition = FormStartPosition.CenterScreen;
@@ -962,8 +962,8 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == WIN_APP_TABS._frmUserDetails)
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmUserDetails frm = new frmUserDetails()
-                    { s1 = btnEdit.Text, Text = "User Editing", UserName = CurrentRow["UserName"].ToString() };
+                    FrmUserDetails frm = new FrmUserDetails()
+                    { S1 = btnEdit.Text, Text = "User Editing", UserName = CurrentRow["UserName"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -1166,13 +1166,13 @@ namespace WindowsFormsApplication1
             FillGrid();
         }
 
-        private void InvoiceGrid_DoubleClick(object sender, EventArgs e) { btnEdit_Click(null, e); }
+        private void InvoiceGrid_DoubleClick(object sender, EventArgs e) { BtnEdit_Click(null, e); }
 
         private void InvoiceGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnEdit_Click(null, e);
+                BtnEdit_Click(null, e);
             }
         }
 

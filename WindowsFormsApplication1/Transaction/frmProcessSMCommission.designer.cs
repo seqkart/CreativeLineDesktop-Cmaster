@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmProcessSMCommission
+    partial class FrmProcessSMCommission
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProcessSMCommission));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProcessSMCommission));
             this.panelControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnSelectALL = new System.Windows.Forms.CheckBox();
             this.btnProcess = new DevExpress.XtraEditors.SimpleButton();
@@ -94,7 +94,7 @@
             this.btnSelectALL.Size = new System.Drawing.Size(18, 17);
             this.btnSelectALL.TabIndex = 288;
             this.btnSelectALL.UseVisualStyleBackColor = true;
-            this.btnSelectALL.CheckedChanged += new System.EventHandler(this.btnSelectALL_CheckedChanged);
+            this.btnSelectALL.CheckedChanged += new System.EventHandler(this.BtnSelectALL_CheckedChanged);
             // 
             // btnProcess
             // 
@@ -104,7 +104,7 @@
             this.btnProcess.Size = new System.Drawing.Size(117, 26);
             this.btnProcess.TabIndex = 200;
             this.btnProcess.Text = "Process";
-            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            this.btnProcess.Click += new System.EventHandler(this.BtnProcess_Click);
             // 
             // ReplGrid
             // 
@@ -245,7 +245,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "&Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // txtPassword
             // 
@@ -267,7 +267,7 @@
             this.Name = "frmProcessSMCommission";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmProcessSMCommission_Load);
+            this.Load += new System.EventHandler(this.FrmProcessSMCommission_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();

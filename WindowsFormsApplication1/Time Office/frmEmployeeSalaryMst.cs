@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
             */
         }
-        private void fillGrid()
+        private void FillGrid()
         {
             try
             {
@@ -80,59 +80,59 @@ namespace WindowsFormsApplication1.Forms_Master
                 MessageBox.Show(ex.Message.ToString().Trim());
             }
         }
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
 
         private void EmployeeGrid_DoubleClick(object sender, EventArgs e)
         {
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
         }
 
-        private void frmEmployeeSalaryMst_Load(object sender, EventArgs e)
+        private void FrmEmployeeSalaryMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            fillGrid();
+            FillGrid();
         }
 
         private void EmployeeGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnEdit_Click(null, e);
+                BtnEdit_Click(null, e);
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
                 var row = EmployeeGridView.GetDataRow(EmployeeGridView.FocusedRowHandle);
-                var frm = new frmEmployeeSalaryMstEdit();
+                var frm = new FrmEmployeeSalaryMstEdit();
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                 frm.Text = "Employee Salary Addition";
-                frm.s1 = btnAdd.Text;
-                frm.empcode = row["EmpCode"].ToString();
+                frm.S1 = btnAdd.Text;
+                frm.Empcode = row["EmpCode"].ToString();
                 frm.ShowDialog();
-                fillGrid();
+                FillGrid();
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
                 var row = EmployeeGridView.GetDataRow(EmployeeGridView.FocusedRowHandle);
-                var frm = new frmEmployeeSalaryMstEdit();
+                var frm = new FrmEmployeeSalaryMstEdit();
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                 frm.Text = "Employee Salary Editing";
-                frm.empcode = row["EmpCode"].ToString();
-                frm.s1 = btnEdit.Text;
+                frm.Empcode = row["EmpCode"].ToString();
+                frm.S1 = btnEdit.Text;
                 frm.ShowDialog();
-                fillGrid();
+                FillGrid();
             }
         }
     }

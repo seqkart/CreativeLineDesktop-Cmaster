@@ -6,19 +6,14 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmMessageBuilder : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMessageBuilder : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public String S1 { get; set; }
         public String MessageCode { get; set; }
         public String SourceTable { get; set; }
-        public frmMessageBuilder()
+        public FrmMessageBuilder()
         {
             InitializeComponent();
-        }
-
-        private void richEditControl1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void TableGrid_DockChanged(object sender, EventArgs e)
@@ -62,7 +57,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnSource_Click(object sender, EventArgs e)
+        private void BtnSource_Click(object sender, EventArgs e)
         {
             DataSet dsSource = ProjectFunctions.GetDataSet("Select name as TableName from Sys.tables", ProjectFunctions.GetConnection());
             if (dsSource.Tables[0].Rows.Count > 0)
@@ -75,7 +70,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnMakeQuery_Click(object sender, EventArgs e)
+        private void BtnMakeQuery_Click(object sender, EventArgs e)
         {
 
         }
@@ -127,7 +122,7 @@ namespace WindowsFormsApplication1.Transaction
             MakeQuery();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -150,7 +145,7 @@ namespace WindowsFormsApplication1.Transaction
                 sqlcom.CommandType = CommandType.Text;
                 try
                 {
-                    if (s1 == "&Add")
+                    if (S1 == "&Add")
                     {
 
                         MessageCode = ProjectFunctions.GetDataSet("select isnull(max(MessageCode),0)+1 from SMSAutomationMst").Tables[0].Rows[0][0].ToString().PadLeft(6, '0');
@@ -166,7 +161,7 @@ namespace WindowsFormsApplication1.Transaction
                         sqlcom.ExecuteNonQuery();
                         sqlcom.Parameters.Clear();
                     }
-                    if (s1 == "Edit")
+                    if (S1 == "Edit")
                     {
                         sqlcom.CommandText = "Update SMSAutomationMst Set MessageQuery=@MessageQuery,MessageDetail=@MessageDetail" +
                             " Where MessageCode=@MessageCode";
@@ -212,21 +207,22 @@ namespace WindowsFormsApplication1.Transaction
                 catch (Exception ex)
 
                 {
+                    ProjectFunctions.SpeakError(ex.Message);
                     Close();
                 }
             }
         }
 
-        private void frmMessageBuilder_Load(object sender, EventArgs e)
+        private void FrmMessageBuilder_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip); ;
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
 
 
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtQueryNo.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet(string.Format("sp_LoadMessageAutomationDataFEdit '{0}'", MessageCode));

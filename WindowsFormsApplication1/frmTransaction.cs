@@ -120,8 +120,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG211")
                 {
-                    WindowsFormsApplication1.Transaction.frmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.frmPIGeneration2
-                    { s1 = btnAdd.Text, Text = "Performa Invoice Addition" };
+                    WindowsFormsApplication1.Transaction.FrmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.FrmPIGeneration2
+                    { S1 = btnAdd.Text, Text = "Performa Invoice Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG149")
                 {
-                    WindowsFormsApplication1.frm_poAddition_GST frm = new WindowsFormsApplication1.frm_poAddition_GST
+                    WindowsFormsApplication1.Frm_poAddition_GST frm = new WindowsFormsApplication1.Frm_poAddition_GST
                     { IsUpdate = false, Text = "Purchase Order     Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -176,8 +176,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG138")
                 {
-                    Transaction.frmPurchaseFromHO frm = new Transaction.frmPurchaseFromHO()
-                    { s1 = btnAdd.Text, Text = "Purchase From HO" };
+                    Transaction.FrmPurchaseFromHO frm = new Transaction.FrmPurchaseFromHO()
+                    { S1 = btnAdd.Text, Text = "Purchase From HO" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -231,8 +231,8 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG101")
                 {
-                    frm_SupplierPaymentVoucherAdd_Upd frm = new frm_SupplierPaymentVoucherAdd_Upd()
-                    { isupdate = false, Text = "Supplier Payment Addition" };
+                    Frm_SupplierPaymentVoucherAdd_Upd frm = new Frm_SupplierPaymentVoucherAdd_Upd()
+                    { Isupdate = false, Text = "Supplier Payment Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -245,7 +245,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG91")
                 {
-                    frm_poAddition_GST frm = new frm_poAddition_GST()
+                    Frm_poAddition_GST frm = new Frm_poAddition_GST()
                     { IsUpdate = false, Text = "Purchase Order Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -280,14 +280,14 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG28")
                 {
-                    frmLoanMstAddEdit frm = new frmLoanMstAddEdit() { s1 = btnAdd.Text, Text = "Loan Addition" };
+                    frmLoanMstAddEdit frm = new frmLoanMstAddEdit() { S1 = btnAdd.Text, Text = "Loan Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG35")
                 {
-                    frmTdsDeductionAddEdit frm = new frmTdsDeductionAddEdit()
-                    { s1 = btnAdd.Text, Text = "TDS Deduction Addition" };
+                    FrmTdsDeductionAddEdit frm = new FrmTdsDeductionAddEdit()
+                    { S1 = btnAdd.Text, Text = "TDS Deduction Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -388,8 +388,8 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Transaction.frmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.frmPIGeneration2
-                    { s1 = btnEdit.Text, Text = "Performa Invoice Edition", DocNo = CurrentRow["PINo"].ToString(), DocDate = Convert.ToDateTime(CurrentRow["PIDate"]) };
+                    WindowsFormsApplication1.Transaction.FrmPIGeneration2 frm = new WindowsFormsApplication1.Transaction.FrmPIGeneration2
+                    { S1 = btnEdit.Text, Text = "Performa Invoice Edition", DocNo = CurrentRow["PINo"].ToString(), DocDate = Convert.ToDateTime(CurrentRow["PIDate"]) };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -434,7 +434,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.frm_poAddition_GST frm = new WindowsFormsApplication1.frm_poAddition_GST
+                    WindowsFormsApplication1.Frm_poAddition_GST frm = new WindowsFormsApplication1.Frm_poAddition_GST
                     {
                         IsUpdate = true,
                         Text = "Purchase Order Edition",
@@ -497,9 +497,9 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.frmPurchaseFromHO frm = new Transaction.frmPurchaseFromHO()
+                    Transaction.FrmPurchaseFromHO frm = new Transaction.FrmPurchaseFromHO()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Purchase From HO",
                         SFDVNO = CurrentRow["SFDVNO"].ToString(),
                         SFMTOTBOX = CurrentRow["SFDBOXNO"].ToString()
@@ -635,10 +635,10 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG101")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frm_SupplierPaymentVoucherAdd_Upd frm = new frm_SupplierPaymentVoucherAdd_Upd()
+                    Frm_SupplierPaymentVoucherAdd_Upd frm = new Frm_SupplierPaymentVoucherAdd_Upd()
                     {
                         Text = "Supplier Payment",
-                        isupdate = true,
+                        Isupdate = true,
                         VoucherDate = Convert.ToDateTime(CurrentRow["Voucher Date"]),
                         VoucherNo = CurrentRow["Voucher No."].ToString(),
                         VoucherType = CurrentRow["Type"].ToString()
@@ -665,7 +665,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG91")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frm_poAddition_GST frm = new frm_poAddition_GST()
+                    Frm_poAddition_GST frm = new Frm_poAddition_GST()
                     {
                         Text = "Purchase Order Editing",
                         IsUpdate = true,
@@ -768,7 +768,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     frmLoanMstAddEdit frm = new frmLoanMstAddEdit()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Loan Editing",
                         LoanNo = CurrentRow["LoanANo"].ToString(),
                         LoanADate = Convert.ToDateTime(CurrentRow["LoanADate"])
@@ -779,9 +779,9 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG35")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmTdsDeductionAddEdit frm = new frmTdsDeductionAddEdit()
+                    FrmTdsDeductionAddEdit frm = new FrmTdsDeductionAddEdit()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "TDS Deduction Editing",
                         TdNo = CurrentRow["TDNo"].ToString(),
                         TdDate = Convert.ToDateTime(CurrentRow["TDDate"])
@@ -1678,8 +1678,6 @@ namespace WindowsFormsApplication1
                                                                   (o1, e1) =>
                                                                   {
 
-
-                                                                      int i = 0;
 
                                                                       foreach (DataRow dr in (InvoiceGrid.DataSource as DataTable).Rows)
                                                                       {

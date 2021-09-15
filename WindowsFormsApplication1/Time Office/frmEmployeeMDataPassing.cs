@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
 
 
-        private void fillGrid()
+        private void FillGrid()
         {
             //DevExpress.XtraSplashScreen.SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             //SplashScreenManager.Default.SetWaitFormDescription("Fetching Data");
@@ -46,17 +46,17 @@ namespace WindowsFormsApplication1.Forms_Master
             }
             //SplashScreenManager.CloseForm();
         }
-        private void frmEmployeeMDataPassing_Load(object sender, EventArgs e)
+        private void FrmEmployeeMDataPassing_Load(object sender, EventArgs e)
         {
             SetMyControls();
             DtStartDate.EditValue = DateTime.Now.AddMonths(-1);
             DtEndDate.EditValue = DateTime.Now;
-            fillGrid();
+            FillGrid();
         }
 
         private void Btn_RefreshGridData_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
 
         private void InvoiceGrid_DoubleClick(object sender, EventArgs e)
@@ -66,10 +66,10 @@ namespace WindowsFormsApplication1.Forms_Master
             var P = ProjectFunctions.GetPositionInForm(this);
             frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
             frm.Text = "Employee Salary Passing";
-            frm.empcode = row["EmpCode"].ToString();
+            frm.Empcode = row["EmpCode"].ToString();
             frm.empdate = row["EmpDDate"].ToString();
             frm.ShowDialog();
-            fillGrid();
+            FillGrid();
         }
 
         private void InvoiceGrid_KeyDown(object sender, KeyEventArgs e)

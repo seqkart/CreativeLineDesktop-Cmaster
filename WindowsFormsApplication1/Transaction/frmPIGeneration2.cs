@@ -8,17 +8,17 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmPIGeneration2 : DevExpress.XtraEditors.XtraForm
+    public partial class FrmPIGeneration2 : DevExpress.XtraEditors.XtraForm
     {
 
         int i = 0;
 
 
         DataTable dt = new DataTable();
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string DocNo { get; set; }
         public DateTime DocDate { get; set; }
-        public frmPIGeneration2()
+        public FrmPIGeneration2()
         {
             InitializeComponent();
 
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -60,15 +60,15 @@ namespace WindowsFormsApplication1.Transaction
             }
             return s2;
         }
-        private void frmPIGeneration2_Load(object sender, EventArgs e)
+        private void FrmPIGeneration2_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtPIDate.EditValue = DateTime.Now;
                 txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtPIDate.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPIMstNewFEDit '" + DocNo + "','" + Convert.ToDateTime(DocDate).ToString("yyyy-MM-dd") + "'");
@@ -150,7 +150,7 @@ namespace WindowsFormsApplication1.Transaction
             return true;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
             SplashScreenManager.Default.SetWaitFormDescription("Loading Data For Next PI ");
@@ -169,7 +169,7 @@ namespace WindowsFormsApplication1.Transaction
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             txtPINo.Text = GetNewInvoiceDocumentNo().PadLeft(6, '0');
 
@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Clear();
                         }
 
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
 
                             sqlcom.CommandType = CommandType.Text;
@@ -233,7 +233,7 @@ namespace WindowsFormsApplication1.Transaction
                         DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[i];
                         if (i <= workbook.Sheets.Count)
                         {
-                            btnSave_Click(null, e);
+                            BtnSave_Click(null, e);
                         }
                         else
                         {
@@ -258,7 +258,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
@@ -327,7 +327,7 @@ namespace WindowsFormsApplication1.Transaction
 
             }
         }
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             txtAddress.Text = openFileDialog1.FileName;
             LoadSheet();

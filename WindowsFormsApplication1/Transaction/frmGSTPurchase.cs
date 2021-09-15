@@ -524,7 +524,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {

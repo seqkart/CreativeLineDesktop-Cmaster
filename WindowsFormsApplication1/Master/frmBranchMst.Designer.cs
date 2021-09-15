@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Master
 {
-    partial class frmBranchMst
+    partial class FrmBranchMst
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBranchMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBranchMst));
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();

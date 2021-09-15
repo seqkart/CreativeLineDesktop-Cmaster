@@ -86,7 +86,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(883, 420);
             this.groupBox1.TabIndex = 212;
-            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupBox1_Paint);
+            this.groupBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupBox1_Paint);
             // 
             // dateTimePicker1
             // 
@@ -162,7 +162,7 @@
             this.btnClose.TabIndex = 12;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // label15
             // 
@@ -252,7 +252,7 @@
             this.txtTimeOut.Name = "txtTimeOut";
             this.txtTimeOut.Size = new System.Drawing.Size(247, 23);
             this.txtTimeOut.TabIndex = 8;
-            this.txtTimeOut.TextChanged += new System.EventHandler(this.txtTimeOut_TextChanged);
+            this.txtTimeOut.TextChanged += new System.EventHandler(this.TxtTimeOut_TextChanged);
             // 
             // txtTimeIn
             // 
@@ -261,7 +261,7 @@
             this.txtTimeIn.Name = "txtTimeIn";
             this.txtTimeIn.Size = new System.Drawing.Size(247, 23);
             this.txtTimeIn.TabIndex = 7;
-            this.txtTimeIn.TextChanged += new System.EventHandler(this.txtTimeIn_TextChanged);
+            this.txtTimeIn.TextChanged += new System.EventHandler(this.TxtTimeIn_TextChanged);
             // 
             // txtEmpID
             // 
@@ -293,7 +293,7 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // label29
             // 
@@ -313,7 +313,7 @@
             this.cbEmpID.Name = "cbEmpID";
             this.cbEmpID.Size = new System.Drawing.Size(215, 24);
             this.cbEmpID.TabIndex = 1;
-            this.cbEmpID.SelectedIndexChanged += new System.EventHandler(this.cbEmpID_SelectedIndexChanged);
+            this.cbEmpID.SelectedIndexChanged += new System.EventHandler(this.CbEmpID_SelectedIndexChanged);
             // 
             // AddAttendanceDetails
             // 

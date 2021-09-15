@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmUserDetails
+    partial class FrmUserDetails
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserDetails));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserDetails));
             this.txtstatusTag = new DevExpress.XtraEditors.TextEdit();
             this.label12 = new DevExpress.XtraEditors.LabelControl();
             this.txtConfirmPassword = new DevExpress.XtraEditors.TextEdit();
@@ -61,7 +61,7 @@
             this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtstatusTag.Size = new System.Drawing.Size(121, 24);
             this.txtstatusTag.TabIndex = 2;
-            this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtstatusTag_Validating);
+            this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtstatusTag_Validating);
             // 
             // label12
             // 
@@ -118,7 +118,7 @@
             this.btnQuit.Size = new System.Drawing.Size(58, 28);
             this.btnQuit.Text = "&Cancel";
             this.btnQuit.ToolTipText = "Cancel";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -128,7 +128,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtUserName
             // 
@@ -230,8 +230,8 @@
             this.Name = "frmUserDetails";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmUserDetails_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmUserDetails_KeyDown);
+            this.Load += new System.EventHandler(this.FrmUserDetails_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmUserDetails_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtstatusTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtConfirmPassword.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);

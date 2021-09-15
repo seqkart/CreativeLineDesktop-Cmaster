@@ -103,8 +103,8 @@
             this.txtEmpCode.Properties.MaxLength = 6;
             this.txtEmpCode.Size = new System.Drawing.Size(75, 24);
             this.txtEmpCode.TabIndex = 1;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // txtEmpName
             // 
@@ -150,7 +150,7 @@
             this.txtLoanAmount.Properties.MaxLength = 30;
             this.txtLoanAmount.Size = new System.Drawing.Size(79, 24);
             this.txtLoanAmount.TabIndex = 5;
-            this.txtLoanAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoanAmount_KeyPress);
+            this.txtLoanAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtLoanAmount_KeyPress);
             // 
             // label4
             // 
@@ -171,7 +171,7 @@
             this.txtLoanInstlmnt.Properties.MaxLength = 30;
             this.txtLoanInstlmnt.Size = new System.Drawing.Size(79, 24);
             this.txtLoanInstlmnt.TabIndex = 7;
-            this.txtLoanInstlmnt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoanInstlmnt_KeyPress);
+            this.txtLoanInstlmnt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtLoanInstlmnt_KeyPress);
             // 
             // label1
             // 
@@ -218,7 +218,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(80, 28);
             this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -229,7 +229,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(75, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtMonthYear
             // 
@@ -355,7 +355,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoanMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmLoanMstAddEdit_Load);
+            this.Load += new System.EventHandler(this.FrmLoanMstAddEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).EndInit();

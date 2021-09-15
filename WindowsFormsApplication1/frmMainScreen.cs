@@ -145,7 +145,7 @@ namespace WindowsFormsApplication1
             {
 
                 case "PROG233":
-                    var PROG233 = new Transaction.frmMessageBuilder() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG233 = new Transaction.FrmMessageBuilder() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG233);
                     PROG233.Show();
                     PROG233.BringToFront();
@@ -331,7 +331,7 @@ namespace WindowsFormsApplication1
                     PROG23.BringToFront();
                     break;
                 case "PROG24":
-                    var PROG24 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG24 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG24";
                     _WorkAreaPanel.Controls.Add(PROG24);
                     PROG24.Show();
@@ -339,7 +339,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG25":
-                    var PROG25 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG25 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG25";
                     _WorkAreaPanel.Controls.Add(PROG25);
                     PROG25.Show();
@@ -417,21 +417,21 @@ namespace WindowsFormsApplication1
                     PROG35.BringToFront();
                     break;
                 case "PROG49":
-                    var PROG49 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG49 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG49";
                     _WorkAreaPanel.Controls.Add(PROG49);
                     PROG49.Show();
                     PROG49.BringToFront();
                     break;
                 case "PROG43":
-                    var PROG43 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG43 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG43";
                     _WorkAreaPanel.Controls.Add(PROG43);
                     PROG43.Show();
                     PROG43.BringToFront();
                     break;
                 case "PROG42":
-                    var PROG42 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG42 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG42";
                     _WorkAreaPanel.Controls.Add(PROG42);
                     PROG42.Show();
@@ -445,21 +445,21 @@ namespace WindowsFormsApplication1
                     //PROG36.BringToFront();
                     break;
                 case "PROG52":
-                    var PROG52 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG52 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG52";
                     _WorkAreaPanel.Controls.Add(PROG52);
                     PROG52.Show();
                     PROG52.BringToFront();
                     break;
                 case "PROG50":
-                    var PROG50 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG50 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG50";
                     _WorkAreaPanel.Controls.Add(PROG50);
                     PROG50.Show();
                     PROG50.BringToFront();
                     break;
                 case "PROG48":
-                    var PROG48 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG48 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG48";
                     _WorkAreaPanel.Controls.Add(PROG48);
                     PROG48.Show();
@@ -473,7 +473,7 @@ namespace WindowsFormsApplication1
                     //PROG44.BringToFront();
                     break;
                 case "PROG38":
-                    var PROG38 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG38 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG38";
                     _WorkAreaPanel.Controls.Add(PROG38);
                     PROG38.Show();
@@ -487,7 +487,7 @@ namespace WindowsFormsApplication1
                     //PROG40.BringToFront();
                     break;
                 case "PROG54":
-                    var PROG54 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG54 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG54";
                     _WorkAreaPanel.Controls.Add(PROG54);
                     PROG54.Show();
@@ -501,14 +501,14 @@ namespace WindowsFormsApplication1
                     PROG58.BringToFront();
                     break;
                 case "PROG59":
-                    var PROG59 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG59 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG59";
                     _WorkAreaPanel.Controls.Add(PROG59);
                     PROG59.Show();
                     PROG59.BringToFront();
                     break;
                 case "PROG60":
-                    var PROG60 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG60 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG60";
                     _WorkAreaPanel.Controls.Add(PROG60);
                     PROG60.Show();
@@ -604,21 +604,21 @@ namespace WindowsFormsApplication1
                     PROG67.BringToFront();
                     break;
                 case "PROG68":
-                    var PROG68 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG68 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG68";
                     _WorkAreaPanel.Controls.Add(PROG68);
                     PROG68.Show();
                     PROG68.BringToFront();
                     break;
                 case "PROG71":
-                    var PROG71 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG71 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG71";
                     _WorkAreaPanel.Controls.Add(PROG71);
                     PROG71.Show();
                     PROG71.BringToFront();
                     break;
                 case "PROG72":
-                    var PROG72 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG72 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG72";
                     _WorkAreaPanel.Controls.Add(PROG72);
                     PROG72.Show();
@@ -632,7 +632,7 @@ namespace WindowsFormsApplication1
                     PROG69.BringToFront();
                     break;
                 case "PROG70":
-                    var PROG70 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG70 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG70";
                     _WorkAreaPanel.Controls.Add(PROG70);
                     PROG70.Show();
@@ -653,35 +653,35 @@ namespace WindowsFormsApplication1
                     PROG74.BringToFront();
                     break;
                 case "PROG75":
-                    var PROG75 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG75 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG75";
                     _WorkAreaPanel.Controls.Add(PROG75);
                     PROG75.Show();
                     PROG75.BringToFront();
                     break;
                 case "PROG76":
-                    var PROG76 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG76 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG76";
                     _WorkAreaPanel.Controls.Add(PROG76);
                     PROG76.Show();
                     PROG76.BringToFront();
                     break;
                 case "PROG77":
-                    var PROG77 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG77 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG77";
                     _WorkAreaPanel.Controls.Add(PROG77);
                     PROG77.Show();
                     PROG77.BringToFront();
                     break;
                 case "PROG78":
-                    var PROG78 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG78 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG78";
                     _WorkAreaPanel.Controls.Add(PROG78);
                     PROG78.Show();
                     PROG78.BringToFront();
                     break;
                 case "PROG79":
-                    var PROG79 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG79 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG79";
                     _WorkAreaPanel.Controls.Add(PROG79);
                     PROG79.Show();
@@ -702,35 +702,35 @@ namespace WindowsFormsApplication1
                     PROG46.BringToFront();
                     break;
                 case "PROG80":
-                    var PROG80 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG80 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG80";
                     _WorkAreaPanel.Controls.Add(PROG80);
                     PROG80.Show();
                     PROG80.BringToFront();
                     break;
                 case "PROG102":
-                    var PROG102 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG102 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG102";
                     _WorkAreaPanel.Controls.Add(PROG102);
                     PROG102.Show();
                     PROG102.BringToFront();
                     break;
                 case "PROG104":
-                    var PROG104 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG104 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG104";
                     _WorkAreaPanel.Controls.Add(PROG104);
                     PROG104.Show();
                     PROG104.BringToFront();
                     break;
                 case "PROG105":
-                    var PROG105 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG105 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG105";
                     _WorkAreaPanel.Controls.Add(PROG105);
                     PROG105.Show();
                     PROG105.BringToFront();
                     break;
                 case "PROG103":
-                    var PROG103 = new frmProcessSMCommission() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG103 = new FrmProcessSMCommission() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG103";
                     _WorkAreaPanel.Controls.Add(PROG103);
                     PROG103.Show();
@@ -766,7 +766,7 @@ namespace WindowsFormsApplication1
                     PROG107.BringToFront();
                     break;
                 case "PROG108":
-                    var PROG108 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG108 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG108";
                     _WorkAreaPanel.Controls.Add(PROG108);
                     PROG108.Show();
@@ -774,35 +774,35 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG109":
-                    var PROG109 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG109 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG109";
                     _WorkAreaPanel.Controls.Add(PROG109);
                     PROG109.Show();
                     PROG109.BringToFront();
                     break;
                 case "PROG110":
-                    var PROG110 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG110 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG110";
                     _WorkAreaPanel.Controls.Add(PROG110);
                     PROG110.Show();
                     PROG110.BringToFront();
                     break;
                 case "PROG111":
-                    var PROG111 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG111 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG111";
                     _WorkAreaPanel.Controls.Add(PROG111);
                     PROG111.Show();
                     PROG111.BringToFront();
                     break;
                 case "PROG112":
-                    var PROG112 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG112 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG112";
                     _WorkAreaPanel.Controls.Add(PROG112);
                     PROG112.Show();
                     PROG112.BringToFront();
                     break;
                 case "PROG113":
-                    var PROG113 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG113 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG113";
                     _WorkAreaPanel.Controls.Add(PROG113);
                     PROG113.Show();
@@ -896,7 +896,7 @@ namespace WindowsFormsApplication1
         {
             DataRow currentrow = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
 
-            FormReports.frmPivotGridReports PROG109 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
+            FormReports.FrmPivotGridReports PROG109 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
             PROG109.LayoutName = currentrow["LayoutName"].ToString();
             GlobalVariables.ProgCode = currentrow["ProgCode"].ToString();
             _WorkAreaPanel.Controls.Add(PROG109);

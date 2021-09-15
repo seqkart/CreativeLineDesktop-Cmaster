@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.FormReports
         public string ReportName { get; set; }
         private string Address;
         public PivotGridControl PGC { get; set; }
-        public bool isGrid { get; set; }
+        public bool IsGrid { get; set; }
 
         public LoadLayout()
         {
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1.FormReports
             }
         }
 
-        private void quitBtn_Click(object sender, EventArgs e)
+        private void QuitBtn_Click(object sender, EventArgs e)
         {
             Hide();
         }

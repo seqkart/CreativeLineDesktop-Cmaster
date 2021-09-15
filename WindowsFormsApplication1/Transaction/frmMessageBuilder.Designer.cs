@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmMessageBuilder
+    partial class FrmMessageBuilder
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Transaction
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMessageBuilder));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMessageBuilder));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.btnMakeQuery = new DevExpress.XtraEditors.SimpleButton();
             this.btnSource = new DevExpress.XtraEditors.SimpleButton();
@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnMakeQuery.Size = new System.Drawing.Size(87, 73);
             this.btnMakeQuery.TabIndex = 209;
             this.btnMakeQuery.Text = "Make Query";
-            this.btnMakeQuery.Click += new System.EventHandler(this.btnMakeQuery_Click);
+            this.btnMakeQuery.Click += new System.EventHandler(this.BtnMakeQuery_Click);
             // 
             // btnSource
             // 
@@ -97,7 +97,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSource.Size = new System.Drawing.Size(87, 73);
             this.btnSource.TabIndex = 4;
             this.btnSource.Text = "Load \r\nTables";
-            this.btnSource.Click += new System.EventHandler(this.btnSource_Click);
+            this.btnSource.Click += new System.EventHandler(this.BtnSource_Click);
             // 
             // ColumnGrid
             // 
@@ -264,7 +264,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -312,7 +312,7 @@ namespace WindowsFormsApplication1.Transaction
             this.KeyPreview = true;
             this.Name = "frmMessageBuilder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmMessageBuilder_Load);
+            this.Load += new System.EventHandler(this.FrmMessageBuilder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ColumnGrid)).EndInit();

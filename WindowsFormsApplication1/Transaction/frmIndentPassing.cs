@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -51,7 +51,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             HelpGridView.CloseEditor();
             HelpGridView.UpdateCurrentRow();

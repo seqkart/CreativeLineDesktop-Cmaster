@@ -43,13 +43,13 @@ namespace WindowsFormsApplication1.Forms_Master
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
             Dispose();
         }
 
-        private void dorestrict()
+        private void Dorestrict()
         {
             var Dt = Convert.ToDateTime(TextMonth.EditValue);
             DaysInMonth = DateTime.DaysInMonth(Dt.Year, Dt.Month);
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
             txtTotalDays.Text = (Convert.ToDecimal(TextWorked.Text) + Convert.ToDecimal(TextPaidHolidays.Text) + Convert.ToDecimal(TextEarned.Text) + Convert.ToDecimal(TextCasual.Text) + Convert.ToDecimal(TextSick.Text)).ToString("0.00");
         }
-        private void frm_EmpSalAddUpdate_Load(object sender, EventArgs e)
+        private void Frm_EmpSalAddUpdate_Load(object sender, EventArgs e)
         {
             txtTotalDays.Enabled = false;
             SetMyControls();
@@ -185,7 +185,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     }
                 }
             }
-            dorestrict();
+            Dorestrict();
             TotalDays();
 
 
@@ -209,7 +209,7 @@ namespace WindowsFormsApplication1.Forms_Master
             ProjectFunctions.ButtonVisualize(this);
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
 
@@ -243,7 +243,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 {
                     if (Convert.ToDecimal(TextPaidHolidays.EditValue) > 7)
                     {
-                        XtraMessageBox.Show("Paid hoildays cannot be greater tahn 7", "Validation Failed");
+                        XtraMessageBox.Show("Paid holidays cannot be greater than 7", "Validation Failed");
                         TextPaidHolidays.Focus();
                         return;
                     }
@@ -650,7 +650,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void TextMonth_EditValueChanged(object sender, EventArgs e)
         {
-            dorestrict();
+            Dorestrict();
         }
 
         private void TextSick_Leave(object sender, EventArgs e)
@@ -706,7 +706,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void btnPassword_Click(object sender, EventArgs e)
+        private void BtnPassword_Click(object sender, EventArgs e)
         {
 
         }

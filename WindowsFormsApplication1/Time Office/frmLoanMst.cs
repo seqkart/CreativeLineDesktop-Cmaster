@@ -12,12 +12,12 @@ namespace WindowsFormsApplication1.Forms_Master
 
         public string _s1 = null;
         public string _empcode = null;
-        public string s1
+        public string S1
         {
             get => _s1;
             set => _s1 = value;
         }
-        public string empcode
+        public string Empcode
         {
             get => _empcode;
             set => _empcode = value;
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 GlobalVariables.CurrentUser,
                 btnAdd, btnEdit, btnDelete, btnPrint);
         }
-        private void fillGrid()
+        private void FillGrid()
         {
             try
             {
@@ -84,15 +84,15 @@ namespace WindowsFormsApplication1.Forms_Master
                 MessageBox.Show(ex.Message.ToString().Trim());
             }
         }
-        private void frmLoanMst_Load(object sender, EventArgs e)
+        private void FrmLoanMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
             DtEndDate.EditValue = DateTime.Now.Date;
             DtStartDate.EditValue = DateTime.Now.AddYears(-1).Date;
-            fillGrid();
+            FillGrid();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
@@ -101,11 +101,11 @@ namespace WindowsFormsApplication1.Forms_Master
                     var frm = new frmLoanMstAddEdit();
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                    s1 = btnAdd.Text.ToString().Trim();
-                    frm.s1 = s1;
+                    S1 = btnAdd.Text.ToString().Trim();
+                    frm.S1 = S1;
                     frm.Text = "Loan Addition";
                     frm.ShowDialog();
-                    fillGrid();
+                    FillGrid();
                 }
                 catch (Exception ex)
                 {
@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
@@ -127,17 +127,17 @@ namespace WindowsFormsApplication1.Forms_Master
                         var frm = new frmLoanMstAddEdit() { LoanNo = row["LoanANo"].ToString(), LoanADate = row["LoanADate"].ToString() };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                        s1 = btnEdit.Text.ToString().Trim();
-                        frm.s1 = s1;
+                        S1 = btnEdit.Text.ToString().Trim();
+                        frm.S1 = S1;
                         frm.Text = "Loan Editing";
-                        frm.empcode = row["EmpCode"].ToString();
+                        frm.Empcode = row["EmpCode"].ToString();
                         frm.ShowDialog();
                     }
                     else
                     {
                         XtraMessageBox.Show("Please UnPass first to perform editing");
                     }
-                    fillGrid();
+                    FillGrid();
                 }
                 catch (Exception ex)
                 {
@@ -147,22 +147,22 @@ namespace WindowsFormsApplication1.Forms_Master
         }
         private void EmployeeGrid_DoubleClick(object sender, EventArgs e)
         {
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
         }
 
         private void EmployeeGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnEdit_Click(null, e);
+                BtnEdit_Click(null, e);
             }
         }
         private void Btn_RefreshGridData_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
+        private void BtnView_Click(object sender, EventArgs e)
         {
 
             try
@@ -173,13 +173,13 @@ namespace WindowsFormsApplication1.Forms_Master
                 var frm = new frmLoanMstAddEdit() { LoanNo = row["LoanANo"].ToString(), LoanADate = row["LoanADate"].ToString() };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-                s1 = btnView.Text.ToString().Trim();
-                frm.s1 = s1;
+                S1 = btnView.Text.ToString().Trim();
+                frm.S1 = S1;
                 frm.Text = "Loan View";
-                frm.empcode = row["EmpCode"].ToString();
+                frm.Empcode = row["EmpCode"].ToString();
                 frm.ShowDialog();
 
-                fillGrid();
+                FillGrid();
             }
             catch (Exception ex)
             {
@@ -188,7 +188,7 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void BtnCancel_Click(object sender, EventArgs e)
         {
             var row = gridView3.GetDataRow(gridView3.FocusedRowHandle);
             var ds = ProjectFunctions.GetDataSet(string.Format(" select LoanCanceledTag from LoanMst Where LoanANo='" + row["LoanANo"].ToString() + "'"));
@@ -201,15 +201,15 @@ namespace WindowsFormsApplication1.Forms_Master
                 ProjectFunctions.GetDataSet("update LoanMst set LoanCanceledTag='Y' Where LoanANo='" + row["LoanANo"].ToString() + "'");
             }
 
-            fillGrid();
+            FillGrid();
         }
 
-        private void gridView3_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
+        private void GridView3_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
         {
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             var confirmResult = XtraMessageBox.Show("Are you sure you want to close ??",
                                      "Confirm Delete!!",
@@ -218,7 +218,7 @@ namespace WindowsFormsApplication1.Forms_Master
             {
                 var row = gridView3.GetDataRow(gridView3.FocusedRowHandle);
                 ProjectFunctions.GetDataSet("update LoanMst Set LoanCloseTag='Y' from LoanMst Where LoanANo ='" + row["LoanANo"].ToString() + "'");
-                fillGrid();
+                FillGrid();
 
             }
         }

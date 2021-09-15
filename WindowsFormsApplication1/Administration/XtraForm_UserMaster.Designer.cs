@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(39, 28);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -91,7 +91,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(41, 28);
             this.btnAdd.Text = "&Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // gridControl_UserMaster
             // 
@@ -108,8 +108,8 @@ namespace WindowsFormsApplication1.Administration
             this.gridControl_UserMaster.TabIndex = 1;
             this.gridControl_UserMaster.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_UserMaster});
-            this.gridControl_UserMaster.Load += new System.EventHandler(this.gridControl_UserMaster_Load);
-            this.gridControl_UserMaster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridControl_UserMaster_KeyDown);
+            this.gridControl_UserMaster.Load += new System.EventHandler(this.GridControl_UserMaster_Load);
+            this.gridControl_UserMaster.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GridControl_UserMaster_KeyDown);
             // 
             // userMasterBindingSource
             // 
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1.Administration
             this.gridView_UserMaster.GridControl = this.gridControl_UserMaster;
             this.gridView_UserMaster.Name = "gridView_UserMaster";
             this.gridView_UserMaster.OptionsView.ShowGroupPanel = false;
-            this.gridView_UserMaster.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.gridView_UserMaster_PopupMenuShowing);
+            this.gridView_UserMaster.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.GridView_UserMaster_PopupMenuShowing);
             // 
             // gridColumn_UserName
             // 
@@ -183,7 +183,7 @@ namespace WindowsFormsApplication1.Administration
             this.button_delete.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.button_delete.Name = "button_delete";
             this.button_delete.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.button_delete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.button_delete_ButtonClick);
+            this.button_delete.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Button_delete_ButtonClick);
             // 
             // gridColumn_Edit
             // 

@@ -302,7 +302,7 @@
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Visible = false;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnPrint
             // 
@@ -325,7 +325,7 @@
             this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnDelete.Size = new System.Drawing.Size(68, 28);
             this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnEdit
             // 
@@ -337,7 +337,7 @@
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -349,7 +349,7 @@
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd.Size = new System.Drawing.Size(52, 28);
             this.btnAdd.Text = "Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // splitter1
             // 
@@ -379,7 +379,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdvanceMst";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAdvanceMst_Load);
+            this.Load += new System.EventHandler(this.FrmAdvanceMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReplGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReplGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();

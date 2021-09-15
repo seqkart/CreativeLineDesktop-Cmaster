@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmUserDetails : XtraForm
+    public partial class FrmUserDetails : XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string UserName { get; set; }
         private void SetMyControls()
         {
@@ -26,16 +26,16 @@ namespace WindowsFormsApplication1
             }
         }
 
-        public frmUserDetails()
+        public FrmUserDetails()
         {
             InitializeComponent();
         }
-        private void frmUserDetails_Load(object sender, EventArgs e)
+        private void FrmUserDetails_Load(object sender, EventArgs e)
         {
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
 
                     var str = string.Empty;
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
                     cmbLoginAs.Focus();
                     cmbLoginAs.SelectedIndex = 0;
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT    RoleCode, UserName, Login_As, UserPwd, UserActive FROM UserMaster Where UserName='" + UserName + "'");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -68,7 +68,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtstatusTag_Validating(object sender, CancelEventArgs e)
+        private void TxtstatusTag_Validating(object sender, CancelEventArgs e)
         {
             if (txtstatusTag.Text == "N" || txtstatusTag.Text == "Y")
             {
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1
                 return false;
             }
         }
-        private void frmUserDetails_KeyDown(object sender, KeyEventArgs e)
+        private void FrmUserDetails_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -164,11 +164,11 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     if (ValidateData())
                     {
@@ -202,7 +202,7 @@ namespace WindowsFormsApplication1
                         }
                     }
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     if (Validate())
                     {

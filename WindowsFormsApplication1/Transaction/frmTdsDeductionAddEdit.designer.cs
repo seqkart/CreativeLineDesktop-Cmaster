@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmTdsDeductionAddEdit
+    partial class FrmTdsDeductionAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTdsDeductionAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTdsDeductionAddEdit));
             this.txtReference = new DevExpress.XtraEditors.TextEdit();
             this.txtTDSDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtOnAmount = new DevExpress.XtraEditors.TextEdit();
@@ -100,7 +100,7 @@
             this.txtReference.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtReference.Size = new System.Drawing.Size(463, 24);
             this.txtReference.TabIndex = 6;
-            this.txtReference.Leave += new System.EventHandler(this.txtReference_Leave);
+            this.txtReference.Leave += new System.EventHandler(this.TxtReference_Leave);
             // 
             // txtTDSDesc
             // 
@@ -125,8 +125,8 @@
             this.txtOnAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtOnAmount.Size = new System.Drawing.Size(128, 24);
             this.txtOnAmount.TabIndex = 5;
-            this.txtOnAmount.EditValueChanged += new System.EventHandler(this.txtOnAmount_EditValueChanged);
-            this.txtOnAmount.Leave += new System.EventHandler(this.txtOnAmount_Leave);
+            this.txtOnAmount.EditValueChanged += new System.EventHandler(this.TxtOnAmount_EditValueChanged);
+            this.txtOnAmount.Leave += new System.EventHandler(this.TxtOnAmount_Leave);
             // 
             // txtTTNo
             // 
@@ -185,9 +185,9 @@
             this.txtPCode.Properties.MaxLength = 6;
             this.txtPCode.Size = new System.Drawing.Size(128, 24);
             this.txtPCode.TabIndex = 3;
-            this.txtPCode.EditValueChanged += new System.EventHandler(this.txtPCode_EditValueChanged);
-            this.txtPCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPCode_KeyDown);
-            this.txtPCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPCode_KeyPress);
+            this.txtPCode.EditValueChanged += new System.EventHandler(this.TxtPCode_EditValueChanged);
+            this.txtPCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPCode_KeyDown);
+            this.txtPCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPCode_KeyPress);
             // 
             // txtPDesc
             // 
@@ -219,8 +219,8 @@
             this.txtTDSCode.Properties.MaxLength = 4;
             this.txtTDSCode.Size = new System.Drawing.Size(128, 24);
             this.txtTDSCode.TabIndex = 4;
-            this.txtTDSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTDSCode_KeyDown);
-            this.txtTDSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPCode_KeyPress);
+            this.txtTDSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTDSCode_KeyDown);
+            this.txtTDSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPCode_KeyPress);
             // 
             // label5
             // 
@@ -316,7 +316,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -326,7 +326,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // TextAuthenticate
             // 
@@ -543,8 +543,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmTdsDeductionAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmTdsDeductionAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTdsDeductionAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmTdsDeductionAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTdsDeductionAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtReference.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTDSDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOnAmount.Properties)).EndInit();

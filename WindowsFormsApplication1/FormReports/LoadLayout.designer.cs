@@ -71,7 +71,7 @@
             this.quitBtn.Size = new System.Drawing.Size(23, 23);
             this.quitBtn.TabIndex = 4;
             this.quitBtn.Text = "X";
-            this.quitBtn.Click += new System.EventHandler(this.quitBtn_Click);
+            this.quitBtn.Click += new System.EventHandler(this.QuitBtn_Click);
             // 
             // FileName
             // 

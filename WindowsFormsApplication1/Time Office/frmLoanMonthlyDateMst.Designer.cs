@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmLoanMonthlyDateMst
+    partial class FrmLoanMonthlyDateMst
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoanMonthlyDateMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoanMonthlyDateMst));
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.btn_Quit = new System.Windows.Forms.ToolStripButton();
@@ -92,7 +92,7 @@
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(43, 24);
             this.btn_Quit.Text = "&Quit";
-            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            this.btn_Quit.Click += new System.EventHandler(this.Btn_Quit_Click);
             // 
             // Menu_ToolStrip
             // 
@@ -120,7 +120,7 @@
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(40, 28);
             this.btn_Edit.Text = "&Edit";
-            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
+            this.btn_Edit.Click += new System.EventHandler(this.Btn_Edit_Click);
             // 
             // btn_Add
             // 
@@ -133,7 +133,7 @@
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(42, 28);
             this.btn_Add.Text = "&Add";
-            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            this.btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
             // vRLMstBindingSource
             // 
@@ -283,7 +283,7 @@
             this.Name = "frmLoanMonthlyDateMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmLoanMonthlyDateMst_Load);
+            this.Load += new System.EventHandler(this.FrmLoanMonthlyDateMst_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vRLMstBindingSource)).EndInit();

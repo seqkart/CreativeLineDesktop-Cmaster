@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmUserFinancialYearAddition : XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         private void SetMyControls()
         {
             try
@@ -25,11 +25,11 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
-        private void frmUserFinancialYearAddition_Load(object sender, EventArgs e)
+        private void FrmUserFinancialYearAddition_Load(object sender, EventArgs e)
         {
             try
             {
@@ -46,7 +46,7 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void cmbSelectFY_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbSelectFY_SelectedIndexChanged(object sender, EventArgs e)
         {
             //if (s1 == "aaaa")
             //{
@@ -81,12 +81,12 @@ namespace WindowsFormsApplication1
 
             return true;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnSaveFY_Click(object sender, EventArgs e)
+        private void BtnSaveFY_Click(object sender, EventArgs e)
         {
             try
             {

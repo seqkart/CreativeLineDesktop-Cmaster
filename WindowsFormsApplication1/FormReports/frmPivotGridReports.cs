@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace WindowsFormsApplication1.FormReports
 {
-    public partial class frmPivotGridReports : DevExpress.XtraEditors.XtraForm
+    public partial class FrmPivotGridReports : DevExpress.XtraEditors.XtraForm
     {
 
         public string CurrentUser { get; set; }
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.FormReports
         public DateTime EndDate { get; set; }
         public string LayoutName = string.Empty;
 
-        public frmPivotGridReports()
+        public FrmPivotGridReports()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmJobWork
+    partial class FrmJobWork
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJobWork));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmJobWork));
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
@@ -197,8 +197,8 @@
             this.txtBrandCode.Size = new System.Drawing.Size(126, 24);
             this.txtBrandCode.TabIndex = 546;
             this.txtBrandCode.TabStop = false;
-            this.txtBrandCode.EditValueChanged += new System.EventHandler(this.txtBrandCode_EditValueChanged);
-            this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBrandCode_KeyDown);
+            this.txtBrandCode.EditValueChanged += new System.EventHandler(this.TxtBrandCode_EditValueChanged);
+            this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBrandCode_KeyDown);
             // 
             // txtBrandName
             // 
@@ -341,8 +341,8 @@
             this.txtArtNo.Size = new System.Drawing.Size(126, 24);
             this.txtArtNo.TabIndex = 539;
             this.txtArtNo.TabStop = false;
-            this.txtArtNo.EditValueChanged += new System.EventHandler(this.txtArtNo_EditValueChanged);
-            this.txtArtNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtArtNo_KeyDown);
+            this.txtArtNo.EditValueChanged += new System.EventHandler(this.TxtArtNo_EditValueChanged);
+            this.txtArtNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtArtNo_KeyDown);
             // 
             // txtOrderNo
             // 
@@ -412,7 +412,7 @@
             this.txtPartyCode.Properties.MaxLength = 6;
             this.txtPartyCode.Size = new System.Drawing.Size(90, 24);
             this.txtPartyCode.TabIndex = 533;
-            this.txtPartyCode.EditValueChanged += new System.EventHandler(this.txtPartyCode_EditValueChanged);
+            this.txtPartyCode.EditValueChanged += new System.EventHandler(this.TxtPartyCode_EditValueChanged);
             // 
             // txtSeason
             // 
@@ -638,7 +638,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmJobWork";
             this.Text = "  ";
-            this.Load += new System.EventHandler(this.frmJobWork_Load);
+            this.Load += new System.EventHandler(this.FrmJobWork_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

@@ -75,7 +75,7 @@
             this.chSale2.Properties.Caption = "Sale Report 1";
             this.chSale2.Size = new System.Drawing.Size(98, 18);
             this.chSale2.TabIndex = 5;
-            this.chSale2.CheckedChanged += new System.EventHandler(this.chSale2_CheckedChanged);
+            this.chSale2.CheckedChanged += new System.EventHandler(this.ChSale2_CheckedChanged);
             // 
             // chSale1
             // 
@@ -84,7 +84,7 @@
             this.chSale1.Properties.Caption = "Sale Report 1";
             this.chSale1.Size = new System.Drawing.Size(88, 18);
             this.chSale1.TabIndex = 1;
-            this.chSale1.CheckedChanged += new System.EventHandler(this.chSale1_CheckedChanged);
+            this.chSale1.CheckedChanged += new System.EventHandler(this.ChSale1_CheckedChanged);
             // 
             // btnProcess
             // 
@@ -93,7 +93,7 @@
             this.btnProcess.Size = new System.Drawing.Size(124, 23);
             this.btnProcess.TabIndex = 4;
             this.btnProcess.Text = "Process";
-            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
+            this.btnProcess.Click += new System.EventHandler(this.BtnProcess_Click);
             // 
             // label2
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.splitContainerControl1);
             this.Name = "frmshowroomreport";
             this.Text = "frmshowroomreport";
-            this.Load += new System.EventHandler(this.frmshowroomreport_Load);
+            this.Load += new System.EventHandler(this.Frmshowroomreport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chSale2.Properties)).EndInit();

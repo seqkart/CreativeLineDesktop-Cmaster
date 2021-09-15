@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1.Transaction
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -248,7 +248,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             return s2;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmLoanMonthlyData
+    partial class FrmLoanMonthlyData
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoanMonthlyData));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoanMonthlyData));
             this.HelpGridCtrl = new DevExpress.XtraGrid.GridControl();
             this.HelpGrid = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
@@ -108,7 +108,7 @@
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(43, 24);
             this.btn_Quit.Text = "&Quit";
-            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            this.btn_Quit.Click += new System.EventHandler(this.Btn_Quit_Click);
             // 
             // btn_Save
             // 
@@ -121,7 +121,7 @@
             this.btn_Save.Name = "btn_Save";
             this.btn_Save.Size = new System.Drawing.Size(45, 28);
             this.btn_Save.Text = "&Save";
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.btn_Save.Click += new System.EventHandler(this.Btn_Save_Click);
             // 
             // labelControl2
             // 
@@ -176,7 +176,7 @@
             this.txtEmpCode.Size = new System.Drawing.Size(98, 24);
             this.txtEmpCode.TabIndex = 2;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // labelControl3
             // 
@@ -226,7 +226,7 @@
             this.txtLoanInt.Properties.MaxLength = 5;
             this.txtLoanInt.Size = new System.Drawing.Size(98, 24);
             this.txtLoanInt.TabIndex = 4;
-            this.txtLoanInt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLoanInt_KeyPress);
+            this.txtLoanInt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtLoanInt_KeyPress);
             // 
             // DtMonthYear
             // 
@@ -281,7 +281,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLoanMonthlyData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmLoanMonthlyData_Load);
+            this.Load += new System.EventHandler(this.FrmLoanMonthlyData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridCtrl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);

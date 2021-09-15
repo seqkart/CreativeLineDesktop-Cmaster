@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frm_poAddition_GST
+    partial class Frm_poAddition_GST
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_poAddition_GST));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_poAddition_GST));
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.TextDoc_NO = new DevExpress.XtraEditors.TextEdit();
             this.TextEntryDocType = new DevExpress.XtraEditors.TextEdit();

@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frm_MaterialRecieptInfo_Load(object sender, EventArgs e)
+        private void Frm_MaterialRecieptInfo_Load(object sender, EventArgs e)
         {
             SetMyControls();
             SetMyValidations();
@@ -2371,7 +2371,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
             //new SVC_Form().ShowDialog(this);
         }

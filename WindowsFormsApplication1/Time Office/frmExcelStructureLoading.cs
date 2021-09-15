@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1.Forms_Master
             dt.Columns.Add("EmpESIDTag", typeof(string));
 
         }
-        private string getNewDocumentNo()
+        private string GetNewDocumentNo()
         {
             var s2 = string.Empty;
             try
@@ -79,29 +79,29 @@ namespace WindowsFormsApplication1.Forms_Master
             //ProjectFunctions.GroupCtrlVisualize(panelControl1);
             ProjectFunctions.XtraFormVisualize(this);
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frmExcelDataLoading_Load(object sender, EventArgs e)
+        private void FrmExcelDataLoading_Load(object sender, EventArgs e)
         {
             SetMyControls();
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
             SFeedingGrid.DataSource = null;
             dt.Clear();
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             SFeedingGrid.Refresh();
             var xlConn = string.Empty;
@@ -114,15 +114,13 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             var ds1 = new DataSet();
             var ds2 = new DataSet();
             var ds3 = new DataSet();
             var ds4 = new DataSet();
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+            var MaxRow = ((SFeedingGrid.FocusedView as GridView).RowCount);
             for (var i = 0; i < MaxRow; i++)
             {
                 var currentrow = SFeedingGridView.GetDataRow(i);
@@ -259,19 +257,17 @@ namespace WindowsFormsApplication1.Forms_Master
                 }
                 //if (currentrow["EmpAdharCardNo"].ToString() == string.Empty)
                 //{
-                //    XtraMessageBox.Show("Invalid Aadhar Card No");
+                //    XtraMessageBox.Show("Invalid Aadhaar Card No");
                 //    return false;
                 //}
             }
             return true;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+                var MaxRow = ((SFeedingGrid.FocusedView as GridView).RowCount);
                 if (ValidateData())
                 {
                     using (var con = new SqlConnection(ProjectFunctions.ConnectionString))
@@ -284,7 +280,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
                         for (var i = 0; i < MaxRow; i++)
                         {
-                            var doc = getNewDocumentNo().PadLeft(5, '0');
+                            var doc = GetNewDocumentNo().PadLeft(5, '0');
                             var currentrow = SFeedingGridView.GetDataRow(i);
                             cmd.CommandType = CommandType.Text;
                             //cmd.CommandText = "Insert into EmpMst(EmpPartyCode, EmpDOB,EmpCode,EmpName,EmpFHRelationTag,EmpFHName,EmpDeptCode,EmpDesgCode,EmpDOJ,EmpPFno,EmpUANNo,EmpBasic,EmpHRA,EmpConv,EmpPET,EmpSplAlw,EmpTDS,EmpMscD1,EmpPanNo,EmpAdharCardNo,EmpBankIFSCode,EmpBankAcNo,UnitCode)values(@EmpPartyCode,@EmpDOB,@EmpCode,@EmpName,@EmpFHRelationTag,@EmpFHName,@EmpDeptCode,@EmpDesgCode,@EmpDOJ,@EmpPFno,@EmpUANNo,@EmpBasic,@EmpHRA,@EmpConv,@EmpPET,@EmpSplAlw,@EmpTDS,@EmpMscD1,@EmpPanNo,@EmpAdharCardNo,@EmpBankIFSCode,@EmpBankAcNo,@UnitCode)";

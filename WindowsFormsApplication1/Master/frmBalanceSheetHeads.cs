@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1.Master
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1.Master
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
         private string GetNewBSCode()
@@ -105,7 +105,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
             if (ValidateData())

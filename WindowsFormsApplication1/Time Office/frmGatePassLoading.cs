@@ -285,9 +285,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             var ds1 = new DataSet();
             var ds2 = new DataSet();
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+            var MaxRow = ((SFeedingGrid.FocusedView as GridView).RowCount);
             for (var i = 0; i < MaxRow; i++)
             {
                 var currentrow = SFeedingGridView.GetDataRow(i);
@@ -312,10 +310,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private bool ValidateData()
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-
+            var MaxRow = ((SFeedingGrid.FocusedView as GridView).RowCount);
             for (var i = 0; i < MaxRow; i++)
             {
                 var currentrow = SFeedingGridView.GetDataRow(i);
@@ -360,9 +355,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((SFeedingGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+            var MaxRow = ((SFeedingGrid.FocusedView as GridView).RowCount);
             if (ValidateData())
             {
                 using (var con = new SqlConnection(ProjectFunctions.ConnectionString))

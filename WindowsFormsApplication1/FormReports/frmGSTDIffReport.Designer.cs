@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.FormReports
 {
-    partial class frmGSTDIffReport
+    partial class FrmGSTDIffReport
     {
         /// <summary>
         /// Required designer variable.

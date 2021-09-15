@@ -1392,7 +1392,7 @@ namespace WindowsFormsApplication1.Transaction
 
             e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Select All Records", (o1, e1) =>
              {
-                 var MaxRow = ((HelpGrid.KeyboardFocusView as GridView).RowCount);
+                 var MaxRow = ((HelpGrid.FocusedView as GridView).RowCount);
                  for (var i = 0; i < MaxRow; i++)
                  {
                      HelpGridView.SetRowCellValue(i, HelpGridView.Columns["Select"], true);

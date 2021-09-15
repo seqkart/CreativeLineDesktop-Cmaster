@@ -144,7 +144,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // TextAuthenticate
             // 
@@ -165,7 +165,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lblDocCode
             // 
@@ -212,7 +212,7 @@
             this.txtPrePaidTag.Properties.MaxLength = 6;
             this.txtPrePaidTag.Size = new System.Drawing.Size(30, 24);
             this.txtPrePaidTag.TabIndex = 2;
-            this.txtPrePaidTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtPrePaidTag_Validating);
+            this.txtPrePaidTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPrePaidTag_Validating);
             // 
             // labelControl3
             // 
@@ -256,8 +256,8 @@
             this.txtEmpCode.Properties.MaxLength = 6;
             this.txtEmpCode.Size = new System.Drawing.Size(52, 24);
             this.txtEmpCode.TabIndex = 0;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // labelControl1
             // 
@@ -299,7 +299,7 @@
             this.txtOT.Properties.NullValuePrompt = "0";
             this.txtOT.Size = new System.Drawing.Size(52, 24);
             this.txtOT.TabIndex = 34;
-            this.txtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl7
             // 
@@ -326,7 +326,7 @@
             this.txtPH.Properties.NullValuePrompt = "0";
             this.txtPH.Size = new System.Drawing.Size(52, 24);
             this.txtPH.TabIndex = 4;
-            this.txtPH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtPH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl5
             // 
@@ -353,7 +353,7 @@
             this.txtDW.Properties.NullValuePrompt = "0";
             this.txtDW.Size = new System.Drawing.Size(52, 24);
             this.txtDW.TabIndex = 3;
-            this.txtDW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtDW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl4
             // 
@@ -397,7 +397,7 @@
             this.txtMisc3.Properties.NullValuePrompt = "0";
             this.txtMisc3.Size = new System.Drawing.Size(90, 24);
             this.txtMisc3.TabIndex = 2;
-            this.txtMisc3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtMisc3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl12
             // 
@@ -424,7 +424,7 @@
             this.txtMisc2.Properties.NullValuePrompt = "0";
             this.txtMisc2.Size = new System.Drawing.Size(90, 24);
             this.txtMisc2.TabIndex = 1;
-            this.txtMisc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtMisc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl11
             // 
@@ -451,7 +451,7 @@
             this.txtMisc1.Properties.NullValuePrompt = "0";
             this.txtMisc1.Size = new System.Drawing.Size(90, 24);
             this.txtMisc1.TabIndex = 0;
-            this.txtMisc1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtMisc1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl10
             // 
@@ -493,7 +493,7 @@
             this.txtMiscDed.Properties.NullValuePrompt = "0";
             this.txtMiscDed.Size = new System.Drawing.Size(90, 24);
             this.txtMiscDed.TabIndex = 40;
-            this.txtMiscDed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtMiscDed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl6
             // 
@@ -520,7 +520,7 @@
             this.txtTDS.Properties.NullValuePrompt = "0";
             this.txtTDS.Size = new System.Drawing.Size(90, 24);
             this.txtTDS.TabIndex = 3;
-            this.txtTDS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtTDS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl16
             // 
@@ -548,7 +548,7 @@
             this.txtLWF.Properties.NullValuePrompt = "0";
             this.txtLWF.Size = new System.Drawing.Size(90, 24);
             this.txtLWF.TabIndex = 2;
-            this.txtLWF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtLWF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl15
             // 
@@ -592,7 +592,7 @@
             this.txtML.Properties.NullValuePrompt = "0";
             this.txtML.Size = new System.Drawing.Size(40, 24);
             this.txtML.TabIndex = 38;
-            this.txtML.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtML.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl26
             // 
@@ -619,7 +619,7 @@
             this.txtSL.Properties.NullValuePrompt = "0";
             this.txtSL.Size = new System.Drawing.Size(40, 24);
             this.txtSL.TabIndex = 2;
-            this.txtSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl19
             // 
@@ -646,7 +646,7 @@
             this.txtCL.Properties.NullValuePrompt = "0";
             this.txtCL.Size = new System.Drawing.Size(90, 24);
             this.txtCL.TabIndex = 1;
-            this.txtCL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtCL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl20
             // 
@@ -673,7 +673,7 @@
             this.txtEL.Properties.NullValuePrompt = "0";
             this.txtEL.Size = new System.Drawing.Size(90, 24);
             this.txtEL.TabIndex = 0;
-            this.txtEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDW_KeyPress);
+            this.txtEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
             // labelControl21
             // 
@@ -779,7 +779,7 @@
             this.Name = "frm_EmpSalAddUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "  ";
-            this.Load += new System.EventHandler(this.frm_EmpSalAddUpdate_Load);
+            this.Load += new System.EventHandler(this.Frm_EmpSalAddUpdate_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();

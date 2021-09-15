@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmBranchMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBranchMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string BranchCode { get; set; }
-        public frmBranchMst()
+        public FrmBranchMst()
         {
             InitializeComponent();
         }
@@ -64,25 +64,7 @@ namespace WindowsFormsApplication1.Master
                     txtAddress1.Focus();
                     return false;
                 }
-                //if (txtAddress2.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid Address2");
-                //    txtAddress2.Focus();
-                //    return false;
-                //}
-                //if (txtAddress3.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid Address3");
-                //    txtAddress3.Focus();
-                //    return false;
-                //}
-
-                //if (txtCityCode.Text.Trim().Length == 0)
-                //{
-                //    ProjectFunctions.SpeakError("Invalid City Name");
-                //    txtCityCode.Focus();
-                //    return false;
-                //}
+               
                 if (txtCityName.Text.Trim().Length == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid City Name");

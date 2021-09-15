@@ -6,14 +6,14 @@ namespace WindowsFormsApplication1
 {
     public partial class frmFYCreation : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public int TransId { get; set; }
         public frmFYCreation()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -54,15 +54,15 @@ namespace WindowsFormsApplication1
             }
             return true;
         }
-        private void frmFYCreation_Load(object sender, EventArgs e)
+        private void FrmFYCreation_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 cmbFY.Focus();
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 cmbFY.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT *  FROM FNYear Where TransID='" + TransId + "'");
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void cmbSelectUser_SelectedIndexChanged(object sender, EventArgs e)
+        private void CmbSelectUser_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbFY.SelectedIndex > 0)
             {
@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into FNYear"
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1
                             sqlcon.Close();
                             Close();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE FNYear SET "
                                                 + " Active=@Active"

@@ -40,7 +40,7 @@ namespace HumanResourceManagementSystem
 
             dr.Close();
         }
-        private void cbEmpID_SelectedIndexChanged(object sender, EventArgs e)
+        private void CbEmpID_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -79,7 +79,7 @@ namespace HumanResourceManagementSystem
 
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (cbEmpID.Text == string.Empty)
             {
@@ -297,12 +297,12 @@ namespace HumanResourceManagementSystem
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Hide();
         }
 
-        private void txtTimeIn_TextChanged(object sender, EventArgs e)
+        private void TxtTimeIn_TextChanged(object sender, EventArgs e)
         {
             string str = txtTimeIn.Text.ToString();
             foreach (char c in str)
@@ -318,7 +318,7 @@ namespace HumanResourceManagementSystem
 
         }
 
-        private void txtTimeOut_TextChanged(object sender, EventArgs e)
+        private void TxtTimeOut_TextChanged(object sender, EventArgs e)
         {
             string str = txtTimeOut.Text.ToString();
             foreach (char c in str)
@@ -333,7 +333,7 @@ namespace HumanResourceManagementSystem
 
         }
 
-        private void groupBox1_Paint(object sender, PaintEventArgs e)
+        private void GroupBox1_Paint(object sender, PaintEventArgs e)
         {
 
         }

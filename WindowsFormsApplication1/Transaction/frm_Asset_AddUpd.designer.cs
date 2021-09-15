@@ -252,7 +252,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "&Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -265,7 +265,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btn_Validate
             // 
@@ -278,7 +278,7 @@
             this.btn_Validate.Name = "btn_Validate";
             this.btn_Validate.Size = new System.Drawing.Size(69, 28);
             this.btn_Validate.Text = "&Validate";
-            this.btn_Validate.Click += new System.EventHandler(this.btn_Validate_Click);
+            this.btn_Validate.Click += new System.EventHandler(this.Btn_Validate_Click);
             // 
             // TextAuthenticate
             // 
@@ -1045,8 +1045,8 @@
             this.rdbNo.TabIndex = 9;
             this.rdbNo.Text = "No";
             this.rdbNo.UseVisualStyleBackColor = true;
-            this.rdbNo.CheckedChanged += new System.EventHandler(this.rdbNo_CheckedChanged_1);
-            this.rdbNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rdbNo_KeyDown);
+            this.rdbNo.CheckedChanged += new System.EventHandler(this.RdbNo_CheckedChanged_1);
+            this.rdbNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RdbNo_KeyDown);
             // 
             // rdbYes
             // 
@@ -1060,8 +1060,8 @@
             this.rdbYes.TabStop = true;
             this.rdbYes.Text = "Yes";
             this.rdbYes.UseVisualStyleBackColor = true;
-            this.rdbYes.CheckedChanged += new System.EventHandler(this.rdbYes_CheckedChanged_1);
-            this.rdbYes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.rdbYes_KeyDown);
+            this.rdbYes.CheckedChanged += new System.EventHandler(this.RdbYes_CheckedChanged_1);
+            this.rdbYes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RdbYes_KeyDown);
             // 
             // labelControl15
             // 
@@ -1311,7 +1311,7 @@
             this.btnAttach.Name = "btnAttach";
             this.btnAttach.Size = new System.Drawing.Size(60, 24);
             this.btnAttach.Text = "Attach";
-            this.btnAttach.Click += new System.EventHandler(this.btnAttach_Click);
+            this.btnAttach.Click += new System.EventHandler(this.BtnAttach_Click);
             // 
             // btnOpen
             // 
@@ -1333,7 +1333,7 @@
             this.btnAttachDel.Name = "btnAttachDel";
             this.btnAttachDel.Size = new System.Drawing.Size(58, 24);
             this.btnAttachDel.Text = "Delete";
-            this.btnAttachDel.Click += new System.EventHandler(this.btnAttachDel_Click);
+            this.btnAttachDel.Click += new System.EventHandler(this.BtnAttachDel_Click);
             // 
             // xtraTabPage6
             // 
@@ -1691,7 +1691,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_Asset_AddUpd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frm_Assetmanager_Load);
+            this.Load += new System.EventHandler(this.Frm_Assetmanager_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TextDesc.Properties)).EndInit();

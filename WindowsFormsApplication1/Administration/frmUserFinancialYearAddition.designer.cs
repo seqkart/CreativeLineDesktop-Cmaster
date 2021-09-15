@@ -78,7 +78,7 @@
             this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Visible = false;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -91,7 +91,7 @@
             this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Visible = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label3
             // 
@@ -110,7 +110,7 @@
             this.cmbSelectFY.Name = "cmbSelectFY";
             this.cmbSelectFY.Size = new System.Drawing.Size(305, 25);
             this.cmbSelectFY.TabIndex = 2;
-            this.cmbSelectFY.SelectedIndexChanged += new System.EventHandler(this.cmbSelectFY_SelectedIndexChanged);
+            this.cmbSelectFY.SelectedIndexChanged += new System.EventHandler(this.CmbSelectFY_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -130,7 +130,7 @@
             this.btnSaveFY.TabIndex = 342;
             this.btnSaveFY.Text = "SAVE";
             this.btnSaveFY.UseVisualStyleBackColor = true;
-            this.btnSaveFY.Click += new System.EventHandler(this.btnSaveFY_Click);
+            this.btnSaveFY.Click += new System.EventHandler(this.BtnSaveFY_Click);
             // 
             // frmUserFinancialYearAddition
             // 
@@ -150,7 +150,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmUserFinancialYearAddition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmUserFinancialYearAddition_Load);
+            this.Load += new System.EventHandler(this.FrmUserFinancialYearAddition_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             this.ResumeLayout(false);

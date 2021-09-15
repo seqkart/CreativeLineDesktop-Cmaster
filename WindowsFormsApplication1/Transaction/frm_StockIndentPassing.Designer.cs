@@ -517,7 +517,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_StockIndentPassing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frm_StockIndentPassing_Load);
+            this.Load += new System.EventHandler(this.Frm_StockIndentPassing_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InPassGridCtrl)).EndInit();

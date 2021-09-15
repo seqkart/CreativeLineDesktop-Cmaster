@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1.FormReports
                 }
             }
         }
-        private void btnProcess_Click(object sender, EventArgs e)
+        private void BtnProcess_Click(object sender, EventArgs e)
         {
             try
             {
@@ -290,7 +290,7 @@ namespace WindowsFormsApplication1.FormReports
         //    }
         //}
 
-        private void chSale1_CheckedChanged(object sender, EventArgs e)
+        private void ChSale1_CheckedChanged(object sender, EventArgs e)
         {
             if (chSale1.Checked)
             {
@@ -298,7 +298,7 @@ namespace WindowsFormsApplication1.FormReports
             }
         }
 
-        private void chSale2_CheckedChanged(object sender, EventArgs e)
+        private void ChSale2_CheckedChanged(object sender, EventArgs e)
         {
             if (chSale2.Checked)
             {
@@ -306,7 +306,7 @@ namespace WindowsFormsApplication1.FormReports
             }
         }
 
-        private void frmshowroomreport_Load(object sender, EventArgs e)
+        private void Frmshowroomreport_Load(object sender, EventArgs e)
         {
             //DataSet ds = GetDataSet("Select * from SKU", ShowConnectionString);
             //if(ds.Tables[0].Rows.Count>0)

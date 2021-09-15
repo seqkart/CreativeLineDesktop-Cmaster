@@ -685,7 +685,7 @@
             this.EntryInfo_Grid.OptionsView.ShowGroupPanel = false;
             this.EntryInfo_Grid.OptionsView.ShowIndicator = false;
             this.EntryInfo_Grid.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.EntryInfo_Grid_InitNewRow);
-            this.EntryInfo_Grid.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.gridView1_CustomUnboundColumnData);
+            this.EntryInfo_Grid.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.GridView1_CustomUnboundColumnData);
             // 
             // colAccCode
             // 

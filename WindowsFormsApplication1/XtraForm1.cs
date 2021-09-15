@@ -809,7 +809,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG24":
-                    var PROG24 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG24 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG24";
 
                     PROG24.Show();
@@ -819,7 +819,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG25":
-                    var PROG25 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG25 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG25";
 
                     PROG25.Show();
@@ -924,7 +924,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG49":
-                    var PROG49 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG49 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG49";
 
                     PROG49.Show();
@@ -933,7 +933,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG43":
-                    var PROG43 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG43 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG43";
 
                     PROG43.Show();
@@ -942,7 +942,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG42":
-                    var PROG42 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG42 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG42";
 
                     PROG42.Show();
@@ -954,7 +954,7 @@ namespace WindowsFormsApplication1
                     
                     break;
                 case "PROG52":
-                    var PROG52 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG52 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG52";
 
                     PROG52.Show();
@@ -963,7 +963,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG50":
-                    var PROG50 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG50 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG50";
 
                     PROG50.Show();
@@ -972,7 +972,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG48":
-                    var PROG48 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG48 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG48";
 
                     PROG48.Show();
@@ -984,7 +984,7 @@ namespace WindowsFormsApplication1
                    
                     break;
                 case "PROG38":
-                    var PROG38 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG38 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG38";
 
                     PROG38.Show();
@@ -996,7 +996,7 @@ namespace WindowsFormsApplication1
                    
                     break;
                 case "PROG54":
-                    var PROG54 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG54 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG54";
 
                     PROG54.Show();
@@ -1014,7 +1014,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG59":
-                    var PROG59 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG59 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG59";
 
                     PROG59.Show();
@@ -1023,7 +1023,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG60":
-                    var PROG60 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG60 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG60";
 
                     PROG60.Show();
@@ -1123,7 +1123,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG68":
-                    var PROG68 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG68 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG68";
 
                     PROG68.Show();
@@ -1132,7 +1132,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG71":
-                    var PROG71 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG71 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG71";
 
                     PROG71.Show();
@@ -1141,7 +1141,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG72":
-                    var PROG72 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG72 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG72";
 
                     PROG72.Show();
@@ -1160,7 +1160,7 @@ namespace WindowsFormsApplication1
 
                     break;
                 case "PROG70":
-                    var PROG70 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG70 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG70";
 
                     PROG70.Show();
@@ -1187,7 +1187,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG75":
-                    var PROG75 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG75 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG75";
 
                     PROG75.Show();
@@ -1196,7 +1196,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG76":
-                    var PROG76 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG76 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG76";
 
                     PROG76.Show();
@@ -1205,7 +1205,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG77":
-                    var PROG77 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG77 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG77";
 
                     PROG77.Show();
@@ -1214,7 +1214,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG78":
-                    var PROG78 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG78 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG78";
 
                     PROG78.Show();
@@ -1223,7 +1223,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG79":
-                    var PROG79 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG79 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG79";
 
                     PROG79.Show();
@@ -1250,7 +1250,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG80":
-                    var PROG80 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG80 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG80";
 
                     PROG80.Show();
@@ -1259,7 +1259,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG102":
-                    var PROG102 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG102 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG102";
 
                     PROG102.Show();
@@ -1268,7 +1268,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG104":
-                    var PROG104 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG104 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG104";
 
                     PROG104.Show();
@@ -1277,7 +1277,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG105":
-                    var PROG105 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG105 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG105";
 
                     PROG105.Show();
@@ -1286,7 +1286,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG103":
-                    var PROG103 = new frmProcessSMCommission() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG103 = new FrmProcessSMCommission() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG103";
 
                     PROG103.Show();
@@ -1332,7 +1332,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG108":
-                    var PROG108 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG108 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG108";
 
                     PROG108.Show();
@@ -1342,7 +1342,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG109":
-                    var PROG109 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG109 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG109";
 
                     PROG109.Show();
@@ -1351,7 +1351,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG110":
-                    var PROG110 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG110 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG110";
 
                     PROG110.Show();
@@ -1360,7 +1360,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG111":
-                    var PROG111 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG111 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG111";
 
                     PROG111.Show();
@@ -1369,7 +1369,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG112":
-                    var PROG112 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG112 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG112";
 
                     PROG112.Show();
@@ -1378,7 +1378,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG113":
-                    var PROG113 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG113 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG113";
 
                     PROG113.Show();
@@ -1536,7 +1536,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG136":
-                    var PROG136 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG136 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG136.Show();
                     PROG136.BringToFront();
                     PROG136.Parent = Page;
@@ -1775,7 +1775,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG231":
-                    var PROG231 = new FormReports.frmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG231 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG231.Show();
                     PROG231.BringToFront();
                     PROG231.Parent = Page;

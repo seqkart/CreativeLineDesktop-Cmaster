@@ -11,14 +11,14 @@ namespace WindowsFormsApplication1
         public string Ms1yProperty { get; set; }
         public string LoanNo { get; set; }
         public DateTime LoanADate { get; set; }
-        public string s1 { get; set; }
+        public string S1 { get; set; }
 
         public frmLoanMstAddEdit()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -65,16 +65,16 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void frmLoanMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmLoanMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtEmpCode.Focus();
                 txtLoanDate.EditValue = Convert.ToDateTime(DateTime.Now);
-                txtLoanNo.Text = getNewLoanNo().PadLeft(5, '0');
+                txtLoanNo.Text = GetNewLoanNo().PadLeft(5, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtEmpCode.Focus();
 
@@ -91,17 +91,17 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtLoanAmount_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtLoanAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtLoanInstlmnt_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtLoanInstlmnt_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private string getNewLoanNo()
+        private string GetNewLoanNo()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(LoanANo as int)),000000) from LoanMst");
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into LoanMst"
@@ -134,7 +134,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('000000'+ CAST( ISNULL( max(Cast(LoanANo as int)),0)+1 AS VARCHAR(6)),6)from LoanMst),@LoanAmt,@LoanInstlmnt,@EmpCode,@LoanADate)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE LoanMst SET "
                                                 + " LoanAmt=@LoanAmt,LoanInstlmnt=@LoanInstlmnt,EmpCode=@EmpCode "
@@ -169,12 +169,12 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpName.Text = string.Empty;
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select EmpMst.EmpCode,EmpMst.EmpName from EmpMst", " Where EmpMst.EmpCode", txtEmpCode, txtEmpName, txtLoanAmount, HelpGrid, HelpGridView, e);
         }

@@ -3050,7 +3050,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(35, 26);
             this.simpleButton1.TabIndex = 53;
             this.simpleButton1.Text = "+";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // HelpGridCtrl
             // 
@@ -3154,7 +3154,7 @@
             this.Name = "Frm_MaterialReceipt_Add_Update_GST";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Material Receipt Updation";
-            this.Load += new System.EventHandler(this.frm_MaterialRecieptInfo_Load);
+            this.Load += new System.EventHandler(this.Frm_MaterialRecieptInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TextDoc_NO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEntryDocType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextChoiceRCO.Properties)).EndInit();

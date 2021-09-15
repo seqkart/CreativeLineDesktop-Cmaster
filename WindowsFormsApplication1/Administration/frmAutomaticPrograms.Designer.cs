@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Administration
 {
-    partial class frmAutomaticPrograms
+    partial class FrmAutomaticPrograms
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,7 @@
             this.btnCreateAssemblies.Size = new System.Drawing.Size(161, 32);
             this.btnCreateAssemblies.TabIndex = 0;
             this.btnCreateAssemblies.Text = "Include Assemblies";
-            this.btnCreateAssemblies.Click += new System.EventHandler(this.btnCreateAssemblies_Click);
+            this.btnCreateAssemblies.Click += new System.EventHandler(this.BtnCreateAssemblies_Click);
             // 
             // btnPrimaryKey
             // 
@@ -54,7 +54,7 @@
             this.btnPrimaryKey.Size = new System.Drawing.Size(189, 32);
             this.btnPrimaryKey.TabIndex = 1;
             this.btnPrimaryKey.Text = "Generate Primary Key For Add Edit";
-            this.btnPrimaryKey.Click += new System.EventHandler(this.btnPrimaryKey_Click);
+            this.btnPrimaryKey.Click += new System.EventHandler(this.BtnPrimaryKey_Click);
             // 
             // btnSetMyCotrolsFunction
             // 
@@ -63,7 +63,7 @@
             this.btnSetMyCotrolsFunction.Size = new System.Drawing.Size(161, 32);
             this.btnSetMyCotrolsFunction.TabIndex = 2;
             this.btnSetMyCotrolsFunction.Text = "Set My Controls";
-            this.btnSetMyCotrolsFunction.Click += new System.EventHandler(this.btnSetMyCotrolsFunction_Click);
+            this.btnSetMyCotrolsFunction.Click += new System.EventHandler(this.BtnSetMyCotrolsFunction_Click);
             // 
             // btnGetNewMasterDocNo
             // 
@@ -72,7 +72,7 @@
             this.btnGetNewMasterDocNo.Size = new System.Drawing.Size(189, 84);
             this.btnGetNewMasterDocNo.TabIndex = 3;
             this.btnGetNewMasterDocNo.Text = "Get New Master Doc No";
-            this.btnGetNewMasterDocNo.Click += new System.EventHandler(this.btnGetNewMasterDocNo_Click);
+            this.btnGetNewMasterDocNo.Click += new System.EventHandler(this.BtnGetNewMasterDocNo_Click);
             // 
             // txtMDNTable
             // 

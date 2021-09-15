@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmEmployeeSalaryMstEdit
+    partial class FrmEmployeeSalaryMstEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -128,8 +128,8 @@
             this.txtPetrol1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPetrol1.Size = new System.Drawing.Size(87, 24);
             this.txtPetrol1.TabIndex = 14;
-            this.txtPetrol1.EditValueChanged += new System.EventHandler(this.txtTotal2_EditValueChanged);
-            this.txtPetrol1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPetrol1_KeyPress);
+            this.txtPetrol1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
+            this.txtPetrol1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPetrol1_KeyPress);
             // 
             // txtPetrol
             // 
@@ -148,7 +148,7 @@
             this.txtPetrol.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPetrol.Size = new System.Drawing.Size(87, 24);
             this.txtPetrol.TabIndex = 8;
-            this.txtPetrol.EditValueChanged += new System.EventHandler(this.txtTotal1_EditValueChanged);
+            this.txtPetrol.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // txtConvenyance1
             // 
@@ -167,8 +167,8 @@
             this.txtConvenyance1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtConvenyance1.Size = new System.Drawing.Size(87, 24);
             this.txtConvenyance1.TabIndex = 13;
-            this.txtConvenyance1.EditValueChanged += new System.EventHandler(this.txtTotal2_EditValueChanged);
-            this.txtConvenyance1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtConvenyance1_KeyPress);
+            this.txtConvenyance1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
+            this.txtConvenyance1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtConvenyance1_KeyPress);
             // 
             // txtConvenyance
             // 
@@ -187,7 +187,7 @@
             this.txtConvenyance.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtConvenyance.Size = new System.Drawing.Size(87, 24);
             this.txtConvenyance.TabIndex = 7;
-            this.txtConvenyance.EditValueChanged += new System.EventHandler(this.txtTotal1_EditValueChanged);
+            this.txtConvenyance.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // txtHRA1
             // 
@@ -206,8 +206,8 @@
             this.txtHRA1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtHRA1.Size = new System.Drawing.Size(87, 24);
             this.txtHRA1.TabIndex = 12;
-            this.txtHRA1.EditValueChanged += new System.EventHandler(this.txtTotal2_EditValueChanged);
-            this.txtHRA1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHRA1_KeyPress);
+            this.txtHRA1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
+            this.txtHRA1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHRA1_KeyPress);
             // 
             // txtBasicPay1
             // 
@@ -227,8 +227,8 @@
             this.txtBasicPay1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtBasicPay1.Size = new System.Drawing.Size(87, 24);
             this.txtBasicPay1.TabIndex = 11;
-            this.txtBasicPay1.EditValueChanged += new System.EventHandler(this.txtTotal2_EditValueChanged);
-            this.txtBasicPay1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBasicPay1_KeyPress);
+            this.txtBasicPay1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
+            this.txtBasicPay1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBasicPay1_KeyPress);
             // 
             // labelControl1
             // 
@@ -256,7 +256,7 @@
             this.txtHRA.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtHRA.Size = new System.Drawing.Size(87, 24);
             this.txtHRA.TabIndex = 6;
-            this.txtHRA.EditValueChanged += new System.EventHandler(this.txtTotal1_EditValueChanged);
+            this.txtHRA.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // labelControl22
             // 
@@ -284,7 +284,7 @@
             this.txtBasicPay.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtBasicPay.Size = new System.Drawing.Size(87, 24);
             this.txtBasicPay.TabIndex = 5;
-            this.txtBasicPay.EditValueChanged += new System.EventHandler(this.txtTotal1_EditValueChanged);
+            this.txtBasicPay.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // labelControl23
             // 
@@ -352,7 +352,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(70, 28);
             this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -363,7 +363,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(65, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // DtStartDate
             // 
@@ -433,7 +433,7 @@
             this.txtTotal2.Size = new System.Drawing.Size(86, 24);
             this.txtTotal2.TabIndex = 16;
             this.txtTotal2.TabStop = false;
-            this.txtTotal2.EditValueChanged += new System.EventHandler(this.txtTotal2_EditValueChanged);
+            this.txtTotal2.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             // 
             // txtTotal1
             // 
@@ -454,7 +454,7 @@
             this.txtTotal1.Size = new System.Drawing.Size(86, 24);
             this.txtTotal1.TabIndex = 10;
             this.txtTotal1.TabStop = false;
-            this.txtTotal1.EditValueChanged += new System.EventHandler(this.txtTotal1_EditValueChanged);
+            this.txtTotal1.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // label15
             // 
@@ -482,7 +482,7 @@
             this.txtEmpSplAlw.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtEmpSplAlw.Size = new System.Drawing.Size(86, 24);
             this.txtEmpSplAlw.TabIndex = 9;
-            this.txtEmpSplAlw.EditValueChanged += new System.EventHandler(this.txtTotal1_EditValueChanged);
+            this.txtEmpSplAlw.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // txtEmpSplAlw1
             // 
@@ -501,7 +501,7 @@
             this.txtEmpSplAlw1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtEmpSplAlw1.Size = new System.Drawing.Size(86, 24);
             this.txtEmpSplAlw1.TabIndex = 15;
-            this.txtEmpSplAlw1.EditValueChanged += new System.EventHandler(this.txtTotal2_EditValueChanged);
+            this.txtEmpSplAlw1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             // 
             // frmEmployeeSalaryMstEdit
             // 
@@ -540,7 +540,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmEmployeeSalaryMstEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmEmployeeSalaryMstEdit_Load);
+            this.Load += new System.EventHandler(this.FrmEmployeeSalaryMstEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPetrol1.Properties)).EndInit();

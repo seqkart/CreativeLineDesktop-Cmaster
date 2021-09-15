@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.FormReports
 {
-    partial class frmPivotGridReports
+    partial class FrmPivotGridReports
     {
         /// <summary>
         /// Required designer variable.

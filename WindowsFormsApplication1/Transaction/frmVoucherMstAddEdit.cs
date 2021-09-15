@@ -6,10 +6,10 @@ using System.Data.SqlTypes;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmVoucherMstAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmVoucherMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
         int rowindex = 0;
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string VoucherNo { get; set; }
         public DateTime VoucherDate { get; set; }
 
@@ -19,7 +19,7 @@ namespace WindowsFormsApplication1.Transaction
         DataTable dt = new DataTable();
 #pragma warning restore CS0414 // The field 'frmVoucherMstAddEdit.PSplInfo' is assigned but its value is never used
 
-        public frmVoucherMstAddEdit()
+        public FrmVoucherMstAddEdit()
         {
             InitializeComponent();
             dt.Columns.Add("AccCode", typeof(string));
@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1.Transaction
         private void frmVoucherMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 dtInvoiceDate.EditValue = DateTime.Now;
                 txtVuType.Focus();
@@ -118,19 +118,19 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void txtVuType_EditValueChanged(object sender, EventArgs e)
+        private void TxtVuType_EditValueChanged(object sender, EventArgs e)
         {
             txtVuDesc.Text = string.Empty;
             InfoGrid.DataSource = null;
             dt.Clear();
             SetCrDrValue();
         }
-        private string getNewInvoiceDocumentNo()
+        private string GetNewInvoiceDocumentNo()
         {
             var s2 = string.Empty;
             try
@@ -252,12 +252,12 @@ namespace WindowsFormsApplication1.Transaction
 
             return true;
         }
-        private void txtVuType_KeyDown(object sender, KeyEventArgs e)
+        private void TxtVuType_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select VouCode,VouDesc from VoucherType ", " Where VouCode", txtVuType, txtVuDesc, txtAccCode, HelpGrid, HelpGridView, e);
         }
 
-        private void txtAccCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtAccCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select AccCode,AccName from ActMst ", " Where AccCode", txtAccCode, txtAccName, txtAmount, HelpGrid, HelpGridView, e);
 
@@ -306,7 +306,7 @@ namespace WindowsFormsApplication1.Transaction
                 cmd.Transaction = transaction;
                 try
                 {
-                    string DocNo = getNewInvoiceDocumentNo().ToString().PadLeft(7, '0');
+                    string DocNo = GetNewInvoiceDocumentNo().ToString().PadLeft(7, '0');
                     string str = "Insert Into VuMst(VumNo,VumDate,VumType,VumAmt,VumAutoGen)values(";
                     str = str + "'" + DocNo + "',";
                     str = str + "'" + Convert.ToDateTime(dtInvoiceDate.EditValue).ToString("yyyy-MM-dd") + "',";
@@ -514,7 +514,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
         }
-        private void clear()
+        private void Clear()
         {
             BtnOK.Text = "&OK";
             txtAccCode.Text = string.Empty;
@@ -528,9 +528,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+            var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
             if (MaxRow == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Operation");
@@ -540,13 +538,13 @@ namespace WindowsFormsApplication1.Transaction
                 InfoGridView.DeleteRow(rowindex);
                 InfoGridView.RefreshData();
                 dt.AcceptChanges();
-                clear();
+                Clear();
             }
         }
 
         private void BtnUndo_Click(object sender, EventArgs e)
         {
-            clear();
+            Clear();
         }
 
         private void InfoGrid_DoubleClick(object sender, EventArgs e)
@@ -587,20 +585,20 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateDataForSaving())
             {
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     AddInvoice();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     EditInvoice();
                 }

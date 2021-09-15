@@ -73,7 +73,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "&Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -83,7 +83,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label1
             // 
@@ -109,7 +109,7 @@
             this.cmbFY.Name = "cmbFY";
             this.cmbFY.Size = new System.Drawing.Size(140, 25);
             this.cmbFY.TabIndex = 316;
-            this.cmbFY.SelectedIndexChanged += new System.EventHandler(this.cmbSelectUser_SelectedIndexChanged);
+            this.cmbFY.SelectedIndexChanged += new System.EventHandler(this.CmbSelectUser_SelectedIndexChanged);
             // 
             // labelControl3
             // 
@@ -196,7 +196,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmFYCreation";
-            this.Load += new System.EventHandler(this.frmFYCreation_Load);
+            this.Load += new System.EventHandler(this.FrmFYCreation_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties.CalendarTimeProperties)).EndInit();

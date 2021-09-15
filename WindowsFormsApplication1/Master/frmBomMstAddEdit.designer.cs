@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmBomMstAddEdit
+    partial class FrmBomMstAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBomMstAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBomMstAddEdit));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -449,7 +449,7 @@
             this.txtPrdAsgnCode1.Size = new System.Drawing.Size(84, 24);
             this.txtPrdAsgnCode1.TabIndex = 2;
             this.txtPrdAsgnCode1.EditValueChanged += new System.EventHandler(this.TxtPrdAsgnCode1_EditValueChanged);
-            this.txtPrdAsgnCode1.Enter += new System.EventHandler(this.txtPrdAsgnCode1_Enter);
+            this.txtPrdAsgnCode1.Enter += new System.EventHandler(this.TxtPrdAsgnCode1_Enter);
             this.txtPrdAsgnCode1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPadAsgnCode1_KeyDown);
             // 
             // label1
@@ -530,7 +530,7 @@
             this.txtActive.Properties.MaxLength = 8;
             this.txtActive.Size = new System.Drawing.Size(48, 24);
             this.txtActive.TabIndex = 383;
-            this.txtActive.Validating += new System.ComponentModel.CancelEventHandler(this.txtActive_Validating);
+            this.txtActive.Validating += new System.ComponentModel.CancelEventHandler(this.TxtActive_Validating);
             // 
             // frmBomMstAddEdit
             // 

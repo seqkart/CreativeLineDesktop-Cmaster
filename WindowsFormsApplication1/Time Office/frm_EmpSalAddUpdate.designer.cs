@@ -160,7 +160,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // TextAuthenticate
             // 
@@ -181,7 +181,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lblDocCode
             // 
@@ -973,7 +973,7 @@
             this.Name = "frm_EmpSalAddUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "  ";
-            this.Load += new System.EventHandler(this.frm_EmpSalAddUpdate_Load);
+            this.Load += new System.EventHandler(this.Frm_EmpSalAddUpdate_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();

@@ -13,12 +13,12 @@ namespace WindowsFormsApplication1.Forms_Master
 
         public string LoanNo { get; set; }
         public string LoanADate { get; set; }
-        public string s1
+        public string S1
         {
             get => _s1;
             set => _s1 = value;
         }
-        public string empcode
+        public string Empcode
         {
             get => _empcode;
             set => _empcode = value;
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Forms_Master
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
             if (txtMonthYear.Text.Trim().Length == 0)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Invalid Month Year", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Invalid Month Year", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtMonthYear.Focus();
                 return false;
             }
@@ -66,14 +66,14 @@ namespace WindowsFormsApplication1.Forms_Master
 
             if (txtEmpCode.Text.Trim().Length == 0)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Invalid EmpCode", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Invalid EmpCode", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtEmpCode.Focus();
                 return false;
             }
 
             if (txtEmpName.Text.Trim().Length == 0)
             {
-                DevExpress.XtraEditors.XtraMessageBox.Show("Invalid EmpName", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                DevExpress.XtraEditors.XtraMessageBox.Show("Invalid EmpName", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtEmpCode.Focus();
                 return false;
             }
@@ -105,10 +105,10 @@ namespace WindowsFormsApplication1.Forms_Master
         //}
 
 
-        private void frmLoanMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmLoanMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 txtMonthYear.Focus();
                 txtMonthYear.EditValue = Convert.ToDateTime(DateTime.Now);
@@ -118,16 +118,16 @@ namespace WindowsFormsApplication1.Forms_Master
                 txtLoanNo.Text = getNewLoanNo().PadLeft(5, '0');
 
             }
-            if (s1 == "Edit" || s1 == "View")
+            if (S1 == "Edit" || S1 == "View")
             {
                 txtMonthYear.Enabled = false;
                 txtEmpCode.Enabled = false;
 
-                if (s1 == "View")
+                if (S1 == "View")
                 {
                     btnSave.Enabled = false;
                 }
-                //var ds = ProjectFunctionsUtils.GetDataSet(string.Format("SELECT   LoanMst.LoanLUyrmn,   LoanMST.LoanPymtMode, LoanMST.LoanADate, LoanMST.LoanANo, LoanMST.LoanID, LoanMST.EmpCode, LoanMST.LoanType, LoanMST.LoanAmt, LoanMST.LoanInstlmnt, LoanMST.LoanVDate, LoanMST.LoanVNo, LoanMST.LoanVType, empmst.EmpName, DeptMst.DeptDesc, LoanMST.LoanBankCode, actmst.AccName FROM         LoanMST LEFT OUTER JOIN actmst ON LoanMST.LoanBankCode = actmst.AccCode LEFT OUTER JOIN empmst ON LoanMST.EmpCode = empmst.EmpCode LEFT OUTER JOIN DeptMst ON empmst.EmpDeptCode = DeptMst.DeptCode Where LoanANo='" + LoanNo + "' And LoanADate='" + Convert.ToDateTime(LoanADate).ToString("yyyy-MM-dd") + "'"));
+               
                 string sql_query = "sp_LoadLoan_Details '" + LoanNo + "', '" + Convert.ToDateTime(LoanADate).ToString("yyyy-MM-dd") + "'";
                 PrintLogWin.PrintLog(sql_query);
 
@@ -155,12 +155,12 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void txtLoanAmount_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtLoanAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtLoanInstlmnt_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtLoanInstlmnt_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
@@ -184,11 +184,11 @@ namespace WindowsFormsApplication1.Forms_Master
 
 
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
-                if (s1 == "Add")
+                if (S1 == "Add")
                 {
                     var strQry = " Insert into LoanMst";
                     strQry = strQry + " (EmpCode,LoanAmt,LoanInstlmnt,LoanLUyrmn,LoanANo,LoanFBy,LoanFDt,LoanADate)";
@@ -217,7 +217,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     }
                 }
 
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     var strQry = " UPDATE    LoanMst";
                     strQry = strQry + " SET  ";
@@ -244,14 +244,14 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpName.Text = string.Empty;
             txtDept.Text = string.Empty;
             txtPreviousInstlmnt.Text = "0";
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

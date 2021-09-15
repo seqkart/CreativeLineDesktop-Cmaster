@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmVoucherMstAddEdit
+    partial class FrmVoucherMstAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVoucherMstAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVoucherMstAddEdit));
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -281,7 +281,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -291,7 +291,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // dtInvoiceDate
             // 
@@ -333,7 +333,7 @@
             this.label2.Size = new System.Drawing.Size(27, 17);
             this.label2.TabIndex = 420;
             this.label2.Text = "Date";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label4
             // 
@@ -415,7 +415,7 @@
             this.txtAccCode.Properties.MaxLength = 8;
             this.txtAccCode.Size = new System.Drawing.Size(91, 24);
             this.txtAccCode.TabIndex = 426;
-            this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccCode_KeyDown);
+            this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown);
             // 
             // label6
             // 
@@ -489,8 +489,8 @@
             this.txtVuType.Properties.MaxLength = 6;
             this.txtVuType.Size = new System.Drawing.Size(91, 24);
             this.txtVuType.TabIndex = 423;
-            this.txtVuType.EditValueChanged += new System.EventHandler(this.txtVuType_EditValueChanged);
-            this.txtVuType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtVuType_KeyDown);
+            this.txtVuType.EditValueChanged += new System.EventHandler(this.TxtVuType_EditValueChanged);
+            this.txtVuType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtVuType_KeyDown);
             // 
             // txtDrCr
             // 

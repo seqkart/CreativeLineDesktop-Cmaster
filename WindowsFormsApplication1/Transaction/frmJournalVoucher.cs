@@ -405,6 +405,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 catch (Exception ex)
                 {
+                    ProjectFunctions.SpeakError(ex.Message);
                     transaction.Rollback();
                 }
             }
@@ -483,6 +484,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 catch (Exception ex)
                 {
+                    ProjectFunctions.SpeakError(ex.Message);
                     transaction.Rollback();
                 }
             }

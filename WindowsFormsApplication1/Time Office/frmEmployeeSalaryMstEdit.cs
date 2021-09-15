@@ -7,12 +7,12 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Forms_Master
 {
-    public partial class frmEmployeeSalaryMstEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmEmployeeSalaryMstEdit : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
-        public string empcode { get; set; }
+        public string S1 { get; set; }
+        public string Empcode { get; set; }
 
-        public frmEmployeeSalaryMstEdit()
+        public FrmEmployeeSalaryMstEdit()
         {
             InitializeComponent();
         }
@@ -24,16 +24,16 @@ namespace WindowsFormsApplication1.Forms_Master
             ProjectFunctions.ButtonVisualize(this);
 
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frmEmployeeSalaryMstEdit_Load(object sender, EventArgs e)
+        private void FrmEmployeeSalaryMstEdit_Load(object sender, EventArgs e)
         {
             DtStartDate.EditValue = DateTime.Now;
             SetMyControls();
-            var ds = ProjectFunctions.GetDataSet("Select * from EmpMst where EmpCode='" + empcode + "'");
+            var ds = ProjectFunctions.GetDataSet("Select * from EmpMst where EmpCode='" + Empcode + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 txtEmpCode.Text = ds.Tables[0].Rows[0]["EmpCode"].ToString();
@@ -55,18 +55,18 @@ namespace WindowsFormsApplication1.Forms_Master
                 txtEmpSplAlw1.Text = ds.Tables[0].Rows[0]["EmpSplAlw"].ToString();
 
 
-                if (validateData1())
+                if (ValidateData1())
                 {
                     txtTotal2.Text = (Convert.ToDecimal(txtBasicPay1.Text) + Convert.ToDecimal(txtHRA1.Text) + Convert.ToDecimal(txtPetrol1.Text) + Convert.ToDecimal(txtConvenyance1.Text) + Convert.ToDecimal(txtEmpSplAlw1.Text)).ToString();
                 }
             }
             txtTotal1.Text = (Convert.ToDecimal(txtBasicPay.Text) + Convert.ToDecimal(txtHRA.Text) + Convert.ToDecimal(txtPetrol.Text) + Convert.ToDecimal(txtConvenyance.Text) + Convert.ToDecimal(txtEmpSplAlw.Text)).ToString();
 
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DtStartDate.Properties.ReadOnly = true;
 
-                var ds1 = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where EmpCode='" + empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
+                var ds1 = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where EmpCode='" + Empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
                 if (ds1.Tables[0].Rows.Count > 0)
                 {
                     txtBasicPay1.Text = ds1.Tables[0].Rows[0]["EmpBasic"].ToString();
@@ -80,14 +80,14 @@ namespace WindowsFormsApplication1.Forms_Master
                     btnSave.Visible = false;
                     ProjectFunctions.SpeakError("No Salary Structure Added For This Employee.");
                 }
-                if (validateData1())
+                if (ValidateData1())
                 {
                     txtTotal2.Text = (Convert.ToDecimal(txtBasicPay1.Text) + Convert.ToDecimal(txtHRA1.Text) + Convert.ToDecimal(txtPetrol1.Text) + Convert.ToDecimal(txtConvenyance1.Text) + Convert.ToDecimal(txtEmpSplAlw1.Text)).ToString();
                 }
 
                 ///////
                 //var ds2 = ProjectFunctions.GetDataSet("Select * from  EmpMst where EmpCode='" + empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
-                var ds2 = ProjectFunctions.GetDataSet("Select * from  EmpMst where EmpCode='" + empcode + "'");
+                var ds2 = ProjectFunctions.GetDataSet("Select * from  EmpMst where EmpCode='" + Empcode + "'");
                 if (ds2.Tables[0].Rows.Count > 0)
                 {
                     txtBasicPay.Text = ds2.Tables[0].Rows[0]["EmpBasic"].ToString();
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     txtConvenyance.Text = ds2.Tables[0].Rows[0]["EmpConv"].ToString();
                     txtEmpSplAlw.Text = ds2.Tables[0].Rows[0]["EmpSplAlw"].ToString();
                 }
-                if (validateData())
+                if (ValidateData())
                 {
                     txtTotal1.Text = (Convert.ToDecimal(txtBasicPay.Text) + Convert.ToDecimal(txtHRA.Text) + Convert.ToDecimal(txtPetrol.Text) + Convert.ToDecimal(txtConvenyance.Text) + Convert.ToDecimal(txtEmpSplAlw.Text)).ToString();
                 }
@@ -104,57 +104,57 @@ namespace WindowsFormsApplication1.Forms_Master
         }
 
 
-        private void txtBasicPay1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtBasicPay1_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtHRA1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtHRA1_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtConvenyance1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtConvenyance1_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtPetrol1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtPetrol1_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtNAllowance11_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNAllowance11_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtNAllowance21_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNAllowance21_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtNAllowance31_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNAllowance31_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtNAllowance41_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtNAllowance41_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtMiscAllowance11_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtMiscAllowance11_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtMiscAllowance21_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtMiscAllowance21_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private bool validateData()
+        private bool ValidateData()
         {
             if (txtBasicPay.Text.Length == 0)
             {
@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1.Forms_Master
             return true;
         }
 
-        private bool validateData1()
+        private bool ValidateData1()
         {
             if (txtBasicPay1.Text.Length == 0)
             {
@@ -211,7 +211,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
         private void EditSalary(bool isAdded)
         {
-            var ds1 = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where EmpCode='" + empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
+            var ds1 = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where EmpCode='" + Empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
             if (ds1.Tables[0].Rows.Count > 0)
             {
                 var Str = "Update EMPMST_MDATA set ";
@@ -222,7 +222,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 Str = Str + " EmpDUUserID='" + GlobalVariables.CurrentUser + "',";
                 Str = Str + " EmDUDt='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "',";
                 Str = Str + "EmpSplAlw ='" + Convert.ToDecimal(txtEmpSplAlw1.Text.Trim()) + "'";
-                Str = Str + "  where empcode='" + empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'";
+                Str = Str + "  where empcode='" + Empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'";
 
                 if (ConvertTo.IntVal(Convert.ToDecimal(txtBasicPay1.Text)) != 0)
                 {
@@ -258,7 +258,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void EditSalary_2(bool isAdded)
         {
-            var ds1 = ProjectFunctions.GetDataSet("Select * from  EmpMST where EmpCode='" + empcode + "'");
+            var ds1 = ProjectFunctions.GetDataSet("Select * from  EmpMST where EmpCode='" + Empcode + "'");
             if (ds1.Tables[0].Rows.Count > 0)
             {
                 var Str = "Update EmpMST set ";
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 Str = Str + " EmpDUUserID='" + GlobalVariables.CurrentUser + "',";
                 Str = Str + " EmDUDt='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "',";
                 Str = Str + " EmpSplAlw ='" + Convert.ToDecimal(txtEmpSplAlw.Text.Trim()) + "'";
-                Str = Str + " Where EmpCode='" + empcode + "'";
+                Str = Str + " Where EmpCode='" + Empcode + "'";
 
 
                 if (ConvertTo.IntVal(Convert.ToDecimal(txtBasicPay.Text)) != 0)
@@ -304,7 +304,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
         private void AddSalary()
         {
-            var ds1 = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where EmpCode='" + empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
+            var ds1 = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where EmpCode='" + Empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
             if (ds1.Tables[0].Rows.Count > 0)
             {
                 XtraMessageBox.Show("Entry Already Exists For Same Month Year");
@@ -398,23 +398,23 @@ namespace WindowsFormsApplication1.Forms_Master
         //        }
         //    }
         //}
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             //MessageBox.Show((txtBasicPay.Text) + "");
             //MessageBox.Show((txtBasicPay1.Text) + "");
             //MessageBox.Show(ConvertTo.IntVal(Convert.ToDecimal(txtBasicPay.Text)) + "");
             //MessageBox.Show(ConvertTo.IntVal(Convert.ToDecimal(txtBasicPay1.Text)) + "");
 
-            if (validateData1())
+            if (ValidateData1())
             {
-                if (s1 == "Add")
+                if (S1 == "Add")
                 {
                     AddSalary();
                     //();//Add in EmpMst
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
-                    var ds = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where empcode='" + empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
+                    var ds = ProjectFunctions.GetDataSet("Select * from  EMPMST_MDATA where empcode='" + Empcode + "' And DATEPART(yy, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy") + "' And DATEPART(MM, EmpDDate)='" + Convert.ToDateTime(DtStartDate.Text).ToString("MM") + "'");
                     if (ds.Tables[0].Rows.Count > 0)
                     {
                         if (ds.Tables[0].Rows[0]["EmpPassbyUser"].ToString() == string.Empty)
@@ -443,7 +443,7 @@ namespace WindowsFormsApplication1.Forms_Master
 
             }
         }
-        private void frmEmployeeSalaryMstEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmEmployeeSalaryMstEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -452,22 +452,22 @@ namespace WindowsFormsApplication1.Forms_Master
         }
 
 
-        private void txtEmpLTCalw1_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtEmpLTCalw1_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtTotal1_EditValueChanged(object sender, EventArgs e)
+        private void TxtTotal1_EditValueChanged(object sender, EventArgs e)
         {
-            if (validateData())
+            if (ValidateData())
             {
                 txtTotal1.Text = (Convert.ToDecimal(txtBasicPay.Text) + Convert.ToDecimal(txtHRA.Text) + Convert.ToDecimal(txtPetrol.Text) + Convert.ToDecimal(txtConvenyance.Text) + Convert.ToDecimal(txtEmpSplAlw.Text)).ToString();
             }
         }
 
-        private void txtTotal2_EditValueChanged(object sender, EventArgs e)
+        private void TxtTotal2_EditValueChanged(object sender, EventArgs e)
         {
-            if (validateData1())
+            if (ValidateData1())
             {
                 txtTotal2.Text = (Convert.ToDecimal(txtBasicPay1.Text) + Convert.ToDecimal(txtHRA1.Text) + Convert.ToDecimal(txtPetrol1.Text) + Convert.ToDecimal(txtConvenyance1.Text) + Convert.ToDecimal(txtEmpSplAlw1.Text)).ToString();
             }

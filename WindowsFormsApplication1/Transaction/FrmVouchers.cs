@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private string getNewInvoiceDocumentNo()
+        private string GetNewInvoiceDocumentNo()
         {
             var s2 = string.Empty;
             try
@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtVoucherDate.EditValue = DateTime.Now;
                 txtVoucherTypeCode.Select();
 
-                txtVoucherNo.Text = getNewInvoiceDocumentNo().ToString();
+                txtVoucherNo.Text = GetNewInvoiceDocumentNo().ToString();
             }
             else
             {
@@ -423,7 +423,7 @@ namespace WindowsFormsApplication1.Transaction
                 cmd.Transaction = transaction;
                 try
                 {
-                    string DocNo = getNewInvoiceDocumentNo().ToString();
+                    string DocNo = GetNewInvoiceDocumentNo().ToString();
                     string str = "Insert Into VuMst(VumNo,VumDate,VumType,VumAmt,VumAutoGen,VumBCode,ShortNarration,LongNarration)values(";
                     str = str + "'" + DocNo + "',";
                     str = str + "'" + Convert.ToDateTime(txtVoucherDate.EditValue).ToString("yyyy-MM-dd") + "',";
@@ -486,6 +486,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 catch (Exception ex)
                 {
+                    ProjectFunctions.SpeakError(ex.Message);
                     transaction.Rollback();
                 }
             }
@@ -587,6 +588,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
                 catch (Exception ex)
                 {
+                    ProjectFunctions.SpeakError(ex.Message);
                     transaction.Rollback();
                 }
             }

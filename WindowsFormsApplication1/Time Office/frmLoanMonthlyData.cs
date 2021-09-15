@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Forms_Master
 {
-    public partial class frmLoanMonthlyData : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLoanMonthlyData : DevExpress.XtraEditors.XtraForm
     {
 
         private SqlConnection con = new SqlConnection(ProjectFunctions.ConnectionString);
@@ -14,11 +14,11 @@ namespace WindowsFormsApplication1.Forms_Master
         public string LoanId { get; set; }
         public bool IsUpdate { get; set; }
         public string RAid { get; set; }
-        public frmLoanMonthlyData()
+        public FrmLoanMonthlyData()
         {
             InitializeComponent();
         }
-        private bool validate()
+        private bool Validate()
         {
             if (txtEmpCode.Text.Length == 0 || txtEmpCode.Text == " ")
             {
@@ -37,9 +37,9 @@ namespace WindowsFormsApplication1.Forms_Master
             return true;
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
+        private void Btn_Save_Click(object sender, EventArgs e)
         {
-            if (validate())
+            if (Validate())
             {
                 txt.Focus();
                 var cmd = con.CreateCommand();
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Forms_Master
             ProjectFunctions.ButtonVisualize(this);
         }
 
-        private void frmLoanMonthlyData_Load(object sender, EventArgs e)
+        private void FrmLoanMonthlyData_Load(object sender, EventArgs e)
         {
 
             SetMyControls();
@@ -102,22 +102,17 @@ namespace WindowsFormsApplication1.Forms_Master
             }
         }
 
-        private void btn_Quit_Click(object sender, EventArgs e)
+        private void Btn_Quit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void txtLoanAmt_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtLoanInt_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtLoanInt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ProjectFunctions.NumericWithDecimal(e);
-        }
-
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Down)
             {

@@ -973,8 +973,7 @@ namespace WindowsFormsApplication1.Transaction
 
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                    var MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                    var MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
 
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
@@ -1359,7 +1358,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                int MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
                 if (MaxRow > 0)
                 {
 
@@ -1399,7 +1398,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                int MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
                 if (MaxRow > 0)
                 {
 
@@ -1468,7 +1467,7 @@ namespace WindowsFormsApplication1.Transaction
             try
             {
 
-                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                int MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
                 if (MaxRow > 0)
                 {
 
@@ -1511,7 +1510,7 @@ namespace WindowsFormsApplication1.Transaction
 
             try
             {
-                int MaxRow = (InfoGrid.KeyboardFocusView as GridView).RowCount;
+                int MaxRow = (InfoGrid.FocusedView as GridView).RowCount;
                 if (MaxRow > 0)
                 {
 

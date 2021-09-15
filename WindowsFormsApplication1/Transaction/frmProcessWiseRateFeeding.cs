@@ -125,13 +125,13 @@ namespace WindowsFormsApplication1.Transaction
             txtWorkerName.Text = String.Empty;
         }
 
-        private void txtWorkerCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtWorkerCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select WRKSYSID,WRKNAME from WORKER", " Where WRKSYSID", txtWorkerCode, txtWorkerName, txtWorkerCode, HelpGrid, HelpGridView, e);
 
         }
 
-        private void frmProcessWiseRateFeeding_Load(object sender, EventArgs e)
+        private void FrmProcessWiseRateFeeding_Load(object sender, EventArgs e)
         {
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
@@ -139,12 +139,12 @@ namespace WindowsFormsApplication1.Transaction
             //lblWorker.Visible = false;
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (chContratcor.Checked)
             {
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void lblContrator_Click(object sender, EventArgs e)
+        private void LblContrator_Click(object sender, EventArgs e)
         {
 
         }

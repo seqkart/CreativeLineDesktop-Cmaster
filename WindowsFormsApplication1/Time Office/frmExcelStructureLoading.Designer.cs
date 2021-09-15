@@ -101,7 +101,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -112,7 +112,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // toolStripButton1
             // 
@@ -124,7 +124,7 @@
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.toolStripButton1.Size = new System.Drawing.Size(79, 28);
             this.toolStripButton1.Text = "Validate";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // btnRefresh
             // 
@@ -136,7 +136,7 @@
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnRefresh.Size = new System.Drawing.Size(77, 28);
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // btnLoad
             // 
@@ -148,7 +148,7 @@
             this.btnLoad.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnLoad.Size = new System.Drawing.Size(57, 28);
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // SFeedingGrid
             // 
@@ -473,7 +473,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // frmExcelStructureLoading
             // 
@@ -488,7 +488,7 @@
             this.Name = "frmExcelStructureLoading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmExcelDataLoading_Load);
+            this.Load += new System.EventHandler(this.FrmExcelDataLoading_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SFeedingGrid)).EndInit();

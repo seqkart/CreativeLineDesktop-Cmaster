@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1.Production
 
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1.Production
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {

@@ -5,19 +5,19 @@ using System.Drawing;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmProcessSMCommission : DevExpress.XtraEditors.XtraForm
+    public partial class FrmProcessSMCommission : DevExpress.XtraEditors.XtraForm
     {
-        public frmProcessSMCommission()
+        public FrmProcessSMCommission()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void fillGrid()
+        private void FillGrid()
         {
             var ds = ProjectFunctions.GetDataSet("	SELECT DISTINCT ActMst.AccCode, ActMst.AccName FROM            InvoiceMst left outer join ActMst ON InvoiceMst.ImPartyCode = ActMst.AccCode WHERE        (InvoiceMst.ImType = 'S') and Imdate between '" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy-MM-dd") + "' and '" + Convert.ToDateTime(DtEndDate.Text).ToString("yyyy-MM-dd") + "'");
             ds.Tables[0].Columns.Add("Select", typeof(bool));
@@ -48,18 +48,18 @@ namespace WindowsFormsApplication1
             ProjectFunctions.ButtonVisualize(panelControl1);
         }
 
-        private void frmProcessSMCommission_Load(object sender, EventArgs e)
+        private void FrmProcessSMCommission_Load(object sender, EventArgs e)
         {
             SetMyControls();
             DtStartDate.EditValue = DateTime.Now;
             DtEndDate.EditValue = DateTime.Now;
 
-            fillGrid();
+            FillGrid();
         }
 
         private void Btn_RefreshGridData_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
 
         private bool ValidateData()
@@ -105,7 +105,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void btnProcess_Click(object sender, EventArgs e)
+        private void BtnProcess_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -138,14 +138,12 @@ namespace WindowsFormsApplication1
                     }
 
                 }
-                fillGrid();
+                FillGrid();
             }
         }
-        private void btnSelectALL_CheckedChanged(object sender, EventArgs e)
+        private void BtnSelectALL_CheckedChanged(object sender, EventArgs e)
         {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-            var MaxRow = ((ReplGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+            var MaxRow = ((ReplGrid.FocusedView as GridView).RowCount);
             if (btnSelectALL.Checked == true)
             {
                 for (var i = 0; i < MaxRow; i++)

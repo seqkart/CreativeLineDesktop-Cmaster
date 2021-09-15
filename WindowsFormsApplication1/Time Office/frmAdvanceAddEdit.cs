@@ -12,14 +12,14 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
 
 
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ExId { get; set; }
         public frmAdvanceAddEdit()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -55,19 +55,19 @@ namespace WindowsFormsApplication1.Forms_Transaction
             txtSalary.Text = ds.Tables[0].Rows[0][0].ToString();
         }
 
-        private void frmAdvanceAddEdit_Load(object sender, EventArgs e)
+        private void FrmAdvanceAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 DtDate.Enabled = true;
                 DtDate.EditValue = DateTime.Now;
                 DtDateforMonth.EditValue = DateTime.Now;
-                txtAdvanceNo.Text = getNewLoanPassNo().PadLeft(6, '0');
+                txtAdvanceNo.Text = GetNewLoanPassNo().PadLeft(6, '0');
                 txtType.Text = "A";
                 DtDate.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DtDateforMonth.Enabled = false;
                 DtDate.Enabled = false;
@@ -162,7 +162,7 @@ string.Empty;
                 txtEmpCode.Focus();
                 return false;
             }
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from ExMst Where ExEmpCode='" + txtEmpCode.Text + "' And ExDate='" + Convert.ToDateTime(DtDate.Text).ToString("yyyy-MM-dd") + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -194,11 +194,11 @@ string.Empty;
 
             return true;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             try
             {
-                if (s1 == "Add")
+                if (S1 == "Add")
                 {
                     if (Convert.ToDateTime(DtDate.Text).Date.Day <= 10)
                     {
@@ -210,7 +210,7 @@ string.Empty;
                     }
                     if (ValidateData())
                     {
-                        string DocNo = getNewLoanPassNo().PadLeft(6, '0');
+                        string DocNo = GetNewLoanPassNo().PadLeft(6, '0');
                         var str = "Insert into ExMst(ExDate,ExEmpCode,ExAmt,ExTag,ExDatePost,ExFedDate,ExNo";
                         str = str + ")values(";
                         str = str + "'" + Convert.ToDateTime(DtDate.Text).ToString("yyyy-MM-dd") + "',";
@@ -241,7 +241,7 @@ string.Empty;
                         //this.Close();
                     }
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     if (ValidateData())
                     {
@@ -281,7 +281,7 @@ string.Empty;
             }
         }
 
-        private string getNewLoanPassNo()
+        private string GetNewLoanPassNo()
         {
             var s2 = string.Empty;
 
@@ -297,17 +297,17 @@ string.Empty;
             }
             return s2;
         }
-        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtSalary_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtSalary_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpCodeDesc.Text = string.Empty;
         }
@@ -337,7 +337,7 @@ string.Empty;
         }
 
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -422,7 +422,7 @@ string.Empty;
 
         }
 
-        private void txtType_Validating(object sender, CancelEventArgs e)
+        private void TxtType_Validating(object sender, CancelEventArgs e)
         {
             if (txtType.Text == "A" || txtType.Text == "C" || txtType.Text == "F" || txtType.Text == "L" || txtType.Text == "T")
             {
@@ -434,7 +434,7 @@ string.Empty;
             }
         }
 
-        private void frmAdvanceAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmAdvanceAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -454,9 +454,9 @@ string.Empty;
             }
         }
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 if (txtPassword.Text == "ADV123")
                 {
@@ -465,34 +465,34 @@ string.Empty;
             }
         }
 
-        private void txtEmpCode_Leave(object sender, EventArgs e)
+        private void TxtEmpCode_Leave(object sender, EventArgs e)
         {
         }
 
-        private void txtEmpCode_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtType_Leave(object sender, EventArgs e)
+        private void TxtEmpCode_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void txtAmount_Leave(object sender, EventArgs e)
+        private void TxtType_Leave(object sender, EventArgs e)
         {
 
         }
 
-        private void txtAmount_KeyDown(object sender, KeyEventArgs e)
+        private void TxtAmount_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtAmount_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void txtPassword_Click(object sender, EventArgs e)
+        private void TxtPassword_Click(object sender, EventArgs e)
         {
 
         }

@@ -45,10 +45,10 @@ namespace WindowsFormsApplication1.Administration
             GridEvents();
         }
 
-        void edit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        void Edit_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             //MessageBox.Show("The button from the " + gridView_UserMaster.FocusedRowHandle + " row has been clicked!");
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
         }
 
 
@@ -81,10 +81,10 @@ namespace WindowsFormsApplication1.Administration
         private void GridEvents()
         {
             //In Non-Editable Mode
-            gridView_UserMaster.ShowingEditor += gridView_UserMaster_ShowingEditor;
+            gridView_UserMaster.ShowingEditor += GridView_UserMaster_ShowingEditor;
             //gridView_UserMaster.DoubleClick += gridView_DoubleClick;
 
-            gridControl_UserMaster.DoubleClick += gridControl_UserMaster_DoubleClick;
+            gridControl_UserMaster.DoubleClick += GridControl_UserMaster_DoubleClick;
         }
 
         private void AddButtonToGrid()
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Administration
             {
                 TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor
             };
-            edit.ButtonClick += edit_ButtonClick;
+            edit.ButtonClick += Edit_ButtonClick;
             edit.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
 
             EditorButton button = edit.Buttons[0];
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1.Administration
         }
 
         //https://supportcenter.devexpress.com/ticket/details/a2934/how-to-handle-a-double-click-on-a-grid-row-or-cell
-        void gridView_UserMaster_ShowingEditor(object sender, CancelEventArgs e)
+        void GridView_UserMaster_ShowingEditor(object sender, CancelEventArgs e)
         {
             if (gridView_UserMaster.FocusedColumn == gridView_UserMaster.Columns["Action"])
             {
@@ -184,13 +184,13 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
                 if (ComparisonUtils.IsEqualTo_String(GlobalVariables.ProgCode, WIN_APP_TABS._frmUserDetails))
                 {
-                    frmUserDetails frm = new frmUserDetails() { s1 = btnAdd.Text, Text = "User Addition" };
+                    FrmUserDetails frm = new FrmUserDetails() { S1 = btnAdd.Text, Text = "User Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -201,7 +201,7 @@ namespace WindowsFormsApplication1.Administration
             FillDataToGrid();
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
@@ -227,7 +227,7 @@ namespace WindowsFormsApplication1.Administration
                     //int foundIndex = userMasterBindingSource.Find("clients_id", cellValue);
                     //userMasterBindingSource.Position = foundIndex;
 
-                    frmUserDetails frm = new frmUserDetails() { s1 = btnEdit.Text, Text = "User Editing", UserName = cellValue_UserName };
+                    FrmUserDetails frm = new FrmUserDetails() { S1 = btnEdit.Text, Text = "User Editing", UserName = cellValue_UserName };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
                     frm.ShowDialog(Parent);
@@ -237,7 +237,7 @@ namespace WindowsFormsApplication1.Administration
             FillDataToGrid();
         }
 
-        private void gridControl_UserMaster_Load(object sender, EventArgs e)
+        private void GridControl_UserMaster_Load(object sender, EventArgs e)
         {
 
             //ProjectFunctions.ToolstripVisualize(Menu_ToolStrip);
@@ -245,29 +245,29 @@ namespace WindowsFormsApplication1.Administration
             FillDataToGrid();
         }
 
-        private void button_delete_ButtonClick(object sender, ButtonPressedEventArgs e)
+        private void Button_delete_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
 
             PrintLogWin.PrintLog("================= button_delete_ButtonClick" +
 string.Empty);
 
         }
 
-        private void gridControl_UserMaster_DoubleClick(object sender, EventArgs e)
+        private void GridControl_UserMaster_DoubleClick(object sender, EventArgs e)
         {
-            btnEdit_Click(null, e);
+            BtnEdit_Click(null, e);
         }
 
-        private void gridControl_UserMaster_KeyDown(object sender, KeyEventArgs e)
+        private void GridControl_UserMaster_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btnEdit_Click(null, e);
+                BtnEdit_Click(null, e);
             }
         }
 
-        private void gridView_UserMaster_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        private void GridView_UserMaster_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
             try
             {

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmBomMstAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBomMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1
         public string _bomPrdId = null;
         public string _bomno = null;
         private int rowindex;
-        public string bomno
+        public string Bomno
         {
             get => _bomno;
             set => _bomno = value;
@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1
             set => _s1 = value;
         }
 
-        public frmBomMstAddEdit()
+        public FrmBomMstAddEdit()
         {
             InitializeComponent();
             dt.Columns.Add("bomPartCode", typeof(string));
@@ -219,7 +219,7 @@ namespace WindowsFormsApplication1
                 txtPrdAsgnCode1.Properties.ReadOnly = true;
                 txtPrdAsgnCode1.TabStop = false;
                 txtProductionBag.Focus();
-                var str = "sp_LoadBomMstDataFEditing '" + bomno + "','" + BomPrdId + "'";
+                var str = "sp_LoadBomMstDataFEditing '" + Bomno + "','" + BomPrdId + "'";
                 var ds = ProjectFunctions.GetDataSet(str);
                 txtBomNo.Text = ds.Tables[0].Rows[0]["bomNo"].ToString();
                 txtPrdAsgnCode1.Text = ds.Tables[0].Rows[0]["bomPrdCode"].ToString();
@@ -442,13 +442,11 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtPrdAsgnCode1_Enter(object sender, EventArgs e)
+        private void TxtPrdAsgnCode1_Enter(object sender, EventArgs e)
         {
             if (S1 == "&Add")
             {
-#pragma warning disable CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
-                var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.KeyboardFocusView' is obsolete: 'Use the FocusedView property instead.'
+                var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
                 if (MaxRow == 0)
                 {
                     txtPrdAsgnCode1.Properties.ReadOnly = false;
@@ -460,7 +458,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtActive_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void TxtActive_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (txtActive.Text == "Y" || txtActive.Text == "N")
             {

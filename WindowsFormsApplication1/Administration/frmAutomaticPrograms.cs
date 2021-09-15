@@ -1,14 +1,14 @@
 ﻿using System;
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmAutomaticPrograms : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAutomaticPrograms : DevExpress.XtraEditors.XtraForm
     {
-        public frmAutomaticPrograms()
+        public FrmAutomaticPrograms()
         {
             InitializeComponent();
         }
 
-        private void btnCreateAssemblies_Click(object sender, EventArgs e)
+        private void BtnCreateAssemblies_Click(object sender, EventArgs e)
         {
             string[] lines = new string[25];
             lines[0] = "using System;";
@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnPrimaryKey_Click(object sender, EventArgs e)
+        private void BtnPrimaryKey_Click(object sender, EventArgs e)
         {
             string[] lines = new string[5];
             lines[0] = "public String s1 { get; set; }";
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnSetMyCotrolsFunction_Click(object sender, EventArgs e)
+        private void BtnSetMyCotrolsFunction_Click(object sender, EventArgs e)
         {
 
             string[] lines = new string[20];
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnGetNewMasterDocNo_Click(object sender, EventArgs e)
+        private void BtnGetNewMasterDocNo_Click(object sender, EventArgs e)
         {
 
             string[] lines = new string[20];

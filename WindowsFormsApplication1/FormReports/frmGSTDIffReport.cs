@@ -1,8 +1,8 @@
 ﻿namespace WindowsFormsApplication1.FormReports
 {
-    public partial class frmGSTDIffReport : DevExpress.XtraEditors.XtraForm
+    public partial class FrmGSTDIffReport : DevExpress.XtraEditors.XtraForm
     {
-        public frmGSTDIffReport()
+        public FrmGSTDIffReport()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frm_SupplierPaymentVoucherAdd_Upd
+    partial class Frm_SupplierPaymentVoucherAdd_Upd
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_SupplierPaymentVoucherAdd_Upd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_SupplierPaymentVoucherAdd_Upd));
             this.TextBnkChgs = new DevExpress.XtraEditors.TextEdit();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
@@ -1384,7 +1384,7 @@
             this.Name = "frm_SupplierPaymentVoucherAdd_Upd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Supplier Payment Addition Module";
-            this.Load += new System.EventHandler(this.frm_PaymentVoucherInfo_Load);
+            this.Load += new System.EventHandler(this.Frm_PaymentVoucherInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TextBnkChgs.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextCreditAcName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextCreditAc.Properties)).EndInit();

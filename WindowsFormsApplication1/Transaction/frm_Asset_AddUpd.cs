@@ -27,13 +27,13 @@ namespace WindowsFormsApplication1
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
             Dispose();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             using (var Connection = new SqlConnection(ProjectFunctions.ConnectionString))
             {
@@ -280,7 +280,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btn_Validate_Click(object sender, EventArgs e)
+        private void Btn_Validate_Click(object sender, EventArgs e)
         {
             if (TextDesc.Text == string.Empty)
             {
@@ -336,7 +336,7 @@ namespace WindowsFormsApplication1
             btnSave.Enabled = true;
         }
 
-        private void frm_Assetmanager_Load(object sender, EventArgs e)
+        private void Frm_Assetmanager_Load(object sender, EventArgs e)
         {
             SetMyControls();
 
@@ -532,7 +532,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnAttach_Click(object sender, EventArgs e)
+        private void BtnAttach_Click(object sender, EventArgs e)
         {
             //using (var AD = new Forms_Transaction.AttachDoc() { DocNo = TextAssetCode.Text, Source = "AST", DocDate = DateTime.Now.Date })
             //{
@@ -582,7 +582,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnAttachDel_Click(object sender, EventArgs e)
+        private void BtnAttachDel_Click(object sender, EventArgs e)
         {
             try
             {
@@ -1024,60 +1024,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        private void rdbYes_CheckedChanged_1(object sender, EventArgs e)
+        private void RdbYes_CheckedChanged_1(object sender, EventArgs e)
         {
             if (rdbYes.Checked == true)
             {
@@ -1093,7 +1040,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void rdbNo_CheckedChanged_1(object sender, EventArgs e)
+        private void RdbNo_CheckedChanged_1(object sender, EventArgs e)
         {
             if (rdbNo.Checked == true)
             {
@@ -1111,7 +1058,7 @@ namespace WindowsFormsApplication1
         {
         }
 
-        private void rdbYes_KeyDown(object sender, KeyEventArgs e)
+        private void RdbYes_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -1119,7 +1066,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void rdbNo_KeyDown(object sender, KeyEventArgs e)
+        private void RdbNo_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
