@@ -133,7 +133,6 @@
             this.BtnLoad.Size = new System.Drawing.Size(135, 37);
             this.BtnLoad.TabIndex = 6;
             this.BtnLoad.Text = "Load Report";
-//            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // MyValidationProvider
             // 
@@ -224,7 +223,6 @@
             this.chSubEntries.Properties.Caption = "Sub Entries";
             this.chSubEntries.Size = new System.Drawing.Size(140, 24);
             this.chSubEntries.TabIndex = 7;
-//            this.chSubEntries.CheckedChanged += new System.EventHandler(this.chSubEntries_CheckedChanged);
             // 
             // RangeSelectorLedger
             // 

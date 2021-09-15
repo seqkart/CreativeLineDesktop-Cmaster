@@ -10,7 +10,7 @@ namespace WindowsFormsApplication1.Transaction
     public partial class SaleOrder : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string DocNo { get; set; }
         public DateTime DocDate { get; set; }
         DataSet dsPopUps = new DataSet();
@@ -231,12 +231,12 @@ namespace WindowsFormsApplication1.Transaction
             e.Handled = true;
         }
 
-        private void txtTransporterCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtTransporterCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTransporterName.Text = string.Empty;
         }
 
-        private void txtTransporterCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtTransporterCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("select TRPRSYSID,TRPRNAME,TRPRADD from TRANSPORTMASTER", " Where AccCode", txtTransporterCode, txtTransporterName, txtTransporterCode, HelpGrid, HelpGridView, e);
         }
@@ -284,14 +284,14 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             dtOrderDate.Enabled = false;
             txtOrderNo.Enabled = false;
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtDebitPartyCode.Select();
 
                 dtOrderDate.EditValue = DateTime.Now;
                 txtDelieveryDate.EditValue = DateTime.Now;
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadSaleOrderMstFEdit] '" + DocDate.Date.ToString("yyyy-MM-dd") + "','" + DocNo + "'");
 
@@ -543,7 +543,7 @@ namespace WindowsFormsApplication1.Transaction
                     try
                     {
 
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
 
 
@@ -575,7 +575,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = "Update SaleOrderMst Set BuyerCode=@BuyerCode,DelieveryTransID=@DelieveryTransID,BuyerPONo=@BuyerPONo,BuyerDANo=@BuyerDANo,Term1=@Term1,Term2=@Term2," +
                                 "Term3=@Term3,Margin=@Margin,TaxType=@TaxType,TransporterCode=@TransporterCode,DelieveryDate=@DelieveryDate,TaxableValue=@TaxableValue,TotalTaxValue=@TotalTaxValue," +
@@ -892,7 +892,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
+        private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             try
             {

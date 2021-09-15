@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class frmDealerOrderMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         DataTable dt = new DataTable();
         public string OrderNo { get; set; }
         private void SetMyControls()
@@ -74,12 +74,12 @@ namespace WindowsFormsApplication1.Transaction
             return true;
         }
 
-        private void txtDealerCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDealerCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDealerName.Text = string.Empty;
             dt = null;
         }
-        private string getNewInvoiceDocumentNo()
+        private string GetNewInvoiceDocumentNo()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(OrdNo as int)),00000000) from DealerOrderMst ");
@@ -90,15 +90,15 @@ namespace WindowsFormsApplication1.Transaction
             }
             return s2;
         }
-        private void frmDealerOrderMaster_Load(object sender, EventArgs e)
+        private void FrmDealerOrderMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 dtOrderDate.EditValue = DateTime.Now;
                 dtOrderForDate.EditValue = DateTime.Now;
                 dtOrderForDate.Focus();
-                txtOrderNo.Text = getNewInvoiceDocumentNo().PadLeft(8, '0');
+                txtOrderNo.Text = GetNewInvoiceDocumentNo().PadLeft(8, '0');
 
                 DataSet ds = ProjectFunctions.GetDataSet("SP_LoadPrdForOrder");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGrid.DataSource = null;
                 }
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtDealerCode.Enabled = false;
                 dtOrderForDate.Focus();
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void frmDealerOrderMaster_KeyDown(object sender, KeyEventArgs e)
+        private void FrmDealerOrderMaster_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -171,7 +171,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtDealerCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDealerCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -202,7 +202,7 @@ namespace WindowsFormsApplication1.Transaction
                         sqlcom.Parameters.AddWithValue("@OrdDate", Convert.ToDateTime(dtOrderDate.Text).ToString("yyyy-MM-dd"));
                         sqlcom.Parameters.AddWithValue("@OrdForDate", Convert.ToDateTime(dtOrderForDate.Text).ToString("yyyy-MM-dd"));
                         sqlcom.Parameters.AddWithValue("@OrdDealerCode", txtDealerCode.Text.Trim());
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.Parameters.AddWithValue("@Tag", "&Add");
                         }
@@ -214,7 +214,7 @@ namespace WindowsFormsApplication1.Transaction
                         txtOrderNo.Text = sqlcom.Parameters["@OrdNo"].Value.ToString();
                         sqlcom.Parameters.Clear();
 
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandType = CommandType.Text;
                             sqlcom.CommandText = " Delete from DealerOrderData Where OrdDNo = @OrdDNo ";
@@ -251,11 +251,11 @@ namespace WindowsFormsApplication1.Transaction
                         transaction.Commit();
                         ProjectFunctions.SpeakError("Order Data Saved Successfully");
                         sqlcon.Close();
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             txtDealerCode.Text = string.Empty;
                             txtDealerName.Text = string.Empty;
-                            frmDealerOrderMaster_Load(null, e);
+                            FrmDealerOrderMaster_Load(null, e);
                         }
                         else
                         {

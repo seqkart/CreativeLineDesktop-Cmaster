@@ -247,8 +247,8 @@ namespace WindowsFormsApplication1.Production
             this.txtFabricCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFabricCode.Size = new System.Drawing.Size(97, 24);
             this.txtFabricCode.TabIndex = 411;
-            this.txtFabricCode.EditValueChanged += new System.EventHandler(this.txtYarnCode_EditValueChanged);
-            this.txtFabricCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtYarnCode_KeyDown);
+            this.txtFabricCode.EditValueChanged += new System.EventHandler(this.TxtYarnCode_EditValueChanged);
+            this.txtFabricCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtYarnCode_KeyDown);
             // 
             // labelControl4
             // 
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1.Production
             this.txtQty.Properties.MaxLength = 100;
             this.txtQty.Size = new System.Drawing.Size(193, 24);
             this.txtQty.TabIndex = 425;
-            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
+            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtQty_KeyPress);
             // 
             // frmFabricStock
             // 
@@ -296,7 +296,7 @@ namespace WindowsFormsApplication1.Production
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmFabricStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmYarnStock_Load);
+            this.Load += new System.EventHandler(this.FrmYarnStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorName.Properties)).EndInit();

@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmBarPrinting : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBarPrinting : DevExpress.XtraEditors.XtraForm
     {
         DataTable dtGeneric = new DataTable();
         DataTable dtVariants = new DataTable();
@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1.Transaction
         string UpdateTag = "N";
 
 
-        public frmBarPrinting()
+        public FrmBarPrinting()
         {
             InitializeComponent();
             dt.Columns.Add("SKUPRODUCTCODE", typeof(string));
@@ -1002,20 +1002,7 @@ namespace WindowsFormsApplication1.Transaction
         }
 
         private void BarCodeGrid_Click(object sender, EventArgs e)
-        {
-            //            try
-            //            {
-            //                ArticleImageBox = null;
-
-            //                DataRow currentrow = BarCodeGridView.GetDataRow(BarCodeGridView.FocusedRowHandle);
-            //                ProjectFunctions.ShowImage(currentrow["SKUARTID"].ToString(), ArticleImageBox);
-            //            }
-            //#pragma warning disable CS0168 // The variable 'ex' is declared but never used
-            //            catch (Exception ex)
-            //#pragma warning restore CS0168 // The variable 'ex' is declared but never used
-            //            {
-            //                //ProjectFunctions.SpeakError(ex.Message);
-            //            }
+        { 
         }
 
         private void FrmBarPrinting_KeyDown(object sender, KeyEventArgs e)

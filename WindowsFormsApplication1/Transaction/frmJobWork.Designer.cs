@@ -627,7 +627,7 @@
             this.BomGridView.GridControl = this.BomGrid;
             this.BomGridView.Name = "BomGridView";
             // 
-            // frmJobWork
+            // FrmJobWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -636,7 +636,7 @@
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.groupControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmJobWork";
+            this.Name = "FrmJobWork";
             this.Text = "  ";
             this.Load += new System.EventHandler(this.FrmJobWork_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();

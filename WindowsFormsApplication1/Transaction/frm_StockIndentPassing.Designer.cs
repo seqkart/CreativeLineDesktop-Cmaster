@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_StockIndentPassing));
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition4 = new DevExpress.XtraGrid.StyleFormatCondition();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition5 = new DevExpress.XtraGrid.StyleFormatCondition();
-            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition6 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition1 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition2 = new DevExpress.XtraGrid.StyleFormatCondition();
+            DevExpress.XtraGrid.StyleFormatCondition styleFormatCondition3 = new DevExpress.XtraGrid.StyleFormatCondition();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.BtnQuit = new System.Windows.Forms.ToolStripButton();
@@ -197,50 +197,50 @@
             this.gridColumn11,
             this.gridColumn14});
             this.IndentPassGrd.DetailHeight = 458;
-            styleFormatCondition4.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            styleFormatCondition4.Appearance.Options.UseBackColor = true;
-            styleFormatCondition4.ApplyToRow = true;
-            styleFormatCondition4.Column = this.gridColumn13;
-            styleFormatCondition4.Condition = DevExpress.XtraGrid.FormatConditionEnum.Between;
-            styleFormatCondition4.Value1 = new decimal(new int[] {
+            styleFormatCondition1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            styleFormatCondition1.Appearance.Options.UseBackColor = true;
+            styleFormatCondition1.ApplyToRow = true;
+            styleFormatCondition1.Column = this.gridColumn13;
+            styleFormatCondition1.Condition = DevExpress.XtraGrid.FormatConditionEnum.Between;
+            styleFormatCondition1.Value1 = new decimal(new int[] {
             1,
             0,
             0,
             -2147483648});
-            styleFormatCondition4.Value2 = new decimal(new int[] {
+            styleFormatCondition1.Value2 = new decimal(new int[] {
             10001,
             0,
             0,
             0});
-            styleFormatCondition5.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            styleFormatCondition5.Appearance.Options.UseBackColor = true;
-            styleFormatCondition5.ApplyToRow = true;
-            styleFormatCondition5.Column = this.gridColumn13;
-            styleFormatCondition5.Condition = DevExpress.XtraGrid.FormatConditionEnum.Between;
-            styleFormatCondition5.Value1 = new decimal(new int[] {
+            styleFormatCondition2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            styleFormatCondition2.Appearance.Options.UseBackColor = true;
+            styleFormatCondition2.ApplyToRow = true;
+            styleFormatCondition2.Column = this.gridColumn13;
+            styleFormatCondition2.Condition = DevExpress.XtraGrid.FormatConditionEnum.Between;
+            styleFormatCondition2.Value1 = new decimal(new int[] {
             10001,
             0,
             0,
             0});
-            styleFormatCondition5.Value2 = new decimal(new int[] {
+            styleFormatCondition2.Value2 = new decimal(new int[] {
             50000,
             0,
             0,
             0});
-            styleFormatCondition6.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            styleFormatCondition6.Appearance.Options.UseBackColor = true;
-            styleFormatCondition6.ApplyToRow = true;
-            styleFormatCondition6.Column = this.gridColumn13;
-            styleFormatCondition6.Condition = DevExpress.XtraGrid.FormatConditionEnum.Greater;
-            styleFormatCondition6.Value1 = new decimal(new int[] {
+            styleFormatCondition3.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            styleFormatCondition3.Appearance.Options.UseBackColor = true;
+            styleFormatCondition3.ApplyToRow = true;
+            styleFormatCondition3.Column = this.gridColumn13;
+            styleFormatCondition3.Condition = DevExpress.XtraGrid.FormatConditionEnum.Greater;
+            styleFormatCondition3.Value1 = new decimal(new int[] {
             50000,
             0,
             0,
             0});
             this.IndentPassGrd.FormatConditions.AddRange(new DevExpress.XtraGrid.StyleFormatCondition[] {
-            styleFormatCondition4,
-            styleFormatCondition5,
-            styleFormatCondition6});
+            styleFormatCondition1,
+            styleFormatCondition2,
+            styleFormatCondition3});
             this.IndentPassGrd.GridControl = this.InPassGridCtrl;
             this.IndentPassGrd.Name = "IndentPassGrd";
             this.IndentPassGrd.OptionsView.ColumnAutoWidth = false;

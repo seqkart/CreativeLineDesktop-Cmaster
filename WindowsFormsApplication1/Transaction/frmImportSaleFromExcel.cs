@@ -5,10 +5,10 @@ using System.Data.OleDb;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmImportSaleFromExcel : DevExpress.XtraEditors.XtraForm
+    public partial class FrmImportSaleFromExcel : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public frmImportSaleFromExcel()
+        public FrmImportSaleFromExcel()
         {
             InitializeComponent();
         }

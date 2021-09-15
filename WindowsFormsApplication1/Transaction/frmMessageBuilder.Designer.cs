@@ -295,7 +295,7 @@ namespace WindowsFormsApplication1.Transaction
             this.label1.TabIndex = 557;
             this.label1.Text = "Indent No";
             // 
-            // frmMessageBuilder
+            // FrmMessageBuilder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -310,7 +310,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmMessageBuilder";
+            this.Name = "FrmMessageBuilder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmMessageBuilder_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();

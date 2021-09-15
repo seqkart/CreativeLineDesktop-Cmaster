@@ -71,7 +71,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void frm_JournalNBankVoucher_Load(object sender, EventArgs e)
+        private void Frm_JournalNBankVoucher_Load(object sender, EventArgs e)
         {
             path = string.Format(@"C:\Application\VU_CMN_{0}.Xlsx", GlobalVariables.CurrentUser);
             DtVoucher.EditValue = (DateTime.Now.Date >= GlobalVariables.FinYearStartDate && DateTime.Now.Date <= GlobalVariables.FinYearEndDate) ? DateTime.Now : GlobalVariables.FinYearEndDate.Date;
@@ -536,11 +536,9 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-                ProjectFunctions.SpeakError("Unable to fetch Data or No Record.");
+                ProjectFunctions.SpeakError("Unable to fetch Data or No Record."+ex.Message);
             }
         }
 
@@ -742,10 +740,9 @@ namespace WindowsFormsApplication1
                     SelectNextControl(ActiveControl, false, true, true, true);
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -766,10 +763,9 @@ namespace WindowsFormsApplication1
                     SelectNextControl(ActiveControl, false, true, true, true);
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -817,10 +813,9 @@ namespace WindowsFormsApplication1
                     SelectNextControl(ActiveControl, false, true, true, true);
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1112,10 +1107,9 @@ namespace WindowsFormsApplication1
                 }
                 e.Handled = true;
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -2095,10 +2089,9 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 

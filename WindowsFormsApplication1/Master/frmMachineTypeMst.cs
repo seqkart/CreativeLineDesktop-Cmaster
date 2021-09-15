@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmMachineTypeMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMachineTypeMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string TypeCode { get; set; }
-        public frmMachineTypeMst()
+        public FrmMachineTypeMst()
         {
             InitializeComponent();
         }

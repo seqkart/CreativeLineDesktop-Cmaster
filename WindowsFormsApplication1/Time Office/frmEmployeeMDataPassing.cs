@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1.Forms_Master
             frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
             frm.Text = "Employee Salary Passing";
             frm.Empcode = row["EmpCode"].ToString();
-            frm.empdate = row["EmpDDate"].ToString();
+            frm.Empdate = row["EmpDDate"].ToString();
             frm.ShowDialog();
             FillGrid();
         }

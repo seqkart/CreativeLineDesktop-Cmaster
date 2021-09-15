@@ -2016,7 +2016,7 @@
             this.textEdit1.Size = new System.Drawing.Size(22, 24);
             this.textEdit1.TabIndex = 4;
             this.textEdit1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
-            this.textEdit1.Validated += new System.EventHandler(this.textEdit1_Validated);
+            this.textEdit1.Validated += new System.EventHandler(this.TextEdit1_Validated);
             // 
             // BtnDelete
             // 

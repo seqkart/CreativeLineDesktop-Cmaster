@@ -37,6 +37,7 @@
             this.cmbSelectFY = new System.Windows.Forms.ComboBox();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.btnSaveFY = new System.Windows.Forms.Button();
+            this.BTEXIT = new System.Windows.Forms.Button();
             this.Menu_ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(419, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(419, 25);
             this.Menu_ToolStrip.TabIndex = 7;
             this.Menu_ToolStrip.TabStop = true;
             this.Menu_ToolStrip.Text = "Options";
@@ -132,6 +133,17 @@
             this.btnSaveFY.UseVisualStyleBackColor = true;
             this.btnSaveFY.Click += new System.EventHandler(this.BtnSaveFY_Click);
             // 
+            // BTEXIT
+            // 
+            this.BTEXIT.Location = new System.Drawing.Point(211, 139);
+            this.BTEXIT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BTEXIT.Name = "BTEXIT";
+            this.BTEXIT.Size = new System.Drawing.Size(87, 30);
+            this.BTEXIT.TabIndex = 342;
+            this.BTEXIT.Text = "EXIT";
+            this.BTEXIT.UseVisualStyleBackColor = true;
+            this.BTEXIT.Click += new System.EventHandler(this.BtnSaveFY_Click);
+            // 
             // frmUserFinancialYearAddition
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
@@ -140,6 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(419, 187);
             this.ControlBox = false;
+            this.Controls.Add(this.BTEXIT);
             this.Controls.Add(this.btnSaveFY);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbSelectFY);
@@ -168,5 +181,6 @@
         private System.Windows.Forms.ComboBox cmbSelectFY;
         private DevExpress.XtraEditors.LabelControl label1;
         private System.Windows.Forms.Button btnSaveFY;
+        private System.Windows.Forms.Button BTEXIT;
     }
 }

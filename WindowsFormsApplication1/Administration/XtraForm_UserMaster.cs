@@ -367,15 +367,14 @@ string.Empty);
                     e.Menu.Items.Add(PartyAccount);
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
 
         }
 
-        private void userMasterBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void UserMasterBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }

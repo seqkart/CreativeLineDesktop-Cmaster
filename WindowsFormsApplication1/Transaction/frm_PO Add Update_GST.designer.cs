@@ -1927,7 +1927,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Purchase Order Addition";
-            this.Load += new System.EventHandler(this.frm_poAddition_Load);
+            this.Load += new System.EventHandler(this.Frm_poAddition_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TextDoc_NO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TextEntryDocType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEntry.Properties.CalendarTimeProperties)).EndInit();

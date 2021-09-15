@@ -99,7 +99,7 @@
             this.btnLoadExcel.Size = new System.Drawing.Size(113, 42);
             this.btnLoadExcel.TabIndex = 209;
             this.btnLoadExcel.Text = "Load Excel";
-            this.btnLoadExcel.Click += new System.EventHandler(this.btnLoadExcel_Click);
+            this.btnLoadExcel.Click += new System.EventHandler(this.BtnLoadExcel_Click);
             // 
             // DColumnGrid
             // 
@@ -298,7 +298,7 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog1_FileOk);
             // 
             // labelControl4
             // 
@@ -331,9 +331,9 @@
             this.txtDebitPartyCode.Properties.MaxLength = 6;
             this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 24);
             this.txtDebitPartyCode.TabIndex = 536;
-            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.txtDebitPartyCode_EditValueChanged);
-            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitPartyCode_KeyDown);
-            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDebitPartyCode_KeyPress);
+            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
+            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
+            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDebitPartyCode_KeyPress);
             // 
             // txtDocType
             // 
@@ -433,7 +433,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDesignDataTemplates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmDesignDataTemplates_Load);
+            this.Load += new System.EventHandler(this.FrmDesignDataTemplates_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DColumnGrid)).EndInit();

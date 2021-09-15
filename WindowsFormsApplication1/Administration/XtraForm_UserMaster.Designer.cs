@@ -113,7 +113,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             // userMasterBindingSource
             // 
-            this.userMasterBindingSource.CurrentChanged += new System.EventHandler(this.userMasterBindingSource_CurrentChanged);
+            this.userMasterBindingSource.CurrentChanged += new System.EventHandler(this.UserMasterBindingSource_CurrentChanged);
             // 
             // gridView_UserMaster
             // 

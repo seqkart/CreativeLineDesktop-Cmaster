@@ -144,8 +144,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMeasurementMapping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmMeasurementMapping_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMeasurementMapping_KeyDown);
+            this.Load += new System.EventHandler(this.FrmMeasurementMapping_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMeasurementMapping_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMCode.Properties)).EndInit();

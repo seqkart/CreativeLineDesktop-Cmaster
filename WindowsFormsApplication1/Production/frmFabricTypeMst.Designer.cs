@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1.Production
             this.KeyPreview = true;
             this.Name = "frmFabricTypeMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmLotTypeMst_Load);
+            this.Load += new System.EventHandler(this.FrmLotTypeMst_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFabricTypeDesc.Properties)).EndInit();

@@ -3,36 +3,36 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmXtraReportViewer : DevExpress.XtraEditors.XtraForm
+    public partial class FrmXtraReportViewer : DevExpress.XtraEditors.XtraForm
     {
-        public frmXtraReportViewer()
+        public FrmXtraReportViewer()
         {
             InitializeComponent();
         }
 
-        private void printPreviewRibbonPageGroup2_CaptionButtonClick(object sender, DevExpress.XtraBars.Ribbon.RibbonPageGroupEventArgs e)
+        private void PrintPreviewRibbonPageGroup2_CaptionButtonClick(object sender, DevExpress.XtraBars.Ribbon.RibbonPageGroupEventArgs e)
         {
 
         }
 
-        private void printPreviewBarItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void PrintPreviewBarItem8_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             //printPreviewBarItem8.PerformClick();
             //this.Close();
         }
 
-        private void frmXtraReportViewer_Load(object sender, EventArgs e)
+        private void FrmXtraReportViewer_Load(object sender, EventArgs e)
         {
 
             //this.Close();
         }
 
-        private void frmXtraReportViewer_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmXtraReportViewer_FormClosed(object sender, FormClosedEventArgs e)
         {
             //printPreviewBarItem8.PerformClick();
         }
 
-        private void printPreviewBarItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void PrintPreviewBarItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
         }

@@ -136,8 +136,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmBalanceSheetHeads";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmBalanceSheetHeads_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBalanceSheetHeads_KeyDown);
+            this.Load += new System.EventHandler(this.FrmBalanceSheetHeads_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBalanceSheetHeads_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBSDesc.Properties)).EndInit();

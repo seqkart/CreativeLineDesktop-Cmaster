@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmXtraReportViewer
+    partial class FrmXtraReportViewer
     {
         /// <summary>
         /// Required designer variable.
@@ -483,7 +483,7 @@
             superToolTip7.Items.Add(toolTipItem7);
             superToolTip7.MaxWidth = 210;
             this.printPreviewBarItem7.SuperTip = superToolTip7;
-            this.printPreviewBarItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.printPreviewBarItem7_ItemClick);
+            this.printPreviewBarItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PrintPreviewBarItem7_ItemClick);
             // 
             // printPreviewBarItem8
             // 
@@ -501,7 +501,7 @@
             superToolTip8.Items.Add(toolTipItem8);
             superToolTip8.MaxWidth = 210;
             this.printPreviewBarItem8.SuperTip = superToolTip8;
-            this.printPreviewBarItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.printPreviewBarItem8_ItemClick);
+            this.printPreviewBarItem8.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PrintPreviewBarItem8_ItemClick);
             // 
             // printPreviewBarItem9
             // 
@@ -1362,7 +1362,7 @@
             this.printPreviewRibbonPageGroup2.Kind = DevExpress.XtraPrinting.Preview.PrintPreviewRibbonPageGroupKind.Print;
             this.printPreviewRibbonPageGroup2.Name = "printPreviewRibbonPageGroup2";
             this.printPreviewRibbonPageGroup2.Text = "Print";
-            this.printPreviewRibbonPageGroup2.CaptionButtonClick += new DevExpress.XtraBars.Ribbon.RibbonPageGroupEventHandler(this.printPreviewRibbonPageGroup2_CaptionButtonClick);
+            this.printPreviewRibbonPageGroup2.CaptionButtonClick += new DevExpress.XtraBars.Ribbon.RibbonPageGroupEventHandler(this.PrintPreviewRibbonPageGroup2_CaptionButtonClick);
             // 
             // printPreviewRibbonPageGroup3
             // 
@@ -1476,8 +1476,8 @@
             this.Name = "frmXtraReportViewer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmXtraReportViewer_FormClosed);
-            this.Load += new System.EventHandler(this.frmXtraReportViewer_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmXtraReportViewer_FormClosed);
+            this.Load += new System.EventHandler(this.FrmXtraReportViewer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.documentViewerRibbonController1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemProgressBar1)).EndInit();

@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmRoleMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmRoleMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string RoleCode { get; set; }
-        public frmRoleMst()
+        public FrmRoleMst()
         {
             InitializeComponent();
         }
@@ -69,12 +69,12 @@ namespace WindowsFormsApplication1.Administration
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtRoleDesc.Focus();
                     txtRoleCode.Text = GetNewDeptCode().PadLeft(4, '0');
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     txtRoleDesc.Enabled = false;
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT RoleCode,RoleDesc FROM RoleMst Where RoleCode='" + RoleCode + "'");
@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1.Administration
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into RoleMst"
@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1.Administration
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(RoleCode as int)),0)+1 AS VARCHAR(4)),4)from RoleMst),@RoleDesc)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE RoleMst SET "
                                                 + " RoleDesc=@RoleDesc "

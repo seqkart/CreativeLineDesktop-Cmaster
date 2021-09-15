@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Production
 {
-    partial class frmYarnStock
+    partial class FrmYarnStock
     {
         /// <summary>
         /// Required designer variable.
@@ -247,8 +247,8 @@ namespace WindowsFormsApplication1.Production
             this.txtYarnCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtYarnCode.Size = new System.Drawing.Size(97, 24);
             this.txtYarnCode.TabIndex = 411;
-            this.txtYarnCode.EditValueChanged += new System.EventHandler(this.txtYarnCode_EditValueChanged);
-            this.txtYarnCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtYarnCode_KeyDown);
+            this.txtYarnCode.EditValueChanged += new System.EventHandler(this.TxtYarnCode_EditValueChanged);
+            this.txtYarnCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtYarnCode_KeyDown);
             // 
             // labelControl4
             // 
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1.Production
             this.txtQty.Properties.MaxLength = 100;
             this.txtQty.Size = new System.Drawing.Size(193, 24);
             this.txtQty.TabIndex = 425;
-            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQty_KeyPress);
+            this.txtQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtQty_KeyPress);
             // 
             // frmYarnStock
             // 
@@ -296,7 +296,7 @@ namespace WindowsFormsApplication1.Production
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmYarnStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmYarnStock_Load);
+            this.Load += new System.EventHandler(this.FrmYarnStock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorName.Properties)).EndInit();

@@ -237,7 +237,7 @@
             this.TextAuthenticate});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1048, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1048, 27);
             this.Menu_ToolStrip.TabIndex = 15;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -250,7 +250,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -263,7 +263,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -276,7 +276,7 @@
             this.btn_Validate.Image = ((System.Drawing.Image)(resources.GetObject("btn_Validate.Image")));
             this.btn_Validate.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Validate.Name = "btn_Validate";
-            this.btn_Validate.Size = new System.Drawing.Size(69, 28);
+            this.btn_Validate.Size = new System.Drawing.Size(69, 24);
             this.btn_Validate.Text = "&Validate";
             this.btn_Validate.Click += new System.EventHandler(this.Btn_Validate_Click);
             // 
@@ -501,7 +501,7 @@
             this.xtraTabPage1.Controls.Add(this.panelControl5);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 378);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage1.Text = "General";
             // 
             // panelControl5
@@ -648,7 +648,7 @@
             this.xtraTabPage2.Controls.Add(this.panelControl4);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1023, 378);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage2.Text = "Finance";
             // 
             // panelControl4
@@ -1251,7 +1251,7 @@
             // 
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(1023, 378);
+            this.xtraTabPage3.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage3.Text = "Service";
             // 
             // xtraTabPage5
@@ -1260,7 +1260,7 @@
             this.xtraTabPage5.Controls.Add(this.AttachmentToolStrip);
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(1023, 378);
+            this.xtraTabPage5.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage5.Text = "Attachments";
             // 
             // Attachments_GridCtrl
@@ -1271,7 +1271,7 @@
             this.Attachments_GridCtrl.MainView = this.Attachments_Grid;
             this.Attachments_GridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Attachments_GridCtrl.Name = "Attachments_GridCtrl";
-            this.Attachments_GridCtrl.Size = new System.Drawing.Size(1023, 351);
+            this.Attachments_GridCtrl.Size = new System.Drawing.Size(1023, 345);
             this.Attachments_GridCtrl.TabIndex = 9;
             this.Attachments_GridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.Attachments_Grid});
@@ -1322,7 +1322,7 @@
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(50, 24);
             this.btnOpen.Text = "Open";
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
             // 
             // btnAttachDel
             // 
@@ -1348,7 +1348,7 @@
             this.xtraTabPage6.Controls.Add(this.labelControl8);
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(1023, 378);
+            this.xtraTabPage6.Size = new System.Drawing.Size(1023, 372);
             this.xtraTabPage6.Text = "History";
             // 
             // HistoryGridControl

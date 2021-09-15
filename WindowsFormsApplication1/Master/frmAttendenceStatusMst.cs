@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmAttendanceStatusMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAttendanceStatusMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string StatusID { get; set; }
-        public frmAttendanceStatusMst()
+        public FrmAttendanceStatusMst()
         {
             InitializeComponent();
         }

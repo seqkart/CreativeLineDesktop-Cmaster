@@ -11,7 +11,6 @@ namespace WindowsFormsApplication1.Transaction
         DataTable dt = new DataTable();
 
         string SourceTable;
-        string DestinationTable;
         public frmDesignDataTemplates()
         {
             InitializeComponent();
@@ -22,7 +21,7 @@ namespace WindowsFormsApplication1.Transaction
             Close();
         }
 
-        private void frmDesignDataTemplates_Load(object sender, EventArgs e)
+        private void FrmDesignDataTemplates_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
@@ -53,13 +52,13 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnLoadExcel_Click(object sender, EventArgs e)
+        private void BtnLoadExcel_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             DColumnGrid.Refresh();
             var xlConn = string.Empty;
@@ -100,12 +99,12 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDebitPartyName.Text = string.Empty;
         }
 
-        private void txtDebitPartyCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtDebitPartyCode_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
@@ -131,7 +130,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void txtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

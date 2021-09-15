@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
         public string _empdate = null;
 
-        public string empdate
+        public string Empdate
         {
             get => _empdate;
             set => _empdate = value;
@@ -43,7 +43,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
 
 
-            DtStartDate.EditValue = empdate;
+            DtStartDate.EditValue = Empdate;
             SetMyControls();
             var ds = ProjectFunctions.GetDataSet("Select * from EmpMST where EmpCode='" + Empcode + "'");
             if (ds.Tables[0].Rows.Count > 0)
@@ -91,7 +91,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 };
                 sqlcom.ExecuteNonQuery();
             }
-            var Str2 = "Update EMPMST_MDATA set EmpPassbyUser='" + GlobalVariables.CurrentUser + "',EmpPassbyOn='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "' Where EmpCode='" + Empcode + "' And EmpDDate='" + Convert.ToDateTime(empdate).ToString("yyyy-MM-dd") + "'";
+            var Str2 = "Update EMPMST_MDATA set EmpPassbyUser='" + GlobalVariables.CurrentUser + "',EmpPassbyOn='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm") + "' Where EmpCode='" + Empcode + "' And EmpDDate='" + Convert.ToDateTime(Empdate).ToString("yyyy-MM-dd") + "'";
             using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
             {
                 sqlcon.Open();

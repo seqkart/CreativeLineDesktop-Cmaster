@@ -14,23 +14,15 @@ namespace WindowsFormsApplication1
 {
     public partial class frmMainScreen : DevExpress.XtraEditors.XtraForm
     {
-#pragma warning disable CS0169 // The field 'frmMainScreen.aTimer' is never used
-        private static System.Timers.Timer aTimer;
 #pragma warning restore CS0169 // The field 'frmMainScreen.aTimer' is never used
         private RibbonControl _mainRibbon;
-#pragma warning disable CS0169 // The field 'frmMainScreen._Dr' is never used
-        private DataRow _Dr;
 #pragma warning restore CS0169 // The field 'frmMainScreen._Dr' is never used
         private PanelControl _WorkAreaPanel = new PanelControl();
-#pragma warning disable CS0169 // The field 'frmMainScreen.selected_Record' is never used
-        private int selected_Record;
 #pragma warning restore CS0169 // The field 'frmMainScreen.selected_Record' is never used
         private RibbonGalleryBarItem SkinOptions;
         private RibbonPageGroup skinsRibbonPageGroup;
         private BackgroundWorker backgroundWorker1;
         private int width = 0;
-#pragma warning disable CS0169 // The field 'frmMainScreen.ThisRecord' is never used
-        private DataRow ThisRecord;
 #pragma warning restore CS0169 // The field 'frmMainScreen.ThisRecord' is never used
         public frmMainScreen()
         {
@@ -38,18 +30,18 @@ namespace WindowsFormsApplication1
             IntitializeTheme();
             backgroundWorker1 = new BackgroundWorker();
         }
-        public void frmMain()
+        public void FrmMain()
         {
             Controls.Clear();
             InitializeComponent();
             IntitializeTheme();
             backgroundWorker1 = new BackgroundWorker();
-            frmMainScreenList_Load(null, null);
+            FrmMainScreenList_Load(null, null);
 
 
         }
 
-        private void frmMainScreenList_Load(object sender, EventArgs e)
+        private void FrmMainScreenList_Load(object sender, EventArgs e)
         {
 
         }
@@ -121,7 +113,7 @@ namespace WindowsFormsApplication1
                                     BarButtonItem button;
                                     button = new BarButtonItem() { Caption = R["ProgDesc"].ToString(), Name = R["ProgCode"].ToString() };
                                     container.AddItem(button);
-                                    button.ItemClick += new ItemClickEventHandler(button_ItemClick);
+                                    button.ItemClick += new ItemClickEventHandler(Button_ItemClick);
 
                                 }
                             }
@@ -438,11 +430,7 @@ namespace WindowsFormsApplication1
                     PROG42.BringToFront();
                     break;
                 case "PROG36":
-                    //var PROG36 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false };
-                    //GlobalVariables.ProgCode = "PROG36";
-                    //_WorkAreaPanel.Controls.Add(PROG36);
-                    //PROG36.Show();
-                    //PROG36.BringToFront();
+
                     break;
                 case "PROG52":
                     var PROG52 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
@@ -466,11 +454,7 @@ namespace WindowsFormsApplication1
                     PROG48.BringToFront();
                     break;
                 case "PROG44":
-                    //var PROG44 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false };
-                    //GlobalVariables.ProgCode = "PROG44";
-                    //_WorkAreaPanel.Controls.Add(PROG44);
-                    //PROG44.Show();
-                    //PROG44.BringToFront();
+
                     break;
                 case "PROG38":
                     var PROG38 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
@@ -480,11 +464,7 @@ namespace WindowsFormsApplication1
                     PROG38.BringToFront();
                     break;
                 case "PROG40":
-                    //var PROG40 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false };
-                    //GlobalVariables.ProgCode = "PROG40";
-                    //_WorkAreaPanel.Controls.Add(PROG40);
-                    //PROG40.Show();
-                    //PROG40.BringToFront();
+
                     break;
                 case "PROG54":
                     var PROG54 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false };
@@ -515,25 +495,13 @@ namespace WindowsFormsApplication1
                     PROG60.BringToFront();
                     break;
                 case "PROG61":
-                    //var PROG61 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false };
-                    //GlobalVariables.ProgCode = "PROG61";
-                    //_WorkAreaPanel.Controls.Add(PROG61);
-                    //PROG61.Show();
-                    //PROG61.BringToFront();
+
                     break;
                 case "PROG63":
-                    //var PROG63 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false };
-                    //GlobalVariables.ProgCode = "PROG63";
-                    //_WorkAreaPanel.Controls.Add(PROG63);
-                    //PROG63.Show();
-                    //PROG63.BringToFront();
+
                     break;
                 case "PROG64":
-                    //var PROG64 = new frmHariomReports() { Dock = DockStyle.Fill, TopLevel = false };
-                    //GlobalVariables.ProgCode = "PROG64";
-                    //_WorkAreaPanel.Controls.Add(PROG64);
-                    //PROG64.Show();
-                    //PROG64.BringToFront();
+
                     break;
                 case "PROG55":
                     var PROG55 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false };
@@ -815,7 +783,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        void button_ItemClick(object sender, ItemClickEventArgs e)
+        void Button_ItemClick(object sender, ItemClickEventArgs e)
         {
             ProjectFunctions.EventTracker("Program Started");
             RunProg(e.Item.Name);
@@ -867,7 +835,7 @@ namespace WindowsFormsApplication1
 
 
         }
-        private void frmMainScreen_Load(object sender, EventArgs e)
+        private void FrmMainScreen_Load(object sender, EventArgs e)
         {
 
             backgroundWorker1.RunWorkerAsync();
@@ -879,12 +847,12 @@ namespace WindowsFormsApplication1
             width = _mainRibbon.Bounds.Width;
         }
 
-        private void frmMainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmMainScreen_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
 
-        private void frmMainScreen_KeyDown(object sender, KeyEventArgs e)
+        private void FrmMainScreen_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && e.KeyCode == Keys.L)
             {

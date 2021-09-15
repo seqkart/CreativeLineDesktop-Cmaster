@@ -4,14 +4,14 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmDataTransfer : DevExpress.XtraEditors.XtraForm
+    public partial class FrmDataTransfer : DevExpress.XtraEditors.XtraForm
     {
         string SourceConnectionString = string.Empty;
         string DestinationConnectionString = string.Empty;
 
         string SourceTable;
         string DestinationTable;
-        public frmDataTransfer()
+        public FrmDataTransfer()
         {
             InitializeComponent();
         }
@@ -28,11 +28,9 @@ namespace WindowsFormsApplication1
                     }
                     return _VarDataSet;
                 }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
-
+                    ProjectFunctions.SpeakError(ex.Message);
                     return null;
                 }
             }

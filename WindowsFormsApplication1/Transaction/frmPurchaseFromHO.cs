@@ -51,11 +51,9 @@ namespace WindowsFormsApplication1.Transaction
                     ArticleImageBox.Image = null;
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
         private void FrmPurchaseFromHO_Load(object sender, EventArgs e)

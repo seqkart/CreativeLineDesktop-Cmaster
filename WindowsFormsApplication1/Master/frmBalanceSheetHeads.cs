@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmBalanceSheetHeads : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string BSCode { get; set; }
         public frmBalanceSheetHeads()
         {
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Master
                 return false;
             }
         }
-        private void frmBalanceSheetHeads_KeyDown(object sender, KeyEventArgs e)
+        private void FrmBalanceSheetHeads_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -77,17 +77,17 @@ namespace WindowsFormsApplication1.Master
             }
             return s2;
         }
-        private void frmBalanceSheetHeads_Load(object sender, EventArgs e)
+        private void FrmBalanceSheetHeads_Load(object sender, EventArgs e)
         {
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtBSDesc.Focus();
                     txtBSCode.Text = GetNewBSCode().PadLeft(4, '0');
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     txtBSDesc.Enabled = false;
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT BSCode,BSDesc FROM BshMst Where BSCode='" + BSCode + "'");
@@ -120,7 +120,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into BshMst"
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1.Master
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(BSCode as int)),0)+1 AS VARCHAR(4)),4)from BshMst),@BSDesc )"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE BshMst SET "
                                                 + " BSDesc=@BSDesc "

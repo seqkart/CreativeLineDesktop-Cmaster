@@ -220,7 +220,7 @@
             this.txtAddress.TabIndex = 452;
             this.txtAddress.TabStop = false;
             // 
-            // frmPIGeneration2
+            // FrmPIGeneration2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -238,7 +238,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmPIGeneration2";
+            this.Name = "FrmPIGeneration2";
             this.Load += new System.EventHandler(this.FrmPIGeneration2_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();

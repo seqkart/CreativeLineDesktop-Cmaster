@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void BtnSaveFY_Click(object sender, EventArgs e)

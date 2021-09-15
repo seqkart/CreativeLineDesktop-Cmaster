@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Production
 {
     public partial class frmYarnTypeMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string YarnTypeCode { get; set; }
         public frmYarnTypeMst()
         {
@@ -53,15 +53,15 @@ namespace WindowsFormsApplication1.Production
             return true;
         }
 
-        private void frmLotTypeMst_Load(object sender, EventArgs e)
+        private void FrmLotTypeMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtYarnTypeDesc.Focus();
                 txtYarnTypeCode.Text = GetNewYarnTypeCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtYarnTypeCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from YarnTypeMst Where YarnTypeCode = '" + YarnTypeCode + "'");
@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1.Production
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into YarnTypeMst"
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Production
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(YarnTypeCode as int)),0)+1 AS VARCHAR(4)),4)from YarnTypeMst),@YarnTypeName )"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE YarnTypeMst SET "
                                                 + " YarnTypeName=@YarnTypeName "

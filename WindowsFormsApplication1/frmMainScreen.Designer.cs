@@ -77,9 +77,9 @@
             this.KeyPreview = true;
             this.Name = "frmMainScreen";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainScreen_FormClosed);
-            this.Load += new System.EventHandler(this.frmMainScreen_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMainScreen_KeyDown);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMainScreen_FormClosed);
+            this.Load += new System.EventHandler(this.FrmMainScreen_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMainScreen_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

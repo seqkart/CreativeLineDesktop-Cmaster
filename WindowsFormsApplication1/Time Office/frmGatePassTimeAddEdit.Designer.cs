@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Transaction
 {
-    partial class frmGatePassTimeAddEdit
+    partial class FrmGatePassTimeAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGatePassTimeAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGatePassTimeAddEdit));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -125,8 +125,8 @@
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtPassword.Size = new System.Drawing.Size(116, 27);
             this.txtPassword.Visible = false;
-            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
-            this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyUp);
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
+            this.txtPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyUp);
             // 
             // txtStatusCode
             // 
@@ -138,8 +138,8 @@
             this.txtStatusCode.Properties.MaxLength = 6;
             this.txtStatusCode.Size = new System.Drawing.Size(117, 24);
             this.txtStatusCode.TabIndex = 13;
-            this.txtStatusCode.EditValueChanged += new System.EventHandler(this.txtStatusCode_EditValueChanged);
-            this.txtStatusCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStatusCode_KeyDown);
+            this.txtStatusCode.EditValueChanged += new System.EventHandler(this.TxtStatusCode_EditValueChanged);
+            this.txtStatusCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStatusCode_KeyDown);
             // 
             // txtEmpCode
             // 
@@ -150,8 +150,8 @@
             this.txtEmpCode.Properties.MaxLength = 6;
             this.txtEmpCode.Size = new System.Drawing.Size(117, 24);
             this.txtEmpCode.TabIndex = 11;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // lblStatusCode
             // 
@@ -355,7 +355,7 @@
             this.gridControl_GatePassData.TabIndex = 374;
             this.gridControl_GatePassData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView_GatePassData});
-            this.gridControl_GatePassData.DoubleClick += new System.EventHandler(this.gridControl_GatePassData_DoubleClick);
+            this.gridControl_GatePassData.DoubleClick += new System.EventHandler(this.GridControl_GatePassData_DoubleClick);
             // 
             // gridView_GatePassData
             // 
@@ -457,8 +457,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGatePassTimeAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmGatePassTimeAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGatePassTimeAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmGatePassTimeAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGatePassTimeAddEdit_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatusCode.Properties)).EndInit();

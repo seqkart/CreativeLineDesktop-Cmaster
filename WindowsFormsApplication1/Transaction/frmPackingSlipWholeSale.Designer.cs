@@ -836,7 +836,7 @@
             this.chOtherPS.Properties.Caption = "Other PS";
             this.chOtherPS.Size = new System.Drawing.Size(87, 24);
             this.chOtherPS.TabIndex = 732;
-            this.chOtherPS.CheckedChanged += new System.EventHandler(this.chOtherPS_CheckedChanged);
+            this.chOtherPS.CheckedChanged += new System.EventHandler(this.ChOtherPS_CheckedChanged);
             // 
             // FrmPackingSlipWholeSale
             // 

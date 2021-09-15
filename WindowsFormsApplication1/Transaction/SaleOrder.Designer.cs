@@ -613,7 +613,7 @@
             this.txtSearchBox.Properties.MaxLength = 400;
             this.txtSearchBox.Size = new System.Drawing.Size(660, 24);
             this.txtSearchBox.TabIndex = 246;
-            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
+            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
             // 
             // GridControl1
@@ -1320,8 +1320,8 @@
             this.txtTransporterCode.Properties.MaxLength = 6;
             this.txtTransporterCode.Size = new System.Drawing.Size(125, 24);
             this.txtTransporterCode.TabIndex = 542;
-            this.txtTransporterCode.EditValueChanged += new System.EventHandler(this.txtTransporterCode_EditValueChanged);
-            this.txtTransporterCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTransporterCode_KeyDown);
+            this.txtTransporterCode.EditValueChanged += new System.EventHandler(this.TxtTransporterCode_EditValueChanged);
+            this.txtTransporterCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTransporterCode_KeyDown);
             // 
             // txtDelieveryDate
             // 

@@ -288,12 +288,9 @@ namespace WindowsFormsApplication1.Transaction
                 {
 
 
-#pragma warning disable S125 // Sections of code should not be commented out
                     //var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
 
                     var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
-#pragma warning restore S125 // Sections of code should not be commented out
-
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
                     var transaction = sqlcon.BeginTransaction("SaveTransaction");

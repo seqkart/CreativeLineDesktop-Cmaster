@@ -135,7 +135,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG181")
                 {
                     WindowsFormsApplication1.Transaction.SaleOrder frm = new WindowsFormsApplication1.Transaction.SaleOrder
-                    { s1 = btnAdd.Text, Text = "Sale Order Addition" };
+                    { S1 = btnAdd.Text, Text = "Sale Order Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -191,7 +191,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG133")
                 {
                     Transaction.Pos.ApprovalLReturn frm = new Transaction.Pos.ApprovalLReturn()
-                    { s1 = btnAdd.Text, Text = "Approval Return Addition" };
+                    { S1 = btnAdd.Text, Text = "Approval Return Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -224,7 +224,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG128")
                 {
-                    Transaction.frmBarPrinting frm = new Transaction.frmBarPrinting()
+                    Transaction.FrmBarPrinting frm = new Transaction.FrmBarPrinting()
                     { S1 = btnAdd.Text, Text = "Bar Printing Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG7")
                 {
                     Transaction.frmDealerOrderMaster frm = new Transaction.frmDealerOrderMaster()
-                    { s1 = btnAdd.Text, Text = "Order Addition" };
+                    { S1 = btnAdd.Text, Text = "Order Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -274,7 +274,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG27")
                 {
-                    frmAdvanceAddEdit frm = new frmAdvanceAddEdit() { s1 = btnAdd.Text, Text = "Advance Addition" };
+                    FrmAdvanceAddEdit frm = new FrmAdvanceAddEdit() { S1 = btnAdd.Text, Text = "Advance Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -340,7 +340,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG142")
                 {
                     WindowsFormsApplication1.Transaction.challans.Frm_ChallanOutward frm = new WindowsFormsApplication1.Transaction.challans.Frm_ChallanOutward
-                    { s1 = btnAdd.Text, Text = "Outward Challan Edition" };
+                    { S1 = btnAdd.Text, Text = "Outward Challan Edition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -408,7 +408,7 @@ namespace WindowsFormsApplication1
 
                     WindowsFormsApplication1.Transaction.SaleOrder frm = new WindowsFormsApplication1.Transaction.SaleOrder
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Sale Order Edition",
                         DocNo = CurrentRow["DocNo"].ToString(),
                         DocDate = Convert.ToDateTime(CurrentRow["DocDate"])
@@ -465,7 +465,7 @@ namespace WindowsFormsApplication1
 
                     Transaction.challans.Frm_ChallanOutward frm = new Transaction.challans.Frm_ChallanOutward
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Challan Outward Edition",
                         ImNo = CurrentRow["CHONO"].ToString(),
                         ImDate = Convert.ToDateTime(CurrentRow["CHODATE"])
@@ -528,7 +528,7 @@ namespace WindowsFormsApplication1
 
                     Transaction.Pos.ApprovalLReturn frm = new Transaction.Pos.ApprovalLReturn()
                     {
-                        s1 = btnEdit.Text,
+                        S1 = btnEdit.Text,
                         Text = "Approval Return Edition",
                         ImDate = Convert.ToDateTime(CurrentRow["BillDate"]),
                         ImNo = CurrentRow["BillNo"].ToString(),
@@ -622,7 +622,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG128")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    Transaction.frmBarPrinting frm = new Transaction.frmBarPrinting()
+                    Transaction.FrmBarPrinting frm = new Transaction.FrmBarPrinting()
                     {
                         S1 = btnEdit.Text,
                         Text = "Bar Printing Edition",
@@ -741,7 +741,7 @@ namespace WindowsFormsApplication1
                         else
                         {
                             Transaction.frmDealerOrderMaster frm = new Transaction.frmDealerOrderMaster()
-                            { s1 = btnEdit.Text, Text = "Order Editing", OrderNo = CurrentRow["OrdNo"].ToString() };
+                            { S1 = btnEdit.Text, Text = "Order Editing", OrderNo = CurrentRow["OrdNo"].ToString() };
                             frm.StartPosition = FormStartPosition.CenterScreen;
                             frm.ShowDialog(Parent);
                         }
@@ -758,8 +758,8 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG27")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmAdvanceAddEdit frm = new frmAdvanceAddEdit()
-                    { s1 = btnEdit.Text, Text = "Advance Editing", ExId = CurrentRow["ExId"].ToString() };
+                    FrmAdvanceAddEdit frm = new FrmAdvanceAddEdit()
+                    { S1 = btnEdit.Text, Text = "Advance Editing", ExId = CurrentRow["ExId"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
@@ -848,7 +848,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG37")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    Transaction.frmBankMarking frm = new Transaction.frmBankMarking()
+                    Transaction.FrmBankMarking frm = new Transaction.FrmBankMarking()
                     {
                         Text = "Bank Marking",
                         AccCode = CurrentRow["VutACode"].ToString(),

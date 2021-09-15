@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
 
         }

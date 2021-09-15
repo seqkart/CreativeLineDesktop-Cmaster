@@ -12,20 +12,16 @@ using WindowsFormsApplication1.FormReports;
 
 namespace WindowsFormsApplication1.Forms_Transaction
 {
-    public partial class frmGatePassTimeAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmGatePassTimeAddEdit : DevExpress.XtraEditors.XtraForm
     {
-#pragma warning restore CS0414 // The field 'frmGatePassTimeAddEdit.VoucherType' is assigned but its value is never used
-
-
-
-        public string s1 { get; set; }
-        public string employee_code { get; set; }
-        public string attendance_date { get; set; }
+        public string S1 { get; set; }
+        public string Employee_code { get; set; }
+        public string Attendance_date { get; set; }
 
         private string securityPassword = string.Empty;
 
 
-        public frmGatePassTimeAddEdit()
+        public FrmGatePassTimeAddEdit()
         {
             InitializeComponent();
         }
@@ -46,7 +42,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         }
 
         //private DataSet dsMain;
-        private void frmGatePassTimeAddEdit_Load(object sender, EventArgs e)
+        private void FrmGatePassTimeAddEdit_Load(object sender, EventArgs e)
         {
             securityPassword = ProjectFunctionsUtils.GetDateChangePassword();
             PrintLogWin.PrintLog(securityPassword);
@@ -56,7 +52,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
 
             SetMyControls();
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 //DtDate.Enabled = false;
                 DtDate.EditValue = DateTime.Now;
@@ -65,18 +61,18 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 //txtStatusCode.Text = "A";
                 txtEmpCode.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 //DtDateforMonth.Enabled = false;
                 DtDate.Enabled = false;
                 txtEmpCode.Enabled = false;
 
-                DtDate.EditValue = attendance_date;
-                txtEmpCode.EditValue = employee_code;
+                DtDate.EditValue = Attendance_date;
+                txtEmpCode.EditValue = Employee_code;
 
                 try
                 {
-                    SetFormValues(0, employee_code, attendance_date, 0);
+                    SetFormValues(0, Employee_code, Attendance_date, 0);
                     //if (ComparisonUtils.IsNotNull_DataSet(dsMain))
                     //{
                     //gridControl_GatePassData.DataSource = dsMain.Tables[0];
@@ -210,7 +206,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpCodeDesc.Text = string.Empty;
 
@@ -229,7 +225,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
         }
 
-        private void txtStatusCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtStatusCode_EditValueChanged(object sender, EventArgs e)
         {
             txtStatusCodeDesc.Text = string.Empty;
         }
@@ -255,7 +251,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         }
 
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -309,7 +305,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             e.Handled = true;
         }
 
-        private void txtStatusCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtStatusCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select status_code AS Code,status AS Description from GatePassStatus", " Where status_code", txtStatusCode, txtStatusCodeDesc, txtStatusCode, HelpGrid, HelpGridView, e);
         }
@@ -350,7 +346,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         }
 
 
-        private void frmGatePassTimeAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmGatePassTimeAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {
@@ -372,14 +368,14 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
 
 
-        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPassword_KeyDown(object sender, KeyEventArgs e)
         {
 
         }
 
-        private void txtPassword_KeyUp(object sender, KeyEventArgs e)
+        private void TxtPassword_KeyUp(object sender, KeyEventArgs e)
         {
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 if (txtPassword.Text == securityPassword)
                 {
@@ -425,7 +421,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
         }
 
-        private void gridControl_GatePassData_DoubleClick(object sender, EventArgs e)
+        private void GridControl_GatePassData_DoubleClick(object sender, EventArgs e)
         {
             try
             {
@@ -437,7 +433,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 string date_value = detailView.GetFocusedRowCellValue("Date") + string.Empty;
 
 
-                SetFormValues(0, employee_code, date_value, cellValue_serial_id);
+                SetFormValues(0, Employee_code, date_value, cellValue_serial_id);
             }
             catch (Exception ex)
             {

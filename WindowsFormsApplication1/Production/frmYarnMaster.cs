@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1.Production
 {
     public partial class frmYarnMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string YarnCode { get; set; }
         public frmYarnMaster()
         {
@@ -82,33 +82,29 @@ namespace WindowsFormsApplication1.Production
 
             return true;
         }
-        private void BtnSave_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtYarnTypeCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtYarnTypeCode_EditValueChanged(object sender, EventArgs e)
         {
             txtYarnTypeDesc.Text = String.Empty;
         }
 
-        private void txtYarnTypeCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtYarnTypeCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select YarnTypeCode,YarnTypeName from YarnTypeMst", " Where YarnTypeCode", txtYarnTypeCode, txtYarnTypeDesc, txtYarnContent, HelpGrid, HelpGridView, e);
         }
 
-        private void txtColorCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtColorCode_EditValueChanged(object sender, EventArgs e)
         {
             txtColorName.Text = string.Empty;
 
         }
 
-        private void txtColorCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtColorCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("select COLSYSID,COLNAME from COLOURS", " Where COLSYSID", txtColorCode, txtColorName, txtColorCode, HelpGrid, HelpGridView, e);
         }
@@ -158,7 +154,7 @@ namespace WindowsFormsApplication1.Production
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into YarnMst"
@@ -166,7 +162,7 @@ namespace WindowsFormsApplication1.Production
                                                     + " values((SELECT RIGHT('000000'+ CAST( ISNULL( max(Cast(YarnCode as int)),0)+1 AS VARCHAR(6)),6)from YarnMst),@YarnContent,@YarnTypeCode,@YarnLotNo,@YarnColorID )"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE YarnMst SET "
                                                 + " YarnContent=@YarnContent,YarnTypeCode=@YarnTypeCode, YarnLotNo=@YarnLotNo,YarnColorID=@YarnColorID"
@@ -200,15 +196,15 @@ namespace WindowsFormsApplication1.Production
             }
         }
 
-        private void frmYarnMaster_Load(object sender, EventArgs e)
+        private void FrmYarnMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtYarnContent.Focus();
                 txtYarnCode.Text = GetNewYarnCode().PadLeft(6, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtYarnContent.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadYarnMstFEdit '" + YarnCode + "'");

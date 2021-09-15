@@ -34,11 +34,6 @@ namespace WindowsFormsApplication1
 
         private void HOSale()
         {
-#pragma warning disable CS0219 // The variable 'i' is assigned but its value is never used
-            int i = 0;
-#pragma warning restore CS0219 // The variable 'i' is assigned but its value is never used
-
-
             dt.Clear();
 
 

@@ -550,7 +550,7 @@ namespace WindowsFormsApplication1
             //}
         }
 
-        private void btnOpen_Click(object sender, EventArgs e)
+        private void BtnOpen_Click(object sender, EventArgs e)
         {
             //using (var VD = new Forms_Transaction.AttachDoc() { IsView = true, Filelocation = DocLoc })
             //{

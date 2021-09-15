@@ -41,7 +41,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.ButtonVisualize(this);
         }
 
-        private void frmVoucherMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmVoucherMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
             if (S1 == "&Add")

@@ -2,18 +2,15 @@
 using System.Data;
 using System.Data.SqlClient;
 
-#pragma warning disable CS0105 // The using directive for 'System.Data' appeared previously in this namespace
-#pragma warning restore CS0105 // The using directive for 'System.Data' appeared previously in this namespace
-
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmBankMarking : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBankMarking : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
         public string AccCode { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public frmBankMarking()
+        public FrmBankMarking()
         {
             InitializeComponent();
         }
@@ -87,7 +84,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void frmBankMarking_Load(object sender, EventArgs e)
+        private void FrmBankMarking_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             FillGrid();

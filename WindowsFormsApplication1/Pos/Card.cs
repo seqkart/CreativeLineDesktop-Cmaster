@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 {
     public partial class Card : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string MemoNo { get; set; }
         public DateTime MemoDate { get; set; }
         public decimal CardPayment { get; set; }

@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1.Forms_Master
             {
                 try
                 {
-                    var frm = new Forms_Transaction.frmGatePassTimeAddEdit() { s1 = _s1, employee_code = _employee_code, attendance_date = _attendance_date };
+                    var frm = new Forms_Transaction.FrmGatePassTimeAddEdit() { S1 = _s1, Employee_code = _employee_code, Attendance_date = _attendance_date };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.Text = "Gate Pass Entry";

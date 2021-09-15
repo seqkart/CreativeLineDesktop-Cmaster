@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Production
 {
-    public partial class frmYarnStock : DevExpress.XtraEditors.XtraForm
+    public partial class FrmYarnStock : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string YarnCode { get; set; }
-        public frmYarnStock()
+        public FrmYarnStock()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1.Production
             this.Close();
         }
 
-        private void txtYarnCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtYarnCode_EditValueChanged(object sender, EventArgs e)
         {
             txtYarnContent.Text = string.Empty;
             txtYarnLotNo.Text = string.Empty;
@@ -92,15 +92,15 @@ namespace WindowsFormsApplication1.Production
             }
             return true;
         }
-        private void frmYarnStock_Load(object sender, EventArgs e)
+        private void FrmYarnStock_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtYarnCode.Focus();
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtYarnCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadYranStockDataFEdit '" + YarnCode + "'");
@@ -147,7 +147,7 @@ namespace WindowsFormsApplication1.Production
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into YarnStockMst"
@@ -155,7 +155,7 @@ namespace WindowsFormsApplication1.Production
                                                     + " values( @YarnCode,@YarnStockQty)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE YarnStockMst SET "
                                                 + " YarnStockQty=@YarnStockQty"
@@ -187,7 +187,7 @@ namespace WindowsFormsApplication1.Production
             }
         }
 
-        private void txtYarnCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtYarnCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1.Production
 
         }
 
-        private void txtQty_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtQty_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }

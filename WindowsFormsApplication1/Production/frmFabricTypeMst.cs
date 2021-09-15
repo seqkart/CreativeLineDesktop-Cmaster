@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Production
 {
     public partial class frmFabricTypeMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string FabricTypeCode { get; set; }
         public frmFabricTypeMst()
         {
@@ -53,15 +53,15 @@ namespace WindowsFormsApplication1.Production
             return true;
         }
 
-        private void frmLotTypeMst_Load(object sender, EventArgs e)
+        private void FrmLotTypeMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtFabricTypeDesc.Focus();
                 txtFabricTypeCode.Text = GetNewYarnTypeCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtFabricTypeCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from FabricTypeMst Where FabricTypeCode = '" + FabricTypeCode + "'");
@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1.Production
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into FabricTypeMst"
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Production
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(FabricTypeCode as int)),0)+1 AS VARCHAR(4)),4)from FabricTypeMst),@FabricTypeName )"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE FabricTypeMst SET "
                                                 + " FabricTypeName=@FabricTypeName "

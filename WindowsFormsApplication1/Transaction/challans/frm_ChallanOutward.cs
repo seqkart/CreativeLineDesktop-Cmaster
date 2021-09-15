@@ -12,7 +12,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 {
     public partial class Frm_ChallanOutward : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
         DataTable dt = new DataTable();
@@ -564,7 +564,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
                 ProjectFunctions.TextBoxVisualize(this);
 
-                PrintLogWin.PrintLog(s1);
+                PrintLogWin.PrintLog(S1);
 
 
                 txtBillingAddress1.Enabled = false;
@@ -576,14 +576,14 @@ namespace WindowsFormsApplication1.Transaction.challans
 
 
 
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     groupControl1.Focus();
                     txtChallanType.Select();
                     txtChallanDate.EditValue = DateTime.Now;
                     txtChallanType.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     string loadChallan_Query = "sp_LoadChallanOutMstFEdit '" + ImNo + "' ,'" + ImDate.ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "' ";
                     PrintLogWin.PrintLog("sp_LoadChallanOutMstFEdit => " + loadChallan_Query);
@@ -645,10 +645,10 @@ namespace WindowsFormsApplication1.Transaction.challans
                         sqlcom.Connection = sqlcon;
                         sqlcom.CommandType = CommandType.StoredProcedure;
                         sqlcom.CommandType = CommandType.Text;
-                        if (s1 == "&Add" || s1 == "Edit")
+                        if (S1 == "&Add" || S1 == "Edit")
                         {
                             int CHONO_New = 0;
-                            if (s1 == "Edit")
+                            if (S1 == "Edit")
                             {
                                 CHONO_New = ConvertTo.IntVal(txtChallanNo.Text);
                             }
@@ -1287,20 +1287,18 @@ namespace WindowsFormsApplication1.Transaction.challans
                 }));
 
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
-        private void txtSearchBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtSearchBox_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
 
-        private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             try
 
@@ -1327,7 +1325,7 @@ namespace WindowsFormsApplication1.Transaction.challans
             }
         }
 
-        private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
+        private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
@@ -1469,22 +1467,22 @@ namespace WindowsFormsApplication1.Transaction.challans
             }
         }
 
-        private void txtIssuedBy_EditValueChanged(object sender, EventArgs e)
+        private void TxtIssuedBy_EditValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtContactDetails_EditValueChanged(object sender, EventArgs e)
+        private void TxtContactDetails_EditValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtDebitPartyCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtDebitPartyCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumberOnly(e);
         }
 
-        private void txtTransporterCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtTransporterCode_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumberOnly(e);
         }

@@ -450,11 +450,9 @@ namespace WindowsFormsApplication1
                             }
 
                         }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                         catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                         {
-                            Error.SetError(TextProdCode, "Enter Valid Prod Code");
+                            Error.SetError(TextProdCode, "Enter Valid Prod Code"+ ex.Message);
                         }
 
 
@@ -468,11 +466,9 @@ namespace WindowsFormsApplication1
 
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
 
         }
@@ -752,10 +748,9 @@ namespace WindowsFormsApplication1
                     SelectNextControl(ActiveControl, false, true, true, true);
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -807,12 +802,11 @@ namespace WindowsFormsApplication1
                 TextProdAmount.Text = (Convert.ToDecimal(TextProdQnty.Text) * Convert.ToDecimal(TextProdRate.Text)).ToString();
                 TextProdAmount.Focus();
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 TextProdQnty.Focus(); Errorflag = false;
                 Error.SetError(TextProdQnty, "Enter Valid Values.");
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1033,11 +1027,9 @@ namespace WindowsFormsApplication1
                 id = int.Parse(EntryInfo_Grid.GetRowCellValue(e.FocusedRowHandle, EntryInfo_Grid.Columns["Id"]).ToString());
                 //  currentprodCode = EntryInfo_Grid.GetRowCellValue(e.FocusedRowHandle, EntryInfo_Grid.Columns["Code"]).ToString();
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1252,11 +1244,9 @@ namespace WindowsFormsApplication1
                     currentprodCode = string.Empty;
                     BtnOK.Text = "&Ok";
                 }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
-
+                    ProjectFunctions.SpeakError(ex.Message);
                 }
                 //EntryInfo_Grid.AddNewRow();
             }
@@ -1316,11 +1306,9 @@ namespace WindowsFormsApplication1
                 Status.Text = "Taxable Amt. is : " + TextTaxableAmt.Text + " and Grid Taxable Amt. is :" + colMdTxblAmt.SummaryItem.SummaryValue;
                 BtnOK.Text = "&Ok";
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1333,11 +1321,9 @@ namespace WindowsFormsApplication1
                 Status.Text = "Taxable Amt. is : " + TextTaxableAmt.Text + " and Grid Taxable Amt. is :" + colMdTxblAmt.SummaryItem.SummaryValue;
                 BtnOK.Text = "&Ok";
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1811,7 +1797,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void textEdit1_Validated(object sender, EventArgs e)
+        private void TextEdit1_Validated(object sender, EventArgs e)
         {
             try
             {
@@ -1850,11 +1836,9 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -2322,10 +2306,9 @@ namespace WindowsFormsApplication1
 
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
                 //Error.SetError(DtEntry);
             }
             Print.Enabled = false;
@@ -2363,10 +2346,9 @@ namespace WindowsFormsApplication1
 
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
                 //Error.SetError(DtEntry);
             }
         }

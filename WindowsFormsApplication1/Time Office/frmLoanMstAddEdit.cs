@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 txtLoanDate.EditValue = Convert.ToDateTime(DateTime.Now);
                 txtEmpCode.Focus();
 
-                txtLoanNo.Text = getNewLoanNo().PadLeft(5, '0');
+                txtLoanNo.Text = GetNewLoanNo().PadLeft(5, '0');
 
             }
             if (S1 == "Edit" || S1 == "View")
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
-        private string getNewLoanNo()
+        private string GetNewLoanNo()
         {
             var s2 = string.Empty;
 
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     strQry = strQry + "'" + Convert.ToDecimal(txtLoanAmount.Text) + "',";
                     strQry = strQry + "'" + Convert.ToDecimal(txtLoanInstlmnt.Text) + "',";
                     strQry = strQry + "'" + Convert.ToDateTime(txtMonthYear.Text).ToString("MM-yyyy") + "',";
-                    strQry = strQry + "'" + getNewLoanNo().PadLeft(5, '0') + "',";
+                    strQry = strQry + "'" + GetNewLoanNo().PadLeft(5, '0') + "',";
                     strQry = strQry + "'" + GlobalVariables.CurrentUser + "',";
                     strQry = strQry + "'" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "',";
                     strQry = strQry + "'" + Convert.ToDateTime(txtLoanDate.Text).ToString("yyyy-MM-dd") + "')";

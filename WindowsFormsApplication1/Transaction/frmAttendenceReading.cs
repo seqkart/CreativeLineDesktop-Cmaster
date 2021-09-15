@@ -3,10 +3,10 @@ using System;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmAttendenceReading : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAttendenceReading : DevExpress.XtraEditors.XtraForm
     {
 
-        public frmAttendenceReading()
+        public FrmAttendenceReading()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void frmAttendenceReading_Load(object sender, EventArgs e)
+        private void FrmAttendenceReading_Load(object sender, EventArgs e)
         {
 
         }

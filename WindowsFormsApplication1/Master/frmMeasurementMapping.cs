@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1.Master
 
     public partial class frmMeasurementMapping : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string MCode { get; set; }
         public frmMeasurementMapping()
         {
@@ -58,15 +58,15 @@ namespace WindowsFormsApplication1.Master
         //        HelpGrid.DataSource = null;
         //    }
         //}
-        private void frmMeasurementMapping_Load(object sender, EventArgs e)
+        private void FrmMeasurementMapping_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtMDesc.Focus();
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtMCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadMeasurementsEdit '" + MCode + "'");
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1.Master
                 }
             }
         }
-        private string getNewNo()
+        private string GetNewNo()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(MCode as int)),0000) from Measurements");
@@ -100,14 +100,14 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into Measurements"
                                                  + " (MCode, MDesc)"
                                                  + " values(@MCode, @MDesc)";
-                            txtMCode.Text = getNewNo().PadLeft(4, '0');
+                            txtMCode.Text = GetNewNo().PadLeft(4, '0');
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE Measurements SET "
                                                 + " MCode=@MCode,MDesc=@MDesc "
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmMeasurementMapping_KeyDown(object sender, KeyEventArgs e)
+        private void FrmMeasurementMapping_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {

@@ -2,16 +2,11 @@
 
 namespace WindowsFormsApplication1.FormReports
 {
-    public partial class frmPrintReportDesigner : DevExpress.XtraEditors.XtraForm
+    public partial class FrmPrintReportDesigner : DevExpress.XtraEditors.XtraForm
     {
-        public frmPrintReportDesigner()
+        public FrmPrintReportDesigner()
         {
             InitializeComponent();
-        }
-
-        private void BtnQuit_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

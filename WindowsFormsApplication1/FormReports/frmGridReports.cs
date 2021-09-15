@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.FormReports
             {
                 DataRow currentrow = MasterGridView.GetDataRow(MasterGridView.FocusedRowHandle);
 
-                Transaction.challans.Frm_ChallanOutward frm = new Transaction.challans.Frm_ChallanOutward { s1 = "Edit", Text = "Challan Outward Edition", ImNo = currentrow["CHONO"].ToString(), ImDate = Convert.ToDateTime(currentrow["CHODATE"]) };
+                Transaction.challans.Frm_ChallanOutward frm = new Transaction.challans.Frm_ChallanOutward { S1 = "Edit", Text = "Challan Outward Edition", ImNo = currentrow["CHONO"].ToString(), ImDate = Convert.ToDateTime(currentrow["CHODATE"]) };
                 frm.StartPosition = FormStartPosition.CenterScreen;
                 frm.ShowDialog(Parent);
             }

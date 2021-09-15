@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmAttendenceReading
+    partial class FrmAttendenceReading
     {
         /// <summary>
         /// Required designer variable.
@@ -96,7 +96,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAttendenceReading";
             this.Text = "frmAttendenceReading";
-            this.Load += new System.EventHandler(this.frmAttendenceReading_Load);
+            this.Load += new System.EventHandler(this.FrmAttendenceReading_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();

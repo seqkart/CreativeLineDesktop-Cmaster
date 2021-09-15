@@ -11,7 +11,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 {
     public partial class ApprovalLReturn : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         DataTable dt = new DataTable();
         public string ImNo { get; set; }
         public DateTime ImDate { get; set; }
@@ -155,16 +155,14 @@ namespace WindowsFormsApplication1.Transaction.Pos
             {
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
-#pragma warning disable CS0618 // 'GridControl.FocusedView' is obsolete: 'Use the FocusedView property instead.'
                     var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
-#pragma warning restore CS0618 // 'GridControl.FocusedView' is obsolete: 'Use the FocusedView property instead.'
                     sqlcon.Open();
                     var sqlcom = sqlcon.CreateCommand();
                     sqlcom.Connection = sqlcon;
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             string BillNo = string.Empty;
 
@@ -183,7 +181,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = "Update SALEINVMAIN Set SIMSYSDATE=@SIMSYSDATE,SIMFNYR=@SIMFNYR,SIMDATE=@SIMDATE,SIMNO=@SIMNO," +
                                 " SIMSERIES=@SIMSERIES,CustCode=@CustCode,SIMRemarks=@SIMRemarks Where SIMDATE='" + Convert.ToDateTime(ImDate).ToString("yyyy-MM-dd") + "' And SIMNO='" + ImNo + "' And SIMSERIES='" + ImSeries + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'";
@@ -268,12 +266,12 @@ namespace WindowsFormsApplication1.Transaction.Pos
             {
                 ProjectFunctions.TextBoxVisualize(this);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtReturnDate.EditValue = DateTime.Now.ToString("dd-MM-yyyy");
                     txtCustMobileNo.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadArticleApprovalMstFEdit] '" + ImDate.Date.ToString("yyyy-MM-dd") + "','" + ImNo + "','" + ImSeries + "','" + GlobalVariables.CUnitID + "'");
 

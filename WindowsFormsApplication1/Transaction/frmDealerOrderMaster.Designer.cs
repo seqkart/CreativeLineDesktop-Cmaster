@@ -306,8 +306,8 @@
             this.txtDealerCode.Properties.MaxLength = 6;
             this.txtDealerCode.Size = new System.Drawing.Size(92, 24);
             this.txtDealerCode.TabIndex = 1;
-            this.txtDealerCode.EditValueChanged += new System.EventHandler(this.txtDealerCode_EditValueChanged);
-            this.txtDealerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDealerCode_KeyDown);
+            this.txtDealerCode.EditValueChanged += new System.EventHandler(this.TxtDealerCode_EditValueChanged);
+            this.txtDealerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDealerCode_KeyDown);
             // 
             // dtOrderForDate
             // 
@@ -390,8 +390,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDealerOrderMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmDealerOrderMaster_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDealerOrderMaster_KeyDown);
+            this.Load += new System.EventHandler(this.FrmDealerOrderMaster_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDealerOrderMaster_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();

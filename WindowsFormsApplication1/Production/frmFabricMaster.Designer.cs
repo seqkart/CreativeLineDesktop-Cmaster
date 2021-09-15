@@ -150,8 +150,8 @@ namespace WindowsFormsApplication1.Production
             this.txtFabricTypeCode.Properties.MaxLength = 100;
             this.txtFabricTypeCode.Size = new System.Drawing.Size(97, 24);
             this.txtFabricTypeCode.TabIndex = 1;
-            this.txtFabricTypeCode.EditValueChanged += new System.EventHandler(this.txtYarnTypeCode_EditValueChanged);
-            this.txtFabricTypeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtYarnTypeCode_KeyDown);
+            this.txtFabricTypeCode.EditValueChanged += new System.EventHandler(this.TxtYarnTypeCode_EditValueChanged);
+            this.txtFabricTypeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtYarnTypeCode_KeyDown);
             // 
             // txtFabricTypeDesc
             // 
@@ -214,8 +214,8 @@ namespace WindowsFormsApplication1.Production
             this.txtColorCode.Properties.MaxLength = 100;
             this.txtColorCode.Size = new System.Drawing.Size(97, 24);
             this.txtColorCode.TabIndex = 5;
-            this.txtColorCode.EditValueChanged += new System.EventHandler(this.txtColorCode_EditValueChanged);
-            this.txtColorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtColorCode_KeyDown);
+            this.txtColorCode.EditValueChanged += new System.EventHandler(this.TxtColorCode_EditValueChanged);
+            this.txtColorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtColorCode_KeyDown);
             // 
             // HelpGrid
             // 
@@ -270,7 +270,7 @@ namespace WindowsFormsApplication1.Production
             this.Name = "frmFabricMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.frmYarnMaster_Load);
+            this.Load += new System.EventHandler(this.FrmYarnMaster_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtFabricContent.Properties)).EndInit();

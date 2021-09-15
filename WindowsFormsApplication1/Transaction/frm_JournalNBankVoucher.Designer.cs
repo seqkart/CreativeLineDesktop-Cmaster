@@ -1639,7 +1639,7 @@
             this.Name = "frm_JournalNBankVoucher";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frm_JournalNBankVoucher";
-            this.Load += new System.EventHandler(this.frm_JournalNBankVoucher_Load);
+            this.Load += new System.EventHandler(this.Frm_JournalNBankVoucher_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TextAcName.Properties)).EndInit();

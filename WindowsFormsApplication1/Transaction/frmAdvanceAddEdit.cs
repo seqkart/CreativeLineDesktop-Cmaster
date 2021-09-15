@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmAdvanceAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAdvanceAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ExId { get; set; }
-        public frmAdvanceAddEdit()
+        public FrmAdvanceAddEdit()
         {
             InitializeComponent();
         }
@@ -26,19 +26,19 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        private void frmAdvanceAddEdit_Load(object sender, EventArgs e)
+        private void FrmAdvanceAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 DtDate.Enabled = false;
                 DtDate.EditValue = DateTime.Now;
                 DtDateforMonth.EditValue = DateTime.Now;
-                txtAdvanceNo.Text = getNewLoanPassNo().PadLeft(6, '0');
+                txtAdvanceNo.Text = GetNewLoanPassNo().PadLeft(6, '0');
                 txtType.Text = "A";
                 DtDateforMonth.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DtDate.Enabled = false;
                 txtType.Enabled = false;
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into ExMst"
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('00000'+ CAST( ISNULL( max(Cast(ExNo as int)),0)+1 AS VARCHAR(5)),5)from ExMst),@ExDate,@ExEmpCode,@ExAmt,@ExTag,@ExDatePost)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE  ExMst Set  "
                                                 + " ExEmpCode=@ExEmpCode,ExAmt=@ExAmt,ExTag=@ExTag,ExDatePost=@ExDatePost "
@@ -153,7 +153,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private string getNewLoanPassNo()
+        private string GetNewLoanPassNo()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet("select isnull(max(Cast(ExNo as int)),000000) from ExMst");
@@ -164,32 +164,20 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-
-
-        private void clear()
-        {
-            txtEmpCode.Text = string.Empty;
-            txtEmpCodeDesc.Text = string.Empty;
-            txtAmount.Text = string.Empty;
-            txtType.Text = string.Empty;
-            s1 = "&Add";
-            txtEmpCode.Focus();
-            Text = "Time Office Payment Addition";
-        }
-        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpCodeDesc.Text = string.Empty;
         }
 
 
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select EmpCode,EmpName from EmpMst", " Where EmpCode", txtEmpCode, txtEmpCodeDesc, txtType, HelpGrid, HelpGridView, e);
         }
@@ -220,7 +208,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void frmAdvanceAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmAdvanceAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -237,7 +225,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtType_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        private void TxtType_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             if (txtType.Text == "A" || txtType.Text == "C" || txtType.Text == "F")
             {

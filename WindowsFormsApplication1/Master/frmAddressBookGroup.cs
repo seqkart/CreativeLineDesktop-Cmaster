@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmAddressBookGroup : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAddressBookGroup : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string AddressBookGroupCode { get; set; }
-        public frmAddressBookGroup()
+        public FrmAddressBookGroup()
         {
             InitializeComponent();
         }
@@ -47,11 +47,11 @@ namespace WindowsFormsApplication1
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtGroupDesc.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT AddressBookGroupCode,AddressBookGroupDesc FROM AddressBookGroup Where AddressBookGroupCode='" + AddressBookGroupCode + "'");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -82,13 +82,13 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into AddressBookGroup"
                                                     + " (AddressBookGroupDesc)values(@AddressBookGroupDesc)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE AddressBookGroup SET "
                                                 + " AddressBookGroupDesc=@AddressBookGroupDesc"

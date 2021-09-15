@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction.Pos
 {
-    partial class Schemesetup
+    partial class SchemeSetup
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Schemesetup));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SchemeSetup));
             this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.treeList1 = new DevExpress.XtraTreeList.TreeList();
@@ -273,7 +273,7 @@
             this.chPowerFilter.Properties.Caption = "Filter";
             this.chPowerFilter.Size = new System.Drawing.Size(86, 25);
             this.chPowerFilter.TabIndex = 741;
-            this.chPowerFilter.CheckedChanged += new System.EventHandler(this.chPowerFilter_CheckedChanged);
+            this.chPowerFilter.CheckedChanged += new System.EventHandler(this.ChPowerFilter_CheckedChanged);
             // 
             // chPowerSKU
             // 
@@ -287,7 +287,7 @@
             this.chPowerSKU.Properties.Caption = "SKU";
             this.chPowerSKU.Size = new System.Drawing.Size(86, 25);
             this.chPowerSKU.TabIndex = 742;
-            this.chPowerSKU.CheckedChanged += new System.EventHandler(this.chPowerSKU_CheckedChanged);
+            this.chPowerSKU.CheckedChanged += new System.EventHandler(this.ChPowerSKU_CheckedChanged);
             // 
             // chPowerGroup
             // 
@@ -301,7 +301,7 @@
             this.chPowerGroup.Properties.Caption = "Group";
             this.chPowerGroup.Size = new System.Drawing.Size(86, 25);
             this.chPowerGroup.TabIndex = 743;
-            this.chPowerGroup.CheckedChanged += new System.EventHandler(this.chPowerGroup_CheckedChanged);
+            this.chPowerGroup.CheckedChanged += new System.EventHandler(this.ChPowerGroup_CheckedChanged);
             // 
             // chPowerArticle
             // 
@@ -315,7 +315,7 @@
             this.chPowerArticle.Properties.Caption = "Article";
             this.chPowerArticle.Size = new System.Drawing.Size(86, 25);
             this.chPowerArticle.TabIndex = 744;
-            this.chPowerArticle.CheckedChanged += new System.EventHandler(this.chPowerArticle_CheckedChanged);
+            this.chPowerArticle.CheckedChanged += new System.EventHandler(this.ChPowerArticle_CheckedChanged);
             // 
             // labelControl17
             // 
@@ -526,7 +526,7 @@
             this.chFlatFilter.Properties.Caption = "Filter";
             this.chFlatFilter.Size = new System.Drawing.Size(86, 25);
             this.chFlatFilter.TabIndex = 13;
-            this.chFlatFilter.CheckedChanged += new System.EventHandler(this.chFlatFilter_CheckedChanged);
+            this.chFlatFilter.CheckedChanged += new System.EventHandler(this.ChFlatFilter_CheckedChanged);
             // 
             // chFlatSKU
             // 
@@ -540,7 +540,7 @@
             this.chFlatSKU.Properties.Caption = "SKU";
             this.chFlatSKU.Size = new System.Drawing.Size(86, 25);
             this.chFlatSKU.TabIndex = 13;
-            this.chFlatSKU.CheckedChanged += new System.EventHandler(this.chFlatSKU_CheckedChanged);
+            this.chFlatSKU.CheckedChanged += new System.EventHandler(this.ChFlatSKU_CheckedChanged);
             // 
             // chFlatGroup
             // 
@@ -554,7 +554,7 @@
             this.chFlatGroup.Properties.Caption = "Group";
             this.chFlatGroup.Size = new System.Drawing.Size(86, 25);
             this.chFlatGroup.TabIndex = 13;
-            this.chFlatGroup.CheckedChanged += new System.EventHandler(this.chFlatGroup_CheckedChanged);
+            this.chFlatGroup.CheckedChanged += new System.EventHandler(this.ChFlatGroup_CheckedChanged);
             // 
             // chFlatArticle
             // 
@@ -568,7 +568,7 @@
             this.chFlatArticle.Properties.Caption = "Article";
             this.chFlatArticle.Size = new System.Drawing.Size(86, 25);
             this.chFlatArticle.TabIndex = 13;
-            this.chFlatArticle.CheckedChanged += new System.EventHandler(this.chFlatArticle_CheckedChanged);
+            this.chFlatArticle.CheckedChanged += new System.EventHandler(this.ChFlatArticle_CheckedChanged);
             // 
             // labelControl10
             // 

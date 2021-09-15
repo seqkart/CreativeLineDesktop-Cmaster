@@ -1427,7 +1427,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void chOtherPS_CheckedChanged(object sender, EventArgs e)
+        private void ChOtherPS_CheckedChanged(object sender, EventArgs e)
         {
 
         }

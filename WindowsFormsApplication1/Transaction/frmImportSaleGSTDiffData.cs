@@ -5,10 +5,10 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmImportSaleGSTDiffData : DevExpress.XtraEditors.XtraForm
+    public partial class FrmImportSaleGSTDiffData : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public frmImportSaleGSTDiffData()
+        public FrmImportSaleGSTDiffData()
         {
             InitializeComponent();
         }

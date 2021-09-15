@@ -1074,8 +1074,8 @@
             this.txtDebitPartyCode.Properties.MaxLength = 6;
             this.txtDebitPartyCode.Size = new System.Drawing.Size(83, 24);
             this.txtDebitPartyCode.TabIndex = 533;
-            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.txtDebitPartyCode_EditValueChanged);
-            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDebitPartyCode_KeyDown);
+            this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
+            this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
             // 
             // label10
             // 

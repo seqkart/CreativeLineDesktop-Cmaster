@@ -261,7 +261,7 @@
             this.txtTransporterCode.TabIndex = 5;
             this.txtTransporterCode.EditValueChanged += new System.EventHandler(this.TxtTransporterCode_EditValueChanged);
             this.txtTransporterCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTransporterCode_KeyDown);
-            this.txtTransporterCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTransporterCode_KeyPress);
+            this.txtTransporterCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTransporterCode_KeyPress);
             // 
             // labelControl7
             // 
@@ -332,7 +332,7 @@
             this.txtIssuedBy.Properties.BeepOnError = false;
             this.txtIssuedBy.Size = new System.Drawing.Size(353, 24);
             this.txtIssuedBy.TabIndex = 3;
-            this.txtIssuedBy.EditValueChanged += new System.EventHandler(this.txtIssuedBy_EditValueChanged);
+            this.txtIssuedBy.EditValueChanged += new System.EventHandler(this.TxtIssuedBy_EditValueChanged);
             // 
             // txtContactDetails
             // 
@@ -343,7 +343,7 @@
             this.txtContactDetails.Name = "txtContactDetails";
             this.txtContactDetails.Size = new System.Drawing.Size(353, 24);
             this.txtContactDetails.TabIndex = 2;
-            this.txtContactDetails.EditValueChanged += new System.EventHandler(this.txtContactDetails_EditValueChanged);
+            this.txtContactDetails.EditValueChanged += new System.EventHandler(this.TxtContactDetails_EditValueChanged);
             // 
             // txtBillingCity
             // 
@@ -430,7 +430,7 @@
             this.txtDebitPartyCode.TabStop = false;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
-            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDebitPartyCode_KeyPress);
+            this.txtDebitPartyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDebitPartyCode_KeyPress);
             // 
             // labelControl8
             // 
@@ -853,9 +853,9 @@
             this.txtSearchBox.Properties.MaxLength = 400;
             this.txtSearchBox.Size = new System.Drawing.Size(594, 24);
             this.txtSearchBox.TabIndex = 246;
-            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
-            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
-            this.txtSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchBox_KeyPress);
+            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
+            this.txtSearchBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSearchBox_KeyPress);
             // 
             // Frm_ChallanOutward
             // 

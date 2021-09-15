@@ -6,19 +6,8 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Forms_Master
 {
-    public partial class frm_EmpSalAddUpdate : XtraForm
+    public partial class Frm_EmpSalAddUpdate : XtraForm
     {
-#pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.EmpDummy' is assigned but its value is never used
-        string EmpDummy = string.Empty;
-#pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.EmpDummy' is assigned but its value is never used
-#pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.BankName' is assigned but its value is never used
-        string BankName = string.Empty;
-#pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankName' is assigned but its value is never used
-#pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.BankIfscCode' is assigned but its value is never used
-        string BankIfscCode = string.Empty;
-#pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankIfscCode' is assigned but its value is never used
-#pragma warning disable CS0414 // The field 'frm_EmpSalAddUpdate.BankAccNo' is assigned but its value is never used
-        string BankAccNo = string.Empty;
 #pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankAccNo' is assigned but its value is never used
 
         private string CurrentControl = string.Empty;
@@ -38,7 +27,7 @@ namespace WindowsFormsApplication1.Forms_Master
         public string sql1 = string.Empty;
         public int DaysInMonth { get; set; }
 
-        public frm_EmpSalAddUpdate()
+        public Frm_EmpSalAddUpdate()
         {
             InitializeComponent();
         }
@@ -704,11 +693,6 @@ namespace WindowsFormsApplication1.Forms_Master
             {
                 e.Cancel = true;
             }
-        }
-
-        private void BtnPassword_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void TextSick_Leave_1(object sender, EventArgs e)

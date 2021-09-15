@@ -82,10 +82,9 @@ namespace WindowsFormsApplication1
                 Record.Columns.Add("MmDocDate", typeof(DateTime));
                 Record.Columns.Add("EntryId", typeof(int)).AutoIncrement = true;
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -167,12 +166,6 @@ namespace WindowsFormsApplication1
 
         private void DtVoucher_Validated(object sender, EventArgs e)
         {
-            //if (!ProjectFunctions.CheckRange(DtVoucher.DateTime, GlobalVariables.FinYearStartDate.Date, DateTime.Today.AddDays(3650)))
-            //    {
-            //    DtVoucher.Focus();
-            //    Error.SetError(DtVoucher, "Date does not fall in Expected Range. Either You are crossign FinancialYear Limit or Crossing Today Limit.");
-            //    return;
-            //    }
 
             if (DtVoucher.DateTime.Date == DateTime.Now.Date || AuthenticateFlag)
             {
@@ -397,11 +390,9 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
-                ProjectFunctions.SpeakError("Unable to fetch Data or No Record.");
+                ProjectFunctions.SpeakError("Unable to fetch Data or No Record."+ ex.Message);
                 HelpGridCtrl.Visible = false;
             }
         }
@@ -732,10 +723,9 @@ namespace WindowsFormsApplication1
                     SelectNextControl(ActiveControl, false, true, true, true);
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -807,10 +797,9 @@ namespace WindowsFormsApplication1
             {
                 TextRefPayment.Text = Math.Round(float.Parse(TextRefBalance.Text), 2) > Math.Round(float.Parse(TextBalanceLeft.Text), 2) ? TextBalanceLeft.Text : TextRefBalance.Text;
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -850,12 +839,10 @@ namespace WindowsFormsApplication1
                     Error.SetError(TextRefPayment, "Please Enter Valid Amount");
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 BtnOk.Enabled = false;
-                Error.SetError(TextRefPayment, "Please Enter Valid Amount");
+                Error.SetError(TextRefPayment, "Please Enter Valid Amount"+ ex.Message);
             }
         }
 
@@ -970,11 +957,9 @@ namespace WindowsFormsApplication1
                         TextPaymentMethod.Focus();
                     }
                 }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                 catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                 {
-                    ProjectFunctions.SpeakError("Unable To Update, Please Contact IT Department");
+                    ProjectFunctions.SpeakError("Unable To Update, Please Contact IT Department"+ ex.Message);
                 }
                 TextBill_Ref_No.Enabled = true;
             }
@@ -1045,10 +1030,9 @@ namespace WindowsFormsApplication1
             {
                 id = int.Parse(EntryInfo_Grid.GetRowCellValue(e.FocusedRowHandle, EntryInfo_Grid.Columns["EntryId"]).ToString());
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -1349,10 +1333,9 @@ namespace WindowsFormsApplication1
                     BtnDelete.Enabled = false;
                 }
             }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 

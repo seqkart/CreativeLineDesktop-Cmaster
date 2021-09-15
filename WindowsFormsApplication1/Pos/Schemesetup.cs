@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Transaction.Pos
 {
-    public partial class Schemesetup : DevExpress.XtraEditors.XtraForm
+    public partial class SchemeSetup : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string SchemeID { get; set; }
-        public Schemesetup()
+        public SchemeSetup()
         {
             InitializeComponent();
         }
@@ -55,7 +55,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         sqlcom.CommandType = CommandType.Text;
                         try
                         {
-                            if (s1 == "&Add")
+                            if (S1 == "&Add")
                             {
 
                                 sqlcom.CommandText = " Insert into SchemeMst"
@@ -63,7 +63,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                                                         + " values(@SchmDate,@SchmName,@FromDate,@EndDate)";
 
                             }
-                            if (s1 == "Edit")
+                            if (S1 == "Edit")
                             {
                                 sqlcom.CommandText = " UPDATE SchemeMst SET "
                                                     + " SchmDate=@SchmDate,SchmName=@SchmName,FromDate=@FromDate,EndDate=@EndDate"
@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
         private void Schemesetup_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtSchmDate.EditValue = DateTime.Now.ToString("dd-MM-yyyy");
                 txtSchemeName.Focus();
@@ -140,7 +140,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                     }
                 }
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
 
                 DataSet ds = ProjectFunctions.GetDataSet("select * from SchemeMst where SchmID='" + SchemeID + "'");
@@ -251,7 +251,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
         }
 
 
-        private void chFlatArticle_CheckedChanged(object sender, EventArgs e)
+        private void ChFlatArticle_CheckedChanged(object sender, EventArgs e)
         {
             if (chFlatArticle.Checked)
             {
@@ -262,7 +262,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chFlatGroup_CheckedChanged(object sender, EventArgs e)
+        private void ChFlatGroup_CheckedChanged(object sender, EventArgs e)
         {
             if (chFlatGroup.Checked)
             {
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chFlatSKU_CheckedChanged(object sender, EventArgs e)
+        private void ChFlatSKU_CheckedChanged(object sender, EventArgs e)
         {
             if (chFlatSKU.Checked)
             {
@@ -284,7 +284,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chFlatFilter_CheckedChanged(object sender, EventArgs e)
+        private void ChFlatFilter_CheckedChanged(object sender, EventArgs e)
         {
             if (chFlatFilter.Checked)
             {
@@ -295,7 +295,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chPowerArticle_CheckedChanged(object sender, EventArgs e)
+        private void ChPowerArticle_CheckedChanged(object sender, EventArgs e)
         {
             if (chPowerArticle.Checked)
             {
@@ -306,7 +306,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chPowerGroup_CheckedChanged(object sender, EventArgs e)
+        private void ChPowerGroup_CheckedChanged(object sender, EventArgs e)
         {
             if (chPowerGroup.Checked)
             {
@@ -317,7 +317,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chPowerSKU_CheckedChanged(object sender, EventArgs e)
+        private void ChPowerSKU_CheckedChanged(object sender, EventArgs e)
         {
             if (chPowerSKU.Checked)
             {
@@ -328,7 +328,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             }
         }
 
-        private void chPowerFilter_CheckedChanged(object sender, EventArgs e)
+        private void ChPowerFilter_CheckedChanged(object sender, EventArgs e)
         {
             if (chPowerFilter.Checked)
             {

@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1.Transaction
             txtRoundOffAmount.Text = (Convert.ToDecimal(txtRNetAmount.Text) - NetAmount).ToString("0.00");
         }
 
-        private void txtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtDebitPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtDebitPartyName.Text = string.Empty;
             txtBillingAddress1.Text = string.Empty;
@@ -99,7 +99,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-        private void txtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtDebitPartyCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

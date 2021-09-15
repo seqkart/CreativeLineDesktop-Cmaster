@@ -23,7 +23,7 @@ namespace WindowsFormsApplication1.Transaction
             Close();
         }
 
-        private void frmIndentPassing_Load(object sender, EventArgs e)
+        private void FrmIndentPassing_Load(object sender, EventArgs e)
         {
             SetMyControls();
             DataSet ds = ProjectFunctions.GetDataSet("sp_LoadIndDataFPassing '" + IndentNo + "','" + IndentDate.Date.ToString("yyyy-MM-dd") + "'");

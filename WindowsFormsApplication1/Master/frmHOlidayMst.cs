@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class FrmHOlidayMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string HolidaySysID { get; set; }
         public FrmHOlidayMst()
         {
@@ -63,11 +63,11 @@ namespace WindowsFormsApplication1.Master
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtHolidayDate.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM HolidaysMaster Where serial_id='" + HolidaySysID + "'");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -99,13 +99,13 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into HolidaysMaster"
                                                     + " (holiday_date,holiday_name)values(@holiday_date,@holiday_name)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE HolidaysMaster SET "
                                                 + " holiday_date=@holiday_date,holiday_name=@holiday_name"
