@@ -379,7 +379,7 @@ namespace WindowsFormsApplication1.Transaction
             e.Handled = true;
         }
 
-  
+
         private void PrepareActMstHelpGrid()
         {
             HelpGridView.Columns.Clear();

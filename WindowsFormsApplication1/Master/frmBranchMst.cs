@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1.Master
                     txtAddress1.Focus();
                     return false;
                 }
-               
+
                 if (txtCityName.Text.Trim().Length == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid City Name");

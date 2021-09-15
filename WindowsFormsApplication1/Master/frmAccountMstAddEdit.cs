@@ -436,7 +436,7 @@ namespace WindowsFormsApplication1
                             txtZipCode.Text = ds.Tables[0].Rows[0]["PINCode"].ToString();
 
 
-                            DataSet dsCity= ProjectFunctions.GetDataSet("SELECT CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME,STATEMASTER.UNDERRG FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID Where CITYMASTER.CTNAME like'%" + ds.Tables[0].Rows[0]["Station"].ToString() + "%'");
+                            DataSet dsCity = ProjectFunctions.GetDataSet("SELECT CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME,STATEMASTER.UNDERRG FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID Where CITYMASTER.CTNAME like'%" + ds.Tables[0].Rows[0]["Station"].ToString() + "%'");
                             if (dsCity.Tables[0].Rows.Count > 0)
                             {
                                 txtCityCode.Text = dsCity.Tables[0].Rows[0]["CTSYSID"].ToString();
@@ -447,8 +447,8 @@ namespace WindowsFormsApplication1
 
 
 
-                            
-                            txtTel.Text = ds.Tables[0].Rows[0]["TelNo"].ToString()+","+ ds.Tables[0].Rows[0]["Mobile"].ToString();
+
+                            txtTel.Text = ds.Tables[0].Rows[0]["TelNo"].ToString() + "," + ds.Tables[0].Rows[0]["Mobile"].ToString();
                             txtEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
                             txtTinNo.Text = ds.Tables[0].Rows[0]["TINNo"].ToString();
                             txtCstPst.Text = ds.Tables[0].Rows[0]["CST"].ToString();

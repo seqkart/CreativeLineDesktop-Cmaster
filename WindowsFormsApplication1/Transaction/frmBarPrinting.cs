@@ -1002,7 +1002,7 @@ namespace WindowsFormsApplication1.Transaction
         }
 
         private void BarCodeGrid_Click(object sender, EventArgs e)
-        { 
+        {
         }
 
         private void FrmBarPrinting_KeyDown(object sender, KeyEventArgs e)

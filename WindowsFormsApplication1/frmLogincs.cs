@@ -242,7 +242,7 @@ namespace WindowsFormsApplication1
                 cnn.Open();
                 cnn.Close();
             }
-            catch (Exception )
+            catch (Exception)
             {
                 Master.FrmServer frm = new Master.FrmServer();
                 this.Hide();

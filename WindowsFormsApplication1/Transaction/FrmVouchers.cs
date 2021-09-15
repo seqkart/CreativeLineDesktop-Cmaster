@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         dr["CRDR"] = "CR";
 
-                        
+
                     }
                     if (Convert.ToDecimal(dr["Amount"]) > 0)
                     {
@@ -278,7 +278,7 @@ namespace WindowsFormsApplication1.Transaction
                 if (HelpGrid.Text == "txtVoucherTypeCode")
                 {
 
-                   DataTable dtNew = dsPopUps.Tables[0].Clone();
+                    DataTable dtNew = dsPopUps.Tables[0].Clone();
                     DataRow[] dtRow = dsPopUps.Tables[0].Select("VouDesc like '" + txtSearchBox.Text + "%'");
                     foreach (DataRow dr in dtRow)
                     {
@@ -303,7 +303,7 @@ namespace WindowsFormsApplication1.Transaction
                         HelpGridView.BestFitColumns();
                     }
                 }
-         
+
                 if (HelpGrid.Text == "txtAccountCode")
                 {
 
@@ -329,7 +329,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                     }
 
-                    
+
                     foreach (DataRow dr in dtRow)
                     {
                         DataRow NewRow = dtNew.NewRow();
@@ -396,7 +396,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BarCodeGrid_KeyDown(object sender, KeyEventArgs e)
         {
-           ProjectFunctions.CreateRohitStylePopUpGridHelp(VoucherGrid, VoucherGridView, HelpGrid, HelpGridView, "AccCode", txtSearchBox, panelControl2, e);
+            ProjectFunctions.CreateRohitStylePopUpGridHelp(VoucherGrid, VoucherGridView, HelpGrid, HelpGridView, "AccCode", txtSearchBox, panelControl2, e);
         }
 
         private void BtnQuit_Click(object sender, EventArgs e)
@@ -406,7 +406,7 @@ namespace WindowsFormsApplication1.Transaction
         private void AddInvoice()
         {
             Decimal VoucherAmount = 0;
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Amount"]);
             }
@@ -605,7 +605,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 DrCrVariable = "CR";
             }
-            
+
             if (txtVoucherTypeCode.Text == "BP")
             {
                 DrCrVariable = "DR";

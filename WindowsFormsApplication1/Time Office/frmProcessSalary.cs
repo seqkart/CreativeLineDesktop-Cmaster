@@ -95,7 +95,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 //Prevent default drawing of the cell
                 e.Handled = true;
 
-                
+
             }
         }
 
@@ -103,21 +103,21 @@ namespace WindowsFormsApplication1.Forms_Transaction
         {
             gridView_SalaryProcess.CustomColumnDisplayText += GridView_SalaryProcess_CustomColumnDisplayText;
 
-           
+
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-           
+
             ProjectFunctions.XtraFormVisualize(this);
 
 
             DtStartDate.EditValue = DateTime.Now;
 
             MainFormButtons.Roles(GlobalVariables.ProgCode, GlobalVariables.CurrentUser, btnAdd);
-           
+
         }
 
         private void GridControl_SalaryProcess_DoubleClick(object sender, EventArgs e)
         {
-           
+
         }
 
         private void ClearGrid()
@@ -338,10 +338,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         PrintLogWin.PrintLog("SetGridViewStyle => Exception => " + ex);
                     }
 
-                   
+
                     if (Col.FieldName == "SalaryLocked")
                     {
-                      
+
 
                     }
                     rowIndex++;
@@ -364,7 +364,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
                 if (salary_locked == 0)
                 {
-                    
+
                     decimal noofcups = ConvertTo.DecimalVal(e.Value);
                     decimal tearate = Convert.ToDecimal(txtteatrate.Text);
                     decimal totalteaamount = noofcups * tearate;
@@ -386,7 +386,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 }
                 else
                 {
-                    
+
                 }
             }
 
@@ -398,7 +398,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
                 if (salary_locked == 0)
                 {
-                   
+
                     decimal salary_paying = ConvertTo.DecimalVal(e.Value);
 
                     decimal salary_calculated = ConvertTo.DecimalVal(focusRowView["SalaryCalculated"]);
@@ -445,7 +445,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                 /////////////////////////////////////////////////////////////
                 if (salary_paid > 0)
                 {
-                   
+
                     decimal salary_paying = ConvertTo.DecimalVal(focusRowView["SalaryPaid"]);
 
                     decimal salary_calculated = ConvertTo.DecimalVal(focusRowView["SalaryCalculated"]);
@@ -464,7 +464,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
 
                     view.SetRowCellValue(view.FocusedRowHandle, view.Columns["Balance"], balance_new);
                 }
-               
+
 
             }
 
@@ -476,7 +476,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             {
                 if (e.Value != DBNull.Value)
                 {
-                    
+
                 }
             }
             if (e.Column.FieldName == "DeductionTime")
@@ -504,7 +504,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             GridView View = sender as GridView;
             if (e.RowHandle >= 0)
             {
-               
+
             }
         }
 
@@ -622,7 +622,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     PrintLogWin.PrintLog(ex);
                 }
             }
-            
+
         }
 
         private void BtnProcessSalary_Click(object sender, EventArgs e)
@@ -654,7 +654,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                         string strNoOfCups = gridView_SalaryProcess.GetRowCellValue(intRow, "NoOfCups").ToString();
                         string strTotalTeaAmount = gridView_SalaryProcess.GetRowCellValue(intRow, "TotalTeaAmount").ToString();
 
-                       
+
 
                         PrintLogWin.PrintLog("----- btnProcessSalary_Click => strSalaryMonth: " + strSalaryMonth);
                         PrintLogWin.PrintLog("----- btnProcessSalary_Click => strEmpCode: " + strEmpCode);
@@ -717,7 +717,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     PrintLogWin.PrintLog(ex);
                 }
             }
-            
+
         }
 
 
@@ -851,7 +851,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             param.Add("@TeaRate", txtteatrate.Text);
             param.Add("@NoOfCups", 0);
 
-            
+
 
             //List<EmployeeSalary> EmployeesSalaryList = EmployeeData.GetEmployeesSalaryList("sp_Salary_Process", param);
 
@@ -921,7 +921,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             else
             {
                 string path = "Salary_For_Month_" + ConvertTo.DateFormatDb(DtStartDate.EditValue) + ".xlsx";
-               
+
 
 
                 XlsxExportOptionsEx options = new XlsxExportOptionsEx();

@@ -306,7 +306,7 @@ namespace WindowsFormsApplication1
             Page.Text = GlobalVariables.ProgDesc;
             Page.Name = GlobalVariables.ProgCode;
 
-      
+
             Console.WriteLine("WriteLine ********** " + myitem);
             PrintLogWin.PrintLog("Write ********** " + myitem);
 
@@ -951,7 +951,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG36":
-                    
+
                     break;
                 case "PROG52":
                     var PROG52 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -981,7 +981,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG44":
-                   
+
                     break;
                 case "PROG38":
                     var PROG38 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -993,7 +993,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG40":
-                   
+
                     break;
                 case "PROG54":
                     var PROG54 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1032,13 +1032,13 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG61":
-                   
+
                     break;
                 case "PROG63":
-                   
+
                     break;
                 case "PROG64":
-                   
+
                     break;
                 case "PROG55":
                     var PROG55 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1710,7 +1710,7 @@ namespace WindowsFormsApplication1
                     PROG159.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
-               
+
                 case "PROG153":
                     var PROG153 = new WindowsFormsApplication1.Forms_Master.FrmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG153.Show();
@@ -1903,7 +1903,7 @@ namespace WindowsFormsApplication1
             ProjectFunctions.WhatsAppDisConnection();
         }
 
-       
+
 
         private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
         {

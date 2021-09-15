@@ -92,8 +92,8 @@ namespace WindowsFormsApplication1.Transaction
             {
 
                 DataRow dtNewRow = dt.NewRow();
-                dtNewRow["AccCode"] = "";
-                dtNewRow["AccName"] = "";
+                dtNewRow["AccCode"] = string.Empty;
+                dtNewRow["AccName"] = string.Empty;
                 dtNewRow["Debit"] = Convert.ToDecimal("0.00");
                 dtNewRow["Credit"] = Convert.ToDecimal("0.00");
                 dtNewRow["Narration"] = string.Empty;
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 if (HelpGridView.RowCount > 0)
                 {
-                   
+
                     VoucherGridView.SetRowCellValue(RowIndex, VoucherGridView.Columns["AccCode"], row["AccCode"].ToString());
                     VoucherGridView.SetRowCellValue(RowIndex, VoucherGridView.Columns["AccName"], row["AccName"].ToString());
                     panelControl2.Visible = false;
@@ -636,7 +636,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
+
                 if (VoucherGridView.FocusedColumn.FieldName == "Credit" || VoucherGridView.FocusedColumn.FieldName == "Debit")
                 {
                     VoucherGridView.FocusedColumn = VoucherGridView.Columns["Narration"];

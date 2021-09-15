@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
 
             txtDeptCode.Enabled = false;
         }
-        
+
         private void FrmDepartmentAddUpdate_Load(object sender, EventArgs e)
         {
             SetMyControls();

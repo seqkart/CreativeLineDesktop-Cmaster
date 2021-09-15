@@ -452,7 +452,7 @@ namespace WindowsFormsApplication1
                         }
                         catch (Exception ex)
                         {
-                            Error.SetError(TextProdCode, "Enter Valid Prod Code"+ ex.Message);
+                            Error.SetError(TextProdCode, "Enter Valid Prod Code" + ex.Message);
                         }
 
 

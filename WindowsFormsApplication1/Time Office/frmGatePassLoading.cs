@@ -2,9 +2,9 @@
 using DevExpress.XtraGrid;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
+using HumanResourceManagementSystem;
 using SeqKartLibrary.CrudTask;
 using SeqKartLibrary.HelperClass;
-using HumanResourceManagementSystem;
 using System;
 using System.ComponentModel;
 using System.Data;

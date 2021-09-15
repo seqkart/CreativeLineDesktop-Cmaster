@@ -188,7 +188,7 @@ namespace WindowsFormsApplication1.FormReports
                         {
                             dr["CRDR"] = "Cr.";
                             dr["Balance"] = -(Convert.ToDecimal(dr["Balance"]));
-                        } 
+                        }
                     }
 
 
@@ -218,14 +218,14 @@ namespace WindowsFormsApplication1.FormReports
 
         private void BtnPrint_Click(object sender, EventArgs e)
         {
-            
 
-                // LedgerGridView.ShowRibbonPrintPreview();
-                payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+
+            // LedgerGridView.ShowRibbonPrintPreview();
+            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
             Prints.PartyLedgerUpdated Report = new Prints.PartyLedgerUpdated();
             Report.txtCompanyName.Text = GlobalVariables.CompanyName;
             Report.txtReportName.Text = "Statement of Accounts";
-            Report.txtDateRange.Text ="From "+ Convert.ToDateTime(_SelectRange.DtFrom.Text).ToString("dd-MM-yyyy") + " To " + Convert.ToDateTime(_SelectRange.DtEnd.Text).ToString("dd-MM-yyyy");
+            Report.txtDateRange.Text = "From " + Convert.ToDateTime(_SelectRange.DtFrom.Text).ToString("dd-MM-yyyy") + " To " + Convert.ToDateTime(_SelectRange.DtEnd.Text).ToString("dd-MM-yyyy");
 
             if (_SelectRange.chSubEntries.Checked)
             {

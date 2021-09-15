@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1
                 FieldName = "Select",
                 Visible = true,
                 VisibleIndex = 1,
-                               
+
             };
             col3.OptionsColumn.AllowEdit = true;
             HelpGridView.Columns.Add(col3);
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1
             if (ds.Tables[0].Rows.Count > 0)
             {
                 ds.Tables[0].Columns.Add("Select", typeof(bool));
-                foreach(DataRow dr in ds.Tables[0].Rows)
+                foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     dr["Select"] = false;
                 }
@@ -247,8 +247,8 @@ namespace WindowsFormsApplication1
             }
         }
 
-       
 
-      
+
+
     }
 }

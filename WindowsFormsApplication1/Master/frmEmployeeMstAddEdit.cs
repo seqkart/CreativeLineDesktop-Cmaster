@@ -984,7 +984,7 @@ string.Empty +
             {
                 MessageBox.Show(timeEdit_Time_In_First.EditValue + "\n\n" + ex + string.Empty);
             }
-            
+
         }
 
         private void ChkDailyWage_CheckedChanged(object sender, EventArgs e)

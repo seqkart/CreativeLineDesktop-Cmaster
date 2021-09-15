@@ -392,7 +392,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                ProjectFunctions.SpeakError("Unable to fetch Data or No Record."+ ex.Message);
+                ProjectFunctions.SpeakError("Unable to fetch Data or No Record." + ex.Message);
                 HelpGridCtrl.Visible = false;
             }
         }
@@ -842,7 +842,7 @@ namespace WindowsFormsApplication1
             catch (Exception ex)
             {
                 BtnOk.Enabled = false;
-                Error.SetError(TextRefPayment, "Please Enter Valid Amount"+ ex.Message);
+                Error.SetError(TextRefPayment, "Please Enter Valid Amount" + ex.Message);
             }
         }
 
@@ -959,7 +959,7 @@ namespace WindowsFormsApplication1
                 }
                 catch (Exception ex)
                 {
-                    ProjectFunctions.SpeakError("Unable To Update, Please Contact IT Department"+ ex.Message);
+                    ProjectFunctions.SpeakError("Unable To Update, Please Contact IT Department" + ex.Message);
                 }
                 TextBill_Ref_No.Enabled = true;
             }

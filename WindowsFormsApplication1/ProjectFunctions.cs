@@ -1652,7 +1652,7 @@ namespace WindowsFormsApplication1
                         GlobalVariables.WhatAppStatus = myDetails.state;
                         GlobalVariables.WhatAppMobileNo = myDetails.user;
 
-                       //ProjectFunctions.Speak(myDetails.state);
+                        //ProjectFunctions.Speak(myDetails.state);
                     }
                     else
                     {
@@ -2196,7 +2196,7 @@ namespace WindowsFormsApplication1
                 {
 
                     XtraMessageBox.Show(TxnResp.TxnOutcome);
-                   
+
 
                     if (TxnResp.TxnOutcome.Contains("702") && !string.IsNullOrEmpty(TxnResp.Info))
                     {
@@ -2218,7 +2218,7 @@ namespace WindowsFormsApplication1
             }
 
 
-          
+
 
 
         }

@@ -538,7 +538,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                ProjectFunctions.SpeakError("Unable to fetch Data or No Record."+ex.Message);
+                ProjectFunctions.SpeakError("Unable to fetch Data or No Record." + ex.Message);
             }
         }
 
@@ -637,7 +637,7 @@ namespace WindowsFormsApplication1
                         //getBal();
                         TextAmount.Focus();
                         break;
-                   
+
                     case "TextInstrumentType":
                         TextInstrumentType.Text = row["Type"].ToString();
                         CurrentControl = string.Empty;
@@ -771,7 +771,7 @@ namespace WindowsFormsApplication1
 
         private void TextDlrCode_KeyDown(object sender, KeyEventArgs e)
         {
-           
+
         }
 
         private void TextExpHeadCode_KeyDown(object sender, KeyEventArgs e)

@@ -7,10 +7,10 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
+using HumanResourceManagementSystem;
 using SeqKartLibrary;
 using SeqKartLibrary.CrudTask;
 using SeqKartLibrary.HelperClass;
-using HumanResourceManagementSystem;
 using SeqKartLibrary.Models;
 using System;
 using System.ComponentModel;
@@ -355,7 +355,7 @@ namespace WindowsFormsApplication1.Forms_Master
                             e.HighPriority = true;
                         }
                     }
-                   
+
                 }
             }
             catch (Exception ex)
@@ -674,7 +674,7 @@ namespace WindowsFormsApplication1.Forms_Master
         {
             if (txtEmpCode.Text.Trim().Length == 0)
             {
-                
+
                 ProjectFunctions.SpeakError("Enter Employee Code");
                 txtEmpCode.Focus();
                 return false;

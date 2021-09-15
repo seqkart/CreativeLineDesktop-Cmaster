@@ -127,7 +127,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 {
                     btnSave.Enabled = false;
                 }
-               
+
                 string sql_query = "sp_LoadLoan_Details '" + LoanNo + "', '" + Convert.ToDateTime(LoanADate).ToString("yyyy-MM-dd") + "'";
                 PrintLogWin.PrintLog(sql_query);
 

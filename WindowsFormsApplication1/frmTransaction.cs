@@ -794,7 +794,7 @@ namespace WindowsFormsApplication1
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     WindowsFormsApplication1.Transaction.FrmVouchers frm = new WindowsFormsApplication1.Transaction.FrmVouchers()
                     {
-                        
+
                         S1 = btnEdit.Text,
                         Text = "Voucher Editing",
                         VoucherNo = CurrentRow["Voucher No."].ToString(),

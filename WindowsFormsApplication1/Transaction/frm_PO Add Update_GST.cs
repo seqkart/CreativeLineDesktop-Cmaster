@@ -286,7 +286,7 @@ namespace WindowsFormsApplication1
 
         private void ShowHelpWindow(string Query)
         {
-            
+
         }
 
         private void TextPartyCode_KeyDown(object sender, KeyEventArgs e)
@@ -487,7 +487,7 @@ namespace WindowsFormsApplication1
         private void DtEntry_Validated(object sender, EventArgs e)
         {
             Print.Enabled = false;
-          //  try
+            //  try
             {
                 //if (OldDt.Date.Equals(DtEntry.DateTime.Date) && IsUpdate)
                 //    if (AuthenticateFlag)
@@ -600,7 +600,7 @@ namespace WindowsFormsApplication1
                 }
                 catch (Exception ex)
                 {
-                    ProjectFunctions.SpeakError("Sir there is Some problem, Contact IT Department!"+ ex.Message);
+                    ProjectFunctions.SpeakError("Sir there is Some problem, Contact IT Department!" + ex.Message);
                     TextProdCode.Focus();
                 }
             }
@@ -637,7 +637,7 @@ namespace WindowsFormsApplication1
                 }
                 catch (Exception ex)
                 {
-                    ProjectFunctions.SpeakError("Sir there is Some problem, Contact IT Department!"+ ex.Message);
+                    ProjectFunctions.SpeakError("Sir there is Some problem, Contact IT Department!" + ex.Message);
                     TextProdCode.Focus();
                 }
 

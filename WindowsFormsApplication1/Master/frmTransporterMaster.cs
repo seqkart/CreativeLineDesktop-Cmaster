@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1
                 txtGSTNo.Focus();
                 return false;
             }
-           
+
 
             return true;
         }
