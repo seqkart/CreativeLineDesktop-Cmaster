@@ -83,7 +83,6 @@ namespace WindowsFormsApplication1
             txtVehicleUpdateReason.DisplayMember = "Description";
             txtVehicleUpdateReason.ValueMember = "Code";
 
-
         }
         private void SetMyControls()
         {

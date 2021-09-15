@@ -47,7 +47,6 @@ namespace WindowsFormsApplication1.Time_Office
 
             PrintLogWin.PrintLog("selected_serial_id 1 => " + selected_serial_id);
 
-
         }
 
         private void ReloadDataGrid_Parent()

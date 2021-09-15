@@ -94,7 +94,6 @@ namespace WindowsFormsApplication1.Master
                 }
             }
         }
-
         private void TxtLoginType_SelectedIndexChanged(object sender, EventArgs e)
         {
 

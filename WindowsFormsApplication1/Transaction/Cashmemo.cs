@@ -143,7 +143,6 @@ namespace WindowsFormsApplication1.Transaction
         {
 
 
-
             if (InfoGrid.DataSource == null)
             {
                 ProjectFunctions.SpeakError("Blank Bill Cannot Be Saved");

@@ -45,7 +45,6 @@ namespace WindowsFormsApplication1.Transaction.Pos
             txtCustName.Text = string.Empty;
 
         }
-
         private void TxtCustMobileNo_KeyDown(object sender, KeyEventArgs e)
         {
             try

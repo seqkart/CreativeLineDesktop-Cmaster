@@ -71,8 +71,6 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(groupControl1);
             ProjectFunctions.DatePickerVisualize(groupControl2);
             ProjectFunctions.ButtonVisualize(this);
-            //ProjectFunctions.GirdViewVisualize(InfoGridView);
-            //ProjectFunctions.GirdViewVisualize(HelpGridView);
             ProjectFunctions.TextBoxVisualize(groupControl2);
         }
 

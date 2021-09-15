@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.FormReports
         }
         void BtnLoad_Click(object sender, EventArgs e)
         {
-            //ProjectFunctions.BindReportToGrid(ProjectFunctions.GetDataSet("Select ProgProcName from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'").Tables[0].Rows[0]["ProgProcName"].ToString(), _RangeSelector.DtFrom.DateTime.Date, _RangeSelector.DtEnd.DateTime.Date, MasterGrid, MasterGridView);
+           
             String PartyString = String.Empty;
             String ArticleString = String.Empty;
             String LedgerString = String.Empty;
