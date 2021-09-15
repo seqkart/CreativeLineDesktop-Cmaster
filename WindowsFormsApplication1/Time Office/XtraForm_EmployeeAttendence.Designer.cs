@@ -40,10 +40,7 @@
             this.windowsUIButtonPanelMain = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new DevExpress.XtraEditors.GroupControl();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.labelDate_Current = new DevExpress.XtraEditors.LabelControl();
             this.lblDayName = new DevExpress.XtraEditors.LabelControl();
             this.textEmpType = new DevExpress.XtraEditors.TextEdit();
             this.label20 = new DevExpress.XtraEditors.LabelControl();
@@ -62,6 +59,10 @@
             this.label4 = new DevExpress.XtraEditors.LabelControl();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxEmployee = new DevExpress.XtraEditors.GroupControl();
             this.txtNightOverTimeHours = new DevExpress.XtraEditors.TextEdit();
@@ -123,7 +124,6 @@
             this.panelControlMachine = new DevExpress.XtraEditors.PanelControl();
             this.panelControl_Machine_In = new DevExpress.XtraEditors.PanelControl();
             this.radioButtonMachine = new System.Windows.Forms.RadioButton();
-            this.labelDate_Current = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxDailyWager = new DevExpress.XtraEditors.GroupControl();
             this.txtDutyHours_Label_DW = new DevExpress.XtraEditors.LabelControl();
             this.txtDutyHours_DW = new DevExpress.XtraEditors.TextEdit();
@@ -137,10 +137,6 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmpType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUnit.Properties)).BeginInit();
@@ -148,6 +144,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpBoxEmployee)).BeginInit();
             this.grpBoxEmployee.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtNightOverTimeHours.Properties)).BeginInit();
@@ -206,7 +206,7 @@
             this.windowsUIButtonPanelCloseButton.Name = "windowsUIButtonPanelCloseButton";
             this.windowsUIButtonPanelCloseButton.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.windowsUIButtonPanelCloseButton.Padding = new System.Windows.Forms.Padding(6, 7, 0, 0);
-            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 942);
+            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 768);
             this.windowsUIButtonPanelCloseButton.TabIndex = 2;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
@@ -247,7 +247,7 @@
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 942);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 768);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 78);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 78);
@@ -281,7 +281,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelDate_Current);
-            this.groupBox1.Controls.Add(this.HelpGrid);
             this.groupBox1.Controls.Add(this.lblDayName);
             this.groupBox1.Controls.Add(this.textEmpType);
             this.groupBox1.Controls.Add(this.label20);
@@ -301,16 +300,268 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupBox1.Location = new System.Drawing.Point(59, 52);
+            this.groupBox1.Location = new System.Drawing.Point(62, 52);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(712, 314);
+            this.groupBox1.Size = new System.Drawing.Size(712, 257);
             this.groupBox1.TabIndex = 4;
+            // 
+            // labelDate_Current
+            // 
+            this.labelDate_Current.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelDate_Current.Location = new System.Drawing.Point(468, -2);
+            this.labelDate_Current.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelDate_Current.Name = "labelDate_Current";
+            this.labelDate_Current.Size = new System.Drawing.Size(201, 17);
+            this.labelDate_Current.TabIndex = 19;
+            this.labelDate_Current.Text = "Wednesday, June17, 2020 1:42 PM";
+            // 
+            // lblDayName
+            // 
+            this.lblDayName.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDayName.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDayName.Appearance.Options.UseFont = true;
+            this.lblDayName.Appearance.Options.UseForeColor = true;
+            this.lblDayName.Location = new System.Drawing.Point(106, 16);
+            this.lblDayName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lblDayName.Name = "lblDayName";
+            this.lblDayName.Size = new System.Drawing.Size(0, 28);
+            this.lblDayName.TabIndex = 372;
+            // 
+            // textEmpType
+            // 
+            this.textEmpType.Enabled = false;
+            this.textEmpType.Location = new System.Drawing.Point(112, 223);
+            this.textEmpType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textEmpType.Name = "textEmpType";
+            this.textEmpType.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.textEmpType.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textEmpType.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textEmpType.Properties.Appearance.Options.UseBackColor = true;
+            this.textEmpType.Properties.Appearance.Options.UseForeColor = true;
+            this.textEmpType.Properties.ReadOnly = true;
+            this.textEmpType.Size = new System.Drawing.Size(233, 24);
+            this.textEmpType.TabIndex = 371;
+            this.textEmpType.EditValueChanged += new System.EventHandler(this.TextEmpType_EditValueChanged);
+            // 
+            // label20
+            // 
+            this.label20.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label20.Appearance.Options.UseFont = true;
+            this.label20.Appearance.Options.UseForeColor = true;
+            this.label20.Location = new System.Drawing.Point(32, 226);
+            this.label20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 19);
+            this.label20.TabIndex = 370;
+            this.label20.Text = "Emp Type:";
+            // 
+            // label29
+            // 
+            this.label29.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label29.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label29.Appearance.Options.UseFont = true;
+            this.label29.Appearance.Options.UseForeColor = true;
+            this.label29.Location = new System.Drawing.Point(14, 28);
+            this.label29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(88, 19);
+            this.label29.TabIndex = 212;
+            this.label29.Text = "Employee ID:";
+            this.label29.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.ErrorImage = global::WindowsFormsApplication1.Properties.Resources.Add;
+            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.profile_icon;
+            this.pictureBox1.InitialImage = global::WindowsFormsApplication1.Properties.Resources.Previous;
+            this.pictureBox1.Location = new System.Drawing.Point(463, 50);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(151, 181);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cbEmpID
+            // 
+            this.cbEmpID.AllowDrop = true;
+            this.cbEmpID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.cbEmpID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEmpID.FormattingEnabled = true;
+            this.cbEmpID.Location = new System.Drawing.Point(112, 25);
+            this.cbEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cbEmpID.Name = "cbEmpID";
+            this.cbEmpID.Size = new System.Drawing.Size(139, 25);
+            this.cbEmpID.TabIndex = 15;
+            this.cbEmpID.Visible = false;
+            // 
+            // textUnit
+            // 
+            this.textUnit.Enabled = false;
+            this.textUnit.Location = new System.Drawing.Point(112, 195);
+            this.textUnit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textUnit.Name = "textUnit";
+            this.textUnit.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textUnit.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textUnit.Properties.Appearance.Options.UseBackColor = true;
+            this.textUnit.Properties.Appearance.Options.UseForeColor = true;
+            this.textUnit.Properties.ReadOnly = true;
+            this.textUnit.Size = new System.Drawing.Size(233, 24);
+            this.textUnit.TabIndex = 13;
+            // 
+            // txtDesignation
+            // 
+            this.txtDesignation.Enabled = false;
+            this.txtDesignation.Location = new System.Drawing.Point(112, 167);
+            this.txtDesignation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDesignation.Name = "txtDesignation";
+            this.txtDesignation.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDesignation.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDesignation.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDesignation.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDesignation.Properties.ReadOnly = true;
+            this.txtDesignation.Size = new System.Drawing.Size(233, 24);
+            this.txtDesignation.TabIndex = 12;
+            // 
+            // txtDepartment
+            // 
+            this.txtDepartment.Enabled = false;
+            this.txtDepartment.Location = new System.Drawing.Point(112, 139);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDepartment.Name = "txtDepartment";
+            this.txtDepartment.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtDepartment.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDepartment.Properties.Appearance.Options.UseBackColor = true;
+            this.txtDepartment.Properties.Appearance.Options.UseForeColor = true;
+            this.txtDepartment.Properties.ReadOnly = true;
+            this.txtDepartment.Size = new System.Drawing.Size(233, 24);
+            this.txtDepartment.TabIndex = 11;
+            // 
+            // txtFName
+            // 
+            this.txtFName.Enabled = false;
+            this.txtFName.Location = new System.Drawing.Point(112, 111);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFName.Name = "txtFName";
+            this.txtFName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtFName.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtFName.Properties.Appearance.Options.UseBackColor = true;
+            this.txtFName.Properties.Appearance.Options.UseForeColor = true;
+            this.txtFName.Properties.ReadOnly = true;
+            this.txtFName.Size = new System.Drawing.Size(233, 24);
+            this.txtFName.TabIndex = 10;
+            // 
+            // txtEmpID
+            // 
+            this.txtEmpID.EnterMoveNextControl = true;
+            this.txtEmpID.Location = new System.Drawing.Point(112, 83);
+            this.txtEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtEmpID.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmpID.Properties.Appearance.Options.UseBackColor = true;
+            this.txtEmpID.Properties.Appearance.Options.UseForeColor = true;
+            this.txtEmpID.Properties.ReadOnly = true;
+            this.txtEmpID.Size = new System.Drawing.Size(140, 24);
+            this.txtEmpID.TabIndex = 1;
+            this.txtEmpID.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
+            // 
+            // dateAttendance
+            // 
+            this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateAttendance.Location = new System.Drawing.Point(112, 54);
+            this.dateAttendance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dateAttendance.Name = "dateAttendance";
+            this.dateAttendance.Size = new System.Drawing.Size(139, 25);
+            this.dateAttendance.TabIndex = 0;
+            this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label7.Appearance.Options.UseFont = true;
+            this.label7.Appearance.Options.UseForeColor = true;
+            this.label7.Location = new System.Drawing.Point(71, 198);
+            this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 19);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Unit:";
+            // 
+            // label6
+            // 
+            this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Appearance.Options.UseFont = true;
+            this.label6.Appearance.Options.UseForeColor = true;
+            this.label6.Location = new System.Drawing.Point(19, 170);
+            this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 19);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Designation:";
+            // 
+            // label5
+            // 
+            this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label5.Appearance.Options.UseFont = true;
+            this.label5.Appearance.Options.UseForeColor = true;
+            this.label5.Location = new System.Drawing.Point(18, 142);
+            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 19);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Department:";
+            // 
+            // label4
+            // 
+            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Appearance.Options.UseFont = true;
+            this.label4.Appearance.Options.UseForeColor = true;
+            this.label4.Location = new System.Drawing.Point(25, 114);
+            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 19);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Emp Name:";
+            // 
+            // label3
+            // 
+            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Appearance.Options.UseFont = true;
+            this.label3.Appearance.Options.UseForeColor = true;
+            this.label3.Location = new System.Drawing.Point(30, 86);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(72, 19);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Emp Code:";
+            // 
+            // label2
+            // 
+            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label2.Appearance.Options.UseFont = true;
+            this.label2.Appearance.Options.UseForeColor = true;
+            this.label2.Location = new System.Drawing.Point(43, 57);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Att Date:";
             // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(234, 137);
+            this.HelpGrid.Location = new System.Drawing.Point(318, 107);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -357,253 +608,11 @@
             this.gridView5.OptionsView.ShowIndicator = false;
             this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
             // 
-            // lblDayName
-            // 
-            this.lblDayName.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblDayName.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDayName.Appearance.Options.UseFont = true;
-            this.lblDayName.Appearance.Options.UseForeColor = true;
-            this.lblDayName.Location = new System.Drawing.Point(106, 16);
-            this.lblDayName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lblDayName.Name = "lblDayName";
-            this.lblDayName.Size = new System.Drawing.Size(0, 28);
-            this.lblDayName.TabIndex = 372;
-            // 
-            // textEmpType
-            // 
-            this.textEmpType.Enabled = false;
-            this.textEmpType.Location = new System.Drawing.Point(107, 279);
-            this.textEmpType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textEmpType.Name = "textEmpType";
-            this.textEmpType.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.textEmpType.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textEmpType.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textEmpType.Properties.Appearance.Options.UseBackColor = true;
-            this.textEmpType.Properties.Appearance.Options.UseForeColor = true;
-            this.textEmpType.Properties.ReadOnly = true;
-            this.textEmpType.Size = new System.Drawing.Size(233, 24);
-            this.textEmpType.TabIndex = 371;
-            this.textEmpType.EditValueChanged += new System.EventHandler(this.TextEmpType_EditValueChanged);
-            // 
-            // label20
-            // 
-            this.label20.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label20.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label20.Appearance.Options.UseFont = true;
-            this.label20.Appearance.Options.UseForeColor = true;
-            this.label20.Location = new System.Drawing.Point(36, 284);
-            this.label20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 19);
-            this.label20.TabIndex = 370;
-            this.label20.Text = "Emp Type:";
-            // 
-            // label29
-            // 
-            this.label29.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label29.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label29.Appearance.Options.UseFont = true;
-            this.label29.Appearance.Options.UseForeColor = true;
-            this.label29.Location = new System.Drawing.Point(20, 29);
-            this.label29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(88, 19);
-            this.label29.TabIndex = 212;
-            this.label29.Text = "Employee ID:";
-            this.label29.Visible = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.ErrorImage = global::WindowsFormsApplication1.Properties.Resources.Add;
-            this.pictureBox1.Image = global::WindowsFormsApplication1.Properties.Resources.profile_icon;
-            this.pictureBox1.InitialImage = global::WindowsFormsApplication1.Properties.Resources.Previous;
-            this.pictureBox1.Location = new System.Drawing.Point(463, 50);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 222);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cbEmpID
-            // 
-            this.cbEmpID.AllowDrop = true;
-            this.cbEmpID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.cbEmpID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEmpID.FormattingEnabled = true;
-            this.cbEmpID.Location = new System.Drawing.Point(106, 25);
-            this.cbEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.cbEmpID.Name = "cbEmpID";
-            this.cbEmpID.Size = new System.Drawing.Size(139, 25);
-            this.cbEmpID.TabIndex = 15;
-            this.cbEmpID.Visible = false;
-            // 
-            // textUnit
-            // 
-            this.textUnit.Enabled = false;
-            this.textUnit.Location = new System.Drawing.Point(106, 242);
-            this.textUnit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textUnit.Name = "textUnit";
-            this.textUnit.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.textUnit.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textUnit.Properties.Appearance.Options.UseBackColor = true;
-            this.textUnit.Properties.Appearance.Options.UseForeColor = true;
-            this.textUnit.Properties.ReadOnly = true;
-            this.textUnit.Size = new System.Drawing.Size(233, 24);
-            this.textUnit.TabIndex = 13;
-            // 
-            // txtDesignation
-            // 
-            this.txtDesignation.Enabled = false;
-            this.txtDesignation.Location = new System.Drawing.Point(106, 205);
-            this.txtDesignation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDesignation.Name = "txtDesignation";
-            this.txtDesignation.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDesignation.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDesignation.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDesignation.Properties.Appearance.Options.UseForeColor = true;
-            this.txtDesignation.Properties.ReadOnly = true;
-            this.txtDesignation.Size = new System.Drawing.Size(233, 24);
-            this.txtDesignation.TabIndex = 12;
-            // 
-            // txtDepartment
-            // 
-            this.txtDepartment.Enabled = false;
-            this.txtDepartment.Location = new System.Drawing.Point(106, 169);
-            this.txtDepartment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtDepartment.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDepartment.Properties.Appearance.Options.UseBackColor = true;
-            this.txtDepartment.Properties.Appearance.Options.UseForeColor = true;
-            this.txtDepartment.Properties.ReadOnly = true;
-            this.txtDepartment.Size = new System.Drawing.Size(233, 24);
-            this.txtDepartment.TabIndex = 11;
-            // 
-            // txtFName
-            // 
-            this.txtFName.Enabled = false;
-            this.txtFName.Location = new System.Drawing.Point(106, 132);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtFName.Name = "txtFName";
-            this.txtFName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtFName.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFName.Properties.Appearance.Options.UseBackColor = true;
-            this.txtFName.Properties.Appearance.Options.UseForeColor = true;
-            this.txtFName.Properties.ReadOnly = true;
-            this.txtFName.Size = new System.Drawing.Size(233, 24);
-            this.txtFName.TabIndex = 10;
-            // 
-            // txtEmpID
-            // 
-            this.txtEmpID.EnterMoveNextControl = true;
-            this.txtEmpID.Location = new System.Drawing.Point(106, 95);
-            this.txtEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.Properties.Appearance.BackColor = System.Drawing.Color.White;
-            this.txtEmpID.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmpID.Properties.Appearance.Options.UseBackColor = true;
-            this.txtEmpID.Properties.Appearance.Options.UseForeColor = true;
-            this.txtEmpID.Properties.ReadOnly = true;
-            this.txtEmpID.Size = new System.Drawing.Size(140, 24);
-            this.txtEmpID.TabIndex = 1;
-            this.txtEmpID.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
-            this.txtEmpID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
-            // 
-            // dateAttendance
-            // 
-            this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateAttendance.Location = new System.Drawing.Point(106, 58);
-            this.dateAttendance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dateAttendance.Name = "dateAttendance";
-            this.dateAttendance.Size = new System.Drawing.Size(139, 25);
-            this.dateAttendance.TabIndex = 0;
-            this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
-            // 
-            // label7
-            // 
-            this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Appearance.Options.UseFont = true;
-            this.label7.Appearance.Options.UseForeColor = true;
-            this.label7.Location = new System.Drawing.Point(70, 247);
-            this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 19);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Unit:";
-            // 
-            // label6
-            // 
-            this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Appearance.Options.UseFont = true;
-            this.label6.Appearance.Options.UseForeColor = true;
-            this.label6.Location = new System.Drawing.Point(22, 211);
-            this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 19);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Designation:";
-            // 
-            // label5
-            // 
-            this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Appearance.Options.UseFont = true;
-            this.label5.Appearance.Options.UseForeColor = true;
-            this.label5.Location = new System.Drawing.Point(23, 174);
-            this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 19);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Department:";
-            // 
-            // label4
-            // 
-            this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Appearance.Options.UseFont = true;
-            this.label4.Appearance.Options.UseForeColor = true;
-            this.label4.Location = new System.Drawing.Point(29, 137);
-            this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 19);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Emp Name:";
-            // 
-            // label3
-            // 
-            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Appearance.Options.UseFont = true;
-            this.label3.Appearance.Options.UseForeColor = true;
-            this.label3.Location = new System.Drawing.Point(34, 101);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 19);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Emp Code:";
-            // 
-            // label2
-            // 
-            this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Appearance.Options.UseFont = true;
-            this.label2.Appearance.Options.UseForeColor = true;
-            this.label2.Location = new System.Drawing.Point(45, 64);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Att Date:";
-            // 
             // label25
             // 
             this.label25.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.label25.Appearance.Options.UseFont = true;
-            this.label25.Location = new System.Drawing.Point(83, 105);
+            this.label25.Location = new System.Drawing.Point(83, 76);
             this.label25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(52, 19);
@@ -651,10 +660,10 @@
             this.grpBoxEmployee.Controls.Add(this.timeEdit_Time_In_Last_Main);
             this.grpBoxEmployee.Controls.Add(this.timeEdit_Time_Out_Last_Main);
             this.grpBoxEmployee.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.grpBoxEmployee.Location = new System.Drawing.Point(61, 435);
+            this.grpBoxEmployee.Location = new System.Drawing.Point(62, 374);
             this.grpBoxEmployee.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxEmployee.Name = "grpBoxEmployee";
-            this.grpBoxEmployee.Size = new System.Drawing.Size(712, 339);
+            this.grpBoxEmployee.Size = new System.Drawing.Size(712, 229);
             this.grpBoxEmployee.TabIndex = 13;
             this.grpBoxEmployee.Text = "Manual Attendance";
             // 
@@ -662,7 +671,7 @@
             // 
             this.txtNightOverTimeHours.EditValue = "0";
             this.txtNightOverTimeHours.EnterMoveNextControl = true;
-            this.txtNightOverTimeHours.Location = new System.Drawing.Point(395, 251);
+            this.txtNightOverTimeHours.Location = new System.Drawing.Point(388, 192);
             this.txtNightOverTimeHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNightOverTimeHours.Name = "txtNightOverTimeHours";
             this.txtNightOverTimeHours.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -688,7 +697,7 @@
             // txtNightOut
             // 
             this.txtNightOut.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.txtNightOut.Location = new System.Drawing.Point(313, 253);
+            this.txtNightOut.Location = new System.Drawing.Point(306, 194);
             this.txtNightOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNightOut.Name = "txtNightOut";
             this.txtNightOut.Properties.AllowEditDays = false;
@@ -709,7 +718,7 @@
             // txtNightIn
             // 
             this.txtNightIn.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.txtNightIn.Location = new System.Drawing.Point(227, 253);
+            this.txtNightIn.Location = new System.Drawing.Point(220, 194);
             this.txtNightIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNightIn.Name = "txtNightIn";
             this.txtNightIn.Properties.AllowEditDays = false;
@@ -730,7 +739,7 @@
             // 
             this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Location = new System.Drawing.Point(337, 227);
+            this.labelControl24.Location = new System.Drawing.Point(330, 168);
             this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
             this.labelControl24.Size = new System.Drawing.Size(29, 19);
@@ -741,7 +750,7 @@
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(259, 227);
+            this.labelControl25.Location = new System.Drawing.Point(252, 168);
             this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(15, 19);
@@ -751,7 +760,7 @@
             // timeEdit_Time_Out_Last
             // 
             this.timeEdit_Time_Out_Last.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeEdit_Time_Out_Last.Location = new System.Drawing.Point(500, 133);
+            this.timeEdit_Time_Out_Last.Location = new System.Drawing.Point(500, 102);
             this.timeEdit_Time_Out_Last.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_Out_Last.Name = "timeEdit_Time_Out_Last";
             this.timeEdit_Time_Out_Last.Properties.AllowEditDays = false;
@@ -772,7 +781,7 @@
             // timeEdit_Time_In_Last
             // 
             this.timeEdit_Time_In_Last.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeEdit_Time_In_Last.Location = new System.Drawing.Point(412, 133);
+            this.timeEdit_Time_In_Last.Location = new System.Drawing.Point(412, 102);
             this.timeEdit_Time_In_Last.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In_Last.Name = "timeEdit_Time_In_Last";
             this.timeEdit_Time_In_Last.Properties.AllowEditDays = false;
@@ -784,8 +793,8 @@
             this.timeEdit_Time_In_Last.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_Last.Properties.EditFormat.FormatString = "HH:mm";
             this.timeEdit_Time_In_Last.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.timeEdit_Time_In_Last.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.timeEdit_Time_In_Last.Properties.MaskSettings.Set("mask", "HH:mm");
             this.timeEdit_Time_In_Last.Size = new System.Drawing.Size(76, 24);
             this.timeEdit_Time_In_Last.TabIndex = 3;
             this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_Last_EditValueChanged);
@@ -793,7 +802,7 @@
             // timeEdit_Time_Out_First
             // 
             this.timeEdit_Time_Out_First.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeEdit_Time_Out_First.Location = new System.Drawing.Point(306, 133);
+            this.timeEdit_Time_Out_First.Location = new System.Drawing.Point(306, 102);
             this.timeEdit_Time_Out_First.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_Out_First.Name = "timeEdit_Time_Out_First";
             this.timeEdit_Time_Out_First.Properties.AllowEditDays = false;
@@ -815,7 +824,7 @@
             // timeEdit_Time_In_First
             // 
             this.timeEdit_Time_In_First.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeEdit_Time_In_First.Location = new System.Drawing.Point(220, 133);
+            this.timeEdit_Time_In_First.Location = new System.Drawing.Point(220, 102);
             this.timeEdit_Time_In_First.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In_First.Name = "timeEdit_Time_In_First";
             this.timeEdit_Time_In_First.Properties.AllowEditDays = false;
@@ -836,7 +845,7 @@
             // timeEdit_Time_In_First_Testing
             // 
             this.timeEdit_Time_In_First_Testing.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeEdit_Time_In_First_Testing.Location = new System.Drawing.Point(8, 191);
+            this.timeEdit_Time_In_First_Testing.Location = new System.Drawing.Point(8, 160);
             this.timeEdit_Time_In_First_Testing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In_First_Testing.Name = "timeEdit_Time_In_First_Testing";
             this.timeEdit_Time_In_First_Testing.Properties.AllowEditDays = false;
@@ -859,7 +868,7 @@
             // 
             this.totalWorkingHours_Label.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.totalWorkingHours_Label.Appearance.Options.UseBackColor = true;
-            this.totalWorkingHours_Label.Location = new System.Drawing.Point(607, 133);
+            this.totalWorkingHours_Label.Location = new System.Drawing.Point(607, 104);
             this.totalWorkingHours_Label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalWorkingHours_Label.Name = "totalWorkingHours_Label";
             this.totalWorkingHours_Label.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
@@ -882,7 +891,7 @@
             // totalWorkingHours_Text_Main
             // 
             this.totalWorkingHours_Text_Main.EnterMoveNextControl = true;
-            this.totalWorkingHours_Text_Main.Location = new System.Drawing.Point(605, 44);
+            this.totalWorkingHours_Text_Main.Location = new System.Drawing.Point(605, 47);
             this.totalWorkingHours_Text_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalWorkingHours_Text_Main.Name = "totalWorkingHours_Text_Main";
             this.totalWorkingHours_Text_Main.Properties.Appearance.BackColor = System.Drawing.Color.Gainsboro;
@@ -970,7 +979,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(598, 165);
+            this.labelControl1.Location = new System.Drawing.Point(598, 134);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(100, 19);
@@ -981,7 +990,7 @@
             // 
             this.labelControl22.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.labelControl22.Appearance.Options.UseForeColor = true;
-            this.labelControl22.Location = new System.Drawing.Point(384, 200);
+            this.labelControl22.Location = new System.Drawing.Point(384, 169);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(320, 17);
@@ -992,7 +1001,7 @@
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(524, 165);
+            this.labelControl20.Location = new System.Drawing.Point(524, 134);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(33, 19);
@@ -1003,7 +1012,7 @@
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(353, 165);
+            this.labelControl19.Location = new System.Drawing.Point(353, 134);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(97, 19);
@@ -1014,7 +1023,7 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(241, 165);
+            this.labelControl18.Location = new System.Drawing.Point(241, 134);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(36, 19);
@@ -1025,7 +1034,7 @@
             // 
             this.totalWorkingHours_Text.EditValue = "0";
             this.totalWorkingHours_Text.EnterMoveNextControl = true;
-            this.totalWorkingHours_Text.Location = new System.Drawing.Point(605, 134);
+            this.totalWorkingHours_Text.Location = new System.Drawing.Point(605, 101);
             this.totalWorkingHours_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalWorkingHours_Text.Name = "totalWorkingHours_Text";
             this.totalWorkingHours_Text.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1053,7 +1062,7 @@
             // 
             this.labelControl16.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl16.Appearance.Options.UseFont = true;
-            this.labelControl16.Location = new System.Drawing.Point(623, 107);
+            this.labelControl16.Location = new System.Drawing.Point(623, 76);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
             this.labelControl16.Size = new System.Drawing.Size(44, 19);
@@ -1064,7 +1073,7 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(525, 107);
+            this.labelControl14.Location = new System.Drawing.Point(525, 76);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(29, 19);
@@ -1075,7 +1084,7 @@
             // 
             this.labelControl13.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl13.Appearance.Options.UseFont = true;
-            this.labelControl13.Location = new System.Drawing.Point(443, 107);
+            this.labelControl13.Location = new System.Drawing.Point(443, 76);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
             this.labelControl13.Size = new System.Drawing.Size(15, 19);
@@ -1086,7 +1095,7 @@
             // 
             this.labelControl12.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl12.Appearance.Options.UseFont = true;
-            this.labelControl12.Location = new System.Drawing.Point(330, 107);
+            this.labelControl12.Location = new System.Drawing.Point(330, 76);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
             this.labelControl12.Size = new System.Drawing.Size(29, 19);
@@ -1097,7 +1106,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(252, 107);
+            this.labelControl10.Location = new System.Drawing.Point(252, 76);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(15, 19);
@@ -1107,7 +1116,7 @@
             // comboBox_Status
             // 
             this.comboBox_Status.FormattingEnabled = true;
-            this.comboBox_Status.Location = new System.Drawing.Point(27, 131);
+            this.comboBox_Status.Location = new System.Drawing.Point(27, 102);
             this.comboBox_Status.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox_Status.Name = "comboBox_Status";
             this.comboBox_Status.Size = new System.Drawing.Size(163, 25);
@@ -1117,7 +1126,7 @@
             // timeEdit_Time_In_First_Main
             // 
             this.timeEdit_Time_In_First_Main.EditValue = "";
-            this.timeEdit_Time_In_First_Main.Location = new System.Drawing.Point(220, 44);
+            this.timeEdit_Time_In_First_Main.Location = new System.Drawing.Point(220, 47);
             this.timeEdit_Time_In_First_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In_First_Main.Name = "timeEdit_Time_In_First_Main";
             this.timeEdit_Time_In_First_Main.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1144,7 +1153,7 @@
             // timeEdit_Time_Out_First_Main
             // 
             this.timeEdit_Time_Out_First_Main.EditValue = "";
-            this.timeEdit_Time_Out_First_Main.Location = new System.Drawing.Point(306, 44);
+            this.timeEdit_Time_Out_First_Main.Location = new System.Drawing.Point(306, 47);
             this.timeEdit_Time_Out_First_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_Out_First_Main.Name = "timeEdit_Time_Out_First_Main";
             this.timeEdit_Time_Out_First_Main.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1169,7 +1178,7 @@
             // timeEdit_Time_In_Last_Main
             // 
             this.timeEdit_Time_In_Last_Main.EditValue = "";
-            this.timeEdit_Time_In_Last_Main.Location = new System.Drawing.Point(412, 44);
+            this.timeEdit_Time_In_Last_Main.Location = new System.Drawing.Point(412, 47);
             this.timeEdit_Time_In_Last_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In_Last_Main.Name = "timeEdit_Time_In_Last_Main";
             this.timeEdit_Time_In_Last_Main.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1194,7 +1203,7 @@
             // timeEdit_Time_Out_Last_Main
             // 
             this.timeEdit_Time_Out_Last_Main.EditValue = "";
-            this.timeEdit_Time_Out_Last_Main.Location = new System.Drawing.Point(500, 44);
+            this.timeEdit_Time_Out_Last_Main.Location = new System.Drawing.Point(500, 47);
             this.timeEdit_Time_Out_Last_Main.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_Out_Last_Main.Name = "timeEdit_Time_Out_Last_Main";
             this.timeEdit_Time_Out_Last_Main.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1246,7 +1255,7 @@
             this.groupBox4.Controls.Add(this.timeEdit_GatePassTime);
             this.groupBox4.Controls.Add(this.comboBox_Shift);
             this.groupBox4.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupBox4.Location = new System.Drawing.Point(58, 755);
+            this.groupBox4.Location = new System.Drawing.Point(61, 611);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(712, 144);
@@ -1506,7 +1515,7 @@
             this.panelControlManual.Appearance.BackColor = System.Drawing.Color.MistyRose;
             this.panelControlManual.Appearance.Options.UseBackColor = true;
             this.panelControlManual.Controls.Add(this.panelControl_Manual_In);
-            this.panelControlManual.Location = new System.Drawing.Point(62, 383);
+            this.panelControlManual.Location = new System.Drawing.Point(61, 317);
             this.panelControlManual.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControlManual.Name = "panelControlManual";
             this.panelControlManual.Size = new System.Drawing.Size(163, 39);
@@ -1529,10 +1538,10 @@
             this.panelControlMachine.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.panelControlMachine.Appearance.Options.UseBackColor = true;
             this.panelControlMachine.Controls.Add(this.panelControl_Machine_In);
-            this.panelControlMachine.Location = new System.Drawing.Point(224, 383);
+            this.panelControlMachine.Location = new System.Drawing.Point(223, 317);
             this.panelControlMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControlMachine.Name = "panelControlMachine";
-            this.panelControlMachine.Size = new System.Drawing.Size(163, 39);
+            this.panelControlMachine.Size = new System.Drawing.Size(181, 39);
             this.panelControlMachine.TabIndex = 18;
             // 
             // panelControl_Machine_In
@@ -1544,7 +1553,7 @@
             this.panelControl_Machine_In.Location = new System.Drawing.Point(1, 1);
             this.panelControl_Machine_In.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl_Machine_In.Name = "panelControl_Machine_In";
-            this.panelControl_Machine_In.Size = new System.Drawing.Size(161, 37);
+            this.panelControl_Machine_In.Size = new System.Drawing.Size(179, 37);
             this.panelControl_Machine_In.TabIndex = 19;
             // 
             // radioButtonMachine
@@ -1563,16 +1572,6 @@
             this.radioButtonMachine.UseVisualStyleBackColor = true;
             this.radioButtonMachine.CheckedChanged += new System.EventHandler(this.RadioButtonMachine_CheckedChanged);
             // 
-            // labelDate_Current
-            // 
-            this.labelDate_Current.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.labelDate_Current.Location = new System.Drawing.Point(468, 27);
-            this.labelDate_Current.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelDate_Current.Name = "labelDate_Current";
-            this.labelDate_Current.Size = new System.Drawing.Size(201, 17);
-            this.labelDate_Current.TabIndex = 19;
-            this.labelDate_Current.Text = "Wednesday, June17, 2020 1:42 PM";
-            // 
             // grpBoxDailyWager
             // 
             this.grpBoxDailyWager.Controls.Add(this.txtDutyHours_Label_DW);
@@ -1585,10 +1584,10 @@
             this.grpBoxDailyWager.Controls.Add(this.timeEdit_Time_In_DW);
             this.grpBoxDailyWager.Controls.Add(this.labelControl3);
             this.grpBoxDailyWager.Controls.Add(this.labelControl4);
-            this.grpBoxDailyWager.Location = new System.Drawing.Point(61, 435);
+            this.grpBoxDailyWager.Location = new System.Drawing.Point(61, 407);
             this.grpBoxDailyWager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxDailyWager.Name = "grpBoxDailyWager";
-            this.grpBoxDailyWager.Size = new System.Drawing.Size(712, 225);
+            this.grpBoxDailyWager.Size = new System.Drawing.Size(712, 196);
             this.grpBoxDailyWager.TabIndex = 20;
             this.grpBoxDailyWager.Text = "Daily Wager Attendance";
             // 
@@ -1760,7 +1759,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(830, 1020);
+            this.ClientSize = new System.Drawing.Size(830, 846);
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.panelControlMachine);
             this.Controls.Add(this.panelControlManual);
             this.Controls.Add(this.groupBox4);
@@ -1776,10 +1776,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEmpType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textUnit.Properties)).EndInit();
@@ -1787,6 +1783,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartment.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpBoxEmployee)).EndInit();
             this.grpBoxEmployee.ResumeLayout(false);
             this.grpBoxEmployee.PerformLayout();

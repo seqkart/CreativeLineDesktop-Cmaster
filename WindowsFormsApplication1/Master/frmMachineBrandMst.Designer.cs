@@ -66,7 +66,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(70, 28);
             this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(65, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label3
             // 
@@ -131,7 +131,7 @@ namespace WindowsFormsApplication1.Master
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmMachineBrandMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmMachineBrandMst_Load);
+            this.Load += new System.EventHandler(this.FrmMachineBrandMst_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandName.Properties)).EndInit();

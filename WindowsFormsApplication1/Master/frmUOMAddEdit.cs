@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmUOMAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmUOMAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string UomCode { get; set; }
-        public frmUOMAddEdit()
+        public FrmUOMAddEdit()
         {
             InitializeComponent();
         }
@@ -22,15 +22,15 @@ namespace WindowsFormsApplication1
             txtUnitDesc.Properties.MaxLength = 20;
             txtUnitCode.Enabled = false;
         }
-        private void frmUnitAddEdit_Load(object sender, EventArgs e)
+        private void FrmUnitAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtUnitDesc.Focus();
                 txtUnitCode.Text = GetNewUnitCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtUnitDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT UomCode,UomDesc FROM UomMst Where UomCode='" + UomCode + "'");
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-        private void frmUnitAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmUnitAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -78,16 +78,16 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -101,7 +101,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into UomMst"
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(UomCode as int)),0)+1 AS VARCHAR(4)),4)from UomMst),@UomDesc)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE UomMst SET "
                                                 + " UomDesc=@UomDesc "

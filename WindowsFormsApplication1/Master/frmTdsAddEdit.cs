@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTdsAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string TdsCode { get; set; }
         public frmTdsAddEdit()
         {
@@ -20,15 +20,15 @@ namespace WindowsFormsApplication1
             txtTdsCode.Enabled = false;
         }
 
-        private void frmTdsAddEdit_Load(object sender, EventArgs e)
+        private void FrmTdsAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtTdsDesc.Focus();
                 txtTdsCode.Text = GetNewTDSCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtTdsDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT     TdsMst.TdsCode, TdsMst.TdsDesc, TdsMst.TdsRate, TdsMst.TdsSRate, TdsMst.TdsUS, TdsMst.TdsPostingCode, ActMst.AccName FROM         TdsMst INNER JOIN ActMst ON TdsMst.TdsPostingCode = ActMst.AccCode Where TdsCode='" + TdsCode + "'");
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-        private void frmTdsAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmTdsAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -110,12 +110,12 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -129,7 +129,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
 
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(TdsCode as int)),0)+1 AS VARCHAR(4)),4)from TdsMst),@TdsDesc,@TdsRate,@TdsSRate,@TdsUS,@TdsPostingCode)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE TdsMst SET "
                                                 + " TdsDesc=@TdsDesc,TdsRate=@TdsRate,TdsSRate=@TdsSRate,TdsUS=@TdsUS,TdsPostingCode=@TdsPostingCode "
@@ -172,12 +172,12 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtAcPostingCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtAcPostingCode_EditValueChanged(object sender, EventArgs e)
         {
             txtAcPostingdesc.Text = string.Empty;
         }
 
-        private void txtAcPostingCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtAcPostingCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

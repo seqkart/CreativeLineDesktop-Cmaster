@@ -7,6 +7,8 @@ namespace WindowsFormsApplication1.FormReports
     {
         RangeSelectorLedger _SelectRange;
         public DataSet DsGetData { get; set; }
+
+        DataTable dt = new DataTable();
         public FrmPartyAccounts()
         {
             InitializeComponent();
@@ -69,18 +71,16 @@ namespace WindowsFormsApplication1.FormReports
         {
             try
             {
-                DataTable dt = new DataTable();
+
+                dt.Clear();
                 DataSet ds = new DataSet();
 
 
-
-
-
-                if(_SelectRange.chBSHead.Checked)
+                if (_SelectRange.chBSHead.Checked)
                 {
                     DataRow currentrow = _SelectRange.HelpGridView.GetDataRow(_SelectRange.HelpGridView.FocusedRowHandle);
                     DataSet dsBSHeads = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst Where AccBSHcode ='" + currentrow["BSCode"].ToString() + "'");
-                    if(dsBSHeads.Tables[0].Rows.Count>0)
+                    if (dsBSHeads.Tables[0].Rows.Count > 0)
                     {
                         dsBSHeads.Tables[0].Columns.Add("Select", typeof(bool));
                         foreach (DataRow dr in dsBSHeads.Tables[0].Rows)
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1.FormReports
                     }
                     else
                     {
-                        _SelectRange.HelpGrid.DataSource = null ;
+                        _SelectRange.HelpGrid.DataSource = null;
                         _SelectRange.HelpGridView.BestFitColumns();
                     }
                 }
@@ -126,19 +126,32 @@ namespace WindowsFormsApplication1.FormReports
                 {
                     if (dr["Select"].ToString().ToUpper() == "TRUE")
                     {
-                        ds = ProjectFunctions.GetDataSet("[sp_ZoomPartyActGrid] '" + Convert.ToDateTime(_SelectRange.DtFrom.EditValue).ToString("yyyy-MM-dd") + "','" + Convert.ToDateTime(_SelectRange.DtEnd.EditValue).ToString("yyyy-MM-dd") + "','" + dr["AccCode"].ToString() + "'");
+                        String SubEntries = String.Empty;
+                        if (_SelectRange.chSubEntries.Checked)
+                        {
+                            SubEntries = "Y";
+                        }
+
+                        ds = ProjectFunctions.GetDataSet("[sp_ZoomPartyActGrid] '" + Convert.ToDateTime(_SelectRange.DtFrom.EditValue).ToString("yyyy-MM-dd") + "','" + Convert.ToDateTime(_SelectRange.DtEnd.EditValue).ToString("yyyy-MM-dd") + "','" + dr["AccCode"].ToString() + "','" + SubEntries + "'");
                         if (ds.Tables[0].Rows.Count > 0)
                         {
                             int Count = 0;
+                            Decimal Balance = 0;
                             for (Count = 0; Count < ds.Tables[0].Rows.Count; Count++)
                             {
                                 if (Count == 0)
                                 {
                                     ds.Tables[0].Rows[0]["Balance"] = Convert.ToDecimal(ds.Tables[0].Rows[0]["Debit"]) - Convert.ToDecimal(ds.Tables[0].Rows[0]["Credit"]);
+                                    Balance = Convert.ToDecimal(ds.Tables[0].Rows[0]["Balance"]);
                                 }
                                 else
                                 {
-                                    ds.Tables[0].Rows[Count]["Balance"] = Convert.ToDecimal(ds.Tables[0].Rows[Count - 1]["Balance"]) + Convert.ToDecimal(ds.Tables[0].Rows[Count]["Debit"]) - Convert.ToDecimal(ds.Tables[0].Rows[Count]["Credit"]);
+                                    if (ds.Tables[0].Rows[Count]["VutID"].ToString() != "-1")
+                                    {
+
+                                        ds.Tables[0].Rows[Count]["Balance"] = Balance + Convert.ToDecimal(ds.Tables[0].Rows[Count]["Debit"]) - Convert.ToDecimal(ds.Tables[0].Rows[Count]["Credit"]);
+                                        Balance = Convert.ToDecimal(ds.Tables[0].Rows[Count]["Balance"]);
+                                    }
                                 }
                             }
 
@@ -158,12 +171,28 @@ namespace WindowsFormsApplication1.FormReports
                     }
                 }
 
-              
+
 
 
                 if (dt.Rows.Count > 0)
                 {
 
+                    dt.Columns.Add("CRDR", typeof(String));
+                    foreach (DataRow dr in dt.Rows)
+                    {
+                        if (Convert.ToDecimal(dr["Balance"]) > 0)
+                        {
+                            dr["CRDR"] = "Dr.";
+                        }
+                        if (Convert.ToDecimal(dr["Balance"]) < 0)
+                        {
+                            dr["CRDR"] = "Cr.";
+                            dr["Balance"] = -(Convert.ToDecimal(dr["Balance"]));
+                        } 
+                    }
+
+
+                    dt.WriteXmlSchema("C://Temp//abc.xml");
                     LedgerGrid.DataSource = dt;
                     LedgerGridView.BestFitColumns();
                     LedgerGridView.Columns["LedgerPartyName"].GroupIndex = 0;
@@ -189,12 +218,64 @@ namespace WindowsFormsApplication1.FormReports
 
         private void BtnPrint_Click(object sender, EventArgs e)
         {
-            LedgerGridView.ShowRibbonPrintPreview();
+            
+
+                // LedgerGridView.ShowRibbonPrintPreview();
+                payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+            Prints.PartyLedgerUpdated Report = new Prints.PartyLedgerUpdated();
+            Report.txtCompanyName.Text = GlobalVariables.CompanyName;
+            Report.txtReportName.Text = "Statement of Accounts";
+            Report.txtDateRange.Text ="From "+ Convert.ToDateTime(_SelectRange.DtFrom.Text).ToString("dd-MM-yyyy") + " To " + Convert.ToDateTime(_SelectRange.DtEnd.Text).ToString("dd-MM-yyyy");
+
+            if (_SelectRange.chSubEntries.Checked)
+            {
+                Report.txtensumd.Visible = false;
+                Report.txtenbal.Visible = false;
+                Report.txtensunc.Visible = false;
+                Report.xrLine1.Visible = false;
+                Report.xrLabel16.Visible = false;
+            }
+            else
+            {
+                Report.txtensumd.Visible = true;
+                Report.txtenbal.Visible = true;
+                Report.txtensunc.Visible = true;
+                Report.xrLine1.Visible = true;
+                Report.xrLabel16.Visible = true;
+            }
+            Report.DataSource = dt;
+            frm.documentViewer1.DocumentSource = Report;
+            frm.ShowDialog();
         }
 
         private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void LedgerGridView_CustomColumnDisplayText(object sender, DevExpress.XtraGrid.Views.Base.CustomColumnDisplayTextEventArgs e)
+        {
+            if (e.Column.FieldName == "Debit")
+            {
+                if (Convert.ToDecimal(e.Value) == 0)
+                {
+                    e.DisplayText = string.Empty;
+                }
+            }
+            if (e.Column.FieldName == "Credit")
+            {
+                if (Convert.ToDecimal(e.Value) == 0)
+                {
+                    e.DisplayText = string.Empty;
+                }
+            }
+            if (e.Column.FieldName == "Balance")
+            {
+                if (Convert.ToDecimal(e.Value) == 0)
+                {
+                    e.DisplayText = string.Empty;
+                }
+            }
         }
     }
 }

@@ -6,24 +6,24 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmMeasurementMappingWithArt : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public frmMeasurementMappingWithArt()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void txtARTID_EditValueChanged(object sender, EventArgs e)
+        private void TxtARTID_EditValueChanged(object sender, EventArgs e)
         {
             txtArtNo.Text = string.Empty;
             txtArtDesc.Text = string.Empty;
         }
 
-        private void txtARTID_KeyDown(object sender, KeyEventArgs e)
+        private void TxtARTID_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForThreeBoxes("SELECT        ARTICLE.ARTSYSID, ARTICLE.ARTNO, GrpMst.GrpSubDesc FROM  ARTICLE INNER JOIN GrpMst ON ARTICLE.ARTSECTIONID = GrpMst.GrpCode AND ARTICLE.ARTSBSECTIONID = GrpMst.GrpSubCode", " Where  ARTNO", txtARTID, txtArtNo, txtArtDesc, txtARTID, HelpGrid, HelpGridView, e);
         }
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Master
 
             }
         }
-        private void frmMeasurementMappingWithArt_Load(object sender, EventArgs e)
+        private void FrmMeasurementMappingWithArt_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
 
             foreach (DevExpress.XtraEditors.Controls.CheckedListBoxItem item in txtSize.Properties.Items)
@@ -168,7 +168,7 @@ namespace WindowsFormsApplication1.Master
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
         }

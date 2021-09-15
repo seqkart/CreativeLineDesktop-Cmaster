@@ -76,7 +76,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -86,7 +86,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtGrpDesc
             // 
@@ -97,8 +97,8 @@
             this.txtGrpDesc.Properties.MaxLength = 50;
             this.txtGrpDesc.Size = new System.Drawing.Size(425, 24);
             this.txtGrpDesc.TabIndex = 3;
-            this.txtGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGrpDesc_KeyPress);
-            this.txtGrpDesc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtGrpDesc_KeyUp);
+            this.txtGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGrpDesc_KeyPress);
+            this.txtGrpDesc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtGrpDesc_KeyUp);
             // 
             // txtSGrpCode
             // 
@@ -118,7 +118,7 @@
             this.txtSGrpDesc.Properties.MaxLength = 50;
             this.txtSGrpDesc.Size = new System.Drawing.Size(425, 24);
             this.txtSGrpDesc.TabIndex = 4;
-            this.txtSGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSGrpDesc_KeyPress);
+            this.txtSGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSGrpDesc_KeyPress);
             // 
             // txtGrpCode
             // 
@@ -129,8 +129,8 @@
             this.txtGrpCode.Properties.MaxLength = 4;
             this.txtGrpCode.Size = new System.Drawing.Size(83, 24);
             this.txtGrpCode.TabIndex = 1;
-            this.txtGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGrpCode_KeyDown);
-            this.txtGrpCode.Validating += new System.ComponentModel.CancelEventHandler(this.txtGrpCode_Validating);
+            this.txtGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtGrpCode_KeyDown);
+            this.txtGrpCode.Validating += new System.ComponentModel.CancelEventHandler(this.TxtGrpCode_Validating);
             // 
             // label9
             // 
@@ -211,8 +211,8 @@
             this.MinimizeBox = false;
             this.Name = "frmGroupMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmGroupMstAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmGroupMstAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmGroupMstAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGroupMstAddEdit_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtGrpDesc.Properties)).EndInit();

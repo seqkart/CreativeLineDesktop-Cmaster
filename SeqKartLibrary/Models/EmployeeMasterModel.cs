@@ -161,5 +161,7 @@ namespace SeqKartLibrary.Models
         public int TeaBreak { get; set; }
         public Nullable<int> TeaBreakTime { get; set; }
         public int OT_Extra { get; set; }
+
+        public string EmpTeaTag { get; set; }
     }
 }

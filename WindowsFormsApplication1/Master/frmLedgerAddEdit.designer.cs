@@ -129,7 +129,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -139,7 +139,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // frmLedgerAddEdit
             // 
@@ -159,8 +159,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmLedgerAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmLedgerAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmLedgerAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmLedgerAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLedgerAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtLedgerCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLedgerType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLedgerDesc.Properties)).EndInit();

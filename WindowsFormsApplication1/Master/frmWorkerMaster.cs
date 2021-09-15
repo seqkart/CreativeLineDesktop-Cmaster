@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmWorkerMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmWorkerMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string WRKSYSID { get; set; }
-        public frmWorkerMaster()
+        public FrmWorkerMaster()
         {
             InitializeComponent();
         }
@@ -36,11 +36,11 @@ namespace WindowsFormsApplication1
         private void FrmWorkerMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtContractorCode.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtWorkerCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadWorkerMstFEdit '" + WRKSYSID + "'");
@@ -146,7 +146,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into WORKER"
                                                  + " (WRKCONTID,WRKNAME, WRKFLOORID,"
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1
 
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE WORKER SET "
                                                 + " WRKCONTID=@WRKCONTID,WRKNAME=@WRKNAME,WRKFLOORID=@WRKFLOORID,WRKMOBNO=@WRKMOBNO,WRKALTMOBNO=@WRKALTMOBNO, "

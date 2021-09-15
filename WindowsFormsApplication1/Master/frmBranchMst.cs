@@ -7,21 +7,16 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmBranchMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string BranchCode { get; set; }
         public frmBranchMst()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void txtStateCode_EditValueChanged(object sender, EventArgs e)
-        {
-
         }
 
         //private void txtCityCode_EditValueChanged(object sender, EventArgs e)
@@ -29,7 +24,7 @@ namespace WindowsFormsApplication1.Master
         //    txtCityName.Text = String.Empty;
         //}
 
-        private void txtAccCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtAccCode_EditValueChanged(object sender, EventArgs e)
         {
             txtAccName.Text = string.Empty;
         }
@@ -225,13 +220,13 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into UNITS"
                                                     + " (UNITNAME,UNITCityID,UNITADDRESS,UNITADDRESS2,UNITADDRESS3,UNITLEDGCODE,UnitGSTNo)values(@UNITNAME,@UNITCityID,@UNITADDRESS,@UNITADDRESS2,@UNITADDRESS3,@UNITLEDGCODE,@UnitGSTNo)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE UNITS SET "
                                                 + " UNITNAME=@UNITNAME,UNITCityID=@UNITCityID,UNITADDRESS=@UNITADDRESS,UNITADDRESS2=@UNITADDRESS2,UNITADDRESS3=@UNITADDRESS3,UNITLEDGCODE=@UNITLEDGCODE,UnitGSTNo=@UnitGSTNo "
@@ -273,11 +268,11 @@ namespace WindowsFormsApplication1.Master
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtBranchCode.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("sp_BranchDataFEdit '" + BranchCode + "'");
                     if (ds.Tables[0].Rows.Count > 0)

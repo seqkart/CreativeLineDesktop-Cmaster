@@ -999,6 +999,57 @@ namespace WindowsFormsApplication1
             }
             e.Handled = true;
         }
+        public static void CreatePopUpForTwoBoxesFromBusy(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ReportGridView.Columns.Clear();
+                ReportGrid.Text = TextBox1.Name;
+                if (TextBox1.Text.Trim().Length == 0)
+                {
+                    DataSet ds = ProjectFunctionsUtils.GetDataSetBusy(Query);
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        ReportGrid.DataSource = ds.Tables[0];
+                        ReportGrid.Show();
+                        ReportGrid.Visible = true;
+                        ReportGrid.Focus();
+                        ReportGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        ProjectFunctions.SpeakError("No Records To Display");
+                    }
+                }
+                else
+                {
+                    DataSet ds = ProjectFunctionsUtils.GetDataSetBusy(Query + WhereClause + "='" + TextBox1.Text + "'");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        TextBox1.Text = ds.Tables[0].Rows[0][0].ToString();
+                        TextBox2.Text = ds.Tables[0].Rows[0][1].ToString();
+                        TextBox3.Focus();
+                    }
+                    else
+                    {
+                        DataSet ds1 = ProjectFunctionsUtils.GetDataSetBusy(Query);
+                        if (ds1.Tables[0].Rows.Count > 0)
+                        {
+                            ReportGrid.DataSource = ds1.Tables[0];
+                            ReportGrid.Show();
+                            ReportGrid.Visible = true;
+                            ReportGrid.Focus();
+                            ReportGridView.BestFitColumns();
+                        }
+                        else
+                        {
+                            ProjectFunctions.SpeakError("No Records To Display");
+                        }
+                    }
+                }
+            }
+            e.Handled = true;
+        }
 
         public static void CreatePopUpForThreeBoxes(string Query, string WhereClause, TextEdit TextBox1, TextEdit TextBox2, TextEdit TextBox3, TextEdit TextBox4, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView, KeyEventArgs e)
         {
@@ -2302,7 +2353,7 @@ namespace WindowsFormsApplication1
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
 
                         ///////////mobile number from fetch
-                        SendBillImageAsync("918591115444", DocNo, DocDate);
+                        SendBillImageAsync(ds.Tables[0].Rows[0]["WhatsAppNo"].ToString(), DocNo, DocDate);
                     }
 
 

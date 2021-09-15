@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmSizeMMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSizeMMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string SZSYSID { get; set; }
-        public frmSizeMMaster()
+        public FrmSizeMMaster()
         {
             InitializeComponent();
         }
@@ -44,11 +44,11 @@ namespace WindowsFormsApplication1
         private void FrmSizeMMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtSizeName.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM SIZEMAST Where SZSYSID='" + SZSYSID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -81,13 +81,13 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into SIZEMAST"
                                                     + " (SZNAME,SZINDEX,SZDESC)values(@SZNAME,@SZINDEX,@SZDESC)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE SIZEMAST SET "
                                                 + " SZNAME=@SZNAME,SZINDEX=@SZINDEX,SZDESC=@SZDESC"

@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmItemMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ITMSYSID { get; set; }
         public frmItemMaster()
         {
@@ -36,11 +36,11 @@ namespace WindowsFormsApplication1
         private void FrmItemMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtItemCode.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtItemCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from ITEMMAST Where  ITMSYSID='" + ITMSYSID + "'");
@@ -162,7 +162,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ITEMMAST"
                                                  + " (ITMCODE,ITMNAME,ITMSUBGROUP,ITMUOM,ITMPURPRICE,ITMRACNO,ITMRACLOC,"
@@ -174,7 +174,7 @@ namespace WindowsFormsApplication1
 
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE ITEMMAST SET "
                                                 + " ITMCODE=@ITMCODE,ITMNAME=@ITMNAME,ITMSUBGROUP=@ITMSUBGROUP,ITMUOM=@ITMUOM,ITMPURPRICE=@ITMPURPRICE, "

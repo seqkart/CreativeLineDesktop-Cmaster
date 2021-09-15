@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmBrand : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBrand : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string BrandCode { get; set; }
-        public frmBrand()
+        public FrmBrand()
         {
             InitializeComponent();
         }
@@ -33,11 +33,11 @@ namespace WindowsFormsApplication1
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtBrandName.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM BRANDS Where BRSYSID='" + BrandCode + "'");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -98,13 +98,13 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into BRANDS"
                                                     + " (BRNAME,BRALIAS)values(@BRNAME,@BRALIAS)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE BRANDS SET "
                                                 + " BRNAME=@BRNAME,BRALIAS=@BRALIAS"

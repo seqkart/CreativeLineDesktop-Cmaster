@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmCustomerMst
+    partial class FrmCustomerMst
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCustomerMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCustomerMst));
             this.GroupBox1 = new DevExpress.XtraEditors.GroupControl();
             this.txtDuringEOSS = new DevExpress.XtraEditors.TextEdit();
             this.Label21 = new DevExpress.XtraEditors.LabelControl();

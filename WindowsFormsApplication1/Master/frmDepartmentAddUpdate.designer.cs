@@ -49,7 +49,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(70, 28);
             this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // Menu_ToolStrip
             // 
@@ -77,7 +77,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(65, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtDesc
             // 
@@ -155,8 +155,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmDepartmentAddUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmDepartmentAddUpdate_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmDepartmentAddUpdate_KeyDown);
+            this.Load += new System.EventHandler(this.FrmDepartmentAddUpdate_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDepartmentAddUpdate_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDesc.Properties)).EndInit();

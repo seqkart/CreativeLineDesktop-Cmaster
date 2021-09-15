@@ -740,11 +740,11 @@ namespace WindowsFormsApplication1.Master
             // spreadsheetControl1
             // 
             this.spreadsheetControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spreadsheetControl1.Location = new System.Drawing.Point(0, 198);
+            this.spreadsheetControl1.Location = new System.Drawing.Point(0, 181);
             this.spreadsheetControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.spreadsheetControl1.MenuManager = this.ribbonControl1;
             this.spreadsheetControl1.Name = "spreadsheetControl1";
-            this.spreadsheetControl1.Size = new System.Drawing.Size(1055, 413);
+            this.spreadsheetControl1.Size = new System.Drawing.Size(1055, 430);
             this.spreadsheetControl1.TabIndex = 0;
             this.spreadsheetControl1.Text = "spreadsheetControl1";
             // 
@@ -1120,7 +1120,7 @@ namespace WindowsFormsApplication1.Master
             this.repositoryItemSpreadsheetFontSizeEdit1,
             this.repositoryItemPopupGalleryEdit1,
             this.repositoryItemTextEdit1});
-            this.ribbonControl1.Size = new System.Drawing.Size(1055, 198);
+            this.ribbonControl1.Size = new System.Drawing.Size(1055, 181);
             // 
             // spreadsheetCommandBarButtonItem1
             // 
@@ -5435,7 +5435,7 @@ namespace WindowsFormsApplication1.Master
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmEWayBillGener";
             this.Text = "frmEWayBillGener";
-            this.Load += new System.EventHandler(this.frmEWayBillGener_Load);
+            this.Load += new System.EventHandler(this.FrmEWayBillGener_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemSpreadsheetFontSizeEdit1)).EndInit();

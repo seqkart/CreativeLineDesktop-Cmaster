@@ -261,7 +261,7 @@ namespace WindowsFormsApplication1.Transaction
                     HelpGrid.Text = "txtCustMobileNo";
                     if (txtCustMobileNo.Text.Trim().Length == 0)
                     {
-                        frmCustomerMst frm = new frmCustomerMst() { s1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
+                        FrmCustomerMst frm = new FrmCustomerMst() { S1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                         frm.ShowDialog(Parent);
@@ -291,7 +291,7 @@ namespace WindowsFormsApplication1.Transaction
                         else
                         {
 
-                            frmCustomerMst frm = new frmCustomerMst() { s1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
+                            FrmCustomerMst frm = new FrmCustomerMst() { S1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
                             var P = ProjectFunctions.GetPositionInForm(this);
                             frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                             frm.ShowDialog(Parent);
@@ -1224,7 +1224,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                frmCustomerMst frm = new frmCustomerMst() { s1 = "Edit", Text = "Customer Edition", CAFSYSID = txtCustCode.Text };
+                FrmCustomerMst frm = new FrmCustomerMst() { S1 = "Edit", Text = "Customer Edition", CAFSYSID = txtCustCode.Text };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                 frm.ShowDialog(Parent);

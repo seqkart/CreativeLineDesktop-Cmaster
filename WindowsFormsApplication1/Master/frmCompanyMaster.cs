@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frmCompanyMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCompanyMaster : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string COMSYSID { get; set; }
-        public frmCompanyMaster()
+        public FrmCompanyMaster()
         {
             InitializeComponent();
         }
@@ -89,11 +89,11 @@ namespace WindowsFormsApplication1
         private void FrmCompanyMaster_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtCmpType.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM COMCONF Where COMSYSID='" + COMSYSID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -170,7 +170,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into COMCONF"
                                                     + " (COMTYPE,COMNAME,COMADD,COMADD1,COMADD2,COMCITY,COMSTATE,COMZIP,COMPHONE,"
@@ -182,7 +182,7 @@ namespace WindowsFormsApplication1
                                                      + "@COMPANWARD,@COMTAN,@COMGST,@COMGSTDT,@COMEXSNO,@COMEXSDIV,@COMEXSDIVADD,@COMEXSDIVCITY,"
                                                      + "@COMEXSDIVSTATE,@COMCURSYMB,@COMCURSTRING,@COMCURSBSTRING,@COMCURFONT,@COMCURCHAR)";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE COMCONF SET "
                                                 + " COMTYPE=@COMTYPE,COMNAME=@COMNAME,COMADD=@COMADD,COMADD1=@COMADD1,COMADD2=@COMADD2,COMCITY=@COMCITY,COMSTATE=@COMSTATE,COMZIP=@COMZIP,COMPHONE=@COMPHONE,"

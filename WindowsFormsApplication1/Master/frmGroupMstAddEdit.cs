@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1
     public partial class frmGroupMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string GrpCode { get; set; }
         public string SubGrpCode { get; set; }
 
@@ -24,7 +24,7 @@ namespace WindowsFormsApplication1
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        private string getNewGroupCode()
+        private string GetNewGroupCode()
         {
             var s2 = string.Empty;
             DataSet ds = ProjectFunctions.GetDataSet(" select isnull(max(cast(GrpCode as int)),0000) from GrpMst");
@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-        private string getNewSubGroupCode()
+        private string GetNewSubGroupCode()
         {
             var s2 = string.Empty;
 
@@ -48,7 +48,7 @@ namespace WindowsFormsApplication1
 
             return s2;
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -104,18 +104,18 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        private void frmGroupMstAddEdit_Load(object sender, EventArgs e)
+        private void FrmGroupMstAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtGrpCode.Focus();
                 txtGrpDesc.Enabled = false;
                 txtSGrpCode.Enabled = false;
                 txtSGrpDesc.Enabled = false;
-                txtGrpCode.Text = getNewGroupCode().PadLeft(4, '0');
+                txtGrpCode.Text = GetNewGroupCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 if (SubGrpCode == string.Empty)
                 {
@@ -145,13 +145,13 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtGrpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtGrpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
-                    if (Convert.ToInt32(txtGrpCode.Text) < Convert.ToInt32(getNewGroupCode()))
+                    if (Convert.ToInt32(txtGrpCode.Text) < Convert.ToInt32(GetNewGroupCode()))
                     {
                         txtGrpCode.Enabled = false;
                         txtSGrpDesc.Enabled = true;
@@ -159,9 +159,9 @@ namespace WindowsFormsApplication1
                         txtGrpDesc.Enabled = false;
                         DataSet ds = ProjectFunctions.GetDataSet("Select GrpDesc from GrpMst Where GrpCode='" + txtGrpCode.Text.Trim().PadLeft(4, '0') + "'");
                         txtGrpDesc.Text = ds.Tables[0].Rows[0]["GrpDesc"].ToString().Trim();
-                        txtSGrpCode.Text = getNewSubGroupCode().PadLeft(4, '0');
+                        txtSGrpCode.Text = GetNewSubGroupCode().PadLeft(4, '0');
                     }
-                    if (Convert.ToInt32(txtGrpCode.Text) == Convert.ToInt32(getNewGroupCode()))
+                    if (Convert.ToInt32(txtGrpCode.Text) == Convert.ToInt32(GetNewGroupCode()))
                     {
                         txtGrpDesc.Focus();
                         txtGrpDesc.Enabled = true;
@@ -170,9 +170,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 if (txtSGrpDesc.Enabled == false)
                 {
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1
                     {
                         var strQry = string.Empty;
                         strQry = " Insert into GrpMst(GrpCode,GrpDesc)values(";
-                        strQry = strQry + "'" + getNewGroupCode().PadLeft(4, '0') + "',";
+                        strQry = strQry + "'" + GetNewGroupCode().PadLeft(4, '0') + "',";
                         strQry = strQry + "'" + txtGrpDesc.Text.Trim() + "')";
 
                         using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
@@ -203,7 +203,7 @@ namespace WindowsFormsApplication1
                         var strQry = string.Empty;
                         strQry = " Insert into GrpMst(GrpCode,GrpSubCode,GrpDesc,GrpSubDesc,GrpHSNCode)values(";
                         strQry = strQry + "'" + txtGrpCode.Text.Trim().PadLeft(4, '0') + "',";
-                        strQry = strQry + "'" + getNewSubGroupCode().PadLeft(4, '0') + "',";
+                        strQry = strQry + "'" + GetNewSubGroupCode().PadLeft(4, '0') + "',";
                         strQry = strQry + "'" + txtGrpDesc.Text.Trim() + "',";
                         strQry = strQry + "'" + txtSGrpDesc.Text.Trim() + "',";
                         strQry = strQry + "'" + txtHSNCode.Text.Trim() + "')";
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1
                     }
                 }
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 if (txtSGrpDesc.Enabled == false)
                 {
@@ -272,26 +272,16 @@ namespace WindowsFormsApplication1
             Close();
         }
 
-        private void txtGrpCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtGrpCode_Validating(object sender, CancelEventArgs e)
         {
-            ProjectFunctions.NumberOnly(e);
-        }
-
-        private void txtSGrpCode_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ProjectFunctions.NumberOnly(e);
-        }
-
-        private void txtGrpCode_Validating(object sender, CancelEventArgs e)
-        {
-            if (Convert.ToInt32(txtGrpCode.Text) > Convert.ToInt32(getNewGroupCode()))
+            if (Convert.ToInt32(txtGrpCode.Text) > Convert.ToInt32(GetNewGroupCode()))
             {
-                txtGrpCode.Text = getNewGroupCode().PadLeft(4, '0');
+                txtGrpCode.Text = GetNewGroupCode().PadLeft(4, '0');
                 txtGrpDesc.Focus();
             }
         }
 
-        private void txtGrpDesc_KeyUp(object sender, KeyEventArgs e)
+        private void TxtGrpDesc_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -299,7 +289,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void frmGroupMstAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmGroupMstAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -307,16 +297,16 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void txtGrpDesc_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtGrpDesc_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.TextOnly(e);
         }
 
-        private void txtSGrpDesc_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtSGrpDesc_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.TextOnly(e);
         }

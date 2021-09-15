@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Master
 {
-    partial class frmCityMst
+    partial class FrmCityMst
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCityMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCityMst));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
@@ -76,7 +76,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -86,7 +86,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtCItyName
             // 
@@ -166,8 +166,8 @@
             this.txtStateCode.Properties.MaxLength = 4;
             this.txtStateCode.Size = new System.Drawing.Size(65, 24);
             this.txtStateCode.TabIndex = 410;
-            this.txtStateCode.EditValueChanged += new System.EventHandler(this.txtStateCode_EditValueChanged);
-            this.txtStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtStateCode_KeyDown);
+            this.txtStateCode.EditValueChanged += new System.EventHandler(this.TxtStateCode_EditValueChanged);
+            this.txtStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStateCode_KeyDown);
             // 
             // label13
             // 
@@ -209,8 +209,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmCityMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmCityMst_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCityMst_KeyDown);
+            this.Load += new System.EventHandler(this.FrmCityMst_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCityMst_KeyDown);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCItyName.Properties)).EndInit();

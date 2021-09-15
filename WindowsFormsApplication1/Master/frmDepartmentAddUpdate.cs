@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmDepartmentAddUpdate : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string DeptCode { get; set; }
         public frmDepartmentAddUpdate()
         {
@@ -22,33 +22,16 @@ namespace WindowsFormsApplication1
 
             txtDeptCode.Enabled = false;
         }
-        //private string GetNewDeptCode()
-        //{
-        //    string sql = "SELECT"
-        //    + " CASE"
-        //    + " WHEN (isnull(max(Cast(REPLACE(DeptCode, 'dp', '') as int)), 00000) + 1) < 10 THEN ('dp0'+CAST(isnull(max(Cast(REPLACE(DeptCode, 'dp', '') as int)), 00000) + 1 as varchar(10)))"
-        //    + " ELSE ('dp'+CAST(isnull(max(Cast(REPLACE(DeptCode, 'dp', '') as int)), 00000) + 1 as varchar(10)))"
-        //    + " END AS NewDeptCode"
-        //    + " FROM DeptMSt;";
-        //    //"select isnull(max(Cast(DeptCode as int)),00000) from DeptMSt"
-        //    String s2 = String.Empty;
-        //    DataSet ds = ProjectFunctions.GetDataSet(sql);
-        //    if (ds.Tables[0].Rows.Count > 0)
-        //    {
-        //        s2 = ds.Tables[0].Rows[0][0].ToString();
-        //        //s2 = (Convert.ToInt32(s2) + 1).ToString();
-        //    }
-        //    return s2;
-        //}
-        private void frmDepartmentAddUpdate_Load(object sender, EventArgs e)
+        
+        private void FrmDepartmentAddUpdate_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtDesc.Focus();
                 txtDeptCode.Text = ProjectFunctionsUtils.GetNewDeptCode();//.PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 //txtDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT DeptCode,DeptDesc,Remarks FROM DeptMst Where DeptCode='" + DeptCode + "'");
@@ -65,13 +48,13 @@ namespace WindowsFormsApplication1
         {
             if (txtDeptCode.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Invalid Department Code", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                XtraMessageBox.Show("Invalid Department Code", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtDeptCode.Focus();
                 return false;
             }
             if (txtDesc.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Invalid Department Description", "Inalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                XtraMessageBox.Show("Invalid Department Description", "Invalid value", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 txtDesc.Focus();
                 return false;
             }
@@ -79,7 +62,7 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        private void frmDepartmentAddUpdate_KeyDown(object sender, KeyEventArgs e)
+        private void FrmDepartmentAddUpdate_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -87,16 +70,16 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -110,7 +93,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into DeptMst"
@@ -118,7 +101,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(DeptCode as int)),0)+1 AS VARCHAR(4)),4)from DeptMst),@DeptDesc,@Remarks)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE DeptMst SET "
                                                 + " DeptDesc=@DeptDesc,Remarks=@Remarks "

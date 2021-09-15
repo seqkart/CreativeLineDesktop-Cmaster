@@ -226,6 +226,26 @@ namespace SeqKartLibrary
                 }
             }
         }
+        public static DataSet GetDataSetBusy(string Query)
+        {
+            using (var _VarDataSet = new DataSet())
+            {
+                try
+                {
+                    using (var _VarSqlDataAdapter = new SqlDataAdapter(Query, new SqlConnection("Data Source=seqkart.ddns.net;Initial Catalog=BusyComp0008_db12021;User ID=sa;Password=Seq@2021")))
+                    {
+                        _VarSqlDataAdapter.SelectCommand.CommandTimeout = 1200;
+                        _VarSqlDataAdapter.Fill(_VarDataSet);
+                    }
+                    return _VarDataSet;
+                }
+                catch (Exception ex)
+                {
+                    XtraMessageBox.Show(ex.Message);
+                    return null;
+                }
+            }
+        }
         public static DataSet GetDataSet_New(string sqlQuery)
         {
             DataSet ds = new DataSet();

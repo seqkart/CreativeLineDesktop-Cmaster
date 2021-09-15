@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmMachineMst
+    partial class FrmMachineMst
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Master
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMachineMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMachineMst));
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtMachineCode = new DevExpress.XtraEditors.TextEdit();
@@ -151,7 +151,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtGauge
             // 
@@ -185,8 +185,8 @@ namespace WindowsFormsApplication1.Master
             this.txtTypeCode.Properties.MaxLength = 8;
             this.txtTypeCode.Size = new System.Drawing.Size(86, 24);
             this.txtTypeCode.TabIndex = 400;
-            this.txtTypeCode.EditValueChanged += new System.EventHandler(this.txtTypeCode_EditValueChanged);
-            this.txtTypeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTypeCode_KeyDown);
+            this.txtTypeCode.EditValueChanged += new System.EventHandler(this.TxtTypeCode_EditValueChanged);
+            this.txtTypeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTypeCode_KeyDown);
             // 
             // label19
             // 
@@ -237,8 +237,8 @@ namespace WindowsFormsApplication1.Master
             this.txtBrandCode.Properties.MaxLength = 8;
             this.txtBrandCode.Size = new System.Drawing.Size(86, 24);
             this.txtBrandCode.TabIndex = 421;
-            this.txtBrandCode.EditValueChanged += new System.EventHandler(this.txtBrandCode_EditValueChanged);
-            this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBrandCode_KeyDown);
+            this.txtBrandCode.EditValueChanged += new System.EventHandler(this.TxtBrandCode_EditValueChanged);
+            this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBrandCode_KeyDown);
             // 
             // labelControl1
             // 
@@ -276,7 +276,7 @@ namespace WindowsFormsApplication1.Master
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMachineMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmMachineMst_Load);
+            this.Load += new System.EventHandler(this.FrmMachineMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMachineCode.Properties)).EndInit();

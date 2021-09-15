@@ -204,7 +204,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -216,7 +216,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // LBDEPCODE
             // 
@@ -240,8 +240,8 @@
             this.txtARTID.Size = new System.Drawing.Size(86, 24);
             this.txtARTID.TabIndex = 780;
             this.txtARTID.TabStop = false;
-            this.txtARTID.EditValueChanged += new System.EventHandler(this.txtARTID_EditValueChanged);
-            this.txtARTID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtARTID_KeyDown);
+            this.txtARTID.EditValueChanged += new System.EventHandler(this.TxtARTID_EditValueChanged);
+            this.txtARTID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtARTID_KeyDown);
             // 
             // HelpGrid
             // 
@@ -340,7 +340,7 @@
             this.btnLoad.Size = new System.Drawing.Size(87, 30);
             this.btnLoad.TabIndex = 788;
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // frmMeasurementMappingWithArt
             // 
@@ -364,7 +364,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMeasurementMappingWithArt";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmMeasurementMappingWithArt_Load);
+            this.Load += new System.EventHandler(this.FrmMeasurementMappingWithArt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();

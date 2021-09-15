@@ -9,7 +9,7 @@ namespace WindowsFormsApplication1.Master
             InitializeComponent();
         }
 
-        private void frmEWayBillGener_Load(object sender, EventArgs e)
+        private void FrmEWayBillGener_Load(object sender, EventArgs e)
         {
 
         }

@@ -39,7 +39,7 @@ namespace WindowsFormsApplication1
                 FieldName = "AccName",
 
                 Visible = true,
-                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                SortOrder = DevExpress.Data.ColumnSortOrder.Ascending,
                 VisibleIndex = 0
             };
             col1.OptionsColumn.AllowEdit = false;
@@ -247,9 +247,8 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void BtnLoad_Click(object sender, EventArgs e)
-        {
+       
 
-        }
+      
     }
 }

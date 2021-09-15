@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmMachineTypeMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string TypeCode { get; set; }
         public frmMachineTypeMst()
         {
@@ -54,20 +54,20 @@ namespace WindowsFormsApplication1.Master
 
             return true;
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmMachineTypeMst_Load(object sender, EventArgs e)
+        private void FrmMachineTypeMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtTypeName.Focus();
                 txtTypeCode.Text = GetNewTypeCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 //txtCatgDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT TypeCode,TypeDesc FROM MachineTypeMst Where TypeCode='" + TypeCode + "'");
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into MachineTypeMst"
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1.Master
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(TypeCode as int)),0)+1 AS VARCHAR(4)),4)from MachineTypeMst),@TypeDesc)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE MachineTypeMst SET "
                                                 + " TypeDesc=@TypeDesc"

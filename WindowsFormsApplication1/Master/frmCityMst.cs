@@ -4,16 +4,16 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmCityMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCityMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string CityCode { get; set; }
-        public frmCityMst()
+        public FrmCityMst()
         {
             InitializeComponent();
         }
 
-        private void txtStateCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtStateCode_EditValueChanged(object sender, EventArgs e)
         {
             txtStateName.Text = string.Empty;
 
@@ -34,16 +34,16 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmCityMst_Load(object sender, EventArgs e)
+        private void FrmCityMst_Load(object sender, EventArgs e)
         {
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtCItyName.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("sp_LoadCityMstFEDIt '" + CityCode + "'");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -92,12 +92,12 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -111,13 +111,13 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into CITYMASTER"
                                                     + " (CTNAME,UNDERSTID)values(@CTNAME,@UNDERSTID)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE CITYMASTER SET "
                                                 + " CTNAME=@CTNAME,UNDERSTID=@UNDERSTID"
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmCityMst_KeyDown(object sender, KeyEventArgs e)
+        private void FrmCityMst_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtStateCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtStateCode_KeyDown(object sender, KeyEventArgs e)
         {
             try
             {

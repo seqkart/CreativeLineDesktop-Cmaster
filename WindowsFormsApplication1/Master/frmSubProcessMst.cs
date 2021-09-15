@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmSubProcessMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public String S1 { get; set; }
         public String SubProcessCode { get; set; }
         public frmSubProcessMst()
         {
@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.Master
             txtSubProcessCode.Enabled = false;
 
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -42,7 +42,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtProcessCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtProcessCode_EditValueChanged(object sender, EventArgs e)
         {
             txtProcessName.Text = string.Empty;
         }
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -102,13 +102,13 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into SubProcessMst"
                                                  + " (SubProcessCode,SubProcessName, ProcessCode)"
                                                  + " values(@SubProcessCode,@SubProcessName, @ProcessCode)";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE SubProcessMst SET "
                                                 + " SubProcessName=@SubProcessName,ProcessCode=@ProcessCode "
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtProcessCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtProcessCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select ProcessCode,ProcessName from ProcessMst", " Where ProcessCode", txtProcessCode, txtProcessName, txtProcessCode, HelpGrid, HelpGridView, e);
         }
@@ -159,15 +159,15 @@ namespace WindowsFormsApplication1.Master
             return s2;
 
         }
-        private void frmSubProcessMst_Load(object sender, EventArgs e)
+        private void FrmSubProcessMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtSubProcessName.Select();
                 txtSubProcessCode.Text = GetNewSubProcessCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtSubProcessCode.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSubProcessMstFEdit '" + SubProcessCode + "'");

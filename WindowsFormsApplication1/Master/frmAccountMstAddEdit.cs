@@ -2,6 +2,7 @@
 using DevExpress.XtraGrid.Views.Grid;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SeqKartLibrary;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -92,6 +93,7 @@ namespace WindowsFormsApplication1
                 {
                     //txtAcName.Enabled = false;
                     DataSet ds = ProjectFunctions.GetDataSet("sp_LoadActMstFEditing '" + AccCode + "'");
+                    txtAccCodeBusy.Text = ds.Tables[0].Rows[0]["AccCodeBusy"].ToString();
                     txtAcCategory.Text = ds.Tables[0].Rows[0]["AccType"].ToString();
                     txtAcCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
                     txtAcName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
@@ -145,6 +147,17 @@ namespace WindowsFormsApplication1
                     txtUnitCode.Text = ds.Tables[0].Rows[0]["AccUnitCode"].ToString();
                     txtUnitName.Text = ds.Tables[0].Rows[0]["UNITNAME"].ToString();
                     cmbTaxType.SelectedItem = ds.Tables[0].Rows[0]["AccTaxType"].ToString();
+
+                    txtAddress4.Text = ds.Tables[0].Rows[0]["AccAddress4"].ToString();
+                    txtWhatsAppNo.Text = ds.Tables[0].Rows[0]["WhatsAppNo"].ToString();
+
+
+
+
+
+
+
+
                     txtAcCategory.Focus();
                     LoadDelAddresses();
                 }
@@ -209,7 +222,7 @@ namespace WindowsFormsApplication1
                 {
                     txtMRPMarkDown.Text = "0";
                 }
-               
+
 
 
                 if (txtLCTag.Text.ToUpper() == "L" || (txtLCTag.Text.ToUpper() == "C"))
@@ -236,7 +249,7 @@ namespace WindowsFormsApplication1
                     return false;
                 }
 
-               
+
                 return true;
             }
             catch (Exception ex)
@@ -262,15 +275,15 @@ namespace WindowsFormsApplication1
                         if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ActMst"
-                            + " (AccTaxType,AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag)"
-                            + " values(@AccTaxType,@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag)";
+                            + " (AccTaxType,AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag,AccCodeBusy)"
+                            + " values(@AccTaxType,@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag,@AccCodeBusy)";
                             txtAcCode.Text = ProjectFunctions.GetNewTransactionCode("select max(Cast(AccCode as int)) from ActMst");
                         }
                         if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE    ActMst SET "
                                                      + " AccTaxType=@AccTaxType,AccActive=@AccActive, AccType=@AccType,AccName=@AccName,AccLedger=@AccLedger,ActOpBal=@ActOpBal,"
-                                                     + " AccEmpCode=@AccEmpCode,AccBSHcode=@AccBSHcode,AccGSTNo=@AccGSTNo,AccGSTStateCode=@AccGSTStateCode,AccLCTag=@AccLCTag,AccGSTType=@AccGSTType,AccStkTrf=@AccStkTrf,AccUnitCode=@AccUnitCode,AccFixBarCodeTag=@AccFixBarCodeTag"
+                                                     + " AccEmpCode=@AccEmpCode,AccBSHcode=@AccBSHcode,AccGSTNo=@AccGSTNo,AccGSTStateCode=@AccGSTStateCode,AccLCTag=@AccLCTag,AccGSTType=@AccGSTType,AccStkTrf=@AccStkTrf,AccUnitCode=@AccUnitCode,AccFixBarCodeTag=@AccFixBarCodeTag,AccCodeBusy=@AccCodeBusy"
                                                      + " Where AccCode=@AccCode";
 
 
@@ -291,17 +304,19 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@AccStkTrf", txtStockTransferTag.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccUnitCode", txtUnitCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccFixBarCodeTag", txtFixBArCodeTag.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@AccCodeBusy", txtAccCodeBusy.Text.Trim());
+
                         sqlcom.ExecuteNonQuery();
                         sqlcom.Parameters.Clear();
                         if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ActMstAddInf"
-                                                   + " (AccCode,AccName,AccType,AccAddress1,AccAddress2,AccAddress3,AccTeleFax,AccEmail,AccContactPerson,"
+                                                   + " (AccCode,AccName,AccType,AccAddress1,AccAddress2,AccAddress3,AccAddress4,WhatsAppNo,AccTeleFax,AccEmail,AccContactPerson,"
                                                    + "AccPSTCST,AccAnATag,AccChqName,AccTIN,AccPANno,"
                                                    + " AccAcinBankName,AccNameAsInBank,AccBankAccNo,"
                                                     + " AccAltMobNo,AccBrokerID,AccMobNo,"
                                                      + " AccZipCode,AccCityCode,AccTDSEnable,AccMrpMarkDown,AccDCCode)"
-                                                   + " values(@AccCode,@AccName,@AccType,@AccAddress1,@AccAddress2,@AccAddress3,@AccTeleFax,@AccEmail,@AccContactPerson,"
+                                                   + " values(@AccCode,@AccName,@AccType,@AccAddress1,@AccAddress2,@AccAddress3,@AccAddress4,@WhatsAppNo,@AccTeleFax,@AccEmail,@AccContactPerson,"
                                                    + "@AccPSTCST,@AccAnATag,@AccChqName,@AccTIN,@AccPANno,"
                                                    + " @AccAcinBankName,@AccNameAsInBank,@AccBankAccNo,"
                             + " @AccAltMobNo,@AccBrokerID,@AccMobNo,"
@@ -311,7 +326,7 @@ namespace WindowsFormsApplication1
                         {
                             sqlcom.CommandText = " UPDATE    ActMstAddInf SET  "
                                                 + "AccName=@AccName,AccType=@AccType,AccAddress1=@AccAddress1,AccAddress2=@AccAddress2,"
-                                                + "AccAddress3=@AccAddress3,AccTeleFax=@AccTeleFax,AccEmail=@AccEmail,AccContactPerson=@AccContactPerson,"
+                                                + "AccAddress3=@AccAddress3,AccAddress4=@AccAddress4,WhatsAppNo=@WhatsAppNo,AccTeleFax=@AccTeleFax,AccEmail=@AccEmail,AccContactPerson=@AccContactPerson,"
                                                 + "AccPSTCST=@AccPSTCST,"
                                                 + "AccAnATag=@AccAnATag,AccChqName=@AccChqName,AccTIN=@AccTIN,"
                                                 + "AccPANno=@AccPANno,AccAcinBankName=@AccAcinBankName,AccNameAsInBank=@AccNameAsInBank,"
@@ -326,6 +341,8 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@AccAddress1", txtAddress1.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccAddress2", txtAddress2.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccAddress3", txtAddress3.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@AccAddress4", txtAddress4.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@WhatsAppNo", txtWhatsAppNo.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccTeleFax", txtTel.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccEmail", txtEmail.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccContactPerson", txtContactPerson.Text.Trim());
@@ -396,7 +413,54 @@ namespace WindowsFormsApplication1
         {
             try
             {
+
                 DataRow row = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
+                if (HelpGrid.Text == "txtAccCodeBusy")
+                {
+                    txtAccCodeBusy.Text = row["MasterCode1"].ToString();
+                    txtAccNameBusy.Text = row["PRINTNAME"].ToString();
+                    HelpGrid.Visible = false;
+                    txtAccCodeBusy.Focus();
+
+                    if (chImportAll.Checked)
+                    {
+                        DataSet ds = ProjectFunctionsUtils.GetDataSetBusy("Select * from MasterAddressInfo where MasterCode='" + txtAccCodeBusy.Text + "'");
+                        if (ds.Tables[0].Rows.Count > 0)
+                        {
+                            txtAcName.Text = txtAccNameBusy.Text;
+                            txtBillingName.Text = txtAccNameBusy.Text;
+                            txtAddress1.Text = ds.Tables[0].Rows[0]["Address1"].ToString();
+                            txtAddress2.Text = ds.Tables[0].Rows[0]["Address2"].ToString();
+                            txtAddress3.Text = ds.Tables[0].Rows[0]["Address3"].ToString();
+                            txtAddress4.Text = ds.Tables[0].Rows[0]["Address4"].ToString();
+                            txtZipCode.Text = ds.Tables[0].Rows[0]["PINCode"].ToString();
+
+
+                            DataSet dsCity= ProjectFunctions.GetDataSet("SELECT CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME,STATEMASTER.UNDERRG FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID Where CITYMASTER.CTNAME like'%" + ds.Tables[0].Rows[0]["Station"].ToString() + "%'");
+                            if (dsCity.Tables[0].Rows.Count > 0)
+                            {
+                                txtCityCode.Text = dsCity.Tables[0].Rows[0]["CTSYSID"].ToString();
+                                txtCityName.Text = dsCity.Tables[0].Rows[0]["CTNAME"].ToString();
+                                txtState.Text = dsCity.Tables[0].Rows[0]["STNAME"].ToString();
+                                txtCountry.Text = dsCity.Tables[0].Rows[0]["UNDERRG"].ToString();
+                            }
+
+
+
+                            
+                            txtTel.Text = ds.Tables[0].Rows[0]["TelNo"].ToString()+","+ ds.Tables[0].Rows[0]["Mobile"].ToString();
+                            txtEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                            txtTinNo.Text = ds.Tables[0].Rows[0]["TINNo"].ToString();
+                            txtCstPst.Text = ds.Tables[0].Rows[0]["CST"].ToString();
+                            txtPanNo.Text = ds.Tables[0].Rows[0]["ITPAN"].ToString();
+                            txtGSTNo.Text = ds.Tables[0].Rows[0]["GSTNo"].ToString();
+                            txtWhatsAppNo.Text = ds.Tables[0].Rows[0]["WhatsAppNo"].ToString();
+
+
+
+                        }
+                    }
+                }
                 if (HelpGrid.Text == "txtSLCode")
                 {
                     txtSLCode.Text = row["LgrCode"].ToString();
@@ -522,7 +586,7 @@ namespace WindowsFormsApplication1
             try
             {
                 ProjectFunctions.CreatePopUpForTwoBoxes("Select GSTStateCode,GSTStateDesc from GSTStateMst", " Where GSTStateCode", txtGSTStateCode, txtGSTStateDesc, txtGSTStateCode, HelpGrid, HelpGridView, e);
-              
+
 
             }
 
@@ -651,7 +715,7 @@ namespace WindowsFormsApplication1
 
         private void InfoGrid_DoubleClick(object sender, EventArgs e)
         {
-            var MaxRow = ((InfoGrid.KeyboardFocusView as GridView).RowCount);
+            var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
             if (MaxRow == 0)
             {
                 ProjectFunctions.SpeakError("Invalid Operation");
@@ -716,12 +780,14 @@ namespace WindowsFormsApplication1
                 TxnRespWithObjAndInfo<GSTINDetail> TxnResp = await EWBAPI.GetGSTNDetailAsync(EwbSession, txtGSTNo.Text);
 
                 if (TxnResp.IsSuccess)
-                
-                
-                
+
+
+
                 {
-                    TextEdit t = new TextEdit();
-                    t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+                    TextEdit t = new TextEdit
+                    {
+                        Text = JsonConvert.SerializeObject(TxnResp.RespObj)
+                    };
                     var details = JObject.Parse(t.Text);
 
 
@@ -735,7 +801,7 @@ namespace WindowsFormsApplication1
                     txtGSTStateDesc.Text = ProjectFunctions.GetDataSet("select GSTStateDesc from GSTStateMst where GSTStateCode='" + details["stateCode"].ToString().PadLeft(2, '0') + "' ").Tables[0].Rows[0][0].ToString();
 
 
-                    
+
 
 
                     XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
@@ -749,6 +815,32 @@ namespace WindowsFormsApplication1
         private void BtnValidate_Click(object sender, EventArgs e)
         {
             GetGSTINDataAsync();
+        }
+
+        private void TxtAccCodeBusy_EditValueChanged(object sender, EventArgs e)
+        {
+            txtAccNameBusy.Text = string.Empty;
+        }
+
+        private void TxtAccCodeBusy_KeyDown(object sender, KeyEventArgs e)
+        {
+            ProjectFunctions.CreatePopUpForTwoBoxesFromBusy("SELECT DISTINCT MasterCode1,PRINTNAME FROM TRAN2  INNER JOIN MASTER1 ON TRAN2.MASTERCODE1 = MASTER1.CODE", " Where MasterCode1", txtAccCodeBusy, txtAccNameBusy, txtAccCodeBusy, HelpGrid, HelpGridView, e);
+        }
+
+        private void BtnBestMatch_Click(object sender, EventArgs e)
+        {
+            DataSet ds = ProjectFunctionsUtils.GetDataSetBusy("Select Code as MasterCode1,Name as PrintName from MASTER1  Where Name like '%" + txtAcName.Text + "%'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                HelpGrid.Text = "txtAccCodeBusy";
+                HelpGrid.DataSource = ds.Tables[0];
+                HelpGrid.BringToFront();
+                HelpGrid.Show();
+                HelpGrid.Focus();
+                HelpGridView.BestFitColumns();
+            }
+
+
         }
     }
 }

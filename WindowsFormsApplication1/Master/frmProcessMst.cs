@@ -6,16 +6,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmProcessMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmProcessMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string ProcessCode { get; set; }
-        public frmProcessMst()
+        public FrmProcessMst()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -64,15 +64,15 @@ namespace WindowsFormsApplication1.Master
             return true;
         }
 
-        private void frmProcessMst_Load(object sender, EventArgs e)
+        private void FrmProcessMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtProcessName.Focus();
                 txtProcessCode.Text = GetNewProcessCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtProcessName.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from ProcessMst Where ProcessCode = '" + ProcessCode + "'");
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1.Master
 
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into ProcessMst"
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1.Master
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(ProcessCode as int)),0)+1 AS VARCHAR(4)),4)from ProcessMst),@ProcessName,@ProcessRate )"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE ProcessMst SET "
                                                 + " ProcessName=@ProcessName,ProcessRate=@ProcessRate "
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtProcessRate_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtProcessRate_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }

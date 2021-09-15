@@ -622,9 +622,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     PrintLogWin.PrintLog(ex);
                 }
             }
-            /*
-
-            */
+            
         }
 
         private void BtnProcessSalary_Click(object sender, EventArgs e)
@@ -719,10 +717,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     PrintLogWin.PrintLog(ex);
                 }
             }
-            /*
-
-            */
-
+            
         }
 
 
@@ -853,6 +848,10 @@ namespace WindowsFormsApplication1.Forms_Transaction
             param.Add("@Salary_Month", DtStartDate.EditValue);
             param.Add("@Deduct_Advance", 1);
             param.Add("@Deduct_Loan", 1);
+            param.Add("@TeaRate", txtteatrate.Text);
+            param.Add("@NoOfCups", 0);
+
+            
 
             //List<EmployeeSalary> EmployeesSalaryList = EmployeeData.GetEmployeesSalaryList("sp_Salary_Process", param);
 

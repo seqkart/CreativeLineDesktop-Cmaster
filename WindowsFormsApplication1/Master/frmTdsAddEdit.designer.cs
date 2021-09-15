@@ -180,7 +180,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -190,7 +190,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtAcPostingCode
             // 
@@ -201,8 +201,8 @@
             this.txtAcPostingCode.Properties.MaxLength = 6;
             this.txtAcPostingCode.Size = new System.Drawing.Size(83, 24);
             this.txtAcPostingCode.TabIndex = 221;
-            this.txtAcPostingCode.EditValueChanged += new System.EventHandler(this.txtAcPostingCode_EditValueChanged);
-            this.txtAcPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAcPostingCode_KeyDown);
+            this.txtAcPostingCode.EditValueChanged += new System.EventHandler(this.TxtAcPostingCode_EditValueChanged);
+            this.txtAcPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAcPostingCode_KeyDown);
             // 
             // txtAcPostingdesc
             // 
@@ -281,8 +281,8 @@
             this.MinimizeBox = false;
             this.Name = "frmTdsAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmTdsAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTdsAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmTdsAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTdsAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtSurcRate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUnderSec.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRate.Properties)).EndInit();

@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmTaxMasterAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string TaxCode { get; set; }
         public frmTaxMasterAddEdit()
         {
@@ -40,15 +40,15 @@ namespace WindowsFormsApplication1
             return s2;
         }
 
-        private void frmTaxMasterAddEdit_Load(object sender, EventArgs e)
+        private void FrmTaxMasterAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtTaxDesc.Focus();
                 txtTaxCode.Text = GetNewTaxCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtTaxDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadTaxMstFEditng '" + TaxCode + "'");
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1
                 }
                 else
                 {
-                    ProjectFunctions.SpeakError("Valid Vaules Are L-Local,C-Central");
+                    ProjectFunctions.SpeakError("Valid Values Are L-Local,C-Central");
                     txtLCType.Focus();
                     return false;
                 }
@@ -145,12 +145,12 @@ namespace WindowsFormsApplication1
             return true;
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frmTaxMasterAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmTaxMasterAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -158,7 +158,7 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
@@ -207,7 +207,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
 
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
@@ -230,7 +230,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(TaxCode as int)),0)+1 AS VARCHAR(4)),4)from TaxMst),@TaxDesc,@TaxLC,@TaxCGSTRate,@TaxSGSTRate,@TaxIGSTRate,@TaxCGSTPost,@TaxSGSTPost,@TaxIGSTPost,@TaxMessage,@TaxSalePost,@TaxAboveAmount,@TaxAboveCGSTRate,@TaxAboveSGSTRate,@TaxAboveIGSTRate)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE TaxMst SET "
                                                 + " TaxDesc=@TaxDesc,TaxLC=@TaxLC,TaxCGSTRate=@TaxCGSTRate,TaxSGSTRate=@TaxSGSTRate,TaxIGSTRate=@TaxIGSTRate,TaxCGSTPost=@TaxCGSTPost,TaxSGSTPost=@TaxSGSTPost,TaxIGSTPost=@TaxIGSTPost,TaxMessage=@TaxMessage,TaxSalePost=@TaxSalePost, "
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void txtSalePostingCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSalePostingCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -282,7 +282,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtTaxPostingCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtTaxPostingCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -291,7 +291,7 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtSurPostingCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSurPostingCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -300,56 +300,37 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void txtSalePostingCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtSalePostingCode_EditValueChanged(object sender, EventArgs e)
         {
             txtCGSTPostingDesc.Text = string.Empty;
         }
 
-        private void txtTaxPostingCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtTaxPostingCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSGSTPostingDesc.Text = string.Empty;
         }
 
-        private void txtSurPostingCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtSurPostingCode_EditValueChanged(object sender, EventArgs e)
         {
             txtIGSTPostingDesc.Text = string.Empty;
         }
 
-        private void txtLCType_Validating(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (txtLCType.Text == "L")
-            {
-
-            }
-            else
-            {
-                if (txtLCType.Text == "C")
-                {
-                }
-                else
-                {
-                    ProjectFunctions.SpeakError("Valid Vaules Are L-Local,C-Central");
-                    txtLCType.Focus();
-                }
-            }
-        }
-
-        private void txtSalePostingCode_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtSalePostingCode_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
 
-        private void txtTaxRate_KeyPress(object sender, KeyPressEventArgs e)
+        private void TxtTaxRate_KeyPress(object sender, KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtSalePostCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtSalePostCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSalePostDesc.Text = string.Empty;
         }
 
-        private void txtSalePostCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSalePostCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select AccCode,AccName from ActMst ", " where AccCode", txtSalePostCode, txtSalePostDesc, txtSalePostCode, HelpGrid, HelpGridView, e);
 

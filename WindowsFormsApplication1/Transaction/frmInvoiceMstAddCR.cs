@@ -623,6 +623,10 @@ namespace WindowsFormsApplication1
 
 
                         }
+
+
+                        ProjectFunctions.GetDataSet(" [SP_SRVPosting] '" + txtSerialNo.Text + "','" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "','RG','" + GlobalVariables.CUnitID + "' ");
+
                         SplashScreenManager.CloseForm();
                         ProjectFunctions.SpeakError("Credit Note Saved Successfully");
                         sqlcon.Close();

@@ -5,12 +5,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmCustomerMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCustomerMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string CAFSYSID { get; set; }
         public string CustMobileNo { get; set; }
-        public frmCustomerMst()
+        public FrmCustomerMst()
         {
             InitializeComponent();
         }
@@ -58,12 +58,12 @@ namespace WindowsFormsApplication1
         private void FrmCustomerMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtFirstName.Focus();
                 txtMobileNo.Text = CustMobileNo;
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtCustId.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from CAFINFO Where CAFSYSID= '" + CAFSYSID + "'");
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into CAFINFO"
                                                  + " (CAFMOBILE, CAFFNAME, CAFMNAME, CAFLNAME, CAFREFERBY, CAFADD, CAFADD1, CAFADD2, CAFCITY, "
@@ -177,7 +177,7 @@ namespace WindowsFormsApplication1
 
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE CAFINFO SET "
                                                 + " CAFMOBILE=@CAFMOBILE,CAFFNAME=@CAFFNAME,CAFMNAME=@CAFMNAME,CAFLNAME=@CAFLNAME, "

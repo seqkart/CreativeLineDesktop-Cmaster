@@ -2,19 +2,19 @@
 using System.Data;
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmSizeMapping : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSizeMapping : DevExpress.XtraEditors.XtraForm
     {
-        public frmSizeMapping()
+        public FrmSizeMapping()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void frmSizeMapping_Load(object sender, EventArgs e)
+        private void FrmSizeMapping_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
 

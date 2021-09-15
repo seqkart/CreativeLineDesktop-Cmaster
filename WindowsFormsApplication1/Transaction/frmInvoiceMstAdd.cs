@@ -1159,6 +1159,8 @@ namespace WindowsFormsApplication1
                         }
                         PackingSlipUpdations();
 
+                        ProjectFunctions.GetDataSet(" [SP_SLVPosting] '" + txtSerialNo.Text + "','" + Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd") + "','GST','" + GlobalVariables.CUnitID + "' ");
+
                         if (StkTransfer.ToUpper() == "Y")
                         {
                             ProjectFunctions.GetDataSet("sp_SinkDCOWithOnline");
@@ -1168,9 +1170,9 @@ namespace WindowsFormsApplication1
 
                         Close();
                     }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
+
                     catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
+
                     {
                         Close();
                     }

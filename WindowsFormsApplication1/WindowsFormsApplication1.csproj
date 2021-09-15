@@ -1223,11 +1223,23 @@
     <Compile Include="Prints\PackingSlipCrossTab.Designer.cs">
       <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prints\PartyLedgerUpdated.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\PartyLedgerUpdated.Designer.cs">
+      <DependentUpon>PartyLedgerUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\PartyReco.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Prints\PartyReco.Designer.cs">
       <DependentUpon>PartyReco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prints\rpt_PartyLedgerNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\rpt_PartyLedgerNew.Designer.cs">
+      <DependentUpon>rpt_PartyLedgerNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\XtraReport_EmployeesSalaryList.cs">
       <SubType>Component</SubType>
@@ -1380,11 +1392,11 @@
     <Compile Include="Master\frmDesignationAddEdit.designer.cs">
       <DependentUpon>frmDesignationAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\frmEmloyeeMstAddEdit.cs">
+    <Compile Include="Master\frmEmployeeMstAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\frmEmloyeeMstAddEdit.designer.cs">
-      <DependentUpon>frmEmloyeeMstAddEdit.cs</DependentUpon>
+    <Compile Include="Master\frmEmployeeMstAddEdit.designer.cs">
+      <DependentUpon>frmEmployeeMstAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmGroupMstAddEdit.cs">
       <SubType>Form</SubType>
@@ -2148,8 +2160,14 @@
     <EmbeddedResource Include="Prints\PackingSlipCrossTab.resx">
       <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prints\PartyLedgerUpdated.resx">
+      <DependentUpon>PartyLedgerUpdated.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prints\PartyReco.resx">
       <DependentUpon>PartyReco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\rpt_PartyLedgerNew.resx">
+      <DependentUpon>rpt_PartyLedgerNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeesSalaryList.resx">
       <DependentUpon>XtraReport_EmployeesSalaryList.cs</DependentUpon>
@@ -2223,8 +2241,8 @@
     <EmbeddedResource Include="Master\frmDesignationAddEdit.resx">
       <DependentUpon>frmDesignationAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\frmEmloyeeMstAddEdit.resx">
-      <DependentUpon>frmEmloyeeMstAddEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Master\frmEmployeeMstAddEdit.resx">
+      <DependentUpon>frmEmployeeMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmGroupMstAddEdit.resx">
       <DependentUpon>frmGroupMstAddEdit.cs</DependentUpon>

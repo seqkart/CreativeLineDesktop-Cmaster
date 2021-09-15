@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class FrmMachineBrandMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string BrandCode { get; set; }
         public FrmMachineBrandMst()
         {
@@ -54,20 +54,20 @@ namespace WindowsFormsApplication1.Master
 
             return true;
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmMachineBrandMst_Load(object sender, EventArgs e)
+        private void FrmMachineBrandMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtBrandName.Focus();
                 txtBrandCode.Text = GetNewBrandCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 //txtCatgDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT BrandCode,BrandDesc FROM MachineBrandMst Where BrandCode='" + BrandCode + "'");
@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into MachineBrandMst"
@@ -102,7 +102,7 @@ namespace WindowsFormsApplication1.Master
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(BrandCode as int)),0)+1 AS VARCHAR(4)),4)from MachineBrandMst),@BrandDesc)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE MachineBrandMst SET "
                                                 + " BrandDesc=@BrandDesc"

@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmContractorMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string CNTSYSID { get; set; }
         public frmContractorMst()
         {
@@ -28,12 +28,12 @@ namespace WindowsFormsApplication1.Master
             txtContCode.Enabled = false;
 
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -47,7 +47,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into CONTRACTOR"
                                                  + " (CNTSYSDATE,CNTNAME, CNTMOBNO,CNTALTMOBNO,CNTEMAILID,CNTIDTYPE,CNTIDNO)values("
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.Master
 
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE CONTRACTOR SET "
                                                 + " CNTNAME=@CNTNAME,CNTMOBNO=@CNTMOBNO,CNTALTMOBNO=@CNTALTMOBNO,CNTEMAILID=@CNTEMAILID,CNTIDTYPE=@CNTIDTYPE, "
@@ -97,14 +97,14 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmContractorMst_Load(object sender, EventArgs e)
+        private void FrmContractorMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtContName.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtContName.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from CONTRACTOR Where CNTSYSID= '" + CNTSYSID + "'");

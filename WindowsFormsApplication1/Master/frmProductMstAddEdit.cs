@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmProductMstAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmProductMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string PrdCode { get; set; }
-        public frmProductMstAddEdit()
+        public FrmProductMstAddEdit()
         {
             InitializeComponent();
         }
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1
             }
             if (txtHSNNo.Text.Length < 3)
             {
-                ProjectFunctions.SpeakError("Invali GST HSNNo");
+                ProjectFunctions.SpeakError("Invalid GST HSNNo");
                 txtHSNNo.Focus();
                 return false;
             }

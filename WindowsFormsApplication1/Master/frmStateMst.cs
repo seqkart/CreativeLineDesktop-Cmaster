@@ -7,14 +7,14 @@ namespace WindowsFormsApplication1.Master
 {
     public partial class frmStateMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string StateCode { get; set; }
         public frmStateMst()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -57,16 +57,16 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmStateMst_Load(object sender, EventArgs e)
+        private void FrmStateMst_Load(object sender, EventArgs e)
         {
             try
             {
                 SetMyControls();
-                if (s1 == "&Add")
+                if (S1 == "&Add")
                 {
                     txtStateName.Focus();
                 }
-                if (s1 == "Edit")
+                if (S1 == "Edit")
                 {
                     DataSet ds = ProjectFunctions.GetDataSet("SELECT * FROM STATEMASTER Where STSYSID='" + StateCode + "'");
                     if (ds.Tables[0].Rows.Count > 0)
@@ -109,7 +109,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -123,13 +123,13 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into STATEMASTER"
                                                     + " (STNAME,UNDERRG)values(@STNAME,@UNDERRG)";
 
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE STATEMASTER SET "
                                                 + " STNAME=@STNAME,UNDERRG=@UNDERRG"
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmStateMst_KeyDown(object sender, KeyEventArgs e)
+        private void FrmStateMst_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {

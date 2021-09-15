@@ -6,7 +6,7 @@ namespace WindowsFormsApplication1
 {
     public partial class frmLedgerAddEdit : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string LgrCode { get; set; }
         public frmLedgerAddEdit()
         {
@@ -20,15 +20,15 @@ namespace WindowsFormsApplication1
             txtLedgerDesc.Properties.MaxLength = 30;
             txtLedgerCode.Enabled = false;
         }
-        private void frmLedgerAddEdit_Load(object sender, EventArgs e)
+        private void FrmLedgerAddEdit_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtLedgerDesc.Focus();
                 txtLedgerCode.Text = GetNewVehicleCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtLedgerDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT LgrCode,LgrDesc FROM LgrMst Where LgrCode='" + LgrCode + "'");
@@ -67,7 +67,7 @@ namespace WindowsFormsApplication1
             }
             return s2;
         }
-        private void frmLedgerAddEdit_KeyDown(object sender, KeyEventArgs e)
+        private void FrmLedgerAddEdit_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -75,16 +75,16 @@ namespace WindowsFormsApplication1
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into LgrMst"
@@ -106,7 +106,7 @@ namespace WindowsFormsApplication1
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(LgrCode as int)),0)+1 AS VARCHAR(4)),4)from LgrMst),@LgrDesc )"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE LgrMst SET "
                                                 + " LgrDesc=@LgrDesc "

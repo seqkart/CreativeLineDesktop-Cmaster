@@ -122,7 +122,7 @@
             this.txtCGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCGSTRate.Size = new System.Drawing.Size(99, 24);
             this.txtCGSTRate.TabIndex = 3;
-            this.txtCGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxRate_KeyPress);
+            this.txtCGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTaxRate_KeyPress);
             // 
             // label3
             // 
@@ -172,7 +172,7 @@
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(50, 28);
             this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -184,7 +184,7 @@
             this.btnSave.Size = new System.Drawing.Size(65, 28);
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtTaxDesc
             // 
@@ -224,7 +224,7 @@
             this.txtSGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGSTRate.Size = new System.Drawing.Size(99, 24);
             this.txtSGSTRate.TabIndex = 4;
-            this.txtSGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxRate_KeyPress);
+            this.txtSGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTaxRate_KeyPress);
             // 
             // label4
             // 
@@ -246,9 +246,9 @@
             this.txtCGSTPostingCode.Properties.MaxLength = 6;
             this.txtCGSTPostingCode.Size = new System.Drawing.Size(99, 24);
             this.txtCGSTPostingCode.TabIndex = 10;
-            this.txtCGSTPostingCode.EditValueChanged += new System.EventHandler(this.txtSalePostingCode_EditValueChanged);
-            this.txtCGSTPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSalePostingCode_KeyDown);
-            this.txtCGSTPostingCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalePostingCode_KeyPress);
+            this.txtCGSTPostingCode.EditValueChanged += new System.EventHandler(this.TxtSalePostingCode_EditValueChanged);
+            this.txtCGSTPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSalePostingCode_KeyDown);
+            this.txtCGSTPostingCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSalePostingCode_KeyPress);
             // 
             // txtCGSTPostingDesc
             // 
@@ -281,9 +281,9 @@
             this.txtSGSTPostingCode.Properties.MaxLength = 6;
             this.txtSGSTPostingCode.Size = new System.Drawing.Size(99, 24);
             this.txtSGSTPostingCode.TabIndex = 11;
-            this.txtSGSTPostingCode.EditValueChanged += new System.EventHandler(this.txtTaxPostingCode_EditValueChanged);
-            this.txtSGSTPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTaxPostingCode_KeyDown);
-            this.txtSGSTPostingCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalePostingCode_KeyPress);
+            this.txtSGSTPostingCode.EditValueChanged += new System.EventHandler(this.TxtTaxPostingCode_EditValueChanged);
+            this.txtSGSTPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTaxPostingCode_KeyDown);
+            this.txtSGSTPostingCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSalePostingCode_KeyPress);
             // 
             // txtIGSTPostingDesc
             // 
@@ -305,9 +305,9 @@
             this.txtIGSTPostingCode.Properties.MaxLength = 6;
             this.txtIGSTPostingCode.Size = new System.Drawing.Size(99, 24);
             this.txtIGSTPostingCode.TabIndex = 12;
-            this.txtIGSTPostingCode.EditValueChanged += new System.EventHandler(this.txtSurPostingCode_EditValueChanged);
-            this.txtIGSTPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSurPostingCode_KeyDown);
-            this.txtIGSTPostingCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSalePostingCode_KeyPress);
+            this.txtIGSTPostingCode.EditValueChanged += new System.EventHandler(this.TxtSurPostingCode_EditValueChanged);
+            this.txtIGSTPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSurPostingCode_KeyDown);
+            this.txtIGSTPostingCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSalePostingCode_KeyPress);
             // 
             // label10
             // 
@@ -431,8 +431,8 @@
             this.txtSalePostCode.Properties.MaxLength = 6;
             this.txtSalePostCode.Size = new System.Drawing.Size(100, 24);
             this.txtSalePostCode.TabIndex = 15;
-            this.txtSalePostCode.EditValueChanged += new System.EventHandler(this.txtSalePostCode_EditValueChanged);
-            this.txtSalePostCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSalePostCode_KeyDown);
+            this.txtSalePostCode.EditValueChanged += new System.EventHandler(this.TxtSalePostCode_EditValueChanged);
+            this.txtSalePostCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSalePostCode_KeyDown);
             // 
             // txtLCType
             // 
@@ -456,7 +456,7 @@
             this.txtAboveAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveAmount.Size = new System.Drawing.Size(99, 24);
             this.txtAboveAmount.TabIndex = 6;
-            this.txtAboveAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxRate_KeyPress);
+            this.txtAboveAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTaxRate_KeyPress);
             // 
             // label8
             // 
@@ -477,7 +477,7 @@
             this.txtAboveIGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveIGSTRate.Size = new System.Drawing.Size(99, 24);
             this.txtAboveIGSTRate.TabIndex = 9;
-            this.txtAboveIGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxRate_KeyPress);
+            this.txtAboveIGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTaxRate_KeyPress);
             // 
             // label13
             // 
@@ -498,7 +498,7 @@
             this.txtAboveSGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveSGSTRate.Size = new System.Drawing.Size(99, 24);
             this.txtAboveSGSTRate.TabIndex = 8;
-            this.txtAboveSGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxRate_KeyPress);
+            this.txtAboveSGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTaxRate_KeyPress);
             // 
             // label14
             // 
@@ -519,7 +519,7 @@
             this.txtAboveCGSTRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAboveCGSTRate.Size = new System.Drawing.Size(99, 24);
             this.txtAboveCGSTRate.TabIndex = 7;
-            this.txtAboveCGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxRate_KeyPress);
+            this.txtAboveCGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTaxRate_KeyPress);
             // 
             // label15
             // 
@@ -581,8 +581,8 @@
             this.MinimizeBox = false;
             this.Name = "frmTaxMasterAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.frmTaxMasterAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTaxMasterAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmTaxMasterAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmTaxMasterAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.txtCGSTRate.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();

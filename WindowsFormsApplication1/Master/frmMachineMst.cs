@@ -6,31 +6,31 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmMachineMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMachineMst : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public String S1 { get; set; }
         public String MachineCode { get; set; }
-        public frmMachineMst()
+        public FrmMachineMst()
         {
             InitializeComponent();
         }
 
-        private void txtTypeCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtTypeCode_EditValueChanged(object sender, EventArgs e)
         {
             txtTypeDesc.Text = String.Empty;
         }
 
-        private void txtBrandCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtBrandCode_EditValueChanged(object sender, EventArgs e)
         {
             txtBrandDesc.Text = String.Empty;
         }
 
-        private void txtTypeCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtTypeCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select TypeCode,TypeDesc from MachineTypeMst", " Where TypeCode", txtTypeCode, txtTypeDesc, txtBrandCode, HelpGrid, HelpGridView, e);
         }
 
-        private void txtBrandCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtBrandCode_KeyDown(object sender, KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select BrandCode,BrandDesc from MachineBrandMst", " Where BrandCode", txtBrandCode, txtBrandDesc, txtGauge, HelpGrid, HelpGridView, e);
         }
@@ -115,15 +115,15 @@ namespace WindowsFormsApplication1.Master
             }
             return true;
         }
-        private void frmMachineMst_Load(object sender, EventArgs e)
+        private void FrmMachineMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtTypeCode.Focus();
                 txtMachineCode.Text = GetNewMachineCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 DataSet ds = ProjectFunctions.GetDataSet("sp_LoadMachineMstFEdit '" + MachineCode + "'");
                 if (ds.Tables[0].Rows.Count > 0)
@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
@@ -153,7 +153,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into MachineMst"
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1.Master
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(MachineCode as int)),0)+1 AS VARCHAR(4)),4)from MachineMst),@MachineTypeCode,@MachineBrandCode,@MachineGauge)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE MachineMst SET "
                                                 + " MachineTypeCode=@MachineTypeCode,MachineBrandCode=@MachineBrandCode,MachineGauge=@MachineGauge"
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }

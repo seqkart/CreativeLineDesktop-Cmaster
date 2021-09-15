@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmHOlidayMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmHOlidayMst : DevExpress.XtraEditors.XtraForm
     {
         public string s1 { get; set; }
         public string HolidaySysID { get; set; }
-        public frmHOlidayMst()
+        public FrmHOlidayMst()
         {
             InitializeComponent();
         }
@@ -27,7 +27,7 @@ namespace WindowsFormsApplication1.Master
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmHOlidayMst_Load(object sender, EventArgs e)
+        private void FrmHOlidayMst_Load(object sender, EventArgs e)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {

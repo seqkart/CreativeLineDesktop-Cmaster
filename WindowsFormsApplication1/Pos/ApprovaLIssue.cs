@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                     HelpGrid.Text = "txtCustMobileNo";
                     if (txtCustMobileNo.Text.Trim().Length == 0)
                     {
-                        frmCustomerMst frm = new frmCustomerMst() { s1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
+                        FrmCustomerMst frm = new FrmCustomerMst() { S1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                         frm.ShowDialog(Parent);
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                         else
                         {
 
-                            frmCustomerMst frm = new frmCustomerMst() { s1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
+                            FrmCustomerMst frm = new FrmCustomerMst() { S1 = "&Add", Text = "Customer Addition", CustMobileNo = txtCustMobileNo.Text };
                             var P = ProjectFunctions.GetPositionInForm(this);
                             frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                             frm.ShowDialog(Parent);

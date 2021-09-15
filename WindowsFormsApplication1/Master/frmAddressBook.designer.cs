@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmAddressBook
+    partial class FrmAddressBook
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddressBook));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddressBook));
             this.label6 = new DevExpress.XtraEditors.LabelControl();
             this.label16 = new DevExpress.XtraEditors.LabelControl();
             this.label17 = new DevExpress.XtraEditors.LabelControl();
@@ -94,7 +94,7 @@
             this.label6.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label6.Appearance.Options.UseFont = true;
             this.label6.Appearance.Options.UseForeColor = true;
-            this.label6.Location = new System.Drawing.Point(83, 332);
+            this.label6.Location = new System.Drawing.Point(66, 284);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 19);
@@ -107,7 +107,7 @@
             this.label16.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label16.Appearance.Options.UseFont = true;
             this.label16.Appearance.Options.UseForeColor = true;
-            this.label16.Location = new System.Drawing.Point(90, 470);
+            this.label16.Location = new System.Drawing.Point(73, 420);
             this.label16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(66, 19);
@@ -120,7 +120,7 @@
             this.label17.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label17.Appearance.Options.UseFont = true;
             this.label17.Appearance.Options.UseForeColor = true;
-            this.label17.Location = new System.Drawing.Point(88, 298);
+            this.label17.Location = new System.Drawing.Point(71, 250);
             this.label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(68, 19);
@@ -133,7 +133,7 @@
             this.label18.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label18.Appearance.Options.UseFont = true;
             this.label18.Appearance.Options.UseForeColor = true;
-            this.label18.Location = new System.Drawing.Point(88, 264);
+            this.label18.Location = new System.Drawing.Point(71, 216);
             this.label18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(68, 19);
@@ -146,7 +146,7 @@
             this.label19.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label19.Appearance.Options.UseFont = true;
             this.label19.Appearance.Options.UseForeColor = true;
-            this.label19.Location = new System.Drawing.Point(100, 230);
+            this.label19.Location = new System.Drawing.Point(83, 182);
             this.label19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(56, 19);
@@ -159,7 +159,7 @@
             this.label22.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label22.Appearance.Options.UseFont = true;
             this.label22.Appearance.Options.UseForeColor = true;
-            this.label22.Location = new System.Drawing.Point(71, 131);
+            this.label22.Location = new System.Drawing.Point(54, 82);
             this.label22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(85, 19);
@@ -172,7 +172,7 @@
             this.label23.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
             this.label23.Appearance.Options.UseFont = true;
             this.label23.Appearance.Options.UseForeColor = true;
-            this.label23.Location = new System.Drawing.Point(499, 163);
+            this.label23.Location = new System.Drawing.Point(482, 121);
             this.label23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(53, 14);
@@ -185,7 +185,7 @@
             this.label24.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
             this.label24.Appearance.Options.UseFont = true;
             this.label24.Appearance.Options.UseForeColor = true;
-            this.label24.Location = new System.Drawing.Point(183, 170);
+            this.label24.Location = new System.Drawing.Point(166, 121);
             this.label24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(22, 14);
@@ -198,7 +198,7 @@
             this.label25.Appearance.ForeColor = System.Drawing.Color.OrangeRed;
             this.label25.Appearance.Options.UseFont = true;
             this.label25.Appearance.Options.UseForeColor = true;
-            this.label25.Location = new System.Drawing.Point(321, 170);
+            this.label25.Location = new System.Drawing.Point(304, 121);
             this.label25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(55, 14);
@@ -208,11 +208,11 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(90, 97);
+            this.HelpGrid.Location = new System.Drawing.Point(206, 238);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(539, 473);
+            this.HelpGrid.Size = new System.Drawing.Size(460, 235);
             this.HelpGrid.TabIndex = 374;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -278,7 +278,7 @@
             // txtAddress
             // 
             this.txtAddress.EnterMoveNextControl = true;
-            this.txtAddress.Location = new System.Drawing.Point(160, 228);
+            this.txtAddress.Location = new System.Drawing.Point(143, 179);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -288,7 +288,7 @@
             // txtGroupCode
             // 
             this.txtGroupCode.EnterMoveNextControl = true;
-            this.txtGroupCode.Location = new System.Drawing.Point(160, 128);
+            this.txtGroupCode.Location = new System.Drawing.Point(143, 79);
             this.txtGroupCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroupCode.Name = "txtGroupCode";
             this.txtGroupCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -302,7 +302,7 @@
             // 
             this.txtGroupDesc.Enabled = false;
             this.txtGroupDesc.EnterMoveNextControl = true;
-            this.txtGroupDesc.Location = new System.Drawing.Point(253, 128);
+            this.txtGroupDesc.Location = new System.Drawing.Point(236, 79);
             this.txtGroupDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroupDesc.Name = "txtGroupDesc";
             this.txtGroupDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -314,7 +314,7 @@
             // txtFirstName
             // 
             this.txtFirstName.EnterMoveNextControl = true;
-            this.txtFirstName.Location = new System.Drawing.Point(253, 192);
+            this.txtFirstName.Location = new System.Drawing.Point(236, 145);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -325,7 +325,7 @@
             // txtLastName
             // 
             this.txtLastName.EnterMoveNextControl = true;
-            this.txtLastName.Location = new System.Drawing.Point(449, 192);
+            this.txtLastName.Location = new System.Drawing.Point(432, 145);
             this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -336,7 +336,7 @@
             // txtAddress1
             // 
             this.txtAddress1.EnterMoveNextControl = true;
-            this.txtAddress1.Location = new System.Drawing.Point(160, 262);
+            this.txtAddress1.Location = new System.Drawing.Point(143, 213);
             this.txtAddress1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -346,7 +346,7 @@
             // txtAddress2
             // 
             this.txtAddress2.EnterMoveNextControl = true;
-            this.txtAddress2.Location = new System.Drawing.Point(160, 296);
+            this.txtAddress2.Location = new System.Drawing.Point(143, 247);
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -356,7 +356,7 @@
             // txtLandMark
             // 
             this.txtLandMark.EnterMoveNextControl = true;
-            this.txtLandMark.Location = new System.Drawing.Point(160, 330);
+            this.txtLandMark.Location = new System.Drawing.Point(143, 281);
             this.txtLandMark.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLandMark.Name = "txtLandMark";
             this.txtLandMark.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -366,7 +366,7 @@
             // txtCompany
             // 
             this.txtCompany.EnterMoveNextControl = true;
-            this.txtCompany.Location = new System.Drawing.Point(160, 469);
+            this.txtCompany.Location = new System.Drawing.Point(143, 417);
             this.txtCompany.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -377,7 +377,7 @@
             // txtEmailId
             // 
             this.txtEmailId.EnterMoveNextControl = true;
-            this.txtEmailId.Location = new System.Drawing.Point(160, 543);
+            this.txtEmailId.Location = new System.Drawing.Point(143, 485);
             this.txtEmailId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmailId.Name = "txtEmailId";
             this.txtEmailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -388,7 +388,7 @@
             // txtContactNo
             // 
             this.txtContactNo.EnterMoveNextControl = true;
-            this.txtContactNo.Location = new System.Drawing.Point(160, 509);
+            this.txtContactNo.Location = new System.Drawing.Point(143, 451);
             this.txtContactNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContactNo.Name = "txtContactNo";
             this.txtContactNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -402,7 +402,7 @@
             this.label1.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Appearance.Options.UseFont = true;
             this.label1.Appearance.Options.UseForeColor = true;
-            this.label1.Location = new System.Drawing.Point(105, 546);
+            this.label1.Location = new System.Drawing.Point(88, 488);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 19);
@@ -415,7 +415,7 @@
             this.label2.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label2.Appearance.Options.UseFont = true;
             this.label2.Appearance.Options.UseForeColor = true;
-            this.label2.Location = new System.Drawing.Point(79, 512);
+            this.label2.Location = new System.Drawing.Point(62, 454);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 19);
@@ -426,7 +426,7 @@
             // 
             this.txtAddressBookCode.Enabled = false;
             this.txtAddressBookCode.EnterMoveNextControl = true;
-            this.txtAddressBookCode.Location = new System.Drawing.Point(160, 94);
+            this.txtAddressBookCode.Location = new System.Drawing.Point(143, 45);
             this.txtAddressBookCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddressBookCode.Name = "txtAddressBookCode";
             this.txtAddressBookCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -441,7 +441,7 @@
             this.label3.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label3.Appearance.Options.UseFont = true;
             this.label3.Appearance.Options.UseForeColor = true;
-            this.label3.Location = new System.Drawing.Point(29, 97);
+            this.label3.Location = new System.Drawing.Point(12, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 19);
@@ -451,7 +451,7 @@
             // txtTitle
             // 
             this.txtTitle.EnterMoveNextControl = true;
-            this.txtTitle.Location = new System.Drawing.Point(160, 194);
+            this.txtTitle.Location = new System.Drawing.Point(143, 145);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -467,7 +467,7 @@
             // txtCountry
             // 
             this.txtCountry.Enabled = false;
-            this.txtCountry.Location = new System.Drawing.Point(160, 432);
+            this.txtCountry.Location = new System.Drawing.Point(143, 383);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -482,7 +482,7 @@
             this.label12.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label12.Appearance.Options.UseFont = true;
             this.label12.Appearance.Options.UseForeColor = true;
-            this.label12.Location = new System.Drawing.Point(99, 433);
+            this.label12.Location = new System.Drawing.Point(82, 386);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 19);
@@ -492,7 +492,7 @@
             // txtCityName
             // 
             this.txtCityName.Enabled = false;
-            this.txtCityName.Location = new System.Drawing.Point(264, 365);
+            this.txtCityName.Location = new System.Drawing.Point(247, 315);
             this.txtCityName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -504,7 +504,7 @@
             // txtState
             // 
             this.txtState.Enabled = false;
-            this.txtState.Location = new System.Drawing.Point(160, 398);
+            this.txtState.Location = new System.Drawing.Point(143, 349);
             this.txtState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -515,7 +515,7 @@
             // 
             // txtCityCode
             // 
-            this.txtCityCode.Location = new System.Drawing.Point(160, 365);
+            this.txtCityCode.Location = new System.Drawing.Point(143, 315);
             this.txtCityCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -531,7 +531,7 @@
             this.Label5.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Label5.Appearance.Options.UseFont = true;
             this.Label5.Appearance.Options.UseForeColor = true;
-            this.Label5.Location = new System.Drawing.Point(118, 399);
+            this.Label5.Location = new System.Drawing.Point(101, 352);
             this.Label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(38, 19);
@@ -544,7 +544,7 @@
             this.Label4.Appearance.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Label4.Appearance.Options.UseFont = true;
             this.Label4.Appearance.Options.UseForeColor = true;
-            this.Label4.Location = new System.Drawing.Point(125, 368);
+            this.Label4.Location = new System.Drawing.Point(108, 318);
             this.Label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label4.Name = "Label4";
             this.Label4.Size = new System.Drawing.Size(31, 19);
@@ -555,7 +555,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(710, 671);
+            this.ClientSize = new System.Drawing.Size(710, 535);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtCountry);

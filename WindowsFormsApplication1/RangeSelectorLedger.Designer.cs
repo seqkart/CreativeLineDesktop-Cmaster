@@ -43,6 +43,7 @@
             this.chLedger = new DevExpress.XtraEditors.CheckEdit();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.chSubEntries = new DevExpress.XtraEditors.CheckEdit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtFrom.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEnd.Properties.CalendarTimeProperties)).BeginInit();
@@ -53,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chLedger.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chSubEntries.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl1
@@ -131,7 +133,7 @@
             this.BtnLoad.Size = new System.Drawing.Size(135, 37);
             this.BtnLoad.TabIndex = 6;
             this.BtnLoad.Text = "Load Report";
-            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
+//            this.BtnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // MyValidationProvider
             // 
@@ -212,11 +214,24 @@
             this.HelpGridView.OptionsView.ShowGroupPanel = false;
             this.HelpGridView.OptionsView.ShowIndicator = false;
             // 
+            // chSubEntries
+            // 
+            this.chSubEntries.Location = new System.Drawing.Point(18, 500);
+            this.chSubEntries.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chSubEntries.Name = "chSubEntries";
+            this.chSubEntries.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chSubEntries.Properties.Appearance.Options.UseFont = true;
+            this.chSubEntries.Properties.Caption = "Sub Entries";
+            this.chSubEntries.Size = new System.Drawing.Size(140, 24);
+            this.chSubEntries.TabIndex = 7;
+//            this.chSubEntries.CheckedChanged += new System.EventHandler(this.chSubEntries_CheckedChanged);
+            // 
             // RangeSelectorLedger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.chSubEntries);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.chLedger);
             this.Controls.Add(this.chBSHead);
@@ -242,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chLedger.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chSubEntries.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,5 +278,6 @@
         public DevExpress.XtraEditors.CheckEdit chLedger;
         public DevExpress.XtraGrid.GridControl HelpGrid;
         public DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
+        public DevExpress.XtraEditors.CheckEdit chSubEntries;
     }
 }

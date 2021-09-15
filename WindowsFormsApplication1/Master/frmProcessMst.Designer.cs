@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmProcessMst
+    partial class FrmProcessMst
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Master
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProcessMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProcessMst));
             this.txtProcessRate = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1.Master
             this.txtProcessRate.Properties.MaxLength = 100;
             this.txtProcessRate.Size = new System.Drawing.Size(301, 24);
             this.txtProcessRate.TabIndex = 2;
-            this.txtProcessRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProcessRate_KeyPress);
+            this.txtProcessRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProcessRate_KeyPress);
             // 
             // Menu_ToolStrip
             // 
@@ -82,7 +82,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -92,7 +92,7 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtProcessName
             // 
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1.Master
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmProcessMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmProcessMst_Load);
+            this.Load += new System.EventHandler(this.FrmProcessMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtProcessRate.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmEmloyeeMstAddEdit
+    partial class FrmEmployeeMstAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -177,6 +177,7 @@
             this.txtDailyWageHours = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new DevExpress.XtraEditors.GroupControl();
             this.txtDailyWageMinutes = new DevExpress.XtraEditors.TextEdit();
+            this.chTeaTag = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.RelationShipGrid123)).BeginInit();
             this.RelationShipGrid123.SuspendLayout();
             this.BasicInfoTab.SuspendLayout();
@@ -285,7 +286,7 @@
             this.BasicInfoTab.Controls.Add(this.panelControl1);
             this.BasicInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BasicInfoTab.Name = "BasicInfoTab";
-            this.BasicInfoTab.Size = new System.Drawing.Size(696, 357);
+            this.BasicInfoTab.Size = new System.Drawing.Size(696, 363);
             this.BasicInfoTab.Text = "Personel";
             // 
             // panelControl1
@@ -315,7 +316,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(696, 357);
+            this.panelControl1.Size = new System.Drawing.Size(696, 363);
             this.panelControl1.TabIndex = 0;
             // 
             // labelControl23
@@ -350,7 +351,7 @@
             this.btnOpen.TabIndex = 386;
             this.btnOpen.Text = "Select Image";
             this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.btnOpen.Click += new System.EventHandler(this.BtnOpen_Click);
             // 
             // pictureBox1
             // 
@@ -560,7 +561,7 @@
             this.AdditionalInfoTab.Controls.Add(this.panelControl2);
             this.AdditionalInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfoTab.Name = "AdditionalInfoTab";
-            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 357);
+            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 363);
             this.AdditionalInfoTab.Text = "Details";
             // 
             // panelControl2
@@ -602,7 +603,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(696, 357);
+            this.panelControl2.Size = new System.Drawing.Size(696, 363);
             this.panelControl2.TabIndex = 248;
             // 
             // labelControl22
@@ -671,7 +672,7 @@
             this.timeEdit_Time_Out_Last.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_Time_Out_Last.Size = new System.Drawing.Size(76, 26);
             this.timeEdit_Time_Out_Last.TabIndex = 33;
-            this.timeEdit_Time_Out_Last.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_Last_EditValueChanged);
+            this.timeEdit_Time_Out_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_Last_EditValueChanged);
             // 
             // timeEdit_Time_In_Last
             // 
@@ -695,7 +696,7 @@
             this.timeEdit_Time_In_Last.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_Time_In_Last.Size = new System.Drawing.Size(76, 26);
             this.timeEdit_Time_In_Last.TabIndex = 32;
-            this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_Last_EditValueChanged);
+            this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_Last_EditValueChanged);
             // 
             // timeEdit_Time_Out_First
             // 
@@ -719,7 +720,7 @@
             this.timeEdit_Time_Out_First.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_Time_Out_First.Size = new System.Drawing.Size(76, 26);
             this.timeEdit_Time_Out_First.TabIndex = 31;
-            this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_Out_First_EditValueChanged);
+            this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_First_EditValueChanged);
             // 
             // totalWorkingHours_Text
             // 
@@ -933,7 +934,7 @@
             this.txtESIDTag.Properties.MaxLength = 1;
             this.txtESIDTag.Size = new System.Drawing.Size(135, 24);
             this.txtESIDTag.TabIndex = 23;
-            this.txtESIDTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtESIDTag_Validating);
+            this.txtESIDTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtESIDTag_Validating);
             // 
             // labelControl38
             // 
@@ -1001,7 +1002,7 @@
             this.txtEPFTag.Properties.MaxLength = 1;
             this.txtEPFTag.Size = new System.Drawing.Size(135, 24);
             this.txtEPFTag.TabIndex = 21;
-            this.txtEPFTag.Validating += new System.ComponentModel.CancelEventHandler(this.txtEPFTag_Validating);
+            this.txtEPFTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEPFTag_Validating);
             // 
             // timeEdit_Time_In_First
             // 
@@ -1027,14 +1028,14 @@
             this.timeEdit_Time_In_First.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_Time_In_First.Size = new System.Drawing.Size(76, 26);
             this.timeEdit_Time_In_First.TabIndex = 30;
-            this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.timeEdit_Time_In_First_EditValueChanged);
+            this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_EditValueChanged);
             // 
             // AdditionalInfo1Tab
             // 
             this.AdditionalInfo1Tab.Controls.Add(this.panelControl3);
             this.AdditionalInfo1Tab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfo1Tab.Name = "AdditionalInfo1Tab";
-            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 357);
+            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 363);
             this.AdditionalInfo1Tab.Text = "Additional";
             // 
             // panelControl3
@@ -1070,7 +1071,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(696, 357);
+            this.panelControl3.Size = new System.Drawing.Size(696, 363);
             this.panelControl3.TabIndex = 172;
             // 
             // txtBankBranchCode
@@ -1369,7 +1370,7 @@
             this.OtherSpecinfoTab.Controls.Add(this.textEdit10);
             this.OtherSpecinfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OtherSpecinfoTab.Name = "OtherSpecinfoTab";
-            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 357);
+            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 363);
             this.OtherSpecinfoTab.Text = "Address ";
             // 
             // panelControl4
@@ -1393,7 +1394,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(696, 357);
+            this.panelControl4.Size = new System.Drawing.Size(696, 363);
             this.panelControl4.TabIndex = 153;
             // 
             // txtCountry
@@ -1584,7 +1585,7 @@
             this.xtraTabPage1.Controls.Add(this.chkTeaBreak);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(696, 357);
+            this.xtraTabPage1.Size = new System.Drawing.Size(696, 363);
             this.xtraTabPage1.Text = "Employee Timing";
             // 
             // labelControl29
@@ -1633,12 +1634,12 @@
             this.chkTeaBreak.TabIndex = 240;
             this.chkTeaBreak.Text = "Tea Break";
             this.chkTeaBreak.UseVisualStyleBackColor = true;
-            this.chkTeaBreak.CheckedChanged += new System.EventHandler(this.chkTeaBreak_CheckedChanged);
+            this.chkTeaBreak.CheckedChanged += new System.EventHandler(this.ChkTeaBreak_CheckedChanged);
             // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(207, 375);
+            this.HelpGrid.Location = new System.Drawing.Point(531, 375);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -1673,8 +1674,8 @@
             this.txtDesgCode.Properties.MaxLength = 4;
             this.txtDesgCode.Size = new System.Drawing.Size(91, 24);
             this.txtDesgCode.TabIndex = 6;
-            this.txtDesgCode.EditValueChanged += new System.EventHandler(this.txtDesgCode_EditValueChanged);
-            this.txtDesgCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDesgCode_KeyDown);
+            this.txtDesgCode.EditValueChanged += new System.EventHandler(this.TxtDesgCode_EditValueChanged);
+            this.txtDesgCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDesgCode_KeyDown);
             // 
             // txtDesgDesc
             // 
@@ -1709,8 +1710,8 @@
             this.txtDeptCode.Properties.MaxLength = 4;
             this.txtDeptCode.Size = new System.Drawing.Size(91, 24);
             this.txtDeptCode.TabIndex = 4;
-            this.txtDeptCode.EditValueChanged += new System.EventHandler(this.txtDeptCode_EditValueChanged);
-            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDeptCode_KeyDown);
+            this.txtDeptCode.EditValueChanged += new System.EventHandler(this.TxtDeptCode_EditValueChanged);
+            this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
             // txtDeptDesc
             // 
@@ -1828,8 +1829,8 @@
             this.txtCategoryCode.Properties.MaxLength = 4;
             this.txtCategoryCode.Size = new System.Drawing.Size(91, 24);
             this.txtCategoryCode.TabIndex = 2;
-            this.txtCategoryCode.EditValueChanged += new System.EventHandler(this.txtCategory_EditValueChanged);
-            this.txtCategoryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCategory_KeyDown);
+            this.txtCategoryCode.EditValueChanged += new System.EventHandler(this.TxtCategory_EditValueChanged);
+            this.txtCategoryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCategory_KeyDown);
             // 
             // labelControl11
             // 
@@ -1854,7 +1855,7 @@
             this.txtEmpLeft.TabIndex = 12;
             this.txtEmpLeft.TabStop = false;
             this.txtEmpLeft.Visible = false;
-            this.txtEmpLeft.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmpLeft_Validating);
+            this.txtEmpLeft.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEmpLeft_Validating);
             // 
             // labelControl21
             // 
@@ -1919,7 +1920,7 @@
             this.windowsUIButtonPanelMain.TabIndex = 55;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
-            this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanelMain_ButtonClick);
+            this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelMain_ButtonClick);
             this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.WindowsUIButtonPanelMain_Click);
             // 
             // windowsUIButtonPanelCloseButton
@@ -1965,6 +1966,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.labelControl24);
+            this.groupBox1.Controls.Add(this.chTeaTag);
             this.groupBox1.Controls.Add(this.txtUnitDesc);
             this.groupBox1.Controls.Add(this.txtUnitCode);
             this.groupBox1.Controls.Add(this.txtEmpCode);
@@ -2024,8 +2026,8 @@
             this.txtUnitCode.Properties.MaxLength = 4;
             this.txtUnitCode.Size = new System.Drawing.Size(91, 24);
             this.txtUnitCode.TabIndex = 8;
-            this.txtUnitCode.EditValueChanged += new System.EventHandler(this.txtUnitCode_EditValueChanged);
-            this.txtUnitCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUnitCode_KeyDown);
+            this.txtUnitCode.EditValueChanged += new System.EventHandler(this.TxtUnitCode_EditValueChanged);
+            this.txtUnitCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUnitCode_KeyDown);
             // 
             // lblDailyWageRate
             // 
@@ -2061,7 +2063,7 @@
             this.chkDailyWage.TabIndex = 239;
             this.chkDailyWage.Text = "Daily Wager";
             this.chkDailyWage.UseVisualStyleBackColor = true;
-            this.chkDailyWage.CheckedChanged += new System.EventHandler(this.chkDailyWage_CheckedChanged);
+            this.chkDailyWage.CheckedChanged += new System.EventHandler(this.ChkDailyWage_CheckedChanged);
             // 
             // labelControl26
             // 
@@ -2087,7 +2089,7 @@
             this.txtDailyWageHours.Size = new System.Drawing.Size(115, 24);
             this.txtDailyWageHours.TabIndex = 250;
             this.txtDailyWageHours.Visible = false;
-            this.txtDailyWageHours.EditValueChanged += new System.EventHandler(this.txtDailyWageHours_EditValueChanged);
+            this.txtDailyWageHours.EditValueChanged += new System.EventHandler(this.TxtDailyWageHours_EditValueChanged);
             // 
             // groupBox2
             // 
@@ -2117,7 +2119,20 @@
             this.txtDailyWageMinutes.TabIndex = 252;
             this.txtDailyWageMinutes.Visible = false;
             // 
-            // frmEmloyeeMstAddEdit
+            // chTeaTag
+            // 
+            this.chTeaTag.AutoSize = true;
+            this.chTeaTag.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.chTeaTag.Location = new System.Drawing.Point(600, 177);
+            this.chTeaTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chTeaTag.Name = "chTeaTag";
+            this.chTeaTag.Size = new System.Drawing.Size(60, 23);
+            this.chTeaTag.TabIndex = 239;
+            this.chTeaTag.Text = "TEA ";
+            this.chTeaTag.UseVisualStyleBackColor = true;
+            this.chTeaTag.CheckedChanged += new System.EventHandler(this.ChkDailyWage_CheckedChanged);
+            // 
+            // FrmEmployeeMstAddEdit
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -2138,10 +2153,10 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmEmloyeeMstAddEdit";
+            this.Name = "FrmEmployeeMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmEmloyeeMstAddEdit_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmEmloyeeMstAddEdit_KeyDown);
+            this.Load += new System.EventHandler(this.FrmEmployeeMstAddEdit_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmEmployeeMstAddEdit_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.RelationShipGrid123)).EndInit();
             this.RelationShipGrid123.ResumeLayout(false);
             this.BasicInfoTab.ResumeLayout(false);
@@ -2388,5 +2403,6 @@
         private DevExpress.XtraEditors.TextEdit txtTeaBreakTime;
         private DevExpress.XtraEditors.LabelControl labelControl27;
         private DevExpress.XtraEditors.LabelControl labelControl29;
+        private System.Windows.Forms.CheckBox chTeaTag;
     }
 }

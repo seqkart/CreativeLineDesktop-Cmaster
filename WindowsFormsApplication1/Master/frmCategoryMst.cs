@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraBars.Docking2010;
-using DevExpress.XtraEditors;
+﻿using DevExpress.XtraEditors;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmCategoryMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCategoryMst : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string CatgCode { get; set; }
-        public frmCategoryMst()
+        public FrmCategoryMst()
         {
             InitializeComponent();
         }
@@ -24,7 +23,7 @@ namespace WindowsFormsApplication1.Master
 
             txtCatgCode.Enabled = false;
         }
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             Close();
         }
@@ -58,15 +57,15 @@ namespace WindowsFormsApplication1.Master
 
             return true;
         }
-        private void frmCategoryMst_Load(object sender, EventArgs e)
+        private void FrmCategoryMst_Load(object sender, EventArgs e)
         {
             SetMyControls();
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtCatgDesc.Focus();
                 txtCatgCode.Text = GetNewDesgCode().PadLeft(4, '0');
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 //txtCatgDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT CatgCode,CatgDesc FROM CatgMst Where CatgCode='" + CatgCode + "'");
@@ -79,12 +78,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void windowsUIButtonPanelMain_ButtonClick(object sender, ButtonEventArgs e)
-        {
-
-        }
-
-        private void frmCategoryMst_KeyDown(object sender, KeyEventArgs e)
+        private void FrmCategoryMst_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Up)
             {
@@ -92,15 +86,15 @@ namespace WindowsFormsApplication1.Master
             }
             if (e.Control && e.KeyCode == Keys.S)
             {
-                btnSave_Click(null, e);
+                BtnSave_Click(null, e);
             }
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            btnSave_Click_1();
+            BtnSave_Click_1();
 
         }
-        private void btnSave_Click_1()
+        private void BtnSave_Click_1()
         {
             if (ValidateData())
             {
@@ -114,7 +108,7 @@ namespace WindowsFormsApplication1.Master
                     sqlcom.CommandType = CommandType.Text;
                     try
                     {
-                        if (s1 == "&Add")
+                        if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " SET TRANSACTION ISOLATION LEVEL SERIALIZABLE  Begin Transaction "
                                                     + " Insert into CatgMst"
@@ -122,7 +116,7 @@ namespace WindowsFormsApplication1.Master
                                                     + " values((SELECT RIGHT('0000'+ CAST( ISNULL( max(Cast(CatgCode as int)),0)+1 AS VARCHAR(4)),4)from CatgMst),@CatgDesc)"
                                                     + " Commit ";
                         }
-                        if (s1 == "Edit")
+                        if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE CatgMst SET "
                                                 + " CatgDesc=@CatgDesc"
