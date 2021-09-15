@@ -17,7 +17,7 @@ namespace WindowsFormsApplication1.Administration
         {
             try
             {
-                //ProjectFunctions.TextBoxVisualize(this);
+               
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
 
