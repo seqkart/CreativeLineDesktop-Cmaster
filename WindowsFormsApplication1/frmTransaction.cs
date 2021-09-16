@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG168")
                 {
-                    WindowsFormsApplication1.frm_Asset_AddUpd frm = new WindowsFormsApplication1.frm_Asset_AddUpd
+                    WindowsFormsApplication1.Frm_Asset_AddUpd frm = new WindowsFormsApplication1.Frm_Asset_AddUpd
                     { IsUpdate = false, Text = "Asset Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -252,7 +252,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG7")
                 {
-                    Transaction.frmDealerOrderMaster frm = new Transaction.frmDealerOrderMaster()
+                    Transaction.FrmDealerOrderMaster frm = new Transaction.FrmDealerOrderMaster()
                     { S1 = btnAdd.Text, Text = "Order Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -740,7 +740,7 @@ namespace WindowsFormsApplication1
                         }
                         else
                         {
-                            Transaction.frmDealerOrderMaster frm = new Transaction.frmDealerOrderMaster()
+                            Transaction.FrmDealerOrderMaster frm = new Transaction.FrmDealerOrderMaster()
                             { S1 = btnEdit.Text, Text = "Order Editing", OrderNo = CurrentRow["OrdNo"].ToString() };
                             frm.StartPosition = FormStartPosition.CenterScreen;
                             frm.ShowDialog(Parent);
@@ -1836,7 +1836,7 @@ namespace WindowsFormsApplication1
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Pass/UnPass Selected Indent Entry",
                                                                   (o1, e1) =>
                                                                   {
-                                                                      frm_StockIndentPassing frm = new frm_StockIndentPassing();
+                                                                      Frm_StockIndentPassing frm = new Frm_StockIndentPassing();
                                                                       var P = ProjectFunctions.GetPositionInForm(this);
                                                                       frm.Location = new Point(P.X +
                                                                           (ClientSize.Width / 2 - frm.Size.Width / 2),

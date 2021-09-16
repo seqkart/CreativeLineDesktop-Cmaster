@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Production
 {
-    public partial class frmFabricTypeMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmFabricTypeMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string FabricTypeCode { get; set; }
-        public frmFabricTypeMst()
+        public FrmFabricTypeMst()
         {
             InitializeComponent();
         }

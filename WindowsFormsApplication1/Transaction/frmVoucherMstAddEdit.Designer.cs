@@ -327,7 +327,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(91, 65);
+            this.label2.Location = new System.Drawing.Point(93, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(27, 17);
@@ -337,7 +337,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(65, 173);
+            this.label4.Location = new System.Drawing.Point(75, 173);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
@@ -376,7 +376,7 @@
             // txtVuDesc
             // 
             this.txtVuDesc.EnterMoveNextControl = true;
-            this.txtVuDesc.Location = new System.Drawing.Point(245, 97);
+            this.txtVuDesc.Location = new System.Drawing.Point(245, 98);
             this.txtVuDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVuDesc.Name = "txtVuDesc";
             this.txtVuDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -399,7 +399,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(70, 139);
+            this.label7.Location = new System.Drawing.Point(74, 139);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 17);
@@ -408,7 +408,7 @@
             // 
             // txtAccCode
             // 
-            this.txtAccCode.Location = new System.Drawing.Point(127, 135);
+            this.txtAccCode.Location = new System.Drawing.Point(128, 135);
             this.txtAccCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -419,7 +419,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(71, 101);
+            this.label6.Location = new System.Drawing.Point(73, 101);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 17);
@@ -482,7 +482,7 @@
             // 
             // txtVuType
             // 
-            this.txtVuType.Location = new System.Drawing.Point(127, 98);
+            this.txtVuType.Location = new System.Drawing.Point(128, 98);
             this.txtVuType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVuType.Name = "txtVuType";
             this.txtVuType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -575,7 +575,7 @@
             this.txtChqDate.Size = new System.Drawing.Size(124, 24);
             this.txtChqDate.TabIndex = 430;
             // 
-            // frmVoucherMstAddEdit
+            // FrmVoucherMstAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -609,7 +609,7 @@
             this.Controls.Add(this.txtVuType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmVoucherMstAddEdit";
+            this.Name = "FrmVoucherMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmVoucherMstAddEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();

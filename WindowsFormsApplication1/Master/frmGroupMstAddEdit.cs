@@ -6,14 +6,14 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmGroupMstAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmGroupMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
         public string S1 { get; set; }
         public string GrpCode { get; set; }
         public string SubGrpCode { get; set; }
 
-        public frmGroupMstAddEdit()
+        public FrmGroupMstAddEdit()
         {
             InitializeComponent();
         }

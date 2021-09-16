@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmDealerOrderMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmDealerOrderMaster : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         DataTable dt = new DataTable();
@@ -16,7 +16,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        public frmDealerOrderMaster()
+        public FrmDealerOrderMaster()
         {
             InitializeComponent();
             dt.Columns.Add("OrdDPrdCode", typeof(decimal));

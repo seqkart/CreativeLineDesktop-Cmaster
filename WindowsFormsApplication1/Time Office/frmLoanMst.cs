@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Forms_Master
 {
-    public partial class frmLoanMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLoanMst : DevExpress.XtraEditors.XtraForm
     {
 
         public string _s1 = null;
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Forms_Master
             get => _empcode;
             set => _empcode = value;
         }
-        public frmLoanMst()
+        public FrmLoanMst()
         {
             InitializeComponent();
         }
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Forms_Master
             {
                 try
                 {
-                    var frm = new frmLoanMstAddEdit();
+                    var frm = new FrmLoanMstAddEdit();
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     S1 = btnAdd.Text.ToString().Trim();
@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1.Forms_Master
                     var ds = ProjectFunctions.GetDataSet(string.Format(" select LoanPassedBy from LoanMst Where LoanANo='" + row["LoanANo"].ToString() + "'"));
                     if (ds.Tables[0].Rows[0]["LoanPassedBy"].ToString() == string.Empty)
                     {
-                        var frm = new frmLoanMstAddEdit() { LoanNo = row["LoanANo"].ToString(), LoanADate = row["LoanADate"].ToString() };
+                        var frm = new FrmLoanMstAddEdit() { LoanNo = row["LoanANo"].ToString(), LoanADate = row["LoanADate"].ToString() };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                         S1 = btnEdit.Text.ToString().Trim();
@@ -170,7 +170,7 @@ namespace WindowsFormsApplication1.Forms_Master
                 var row = gridView3.GetDataRow(gridView3.FocusedRowHandle);
                 var ds = ProjectFunctions.GetDataSet(string.Format(" select LoanPassedBy from LoanMst Where LoanANo='" + row["LoanANo"].ToString() + "'"));
 
-                var frm = new frmLoanMstAddEdit() { LoanNo = row["LoanANo"].ToString(), LoanADate = row["LoanADate"].ToString() };
+                var frm = new FrmLoanMstAddEdit() { LoanNo = row["LoanANo"].ToString(), LoanADate = row["LoanADate"].ToString() };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                 S1 = btnView.Text.ToString().Trim();
@@ -186,22 +186,6 @@ namespace WindowsFormsApplication1.Forms_Master
                 PrintLogWin.PrintLog(ex);
 
             }
-        }
-
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
-            var row = gridView3.GetDataRow(gridView3.FocusedRowHandle);
-            var ds = ProjectFunctions.GetDataSet(string.Format(" select LoanCanceledTag from LoanMst Where LoanANo='" + row["LoanANo"].ToString() + "'"));
-            if (ds.Tables[0].Rows[0]["LoanCanceledTag"].ToString().Trim().ToUpper() == "Y")
-            {
-                ProjectFunctions.GetDataSet("update LoanMst set LoanCanceledTag=null Where LoanANo='" + row["LoanANo"].ToString() + "'");
-            }
-            else
-            {
-                ProjectFunctions.GetDataSet("update LoanMst set LoanCanceledTag='Y' Where LoanANo='" + row["LoanANo"].ToString() + "'");
-            }
-
-            FillGrid();
         }
 
         private void GridView3_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmAttachmentViewer
+    partial class FrmAttachmentViewer
     {
         /// <summary>
         /// Required designer variable.

@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Forms_Master
 {
-    public partial class frmLoanMstAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLoanMstAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
         public string _s1 = null;
@@ -25,7 +25,7 @@ namespace WindowsFormsApplication1.Forms_Master
         }
 
         public string MonthYear { get; set; }
-        public frmLoanMstAddEdit()
+        public FrmLoanMstAddEdit()
         {
             InitializeComponent();
         }

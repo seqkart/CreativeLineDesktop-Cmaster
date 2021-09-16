@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frm_Asset_AddUpd : XtraForm
+    public partial class Frm_Asset_AddUpd : XtraForm
     {
         public string AMUpDateDt;
         public string MMDocNo { get; set; }
@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
         public bool IsUpdate { get; set; }
 
 
-        public frm_Asset_AddUpd()
+        public Frm_Asset_AddUpd()
         {
             InitializeComponent();
         }

@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG241")
                 {
-                    WindowsFormsApplication1.Production.frmFabricStock frm = new WindowsFormsApplication1.Production.frmFabricStock()
+                    WindowsFormsApplication1.Production.FrmFabricStock frm = new WindowsFormsApplication1.Production.FrmFabricStock()
                     { S1 = btnAdd.Text, Text = "Fabric Stock Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -57,7 +57,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG240")
                 {
-                    WindowsFormsApplication1.Production.frmFabricTypeMst frm = new WindowsFormsApplication1.Production.frmFabricTypeMst()
+                    WindowsFormsApplication1.Production.FrmFabricTypeMst frm = new WindowsFormsApplication1.Production.FrmFabricTypeMst()
                     { S1 = btnAdd.Text, Text = "Fabric Type Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG239")
                 {
-                    WindowsFormsApplication1.Production.frmFabricMaster frm = new WindowsFormsApplication1.Production.frmFabricMaster()
+                    WindowsFormsApplication1.Production.FrmFabricMaster frm = new WindowsFormsApplication1.Production.FrmFabricMaster()
                     { S1 = btnAdd.Text, Text = "Fabric Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG236")
                 {
-                    WindowsFormsApplication1.Production.frmYarnMaster frm = new WindowsFormsApplication1.Production.frmYarnMaster()
+                    WindowsFormsApplication1.Production.FrmYarnMaster frm = new WindowsFormsApplication1.Production.FrmYarnMaster()
                     { S1 = btnAdd.Text, Text = "Yarn Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG229")
                 {
-                    WindowsFormsApplication1.Master.frmSubProcessMst frm = new WindowsFormsApplication1.Master.frmSubProcessMst()
+                    WindowsFormsApplication1.Master.FrmSubProcessMst frm = new WindowsFormsApplication1.Master.FrmSubProcessMst()
                     { S1 = btnAdd.Text, Text = "Sub Process Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -181,7 +181,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG180")
                 {
-                    WindowsFormsApplication1.Transaction.frmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.frmDesignDataTemplates()
+                    WindowsFormsApplication1.Transaction.FrmDesignDataTemplates frm = new WindowsFormsApplication1.Transaction.FrmDesignDataTemplates()
                     { Text = "Create Data Template" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -308,7 +308,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG123")
                 {
-                    frmColors frm = new frmColors() { S1 = btnAdd.Text, Text = "Colors Addition" };
+                    FrmColors frm = new FrmColors() { S1 = btnAdd.Text, Text = "Colors Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -443,7 +443,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG16")
                 {
-                    frmGroupMstAddEdit frm = new frmGroupMstAddEdit() { S1 = btnAdd.Text, Text = "Group Head Addition" };
+                    FrmGroupMstAddEdit frm = new FrmGroupMstAddEdit() { S1 = btnAdd.Text, Text = "Group Head Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -561,7 +561,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Production.frmFabricStock frm = new WindowsFormsApplication1.Production.frmFabricStock()
+                    WindowsFormsApplication1.Production.FrmFabricStock frm = new WindowsFormsApplication1.Production.FrmFabricStock()
                     { S1 = btnEdit.Text, Text = "Fabric Stock Edition", FabricCode = CurrentRow["FabricCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -571,7 +571,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Production.frmFabricTypeMst frm = new WindowsFormsApplication1.Production.frmFabricTypeMst()
+                    WindowsFormsApplication1.Production.FrmFabricTypeMst frm = new WindowsFormsApplication1.Production.FrmFabricTypeMst()
                     { S1 = btnEdit.Text, Text = "Fabric Type Edition", FabricTypeCode = CurrentRow["FabricTypeCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -581,7 +581,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Production.frmFabricMaster frm = new WindowsFormsApplication1.Production.frmFabricMaster()
+                    WindowsFormsApplication1.Production.FrmFabricMaster frm = new WindowsFormsApplication1.Production.FrmFabricMaster()
                     { S1 = btnEdit.Text, Text = "Fabric Master Edition", FabricCode = CurrentRow["FabricCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -613,7 +613,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Production.frmYarnMaster frm = new WindowsFormsApplication1.Production.frmYarnMaster()
+                    WindowsFormsApplication1.Production.FrmYarnMaster frm = new WindowsFormsApplication1.Production.FrmYarnMaster()
                     { S1 = btnEdit.Text, Text = "Yarn Master Edition", YarnCode = CurrentRow["YarnCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -663,7 +663,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmSubProcessMst frm = new WindowsFormsApplication1.Master.frmSubProcessMst()
+                    WindowsFormsApplication1.Master.FrmSubProcessMst frm = new WindowsFormsApplication1.Master.FrmSubProcessMst()
                     { S1 = btnEdit.Text, Text = "Sub Process Master Edition", SubProcessCode = CurrentRow["SubProcessCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -852,7 +852,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG123")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmColors frm = new frmColors()
+                    FrmColors frm = new FrmColors()
                     { S1 = btnEdit.Text, Text = "Colors Edition", COLSYSID = CurrentRow["COLSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -1026,7 +1026,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG16")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmGroupMstAddEdit frm = new frmGroupMstAddEdit()
+                    FrmGroupMstAddEdit frm = new FrmGroupMstAddEdit()
                     {
                         S1 = btnEdit.Text,
                         Text = "Group Head Editing",

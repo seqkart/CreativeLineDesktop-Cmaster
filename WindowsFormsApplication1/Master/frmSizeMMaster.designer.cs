@@ -168,7 +168,7 @@
             this.txtIndex.Size = new System.Drawing.Size(89, 24);
             this.txtIndex.TabIndex = 2;
             // 
-            // frmSizeMMaster
+            // FrmSizeMMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -183,10 +183,10 @@
             this.Controls.Add(this.Label15);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.LABEL4);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmSizeMMaster";
+            this.Name = "FrmSizeMMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "7";
             this.Load += new System.EventHandler(this.FrmSizeMMaster_Load);

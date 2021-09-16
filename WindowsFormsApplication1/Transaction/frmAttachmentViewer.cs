@@ -5,10 +5,10 @@ using System.IO;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmAttachmentViewer : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAttachmentViewer : DevExpress.XtraEditors.XtraForm
     {
         public long TransID { get; set; }
-        public frmAttachmentViewer()
+        public FrmAttachmentViewer()
         {
             InitializeComponent();
         }

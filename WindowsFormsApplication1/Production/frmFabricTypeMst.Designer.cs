@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Production
 {
-    partial class frmFabricTypeMst
+    partial class FrmFabricTypeMst
     {
         /// <summary>
         /// Required designer variable.

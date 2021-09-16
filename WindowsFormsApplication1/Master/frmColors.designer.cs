@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmColors
+    partial class FrmColors
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmColors));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmColors));
             this.txtColorName = new DevExpress.XtraEditors.TextEdit();
             this.txtSysColorID = new DevExpress.XtraEditors.TextEdit();
             this.Label3 = new DevExpress.XtraEditors.LabelControl();

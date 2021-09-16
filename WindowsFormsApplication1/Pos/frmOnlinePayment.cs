@@ -7,7 +7,7 @@ namespace WindowsFormsApplication1.Pos
 {
     public partial class frmOnlinePayment : DevExpress.XtraEditors.XtraForm
     {
-        public string s1 { get; set; }
+        public string S1 { get; set; }
         public string MemoNo { get; set; }
         public DateTime MemoDate { get; set; }
         public decimal CardPayment { get; set; }
@@ -18,22 +18,22 @@ namespace WindowsFormsApplication1.Pos
             InitializeComponent();
         }
 
-        private void btnPayTM_Click(object sender, EventArgs e)
+        private void BtnPayTM_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "PayTM";
         }
 
-        private void btnGooglePay_Click(object sender, EventArgs e)
+        private void BtnGooglePay_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "GooglePay";
         }
 
-        private void btnPhonePe_Click(object sender, EventArgs e)
+        private void BtnPhonePe_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "PhonePe";
         }
 
-        private void frmOnlinePayment_Load(object sender, EventArgs e)
+        private void FrmOnlinePayment_Load(object sender, EventArgs e)
         {
             try
 
@@ -206,18 +206,18 @@ namespace WindowsFormsApplication1.Pos
             }
             return true;
         }
-        private void btnRevert_Click(object sender, EventArgs e)
+        private void BtnRevert_Click(object sender, EventArgs e)
         {
             Hide();
         }
 
-        private void btnSaveOnly_Click(object sender, EventArgs e)
+        private void BtnSaveOnly_Click(object sender, EventArgs e)
         {
             Save();
             Close();
         }
 
-        private void labelControl49_Click(object sender, EventArgs e)
+        private void LabelControl49_Click(object sender, EventArgs e)
         {
 
         }

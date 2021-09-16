@@ -1041,12 +1041,6 @@
     <Compile Include="FormReports\frmGridReports.Designer.cs">
       <DependentUpon>frmGridReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReports\frmGSTDIffReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReports\frmGSTDIffReport.Designer.cs">
-      <DependentUpon>frmGSTDIffReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormReports\frmPartyAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1138,12 +1132,6 @@
     </Compile>
     <Compile Include="Master\frmContractorMst.Designer.cs">
       <DependentUpon>frmContractorMst.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master\frmEWayBillGener.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master\frmEWayBillGener.Designer.cs">
-      <DependentUpon>frmEWayBillGener.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmHOlidayMst.cs">
       <SubType>Form</SubType>
@@ -2070,9 +2058,6 @@
     <EmbeddedResource Include="FormReports\frmGridReports.resx">
       <DependentUpon>frmGridReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReports\frmGSTDIffReport.resx">
-      <DependentUpon>frmGSTDIffReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormReports\frmPartyAccounts.resx">
       <DependentUpon>frmPartyAccounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -2117,9 +2102,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmContractorMst.resx">
       <DependentUpon>frmContractorMst.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master\frmEWayBillGener.resx">
-      <DependentUpon>frmEWayBillGener.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmHOlidayMst.resx">
       <DependentUpon>frmHOlidayMst.cs</DependentUpon>

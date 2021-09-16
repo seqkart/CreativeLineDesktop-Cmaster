@@ -45,7 +45,7 @@
             // 
             this.Label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label3.Appearance.Options.UseFont = true;
-            this.Label3.Location = new System.Drawing.Point(64, 102);
+            this.Label3.Location = new System.Drawing.Point(14, 86);
             this.Label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(138, 20);
@@ -66,7 +66,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(609, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(501, 31);
             this.Menu_ToolStrip.TabIndex = 772;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -98,7 +98,7 @@
             // 
             this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(61, 68);
+            this.LBDEPCODE.Location = new System.Drawing.Point(11, 52);
             this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LBDEPCODE.Name = "LBDEPCODE";
             this.LBDEPCODE.Size = new System.Drawing.Size(141, 20);
@@ -109,7 +109,7 @@
             // 
             this.txtMCode.Enabled = false;
             this.txtMCode.EnterMoveNextControl = true;
-            this.txtMCode.Location = new System.Drawing.Point(215, 66);
+            this.txtMCode.Location = new System.Drawing.Point(165, 50);
             this.txtMCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMCode.Name = "txtMCode";
             this.txtMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -121,7 +121,7 @@
             // txtMDesc
             // 
             this.txtMDesc.EnterMoveNextControl = true;
-            this.txtMDesc.Location = new System.Drawing.Point(215, 98);
+            this.txtMDesc.Location = new System.Drawing.Point(165, 82);
             this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMDesc.Name = "txtMDesc";
             this.txtMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -132,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(609, 175);
+            this.ClientSize = new System.Drawing.Size(501, 122);
             this.ControlBox = false;
             this.Controls.Add(this.txtMCode);
             this.Controls.Add(this.Label3);

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Production
 {
-    partial class frmFabricStock
+    partial class FrmFabricStock
     {
         /// <summary>
         /// Required designer variable.

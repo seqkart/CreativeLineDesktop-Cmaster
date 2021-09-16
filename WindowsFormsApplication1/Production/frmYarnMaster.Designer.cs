@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Production
 {
-    partial class frmYarnMaster
+    partial class FrmYarnMaster
     {
         /// <summary>
         /// Required designer variable.

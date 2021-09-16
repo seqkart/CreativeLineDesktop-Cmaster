@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmSubProcessMst
+    partial class FrmSubProcessMst
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Master
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSubProcessMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSubProcessMst));
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtSubProcessCode = new DevExpress.XtraEditors.TextEdit();

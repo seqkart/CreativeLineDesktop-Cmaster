@@ -1075,54 +1075,7 @@ namespace WindowsFormsApplication1.Time_Office
                         return false;
                     }
                 }
-                /*
-                  if (ComparisonUtils.IsNotEmpty(timeEdit_Time_In_First.EditValue) &&
-                          ComparisonUtils.IsNotEmpty(timeEdit_Time_Out_First.EditValue) &&
-                          ComparisonUtils.IsNotEmpty(timeEdit_Time_In_Last.EditValue) &&
-                          ComparisonUtils.IsNotEmpty(timeEdit_Time_Out_Last.EditValue))
-                  {
-                      if (TimeSpan.Compare(ConvertTo.TimeSpanVal(timeEdit_Time_Out_First.EditValue), ConvertTo.TimeSpanVal(timeEdit_Time_Out_First_Main.EditValue)) == 1)
-                      {
-                          ProjectFunctionsUtils.SpeakError("Time Out First should be less than " + GetEditValue(timeEdit_Time_Out_First_Main) + "");
-
-                          timeEdit_Time_Out_First.Focus();
-                          return false;
-                      }
-
-                      if (TimeSpan.Compare(ConvertTo.TimeSpanVal(timeEdit_Time_In_Last.EditValue), ConvertTo.TimeSpanVal(timeEdit_Time_In_Last_Main.EditValue)) == -1)
-                      {
-                          ProjectFunctionsUtils.SpeakError("Time In Last should be greater than " + GetEditValue(timeEdit_Time_In_Last_Main) + "");
-
-                          timeEdit_Time_In_Last.Focus();
-                          return false;
-                      }
-                  }
-
-                  if (ComparisonUtils.IsNotEmpty(timeEdit_Time_In_First.EditValue) && ComparisonUtils.IsNotEmpty(timeEdit_Time_Out_First.EditValue) &&
-                          (ComparisonUtils.IsEmpty(timeEdit_Time_In_Last.EditValue) || ComparisonUtils.IsEmpty(timeEdit_Time_Out_Last.EditValue)))
-                  {
-                      if (TimeSpan.Compare(ConvertTo.TimeSpanVal(timeEdit_Time_Out_First.EditValue), ConvertTo.TimeSpanVal(timeEdit_Time_Out_First_Main.EditValue)) == 1)
-                      {
-                          ProjectFunctionsUtils.SpeakError("Time Out First should be less than " + GetEditValue(timeEdit_Time_Out_First_Main) + "");
-
-                          timeEdit_Time_Out_First.Focus();
-                          return false;
-                      }
-
-                  }
-
-                  if ((ComparisonUtils.IsEmpty(timeEdit_Time_In_First.EditValue) || ComparisonUtils.IsEmpty(timeEdit_Time_Out_First.EditValue)) &&
-                          (ComparisonUtils.IsNotEmpty(timeEdit_Time_In_Last.EditValue) && ComparisonUtils.IsNotEmpty(timeEdit_Time_Out_Last.EditValue)))
-                  {
-                      if (TimeSpan.Compare(ConvertTo.TimeSpanVal(timeEdit_Time_In_Last.EditValue), ConvertTo.TimeSpanVal(timeEdit_Time_In_Last_Main.EditValue)) == -1)
-                      {
-                          ProjectFunctionsUtils.SpeakError("Time In Last should be greater than " + GetEditValue(timeEdit_Time_In_Last_Main) + "");
-
-                          timeEdit_Time_In_Last.Focus();
-                          return false;
-                      }
-                  }
-                */
+               
             }
 
 

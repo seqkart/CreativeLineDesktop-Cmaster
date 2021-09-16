@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmLoanMst
+    partial class FrmLoanMst
     {
         /// <summary>
         /// Required designer variable.
@@ -38,7 +38,7 @@
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLoanMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoanMst));
             this.Btn_RefreshGridData = new DevExpress.XtraEditors.SimpleButton();
             this.DtEndDate = new DevExpress.XtraEditors.DateEdit();
             this.DtStartDate = new DevExpress.XtraEditors.DateEdit();

@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Production
 {
-    public partial class frmFabricStock : DevExpress.XtraEditors.XtraForm
+    public partial class FrmFabricStock : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string FabricCode { get; set; }
-        public frmFabricStock()
+        public FrmFabricStock()
         {
             InitializeComponent();
         }

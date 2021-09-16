@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmSubProcessMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSubProcessMst : DevExpress.XtraEditors.XtraForm
     {
         public String S1 { get; set; }
         public String SubProcessCode { get; set; }
-        public frmSubProcessMst()
+        public FrmSubProcessMst()
         {
             InitializeComponent();
         }

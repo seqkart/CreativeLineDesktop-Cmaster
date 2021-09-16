@@ -137,11 +137,6 @@ namespace WindowsFormsApplication1
             e.Handled = true;
         }
 
-        private void TxtReqQuantity_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            ProjectFunctions.NumericWithDecimal(e);
-        }
-
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

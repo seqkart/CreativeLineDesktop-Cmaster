@@ -5,12 +5,12 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.FormReports
 {
-    public partial class frmshowroomreport : DevExpress.XtraEditors.XtraForm
+    public partial class Frmshowroomreport : DevExpress.XtraEditors.XtraForm
 
     {
         string ShowConnectionString = @"Data Source=CREATIVE-PC\MSSQLSERVER1;Initial Catalog=SEQKART;User ID=sa;pwd=123";
         string ShowConnectionStringHO = @"Data Source=seqkart.ddns.net;Initial Catalog=test;User ID=sa;pwd=Seq@2020";
-        public frmshowroomreport()
+        public Frmshowroomreport()
         {
             InitializeComponent();
         }

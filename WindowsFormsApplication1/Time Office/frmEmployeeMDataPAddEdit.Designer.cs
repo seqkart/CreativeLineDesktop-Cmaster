@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmEmployeeMDataPAddEdit
+    partial class FrmEmployeeMDataPAddEdit
     {
         /// <summary>
         /// Required designer variable.

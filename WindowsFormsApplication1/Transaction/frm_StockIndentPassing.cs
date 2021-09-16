@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frm_StockIndentPassing : XtraForm
+    public partial class Frm_StockIndentPassing : XtraForm
     {
 
 
@@ -13,7 +13,7 @@ namespace WindowsFormsApplication1
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
-        public frm_StockIndentPassing()
+        public Frm_StockIndentPassing()
         {
             InitializeComponent();
             StartDate = DateTime.Now.AddDays(-1);

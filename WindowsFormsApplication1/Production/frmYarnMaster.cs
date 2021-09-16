@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Production
 {
-    public partial class frmYarnMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmYarnMaster : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string YarnCode { get; set; }
-        public frmYarnMaster()
+        public FrmYarnMaster()
         {
             InitializeComponent();
         }

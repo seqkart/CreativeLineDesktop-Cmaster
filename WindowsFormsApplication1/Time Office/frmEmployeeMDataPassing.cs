@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1.Forms_Master
         private void InvoiceGrid_DoubleClick(object sender, EventArgs e)
         {
             var row = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-            var frm = new frmEmployeeMDataPAddEdit();
+            var frm = new FrmEmployeeMDataPAddEdit();
             var P = ProjectFunctions.GetPositionInForm(this);
             frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
             frm.Text = "Employee Salary Passing";

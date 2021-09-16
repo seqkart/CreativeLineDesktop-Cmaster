@@ -8,7 +8,7 @@ namespace WindowsFormsApplication1.Forms_Master
 {
     public partial class Frm_EmpSalAddUpdate : XtraForm
     {
-#pragma warning restore CS0414 // The field 'frm_EmpSalAddUpdate.BankAccNo' is assigned but its value is never used
+
 
         private string CurrentControl = string.Empty;
         public DateTime StartDate { get; set; }

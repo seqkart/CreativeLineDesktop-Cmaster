@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmColors : DevExpress.XtraEditors.XtraForm
+    public partial class FrmColors : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string COLSYSID { get; set; }
-        public frmColors()
+        public FrmColors()
         {
             InitializeComponent();
         }

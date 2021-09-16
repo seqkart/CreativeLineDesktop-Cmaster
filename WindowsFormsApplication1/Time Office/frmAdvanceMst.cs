@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             {
                 try
                 {
-                    var frm = new Forms_Transaction.frmAdvanceAddEdit() { S1 = btnAdd.Text };
+                    var frm = new Forms_Transaction.FrmAdvanceAddEdit() { S1 = btnAdd.Text };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.Text = "Time Office Payment Addition";
@@ -139,7 +139,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
                     var ds = ProjectFunctions.GetDataSet(string.Format("select * from ExMst Where ExId='" + row["ExId"].ToString() + "'"));
                     if (ds.Tables[0].Rows[0]["ExLoadTag"].ToString() == string.Empty)
                     {
-                        var frm = new Forms_Transaction.frmAdvanceAddEdit() { S1 = btnEdit.Text };
+                        var frm = new Forms_Transaction.FrmAdvanceAddEdit() { S1 = btnEdit.Text };
                         var P = ProjectFunctions.GetPositionInForm(this);
                         frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                         frm.Text = "Time Office Payment Editing";

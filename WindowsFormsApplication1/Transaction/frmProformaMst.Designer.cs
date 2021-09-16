@@ -121,7 +121,7 @@
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(101, 52);
+            this.label15.Location = new System.Drawing.Point(101, 51);
             this.label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(38, 17);
@@ -144,7 +144,7 @@
             // 
             this.txtPIDate.EditValue = null;
             this.txtPIDate.Enabled = false;
-            this.txtPIDate.Location = new System.Drawing.Point(140, 10);
+            this.txtPIDate.Location = new System.Drawing.Point(140, 12);
             this.txtPIDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPIDate.Name = "txtPIDate";
             this.txtPIDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -169,7 +169,7 @@
             // txtPINo
             // 
             this.txtPINo.Enabled = false;
-            this.txtPINo.Location = new System.Drawing.Point(264, 10);
+            this.txtPINo.Location = new System.Drawing.Point(264, 12);
             this.txtPINo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPINo.Name = "txtPINo";
             this.txtPINo.Size = new System.Drawing.Size(173, 24);
@@ -431,7 +431,7 @@
             this.xtraTabPage2.Controls.Add(this.txtPIDate);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1167, 728);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1167, 734);
             this.xtraTabPage2.Text = "Entry Page";
             // 
             // xtraTabPage1
@@ -439,7 +439,7 @@
             this.xtraTabPage1.Controls.Add(this.InvoiceGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1167, 728);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1167, 734);
             this.xtraTabPage1.Text = "Data";
             // 
             // InvoiceGrid
@@ -450,7 +450,7 @@
             this.InvoiceGrid.MainView = this.InvoiceGridView;
             this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
-            this.InvoiceGrid.Size = new System.Drawing.Size(1167, 728);
+            this.InvoiceGrid.Size = new System.Drawing.Size(1167, 734);
             this.InvoiceGrid.TabIndex = 446;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});

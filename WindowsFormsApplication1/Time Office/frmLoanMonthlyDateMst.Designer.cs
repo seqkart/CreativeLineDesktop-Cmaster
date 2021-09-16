@@ -74,7 +74,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(16, 55);
+            this.labelControl1.Location = new System.Drawing.Point(16, 54);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(30, 17);
@@ -118,7 +118,7 @@
             this.btn_Edit.Image = ((System.Drawing.Image)(resources.GetObject("btn_Edit.Image")));
             this.btn_Edit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.Size = new System.Drawing.Size(40, 28);
+            this.btn_Edit.Size = new System.Drawing.Size(40, 24);
             this.btn_Edit.Text = "&Edit";
             this.btn_Edit.Click += new System.EventHandler(this.Btn_Edit_Click);
             // 
@@ -131,7 +131,7 @@
             this.btn_Add.Image = ((System.Drawing.Image)(resources.GetObject("btn_Add.Image")));
             this.btn_Add.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(42, 28);
+            this.btn_Add.Size = new System.Drawing.Size(42, 24);
             this.btn_Add.Text = "&Add";
             this.btn_Add.Click += new System.EventHandler(this.Btn_Add_Click);
             // 
@@ -257,7 +257,7 @@
             // 
             // Btn_RefreshRateL
             // 
-            this.Btn_RefreshRateL.Location = new System.Drawing.Point(169, 50);
+            this.Btn_RefreshRateL.Location = new System.Drawing.Point(169, 49);
             this.Btn_RefreshRateL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshRateL.Name = "Btn_RefreshRateL";
             this.Btn_RefreshRateL.Size = new System.Drawing.Size(87, 27);
@@ -270,7 +270,7 @@
             // 
             this.vRLMstBindingSource1.DataMember = "V_RLMst";
             // 
-            // frmLoanMonthlyDateMst
+            // FrmLoanMonthlyDateMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -280,7 +280,7 @@
             this.Controls.Add(this.panelControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmLoanMonthlyDateMst";
+            this.Name = "FrmLoanMonthlyDateMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmLoanMonthlyDateMst_Load);

@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmDesignDataTemplates : DevExpress.XtraEditors.XtraForm
+    public partial class FrmDesignDataTemplates : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
 
         string SourceTable;
-        public frmDesignDataTemplates()
+        public FrmDesignDataTemplates()
         {
             InitializeComponent();
         }

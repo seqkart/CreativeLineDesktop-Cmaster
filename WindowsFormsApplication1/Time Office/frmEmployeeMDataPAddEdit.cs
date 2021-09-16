@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 namespace WindowsFormsApplication1.Forms_Master
 {
-    public partial class frmEmployeeMDataPAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmEmployeeMDataPAddEdit : DevExpress.XtraEditors.XtraForm
     {
 
 
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Forms_Master
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
         }
-        public frmEmployeeMDataPAddEdit()
+        public FrmEmployeeMDataPAddEdit()
         {
             InitializeComponent();
         }

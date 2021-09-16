@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmDesignDataTemplates
+    partial class FrmDesignDataTemplates
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDesignDataTemplates));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDesignDataTemplates));
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.btnLoadExcel = new DevExpress.XtraEditors.SimpleButton();
             this.DColumnGrid = new DevExpress.XtraGrid.GridControl();

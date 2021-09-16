@@ -6,15 +6,15 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Forms_Transaction
 {
-    public partial class frmAdvanceAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAdvanceAddEdit : DevExpress.XtraEditors.XtraForm
     {
-#pragma warning restore CS0414 // The field 'frmAdvanceAddEdit.VoucherType' is assigned but its value is never used
+
 
 
 
         public string S1 { get; set; }
         public string ExId { get; set; }
-        public frmAdvanceAddEdit()
+        public FrmAdvanceAddEdit()
         {
             InitializeComponent();
         }

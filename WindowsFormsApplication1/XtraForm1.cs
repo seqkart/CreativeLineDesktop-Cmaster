@@ -471,7 +471,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG222":
-                    var PROG222 = new frm_StockIndentPassing() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG222 = new Frm_StockIndentPassing() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG222.Show();
                     PROG222.BringToFront();
                     PROG222.Parent = Page;
@@ -1697,7 +1697,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG161":
-                    var PROG161 = new WindowsFormsApplication1.Forms_Master.frmLoanMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG161 = new WindowsFormsApplication1.Forms_Master.FrmLoanMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG161.Show();
                     PROG161.BringToFront();
                     PROG161.Parent = Page;

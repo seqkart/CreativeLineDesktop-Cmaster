@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Forms_Master
 {
-    partial class frmLoanMstAddEdit
+    partial class FrmLoanMstAddEdit
     {
         /// <summary>
         /// Required designer variable.

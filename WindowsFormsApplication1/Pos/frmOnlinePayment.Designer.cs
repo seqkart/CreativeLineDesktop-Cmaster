@@ -80,7 +80,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnSaveOnly.Size = new System.Drawing.Size(84, 47);
             this.btnSaveOnly.TabIndex = 38;
             this.btnSaveOnly.Text = "Save ";
-            this.btnSaveOnly.Click += new System.EventHandler(this.btnSaveOnly_Click);
+            this.btnSaveOnly.Click += new System.EventHandler(this.BtnSaveOnly_Click);
             // 
             // labelControl4
             // 
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnRevert.Size = new System.Drawing.Size(148, 47);
             this.btnRevert.TabIndex = 32;
             this.btnRevert.Text = "Revert";
-            this.btnRevert.Click += new System.EventHandler(this.btnRevert_Click);
+            this.btnRevert.Click += new System.EventHandler(this.BtnRevert_Click);
             // 
             // btnSave
             // 
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl49.Size = new System.Drawing.Size(130, 25);
             this.labelControl49.TabIndex = 5;
             this.labelControl49.Text = "Transaction No.";
-            this.labelControl49.Click += new System.EventHandler(this.labelControl49_Click);
+            this.labelControl49.Click += new System.EventHandler(this.LabelControl49_Click);
             // 
             // labelControl48
             // 
@@ -415,7 +415,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnPhonePe.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnPhonePe.Size = new System.Drawing.Size(129, 84);
             this.btnPhonePe.TabIndex = 17;
-            this.btnPhonePe.Click += new System.EventHandler(this.btnPhonePe_Click);
+            this.btnPhonePe.Click += new System.EventHandler(this.BtnPhonePe_Click);
             // 
             // btnPayTM
             // 
@@ -427,7 +427,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnPayTM.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnPayTM.Size = new System.Drawing.Size(129, 82);
             this.btnPayTM.TabIndex = 20;
-            this.btnPayTM.Click += new System.EventHandler(this.btnPayTM_Click);
+            this.btnPayTM.Click += new System.EventHandler(this.BtnPayTM_Click);
             // 
             // btnGooglePay
             // 
@@ -439,7 +439,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnGooglePay.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnGooglePay.Size = new System.Drawing.Size(129, 84);
             this.btnGooglePay.TabIndex = 16;
-            this.btnGooglePay.Click += new System.EventHandler(this.btnGooglePay_Click);
+            this.btnGooglePay.Click += new System.EventHandler(this.BtnGooglePay_Click);
             // 
             // frmOnlinePayment
             // 
@@ -471,7 +471,7 @@ namespace WindowsFormsApplication1.Pos
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmOnlinePayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmOnlinePayment_Load);
+            this.Load += new System.EventHandler(this.FrmOnlinePayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
