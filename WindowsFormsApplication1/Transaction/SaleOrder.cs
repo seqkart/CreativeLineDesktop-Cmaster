@@ -308,8 +308,6 @@ namespace WindowsFormsApplication1.Transaction
                 txtBuyerPONo.Text = ds.Tables[0].Rows[0]["BuyerPONo"].ToString();
 
 
-
-
                 txtDelAccName.Text = ds.Tables[0].Rows[0]["DelAccName"].ToString();
 
                 txtDelieveryCode.Text = ds.Tables[0].Rows[0]["BuyerCode"].ToString();
