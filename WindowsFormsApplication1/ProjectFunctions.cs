@@ -2096,10 +2096,10 @@ namespace WindowsFormsApplication1
             //ewbGen.fromStateCode = 34;
             //ewbGen.actFromStateCode = 34;
             //ewbGen.toGstin = "05AAACG0904A1ZL";
-            //ewbGen.toTrdName = "sthuthya";
-            //ewbGen.toAddr1 = "Shree Nilaya";
-            //ewbGen.toAddr2 = "Dasarahosahalli";
-            //ewbGen.toPlace = "Beml Nagar";
+            //ewbGen.toTrdName = "";
+            //ewbGen.toAddr1 = " ";
+            //ewbGen.toAddr2 = "";
+            //ewbGen.toPlace = " ";
             //ewbGen.toPincode = 263652;/*110005;*/
             //ewbGen.toStateCode = 05;
             //ewbGen.actToStateCode = 05;

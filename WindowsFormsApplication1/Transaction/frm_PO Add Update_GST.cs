@@ -159,10 +159,7 @@ namespace WindowsFormsApplication1
             {
                 DtEntry.EditValue = DateTime.Today;
                 DtDelivery.EditValue = DateTime.Today;
-                //if (IsAutoGenrate)
-                //{
-                //    GetData4Update(AutoGenQuery);
-                //}
+               
                 DtEntry.Focus();
             }
         }

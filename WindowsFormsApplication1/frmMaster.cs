@@ -441,6 +441,15 @@ namespace WindowsFormsApplication1
                     frm.ShowDialog(Parent);
                 }
 
+
+                if (GlobalVariables.ProgCode == "PROG246")
+                {
+                    WindowsFormsApplication1.Master.FrmGrpMstBSHeads frm = new WindowsFormsApplication1.Master.FrmGrpMstBSHeads() { S1 = btnAdd.Text, Text = "Group Head Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG16")
                 {
                     FrmGroupMstAddEdit frm = new FrmGroupMstAddEdit() { S1 = btnAdd.Text, Text = "Group Head Addition" };
@@ -1022,7 +1031,22 @@ namespace WindowsFormsApplication1
 
                     frm.ShowDialog(Parent);
                 }
+                
+                if (GlobalVariables.ProgCode == "PROG246")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    WindowsFormsApplication1.Master.FrmGrpMstBSHeads frm = new WindowsFormsApplication1.Master.FrmGrpMstBSHeads()
+                    {
+                        S1 = btnEdit.Text,
+                        Text = "Group Head Editing",
+                        GrpCode = CurrentRow["GrpCode"].ToString(),
+                        SubGrpCode = CurrentRow["GrpSubCode"].ToString()
+                    };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
 
+
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG16")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
