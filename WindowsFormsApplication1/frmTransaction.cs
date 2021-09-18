@@ -1039,6 +1039,7 @@ namespace WindowsFormsApplication1
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Generate EWAY Bill", (o1, e1) =>
                     {
                         ProjectFunctions.GenerateEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                        FillGrid();
                     }));
                 }
                 if (GlobalVariables.ProgCode == "PROG131")
@@ -1046,7 +1047,9 @@ namespace WindowsFormsApplication1
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Cancel EWAY Bill", (o1, e1) =>
                     {
+                      
                         ProjectFunctions.CancelEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
+                        FillGrid();
                     }));
                 }
                 if (GlobalVariables.ProgCode == "PROG131")
@@ -2311,6 +2314,11 @@ namespace WindowsFormsApplication1
                     System.Diagnostics.Process.Start(saveFileDialog1.FileName);
                 }
             }
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            FillGrid();
         }
     }
 }

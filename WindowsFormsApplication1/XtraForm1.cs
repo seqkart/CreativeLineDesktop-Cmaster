@@ -1875,43 +1875,55 @@ namespace WindowsFormsApplication1
         {
             RemoveTab();
         }
+
+
         //-----------------------------------change
 
 
         private async void ChangeQRData()
 
         {
-
-            // using (var httpClient = new HttpClient())
+            try
             {
-                //  using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
+
+                using (var httpClient = new HttpClient())
                 {
-                    //       request.Headers.TryAddWithoutValidation("accept", "*/*");
-
-                    //   var response = await httpClient.SendAsync(request);
-
-                    //       if (response.IsSuccessStatusCode == true)
+                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
                     {
+                        request.Headers.TryAddWithoutValidation("accept", "*/*");
 
-                        //   byte[] MyData = new byte[0];
-                        //  MyData = await response.Content.ReadAsByteArrayAsync();
+                        var response = await httpClient.SendAsync(request);
 
-                        // MemoryStream stream = new MemoryStream(MyData)
+                        if (response.IsSuccessStatusCode == true)
                         {
-                            //      Position = 0
-                            // };
 
-                            //   pictureEdit1.Image = Image.FromStream(stream);
-                            //       pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+                            byte[] MyData = new byte[0];
+                            MyData = await response.Content.ReadAsByteArrayAsync();
+
+                            MemoryStream stream = new MemoryStream(MyData)
+                            {
+                                Position = 0
+                            };
+
+                            pictureEdit1.Image = Image.FromStream(stream);
+                            pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
                             //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
                             //ProjectFunctions.SpeakError("Whats app status is connected on mobile no " + myDetails.user);
 
                         }
                     }
+
                 }
             }
+            catch (Exception)
+            {
+                return;
+            }
+
+
         }
+
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             ProjectFunctions.WhatsAppDisConnection();

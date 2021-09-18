@@ -2139,10 +2139,21 @@ namespace WindowsFormsApplication1
             ewbGen.transporterName = ds.Tables[0].Rows[0]["TRPRNAME"].ToString(); 
             ewbGen.transDocNo = string.Empty;
             ewbGen.totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]); ;
-            ewbGen.transMode = ds.Tables[0].Rows[0]["TransMode"].ToString();//1
+            ewbGen.vehicleNo = ds.Tables[0].Rows[0]["VehicleNo"].ToString();
             ewbGen.transDistance = "0"; /*1200*/
             ewbGen.transDocDate = string.Empty;
-            ewbGen.vehicleNo = ds.Tables[0].Rows[0]["VehicleNo"].ToString(); ;
+
+            if(ds.Tables[0].Rows[0]["VehicleNo"].ToString()=="")
+            {
+               
+                ewbGen.transMode = "";
+            }
+            else
+            {
+                ewbGen.transMode = ds.Tables[0].Rows[0]["TransMode"].ToString();
+                
+            }
+           
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
 

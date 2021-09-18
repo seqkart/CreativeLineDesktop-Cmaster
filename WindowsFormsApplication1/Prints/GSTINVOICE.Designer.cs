@@ -2745,6 +2745,7 @@
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PaperName = "A4";
             this.PrinterName = "Brother DCP-L2540DW series Printer";
+            this.ShowPrintMarginsWarning = false;
             this.SnapGridStepCount = 1;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
             this.Version = "21.1";

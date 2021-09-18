@@ -159,7 +159,7 @@ namespace WindowsFormsApplication1
         }
         private void FillPartyGrid()
         {
-            DataSet ds = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst");
+            DataSet ds = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst where  AccActive='y' order by AccName ");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 ds.Tables[0].Columns.Add("Select", typeof(bool));
@@ -179,7 +179,7 @@ namespace WindowsFormsApplication1
         }
         private void FillLedgerGrid()
         {
-            DataSet ds = ProjectFunctions.GetDataSet("Select LgrCode,LgrDesc from LgrMst");
+            DataSet ds = ProjectFunctions.GetDataSet("Select LgrCode,LgrDesc from LgrMst order by LgrDesc ");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 ds.Tables[0].Columns.Add("Select", typeof(bool));
@@ -199,7 +199,7 @@ namespace WindowsFormsApplication1
         }
         private void FillBSGrid()
         {
-            DataSet ds = ProjectFunctions.GetDataSet("Select BSCode,BSDesc from bshmst");
+            DataSet ds = ProjectFunctions.GetDataSet("Select BSCode,BSDesc from bshmst order by BSDesc");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 ds.Tables[0].Columns.Add("Select", typeof(bool));

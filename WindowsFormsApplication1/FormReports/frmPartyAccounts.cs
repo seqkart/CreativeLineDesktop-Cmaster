@@ -152,6 +152,16 @@ namespace WindowsFormsApplication1.FormReports
                                         ds.Tables[0].Rows[Count]["Balance"] = Balance + Convert.ToDecimal(ds.Tables[0].Rows[Count]["Debit"]) - Convert.ToDecimal(ds.Tables[0].Rows[Count]["Credit"]);
                                         Balance = Convert.ToDecimal(ds.Tables[0].Rows[Count]["Balance"]);
                                     }
+                                    else
+                                    {
+                                        ds.Tables[0].Rows[Count]["Debit"] = Convert.ToDecimal("0");
+                                        ds.Tables[0].Rows[Count]["Credit"] = Convert.ToDecimal("0");
+                                        ds.Tables[0].Rows[Count]["VutNo"] = null;
+                                        ds.Tables[0].Rows[Count]["VutDesc"] = null;
+                                        ds.Tables[0].Rows[Count]["VutDate"] = Convert.ToDateTime("1900-01-01");
+
+                                        ds.Tables[0].Rows[Count]["VutType"] = null;
+                                    }
                                 }
                             }
 
@@ -227,7 +237,17 @@ namespace WindowsFormsApplication1.FormReports
             Report.txtReportName.Text = "Statement of Accounts";
             Report.txtDateRange.Text = "From " + Convert.ToDateTime(_SelectRange.DtFrom.Text).ToString("dd-MM-yyyy") + " To " + Convert.ToDateTime(_SelectRange.DtEnd.Text).ToString("dd-MM-yyyy");
 
-            if (_SelectRange.chSubEntries.Checked)
+
+            int count = 0;
+            foreach(DataRow dr in (_SelectRange.HelpGrid.DataSource as DataTable).Rows)
+            {
+                if(dr["Select"].ToString().ToUpper()=="TRUE")
+                {
+                    count++;
+                }
+            }
+
+            if (count==1)
             {
                 Report.txtensumd.Visible = false;
                 Report.txtenbal.Visible = false;
@@ -276,6 +296,14 @@ namespace WindowsFormsApplication1.FormReports
                     e.DisplayText = string.Empty;
                 }
             }
+            if (e.Column.FieldName == "VutDate")
+            {
+                if (Convert.ToDateTime(e.Value).Date == Convert.ToDateTime("1900-01-01").Date)
+                {
+                    e.DisplayText = string.Empty;
+                }
+            }
+            
         }
     }
 }

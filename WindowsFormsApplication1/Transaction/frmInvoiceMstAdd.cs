@@ -2330,9 +2330,6 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void TextEdit1_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

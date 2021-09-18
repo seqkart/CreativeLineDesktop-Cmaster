@@ -48,11 +48,11 @@
             this.txtSubSupplyType = new System.Windows.Forms.ComboBox();
             this.txtSupplyType = new System.Windows.Forms.ComboBox();
             this.txtVehicleUpdateReason = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.label26 = new DevExpress.XtraEditors.LabelControl();
+            this.label24 = new DevExpress.XtraEditors.LabelControl();
+            this.label22 = new DevExpress.XtraEditors.LabelControl();
+            this.label21 = new DevExpress.XtraEditors.LabelControl();
+            this.label20 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl29 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl28 = new DevExpress.XtraEditors.LabelControl();
@@ -588,7 +588,7 @@
             this.txtVehicleNo.Properties.MaxLength = 200;
             this.txtVehicleNo.Size = new System.Drawing.Size(199, 24);
             this.txtVehicleNo.TabIndex = 552;
-            this.txtVehicleNo.EditValueChanged += new System.EventHandler(this.TextEdit1_EditValueChanged);
+//            this.txtVehicleNo.EditValueChanged += new System.EventHandler(this.TextEdit1_EditValueChanged);
             // 
             // txtTransMode
             // 
@@ -632,51 +632,46 @@
             // 
             // label26
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(7, 61);
+            this.label26.Location = new System.Drawing.Point(14, 62);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(134, 19);
+            this.label26.Size = new System.Drawing.Size(121, 17);
             this.label26.TabIndex = 557;
             this.label26.Text = "Vehicle Updt Reason";
             // 
             // label24
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(61, 89);
+            this.label24.Location = new System.Drawing.Point(65, 90);
             this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(80, 19);
+            this.label24.Size = new System.Drawing.Size(70, 17);
             this.label24.TabIndex = 556;
             this.label24.Text = "Trans.Mode";
             // 
             // label22
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(460, 89);
+            this.label22.Location = new System.Drawing.Point(469, 90);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 19);
+            this.label22.Size = new System.Drawing.Size(29, 17);
             this.label22.TabIndex = 555;
             this.label22.Text = "Units";
             // 
             // label21
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(392, 61);
+            this.label21.Location = new System.Drawing.Point(401, 62);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(109, 19);
+            this.label21.Size = new System.Drawing.Size(97, 17);
             this.label21.TabIndex = 553;
             this.label21.Text = "Sub Supply Type";
             // 
             // label20
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(419, 33);
+            this.label20.Location = new System.Drawing.Point(427, 34);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(82, 19);
+            this.label20.Size = new System.Drawing.Size(71, 17);
             this.label20.TabIndex = 551;
             this.label20.Text = "Supply Type";
             // 
@@ -3665,12 +3660,14 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1406, 841);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Menu_ToolStrip);
+            this.EnableAcrylicAccent = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmInvoiceMstAdd";
@@ -4098,10 +4095,10 @@
         private System.Windows.Forms.ComboBox txtSubSupplyType;
         private System.Windows.Forms.ComboBox txtSupplyType;
         private System.Windows.Forms.ComboBox txtVehicleUpdateReason;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private DevExpress.XtraEditors.LabelControl label26;
+        private DevExpress.XtraEditors.LabelControl label24;
+        private DevExpress.XtraEditors.LabelControl label22;
+        private DevExpress.XtraEditors.LabelControl label21;
+        private DevExpress.XtraEditors.LabelControl label20;
     }
 }
