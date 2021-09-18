@@ -30,10 +30,10 @@ namespace WindowsFormsApplication1.Master
         private void InitializeComponent()
         {
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtBrandName = new DevExpress.XtraEditors.TextEdit();
             this.txtBrandCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -55,28 +55,9 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(523, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(523, 27);
             this.Menu_ToolStrip.TabIndex = 205;
             this.Menu_ToolStrip.Text = "Options";
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
-            this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(70, 28);
-            this.btnQuit.Text = "Close";
-            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Image = global::WindowsFormsApplication1.Properties.Resources.Add;
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(65, 28);
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label3
             // 
@@ -95,6 +76,25 @@ namespace WindowsFormsApplication1.Master
             this.label1.Size = new System.Drawing.Size(122, 17);
             this.label1.TabIndex = 203;
             this.label1.Text = "Machine Brand Code";
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
+            this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(70, 24);
+            this.btnQuit.Text = "Close";
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Image = global::WindowsFormsApplication1.Properties.Resources.Add;
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(65, 24);
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtBrandName
             // 

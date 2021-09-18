@@ -185,7 +185,7 @@
             this.PDTab.Controls.Add(this.panelControl1);
             this.PDTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PDTab.Name = "PDTab";
-            this.PDTab.Size = new System.Drawing.Size(819, 349);
+            this.PDTab.Size = new System.Drawing.Size(793, 349);
             this.PDTab.Text = "Product Details";
             // 
             // panelControl1
@@ -213,7 +213,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(819, 349);
+            this.panelControl1.Size = new System.Drawing.Size(793, 349);
             this.panelControl1.TabIndex = 5;
             // 
             // txtUMDesc
@@ -346,7 +346,7 @@
             this.ProductTabCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ProductTabCtrl.Name = "ProductTabCtrl";
             this.ProductTabCtrl.SelectedTabPage = this.PDTab;
-            this.ProductTabCtrl.Size = new System.Drawing.Size(821, 384);
+            this.ProductTabCtrl.Size = new System.Drawing.Size(795, 384);
             this.ProductTabCtrl.TabIndex = 4;
             this.ProductTabCtrl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.PDTab});
@@ -412,7 +412,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(824, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(824, 27);
             this.Menu_ToolStrip.TabIndex = 263;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -422,7 +422,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -432,7 +432,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -463,7 +463,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(174, 37);
+            this.HelpGrid.Location = new System.Drawing.Point(50, 48);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -502,7 +502,7 @@
             this.txtstatusTag.Size = new System.Drawing.Size(59, 24);
             this.txtstatusTag.TabIndex = 2;
             // 
-            // frmProductMstAddEdit
+            // FrmProductMstAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -524,7 +524,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmProductMstAddEdit";
+            this.Name = "FrmProductMstAddEdit";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmProductMstAddEdit_Load);

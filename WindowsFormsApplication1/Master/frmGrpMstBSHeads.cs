@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1.Master
                     txtSGrpCode.Enabled = false;
                     txtSGrpDesc.Enabled = true;
                     txtSGrpDesc.Focus();
-                    DataSet ds = ProjectFunctions.GetDataSet("SELECT GrpCode,GrpDesc,GrpSubCode,GrpSubDesc,GrpHSNCode FROM BSHeadGrpMst where GrpCode ='" + GrpCode + "' And  GrpSubCode='" + SubGrpCode + "'");
+                    DataSet ds = ProjectFunctions.GetDataSet("SELECT GrpCode,GrpDesc,GrpSubCode,GrpSubDesc FROM BSHeadGrpMst where GrpCode ='" + GrpCode + "' And  GrpSubCode='" + SubGrpCode + "'");
                     txtGrpCode.Text = ds.Tables[0].Rows[0]["GrpCode"].ToString();
                     txtGrpDesc.Text = ds.Tables[0].Rows[0]["GrpDesc"].ToString();
                     txtSGrpCode.Text = ds.Tables[0].Rows[0]["GrpSubCode"].ToString();
@@ -223,7 +223,7 @@ namespace WindowsFormsApplication1.Master
                     if (ValidateGrpData())
                     {
                         var strQry = string.Empty;
-                        strQry = " UPDATE GrpMst SET";
+                        strQry = " UPDATE BSHeadGrpMst SET";
                         strQry = strQry + " GrpDesc ='" + txtGrpDesc.Text.ToString().Trim() + "'";
                         strQry = strQry + " Where GrpCode='" + GrpCode + "'";
                         using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
@@ -244,7 +244,7 @@ namespace WindowsFormsApplication1.Master
                     if (ValidateSubGrpData())
                     {
                         var strQry = string.Empty;
-                        strQry = " UPDATE GrpMst SET";
+                        strQry = " UPDATE BSHeadGrpMst SET";
                         strQry = strQry + " GrpSubDesc ='" + txtSGrpDesc.Text.Trim() + "'";
 
 

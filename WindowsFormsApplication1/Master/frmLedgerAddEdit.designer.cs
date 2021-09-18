@@ -32,21 +32,21 @@
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtLedgerCode = new DevExpress.XtraEditors.TextEdit();
-            this.txtLedgerType = new DevExpress.XtraEditors.TextEdit();
-            this.txtLedgerDesc = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerCode.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerDesc.Properties)).BeginInit();
+            this.txtLedgerDesc = new DevExpress.XtraEditors.TextEdit();
+            this.txtLedgerType = new DevExpress.XtraEditors.TextEdit();
+            this.txtLedgerCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerDesc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerCode.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(65, 99);
+            this.label3.Location = new System.Drawing.Point(85, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 17);
@@ -55,7 +55,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(66, 133);
+            this.label2.Location = new System.Drawing.Point(85, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(28, 17);
@@ -64,44 +64,12 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(65, 65);
+            this.label1.Location = new System.Drawing.Point(82, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 17);
             this.label1.TabIndex = 16;
             this.label1.Text = "Code";
-            // 
-            // txtLedgerCode
-            // 
-            this.txtLedgerCode.Location = new System.Drawing.Point(121, 61);
-            this.txtLedgerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLedgerCode.Name = "txtLedgerCode";
-            this.txtLedgerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLedgerCode.Size = new System.Drawing.Size(65, 24);
-            this.txtLedgerCode.TabIndex = 1;
-            this.txtLedgerCode.TabStop = false;
-            // 
-            // txtLedgerType
-            // 
-            this.txtLedgerType.EnterMoveNextControl = true;
-            this.txtLedgerType.Location = new System.Drawing.Point(121, 129);
-            this.txtLedgerType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLedgerType.Name = "txtLedgerType";
-            this.txtLedgerType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLedgerType.Properties.MaxLength = 1;
-            this.txtLedgerType.Size = new System.Drawing.Size(65, 24);
-            this.txtLedgerType.TabIndex = 3;
-            // 
-            // txtLedgerDesc
-            // 
-            this.txtLedgerDesc.EnterMoveNextControl = true;
-            this.txtLedgerDesc.Location = new System.Drawing.Point(121, 95);
-            this.txtLedgerDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtLedgerDesc.Name = "txtLedgerDesc";
-            this.txtLedgerDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLedgerDesc.Properties.MaxLength = 30;
-            this.txtLedgerDesc.Size = new System.Drawing.Size(267, 24);
-            this.txtLedgerDesc.TabIndex = 1;
             // 
             // Menu_ToolStrip
             // 
@@ -117,7 +85,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(454, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(454, 27);
             this.Menu_ToolStrip.TabIndex = 194;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -127,7 +95,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -137,9 +105,41 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // txtLedgerDesc
+            // 
+            this.txtLedgerDesc.EnterMoveNextControl = true;
+            this.txtLedgerDesc.Location = new System.Drawing.Point(121, 95);
+            this.txtLedgerDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLedgerDesc.Name = "txtLedgerDesc";
+            this.txtLedgerDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLedgerDesc.Properties.MaxLength = 30;
+            this.txtLedgerDesc.Size = new System.Drawing.Size(267, 24);
+            this.txtLedgerDesc.TabIndex = 1;
+            // 
+            // txtLedgerType
+            // 
+            this.txtLedgerType.EnterMoveNextControl = true;
+            this.txtLedgerType.Location = new System.Drawing.Point(121, 129);
+            this.txtLedgerType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLedgerType.Name = "txtLedgerType";
+            this.txtLedgerType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLedgerType.Properties.MaxLength = 1;
+            this.txtLedgerType.Size = new System.Drawing.Size(65, 24);
+            this.txtLedgerType.TabIndex = 3;
+            // 
+            // txtLedgerCode
+            // 
+            this.txtLedgerCode.Location = new System.Drawing.Point(121, 61);
+            this.txtLedgerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtLedgerCode.Name = "txtLedgerCode";
+            this.txtLedgerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtLedgerCode.Size = new System.Drawing.Size(65, 24);
+            this.txtLedgerCode.TabIndex = 1;
+            this.txtLedgerCode.TabStop = false;
             // 
             // frmLedgerAddEdit
             // 
@@ -161,11 +161,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmLedgerAddEdit_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLedgerAddEdit_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerCode.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerDesc.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerDesc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLedgerCode.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

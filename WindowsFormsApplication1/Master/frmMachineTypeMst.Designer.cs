@@ -30,10 +30,10 @@ namespace WindowsFormsApplication1.Master
         private void InitializeComponent()
         {
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtTypeName = new DevExpress.XtraEditors.TextEdit();
             this.txtTypeCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -59,6 +59,24 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.TabIndex = 210;
             this.Menu_ToolStrip.Text = "Options";
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(24, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 17);
+            this.label3.TabIndex = 209;
+            this.label3.Text = "Machine Type Name";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(24, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 17);
+            this.label1.TabIndex = 208;
+            this.label1.Text = "Machine Type Code";
+            // 
             // btnQuit
             // 
             this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
@@ -77,24 +95,6 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Size = new System.Drawing.Size(65, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(24, 94);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
-            this.label3.TabIndex = 209;
-            this.label3.Text = "Machine Type Name";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(24, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
-            this.label1.TabIndex = 208;
-            this.label1.Text = "Machine Type Code";
             // 
             // txtTypeName
             // 
@@ -115,7 +115,7 @@ namespace WindowsFormsApplication1.Master
             this.txtTypeCode.Size = new System.Drawing.Size(97, 24);
             this.txtTypeCode.TabIndex = 206;
             // 
-            // frmMachineTypeMst
+            // FrmMachineTypeMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -129,7 +129,7 @@ namespace WindowsFormsApplication1.Master
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmMachineTypeMst";
+            this.Name = "FrmMachineTypeMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmMachineTypeMst_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

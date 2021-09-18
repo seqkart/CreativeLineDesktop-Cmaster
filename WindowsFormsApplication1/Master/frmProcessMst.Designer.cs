@@ -30,31 +30,20 @@ namespace WindowsFormsApplication1.Master
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProcessMst));
-            this.txtProcessRate = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.Label17 = new DevExpress.XtraEditors.LabelControl();
+            this.Label16 = new DevExpress.XtraEditors.LabelControl();
+            this.Label15 = new DevExpress.XtraEditors.LabelControl();
+            this.txtProcessRate = new DevExpress.XtraEditors.TextEdit();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtProcessName = new DevExpress.XtraEditors.TextEdit();
             this.txtProcessCode = new DevExpress.XtraEditors.TextEdit();
-            this.Label17 = new DevExpress.XtraEditors.LabelControl();
-            this.Label16 = new DevExpress.XtraEditors.LabelControl();
-            this.Label15 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProcessRate.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProcessRate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProcessName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProcessCode.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtProcessRate
-            // 
-            this.txtProcessRate.Location = new System.Drawing.Point(160, 166);
-            this.txtProcessRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProcessRate.Name = "txtProcessRate";
-            this.txtProcessRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProcessRate.Properties.MaxLength = 100;
-            this.txtProcessRate.Size = new System.Drawing.Size(301, 24);
-            this.txtProcessRate.TabIndex = 2;
-            this.txtProcessRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProcessRate_KeyPress);
             // 
             // Menu_ToolStrip
             // 
@@ -70,48 +59,9 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(519, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(519, 27);
             this.Menu_ToolStrip.TabIndex = 389;
             this.Menu_ToolStrip.Text = "Options";
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
-            this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
-            this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
-            // 
-            // txtProcessName
-            // 
-            this.txtProcessName.Location = new System.Drawing.Point(160, 123);
-            this.txtProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProcessName.Name = "txtProcessName";
-            this.txtProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProcessName.Properties.MaxLength = 100;
-            this.txtProcessName.Size = new System.Drawing.Size(301, 24);
-            this.txtProcessName.TabIndex = 1;
-            // 
-            // txtProcessCode
-            // 
-            this.txtProcessCode.Location = new System.Drawing.Point(160, 80);
-            this.txtProcessCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProcessCode.Name = "txtProcessCode";
-            this.txtProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProcessCode.Size = new System.Drawing.Size(97, 24);
-            this.txtProcessCode.TabIndex = 0;
             // 
             // Label17
             // 
@@ -146,7 +96,57 @@ namespace WindowsFormsApplication1.Master
             this.Label15.TabIndex = 384;
             this.Label15.Text = "PROCESS CODE ";
             // 
-            // frmProcessMst
+            // txtProcessRate
+            // 
+            this.txtProcessRate.Location = new System.Drawing.Point(160, 166);
+            this.txtProcessRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProcessRate.Name = "txtProcessRate";
+            this.txtProcessRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProcessRate.Properties.MaxLength = 100;
+            this.txtProcessRate.Size = new System.Drawing.Size(301, 24);
+            this.txtProcessRate.TabIndex = 2;
+            this.txtProcessRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProcessRate_KeyPress);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
+            this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // txtProcessName
+            // 
+            this.txtProcessName.Location = new System.Drawing.Point(160, 123);
+            this.txtProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProcessName.Name = "txtProcessName";
+            this.txtProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProcessName.Properties.MaxLength = 100;
+            this.txtProcessName.Size = new System.Drawing.Size(301, 24);
+            this.txtProcessName.TabIndex = 1;
+            // 
+            // txtProcessCode
+            // 
+            this.txtProcessCode.Location = new System.Drawing.Point(160, 80);
+            this.txtProcessCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProcessCode.Name = "txtProcessCode";
+            this.txtProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProcessCode.Size = new System.Drawing.Size(97, 24);
+            this.txtProcessCode.TabIndex = 0;
+            // 
+            // FrmProcessMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -162,12 +162,12 @@ namespace WindowsFormsApplication1.Master
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmProcessMst";
+            this.Name = "FrmProcessMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmProcessMst_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.txtProcessRate.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProcessRate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProcessName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProcessCode.Properties)).EndInit();
             this.ResumeLayout(false);

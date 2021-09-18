@@ -314,6 +314,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG247":
+                    var PROG247 = new Master.frmAccountsMappingBusy() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG247.Show();
+                    PROG247.BringToFront();
+                    PROG247.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG246":
                     var PROG246 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG246.Show();
@@ -1868,43 +1875,43 @@ namespace WindowsFormsApplication1
         {
             RemoveTab();
         }
-
+        //-----------------------------------change
 
 
         private async void ChangeQRData()
+
         {
 
-            using (var httpClient = new HttpClient())
+            // using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/qrcode"))
+                //  using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
                 {
-                    request.Headers.TryAddWithoutValidation("accept", "*/*");
+                    //       request.Headers.TryAddWithoutValidation("accept", "*/*");
 
-                    var response = await httpClient.SendAsync(request);
+                    //   var response = await httpClient.SendAsync(request);
 
-                    if (response.IsSuccessStatusCode == true)
+                    //       if (response.IsSuccessStatusCode == true)
                     {
 
-                        byte[] MyData = new byte[0];
-                        MyData = await response.Content.ReadAsByteArrayAsync();
+                        //   byte[] MyData = new byte[0];
+                        //  MyData = await response.Content.ReadAsByteArrayAsync();
 
-                        MemoryStream stream = new MemoryStream(MyData)
+                        // MemoryStream stream = new MemoryStream(MyData)
                         {
-                            Position = 0
-                        };
+                            //      Position = 0
+                            // };
 
-                        pictureEdit1.Image = Image.FromStream(stream);
-                        pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+                            //   pictureEdit1.Image = Image.FromStream(stream);
+                            //       pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
-                        //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
-                        //ProjectFunctions.SpeakError("Whats app status is connected on mobile no " + myDetails.user);
+                            //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
+                            //ProjectFunctions.SpeakError("Whats app status is connected on mobile no " + myDetails.user);
 
-
+                        }
                     }
                 }
             }
         }
-
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             ProjectFunctions.WhatsAppDisConnection();

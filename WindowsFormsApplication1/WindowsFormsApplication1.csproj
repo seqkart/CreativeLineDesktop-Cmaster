@@ -1109,6 +1109,12 @@
       <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="HRMS\GlobalClassBase.cs" />
+    <Compile Include="Master\frmAccountsMappingBusy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmAccountsMappingBusy.Designer.cs">
+      <DependentUpon>frmAccountsMappingBusy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmAttendenceStatusMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2096,6 +2102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HRMS\AddAttendanceDetails.resx">
       <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmAccountsMappingBusy.resx">
+      <DependentUpon>frmAccountsMappingBusy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmAttendenceStatusMst.resx">
       <DependentUpon>frmAttendenceStatusMst.cs</DependentUpon>

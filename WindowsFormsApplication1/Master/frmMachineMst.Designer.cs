@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1.Master
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(84, 51);
+            this.HelpGrid.Location = new System.Drawing.Point(95, 47);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1.Master
             this.labelControl1.TabIndex = 423;
             this.labelControl1.Text = "Brand";
             // 
-            // frmMachineMst
+            // FrmMachineMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -274,7 +274,7 @@ namespace WindowsFormsApplication1.Master
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmMachineMst";
+            this.Name = "FrmMachineMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmMachineMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();

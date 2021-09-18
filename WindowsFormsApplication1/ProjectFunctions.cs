@@ -1639,7 +1639,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1669,7 +1669,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1698,7 +1698,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://103.223.12.170:3000/disconnect"))
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://seqkartsolution:3000/disconnect"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1730,7 +1730,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1753,7 +1753,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1782,7 +1782,7 @@ namespace WindowsFormsApplication1
             //{
             //    using (var httpClient = new HttpClient())
             //    {
-            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
+            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
             //        {
             //            request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -2135,8 +2135,8 @@ namespace WindowsFormsApplication1
             ewbGen.igstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["IGSTAmount"]);
             ewbGen.cessValue = Convert.ToDouble("0");
             ewbGen.cessNonAdvolValue = Convert.ToDouble("0");
-            ewbGen.transporterId = string.Empty;
-            ewbGen.transporterName = string.Empty;
+            ewbGen.transporterId = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString();
+            ewbGen.transporterName = ds.Tables[0].Rows[0]["TRPRNAME"].ToString(); 
             ewbGen.transDocNo = string.Empty;
             ewbGen.totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]); ;
             ewbGen.transMode = ds.Tables[0].Rows[0]["TransMode"].ToString();//1
