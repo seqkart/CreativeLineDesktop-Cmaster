@@ -227,7 +227,7 @@
             // 
             this.xrPdfContent2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.833364F);
             this.xrPdfContent2.Name = "xrPdfContent2";
-            this.xrPdfContent2.SizeF = new System.Drawing.SizeF(1111F, 12.83334F);
+            this.xrPdfContent2.SizeF = new System.Drawing.SizeF(1119F, 12.83334F);
             this.xrPdfContent2.SourceSerializable = resources.GetString("xrPdfContent2.SourceSerializable");
             // 
             // Detail
@@ -1857,9 +1857,9 @@
             this.xrLabel70,
             this.xrLabel71,
             this.xrLabel72});
-            this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(2.000014F, 22.91379F);
+            this.xrPanel3.LocationFloat = new DevExpress.Utils.PointFloat(2.000014F, 20.91379F);
             this.xrPanel3.Name = "xrPanel3";
-            this.xrPanel3.SizeF = new System.Drawing.SizeF(800.0834F, 75.46867F);
+            this.xrPanel3.SizeF = new System.Drawing.SizeF(800.0834F, 78.46867F);
             this.xrPanel3.StylePriority.UseBorders = false;
             // 
             // xrLabel29
@@ -1984,7 +1984,7 @@
             this.xrLabel103});
             this.xrPanel5.LocationFloat = new DevExpress.Utils.PointFloat(802F, 20.83045F);
             this.xrPanel5.Name = "xrPanel5";
-            this.xrPanel5.SizeF = new System.Drawing.SizeF(300.0416F, 110.3852F);
+            this.xrPanel5.SizeF = new System.Drawing.SizeF(302.0416F, 110.3852F);
             this.xrPanel5.StylePriority.UseBorders = false;
             // 
             // xrLabel23
@@ -2741,9 +2741,9 @@
             this.Landscape = true;
             this.Margins = new System.Drawing.Printing.Margins(25, 25, 35, 20);
             this.PageHeight = 827;
-            this.PageWidth = 1161;
-            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
-            this.PaperName = "A4";
+            this.PageWidth = 1169;
+            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PaperName = "North America 3x 5";
             this.PrinterName = "Brother DCP-L2540DW series Printer";
             this.ShowPrintMarginsWarning = false;
             this.SnapGridStepCount = 1;

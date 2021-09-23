@@ -188,10 +188,57 @@ namespace WindowsFormsApplication1.Master
         {
             foreach (DataRow dr in (AccountGrid.DataSource as DataTable).Rows)
             {
-
                 ProjectFunctions.GetDataSet("Update ActMst Set AccCodeBusy='" + dr["AccCodeBusy"].ToString() + "' Where AccCode='" + dr["AccCode"].ToString() + "'");
             }
         }
 
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            DataRow currentrow = AccountGridView.GetDataRow(AccountGridView.FocusedRowHandle);
+            DataSet ds = ProjectFunctionsUtils.GetDataSetBusy("Select * from MasterAddressInfo where MasterCode='" + currentrow["AccCodeBusy"].ToString() + "'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                FrmAccountMstAddEdit frm = new FrmAccountMstAddEdit() { S1 = "&Add", Text = "Account Addition" };
+                frm.StartPosition = FormStartPosition.CenterScreen;
+
+
+              // only name block
+                DataSet dsNane = ProjectFunctionsUtils.GetDataSetBusy("Select Code ,Name  from MASTER1  Where Code='"+ currentrow["AccCodeBusy"].ToString() + "'");
+                frm.txtAccCodeBusy.Text = dsNane.Tables[0].Rows[0]["Code"].ToString();
+                frm.txtAccNameBusy.Text = dsNane.Tables[0].Rows[0]["Name"].ToString();
+                frm.txtAcName.Text = dsNane.Tables[0].Rows[0]["Name"].ToString();
+                frm.txtBillingName.Text = dsNane.Tables[0].Rows[0]["Name"].ToString();
+
+                // only name block
+
+                //address block & others
+                frm.txtAddress1.Text = ds.Tables[0].Rows[0]["Address1"].ToString();
+                frm.txtAddress2.Text = ds.Tables[0].Rows[0]["Address2"].ToString();
+                frm.txtAddress3.Text = ds.Tables[0].Rows[0]["Address3"].ToString();
+                frm.txtAddress4.Text = ds.Tables[0].Rows[0]["Address4"].ToString();
+                frm.txtZipCode.Text = ds.Tables[0].Rows[0]["PINCode"].ToString();
+                DataSet dsCity = ProjectFunctions.GetDataSet("SELECT CITYMASTER.CTSYSID, CITYMASTER.CTNAME,STATEMASTER.STNAME,STATEMASTER.UNDERRG FROM CITYMASTER INNER JOIN STATEMASTER ON CITYMASTER.UNDERSTID = STATEMASTER.STSYSID Where CITYMASTER.CTNAME like'%" + ds.Tables[0].Rows[0]["Station"].ToString() + "%'");
+                if (dsCity.Tables[0].Rows.Count > 0)
+                {
+                    frm.txtCityCode.Text = dsCity.Tables[0].Rows[0]["CTSYSID"].ToString();
+                    frm.txtCityName.Text = dsCity.Tables[0].Rows[0]["CTNAME"].ToString();
+                    frm.txtState.Text = dsCity.Tables[0].Rows[0]["STNAME"].ToString();
+                    frm.txtCountry.Text = dsCity.Tables[0].Rows[0]["UNDERRG"].ToString();
+                }
+
+                frm.txtTel.Text = ds.Tables[0].Rows[0]["TelNo"].ToString() + "," + ds.Tables[0].Rows[0]["Mobile"].ToString();
+                frm.txtEmail.Text = ds.Tables[0].Rows[0]["Email"].ToString();
+                frm.txtTinNo.Text = ds.Tables[0].Rows[0]["TINNo"].ToString();
+                frm.txtCstPst.Text = ds.Tables[0].Rows[0]["CST"].ToString();
+                frm.txtPanNo.Text = ds.Tables[0].Rows[0]["ITPAN"].ToString();
+                frm.txtGSTNo.Text = ds.Tables[0].Rows[0]["GSTNo"].ToString();
+                frm.txtWhatsAppNo.Text = ds.Tables[0].Rows[0]["WhatsAppNo"].ToString();
+
+                //address block
+
+                frm.ShowDialog(Parent);
+                FillGrid();
+            }
+        }
     }
 }

@@ -34,13 +34,14 @@ namespace WindowsFormsApplication1.Master
             this.AccountGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnclose = new System.Windows.Forms.ToolStripButton();
+            this.btnImport = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.lbl = new System.Windows.Forms.ToolStripLabel();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.AccountGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AccountGridView)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -89,6 +90,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnclose,
+            this.btnImport,
             this.btnSave,
             this.lbl});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
@@ -111,13 +113,38 @@ namespace WindowsFormsApplication1.Master
             this.btnclose.Text = "Quit";
             this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
             // 
+            // btnImport
+            // 
+            this.btnImport.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnImport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnImport.ForeColor = System.Drawing.Color.White;
+            this.btnImport.Image = ((System.Drawing.Image)(resources.GetObject("btnImport.Image")));
+            this.btnImport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnImport.Name = "btnImport";
+            this.btnImport.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnImport.Size = new System.Drawing.Size(72, 28);
+            this.btnImport.Text = "Import";
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
+            this.btnSave.Text = "Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // lbl
             // 
             this.lbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(34, 28);
-            this.lbl.Text = "dsd";
+            this.lbl.Size = new System.Drawing.Size(120, 28);
+            this.lbl.Text = "Import Account";
             // 
             // panelControl1
             // 
@@ -182,18 +209,6 @@ namespace WindowsFormsApplication1.Master
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
-            // btnSave
-            // 
-            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnSave.Size = new System.Drawing.Size(55, 28);
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // frmAccountsMappingBusy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -236,5 +251,6 @@ namespace WindowsFormsApplication1.Master
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraEditors.TextEdit txtSearchBox;
         private System.Windows.Forms.ToolStripButton btnSave;
+        private System.Windows.Forms.ToolStripButton btnImport;
     }
 }

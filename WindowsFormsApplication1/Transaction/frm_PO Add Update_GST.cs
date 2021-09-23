@@ -283,6 +283,22 @@ namespace WindowsFormsApplication1
 
         private void ShowHelpWindow(string Query)
         {
+            
+                DataSet ds = ProjectFunctions.GetDataSet(Query);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                HelpGrid.Columns.Clear();
+                    HelpGridCtrl.DataSource = ds.Tables[0];
+                    HelpGrid.BestFitColumns();
+                    HelpGridCtrl.Show();
+                    HelpGridCtrl.Focus();
+                    HelpGridCtrl.BringToFront();
+                }
+                else
+                {
+                    XtraMessageBox.Show("No Data To Display");
+                }
+           
 
         }
 

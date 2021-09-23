@@ -1235,6 +1235,12 @@
     <Compile Include="Prints\PartyReco.Designer.cs">
       <DependentUpon>PartyReco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prints\Rpt_POORDER.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\Rpt_POORDER.Designer.cs">
+      <DependentUpon>Rpt_POORDER.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\rpt_PartyLedgerNew.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2165,6 +2171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\PartyReco.resx">
       <DependentUpon>PartyReco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\Rpt_POORDER.resx">
+      <DependentUpon>Rpt_POORDER.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\rpt_PartyLedgerNew.resx">
       <DependentUpon>rpt_PartyLedgerNew.cs</DependentUpon>

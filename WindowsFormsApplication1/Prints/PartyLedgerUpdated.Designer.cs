@@ -231,7 +231,7 @@ namespace WindowsFormsApplication1.Prints
             // xrLabel2
             // 
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[VutDate]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(GetYear([Table].[VutDate])=\'1900\',\'\' ,[Table].[VutDate] )")});
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(2.5F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);

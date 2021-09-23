@@ -402,7 +402,7 @@ namespace WindowsFormsApplication1.Transaction
 
                         if (colorcount == 0)
                         {
-                            ProjectFunctions.SpeakError("No Color Found");
+                            ProjectFunctions.SpeakError("No Colour Found");
                             return false;
                         }
 
@@ -734,31 +734,36 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.SpeakError(" Data Saved Successfully");
                         sqlcon.Close();
 
-
+                       
 
                         // Print 
+                        MessageBox.Show("Are you sure you want to print", "Are you sure?", MessageBoxButtons.YesNoCancel); //Gets users input by showing the message box
 
-
-                        DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" + txtPackingSlipNO.Text + "','" + lblBox.Text + "','" + GlobalVariables.FinancialYear + "','" + GlobalVariables.CUnitID + "'");
-                        if (ds.Tables[0].Rows.Count > 0)
+                        if (DialogResult == DialogResult.Yes) //Creates the yes function
                         {
-                            int j;
-                            String PrinterName = ProjectFunctions.GetDataSet("select ProgPrinterName from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'").Tables[0].Rows[0]["ProgPrinterName"].ToString();
-                            for (j = 0; j < 2; j++)
+                            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadPackingSLipPrint '" + txtPackingSlipNO.Text + "','" + lblBox.Text + "','" + GlobalVariables.FinancialYear + "','" + GlobalVariables.CUnitID + "'");
+                            if (ds.Tables[0].Rows.Count > 0)
                             {
-                                Prints.BOXLABEL rpt = new Prints.BOXLABEL() { Ds = ds };
-                                rpt.Parameters["PSWSNO"].Visible = false;
-                                rpt.Parameters["PSWSTOTBOXES"].Visible = false;
-                                rpt.Parameters["FY"].Visible = false;
-                                rpt.Parameters["UnitCode"].Visible = false;
-                                rpt.Parameters["PSWSNO"].Value = txtPackingSlipNO.Text;
-                                rpt.Parameters["PSWSTOTBOXES"].Value = lblBox.Text;
-                                rpt.Parameters["FY"].Value = GlobalVariables.FinancialYear;
-                                rpt.Parameters["UnitCode"].Value = GlobalVariables.CUnitID;
-                                rpt.CreateDocument();
-                                rpt.Print(PrinterName);
+                                int j;
+                                String PrinterName = ProjectFunctions.GetDataSet("select ProgPrinterName from ProgramMaster Where ProgCode='" + GlobalVariables.ProgCode + "'").Tables[0].Rows[0]["ProgPrinterName"].ToString();
+                                for (j = 0; j < 2; j++)
+                                {
+                                    Prints.BOXLABEL rpt = new Prints.BOXLABEL() { Ds = ds };
+                                    rpt.Parameters["PSWSNO"].Visible = false;
+                                    rpt.Parameters["PSWSTOTBOXES"].Visible = false;
+                                    rpt.Parameters["FY"].Visible = false;
+                                    rpt.Parameters["UnitCode"].Visible = false;
+                                    rpt.Parameters["PSWSNO"].Value = txtPackingSlipNO.Text;
+                                    rpt.Parameters["PSWSTOTBOXES"].Value = lblBox.Text;
+                                    rpt.Parameters["FY"].Value = GlobalVariables.FinancialYear;
+                                    rpt.Parameters["UnitCode"].Value = GlobalVariables.CUnitID;
+                                    rpt.CreateDocument();
+                                    rpt.Print(PrinterName);
+                                }
                             }
                         }
+
+                      
 
                        
 

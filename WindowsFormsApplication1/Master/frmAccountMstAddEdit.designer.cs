@@ -38,6 +38,9 @@
             this.ProductTabCtrl = new DevExpress.XtraTab.XtraTabControl();
             this.AInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.txtWhatsAppNo = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.chImportAll = new DevExpress.XtraEditors.CheckEdit();
             this.btnBestMatch = new DevExpress.XtraEditors.SimpleButton();
             this.txtAccCodeBusy = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
@@ -66,6 +69,7 @@
             this.txtSLDesc = new DevExpress.XtraEditors.TextEdit();
             this.BInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.txtAddress4 = new DevExpress.XtraEditors.TextEdit();
             this.lblGstInfo = new DevExpress.XtraEditors.LabelControl();
             this.btnValidate = new DevExpress.XtraEditors.SimpleButton();
             this.txtCountry = new DevExpress.XtraEditors.TextEdit();
@@ -108,6 +112,7 @@
             this.txtTel = new DevExpress.XtraEditors.TextEdit();
             this.label10 = new DevExpress.XtraEditors.LabelControl();
             this.txtAddress2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtAddress3 = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress1 = new DevExpress.XtraEditors.TextEdit();
             this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
@@ -152,11 +157,6 @@
             this.txtStockTransferTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cmbTaxType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label28 = new DevExpress.XtraEditors.LabelControl();
-            this.chImportAll = new DevExpress.XtraEditors.CheckEdit();
-            this.txtWhatsAppNo = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAddress3 = new DevExpress.XtraEditors.TextEdit();
-            this.txtAddress4 = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCategory.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAcCode.Properties)).BeginInit();
@@ -165,6 +165,8 @@
             this.AInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWhatsAppNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chImportAll.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCodeBusy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccNameBusy.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).BeginInit();
@@ -183,6 +185,7 @@
             this.BInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCityName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
@@ -205,6 +208,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtDelZipCode.Properties)).BeginInit();
@@ -228,10 +232,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFixBArCodeTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockTransferTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTaxType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chImportAll.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWhatsAppNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress4.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAcCategory
@@ -319,7 +319,7 @@
             this.AInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.AInfoTab.Size = new System.Drawing.Size(817, 524);
+            this.AInfoTab.Size = new System.Drawing.Size(817, 518);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
@@ -357,8 +357,36 @@
             this.panelControl3.Location = new System.Drawing.Point(12, 13);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(793, 498);
+            this.panelControl3.Size = new System.Drawing.Size(793, 492);
             this.panelControl3.TabIndex = 0;
+            // 
+            // txtWhatsAppNo
+            // 
+            this.txtWhatsAppNo.EnterMoveNextControl = true;
+            this.txtWhatsAppNo.Location = new System.Drawing.Point(151, 398);
+            this.txtWhatsAppNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtWhatsAppNo.Name = "txtWhatsAppNo";
+            this.txtWhatsAppNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtWhatsAppNo.Properties.MaxLength = 11;
+            this.txtWhatsAppNo.Size = new System.Drawing.Size(221, 24);
+            this.txtWhatsAppNo.TabIndex = 441;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(50, 401);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(86, 17);
+            this.labelControl4.TabIndex = 442;
+            this.labelControl4.Text = "Whats App No";
+            // 
+            // chImportAll
+            // 
+            this.chImportAll.Location = new System.Drawing.Point(396, 401);
+            this.chImportAll.Name = "chImportAll";
+            this.chImportAll.Properties.Caption = "Import All Info";
+            this.chImportAll.Size = new System.Drawing.Size(94, 24);
+            this.chImportAll.TabIndex = 440;
             // 
             // btnBestMatch
             // 
@@ -707,6 +735,17 @@
             this.panelControl2.Name = "panelControl2";
             this.panelControl2.Size = new System.Drawing.Size(793, 498);
             this.panelControl2.TabIndex = 0;
+            // 
+            // txtAddress4
+            // 
+            this.txtAddress4.EnterMoveNextControl = true;
+            this.txtAddress4.Location = new System.Drawing.Point(133, 126);
+            this.txtAddress4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress4.Name = "txtAddress4";
+            this.txtAddress4.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAddress4.Properties.MaxLength = 45;
+            this.txtAddress4.Size = new System.Drawing.Size(644, 24);
+            this.txtAddress4.TabIndex = 456;
             // 
             // lblGstInfo
             // 
@@ -1149,6 +1188,17 @@
             this.txtAddress2.Size = new System.Drawing.Size(644, 24);
             this.txtAddress2.TabIndex = 2;
             // 
+            // txtAddress3
+            // 
+            this.txtAddress3.EnterMoveNextControl = true;
+            this.txtAddress3.Location = new System.Drawing.Point(133, 99);
+            this.txtAddress3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtAddress3.Name = "txtAddress3";
+            this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtAddress3.Properties.MaxLength = 45;
+            this.txtAddress3.Size = new System.Drawing.Size(644, 24);
+            this.txtAddress3.TabIndex = 3;
+            // 
             // txtAddress1
             // 
             this.txtAddress1.EnterMoveNextControl = true;
@@ -1445,7 +1495,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(185, 31);
+            this.HelpGrid.Location = new System.Drawing.Point(698, 23);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -1664,56 +1714,6 @@
             this.label28.Tag = "";
             this.label28.Text = "Tax Type";
             // 
-            // chImportAll
-            // 
-            this.chImportAll.Location = new System.Drawing.Point(396, 401);
-            this.chImportAll.Name = "chImportAll";
-            this.chImportAll.Properties.Caption = "Import All Info";
-            this.chImportAll.Size = new System.Drawing.Size(94, 21);
-            this.chImportAll.TabIndex = 440;
-            // 
-            // txtWhatsAppNo
-            // 
-            this.txtWhatsAppNo.EnterMoveNextControl = true;
-            this.txtWhatsAppNo.Location = new System.Drawing.Point(151, 398);
-            this.txtWhatsAppNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtWhatsAppNo.Name = "txtWhatsAppNo";
-            this.txtWhatsAppNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtWhatsAppNo.Properties.MaxLength = 11;
-            this.txtWhatsAppNo.Size = new System.Drawing.Size(221, 24);
-            this.txtWhatsAppNo.TabIndex = 441;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Location = new System.Drawing.Point(50, 401);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(86, 17);
-            this.labelControl4.TabIndex = 442;
-            this.labelControl4.Text = "Whats App No";
-            // 
-            // txtAddress3
-            // 
-            this.txtAddress3.EnterMoveNextControl = true;
-            this.txtAddress3.Location = new System.Drawing.Point(133, 99);
-            this.txtAddress3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddress3.Name = "txtAddress3";
-            this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAddress3.Properties.MaxLength = 45;
-            this.txtAddress3.Size = new System.Drawing.Size(644, 24);
-            this.txtAddress3.TabIndex = 3;
-            // 
-            // txtAddress4
-            // 
-            this.txtAddress4.EnterMoveNextControl = true;
-            this.txtAddress4.Location = new System.Drawing.Point(133, 126);
-            this.txtAddress4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAddress4.Name = "txtAddress4";
-            this.txtAddress4.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtAddress4.Properties.MaxLength = 45;
-            this.txtAddress4.Size = new System.Drawing.Size(644, 24);
-            this.txtAddress4.TabIndex = 456;
-            // 
             // FrmAccountMstAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1763,6 +1763,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWhatsAppNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chImportAll.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCodeBusy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccNameBusy.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAgentName.Properties)).EndInit();
@@ -1782,6 +1784,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             this.panelControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCountry.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCityName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
@@ -1804,6 +1807,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress1.Properties)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             this.xtraTabPage1.PerformLayout();
@@ -1829,10 +1833,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtFixBArCodeTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockTransferTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbTaxType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chImportAll.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtWhatsAppNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress4.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1842,7 +1842,6 @@
 
         private DevExpress.XtraEditors.TextEdit txtAcCategory;
         private DevExpress.XtraEditors.LabelControl label27;
-        private DevExpress.XtraEditors.TextEdit txtAcName;
         private DevExpress.XtraEditors.TextEdit txtAcCode;
         private DevExpress.XtraEditors.LabelControl label3;
         private DevExpress.XtraEditors.LabelControl label1;
@@ -1862,28 +1861,21 @@
         private DevExpress.XtraEditors.LabelControl label13;
         private DevExpress.XtraEditors.TextEdit txtSLDesc;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.TextEdit txtCstPst;
         private DevExpress.XtraEditors.LabelControl label34;
         private DevExpress.XtraEditors.TextEdit txtContactPerson;
         private DevExpress.XtraEditors.LabelControl label12;
-        private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.LabelControl label11;
-        private DevExpress.XtraEditors.TextEdit txtTel;
         private DevExpress.XtraEditors.LabelControl label10;
-        private DevExpress.XtraEditors.TextEdit txtAddress2;
-        private DevExpress.XtraEditors.TextEdit txtAddress1;
         private DevExpress.XtraEditors.LabelControl label9;
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private System.Windows.Forms.ToolStripButton BtnQuit;
         private System.Windows.Forms.ToolStripButton BtnSave;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
-        private DevExpress.XtraEditors.TextEdit txtTinNo;
         private DevExpress.XtraEditors.LabelControl label45;
         private DevExpress.XtraEditors.LabelControl label46;
         private DevExpress.XtraEditors.TextEdit txtBSCode;
         private DevExpress.XtraEditors.TextEdit txtBSDesc;
-        private DevExpress.XtraEditors.TextEdit txtBillingName;
         private DevExpress.XtraEditors.LabelControl label51;
         private DevExpress.XtraEditors.TextEdit txtNameAsOnBankAcc;
         private DevExpress.XtraEditors.LabelControl label48;
@@ -1893,9 +1885,7 @@
         private DevExpress.XtraEditors.LabelControl label43;
         private DevExpress.XtraEditors.TextEdit txtBankAccNo;
         private DevExpress.XtraEditors.LabelControl label41;
-        private DevExpress.XtraEditors.TextEdit txtPanNo;
         private DevExpress.XtraEditors.LabelControl label19;
-        private DevExpress.XtraEditors.TextEdit txtGSTNo;
         private DevExpress.XtraEditors.LabelControl label2;
         private DevExpress.XtraEditors.TextEdit txtGSTStateCode;
         private DevExpress.XtraEditors.LabelControl label4;
@@ -1903,7 +1893,6 @@
         private DevExpress.XtraEditors.LabelControl label7;
         private DevExpress.XtraEditors.TextEdit txtAltMobileNo;
         private DevExpress.XtraEditors.LabelControl label15;
-        private DevExpress.XtraEditors.TextEdit txtMobileNo;
         private DevExpress.XtraEditors.LabelControl label14;
         private DevExpress.XtraEditors.ComboBoxEdit txtGSTType;
         private DevExpress.XtraEditors.LabelControl label16;
@@ -1918,18 +1907,13 @@
         private DevExpress.XtraEditors.LabelControl label21;
         private DevExpress.XtraEditors.TextEdit txtAccDCCode;
         private DevExpress.XtraEditors.LabelControl label20;
-        private DevExpress.XtraEditors.TextEdit txtZipCode;
         private DevExpress.XtraEditors.LabelControl label18;
         private DevExpress.XtraEditors.LabelControl StockTransfer1111;
         private DevExpress.XtraEditors.TextEdit txtUnitCode;
         private DevExpress.XtraEditors.LabelControl label24;
         private DevExpress.XtraEditors.TextEdit txtUnitName;
         private DevExpress.XtraEditors.LabelControl label25;
-        private DevExpress.XtraEditors.TextEdit txtCountry;
         internal DevExpress.XtraEditors.LabelControl label5;
-        private DevExpress.XtraEditors.TextEdit txtCityName;
-        private DevExpress.XtraEditors.TextEdit txtState;
-        private DevExpress.XtraEditors.TextEdit txtCityCode;
         internal DevExpress.XtraEditors.LabelControl label6;
         internal DevExpress.XtraEditors.LabelControl label8;
         private DevExpress.XtraEditors.ComboBoxEdit txtFixBArCodeTag;
@@ -1960,14 +1944,30 @@
         private DevExpress.XtraEditors.TextEdit txtDelZipCode;
         private DevExpress.XtraEditors.SimpleButton btnValidate;
         private DevExpress.XtraEditors.LabelControl lblGstInfo;
-        private DevExpress.XtraEditors.TextEdit txtAccCodeBusy;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit txtAccNameBusy;
         private DevExpress.XtraEditors.SimpleButton btnBestMatch;
         private DevExpress.XtraEditors.CheckEdit chImportAll;
-        private DevExpress.XtraEditors.TextEdit txtWhatsAppNo;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit txtAddress3;
-        private DevExpress.XtraEditors.TextEdit txtAddress4;
+        public DevExpress.XtraEditors.TextEdit txtAcName;
+        public DevExpress.XtraEditors.TextEdit txtEmail;
+        public DevExpress.XtraEditors.TextEdit txtTel;
+        public DevExpress.XtraEditors.TextEdit txtAddress2;
+        public DevExpress.XtraEditors.TextEdit txtAddress1;
+        public DevExpress.XtraEditors.TextEdit txtBillingName;
+        public DevExpress.XtraEditors.TextEdit txtGSTNo;
+        public DevExpress.XtraEditors.TextEdit txtMobileNo;
+        public DevExpress.XtraEditors.TextEdit txtZipCode;
+        public DevExpress.XtraEditors.TextEdit txtCityName;
+        public DevExpress.XtraEditors.TextEdit txtState;
+        public DevExpress.XtraEditors.TextEdit txtCityCode;
+        public DevExpress.XtraEditors.TextEdit txtAddress3;
+        public DevExpress.XtraEditors.TextEdit txtAddress4;
+        public DevExpress.XtraEditors.TextEdit txtCountry;
+        public DevExpress.XtraEditors.TextEdit txtCstPst;
+        public DevExpress.XtraEditors.TextEdit txtTinNo;
+        public DevExpress.XtraEditors.TextEdit txtPanNo;
+        public DevExpress.XtraEditors.TextEdit txtWhatsAppNo;
+        public DevExpress.XtraEditors.TextEdit txtAccCodeBusy;
+        public DevExpress.XtraEditors.TextEdit txtAccNameBusy;
     }
 }

@@ -1663,7 +1663,7 @@
             // HelpGridCtrl
             // 
             this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGridCtrl.Location = new System.Drawing.Point(727, 401);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(179, 80);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
@@ -1752,7 +1752,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1282, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1284, 31);
             this.Menu_ToolStrip.TabIndex = 24;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1835,11 +1835,11 @@
             // 
             this.Error.ContainerControl = this;
             // 
-            // frm_poAddition_GST
+            // Frm_poAddition_GST
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1282, 643);
+            this.ClientSize = new System.Drawing.Size(1284, 651);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.EntryInfo_GridCtrl);
@@ -1923,7 +1923,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IconOptions.ShowIcon = false;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frm_poAddition_GST";
+            this.Name = "Frm_poAddition_GST";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Purchase Order Addition";
