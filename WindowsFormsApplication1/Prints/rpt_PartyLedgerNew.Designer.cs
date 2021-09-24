@@ -80,6 +80,7 @@ namespace WindowsFormsApplication1.Prints
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Area4
@@ -93,8 +94,7 @@ namespace WindowsFormsApplication1.Prints
             this.prt_Show_DRCR_1,
             this.Field1,
             this.Field12});
-            this.Area4.Expanded = false;
-            this.Area4.HeightF = 16F;
+            this.Area4.HeightF = 32.66668F;
             this.Area4.KeepTogether = true;
             this.Area4.Name = "Area4";
             this.Area4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -116,7 +116,7 @@ namespace WindowsFormsApplication1.Prints
             this.txtVno.LocationFloat = new DevExpress.Utils.PointFloat(100F, 0F);
             this.txtVno.Name = "txtVno";
             this.txtVno.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.txtVno.SizeF = new System.Drawing.SizeF(50F, 15.97222F);
+            this.txtVno.SizeF = new System.Drawing.SizeF(50F, 16.66667F);
             this.txtVno.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // prt_dr_show_1
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1.Prints
             this.prt_dr_show_1.LocationFloat = new DevExpress.Utils.PointFloat(416.6667F, 0F);
             this.prt_dr_show_1.Name = "prt_dr_show_1";
             this.prt_dr_show_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.prt_dr_show_1.SizeF = new System.Drawing.SizeF(83.33334F, 14.58333F);
+            this.prt_dr_show_1.SizeF = new System.Drawing.SizeF(83.33334F, 16.66667F);
             this.prt_dr_show_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // prt_cr_show_1
@@ -150,7 +150,7 @@ namespace WindowsFormsApplication1.Prints
             this.prt_cr_show_1.LocationFloat = new DevExpress.Utils.PointFloat(508.3333F, 0F);
             this.prt_cr_show_1.Name = "prt_cr_show_1";
             this.prt_cr_show_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.prt_cr_show_1.SizeF = new System.Drawing.SizeF(100F, 14.58333F);
+            this.prt_cr_show_1.SizeF = new System.Drawing.SizeF(100F, 16.66667F);
             this.prt_cr_show_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // prt_run_bal_1
@@ -167,7 +167,7 @@ namespace WindowsFormsApplication1.Prints
             this.prt_run_bal_1.LocationFloat = new DevExpress.Utils.PointFloat(616.6667F, 0F);
             this.prt_run_bal_1.Name = "prt_run_bal_1";
             this.prt_run_bal_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.prt_run_bal_1.SizeF = new System.Drawing.SizeF(100F, 14.58333F);
+            this.prt_run_bal_1.SizeF = new System.Drawing.SizeF(100F, 16.66667F);
             this.prt_run_bal_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // prt_date_1
@@ -181,10 +181,10 @@ namespace WindowsFormsApplication1.Prints
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[VutDate]")});
             this.prt_date_1.Font = new System.Drawing.Font("Arial", 8F);
             this.prt_date_1.ForeColor = System.Drawing.Color.Black;
-            this.prt_date_1.LocationFloat = new DevExpress.Utils.PointFloat(0.6944444F, 0.1388889F);
+            this.prt_date_1.LocationFloat = new DevExpress.Utils.PointFloat(0.6944444F, 0F);
             this.prt_date_1.Name = "prt_date_1";
             this.prt_date_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.prt_date_1.SizeF = new System.Drawing.SizeF(65.97222F, 14.58333F);
+            this.prt_date_1.SizeF = new System.Drawing.SizeF(65.97222F, 16.66667F);
             this.prt_date_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // prt_Show_DRCR_1
@@ -201,7 +201,7 @@ namespace WindowsFormsApplication1.Prints
             this.prt_Show_DRCR_1.LocationFloat = new DevExpress.Utils.PointFloat(725F, 0F);
             this.prt_Show_DRCR_1.Name = "prt_Show_DRCR_1";
             this.prt_Show_DRCR_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.prt_Show_DRCR_1.SizeF = new System.Drawing.SizeF(25F, 15.69444F);
+            this.prt_Show_DRCR_1.SizeF = new System.Drawing.SizeF(25F, 16.66667F);
             this.prt_Show_DRCR_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Field1
@@ -217,7 +217,7 @@ namespace WindowsFormsApplication1.Prints
             this.Field1.LocationFloat = new DevExpress.Utils.PointFloat(159.375F, 0F);
             this.Field1.Name = "Field1";
             this.Field1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.Field1.SizeF = new System.Drawing.SizeF(254.5139F, 14.58333F);
+            this.Field1.SizeF = new System.Drawing.SizeF(254.5139F, 16.66667F);
             this.Field1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Field12
@@ -240,11 +240,11 @@ namespace WindowsFormsApplication1.Prints
             // Area2
             // 
             this.Area2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.txtCompanyName,
             this.Text1,
             this.Text3,
             this.Text2,
             this.Text5,
-            this.txtCompanyName,
             this.txtDateRange,
             this.Text7,
             this.Field18,
@@ -332,7 +332,7 @@ namespace WindowsFormsApplication1.Prints
             this.txtCompanyName.CanGrow = false;
             this.txtCompanyName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtCompanyName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCompanyName.LocationFloat = new DevExpress.Utils.PointFloat(41.66667F, 4.166667F);
+            this.txtCompanyName.LocationFloat = new DevExpress.Utils.PointFloat(71.16666F, 4.166667F);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.txtCompanyName.SizeF = new System.Drawing.SizeF(641.6667F, 25F);
@@ -348,7 +348,7 @@ namespace WindowsFormsApplication1.Prints
             this.txtDateRange.CanGrow = false;
             this.txtDateRange.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.txtDateRange.ForeColor = System.Drawing.Color.Black;
-            this.txtDateRange.LocationFloat = new DevExpress.Utils.PointFloat(159.375F, 75F);
+            this.txtDateRange.LocationFloat = new DevExpress.Utils.PointFloat(184.1875F, 75F);
             this.txtDateRange.Name = "txtDateRange";
             this.txtDateRange.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.txtDateRange.SizeF = new System.Drawing.SizeF(415.6251F, 17.70833F);
@@ -468,7 +468,7 @@ namespace WindowsFormsApplication1.Prints
             this.txtReportName.CanGrow = false;
             this.txtReportName.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.txtReportName.ForeColor = System.Drawing.Color.Black;
-            this.txtReportName.LocationFloat = new DevExpress.Utils.PointFloat(42.01389F, 28.125F);
+            this.txtReportName.LocationFloat = new DevExpress.Utils.PointFloat(71.16666F, 29.16667F);
             this.txtReportName.Name = "txtReportName";
             this.txtReportName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.txtReportName.SizeF = new System.Drawing.SizeF(641.6667F, 17.70833F);
@@ -646,7 +646,9 @@ namespace WindowsFormsApplication1.Prints
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 17F;
+            this.bottomMarginBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel44});
+            this.bottomMarginBand1.HeightF = 17.00002F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // GroupHeader1
@@ -663,9 +665,23 @@ namespace WindowsFormsApplication1.Prints
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(265F, 23F);
             this.xrLabel1.Text = "xrLabel1";
+            // 
+            // xrLabel44
+            // 
+            this.xrLabel44.CanGrow = false;
+            this.xrLabel44.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Bold);
+            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(533.1772F, 0F);
+            this.xrLabel44.Name = "xrLabel44";
+            this.xrLabel44.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel44.SizeF = new System.Drawing.SizeF(250.8227F, 17.00002F);
+            this.xrLabel44.StylePriority.UseFont = false;
+            this.xrLabel44.StylePriority.UseTextAlignment = false;
+            this.xrLabel44.Text = "Powered by SEQKART SOLUTIONS";
+            this.xrLabel44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrLabel44.WordWrap = false;
             // 
             // rpt_PartyLedgerNew
             // 
@@ -761,5 +777,6 @@ namespace WindowsFormsApplication1.Prints
         public DevExpress.XtraReports.UI.XRLabel txtReportName;
         private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel44;
     }
 }
