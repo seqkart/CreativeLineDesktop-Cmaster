@@ -315,7 +315,7 @@ namespace WindowsFormsApplication1
             switch (myitem)
             {
                 case "PROG247":
-                    var PROG247 = new Master.frmAccountsMappingBusy() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG247 = new Master.FrmAccountsMappingBusy() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG247.Show();
                     PROG247.BringToFront();
                     PROG247.Parent = Page;

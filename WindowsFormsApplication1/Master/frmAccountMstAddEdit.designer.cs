@@ -38,6 +38,12 @@
             this.ProductTabCtrl = new DevExpress.XtraTab.XtraTabControl();
             this.AInfoTab = new DevExpress.XtraTab.XtraTabPage();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSubLedgerCode = new DevExpress.XtraEditors.TextEdit();
+            this.txtSubLedgerDesc = new DevExpress.XtraEditors.TextEdit();
+            this.txtMainLedgerCode = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtMainLedgerDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtWhatsAppNo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.chImportAll = new DevExpress.XtraEditors.CheckEdit();
@@ -165,6 +171,10 @@
             this.AInfoTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubLedgerCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubLedgerDesc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMainLedgerCode.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMainLedgerDesc.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWhatsAppNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chImportAll.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCodeBusy.Properties)).BeginInit();
@@ -319,11 +329,17 @@
             this.AInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.AInfoTab.Size = new System.Drawing.Size(817, 518);
+            this.AInfoTab.Size = new System.Drawing.Size(817, 524);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
             // 
+            this.panelControl3.Controls.Add(this.labelControl5);
+            this.panelControl3.Controls.Add(this.txtSubLedgerCode);
+            this.panelControl3.Controls.Add(this.txtSubLedgerDesc);
+            this.panelControl3.Controls.Add(this.txtMainLedgerCode);
+            this.panelControl3.Controls.Add(this.labelControl6);
+            this.panelControl3.Controls.Add(this.txtMainLedgerDesc);
             this.panelControl3.Controls.Add(this.txtWhatsAppNo);
             this.panelControl3.Controls.Add(this.labelControl4);
             this.panelControl3.Controls.Add(this.chImportAll);
@@ -357,8 +373,75 @@
             this.panelControl3.Location = new System.Drawing.Point(12, 13);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(793, 492);
+            this.panelControl3.Size = new System.Drawing.Size(793, 498);
             this.panelControl3.TabIndex = 0;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(29, 50);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(108, 17);
+            this.labelControl5.TabIndex = 448;
+            this.labelControl5.Text = "Ledger Group Sub";
+            // 
+            // txtSubLedgerCode
+            // 
+            this.txtSubLedgerCode.EnterMoveNextControl = true;
+            this.txtSubLedgerCode.Location = new System.Drawing.Point(151, 46);
+            this.txtSubLedgerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSubLedgerCode.Name = "txtSubLedgerCode";
+            this.txtSubLedgerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSubLedgerCode.Properties.MaxLength = 4;
+            this.txtSubLedgerCode.Size = new System.Drawing.Size(80, 24);
+            this.txtSubLedgerCode.TabIndex = 444;
+            this.txtSubLedgerCode.EditValueChanged += new System.EventHandler(this.txtSubLedgerCode_EditValueChanged);
+            this.txtSubLedgerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSubLedgerCode_KeyDown);
+            // 
+            // txtSubLedgerDesc
+            // 
+            this.txtSubLedgerDesc.Location = new System.Drawing.Point(240, 46);
+            this.txtSubLedgerDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSubLedgerDesc.Name = "txtSubLedgerDesc";
+            this.txtSubLedgerDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSubLedgerDesc.Properties.ReadOnly = true;
+            this.txtSubLedgerDesc.Size = new System.Drawing.Size(511, 24);
+            this.txtSubLedgerDesc.TabIndex = 445;
+            this.txtSubLedgerDesc.TabStop = false;
+            // 
+            // txtMainLedgerCode
+            // 
+            this.txtMainLedgerCode.EnterMoveNextControl = true;
+            this.txtMainLedgerCode.Location = new System.Drawing.Point(151, 14);
+            this.txtMainLedgerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMainLedgerCode.Name = "txtMainLedgerCode";
+            this.txtMainLedgerCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.txtMainLedgerCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtMainLedgerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMainLedgerCode.Properties.MaxLength = 4;
+            this.txtMainLedgerCode.Size = new System.Drawing.Size(80, 24);
+            this.txtMainLedgerCode.TabIndex = 443;
+            this.txtMainLedgerCode.EditValueChanged += new System.EventHandler(this.txtMainLedgerCode_EditValueChanged);
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(30, 17);
+            this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(115, 17);
+            this.labelControl6.TabIndex = 447;
+            this.labelControl6.Text = "Ledger Group Main";
+            // 
+            // txtMainLedgerDesc
+            // 
+            this.txtMainLedgerDesc.Location = new System.Drawing.Point(240, 14);
+            this.txtMainLedgerDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMainLedgerDesc.Name = "txtMainLedgerDesc";
+            this.txtMainLedgerDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMainLedgerDesc.Properties.ReadOnly = true;
+            this.txtMainLedgerDesc.Size = new System.Drawing.Size(511, 24);
+            this.txtMainLedgerDesc.TabIndex = 446;
+            this.txtMainLedgerDesc.TabStop = false;
             // 
             // txtWhatsAppNo
             // 
@@ -385,7 +468,7 @@
             this.chImportAll.Location = new System.Drawing.Point(396, 401);
             this.chImportAll.Name = "chImportAll";
             this.chImportAll.Properties.Caption = "Import All Info";
-            this.chImportAll.Size = new System.Drawing.Size(94, 24);
+            this.chImportAll.Size = new System.Drawing.Size(94, 21);
             this.chImportAll.TabIndex = 440;
             // 
             // btnBestMatch
@@ -567,30 +650,32 @@
             // 
             // label46
             // 
-            this.label46.Location = new System.Drawing.Point(21, 53);
+            this.label46.Location = new System.Drawing.Point(12, 466);
             this.label46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(115, 17);
             this.label46.TabIndex = 409;
             this.label46.Text = "Balance Sheet Code";
+            this.label46.Visible = false;
             // 
             // txtBSCode
             // 
             this.txtBSCode.EnterMoveNextControl = true;
-            this.txtBSCode.Location = new System.Drawing.Point(151, 49);
+            this.txtBSCode.Location = new System.Drawing.Point(142, 462);
             this.txtBSCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBSCode.Name = "txtBSCode";
             this.txtBSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSCode.Properties.MaxLength = 4;
             this.txtBSCode.Size = new System.Drawing.Size(80, 24);
             this.txtBSCode.TabIndex = 1;
+            this.txtBSCode.Visible = false;
             this.txtBSCode.EditValueChanged += new System.EventHandler(this.TxtBCCode_EditValueChanged);
             this.txtBSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBSCode_KeyDown);
             this.txtBSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpCode_KeyPress);
             // 
             // txtBSDesc
             // 
-            this.txtBSDesc.Location = new System.Drawing.Point(240, 49);
+            this.txtBSDesc.Location = new System.Drawing.Point(231, 462);
             this.txtBSDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBSDesc.Name = "txtBSDesc";
             this.txtBSDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -598,6 +683,7 @@
             this.txtBSDesc.Size = new System.Drawing.Size(511, 24);
             this.txtBSDesc.TabIndex = 1;
             this.txtBSDesc.TabStop = false;
+            this.txtBSDesc.Visible = false;
             // 
             // txtEmpCode
             // 
@@ -639,7 +725,7 @@
             // txtSLCode
             // 
             this.txtSLCode.EnterMoveNextControl = true;
-            this.txtSLCode.Location = new System.Drawing.Point(151, 17);
+            this.txtSLCode.Location = new System.Drawing.Point(142, 430);
             this.txtSLCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLCode.Name = "txtSLCode";
             this.txtSLCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
@@ -648,22 +734,24 @@
             this.txtSLCode.Properties.MaxLength = 4;
             this.txtSLCode.Size = new System.Drawing.Size(80, 24);
             this.txtSLCode.TabIndex = 0;
+            this.txtSLCode.Visible = false;
             this.txtSLCode.EditValueChanged += new System.EventHandler(this.TxtSLCode_EditValueChanged);
             this.txtSLCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSLCode_KeyDown);
             this.txtSLCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtEmpCode_KeyPress);
             // 
             // label13
             // 
-            this.label13.Location = new System.Drawing.Point(71, 21);
+            this.label13.Location = new System.Drawing.Point(62, 434);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 17);
             this.label13.TabIndex = 393;
             this.label13.Text = "Sub Ledger";
+            this.label13.Visible = false;
             // 
             // txtSLDesc
             // 
-            this.txtSLDesc.Location = new System.Drawing.Point(240, 17);
+            this.txtSLDesc.Location = new System.Drawing.Point(231, 430);
             this.txtSLDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLDesc.Name = "txtSLDesc";
             this.txtSLDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -671,6 +759,7 @@
             this.txtSLDesc.Size = new System.Drawing.Size(511, 24);
             this.txtSLDesc.TabIndex = 7;
             this.txtSLDesc.TabStop = false;
+            this.txtSLDesc.Visible = false;
             // 
             // BInfoTab
             // 
@@ -1495,7 +1584,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(698, 23);
+            this.HelpGrid.Location = new System.Drawing.Point(191, 29);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -1763,6 +1852,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             this.panelControl3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubLedgerCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSubLedgerDesc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMainLedgerCode.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMainLedgerDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWhatsAppNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chImportAll.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAccCodeBusy.Properties)).EndInit();
@@ -1969,5 +2062,11 @@
         public DevExpress.XtraEditors.TextEdit txtWhatsAppNo;
         public DevExpress.XtraEditors.TextEdit txtAccCodeBusy;
         public DevExpress.XtraEditors.TextEdit txtAccNameBusy;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtSubLedgerCode;
+        private DevExpress.XtraEditors.TextEdit txtSubLedgerDesc;
+        private DevExpress.XtraEditors.TextEdit txtMainLedgerCode;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.TextEdit txtMainLedgerDesc;
     }
 }

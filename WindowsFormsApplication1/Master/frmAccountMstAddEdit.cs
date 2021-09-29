@@ -151,6 +151,11 @@ namespace WindowsFormsApplication1
                     txtAddress4.Text = ds.Tables[0].Rows[0]["AccAddress4"].ToString();
                     txtWhatsAppNo.Text = ds.Tables[0].Rows[0]["WhatsAppNo"].ToString();
 
+                    txtMainLedgerCode.Text = ds.Tables[0].Rows[0]["AccMainLedgerCode"].ToString();
+                    txtMainLedgerDesc.Text = ds.Tables[0].Rows[0]["GrpDesc"].ToString();
+                    txtSubLedgerCode.Text = ds.Tables[0].Rows[0]["AccSubLedgerCode"].ToString();
+                    txtSubLedgerDesc.Text = ds.Tables[0].Rows[0]["GrpSubDesc"].ToString();
+
 
 
 
@@ -194,6 +199,15 @@ namespace WindowsFormsApplication1
         {
             try
             {
+                if (txtMainLedgerCode.Text.Trim().Length == 0)
+                {
+                    txtMainLedgerCode.Text = "0";
+
+                }
+                if (txtSubLedgerCode.Text.Trim().Length == 0)
+                {
+                    txtSubLedgerCode.Text = "0";
+                }
                 if (txtOBalance.Text.Trim().Length == 0)
                 {
                     txtOBalance.Text = "0";
@@ -275,18 +289,16 @@ namespace WindowsFormsApplication1
                         if (S1 == "&Add")
                         {
                             sqlcom.CommandText = " Insert into ActMst"
-                            + " (AccTaxType,AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag,AccCodeBusy)"
-                            + " values(@AccTaxType,@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag,@AccCodeBusy)";
+                            + " (AccTaxType,AccActive,AccCode,AccType,AccName,AccLedger,ActOpBal,AccEmpCode,AccBSHcode,AccGSTNo,AccGSTStateCode,AccLCTag,AccGSTType,AccStkTrf,AccUnitCode,AccFixBarCodeTag,AccCodeBusy,AccMainLedgerCode,AccSubLedgerCode)"
+                            + " values(@AccTaxType,@AccActive,@AccCode,@AccType,@AccName,@AccLedger,@ActOpBal,@AccEmpCode,@AccBSHcode,@AccGSTNo,@AccGSTStateCode,@AccLCTag,@AccGSTType,@AccStkTrf,@AccUnitCode,@AccFixBarCodeTag,@AccCodeBusy,@AccMainLedgerCode,@AccSubLedgerCode)";
                             txtAcCode.Text = ProjectFunctions.GetNewTransactionCode("select max(Cast(AccCode as int)) from ActMst");
                         }
                         if (S1 == "Edit")
                         {
                             sqlcom.CommandText = " UPDATE    ActMst SET "
                                                      + " AccTaxType=@AccTaxType,AccActive=@AccActive, AccType=@AccType,AccName=@AccName,AccLedger=@AccLedger,ActOpBal=@ActOpBal,"
-                                                     + " AccEmpCode=@AccEmpCode,AccBSHcode=@AccBSHcode,AccGSTNo=@AccGSTNo,AccGSTStateCode=@AccGSTStateCode,AccLCTag=@AccLCTag,AccGSTType=@AccGSTType,AccStkTrf=@AccStkTrf,AccUnitCode=@AccUnitCode,AccFixBarCodeTag=@AccFixBarCodeTag,AccCodeBusy=@AccCodeBusy"
+                                                     + " AccEmpCode=@AccEmpCode,AccBSHcode=@AccBSHcode,AccGSTNo=@AccGSTNo,AccGSTStateCode=@AccGSTStateCode,AccLCTag=@AccLCTag,AccGSTType=@AccGSTType,AccStkTrf=@AccStkTrf,AccUnitCode=@AccUnitCode,AccFixBarCodeTag=@AccFixBarCodeTag,AccCodeBusy=@AccCodeBusy,AccMainLedgerCode=@AccMainLedgerCode,AccSubLedgerCode=@AccSubLedgerCode "
                                                      + " Where AccCode=@AccCode";
-
-
                         }
                         sqlcom.Parameters.AddWithValue("@AccTaxType", cmbTaxType.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccActive", txtStatusTag.Text.Trim());
@@ -305,6 +317,8 @@ namespace WindowsFormsApplication1
                         sqlcom.Parameters.AddWithValue("@AccUnitCode", txtUnitCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccFixBarCodeTag", txtFixBArCodeTag.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccCodeBusy", txtAccCodeBusy.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@AccMainLedgerCode", txtMainLedgerCode.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@AccSubLedgerCode", txtSubLedgerCode.Text.Trim());
 
                         sqlcom.ExecuteNonQuery();
                         sqlcom.Parameters.Clear();
@@ -472,6 +486,15 @@ namespace WindowsFormsApplication1
                 {
                     txtBSCode.Text = row["BSCode"].ToString();
                     txtBSDesc.Text = row["BSDesc"].ToString();
+                    HelpGrid.Visible = false;
+                    txtBSCode.Focus();
+                }
+                if (HelpGrid.Text == "txtMainLedgerCode")
+                {
+                    txtMainLedgerCode.Text = row["GrpCode"].ToString();
+                    txtMainLedgerDesc.Text = row["GrpDesc"].ToString();
+                    txtSubLedgerCode.Text = row["GrpSubCode"].ToString();
+                    txtSubLedgerDesc.Text = row["GrpSubDesc"].ToString();
                     HelpGrid.Visible = false;
                     txtBSCode.Focus();
                 }
@@ -841,6 +864,37 @@ namespace WindowsFormsApplication1
             }
 
 
+        }
+
+        private void txtMainLedgerCode_EditValueChanged(object sender, EventArgs e)
+        {
+            txtMainLedgerDesc.Text = string.Empty;
+        }
+
+        private void txtSubLedgerCode_EditValueChanged(object sender, EventArgs e)
+        {
+            txtSubLedgerDesc.Text = string.Empty;
+        }
+
+        private void txtSubLedgerCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+                 DataSet ds = ProjectFunctions.GetDataSet(" select GrpSubDesc,GrpDesc,GrpCode,GrpSubCode  from BSHeadGrpMst Where grpsubcode is not null");
+                if(ds.Tables[0].Rows.Count>0)
+                {
+                    HelpGrid.Text = "txtMainLedgerCode";
+                    HelpGridView.Columns.Clear();
+                    HelpGrid.DataSource = ds.Tables[0];
+                    HelpGridView.BestFitColumns();
+                    HelpGrid.Show();
+                    HelpGrid.BringToFront();
+                    HelpGrid.Focus();
+
+                }
+            }
+            e.Handled = true;
         }
     }
 }

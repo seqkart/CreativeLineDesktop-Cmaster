@@ -209,7 +209,7 @@
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.toolStripButton1.Size = new System.Drawing.Size(77, 28);
             this.toolStripButton1.Text = "Refresh";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // FrmTransaction
             // 

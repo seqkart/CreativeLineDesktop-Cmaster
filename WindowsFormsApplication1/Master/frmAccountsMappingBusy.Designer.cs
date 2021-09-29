@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmAccountsMappingBusy
+    partial class FrmAccountsMappingBusy
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Master
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccountsMappingBusy));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAccountsMappingBusy));
             this.AccountGrid = new DevExpress.XtraGrid.GridControl();
             this.AccountGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
@@ -111,7 +111,7 @@ namespace WindowsFormsApplication1.Master
             this.btnclose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnclose.Size = new System.Drawing.Size(53, 28);
             this.btnclose.Text = "Quit";
-            this.btnclose.Click += new System.EventHandler(this.btnclose_Click);
+            this.btnclose.Click += new System.EventHandler(this.Btnclose_Click);
             // 
             // btnImport
             // 
@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1.Master
             this.btnImport.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnImport.Size = new System.Drawing.Size(72, 28);
             this.btnImport.Text = "Import";
-            this.btnImport.Click += new System.EventHandler(this.btnImport_Click);
+            this.btnImport.Click += new System.EventHandler(this.BtnImport_Click);
             // 
             // btnSave
             // 
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lbl
             // 
@@ -206,8 +206,8 @@ namespace WindowsFormsApplication1.Master
             this.txtSearchBox.Properties.MaxLength = 400;
             this.txtSearchBox.Size = new System.Drawing.Size(568, 24);
             this.txtSearchBox.TabIndex = 246;
-            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
-            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
+            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
             // 
             // frmAccountsMappingBusy
             // 
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1.Master
             this.KeyPreview = true;
             this.Name = "frmAccountsMappingBusy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmAccountsMappingBusy_Load);
+            this.Load += new System.EventHandler(this.FrmAccountsMappingBusy_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AccountGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AccountGridView)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);

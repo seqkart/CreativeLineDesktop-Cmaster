@@ -6,13 +6,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmAccountsMappingBusy : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAccountsMappingBusy : DevExpress.XtraEditors.XtraForm
     {
         int RowIndex;
         DataTable dt = new DataTable();
 
         DataSet dsPopUps = new DataSet();
-        public frmAccountsMappingBusy()
+        public FrmAccountsMappingBusy()
         {
             InitializeComponent();
             dt.Columns.Add("AccCodeBusy", typeof(String));
@@ -27,8 +27,8 @@ namespace WindowsFormsApplication1.Master
 
         private void FillGrid()
         {
-            DataSet dsAccName = ProjectFunctionsUtils.GetDataSet("Select AccCode,AccName,AccCodeBusy   from ActMst");
-            DataSet ds = ProjectFunctionsUtils.GetDataSetBusy("Select Code as AccCodeBusy,Name as AccNameBusy,'' as AccCode,'' as AccName from Master1 ");
+            DataSet dsAccName = ProjectFunctionsUtils.GetDataSet("Select AccCode,AccName,AccCodeBusy from ActMst");
+            DataSet ds = ProjectFunctionsUtils.GetDataSetBusy("Select Code as AccCodeBusy,Name as AccNameBusy,'' as AccCode,'' as AccName from Master1 where MasterType='2' ");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 dt = ds.Tables[0];
@@ -53,17 +53,17 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void frmAccountsMappingBusy_Load(object sender, EventArgs e)
+        private void FrmAccountsMappingBusy_Load(object sender, EventArgs e)
         {
             FillGrid();
         }
 
-        private void btnclose_Click(object sender, EventArgs e)
+        private void Btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             try
 
@@ -121,7 +121,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
+        private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             foreach (DataRow dr in (AccountGrid.DataSource as DataTable).Rows)
             {
@@ -192,7 +192,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
+        private void BtnImport_Click(object sender, EventArgs e)
         {
             DataRow currentrow = AccountGridView.GetDataRow(AccountGridView.FocusedRowHandle);
             DataSet ds = ProjectFunctionsUtils.GetDataSetBusy("Select * from MasterAddressInfo where MasterCode='" + currentrow["AccCodeBusy"].ToString() + "'");

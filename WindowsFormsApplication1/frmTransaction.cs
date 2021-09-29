@@ -2316,7 +2316,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             FillGrid();
         }
