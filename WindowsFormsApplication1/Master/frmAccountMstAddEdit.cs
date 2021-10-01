@@ -866,17 +866,17 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void txtMainLedgerCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtMainLedgerCode_EditValueChanged(object sender, EventArgs e)
         {
             txtMainLedgerDesc.Text = string.Empty;
         }
 
-        private void txtSubLedgerCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtSubLedgerCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSubLedgerDesc.Text = string.Empty;
         }
 
-        private void txtSubLedgerCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSubLedgerCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

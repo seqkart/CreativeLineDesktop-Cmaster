@@ -33,6 +33,7 @@
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -48,6 +49,7 @@
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <FileAlignment>2048</FileAlignment>
     <CodeAnalysisIgnoreGeneratedCode>false</CodeAnalysisIgnoreGeneratedCode>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -88,6 +90,12 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Azure.Core, Version=1.18.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Core.1.18.0\lib\net461\Azure.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Azure.Identity, Version=1.4.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Identity.1.4.1\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
     <Reference Include="Crc32C.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Crc32C.NET.1.0.5.0\lib\net20\Crc32C.NET.dll</HintPath>
     </Reference>
@@ -119,237 +127,237 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.BonusSkins.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Charts.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.CodeParser.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Dashboard.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v21.1.Win, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dashboard.v21.1.Win, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Dashboard.v21.1.Win.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Data.Desktop.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Data.21.1.5\lib\net452\DevExpress.Data.v21.1.dll</HintPath>
+    <Reference Include="DevExpress.Data.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Data.21.1.6\lib\net452\DevExpress.Data.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.DataAccess.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.DataAccess.v21.1.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Diagram.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Diagram.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Diagram.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Docs.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Docs.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Docs.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Win.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.Win.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.Win.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Xpo.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.Xpo.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.Xpo.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Images.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Images.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Images.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Map.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Map.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Map.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Office.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Pdf.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v21.1.Drawing, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v21.1.Drawing, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Pdf.v21.1.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Persistent.Base.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Persistent.Base.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Persistent.Base.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.PivotGrid.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Printing.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.RichEdit.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.RichEdit.v21.1.Export.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Snap.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Snap.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Snap.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Sparkline.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Spreadsheet.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Spreadsheet.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Spreadsheet.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.TreeMap.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.TreeMap.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.TreeMap.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Utils.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Utils.v21.1.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Xpo.21.1.5\lib\net452\DevExpress.Xpo.v21.1.dll</HintPath>
+    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Xpo.21.1.6\lib\net452\DevExpress.Xpo.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraBars.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.1.Extensions, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.Wizard.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraDiagram.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraDiagram.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraDiagram.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraEditors.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.1.Presets, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.1.Presets, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.1.Presets.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.1.Win, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.1.Win, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.1.Win.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGrid.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraLayout.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraMap.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraMap.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraMap.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraNavBar.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPdfViewer.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPdfViewer.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPdfViewer.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPivotGrid.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPrinting.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraReports.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraReports.v21.1.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraRichEdit.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Core, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Core, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Reporting, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Reporting, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.Reporting.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Reporting.Extensions, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.1.Reporting.Extensions, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.Reporting.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraSpreadsheet.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraSpreadsheet.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraSpreadsheet.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraTreeList.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeMap.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeMap.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraTreeMap.v21.1.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v21.1, Version=21.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.1, Version=21.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraVerticalGrid.v21.1.dll</HintPath>
     </Reference>
@@ -470,6 +478,12 @@
     <Reference Include="Microsoft.CodeAnalysis.CSharp, Version=3.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeAnalysis.CSharp.3.8.0\lib\netstandard2.0\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Data.SqlClient, Version=3.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.3.0.0\lib\net461\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Tools.Sql.BatchParser, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.Data.Tools.Sql.BatchParser.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.9.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.9\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
     </Reference>
@@ -542,14 +556,26 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.5.0.1\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens">
-      <HintPath>..\gstapi\TaxProEinvoiceApiIntigrationDemo.NET\TaxProEinvoiceApiIntigrationDemo.NET\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.Identity.Client, Version=4.30.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.4.30.1\lib\net461\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging">
-      <HintPath>..\gstapi\TaxProEinvoiceApiIntigrationDemo.NET\TaxProEinvoiceApiIntigrationDemo.NET\bin\Debug\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.Identity.Client.Extensions.Msal, Version=2.18.4.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Identity.Client.Extensions.Msal.2.18.4\lib\net45\Microsoft.Identity.Client.Extensions.Msal.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens">
-      <HintPath>..\gstapi\TaxProEinvoiceApiIntigrationDemo.NET\TaxProEinvoiceApiIntigrationDemo.NET\bin\Debug\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.JsonWebTokens.6.12.2\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Logging.6.12.2\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect, Version=6.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Protocols.OpenIdConnect.6.8.0\lib\net461\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IdentityModel.Tokens.6.12.2\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.8\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
@@ -566,6 +592,96 @@
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\BNPL\nEzee\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment, Version=1.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Assessment.1.0.305\lib\net462\Microsoft.SqlServer.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment.Types, Version=1.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Assessment.Authoring.1.0.282\lib\net462\Microsoft.SqlServer.Assessment.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="MICROSOFT.SQLSERVER.CONNECTIONINFO.RESOURCES">
+      <HintPath>C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Update Cache\KB4583458\GDR\x64\de\MICROSOFT.SQLSERVER.CONNECTIONINFO.RESOURCES.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Assessment, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.HadrData, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.HadrData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.HadrModel, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.HadrModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="MICROSOFT.SQLSERVER.MANAGEMENT.SDK.SFC.RESOURCES">
+      <HintPath>C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Update Cache\KB4583458\GDR\x64\de\MICROSOFT.SQLSERVER.MANAGEMENT.SDK.SFC.RESOURCES.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlScriptPublish, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.SqlScriptPublish.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo.Notebook, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.Smo.Notebook.dll</HintPath>
+    </Reference>
+    <Reference Include="MICROSOFT.SQLSERVER.SMO.RESOURCES">
+      <HintPath>C:\Program Files\Microsoft SQL Server\150\Setup Bootstrap\Update Cache\KB4583458\GDR\x64\de\MICROSOFT.SQLSERVER.SMO.RESOURCES.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=16.200.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.161.46437.65\lib\net462\Microsoft.SqlServer.WmiEnum.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Win32.Registry, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Win32.Registry.5.0.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
@@ -642,6 +758,9 @@
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.5.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
     <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
       <Private>True</Private>
@@ -650,6 +769,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.5.0.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -662,6 +782,10 @@
       <HintPath>..\packages\System.Diagnostics.StackTrace.4.3.0\lib\net46\System.Diagnostics.StackTrace.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.12.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IdentityModel.Tokens.Jwt.6.12.2\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -699,6 +823,9 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory.Data, Version=1.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.Data.1.0.2\lib\net461\System.Memory.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
@@ -735,6 +862,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
@@ -756,6 +885,9 @@
       <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.ProtectedData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.ProtectedData.5.0.0\lib\net461\System.Security.Cryptography.ProtectedData.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
@@ -800,6 +932,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Xml.ReaderWriter.4.3.1\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
       <Private>True</Private>
@@ -908,12 +1041,6 @@
     <Compile Include="FormReports\frmGridReports.Designer.cs">
       <DependentUpon>frmGridReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormReports\frmGSTDIffReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormReports\frmGSTDIffReport.Designer.cs">
-      <DependentUpon>frmGSTDIffReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormReports\frmPartyAccounts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -975,7 +1102,19 @@
       <DependentUpon>frmSelectRangeNew.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperClass\CustomArguments.cs" />
+    <Compile Include="HRMS\AddAttendanceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMS\AddAttendanceDetails.designer.cs">
+      <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="HRMS\GlobalClassBase.cs" />
+    <Compile Include="Master\frmAccountsMappingBusy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmAccountsMappingBusy.Designer.cs">
+      <DependentUpon>frmAccountsMappingBusy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmAttendenceStatusMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1000,11 +1139,11 @@
     <Compile Include="Master\frmContractorMst.Designer.cs">
       <DependentUpon>frmContractorMst.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\frmEWayBillGener.cs">
+    <Compile Include="Master\frmGrpMstBSHeads.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\frmEWayBillGener.Designer.cs">
-      <DependentUpon>frmEWayBillGener.cs</DependentUpon>
+    <Compile Include="Master\frmGrpMstBSHeads.Designer.cs">
+      <DependentUpon>frmGrpMstBSHeads.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmHOlidayMst.cs">
       <SubType>Form</SubType>
@@ -1035,6 +1174,12 @@
     </Compile>
     <Compile Include="Master\frmProcessMst.Designer.cs">
       <DependentUpon>frmProcessMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmServer.Designer.cs">
+      <DependentUpon>frmServer.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmSizeMapping.cs">
       <SubType>Form</SubType>
@@ -1078,11 +1223,29 @@
     <Compile Include="Prints\PackingSlipCrossTab.Designer.cs">
       <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prints\PartyLedgerUpdated.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\PartyLedgerUpdated.Designer.cs">
+      <DependentUpon>PartyLedgerUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\PartyReco.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Prints\PartyReco.Designer.cs">
       <DependentUpon>PartyReco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prints\Rpt_POORDER.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\Rpt_POORDER.Designer.cs">
+      <DependentUpon>Rpt_POORDER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prints\rpt_PartyLedgerNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\rpt_PartyLedgerNew.Designer.cs">
+      <DependentUpon>rpt_PartyLedgerNew.cs</DependentUpon>
     </Compile>
     <Compile Include="Prints\XtraReport_EmployeesSalaryList.cs">
       <SubType>Component</SubType>
@@ -1095,12 +1258,6 @@
     </Compile>
     <Compile Include="Prints\XtraReport_EmployeeAttendance.Designer.cs">
       <DependentUpon>XtraReport_EmployeeAttendance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Prints\salaryregister.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>salaryregister.rpt</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Prints\XtraReportGatePass.cs">
       <SubType>Component</SubType>
@@ -1156,12 +1313,6 @@
     <Compile Include="HelperClass\ImageUtils.cs" />
     <Compile Include="HelperClass\MessageBox_Debug.cs" />
     <Compile Include="HelperClass\PrintLogWin.cs" />
-    <Compile Include="HRMS\AddAttendanceDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HRMS\AddAttendanceDetails.designer.cs">
-      <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="HRMS\GlobalClass.cs" />
     <Compile Include="main.cs">
       <SubType>Form</SubType>
@@ -1247,11 +1398,11 @@
     <Compile Include="Master\frmDesignationAddEdit.designer.cs">
       <DependentUpon>frmDesignationAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Master\frmEmloyeeMstAddEdit.cs">
+    <Compile Include="Master\frmEmployeeMstAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Master\frmEmloyeeMstAddEdit.designer.cs">
-      <DependentUpon>frmEmloyeeMstAddEdit.cs</DependentUpon>
+    <Compile Include="Master\frmEmployeeMstAddEdit.designer.cs">
+      <DependentUpon>frmEmployeeMstAddEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmGroupMstAddEdit.cs">
       <SubType>Form</SubType>
@@ -1616,11 +1767,11 @@
     <Compile Include="Time Office\frmLoanMstAddEdit.Designer.cs">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Time Office\frmProcessSalary.cs">
+    <Compile Include="Time Office\FrmProcessSalary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Time Office\frmProcessSalary.Designer.cs">
-      <DependentUpon>frmProcessSalary.cs</DependentUpon>
+    <Compile Include="Time Office\FrmProcessSalary.Designer.cs">
+      <DependentUpon>FrmProcessSalary.cs</DependentUpon>
     </Compile>
     <Compile Include="Time Office\frm_EmpSalAddUpdate.cs">
       <SubType>Form</SubType>
@@ -1748,6 +1899,12 @@
     <Compile Include="Transaction\frmJobWork.Designer.cs">
       <DependentUpon>frmJobWork.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmJournalVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmJournalVoucher.Designer.cs">
+      <DependentUpon>frmJournalVoucher.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmLoanMstAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1796,12 +1953,6 @@
     <Compile Include="Transaction\frmPurchaseFromHO.Designer.cs">
       <DependentUpon>frmPurchaseFromHO.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\frmSchemeMstAddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Transaction\frmSchemeMstAddEdit.designer.cs">
-      <DependentUpon>frmSchemeMstAddEdit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Transaction\frmTdsDeductionAddEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1814,11 +1965,11 @@
     <Compile Include="Transaction\frmVoucherMstAddEdit.Designer.cs">
       <DependentUpon>frmVoucherMstAddEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction\frm_AdvMappingAddEdit.cs">
+    <Compile Include="Transaction\FrmVouchers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transaction\frm_AdvMappingAddEdit.Designer.cs">
-      <DependentUpon>frm_AdvMappingAddEdit.cs</DependentUpon>
+    <Compile Include="Transaction\FrmVouchers.Designer.cs">
+      <DependentUpon>FrmVouchers.cs</DependentUpon>
     </Compile>
     <Compile Include="Transaction\frm_Asset_AddUpd.cs">
       <SubType>Form</SubType>
@@ -1925,9 +2076,6 @@
     <EmbeddedResource Include="FormReports\frmGridReports.resx">
       <DependentUpon>frmGridReports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormReports\frmGSTDIffReport.resx">
-      <DependentUpon>frmGSTDIffReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormReports\frmPartyAccounts.resx">
       <DependentUpon>frmPartyAccounts.cs</DependentUpon>
     </EmbeddedResource>
@@ -1958,6 +2106,12 @@
     <EmbeddedResource Include="frmSelectRangeNew.resx">
       <DependentUpon>frmSelectRangeNew.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HRMS\AddAttendanceDetails.resx">
+      <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmAccountsMappingBusy.resx">
+      <DependentUpon>frmAccountsMappingBusy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\frmAttendenceStatusMst.resx">
       <DependentUpon>frmAttendenceStatusMst.cs</DependentUpon>
     </EmbeddedResource>
@@ -1970,8 +2124,8 @@
     <EmbeddedResource Include="Master\frmContractorMst.resx">
       <DependentUpon>frmContractorMst.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\frmEWayBillGener.resx">
-      <DependentUpon>frmEWayBillGener.cs</DependentUpon>
+    <EmbeddedResource Include="Master\frmGrpMstBSHeads.resx">
+      <DependentUpon>frmGrpMstBSHeads.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmHOlidayMst.resx">
       <DependentUpon>frmHOlidayMst.cs</DependentUpon>
@@ -1987,6 +2141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmProcessMst.resx">
       <DependentUpon>frmProcessMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmServer.resx">
+      <DependentUpon>frmServer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmSizeMapping.resx">
       <DependentUpon>frmSizeMapping.cs</DependentUpon>
@@ -2009,18 +2166,23 @@
     <EmbeddedResource Include="Prints\PackingSlipCrossTab.resx">
       <DependentUpon>PackingSlipCrossTab.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prints\PartyLedgerUpdated.resx">
+      <DependentUpon>PartyLedgerUpdated.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prints\PartyReco.resx">
       <DependentUpon>PartyReco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\Rpt_POORDER.resx">
+      <DependentUpon>Rpt_POORDER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\rpt_PartyLedgerNew.resx">
+      <DependentUpon>rpt_PartyLedgerNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeesSalaryList.resx">
       <DependentUpon>XtraReport_EmployeesSalaryList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReport_EmployeeAttendance.resx">
       <DependentUpon>XtraReport_EmployeeAttendance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Prints\salaryregister.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>salaryregister.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\XtraReportGatePass.resx">
       <DependentUpon>XtraReportGatePass.cs</DependentUpon>
@@ -2045,9 +2207,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmXtraReportViewer.resx">
       <DependentUpon>frmXtraReportViewer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HRMS\AddAttendanceDetails.resx">
-      <DependentUpon>AddAttendanceDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>
@@ -2091,8 +2250,8 @@
     <EmbeddedResource Include="Master\frmDesignationAddEdit.resx">
       <DependentUpon>frmDesignationAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Master\frmEmloyeeMstAddEdit.resx">
-      <DependentUpon>frmEmloyeeMstAddEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Master\frmEmployeeMstAddEdit.resx">
+      <DependentUpon>frmEmployeeMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmGroupMstAddEdit.resx">
       <DependentUpon>frmGroupMstAddEdit.cs</DependentUpon>
@@ -2284,8 +2443,8 @@
     <EmbeddedResource Include="Time Office\frmLoanMstAddEdit.resx">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Time Office\frmProcessSalary.resx">
-      <DependentUpon>frmProcessSalary.cs</DependentUpon>
+    <EmbeddedResource Include="Time Office\FrmProcessSalary.resx">
+      <DependentUpon>FrmProcessSalary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Time Office\frm_EmpSalAddUpdate.resx">
       <DependentUpon>frm_EmpSalAddUpdate.cs</DependentUpon>
@@ -2350,6 +2509,9 @@
     <EmbeddedResource Include="Transaction\frmJobWork.resx">
       <DependentUpon>frmJobWork.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmJournalVoucher.resx">
+      <DependentUpon>frmJournalVoucher.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmLoanMstAddEdit.resx">
       <DependentUpon>frmLoanMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -2374,17 +2536,14 @@
     <EmbeddedResource Include="Transaction\frmPurchaseFromHO.resx">
       <DependentUpon>frmPurchaseFromHO.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\frmSchemeMstAddEdit.resx">
-      <DependentUpon>frmSchemeMstAddEdit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmTdsDeductionAddEdit.resx">
       <DependentUpon>frmTdsDeductionAddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmVoucherMstAddEdit.resx">
       <DependentUpon>frmVoucherMstAddEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction\frm_AdvMappingAddEdit.resx">
-      <DependentUpon>frm_AdvMappingAddEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Transaction\FrmVouchers.resx">
+      <DependentUpon>FrmVouchers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frm_Asset_AddUpd.resx">
       <DependentUpon>frm_Asset_AddUpd.cs</DependentUpon>
@@ -2570,6 +2729,7 @@
     <None Include="Resources\fm2.jpg" />
     <None Include="Resources\google.png" />
     <None Include="Resources\google1.png" />
+    <None Include="Resources\indian.png" />
     <Content Include="Resources\Maestro.png" />
     <None Include="Resources\Mail.png" />
     <None Include="Resources\Male.png" />
@@ -2676,9 +2836,9 @@
     <None Include="Resources\logo.ico" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -2697,6 +2857,12 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.3.3.2\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SeqKartSecurity\SeqKartSecurity.csproj">
+      <Project>{67A93BD3-F7F3-4560-B222-A2716585C508}</Project>
+      <Name>SeqKartSecurity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -2712,6 +2878,7 @@
     <Error Condition="!Exists('..\packages\MongoDB.Driver.Core.2.11.4\build\MongoDB.Driver.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MongoDB.Driver.Core.2.11.4\build\MongoDB.Driver.Core.targets'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.3.1.9\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Configuration.UserSecrets.3.1.9\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.3.1.9\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Extensions.Configuration.UserSecrets.3.1.9\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="..\packages\Microsoft.AspNetCore.Server.IIS.2.2.6\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets" Condition="Exists('..\packages\Microsoft.AspNetCore.Server.IIS.2.2.6\build\netstandard2.0\Microsoft.AspNetCore.Server.IIS.targets')" />
@@ -2720,6 +2887,7 @@
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
   <Import Project="..\packages\MongoDB.Driver.Core.2.11.4\build\MongoDB.Driver.Core.targets" Condition="Exists('..\packages\MongoDB.Driver.Core.2.11.4\build\MongoDB.Driver.Core.targets')" />
   <Import Project="..\packages\Microsoft.Extensions.Configuration.UserSecrets.3.1.9\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets" Condition="Exists('..\packages\Microsoft.Extensions.Configuration.UserSecrets.3.1.9\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" />
+  <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.3.0.0\build\net46\Microsoft.Data.SqlClient.SNI.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

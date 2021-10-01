@@ -395,8 +395,8 @@
             this.txtSubLedgerCode.Properties.MaxLength = 4;
             this.txtSubLedgerCode.Size = new System.Drawing.Size(80, 24);
             this.txtSubLedgerCode.TabIndex = 444;
-            this.txtSubLedgerCode.EditValueChanged += new System.EventHandler(this.txtSubLedgerCode_EditValueChanged);
-            this.txtSubLedgerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSubLedgerCode_KeyDown);
+            this.txtSubLedgerCode.EditValueChanged += new System.EventHandler(this.TxtSubLedgerCode_EditValueChanged);
+            this.txtSubLedgerCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSubLedgerCode_KeyDown);
             // 
             // txtSubLedgerDesc
             // 
@@ -421,7 +421,7 @@
             this.txtMainLedgerCode.Properties.MaxLength = 4;
             this.txtMainLedgerCode.Size = new System.Drawing.Size(80, 24);
             this.txtMainLedgerCode.TabIndex = 443;
-            this.txtMainLedgerCode.EditValueChanged += new System.EventHandler(this.txtMainLedgerCode_EditValueChanged);
+            this.txtMainLedgerCode.EditValueChanged += new System.EventHandler(this.TxtMainLedgerCode_EditValueChanged);
             // 
             // labelControl6
             // 
@@ -1584,7 +1584,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(191, 29);
+            this.HelpGrid.Location = new System.Drawing.Point(437, 42);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
