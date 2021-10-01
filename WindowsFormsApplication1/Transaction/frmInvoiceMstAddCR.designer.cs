@@ -332,7 +332,7 @@
             this.label10.Location = new System.Drawing.Point(-62, 354);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 17);
+            this.label10.Size = new System.Drawing.Size(18, 16);
             this.label10.TabIndex = 454;
             this.label10.Text = "cla";
             // 
@@ -360,10 +360,10 @@
             this.groupControl2.Controls.Add(this.txtDebitNoteNo);
             this.groupControl2.Controls.Add(this.txtTransporterName);
             this.groupControl2.Controls.Add(this.txtTransporterCode);
-            this.groupControl2.Location = new System.Drawing.Point(614, 72);
+            this.groupControl2.Location = new System.Drawing.Point(578, 72);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(503, 262);
+            this.groupControl2.Size = new System.Drawing.Size(539, 262);
             this.groupControl2.TabIndex = 541;
             this.groupControl2.Text = "DEBIT NOTE DETAILS";
             // 
@@ -383,7 +383,7 @@
             this.txtGRDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtGRDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtGRDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
-            this.txtGRDate.Size = new System.Drawing.Size(129, 24);
+            this.txtGRDate.Size = new System.Drawing.Size(129, 22);
             this.txtGRDate.TabIndex = 7;
             // 
             // labelControl6
@@ -401,10 +401,10 @@
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(35, 221);
+            this.labelControl5.Location = new System.Drawing.Point(28, 220);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(68, 17);
+            this.labelControl5.Size = new System.Drawing.Size(76, 16);
             this.labelControl5.TabIndex = 568;
             this.labelControl5.Text = "Pacakages :";
             // 
@@ -415,7 +415,7 @@
             this.txtbox.Name = "txtbox";
             this.txtbox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtbox.Properties.MaxLength = 30;
-            this.txtbox.Size = new System.Drawing.Size(147, 24);
+            this.txtbox.Size = new System.Drawing.Size(147, 22);
             this.txtbox.TabIndex = 8;
             // 
             // txtReason
@@ -430,7 +430,7 @@
             "DEFECTIVE GOODS",
             "SOR",
             "OTHERS"});
-            this.txtReason.Size = new System.Drawing.Size(377, 24);
+            this.txtReason.Size = new System.Drawing.Size(377, 22);
             this.txtReason.TabIndex = 4;
             this.txtReason.SelectedIndexChanged += new System.EventHandler(this.TxtReason_SelectedIndexChanged);
             // 
@@ -440,43 +440,47 @@
             this.txtDEbitNoteDate.Location = new System.Drawing.Point(356, 51);
             this.txtDEbitNoteDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDEbitNoteDate.Name = "txtDEbitNoteDate";
+            this.txtDEbitNoteDate.Properties.BeepOnError = false;
             this.txtDEbitNoteDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDEbitNoteDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtDEbitNoteDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent;
             this.txtDEbitNoteDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.txtDEbitNoteDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtDEbitNoteDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.txtDEbitNoteDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtDEbitNoteDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.txtDEbitNoteDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtDEbitNoteDate.Size = new System.Drawing.Size(129, 24);
+            this.txtDEbitNoteDate.Properties.MaskSettings.Set("mask", "d");
+            this.txtDEbitNoteDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtDEbitNoteDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.txtDEbitNoteDate.Size = new System.Drawing.Size(129, 22);
             this.txtDEbitNoteDate.TabIndex = 1;
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(52, 111);
+            this.labelControl9.Location = new System.Drawing.Point(50, 110);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(50, 17);
+            this.labelControl9.Size = new System.Drawing.Size(54, 16);
             this.labelControl9.TabIndex = 552;
             this.labelControl9.Text = "Reason :";
             // 
             // labelControl32
             // 
-            this.labelControl32.Location = new System.Drawing.Point(293, 194);
+            this.labelControl32.Location = new System.Drawing.Point(290, 192);
             this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(58, 17);
+            this.labelControl32.Size = new System.Drawing.Size(61, 16);
             this.labelControl32.TabIndex = 552;
             this.labelControl32.Text = "GR. Date :";
             // 
             // labelControl31
             // 
-            this.labelControl31.Location = new System.Drawing.Point(51, 194);
+            this.labelControl31.Location = new System.Drawing.Point(51, 193);
             this.labelControl31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(52, 17);
+            this.labelControl31.Size = new System.Drawing.Size(53, 16);
             this.labelControl31.TabIndex = 553;
             this.labelControl31.Text = "GR. No. :";
             // 
@@ -487,24 +491,24 @@
             this.txtGRNo.Name = "txtGRNo";
             this.txtGRNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGRNo.Properties.MaxLength = 15;
-            this.txtGRNo.Size = new System.Drawing.Size(147, 24);
+            this.txtGRNo.Size = new System.Drawing.Size(147, 22);
             this.txtGRNo.TabIndex = 6;
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(27, 166);
+            this.labelControl24.Location = new System.Drawing.Point(28, 165);
             this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(76, 17);
+            this.labelControl24.Size = new System.Drawing.Size(76, 16);
             this.labelControl24.TabIndex = 540;
             this.labelControl24.Text = "Transporter :";
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(229, 84);
+            this.labelControl15.Location = new System.Drawing.Point(233, 82);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(120, 17);
+            this.labelControl15.Size = new System.Drawing.Size(118, 16);
             this.labelControl15.TabIndex = 542;
             this.labelControl15.Text = "Debit Note Amount :";
             // 
@@ -513,33 +517,33 @@
             this.txtDebitNoteAmount.Location = new System.Drawing.Point(356, 78);
             this.txtDebitNoteAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDebitNoteAmount.Name = "txtDebitNoteAmount";
-            this.txtDebitNoteAmount.Size = new System.Drawing.Size(129, 24);
+            this.txtDebitNoteAmount.Size = new System.Drawing.Size(129, 22);
             this.txtDebitNoteAmount.TabIndex = 3;
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(248, 56);
+            this.labelControl16.Location = new System.Drawing.Point(249, 54);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(102, 17);
+            this.labelControl16.Size = new System.Drawing.Size(102, 16);
             this.labelControl16.TabIndex = 540;
             this.labelControl16.Text = "Debit Note Date :";
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(8, 84);
+            this.labelControl17.Location = new System.Drawing.Point(11, 83);
             this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(95, 17);
+            this.labelControl17.Size = new System.Drawing.Size(93, 16);
             this.labelControl17.TabIndex = 540;
             this.labelControl17.Text = "Debit Note Qty :";
             // 
             // labelControl18
             // 
-            this.labelControl18.Location = new System.Drawing.Point(7, 56);
+            this.labelControl18.Location = new System.Drawing.Point(10, 55);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(96, 17);
+            this.labelControl18.Size = new System.Drawing.Size(94, 16);
             this.labelControl18.TabIndex = 540;
             this.labelControl18.Text = "Debit Note No. :";
             // 
@@ -548,7 +552,7 @@
             this.txtOtherReason.Location = new System.Drawing.Point(108, 133);
             this.txtOtherReason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherReason.Name = "txtOtherReason";
-            this.txtOtherReason.Size = new System.Drawing.Size(377, 24);
+            this.txtOtherReason.Size = new System.Drawing.Size(377, 22);
             this.txtOtherReason.TabIndex = 539;
             this.txtOtherReason.Visible = false;
             // 
@@ -557,7 +561,7 @@
             this.txtDEbitNoteQty.Location = new System.Drawing.Point(108, 78);
             this.txtDEbitNoteQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDEbitNoteQty.Name = "txtDEbitNoteQty";
-            this.txtDEbitNoteQty.Size = new System.Drawing.Size(113, 24);
+            this.txtDEbitNoteQty.Size = new System.Drawing.Size(113, 22);
             this.txtDEbitNoteQty.TabIndex = 2;
             // 
             // txtDebitNoteNo
@@ -567,7 +571,7 @@
             this.txtDebitNoteNo.Name = "txtDebitNoteNo";
             this.txtDebitNoteNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitNoteNo.Properties.MaxLength = 50;
-            this.txtDebitNoteNo.Size = new System.Drawing.Size(113, 24);
+            this.txtDebitNoteNo.Size = new System.Drawing.Size(113, 22);
             this.txtDebitNoteNo.TabIndex = 0;
             this.txtDebitNoteNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitNoteNo_KeyDown);
             // 
@@ -579,7 +583,7 @@
             this.txtTransporterName.Name = "txtTransporterName";
             this.txtTransporterName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterName.Properties.ReadOnly = true;
-            this.txtTransporterName.Size = new System.Drawing.Size(299, 24);
+            this.txtTransporterName.Size = new System.Drawing.Size(299, 22);
             this.txtTransporterName.TabIndex = 532;
             this.txtTransporterName.TabStop = false;
             // 
@@ -590,7 +594,7 @@
             this.txtTransporterCode.Name = "txtTransporterCode";
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterCode.Properties.MaxLength = 6;
-            this.txtTransporterCode.Size = new System.Drawing.Size(76, 24);
+            this.txtTransporterCode.Size = new System.Drawing.Size(76, 22);
             this.txtTransporterCode.TabIndex = 5;
             this.txtTransporterCode.EditValueChanged += new System.EventHandler(this.TxtTransporterCode_EditValueChanged);
             this.txtTransporterCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTransporterCode_KeyDown);
@@ -624,10 +628,10 @@
             // 
             // labelControl10
             // 
-            this.labelControl10.Location = new System.Drawing.Point(45, 229);
+            this.labelControl10.Location = new System.Drawing.Point(42, 227);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(45, 17);
+            this.labelControl10.Size = new System.Drawing.Size(49, 16);
             this.labelControl10.TabIndex = 546;
             this.labelControl10.Text = "GST No";
             // 
@@ -639,7 +643,7 @@
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.ReadOnly = true;
-            this.txtGSTNo.Size = new System.Drawing.Size(433, 24);
+            this.txtGSTNo.Size = new System.Drawing.Size(433, 22);
             this.txtGSTNo.TabIndex = 545;
             this.txtGSTNo.TabStop = false;
             // 
@@ -648,25 +652,25 @@
             this.labelControl13.Location = new System.Drawing.Point(271, 171);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(29, 17);
+            this.labelControl13.Size = new System.Drawing.Size(31, 16);
             this.labelControl13.TabIndex = 544;
             this.labelControl13.Text = "State";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(70, 200);
+            this.labelControl3.Location = new System.Drawing.Point(72, 198);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(18, 17);
+            this.labelControl3.Size = new System.Drawing.Size(19, 16);
             this.labelControl3.TabIndex = 542;
             this.labelControl3.Text = "Zip";
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(66, 171);
+            this.labelControl12.Location = new System.Drawing.Point(69, 169);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(21, 17);
+            this.labelControl12.Size = new System.Drawing.Size(22, 16);
             this.labelControl12.TabIndex = 542;
             this.labelControl12.Text = "City";
             // 
@@ -676,7 +680,7 @@
             this.txtBillingZip.Location = new System.Drawing.Point(96, 195);
             this.txtBillingZip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillingZip.Name = "txtBillingZip";
-            this.txtBillingZip.Size = new System.Drawing.Size(168, 24);
+            this.txtBillingZip.Size = new System.Drawing.Size(168, 22);
             this.txtBillingZip.TabIndex = 539;
             // 
             // txtBillingState
@@ -685,7 +689,7 @@
             this.txtBillingState.Location = new System.Drawing.Point(306, 166);
             this.txtBillingState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillingState.Name = "txtBillingState";
-            this.txtBillingState.Size = new System.Drawing.Size(223, 24);
+            this.txtBillingState.Size = new System.Drawing.Size(223, 22);
             this.txtBillingState.TabIndex = 540;
             // 
             // txtBillingCity
@@ -694,15 +698,15 @@
             this.txtBillingCity.Location = new System.Drawing.Point(96, 166);
             this.txtBillingCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillingCity.Name = "txtBillingCity";
-            this.txtBillingCity.Size = new System.Drawing.Size(168, 24);
+            this.txtBillingCity.Size = new System.Drawing.Size(168, 22);
             this.txtBillingCity.TabIndex = 541;
             // 
             // labelControl11
             // 
-            this.labelControl11.Location = new System.Drawing.Point(41, 85);
+            this.labelControl11.Location = new System.Drawing.Point(40, 83);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(48, 17);
+            this.labelControl11.Size = new System.Drawing.Size(51, 16);
             this.labelControl11.TabIndex = 538;
             this.labelControl11.Text = "Address";
             // 
@@ -712,7 +716,7 @@
             this.txtBillingAddress3.Location = new System.Drawing.Point(96, 137);
             this.txtBillingAddress3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillingAddress3.Name = "txtBillingAddress3";
-            this.txtBillingAddress3.Size = new System.Drawing.Size(433, 24);
+            this.txtBillingAddress3.Size = new System.Drawing.Size(433, 22);
             this.txtBillingAddress3.TabIndex = 537;
             // 
             // txtBillingAddress2
@@ -721,7 +725,7 @@
             this.txtBillingAddress2.Location = new System.Drawing.Point(96, 109);
             this.txtBillingAddress2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillingAddress2.Name = "txtBillingAddress2";
-            this.txtBillingAddress2.Size = new System.Drawing.Size(433, 24);
+            this.txtBillingAddress2.Size = new System.Drawing.Size(433, 22);
             this.txtBillingAddress2.TabIndex = 536;
             // 
             // txtBillingAddress1
@@ -730,15 +734,15 @@
             this.txtBillingAddress1.Location = new System.Drawing.Point(96, 80);
             this.txtBillingAddress1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBillingAddress1.Name = "txtBillingAddress1";
-            this.txtBillingAddress1.Size = new System.Drawing.Size(433, 24);
+            this.txtBillingAddress1.Size = new System.Drawing.Size(433, 22);
             this.txtBillingAddress1.TabIndex = 535;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(22, 56);
+            this.labelControl4.Location = new System.Drawing.Point(20, 54);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 17);
+            this.labelControl4.Size = new System.Drawing.Size(71, 16);
             this.labelControl4.TabIndex = 534;
             this.labelControl4.Text = "Party Name";
             // 
@@ -751,7 +755,7 @@
             this.txtDebitPartyName.Name = "txtDebitPartyName";
             this.txtDebitPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyName.Properties.ReadOnly = true;
-            this.txtDebitPartyName.Size = new System.Drawing.Size(343, 24);
+            this.txtDebitPartyName.Size = new System.Drawing.Size(343, 22);
             this.txtDebitPartyName.TabIndex = 532;
             this.txtDebitPartyName.TabStop = false;
             // 
@@ -762,28 +766,28 @@
             this.txtDebitPartyCode.Name = "txtDebitPartyCode";
             this.txtDebitPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyCode.Properties.MaxLength = 6;
-            this.txtDebitPartyCode.Size = new System.Drawing.Size(83, 24);
+            this.txtDebitPartyCode.Size = new System.Drawing.Size(83, 22);
             this.txtDebitPartyCode.TabIndex = 533;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
             // 
             // labelControl19
             // 
-            this.labelControl19.Location = new System.Drawing.Point(22, 345);
+            this.labelControl19.Location = new System.Drawing.Point(22, 346);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(50, 17);
+            this.labelControl19.Size = new System.Drawing.Size(54, 16);
             this.labelControl19.TabIndex = 549;
             this.labelControl19.Text = "BarCode";
             // 
             // txtBarCode
             // 
-            this.txtBarCode.Location = new System.Drawing.Point(80, 341);
+            this.txtBarCode.Location = new System.Drawing.Point(80, 343);
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarCode.Properties.MaxLength = 60;
-            this.txtBarCode.Size = new System.Drawing.Size(294, 24);
+            this.txtBarCode.Size = new System.Drawing.Size(294, 22);
             this.txtBarCode.TabIndex = 548;
             this.txtBarCode.EditValueChanged += new System.EventHandler(this.TxtBarCode_EditValueChanged);
             this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
@@ -793,7 +797,7 @@
             this.labelControl1.Location = new System.Drawing.Point(17, 43);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(99, 17);
+            this.labelControl1.Size = new System.Drawing.Size(99, 16);
             this.labelControl1.TabIndex = 515;
             this.labelControl1.Text = "Credit Note Date";
             // 
@@ -801,7 +805,7 @@
             // 
             this.dtInvoiceDate.EditValue = null;
             this.dtInvoiceDate.Enabled = false;
-            this.dtInvoiceDate.Location = new System.Drawing.Point(126, 38);
+            this.dtInvoiceDate.Location = new System.Drawing.Point(126, 40);
             this.dtInvoiceDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtInvoiceDate.Name = "dtInvoiceDate";
             this.dtInvoiceDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -810,38 +814,38 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dtInvoiceDate.Properties.Mask.EditMask = "";
             this.dtInvoiceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtInvoiceDate.Size = new System.Drawing.Size(119, 24);
+            this.dtInvoiceDate.Size = new System.Drawing.Size(119, 22);
             this.dtInvoiceDate.TabIndex = 475;
             this.dtInvoiceDate.TabStop = false;
             // 
             // txtSerialNo
             // 
             this.txtSerialNo.Enabled = false;
-            this.txtSerialNo.Location = new System.Drawing.Point(437, 38);
+            this.txtSerialNo.Location = new System.Drawing.Point(437, 40);
             this.txtSerialNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSerialNo.Name = "txtSerialNo";
-            this.txtSerialNo.Size = new System.Drawing.Size(159, 24);
+            this.txtSerialNo.Size = new System.Drawing.Size(159, 22);
             this.txtSerialNo.TabIndex = 478;
             this.txtSerialNo.TabStop = false;
             // 
             // txtserial
             // 
             this.txtserial.Enabled = false;
-            this.txtserial.Location = new System.Drawing.Point(350, 38);
+            this.txtserial.Location = new System.Drawing.Point(350, 40);
             this.txtserial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtserial.Name = "txtserial";
-            this.txtserial.Size = new System.Drawing.Size(80, 24);
+            this.txtserial.Size = new System.Drawing.Size(80, 22);
             this.txtserial.TabIndex = 477;
             this.txtserial.TabStop = false;
             // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(126, 377);
+            this.HelpGrid.Location = new System.Drawing.Point(126, 351);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(768, 425);
+            this.HelpGrid.Size = new System.Drawing.Size(768, 304);
             this.HelpGrid.TabIndex = 475;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1380,7 +1384,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage5.Size = new System.Drawing.Size(657, 210);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // btnCalculate
@@ -1391,14 +1395,14 @@
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(111, 35);
             this.btnCalculate.TabIndex = 558;
-            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.Text = "Re-Calculate";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.BtnCalculate_Click);
             // 
             // txtRound2
             // 
             this.txtRound2.EditValue = "0";
-            this.txtRound2.Location = new System.Drawing.Point(488, 123);
+            this.txtRound2.Location = new System.Drawing.Point(488, 124);
             this.txtRound2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRound2.Name = "txtRound2";
             this.txtRound2.Properties.Appearance.Options.UseTextOptions = true;
@@ -1412,7 +1416,7 @@
             this.txtRound2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRound2.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtRound2.Properties.MaxLength = 6;
-            this.txtRound2.Size = new System.Drawing.Size(63, 24);
+            this.txtRound2.Size = new System.Drawing.Size(63, 22);
             this.txtRound2.TabIndex = 554;
             this.txtRound2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtRound2_KeyDown);
             // 
@@ -1423,7 +1427,7 @@
             this.cmbTradeDisc.Name = "cmbTradeDisc";
             this.cmbTradeDisc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbTradeDisc.Size = new System.Drawing.Size(117, 24);
+            this.cmbTradeDisc.Size = new System.Drawing.Size(117, 22);
             this.cmbTradeDisc.TabIndex = 557;
             // 
             // labelControl47
@@ -1431,25 +1435,25 @@
             this.labelControl47.Location = new System.Drawing.Point(470, 71);
             this.labelControl47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl47.Name = "labelControl47";
-            this.labelControl47.Size = new System.Drawing.Size(9, 17);
+            this.labelControl47.Size = new System.Drawing.Size(7, 16);
             this.labelControl47.TabIndex = 542;
             this.labelControl47.Text = "=";
             // 
             // labelControl42
             // 
-            this.labelControl42.Location = new System.Drawing.Point(470, 42);
+            this.labelControl42.Location = new System.Drawing.Point(470, 40);
             this.labelControl42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl42.Name = "labelControl42";
-            this.labelControl42.Size = new System.Drawing.Size(9, 17);
+            this.labelControl42.Size = new System.Drawing.Size(7, 16);
             this.labelControl42.TabIndex = 542;
             this.labelControl42.Text = "=";
             // 
             // labelControl41
             // 
-            this.labelControl41.Location = new System.Drawing.Point(386, 42);
+            this.labelControl41.Location = new System.Drawing.Point(386, 40);
             this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(11, 17);
+            this.labelControl41.Size = new System.Drawing.Size(12, 16);
             this.labelControl41.TabIndex = 542;
             this.labelControl41.Text = "%";
             // 
@@ -1466,37 +1470,37 @@
             // 
             // labelControl49
             // 
-            this.labelControl49.Location = new System.Drawing.Point(419, 128);
+            this.labelControl49.Location = new System.Drawing.Point(419, 127);
             this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(60, 17);
+            this.labelControl49.Size = new System.Drawing.Size(60, 16);
             this.labelControl49.TabIndex = 542;
             this.labelControl49.Text = "Round Off";
             // 
             // labelControl48
             // 
-            this.labelControl48.Location = new System.Drawing.Point(443, 99);
+            this.labelControl48.Location = new System.Drawing.Point(443, 98);
             this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(36, 17);
+            this.labelControl48.Size = new System.Drawing.Size(35, 16);
             this.labelControl48.TabIndex = 542;
             this.labelControl48.Text = "Octroi";
             // 
             // labelControl44
             // 
-            this.labelControl44.Location = new System.Drawing.Point(17, 99);
+            this.labelControl44.Location = new System.Drawing.Point(17, 98);
             this.labelControl44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(180, 17);
+            this.labelControl44.Size = new System.Drawing.Size(185, 16);
             this.labelControl44.TabIndex = 542;
             this.labelControl44.Text = "Packing && Forwarding Charges";
             // 
             // labelControl40
             // 
-            this.labelControl40.Location = new System.Drawing.Point(175, 42);
+            this.labelControl40.Location = new System.Drawing.Point(175, 40);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(82, 17);
+            this.labelControl40.Size = new System.Drawing.Size(87, 16);
             this.labelControl40.TabIndex = 542;
             this.labelControl40.Text = "Discount Type";
             // 
@@ -1505,34 +1509,34 @@
             this.labelControl50.Location = new System.Drawing.Point(338, 71);
             this.labelControl50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(55, 17);
+            this.labelControl50.Size = new System.Drawing.Size(58, 16);
             this.labelControl50.TabIndex = 542;
             this.labelControl50.Text = "Insurance";
             // 
             // labelControl43
             // 
-            this.labelControl43.Location = new System.Drawing.Point(10, 71);
+            this.labelControl43.Location = new System.Drawing.Point(8, 71);
             this.labelControl43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(102, 17);
+            this.labelControl43.Size = new System.Drawing.Size(106, 16);
             this.labelControl43.TabIndex = 542;
             this.labelControl43.Text = "Total Tax Amount";
             // 
             // labelControl39
             // 
-            this.labelControl39.Location = new System.Drawing.Point(332, 13);
+            this.labelControl39.Location = new System.Drawing.Point(337, 11);
             this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(160, 17);
+            this.labelControl39.Size = new System.Drawing.Size(163, 16);
             this.labelControl39.TabIndex = 542;
             this.labelControl39.Text = "Item Wise Discount Amount";
             // 
             // labelControl38
             // 
-            this.labelControl38.Location = new System.Drawing.Point(33, 13);
+            this.labelControl38.Location = new System.Drawing.Point(26, 11);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(81, 17);
+            this.labelControl38.Size = new System.Drawing.Size(88, 16);
             this.labelControl38.TabIndex = 542;
             this.labelControl38.Text = "Taxable Value";
             // 
@@ -1553,13 +1557,13 @@
             this.txtValueOfGoods.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtValueOfGoods.Properties.MaxLength = 8;
             this.txtValueOfGoods.Properties.ReadOnly = true;
-            this.txtValueOfGoods.Size = new System.Drawing.Size(157, 24);
+            this.txtValueOfGoods.Size = new System.Drawing.Size(157, 22);
             this.txtValueOfGoods.TabIndex = 476;
             this.txtValueOfGoods.TabStop = false;
             // 
             // txtTotalTaxAmount
             // 
-            this.txtTotalTaxAmount.Location = new System.Drawing.Point(119, 65);
+            this.txtTotalTaxAmount.Location = new System.Drawing.Point(119, 68);
             this.txtTotalTaxAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalTaxAmount.Name = "txtTotalTaxAmount";
             this.txtTotalTaxAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1574,7 +1578,7 @@
             this.txtTotalTaxAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtTotalTaxAmount.Properties.MaxLength = 8;
             this.txtTotalTaxAmount.Properties.ReadOnly = true;
-            this.txtTotalTaxAmount.Size = new System.Drawing.Size(157, 24);
+            this.txtTotalTaxAmount.Size = new System.Drawing.Size(157, 22);
             this.txtTotalTaxAmount.TabIndex = 489;
             this.txtTotalTaxAmount.TabStop = false;
             // 
@@ -1595,13 +1599,13 @@
             this.txtMainDiscVal.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtMainDiscVal.Properties.MaxLength = 8;
             this.txtMainDiscVal.Properties.ReadOnly = true;
-            this.txtMainDiscVal.Size = new System.Drawing.Size(157, 24);
+            this.txtMainDiscVal.Size = new System.Drawing.Size(157, 22);
             this.txtMainDiscVal.TabIndex = 489;
             this.txtMainDiscVal.TabStop = false;
             // 
             // txtRoundOffAmount
             // 
-            this.txtRoundOffAmount.Location = new System.Drawing.Point(582, 123);
+            this.txtRoundOffAmount.Location = new System.Drawing.Point(582, 124);
             this.txtRoundOffAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoundOffAmount.Name = "txtRoundOffAmount";
             this.txtRoundOffAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1615,7 +1619,7 @@
             this.txtRoundOffAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoundOffAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtRoundOffAmount.Properties.MaxLength = 6;
-            this.txtRoundOffAmount.Size = new System.Drawing.Size(62, 24);
+            this.txtRoundOffAmount.Size = new System.Drawing.Size(62, 22);
             this.txtRoundOffAmount.TabIndex = 552;
             // 
             // txtOctoriAmount
@@ -1625,7 +1629,7 @@
             0,
             0,
             131072});
-            this.txtOctoriAmount.Location = new System.Drawing.Point(486, 94);
+            this.txtOctoriAmount.Location = new System.Drawing.Point(486, 95);
             this.txtOctoriAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOctoriAmount.Name = "txtOctoriAmount";
             this.txtOctoriAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1646,7 +1650,7 @@
             this.txtOctoriAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtOctoriAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtOctoriAmount.Properties.MaxLength = 6;
-            this.txtOctoriAmount.Size = new System.Drawing.Size(157, 24);
+            this.txtOctoriAmount.Size = new System.Drawing.Size(157, 22);
             this.txtOctoriAmount.TabIndex = 552;
             // 
             // txtTotalDisc
@@ -1666,7 +1670,7 @@
             this.txtTotalDisc.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtTotalDisc.Properties.MaxLength = 8;
             this.txtTotalDisc.Properties.ReadOnly = true;
-            this.txtTotalDisc.Size = new System.Drawing.Size(138, 24);
+            this.txtTotalDisc.Size = new System.Drawing.Size(138, 22);
             this.txtTotalDisc.TabIndex = 489;
             this.txtTotalDisc.TabStop = false;
             // 
@@ -1677,7 +1681,7 @@
             0,
             0,
             131072});
-            this.txtPKGFrt.Location = new System.Drawing.Point(210, 94);
+            this.txtPKGFrt.Location = new System.Drawing.Point(210, 95);
             this.txtPKGFrt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPKGFrt.Name = "txtPKGFrt";
             this.txtPKGFrt.Properties.Appearance.Options.UseTextOptions = true;
@@ -1698,13 +1702,13 @@
             this.txtPKGFrt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPKGFrt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtPKGFrt.Properties.MaxLength = 6;
-            this.txtPKGFrt.Size = new System.Drawing.Size(119, 24);
+            this.txtPKGFrt.Size = new System.Drawing.Size(119, 22);
             this.txtPKGFrt.TabIndex = 552;
             this.txtPKGFrt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPKGFrt_KeyDown);
             // 
             // txtRNetAmount
             // 
-            this.txtRNetAmount.Location = new System.Drawing.Point(486, 152);
+            this.txtRNetAmount.Location = new System.Drawing.Point(486, 153);
             this.txtRNetAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRNetAmount.Name = "txtRNetAmount";
             this.txtRNetAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1728,7 +1732,7 @@
             // txtInsurancePer
             // 
             this.txtInsurancePer.EditValue = "0.00";
-            this.txtInsurancePer.Location = new System.Drawing.Point(404, 65);
+            this.txtInsurancePer.Location = new System.Drawing.Point(404, 68);
             this.txtInsurancePer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInsurancePer.Name = "txtInsurancePer";
             this.txtInsurancePer.Properties.Appearance.Options.UseTextOptions = true;
@@ -1749,7 +1753,7 @@
             this.txtInsurancePer.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtInsurancePer.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtInsurancePer.Properties.MaxLength = 6;
-            this.txtInsurancePer.Size = new System.Drawing.Size(62, 24);
+            this.txtInsurancePer.Size = new System.Drawing.Size(62, 22);
             this.txtInsurancePer.TabIndex = 510;
             // 
             // txtMainDisc
@@ -1780,12 +1784,12 @@
             this.txtMainDisc.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMainDisc.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtMainDisc.Properties.MaxLength = 6;
-            this.txtMainDisc.Size = new System.Drawing.Size(61, 24);
+            this.txtMainDisc.Size = new System.Drawing.Size(61, 22);
             this.txtMainDisc.TabIndex = 552;
             // 
             // txtInsuranceAmount
             // 
-            this.txtInsuranceAmount.Location = new System.Drawing.Point(486, 65);
+            this.txtInsuranceAmount.Location = new System.Drawing.Point(486, 68);
             this.txtInsuranceAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInsuranceAmount.Name = "txtInsuranceAmount";
             this.txtInsuranceAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1800,7 +1804,7 @@
             this.txtInsuranceAmount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
             this.txtInsuranceAmount.Properties.MaxLength = 8;
             this.txtInsuranceAmount.Properties.ReadOnly = true;
-            this.txtInsuranceAmount.Size = new System.Drawing.Size(157, 24);
+            this.txtInsuranceAmount.Size = new System.Drawing.Size(157, 22);
             this.txtInsuranceAmount.TabIndex = 507;
             this.txtInsuranceAmount.TabStop = false;
             // 
@@ -1810,7 +1814,7 @@
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage6.Size = new System.Drawing.Size(657, 210);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -1821,7 +1825,7 @@
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(657, 203);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(657, 210);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1952,7 +1956,7 @@
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage9.Size = new System.Drawing.Size(657, 210);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -1963,7 +1967,7 @@
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(657, 203);
+            this.HSNGrid.Size = new System.Drawing.Size(657, 210);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2097,15 +2101,15 @@
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(657, 203);
+            this.xtraTabPage7.Size = new System.Drawing.Size(657, 210);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
             // 
-            this.labelControl51.Location = new System.Drawing.Point(159, 8);
+            this.labelControl51.Location = new System.Drawing.Point(149, 21);
             this.labelControl51.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(36, 17);
+            this.labelControl51.Size = new System.Drawing.Size(35, 16);
             this.labelControl51.TabIndex = 554;
             this.labelControl51.Text = "Octroi";
             this.labelControl51.Visible = false;
@@ -2117,7 +2121,7 @@
             0,
             0,
             131072});
-            this.textEdit1.Location = new System.Drawing.Point(216, 4);
+            this.textEdit1.Location = new System.Drawing.Point(206, 18);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -2129,7 +2133,7 @@
             this.textEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.textEdit1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.textEdit1.Properties.MaxLength = 6;
-            this.textEdit1.Size = new System.Drawing.Size(157, 24);
+            this.textEdit1.Size = new System.Drawing.Size(157, 22);
             this.textEdit1.TabIndex = 555;
             this.textEdit1.Visible = false;
             // 
@@ -2162,7 +2166,7 @@
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(433, 203);
+            this.xtraTabPage8.Size = new System.Drawing.Size(433, 210);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // pictureEdit1
@@ -2173,7 +2177,7 @@
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(433, 203);
+            this.pictureEdit1.Size = new System.Drawing.Size(433, 210);
             this.pictureEdit1.TabIndex = 2;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
@@ -2182,7 +2186,7 @@
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(433, 203);
+            this.xtraTabPage1.Size = new System.Drawing.Size(433, 210);
             this.xtraTabPage1.Text = "View Docs";
             // 
             // DocsGrid
@@ -2193,7 +2197,7 @@
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(433, 203);
+            this.DocsGrid.Size = new System.Drawing.Size(433, 210);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2249,7 +2253,7 @@
             this.labelControl2.Location = new System.Drawing.Point(252, 43);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(90, 17);
+            this.labelControl2.Size = new System.Drawing.Size(88, 16);
             this.labelControl2.TabIndex = 516;
             this.labelControl2.Text = "Credit Note No";
             // 
@@ -2261,7 +2265,7 @@
             this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
             this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(87, 24);
+            this.chMultiParty.Size = new System.Drawing.Size(87, 21);
             this.chMultiParty.TabIndex = 558;
             // 
             // FrmInvoiceMstAddCR

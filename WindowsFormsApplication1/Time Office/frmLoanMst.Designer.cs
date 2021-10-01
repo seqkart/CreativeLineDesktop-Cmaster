@@ -104,7 +104,7 @@
             this.DtEndDate.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.DtEndDate.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.DtEndDate.Properties.Mask.BeepOnError = true;
-            this.DtEndDate.Properties.Mask.EditMask = "dd/MM/yy";
+            this.DtEndDate.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.DtEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.DtEndDate.Size = new System.Drawing.Size(98, 24);
             this.DtEndDate.TabIndex = 195;
@@ -135,7 +135,7 @@
             this.DtStartDate.Properties.Mask.BeepOnError = true;
             this.DtStartDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
             this.DtStartDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
-            this.DtStartDate.Properties.MaskSettings.Set("mask", "dd/MM/yy");
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
             this.DtStartDate.Size = new System.Drawing.Size(98, 24);
             this.DtStartDate.TabIndex = 194;
             // 

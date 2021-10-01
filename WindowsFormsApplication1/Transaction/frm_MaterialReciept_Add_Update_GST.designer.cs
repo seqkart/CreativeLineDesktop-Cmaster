@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MaterialReceipt_Add_Update_GST));
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.TextDoc_NO = new DevExpress.XtraEditors.TextEdit();
             this.TextEntryDocType = new DevExpress.XtraEditors.TextEdit();
@@ -291,7 +291,7 @@
             this.labelControl26.Location = new System.Drawing.Point(213, 48);
             this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(27, 17);
+            this.labelControl26.Size = new System.Drawing.Size(29, 16);
             this.labelControl26.TabIndex = 13;
             this.labelControl26.Text = "Date";
             // 
@@ -311,7 +311,7 @@
             this.TextDoc_NO.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDoc_NO.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDoc_NO.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDoc_NO.Size = new System.Drawing.Size(107, 24);
+            this.TextDoc_NO.Size = new System.Drawing.Size(107, 22);
             this.TextDoc_NO.TabIndex = 2;
             this.TextDoc_NO.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             // 
@@ -335,7 +335,7 @@
             this.TextEntryDocType.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextEntryDocType.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextEntryDocType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextEntryDocType.Size = new System.Drawing.Size(70, 24);
+            this.TextEntryDocType.Size = new System.Drawing.Size(70, 22);
             this.TextEntryDocType.TabIndex = 0;
             this.TextEntryDocType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -344,7 +344,7 @@
             this.labelControl1.Location = new System.Drawing.Point(379, 48);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(53, 17);
+            this.labelControl1.Size = new System.Drawing.Size(53, 16);
             this.labelControl1.TabIndex = 12;
             this.labelControl1.Text = "Doc No#";
             // 
@@ -366,7 +366,7 @@
             this.TextChoiceRCO.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextChoiceRCO.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TextChoiceRCO.Properties.MaxLength = 1;
-            this.TextChoiceRCO.Size = new System.Drawing.Size(42, 24);
+            this.TextChoiceRCO.Size = new System.Drawing.Size(42, 22);
             this.TextChoiceRCO.TabIndex = 3;
             this.TextChoiceRCO.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextChoiceRCO.Validating += new System.ComponentModel.CancelEventHandler(this.TextChoiceRCO_Validating);
@@ -390,7 +390,7 @@
             this.TextSuppDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextSuppDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextSuppDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextSuppDesc.Size = new System.Drawing.Size(659, 24);
+            this.TextSuppDesc.Size = new System.Drawing.Size(659, 22);
             this.TextSuppDesc.TabIndex = 9;
             this.TextSuppDesc.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextSuppDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -410,26 +410,26 @@
             this.TextSuppCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextSuppCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextSuppCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextSuppCode.Size = new System.Drawing.Size(73, 24);
+            this.TextSuppCode.Size = new System.Drawing.Size(73, 22);
             this.TextSuppCode.TabIndex = 8;
             this.TextSuppCode.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextSuppCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextSuppCode_KeyDown);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(43, 119);
+            this.labelControl3.Location = new System.Drawing.Point(42, 117);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(83, 17);
+            this.labelControl3.Size = new System.Drawing.Size(86, 16);
             this.labelControl3.TabIndex = 0;
             this.labelControl3.Text = "Supplier Code";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(71, 48);
+            this.labelControl2.Location = new System.Drawing.Point(68, 46);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(55, 17);
+            this.labelControl2.Size = new System.Drawing.Size(60, 16);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "Doc Type";
             // 
@@ -438,7 +438,7 @@
             this.labelControl34.Location = new System.Drawing.Point(566, 48);
             this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(36, 17);
+            this.labelControl34.Size = new System.Drawing.Size(37, 16);
             this.labelControl34.TabIndex = 0;
             this.labelControl34.Text = "R/C/O";
             // 
@@ -447,7 +447,7 @@
             this.labelControl6.Location = new System.Drawing.Point(796, 51);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(53, 17);
+            this.labelControl6.Size = new System.Drawing.Size(55, 16);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Behalf Of";
             // 
@@ -474,7 +474,7 @@
             this.DtEntry.Properties.Mask.BeepOnError = true;
             this.DtEntry.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.DtEntry.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtEntry.Size = new System.Drawing.Size(124, 24);
+            this.DtEntry.Size = new System.Drawing.Size(124, 22);
             this.DtEntry.TabIndex = 1;
             this.DtEntry.EditValueChanged += new System.EventHandler(this.DtEntry_EditValueChanged);
             this.DtEntry.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
@@ -595,17 +595,17 @@
             this.TextRound.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextRound.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextRound.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextRound.Size = new System.Drawing.Size(117, 24);
+            this.TextRound.Size = new System.Drawing.Size(117, 22);
             this.TextRound.TabIndex = 12;
             this.TextRound.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextRound.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
             // 
             // labelControl33
             // 
-            this.labelControl33.Location = new System.Drawing.Point(1140, 290);
+            this.labelControl33.Location = new System.Drawing.Point(1146, 289);
             this.labelControl33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl33.Name = "labelControl33";
-            this.labelControl33.Size = new System.Drawing.Size(60, 17);
+            this.labelControl33.Size = new System.Drawing.Size(60, 16);
             this.labelControl33.TabIndex = 49;
             this.labelControl33.Text = "Round Off";
             // 
@@ -623,7 +623,7 @@
             this.TxtFrtDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TxtFrtDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TxtFrtDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TxtFrtDesc.Size = new System.Drawing.Size(384, 24);
+            this.TxtFrtDesc.Size = new System.Drawing.Size(384, 22);
             this.TxtFrtDesc.TabIndex = 15;
             // 
             // TextFrtCode
@@ -640,16 +640,16 @@
             this.TextFrtCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextFrtCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextFrtCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextFrtCode.Size = new System.Drawing.Size(78, 24);
+            this.TextFrtCode.Size = new System.Drawing.Size(78, 22);
             this.TextFrtCode.TabIndex = 14;
             this.TextFrtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextFrtCode_KeyDown);
             // 
             // labelControl38
             // 
-            this.labelControl38.Location = new System.Drawing.Point(86, 220);
+            this.labelControl38.Location = new System.Drawing.Point(86, 218);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(40, 17);
+            this.labelControl38.Size = new System.Drawing.Size(42, 16);
             this.labelControl38.TabIndex = 47;
             this.labelControl38.Text = "Freight";
             // 
@@ -668,7 +668,7 @@
             this.TextDescGoods.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDescGoods.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDescGoods.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDescGoods.Size = new System.Drawing.Size(147, 24);
+            this.TextDescGoods.Size = new System.Drawing.Size(147, 22);
             this.TextDescGoods.TabIndex = 19;
             this.TextDescGoods.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextDescGoods.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -678,7 +678,7 @@
             this.labelControl40.Location = new System.Drawing.Point(701, 255);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(61, 17);
+            this.labelControl40.Size = new System.Drawing.Size(66, 16);
             this.labelControl40.TabIndex = 46;
             this.labelControl40.Text = "Gds. Desc.";
             // 
@@ -697,7 +697,7 @@
             this.TextRemarks.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextRemarks.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextRemarks.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextRemarks.Size = new System.Drawing.Size(780, 24);
+            this.TextRemarks.Size = new System.Drawing.Size(780, 22);
             this.TextRemarks.TabIndex = 20;
             this.TextRemarks.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextRemarks.Enter += new System.EventHandler(this.TextRemarks_Enter);
@@ -723,7 +723,7 @@
             this.TextInvAmount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextInvAmount.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextInvAmount.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextInvAmount.Size = new System.Drawing.Size(117, 24);
+            this.TextInvAmount.Size = new System.Drawing.Size(117, 22);
             this.TextInvAmount.TabIndex = 13;
             this.TextInvAmount.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextInvAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -750,7 +750,7 @@
             this.TextFreightAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextFreightAmt.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextFreightAmt.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextFreightAmt.Size = new System.Drawing.Size(117, 24);
+            this.TextFreightAmt.Size = new System.Drawing.Size(117, 22);
             this.TextFreightAmt.TabIndex = 6;
             this.TextFreightAmt.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextFreightAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -777,7 +777,7 @@
             this.TextTotalAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextTotalAmt.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextTotalAmt.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextTotalAmt.Size = new System.Drawing.Size(117, 24);
+            this.TextTotalAmt.Size = new System.Drawing.Size(117, 22);
             this.TextTotalAmt.TabIndex = 11;
             this.TextTotalAmt.EditValueChanged += new System.EventHandler(this.TextTotalAmt_EditValueChanged);
             this.TextTotalAmt.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
@@ -805,7 +805,7 @@
             this.TextTaxableAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextTaxableAmt.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextTaxableAmt.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextTaxableAmt.Size = new System.Drawing.Size(117, 24);
+            this.TextTaxableAmt.Size = new System.Drawing.Size(117, 22);
             this.TextTaxableAmt.TabIndex = 7;
             this.TextTaxableAmt.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextTaxableAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -832,7 +832,7 @@
             this.TextIGSTAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextIGSTAmt.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextIGSTAmt.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextIGSTAmt.Size = new System.Drawing.Size(117, 24);
+            this.TextIGSTAmt.Size = new System.Drawing.Size(117, 22);
             this.TextIGSTAmt.TabIndex = 10;
             this.TextIGSTAmt.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextIGSTAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -859,7 +859,7 @@
             this.TextCGSTAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextCGSTAmt.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCGSTAmt.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCGSTAmt.Size = new System.Drawing.Size(117, 24);
+            this.TextCGSTAmt.Size = new System.Drawing.Size(117, 22);
             this.TextCGSTAmt.TabIndex = 9;
             this.TextCGSTAmt.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextCGSTAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -886,7 +886,7 @@
             this.TextPackingChgs.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextPackingChgs.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextPackingChgs.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextPackingChgs.Size = new System.Drawing.Size(117, 24);
+            this.TextPackingChgs.Size = new System.Drawing.Size(117, 22);
             this.TextPackingChgs.TabIndex = 5;
             this.TextPackingChgs.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextPackingChgs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -913,7 +913,7 @@
             this.TextSGSTAmt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextSGSTAmt.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextSGSTAmt.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextSGSTAmt.Size = new System.Drawing.Size(117, 24);
+            this.TextSGSTAmt.Size = new System.Drawing.Size(117, 22);
             this.TextSGSTAmt.TabIndex = 8;
             this.TextSGSTAmt.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextSGSTAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -935,7 +935,7 @@
             this.TextTransName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextTransName.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextTransName.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextTransName.Size = new System.Drawing.Size(273, 24);
+            this.TextTransName.Size = new System.Drawing.Size(273, 22);
             this.TextTransName.TabIndex = 17;
             this.TextTransName.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextTransName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -955,7 +955,7 @@
             this.TextVehNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextVehNo.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextVehNo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextVehNo.Size = new System.Drawing.Size(103, 24);
+            this.TextVehNo.Size = new System.Drawing.Size(103, 22);
             this.TextVehNo.TabIndex = 18;
             this.TextVehNo.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextVehNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -975,7 +975,7 @@
             this.TextGrNo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextGrNo.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextGrNo.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextGrNo.Size = new System.Drawing.Size(147, 24);
+            this.TextGrNo.Size = new System.Drawing.Size(147, 22);
             this.TextGrNo.TabIndex = 16;
             this.TextGrNo.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextGrNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -995,7 +995,7 @@
             this.TextDocNumber.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextDocNumber.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDocNumber.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextDocNumber.Size = new System.Drawing.Size(100, 24);
+            this.TextDocNumber.Size = new System.Drawing.Size(100, 22);
             this.TextDocNumber.TabIndex = 1;
             this.TextDocNumber.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextDocNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -1018,113 +1018,113 @@
             this.TextDocType.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextDocType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TextDocType.Properties.MaxLength = 1;
-            this.TextDocType.Size = new System.Drawing.Size(50, 24);
+            this.TextDocType.Size = new System.Drawing.Size(50, 22);
             this.TextDocType.TabIndex = 0;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotLike;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            conditionValidationRule2.Values.Add("I");
-            conditionValidationRule2.Values.Add("B");
-            conditionValidationRule2.Values.Add("O");
-            this.MyValidationProvider.SetValidationRule(this.TextDocType, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotLike;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            conditionValidationRule1.Values.Add("I");
+            conditionValidationRule1.Values.Add("B");
+            conditionValidationRule1.Values.Add("O");
+            this.MyValidationProvider.SetValidationRule(this.TextDocType, conditionValidationRule1);
             this.TextDocType.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextDocType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl17
             // 
-            this.labelControl17.Location = new System.Drawing.Point(76, 286);
+            this.labelControl17.Location = new System.Drawing.Point(73, 284);
             this.labelControl17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl17.Name = "labelControl17";
-            this.labelControl17.Size = new System.Drawing.Size(50, 17);
+            this.labelControl17.Size = new System.Drawing.Size(55, 16);
             this.labelControl17.TabIndex = 20;
             this.labelControl17.Text = "Remarks";
             // 
             // labelControl25
             // 
-            this.labelControl25.Location = new System.Drawing.Point(1112, 320);
+            this.labelControl25.Location = new System.Drawing.Point(1114, 319);
             this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(89, 17);
+            this.labelControl25.Size = new System.Drawing.Size(92, 16);
             this.labelControl25.TabIndex = 18;
             this.labelControl25.Text = "Invoice Amount";
             // 
             // labelControl24
             // 
-            this.labelControl24.Location = new System.Drawing.Point(1160, 110);
+            this.labelControl24.Location = new System.Drawing.Point(1164, 109);
             this.labelControl24.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(40, 17);
+            this.labelControl24.Size = new System.Drawing.Size(42, 16);
             this.labelControl24.TabIndex = 17;
             this.labelControl24.Text = "Freight";
             // 
             // labelControl46
             // 
-            this.labelControl46.Location = new System.Drawing.Point(1150, 230);
+            this.labelControl46.Location = new System.Drawing.Point(1151, 229);
             this.labelControl46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl46.Name = "labelControl46";
-            this.labelControl46.Size = new System.Drawing.Size(49, 17);
+            this.labelControl46.Size = new System.Drawing.Size(55, 16);
             this.labelControl46.TabIndex = 14;
             this.labelControl46.Text = "IGSTAmt";
             // 
             // labelControl16
             // 
-            this.labelControl16.Location = new System.Drawing.Point(1122, 200);
+            this.labelControl16.Location = new System.Drawing.Point(1120, 199);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(80, 17);
+            this.labelControl16.Size = new System.Drawing.Size(86, 16);
             this.labelControl16.TabIndex = 14;
             this.labelControl16.Text = "CGST Amount";
             // 
             // labelControl29
             // 
-            this.labelControl29.Location = new System.Drawing.Point(1125, 260);
+            this.labelControl29.Location = new System.Drawing.Point(1126, 259);
             this.labelControl29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl29.Name = "labelControl29";
-            this.labelControl29.Size = new System.Drawing.Size(78, 17);
+            this.labelControl29.Size = new System.Drawing.Size(80, 16);
             this.labelControl29.TabIndex = 23;
             this.labelControl29.Text = "Total Amount";
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(1123, 170);
+            this.labelControl22.Location = new System.Drawing.Point(1120, 169);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(79, 17);
+            this.labelControl22.Size = new System.Drawing.Size(86, 16);
             this.labelControl22.TabIndex = 15;
             this.labelControl22.Text = "SGST Amount";
             // 
             // labelControl37
             // 
-            this.labelControl37.Location = new System.Drawing.Point(1125, 140);
+            this.labelControl37.Location = new System.Drawing.Point(1127, 139);
             this.labelControl37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl37.Name = "labelControl37";
-            this.labelControl37.Size = new System.Drawing.Size(75, 17);
+            this.labelControl37.Size = new System.Drawing.Size(79, 16);
             this.labelControl37.TabIndex = 23;
             this.labelControl37.Text = "Taxable Amt.";
             // 
             // labelControl15
             // 
-            this.labelControl15.Location = new System.Drawing.Point(1113, 50);
+            this.labelControl15.Location = new System.Drawing.Point(1111, 49);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(93, 17);
+            this.labelControl15.Size = new System.Drawing.Size(95, 16);
             this.labelControl15.TabIndex = 16;
             this.labelControl15.Text = "Value Of Goods";
             // 
             // labelControl21
             // 
-            this.labelControl21.Location = new System.Drawing.Point(1181, 80);
+            this.labelControl21.Location = new System.Drawing.Point(1191, 79);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(19, 17);
+            this.labelControl21.Size = new System.Drawing.Size(15, 16);
             this.labelControl21.TabIndex = 23;
             this.labelControl21.Text = "+/-";
             // 
             // labelControl36
             // 
-            this.labelControl36.Location = new System.Drawing.Point(52, 256);
+            this.labelControl36.Location = new System.Drawing.Point(50, 254);
             this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(74, 17);
+            this.labelControl36.Size = new System.Drawing.Size(78, 16);
             this.labelControl36.TabIndex = 21;
             this.labelControl36.Text = "Trans. Name";
             // 
@@ -1133,7 +1133,7 @@
             this.labelControl54.Location = new System.Drawing.Point(430, 256);
             this.labelControl54.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl54.Name = "labelControl54";
-            this.labelControl54.Size = new System.Drawing.Size(55, 17);
+            this.labelControl54.Size = new System.Drawing.Size(55, 16);
             this.labelControl54.TabIndex = 21;
             this.labelControl54.Text = "Veh. No#";
             // 
@@ -1142,7 +1142,7 @@
             this.labelControl20.Location = new System.Drawing.Point(474, 187);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(71, 17);
+            this.labelControl20.Size = new System.Drawing.Size(75, 16);
             this.labelControl20.TabIndex = 24;
             this.labelControl20.Text = "Invoice Date";
             // 
@@ -1151,7 +1151,7 @@
             this.labelControl35.Location = new System.Drawing.Point(720, 221);
             this.labelControl35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl35.Name = "labelControl35";
-            this.labelControl35.Size = new System.Drawing.Size(42, 17);
+            this.labelControl35.Size = new System.Drawing.Size(44, 16);
             this.labelControl35.TabIndex = 21;
             this.labelControl35.Text = "GR No.";
             // 
@@ -1160,7 +1160,7 @@
             this.labelControl30.Location = new System.Drawing.Point(678, 186);
             this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(84, 17);
+            this.labelControl30.Size = new System.Drawing.Size(84, 16);
             this.labelControl30.TabIndex = 21;
             this.labelControl30.Text = "Amount on Bill";
             // 
@@ -1169,16 +1169,16 @@
             this.labelControl18.Location = new System.Drawing.Point(205, 187);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(152, 17);
+            this.labelControl18.Size = new System.Drawing.Size(154, 16);
             this.labelControl18.TabIndex = 1;
             this.labelControl18.Text = "Invoice Number as  on Bill";
             // 
             // labelControl14
             // 
-            this.labelControl14.Location = new System.Drawing.Point(72, 187);
+            this.labelControl14.Location = new System.Drawing.Point(68, 185);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(54, 17);
+            this.labelControl14.Size = new System.Drawing.Size(60, 16);
             this.labelControl14.TabIndex = 22;
             this.labelControl14.Text = "Doc.Type";
             // 
@@ -1194,10 +1194,10 @@
             this.DtDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtDocDate.Properties.Mask.BeepOnError = true;
-            this.DtDocDate.Properties.Mask.EditMask = "dd/MM/yy";
+            this.DtDocDate.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.DtDocDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
             this.DtDocDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.DtDocDate.Size = new System.Drawing.Size(119, 24);
+            this.DtDocDate.Size = new System.Drawing.Size(119, 22);
             this.DtDocDate.TabIndex = 2;
             this.DtDocDate.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.DtDocDate.Enter += new System.EventHandler(this.DtDocDate_Enter);
@@ -1227,7 +1227,7 @@
             this.TextAsPerBill.Properties.Mask.EditMask = "d";
             this.TextAsPerBill.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextAsPerBill.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextAsPerBill.Size = new System.Drawing.Size(147, 24);
+            this.TextAsPerBill.Size = new System.Drawing.Size(147, 22);
             this.TextAsPerBill.TabIndex = 3;
             this.TextAsPerBill.ToolTip = "Amount as Per Bill";
             this.TextAsPerBill.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
@@ -1253,7 +1253,7 @@
             this.TextValueOfGoods.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.TextValueOfGoods.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextValueOfGoods.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextValueOfGoods.Size = new System.Drawing.Size(117, 24);
+            this.TextValueOfGoods.Size = new System.Drawing.Size(117, 22);
             this.TextValueOfGoods.TabIndex = 4;
             this.TextValueOfGoods.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextValueOfGoods.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -1365,7 +1365,7 @@
             this.TextProdRate.Properties.Mask.EditMask = "N4";
             this.TextProdRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextProdRate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.TextProdRate.Size = new System.Drawing.Size(92, 24);
+            this.TextProdRate.Size = new System.Drawing.Size(92, 22);
             this.TextProdRate.TabIndex = 12;
             this.TextProdRate.Enter += new System.EventHandler(this.TextProdRate_Enter);
             this.TextProdRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -1387,7 +1387,7 @@
             this.TextAcPostDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextAcPostDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextAcPostDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextAcPostDesc.Size = new System.Drawing.Size(415, 24);
+            this.TextAcPostDesc.Size = new System.Drawing.Size(415, 22);
             this.TextAcPostDesc.TabIndex = 10;
             // 
             // labelControl7
@@ -1395,7 +1395,7 @@
             this.labelControl7.Location = new System.Drawing.Point(30, 29);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(55, 17);
+            this.labelControl7.Size = new System.Drawing.Size(57, 16);
             this.labelControl7.TabIndex = 21;
             this.labelControl7.Text = "Prd Code";
             // 
@@ -1404,7 +1404,7 @@
             this.labelControl13.Location = new System.Drawing.Point(26, 97);
             this.labelControl13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl13.Name = "labelControl13";
-            this.labelControl13.Size = new System.Drawing.Size(61, 17);
+            this.labelControl13.Size = new System.Drawing.Size(65, 16);
             this.labelControl13.TabIndex = 21;
             this.labelControl13.Text = "HSN Code";
             // 
@@ -1421,7 +1421,7 @@
             this.TextAcPostingCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextAcPostingCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextAcPostingCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextAcPostingCode.Size = new System.Drawing.Size(78, 24);
+            this.TextAcPostingCode.Size = new System.Drawing.Size(78, 22);
             this.TextAcPostingCode.TabIndex = 9;
             this.TextAcPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextAcPostingCode_KeyDown);
             // 
@@ -1430,7 +1430,7 @@
             this.labelControl10.Location = new System.Drawing.Point(631, 29);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(42, 17);
+            this.labelControl10.Size = new System.Drawing.Size(43, 16);
             this.labelControl10.TabIndex = 3;
             this.labelControl10.Text = "PO No.";
             // 
@@ -1439,7 +1439,7 @@
             this.labelControl8.Location = new System.Drawing.Point(36, 131);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(47, 17);
+            this.labelControl8.Size = new System.Drawing.Size(48, 16);
             this.labelControl8.TabIndex = 23;
             this.labelControl8.Text = "Doc Qty";
             // 
@@ -1448,7 +1448,7 @@
             this.labelControl32.Location = new System.Drawing.Point(197, 97);
             this.labelControl32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl32.Name = "labelControl32";
-            this.labelControl32.Size = new System.Drawing.Size(66, 17);
+            this.labelControl32.Size = new System.Drawing.Size(68, 16);
             this.labelControl32.TabIndex = 259;
             this.labelControl32.Text = "A/c Posting";
             // 
@@ -1457,7 +1457,7 @@
             this.labelControl11.Location = new System.Drawing.Point(533, 63);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(31, 17);
+            this.labelControl11.Size = new System.Drawing.Size(31, 16);
             this.labelControl11.TabIndex = 20;
             this.labelControl11.Text = "UOM";
             // 
@@ -1466,7 +1466,7 @@
             this.labelControl12.Location = new System.Drawing.Point(324, 165);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(30, 17);
+            this.labelControl12.Size = new System.Drawing.Size(37, 16);
             this.labelControl12.TabIndex = 17;
             this.labelControl12.Text = "SGST";
             // 
@@ -1498,7 +1498,7 @@
             this.TextPrdSGSTRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdSGSTRate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdSGSTRate.Properties.NullText = "0";
-            this.TextPrdSGSTRate.Size = new System.Drawing.Size(40, 24);
+            this.TextPrdSGSTRate.Size = new System.Drawing.Size(40, 22);
             this.TextPrdSGSTRate.TabIndex = 16;
             this.TextPrdSGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
             this.TextPrdSGSTRate.Validating += new System.ComponentModel.CancelEventHandler(this.TextProdQnty_Validating_1);
@@ -1508,7 +1508,7 @@
             this.labelControl9.Location = new System.Drawing.Point(55, 165);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(26, 17);
+            this.labelControl9.Size = new System.Drawing.Size(29, 16);
             this.labelControl9.TabIndex = 18;
             this.labelControl9.Text = "Rate";
             // 
@@ -1517,7 +1517,7 @@
             this.labelControl48.Location = new System.Drawing.Point(324, 199);
             this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
-            this.labelControl48.Size = new System.Drawing.Size(31, 17);
+            this.labelControl48.Size = new System.Drawing.Size(37, 16);
             this.labelControl48.TabIndex = 17;
             this.labelControl48.Text = "CGST";
             // 
@@ -1526,7 +1526,7 @@
             this.labelControl55.Location = new System.Drawing.Point(402, 165);
             this.labelControl55.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl55.Name = "labelControl55";
-            this.labelControl55.Size = new System.Drawing.Size(11, 17);
+            this.labelControl55.Size = new System.Drawing.Size(12, 16);
             this.labelControl55.TabIndex = 16;
             this.labelControl55.Text = "%";
             // 
@@ -1535,7 +1535,7 @@
             this.labelControl51.Location = new System.Drawing.Point(552, 203);
             this.labelControl51.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl51.Name = "labelControl51";
-            this.labelControl51.Size = new System.Drawing.Size(56, 17);
+            this.labelControl51.Size = new System.Drawing.Size(58, 16);
             this.labelControl51.TabIndex = 17;
             this.labelControl51.Text = "Total Amt";
             // 
@@ -1544,7 +1544,7 @@
             this.labelControl43.Location = new System.Drawing.Point(324, 131);
             this.labelControl43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl43.Name = "labelControl43";
-            this.labelControl43.Size = new System.Drawing.Size(94, 17);
+            this.labelControl43.Size = new System.Drawing.Size(99, 16);
             this.labelControl43.TabIndex = 17;
             this.labelControl43.Text = "Taxable Amount";
             // 
@@ -1576,7 +1576,7 @@
             this.TextPrdCGSTRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdCGSTRate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdCGSTRate.Properties.NullText = "0";
-            this.TextPrdCGSTRate.Size = new System.Drawing.Size(40, 24);
+            this.TextPrdCGSTRate.Size = new System.Drawing.Size(40, 22);
             this.TextPrdCGSTRate.TabIndex = 18;
             this.TextPrdCGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
             this.TextPrdCGSTRate.Validating += new System.ComponentModel.CancelEventHandler(this.TextProdQnty_Validating_1);
@@ -1586,7 +1586,7 @@
             this.labelControl50.Location = new System.Drawing.Point(324, 233);
             this.labelControl50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl50.Name = "labelControl50";
-            this.labelControl50.Size = new System.Drawing.Size(26, 17);
+            this.labelControl50.Size = new System.Drawing.Size(31, 16);
             this.labelControl50.TabIndex = 17;
             this.labelControl50.Text = "IGST";
             // 
@@ -1595,7 +1595,7 @@
             this.labelControl31.Location = new System.Drawing.Point(402, 233);
             this.labelControl31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl31.Name = "labelControl31";
-            this.labelControl31.Size = new System.Drawing.Size(11, 17);
+            this.labelControl31.Size = new System.Drawing.Size(12, 16);
             this.labelControl31.TabIndex = 17;
             this.labelControl31.Text = "%";
             // 
@@ -1604,7 +1604,7 @@
             this.labelControl44.Location = new System.Drawing.Point(402, 199);
             this.labelControl44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl44.Name = "labelControl44";
-            this.labelControl44.Size = new System.Drawing.Size(11, 17);
+            this.labelControl44.Size = new System.Drawing.Size(12, 16);
             this.labelControl44.TabIndex = 258;
             this.labelControl44.Text = "%";
             // 
@@ -1622,7 +1622,7 @@
             this.TextProdDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextProdDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextProdDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextProdDesc.Size = new System.Drawing.Size(422, 24);
+            this.TextProdDesc.Size = new System.Drawing.Size(422, 22);
             this.TextProdDesc.TabIndex = 5;
             this.TextProdDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -1640,7 +1640,7 @@
             this.TextPrdHSNCd.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextPrdHSNCd.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextPrdHSNCd.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextPrdHSNCd.Size = new System.Drawing.Size(93, 24);
+            this.TextPrdHSNCd.Size = new System.Drawing.Size(93, 22);
             this.TextPrdHSNCd.TabIndex = 8;
             this.TextPrdHSNCd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdHSNCd.Validating += new System.ComponentModel.CancelEventHandler(this.TextPrdHSNCd_Validating);
@@ -1658,7 +1658,7 @@
             this.TextProdCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextProdCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextProdCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextProdCode.Size = new System.Drawing.Size(71, 24);
+            this.TextProdCode.Size = new System.Drawing.Size(71, 22);
             this.TextProdCode.TabIndex = 0;
             this.TextProdCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextProdCode_KeyDown);
             // 
@@ -1686,7 +1686,7 @@
             this.TextProdQnty.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextProdQnty.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextProdQnty.Properties.NullText = "0";
-            this.TextProdQnty.Size = new System.Drawing.Size(92, 24);
+            this.TextProdQnty.Size = new System.Drawing.Size(92, 22);
             this.TextProdQnty.TabIndex = 11;
             this.TextProdQnty.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextProdQnty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -1707,7 +1707,7 @@
             this.TextUOM.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextUOM.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextUOM.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextUOM.Size = new System.Drawing.Size(41, 24);
+            this.TextUOM.Size = new System.Drawing.Size(41, 22);
             this.TextUOM.TabIndex = 6;
             this.TextUOM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -1757,7 +1757,7 @@
             this.TextPrdSGSTAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdSGSTAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdSGSTAmt.Properties.NullText = "0";
-            this.TextPrdSGSTAmt.Size = new System.Drawing.Size(92, 24);
+            this.TextPrdSGSTAmt.Size = new System.Drawing.Size(92, 22);
             this.TextPrdSGSTAmt.TabIndex = 17;
             this.TextPrdSGSTAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdSGSTAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -1791,7 +1791,7 @@
             this.TextPrdCGSTAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdCGSTAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdCGSTAmt.Properties.NullText = "0";
-            this.TextPrdCGSTAmt.Size = new System.Drawing.Size(92, 24);
+            this.TextPrdCGSTAmt.Size = new System.Drawing.Size(92, 22);
             this.TextPrdCGSTAmt.TabIndex = 19;
             this.TextPrdCGSTAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdCGSTAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -1826,7 +1826,7 @@
             this.TextPOStock.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPOStock.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPOStock.Properties.NullText = "0";
-            this.TextPOStock.Size = new System.Drawing.Size(92, 24);
+            this.TextPOStock.Size = new System.Drawing.Size(92, 22);
             this.TextPOStock.TabIndex = 7;
             // 
             // TextPrdIGSTAmt
@@ -1857,7 +1857,7 @@
             this.TextPrdIGSTAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdIGSTAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdIGSTAmt.Properties.NullText = "0";
-            this.TextPrdIGSTAmt.Size = new System.Drawing.Size(92, 24);
+            this.TextPrdIGSTAmt.Size = new System.Drawing.Size(92, 22);
             this.TextPrdIGSTAmt.TabIndex = 21;
             this.TextPrdIGSTAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdIGSTAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -1891,7 +1891,7 @@
             this.TextPrdIGSTRate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdIGSTRate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdIGSTRate.Properties.NullText = "0";
-            this.TextPrdIGSTRate.Size = new System.Drawing.Size(40, 24);
+            this.TextPrdIGSTRate.Size = new System.Drawing.Size(40, 22);
             this.TextPrdIGSTRate.TabIndex = 20;
             this.TextPrdIGSTRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdIGSTRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -1902,7 +1902,7 @@
             this.labelControl39.Location = new System.Drawing.Point(621, 63);
             this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(53, 17);
+            this.labelControl39.Size = new System.Drawing.Size(56, 16);
             this.labelControl39.TabIndex = 51;
             this.labelControl39.Text = "PO Stock";
             // 
@@ -1974,7 +1974,7 @@
             this.TextMdPrdTxbAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextMdPrdTxbAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextMdPrdTxbAmt.Properties.NullText = "0";
-            this.TextMdPrdTxbAmt.Size = new System.Drawing.Size(92, 24);
+            this.TextMdPrdTxbAmt.Size = new System.Drawing.Size(92, 22);
             this.TextMdPrdTxbAmt.TabIndex = 15;
             this.TextMdPrdTxbAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextMdPrdTxbAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -2013,7 +2013,7 @@
             this.textEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.textEdit1.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.textEdit1.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.textEdit1.Size = new System.Drawing.Size(22, 24);
+            this.textEdit1.Size = new System.Drawing.Size(22, 22);
             this.textEdit1.TabIndex = 4;
             this.textEdit1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.textEdit1.Validated += new System.EventHandler(this.TextEdit1_Validated);
@@ -2070,7 +2070,7 @@
             this.TextProdPONO.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextProdPONO.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextProdPONO.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextProdPONO.Size = new System.Drawing.Size(64, 24);
+            this.TextProdPONO.Size = new System.Drawing.Size(64, 22);
             this.TextProdPONO.TabIndex = 3;
             this.TextProdPONO.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -2079,7 +2079,7 @@
             this.labelControl27.Location = new System.Drawing.Point(38, 199);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(45, 17);
+            this.labelControl27.Size = new System.Drawing.Size(46, 16);
             this.labelControl27.TabIndex = 40;
             this.labelControl27.Text = "Amount";
             // 
@@ -2088,7 +2088,7 @@
             this.labelControl63.Location = new System.Drawing.Point(624, 167);
             this.labelControl63.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl63.Name = "labelControl63";
-            this.labelControl63.Size = new System.Drawing.Size(64, 17);
+            this.labelControl63.Size = new System.Drawing.Size(58, 16);
             this.labelControl63.TabIndex = 40;
             this.labelControl63.Text = "Other (+/-)";
             // 
@@ -2097,7 +2097,7 @@
             this.labelControl28.Location = new System.Drawing.Point(184, 29);
             this.labelControl28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(64, 17);
+            this.labelControl28.Size = new System.Drawing.Size(67, 16);
             this.labelControl28.TabIndex = 43;
             this.labelControl28.Text = "Asgn Code";
             // 
@@ -2158,7 +2158,7 @@
             this.TextPrdPackingAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdPackingAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdPackingAmt.Properties.NullText = "0";
-            this.TextPrdPackingAmt.Size = new System.Drawing.Size(92, 24);
+            this.TextPrdPackingAmt.Size = new System.Drawing.Size(92, 22);
             this.TextPrdPackingAmt.TabIndex = 14;
             this.TextPrdPackingAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdPackingAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -2178,7 +2178,7 @@
             this.TextProdAsgnCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextProdAsgnCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextProdAsgnCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextProdAsgnCode.Size = new System.Drawing.Size(94, 24);
+            this.TextProdAsgnCode.Size = new System.Drawing.Size(94, 22);
             this.TextProdAsgnCode.TabIndex = 1;
             this.TextProdAsgnCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -2205,7 +2205,7 @@
             this.TextStockInHand.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextStockInHand.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextStockInHand.Properties.NullText = "0";
-            this.TextStockInHand.Size = new System.Drawing.Size(94, 24);
+            this.TextStockInHand.Size = new System.Drawing.Size(94, 22);
             this.TextStockInHand.TabIndex = 2;
             this.TextStockInHand.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -2214,7 +2214,7 @@
             this.labelControl61.Location = new System.Drawing.Point(63, 233);
             this.labelControl61.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl61.Name = "labelControl61";
-            this.labelControl61.Size = new System.Drawing.Size(19, 17);
+            this.labelControl61.Size = new System.Drawing.Size(15, 16);
             this.labelControl61.TabIndex = 40;
             this.labelControl61.Text = "+/-";
             // 
@@ -2242,7 +2242,7 @@
             this.TextPrdPlusAmt.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.TextPrdPlusAmt.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.TextPrdPlusAmt.Properties.NullText = "0";
-            this.TextPrdPlusAmt.Size = new System.Drawing.Size(78, 24);
+            this.TextPrdPlusAmt.Size = new System.Drawing.Size(78, 22);
             this.TextPrdPlusAmt.TabIndex = 23;
             this.TextPrdPlusAmt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             this.TextPrdPlusAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumericwithdigit);
@@ -2253,7 +2253,7 @@
             this.labelControl49.Location = new System.Drawing.Point(359, 29);
             this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
-            this.labelControl49.Size = new System.Drawing.Size(55, 17);
+            this.labelControl49.Size = new System.Drawing.Size(57, 16);
             this.labelControl49.TabIndex = 40;
             this.labelControl49.Text = "Stock Qty";
             // 
@@ -2291,7 +2291,7 @@
             this.TextExpHeadCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextExpHeadCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextExpHeadCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextExpHeadCode.Size = new System.Drawing.Size(89, 24);
+            this.TextExpHeadCode.Size = new System.Drawing.Size(89, 22);
             this.TextExpHeadCode.TabIndex = 3;
             this.TextExpHeadCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextExpHeadCode_KeyDown);
             // 
@@ -2311,7 +2311,7 @@
             this.TextCostCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextCostCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCostCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCostCode.Size = new System.Drawing.Size(89, 24);
+            this.TextCostCode.Size = new System.Drawing.Size(89, 22);
             this.TextCostCode.TabIndex = 0;
             this.TextCostCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCostCode_KeyDown);
             // 
@@ -2332,7 +2332,7 @@
             this.TextCostSubCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextCostSubCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCostSubCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCostSubCode.Size = new System.Drawing.Size(89, 24);
+            this.TextCostSubCode.Size = new System.Drawing.Size(89, 22);
             this.TextCostSubCode.TabIndex = 45;
             // 
             // ExpLbl
@@ -2340,7 +2340,7 @@
             this.ExpLbl.Location = new System.Drawing.Point(14, 78);
             this.ExpLbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ExpLbl.Name = "ExpLbl";
-            this.ExpLbl.Size = new System.Drawing.Size(56, 17);
+            this.ExpLbl.Size = new System.Drawing.Size(60, 16);
             this.ExpLbl.TabIndex = 44;
             this.ExpLbl.Text = "Exp Head";
             // 
@@ -2349,7 +2349,7 @@
             this.SubGrpLbl.Location = new System.Drawing.Point(14, 44);
             this.SubGrpLbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SubGrpLbl.Name = "SubGrpLbl";
-            this.SubGrpLbl.Size = new System.Drawing.Size(63, 17);
+            this.SubGrpLbl.Size = new System.Drawing.Size(64, 16);
             this.SubGrpLbl.TabIndex = 44;
             this.SubGrpLbl.Text = "Sub Group";
             // 
@@ -2358,7 +2358,7 @@
             this.GrpLbl.Location = new System.Drawing.Point(14, 10);
             this.GrpLbl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GrpLbl.Name = "GrpLbl";
-            this.GrpLbl.Size = new System.Drawing.Size(37, 17);
+            this.GrpLbl.Size = new System.Drawing.Size(37, 16);
             this.GrpLbl.TabIndex = 44;
             this.GrpLbl.Text = "Group";
             // 
@@ -2378,7 +2378,7 @@
             this.TextExpHeadDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextExpHeadDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextExpHeadDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextExpHeadDesc.Size = new System.Drawing.Size(330, 24);
+            this.TextExpHeadDesc.Size = new System.Drawing.Size(330, 22);
             this.TextExpHeadDesc.TabIndex = 43;
             // 
             // TextCostSubCodeDesc
@@ -2397,7 +2397,7 @@
             this.TextCostSubCodeDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCostSubCodeDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCostSubCodeDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCostSubCodeDesc.Size = new System.Drawing.Size(330, 24);
+            this.TextCostSubCodeDesc.Size = new System.Drawing.Size(330, 22);
             this.TextCostSubCodeDesc.TabIndex = 43;
             // 
             // TextCostDesc
@@ -2416,7 +2416,7 @@
             this.TextCostDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCostDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCostDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCostDesc.Size = new System.Drawing.Size(330, 24);
+            this.TextCostDesc.Size = new System.Drawing.Size(330, 22);
             this.TextCostDesc.TabIndex = 43;
             // 
             // EntryInfo_GridCtrl
@@ -2839,7 +2839,7 @@
             this.TextCreditDesc.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCreditDesc.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCreditDesc.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCreditDesc.Size = new System.Drawing.Size(535, 24);
+            this.TextCreditDesc.Size = new System.Drawing.Size(535, 22);
             this.TextCreditDesc.TabIndex = 7;
             this.TextCreditDesc.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextCreditDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -2859,7 +2859,7 @@
             this.TextCreditCode.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.TextCreditCode.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextCreditCode.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextCreditCode.Size = new System.Drawing.Size(76, 24);
+            this.TextCreditCode.Size = new System.Drawing.Size(76, 22);
             this.TextCreditCode.TabIndex = 6;
             this.TextCreditCode.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextCreditCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextCreditCode_KeyDown);
@@ -2882,7 +2882,7 @@
             this.TextIsCash.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextIsCash.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TextIsCash.Properties.MaxLength = 1;
-            this.TextIsCash.Size = new System.Drawing.Size(70, 24);
+            this.TextIsCash.Size = new System.Drawing.Size(70, 22);
             this.TextIsCash.TabIndex = 5;
             this.TextIsCash.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextIsCash.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -2890,10 +2890,10 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(41, 84);
+            this.labelControl4.Location = new System.Drawing.Point(42, 82);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(85, 17);
+            this.labelControl4.Size = new System.Drawing.Size(86, 16);
             this.labelControl4.TabIndex = 40;
             this.labelControl4.Text = "Cash / Imprest";
             // 
@@ -2902,7 +2902,7 @@
             this.labelControl5.Location = new System.Drawing.Point(213, 82);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(70, 17);
+            this.labelControl5.Size = new System.Drawing.Size(71, 16);
             this.labelControl5.TabIndex = 39;
             this.labelControl5.Text = "Credit Code";
             // 
@@ -2925,7 +2925,7 @@
             this.TextISLC.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TextISLC.Properties.MaxLength = 1;
             this.TextISLC.Properties.ReadOnly = true;
-            this.TextISLC.Size = new System.Drawing.Size(147, 24);
+            this.TextISLC.Size = new System.Drawing.Size(147, 22);
             this.TextISLC.TabIndex = 12;
             // 
             // labelControl19
@@ -2933,7 +2933,7 @@
             this.labelControl19.Location = new System.Drawing.Point(467, 152);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(80, 17);
+            this.labelControl19.Size = new System.Drawing.Size(85, 16);
             this.labelControl19.TabIndex = 25;
             this.labelControl19.Text = "Supplier Type";
             // 
@@ -2978,7 +2978,7 @@
             "OTH"});
             this.TextBehalfOf.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.UltraFlat;
             this.TextBehalfOf.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
-            this.TextBehalfOf.Size = new System.Drawing.Size(55, 24);
+            this.TextBehalfOf.Size = new System.Drawing.Size(55, 22);
             this.TextBehalfOf.TabIndex = 4;
             this.TextBehalfOf.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextBehalfOf.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
@@ -2999,16 +2999,16 @@
             this.TextSuppGST.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.TextSuppGST.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.TextSuppGST.Properties.ReadOnly = true;
-            this.TextSuppGST.Size = new System.Drawing.Size(322, 24);
+            this.TextSuppGST.Size = new System.Drawing.Size(322, 22);
             this.TextSuppGST.TabIndex = 10;
             this.TextSuppGST.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(90, 154);
+            this.labelControl23.Location = new System.Drawing.Point(87, 152);
             this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(36, 17);
+            this.labelControl23.Size = new System.Drawing.Size(41, 16);
             this.labelControl23.TabIndex = 0;
             this.labelControl23.Text = "GSTIN";
             // 
@@ -3031,7 +3031,7 @@
             this.PurchaseType.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.PurchaseType.Properties.MaxLength = 1;
             this.PurchaseType.Properties.ReadOnly = true;
-            this.PurchaseType.Size = new System.Drawing.Size(119, 24);
+            this.PurchaseType.Size = new System.Drawing.Size(119, 22);
             this.PurchaseType.TabIndex = 11;
             // 
             // simpleButton1

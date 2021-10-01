@@ -44,7 +44,7 @@
             this.Label11 = new DevExpress.XtraEditors.LabelControl();
             this.Label10 = new DevExpress.XtraEditors.LabelControl();
             this.Label15 = new DevExpress.XtraEditors.LabelControl();
-            this.Panel3 = new System.Windows.Forms.Panel();
+            this.panelControl5 = new DevExpress.XtraEditors.PanelControl();
             this.txtCurrencyCharacter = new DevExpress.XtraEditors.TextEdit();
             this.txtFont = new DevExpress.XtraEditors.TextEdit();
             this.txtCurrencySubstring = new DevExpress.XtraEditors.TextEdit();
@@ -104,12 +104,13 @@
             this.txtDivAddress = new DevExpress.XtraEditors.TextEdit();
             this.txtDivCity = new DevExpress.XtraEditors.TextEdit();
             this.txtDivState = new DevExpress.XtraEditors.TextEdit();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).BeginInit();
+            this.panelControl5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrencyCharacter.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFont.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrencySubstring.Properties)).BeginInit();
@@ -143,8 +144,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDivAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDivCity.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDivState.Properties)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             this.Menu_ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -336,30 +339,29 @@
             this.Label15.TabIndex = 43;
             this.Label15.Text = "ISSUED DATE";
             // 
-            // Panel3
+            // panelControl5
             // 
-            this.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel3.Controls.Add(this.txtCurrencyCharacter);
-            this.Panel3.Controls.Add(this.txtFont);
-            this.Panel3.Controls.Add(this.txtCurrencySubstring);
-            this.Panel3.Controls.Add(this.txtCurrencyString);
-            this.Panel3.Controls.Add(this.txtCurrencySymbol);
-            this.Panel3.Controls.Add(this.Label40);
-            this.Panel3.Controls.Add(this.Label39);
-            this.Panel3.Controls.Add(this.Label38);
-            this.Panel3.Controls.Add(this.Label37);
-            this.Panel3.Controls.Add(this.Label26);
-            this.Panel3.Controls.Add(this.Label27);
-            this.Panel3.Controls.Add(this.Label33);
-            this.Panel3.Controls.Add(this.Label34);
-            this.Panel3.Controls.Add(this.Label35);
-            this.Panel3.Controls.Add(this.Label36);
-            this.Panel3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Panel3.Location = new System.Drawing.Point(646, 426);
-            this.Panel3.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.Panel3.Name = "Panel3";
-            this.Panel3.Size = new System.Drawing.Size(534, 312);
-            this.Panel3.TabIndex = 618;
+            this.panelControl5.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl5.Controls.Add(this.txtCurrencyCharacter);
+            this.panelControl5.Controls.Add(this.txtFont);
+            this.panelControl5.Controls.Add(this.txtCurrencySubstring);
+            this.panelControl5.Controls.Add(this.txtCurrencyString);
+            this.panelControl5.Controls.Add(this.txtCurrencySymbol);
+            this.panelControl5.Controls.Add(this.Label40);
+            this.panelControl5.Controls.Add(this.Label39);
+            this.panelControl5.Controls.Add(this.Label38);
+            this.panelControl5.Controls.Add(this.Label37);
+            this.panelControl5.Controls.Add(this.Label26);
+            this.panelControl5.Controls.Add(this.Label27);
+            this.panelControl5.Controls.Add(this.Label33);
+            this.panelControl5.Controls.Add(this.Label34);
+            this.panelControl5.Controls.Add(this.Label35);
+            this.panelControl5.Controls.Add(this.Label36);
+            this.panelControl5.Location = new System.Drawing.Point(646, 426);
+            this.panelControl5.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panelControl5.Name = "panelControl5";
+            this.panelControl5.Size = new System.Drawing.Size(534, 312);
+            this.panelControl5.TabIndex = 618;
             // 
             // txtCurrencyCharacter
             // 
@@ -368,7 +370,7 @@
             this.txtCurrencyCharacter.Name = "txtCurrencyCharacter";
             this.txtCurrencyCharacter.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCurrencyCharacter.Properties.MaxLength = 100;
-            this.txtCurrencyCharacter.Size = new System.Drawing.Size(117, 24);
+            this.txtCurrencyCharacter.Size = new System.Drawing.Size(117, 22);
             this.txtCurrencyCharacter.TabIndex = 656;
             // 
             // txtFont
@@ -378,7 +380,7 @@
             this.txtFont.Name = "txtFont";
             this.txtFont.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFont.Properties.MaxLength = 100;
-            this.txtFont.Size = new System.Drawing.Size(117, 24);
+            this.txtFont.Size = new System.Drawing.Size(117, 22);
             this.txtFont.TabIndex = 655;
             // 
             // txtCurrencySubstring
@@ -388,7 +390,7 @@
             this.txtCurrencySubstring.Name = "txtCurrencySubstring";
             this.txtCurrencySubstring.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCurrencySubstring.Properties.MaxLength = 100;
-            this.txtCurrencySubstring.Size = new System.Drawing.Size(117, 24);
+            this.txtCurrencySubstring.Size = new System.Drawing.Size(117, 22);
             this.txtCurrencySubstring.TabIndex = 654;
             // 
             // txtCurrencyString
@@ -398,7 +400,7 @@
             this.txtCurrencyString.Name = "txtCurrencyString";
             this.txtCurrencyString.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCurrencyString.Properties.MaxLength = 100;
-            this.txtCurrencyString.Size = new System.Drawing.Size(117, 24);
+            this.txtCurrencyString.Size = new System.Drawing.Size(117, 22);
             this.txtCurrencyString.TabIndex = 653;
             // 
             // txtCurrencySymbol
@@ -408,7 +410,7 @@
             this.txtCurrencySymbol.Name = "txtCurrencySymbol";
             this.txtCurrencySymbol.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCurrencySymbol.Properties.MaxLength = 100;
-            this.txtCurrencySymbol.Size = new System.Drawing.Size(117, 24);
+            this.txtCurrencySymbol.Size = new System.Drawing.Size(117, 22);
             this.txtCurrencySymbol.TabIndex = 652;
             // 
             // Label40
@@ -730,7 +732,7 @@
             this.txtCmpCode.Name = "txtCmpCode";
             this.txtCmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpCode.Properties.MaxLength = 8;
-            this.txtCmpCode.Size = new System.Drawing.Size(153, 24);
+            this.txtCmpCode.Size = new System.Drawing.Size(153, 22);
             this.txtCmpCode.TabIndex = 623;
             this.txtCmpCode.TabStop = false;
             // 
@@ -746,7 +748,7 @@
             "PROPRITERSHIP",
             "PVT. LTD.",
             "LTD."});
-            this.txtCmpType.Size = new System.Drawing.Size(322, 24);
+            this.txtCmpType.Size = new System.Drawing.Size(322, 22);
             this.txtCmpType.TabIndex = 624;
             // 
             // txtCmpName
@@ -756,7 +758,7 @@
             this.txtCmpName.Name = "txtCmpName";
             this.txtCmpName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpName.Properties.MaxLength = 100;
-            this.txtCmpName.Size = new System.Drawing.Size(482, 24);
+            this.txtCmpName.Size = new System.Drawing.Size(482, 22);
             this.txtCmpName.TabIndex = 625;
             // 
             // txtCmpAddress
@@ -766,7 +768,7 @@
             this.txtCmpAddress.Name = "txtCmpAddress";
             this.txtCmpAddress.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpAddress.Properties.MaxLength = 100;
-            this.txtCmpAddress.Size = new System.Drawing.Size(482, 24);
+            this.txtCmpAddress.Size = new System.Drawing.Size(482, 22);
             this.txtCmpAddress.TabIndex = 626;
             // 
             // txtCmpAddress1
@@ -776,7 +778,7 @@
             this.txtCmpAddress1.Name = "txtCmpAddress1";
             this.txtCmpAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpAddress1.Properties.MaxLength = 100;
-            this.txtCmpAddress1.Size = new System.Drawing.Size(482, 24);
+            this.txtCmpAddress1.Size = new System.Drawing.Size(482, 22);
             this.txtCmpAddress1.TabIndex = 627;
             // 
             // txtCmpAddress2
@@ -786,7 +788,7 @@
             this.txtCmpAddress2.Name = "txtCmpAddress2";
             this.txtCmpAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpAddress2.Properties.MaxLength = 100;
-            this.txtCmpAddress2.Size = new System.Drawing.Size(482, 24);
+            this.txtCmpAddress2.Size = new System.Drawing.Size(482, 22);
             this.txtCmpAddress2.TabIndex = 628;
             // 
             // txtCmpCity
@@ -796,7 +798,7 @@
             this.txtCmpCity.Name = "txtCmpCity";
             this.txtCmpCity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpCity.Properties.MaxLength = 100;
-            this.txtCmpCity.Size = new System.Drawing.Size(153, 24);
+            this.txtCmpCity.Size = new System.Drawing.Size(153, 22);
             this.txtCmpCity.TabIndex = 629;
             // 
             // txtCmpState
@@ -806,7 +808,7 @@
             this.txtCmpState.Name = "txtCmpState";
             this.txtCmpState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpState.Properties.MaxLength = 100;
-            this.txtCmpState.Size = new System.Drawing.Size(192, 24);
+            this.txtCmpState.Size = new System.Drawing.Size(192, 22);
             this.txtCmpState.TabIndex = 630;
             // 
             // txtCmpPhoneNo
@@ -816,7 +818,7 @@
             this.txtCmpPhoneNo.Name = "txtCmpPhoneNo";
             this.txtCmpPhoneNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpPhoneNo.Properties.MaxLength = 100;
-            this.txtCmpPhoneNo.Size = new System.Drawing.Size(192, 24);
+            this.txtCmpPhoneNo.Size = new System.Drawing.Size(192, 22);
             this.txtCmpPhoneNo.TabIndex = 632;
             // 
             // txtCmpZip
@@ -826,7 +828,7 @@
             this.txtCmpZip.Name = "txtCmpZip";
             this.txtCmpZip.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCmpZip.Properties.MaxLength = 100;
-            this.txtCmpZip.Size = new System.Drawing.Size(153, 24);
+            this.txtCmpZip.Size = new System.Drawing.Size(153, 22);
             this.txtCmpZip.TabIndex = 631;
             // 
             // txtAlternateNo
@@ -836,7 +838,7 @@
             this.txtAlternateNo.Name = "txtAlternateNo";
             this.txtAlternateNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAlternateNo.Properties.MaxLength = 100;
-            this.txtAlternateNo.Size = new System.Drawing.Size(192, 24);
+            this.txtAlternateNo.Size = new System.Drawing.Size(192, 22);
             this.txtAlternateNo.TabIndex = 634;
             // 
             // txtMobile
@@ -846,7 +848,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobile.Properties.MaxLength = 100;
-            this.txtMobile.Size = new System.Drawing.Size(153, 24);
+            this.txtMobile.Size = new System.Drawing.Size(153, 22);
             this.txtMobile.TabIndex = 633;
             // 
             // txtEmailId
@@ -856,7 +858,7 @@
             this.txtEmailId.Name = "txtEmailId";
             this.txtEmailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmailId.Properties.MaxLength = 100;
-            this.txtEmailId.Size = new System.Drawing.Size(482, 24);
+            this.txtEmailId.Size = new System.Drawing.Size(482, 22);
             this.txtEmailId.TabIndex = 635;
             // 
             // txtWebsite
@@ -866,7 +868,7 @@
             this.txtWebsite.Name = "txtWebsite";
             this.txtWebsite.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWebsite.Properties.MaxLength = 100;
-            this.txtWebsite.Size = new System.Drawing.Size(482, 24);
+            this.txtWebsite.Size = new System.Drawing.Size(482, 22);
             this.txtWebsite.TabIndex = 636;
             // 
             // txtTinNo
@@ -876,7 +878,7 @@
             this.txtTinNo.Name = "txtTinNo";
             this.txtTinNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTinNo.Properties.MaxLength = 100;
-            this.txtTinNo.Size = new System.Drawing.Size(280, 24);
+            this.txtTinNo.Size = new System.Drawing.Size(280, 22);
             this.txtTinNo.TabIndex = 637;
             // 
             // txtCSTIssueDate
@@ -893,7 +895,7 @@
             this.txtCSTIssueDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtCSTIssueDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCSTIssueDate.Properties.MaxLength = 100;
-            this.txtCSTIssueDate.Size = new System.Drawing.Size(115, 24);
+            this.txtCSTIssueDate.Size = new System.Drawing.Size(115, 22);
             this.txtCSTIssueDate.TabIndex = 638;
             // 
             // txtCSTNo
@@ -903,7 +905,7 @@
             this.txtCSTNo.Name = "txtCSTNo";
             this.txtCSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCSTNo.Properties.MaxLength = 100;
-            this.txtCSTNo.Size = new System.Drawing.Size(280, 24);
+            this.txtCSTNo.Size = new System.Drawing.Size(280, 22);
             this.txtCSTNo.TabIndex = 639;
             // 
             // txtCINNo
@@ -913,7 +915,7 @@
             this.txtCINNo.Name = "txtCINNo";
             this.txtCINNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCINNo.Properties.MaxLength = 100;
-            this.txtCINNo.Size = new System.Drawing.Size(280, 24);
+            this.txtCINNo.Size = new System.Drawing.Size(280, 22);
             this.txtCINNo.TabIndex = 640;
             // 
             // txtPanNo
@@ -923,7 +925,7 @@
             this.txtPanNo.Name = "txtPanNo";
             this.txtPanNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPanNo.Properties.MaxLength = 100;
-            this.txtPanNo.Size = new System.Drawing.Size(280, 24);
+            this.txtPanNo.Size = new System.Drawing.Size(280, 22);
             this.txtPanNo.TabIndex = 641;
             // 
             // txtTanNo
@@ -933,7 +935,7 @@
             this.txtTanNo.Name = "txtTanNo";
             this.txtTanNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTanNo.Properties.MaxLength = 100;
-            this.txtTanNo.Size = new System.Drawing.Size(280, 24);
+            this.txtTanNo.Size = new System.Drawing.Size(280, 22);
             this.txtTanNo.TabIndex = 642;
             // 
             // txtGSTNo
@@ -943,7 +945,7 @@
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.MaxLength = 100;
-            this.txtGSTNo.Size = new System.Drawing.Size(280, 24);
+            this.txtGSTNo.Size = new System.Drawing.Size(280, 22);
             this.txtGSTNo.TabIndex = 643;
             // 
             // txtGSTIssueDate
@@ -960,7 +962,7 @@
             this.txtGSTIssueDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtGSTIssueDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtGSTIssueDate.Properties.MaxLength = 100;
-            this.txtGSTIssueDate.Size = new System.Drawing.Size(115, 24);
+            this.txtGSTIssueDate.Size = new System.Drawing.Size(115, 22);
             this.txtGSTIssueDate.TabIndex = 645;
             // 
             // label13
@@ -982,7 +984,7 @@
             this.txtWard.Name = "txtWard";
             this.txtWard.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWard.Properties.MaxLength = 100;
-            this.txtWard.Size = new System.Drawing.Size(115, 24);
+            this.txtWard.Size = new System.Drawing.Size(115, 22);
             this.txtWard.TabIndex = 646;
             // 
             // txtExxiseNo
@@ -992,7 +994,7 @@
             this.txtExxiseNo.Name = "txtExxiseNo";
             this.txtExxiseNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtExxiseNo.Properties.MaxLength = 100;
-            this.txtExxiseNo.Size = new System.Drawing.Size(391, 24);
+            this.txtExxiseNo.Size = new System.Drawing.Size(391, 22);
             this.txtExxiseNo.TabIndex = 647;
             // 
             // txtDivission
@@ -1002,7 +1004,7 @@
             this.txtDivission.Name = "txtDivission";
             this.txtDivission.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDivission.Properties.MaxLength = 100;
-            this.txtDivission.Size = new System.Drawing.Size(391, 24);
+            this.txtDivission.Size = new System.Drawing.Size(391, 22);
             this.txtDivission.TabIndex = 648;
             // 
             // txtDivAddress
@@ -1012,7 +1014,7 @@
             this.txtDivAddress.Name = "txtDivAddress";
             this.txtDivAddress.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDivAddress.Properties.MaxLength = 100;
-            this.txtDivAddress.Size = new System.Drawing.Size(391, 24);
+            this.txtDivAddress.Size = new System.Drawing.Size(391, 22);
             this.txtDivAddress.TabIndex = 649;
             // 
             // txtDivCity
@@ -1022,7 +1024,7 @@
             this.txtDivCity.Name = "txtDivCity";
             this.txtDivCity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDivCity.Properties.MaxLength = 100;
-            this.txtDivCity.Size = new System.Drawing.Size(173, 24);
+            this.txtDivCity.Size = new System.Drawing.Size(173, 22);
             this.txtDivCity.TabIndex = 650;
             // 
             // txtDivState
@@ -1032,60 +1034,58 @@
             this.txtDivState.Name = "txtDivState";
             this.txtDivState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDivState.Properties.MaxLength = 100;
-            this.txtDivState.Size = new System.Drawing.Size(162, 24);
+            this.txtDivState.Size = new System.Drawing.Size(162, 22);
             this.txtDivState.TabIndex = 651;
             // 
-            // panel1
+            // panelControl1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Label25);
-            this.panel1.Controls.Add(this.txtDivState);
-            this.panel1.Controls.Add(this.txtDivCity);
-            this.panel1.Controls.Add(this.chExciseUnit);
-            this.panel1.Controls.Add(this.txtDivAddress);
-            this.panel1.Controls.Add(this.chNonExciseUnit);
-            this.panel1.Controls.Add(this.txtDivission);
-            this.panel1.Controls.Add(this.Label32);
-            this.panel1.Controls.Add(this.txtExxiseNo);
-            this.panel1.Controls.Add(this.Label31);
-            this.panel1.Controls.Add(this.Label28);
-            this.panel1.Controls.Add(this.Label30);
-            this.panel1.Controls.Add(this.Label29);
-            this.panel1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.panel1.Location = new System.Drawing.Point(646, 78);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(534, 337);
-            this.panel1.TabIndex = 657;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.Controls.Add(this.Label25);
+            this.panelControl1.Controls.Add(this.txtDivState);
+            this.panelControl1.Controls.Add(this.txtDivCity);
+            this.panelControl1.Controls.Add(this.chExciseUnit);
+            this.panelControl1.Controls.Add(this.txtDivAddress);
+            this.panelControl1.Controls.Add(this.chNonExciseUnit);
+            this.panelControl1.Controls.Add(this.txtDivission);
+            this.panelControl1.Controls.Add(this.Label32);
+            this.panelControl1.Controls.Add(this.txtExxiseNo);
+            this.panelControl1.Controls.Add(this.Label31);
+            this.panelControl1.Controls.Add(this.Label28);
+            this.panelControl1.Controls.Add(this.Label30);
+            this.panelControl1.Controls.Add(this.Label29);
+            this.panelControl1.Location = new System.Drawing.Point(646, 78);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(534, 337);
+            this.panelControl1.TabIndex = 657;
             // 
-            // panel2
+            // panelControl2
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.Label24);
-            this.panel2.Controls.Add(this.txtGSTIssueDate);
-            this.panel2.Controls.Add(this.txtWard);
-            this.panel2.Controls.Add(this.Label15);
-            this.panel2.Controls.Add(this.Label10);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.Label11);
-            this.panel2.Controls.Add(this.txtGSTNo);
-            this.panel2.Controls.Add(this.Label12);
-            this.panel2.Controls.Add(this.txtTanNo);
-            this.panel2.Controls.Add(this.Label21);
-            this.panel2.Controls.Add(this.txtPanNo);
-            this.panel2.Controls.Add(this.Label22);
-            this.panel2.Controls.Add(this.txtCINNo);
-            this.panel2.Controls.Add(this.TXCTAN);
-            this.panel2.Controls.Add(this.txtCSTNo);
-            this.panel2.Controls.Add(this.Label16);
-            this.panel2.Controls.Add(this.txtCSTIssueDate);
-            this.panel2.Controls.Add(this.txtTinNo);
-            this.panel2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.panel2.Location = new System.Drawing.Point(15, 426);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(624, 312);
-            this.panel2.TabIndex = 657;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl2.Controls.Add(this.Label24);
+            this.panelControl2.Controls.Add(this.txtGSTIssueDate);
+            this.panelControl2.Controls.Add(this.txtWard);
+            this.panelControl2.Controls.Add(this.Label15);
+            this.panelControl2.Controls.Add(this.Label10);
+            this.panelControl2.Controls.Add(this.label13);
+            this.panelControl2.Controls.Add(this.Label11);
+            this.panelControl2.Controls.Add(this.txtGSTNo);
+            this.panelControl2.Controls.Add(this.Label12);
+            this.panelControl2.Controls.Add(this.txtTanNo);
+            this.panelControl2.Controls.Add(this.Label21);
+            this.panelControl2.Controls.Add(this.txtPanNo);
+            this.panelControl2.Controls.Add(this.Label22);
+            this.panelControl2.Controls.Add(this.txtCINNo);
+            this.panelControl2.Controls.Add(this.TXCTAN);
+            this.panelControl2.Controls.Add(this.txtCSTNo);
+            this.panelControl2.Controls.Add(this.Label16);
+            this.panelControl2.Controls.Add(this.txtCSTIssueDate);
+            this.panelControl2.Controls.Add(this.txtTinNo);
+            this.panelControl2.Location = new System.Drawing.Point(15, 426);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(624, 312);
+            this.panelControl2.TabIndex = 657;
             // 
             // Menu_ToolStrip
             // 
@@ -1101,7 +1101,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1195, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1195, 27);
             this.Menu_ToolStrip.TabIndex = 658;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1111,7 +1111,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -1121,19 +1121,19 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // frmCompanyMaster
+            // FrmCompanyMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1195, 779);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelControl2);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.txtWebsite);
             this.Controls.Add(this.txtEmailId);
             this.Controls.Add(this.txtAlternateNo);
@@ -1148,7 +1148,7 @@
             this.Controls.Add(this.txtCmpName);
             this.Controls.Add(this.txtCmpType);
             this.Controls.Add(this.txtCmpCode);
-            this.Controls.Add(this.Panel3);
+            this.Controls.Add(this.panelControl5);
             this.Controls.Add(this.Label19);
             this.Controls.Add(this.Label18);
             this.Controls.Add(this.Label9);
@@ -1165,12 +1165,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmCompanyMaster";
+            this.Name = "FrmCompanyMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmCompanyMaster_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCompanyMaster_KeyDown);
-            this.Panel3.ResumeLayout(false);
-            this.Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl5)).EndInit();
+            this.panelControl5.ResumeLayout(false);
+            this.panelControl5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrencyCharacter.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFont.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCurrencySubstring.Properties)).EndInit();
@@ -1204,10 +1205,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtDivAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDivCity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDivState.Properties)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             this.ResumeLayout(false);
@@ -1231,7 +1234,7 @@
         internal DevExpress.XtraEditors.LabelControl Label11;
         internal DevExpress.XtraEditors.LabelControl Label10;
         internal DevExpress.XtraEditors.LabelControl Label15;
-        internal System.Windows.Forms.Panel Panel3;
+        internal new DevExpress.XtraEditors.PanelControl panelControl5;
         internal DevExpress.XtraEditors.LabelControl Label40;
         internal DevExpress.XtraEditors.LabelControl Label39;
         internal DevExpress.XtraEditors.LabelControl Label38;
@@ -1291,10 +1294,12 @@
         private DevExpress.XtraEditors.TextEdit txtDivAddress;
         private DevExpress.XtraEditors.TextEdit txtDivCity;
         private DevExpress.XtraEditors.TextEdit txtDivState;
-        internal System.Windows.Forms.Panel panel1;
-        internal System.Windows.Forms.Panel panel2;
+
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
         private System.Windows.Forms.ToolStripButton btnSave;
+        
+        internal DevExpress.XtraEditors.PanelControl panelControl1;
+        internal DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }

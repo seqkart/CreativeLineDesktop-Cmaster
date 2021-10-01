@@ -534,11 +534,11 @@
             // 
             this.HelpGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(2, 26);
+            this.HelpGrid.Location = new System.Drawing.Point(2, 24);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(731, 357);
+            this.HelpGrid.Size = new System.Drawing.Size(731, 359);
             this.HelpGrid.TabIndex = 245;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -577,7 +577,7 @@
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSearchBox.Properties.MaxLength = 400;
-            this.txtSearchBox.Size = new System.Drawing.Size(731, 24);
+            this.txtSearchBox.Size = new System.Drawing.Size(731, 22);
             this.txtSearchBox.TabIndex = 246;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
@@ -620,7 +620,7 @@
             this.groupControl1.Location = new System.Drawing.Point(14, 38);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(868, 197);
+            this.groupControl1.Size = new System.Drawing.Size(887, 197);
             this.groupControl1.TabIndex = 709;
             this.groupControl1.Text = "Generate Mode";
             // 
@@ -661,19 +661,19 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(48, 159);
+            this.label2.Location = new System.Drawing.Point(40, 158);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 707;
             this.label2.Text = "BARCODE";
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(36, 121);
+            this.labelControl1.Location = new System.Drawing.Point(31, 120);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(69, 17);
+            this.labelControl1.Size = new System.Drawing.Size(75, 16);
             this.labelControl1.TabIndex = 706;
             this.labelControl1.Text = "ORDER NO.";
             // 
@@ -696,7 +696,7 @@
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBarCode.Properties.MaxLength = 40;
-            this.txtBarCode.Size = new System.Drawing.Size(253, 24);
+            this.txtBarCode.Size = new System.Drawing.Size(253, 22);
             this.txtBarCode.TabIndex = 704;
             this.txtBarCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBarCode_KeyDown);
             // 
@@ -706,7 +706,7 @@
             this.RBBYFLTRT.Location = new System.Drawing.Point(749, 103);
             this.RBBYFLTRT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBBYFLTRT.Name = "RBBYFLTRT";
-            this.RBBYFLTRT.Size = new System.Drawing.Size(113, 23);
+            this.RBBYFLTRT.Size = new System.Drawing.Size(126, 21);
             this.RBBYFLTRT.TabIndex = 702;
             this.RBBYFLTRT.TabStop = true;
             this.RBBYFLTRT.Text = "BY FLAT RATE";
@@ -719,7 +719,7 @@
             this.RBBYDSCPRCN.Location = new System.Drawing.Point(749, 75);
             this.RBBYDSCPRCN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.RBBYDSCPRCN.Name = "RBBYDSCPRCN";
-            this.RBBYDSCPRCN.Size = new System.Drawing.Size(91, 23);
+            this.RBBYDSCPRCN.Size = new System.Drawing.Size(94, 21);
             this.RBBYDSCPRCN.TabIndex = 701;
             this.RBBYDSCPRCN.TabStop = true;
             this.RBBYDSCPRCN.Text = "BY DISC%";
@@ -745,7 +745,7 @@
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtOrderNo.Properties.MaxLength = 4;
-            this.txtOrderNo.Size = new System.Drawing.Size(253, 24);
+            this.txtOrderNo.Size = new System.Drawing.Size(253, 22);
             this.txtOrderNo.TabIndex = 697;
             // 
             // txtDeptCode
@@ -756,7 +756,7 @@
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
-            this.txtDeptCode.Size = new System.Drawing.Size(68, 24);
+            this.txtDeptCode.Size = new System.Drawing.Size(68, 22);
             this.txtDeptCode.TabIndex = 694;
             this.txtDeptCode.EditValueChanged += new System.EventHandler(this.TxtDeptCode_EditValueChanged);
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
@@ -769,7 +769,7 @@
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
-            this.txtDeptDesc.Size = new System.Drawing.Size(184, 24);
+            this.txtDeptDesc.Size = new System.Drawing.Size(184, 22);
             this.txtDeptDesc.TabIndex = 695;
             this.txtDeptDesc.TabStop = false;
             // 
@@ -780,7 +780,7 @@
             this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSysID.Size = new System.Drawing.Size(97, 24);
+            this.txtSysID.Size = new System.Drawing.Size(97, 22);
             this.txtSysID.TabIndex = 699;
             this.txtSysID.Visible = false;
             // 
@@ -798,10 +798,10 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(28, 85);
+            this.labelControl6.Location = new System.Drawing.Point(18, 84);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(77, 17);
+            this.labelControl6.Size = new System.Drawing.Size(88, 16);
             this.labelControl6.TabIndex = 696;
             this.labelControl6.Text = "STORE CODE";
             // 
@@ -884,7 +884,7 @@
             this.openFileDialog2.FileName = "openFileDialog1";
             this.openFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialog2_FileOk);
             // 
-            // frmBarPrinting
+            // FrmBarPrinting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -898,7 +898,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmBarPrinting";
+            this.Name = "FrmBarPrinting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.FrmBarPrinting_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBarPrinting_KeyDown);

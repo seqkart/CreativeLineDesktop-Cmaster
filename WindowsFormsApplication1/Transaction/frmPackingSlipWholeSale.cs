@@ -1,4 +1,4 @@
-﻿ using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
@@ -59,7 +59,7 @@ namespace WindowsFormsApplication1.Transaction
             foreach (DataRow dr in dt.Rows)
             {
                 dr["SIDBOXNO"] = Convert.ToDecimal(lblBox.Text);
-                QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                QtySum += Convert.ToDecimal(dr["SIDSCANQTY"]);
             }
             lblTotQty.Text = QtySum.ToString("0");
             _ = new DataSet();
@@ -184,8 +184,8 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.GirdViewVisualize(BarCodeGridView);
                 ProjectFunctions.GirdViewVisualize(HelpGridView);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-                ProjectFunctions.TextBoxVisualize(Panel1);
-                ProjectFunctions.TextBoxVisualize(Panel2);
+                ProjectFunctions.TextBoxVisualize(panelControl1);
+                ProjectFunctions.TextBoxVisualize(panelControl2);
                 ProjectFunctions.TextBoxVisualize(this);
 
 
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1.Transaction
                     lblBox.Text = "1";
                     lblTotQty.Text = "0";
                     lblPackingSLipTot.Text = "0";
-                    Panel1.Focus();
+                    panelControl1.Focus();
 
                     txtAccCode.Select();
                 }
@@ -734,7 +734,7 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.SpeakError(" Data Saved Successfully");
                         sqlcon.Close();
 
-                       
+
 
                         // Print 
                         MessageBox.Show("Are you sure you want to print", "Are you sure?", MessageBoxButtons.YesNoCancel); //Gets users input by showing the message box
@@ -763,9 +763,9 @@ namespace WindowsFormsApplication1.Transaction
                             }
                         }
 
-                      
 
-                       
+
+
 
 
 
@@ -972,7 +972,7 @@ namespace WindowsFormsApplication1.Transaction
                             {
                                 if (dr["SIDBARCODE"].ToString() == ds.Tables[0].Rows[0]["SIDBARCODE"].ToString())
                                 {
-                                    Qty = Qty + Convert.ToInt32(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
+                                    Qty += Convert.ToInt32(ds.Tables[0].Rows[0]["SIDSCANQTY"]);
                                 }
                             }
                             Qty += Convert.ToInt32(ProjectFunctions.GetDataSet("Select isnull(sum(SIDSCANQTY),0) from PSWSLDET where SIDPARTYC='" + txtAccCode.Text.Trim() + "' And SIDBARCODE='" + txtBarCode.Text + "' ").Tables[0].Rows[0][0]);
@@ -1096,7 +1096,7 @@ namespace WindowsFormsApplication1.Transaction
                                         }
                                     }
                                 }
-                               
+
                             }
                         }
 
@@ -1488,5 +1488,7 @@ namespace WindowsFormsApplication1.Transaction
         {
 
         }
+
+
     }
 }

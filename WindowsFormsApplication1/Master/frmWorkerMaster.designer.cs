@@ -146,7 +146,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(68, 51);
+            this.HelpGrid.Location = new System.Drawing.Point(68, 35);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -180,7 +180,7 @@
             this.txtWorkerCode.Name = "txtWorkerCode";
             this.txtWorkerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWorkerCode.Properties.MaxLength = 8;
-            this.txtWorkerCode.Size = new System.Drawing.Size(86, 24);
+            this.txtWorkerCode.Size = new System.Drawing.Size(86, 22);
             this.txtWorkerCode.TabIndex = 718;
             this.txtWorkerCode.TabStop = false;
             // 
@@ -191,7 +191,7 @@
             this.txtEMailId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEMailId.Name = "txtEMailId";
             this.txtEMailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEMailId.Size = new System.Drawing.Size(478, 24);
+            this.txtEMailId.Size = new System.Drawing.Size(478, 22);
             this.txtEMailId.TabIndex = 726;
             // 
             // txtMobileNo
@@ -201,7 +201,7 @@
             this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMobileNo.Size = new System.Drawing.Size(199, 24);
+            this.txtMobileNo.Size = new System.Drawing.Size(199, 22);
             this.txtMobileNo.TabIndex = 725;
             // 
             // txtContractorDesc
@@ -213,7 +213,7 @@
             this.txtContractorDesc.Name = "txtContractorDesc";
             this.txtContractorDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorDesc.Properties.MaxLength = 8;
-            this.txtContractorDesc.Size = new System.Drawing.Size(385, 24);
+            this.txtContractorDesc.Size = new System.Drawing.Size(385, 22);
             this.txtContractorDesc.TabIndex = 720;
             this.txtContractorDesc.TabStop = false;
             // 
@@ -266,7 +266,7 @@
             this.txtWorkerName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtWorkerName.Name = "txtWorkerName";
             this.txtWorkerName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtWorkerName.Size = new System.Drawing.Size(357, 24);
+            this.txtWorkerName.Size = new System.Drawing.Size(357, 22);
             this.txtWorkerName.TabIndex = 724;
             // 
             // txtContractorCode
@@ -277,7 +277,7 @@
             this.txtContractorCode.Name = "txtContractorCode";
             this.txtContractorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContractorCode.Properties.MaxLength = 8;
-            this.txtContractorCode.Size = new System.Drawing.Size(86, 24);
+            this.txtContractorCode.Size = new System.Drawing.Size(86, 22);
             this.txtContractorCode.TabIndex = 719;
             this.txtContractorCode.EditValueChanged += new System.EventHandler(this.TxtContractorCode_EditValueChanged);
             this.txtContractorCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtContractorCode_KeyDown);
@@ -289,7 +289,7 @@
             this.txtOtherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherNo.Name = "txtOtherNo";
             this.txtOtherNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOtherNo.Size = new System.Drawing.Size(183, 24);
+            this.txtOtherNo.Size = new System.Drawing.Size(183, 22);
             this.txtOtherNo.TabIndex = 749;
             // 
             // txtFloorCode
@@ -299,7 +299,7 @@
             this.txtFloorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFloorCode.Name = "txtFloorCode";
             this.txtFloorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtFloorCode.Size = new System.Drawing.Size(114, 24);
+            this.txtFloorCode.Size = new System.Drawing.Size(114, 22);
             this.txtFloorCode.TabIndex = 750;
             // 
             // txtIDType
@@ -316,7 +316,7 @@
             "PASSPORT",
             "OTHER ID",
             "LISCENSE"});
-            this.txtIDType.Size = new System.Drawing.Size(199, 24);
+            this.txtIDType.Size = new System.Drawing.Size(199, 22);
             this.txtIDType.TabIndex = 751;
             // 
             // txtIDNo
@@ -326,10 +326,10 @@
             this.txtIDNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIDNo.Size = new System.Drawing.Size(183, 24);
+            this.txtIDNo.Size = new System.Drawing.Size(183, 22);
             this.txtIDNo.TabIndex = 752;
             // 
-            // frmWorkerMaster
+            // FrmWorkerMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -357,7 +357,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmWorkerMaster";
+            this.Name = "FrmWorkerMaster";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmWorkerMaster_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmWorkerMaster_KeyDown);

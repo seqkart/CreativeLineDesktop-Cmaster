@@ -1919,7 +1919,7 @@ namespace WindowsFormsApplication1
             catch (Exception)
             {
                 return;
-            }
+            }ProjectFunctions.WhatsAppDisConnection();
 
 
         }
@@ -1928,8 +1928,6 @@ namespace WindowsFormsApplication1
         {
             ProjectFunctions.WhatsAppDisConnection();
         }
-
-
 
         private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
         {

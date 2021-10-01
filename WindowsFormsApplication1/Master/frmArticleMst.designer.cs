@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1
 {
-    partial class frmArticleMst
+    partial class FrmArticleMst
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArticleMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArticleMst));
             this.CHKARTNONMAINT = new System.Windows.Forms.CheckBox();
             this.GroupBox16 = new DevExpress.XtraEditors.GroupControl();
             this.CHKSAMEMW = new System.Windows.Forms.CheckBox();

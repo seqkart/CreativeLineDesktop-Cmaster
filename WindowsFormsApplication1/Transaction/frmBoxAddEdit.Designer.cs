@@ -155,11 +155,11 @@
             // BarCodeGrid
             // 
             this.BarCodeGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BarCodeGrid.Location = new System.Drawing.Point(13, 265);
+            this.BarCodeGrid.Location = new System.Drawing.Point(12, 194);
             this.BarCodeGrid.MainView = this.BarCodeGridView;
             this.BarCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BarCodeGrid.Name = "BarCodeGrid";
-            this.BarCodeGrid.Size = new System.Drawing.Size(1014, 413);
+            this.BarCodeGrid.Size = new System.Drawing.Size(1014, 470);
             this.BarCodeGrid.TabIndex = 688;
             this.BarCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BarCodeGridView});
@@ -336,7 +336,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(136, 153);
+            this.HelpGrid.Location = new System.Drawing.Point(138, 334);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -347,6 +347,7 @@
             this.HelpGridView,
             this.gridView1});
             this.HelpGrid.Visible = false;
+            this.HelpGrid.Click += new System.EventHandler(this.HelpGrid_Click);
             this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
             // 
             // HelpGridView
@@ -371,10 +372,10 @@
             // txtMemoNo
             // 
             this.txtMemoNo.Enabled = false;
-            this.txtMemoNo.Location = new System.Drawing.Point(297, 58);
+            this.txtMemoNo.Location = new System.Drawing.Point(314, 44);
             this.txtMemoNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemoNo.Name = "txtMemoNo";
-            this.txtMemoNo.Size = new System.Drawing.Size(114, 24);
+            this.txtMemoNo.Size = new System.Drawing.Size(114, 22);
             this.txtMemoNo.TabIndex = 692;
             this.txtMemoNo.TabStop = false;
             // 
@@ -391,7 +392,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.dateEdit1.Properties.Mask.EditMask = "";
             this.dateEdit1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dateEdit1.Size = new System.Drawing.Size(92, 24);
+            this.dateEdit1.Size = new System.Drawing.Size(92, 22);
             this.dateEdit1.TabIndex = 694;
             this.dateEdit1.TabStop = false;
             // 
@@ -399,7 +400,7 @@
             // 
             this.txtMemoDate.EditValue = null;
             this.txtMemoDate.Enabled = false;
-            this.txtMemoDate.Location = new System.Drawing.Point(103, 58);
+            this.txtMemoDate.Location = new System.Drawing.Point(104, 44);
             this.txtMemoDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemoDate.Name = "txtMemoDate";
             this.txtMemoDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -408,13 +409,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtMemoDate.Properties.Mask.EditMask = "";
             this.txtMemoDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtMemoDate.Size = new System.Drawing.Size(114, 24);
+            this.txtMemoDate.Size = new System.Drawing.Size(114, 22);
             this.txtMemoDate.TabIndex = 697;
             this.txtMemoDate.TabStop = false;
             // 
             // txtBarCode
             // 
-            this.txtBarCode.Location = new System.Drawing.Point(90, 226);
+            this.txtBarCode.Location = new System.Drawing.Point(104, 148);
             this.txtBarCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -429,7 +430,7 @@
             this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBox.Appearance.Options.UseBackColor = true;
             this.lblBox.Appearance.Options.UseFont = true;
-            this.lblBox.Location = new System.Drawing.Point(453, 89);
+            this.lblBox.Location = new System.Drawing.Point(852, 35);
             this.lblBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblBox.Name = "lblBox";
             this.lblBox.Size = new System.Drawing.Size(71, 141);
@@ -441,7 +442,7 @@
             this.txtRemarks.Location = new System.Drawing.Point(90, 687);
             this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(937, 24);
+            this.txtRemarks.Size = new System.Drawing.Size(937, 22);
             this.txtRemarks.TabIndex = 702;
             this.txtRemarks.TabStop = false;
             // 
@@ -458,10 +459,10 @@
             // 
             // txtLocation
             // 
-            this.txtLocation.Location = new System.Drawing.Point(477, 58);
+            this.txtLocation.Location = new System.Drawing.Point(510, 44);
             this.txtLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(199, 24);
+            this.txtLocation.Size = new System.Drawing.Size(199, 22);
             this.txtLocation.TabIndex = 704;
             this.txtLocation.TabStop = false;
             // 
@@ -469,7 +470,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(314, 133);
+            this.labelControl1.Location = new System.Drawing.Point(713, 79);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 54);
@@ -480,7 +481,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(611, 133);
+            this.labelControl2.Location = new System.Drawing.Point(1010, 79);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(62, 54);
@@ -493,7 +494,7 @@
             this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotQty.Appearance.Options.UseBackColor = true;
             this.lblTotQty.Appearance.Options.UseFont = true;
-            this.lblTotQty.Location = new System.Drawing.Point(692, 89);
+            this.lblTotQty.Location = new System.Drawing.Point(1091, 35);
             this.lblTotQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotQty.Name = "lblTotQty";
             this.lblTotQty.Size = new System.Drawing.Size(71, 141);
@@ -502,7 +503,7 @@
             // 
             // ArticleImageBox
             // 
-            this.ArticleImageBox.Location = new System.Drawing.Point(1034, 280);
+            this.ArticleImageBox.Location = new System.Drawing.Point(1032, 246);
             this.ArticleImageBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -514,7 +515,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(14, 60);
+            this.labelControl3.Location = new System.Drawing.Point(7, 45);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(89, 21);
@@ -525,7 +526,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(217, 60);
+            this.labelControl4.Location = new System.Drawing.Point(226, 45);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(80, 21);
@@ -536,7 +537,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(411, 60);
+            this.labelControl5.Location = new System.Drawing.Point(436, 45);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(66, 21);
@@ -547,7 +548,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(21, 230);
+            this.labelControl6.Location = new System.Drawing.Point(35, 152);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(62, 21);

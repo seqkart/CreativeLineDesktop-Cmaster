@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmArticleMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmArticleMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
 
         public string PrdCode { get; set; }
 
-        public frmArticleMst() { InitializeComponent(); }
+        public FrmArticleMst() { InitializeComponent(); }
 
 
         private void TxtUMCode_EditValueChanged(object sender, EventArgs e)

@@ -1678,8 +1678,10 @@ namespace WindowsFormsApplication1
                     {
 
                         string content = await response.Content.ReadAsStringAsync();
-                        TextEdit t = new TextEdit();
-                        t.Text = JsonConvert.SerializeObject(content);
+                        TextEdit t = new TextEdit
+                        {
+                            Text = JsonConvert.SerializeObject(content)
+                        };
                         var details = JObject.Parse(t.Text);
 
                         Speak(details["Connected"].ToString());
@@ -1832,11 +1834,13 @@ namespace WindowsFormsApplication1
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
             if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
             {
-                ReqCancelEwbPl reqCancelEWB = new ReqCancelEwbPl();
-                //reqCancelEWB.ewbNo = 101008701277;
-                reqCancelEWB.ewbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
-                reqCancelEWB.cancelRsnCode = 2;
-                reqCancelEWB.cancelRmrk = "Cancelled the order";
+                ReqCancelEwbPl reqCancelEWB = new ReqCancelEwbPl
+                {
+                    //reqCancelEWB.ewbNo = 101008701277;
+                    ewbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]),
+                    cancelRsnCode = 2,
+                    cancelRmrk = "Cancelled the order"
+                };
 
                 TxnRespWithObjAndInfo<RespCancelEwbPl> respCancelEWB = await EWBAPI.CancelEWBAsync(EwbSession, reqCancelEWB);
                 if (respCancelEWB.IsSuccess)
@@ -1997,8 +2001,10 @@ namespace WindowsFormsApplication1
             if (TxnResp.IsSuccess == true)
             {
                 XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
-                TextEdit t = new TextEdit();
-                t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+                TextEdit t = new TextEdit
+                {
+                    Text = JsonConvert.SerializeObject(TxnResp.RespObj)
+                };
                 var details = JObject.Parse(t.Text);
                 ProjectFunctions.SpeakError("Pending EWayBill  API Hits - " + details["EWBApiBal"].ToString() + " And Expiry Date is " + Convert.ToDateTime(details["EWBApiBalExpDt"]).ToString("dd-MM-yyyy"));
             }
@@ -2046,104 +2052,106 @@ namespace WindowsFormsApplication1
             }
 
             GlobalVariables.CmpGSTNo = GlobalVariables.EWBGSTIN;
-            ReqGenEwbPl ewbGen = new ReqGenEwbPl();
-            ewbGen.supplyType = ds.Tables[0].Rows[0]["SupplyType"].ToString();
-            ewbGen.subSupplyType = ds.Tables[0].Rows[0]["SubSupplyType"].ToString();
-            ewbGen.subSupplyDesc = string.Empty;
-            ewbGen.docType = "INV";
-            ewbGen.docNo = ds.Tables[0].Rows[0]["BillSeries"].ToString() + "-" + ds.Tables[0].Rows[0]["BillNo"].ToString();
+            ReqGenEwbPl ewbGen = new ReqGenEwbPl
+            {
+                supplyType = ds.Tables[0].Rows[0]["SupplyType"].ToString(),
+                subSupplyType = ds.Tables[0].Rows[0]["SubSupplyType"].ToString(),
+                subSupplyDesc = string.Empty,
+                docType = "INV",
+                docNo = ds.Tables[0].Rows[0]["BillSeries"].ToString() + "-" + ds.Tables[0].Rows[0]["BillNo"].ToString(),
 
-            ewbGen.docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd/MM/yyyy");
-            ewbGen.fromGstin = GlobalVariables.CmpGSTNo;
-            ewbGen.fromTrdName = GlobalVariables.CompanyName;
-            ewbGen.fromAddr1 = GlobalVariables.CAddress1;
-            ewbGen.fromAddr2 = GlobalVariables.CAddress2;
-            //    ewbGen.fromPlace = "ludhiana";
-            ewbGen.fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode);
+                docDate = Convert.ToDateTime(ds.Tables[0].Rows[0]["BillDate"]).ToString("dd/MM/yyyy"),
+                fromGstin = GlobalVariables.CmpGSTNo,
+                fromTrdName = GlobalVariables.CompanyName,
+                fromAddr1 = GlobalVariables.CAddress1,
+                fromAddr2 = GlobalVariables.CAddress2,
+                //    ewbGen.fromPlace = "ludhiana";
+                fromPincode = Convert.ToInt32(GlobalVariables.CmpZipCode),
 
-            ewbGen.fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
-            ewbGen.actFromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2));
-            ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
-            ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString();
-            ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString();
-            ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
-            ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
-            ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
-            ewbGen.actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
-            ewbGen.transactionType = 1;
-            ewbGen.dispatchFromGSTIN = GlobalVariables.CmpGSTNo;
-            ewbGen.dispatchFromTradeName = GlobalVariables.CompanyName;
-            ewbGen.shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
-
-
-
-            //ReqGenEwbPl ewbGen = new ReqGenEwbPl();
-
-            //ewbGen.supplyType = "O";
-            //ewbGen.subSupplyType = "1";
-            //ewbGen.subSupplyDesc = string.Empty;
-            //ewbGen.docType = "INV";
-            //ewbGen.docNo = "235";
-            //ewbGen.docDate = "21/04/2021";
-            //ewbGen.fromGstin = "34AACCC1596Q002";//"07AACCC1596Q1Z4";
-            //ewbGen.fromTrdName = "welton";
-            //ewbGen.fromAddr1 = "2ND CROSS NO 59  19  A";
-            //ewbGen.fromAddr2 = "GROUND FLOOR OSBORNE ROAD";
-            //ewbGen.fromPlace = "FRAZER TOWN";
-            //ewbGen.fromPincode = 605001;//263652;/*110001;*/
-            //ewbGen.fromStateCode = 34;
-            //ewbGen.actFromStateCode = 34;
-            //ewbGen.toGstin = "05AAACG0904A1ZL";
-            //ewbGen.toTrdName = "";
-            //ewbGen.toAddr1 = " ";
-            //ewbGen.toAddr2 = "";
-            //ewbGen.toPlace = " ";
-            //ewbGen.toPincode = 263652;/*110005;*/
-            //ewbGen.toStateCode = 05;
-            //ewbGen.actToStateCode = 05;
-            //ewbGen.transactionType = 1;
-            //ewbGen.dispatchFromGSTIN = string.Empty; /*29AAAAA1303P1ZV*/
-            //ewbGen.dispatchFromTradeName = "ABC Traders";
-            //ewbGen.shipToGSTIN = "05AAACG0904A1ZL"; //29ALSPR1722R1Z3
-            //ewbGen.shipToTradeName = "XYZ Traders";
+                fromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2)),
+                actFromStateCode = Convert.ToInt32(GlobalVariables.CmpGSTNo.Substring(0, 2)),
+                toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString(),
+                toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString(),
+                toAddr1 = ds.Tables[0].Rows[0]["DelieveryPartyAddress1"].ToString(),
+                toAddr2 = ds.Tables[0].Rows[0]["DelieveryPartyAddress2"].ToString(),
+                toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString(),
+                toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]),
+                toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2)),
+                actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2)),
+                transactionType = 1,
+                dispatchFromGSTIN = GlobalVariables.CmpGSTNo,
+                dispatchFromTradeName = GlobalVariables.CompanyName,
+                shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString(),
+                shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString(),
 
 
-            //ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            //ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
-            //ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DeliveryPartyAddress1"].ToString();
-            //ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DeliveryPartyAddress2"].ToString();
-            //ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
-            //ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
-            //ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
-            //ewbGen.actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
-            //ewbGen.transactionType = 1;
-            //ewbGen.dispatchFromGSTIN = "";
-            //ewbGen.dispatchFromTradeName = GlobalVariables.CompanyName;
-            //ewbGen.shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
-            //ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
+
+                //ReqGenEwbPl ewbGen = new ReqGenEwbPl();
+
+                //ewbGen.supplyType = "O";
+                //ewbGen.subSupplyType = "1";
+                //ewbGen.subSupplyDesc = string.Empty;
+                //ewbGen.docType = "INV";
+                //ewbGen.docNo = "235";
+                //ewbGen.docDate = "21/04/2021";
+                //ewbGen.fromGstin = "34AACCC1596Q002";//"07AACCC1596Q1Z4";
+                //ewbGen.fromTrdName = "welton";
+                //ewbGen.fromAddr1 = "2ND CROSS NO 59  19  A";
+                //ewbGen.fromAddr2 = "GROUND FLOOR OSBORNE ROAD";
+                //ewbGen.fromPlace = "FRAZER TOWN";
+                //ewbGen.fromPincode = 605001;//263652;/*110001;*/
+                //ewbGen.fromStateCode = 34;
+                //ewbGen.actFromStateCode = 34;
+                //ewbGen.toGstin = "05AAACG0904A1ZL";
+                //ewbGen.toTrdName = "";
+                //ewbGen.toAddr1 = " ";
+                //ewbGen.toAddr2 = "";
+                //ewbGen.toPlace = " ";
+                //ewbGen.toPincode = 263652;/*110005;*/
+                //ewbGen.toStateCode = 05;
+                //ewbGen.actToStateCode = 05;
+                //ewbGen.transactionType = 1;
+                //ewbGen.dispatchFromGSTIN = string.Empty; /*29AAAAA1303P1ZV*/
+                //ewbGen.dispatchFromTradeName = "ABC Traders";
+                //ewbGen.shipToGSTIN = "05AAACG0904A1ZL"; //29ALSPR1722R1Z3
+                //ewbGen.shipToTradeName = "XYZ Traders";
 
 
-            //txtPKGFrt.Text = ds.Tables[0].Rows[0]["SIMFREIGHTAMT"].ToString();
+                //ewbGen.toGstin = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+                //ewbGen.toTrdName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
+                //ewbGen.toAddr1 = ds.Tables[0].Rows[0]["DeliveryPartyAddress1"].ToString();
+                //ewbGen.toAddr2 = ds.Tables[0].Rows[0]["DeliveryPartyAddress2"].ToString();
+                //ewbGen.toPlace = ds.Tables[0].Rows[0]["DebitPartyCity"].ToString();
+                //ewbGen.toPincode = Convert.ToInt32(ds.Tables[0].Rows[0]["DebitPartyZipCode"]);
+                //ewbGen.toStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
+                //ewbGen.actToStateCode = Convert.ToInt32(ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Substring(0, 2));
+                //ewbGen.transactionType = 1;
+                //ewbGen.dispatchFromGSTIN = "";
+                //ewbGen.dispatchFromTradeName = GlobalVariables.CompanyName;
+                //ewbGen.shipToGSTIN = ds.Tables[0].Rows[0]["AccGSTNo"].ToString();
+                //ewbGen.shipToTradeName = ds.Tables[0].Rows[0]["DebitPartyName"].ToString();
 
-            ewbGen.otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]);
-            // ewbGen.totalValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]);
-            ewbGen.totalValue = Convert.ToDouble("0");
-            ewbGen.cgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["CGSTAmount"]);
-            ewbGen.sgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SGSTAmount"]);
-            ewbGen.igstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["IGSTAmount"]);
-            ewbGen.cessValue = Convert.ToDouble("0");
-            ewbGen.cessNonAdvolValue = Convert.ToDouble("0");
-            ewbGen.transporterId = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString();
-            ewbGen.transporterName = ds.Tables[0].Rows[0]["TRPRNAME"].ToString(); 
-            ewbGen.transDocNo = string.Empty;
-            ewbGen.totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]); ;
-            ewbGen.vehicleNo = ds.Tables[0].Rows[0]["VehicleNo"].ToString();
-            ewbGen.transDistance = "0"; /*1200*/
-            ewbGen.transDocDate = string.Empty;
 
-            if(ds.Tables[0].Rows[0]["VehicleNo"].ToString()=="")
+                //txtPKGFrt.Text = ds.Tables[0].Rows[0]["SIMFREIGHTAMT"].ToString();
+
+                otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]),
+                // ewbGen.totalValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]);
+                totalValue = Convert.ToDouble("0"),
+                cgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["CGSTAmount"]),
+                sgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SGSTAmount"]),
+                igstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["IGSTAmount"]),
+                cessValue = Convert.ToDouble("0"),
+                cessNonAdvolValue = Convert.ToDouble("0"),
+                transporterId = ds.Tables[0].Rows[0]["TRPGSTNo"].ToString(),
+                transporterName = ds.Tables[0].Rows[0]["TRPRNAME"].ToString(),
+                transDocNo = string.Empty,
+                totInvValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]),
+                vehicleNo = ds.Tables[0].Rows[0]["VehicleNo"].ToString(),
+                transDistance = "0", /*1200*/
+                transDocDate = string.Empty
+            };
+
+            if (ds.Tables[0].Rows[0]["VehicleNo"].ToString()=="")
             {
                
                 ewbGen.transMode = "";
@@ -2196,8 +2204,10 @@ namespace WindowsFormsApplication1
                 {
                     XtraMessageBox.Show(JsonConvert.SerializeObject(TxnResp.RespObj));
 
-                    TextEdit t = new TextEdit();
-                    t.Text = JsonConvert.SerializeObject(TxnResp.RespObj);
+                    TextEdit t = new TextEdit
+                    {
+                        Text = JsonConvert.SerializeObject(TxnResp.RespObj)
+                    };
 
                     var details = JObject.Parse(t.Text);
 

@@ -398,18 +398,18 @@
             // 
             // ChoiceSelectAll
             // 
-            this.ChoiceSelectAll.Location = new System.Drawing.Point(1008, 44);
+            this.ChoiceSelectAll.Location = new System.Drawing.Point(1008, 41);
             this.ChoiceSelectAll.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelectAll.Name = "ChoiceSelectAll";
             this.ChoiceSelectAll.Properties.Caption = "Select All";
-            this.ChoiceSelectAll.Size = new System.Drawing.Size(87, 24);
+            this.ChoiceSelectAll.Size = new System.Drawing.Size(87, 21);
             this.ChoiceSelectAll.TabIndex = 200;
             this.ChoiceSelectAll.CheckedChanged += new System.EventHandler(this.ChoiceSelectAll_CheckedChanged);
             // 
             // DtIndentPass
             // 
             this.DtIndentPass.EditValue = null;
-            this.DtIndentPass.Location = new System.Drawing.Point(860, 44);
+            this.DtIndentPass.Location = new System.Drawing.Point(860, 40);
             this.DtIndentPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtIndentPass.Name = "DtIndentPass";
             this.DtIndentPass.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -418,7 +418,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtIndentPass.Properties.Mask.EditMask = "";
             this.DtIndentPass.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtIndentPass.Size = new System.Drawing.Size(117, 24);
+            this.DtIndentPass.Size = new System.Drawing.Size(117, 22);
             this.DtIndentPass.TabIndex = 195;
             // 
             // labelControl3
@@ -426,7 +426,7 @@
             this.labelControl3.Location = new System.Drawing.Point(735, 43);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(115, 17);
+            this.labelControl3.Size = new System.Drawing.Size(120, 16);
             this.labelControl3.TabIndex = 197;
             this.labelControl3.Text = "Indent Passing Date";
             // 
@@ -435,7 +435,7 @@
             this.labelControl1.Location = new System.Drawing.Point(8, 43);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 17);
+            this.labelControl1.Size = new System.Drawing.Size(31, 16);
             this.labelControl1.TabIndex = 205;
             this.labelControl1.Text = "From";
             // 
@@ -444,13 +444,13 @@
             this.labelControl2.Location = new System.Drawing.Point(192, 43);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(15, 17);
+            this.labelControl2.Size = new System.Drawing.Size(17, 16);
             this.labelControl2.TabIndex = 204;
             this.labelControl2.Text = "To";
             // 
             // Btn_RefreshGridData
             // 
-            this.Btn_RefreshGridData.Location = new System.Drawing.Point(366, 43);
+            this.Btn_RefreshGridData.Location = new System.Drawing.Point(366, 38);
             this.Btn_RefreshGridData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Btn_RefreshGridData.Name = "Btn_RefreshGridData";
             this.Btn_RefreshGridData.Size = new System.Drawing.Size(87, 26);
@@ -461,7 +461,7 @@
             // DtEndDate
             // 
             this.DtEndDate.EditValue = null;
-            this.DtEndDate.Location = new System.Drawing.Point(213, 44);
+            this.DtEndDate.Location = new System.Drawing.Point(213, 40);
             this.DtEndDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEndDate.Name = "DtEndDate";
             this.DtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -470,22 +470,21 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtEndDate.Properties.Mask.EditMask = "";
             this.DtEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtEndDate.Size = new System.Drawing.Size(117, 24);
+            this.DtEndDate.Size = new System.Drawing.Size(117, 22);
             this.DtEndDate.TabIndex = 202;
             // 
             // DtStartDate
             // 
             this.DtStartDate.EditValue = null;
-            this.DtStartDate.Location = new System.Drawing.Point(43, 44);
+            this.DtStartDate.Location = new System.Drawing.Point(43, 40);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtStartDate.Properties.Mask.EditMask = "";
-            this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtStartDate.Size = new System.Drawing.Size(117, 24);
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "");
+            this.DtStartDate.Size = new System.Drawing.Size(117, 22);
             this.DtStartDate.TabIndex = 201;
             // 
             // panelControl1
@@ -506,7 +505,7 @@
             this.panelControl1.TabIndex = 206;
             this.panelControl1.Text = "Passing Indent Items for Purchase Order...";
             // 
-            // frm_StockIndentPassing
+            // Frm_StockIndentPassing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -515,7 +514,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frm_StockIndentPassing";
+            this.Name = "Frm_StockIndentPassing";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.Frm_StockIndentPassing_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

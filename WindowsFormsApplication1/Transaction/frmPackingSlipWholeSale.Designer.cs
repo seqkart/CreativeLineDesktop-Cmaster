@@ -54,7 +54,7 @@
             this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn17 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BarCodeGrid = new DevExpress.XtraGrid.GridControl();
-            this.Panel2 = new System.Windows.Forms.Panel();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.txtPackingSlipNO = new DevExpress.XtraEditors.TextEdit();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
             this.txtPackingSLipDate = new DevExpress.XtraEditors.DateEdit();
@@ -63,7 +63,7 @@
             this.Label8 = new DevExpress.XtraEditors.LabelControl();
             this.Label7 = new DevExpress.XtraEditors.LabelControl();
             this.lblPackingSLipTot = new DevExpress.XtraEditors.LabelControl();
-            this.Panel1 = new System.Windows.Forms.Panel();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -94,13 +94,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).BeginInit();
-            this.Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSlipNO.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).BeginInit();
-            this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).BeginInit();
@@ -218,7 +220,7 @@
             this.txtRemarks.Location = new System.Drawing.Point(86, 758);
             this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
-            this.txtRemarks.Size = new System.Drawing.Size(924, 24);
+            this.txtRemarks.Size = new System.Drawing.Size(924, 22);
             this.txtRemarks.TabIndex = 718;
             this.txtRemarks.TabStop = false;
             // 
@@ -436,25 +438,25 @@
             this.BarCodeGrid.DoubleClick += new System.EventHandler(this.BarCodeGrid_DoubleClick);
             this.BarCodeGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarCodeGrid_KeyDown);
             // 
-            // Panel2
+            // panelControl2
             // 
-            this.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel2.Controls.Add(this.txtPackingSlipNO);
-            this.Panel2.Controls.Add(this.labelControl12);
-            this.Panel2.Controls.Add(this.txtPackingSLipDate);
-            this.Panel2.Controls.Add(this.txtStoreQty);
-            this.Panel2.Controls.Add(this.lblTotQty);
-            this.Panel2.Controls.Add(this.txtStoreCode);
-            this.Panel2.Controls.Add(this.labelControl2);
-            this.Panel2.Controls.Add(this.Label8);
-            this.Panel2.Controls.Add(this.labelControl1);
-            this.Panel2.Controls.Add(this.Label7);
-            this.Panel2.Controls.Add(this.lblBox);
-            this.Panel2.Location = new System.Drawing.Point(502, 38);
-            this.Panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Panel2.Name = "Panel2";
-            this.Panel2.Size = new System.Drawing.Size(780, 205);
-            this.Panel2.TabIndex = 725;
+            this.panelControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl2.Controls.Add(this.txtPackingSlipNO);
+            this.panelControl2.Controls.Add(this.labelControl12);
+            this.panelControl2.Controls.Add(this.txtPackingSLipDate);
+            this.panelControl2.Controls.Add(this.txtStoreQty);
+            this.panelControl2.Controls.Add(this.lblTotQty);
+            this.panelControl2.Controls.Add(this.txtStoreCode);
+            this.panelControl2.Controls.Add(this.labelControl2);
+            this.panelControl2.Controls.Add(this.Label8);
+            this.panelControl2.Controls.Add(this.labelControl1);
+            this.panelControl2.Controls.Add(this.Label7);
+            this.panelControl2.Controls.Add(this.lblBox);
+            this.panelControl2.Location = new System.Drawing.Point(502, 38);
+            this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(780, 205);
+            this.panelControl2.TabIndex = 725;
             // 
             // txtPackingSlipNO
             // 
@@ -462,15 +464,15 @@
             this.txtPackingSlipNO.Location = new System.Drawing.Point(131, 9);
             this.txtPackingSlipNO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPackingSlipNO.Name = "txtPackingSlipNO";
-            this.txtPackingSlipNO.Size = new System.Drawing.Size(132, 24);
+            this.txtPackingSlipNO.Size = new System.Drawing.Size(132, 22);
             this.txtPackingSlipNO.TabIndex = 15;
             // 
             // labelControl12
             // 
-            this.labelControl12.Location = new System.Drawing.Point(64, 43);
+            this.labelControl12.Location = new System.Drawing.Point(57, 42);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(66, 17);
+            this.labelControl12.Size = new System.Drawing.Size(68, 16);
             this.labelControl12.TabIndex = 734;
             this.labelControl12.Text = "Store Code";
             // 
@@ -486,7 +488,7 @@
             this.txtPackingSLipDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtPackingSLipDate.Properties.MaskSettings.Set("mask", "");
-            this.txtPackingSLipDate.Size = new System.Drawing.Size(138, 24);
+            this.txtPackingSLipDate.Size = new System.Drawing.Size(138, 22);
             this.txtPackingSLipDate.TabIndex = 724;
             this.txtPackingSLipDate.TabStop = false;
             // 
@@ -503,7 +505,7 @@
             this.txtStoreQty.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtStoreQty.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.txtStoreQty.Properties.UseReadOnlyAppearance = false;
-            this.txtStoreQty.Size = new System.Drawing.Size(59, 24);
+            this.txtStoreQty.Size = new System.Drawing.Size(59, 22);
             this.txtStoreQty.TabIndex = 733;
             // 
             // txtStoreCode
@@ -519,7 +521,7 @@
             this.txtStoreCode.Properties.AppearanceReadOnly.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.txtStoreCode.Properties.AppearanceReadOnly.Options.UseFont = true;
             this.txtStoreCode.Properties.UseReadOnlyAppearance = false;
-            this.txtStoreCode.Size = new System.Drawing.Size(72, 24);
+            this.txtStoreCode.Size = new System.Drawing.Size(72, 22);
             this.txtStoreCode.TabIndex = 732;
             this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStoreCode_KeyDown);
             // 
@@ -528,16 +530,16 @@
             this.Label8.Location = new System.Drawing.Point(279, 13);
             this.Label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(47, 17);
+            this.Label8.Size = new System.Drawing.Size(53, 16);
             this.Label8.TabIndex = 0;
             this.Label8.Text = "DATED :";
             // 
             // Label7
             // 
-            this.Label7.Location = new System.Drawing.Point(19, 13);
+            this.Label7.Location = new System.Drawing.Point(7, 12);
             this.Label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label7.Name = "Label7";
-            this.Label7.Size = new System.Drawing.Size(111, 17);
+            this.Label7.Size = new System.Drawing.Size(118, 16);
             this.Label7.TabIndex = 0;
             this.Label7.Text = "PACKING SLIP NO :";
             // 
@@ -554,39 +556,39 @@
             this.lblPackingSLipTot.TabIndex = 725;
             this.lblPackingSLipTot.Text = "0";
             // 
-            // Panel1
+            // panelControl1
             // 
-            this.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Panel1.Controls.Add(this.labelControl11);
-            this.Panel1.Controls.Add(this.textEdit1);
-            this.Panel1.Controls.Add(this.labelControl10);
-            this.Panel1.Controls.Add(this.labelControl9);
-            this.Panel1.Controls.Add(this.labelControl8);
-            this.Panel1.Controls.Add(this.labelControl7);
-            this.Panel1.Controls.Add(this.labelControl5);
-            this.Panel1.Controls.Add(this.labelControl4);
-            this.Panel1.Controls.Add(this.txtGSTNo);
-            this.Panel1.Controls.Add(this.txtState);
-            this.Panel1.Controls.Add(this.txtCity);
-            this.Panel1.Controls.Add(this.txtAddress3);
-            this.Panel1.Controls.Add(this.txtAddress2);
-            this.Panel1.Controls.Add(this.txtDANo);
-            this.Panel1.Controls.Add(this.txtPONo);
-            this.Panel1.Controls.Add(this.txtAddress);
-            this.Panel1.Controls.Add(this.txtAccName);
-            this.Panel1.Controls.Add(this.txtAccCode);
-            this.Panel1.Location = new System.Drawing.Point(14, 38);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(481, 205);
-            this.Panel1.TabIndex = 724;
+            this.panelControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.panelControl1.Controls.Add(this.labelControl11);
+            this.panelControl1.Controls.Add(this.textEdit1);
+            this.panelControl1.Controls.Add(this.labelControl10);
+            this.panelControl1.Controls.Add(this.labelControl9);
+            this.panelControl1.Controls.Add(this.labelControl8);
+            this.panelControl1.Controls.Add(this.labelControl7);
+            this.panelControl1.Controls.Add(this.labelControl5);
+            this.panelControl1.Controls.Add(this.labelControl4);
+            this.panelControl1.Controls.Add(this.txtGSTNo);
+            this.panelControl1.Controls.Add(this.txtState);
+            this.panelControl1.Controls.Add(this.txtCity);
+            this.panelControl1.Controls.Add(this.txtAddress3);
+            this.panelControl1.Controls.Add(this.txtAddress2);
+            this.panelControl1.Controls.Add(this.txtDANo);
+            this.panelControl1.Controls.Add(this.txtPONo);
+            this.panelControl1.Controls.Add(this.txtAddress);
+            this.panelControl1.Controls.Add(this.txtAccName);
+            this.panelControl1.Controls.Add(this.txtAccCode);
+            this.panelControl1.Location = new System.Drawing.Point(14, 38);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(481, 205);
+            this.panelControl1.TabIndex = 724;
             // 
             // labelControl11
             // 
             this.labelControl11.Location = new System.Drawing.Point(356, 171);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(24, 17);
+            this.labelControl11.Size = new System.Drawing.Size(25, 16);
             this.labelControl11.TabIndex = 727;
             this.labelControl11.Text = "DC :";
             // 
@@ -595,7 +597,7 @@
             this.textEdit1.Location = new System.Drawing.Point(384, 167);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(90, 24);
+            this.textEdit1.Size = new System.Drawing.Size(90, 22);
             this.textEdit1.TabIndex = 726;
             // 
             // labelControl10
@@ -603,57 +605,57 @@
             this.labelControl10.Location = new System.Drawing.Point(189, 171);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(51, 17);
+            this.labelControl10.Size = new System.Drawing.Size(51, 16);
             this.labelControl10.TabIndex = 725;
             this.labelControl10.Text = "PO NO. :";
             this.labelControl10.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl9
             // 
-            this.labelControl9.Location = new System.Drawing.Point(17, 171);
+            this.labelControl9.Location = new System.Drawing.Point(13, 171);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(51, 17);
+            this.labelControl9.Size = new System.Drawing.Size(51, 16);
             this.labelControl9.TabIndex = 725;
             this.labelControl9.Text = "DA NO. :";
             this.labelControl9.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl8
             // 
-            this.labelControl8.Location = new System.Drawing.Point(50, 143);
+            this.labelControl8.Location = new System.Drawing.Point(46, 143);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(57, 17);
+            this.labelControl8.Size = new System.Drawing.Size(60, 16);
             this.labelControl8.TabIndex = 725;
             this.labelControl8.Text = "GST NO. :";
             this.labelControl8.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl7
             // 
-            this.labelControl7.Location = new System.Drawing.Point(33, 117);
+            this.labelControl7.Location = new System.Drawing.Point(24, 117);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(74, 17);
+            this.labelControl7.Size = new System.Drawing.Size(82, 16);
             this.labelControl7.TabIndex = 725;
             this.labelControl7.Text = "CITY / SATE :";
             this.labelControl7.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(45, 39);
+            this.labelControl5.Location = new System.Drawing.Point(34, 39);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(62, 17);
+            this.labelControl5.Size = new System.Drawing.Size(72, 16);
             this.labelControl5.TabIndex = 725;
             this.labelControl5.Text = "ADDRESS :";
             this.labelControl5.Click += new System.EventHandler(this.LabelControl4_Click);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(22, 12);
+            this.labelControl4.Location = new System.Drawing.Point(12, 12);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(85, 17);
+            this.labelControl4.Size = new System.Drawing.Size(94, 16);
             this.labelControl4.TabIndex = 725;
             this.labelControl4.Text = "PARTY NAME :";
             this.labelControl4.Click += new System.EventHandler(this.LabelControl4_Click);
@@ -664,7 +666,7 @@
             this.txtGSTNo.Location = new System.Drawing.Point(111, 140);
             this.txtGSTNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGSTNo.Name = "txtGSTNo";
-            this.txtGSTNo.Size = new System.Drawing.Size(363, 24);
+            this.txtGSTNo.Size = new System.Drawing.Size(363, 22);
             this.txtGSTNo.TabIndex = 13;
             // 
             // txtState
@@ -673,7 +675,7 @@
             this.txtState.Location = new System.Drawing.Point(285, 114);
             this.txtState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(189, 24);
+            this.txtState.Size = new System.Drawing.Size(189, 22);
             this.txtState.TabIndex = 18;
             // 
             // txtCity
@@ -682,7 +684,7 @@
             this.txtCity.Location = new System.Drawing.Point(111, 114);
             this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(174, 24);
+            this.txtCity.Size = new System.Drawing.Size(174, 22);
             this.txtCity.TabIndex = 18;
             // 
             // txtAddress3
@@ -691,7 +693,7 @@
             this.txtAddress3.Location = new System.Drawing.Point(111, 88);
             this.txtAddress3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress3.Name = "txtAddress3";
-            this.txtAddress3.Size = new System.Drawing.Size(363, 24);
+            this.txtAddress3.Size = new System.Drawing.Size(363, 22);
             this.txtAddress3.TabIndex = 18;
             // 
             // txtAddress2
@@ -700,7 +702,7 @@
             this.txtAddress2.Location = new System.Drawing.Point(111, 61);
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(363, 24);
+            this.txtAddress2.Size = new System.Drawing.Size(363, 22);
             this.txtAddress2.TabIndex = 17;
             // 
             // txtDANo
@@ -708,7 +710,7 @@
             this.txtDANo.Location = new System.Drawing.Point(71, 167);
             this.txtDANo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDANo.Name = "txtDANo";
-            this.txtDANo.Size = new System.Drawing.Size(112, 24);
+            this.txtDANo.Size = new System.Drawing.Size(112, 22);
             this.txtDANo.TabIndex = 16;
             // 
             // txtPONo
@@ -716,7 +718,7 @@
             this.txtPONo.Location = new System.Drawing.Point(247, 167);
             this.txtPONo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPONo.Name = "txtPONo";
-            this.txtPONo.Size = new System.Drawing.Size(100, 24);
+            this.txtPONo.Size = new System.Drawing.Size(100, 22);
             this.txtPONo.TabIndex = 17;
             // 
             // txtAddress
@@ -725,7 +727,7 @@
             this.txtAddress.Location = new System.Drawing.Point(111, 35);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(363, 24);
+            this.txtAddress.Size = new System.Drawing.Size(363, 22);
             this.txtAddress.TabIndex = 12;
             // 
             // txtAccName
@@ -734,7 +736,7 @@
             this.txtAccName.Location = new System.Drawing.Point(185, 9);
             this.txtAccName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAccName.Name = "txtAccName";
-            this.txtAccName.Size = new System.Drawing.Size(288, 24);
+            this.txtAccName.Size = new System.Drawing.Size(288, 22);
             this.txtAccName.TabIndex = 11;
             // 
             // txtAccCode
@@ -742,7 +744,7 @@
             this.txtAccCode.Location = new System.Drawing.Point(111, 9);
             this.txtAccCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAccCode.Name = "txtAccCode";
-            this.txtAccCode.Size = new System.Drawing.Size(72, 24);
+            this.txtAccCode.Size = new System.Drawing.Size(72, 22);
             this.txtAccCode.TabIndex = 10;
             this.txtAccCode.EditValueChanged += new System.EventHandler(this.TxtAccCode_EditValueChanged);
             this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown_1);
@@ -834,7 +836,7 @@
             this.chOtherPS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chOtherPS.Name = "chOtherPS";
             this.chOtherPS.Properties.Caption = "Other PS";
-            this.chOtherPS.Size = new System.Drawing.Size(87, 24);
+            this.chOtherPS.Size = new System.Drawing.Size(87, 21);
             this.chOtherPS.TabIndex = 732;
             this.chOtherPS.CheckedChanged += new System.EventHandler(this.ChOtherPS_CheckedChanged);
             // 
@@ -844,16 +846,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1289, 790);
             this.ControlBox = false;
-            this.Controls.Add(this.chOtherPS);
             this.Controls.Add(this.HelpGrid);
+            this.Controls.Add(this.chOtherPS);
             this.Controls.Add(this.ArticleImageBox);
             this.Controls.Add(this.BarCodeGrid);
-            this.Controls.Add(this.Panel2);
+            this.Controls.Add(this.panelControl2);
             this.Controls.Add(this.lblPackingSLipTot);
             this.Controls.Add(this.labelControl6);
             this.Controls.Add(this.txtBarCode);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.Panel1);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.txtRemarks);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Menu_ToolStrip);
@@ -869,15 +871,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).EndInit();
-            this.Panel2.ResumeLayout(false);
-            this.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            this.panelControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSlipNO.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPackingSLipDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreQty.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStoreCode.Properties)).EndInit();
-            this.Panel1.ResumeLayout(false);
-            this.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtGSTNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtState.Properties)).EndInit();
@@ -925,10 +929,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
         private DevExpress.XtraGrid.GridControl BarCodeGrid;
-        internal System.Windows.Forms.Panel Panel2;
         internal DevExpress.XtraEditors.LabelControl Label8;
         internal DevExpress.XtraEditors.LabelControl Label7;
-        internal System.Windows.Forms.Panel Panel1;
         private System.Windows.Forms.ToolStripButton btnLoadDataFPackingSlip;
         private DevExpress.XtraEditors.TextEdit txtPackingSlipNO;
         private DevExpress.XtraEditors.DateEdit txtPackingSLipDate;
@@ -962,5 +964,7 @@
         private DevExpress.XtraGrid.GridControl HelpGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraEditors.CheckEdit chOtherPS;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        internal DevExpress.XtraEditors.PanelControl panelControl2;
     }
 }

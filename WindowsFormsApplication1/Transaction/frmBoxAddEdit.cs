@@ -573,6 +573,9 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.SalePopUPForAllWindows(this, e);
         }
 
+        private void HelpGrid_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

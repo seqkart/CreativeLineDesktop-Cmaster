@@ -129,9 +129,11 @@ namespace WindowsFormsApplication1.Transaction
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtVoucherDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtVoucherDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.txtVoucherDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.Fluent;
             this.txtVoucherDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
-            this.txtVoucherDate.Properties.MaskSettings.Set("spinWithCarry", true);
+            this.txtVoucherDate.Properties.MaskSettings.Set("spinWithCarry", false);
+            this.txtVoucherDate.Properties.MaskSettings.Set("mask", "d");
+            this.txtVoucherDate.Properties.UseMaskAsDisplayFormat = true;
             this.txtVoucherDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.txtVoucherDate.Size = new System.Drawing.Size(132, 26);
             this.txtVoucherDate.TabIndex = 476;
@@ -437,11 +439,11 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.HelpGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(2, 26);
+            this.HelpGrid.Location = new System.Drawing.Point(2, 24);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(448, 203);
+            this.HelpGrid.Size = new System.Drawing.Size(448, 205);
             this.HelpGrid.TabIndex = 245;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -470,7 +472,7 @@ namespace WindowsFormsApplication1.Transaction
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSearchBox.Properties.MaxLength = 400;
-            this.txtSearchBox.Size = new System.Drawing.Size(448, 24);
+            this.txtSearchBox.Size = new System.Drawing.Size(448, 22);
             this.txtSearchBox.TabIndex = 246;
             this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
             this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);

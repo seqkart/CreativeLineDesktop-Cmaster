@@ -279,7 +279,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG125")
                 {
-                    frmArticleMst frm = new frmArticleMst() { S1 = btnAdd.Text, Text = "User Addition" };
+                    FrmArticleMst frm = new FrmArticleMst() { S1 = btnAdd.Text, Text = "User Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -828,7 +828,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG125")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmArticleMst frm = new frmArticleMst()
+                    FrmArticleMst frm = new FrmArticleMst()
                     { S1 = btnEdit.Text, Text = "Article Edition", PrdCode = CurrentRow["ARTSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 

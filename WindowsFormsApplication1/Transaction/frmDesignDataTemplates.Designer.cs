@@ -302,10 +302,10 @@
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(33, 55);
+            this.labelControl4.Location = new System.Drawing.Point(29, 54);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 17);
+            this.labelControl4.Size = new System.Drawing.Size(71, 16);
             this.labelControl4.TabIndex = 537;
             this.labelControl4.Text = "Party Name";
             // 
@@ -318,7 +318,7 @@
             this.txtDebitPartyName.Name = "txtDebitPartyName";
             this.txtDebitPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyName.Properties.ReadOnly = true;
-            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 24);
+            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 22);
             this.txtDebitPartyName.TabIndex = 535;
             this.txtDebitPartyName.TabStop = false;
             // 
@@ -329,7 +329,7 @@
             this.txtDebitPartyCode.Name = "txtDebitPartyCode";
             this.txtDebitPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyCode.Properties.MaxLength = 6;
-            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 24);
+            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 22);
             this.txtDebitPartyCode.TabIndex = 536;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
@@ -345,7 +345,7 @@
             this.txtDocType.Properties.Items.AddRange(new object[] {
             "Sale",
             "Purchase"});
-            this.txtDocType.Size = new System.Drawing.Size(117, 24);
+            this.txtDocType.Size = new System.Drawing.Size(117, 22);
             this.txtDocType.TabIndex = 538;
             // 
             // labelControl1
@@ -353,7 +353,7 @@
             this.labelControl1.Location = new System.Drawing.Point(645, 55);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(91, 17);
+            this.labelControl1.Size = new System.Drawing.Size(96, 16);
             this.labelControl1.TabIndex = 539;
             this.labelControl1.Text = "Document Type";
             // 
@@ -400,19 +400,19 @@
             this.txtTemplateName.Name = "txtTemplateName";
             this.txtTemplateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTemplateName.Properties.MaxLength = 100;
-            this.txtTemplateName.Size = new System.Drawing.Size(534, 24);
+            this.txtTemplateName.Size = new System.Drawing.Size(534, 22);
             this.txtTemplateName.TabIndex = 541;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(12, 90);
+            this.labelControl2.Location = new System.Drawing.Point(5, 89);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(89, 17);
+            this.labelControl2.Size = new System.Drawing.Size(95, 16);
             this.labelControl2.TabIndex = 542;
             this.labelControl2.Text = "TemplateName";
             // 
-            // frmDesignDataTemplates
+            // FrmDesignDataTemplates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -431,7 +431,7 @@
             this.Controls.Add(this.groupControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmDesignDataTemplates";
+            this.Name = "FrmDesignDataTemplates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmDesignDataTemplates_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

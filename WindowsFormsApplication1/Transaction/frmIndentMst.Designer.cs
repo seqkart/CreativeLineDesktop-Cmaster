@@ -125,18 +125,17 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtInvoiceDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dtInvoiceDate.Properties.Mask.EditMask = "";
-            this.dtInvoiceDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.dtInvoiceDate.Size = new System.Drawing.Size(92, 24);
+            this.dtInvoiceDate.Properties.MaskSettings.Set("mask", "");
+            this.dtInvoiceDate.Size = new System.Drawing.Size(92, 22);
             this.dtInvoiceDate.TabIndex = 345;
             this.dtInvoiceDate.TabStop = false;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(41, 60);
+            this.label2.Location = new System.Drawing.Point(48, 60);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 17);
+            this.label2.Size = new System.Drawing.Size(29, 16);
             this.label2.TabIndex = 346;
             this.label2.Text = "Date";
             // 
@@ -146,7 +145,7 @@
             this.txtSerialNo.Location = new System.Drawing.Point(404, 58);
             this.txtSerialNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSerialNo.Name = "txtSerialNo";
-            this.txtSerialNo.Size = new System.Drawing.Size(173, 24);
+            this.txtSerialNo.Size = new System.Drawing.Size(173, 22);
             this.txtSerialNo.TabIndex = 348;
             this.txtSerialNo.TabStop = false;
             // 
@@ -156,7 +155,7 @@
             this.txtserial.Location = new System.Drawing.Point(357, 58);
             this.txtserial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtserial.Name = "txtserial";
-            this.txtserial.Size = new System.Drawing.Size(40, 24);
+            this.txtserial.Size = new System.Drawing.Size(40, 22);
             this.txtserial.TabIndex = 347;
             this.txtserial.TabStop = false;
             // 
@@ -165,7 +164,7 @@
             this.label1.Location = new System.Drawing.Point(282, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 17);
+            this.label1.Size = new System.Drawing.Size(57, 16);
             this.label1.TabIndex = 344;
             this.label1.Text = "Indent No";
             // 
@@ -177,7 +176,7 @@
             this.txtDeptName.Name = "txtDeptName";
             this.txtDeptName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptName.Properties.ReadOnly = true;
-            this.txtDeptName.Size = new System.Drawing.Size(583, 24);
+            this.txtDeptName.Size = new System.Drawing.Size(583, 22);
             this.txtDeptName.TabIndex = 349;
             this.txtDeptName.TabStop = false;
             // 
@@ -189,48 +188,48 @@
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductName.Properties.ReadOnly = true;
-            this.txtProductName.Size = new System.Drawing.Size(377, 24);
+            this.txtProductName.Size = new System.Drawing.Size(377, 22);
             this.txtProductName.TabIndex = 351;
             this.txtProductName.TabStop = false;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(24, 133);
+            this.label7.Location = new System.Drawing.Point(30, 133);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 17);
+            this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 355;
             this.label7.Text = "Product";
             // 
             // txtProductACode
             // 
-            this.txtProductACode.Location = new System.Drawing.Point(82, 129);
+            this.txtProductACode.Location = new System.Drawing.Point(83, 129);
             this.txtProductACode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductACode.Name = "txtProductACode";
             this.txtProductACode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductACode.Properties.MaxLength = 8;
-            this.txtProductACode.Size = new System.Drawing.Size(91, 24);
+            this.txtProductACode.Size = new System.Drawing.Size(91, 22);
             this.txtProductACode.TabIndex = 352;
             this.txtProductACode.EditValueChanged += new System.EventHandler(this.TxtProductACode_EditValueChanged);
             this.txtProductACode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtProductACode_KeyDown);
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(6, 95);
+            this.label6.Location = new System.Drawing.Point(12, 95);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 17);
+            this.label6.Size = new System.Drawing.Size(65, 16);
             this.label6.TabIndex = 353;
             this.label6.Text = "Dept Code";
             // 
             // txtDeptCode
             // 
-            this.txtDeptCode.Location = new System.Drawing.Point(82, 93);
+            this.txtDeptCode.Location = new System.Drawing.Point(83, 93);
             this.txtDeptCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 6;
-            this.txtDeptCode.Size = new System.Drawing.Size(91, 24);
+            this.txtDeptCode.Size = new System.Drawing.Size(91, 22);
             this.txtDeptCode.TabIndex = 350;
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
@@ -239,7 +238,7 @@
             this.label30.Location = new System.Drawing.Point(588, 133);
             this.label30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(80, 17);
+            this.label30.Size = new System.Drawing.Size(82, 16);
             this.label30.TabIndex = 375;
             this.label30.Text = "Product Code";
             // 
@@ -251,7 +250,7 @@
             this.txtProductCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductCode.Properties.MaxLength = 4;
             this.txtProductCode.Properties.ReadOnly = true;
-            this.txtProductCode.Size = new System.Drawing.Size(99, 24);
+            this.txtProductCode.Size = new System.Drawing.Size(99, 22);
             this.txtProductCode.TabIndex = 374;
             // 
             // txtProductQty
@@ -263,16 +262,16 @@
             this.txtProductQty.Name = "txtProductQty";
             this.txtProductQty.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductQty.Properties.MaxLength = 15;
-            this.txtProductQty.Size = new System.Drawing.Size(90, 24);
+            this.txtProductQty.Size = new System.Drawing.Size(90, 22);
             this.txtProductQty.TabIndex = 376;
             this.txtProductQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProductQty_KeyPress);
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(47, 167);
+            this.label4.Location = new System.Drawing.Point(57, 167);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 17);
+            this.label4.Size = new System.Drawing.Size(20, 16);
             this.label4.TabIndex = 377;
             this.label4.Text = "Qty";
             // 
@@ -285,7 +284,7 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAmount.Properties.MaxLength = 15;
-            this.txtAmount.Size = new System.Drawing.Size(90, 24);
+            this.txtAmount.Size = new System.Drawing.Size(90, 22);
             this.txtAmount.TabIndex = 378;
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProductQty_KeyPress);
             // 
@@ -294,7 +293,7 @@
             this.label3.Location = new System.Drawing.Point(428, 167);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 379;
             this.label3.Text = "Amount";
             // 

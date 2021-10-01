@@ -172,7 +172,7 @@
             this.lblDocCode.Location = new System.Drawing.Point(14, 55);
             this.lblDocCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDocCode.Name = "lblDocCode";
-            this.lblDocCode.Size = new System.Drawing.Size(38, 17);
+            this.lblDocCode.Size = new System.Drawing.Size(36, 16);
             this.lblDocCode.TabIndex = 29;
             this.lblDocCode.Text = "Month";
             // 
@@ -200,7 +200,7 @@
             this.txtEmpName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.MaxLength = 6;
-            this.txtEmpName.Size = new System.Drawing.Size(408, 24);
+            this.txtEmpName.Size = new System.Drawing.Size(408, 22);
             this.txtEmpName.TabIndex = 36;
             // 
             // txtPrePaidTag
@@ -210,7 +210,7 @@
             this.txtPrePaidTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPrePaidTag.Name = "txtPrePaidTag";
             this.txtPrePaidTag.Properties.MaxLength = 6;
-            this.txtPrePaidTag.Size = new System.Drawing.Size(30, 24);
+            this.txtPrePaidTag.Size = new System.Drawing.Size(30, 22);
             this.txtPrePaidTag.TabIndex = 2;
             this.txtPrePaidTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtPrePaidTag_Validating);
             // 
@@ -233,7 +233,7 @@
             this.txtDeptDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.MaxLength = 6;
-            this.txtDeptDesc.Size = new System.Drawing.Size(468, 24);
+            this.txtDeptDesc.Size = new System.Drawing.Size(468, 22);
             this.txtDeptDesc.TabIndex = 32;
             // 
             // labelControl2
@@ -241,7 +241,7 @@
             this.labelControl2.Location = new System.Drawing.Point(6, 84);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(69, 17);
+            this.labelControl2.Size = new System.Drawing.Size(71, 16);
             this.labelControl2.TabIndex = 33;
             this.labelControl2.Text = "Department";
             // 
@@ -254,7 +254,7 @@
             this.txtEmpCode.Properties.EditFormat.FormatString = "N2";
             this.txtEmpCode.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(52, 24);
+            this.txtEmpCode.Size = new System.Drawing.Size(52, 22);
             this.txtEmpCode.TabIndex = 0;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
@@ -264,7 +264,7 @@
             this.labelControl1.Location = new System.Drawing.Point(6, 47);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(31, 17);
+            this.labelControl1.Size = new System.Drawing.Size(33, 16);
             this.labelControl1.TabIndex = 31;
             this.labelControl1.Text = "Code";
             // 
@@ -297,7 +297,7 @@
             this.txtOT.Properties.MaxLength = 5;
             this.txtOT.Properties.NullText = "0";
             this.txtOT.Properties.NullValuePrompt = "0";
-            this.txtOT.Size = new System.Drawing.Size(52, 24);
+            this.txtOT.Size = new System.Drawing.Size(52, 22);
             this.txtOT.TabIndex = 34;
             this.txtOT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -306,7 +306,7 @@
             this.labelControl7.Location = new System.Drawing.Point(14, 161);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(60, 17);
+            this.labelControl7.Size = new System.Drawing.Size(63, 16);
             this.labelControl7.TabIndex = 35;
             this.labelControl7.Text = "Over Time";
             // 
@@ -324,7 +324,7 @@
             this.txtPH.Properties.MaxLength = 5;
             this.txtPH.Properties.NullText = "0";
             this.txtPH.Properties.NullValuePrompt = "0";
-            this.txtPH.Size = new System.Drawing.Size(52, 24);
+            this.txtPH.Size = new System.Drawing.Size(52, 22);
             this.txtPH.TabIndex = 4;
             this.txtPH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -333,7 +333,7 @@
             this.labelControl5.Location = new System.Drawing.Point(14, 103);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(79, 17);
+            this.labelControl5.Size = new System.Drawing.Size(85, 16);
             this.labelControl5.TabIndex = 33;
             this.labelControl5.Text = "Paid Holidays";
             // 
@@ -351,7 +351,7 @@
             this.txtDW.Properties.MaxLength = 5;
             this.txtDW.Properties.NullText = "0";
             this.txtDW.Properties.NullValuePrompt = "0";
-            this.txtDW.Size = new System.Drawing.Size(52, 24);
+            this.txtDW.Size = new System.Drawing.Size(52, 22);
             this.txtDW.TabIndex = 3;
             this.txtDW.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -360,7 +360,7 @@
             this.labelControl4.Location = new System.Drawing.Point(14, 44);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(63, 17);
+            this.labelControl4.Size = new System.Drawing.Size(66, 16);
             this.labelControl4.TabIndex = 31;
             this.labelControl4.Text = "Worked(D)";
             // 
@@ -395,7 +395,7 @@
             this.txtMisc3.Properties.MaxLength = 10;
             this.txtMisc3.Properties.NullText = "0";
             this.txtMisc3.Properties.NullValuePrompt = "0";
-            this.txtMisc3.Size = new System.Drawing.Size(90, 24);
+            this.txtMisc3.Size = new System.Drawing.Size(90, 22);
             this.txtMisc3.TabIndex = 2;
             this.txtMisc3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -404,7 +404,7 @@
             this.labelControl12.Location = new System.Drawing.Point(10, 162);
             this.labelControl12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(37, 17);
+            this.labelControl12.Size = new System.Drawing.Size(38, 16);
             this.labelControl12.TabIndex = 37;
             this.labelControl12.Text = "Misc.3";
             // 
@@ -422,7 +422,7 @@
             this.txtMisc2.Properties.MaxLength = 10;
             this.txtMisc2.Properties.NullText = "0";
             this.txtMisc2.Properties.NullValuePrompt = "0";
-            this.txtMisc2.Size = new System.Drawing.Size(90, 24);
+            this.txtMisc2.Size = new System.Drawing.Size(90, 22);
             this.txtMisc2.TabIndex = 1;
             this.txtMisc2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -431,7 +431,7 @@
             this.labelControl11.Location = new System.Drawing.Point(10, 103);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(37, 17);
+            this.labelControl11.Size = new System.Drawing.Size(38, 16);
             this.labelControl11.TabIndex = 35;
             this.labelControl11.Text = "Misc.2";
             // 
@@ -449,7 +449,7 @@
             this.txtMisc1.Properties.MaxLength = 10;
             this.txtMisc1.Properties.NullText = "0";
             this.txtMisc1.Properties.NullValuePrompt = "0";
-            this.txtMisc1.Size = new System.Drawing.Size(90, 24);
+            this.txtMisc1.Size = new System.Drawing.Size(90, 22);
             this.txtMisc1.TabIndex = 0;
             this.txtMisc1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -458,7 +458,7 @@
             this.labelControl10.Location = new System.Drawing.Point(10, 44);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(37, 17);
+            this.labelControl10.Size = new System.Drawing.Size(38, 16);
             this.labelControl10.TabIndex = 33;
             this.labelControl10.Text = "Misc.1";
             // 
@@ -491,7 +491,7 @@
             this.txtMiscDed.Properties.MaxLength = 10;
             this.txtMiscDed.Properties.NullText = "0";
             this.txtMiscDed.Properties.NullValuePrompt = "0";
-            this.txtMiscDed.Size = new System.Drawing.Size(90, 24);
+            this.txtMiscDed.Size = new System.Drawing.Size(90, 22);
             this.txtMiscDed.TabIndex = 40;
             this.txtMiscDed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -500,7 +500,7 @@
             this.labelControl6.Location = new System.Drawing.Point(14, 162);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(24, 17);
+            this.labelControl6.Size = new System.Drawing.Size(26, 16);
             this.labelControl6.TabIndex = 41;
             this.labelControl6.Text = "Ded";
             // 
@@ -518,7 +518,7 @@
             this.txtTDS.Properties.MaxLength = 10;
             this.txtTDS.Properties.NullText = "0";
             this.txtTDS.Properties.NullValuePrompt = "0";
-            this.txtTDS.Size = new System.Drawing.Size(90, 24);
+            this.txtTDS.Size = new System.Drawing.Size(90, 22);
             this.txtTDS.TabIndex = 3;
             this.txtTDS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -527,7 +527,7 @@
             this.labelControl16.Location = new System.Drawing.Point(14, 105);
             this.labelControl16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(51, 17);
+            this.labelControl16.Size = new System.Drawing.Size(53, 16);
             this.labelControl16.TabIndex = 39;
             this.labelControl16.Text = "Tds Amt.";
             // 
@@ -546,7 +546,7 @@
             this.txtLWF.Properties.MaxLength = 10;
             this.txtLWF.Properties.NullText = "0";
             this.txtLWF.Properties.NullValuePrompt = "0";
-            this.txtLWF.Size = new System.Drawing.Size(90, 24);
+            this.txtLWF.Size = new System.Drawing.Size(90, 22);
             this.txtLWF.TabIndex = 2;
             this.txtLWF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -555,7 +555,7 @@
             this.labelControl15.Location = new System.Drawing.Point(14, 44);
             this.labelControl15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl15.Name = "labelControl15";
-            this.labelControl15.Size = new System.Drawing.Size(24, 17);
+            this.labelControl15.Size = new System.Drawing.Size(28, 16);
             this.labelControl15.TabIndex = 37;
             this.labelControl15.Text = "LWF";
             // 
@@ -590,7 +590,7 @@
             this.txtML.Properties.MaxLength = 5;
             this.txtML.Properties.NullText = "0";
             this.txtML.Properties.NullValuePrompt = "0";
-            this.txtML.Size = new System.Drawing.Size(40, 24);
+            this.txtML.Size = new System.Drawing.Size(40, 22);
             this.txtML.TabIndex = 38;
             this.txtML.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -599,7 +599,7 @@
             this.labelControl26.Location = new System.Drawing.Point(62, 162);
             this.labelControl26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(24, 17);
+            this.labelControl26.Size = new System.Drawing.Size(24, 16);
             this.labelControl26.TabIndex = 39;
             this.labelControl26.Text = "M.L.";
             // 
@@ -617,7 +617,7 @@
             this.txtSL.Properties.MaxLength = 5;
             this.txtSL.Properties.NullText = "0";
             this.txtSL.Properties.NullValuePrompt = "0";
-            this.txtSL.Size = new System.Drawing.Size(40, 24);
+            this.txtSL.Size = new System.Drawing.Size(40, 22);
             this.txtSL.TabIndex = 2;
             this.txtSL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -626,7 +626,7 @@
             this.labelControl19.Location = new System.Drawing.Point(14, 162);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(23, 17);
+            this.labelControl19.Size = new System.Drawing.Size(26, 16);
             this.labelControl19.TabIndex = 37;
             this.labelControl19.Text = "Sick";
             // 
@@ -644,7 +644,7 @@
             this.txtCL.Properties.MaxLength = 5;
             this.txtCL.Properties.NullText = "0";
             this.txtCL.Properties.NullValuePrompt = "0";
-            this.txtCL.Size = new System.Drawing.Size(90, 24);
+            this.txtCL.Size = new System.Drawing.Size(90, 22);
             this.txtCL.TabIndex = 1;
             this.txtCL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -653,7 +653,7 @@
             this.labelControl20.Location = new System.Drawing.Point(14, 103);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(38, 17);
+            this.labelControl20.Size = new System.Drawing.Size(42, 16);
             this.labelControl20.TabIndex = 35;
             this.labelControl20.Text = "Casual";
             // 
@@ -671,7 +671,7 @@
             this.txtEL.Properties.MaxLength = 5;
             this.txtEL.Properties.NullText = "0";
             this.txtEL.Properties.NullValuePrompt = "0";
-            this.txtEL.Size = new System.Drawing.Size(90, 24);
+            this.txtEL.Size = new System.Drawing.Size(90, 22);
             this.txtEL.TabIndex = 0;
             this.txtEL.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDW_KeyPress);
             // 
@@ -680,7 +680,7 @@
             this.labelControl21.Location = new System.Drawing.Point(14, 44);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(41, 17);
+            this.labelControl21.Size = new System.Drawing.Size(44, 16);
             this.labelControl21.TabIndex = 33;
             this.labelControl21.Text = "Earned";
             // 
@@ -695,7 +695,7 @@
             this.dtMonthYear.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.dtMonthYear.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.dtMonthYear.Properties.MaxLength = 6;
-            this.dtMonthYear.Size = new System.Drawing.Size(85, 24);
+            this.dtMonthYear.Size = new System.Drawing.Size(85, 22);
             this.dtMonthYear.TabIndex = 0;
             conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
             conditionValidationRule2.ErrorText = "This value is not valid";
