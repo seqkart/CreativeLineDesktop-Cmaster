@@ -65,7 +65,7 @@
             this.txtSurcRate.Location = new System.Drawing.Point(161, 234);
             this.txtSurcRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSurcRate.Name = "txtSurcRate";
-            this.txtSurcRate.Size = new System.Drawing.Size(83, 24);
+            this.txtSurcRate.Size = new System.Drawing.Size(83, 22);
             this.txtSurcRate.TabIndex = 223;
             // 
             // txtUnderSec
@@ -76,7 +76,7 @@
             this.txtUnderSec.Name = "txtUnderSec";
             this.txtUnderSec.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnderSec.Properties.MaxLength = 40;
-            this.txtUnderSec.Size = new System.Drawing.Size(388, 24);
+            this.txtUnderSec.Size = new System.Drawing.Size(388, 22);
             this.txtUnderSec.TabIndex = 220;
             // 
             // txtRate
@@ -85,7 +85,7 @@
             this.txtRate.Location = new System.Drawing.Point(161, 199);
             this.txtRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(83, 24);
+            this.txtRate.Size = new System.Drawing.Size(83, 22);
             this.txtRate.TabIndex = 222;
             // 
             // txtTdsDesc
@@ -96,7 +96,7 @@
             this.txtTdsDesc.Name = "txtTdsDesc";
             this.txtTdsDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTdsDesc.Properties.MaxLength = 50;
-            this.txtTdsDesc.Size = new System.Drawing.Size(388, 24);
+            this.txtTdsDesc.Size = new System.Drawing.Size(388, 22);
             this.txtTdsDesc.TabIndex = 219;
             // 
             // txtTdsCode
@@ -106,7 +106,7 @@
             this.txtTdsCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTdsCode.Name = "txtTdsCode";
             this.txtTdsCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTdsCode.Size = new System.Drawing.Size(83, 24);
+            this.txtTdsCode.Size = new System.Drawing.Size(83, 22);
             this.txtTdsCode.TabIndex = 218;
             // 
             // label9
@@ -114,7 +114,7 @@
             this.label9.Location = new System.Drawing.Point(69, 135);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 17);
+            this.label9.Size = new System.Drawing.Size(85, 16);
             this.label9.TabIndex = 229;
             this.label9.Text = "Under Section";
             // 
@@ -123,7 +123,7 @@
             this.label8.Location = new System.Drawing.Point(127, 203);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(26, 17);
+            this.label8.Size = new System.Drawing.Size(29, 16);
             this.label8.TabIndex = 228;
             this.label8.Text = "Rate";
             // 
@@ -132,7 +132,7 @@
             this.label5.Location = new System.Drawing.Point(63, 238);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 17);
+            this.label5.Size = new System.Drawing.Size(94, 16);
             this.label5.TabIndex = 227;
             this.label5.Text = "Surcharge Rate";
             // 
@@ -141,7 +141,7 @@
             this.label3.Location = new System.Drawing.Point(126, 106);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 17);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 226;
             this.label3.Text = "Desc";
             // 
@@ -150,7 +150,7 @@
             this.label1.Location = new System.Drawing.Point(122, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 225;
             this.label1.Text = "Code";
             // 
@@ -168,7 +168,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(602, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(602, 27);
             this.Menu_ToolStrip.TabIndex = 230;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -178,7 +178,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -188,7 +188,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -199,7 +199,7 @@
             this.txtAcPostingCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAcPostingCode.Name = "txtAcPostingCode";
             this.txtAcPostingCode.Properties.MaxLength = 6;
-            this.txtAcPostingCode.Size = new System.Drawing.Size(83, 24);
+            this.txtAcPostingCode.Size = new System.Drawing.Size(83, 22);
             this.txtAcPostingCode.TabIndex = 221;
             this.txtAcPostingCode.EditValueChanged += new System.EventHandler(this.TxtAcPostingCode_EditValueChanged);
             this.txtAcPostingCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAcPostingCode_KeyDown);
@@ -212,7 +212,7 @@
             this.txtAcPostingdesc.Name = "txtAcPostingdesc";
             this.txtAcPostingdesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAcPostingdesc.Properties.ReadOnly = true;
-            this.txtAcPostingdesc.Size = new System.Drawing.Size(299, 24);
+            this.txtAcPostingdesc.Size = new System.Drawing.Size(299, 22);
             this.txtAcPostingdesc.TabIndex = 232;
             this.txtAcPostingdesc.TabStop = false;
             // 
@@ -221,7 +221,7 @@
             this.label2.Location = new System.Drawing.Point(84, 169);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 17);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 233;
             this.label2.Text = "A/C Posting";
             // 

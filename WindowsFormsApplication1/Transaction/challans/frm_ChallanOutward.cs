@@ -753,9 +753,9 @@ namespace WindowsFormsApplication1.Transaction.challans
                             }
                             BarCodeGridView.CloseEditor();
                             BarCodeGridView.UpdateCurrentRow();
-                         
+
                         }
-                       
+
                         Close();
                     }
                 }
@@ -766,7 +766,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-       
+
         private void HelpGrid_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -903,7 +903,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                             if (currentrow == null)
                                             {
                                                 HelpGrid.Text = "CHOColName";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
