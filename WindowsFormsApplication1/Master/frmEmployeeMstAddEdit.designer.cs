@@ -168,6 +168,7 @@
             this.labelControl = new DevExpress.XtraEditors.LabelControl();
             this.groupBox1 = new DevExpress.XtraEditors.GroupControl();
             this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
+            this.chTeaTag = new System.Windows.Forms.CheckBox();
             this.txtUnitDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtUnitCode = new DevExpress.XtraEditors.TextEdit();
             this.lblDailyWageRate = new DevExpress.XtraEditors.LabelControl();
@@ -177,7 +178,6 @@
             this.txtDailyWageHours = new DevExpress.XtraEditors.TextEdit();
             this.groupBox2 = new DevExpress.XtraEditors.GroupControl();
             this.txtDailyWageMinutes = new DevExpress.XtraEditors.TextEdit();
-            this.chTeaTag = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.RelationShipGrid123)).BeginInit();
             this.RelationShipGrid123.SuspendLayout();
             this.BasicInfoTab.SuspendLayout();
@@ -286,7 +286,7 @@
             this.BasicInfoTab.Controls.Add(this.panelControl1);
             this.BasicInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BasicInfoTab.Name = "BasicInfoTab";
-            this.BasicInfoTab.Size = new System.Drawing.Size(696, 363);
+            this.BasicInfoTab.Size = new System.Drawing.Size(696, 358);
             this.BasicInfoTab.Text = "Personel";
             // 
             // panelControl1
@@ -316,7 +316,7 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(696, 363);
+            this.panelControl1.Size = new System.Drawing.Size(696, 358);
             this.panelControl1.TabIndex = 0;
             // 
             // labelControl23
@@ -337,7 +337,7 @@
             this.lblFilename.Location = new System.Drawing.Point(400, 320);
             this.lblFilename.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblFilename.Name = "lblFilename";
-            this.lblFilename.Size = new System.Drawing.Size(75, 17);
+            this.lblFilename.Size = new System.Drawing.Size(78, 16);
             this.lblFilename.TabIndex = 387;
             this.lblFilename.Text = "Image Name";
             // 
@@ -378,7 +378,7 @@
             this.txtNationality.Properties.Items.AddRange(new object[] {
             "INDIAN"});
             this.txtNationality.Properties.Sorted = true;
-            this.txtNationality.Size = new System.Drawing.Size(117, 24);
+            this.txtNationality.Size = new System.Drawing.Size(117, 22);
             this.txtNationality.TabIndex = 18;
             // 
             // txtMotherName
@@ -389,7 +389,7 @@
             this.txtMotherName.Name = "txtMotherName";
             this.txtMotherName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMotherName.Properties.MaxLength = 40;
-            this.txtMotherName.Size = new System.Drawing.Size(257, 24);
+            this.txtMotherName.Size = new System.Drawing.Size(257, 22);
             this.txtMotherName.TabIndex = 17;
             this.txtMotherName.Visible = false;
             // 
@@ -415,7 +415,7 @@
             this.txtEmpSex.Properties.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.txtEmpSex.Size = new System.Drawing.Size(91, 24);
+            this.txtEmpSex.Size = new System.Drawing.Size(91, 22);
             this.txtEmpSex.TabIndex = 14;
             // 
             // txtRelationTag
@@ -429,7 +429,7 @@
             this.txtRelationTag.Properties.Items.AddRange(new object[] {
             "F",
             "H"});
-            this.txtRelationTag.Size = new System.Drawing.Size(92, 24);
+            this.txtRelationTag.Size = new System.Drawing.Size(92, 22);
             this.txtRelationTag.TabIndex = 16;
             // 
             // txtEmail
@@ -440,7 +440,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmail.Properties.MaxLength = 80;
-            this.txtEmail.Size = new System.Drawing.Size(257, 24);
+            this.txtEmail.Size = new System.Drawing.Size(257, 22);
             this.txtEmail.TabIndex = 19;
             // 
             // labelControl43
@@ -484,7 +484,7 @@
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRemarks.Properties.MaxLength = 150;
-            this.txtRemarks.Size = new System.Drawing.Size(257, 24);
+            this.txtRemarks.Size = new System.Drawing.Size(257, 22);
             this.txtRemarks.TabIndex = 20;
             // 
             // txtDOB
@@ -498,7 +498,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDOB.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtDOB.Size = new System.Drawing.Size(117, 24);
+            this.txtDOB.Size = new System.Drawing.Size(117, 22);
             this.txtDOB.TabIndex = 13;
             // 
             // txtFHName
@@ -509,7 +509,7 @@
             this.txtFHName.Name = "txtFHName";
             this.txtFHName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFHName.Properties.MaxLength = 40;
-            this.txtFHName.Size = new System.Drawing.Size(257, 24);
+            this.txtFHName.Size = new System.Drawing.Size(257, 22);
             this.txtFHName.TabIndex = 15;
             // 
             // label3
@@ -561,7 +561,7 @@
             this.AdditionalInfoTab.Controls.Add(this.panelControl2);
             this.AdditionalInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfoTab.Name = "AdditionalInfoTab";
-            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 363);
+            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 358);
             this.AdditionalInfoTab.Text = "Details";
             // 
             // panelControl2
@@ -603,7 +603,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(696, 363);
+            this.panelControl2.Size = new System.Drawing.Size(696, 358);
             this.panelControl2.TabIndex = 248;
             // 
             // labelControl22
@@ -613,7 +613,7 @@
             this.labelControl22.Location = new System.Drawing.Point(357, 337);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(320, 17);
+            this.labelControl22.Size = new System.Drawing.Size(318, 16);
             this.labelControl22.TabIndex = 224;
             this.labelControl22.Text = "Use Military Standard Time Format 0000 hrs - 2300 hrs";
             // 
@@ -809,7 +809,7 @@
             this.txtUANNo.Name = "txtUANNo";
             this.txtUANNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUANNo.Properties.MaxLength = 10;
-            this.txtUANNo.Size = new System.Drawing.Size(135, 24);
+            this.txtUANNo.Size = new System.Drawing.Size(135, 22);
             this.txtUANNo.TabIndex = 26;
             // 
             // labelControl4
@@ -817,7 +817,7 @@
             this.labelControl4.Location = new System.Drawing.Point(43, 192);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(49, 17);
+            this.labelControl4.Size = new System.Drawing.Size(50, 16);
             this.labelControl4.TabIndex = 215;
             this.labelControl4.Text = "UAN No";
             // 
@@ -836,7 +836,7 @@
             this.txtMiscDed.Properties.Mask.EditMask = "N2";
             this.txtMiscDed.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtMiscDed.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtMiscDed.Size = new System.Drawing.Size(99, 24);
+            this.txtMiscDed.Size = new System.Drawing.Size(99, 22);
             this.txtMiscDed.TabIndex = 29;
             // 
             // labelControl2
@@ -844,7 +844,7 @@
             this.labelControl2.Location = new System.Drawing.Point(522, 120);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(55, 17);
+            this.labelControl2.Size = new System.Drawing.Size(57, 16);
             this.labelControl2.TabIndex = 213;
             this.labelControl2.Text = "Misc Ded";
             // 
@@ -853,7 +853,7 @@
             this.label35.Location = new System.Drawing.Point(481, 47);
             this.label35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(96, 17);
+            this.label35.Size = new System.Drawing.Size(100, 16);
             this.label35.TabIndex = 207;
             this.label35.Text = "Health Insurance";
             // 
@@ -872,7 +872,7 @@
             this.txtHealthInsurance.Properties.Mask.EditMask = "N2";
             this.txtHealthInsurance.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHealthInsurance.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtHealthInsurance.Size = new System.Drawing.Size(99, 24);
+            this.txtHealthInsurance.Size = new System.Drawing.Size(99, 22);
             this.txtHealthInsurance.TabIndex = 27;
             // 
             // txtESICNo
@@ -883,7 +883,7 @@
             this.txtESICNo.Name = "txtESICNo";
             this.txtESICNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtESICNo.Properties.MaxLength = 10;
-            this.txtESICNo.Size = new System.Drawing.Size(135, 24);
+            this.txtESICNo.Size = new System.Drawing.Size(135, 22);
             this.txtESICNo.TabIndex = 25;
             // 
             // labelControl40
@@ -891,7 +891,7 @@
             this.labelControl40.Location = new System.Drawing.Point(53, 158);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
-            this.labelControl40.Size = new System.Drawing.Size(39, 17);
+            this.labelControl40.Size = new System.Drawing.Size(42, 16);
             this.labelControl40.TabIndex = 177;
             this.labelControl40.Text = "ESI No";
             // 
@@ -903,7 +903,7 @@
             this.txtEPFNo.Name = "txtEPFNo";
             this.txtEPFNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEPFNo.Properties.MaxLength = 8;
-            this.txtEPFNo.Size = new System.Drawing.Size(135, 24);
+            this.txtEPFNo.Size = new System.Drawing.Size(135, 22);
             this.txtEPFNo.TabIndex = 24;
             // 
             // labelControl41
@@ -911,7 +911,7 @@
             this.labelControl41.Location = new System.Drawing.Point(50, 124);
             this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
-            this.labelControl41.Size = new System.Drawing.Size(42, 17);
+            this.labelControl41.Size = new System.Drawing.Size(47, 16);
             this.labelControl41.TabIndex = 175;
             this.labelControl41.Text = "EPF No";
             // 
@@ -920,7 +920,7 @@
             this.labelControl39.Location = new System.Drawing.Point(32, 90);
             this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
-            this.labelControl39.Size = new System.Drawing.Size(60, 17);
+            this.labelControl39.Size = new System.Drawing.Size(65, 16);
             this.labelControl39.TabIndex = 174;
             this.labelControl39.Text = "ESID (Y/N)";
             // 
@@ -932,7 +932,7 @@
             this.txtESIDTag.Name = "txtESIDTag";
             this.txtESIDTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtESIDTag.Properties.MaxLength = 1;
-            this.txtESIDTag.Size = new System.Drawing.Size(135, 24);
+            this.txtESIDTag.Size = new System.Drawing.Size(135, 22);
             this.txtESIDTag.TabIndex = 23;
             this.txtESIDTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtESIDTag_Validating);
             // 
@@ -941,7 +941,7 @@
             this.labelControl38.Location = new System.Drawing.Point(32, 56);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
-            this.labelControl38.Size = new System.Drawing.Size(60, 17);
+            this.labelControl38.Size = new System.Drawing.Size(68, 16);
             this.labelControl38.TabIndex = 172;
             this.labelControl38.Text = "EFPF (Y/N)";
             // 
@@ -953,7 +953,7 @@
             this.txtEFPFTag.Name = "txtEFPFTag";
             this.txtEFPFTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEFPFTag.Properties.MaxLength = 1;
-            this.txtEFPFTag.Size = new System.Drawing.Size(135, 24);
+            this.txtEFPFTag.Size = new System.Drawing.Size(135, 22);
             this.txtEFPFTag.TabIndex = 22;
             // 
             // labelControl36
@@ -961,7 +961,7 @@
             this.labelControl36.Location = new System.Drawing.Point(38, 20);
             this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
-            this.labelControl36.Size = new System.Drawing.Size(54, 17);
+            this.labelControl36.Size = new System.Drawing.Size(60, 16);
             this.labelControl36.TabIndex = 169;
             this.labelControl36.Text = "EPF (Y/N)";
             // 
@@ -980,7 +980,7 @@
             this.txtTDS.Properties.Mask.EditMask = "N2";
             this.txtTDS.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTDS.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtTDS.Size = new System.Drawing.Size(99, 24);
+            this.txtTDS.Size = new System.Drawing.Size(99, 22);
             this.txtTDS.TabIndex = 28;
             // 
             // labelControl34
@@ -988,7 +988,7 @@
             this.labelControl34.Location = new System.Drawing.Point(554, 85);
             this.labelControl34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl34.Name = "labelControl34";
-            this.labelControl34.Size = new System.Drawing.Size(23, 17);
+            this.labelControl34.Size = new System.Drawing.Size(28, 16);
             this.labelControl34.TabIndex = 165;
             this.labelControl34.Text = "TDS";
             // 
@@ -1000,7 +1000,7 @@
             this.txtEPFTag.Name = "txtEPFTag";
             this.txtEPFTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEPFTag.Properties.MaxLength = 1;
-            this.txtEPFTag.Size = new System.Drawing.Size(135, 24);
+            this.txtEPFTag.Size = new System.Drawing.Size(135, 22);
             this.txtEPFTag.TabIndex = 21;
             this.txtEPFTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtEPFTag_Validating);
             // 
@@ -1035,7 +1035,7 @@
             this.AdditionalInfo1Tab.Controls.Add(this.panelControl3);
             this.AdditionalInfo1Tab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfo1Tab.Name = "AdditionalInfo1Tab";
-            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 363);
+            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 358);
             this.AdditionalInfo1Tab.Text = "Additional";
             // 
             // panelControl3
@@ -1071,7 +1071,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(696, 363);
+            this.panelControl3.Size = new System.Drawing.Size(696, 358);
             this.panelControl3.TabIndex = 172;
             // 
             // txtBankBranchCode
@@ -1082,7 +1082,7 @@
             this.txtBankBranchCode.Name = "txtBankBranchCode";
             this.txtBankBranchCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBankBranchCode.Properties.MaxLength = 40;
-            this.txtBankBranchCode.Size = new System.Drawing.Size(140, 24);
+            this.txtBankBranchCode.Size = new System.Drawing.Size(140, 22);
             this.txtBankBranchCode.TabIndex = 41;
             // 
             // label9
@@ -1090,7 +1090,7 @@
             this.label9.Location = new System.Drawing.Point(58, 224);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(105, 17);
+            this.label9.Size = new System.Drawing.Size(112, 16);
             this.label9.TabIndex = 267;
             this.label9.Text = "Bank Branch Code";
             // 
@@ -1102,7 +1102,7 @@
             this.txtAdharCardNo.Name = "txtAdharCardNo";
             this.txtAdharCardNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAdharCardNo.Properties.MaxLength = 25;
-            this.txtAdharCardNo.Size = new System.Drawing.Size(140, 24);
+            this.txtAdharCardNo.Size = new System.Drawing.Size(140, 22);
             this.txtAdharCardNo.TabIndex = 39;
             // 
             // label34
@@ -1110,7 +1110,7 @@
             this.label34.Location = new System.Drawing.Point(63, 156);
             this.label34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(100, 17);
+            this.label34.Size = new System.Drawing.Size(100, 16);
             this.label34.TabIndex = 265;
             this.label34.Text = "Aadhar  Card No";
             // 
@@ -1122,7 +1122,7 @@
             this.txtNomineeRelation.Name = "txtNomineeRelation";
             this.txtNomineeRelation.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNomineeRelation.Properties.MaxLength = 20;
-            this.txtNomineeRelation.Size = new System.Drawing.Size(140, 24);
+            this.txtNomineeRelation.Size = new System.Drawing.Size(140, 22);
             this.txtNomineeRelation.TabIndex = 45;
             // 
             // label31
@@ -1130,7 +1130,7 @@
             this.label31.Location = new System.Drawing.Point(422, 122);
             this.label31.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(104, 17);
+            this.label31.Size = new System.Drawing.Size(108, 16);
             this.label31.TabIndex = 263;
             this.label31.Text = "Nominee Relation";
             // 
@@ -1149,7 +1149,7 @@
             this.txtNomineeDOB.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtNomineeDOB.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtNomineeDOB.Properties.MaxLength = 20;
-            this.txtNomineeDOB.Size = new System.Drawing.Size(140, 24);
+            this.txtNomineeDOB.Size = new System.Drawing.Size(140, 22);
             this.txtNomineeDOB.TabIndex = 46;
             // 
             // label32
@@ -1157,7 +1157,7 @@
             this.label32.Location = new System.Drawing.Point(434, 156);
             this.label32.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(92, 17);
+            this.label32.Size = new System.Drawing.Size(96, 16);
             this.label32.TabIndex = 261;
             this.label32.Text = "Nominee D.O.B.";
             // 
@@ -1169,7 +1169,7 @@
             this.txtNomineeName.Name = "txtNomineeName";
             this.txtNomineeName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNomineeName.Properties.MaxLength = 25;
-            this.txtNomineeName.Size = new System.Drawing.Size(140, 24);
+            this.txtNomineeName.Size = new System.Drawing.Size(140, 22);
             this.txtNomineeName.TabIndex = 38;
             // 
             // label33
@@ -1177,7 +1177,7 @@
             this.label33.Location = new System.Drawing.Point(49, 122);
             this.label33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(114, 17);
+            this.label33.Size = new System.Drawing.Size(120, 16);
             this.label33.TabIndex = 259;
             this.label33.Text = "Employee Nominee";
             // 
@@ -1189,7 +1189,7 @@
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBankName.Properties.MaxLength = 40;
-            this.txtBankName.Size = new System.Drawing.Size(225, 24);
+            this.txtBankName.Size = new System.Drawing.Size(225, 22);
             this.txtBankName.TabIndex = 37;
             // 
             // label30
@@ -1197,7 +1197,7 @@
             this.label30.Location = new System.Drawing.Point(97, 88);
             this.label30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(66, 17);
+            this.label30.Size = new System.Drawing.Size(71, 16);
             this.label30.TabIndex = 257;
             this.label30.Text = "Bank Name";
             // 
@@ -1209,7 +1209,7 @@
             this.txtBankAccountNo.Name = "txtBankAccountNo";
             this.txtBankAccountNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBankAccountNo.Properties.MaxLength = 20;
-            this.txtBankAccountNo.Size = new System.Drawing.Size(140, 24);
+            this.txtBankAccountNo.Size = new System.Drawing.Size(140, 22);
             this.txtBankAccountNo.TabIndex = 43;
             // 
             // label29
@@ -1217,7 +1217,7 @@
             this.label29.Location = new System.Drawing.Point(427, 54);
             this.label29.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(99, 17);
+            this.label29.Size = new System.Drawing.Size(103, 16);
             this.label29.TabIndex = 255;
             this.label29.Text = "Bank Account No";
             // 
@@ -1229,7 +1229,7 @@
             this.txtIfscCode.Name = "txtIfscCode";
             this.txtIfscCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIfscCode.Properties.MaxLength = 15;
-            this.txtIfscCode.Size = new System.Drawing.Size(140, 24);
+            this.txtIfscCode.Size = new System.Drawing.Size(140, 22);
             this.txtIfscCode.TabIndex = 44;
             // 
             // label28
@@ -1237,7 +1237,7 @@
             this.label28.Location = new System.Drawing.Point(467, 88);
             this.label28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(59, 17);
+            this.label28.Size = new System.Drawing.Size(65, 16);
             this.label28.TabIndex = 253;
             this.label28.Text = "IFSC Code";
             // 
@@ -1246,7 +1246,7 @@
             this.label27.Location = new System.Drawing.Point(75, 54);
             this.label27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(88, 17);
+            this.label27.Size = new System.Drawing.Size(91, 16);
             this.label27.TabIndex = 251;
             this.label27.Text = "Payment Mode";
             // 
@@ -1255,7 +1255,7 @@
             this.label26.Location = new System.Drawing.Point(446, 20);
             this.label26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(80, 17);
+            this.label26.Size = new System.Drawing.Size(80, 16);
             this.label26.TabIndex = 249;
             this.label26.Text = "Marital Status";
             // 
@@ -1264,7 +1264,7 @@
             this.label22.Location = new System.Drawing.Point(55, 20);
             this.label22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(108, 17);
+            this.label22.Size = new System.Drawing.Size(115, 16);
             this.label22.TabIndex = 247;
             this.label22.Text = "Employee Religion";
             // 
@@ -1276,7 +1276,7 @@
             this.txtPassPortNo.Name = "txtPassPortNo";
             this.txtPassPortNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPassPortNo.Properties.MaxLength = 20;
-            this.txtPassPortNo.Size = new System.Drawing.Size(140, 24);
+            this.txtPassPortNo.Size = new System.Drawing.Size(140, 22);
             this.txtPassPortNo.TabIndex = 47;
             // 
             // label20
@@ -1284,7 +1284,7 @@
             this.label20.Location = new System.Drawing.Point(453, 190);
             this.label20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(73, 17);
+            this.label20.Size = new System.Drawing.Size(75, 16);
             this.label20.TabIndex = 186;
             this.label20.Text = "Passport No";
             // 
@@ -1293,7 +1293,7 @@
             this.label12.Location = new System.Drawing.Point(120, 190);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(43, 17);
+            this.label12.Size = new System.Drawing.Size(45, 16);
             this.label12.TabIndex = 179;
             this.label12.Text = "Pan No";
             // 
@@ -1305,7 +1305,7 @@
             this.txtPanNo.Name = "txtPanNo";
             this.txtPanNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPanNo.Properties.MaxLength = 10;
-            this.txtPanNo.Size = new System.Drawing.Size(140, 24);
+            this.txtPanNo.Size = new System.Drawing.Size(140, 22);
             this.txtPanNo.TabIndex = 40;
             // 
             // txtEmployeeReligion
@@ -1325,7 +1325,7 @@
             "Jaini",
             "Buddh"});
             this.txtEmployeeReligion.Properties.MaxLength = 20;
-            this.txtEmployeeReligion.Size = new System.Drawing.Size(138, 24);
+            this.txtEmployeeReligion.Size = new System.Drawing.Size(138, 22);
             this.txtEmployeeReligion.TabIndex = 35;
             // 
             // txtMaritalStatus
@@ -1341,7 +1341,7 @@
             "Married ",
             "Unmarried"});
             this.txtMaritalStatus.Properties.MaxLength = 20;
-            this.txtMaritalStatus.Size = new System.Drawing.Size(140, 24);
+            this.txtMaritalStatus.Size = new System.Drawing.Size(140, 22);
             this.txtMaritalStatus.TabIndex = 42;
             // 
             // txtPaymentMode
@@ -1358,7 +1358,7 @@
             "By Cheque",
             "By Transfer"});
             this.txtPaymentMode.Properties.MaxLength = 20;
-            this.txtPaymentMode.Size = new System.Drawing.Size(140, 24);
+            this.txtPaymentMode.Size = new System.Drawing.Size(140, 22);
             this.txtPaymentMode.TabIndex = 36;
             // 
             // OtherSpecinfoTab
@@ -1370,7 +1370,7 @@
             this.OtherSpecinfoTab.Controls.Add(this.textEdit10);
             this.OtherSpecinfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OtherSpecinfoTab.Name = "OtherSpecinfoTab";
-            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 363);
+            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 358);
             this.OtherSpecinfoTab.Text = "Address ";
             // 
             // panelControl4
@@ -1394,7 +1394,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(696, 363);
+            this.panelControl4.Size = new System.Drawing.Size(696, 358);
             this.panelControl4.TabIndex = 153;
             // 
             // txtCountry
@@ -1405,7 +1405,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCountry.Properties.MaxLength = 100;
-            this.txtCountry.Size = new System.Drawing.Size(167, 24);
+            this.txtCountry.Size = new System.Drawing.Size(167, 22);
             this.txtCountry.TabIndex = 54;
             this.txtCountry.TabStop = false;
             // 
@@ -1414,7 +1414,7 @@
             this.label1.Location = new System.Drawing.Point(390, 180);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 17);
+            this.label1.Size = new System.Drawing.Size(45, 16);
             this.label1.TabIndex = 459;
             this.label1.Text = "Country";
             // 
@@ -1426,7 +1426,7 @@
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityName.Properties.MaxLength = 100;
-            this.txtCityName.Size = new System.Drawing.Size(428, 24);
+            this.txtCityName.Size = new System.Drawing.Size(428, 22);
             this.txtCityName.TabIndex = 52;
             this.txtCityName.TabStop = false;
             // 
@@ -1438,7 +1438,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
-            this.txtState.Size = new System.Drawing.Size(281, 24);
+            this.txtState.Size = new System.Drawing.Size(281, 22);
             this.txtState.TabIndex = 53;
             this.txtState.TabStop = false;
             // 
@@ -1449,7 +1449,7 @@
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 100;
-            this.txtCityCode.Size = new System.Drawing.Size(80, 24);
+            this.txtCityCode.Size = new System.Drawing.Size(80, 22);
             this.txtCityCode.TabIndex = 51;
             // 
             // label6
@@ -1457,7 +1457,7 @@
             this.label6.Location = new System.Drawing.Point(71, 178);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 17);
+            this.label6.Size = new System.Drawing.Size(31, 16);
             this.label6.TabIndex = 455;
             this.label6.Text = "State";
             // 
@@ -1466,7 +1466,7 @@
             this.label2.Location = new System.Drawing.Point(79, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 17);
+            this.label2.Size = new System.Drawing.Size(22, 16);
             this.label2.TabIndex = 454;
             this.label2.Text = "City";
             // 
@@ -1475,7 +1475,7 @@
             this.label8.Location = new System.Drawing.Point(45, 114);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 17);
+            this.label8.Size = new System.Drawing.Size(58, 16);
             this.label8.TabIndex = 184;
             this.label8.Text = "Address3";
             // 
@@ -1484,7 +1484,7 @@
             this.labelControl30.Location = new System.Drawing.Point(45, 46);
             this.labelControl30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl30.Name = "labelControl30";
-            this.labelControl30.Size = new System.Drawing.Size(55, 17);
+            this.labelControl30.Size = new System.Drawing.Size(58, 16);
             this.labelControl30.TabIndex = 181;
             this.labelControl30.Text = "Address1";
             // 
@@ -1496,7 +1496,7 @@
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 40;
-            this.txtAddress1.Size = new System.Drawing.Size(514, 24);
+            this.txtAddress1.Size = new System.Drawing.Size(514, 22);
             this.txtAddress1.TabIndex = 48;
             // 
             // txtAddress2
@@ -1507,7 +1507,7 @@
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 40;
-            this.txtAddress2.Size = new System.Drawing.Size(514, 24);
+            this.txtAddress2.Size = new System.Drawing.Size(514, 22);
             this.txtAddress2.TabIndex = 49;
             // 
             // txtAddress3
@@ -1518,7 +1518,7 @@
             this.txtAddress3.Name = "txtAddress3";
             this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress3.Properties.MaxLength = 40;
-            this.txtAddress3.Size = new System.Drawing.Size(514, 24);
+            this.txtAddress3.Size = new System.Drawing.Size(514, 22);
             this.txtAddress3.TabIndex = 50;
             // 
             // labelControl28
@@ -1526,7 +1526,7 @@
             this.labelControl28.Location = new System.Drawing.Point(105, 20);
             this.labelControl28.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl28.Name = "labelControl28";
-            this.labelControl28.Size = new System.Drawing.Size(62, 17);
+            this.labelControl28.Size = new System.Drawing.Size(66, 16);
             this.labelControl28.TabIndex = 166;
             this.labelControl28.Text = "Permanent";
             // 
@@ -1535,7 +1535,7 @@
             this.label4.Location = new System.Drawing.Point(45, 80);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 17);
+            this.label4.Size = new System.Drawing.Size(58, 16);
             this.label4.TabIndex = 162;
             this.label4.Text = "Address2";
             // 
@@ -1544,7 +1544,7 @@
             this.label11.Location = new System.Drawing.Point(402, 392);
             this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(42, 17);
+            this.label11.Size = new System.Drawing.Size(45, 16);
             this.label11.TabIndex = 152;
             this.label11.Text = "EmailId";
             // 
@@ -1555,7 +1555,7 @@
             this.textEdit25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit25.Name = "textEdit25";
             this.textEdit25.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit25.Size = new System.Drawing.Size(300, 24);
+            this.textEdit25.Size = new System.Drawing.Size(300, 22);
             this.textEdit25.TabIndex = 151;
             // 
             // label5
@@ -1563,7 +1563,7 @@
             this.label5.Location = new System.Drawing.Point(1, 392);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 17);
+            this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 150;
             this.label5.Text = "Nationality";
             // 
@@ -1574,7 +1574,7 @@
             this.textEdit10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textEdit10.Size = new System.Drawing.Size(304, 24);
+            this.textEdit10.Size = new System.Drawing.Size(304, 22);
             this.textEdit10.TabIndex = 149;
             // 
             // xtraTabPage1
@@ -1585,7 +1585,7 @@
             this.xtraTabPage1.Controls.Add(this.chkTeaBreak);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(696, 363);
+            this.xtraTabPage1.Size = new System.Drawing.Size(696, 358);
             this.xtraTabPage1.Text = "Employee Timing";
             // 
             // labelControl29
@@ -1609,7 +1609,7 @@
             this.txtTeaBreakTime.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txtTeaBreakTime.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTeaBreakTime.Properties.MaxLength = 4;
-            this.txtTeaBreakTime.Size = new System.Drawing.Size(115, 24);
+            this.txtTeaBreakTime.Size = new System.Drawing.Size(115, 22);
             this.txtTeaBreakTime.TabIndex = 243;
             // 
             // labelControl27
@@ -1639,7 +1639,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(531, 375);
+            this.HelpGrid.Location = new System.Drawing.Point(123, 13);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -1672,7 +1672,7 @@
             this.txtDesgCode.Name = "txtDesgCode";
             this.txtDesgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDesgCode.Properties.MaxLength = 4;
-            this.txtDesgCode.Size = new System.Drawing.Size(91, 24);
+            this.txtDesgCode.Size = new System.Drawing.Size(91, 22);
             this.txtDesgCode.TabIndex = 6;
             this.txtDesgCode.EditValueChanged += new System.EventHandler(this.TxtDesgCode_EditValueChanged);
             this.txtDesgCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDesgCode_KeyDown);
@@ -1685,7 +1685,7 @@
             this.txtDesgDesc.Name = "txtDesgDesc";
             this.txtDesgDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDesgDesc.Properties.ReadOnly = true;
-            this.txtDesgDesc.Size = new System.Drawing.Size(205, 24);
+            this.txtDesgDesc.Size = new System.Drawing.Size(205, 22);
             this.txtDesgDesc.TabIndex = 7;
             this.txtDesgDesc.TabStop = false;
             // 
@@ -1708,7 +1708,7 @@
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptCode.Properties.MaxLength = 4;
-            this.txtDeptCode.Size = new System.Drawing.Size(91, 24);
+            this.txtDeptCode.Size = new System.Drawing.Size(91, 22);
             this.txtDeptCode.TabIndex = 4;
             this.txtDeptCode.EditValueChanged += new System.EventHandler(this.TxtDeptCode_EditValueChanged);
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
@@ -1721,7 +1721,7 @@
             this.txtDeptDesc.Name = "txtDeptDesc";
             this.txtDeptDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDeptDesc.Properties.ReadOnly = true;
-            this.txtDeptDesc.Size = new System.Drawing.Size(205, 24);
+            this.txtDeptDesc.Size = new System.Drawing.Size(205, 22);
             this.txtDeptDesc.TabIndex = 5;
             this.txtDeptDesc.TabStop = false;
             // 
@@ -1744,7 +1744,7 @@
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpName.Properties.MaxLength = 40;
-            this.txtEmpName.Size = new System.Drawing.Size(451, 24);
+            this.txtEmpName.Size = new System.Drawing.Size(451, 22);
             this.txtEmpName.TabIndex = 1;
             // 
             // txtEmpCode
@@ -1755,7 +1755,7 @@
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpCode.Properties.MaxLength = 5;
-            this.txtEmpCode.Size = new System.Drawing.Size(91, 24);
+            this.txtEmpCode.Size = new System.Drawing.Size(91, 22);
             this.txtEmpCode.TabIndex = 0;
             // 
             // labelControl1
@@ -1776,11 +1776,16 @@
             this.txtDOJ.Location = new System.Drawing.Point(547, 73);
             this.txtDOJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDOJ.Name = "txtDOJ";
+            this.txtDOJ.Properties.BeepOnError = false;
             this.txtDOJ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDOJ.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtDOJ.Size = new System.Drawing.Size(115, 24);
+            this.txtDOJ.Properties.MaskSettings.Set("mask", "M");
+            this.txtDOJ.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtDOJ.Properties.MaskSettings.Set("spinWithCarry", false);
+            this.txtDOJ.Properties.UseMaskAsDisplayFormat = true;
+            this.txtDOJ.Size = new System.Drawing.Size(115, 22);
             this.txtDOJ.TabIndex = 10;
             // 
             // labelControl5
@@ -1801,11 +1806,15 @@
             this.txtDOL.Location = new System.Drawing.Point(547, 107);
             this.txtDOL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDOL.Name = "txtDOL";
+            this.txtDOL.Properties.BeepOnError = false;
             this.txtDOL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDOL.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtDOL.Size = new System.Drawing.Size(115, 24);
+            this.txtDOL.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtDOL.Properties.MaskSettings.Set("spinWithCarry", false);
+            this.txtDOL.Properties.UseMaskAsDisplayFormat = true;
+            this.txtDOL.Size = new System.Drawing.Size(115, 22);
             this.txtDOL.TabIndex = 11;
             // 
             // labelControl15
@@ -1827,7 +1836,7 @@
             this.txtCategoryCode.Name = "txtCategoryCode";
             this.txtCategoryCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCategoryCode.Properties.MaxLength = 4;
-            this.txtCategoryCode.Size = new System.Drawing.Size(91, 24);
+            this.txtCategoryCode.Size = new System.Drawing.Size(91, 22);
             this.txtCategoryCode.TabIndex = 2;
             this.txtCategoryCode.EditValueChanged += new System.EventHandler(this.TxtCategory_EditValueChanged);
             this.txtCategoryCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCategory_KeyDown);
@@ -1851,7 +1860,7 @@
             this.txtEmpLeft.Name = "txtEmpLeft";
             this.txtEmpLeft.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpLeft.Properties.MaxLength = 1;
-            this.txtEmpLeft.Size = new System.Drawing.Size(115, 24);
+            this.txtEmpLeft.Size = new System.Drawing.Size(115, 22);
             this.txtEmpLeft.TabIndex = 12;
             this.txtEmpLeft.TabStop = false;
             this.txtEmpLeft.Visible = false;
@@ -1878,7 +1887,7 @@
             this.txtCategoryDesc.Name = "txtCategoryDesc";
             this.txtCategoryDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCategoryDesc.Properties.MaxLength = 40;
-            this.txtCategoryDesc.Size = new System.Drawing.Size(205, 24);
+            this.txtCategoryDesc.Size = new System.Drawing.Size(205, 22);
             this.txtCategoryDesc.TabIndex = 3;
             this.txtCategoryDesc.TabStop = false;
             // 
@@ -1921,7 +1930,7 @@
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelMain_ButtonClick);
-            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.WindowsUIButtonPanelMain_Click);
+//            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.WindowsUIButtonPanelMain_Click);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -2004,6 +2013,19 @@
             this.labelControl24.TabIndex = 238;
             this.labelControl24.Text = "Unit";
             // 
+            // chTeaTag
+            // 
+            this.chTeaTag.AutoSize = true;
+            this.chTeaTag.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.chTeaTag.Location = new System.Drawing.Point(600, 177);
+            this.chTeaTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.chTeaTag.Name = "chTeaTag";
+            this.chTeaTag.Size = new System.Drawing.Size(60, 23);
+            this.chTeaTag.TabIndex = 239;
+            this.chTeaTag.Text = "TEA ";
+            this.chTeaTag.UseVisualStyleBackColor = true;
+            this.chTeaTag.CheckedChanged += new System.EventHandler(this.ChkDailyWage_CheckedChanged);
+            // 
             // txtUnitDesc
             // 
             this.txtUnitDesc.EnterMoveNextControl = true;
@@ -2012,7 +2034,7 @@
             this.txtUnitDesc.Name = "txtUnitDesc";
             this.txtUnitDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnitDesc.Properties.ReadOnly = true;
-            this.txtUnitDesc.Size = new System.Drawing.Size(205, 24);
+            this.txtUnitDesc.Size = new System.Drawing.Size(205, 22);
             this.txtUnitDesc.TabIndex = 9;
             this.txtUnitDesc.TabStop = false;
             // 
@@ -2024,7 +2046,7 @@
             this.txtUnitCode.Name = "txtUnitCode";
             this.txtUnitCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUnitCode.Properties.MaxLength = 4;
-            this.txtUnitCode.Size = new System.Drawing.Size(91, 24);
+            this.txtUnitCode.Size = new System.Drawing.Size(91, 22);
             this.txtUnitCode.TabIndex = 8;
             this.txtUnitCode.EditValueChanged += new System.EventHandler(this.TxtUnitCode_EditValueChanged);
             this.txtUnitCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUnitCode_KeyDown);
@@ -2049,7 +2071,7 @@
             this.txtDailyWageRate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txtDailyWageRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDailyWageRate.Properties.MaxLength = 4;
-            this.txtDailyWageRate.Size = new System.Drawing.Size(115, 24);
+            this.txtDailyWageRate.Size = new System.Drawing.Size(115, 22);
             this.txtDailyWageRate.TabIndex = 241;
             // 
             // chkDailyWage
@@ -2086,7 +2108,7 @@
             this.txtDailyWageHours.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txtDailyWageHours.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDailyWageHours.Properties.MaxLength = 4;
-            this.txtDailyWageHours.Size = new System.Drawing.Size(115, 24);
+            this.txtDailyWageHours.Size = new System.Drawing.Size(115, 22);
             this.txtDailyWageHours.TabIndex = 250;
             this.txtDailyWageHours.Visible = false;
             this.txtDailyWageHours.EditValueChanged += new System.EventHandler(this.TxtDailyWageHours_EditValueChanged);
@@ -2115,22 +2137,9 @@
             this.txtDailyWageMinutes.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.txtDailyWageMinutes.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDailyWageMinutes.Properties.MaxLength = 4;
-            this.txtDailyWageMinutes.Size = new System.Drawing.Size(115, 24);
+            this.txtDailyWageMinutes.Size = new System.Drawing.Size(115, 22);
             this.txtDailyWageMinutes.TabIndex = 252;
             this.txtDailyWageMinutes.Visible = false;
-            // 
-            // chTeaTag
-            // 
-            this.chTeaTag.AutoSize = true;
-            this.chTeaTag.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.chTeaTag.Location = new System.Drawing.Point(600, 177);
-            this.chTeaTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.chTeaTag.Name = "chTeaTag";
-            this.chTeaTag.Size = new System.Drawing.Size(60, 23);
-            this.chTeaTag.TabIndex = 239;
-            this.chTeaTag.Text = "TEA ";
-            this.chTeaTag.UseVisualStyleBackColor = true;
-            this.chTeaTag.CheckedChanged += new System.EventHandler(this.ChkDailyWage_CheckedChanged);
             // 
             // FrmEmployeeMstAddEdit
             // 

@@ -111,7 +111,7 @@
             this.label4.Location = new System.Drawing.Point(23, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 448;
             this.label4.Text = "PI Date";
             // 
@@ -156,7 +156,7 @@
             this.label5.Location = new System.Drawing.Point(173, 64);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 17);
+            this.label5.Size = new System.Drawing.Size(33, 16);
             this.label5.TabIndex = 446;
             this.label5.Text = "PI No";
             // 
@@ -165,7 +165,7 @@
             this.label15.Location = new System.Drawing.Point(34, 98);
             this.label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 17);
+            this.label15.Size = new System.Drawing.Size(32, 16);
             this.label15.TabIndex = 451;
             this.label15.Text = "Store";
             // 
@@ -175,7 +175,7 @@
             this.txtPINo.Location = new System.Drawing.Point(208, 59);
             this.txtPINo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPINo.Name = "txtPINo";
-            this.txtPINo.Size = new System.Drawing.Size(173, 24);
+            this.txtPINo.Size = new System.Drawing.Size(173, 22);
             this.txtPINo.TabIndex = 449;
             this.txtPINo.TabStop = false;
             // 
@@ -186,7 +186,7 @@
             this.txtStoreCode.Name = "txtStoreCode";
             this.txtStoreCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStoreCode.Properties.MaxLength = 6;
-            this.txtStoreCode.Size = new System.Drawing.Size(92, 24);
+            this.txtStoreCode.Size = new System.Drawing.Size(92, 22);
             this.txtStoreCode.TabIndex = 444;
             // 
             // txtPIDate
@@ -201,7 +201,7 @@
             this.txtPIDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtPIDate.Properties.MaskSettings.Set("mask", "");
-            this.txtPIDate.Size = new System.Drawing.Size(92, 24);
+            this.txtPIDate.Size = new System.Drawing.Size(92, 22);
             this.txtPIDate.TabIndex = 447;
             this.txtPIDate.TabStop = false;
             // 
@@ -216,7 +216,7 @@
             this.txtAddress.Location = new System.Drawing.Point(164, 93);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(643, 24);
+            this.txtAddress.Size = new System.Drawing.Size(643, 22);
             this.txtAddress.TabIndex = 452;
             this.txtAddress.TabStop = false;
             // 

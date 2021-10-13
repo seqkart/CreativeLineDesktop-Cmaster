@@ -113,7 +113,7 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -136,7 +136,7 @@
             this.txtStatusCode.Name = "txtStatusCode";
             this.txtStatusCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStatusCode.Properties.MaxLength = 6;
-            this.txtStatusCode.Size = new System.Drawing.Size(117, 24);
+            this.txtStatusCode.Size = new System.Drawing.Size(117, 22);
             this.txtStatusCode.TabIndex = 13;
             this.txtStatusCode.EditValueChanged += new System.EventHandler(this.TxtStatusCode_EditValueChanged);
             this.txtStatusCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStatusCode_KeyDown);
@@ -148,7 +148,7 @@
             this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(117, 24);
+            this.txtEmpCode.Size = new System.Drawing.Size(117, 22);
             this.txtEmpCode.TabIndex = 11;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
@@ -158,7 +158,7 @@
             this.lblStatusCode.Location = new System.Drawing.Point(57, 171);
             this.lblStatusCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblStatusCode.Name = "lblStatusCode";
-            this.lblStatusCode.Size = new System.Drawing.Size(35, 17);
+            this.lblStatusCode.Size = new System.Drawing.Size(37, 16);
             this.lblStatusCode.TabIndex = 29;
             this.lblStatusCode.Text = "Status";
             // 
@@ -167,7 +167,7 @@
             this.lblDate.Location = new System.Drawing.Point(65, 94);
             this.lblDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(27, 17);
+            this.lblDate.Size = new System.Drawing.Size(29, 16);
             this.lblDate.TabIndex = 30;
             this.lblDate.Text = "Date";
             // 
@@ -176,7 +176,7 @@
             this.lblEmpCode.Location = new System.Drawing.Point(31, 132);
             this.lblEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblEmpCode.Name = "lblEmpCode";
-            this.lblEmpCode.Size = new System.Drawing.Size(61, 17);
+            this.lblEmpCode.Size = new System.Drawing.Size(64, 16);
             this.lblEmpCode.TabIndex = 27;
             this.lblEmpCode.Text = "Emp Code";
             // 
@@ -187,7 +187,7 @@
             this.txtEmpCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCodeDesc.Name = "txtEmpCodeDesc";
             this.txtEmpCodeDesc.Properties.MaxLength = 6;
-            this.txtEmpCodeDesc.Size = new System.Drawing.Size(233, 24);
+            this.txtEmpCodeDesc.Size = new System.Drawing.Size(233, 22);
             this.txtEmpCodeDesc.TabIndex = 12;
             this.txtEmpCodeDesc.TabStop = false;
             // 
@@ -198,6 +198,7 @@
             this.DtDate.Location = new System.Drawing.Point(96, 90);
             this.DtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDate.Name = "DtDate";
+            this.DtDate.Properties.BeepOnError = false;
             this.DtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -206,9 +207,10 @@
             this.DtDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.DtDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DtDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.DtDate.Size = new System.Drawing.Size(117, 24);
+            this.DtDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
+            this.DtDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.DtDate.Size = new System.Drawing.Size(117, 22);
             this.DtDate.TabIndex = 10;
             this.DtDate.EditValueChanged += new System.EventHandler(this.DtDate_EditValueChanged);
             // 
@@ -275,12 +277,15 @@
             this.timeEdit_Time_In.Properties.Appearance.Options.UseBackColor = true;
             this.timeEdit_Time_In.Properties.Appearance.Options.UseFont = true;
             this.timeEdit_Time_In.Properties.Appearance.Options.UseForeColor = true;
+            this.timeEdit_Time_In.Properties.BeepOnError = false;
             this.timeEdit_Time_In.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit_Time_In.Properties.DisplayFormat.FormatString = "HH:mm";
             this.timeEdit_Time_In.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In.Properties.EditFormat.FormatString = "HH:mm";
             this.timeEdit_Time_In.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.timeEdit_Time_In.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.timeEdit_Time_In.Properties.MaskSettings.Set("mask", "t");
             this.timeEdit_Time_In.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
             this.timeEdit_Time_In.Size = new System.Drawing.Size(117, 26);
             this.timeEdit_Time_In.TabIndex = 16;
@@ -320,15 +325,19 @@
             this.timeEdit_Time_Out.Properties.Appearance.Options.UseBackColor = true;
             this.timeEdit_Time_Out.Properties.Appearance.Options.UseFont = true;
             this.timeEdit_Time_Out.Properties.Appearance.Options.UseForeColor = true;
+            this.timeEdit_Time_Out.Properties.BeepOnError = false;
             this.timeEdit_Time_Out.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.timeEdit_Time_Out.Properties.DisplayFormat.FormatString = "HH:mm";
             this.timeEdit_Time_Out.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_Out.Properties.EditFormat.FormatString = "HH:mm";
             this.timeEdit_Time_Out.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
+            this.timeEdit_Time_Out.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.timeEdit_Time_Out.Properties.MaskSettings.Set("mask", "t");
             this.timeEdit_Time_Out.Properties.NullText = "00:00";
             this.timeEdit_Time_Out.Properties.NullValuePrompt = "00:00";
             this.timeEdit_Time_Out.Properties.TimeEditStyle = DevExpress.XtraEditors.Repository.TimeEditStyle.TouchUI;
+            this.timeEdit_Time_Out.Properties.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_Out.Size = new System.Drawing.Size(117, 26);
             this.timeEdit_Time_Out.TabIndex = 15;
             // 
@@ -339,7 +348,7 @@
             this.txtStatusCodeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatusCodeDesc.Name = "txtStatusCodeDesc";
             this.txtStatusCodeDesc.Properties.MaxLength = 6;
-            this.txtStatusCodeDesc.Size = new System.Drawing.Size(233, 24);
+            this.txtStatusCodeDesc.Size = new System.Drawing.Size(233, 22);
             this.txtStatusCodeDesc.TabIndex = 14;
             this.txtStatusCodeDesc.TabStop = false;
             // 
@@ -368,7 +377,7 @@
             this.label1.Location = new System.Drawing.Point(15, 265);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 375;
             // 
             // pictureBox1
@@ -427,7 +436,7 @@
             // 
             this.DVPrintDocument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.DVPrintDocument_PrintPage);
             // 
-            // frmGatePassTimeAddEdit
+            // FrmGatePassTimeAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -455,7 +464,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmGatePassTimeAddEdit";
+            this.Name = "FrmGatePassTimeAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmGatePassTimeAddEdit_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGatePassTimeAddEdit_KeyDown);

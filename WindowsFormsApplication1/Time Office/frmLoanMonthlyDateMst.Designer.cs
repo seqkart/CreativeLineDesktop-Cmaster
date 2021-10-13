@@ -77,7 +77,7 @@
             this.labelControl1.Location = new System.Drawing.Point(16, 54);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 17);
+            this.labelControl1.Size = new System.Drawing.Size(31, 16);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "From";
             // 
@@ -144,7 +144,7 @@
             this.txtaid.Location = new System.Drawing.Point(863, 503);
             this.txtaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtaid.Name = "txtaid";
-            this.txtaid.Size = new System.Drawing.Size(12, 24);
+            this.txtaid.Size = new System.Drawing.Size(12, 22);
             this.txtaid.TabIndex = 4;
             // 
             // LoanGrid
@@ -246,13 +246,15 @@
             this.DtStartDate.Location = new System.Drawing.Point(64, 50);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
+            this.DtStartDate.Properties.BeepOnError = false;
             this.DtStartDate.Properties.EditFormat.FormatString = "MM-yyyy";
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DtStartDate.Properties.Mask.EditMask = "MM-yyyy";
-            this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.DtStartDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "MM-yyyy");
+            this.DtStartDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.DtStartDate.Properties.MaxLength = 6;
-            this.DtStartDate.Size = new System.Drawing.Size(98, 24);
+            this.DtStartDate.Size = new System.Drawing.Size(98, 22);
             this.DtStartDate.TabIndex = 45;
             // 
             // Btn_RefreshRateL

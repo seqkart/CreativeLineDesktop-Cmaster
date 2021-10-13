@@ -312,7 +312,7 @@
             this.labelDate_Current.Location = new System.Drawing.Point(468, -2);
             this.labelDate_Current.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelDate_Current.Name = "labelDate_Current";
-            this.labelDate_Current.Size = new System.Drawing.Size(201, 17);
+            this.labelDate_Current.Size = new System.Drawing.Size(207, 16);
             this.labelDate_Current.TabIndex = 19;
             this.labelDate_Current.Text = "Wednesday, June17, 2020 1:42 PM";
             // 
@@ -340,7 +340,7 @@
             this.textEmpType.Properties.Appearance.Options.UseBackColor = true;
             this.textEmpType.Properties.Appearance.Options.UseForeColor = true;
             this.textEmpType.Properties.ReadOnly = true;
-            this.textEmpType.Size = new System.Drawing.Size(233, 24);
+            this.textEmpType.Size = new System.Drawing.Size(233, 22);
             this.textEmpType.TabIndex = 371;
             this.textEmpType.EditValueChanged += new System.EventHandler(this.TextEmpType_EditValueChanged);
             // 
@@ -394,7 +394,7 @@
             this.cbEmpID.Location = new System.Drawing.Point(112, 25);
             this.cbEmpID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbEmpID.Name = "cbEmpID";
-            this.cbEmpID.Size = new System.Drawing.Size(139, 25);
+            this.cbEmpID.Size = new System.Drawing.Size(139, 24);
             this.cbEmpID.TabIndex = 15;
             this.cbEmpID.Visible = false;
             // 
@@ -409,7 +409,7 @@
             this.textUnit.Properties.Appearance.Options.UseBackColor = true;
             this.textUnit.Properties.Appearance.Options.UseForeColor = true;
             this.textUnit.Properties.ReadOnly = true;
-            this.textUnit.Size = new System.Drawing.Size(233, 24);
+            this.textUnit.Size = new System.Drawing.Size(233, 22);
             this.textUnit.TabIndex = 13;
             // 
             // txtDesignation
@@ -423,7 +423,7 @@
             this.txtDesignation.Properties.Appearance.Options.UseBackColor = true;
             this.txtDesignation.Properties.Appearance.Options.UseForeColor = true;
             this.txtDesignation.Properties.ReadOnly = true;
-            this.txtDesignation.Size = new System.Drawing.Size(233, 24);
+            this.txtDesignation.Size = new System.Drawing.Size(233, 22);
             this.txtDesignation.TabIndex = 12;
             // 
             // txtDepartment
@@ -437,7 +437,7 @@
             this.txtDepartment.Properties.Appearance.Options.UseBackColor = true;
             this.txtDepartment.Properties.Appearance.Options.UseForeColor = true;
             this.txtDepartment.Properties.ReadOnly = true;
-            this.txtDepartment.Size = new System.Drawing.Size(233, 24);
+            this.txtDepartment.Size = new System.Drawing.Size(233, 22);
             this.txtDepartment.TabIndex = 11;
             // 
             // txtFName
@@ -451,7 +451,7 @@
             this.txtFName.Properties.Appearance.Options.UseBackColor = true;
             this.txtFName.Properties.Appearance.Options.UseForeColor = true;
             this.txtFName.Properties.ReadOnly = true;
-            this.txtFName.Size = new System.Drawing.Size(233, 24);
+            this.txtFName.Size = new System.Drawing.Size(233, 22);
             this.txtFName.TabIndex = 10;
             // 
             // txtEmpID
@@ -465,19 +465,21 @@
             this.txtEmpID.Properties.Appearance.Options.UseBackColor = true;
             this.txtEmpID.Properties.Appearance.Options.UseForeColor = true;
             this.txtEmpID.Properties.ReadOnly = true;
-            this.txtEmpID.Size = new System.Drawing.Size(140, 24);
+            this.txtEmpID.Size = new System.Drawing.Size(140, 22);
             this.txtEmpID.TabIndex = 1;
             this.txtEmpID.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
             this.txtEmpID.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // dateAttendance
             // 
-            this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateAttendance.Location = new System.Drawing.Point(112, 54);
             this.dateAttendance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateAttendance.Name = "dateAttendance";
-            this.dateAttendance.Size = new System.Drawing.Size(139, 25);
+            this.dateAttendance.Size = new System.Drawing.Size(139, 22);
             this.dateAttendance.TabIndex = 0;
+            this.dateAttendance.Value = new System.DateTime(2021, 10, 12, 0, 0, 0, 0);
+            this.dateAttendance.FormatChanged += new System.EventHandler(this.DateAttendance_FormatChanged);
             this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
             // 
             // label7
@@ -711,7 +713,7 @@
             this.txtNightOut.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtNightOut.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtNightOut.Properties.MaskSettings.Set("mask", "HH:mm");
-            this.txtNightOut.Size = new System.Drawing.Size(76, 24);
+            this.txtNightOut.Size = new System.Drawing.Size(76, 22);
             this.txtNightOut.TabIndex = 255;
             this.txtNightOut.EditValueChanged += new System.EventHandler(this.TxtNightOut_EditValueChanged);
             // 
@@ -732,7 +734,7 @@
             this.txtNightIn.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.txtNightIn.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtNightIn.Properties.MaskSettings.Set("mask", "HH:mm");
-            this.txtNightIn.Size = new System.Drawing.Size(76, 24);
+            this.txtNightIn.Size = new System.Drawing.Size(76, 22);
             this.txtNightIn.TabIndex = 254;
             // 
             // labelControl24
@@ -774,7 +776,7 @@
             this.timeEdit_Time_Out_Last.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_Out_Last.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_Out_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEdit_Time_Out_Last.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_Out_Last.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_Out_Last.TabIndex = 4;
             this.timeEdit_Time_Out_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_Last_EditValueChanged);
             // 
@@ -795,7 +797,7 @@
             this.timeEdit_Time_In_Last.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_Last.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.timeEdit_Time_In_Last.Properties.MaskSettings.Set("mask", "HH:mm");
-            this.timeEdit_Time_In_Last.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_In_Last.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_In_Last.TabIndex = 3;
             this.timeEdit_Time_In_Last.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_Last_EditValueChanged);
             // 
@@ -816,7 +818,7 @@
             this.timeEdit_Time_Out_First.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_Out_First.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_Out_First.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEdit_Time_Out_First.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_Out_First.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_Out_First.TabIndex = 2;
             this.timeEdit_Time_Out_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_First_EditValueChanged);
             this.timeEdit_Time_Out_First.Validating += new System.ComponentModel.CancelEventHandler(this.TimeEdit_Time_Out_First_Validating);
@@ -838,7 +840,7 @@
             this.timeEdit_Time_In_First.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_First.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_First.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEdit_Time_In_First.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_In_First.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_In_First.TabIndex = 1;
             this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_EditValueChanged);
             // 
@@ -859,7 +861,7 @@
             this.timeEdit_Time_In_First_Testing.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_First_Testing.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_First_Testing.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEdit_Time_In_First_Testing.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_In_First_Testing.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_In_First_Testing.TabIndex = 253;
             this.timeEdit_Time_In_First_Testing.Visible = false;
             this.timeEdit_Time_In_First_Testing.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_1_EditValueChanged);
@@ -872,7 +874,7 @@
             this.totalWorkingHours_Label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalWorkingHours_Label.Name = "totalWorkingHours_Label";
             this.totalWorkingHours_Label.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.totalWorkingHours_Label.Size = new System.Drawing.Size(0, 20);
+            this.totalWorkingHours_Label.Size = new System.Drawing.Size(0, 19);
             this.totalWorkingHours_Label.TabIndex = 5;
             // 
             // label18
@@ -993,7 +995,7 @@
             this.labelControl22.Location = new System.Drawing.Point(384, 169);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(320, 17);
+            this.labelControl22.Size = new System.Drawing.Size(318, 16);
             this.labelControl22.TabIndex = 238;
             this.labelControl22.Text = "Use Military Standard Time Format 0000 hrs - 2300 hrs";
             // 
@@ -1119,7 +1121,7 @@
             this.comboBox_Status.Location = new System.Drawing.Point(27, 102);
             this.comboBox_Status.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox_Status.Name = "comboBox_Status";
-            this.comboBox_Status.Size = new System.Drawing.Size(163, 25);
+            this.comboBox_Status.Size = new System.Drawing.Size(163, 24);
             this.comboBox_Status.TabIndex = 0;
             this.comboBox_Status.SelectedValueChanged += new System.EventHandler(this.ComboBox_Status_SelectedValueChanged);
             // 
@@ -1231,7 +1233,7 @@
             this.comboBox_Shift.Location = new System.Drawing.Point(369, 103);
             this.comboBox_Shift.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox_Shift.Name = "comboBox_Shift";
-            this.comboBox_Shift.Size = new System.Drawing.Size(56, 25);
+            this.comboBox_Shift.Size = new System.Drawing.Size(56, 24);
             this.comboBox_Shift.TabIndex = 20;
             // 
             // groupBox4
@@ -1268,7 +1270,7 @@
             this.label19.Location = new System.Drawing.Point(365, 25);
             this.label19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 17);
+            this.label19.Size = new System.Drawing.Size(0, 16);
             this.label19.TabIndex = 1;
             // 
             // txtTeaBreakTime
@@ -1282,7 +1284,7 @@
             this.txtTeaBreakTime.Properties.Appearance.Options.UseBackColor = true;
             this.txtTeaBreakTime.Properties.Appearance.Options.UseForeColor = true;
             this.txtTeaBreakTime.Properties.ReadOnly = true;
-            this.txtTeaBreakTime.Size = new System.Drawing.Size(76, 24);
+            this.txtTeaBreakTime.Size = new System.Drawing.Size(76, 22);
             this.txtTeaBreakTime.TabIndex = 237;
             this.txtTeaBreakTime.EditValueChanged += new System.EventHandler(this.TxtTeaBreakTime_EditValueChanged);
             // 
@@ -1329,7 +1331,7 @@
             this.txtStatusType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatusType.Name = "txtStatusType";
             this.txtStatusType.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.txtStatusType.Size = new System.Drawing.Size(70, 24);
+            this.txtStatusType.Size = new System.Drawing.Size(70, 22);
             this.txtStatusType.TabIndex = 0;
             // 
             // labelControl17
@@ -1350,7 +1352,7 @@
             this.lblOvertimeHours.Location = new System.Drawing.Point(203, 90);
             this.lblOvertimeHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblOvertimeHours.Name = "lblOvertimeHours";
-            this.lblOvertimeHours.Size = new System.Drawing.Size(7, 17);
+            this.lblOvertimeHours.Size = new System.Drawing.Size(7, 16);
             this.lblOvertimeHours.TabIndex = 25;
             this.lblOvertimeHours.Text = "0";
             // 
@@ -1379,7 +1381,7 @@
             this.txtSerial_ID.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.txtSerial_ID.Properties.Mask.EditMask = "T";
             this.txtSerial_ID.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.txtSerial_ID.Size = new System.Drawing.Size(55, 24);
+            this.txtSerial_ID.Size = new System.Drawing.Size(55, 22);
             this.txtSerial_ID.TabIndex = 28;
             // 
             // textEdit_ForTime
@@ -1398,7 +1400,7 @@
             this.textEdit_ForTime.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.textEdit_ForTime.Properties.Mask.EditMask = "T";
             this.textEdit_ForTime.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.textEdit_ForTime.Size = new System.Drawing.Size(56, 24);
+            this.textEdit_ForTime.Size = new System.Drawing.Size(56, 22);
             this.textEdit_ForTime.TabIndex = 22;
             // 
             // txtLunchBreak
@@ -1415,7 +1417,7 @@
             this.txtLunchBreak.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.txtLunchBreak.Properties.Mask.EditMask = "T";
             this.txtLunchBreak.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.txtLunchBreak.Size = new System.Drawing.Size(43, 24);
+            this.txtLunchBreak.Size = new System.Drawing.Size(43, 22);
             this.txtLunchBreak.TabIndex = 27;
             this.txtLunchBreak.EditValueChanged += new System.EventHandler(this.TxtLunchBreak_EditValueChanged);
             // 
@@ -1429,7 +1431,7 @@
             this.txtOverTImeHOurs.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtOverTImeHOurs.Properties.Appearance.Options.UseBackColor = true;
             this.txtOverTImeHOurs.Properties.Appearance.Options.UseForeColor = true;
-            this.txtOverTImeHOurs.Size = new System.Drawing.Size(76, 24);
+            this.txtOverTImeHOurs.Size = new System.Drawing.Size(76, 22);
             this.txtOverTImeHOurs.TabIndex = 4;
             this.txtOverTImeHOurs.EditValueChanged += new System.EventHandler(this.TxtOvertimeHours_EditValueChanged);
             // 
@@ -1447,7 +1449,7 @@
             this.txtDailyWager.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.txtDailyWager.Properties.Mask.EditMask = "T";
             this.txtDailyWager.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.txtDailyWager.Size = new System.Drawing.Size(69, 24);
+            this.txtDailyWager.Size = new System.Drawing.Size(69, 22);
             this.txtDailyWager.TabIndex = 26;
             // 
             // label27
@@ -1490,7 +1492,7 @@
             this.timeEdit_GatePassTime.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered;
             this.timeEdit_GatePassTime.Properties.Mask.EditMask = "T";
             this.timeEdit_GatePassTime.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
-            this.timeEdit_GatePassTime.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_GatePassTime.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_GatePassTime.TabIndex = 21;
             // 
             // radioButtonManual
@@ -1599,7 +1601,7 @@
             this.txtDutyHours_Label_DW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDutyHours_Label_DW.Name = "txtDutyHours_Label_DW";
             this.txtDutyHours_Label_DW.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.txtDutyHours_Label_DW.Size = new System.Drawing.Size(0, 20);
+            this.txtDutyHours_Label_DW.Size = new System.Drawing.Size(0, 19);
             this.txtDutyHours_Label_DW.TabIndex = 258;
             // 
             // txtDutyHours_DW
@@ -1645,7 +1647,7 @@
             this.totalWorkingHours_Label_DW.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.totalWorkingHours_Label_DW.Name = "totalWorkingHours_Label_DW";
             this.totalWorkingHours_Label_DW.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.totalWorkingHours_Label_DW.Size = new System.Drawing.Size(0, 20);
+            this.totalWorkingHours_Label_DW.Size = new System.Drawing.Size(0, 19);
             this.totalWorkingHours_Label_DW.TabIndex = 255;
             // 
             // totalWorkingHours_Text_DW
@@ -1703,7 +1705,7 @@
             this.timeEdit_Time_Out_DW.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_Out_DW.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_Out_DW.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEdit_Time_Out_DW.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_Out_DW.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_Out_DW.TabIndex = 233;
             this.timeEdit_Time_Out_DW.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_Out_DW_EditValueChanged);
             // 
@@ -1724,7 +1726,7 @@
             this.timeEdit_Time_In_DW.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_DW.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_DW.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.timeEdit_Time_In_DW.Size = new System.Drawing.Size(76, 24);
+            this.timeEdit_Time_In_DW.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_In_DW.TabIndex = 232;
             this.timeEdit_Time_In_DW.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_DW_EditValueChanged);
             // 

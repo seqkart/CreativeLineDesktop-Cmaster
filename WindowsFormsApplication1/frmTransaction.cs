@@ -1131,7 +1131,7 @@ namespace WindowsFormsApplication1
                         .Add(new DevExpress.Utils.Menu.DXMenuItem("Print Challan",
                                                                   (o1, e1) =>
                                                                   {
-                                                                      MakePrintGrid();
+                                                                      MakeChallanGrid();
                                                                       PrintOutGrid.Visible = true;
                                                                   }));
                 }
@@ -1889,6 +1889,20 @@ namespace WindowsFormsApplication1
             PrintOutGridView.BestFitColumns();
 
         }
+
+        private void MakeChallanGrid()
+        {
+            PreparePrintGrid();
+            DataTable dt = new DataTable();
+            dt.Columns.Add("CopyText", typeof(string));
+            dt.Columns.Add("Select", typeof(bool));
+            dt.Rows.Add("Party Copy", false);
+           dt.Rows.Add("Gate Copy", false);
+            dt.Rows.Add("Extra Copy", false);
+            PrintOutGrid.DataSource = dt;
+            PrintOutGridView.BestFitColumns();
+
+        }
         private void DeleteVouchers()
         {
 
@@ -2012,7 +2026,7 @@ namespace WindowsFormsApplication1
                                     "','" +
                                     GlobalVariables.CUnitID + "'");
                                 ds.WriteXmlSchema("C://Temp//abc.xml");
-                                Challanoutward rpt = new Challanoutward { DataSource = ds.Tables[0] };
+                                Challanoutward rpt = new Challanoutward { DataSource = ds.Tables[0], ds = ds };
                                 rpt.lblCopy.Text = CopyText;
                                 rpt.lblGrossWeight.Text = ds.Tables[1].Rows[0]["GrossWeight"].ToString();
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();

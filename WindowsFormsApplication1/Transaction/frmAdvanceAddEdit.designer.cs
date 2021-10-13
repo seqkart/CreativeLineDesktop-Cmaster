@@ -208,7 +208,7 @@
             this.DtDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.DtDate.Properties.MaskSettings.Set("mask", "d");
             this.DtDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
-            this.DtDate.Properties.MaskSettings.Set("spinWithCarry", false);
+            this.DtDate.Properties.MaskSettings.Set("spinWithCarry", true);
             this.DtDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
             this.DtDate.Size = new System.Drawing.Size(119, 22);
             this.DtDate.TabIndex = 32;
@@ -254,7 +254,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(55, 36);
+            this.HelpGrid.Location = new System.Drawing.Point(104, 36);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";

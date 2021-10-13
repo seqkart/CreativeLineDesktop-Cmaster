@@ -836,7 +836,7 @@
             this.chOtherPS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chOtherPS.Name = "chOtherPS";
             this.chOtherPS.Properties.Caption = "Other PS";
-            this.chOtherPS.Size = new System.Drawing.Size(87, 21);
+            this.chOtherPS.Size = new System.Drawing.Size(87, 24);
             this.chOtherPS.TabIndex = 732;
             this.chOtherPS.CheckedChanged += new System.EventHandler(this.ChOtherPS_CheckedChanged);
             // 

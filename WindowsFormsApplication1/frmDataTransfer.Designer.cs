@@ -119,7 +119,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1471, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1475, 27);
             this.Menu_ToolStrip.TabIndex = 208;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -281,7 +281,7 @@
             this.txtSourceDataBase.Name = "txtSourceDataBase";
             this.txtSourceDataBase.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSourceDataBase.Properties.MaxLength = 100;
-            this.txtSourceDataBase.Size = new System.Drawing.Size(195, 24);
+            this.txtSourceDataBase.Size = new System.Drawing.Size(195, 22);
             this.txtSourceDataBase.TabIndex = 3;
             this.txtSourceDataBase.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -290,7 +290,7 @@
             this.label5.Location = new System.Drawing.Point(59, 156);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.Size = new System.Drawing.Size(60, 16);
             this.label5.TabIndex = 203;
             this.label5.Text = "Database";
             // 
@@ -303,7 +303,7 @@
             this.txtSourcePassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSourcePassword.Properties.MaxLength = 100;
             this.txtSourcePassword.Properties.PasswordChar = '*';
-            this.txtSourcePassword.Size = new System.Drawing.Size(195, 24);
+            this.txtSourcePassword.Size = new System.Drawing.Size(195, 22);
             this.txtSourcePassword.TabIndex = 2;
             this.txtSourcePassword.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -312,7 +312,7 @@
             this.label4.Location = new System.Drawing.Point(58, 122);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 17);
+            this.label4.Size = new System.Drawing.Size(60, 16);
             this.label4.TabIndex = 203;
             this.label4.Text = "Password";
             // 
@@ -324,7 +324,7 @@
             this.txtSourceUserName.Name = "txtSourceUserName";
             this.txtSourceUserName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSourceUserName.Properties.MaxLength = 100;
-            this.txtSourceUserName.Size = new System.Drawing.Size(195, 24);
+            this.txtSourceUserName.Size = new System.Drawing.Size(195, 22);
             this.txtSourceUserName.TabIndex = 1;
             this.txtSourceUserName.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -333,7 +333,7 @@
             this.label2.Location = new System.Drawing.Point(51, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 203;
             this.label2.Text = "User Name";
             // 
@@ -345,7 +345,7 @@
             this.txtSourceServer.Name = "txtSourceServer";
             this.txtSourceServer.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtSourceServer.Properties.MaxLength = 100;
-            this.txtSourceServer.Size = new System.Drawing.Size(195, 24);
+            this.txtSourceServer.Size = new System.Drawing.Size(195, 22);
             this.txtSourceServer.TabIndex = 0;
             this.txtSourceServer.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -354,7 +354,7 @@
             this.label3.Location = new System.Drawing.Point(79, 54);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(40, 16);
             this.label3.TabIndex = 203;
             this.label3.Text = "Server";
             // 
@@ -504,7 +504,7 @@
             this.txtDestinationUserName.Name = "txtDestinationUserName";
             this.txtDestinationUserName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDestinationUserName.Properties.MaxLength = 100;
-            this.txtDestinationUserName.Size = new System.Drawing.Size(195, 24);
+            this.txtDestinationUserName.Size = new System.Drawing.Size(195, 22);
             this.txtDestinationUserName.TabIndex = 6;
             this.txtDestinationUserName.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -516,7 +516,7 @@
             this.txtDestinationDataBase.Name = "txtDestinationDataBase";
             this.txtDestinationDataBase.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDestinationDataBase.Properties.MaxLength = 100;
-            this.txtDestinationDataBase.Size = new System.Drawing.Size(195, 24);
+            this.txtDestinationDataBase.Size = new System.Drawing.Size(195, 22);
             this.txtDestinationDataBase.TabIndex = 8;
             this.txtDestinationDataBase.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -525,7 +525,7 @@
             this.label1.Location = new System.Drawing.Point(56, 50);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.Size = new System.Drawing.Size(40, 16);
             this.label1.TabIndex = 203;
             this.label1.Text = "Server";
             // 
@@ -534,7 +534,7 @@
             this.label8.Location = new System.Drawing.Point(36, 152);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 17);
+            this.label8.Size = new System.Drawing.Size(60, 16);
             this.label8.TabIndex = 203;
             this.label8.Text = "Database";
             // 
@@ -546,7 +546,7 @@
             this.txtDestinationServer.Name = "txtDestinationServer";
             this.txtDestinationServer.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDestinationServer.Properties.MaxLength = 100;
-            this.txtDestinationServer.Size = new System.Drawing.Size(195, 24);
+            this.txtDestinationServer.Size = new System.Drawing.Size(195, 22);
             this.txtDestinationServer.TabIndex = 5;
             this.txtDestinationServer.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -559,7 +559,7 @@
             this.txtDestinationPassword.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtDestinationPassword.Properties.MaxLength = 100;
             this.txtDestinationPassword.Properties.PasswordChar = '*';
-            this.txtDestinationPassword.Size = new System.Drawing.Size(195, 24);
+            this.txtDestinationPassword.Size = new System.Drawing.Size(195, 22);
             this.txtDestinationPassword.TabIndex = 7;
             this.txtDestinationPassword.EditValueChanged += new System.EventHandler(this.TxtSourceServer_EditValueChanged);
             // 
@@ -568,7 +568,7 @@
             this.label6.Location = new System.Drawing.Point(28, 84);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 17);
+            this.label6.Size = new System.Drawing.Size(69, 16);
             this.label6.TabIndex = 203;
             this.label6.Text = "User Name";
             // 
@@ -577,7 +577,7 @@
             this.label7.Location = new System.Drawing.Point(35, 118);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.Size = new System.Drawing.Size(60, 16);
             this.label7.TabIndex = 203;
             this.label7.Text = "Password";
             // 
@@ -617,7 +617,7 @@
             this.label9.Location = new System.Drawing.Point(1153, 506);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 17);
+            this.label9.Size = new System.Drawing.Size(43, 16);
             this.label9.TabIndex = 210;
             this.label9.Text = "Source";
             // 
@@ -646,7 +646,7 @@
             this.label10.Location = new System.Drawing.Point(1140, 604);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 17);
+            this.label10.Size = new System.Drawing.Size(67, 16);
             this.label10.TabIndex = 216;
             this.label10.Text = "Destination";
             // 
@@ -655,15 +655,15 @@
             this.lblTotalRecordsToTransfer.Location = new System.Drawing.Point(969, 471);
             this.lblTotalRecordsToTransfer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotalRecordsToTransfer.Name = "lblTotalRecordsToTransfer";
-            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(81, 17);
+            this.lblTotalRecordsToTransfer.Size = new System.Drawing.Size(86, 16);
             this.lblTotalRecordsToTransfer.TabIndex = 210;
             this.lblTotalRecordsToTransfer.Text = "Total Records";
             // 
-            // frmDataTransfer
+            // FrmDataTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1471, 980);
+            this.ClientSize = new System.Drawing.Size(1475, 986);
             this.Controls.Add(this.lblTotalRecordsToTransfer);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDestinationConnection);
@@ -678,7 +678,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmDataTransfer";
+            this.Name = "FrmDataTransfer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmDataTransfer_Load);

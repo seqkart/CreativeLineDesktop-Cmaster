@@ -342,16 +342,16 @@ namespace WindowsFormsApplication1.Forms_Master
             // 
             // DtStartDate
             // 
-            this.DtStartDate.Location = new System.Drawing.Point(128, 68);
+            this.DtStartDate.Location = new System.Drawing.Point(128, 70);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.EditFormat.FormatString = "MM-yyyy";
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DtStartDate.Properties.Mask.EditMask = "MM-yyyy";
-            this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.DtStartDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "MM-yyyy");
             this.DtStartDate.Properties.MaxLength = 6;
-            this.DtStartDate.Size = new System.Drawing.Size(105, 24);
+            this.DtStartDate.Size = new System.Drawing.Size(105, 22);
             this.DtStartDate.TabIndex = 1;
             // 
             // label13
@@ -359,7 +359,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.label13.Location = new System.Drawing.Point(5, 73);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 17);
+            this.label13.Size = new System.Drawing.Size(110, 16);
             this.label13.TabIndex = 357;
             this.label13.Text = "Select Month/Year";
             // 
@@ -376,12 +376,12 @@ namespace WindowsFormsApplication1.Forms_Master
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(332, 68);
+            this.txtEmpCode.Location = new System.Drawing.Point(332, 70);
             this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpCode.Properties.MaxLength = 6;
-            this.txtEmpCode.Size = new System.Drawing.Size(105, 24);
+            this.txtEmpCode.Size = new System.Drawing.Size(105, 22);
             this.txtEmpCode.TabIndex = 2;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
@@ -391,7 +391,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.label1.Location = new System.Drawing.Point(260, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 17);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 359;
             this.label1.Text = "EmpCode";
             // 

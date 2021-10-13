@@ -880,9 +880,9 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
-                 DataSet ds = ProjectFunctions.GetDataSet(" select GrpSubDesc,GrpDesc,GrpCode,GrpSubCode  from BSHeadGrpMst Where grpsubcode is not null");
-                if(ds.Tables[0].Rows.Count>0)
+
+                DataSet ds = ProjectFunctions.GetDataSet(" select GrpSubDesc,GrpDesc,GrpCode,GrpSubCode  from BSHeadGrpMst Where grpsubcode is not null");
+                if (ds.Tables[0].Rows.Count > 0)
                 {
                     HelpGrid.Text = "txtMainLedgerCode";
                     HelpGridView.Columns.Clear();

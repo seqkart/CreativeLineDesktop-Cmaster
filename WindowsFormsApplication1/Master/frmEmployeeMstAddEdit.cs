@@ -582,7 +582,7 @@ string.Empty +
                                                  + " @EmpPassportNo,"
                                                  + " @EmpSplAlw,@EmpReligion,@EmpMaritalStatus,@EmpPymtMode,@EmpBankIFSCode,"
                                                  + " @EmpBankAcNo,@EmpBankName,@EmpNominee,@EmpNomineeRelation,@EmpNomineeDOB,@EmpAdharCardNo,@EmpGHISDed,@EmpFPFDTag,@EmpMscD1,@EmpAddress1,@EmpAddress2,@EmpAddress3,@EmpDistCity,@EmpState,@EmpCountry,@EmpUANNo,@EmpBankBranchCode," +
-                                                    "@TimeInFirst, @TimeOutFirst, @TimeInLast, @TimeOutLast, @WorkingHours, @EmpImage, @DailyWage, @DailyWageRate, @DailyWageMinutes, @TeaBreak, @TeaBreakTime,@EmpTeaTag"
+                                                    "@TimeInFirst, @TimeOutFirst, @TimeInLast, @TimeOutLast, @WorkingHours, @EmpImage, @DailyWage, @DailyWageRate, @DailyWageMinutes, @TeaBreak, @TeaBreakTime,@EmpTeaTag)"
                                                  + " Commit ";
                             sqlcom.CommandText = sql;
 
@@ -1092,9 +1092,6 @@ string.Empty +
             }
         }
 
-        private void WindowsUIButtonPanelMain_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

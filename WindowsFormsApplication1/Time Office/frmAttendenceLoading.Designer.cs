@@ -460,7 +460,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.label2.Location = new System.Drawing.Point(69, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 362;
             this.label2.Text = "Emp Name";
             this.label2.Visible = false;
@@ -474,7 +474,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.txtEmpName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpName.Properties.MaxLength = 6;
             this.txtEmpName.Properties.ReadOnly = true;
-            this.txtEmpName.Size = new System.Drawing.Size(105, 24);
+            this.txtEmpName.Size = new System.Drawing.Size(105, 22);
             this.txtEmpName.TabIndex = 361;
             this.txtEmpName.Visible = false;
             // 
@@ -526,7 +526,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.lblemp.ToolTip = "EMPLOYEE NAME";
             this.lblemp.ToolTipIconType = DevExpress.Utils.ToolTipIconType.Information;
             // 
-            // frmAttendanceLoading
+            // FrmAttendanceLoading
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -550,7 +550,7 @@ namespace WindowsFormsApplication1.Forms_Master
             this.Controls.Add(this.txtEmpName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmAttendanceLoading";
+            this.Name = "FrmAttendanceLoading";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmExcelDataLoading_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

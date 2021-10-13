@@ -271,6 +271,7 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
+            this.btnAttachDocs = new DevExpress.XtraEditors.SimpleButton();
             this.DocsGrid = new DevExpress.XtraGrid.GridControl();
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -292,6 +293,7 @@
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.xtraOpenFileDialog1 = new DevExpress.XtraEditors.XtraOpenFileDialog(this.components);
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -543,7 +545,7 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 782);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 776);
             this.xtraTabPage1.Text = "Main Invoice Details";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.XtraTabPage1_Paint);
             // 
@@ -851,7 +853,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(147, 21);
+            this.chInclusive.Size = new System.Drawing.Size(147, 24);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -861,7 +863,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(147, 21);
+            this.chExclusive.Size = new System.Drawing.Size(147, 24);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -885,7 +887,7 @@
             this.chLot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "LOT";
-            this.chLot.Size = new System.Drawing.Size(147, 21);
+            this.chLot.Size = new System.Drawing.Size(147, 24);
             this.chLot.TabIndex = 534;
             this.chLot.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
@@ -895,7 +897,7 @@
             this.CHSOR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CHSOR.Name = "CHSOR";
             this.CHSOR.Properties.Caption = "SOR";
-            this.CHSOR.Size = new System.Drawing.Size(147, 21);
+            this.CHSOR.Size = new System.Drawing.Size(147, 24);
             this.CHSOR.TabIndex = 533;
             this.CHSOR.CheckedChanged += new System.EventHandler(this.CHSOR_CheckedChanged);
             // 
@@ -905,7 +907,7 @@
             this.chRegular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(147, 21);
+            this.chRegular.Size = new System.Drawing.Size(147, 24);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -928,7 +930,7 @@
             this.chDirect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(147, 21);
+            this.chDirect.Size = new System.Drawing.Size(147, 24);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
@@ -938,7 +940,7 @@
             this.chPackingSlip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(147, 21);
+            this.chPackingSlip.Size = new System.Drawing.Size(147, 24);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -1458,7 +1460,7 @@
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1404, 782);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1404, 776);
             this.xtraTabPage2.Text = "Invoice Data";
             // 
             // chall
@@ -1467,7 +1469,7 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 21);
+            this.chall.Size = new System.Drawing.Size(87, 24);
             this.chall.TabIndex = 824;
             // 
             // txtItemDiscPer
@@ -1762,6 +1764,7 @@
             this.InfoGridView.OptionsView.ShowFooter = true;
             this.InfoGridView.OptionsView.ShowGroupPanel = false;
             this.InfoGridView.OptionsView.ShowIndicator = false;
+            this.InfoGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.InfoGridView_PopupMenuShowing);
             this.InfoGridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.InfoGridView_CellValueChanged);
             this.InfoGridView.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.InfoGridView_ValidateRow);
             // 
@@ -2113,6 +2116,8 @@
             // 
             // gridColumn53
             // 
+            this.gridColumn53.AppearanceCell.ForeColor = System.Drawing.Color.Black;
+            this.gridColumn53.AppearanceCell.Options.UseForeColor = true;
             this.gridColumn53.Caption = "GRPHSNCODE";
             this.gridColumn53.FieldName = "GRPHSNCODE";
             this.gridColumn53.MinWidth = 23;
@@ -2339,7 +2344,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage5.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -2756,7 +2761,7 @@
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage6.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -2767,7 +2772,7 @@
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(603, 210);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(603, 204);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2898,7 +2903,7 @@
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage9.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -2909,7 +2914,7 @@
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(603, 210);
+            this.HSNGrid.Size = new System.Drawing.Size(603, 204);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3043,7 +3048,7 @@
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage7.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -3086,7 +3091,7 @@
             this.TXMAINREMARKS.Name = "TXMAINREMARKS";
             this.TXMAINREMARKS.Properties.AutoHeight = false;
             this.TXMAINREMARKS.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TXMAINREMARKS.Properties.MaxLength = 6;
+            this.TXMAINREMARKS.Properties.MaxLength = 255;
             this.TXMAINREMARKS.Size = new System.Drawing.Size(595, 106);
             this.TXMAINREMARKS.TabIndex = 553;
             // 
@@ -3130,7 +3135,7 @@
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(469, 210);
+            this.xtraTabPage3.Size = new System.Drawing.Size(469, 204);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -3157,7 +3162,7 @@
             this.chToPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(71, 21);
+            this.chToPay.Size = new System.Drawing.Size(71, 24);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
@@ -3167,7 +3172,7 @@
             this.chPaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(55, 21);
+            this.chPaid.Size = new System.Drawing.Size(55, 24);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 
@@ -3185,9 +3190,14 @@
             this.txtGateEntryNo.Location = new System.Drawing.Point(115, 130);
             this.txtGateEntryNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGateEntryNo.Name = "txtGateEntryNo";
+            this.txtGateEntryNo.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtGateEntryNo.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGateEntryNo.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtGateEntryNo.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtGateEntryNo.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtGateEntryNo.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtGateEntryNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGateEntryNo.Properties.MaxLength = 6;
-            this.txtGateEntryNo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtGateEntryNo.Size = new System.Drawing.Size(122, 22);
             this.txtGateEntryNo.TabIndex = 552;
             // 
@@ -3198,9 +3208,12 @@
             this.txtBuiltyAmount.Name = "txtBuiltyAmount";
             this.txtBuiltyAmount.Properties.Appearance.Options.UseTextOptions = true;
             this.txtBuiltyAmount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBuiltyAmount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtBuiltyAmount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtBuiltyAmount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtBuiltyAmount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtBuiltyAmount.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBuiltyAmount.Properties.MaxLength = 6;
-            this.txtBuiltyAmount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtBuiltyAmount.Size = new System.Drawing.Size(129, 22);
             this.txtBuiltyAmount.TabIndex = 552;
             // 
@@ -3209,9 +3222,14 @@
             this.txtTotalBoxes.Location = new System.Drawing.Point(329, 72);
             this.txtTotalBoxes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalBoxes.Name = "txtTotalBoxes";
+            this.txtTotalBoxes.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtTotalBoxes.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalBoxes.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtTotalBoxes.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtTotalBoxes.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtTotalBoxes.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtTotalBoxes.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTotalBoxes.Properties.MaxLength = 6;
-            this.txtTotalBoxes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtTotalBoxes.Size = new System.Drawing.Size(129, 22);
             this.txtTotalBoxes.TabIndex = 552;
             // 
@@ -3220,9 +3238,14 @@
             this.txtCHGWeight.Location = new System.Drawing.Point(115, 72);
             this.txtCHGWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCHGWeight.Name = "txtCHGWeight";
+            this.txtCHGWeight.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtCHGWeight.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtCHGWeight.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtCHGWeight.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtCHGWeight.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtCHGWeight.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtCHGWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCHGWeight.Properties.MaxLength = 6;
-            this.txtCHGWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCHGWeight.Properties.MaxLength = 12;
             this.txtCHGWeight.Size = new System.Drawing.Size(122, 22);
             this.txtCHGWeight.TabIndex = 552;
             // 
@@ -3249,9 +3272,16 @@
             this.txtActualWeight.Location = new System.Drawing.Point(115, 42);
             this.txtActualWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtActualWeight.Name = "txtActualWeight";
+            this.txtActualWeight.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtActualWeight.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtActualWeight.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtActualWeight.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtActualWeight.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtActualWeight.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtActualWeight.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtActualWeight.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.txtActualWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtActualWeight.Properties.MaxLength = 6;
-            this.txtActualWeight.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtActualWeight.Properties.MaxLength = 12;
             this.txtActualWeight.Size = new System.Drawing.Size(122, 22);
             this.txtActualWeight.TabIndex = 552;
             // 
@@ -3372,7 +3402,7 @@
             this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(469, 210);
+            this.xtraTabPage4.Size = new System.Drawing.Size(469, 204);
             this.xtraTabPage4.Text = "Bank Details";
             // 
             // txtBankName
@@ -3417,22 +3447,33 @@
             // 
             // xtraTabPage8
             // 
+            this.xtraTabPage8.Controls.Add(this.btnAttachDocs);
             this.xtraTabPage8.Controls.Add(this.DocsGrid);
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage8.ImageOptions.Image")));
             this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(469, 210);
+            this.xtraTabPage8.Size = new System.Drawing.Size(469, 204);
             this.xtraTabPage8.Text = "Documents Attached";
+            // 
+            // btnAttachDocs
+            // 
+            this.btnAttachDocs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAttachDocs.ImageOptions.Image")));
+            this.btnAttachDocs.Location = new System.Drawing.Point(43, 13);
+            this.btnAttachDocs.Name = "btnAttachDocs";
+            this.btnAttachDocs.Size = new System.Drawing.Size(94, 29);
+            this.btnAttachDocs.TabIndex = 480;
+            this.btnAttachDocs.Text = "Attach Doc\r\n";
+            this.btnAttachDocs.Click += new System.EventHandler(this.btnAttachDocs_Click);
             // 
             // DocsGrid
             // 
             this.DocsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DocsGrid.Location = new System.Drawing.Point(127, 0);
+            this.DocsGrid.Location = new System.Drawing.Point(127, 61);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(342, 201);
+            this.DocsGrid.Size = new System.Drawing.Size(298, 140);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3496,13 +3537,13 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 61);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.ShowScrollBars = true;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(127, 201);
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(127, 140);
             this.pictureEdit1.TabIndex = 1;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
@@ -3659,6 +3700,11 @@
             this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
+            // 
+            // xtraOpenFileDialog1
+            // 
+            this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
+            this.xtraOpenFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.xtraOpenFileDialog1_FileOk);
             // 
             // FrmInvoiceMstAdd
             // 
@@ -4106,5 +4152,7 @@
         private DevExpress.XtraEditors.LabelControl label22;
         private DevExpress.XtraEditors.LabelControl label21;
         private DevExpress.XtraEditors.LabelControl label20;
+        private DevExpress.XtraEditors.SimpleButton btnAttachDocs;
+        private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
     }
 }

@@ -451,7 +451,9 @@ namespace WindowsFormsApplication1.Forms_Master
                 lblemp.Text = row["EmpName"].ToString();
                 //txtDept.Text = row["DeptDesc"].ToString();
                 HelpGrid.Visible = false;
-                btnLoad_Data.Focus();
+                BtnLoad_Data_Click(sender, e);
+
+                //btnLoad_Data.Focus();
 
                 //LastInstlmnt();
             }

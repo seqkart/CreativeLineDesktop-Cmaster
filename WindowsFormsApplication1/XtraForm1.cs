@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
                 Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
-            timer.Start();
+          //  timer.Start();
 
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
@@ -208,38 +208,38 @@ namespace WindowsFormsApplication1
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                _ = ProjectFunctions.WhatsAppConnectionStatus();
+            //try
+            //{
+            //    _ = ProjectFunctions.WhatsAppConnectionStatus();
 
 
-                if (GlobalVariables.WhatAppStatus != null)
-                {
-                    if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
-                    {
-                        pictureEdit1.Visible = false;
-                        labelControl1.Text = GlobalVariables.WhatAppStatus;
-                        labelControl2.Text = GlobalVariables.WhatAppMobileNo;
-                    }
-                    else
-                    {
-                        pictureEdit1.Visible = true;
-                        ChangeQRData();
+            //    if (GlobalVariables.WhatAppStatus != null)
+            //    {
+            //        if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+            //        {
+            //            pictureEdit1.Visible = false;
+            //            labelControl1.Text = GlobalVariables.WhatAppStatus;
+            //            labelControl2.Text = GlobalVariables.WhatAppMobileNo;
+            //        }
+            //        else
+            //        {
+            //            pictureEdit1.Visible = true;
+            //            ChangeQRData();
 
-                    }
-                }
-                else
-                {
-                    labelControl1.Text = "Disconnected";
-                    pictureEdit1.Visible = true;
-                    ChangeQRData();
-                }
+            //        }
+            //    }
+            //    else
+            //    {
+            //        labelControl1.Text = "Disconnected";
+            //        pictureEdit1.Visible = true;
+            //        ChangeQRData();
+            //    }
 
-            }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError(ex.Message);
+            //}
         }
 
         private void XtraForm1_FormClosed(object sender, FormClosedEventArgs e)
@@ -314,6 +314,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG248":
+                    var PROG248 = new Master.frmUploadBalances() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG248.Show();
+                    PROG248.BringToFront();
+                    PROG248.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG247":
                     var PROG247 = new Master.FrmAccountsMappingBusy() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG247.Show();

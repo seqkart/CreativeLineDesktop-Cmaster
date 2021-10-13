@@ -758,7 +758,7 @@ namespace WindowsFormsApplication1.Time_Office
                         PrintLogWin.PrintLog("outputVal => " + outputVal);
                         PrintLogWin.PrintLog("returnVal => " + returnVal);
 
-                        ProjectFunctions.SpeakError("Record has been saved");
+                      //  ProjectFunctions.SpeakError("Record has been saved");
                     }
                     else
                     {
@@ -1075,7 +1075,7 @@ namespace WindowsFormsApplication1.Time_Office
                         return false;
                     }
                 }
-               
+
             }
 
 
@@ -1915,8 +1915,13 @@ namespace WindowsFormsApplication1.Time_Office
             DateTime today = dateAttendance.Value;
             lblDayName.Text = today.ToString("dddd");
 
+            // SendKeys.Send("{left}");
+
+
             TxtEmpCode_EditValueChanged(txtEmpID, EventArgs.Empty);
         }
+
+
 
         private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
@@ -2073,6 +2078,12 @@ namespace WindowsFormsApplication1.Time_Office
             }
 
             txtOverTImeHOurs.Text = (Convert.ToDecimal(txtOverTImeHOurs.Text) + (Convert.ToDecimal(txtNightOverTimeHours.Text) * 60)).ToString();
+        }
+
+        private void DateAttendance_FormatChanged(object sender, EventArgs e)
+        {
+            dateAttendance.Format = DateTimePickerFormat.Custom;
+            dateAttendance.CustomFormat = "dd>mm>yyyy";
         }
     }
 

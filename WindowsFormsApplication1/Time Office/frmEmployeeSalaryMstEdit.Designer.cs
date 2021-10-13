@@ -85,7 +85,7 @@
             this.txtEmpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpCode.Properties.MaxLength = 5;
             this.txtEmpCode.Properties.ReadOnly = true;
-            this.txtEmpCode.Size = new System.Drawing.Size(91, 24);
+            this.txtEmpCode.Size = new System.Drawing.Size(91, 22);
             this.txtEmpCode.TabIndex = 2;
             this.txtEmpCode.TabStop = false;
             // 
@@ -98,16 +98,16 @@
             this.txtEmpName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmpName.Properties.MaxLength = 40;
             this.txtEmpName.Properties.ReadOnly = true;
-            this.txtEmpName.Size = new System.Drawing.Size(176, 24);
+            this.txtEmpName.Size = new System.Drawing.Size(176, 22);
             this.txtEmpName.TabIndex = 3;
             this.txtEmpName.TabStop = false;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(68, 264);
+            this.label2.Location = new System.Drawing.Point(69, 265);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 17);
+            this.label2.Size = new System.Drawing.Size(35, 16);
             this.label2.TabIndex = 228;
             this.label2.Text = "Petrol";
             // 
@@ -115,7 +115,7 @@
             // 
             this.txtPetrol1.EditValue = "0";
             this.txtPetrol1.EnterMoveNextControl = true;
-            this.txtPetrol1.Location = new System.Drawing.Point(307, 263);
+            this.txtPetrol1.Location = new System.Drawing.Point(307, 262);
             this.txtPetrol1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPetrol1.Name = "txtPetrol1";
             this.txtPetrol1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -126,7 +126,7 @@
             this.txtPetrol1.Properties.Mask.EditMask = "n2";
             this.txtPetrol1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPetrol1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtPetrol1.Size = new System.Drawing.Size(87, 24);
+            this.txtPetrol1.Size = new System.Drawing.Size(87, 22);
             this.txtPetrol1.TabIndex = 14;
             this.txtPetrol1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             this.txtPetrol1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPetrol1_KeyPress);
@@ -135,7 +135,7 @@
             // 
             this.txtPetrol.EditValue = "0";
             this.txtPetrol.EnterMoveNextControl = true;
-            this.txtPetrol.Location = new System.Drawing.Point(111, 263);
+            this.txtPetrol.Location = new System.Drawing.Point(111, 262);
             this.txtPetrol.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPetrol.Name = "txtPetrol";
             this.txtPetrol.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -146,7 +146,7 @@
             this.txtPetrol.Properties.Mask.EditMask = "n2";
             this.txtPetrol.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtPetrol.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtPetrol.Size = new System.Drawing.Size(87, 24);
+            this.txtPetrol.Size = new System.Drawing.Size(87, 22);
             this.txtPetrol.TabIndex = 8;
             this.txtPetrol.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
@@ -154,7 +154,7 @@
             // 
             this.txtConvenyance1.EditValue = "0";
             this.txtConvenyance1.EnterMoveNextControl = true;
-            this.txtConvenyance1.Location = new System.Drawing.Point(307, 229);
+            this.txtConvenyance1.Location = new System.Drawing.Point(307, 228);
             this.txtConvenyance1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConvenyance1.Name = "txtConvenyance1";
             this.txtConvenyance1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -165,7 +165,7 @@
             this.txtConvenyance1.Properties.Mask.EditMask = "n2";
             this.txtConvenyance1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtConvenyance1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtConvenyance1.Size = new System.Drawing.Size(87, 24);
+            this.txtConvenyance1.Size = new System.Drawing.Size(87, 22);
             this.txtConvenyance1.TabIndex = 13;
             this.txtConvenyance1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             this.txtConvenyance1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtConvenyance1_KeyPress);
@@ -174,7 +174,7 @@
             // 
             this.txtConvenyance.EditValue = "0";
             this.txtConvenyance.EnterMoveNextControl = true;
-            this.txtConvenyance.Location = new System.Drawing.Point(111, 229);
+            this.txtConvenyance.Location = new System.Drawing.Point(111, 228);
             this.txtConvenyance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConvenyance.Name = "txtConvenyance";
             this.txtConvenyance.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -185,7 +185,7 @@
             this.txtConvenyance.Properties.Mask.EditMask = "n2";
             this.txtConvenyance.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtConvenyance.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtConvenyance.Size = new System.Drawing.Size(87, 24);
+            this.txtConvenyance.Size = new System.Drawing.Size(87, 22);
             this.txtConvenyance.TabIndex = 7;
             this.txtConvenyance.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
@@ -193,7 +193,7 @@
             // 
             this.txtHRA1.EditValue = "0";
             this.txtHRA1.EnterMoveNextControl = true;
-            this.txtHRA1.Location = new System.Drawing.Point(307, 195);
+            this.txtHRA1.Location = new System.Drawing.Point(307, 194);
             this.txtHRA1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHRA1.Name = "txtHRA1";
             this.txtHRA1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -204,7 +204,7 @@
             this.txtHRA1.Properties.Mask.EditMask = "n2";
             this.txtHRA1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHRA1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtHRA1.Size = new System.Drawing.Size(87, 24);
+            this.txtHRA1.Size = new System.Drawing.Size(87, 22);
             this.txtHRA1.TabIndex = 12;
             this.txtHRA1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             this.txtHRA1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtHRA1_KeyPress);
@@ -214,7 +214,7 @@
             this.txtBasicPay1.AllowDrop = true;
             this.txtBasicPay1.EditValue = "0";
             this.txtBasicPay1.EnterMoveNextControl = true;
-            this.txtBasicPay1.Location = new System.Drawing.Point(307, 158);
+            this.txtBasicPay1.Location = new System.Drawing.Point(307, 160);
             this.txtBasicPay1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBasicPay1.Name = "txtBasicPay1";
             this.txtBasicPay1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -225,17 +225,17 @@
             this.txtBasicPay1.Properties.Mask.EditMask = "n2";
             this.txtBasicPay1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBasicPay1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtBasicPay1.Size = new System.Drawing.Size(87, 24);
+            this.txtBasicPay1.Size = new System.Drawing.Size(87, 22);
             this.txtBasicPay1.TabIndex = 11;
             this.txtBasicPay1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             this.txtBasicPay1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtBasicPay1_KeyPress);
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(71, 93);
+            this.labelControl1.Location = new System.Drawing.Point(71, 95);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(31, 17);
+            this.labelControl1.Size = new System.Drawing.Size(33, 16);
             this.labelControl1.TabIndex = 233;
             this.labelControl1.Text = "Code";
             // 
@@ -243,7 +243,7 @@
             // 
             this.txtHRA.EditValue = "0";
             this.txtHRA.EnterMoveNextControl = true;
-            this.txtHRA.Location = new System.Drawing.Point(111, 195);
+            this.txtHRA.Location = new System.Drawing.Point(111, 194);
             this.txtHRA.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHRA.Name = "txtHRA";
             this.txtHRA.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -254,16 +254,16 @@
             this.txtHRA.Properties.Mask.EditMask = "n2";
             this.txtHRA.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtHRA.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtHRA.Size = new System.Drawing.Size(87, 24);
+            this.txtHRA.Size = new System.Drawing.Size(87, 22);
             this.txtHRA.TabIndex = 6;
             this.txtHRA.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // labelControl22
             // 
-            this.labelControl22.Location = new System.Drawing.Point(66, 196);
+            this.labelControl22.Location = new System.Drawing.Point(66, 197);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(34, 17);
+            this.labelControl22.Size = new System.Drawing.Size(38, 16);
             this.labelControl22.TabIndex = 227;
             this.labelControl22.Text = "H.R.A.";
             // 
@@ -271,7 +271,7 @@
             // 
             this.txtBasicPay.EditValue = "0";
             this.txtBasicPay.EnterMoveNextControl = true;
-            this.txtBasicPay.Location = new System.Drawing.Point(111, 158);
+            this.txtBasicPay.Location = new System.Drawing.Point(111, 160);
             this.txtBasicPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBasicPay.Name = "txtBasicPay";
             this.txtBasicPay.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -282,25 +282,25 @@
             this.txtBasicPay.Properties.Mask.EditMask = "n2";
             this.txtBasicPay.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtBasicPay.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtBasicPay.Size = new System.Drawing.Size(87, 24);
+            this.txtBasicPay.Size = new System.Drawing.Size(87, 22);
             this.txtBasicPay.TabIndex = 5;
             this.txtBasicPay.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // labelControl23
             // 
-            this.labelControl23.Location = new System.Drawing.Point(50, 160);
+            this.labelControl23.Location = new System.Drawing.Point(43, 163);
             this.labelControl23.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(53, 17);
+            this.labelControl23.Size = new System.Drawing.Size(61, 16);
             this.labelControl23.TabIndex = 226;
             this.labelControl23.Text = "Basic Pay";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(38, 235);
+            this.label1.Location = new System.Drawing.Point(36, 231);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 17);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 225;
             this.label1.Text = "Convyance";
             // 
@@ -313,16 +313,16 @@
             this.txtFHName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFHName.Properties.MaxLength = 40;
             this.txtFHName.Properties.ReadOnly = true;
-            this.txtFHName.Size = new System.Drawing.Size(289, 24);
+            this.txtFHName.Size = new System.Drawing.Size(289, 22);
             this.txtFHName.TabIndex = 4;
             this.txtFHName.TabStop = false;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(44, 129);
+            this.label3.Location = new System.Drawing.Point(42, 129);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 17);
+            this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 236;
             this.label3.Text = "F/H Name";
             // 
@@ -340,7 +340,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(419, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(419, 31);
             this.Menu_ToolStrip.TabIndex = 237;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -393,24 +393,24 @@
             this.DtStartDate.Properties.Mask.BeepOnError = true;
             this.DtStartDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtStartDate.Size = new System.Drawing.Size(91, 24);
+            this.DtStartDate.Size = new System.Drawing.Size(91, 22);
             this.DtStartDate.TabIndex = 1;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(33, 59);
+            this.labelControl3.Location = new System.Drawing.Point(35, 61);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(69, 17);
+            this.labelControl3.Size = new System.Drawing.Size(69, 16);
             this.labelControl3.TabIndex = 239;
             this.labelControl3.Text = "Month/Year";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(72, 335);
+            this.labelControl4.Location = new System.Drawing.Point(73, 333);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(29, 17);
+            this.labelControl4.Size = new System.Drawing.Size(31, 16);
             this.labelControl4.TabIndex = 351;
             this.labelControl4.Text = "Total";
             // 
@@ -418,7 +418,7 @@
             // 
             this.txtTotal2.EditValue = "0";
             this.txtTotal2.EnterMoveNextControl = true;
-            this.txtTotal2.Location = new System.Drawing.Point(308, 331);
+            this.txtTotal2.Location = new System.Drawing.Point(308, 330);
             this.txtTotal2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotal2.Name = "txtTotal2";
             this.txtTotal2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -430,7 +430,7 @@
             this.txtTotal2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotal2.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotal2.Properties.ReadOnly = true;
-            this.txtTotal2.Size = new System.Drawing.Size(86, 24);
+            this.txtTotal2.Size = new System.Drawing.Size(86, 22);
             this.txtTotal2.TabIndex = 16;
             this.txtTotal2.TabStop = false;
             this.txtTotal2.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
@@ -439,7 +439,7 @@
             // 
             this.txtTotal1.EditValue = "0";
             this.txtTotal1.EnterMoveNextControl = true;
-            this.txtTotal1.Location = new System.Drawing.Point(111, 331);
+            this.txtTotal1.Location = new System.Drawing.Point(111, 330);
             this.txtTotal1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotal1.Name = "txtTotal1";
             this.txtTotal1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -451,17 +451,17 @@
             this.txtTotal1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtTotal1.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTotal1.Properties.ReadOnly = true;
-            this.txtTotal1.Size = new System.Drawing.Size(86, 24);
+            this.txtTotal1.Size = new System.Drawing.Size(86, 22);
             this.txtTotal1.TabIndex = 10;
             this.txtTotal1.TabStop = false;
             this.txtTotal1.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
             // label15
             // 
-            this.label15.Location = new System.Drawing.Point(19, 301);
+            this.label15.Location = new System.Drawing.Point(19, 299);
             this.label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(80, 17);
+            this.label15.Size = new System.Drawing.Size(85, 16);
             this.label15.TabIndex = 364;
             this.label15.Text = "Spl Allowance";
             // 
@@ -469,7 +469,7 @@
             // 
             this.txtEmpSplAlw.EditValue = "0";
             this.txtEmpSplAlw.EnterMoveNextControl = true;
-            this.txtEmpSplAlw.Location = new System.Drawing.Point(111, 297);
+            this.txtEmpSplAlw.Location = new System.Drawing.Point(111, 296);
             this.txtEmpSplAlw.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpSplAlw.Name = "txtEmpSplAlw";
             this.txtEmpSplAlw.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -480,7 +480,7 @@
             this.txtEmpSplAlw.Properties.Mask.EditMask = "n2";
             this.txtEmpSplAlw.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtEmpSplAlw.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtEmpSplAlw.Size = new System.Drawing.Size(86, 24);
+            this.txtEmpSplAlw.Size = new System.Drawing.Size(86, 22);
             this.txtEmpSplAlw.TabIndex = 9;
             this.txtEmpSplAlw.EditValueChanged += new System.EventHandler(this.TxtTotal1_EditValueChanged);
             // 
@@ -488,7 +488,7 @@
             // 
             this.txtEmpSplAlw1.EditValue = "0";
             this.txtEmpSplAlw1.EnterMoveNextControl = true;
-            this.txtEmpSplAlw1.Location = new System.Drawing.Point(307, 297);
+            this.txtEmpSplAlw1.Location = new System.Drawing.Point(307, 296);
             this.txtEmpSplAlw1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpSplAlw1.Name = "txtEmpSplAlw1";
             this.txtEmpSplAlw1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -499,11 +499,11 @@
             this.txtEmpSplAlw1.Properties.Mask.EditMask = "n2";
             this.txtEmpSplAlw1.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtEmpSplAlw1.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtEmpSplAlw1.Size = new System.Drawing.Size(86, 24);
+            this.txtEmpSplAlw1.Size = new System.Drawing.Size(86, 22);
             this.txtEmpSplAlw1.TabIndex = 15;
             this.txtEmpSplAlw1.EditValueChanged += new System.EventHandler(this.TxtTotal2_EditValueChanged);
             // 
-            // frmEmployeeSalaryMstEdit
+            // FrmEmployeeSalaryMstEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -538,7 +538,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmEmployeeSalaryMstEdit";
+            this.Name = "FrmEmployeeSalaryMstEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmEmployeeSalaryMstEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).EndInit();

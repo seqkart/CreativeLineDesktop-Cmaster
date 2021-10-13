@@ -104,11 +104,13 @@
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtStartDate.Properties.Appearance.Options.UseFont = true;
+            this.DtStartDate.Properties.BeepOnError = false;
             this.DtStartDate.Properties.EditFormat.FormatString = "MM-yyyy";
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.DtStartDate.Properties.Mask.EditMask = "MMMM-yyyy";
-            this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.DtStartDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "Y");
+            this.DtStartDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.DtStartDate.Properties.MaxLength = 15;
             this.DtStartDate.Size = new System.Drawing.Size(119, 28);
             this.DtStartDate.TabIndex = 0;
@@ -120,7 +122,7 @@
             this.label13.Location = new System.Drawing.Point(5, 55);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 17);
+            this.label13.Size = new System.Drawing.Size(110, 16);
             this.label13.TabIndex = 347;
             this.label13.Text = "Select Month/Year";
             // 
@@ -430,7 +432,7 @@
             this.txtteatrate.EditValue = "5";
             this.txtteatrate.Location = new System.Drawing.Point(1060, 53);
             this.txtteatrate.Name = "txtteatrate";
-            this.txtteatrate.Size = new System.Drawing.Size(73, 24);
+            this.txtteatrate.Size = new System.Drawing.Size(73, 22);
             this.txtteatrate.TabIndex = 357;
             // 
             // labelControl1

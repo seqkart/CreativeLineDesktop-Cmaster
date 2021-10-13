@@ -92,6 +92,7 @@
             this.DtEndDate.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.DodgerBlue;
             this.DtEndDate.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.DtEndDate.Properties.AppearanceFocused.Options.UseBorderColor = true;
+            this.DtEndDate.Properties.BeepOnError = false;
             this.DtEndDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.DtEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
@@ -102,9 +103,11 @@
             this.DtEndDate.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.DtEndDate.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.DtEndDate.Properties.Mask.BeepOnError = true;
-            this.DtEndDate.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.DtEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtEndDate.Size = new System.Drawing.Size(108, 24);
+            this.DtEndDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtEndDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.DtEndDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
+            this.DtEndDate.Properties.UseMaskAsDisplayFormat = true;
+            this.DtEndDate.Size = new System.Drawing.Size(108, 22);
             this.DtEndDate.TabIndex = 1;
             // 
             // DtStartDate
@@ -121,6 +124,7 @@
             this.DtStartDate.Properties.AppearanceFocused.BorderColor = System.Drawing.Color.DodgerBlue;
             this.DtStartDate.Properties.AppearanceFocused.Options.UseBackColor = true;
             this.DtStartDate.Properties.AppearanceFocused.Options.UseBorderColor = true;
+            this.DtStartDate.Properties.BeepOnError = false;
             this.DtStartDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.DtStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo, "", -1, true, false, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
@@ -131,9 +135,11 @@
             this.DtStartDate.Properties.LookAndFeel.Style = DevExpress.LookAndFeel.LookAndFeelStyle.Flat;
             this.DtStartDate.Properties.LookAndFeel.UseDefaultLookAndFeel = false;
             this.DtStartDate.Properties.Mask.BeepOnError = true;
-            this.DtStartDate.Properties.Mask.EditMask = "dd/MM/yyyy";
-            this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.DtStartDate.Size = new System.Drawing.Size(108, 24);
+            this.DtStartDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.DtStartDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.DtStartDate.Properties.MaskSettings.Set("mask", "dd/MM/yyyy");
+            this.DtStartDate.Properties.UseMaskAsDisplayFormat = true;
+            this.DtStartDate.Size = new System.Drawing.Size(108, 22);
             this.DtStartDate.TabIndex = 0;
             // 
             // labelControl1
@@ -141,7 +147,7 @@
             this.labelControl1.Location = new System.Drawing.Point(34, 73);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 17);
+            this.labelControl1.Size = new System.Drawing.Size(31, 16);
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "From";
             // 
@@ -150,7 +156,7 @@
             this.labelControl2.Location = new System.Drawing.Point(187, 73);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(15, 17);
+            this.labelControl2.Size = new System.Drawing.Size(17, 16);
             this.labelControl2.TabIndex = 0;
             this.labelControl2.Text = "To";
             // 
@@ -158,13 +164,13 @@
             // 
             this.InvoiceGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InvoiceGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.InvoiceGrid.Location = new System.Drawing.Point(0, 117);
+            this.InvoiceGrid.Location = new System.Drawing.Point(0, 123);
             this.InvoiceGrid.MainView = this.InvoiceGridView;
             this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
             this.InvoiceGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.InvoiceGrid.Size = new System.Drawing.Size(938, 596);
+            this.InvoiceGrid.Size = new System.Drawing.Size(938, 590);
             this.InvoiceGrid.TabIndex = 5;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});
@@ -333,14 +339,14 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(938, 31);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
             // splitter1
             // 
             this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.splitter1.Location = new System.Drawing.Point(0, 25);
+            this.splitter1.Location = new System.Drawing.Point(0, 31);
             this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(938, 92);

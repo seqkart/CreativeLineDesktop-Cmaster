@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
+using PdfSharp.Drawing;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -248,8 +249,8 @@ namespace WindowsFormsApplication1
                 InfoGridView.Columns["SIDPSDATE"].Visible = false;
                 InfoGridView.Columns["SIDPSID"].Visible = false;
                 InfoGridView.Columns["SIDPSNO"].Visible = false;
-                //InfoGridView.Columns["TAXCODE"].Visible = false;
-                //InfoGridView.Columns["GRPHSNCODE"].Visible = false;
+                InfoGridView.Columns["TAXCODE"].Visible = true;
+                InfoGridView.Columns["GRPHSNCODE"].Visible = true;
             }
         }
 
@@ -1183,23 +1184,25 @@ namespace WindowsFormsApplication1
 
         private void PackingSlipUpdations()
         {
-
-            foreach (DataRow dr in (PSGrid.DataSource as DataTable).Rows)
+            if (chPackingSlip.Checked)
             {
-                ProjectFunctions.GetDataSet("Update PSWSLMAIN Set Used='N'  Where PSWSNO='" + dr["PSWSNO"].ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
-            }
+                foreach (DataRow dr in (PSGrid.DataSource as DataTable).Rows)
+                {
+                    ProjectFunctions.GetDataSet("Update PSWSLMAIN Set Used='N'  Where PSWSNO='" + dr["PSWSNO"].ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                }
 
 
-            var distinctRows = (from DataRow dRow in dt.Rows
-                                select dRow["SIDPSNO"]).Distinct();
-            foreach (var v in distinctRows)
-            {
-                ProjectFunctions.GetDataSet("Update PSWSLMAIN Set Used='Y'  Where PSWSNO='" + v.ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
-            }
+                var distinctRows = (from DataRow dRow in dt.Rows
+                                    select dRow["SIDPSNO"]).Distinct();
+                foreach (var v in distinctRows)
+                {
+                    ProjectFunctions.GetDataSet("Update PSWSLMAIN Set Used='Y'  Where PSWSNO='" + v.ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                }
 
-            foreach (DataRow dr in dtWeight.Rows)
-            {
-                ProjectFunctions.GetDataSet("Update PSWSLMAIN Set PSWEIGHT='" + Convert.ToDecimal(dr["Weight"]) + "' Where PSWSNO='" + dr["PSWSNO"].ToString() + "' And PSWSTOTBOXES='" + dr["BoxNo"].ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                foreach (DataRow dr in dtWeight.Rows)
+                {
+                    ProjectFunctions.GetDataSet("Update PSWSLMAIN Set PSWEIGHT='" + Convert.ToDecimal(dr["Weight"]) + "' Where PSWSNO='" + dr["PSWSNO"].ToString() + "' And PSWSTOTBOXES='" + dr["BoxNo"].ToString() + "' And PSWSFNYR='" + GlobalVariables.FinancialYear + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+                }
             }
         }
         private void BtnSave_Click(object sender, EventArgs e)
@@ -2330,6 +2333,64 @@ namespace WindowsFormsApplication1
             }
         }
 
-        
+        private void btnAttachDocs_Click(object sender, EventArgs e)
+        {
+            xtraOpenFileDialog1.ShowDialog();
+        }
+        void DrawImage(XGraphics gfx, String jpegSamplePath, int x, int y, int width, int height)
+        {
+            XImage image = XImage.FromFile(xtraOpenFileDialog1.FileName);
+            gfx.DrawImage(image, x, y, width, height);
+        }
+        private void xtraOpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            PdfSharp.Pdf.PdfDocument document = new PdfSharp.Pdf.PdfDocument();
+            document.Info.Title = "image1";
+            PdfSharp.Pdf.PdfPage page = document.AddPage();
+            XGraphics gfx = XGraphics.FromPdfPage(page);
+            DrawImage(gfx, "abc", 0, 0, (int)page.Width, (int)page.Height);
+            document.Save("C:\\Temp\\abc.pdf");
+            byte[] pdfb = null;
+            FileStream fs = new FileStream("C:\\Temp\\abc.pdf", FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fs);
+            pdfb = br.ReadBytes((int)fs.Length);
+            using (var sqlcon = new SqlConnection(ProjectFunctions.ImageConnectionString))
+            {
+                sqlcon.Open();
+                String str = "insert into ImagesData(DocType,DocNo,DocDate,DocPDF) values(@DocType,@DocNo,@DocDate,@DocPDF)";
+                var sqlcom = new SqlCommand(str, sqlcon);
+                sqlcom.Parameters.AddWithValue("@DocType", txtserial.Text);
+                sqlcom.Parameters.AddWithValue("@DocNo", txtSerialNo.Text);
+                sqlcom.Parameters.AddWithValue("@DocDate", Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd"));
+                sqlcom.Parameters.AddWithValue("@DocPDF", pdfb);
+                sqlcom.CommandType = CommandType.Text;
+                sqlcom.ExecuteNonQuery();
+                sqlcon.Close();
+                LoadDocs();
+
+                XtraMessageBox.Show("Document Saved Successfully");
+            }
+        }
+
+        private void InfoGridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        {
+            try
+            {
+                e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete Current Row", (o1, e1) =>
+                {
+                    if (DialogResult.Yes == XtraMessageBox.Show("Do You Want Delete ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
+                    {
+                        InfoGridView.DeleteRow(InfoGridView.FocusedRowHandle);
+                        dt.AcceptChanges();
+                        Calculation();
+                    }
+                }));
+
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
+        }
     }
 }
