@@ -213,13 +213,15 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory(Application.StartupPath + "\\PI");
             }
-            if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+           
+            if (System.IO.Directory.Exists(Application.StartupPath + "\\Salary"))
             {
 
             }
             else
             {
-                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\salary");
+
             }
             if (System.IO.Directory.Exists("C:\\Temp\\GST"))
             {

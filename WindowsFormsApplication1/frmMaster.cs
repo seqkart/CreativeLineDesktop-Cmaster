@@ -1334,12 +1334,12 @@ namespace WindowsFormsApplication1
                 APICount = new DXMenuItem("API PENDING HITS",
                                        (o1, e1) =>
                                        {
-                                           ProjectFunctions.GetAPIPendingHitsAsync();
+                                           System.Threading.Tasks.Task task = ProjectFunctions.GetAPIPendingHitsAsync();
                                        });
                 HSNCodeInfo = new DXMenuItem("HSN Code Information",
                                        (o1, e1) =>
                                        {
-                                           ProjectFunctions.GetAPIHSNCodeInfo(CurrentRow["GrpHSNCode"].ToString());
+                                           System.Threading.Tasks.Task task = ProjectFunctions.GetAPIHSNCodeInfo(CurrentRow["GrpHSNCode"].ToString());
                                        });
 
 

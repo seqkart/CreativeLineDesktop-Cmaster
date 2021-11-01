@@ -309,7 +309,7 @@ namespace WindowsFormsApplication1
 
                 if (AccMRPMarkDown > 0)
                 {
-                    WSP = WSP - ((WSP * AccMRPMarkDown) / 100);
+                    WSP -= ((WSP * AccMRPMarkDown) / 100);
                 }
                 else
                 {
@@ -319,7 +319,7 @@ namespace WindowsFormsApplication1
                     }
                     else
                     {
-                        WSP = WSP - ((WSP * Convert.ToDecimal(dr["ARTMARGIN"])) / 100);
+                        WSP -= ((WSP * Convert.ToDecimal(dr["ARTMARGIN"])) / 100);
                     }
 
                 }
@@ -388,9 +388,9 @@ namespace WindowsFormsApplication1
                 SGSTAmount = Math.Round(((ValueOfGoods * Convert.ToDecimal(dr["SIDSGSTPER"])) / 100), 2);
                 IGSTAmount = Math.Round(((ValueOfGoods * Convert.ToDecimal(dr["SIDIGSTPER"])) / 100), 2);
 
-                SumCGSTAmount = SumCGSTAmount + CGSTAmount;
-                SumSGSTAmount = SumSGSTAmount + SGSTAmount;
-                SumIGSTAmount = SumIGSTAmount + IGSTAmount;
+                SumCGSTAmount += CGSTAmount;
+                SumSGSTAmount += SGSTAmount;
+                SumIGSTAmount += IGSTAmount;
                 SumValueOfGoods = SumValueOfGoods + ValueOfGoods;
                 dr["SIDCGSTAMT"] = CGSTAmount;
                 dr["SIDSGSTAMT"] = SGSTAmount;
@@ -444,11 +444,11 @@ namespace WindowsFormsApplication1
                 {
                     if ((Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"])).ToString("0.00") == Convert.ToDecimal(v).ToString("0.00"))
                     {
-                        SIDSCANQTY = SIDSCANQTY + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                        SIDITMNETAMT = SIDITMNETAMT + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                        SIDSGSTAMT = SIDSGSTAMT + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                        SIDCGSTAMT = SIDCGSTAMT + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                        SIDIGSTAMT = SIDIGSTAMT + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                        SIDSCANQTY += Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        SIDITMNETAMT += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                        SIDSGSTAMT += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                        SIDCGSTAMT += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                        SIDIGSTAMT += Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         SIDCGSTPER = Convert.ToDecimal(dr["SIDCGSTPER"]);
                         SIDSGSTPER = Convert.ToDecimal(dr["SIDSGSTPER"]);
                         SIDIGSTPER = Convert.ToDecimal(dr["SIDIGSTPER"]);
@@ -511,11 +511,11 @@ namespace WindowsFormsApplication1
                 {
                     if (((Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"])).ToString("0.00") + dr["GRPHSNCODE"]) == v.ToString())
                     {
-                        SIDSCANQTY = SIDSCANQTY + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                        SIDITMNETAMT = SIDITMNETAMT + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                        SIDSGSTAMT = SIDSGSTAMT + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                        SIDCGSTAMT = SIDCGSTAMT + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                        SIDIGSTAMT = SIDIGSTAMT + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                        SIDSCANQTY += Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        SIDITMNETAMT += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                        SIDSGSTAMT += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                        SIDCGSTAMT += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                        SIDIGSTAMT += Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         SIDCGSTPER = Convert.ToDecimal(dr["SIDCGSTPER"]);
                         SIDSGSTPER = Convert.ToDecimal(dr["SIDSGSTPER"]);
                         SIDIGSTPER = Convert.ToDecimal(dr["SIDIGSTPER"]);
@@ -1431,8 +1431,8 @@ namespace WindowsFormsApplication1
                 int Count = 0;
                 foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
                 {
-                    Count = Count + 1;
-                    Weight = Weight + Convert.ToDecimal(dr["Weight"]);
+                    Count++;
+                    Weight += Convert.ToDecimal(dr["Weight"]);
                 }
 
                 txtActualWeight.Text = Weight.ToString("0.00");
@@ -1667,7 +1667,7 @@ namespace WindowsFormsApplication1
 
 
                                                 GridControl1.Text = "SIDARTNO";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();

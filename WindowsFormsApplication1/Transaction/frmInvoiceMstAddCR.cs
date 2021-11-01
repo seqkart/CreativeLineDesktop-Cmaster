@@ -94,11 +94,11 @@ namespace WindowsFormsApplication1
             foreach (DataRow dr in dt.Rows)
             {
 
-                SumValueOfGoods = SumValueOfGoods + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                SumDiscAmount = SumDiscAmount + Convert.ToDecimal(dr["SIDITMDISCAMT"]);
-                SumCGSTAmount = SumCGSTAmount + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                SumSGSTAmount = SumSGSTAmount + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                SumIGSTAmount = SumIGSTAmount + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                SumValueOfGoods += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                SumDiscAmount += Convert.ToDecimal(dr["SIDITMDISCAMT"]);
+                SumCGSTAmount += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                SumSGSTAmount += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                SumIGSTAmount += Convert.ToDecimal(dr["SIDIGSTAMT"]);
 
             }
 
@@ -151,11 +151,11 @@ namespace WindowsFormsApplication1
                 {
                     if ((Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"])).ToString("0.00") == Convert.ToDecimal(v).ToString("0.00"))
                     {
-                        SIDSCANQTY = SIDSCANQTY + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                        SIDITMNETAMT = SIDITMNETAMT + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                        SIDSGSTAMT = SIDSGSTAMT + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                        SIDCGSTAMT = SIDCGSTAMT + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                        SIDIGSTAMT = SIDIGSTAMT + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                        SIDSCANQTY += Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        SIDITMNETAMT += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                        SIDSGSTAMT += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                        SIDCGSTAMT += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                        SIDIGSTAMT += Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         SIDCGSTPER = Convert.ToDecimal(dr["SIDCGSTPER"]);
                         SIDSGSTPER = Convert.ToDecimal(dr["SIDSGSTPER"]);
                         SIDIGSTPER = Convert.ToDecimal(dr["SIDIGSTPER"]);
@@ -218,11 +218,11 @@ namespace WindowsFormsApplication1
                 {
                     if (((Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"])).ToString("0.00") + dr["GRPHSNCODE"]) == v.ToString())
                     {
-                        SIDSCANQTY = SIDSCANQTY + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                        SIDITMNETAMT = SIDITMNETAMT + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                        SIDSGSTAMT = SIDSGSTAMT + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                        SIDCGSTAMT = SIDCGSTAMT + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                        SIDIGSTAMT = SIDIGSTAMT + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                        SIDSCANQTY += Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        SIDITMNETAMT += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                        SIDSGSTAMT += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                        SIDCGSTAMT += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                        SIDIGSTAMT += Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         SIDCGSTPER = Convert.ToDecimal(dr["SIDCGSTPER"]);
                         SIDSGSTPER = Convert.ToDecimal(dr["SIDSGSTPER"]);
                         SIDIGSTPER = Convert.ToDecimal(dr["SIDIGSTPER"]);

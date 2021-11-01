@@ -867,7 +867,7 @@ namespace WindowsFormsApplication1
                         {
                             ReportGridView.Columns[Count].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, dr.ColumnName, "{0}") });
                         }
-                        Count = Count + 1;
+                        Count++;
                     }
                     if (editBtn)
                     {
@@ -1230,7 +1230,7 @@ namespace WindowsFormsApplication1
                         {
                             ReportGridView.Columns[Count].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, dr.ColumnName, "{0}") });
                         }
-                        Count = Count + 1;
+                        Count++;
                     }
                 }
                 if (dsMaster.Tables[0].Rows.Count > 0)
@@ -1269,7 +1269,7 @@ namespace WindowsFormsApplication1
                             {
                                 ReportGridView.Columns[Count].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, dr.ColumnName, "{0}") });
                             }
-                            Count = Count + 1;
+                            Count++;
                         }
                     }
                     if (dsMaster.Tables[0].Rows.Count > 0)
@@ -1323,7 +1323,7 @@ namespace WindowsFormsApplication1
                             {
                                 ReportGridView.Columns[Count].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, dr.ColumnName, "{0}") });
                             }
-                            Count = Count + 1;
+                            Count++;
                         }
                     }
                     if (dsMaster.Tables[0].Rows.Count > 0)
@@ -1374,7 +1374,7 @@ namespace WindowsFormsApplication1
                         {
                             ReportGridView.Columns[Count].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, dr.ColumnName, "{0}") });
                         }
-                        Count = Count + 1;
+                        Count++;
                     }
                 }
                 if (dsMaster.Tables[0].Rows.Count > 0)
@@ -2350,7 +2350,7 @@ namespace WindowsFormsApplication1
 
                                             ReportGrid.Text = SourceFieldName;
 
-                                            SearchBox.Text = SearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            SearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                             Panel1.Visible = true;
                                             Panel1.Select();
                                             SearchBox.Focus();
@@ -2392,7 +2392,7 @@ namespace WindowsFormsApplication1
 
                                             ReportGrid.Text = T1.Name;
                                             SearchBox.Text = string.Empty;
-                                            SearchBox.Text = SearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            SearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                             ReportGrid.Show();
                                             Panel1.Visible = true;
                                             ReportGrid.Visible = true;

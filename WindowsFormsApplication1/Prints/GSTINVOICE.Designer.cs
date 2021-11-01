@@ -573,7 +573,7 @@
             this.xrLabel120.SizeF = new System.Drawing.SizeF(358.3334F, 14F);
             this.xrLabel120.StylePriority.UseFont = false;
             this.xrLabel120.StylePriority.UseTextAlignment = false;
-            this.xrLabel120.Text = "INSURANCE POLICY No.: 36170021200200000022";
+            this.xrLabel120.Text = "INSURANCE POLICY No.: 0000000024732501";
             this.xrLabel120.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             this.xrLabel120.WordWrap = false;
             // 
@@ -2730,7 +2730,7 @@
             this.ShowPrintMarginsWarning = false;
             this.SnapGridStepCount = 1;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "21.1";
+            this.Version = "21.2";
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.GSTINVOICE_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

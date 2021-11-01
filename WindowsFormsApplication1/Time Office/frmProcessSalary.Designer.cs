@@ -92,7 +92,7 @@
             this.ChoiceSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceSelect.Name = "ChoiceSelect";
             this.ChoiceSelect.Properties.Caption = "Select &All";
-            this.ChoiceSelect.Size = new System.Drawing.Size(87, 21);
+            this.ChoiceSelect.Size = new System.Drawing.Size(87, 24);
             this.ChoiceSelect.TabIndex = 349;
             this.ChoiceSelect.Visible = false;
             this.ChoiceSelect.CheckedChanged += new System.EventHandler(this.ChoiceSelect_CheckedChanged);
@@ -104,7 +104,6 @@
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtStartDate.Properties.Appearance.Options.UseFont = true;
-            this.DtStartDate.Properties.BeepOnError = false;
             this.DtStartDate.Properties.EditFormat.FormatString = "MM-yyyy";
             this.DtStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.DtStartDate.Properties.Mask.UseMaskAsDisplayFormat = true;

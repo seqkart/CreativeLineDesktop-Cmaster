@@ -29,7 +29,9 @@ namespace WindowsFormsApplication1.Forms_Transaction
 {
     public partial class FrmProcessSalary : DevExpress.XtraEditors.XtraForm
     {
+#pragma warning disable IDE0044 // Add readonly modifier
         private string _Mnthyr;
+#pragma warning restore IDE0044 // Add readonly modifier
         private bool flagExceed;
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
@@ -920,13 +922,11 @@ namespace WindowsFormsApplication1.Forms_Transaction
             }
             else
             {
-                string path = "Salary_For_Month_" + ConvertTo.DateFormatDb(DtStartDate.EditValue) + ".xlsx";
-
-
-
+                string path = Application.StartupPath + @"\Salary\" + "Salary_For_Month_" + ConvertTo.DateFormatDb(DtStartDate.EditValue) + ".xlsx";
                 XlsxExportOptionsEx options = new XlsxExportOptionsEx();
                 options.CustomizeCell += Options_CustomizeCell;
                 gridControl_SalaryProcess.ExportToXlsx(path, options);
+                ProjectFunctions.Speak("XLS GENERATED");
                 Process.Start(path);
             }
 

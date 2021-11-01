@@ -39,7 +39,6 @@
             this.CHODKGSTYPE1 = new DevExpress.XtraReports.UI.XRLabel();
             this.CHODMAINREM1 = new DevExpress.XtraReports.UI.XRLabel();
             this.CHODARTNO1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
@@ -67,6 +66,7 @@
             this.Text28 = new DevExpress.XtraReports.UI.XRLabel();
             this.Text17 = new DevExpress.XtraReports.UI.XRLabel();
             this.reportFooterBand1 = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.txtMainRemarks = new DevExpress.XtraReports.UI.XRLabel();
             this.lblNetWeight = new DevExpress.XtraReports.UI.XRLabel();
             this.lblGrossWeight = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
@@ -90,7 +90,6 @@
             this.Box9 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.Box12 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.Line1 = new DevExpress.XtraReports.UI.XRCrossBandLine();
-            this.Line2 = new DevExpress.XtraReports.UI.XRCrossBandLine();
             this.Line3 = new DevExpress.XtraReports.UI.XRCrossBandLine();
             this.Line4 = new DevExpress.XtraReports.UI.XRCrossBandLine();
             this.Line5 = new DevExpress.XtraReports.UI.XRCrossBandLine();
@@ -106,7 +105,7 @@
             this.calculatedField2 = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.calculatedField3 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.txtMainRemarks = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCrossBandLine1 = new DevExpress.XtraReports.UI.XRCrossBandLine();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // detailBand1
@@ -120,7 +119,7 @@
             this.CHODKGSTYPE1,
             this.CHODMAINREM1,
             this.CHODARTNO1});
-            this.detailBand1.HeightF = 17.99306F;
+            this.detailBand1.HeightF = 18F;
             this.detailBand1.Name = "detailBand1";
             this.detailBand1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.detailBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -191,7 +190,7 @@
             this.CHODITEMN1.Multiline = true;
             this.CHODITEMN1.Name = "CHODITEMN1";
             this.CHODITEMN1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.CHODITEMN1.SizeF = new System.Drawing.SizeF(101.7639F, 17.125F);
+            this.CHODITEMN1.SizeF = new System.Drawing.SizeF(95.7639F, 17.125F);
             this.CHODITEMN1.StylePriority.UseFont = false;
             this.CHODITEMN1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.CHODITEMN1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.CHODITEMN1_BeforePrint);
@@ -203,14 +202,14 @@
             this.CHODDESC1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CHODDESC1.BorderWidth = 1F;
             this.CHODDESC1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CHOArtDesc]+\', \'+[Table].[CHOManualDesc]")});
-            this.CHODDESC1.Font = new System.Drawing.Font("Calibri", 10F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CHOArtDesc]+\', \'+[Table].[CHOManualDesc]+\' (\' +[Table].[CHOColName]+\')\'")});
+            this.CHODDESC1.Font = new System.Drawing.Font("Calibri", 9F);
             this.CHODDESC1.ForeColor = System.Drawing.Color.Black;
-            this.CHODDESC1.LocationFloat = new DevExpress.Utils.PointFloat(177.7778F, 0F);
+            this.CHODDESC1.LocationFloat = new DevExpress.Utils.PointFloat(170.2778F, 0F);
             this.CHODDESC1.Multiline = true;
             this.CHODDESC1.Name = "CHODDESC1";
             this.CHODDESC1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.CHODDESC1.SizeF = new System.Drawing.SizeF(135.7639F, 17.125F);
+            this.CHODDESC1.SizeF = new System.Drawing.SizeF(144.9306F, 17.125F);
             this.CHODDESC1.StylePriority.UseFont = false;
             this.CHODDESC1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.CHODDESC1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.CHODDESC1_BeforePrint);
@@ -276,14 +275,6 @@
             this.CHODARTNO1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.CHODARTNO1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.CHODARTNO1_BeforePrint);
             // 
-            // reportHeaderBand1
-            // 
-            this.reportHeaderBand1.HeightF = 0F;
-            this.reportHeaderBand1.KeepTogether = true;
-            this.reportHeaderBand1.Name = "reportHeaderBand1";
-            this.reportHeaderBand1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.reportHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // pageHeaderBand1
             // 
             this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -312,7 +303,7 @@
             this.Text25,
             this.Text28,
             this.Text17});
-            this.pageHeaderBand1.HeightF = 188.5417F;
+            this.pageHeaderBand1.HeightF = 189F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -613,7 +604,7 @@
             this.Text15.LocationFloat = new DevExpress.Utils.PointFloat(68.80556F, 163.4444F);
             this.Text15.Name = "Text15";
             this.Text15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.Text15.SizeF = new System.Drawing.SizeF(101.7639F, 19.51389F);
+            this.Text15.SizeF = new System.Drawing.SizeF(95.7639F, 19.51389F);
             this.Text15.Text = "Product Name";
             this.Text15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -757,6 +748,17 @@
             this.reportFooterBand1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.reportFooterBand1.PrintAtBottom = true;
             this.reportFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // txtMainRemarks
+            // 
+            this.txtMainRemarks.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
+            this.txtMainRemarks.LocationFloat = new DevExpress.Utils.PointFloat(100.1667F, 2.291667F);
+            this.txtMainRemarks.Multiline = true;
+            this.txtMainRemarks.Name = "txtMainRemarks";
+            this.txtMainRemarks.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.txtMainRemarks.SizeF = new System.Drawing.SizeF(309.1667F, 39.66665F);
+            this.txtMainRemarks.StylePriority.UseFont = false;
+            this.txtMainRemarks.Text = "txtMainRemarks";
             // 
             // lblNetWeight
             // 
@@ -1027,7 +1029,7 @@
             this.Box2.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Box2.BorderWidth = 1F;
             this.Box2.EndBand = this.pageHeaderBand1;
-            this.Box2.EndPointFloat = new DevExpress.Utils.PointFloat(398.3136F, 54.05553F);
+            this.Box2.EndPointFloat = new DevExpress.Utils.PointFloat(398.3136F, 54.51383F);
             this.Box2.Name = "Box2";
             this.Box2.StartBand = this.pageHeaderBand1;
             this.Box2.StartPointFloat = new DevExpress.Utils.PointFloat(398.3136F, 28.03372F);
@@ -1038,7 +1040,7 @@
             this.Box3.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Box3.BorderWidth = 1F;
             this.Box3.EndBand = this.pageHeaderBand1;
-            this.Box3.EndPointFloat = new DevExpress.Utils.PointFloat(6.894814F, 54.70833F);
+            this.Box3.EndPointFloat = new DevExpress.Utils.PointFloat(6.894814F, 55.16663F);
             this.Box3.Name = "Box3";
             this.Box3.StartBand = this.pageHeaderBand1;
             this.Box3.StartPointFloat = new DevExpress.Utils.PointFloat(6.894814F, 28.125F);
@@ -1049,7 +1051,7 @@
             this.Box8.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Box8.BorderWidth = 1F;
             this.Box8.EndBand = this.pageHeaderBand1;
-            this.Box8.EndPointFloat = new DevExpress.Utils.PointFloat(7.291667F, 160.9584F);
+            this.Box8.EndPointFloat = new DevExpress.Utils.PointFloat(7.291667F, 161.4167F);
             this.Box8.Name = "Box8";
             this.Box8.StartBand = this.pageHeaderBand1;
             this.Box8.StartPointFloat = new DevExpress.Utils.PointFloat(7.291667F, 53.125F);
@@ -1060,7 +1062,7 @@
             this.Box9.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Box9.BorderWidth = 1F;
             this.Box9.EndBand = this.pageHeaderBand1;
-            this.Box9.EndPointFloat = new DevExpress.Utils.PointFloat(398.2222F, 160.9584F);
+            this.Box9.EndPointFloat = new DevExpress.Utils.PointFloat(398.2222F, 161.4167F);
             this.Box9.Name = "Box9";
             this.Box9.StartBand = this.pageHeaderBand1;
             this.Box9.StartPointFloat = new DevExpress.Utils.PointFloat(398.2222F, 53.12499F);
@@ -1071,7 +1073,7 @@
             this.Box12.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Box12.BorderWidth = 1F;
             this.Box12.EndBand = this.pageHeaderBand1;
-            this.Box12.EndPointFloat = new DevExpress.Utils.PointFloat(6.902794F, 187.5278F);
+            this.Box12.EndPointFloat = new DevExpress.Utils.PointFloat(6.902794F, 187.9861F);
             this.Box12.Name = "Box12";
             this.Box12.StartBand = this.pageHeaderBand1;
             this.Box12.StartPointFloat = new DevExpress.Utils.PointFloat(6.902794F, 159.9286F);
@@ -1081,40 +1083,29 @@
             // 
             this.Line1.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Line1.EndBand = this.reportFooterBand1;
-            this.Line1.EndPointFloat = new DevExpress.Utils.PointFloat(66.68056F, 2.000023F);
+            this.Line1.EndPointFloat = new DevExpress.Utils.PointFloat(66.68056F, 2.000046F);
             this.Line1.ForeColor = System.Drawing.Color.Black;
             this.Line1.Name = "Line1";
             this.Line1.StartBand = this.pageHeaderBand1;
             this.Line1.StartPointFloat = new DevExpress.Utils.PointFloat(66.68056F, 159.9207F);
             this.Line1.WidthF = 1.388882F;
             // 
-            // Line2
-            // 
-            this.Line2.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
-            this.Line2.EndBand = this.reportFooterBand1;
-            this.Line2.EndPointFloat = new DevExpress.Utils.PointFloat(173.9583F, 2.000023F);
-            this.Line2.ForeColor = System.Drawing.Color.Black;
-            this.Line2.Name = "Line2";
-            this.Line2.StartBand = this.pageHeaderBand1;
-            this.Line2.StartPointFloat = new DevExpress.Utils.PointFloat(173.9583F, 159.7798F);
-            this.Line2.WidthF = 1F;
-            // 
             // Line3
             // 
             this.Line3.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Line3.EndBand = this.reportFooterBand1;
-            this.Line3.EndPointFloat = new DevExpress.Utils.PointFloat(315.625F, 2.000023F);
+            this.Line3.EndPointFloat = new DevExpress.Utils.PointFloat(318.125F, 2.000046F);
             this.Line3.ForeColor = System.Drawing.Color.Black;
             this.Line3.Name = "Line3";
             this.Line3.StartBand = this.pageHeaderBand1;
-            this.Line3.StartPointFloat = new DevExpress.Utils.PointFloat(315.625F, 161.0119F);
+            this.Line3.StartPointFloat = new DevExpress.Utils.PointFloat(318.125F, 161.0119F);
             this.Line3.WidthF = 1F;
             // 
             // Line4
             // 
             this.Line4.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Line4.EndBand = this.reportFooterBand1;
-            this.Line4.EndPointFloat = new DevExpress.Utils.PointFloat(517.0139F, 51.12512F);
+            this.Line4.EndPointFloat = new DevExpress.Utils.PointFloat(517.0139F, 51.12514F);
             this.Line4.ForeColor = System.Drawing.Color.Black;
             this.Line4.Name = "Line4";
             this.Line4.StartBand = this.pageHeaderBand1;
@@ -1125,7 +1116,7 @@
             // 
             this.Line5.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Line5.EndBand = this.reportFooterBand1;
-            this.Line5.EndPointFloat = new DevExpress.Utils.PointFloat(591.6667F, 51.12512F);
+            this.Line5.EndPointFloat = new DevExpress.Utils.PointFloat(591.6667F, 51.12514F);
             this.Line5.ForeColor = System.Drawing.Color.Black;
             this.Line5.Name = "Line5";
             this.Line5.StartBand = this.pageHeaderBand1;
@@ -1136,7 +1127,7 @@
             // 
             this.Line6.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Line6.EndBand = this.reportFooterBand1;
-            this.Line6.EndPointFloat = new DevExpress.Utils.PointFloat(641.6667F, 2.000023F);
+            this.Line6.EndPointFloat = new DevExpress.Utils.PointFloat(641.6667F, 2.000046F);
             this.Line6.ForeColor = System.Drawing.Color.Black;
             this.Line6.Name = "Line6";
             this.Line6.StartBand = this.pageHeaderBand1;
@@ -1147,7 +1138,7 @@
             // 
             this.Line10.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Line10.EndBand = this.reportFooterBand1;
-            this.Line10.EndPointFloat = new DevExpress.Utils.PointFloat(415.625F, 23.27788F);
+            this.Line10.EndPointFloat = new DevExpress.Utils.PointFloat(415.625F, 23.2779F);
             this.Line10.ForeColor = System.Drawing.Color.Black;
             this.Line10.Name = "Line10";
             this.Line10.StartBand = this.pageHeaderBand1;
@@ -1159,7 +1150,7 @@
             this.Box4.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.Box4.BorderWidth = 1F;
             this.Box4.EndBand = this.reportFooterBand1;
-            this.Box4.EndPointFloat = new DevExpress.Utils.PointFloat(6.597201F, 53.27787F);
+            this.Box4.EndPointFloat = new DevExpress.Utils.PointFloat(6.597201F, 53.27789F);
             this.Box4.Name = "Box4";
             this.Box4.StartBand = this.reportFooterBand1;
             this.Box4.StartPointFloat = new DevExpress.Utils.PointFloat(6.597201F, 0.3472169F);
@@ -1180,14 +1171,14 @@
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 13F;
+            this.topMarginBand1.HeightF = 28.83334F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
             this.bottomMarginBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel13});
-            this.bottomMarginBand1.HeightF = 18F;
+            this.bottomMarginBand1.HeightF = 24.45831F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // xrLabel13
@@ -1224,7 +1215,7 @@
             // 
             this.xrCrossBandBox1.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
             this.xrCrossBandBox1.EndBand = this.reportFooterBand1;
-            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(5.583327F, 53.83348F);
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(5.583327F, 53.8335F);
             this.xrCrossBandBox1.Name = "xrCrossBandBox1";
             this.xrCrossBandBox1.StartBand = this.pageHeaderBand1;
             this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(5.583327F, 2.333323F);
@@ -1235,22 +1226,21 @@
             this.calculatedField3.DataMember = "Table";
             this.calculatedField3.Name = "calculatedField3";
             // 
-            // txtMainRemarks
+            // xrCrossBandLine1
             // 
-            this.txtMainRemarks.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold);
-            this.txtMainRemarks.LocationFloat = new DevExpress.Utils.PointFloat(100.1667F, 2.291667F);
-            this.txtMainRemarks.Multiline = true;
-            this.txtMainRemarks.Name = "txtMainRemarks";
-            this.txtMainRemarks.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.txtMainRemarks.SizeF = new System.Drawing.SizeF(309.1667F, 39.66665F);
-            this.txtMainRemarks.StylePriority.UseFont = false;
-            this.txtMainRemarks.Text = "txtMainRemarks";
+            this.xrCrossBandLine1.AnchorVertical = ((DevExpress.XtraReports.UI.VerticalAnchorStyles)((DevExpress.XtraReports.UI.VerticalAnchorStyles.Top | DevExpress.XtraReports.UI.VerticalAnchorStyles.Bottom)));
+            this.xrCrossBandLine1.EndBand = this.reportFooterBand1;
+            this.xrCrossBandLine1.EndPointFloat = new DevExpress.Utils.PointFloat(167.2916F, 2F);
+            this.xrCrossBandLine1.ForeColor = System.Drawing.Color.Black;
+            this.xrCrossBandLine1.Name = "xrCrossBandLine1";
+            this.xrCrossBandLine1.StartBand = this.pageHeaderBand1;
+            this.xrCrossBandLine1.StartPointFloat = new DevExpress.Utils.PointFloat(167.2916F, 158.1131F);
+            this.xrCrossBandLine1.WidthF = 1F;
             // 
             // Challanoutward
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.detailBand1,
-            this.reportHeaderBand1,
             this.pageHeaderBand1,
             this.reportFooterBand1,
             this.pageFooterBand1,
@@ -1263,6 +1253,7 @@
             this.calculatedField2,
             this.calculatedField3});
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
+            this.xrCrossBandLine1,
             this.xrCrossBandBox1,
             this.Box2,
             this.Box3,
@@ -1270,7 +1261,6 @@
             this.Box9,
             this.Box12,
             this.Line1,
-            this.Line2,
             this.Line3,
             this.Line4,
             this.Line5,
@@ -1279,14 +1269,14 @@
             this.Box4});
             this.DataSourceSchema = resources.GetString("$this.DataSourceSchema");
             this.DefaultPrinterSettingsUsing.UseLandscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(19, 19, 13, 18);
+            this.Margins = new System.Drawing.Printing.Margins(19, 19, 29, 24);
             this.PageHeight = 585;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PrinterName = "Brother HL-2130 series";
             this.ShowPrintMarginsWarning = false;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "21.1";
+            this.Version = "21.2";
             this.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.Challanoutward_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1300,7 +1290,6 @@
         private UI.XRLabel CHODKGSTYPE1;
         private UI.XRLabel CHODMAINREM1;
         private UI.XRLabel CHODARTNO1;
-        private UI.ReportHeaderBand reportHeaderBand1;
         private UI.PageHeaderBand pageHeaderBand1;
         private UI.XRLabel Text7;
         private UI.XRLabel Text8;
@@ -1338,7 +1327,6 @@
         private UI.XRCrossBandBox Box9;
         private UI.XRCrossBandBox Box12;
         private UI.XRCrossBandLine Line1;
-        private UI.XRCrossBandLine Line2;
         private UI.XRCrossBandLine Line3;
         private UI.XRCrossBandLine Line4;
         private UI.XRCrossBandLine Line5;
@@ -1371,5 +1359,6 @@
         private UI.XRLabel xrLabel9;
         private UI.XRLabel xrLabel13;
         private UI.XRLabel txtMainRemarks;
+        private UI.XRCrossBandLine xrCrossBandLine1;
     }
 }
