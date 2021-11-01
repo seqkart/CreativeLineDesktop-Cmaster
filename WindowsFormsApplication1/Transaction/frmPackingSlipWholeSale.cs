@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
@@ -1035,11 +1034,24 @@ namespace WindowsFormsApplication1.Transaction
                                     DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PSWSLDET Where SIDBARCODE='" + txtBarCode.Text + "'");
                                     if (dsCheck.Tables[0].Rows.Count > 0)
                                     {
-                                        ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
-                                        txtBarCode.Focus();
-                                        txtBarCode.SelectAll();
-                                        e.Handled = true;
-                                        return;
+                                        DataSet dsSaleCumReturn = ProjectFunctions.GetDataSet("Select (select count(*) from saleinvdet where SIDBARCODE='" + txtBarCode.Text + "')- (select count(*) from CRDET where SIDBARCODE='" + txtBarCode.Text + "') as Count");
+                                        if (dsSaleCumReturn.Tables[0].Rows.Count > 0)
+                                        {
+                                            if (Convert.ToDecimal(dsSaleCumReturn.Tables[0].Rows[0][0]) > 0)
+                                            {
+                                                ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                                txtBarCode.Focus();
+                                                txtBarCode.SelectAll();
+                                                e.Handled = true;
+                                                return;
+                                            }
+                                        }
+
+                                        //ProjectFunctions.SpeakError("BarCode Already Used In Some Other PS");
+                                        //txtBarCode.Focus();
+                                        //txtBarCode.SelectAll();
+                                        //e.Handled = true;
+                                        //return;
                                     }
                                 }
                             }

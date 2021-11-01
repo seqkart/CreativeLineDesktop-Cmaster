@@ -73,6 +73,9 @@ namespace WindowsFormsApplication1.Master
                     {
                         if (drSize["Select"].ToString().ToUpper() == "TRUE")
                         {
+                            //DataSet dsCheck=ProjectFunctions.GetDataSet("Select  * from SizeMapping where ")
+
+
                             ProjectFunctions.GetDataSet("Insert into SizeMapping (GrpCode,GrpSubCode,SizeId,SizeDesc)values('" + drGroup["GrpCode"].ToString() + "','" + drGroup["GrpSubCode"].ToString() + "','" + drSize["SZSYSID"].ToString() + "','" + drSize["SizeDesc"].ToString() + "')");
                         }
                     }

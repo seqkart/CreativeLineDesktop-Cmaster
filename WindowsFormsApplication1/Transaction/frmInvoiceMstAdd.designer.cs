@@ -127,14 +127,9 @@
             this.txtserial = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.chall = new DevExpress.XtraEditors.CheckEdit();
-            this.txtItemDiscPer = new DevExpress.XtraEditors.TextEdit();
             this.labelControl53 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl54 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl55 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl56 = new DevExpress.XtraEditors.LabelControl();
-            this.txtItemMRP = new DevExpress.XtraEditors.TextEdit();
-            this.txtItemFlatRate = new DevExpress.XtraEditors.TextEdit();
-            this.txtItemDiscAMount = new DevExpress.XtraEditors.TextEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.GridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -289,6 +284,11 @@
             this.gridColumn32 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView7 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView8 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtItemDiscPer = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl55 = new DevExpress.XtraEditors.LabelControl();
+            this.txtItemMRP = new DevExpress.XtraEditors.TextEdit();
+            this.txtItemFlatRate = new DevExpress.XtraEditors.TextEdit();
+            this.txtItemDiscAMount = new DevExpress.XtraEditors.TextEdit();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -359,10 +359,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtserial.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
@@ -436,6 +432,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -545,7 +545,7 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 782);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1404, 776);
             this.xtraTabPage1.Text = "Main Invoice Details";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.XtraTabPage1_Paint);
             // 
@@ -853,7 +853,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(147, 21);
+            this.chInclusive.Size = new System.Drawing.Size(147, 24);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -863,7 +863,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(147, 21);
+            this.chExclusive.Size = new System.Drawing.Size(147, 24);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -887,7 +887,7 @@
             this.chLot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chLot.Name = "chLot";
             this.chLot.Properties.Caption = "LOT";
-            this.chLot.Size = new System.Drawing.Size(147, 21);
+            this.chLot.Size = new System.Drawing.Size(147, 24);
             this.chLot.TabIndex = 534;
             this.chLot.CheckedChanged += new System.EventHandler(this.ChLot_CheckedChanged);
             // 
@@ -897,7 +897,7 @@
             this.CHSOR.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CHSOR.Name = "CHSOR";
             this.CHSOR.Properties.Caption = "SOR";
-            this.CHSOR.Size = new System.Drawing.Size(147, 21);
+            this.CHSOR.Size = new System.Drawing.Size(147, 24);
             this.CHSOR.TabIndex = 533;
             this.CHSOR.CheckedChanged += new System.EventHandler(this.CHSOR_CheckedChanged);
             // 
@@ -907,7 +907,7 @@
             this.chRegular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chRegular.Name = "chRegular";
             this.chRegular.Properties.Caption = "Regular";
-            this.chRegular.Size = new System.Drawing.Size(147, 21);
+            this.chRegular.Size = new System.Drawing.Size(147, 24);
             this.chRegular.TabIndex = 533;
             this.chRegular.CheckedChanged += new System.EventHandler(this.ChRegular_CheckedChanged);
             // 
@@ -930,7 +930,7 @@
             this.chDirect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chDirect.Name = "chDirect";
             this.chDirect.Properties.Caption = "Direct";
-            this.chDirect.Size = new System.Drawing.Size(147, 21);
+            this.chDirect.Size = new System.Drawing.Size(147, 24);
             this.chDirect.TabIndex = 533;
             this.chDirect.CheckedChanged += new System.EventHandler(this.ChDirect_CheckedChanged);
             // 
@@ -940,7 +940,7 @@
             this.chPackingSlip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chPackingSlip.Name = "chPackingSlip";
             this.chPackingSlip.Properties.Caption = "Packing Slip";
-            this.chPackingSlip.Size = new System.Drawing.Size(147, 21);
+            this.chPackingSlip.Size = new System.Drawing.Size(147, 24);
             this.chPackingSlip.TabIndex = 533;
             this.chPackingSlip.CheckedChanged += new System.EventHandler(this.ChPackingSlip_CheckedChanged);
             // 
@@ -1460,7 +1460,7 @@
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1404, 782);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1404, 776);
             this.xtraTabPage2.Text = "Invoice Data";
             // 
             // chall
@@ -1469,42 +1469,8 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 21);
+            this.chall.Size = new System.Drawing.Size(87, 24);
             this.chall.TabIndex = 824;
-            // 
-            // txtItemDiscPer
-            // 
-            this.txtItemDiscPer.EditValue = "0";
-            this.txtItemDiscPer.Location = new System.Drawing.Point(554, 183);
-            this.txtItemDiscPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtItemDiscPer.Name = "txtItemDiscPer";
-            this.txtItemDiscPer.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemDiscPer.Properties.Appearance.Options.UseFont = true;
-            this.txtItemDiscPer.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.txtItemDiscPer.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemDiscPer.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemDiscPer.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscPer.Properties.EditFormat.FormatString = "n2";
-            this.txtItemDiscPer.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemDiscPer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemDiscPer.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemDiscPer.Size = new System.Drawing.Size(57, 28);
-            this.txtItemDiscPer.TabIndex = 817;
-            this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.TxtItemDiscPer_EditValueChanged);
-            this.txtItemDiscPer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemDiscPer_KeyDown);
             // 
             // labelControl53
             // 
@@ -1528,17 +1494,6 @@
             this.labelControl54.TabIndex = 823;
             this.labelControl54.Text = "Net Rate   F11";
             // 
-            // labelControl55
-            // 
-            this.labelControl55.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelControl55.Appearance.Options.UseFont = true;
-            this.labelControl55.Location = new System.Drawing.Point(611, 188);
-            this.labelControl55.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.labelControl55.Name = "labelControl55";
-            this.labelControl55.Size = new System.Drawing.Size(13, 21);
-            this.labelControl55.TabIndex = 820;
-            this.labelControl55.Text = "%";
-            // 
             // labelControl56
             // 
             this.labelControl56.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1549,92 +1504,6 @@
             this.labelControl56.Size = new System.Drawing.Size(162, 20);
             this.labelControl56.TabIndex = 821;
             this.labelControl56.Text = "Item Discount             F9";
-            // 
-            // txtItemMRP
-            // 
-            this.txtItemMRP.EditValue = "0";
-            this.txtItemMRP.Location = new System.Drawing.Point(451, 183);
-            this.txtItemMRP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtItemMRP.Name = "txtItemMRP";
-            this.txtItemMRP.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemMRP.Properties.Appearance.Options.UseFont = true;
-            this.txtItemMRP.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemMRP.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemMRP.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemMRP.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemMRP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemMRP.Properties.EditFormat.FormatString = "n2";
-            this.txtItemMRP.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemMRP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemMRP.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemMRP.Size = new System.Drawing.Size(84, 28);
-            this.txtItemMRP.TabIndex = 818;
-            // 
-            // txtItemFlatRate
-            // 
-            this.txtItemFlatRate.EditValue = "0";
-            this.txtItemFlatRate.Location = new System.Drawing.Point(719, 183);
-            this.txtItemFlatRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtItemFlatRate.Name = "txtItemFlatRate";
-            this.txtItemFlatRate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemFlatRate.Properties.Appearance.Options.UseFont = true;
-            this.txtItemFlatRate.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemFlatRate.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemFlatRate.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemFlatRate.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemFlatRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemFlatRate.Properties.EditFormat.FormatString = "n2";
-            this.txtItemFlatRate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemFlatRate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemFlatRate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemFlatRate.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemFlatRate.Size = new System.Drawing.Size(84, 28);
-            this.txtItemFlatRate.TabIndex = 819;
-            this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.TxtItemFlatRate_EditValueChanged);
-            this.txtItemFlatRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemFlatRate_KeyDown);
-            // 
-            // txtItemDiscAMount
-            // 
-            this.txtItemDiscAMount.EditValue = "0";
-            this.txtItemDiscAMount.Location = new System.Drawing.Point(626, 183);
-            this.txtItemDiscAMount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtItemDiscAMount.Name = "txtItemDiscAMount";
-            this.txtItemDiscAMount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemDiscAMount.Properties.Appearance.Options.UseFont = true;
-            this.txtItemDiscAMount.Properties.Appearance.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.AppearanceFocused.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
-            this.txtItemDiscAMount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.txtItemDiscAMount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
-            this.txtItemDiscAMount.Properties.DisplayFormat.FormatString = "n2";
-            this.txtItemDiscAMount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscAMount.Properties.EditFormat.FormatString = "n2";
-            this.txtItemDiscAMount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
-            this.txtItemDiscAMount.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtItemDiscAMount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
-            this.txtItemDiscAMount.Properties.MaskSettings.Set("mask", "n2");
-            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtItemDiscAMount.Size = new System.Drawing.Size(80, 28);
-            this.txtItemDiscAMount.TabIndex = 816;
             // 
             // panelControl1
             // 
@@ -2345,7 +2214,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage5.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // cmbTradeDisc
@@ -2762,7 +2631,7 @@
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage6.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -2773,7 +2642,7 @@
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(603, 210);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(603, 204);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2904,7 +2773,7 @@
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage9.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -2915,7 +2784,7 @@
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(603, 210);
+            this.HSNGrid.Size = new System.Drawing.Size(603, 204);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3049,7 +2918,7 @@
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(603, 210);
+            this.xtraTabPage7.Size = new System.Drawing.Size(603, 204);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -3137,7 +3006,7 @@
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(469, 210);
+            this.xtraTabPage3.Size = new System.Drawing.Size(469, 204);
             this.xtraTabPage3.Text = "Dispatch Details";
             // 
             // simpleButton6
@@ -3164,7 +3033,7 @@
             this.chToPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chToPay.Name = "chToPay";
             this.chToPay.Properties.Caption = "To Pay";
-            this.chToPay.Size = new System.Drawing.Size(71, 21);
+            this.chToPay.Size = new System.Drawing.Size(71, 24);
             this.chToPay.TabIndex = 554;
             this.chToPay.CheckedChanged += new System.EventHandler(this.ChToPay_CheckedChanged);
             // 
@@ -3174,7 +3043,7 @@
             this.chPaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chPaid.Name = "chPaid";
             this.chPaid.Properties.Caption = "Paid";
-            this.chPaid.Size = new System.Drawing.Size(55, 21);
+            this.chPaid.Size = new System.Drawing.Size(55, 24);
             this.chPaid.TabIndex = 555;
             this.chPaid.CheckedChanged += new System.EventHandler(this.ChPaid_CheckedChanged);
             // 
@@ -3404,7 +3273,7 @@
             this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(469, 210);
+            this.xtraTabPage4.Size = new System.Drawing.Size(469, 204);
             this.xtraTabPage4.Text = "Bank Details";
             // 
             // txtBankName
@@ -3455,7 +3324,7 @@
             this.xtraTabPage8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage8.ImageOptions.Image")));
             this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(469, 210);
+            this.xtraTabPage8.Size = new System.Drawing.Size(469, 204);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // btnAttachDocs
@@ -3664,6 +3533,137 @@
             this.gridView8.GridControl = this.PSGrid;
             this.gridView8.Name = "gridView8";
             // 
+            // txtItemDiscPer
+            // 
+            this.txtItemDiscPer.EditValue = "0";
+            this.txtItemDiscPer.Location = new System.Drawing.Point(554, 183);
+            this.txtItemDiscPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtItemDiscPer.Name = "txtItemDiscPer";
+            this.txtItemDiscPer.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemDiscPer.Properties.Appearance.Options.UseFont = true;
+            this.txtItemDiscPer.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceDisabled.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceFocused.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscPer.Properties.AppearanceReadOnly.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.txtItemDiscPer.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemDiscPer.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemDiscPer.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscPer.Properties.EditFormat.FormatString = "n2";
+            this.txtItemDiscPer.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscPer.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemDiscPer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemDiscPer.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemDiscPer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemDiscPer.Size = new System.Drawing.Size(57, 28);
+            this.txtItemDiscPer.TabIndex = 817;
+            this.txtItemDiscPer.EditValueChanged += new System.EventHandler(this.TxtItemDiscPer_EditValueChanged);
+            this.txtItemDiscPer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemDiscPer_KeyDown);
+            // 
+            // labelControl55
+            // 
+            this.labelControl55.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl55.Appearance.Options.UseFont = true;
+            this.labelControl55.Location = new System.Drawing.Point(611, 188);
+            this.labelControl55.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl55.Name = "labelControl55";
+            this.labelControl55.Size = new System.Drawing.Size(13, 21);
+            this.labelControl55.TabIndex = 820;
+            this.labelControl55.Text = "%";
+            // 
+            // txtItemMRP
+            // 
+            this.txtItemMRP.EditValue = "0";
+            this.txtItemMRP.Location = new System.Drawing.Point(451, 183);
+            this.txtItemMRP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtItemMRP.Name = "txtItemMRP";
+            this.txtItemMRP.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemMRP.Properties.Appearance.Options.UseFont = true;
+            this.txtItemMRP.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemMRP.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemMRP.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemMRP.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemMRP.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemMRP.Properties.EditFormat.FormatString = "n2";
+            this.txtItemMRP.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemMRP.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemMRP.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemMRP.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemMRP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemMRP.Size = new System.Drawing.Size(84, 28);
+            this.txtItemMRP.TabIndex = 818;
+            // 
+            // txtItemFlatRate
+            // 
+            this.txtItemFlatRate.EditValue = "0";
+            this.txtItemFlatRate.Location = new System.Drawing.Point(719, 183);
+            this.txtItemFlatRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtItemFlatRate.Name = "txtItemFlatRate";
+            this.txtItemFlatRate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemFlatRate.Properties.Appearance.Options.UseFont = true;
+            this.txtItemFlatRate.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemFlatRate.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemFlatRate.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemFlatRate.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemFlatRate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemFlatRate.Properties.EditFormat.FormatString = "n2";
+            this.txtItemFlatRate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemFlatRate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemFlatRate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemFlatRate.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemFlatRate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemFlatRate.Size = new System.Drawing.Size(84, 28);
+            this.txtItemFlatRate.TabIndex = 819;
+            this.txtItemFlatRate.EditValueChanged += new System.EventHandler(this.TxtItemFlatRate_EditValueChanged);
+            this.txtItemFlatRate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtItemFlatRate_KeyDown);
+            // 
+            // txtItemDiscAMount
+            // 
+            this.txtItemDiscAMount.EditValue = "0";
+            this.txtItemDiscAMount.Location = new System.Drawing.Point(626, 183);
+            this.txtItemDiscAMount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtItemDiscAMount.Name = "txtItemDiscAMount";
+            this.txtItemDiscAMount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemDiscAMount.Properties.Appearance.Options.UseFont = true;
+            this.txtItemDiscAMount.Properties.Appearance.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceDisabled.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceDisabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceFocused.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceFocused.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.AppearanceReadOnly.Options.UseTextOptions = true;
+            this.txtItemDiscAMount.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.txtItemDiscAMount.Properties.ContextImageOptions.Alignment = DevExpress.XtraEditors.ContextImageAlignment.Far;
+            this.txtItemDiscAMount.Properties.DisplayFormat.FormatString = "n2";
+            this.txtItemDiscAMount.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscAMount.Properties.EditFormat.FormatString = "n2";
+            this.txtItemDiscAMount.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.txtItemDiscAMount.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtItemDiscAMount.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.NumericMaskManager));
+            this.txtItemDiscAMount.Properties.MaskSettings.Set("mask", "n2");
+            this.txtItemDiscAMount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtItemDiscAMount.Size = new System.Drawing.Size(80, 28);
+            this.txtItemDiscAMount.TabIndex = 816;
+            // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -3674,7 +3674,7 @@
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(771, 191);
+            this.HelpGrid.Size = new System.Drawing.Size(771, 355);
             this.HelpGrid.TabIndex = 475;
             this.HelpGrid.TabStop = false;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3801,10 +3801,6 @@
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chall.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
@@ -3883,6 +3879,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.PSGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscPer.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemMRP.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemFlatRate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtItemDiscAMount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

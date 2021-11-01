@@ -84,7 +84,6 @@
             this.xrLine10 = new DevExpress.XtraReports.UI.XRLine();
             this.xrBarCode1 = new DevExpress.XtraReports.UI.XRBarCode();
             this.xrLabel61 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel80 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel79 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
@@ -128,6 +127,7 @@
             this.cashback = new DevExpress.XtraReports.UI.CalculatedField();
             this.calculatedField1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.carddetails = new DevExpress.XtraReports.UI.CalculatedField();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             Detail = new DevExpress.XtraReports.UI.DetailBand();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -840,7 +840,7 @@
             this.xrLine10.LineWidth = 4F;
             this.xrLine10.LocationFloat = new DevExpress.Utils.PointFloat(0.6944444F, 639.3195F);
             this.xrLine10.Name = "xrLine10";
-            this.xrLine10.SizeF = new System.Drawing.SizeF(281.4583F, 4F);
+            this.xrLine10.SizeF = new System.Drawing.SizeF(281.4583F, 4.166667F);
             this.xrLine10.StylePriority.UseBorderWidth = false;
             // 
             // xrBarCode1
@@ -871,13 +871,6 @@
             this.xrLabel61.Text = "AMT. :";
             this.xrLabel61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrLabel61.WordWrap = false;
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(4.097197F, 194.6842F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.TAXDETAILSUBREPORT();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(274.1111F, 19.99998F);
             // 
             // xrLabel80
             // 
@@ -1062,7 +1055,7 @@
             this.xrLine8.LineWidth = 4F;
             this.xrLine8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 551.5833F);
             this.xrLine8.Name = "xrLine8";
-            this.xrLine8.SizeF = new System.Drawing.SizeF(281.4583F, 4F);
+            this.xrLine8.SizeF = new System.Drawing.SizeF(281.4583F, 4.166667F);
             this.xrLine8.StylePriority.UseBorderWidth = false;
             // 
             // xrLabel43
@@ -1427,6 +1420,13 @@
             this.carddetails.Name = "carddetails";
             this.carddetails.GetValue += new DevExpress.XtraReports.UI.GetValueEventHandler(this.carddetails_GetValue);
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(4.097197F, 194.6842F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.TAXDETAILSUBREPORT();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(274.1111F, 19.99998F);
+            // 
             // CASHMEMO
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1447,18 +1447,22 @@
             this.carddetails});
             this.DataMember = "Table1";
             this.DataSourceSchema = resources.GetString("$this.DataSourceSchema");
-            this.DrawGrid = false;
+            this.DefaultPrinterSettingsUsing.UsePaperKind = true;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(0, 0, 0, 11);
-            this.PageHeight = 1022;
+            this.PageHeight = 1169;
             this.PageWidth = 284;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            this.PaperName = "80 x 297 mm";
             this.PrinterName = "THERMAL Receipt Printer";
+            this.ReportPrintOptions.DetailCountOnEmptyDataSource = 0;
+            this.ReportPrintOptions.PrintOnEmptyDataSource = false;
             this.RollPaper = true;
             this.ShowPreviewMarginLines = false;
             this.ShowPrintMarginsWarning = false;
+            this.ShowPrintStatusDialog = false;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "20.2";
+            this.Version = "21.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

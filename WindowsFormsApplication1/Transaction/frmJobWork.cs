@@ -4,14 +4,46 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class FrmJobWork : DevExpress.XtraEditors.XtraForm
     {
+       
         public FrmJobWork()
         {
             InitializeComponent();
+            
         }
 
-        private void LoadMeasurementDataAsPerGroup()
+
+        private void LoadProductionOrderColorAndSize()
         {
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadMeasurementDataAsPerGroup '0001'");
+            DataTable dsProductionOrder = new DataTable();
+            dsProductionOrder.Columns.Add("COLSYSID", typeof(Int64));
+            dsProductionOrder.Columns.Add("COLNAME", typeof(string));
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderColorAndSize");
+            if(ds.Tables[0].Rows.Count>0)
+            {
+                dsProductionOrder = ds.Tables[1];
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    dsProductionOrder.Columns.Add(dr["SZDESC"].ToString().Trim());
+                }
+
+
+
+                if (dsProductionOrder.Rows.Count > 0)
+                {
+                    OrderGrid.DataSource = dsProductionOrder;
+                    OrderGridView.BestFitColumns();
+                }
+                else
+                {
+                    OrderGrid.DataSource = null;
+                    OrderGridView.BestFitColumns();
+                }
+            }
+        }
+
+        private void LoadMeasurementDataAsPerArticleSize()
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadMeasurementDataAsPerArt '" + txtArtID.Text + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 MeasurementGird.DataSource = ds.Tables[0];
@@ -37,7 +69,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void FrmJobWork_Load(object sender, EventArgs e)
         {
-            LoadMeasurementDataAsPerGroup();
+            //LoadMeasurementDataAsPerGroup();
         }
 
         private void TxtArtNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
@@ -120,6 +152,11 @@ namespace WindowsFormsApplication1.Transaction
         private void TxtBrandCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("select BRSYSID,BRNAME from BRANDS", " Where BRSYSID", txtBrandCode, txtBrandName, txtBrandCode, HelpGrid, HelpGridView, e);
+        }
+
+        private void txtOrderDate_EditValueChanged(object sender, EventArgs e)
+        {
+            LoadProductionOrderColorAndSize();
         }
     }
 }

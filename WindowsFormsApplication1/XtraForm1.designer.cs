@@ -149,7 +149,7 @@
             this.ribbonPage2});
             this._ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2019;
             this._ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this._ribbonControl.Size = new System.Drawing.Size(1174, 166);
+            this._ribbonControl.Size = new System.Drawing.Size(1174, 162);
             this._ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
             // skinDropDownButtonItem1
@@ -324,7 +324,7 @@
             this.accordionControl1.ResizeMode = DevExpress.XtraBars.Navigation.AccordionControlResizeMode.OuterResizeZone;
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Auto;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(224, 825);
+            this.accordionControl1.Size = new System.Drawing.Size(224, 829);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -348,7 +348,7 @@
             this.hyperlinkLabelControl2.Location = new System.Drawing.Point(166, 212);
             this.hyperlinkLabelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hyperlinkLabelControl2.Name = "hyperlinkLabelControl2";
-            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(71, 17);
+            this.hyperlinkLabelControl2.Size = new System.Drawing.Size(76, 16);
             this.hyperlinkLabelControl2.TabIndex = 3;
             this.hyperlinkLabelControl2.Text = "Show Radial";
             this.hyperlinkLabelControl2.Click += new System.EventHandler(this.HyperlinkLabelControl2_Click);
@@ -358,7 +358,7 @@
             this.hyperlinkLabelControl1.Location = new System.Drawing.Point(166, 107);
             this.hyperlinkLabelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.hyperlinkLabelControl1.Name = "hyperlinkLabelControl1";
-            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(63, 17);
+            this.hyperlinkLabelControl1.Size = new System.Drawing.Size(68, 16);
             this.hyperlinkLabelControl1.TabIndex = 2;
             this.hyperlinkLabelControl1.Text = "Disconnect";
             this.hyperlinkLabelControl1.Click += new System.EventHandler(this.HyperlinkLabelControl1_Click);
@@ -379,7 +379,7 @@
             this.labelControl2.Location = new System.Drawing.Point(166, 61);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(0, 17);
+            this.labelControl2.Size = new System.Drawing.Size(0, 16);
             this.labelControl2.TabIndex = 1;
             // 
             // labelControl1
@@ -387,7 +387,7 @@
             this.labelControl1.Location = new System.Drawing.Point(166, 41);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(0, 17);
+            this.labelControl1.Size = new System.Drawing.Size(0, 16);
             this.labelControl1.TabIndex = 0;
             // 
             // pictureEdit1
@@ -440,7 +440,7 @@
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.PageImagePosition = DevExpress.XtraTab.TabPageImagePosition.Center;
-            this.xtraTabControl1.Size = new System.Drawing.Size(945, 825);
+            this.xtraTabControl1.Size = new System.Drawing.Size(945, 829);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
             this.xtraTabControl1.Transition.TransitionType = combTransition1;
@@ -455,7 +455,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 203);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 199);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -468,7 +468,7 @@
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.xtraTabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1174, 825);
+            this.splitContainer1.Size = new System.Drawing.Size(1174, 829);
             this.splitContainer1.SplitterDistance = 224;
             this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 2;
@@ -479,7 +479,7 @@
             this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.MenuManager = this._ribbonControl;
             this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(117, 24);
+            this.textEdit1.Size = new System.Drawing.Size(117, 22);
             this.textEdit1.TabIndex = 4;
             // 
             // popupMenu1

@@ -3148,9 +3148,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(926, 643);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl3);
             this.Controls.Add(this.groupControl4);

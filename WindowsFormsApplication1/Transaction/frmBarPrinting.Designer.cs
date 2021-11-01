@@ -486,6 +486,8 @@
             this.gridColumn27.FieldName = "SizeMappingTransID";
             this.gridColumn27.MinWidth = 25;
             this.gridColumn27.Name = "gridColumn27";
+            this.gridColumn27.Visible = true;
+            this.gridColumn27.VisibleIndex = 15;
             this.gridColumn27.Width = 94;
             // 
             // Menu_ToolStrip

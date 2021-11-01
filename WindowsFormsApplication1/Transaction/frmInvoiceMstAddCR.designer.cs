@@ -338,6 +338,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl2.CaptionImageOptions.SvgImage")));
             this.groupControl2.Controls.Add(this.txtGRDate);
             this.groupControl2.Controls.Add(this.labelControl6);
@@ -878,6 +879,9 @@
             // 
             // InfoGrid
             // 
+            this.InfoGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.InfoGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InfoGrid.Location = new System.Drawing.Point(17, 375);
             this.InfoGrid.MainView = this.InfoGridView;
@@ -1341,6 +1345,7 @@
             // 
             // xtraTabControl3
             // 
+            this.xtraTabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl3.Location = new System.Drawing.Point(458, 663);
             this.xtraTabControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl3.Name = "xtraTabControl3";
@@ -1384,7 +1389,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(657, 210);
+            this.xtraTabPage5.Size = new System.Drawing.Size(657, 204);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // btnCalculate
@@ -1814,7 +1819,7 @@
             this.xtraTabPage6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage6.ImageOptions.Image")));
             this.xtraTabPage6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage6.Name = "xtraTabPage6";
-            this.xtraTabPage6.Size = new System.Drawing.Size(657, 210);
+            this.xtraTabPage6.Size = new System.Drawing.Size(657, 204);
             this.xtraTabPage6.Text = "GST Tax Details";
             // 
             // TaxCodeGrid
@@ -1825,7 +1830,7 @@
             this.TaxCodeGrid.MainView = this.gridView3;
             this.TaxCodeGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TaxCodeGrid.Name = "TaxCodeGrid";
-            this.TaxCodeGrid.Size = new System.Drawing.Size(657, 210);
+            this.TaxCodeGrid.Size = new System.Drawing.Size(657, 204);
             this.TaxCodeGrid.TabIndex = 476;
             this.TaxCodeGrid.TabStop = false;
             this.TaxCodeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1956,7 +1961,7 @@
             this.xtraTabPage9.Controls.Add(this.HSNGrid);
             this.xtraTabPage9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage9.Name = "xtraTabPage9";
-            this.xtraTabPage9.Size = new System.Drawing.Size(657, 210);
+            this.xtraTabPage9.Size = new System.Drawing.Size(657, 204);
             this.xtraTabPage9.Text = "HSN WISE GST DETAILS";
             // 
             // HSNGrid
@@ -1967,7 +1972,7 @@
             this.HSNGrid.MainView = this.gridView6;
             this.HSNGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HSNGrid.Name = "HSNGrid";
-            this.HSNGrid.Size = new System.Drawing.Size(657, 210);
+            this.HSNGrid.Size = new System.Drawing.Size(657, 204);
             this.HSNGrid.TabIndex = 477;
             this.HSNGrid.TabStop = false;
             this.HSNGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2101,7 +2106,7 @@
             this.xtraTabPage7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage7.ImageOptions.Image")));
             this.xtraTabPage7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage7.Name = "xtraTabPage7";
-            this.xtraTabPage7.Size = new System.Drawing.Size(657, 210);
+            this.xtraTabPage7.Size = new System.Drawing.Size(657, 204);
             this.xtraTabPage7.Text = "Remarks";
             // 
             // labelControl51
@@ -2150,6 +2155,7 @@
             // 
             // xtraTabControl2
             // 
+            this.xtraTabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.xtraTabControl2.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabControl2.Location = new System.Drawing.Point(17, 663);
             this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -2166,7 +2172,7 @@
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(433, 210);
+            this.xtraTabPage8.Size = new System.Drawing.Size(433, 204);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // pictureEdit1
@@ -2177,7 +2183,7 @@
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(433, 210);
+            this.pictureEdit1.Size = new System.Drawing.Size(433, 204);
             this.pictureEdit1.TabIndex = 2;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
@@ -2186,7 +2192,7 @@
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(433, 210);
+            this.xtraTabPage1.Size = new System.Drawing.Size(433, 204);
             this.xtraTabPage1.Text = "View Docs";
             // 
             // DocsGrid
@@ -2197,7 +2203,7 @@
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(433, 210);
+            this.DocsGrid.Size = new System.Drawing.Size(433, 204);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2265,7 +2271,7 @@
             this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
             this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(87, 21);
+            this.chMultiParty.Size = new System.Drawing.Size(87, 24);
             this.chMultiParty.TabIndex = 558;
             // 
             // FrmInvoiceMstAddCR
@@ -2274,7 +2280,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1129, 910);
+            this.ClientSize = new System.Drawing.Size(1129, 911);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.chMultiParty);

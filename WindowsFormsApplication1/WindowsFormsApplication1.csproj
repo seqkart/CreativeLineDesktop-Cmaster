@@ -127,241 +127,241 @@
     <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Dapper.2.0.90\lib\net461\Dapper.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.BonusSkins.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.BonusSkins.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.BonusSkins.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.BonusSkins.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Charts.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Charts.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Charts.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.CodeParser.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.CodeParser.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dashboard.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Dashboard.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Dashboard.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Dashboard.v21.1.Win, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dashboard.v21.2.Win, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Dashboard.v21.1.Win.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Dashboard.v21.2.Win.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Data.Desktop.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Data.Desktop.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Data.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Data.21.1.6\lib\net452\DevExpress.Data.v21.1.dll</HintPath>
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Data.21.2.3\lib\net452\DevExpress.Data.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.DataAccess.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.DataAccess.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.DataAccess.v21.1.UI, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.DataAccess.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.DataAccess.v21.1.UI.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.DataAccess.v21.2.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Diagram.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Diagram.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Diagram.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Diagram.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Dialogs.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Docs.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Dialogs.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Docs.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Docs.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Docs.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Win.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.Win.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.Win.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.Win.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.ExpressApp.Xpo.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.ExpressApp.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.Xpo.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.ExpressApp.Xpo.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Images.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Images.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Images.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Map.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Map.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Map.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Map.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Office.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Office.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Office.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Pdf.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Pdf.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Pdf.v21.1.Drawing, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Pdf.v21.1.Drawing.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Pdf.v21.2.Drawing.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Persistent.Base.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Persistent.Base.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Persistent.Base.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Persistent.Base.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.PivotGrid.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.PivotGrid.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Printing.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Printing.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Printing.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.RichEdit.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.RichEdit.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.RichEdit.v21.1.Export, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.RichEdit.v21.1.Export.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.RichEdit.v21.2.Export.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Snap.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Snap.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Snap.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Snap.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Sparkline.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Sparkline.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Spreadsheet.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Spreadsheet.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Spreadsheet.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Spreadsheet.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.TreeMap.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.TreeMap.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.TreeMap.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.TreeMap.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Utils.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Utils.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Utils.v21.1.UI, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Utils.v21.1.UI.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.Utils.v21.2.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
-      <HintPath>..\packages\DevExpress.Xpo.21.1.6\lib\net452\DevExpress.Xpo.v21.1.dll</HintPath>
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <HintPath>..\packages\DevExpress.Xpo.21.2.3\lib\net452\DevExpress.Xpo.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraBars.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraBars.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.Extensions, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.Extensions.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.2.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.UI, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2.UI, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.UI.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.2.UI.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v21.1.Wizard, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraCharts.v21.2.Wizard, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.1.Wizard.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraCharts.v21.2.Wizard.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraDiagram.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraDiagram.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraDiagram.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraDiagram.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraDialogs.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraDialogs.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraEditors.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraEditors.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.1.Presets, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.2.Presets, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.1.Presets.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.2.Presets.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGauges.v21.1.Win, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGauges.v21.2.Win, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.1.Win.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGauges.v21.2.Win.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraGrid.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGrid.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraGrid.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraLayout.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraLayout.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraLayout.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraMap.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraMap.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraMap.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraMap.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraNavBar.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraNavBar.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraNavBar.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraNavBar.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPdfViewer.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPdfViewer.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPdfViewer.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPdfViewer.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPivotGrid.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPivotGrid.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPrinting.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraPrinting.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraReports.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraReports.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v21.1.Extensions, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraReports.v21.1.Extensions.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraReports.v21.2.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraRichEdit.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraRichEdit.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraRichEdit.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Core, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.Core.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.2.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Reporting, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Reporting, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.Reporting.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.2.Reporting.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraScheduler.v21.1.Reporting.Extensions, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Reporting.Extensions, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.1.Reporting.Extensions.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraScheduler.v21.2.Reporting.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraSpreadsheet.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraSpreadsheet.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraSpreadsheet.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraSpreadsheet.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeList.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraTreeList.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraTreeList.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraTreeMap.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraTreeMap.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraTreeMap.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraTreeMap.v21.2.dll</HintPath>
     </Reference>
-    <Reference Include="DevExpress.XtraVerticalGrid.v21.1, Version=21.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+    <Reference Include="DevExpress.XtraVerticalGrid.v21.2, Version=21.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraVerticalGrid.v21.1.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Default Company Name\Setup1\DevExpress.XtraVerticalGrid.v21.2.dll</HintPath>
     </Reference>
     <Reference Include="DnsClient, Version=1.5.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
       <HintPath>..\packages\DnsClient.1.5.0\lib\net471\DnsClient.dll</HintPath>
@@ -1201,6 +1201,12 @@
     </Compile>
     <Compile Include="Master\frmSizeMapping.Designer.cs">
       <DependentUpon>frmSizeMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmSizeMappingEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmSizeMappingEdit.Designer.cs">
+      <DependentUpon>frmSizeMappingEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmStateMst.cs">
       <SubType>Form</SubType>
@@ -2168,6 +2174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmSizeMapping.resx">
       <DependentUpon>frmSizeMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmSizeMappingEdit.resx">
+      <DependentUpon>frmSizeMappingEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmStateMst.resx">
       <DependentUpon>frmStateMst.cs</DependentUpon>

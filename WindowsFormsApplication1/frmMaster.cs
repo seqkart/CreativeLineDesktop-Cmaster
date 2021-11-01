@@ -566,6 +566,16 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG212")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+
+                    WindowsFormsApplication1.Master.frmSizeMappingEdit frm = new WindowsFormsApplication1.Master.frmSizeMappingEdit()
+                    { Text = "Size Mapping Edition", transid = CurrentRow["transid"].ToString() };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                    FillGrid();
+                }
                 if (GlobalVariables.ProgCode == "PROG241")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

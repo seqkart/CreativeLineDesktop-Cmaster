@@ -314,6 +314,12 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG249":
+                    var PROG249 = new Transaction.FrmJobWork() ;
+                    PROG249.Show();
+                    PROG249.BringToFront();
+                    PROG249.ShowDialog(this.Parent);
+                    break;
                 case "PROG248":
                     var PROG248 = new Master.frmUploadBalances() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG248.Show();

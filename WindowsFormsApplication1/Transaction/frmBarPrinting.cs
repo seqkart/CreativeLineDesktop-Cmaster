@@ -119,7 +119,8 @@ namespace WindowsFormsApplication1.Transaction
                             BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SKUSIZID"], string.Empty);
                             BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SKUCOLN"], string.Empty);
                             BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SKUSIZN"], string.Empty);
-
+                            BarCodeGridView.SetRowCellValue(RowIndex, BarCodeGridView.Columns["SizeMappingTransID"], string.Empty);
+                           
 
                             //int i = BarCodeGridView.FocusedRowHandle;
 

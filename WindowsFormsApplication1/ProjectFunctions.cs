@@ -1862,7 +1862,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static async void PrintEWaybill(String BillNo, DateTime BillDate)
+        public static  async  void PrintEWaybill(String BillNo, DateTime BillDate)
         {
 
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
@@ -1910,6 +1910,84 @@ namespace WindowsFormsApplication1
                     if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
                     {
                         string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+
+
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath,false,false);
+                    }
+                    else
+                    {
+                        System.IO.Directory.CreateDirectory(Application.StartupPath + "\\EWAY");
+                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
+
+                    }
+
+          
+                }
+                else
+                {
+                    XtraMessageBox.Show(TxnResp.TxnOutcome);
+                }
+
+            }
+            else
+            {
+                XtraMessageBox.Show("EWay Bill is not generated then how to print");
+                return;
+            }
+        }
+
+
+        public static async Task PrintEWaybillTask(String BillNo, DateTime BillDate)
+        {
+
+            DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
+            if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length > 0)
+            {
+                EWBSession EwbSession = new EWBSession();
+                EwbSession.EwbApiLoginDetails.EwbGstin = GlobalVariables.EWBGSTIN;
+                EwbSession.EwbApiLoginDetails.EwbUserID = GlobalVariables.EWBUserID;
+                EwbSession.EwbApiLoginDetails.EwbPassword = GlobalVariables.EWBPassword;
+                EwbSession.EwbApiSetting.GSPName = GlobalVariables.GSPName;
+                EwbSession.EwbApiSetting.AspPassword = GlobalVariables.ASPPassword;
+                EwbSession.EwbApiSetting.AspUserId = GlobalVariables.ASPNetUser;
+                EwbSession.EwbApiSetting.BaseUrl = GlobalVariables.BaseUrl;
+                long EwbNo = Convert.ToInt64(ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"]);
+
+
+                EwbSession.EwbApiLoginDetails.EwbAuthToken = GlobalVariables.AuthToken;
+                EwbSession.EwbApiLoginDetails.EwbTokenExp = GlobalVariables.AuthTokenTimeStamp;
+
+                if (DateTime.Now > GlobalVariables.AuthTokenTimeStamp)
+                {
+                    TxnRespWithObjAndInfo<EWBSession> TxnResp2 = await EWBAPI.GetAuthTokenAsync(EwbSession);
+                    if (TxnResp2.IsSuccess)
+                    {
+
+                        String AuthToken = EwbSession.EwbApiLoginDetails.EwbAuthToken;
+                        String TokenExpiry = Convert.ToDateTime(EwbSession.EwbApiLoginDetails.EwbTokenExp).ToString("dd/MM/yyyy HH:mm:ss");
+                        ProjectFunctions.GetDataSet("Update APIIntegrationSetting Set EayBillAuthToken='" + AuthToken + "' ,AuthTokenGenDate='" + Convert.ToDateTime(TokenExpiry).ToString("yyyy-MM-dd HH:mm:ss") + "'");
+                        GlobalVariables.AuthToken = AuthToken;
+                        GlobalVariables.AuthTokenTimeStamp = Convert.ToDateTime(TokenExpiry);
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("Unable To Generate Auth Token");
+                        return;
+                    }
+
+                }
+
+                TxnRespWithObjAndInfo<RespGetEWBDetail> TxnResp = await EWBAPI.GetEWBDetailAsync(EwbSession, EwbNo);
+
+                var a = JsonConvert.SerializeObject(TxnResp.RespObj);
+                if (TxnResp.IsSuccess == true)
+                {
+                    if (System.IO.Directory.Exists(Application.StartupPath + "\\EWAY"))
+                    {
+                        string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
+
+
                         EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
                     }
                     else
@@ -2374,7 +2452,7 @@ namespace WindowsFormsApplication1
                         frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
 
                         ///////////mobile number from fetch
-                        SendBillImageAsync(ds.Tables[0].Rows[0]["WhatsAppNo"].ToString(), DocNo, DocDate);
+                        //SendBillImageAsync(ds.Tables[0].Rows[0]["WhatsAppNo"].ToString(), DocNo, DocDate);
                     }
 
 
