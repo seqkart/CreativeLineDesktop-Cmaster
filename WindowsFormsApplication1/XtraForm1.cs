@@ -319,7 +319,7 @@ namespace WindowsFormsApplication1
                     PROG249.ShowDialog(this.Parent);
                     break;
                 case "PROG248":
-                    var PROG248 = new Master.frmUploadBalances() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG248 = new Master.FrmUploadBalances() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG248.Show();
                     PROG248.BringToFront();
                     PROG248.Parent = Page;

@@ -245,7 +245,7 @@ namespace WindowsFormsApplication1.Transaction
                                             {
                                                 HelpGrid.Text = "SKUARTNO";
 
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -262,7 +262,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
                                                     HelpGrid.Text = "SKUARTNO";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 else
                                                 {
                                                     HelpGrid.Text = "SKUARTNO";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -288,7 +288,7 @@ namespace WindowsFormsApplication1.Transaction
                                             if (currentrow == null)
                                             {
                                                 HelpGrid.Text = "SKUCOLN";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -304,7 +304,7 @@ namespace WindowsFormsApplication1.Transaction
                                                     UpdateTag = "Y";
 
                                                     HelpGrid.Text = "SKUCOLN";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -316,7 +316,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 else
                                                 {
                                                     HelpGrid.Text = "SKUCOLN";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -333,7 +333,7 @@ namespace WindowsFormsApplication1.Transaction
                                             if (currentrow == null)
                                             {
                                                 HelpGrid.Text = "SKUSIZN";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -350,7 +350,7 @@ namespace WindowsFormsApplication1.Transaction
                                                     UpdateTag = "Y";
 
                                                     HelpGrid.Text = "SKUSIZN";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -362,7 +362,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 else
                                                 {
                                                     HelpGrid.Text = "SKUSIZN";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();

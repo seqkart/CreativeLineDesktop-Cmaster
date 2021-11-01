@@ -1,5 +1,4 @@
-﻿using System;
-namespace SeqKartSecurity.Connections
+﻿namespace SeqKartSecurity.Connections
 {
     public class ConnectionStringsDb
     {
@@ -17,10 +16,10 @@ namespace SeqKartSecurity.Connections
 
         // public static string DefaultConnectionString = @"Data Source=cserver;Initial Catalog=SEQKARTnew;User ID=sa;pwd=Seq@2021";
         public static string ImageConnectionString = @"Data Source = cserver; Initial Catalog = EFileSeqKart; User ID = sa; pwd=Seq@2021";
-       // public static string ImageConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\HOIMAGE.txt");
+        // public static string ImageConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\HOIMAGE.txt");
 
         public static string DefaultConnectionString = @"Data Source=cserver;Initial Catalog=SEQKARTnew;User ID=sa;pwd=Seq@2021";
-       // public static string DefaultConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\HO.txt");
+        // public static string DefaultConnectionString = System.IO.File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + @"\HO.txt");
 
 
 

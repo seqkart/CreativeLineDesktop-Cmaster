@@ -391,7 +391,7 @@ namespace WindowsFormsApplication1
                 SumCGSTAmount += CGSTAmount;
                 SumSGSTAmount += SGSTAmount;
                 SumIGSTAmount += IGSTAmount;
-                SumValueOfGoods = SumValueOfGoods + ValueOfGoods;
+                SumValueOfGoods += ValueOfGoods;
                 dr["SIDCGSTAMT"] = CGSTAmount;
                 dr["SIDSGSTAMT"] = SGSTAmount;
                 dr["SIDIGSTAMT"] = IGSTAmount;
@@ -2333,7 +2333,7 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnAttachDocs_Click(object sender, EventArgs e)
+        private void BtnAttachDocs_Click(object sender, EventArgs e)
         {
             xtraOpenFileDialog1.ShowDialog();
         }
@@ -2342,7 +2342,7 @@ namespace WindowsFormsApplication1
             XImage image = XImage.FromFile(xtraOpenFileDialog1.FileName);
             gfx.DrawImage(image, x, y, width, height);
         }
-        private void xtraOpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void XtraOpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             PdfSharp.Pdf.PdfDocument document = new PdfSharp.Pdf.PdfDocument();
             document.Info.Title = "image1";

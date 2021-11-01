@@ -5,7 +5,7 @@ namespace DevExpress.XtraReports.Import.Import.PRINTS
 {
     public partial class Challanoutward : DevExpress.XtraReports.UI.XtraReport
     {
-        public DataSet ds { get; set; }
+        public DataSet Ds { get; set; }
         public Challanoutward()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace DevExpress.XtraReports.Import.Import.PRINTS
 
         }
 
-        private void xrLabel4_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        private void XrLabel4_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
 
         }
@@ -43,7 +43,7 @@ namespace DevExpress.XtraReports.Import.Import.PRINTS
 
         private void Challanoutward_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-            txtMainRemarks.Text = ds.Tables[0].Rows[0]["MAINREMARKS"].ToString();
+            txtMainRemarks.Text = Ds.Tables[0].Rows[0]["MAINREMARKS"].ToString();
         }
     }
 }

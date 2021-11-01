@@ -1246,7 +1246,7 @@ namespace WindowsFormsApplication1.Time_Office
                             totalHrs_First = (dateTime_Out_2 - dateTime_In_2).TotalMinutes;
                             if (totalHrs_First < 0)
                             {
-                                totalHrs_First = totalHrs_First * -1;
+                                totalHrs_First *= -1;
                             }
                         }
                     }
@@ -1340,7 +1340,7 @@ namespace WindowsFormsApplication1.Time_Office
                             totalHrs_First = (dateTime_Out_2 - dateTime_In_2).TotalMinutes;
                             if (totalHrs_First < 0)
                             {
-                                totalHrs_First = totalHrs_First * -1;
+                                totalHrs_First *= -1;
                             }
                         }
                     }
@@ -1385,7 +1385,7 @@ namespace WindowsFormsApplication1.Time_Office
                                     totalHrs_Last = (dateTime_Out_Last - dateTime_In_Last).TotalMinutes;
                                     if (totalHrs_Last < 0)
                                     {
-                                        totalHrs_Last = totalHrs_Last * -1;
+                                        totalHrs_Last *= -1;
                                     }
                                 }
                             }
@@ -1407,7 +1407,7 @@ namespace WindowsFormsApplication1.Time_Office
                                 if (totalHrs_Last < 0)
                                 {
                                     PrintLogWin.PrintLog("========= M");
-                                    totalHrs_Last = totalHrs_Last * -1;
+                                    totalHrs_Last *= -1;
                                 }
                             }
                         }
@@ -1464,19 +1464,19 @@ namespace WindowsFormsApplication1.Time_Office
 
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0 && ConvertTo.IntVal(txtTeaBreakTime.EditValue) == 0)
                             {
-                                totalHrs_FullDay = totalHrs_FullDay + lunch_no_tea_no_add_minutes;
+                                totalHrs_FullDay += lunch_no_tea_no_add_minutes;
                                 PrintLogWin.PrintLog("========= D-5");
                             }
 
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 0 && ConvertTo.IntVal(txtTeaBreakTime.EditValue) > 0)
                             {
-                                totalHrs_FullDay = totalHrs_FullDay + lunch_no_tea_yes_add_minutes;
+                                totalHrs_FullDay += lunch_no_tea_yes_add_minutes;
                                 PrintLogWin.PrintLog("========= D-6");
                             }
 
                             if (ConvertTo.IntVal(txtLunchBreak.EditValue) == 1 && ConvertTo.IntVal(txtTeaBreakTime.EditValue) == 0)
                             {
-                                totalHrs_FullDay = totalHrs_FullDay + lunch_yes_tea_no_add_minutes;
+                                totalHrs_FullDay += lunch_yes_tea_no_add_minutes;
                                 PrintLogWin.PrintLog("========= D-7");
                             }
                         }
@@ -1948,7 +1948,7 @@ namespace WindowsFormsApplication1.Time_Office
                 {
                     if (txtEmpID.Text.Length == 0)
                     {
-                        strQry = strQry + "select Empcode as Code,Empname as Description,EmpImage, DailyWage, DailyWageRate, DailyWageMinutes from EmpMst  order by Empname";
+                        strQry += "select Empcode as Code,Empname as Description,EmpImage, DailyWage, DailyWageRate, DailyWageMinutes from EmpMst  order by Empname";
                         ds = ProjectFunctions.GetDataSet(strQry);
                         HelpGrid.DataSource = ds.Tables[0];
                         HelpGridView.BestFitColumns();
@@ -1982,7 +1982,7 @@ namespace WindowsFormsApplication1.Time_Office
                         else
                         {
                             var strQry1 = string.Empty;
-                            strQry1 = strQry1 + "select empcode as Code,empname as Description,EmpImage, DailyWage, DailyWageRate, DailyWageMinutes from EmpMst  order by Empname";
+                            strQry1 += "select empcode as Code,empname as Description,EmpImage, DailyWage, DailyWageRate, DailyWageMinutes from EmpMst  order by Empname";
                             var ds1 = ProjectFunctions.GetDataSet(strQry1);
                             HelpGrid.DataSource = ds1.Tables[0];
                             HelpGridView.BestFitColumns();

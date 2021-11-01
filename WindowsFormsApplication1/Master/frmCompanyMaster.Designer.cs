@@ -1234,7 +1234,7 @@
         internal DevExpress.XtraEditors.LabelControl Label11;
         internal DevExpress.XtraEditors.LabelControl Label10;
         internal DevExpress.XtraEditors.LabelControl Label15;
-        internal new DevExpress.XtraEditors.PanelControl panelControl5;
+        internal DevExpress.XtraEditors.PanelControl panelControl5;
         internal DevExpress.XtraEditors.LabelControl Label40;
         internal DevExpress.XtraEditors.LabelControl Label39;
         internal DevExpress.XtraEditors.LabelControl Label38;

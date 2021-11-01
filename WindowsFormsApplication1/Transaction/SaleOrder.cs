@@ -262,7 +262,7 @@ namespace WindowsFormsApplication1.Transaction
 
             foreach (DataRow dr in dt.Rows)
             {
-                TotalSubValue = TotalSubValue + Convert.ToDecimal(dr["BaseCost"]);
+                TotalSubValue += Convert.ToDecimal(dr["BaseCost"]);
                 TotalTaxValue = TotalTaxValue + Convert.ToDecimal(dr["CGSTAmount"]) + Convert.ToDecimal(dr["SGSTAmount"]) + Convert.ToDecimal(dr["IGSTAmount"]);
             }
 
@@ -675,7 +675,7 @@ namespace WindowsFormsApplication1.Transaction
                                             if (currentrow == null)
                                             {
                                                 GridControl1.Text = "ArtNo";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -689,7 +689,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 {
                                                     UpdateTag = "Y";
                                                     GridControl1.Text = "ArtNo";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -700,7 +700,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 else
                                                 {
                                                     GridControl1.Text = "ArtNo";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -715,7 +715,7 @@ namespace WindowsFormsApplication1.Transaction
                                             if (currentrow == null)
                                             {
                                                 GridControl1.Text = "ColorId";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -731,7 +731,7 @@ namespace WindowsFormsApplication1.Transaction
                                                     UpdateTag = "Y";
 
                                                     GridControl1.Text = "ColorId";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -743,7 +743,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 else
                                                 {
                                                     GridControl1.Text = "ColorId";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -760,7 +760,7 @@ namespace WindowsFormsApplication1.Transaction
                                             if (currentrow == null)
                                             {
                                                 GridControl1.Text = "SizeId";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -777,7 +777,7 @@ namespace WindowsFormsApplication1.Transaction
                                                     UpdateTag = "Y";
 
                                                     GridControl1.Text = "SizeId";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -789,7 +789,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 else
                                                 {
                                                     GridControl1.Text = "SizeId";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();

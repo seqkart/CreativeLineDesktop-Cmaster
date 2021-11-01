@@ -4,24 +4,24 @@ using System.Linq;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmSizeMappingEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSizeMappingEdit : DevExpress.XtraEditors.XtraForm
     {
-        public String transid { get; set; }
+        public String Transid { get; set; }
 
 
-        public frmSizeMappingEdit()
+        public FrmSizeMappingEdit()
         {
             InitializeComponent();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmSizeMappingEdit_Load(object sender, EventArgs e)
+        private void FrmSizeMappingEdit_Load(object sender, EventArgs e)
         {
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSizeMappingFEdit '" + transid + "'");
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSizeMappingFEdit '" + Transid + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 txtGrpCode.Text = ds.Tables[0].Rows[0]["GrpCode"].ToString();
@@ -37,9 +37,9 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
-            ProjectFunctions.GetDataSet("update SizeMapping set  SizeDesc='" + txtTempSizeDesc.Text + "' where transid='" + transid + "'   ");
+            ProjectFunctions.GetDataSet("update SizeMapping set  SizeDesc='" + txtTempSizeDesc.Text + "' where transid='" + Transid + "'   ");
             this.Close();
         }
     }

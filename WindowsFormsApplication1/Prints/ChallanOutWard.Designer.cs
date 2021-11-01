@@ -173,7 +173,7 @@
             this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel4.WordWrap = false;
-            this.xrLabel4.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel4_BeforePrint);
+            this.xrLabel4.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.XrLabel4_BeforePrint);
             // 
             // CHODITEMN1
             // 

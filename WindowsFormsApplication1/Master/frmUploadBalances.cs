@@ -1,14 +1,13 @@
 ﻿using System;
-using System;
 using System.Data;
 using System.IO;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmUploadBalances : DevExpress.XtraEditors.XtraForm
+    public partial class FrmUploadBalances : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public frmUploadBalances()
+        public FrmUploadBalances()
         {
             InitializeComponent();
             dt.Columns.Add("Account", typeof(string));
@@ -92,7 +91,7 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
             {

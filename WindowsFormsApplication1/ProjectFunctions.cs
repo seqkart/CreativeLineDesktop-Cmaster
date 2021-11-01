@@ -277,7 +277,7 @@ namespace WindowsFormsApplication1
             s4 = Convert.ToDecimal(WSB);
             s5 = Convert.ToDecimal(ForQuantity) + Convert.ToDecimal(freeQuantity);
             s6 = Convert.ToDecimal(ForQuantity);
-            s7 = (s7 - (s7 * s2 / 100));
+            s7 -= (s7 * s2 / 100);
             s8 = (s7 - (s7 * s3 / 100));
             s9 = (s8 - (s8 * s4 / 100));
             if (Convert.ToInt32(ForQuantity) == 0)

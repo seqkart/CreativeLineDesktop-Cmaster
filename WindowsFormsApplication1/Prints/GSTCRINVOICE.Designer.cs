@@ -1383,7 +1383,7 @@
             this.xrLabel49.StylePriority.UseFont = false;
             this.xrLabel49.Text = "TRANSPORT :";
             this.xrLabel49.WordWrap = false;
-            this.xrLabel49.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel49_BeforePrint);
+            this.xrLabel49.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.XrLabel49_BeforePrint);
             // 
             // xrLabel48
             // 

@@ -41,21 +41,6 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void LoadMeasurementDataAsPerArticleSize()
-        {
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadMeasurementDataAsPerArt '" + txtArtID.Text + "'");
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                MeasurementGird.DataSource = ds.Tables[0];
-                MeasurementGirdView.BestFitColumns();
-            }
-            else
-            {
-                MeasurementGird.DataSource = null;
-                MeasurementGirdView.BestFitColumns();
-            }
-        }
-
         private void TxtPartyCode_EditValueChanged(object sender, EventArgs e)
         {
             txtPartyName.Text = string.Empty;
@@ -154,7 +139,7 @@ namespace WindowsFormsApplication1.Transaction
             ProjectFunctions.CreatePopUpForTwoBoxes("select BRSYSID,BRNAME from BRANDS", " Where BRSYSID", txtBrandCode, txtBrandName, txtBrandCode, HelpGrid, HelpGridView, e);
         }
 
-        private void txtOrderDate_EditValueChanged(object sender, EventArgs e)
+        private void TxtOrderDate_EditValueChanged(object sender, EventArgs e)
         {
             LoadProductionOrderColorAndSize();
         }

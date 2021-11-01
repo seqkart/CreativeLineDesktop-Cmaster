@@ -570,8 +570,8 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmSizeMappingEdit frm = new WindowsFormsApplication1.Master.frmSizeMappingEdit()
-                    { Text = "Size Mapping Edition", transid = CurrentRow["transid"].ToString() };
+                    WindowsFormsApplication1.Master.FrmSizeMappingEdit frm = new WindowsFormsApplication1.Master.FrmSizeMappingEdit()
+                    { Text = "Size Mapping Edition", Transid = CurrentRow["transid"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                     FillGrid();

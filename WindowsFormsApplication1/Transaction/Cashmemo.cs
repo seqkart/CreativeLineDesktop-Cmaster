@@ -641,7 +641,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                         else
                         {
-                            NetRate = NetRate - ((NetRate * TaxRate) / (100 + TaxRate));
+                            NetRate -= ((NetRate * TaxRate) / (100 + TaxRate));
                         }
 
                         DataSet dsCheckDate = ProjectFunctions.GetDataSet("sp_GetSchemeData '" + dr["SIDBARCODE"].ToString() + "','" + Convert.ToDateTime(lblCashMemoDate.Text).ToString("yyyy-MM-dd") + "'");
@@ -667,11 +667,11 @@ namespace WindowsFormsApplication1.Transaction
                         decimal TempMainDisc = (TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100;
 
 
-                        MainDiscAmount = MainDiscAmount + TempMainDisc;
+                        MainDiscAmount += TempMainDisc;
                         ValueOfGoods = TempValueOfGoods - TempMainDisc;
 
 
-                        SumRowDiscAmount = SumRowDiscAmount + RowDiscAmount;
+                        SumRowDiscAmount += RowDiscAmount;
                         dr["SIDITMDISCAMT"] = RowDiscAmount;
 
 
@@ -695,7 +695,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
 
-                        SumValueOfGoods = SumValueOfGoods + ValueOfGoods;
+                        SumValueOfGoods += ValueOfGoods;
 
 
                         decimal TaxRateFinal = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
@@ -714,9 +714,9 @@ namespace WindowsFormsApplication1.Transaction
                         dr["SIDITMNETAMT"] = Math.Round(ValueOfGoods, 2);
 
 
-                        SumCGSTAmount = SumCGSTAmount + CGSTAmount;
-                        SumSGSTAmount = SumSGSTAmount + SGSTAmount;
-                        SumIGSTAmount = SumIGSTAmount + IGSTAmount;
+                        SumCGSTAmount += CGSTAmount;
+                        SumSGSTAmount += SGSTAmount;
+                        SumIGSTAmount += IGSTAmount;
 
                         dr["SIDCGSTAMT"] = CGSTAmount;
                         dr["SIDSGSTAMT"] = SGSTAmount;
@@ -725,10 +725,10 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     else
                     {
-                        SumValueOfGoods = SumValueOfGoods + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                        SumCGSTAmount = SumCGSTAmount + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                        SumSGSTAmount = SumSGSTAmount + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                        SumIGSTAmount = SumIGSTAmount + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                        SumValueOfGoods += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                        SumCGSTAmount += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                        SumSGSTAmount += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                        SumIGSTAmount += Convert.ToDecimal(dr["SIDIGSTAMT"]);
 
 
                         dr["SIDITMDISCPRCN"] = (100 - ((Convert.ToDecimal(dr["SIDITMNETAMT"]) / Convert.ToDecimal(dr["SIDARTMRP"])) * 100));
@@ -737,11 +737,11 @@ namespace WindowsFormsApplication1.Transaction
 
                     if (Convert.ToDecimal(dr["SIDSCANQTY"]) > 0)
                     {
-                        TotalSaleQty = TotalSaleQty + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        TotalSaleQty += Convert.ToDecimal(dr["SIDSCANQTY"]);
                     }
                     else
                     {
-                        TotalReturnQty = TotalReturnQty + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        TotalReturnQty += Convert.ToDecimal(dr["SIDSCANQTY"]);
                     }
 
                 }
@@ -848,10 +848,10 @@ namespace WindowsFormsApplication1.Transaction
                         decimal TempMainDisc = (TempValueOfGoods * Convert.ToDecimal(txtMainDisc.Text)) / 100;
 
 
-                        MainDiscAmount = MainDiscAmount + TempMainDisc;
+                        MainDiscAmount += TempMainDisc;
                         ValueOfGoods = TempValueOfGoods - TempMainDisc;
 
-                        SumRowDiscAmount = SumRowDiscAmount + RowDiscAmount;
+                        SumRowDiscAmount += RowDiscAmount;
                         dr["SIDITMDISCAMT"] = RowDiscAmount;
 
 
@@ -861,7 +861,7 @@ namespace WindowsFormsApplication1.Transaction
                         decimal IGSTAmount = 0;
 
 
-                        SumValueOfGoods = SumValueOfGoods + ValueOfGoods;
+                        SumValueOfGoods += ValueOfGoods;
                         CGSTAmount = ((ValueOfGoods * Convert.ToDecimal(dr["SIDCGSTPER"])) / 100);
                         SGSTAmount = ((ValueOfGoods * Convert.ToDecimal(dr["SIDSGSTPER"])) / 100);
                         IGSTAmount = ((ValueOfGoods * Convert.ToDecimal(dr["SIDIGSTPER"])) / 100);
@@ -869,9 +869,9 @@ namespace WindowsFormsApplication1.Transaction
                         dr["SIDITMNETAMT"] = Math.Round(ValueOfGoods + CGSTAmount + SGSTAmount + IGSTAmount, 2);
 
 
-                        SumCGSTAmount = SumCGSTAmount + CGSTAmount;
-                        SumSGSTAmount = SumSGSTAmount + SGSTAmount;
-                        SumIGSTAmount = SumIGSTAmount + IGSTAmount;
+                        SumCGSTAmount += CGSTAmount;
+                        SumSGSTAmount += SGSTAmount;
+                        SumIGSTAmount += IGSTAmount;
 
                         dr["SIDCGSTAMT"] = CGSTAmount;
                         dr["SIDSGSTAMT"] = SGSTAmount;
@@ -879,10 +879,10 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     else
                     {
-                        SumValueOfGoods = SumValueOfGoods + Convert.ToDecimal(dr["SIDITMNETAMT"]);
-                        SumCGSTAmount = SumCGSTAmount + Convert.ToDecimal(dr["SIDCGSTAMT"]);
-                        SumSGSTAmount = SumSGSTAmount + Convert.ToDecimal(dr["SIDSGSTAMT"]);
-                        SumIGSTAmount = SumIGSTAmount + Convert.ToDecimal(dr["SIDIGSTAMT"]);
+                        SumValueOfGoods += Convert.ToDecimal(dr["SIDITMNETAMT"]);
+                        SumCGSTAmount += Convert.ToDecimal(dr["SIDCGSTAMT"]);
+                        SumSGSTAmount += Convert.ToDecimal(dr["SIDSGSTAMT"]);
+                        SumIGSTAmount += Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         decimal TempAmount = 0;
                         TempAmount = Convert.ToDecimal(dr["SIDITMNETAMT"]) - Convert.ToDecimal(dr["SIDCGSTAMT"]) - Convert.ToDecimal(dr["SIDSGSTAMT"]) - Convert.ToDecimal(dr["SIDIGSTAMT"]);
                         dr["SIDITMDISCPRCN"] = (100 + ((TempAmount / Convert.ToDecimal(dr["SIDARTMRP"])) * 100));
@@ -893,11 +893,11 @@ namespace WindowsFormsApplication1.Transaction
 
                     if (Convert.ToDecimal(dr["SIDSCANQTY"]) > 0)
                     {
-                        TotalSaleQty = TotalSaleQty + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        TotalSaleQty += Convert.ToDecimal(dr["SIDSCANQTY"]);
                     }
                     else
                     {
-                        TotalReturnQty = TotalReturnQty + Convert.ToDecimal(dr["SIDSCANQTY"]);
+                        TotalReturnQty += Convert.ToDecimal(dr["SIDSCANQTY"]);
                     }
                 }
 

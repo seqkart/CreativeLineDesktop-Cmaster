@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Master
 {
-    partial class frmSizeMappingEdit
+    partial class FrmSizeMappingEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Master
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSizeMappingEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSizeMappingEdit));
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
@@ -209,7 +209,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -221,7 +221,7 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // labelControl3
             // 
@@ -268,7 +268,7 @@ namespace WindowsFormsApplication1.Master
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmSizeMappingEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmSizeMappingEdit_Load);
+            this.Load += new System.EventHandler(this.FrmSizeMappingEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTempSizeDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSizeDesc.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSizeID.Properties)).EndInit();

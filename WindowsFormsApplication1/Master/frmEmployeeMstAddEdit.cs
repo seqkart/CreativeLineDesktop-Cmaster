@@ -911,7 +911,7 @@ string.Empty +
                             totalHrs_First = (dateTime_Out_2 - dateTime_In_2).TotalHours;
                             if (totalHrs_First < 0)
                             {
-                                totalHrs_First = totalHrs_First * -1;
+                                totalHrs_First *= -1;
                             }
                         }
                     }
@@ -947,7 +947,7 @@ string.Empty +
                                     totalHrs_Last = (dateTime_Out_Last - dateTime_In_Last).TotalHours;
                                     if (totalHrs_Last < 0)
                                     {
-                                        totalHrs_Last = totalHrs_Last * -1;
+                                        totalHrs_Last *= -1;
                                     }
                                 }
                             }
@@ -967,7 +967,7 @@ string.Empty +
                                 totalHrs_Last = (dateTime_Out_Last - dateTime_In_Last).TotalHours;
                                 if (totalHrs_Last < 0)
                                 {
-                                    totalHrs_Last = totalHrs_Last * -1;
+                                    totalHrs_Last *= -1;
                                 }
                             }
                         }

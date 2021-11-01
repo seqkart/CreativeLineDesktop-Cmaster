@@ -304,7 +304,7 @@
             this.txtOrderDate.Size = new System.Drawing.Size(119, 22);
             this.txtOrderDate.TabIndex = 538;
             this.txtOrderDate.TabStop = false;
-            this.txtOrderDate.EditValueChanged += new System.EventHandler(this.txtOrderDate_EditValueChanged);
+            this.txtOrderDate.EditValueChanged += new System.EventHandler(this.TxtOrderDate_EditValueChanged);
             // 
             // labelControl5
             // 

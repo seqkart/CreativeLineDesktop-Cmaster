@@ -3335,7 +3335,7 @@
             this.btnAttachDocs.Size = new System.Drawing.Size(94, 29);
             this.btnAttachDocs.TabIndex = 480;
             this.btnAttachDocs.Text = "Attach Doc\r\n";
-            this.btnAttachDocs.Click += new System.EventHandler(this.btnAttachDocs_Click);
+            this.btnAttachDocs.Click += new System.EventHandler(this.BtnAttachDocs_Click);
             // 
             // DocsGrid
             // 
@@ -3706,7 +3706,7 @@
             // xtraOpenFileDialog1
             // 
             this.xtraOpenFileDialog1.FileName = "xtraOpenFileDialog1";
-            this.xtraOpenFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.xtraOpenFileDialog1_FileOk);
+            this.xtraOpenFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.XtraOpenFileDialog1_FileOk);
             // 
             // FrmInvoiceMstAdd
             // 

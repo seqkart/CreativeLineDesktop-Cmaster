@@ -2026,7 +2026,7 @@ namespace WindowsFormsApplication1
                                     "','" +
                                     GlobalVariables.CUnitID + "'");
                                 ds.WriteXmlSchema("C://Temp//abc.xml");
-                                Challanoutward rpt = new Challanoutward { DataSource = ds.Tables[0], ds = ds };
+                                Challanoutward rpt = new Challanoutward { DataSource = ds.Tables[0], Ds = ds };
                                 rpt.lblCopy.Text = CopyText;
                                 rpt.lblGrossWeight.Text = ds.Tables[1].Rows[0]["GrossWeight"].ToString();
                                 rpt.lblNetWeight.Text = ds.Tables[1].Rows[0]["NetWeight"].ToString();
