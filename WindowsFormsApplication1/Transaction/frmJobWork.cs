@@ -4,11 +4,11 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class FrmJobWork : DevExpress.XtraEditors.XtraForm
     {
-       
+
         public FrmJobWork()
         {
             InitializeComponent();
-            
+
         }
 
 
@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.Transaction
             dsProductionOrder.Columns.Add("COLSYSID", typeof(Int64));
             dsProductionOrder.Columns.Add("COLNAME", typeof(string));
             DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderColorAndSize");
-            if(ds.Tables[0].Rows.Count>0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 dsProductionOrder = ds.Tables[1];
                 foreach (DataRow dr in ds.Tables[0].Rows)

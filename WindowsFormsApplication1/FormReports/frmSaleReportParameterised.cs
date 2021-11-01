@@ -18,7 +18,7 @@ namespace WindowsFormsApplication1.FormReports
         }
         void BtnLoad_Click(object sender, EventArgs e)
         {
-           
+
             String PartyString = String.Empty;
             String ArticleString = String.Empty;
             String LedgerString = String.Empty;

@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraEditors;
 using SeqKartLibrary;
-using SeqKartLibrary.CrudTask;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -114,7 +113,7 @@ namespace WindowsFormsApplication1
                         }
                         sqlcom.Parameters.AddWithValue("@DesgCode", txtDesgCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@DesgDesc", txtDesc.Text.Trim());
-    
+
                         sqlcom.ExecuteNonQuery();
                         transaction.Commit();
                         sqlcon.Close();

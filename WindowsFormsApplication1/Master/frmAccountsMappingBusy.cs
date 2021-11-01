@@ -202,8 +202,8 @@ namespace WindowsFormsApplication1.Master
                 frm.StartPosition = FormStartPosition.CenterScreen;
 
 
-              // only name block
-                DataSet dsNane = ProjectFunctionsUtils.GetDataSetBusy("Select Code ,Name  from MASTER1  Where Code='"+ currentrow["AccCodeBusy"].ToString() + "'");
+                // only name block
+                DataSet dsNane = ProjectFunctionsUtils.GetDataSetBusy("Select Code ,Name  from MASTER1  Where Code='" + currentrow["AccCodeBusy"].ToString() + "'");
                 frm.txtAccCodeBusy.Text = dsNane.Tables[0].Rows[0]["Code"].ToString();
                 frm.txtAccNameBusy.Text = dsNane.Tables[0].Rows[0]["Name"].ToString();
                 frm.txtAcName.Text = dsNane.Tables[0].Rows[0]["Name"].ToString();

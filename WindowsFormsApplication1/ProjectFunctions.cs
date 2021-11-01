@@ -1862,7 +1862,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static  async  void PrintEWaybill(String BillNo, DateTime BillDate)
+        public static async void PrintEWaybill(String BillNo, DateTime BillDate)
         {
 
             DataSet ds = ProjectFunctions.GetDataSet("Select SIMTRDPRMWYBLNO from SALEINVMAIN where SIMNO='" + BillNo + "' And SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' and SIMSERIES='GST' and UnitCode='" + GlobalVariables.CUnitID + "'");
@@ -1912,7 +1912,7 @@ namespace WindowsFormsApplication1
                         string pdfFolderPath = Application.StartupPath + "\\EWAY\\";
 
 
-                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath,false,false);
+                        EWBAPI.PrintEWB(EwbSession, TxnResp.RespObj, pdfFolderPath, false, false);
                     }
                     else
                     {
@@ -1922,7 +1922,7 @@ namespace WindowsFormsApplication1
 
                     }
 
-          
+
                 }
                 else
                 {
@@ -2229,17 +2229,17 @@ namespace WindowsFormsApplication1
                 transDocDate = string.Empty
             };
 
-            if (ds.Tables[0].Rows[0]["VehicleNo"].ToString()=="")
+            if (ds.Tables[0].Rows[0]["VehicleNo"].ToString() == string.Empty)
             {
-               
-                ewbGen.transMode = "";
+
+                ewbGen.transMode = string.Empty;
             }
             else
             {
                 ewbGen.transMode = ds.Tables[0].Rows[0]["TransMode"].ToString();
-                
+
             }
-           
+
             ewbGen.vehicleType = "R";//R
             ewbGen.itemList = new List<ReqGenEwbPl.ItemListInReqEWBpl>();
 

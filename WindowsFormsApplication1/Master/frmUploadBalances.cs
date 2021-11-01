@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1.Master
                 foreach (DataRow dr in dt.Rows)
                 {
                     String AccCode = string.Empty;
-                    DataSet dsActMst = ProjectFunctions.GetDataSet(" Select AccCode from ActMst where upper(AccName)='" + dr["Account"].ToString().Trim().ToUpper().Replace("'", "") + "'");
+                    DataSet dsActMst = ProjectFunctions.GetDataSet(" Select AccCode from ActMst where upper(AccName)='" + dr["Account"].ToString().Trim().ToUpper().Replace("'", string.Empty) + "'");
                     if (dsActMst.Tables[0].Rows.Count > 0)
                     {
                         dr["AccCode"] = dsActMst.Tables[0].Rows[0][0].ToString();

@@ -49,7 +49,7 @@ namespace WindowsFormsApplication1
         private void TxtSGrpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtSGrpDesc.Text = string.Empty;
-           
+
             txtSGrpDesc.Text = string.Empty;
         }
 

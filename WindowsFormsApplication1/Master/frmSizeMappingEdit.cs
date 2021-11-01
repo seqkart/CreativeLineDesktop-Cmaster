@@ -1,20 +1,13 @@
-﻿using DevExpress.XtraEditors;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
     public partial class frmSizeMappingEdit : DevExpress.XtraEditors.XtraForm
     {
         public String transid { get; set; }
-        
+
 
         public frmSizeMappingEdit()
         {
@@ -29,7 +22,7 @@ namespace WindowsFormsApplication1.Master
         private void frmSizeMappingEdit_Load(object sender, EventArgs e)
         {
             DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSizeMappingFEdit '" + transid + "'");
-            if(ds.Tables[0].Rows.Count>0)
+            if (ds.Tables[0].Rows.Count > 0)
             {
                 txtGrpCode.Text = ds.Tables[0].Rows[0]["GrpCode"].ToString();
                 txtSGrpCode.Text = ds.Tables[0].Rows[0]["GrpSubCode"].ToString();

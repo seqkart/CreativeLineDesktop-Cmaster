@@ -16,23 +16,23 @@ namespace WindowsFormsApplication1.Prints
 
             txtVendorCode.Text = GlobalVariables.VendorCode;
             // txtvehicleNo.Text = VehicleNo;
-          //  GSTINVOICE.PrintingSystem.ContinuousPageNumbering = false;
+            //  GSTINVOICE.PrintingSystem.ContinuousPageNumbering = false;
 
 
         }
 
         private void XrPageInfo2_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-        //    if (e.PageIndex + 1 < e.PageCount)
-        //        e.PageIndex = e.PageIndex - 1;
-        //}
-        //    void ToBeContinueLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        //    {
-        //        if (e.PageIndex + 1 < e.PageCount)
-        //            ((XRLabel)sender).Text = "To be continued...";
-        //        else
-        //            ((XRLabel)sender).Text = "Your text for the last page";
-        //    }
+            //    if (e.PageIndex + 1 < e.PageCount)
+            //        e.PageIndex = e.PageIndex - 1;
+            //}
+            //    void ToBeContinueLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
+            //    {
+            //        if (e.PageIndex + 1 < e.PageCount)
+            //            ((XRLabel)sender).Text = "To be continued...";
+            //        else
+            //            ((XRLabel)sender).Text = "Your text for the last page";
+            //    }
 
 
         }

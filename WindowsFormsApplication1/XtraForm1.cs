@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
                 Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
-          //  timer.Start();
+            //  timer.Start();
 
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
@@ -315,7 +315,7 @@ namespace WindowsFormsApplication1
             switch (myitem)
             {
                 case "PROG249":
-                    var PROG249 = new Transaction.FrmJobWork() ;
+                    var PROG249 = new Transaction.FrmJobWork();
                     PROG249.Show();
                     PROG249.BringToFront();
                     PROG249.ShowDialog(this.Parent);
@@ -1932,7 +1932,8 @@ namespace WindowsFormsApplication1
             catch (Exception)
             {
                 return;
-            }ProjectFunctions.WhatsAppDisConnection();
+            }
+            ProjectFunctions.WhatsAppDisConnection();
 
 
         }

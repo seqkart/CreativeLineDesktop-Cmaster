@@ -1041,7 +1041,7 @@ namespace WindowsFormsApplication1
 
                     frm.ShowDialog(Parent);
                 }
-                
+
                 if (GlobalVariables.ProgCode == "PROG246")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

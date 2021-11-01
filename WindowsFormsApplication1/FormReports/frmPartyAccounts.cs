@@ -239,15 +239,15 @@ namespace WindowsFormsApplication1.FormReports
 
 
             int count = 0;
-            foreach(DataRow dr in (_SelectRange.HelpGrid.DataSource as DataTable).Rows)
+            foreach (DataRow dr in (_SelectRange.HelpGrid.DataSource as DataTable).Rows)
             {
-                if(dr["Select"].ToString().ToUpper()=="TRUE")
+                if (dr["Select"].ToString().ToUpper() == "TRUE")
                 {
                     count++;
                 }
             }
 
-            if (count==1)
+            if (count == 1)
             {
                 Report.txtensumd.Visible = false;
                 Report.txtenbal.Visible = false;
@@ -303,7 +303,7 @@ namespace WindowsFormsApplication1.FormReports
                     e.DisplayText = string.Empty;
                 }
             }
-            
+
         }
     }
 }

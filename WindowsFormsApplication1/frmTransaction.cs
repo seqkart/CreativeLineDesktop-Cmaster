@@ -1047,7 +1047,7 @@ namespace WindowsFormsApplication1
                     DataRow currentrow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
                     e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Cancel EWAY Bill", (o1, e1) =>
                     {
-                      
+
                         ProjectFunctions.CancelEWaybill(currentrow["BillNo"].ToString(), Convert.ToDateTime(currentrow["BillDate"]));
                         FillGrid();
                     }));
@@ -1897,7 +1897,7 @@ namespace WindowsFormsApplication1
             dt.Columns.Add("CopyText", typeof(string));
             dt.Columns.Add("Select", typeof(bool));
             dt.Rows.Add("Party Copy", false);
-           dt.Rows.Add("Gate Copy", false);
+            dt.Rows.Add("Gate Copy", false);
             dt.Rows.Add("Extra Copy", false);
             PrintOutGrid.DataSource = dt;
             PrintOutGridView.BestFitColumns();
