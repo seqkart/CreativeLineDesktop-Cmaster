@@ -12,9 +12,7 @@ using SeqKartLibrary;
 using System;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
@@ -1887,55 +1885,6 @@ namespace WindowsFormsApplication1
         private void XtraForm1_Enter(object sender, EventArgs e)
         {
             RemoveTab();
-        }
-
-
-        //-----------------------------------change
-
-
-        private async void ChangeQRData()
-
-        {
-            try
-            {
-
-                using (var httpClient = new HttpClient())
-                {
-                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/qrcode"))
-                    {
-                        request.Headers.TryAddWithoutValidation("accept", "*/*");
-
-                        var response = await httpClient.SendAsync(request);
-
-                        if (response.IsSuccessStatusCode == true)
-                        {
-
-                            byte[] MyData = new byte[0];
-                            MyData = await response.Content.ReadAsByteArrayAsync();
-
-                            MemoryStream stream = new MemoryStream(MyData)
-                            {
-                                Position = 0
-                            };
-
-                            pictureEdit1.Image = Image.FromStream(stream);
-                            pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
-
-                            //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
-                            //ProjectFunctions.SpeakError("Whats app status is connected on mobile no " + myDetails.user);
-
-                        }
-                    }
-
-                }
-            }
-            catch (Exception)
-            {
-                return;
-            }
-            ProjectFunctions.WhatsAppDisConnection();
-
-
         }
 
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
