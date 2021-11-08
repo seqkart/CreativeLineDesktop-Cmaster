@@ -792,22 +792,7 @@ namespace WindowsFormsApplication1.Transaction
                             Count();
 
                             lblTotQty.Text = "0";
-                            //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                            //    PSWSNO +
-                            //    "','" +
-                            //    PSWSTOTBOXES +
-                            //    "','" +
-                            //    GlobalVariables.FinancialYear +
-                            //    "','" +
-                            //    GlobalVariables.CUnitID +
-                            //    "'");
-
-                            //if (ds.Tables[0].Rows.Count > 0)
-                            //{
-                            //    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
-                            //        Convert.ToDecimal(lblTotQty.Text)).ToString();
-                            //    lblTotQty.Text = "0";
-                            //}
+                            Count();
                         }
                         else
                         {
@@ -827,21 +812,7 @@ namespace WindowsFormsApplication1.Transaction
                             Count();
 
                             lblTotQty.Text = "0";
-                            //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                            //    PSWSNO +
-                            //    "','" +
-                            //    PSWSTOTBOXES +
-                            //    "','" +
-                            //    GlobalVariables.FinancialYear +
-                            //    "','" +
-                            //    GlobalVariables.CUnitID +
-                            //    "'");
-
-                            //if (ds.Tables[0].Rows.Count > 0)
-                            //{
-                            //    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) + Convert.ToDecimal(lblTotQty.Text)).ToString();
-                            //    lblTotQty.Text = "0";
-                            //}
+                            Count();
                         }
                     }
                 }
@@ -1074,6 +1045,7 @@ namespace WindowsFormsApplication1.Transaction
 
                                     e.Handled = true;
                                     return;
+
                                 }
                             }
                             foreach (DataRow dr in dt.Rows)
@@ -1267,35 +1239,6 @@ namespace WindowsFormsApplication1.Transaction
                     Count();
 
 
-                    //dt.AcceptChanges();
-                    //Decimal QtySum = 0;
-                    //foreach (DataRow dr in dt.Rows)
-                    //{
-                    //    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                    //}
-                    //lblTotQty.Text = QtySum.ToString("0");
-
-                    //DataSet dsNew = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                    //    PSWSNO +
-                    //    "','" +
-                    //    PSWSTOTBOXES +
-                    //    "','" +
-                    //    GlobalVariables.FinancialYear +
-                    //    "','" +
-                    //    GlobalVariables.CUnitID +
-                    //    "'");
-
-                    //if (dsNew.Tables[0].Rows.Count > 0)
-                    //{
-                    //    lblPackingSLipTot.Text = (Convert.ToDecimal(dsNew.Tables[0].Rows[0][0]) +
-                    //        Convert.ToDecimal(lblTotQty.Text)).ToString();
-                    //}
-
-
-
-
-
-
 
 
                 }
@@ -1313,12 +1256,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 ProjectFunctions.DeleteCurrentRowOnKeyDown(BarCodeGrid, BarCodeGridView, e);
                 dt.AcceptChanges();
-                //Decimal QtySum = 0;
-                //foreach (DataRow dr in dt.Rows)
-                //{
-                //    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                //}
-                //lblTotQty.Text = QtySum.ToString("0");
+
 
                 Count();
 
@@ -1349,35 +1287,15 @@ namespace WindowsFormsApplication1.Transaction
                     {
                         gridColumn7.OptionsColumn.AllowEdit = false;
                     }
+
+                    Count();
                 }));
 
                 e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Delete Current Row", (o1, e1) =>
                 {
                     BarCodeGridView.DeleteRow(BarCodeGridView.FocusedRowHandle);
                     dt.AcceptChanges();
-                    //Decimal QtySum = 0;
-                    //foreach (DataRow dr in dt.Rows)
-                    //{
-                    //    QtySum = QtySum + Convert.ToDecimal(dr["SIDSCANQTY"]);
-                    //}
-                    //lblTotQty.Text = QtySum.ToString("0");
 
-
-                    //DataSet ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                    //    PSWSNO +
-                    //    "','" +
-                    //    PSWSTOTBOXES +
-                    //    "','" +
-                    //    GlobalVariables.FinancialYear +
-                    //    "','" +
-                    //    GlobalVariables.CUnitID +
-                    //    "'");
-
-                    //if (ds.Tables[0].Rows.Count > 0)
-                    //{
-                    //    lblPackingSLipTot.Text = (Convert.ToDecimal(ds.Tables[0].Rows[0][0]) +
-                    //        Convert.ToDecimal(lblTotQty.Text)).ToString();
-                    //}
 
                     Count();
                 }));

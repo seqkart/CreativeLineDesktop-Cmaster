@@ -1639,7 +1639,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1649,8 +1649,8 @@ namespace WindowsFormsApplication1
                         string content = await response.Content.ReadAsStringAsync();
 
                         var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
-                        GlobalVariables.WhatAppStatus = myDetails.state;
-                        GlobalVariables.WhatAppMobileNo = myDetails.user;
+                        GlobalVariables.WhatAppStatus = myDetails.State;
+                        GlobalVariables.WhatAppMobileNo = myDetails.User;
 
                         //ProjectFunctions.Speak(myDetails.state);
                     }
@@ -1669,7 +1669,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://seqkartsolution:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1700,7 +1700,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://seqkartsolution:3000/disconnect"))
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://103.223.12.170:3000/disconnect"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1710,6 +1710,7 @@ namespace WindowsFormsApplication1
                         SpeakError("Whats App Disconnected");
                     }
                 }
+                ProjectFunctions.Speak("whatsapp already disconnected");
             }
         }
 

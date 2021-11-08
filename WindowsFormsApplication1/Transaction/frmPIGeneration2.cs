@@ -4,7 +4,7 @@ using System;
 using System.Data;
 using System.Data.OleDb;
 using System.Data.SqlClient;
-
+using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
@@ -276,9 +276,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtStoreCode.Text = worksheet.Name;
 
                 DataTable TempTable = new DataTable();
-
-                var xlConn = string.Empty;
-                xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + txtAddress.Text + ";Extended Properties=\"Excel 12.0;\";";
+                string xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + txtAddress.Text + ";Extended Properties=\"Excel 12.0;\";";
                 using (var myCommand = new OleDbDataAdapter("SELECT [EAN Code],[PI Qty] as [PI Qty] FROM [" + txtStoreCode.Text + "$]", xlConn))
                 {
                     myCommand.Fill(TempTable);
@@ -334,6 +332,79 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
+        }
+
+        private void BtnSKU_Click(object sender, EventArgs e)
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("select distinct SKUVOUCHNO, SKUFNYR from SKU where SKUSYSDATE >= '2021-04-01' and isnull(skupartybarcode,'') <>'' order by SKUFNYR, SKUVOUCHNO desc");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                HelpGridView.Columns.Clear();
+                HelpGrid.Text = "SKU";
+                HelpGrid.DataSource = ds.Tables[0];
+                HelpGridView.BestFitColumns();
+                HelpGrid.Show();
+                HelpGrid.Focus();
+
+            }
+        }
+
+        private void HelpGrid_DoubleClick(object sender, EventArgs e)
+        {
+            DataRow currentrow = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
+            if (HelpGrid.Text == "SKU")
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadSKUForPI '" + currentrow["SKUVOUCHNO"].ToString() + "' ,'" + currentrow["SKUFNYR"].ToString() + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    dt = ds.Tables[0];
+                    InfoGrid.DataSource = ds.Tables[0];
+                    InfoGridView.BestFitColumns();
+                    HelpGrid.Visible = false;
+                }
+                else
+                {
+                    InfoGrid.DataSource = null;
+                    InfoGridView.BestFitColumns();
+                }
+            }
+            if (HelpGrid.Text == "STORE")
+            {
+                txtStoreCode.Text = currentrow["AccDCCode"].ToString();
+                HelpGrid.Visible = false;
+            }
+        }
+
+        private void HelpGrid_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                HelpGrid_DoubleClick(null, e);
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                HelpGrid.Visible = false;
+            }
+
+        }
+
+        private void TxtStoreCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("select AccDCCode,AccName from ActMstAddInf  where isnull(AccDCCode,'') <>''");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    HelpGridView.Columns.Clear();
+                    HelpGrid.Text = "STORE";
+                    HelpGrid.DataSource = ds.Tables[0];
+                    HelpGridView.BestFitColumns();
+                    HelpGrid.Show();
+                    HelpGrid.Focus();
+
+                }
+            }
+            e.Handled = true;
         }
     }
 }

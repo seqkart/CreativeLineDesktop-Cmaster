@@ -2,11 +2,11 @@
 {
     class WhatsAppLoginStatus
     {
-        public string success { get; set; }
-        public string connected { get; set; }
-        public string state { get; set; }
-        public string user { get; set; }
-        public string server { get; set; }
+        public string Success { get; set; }
+        public string Connected { get; set; }
+        public string State { get; set; }
+        public string User { get; set; }
+        public string Server { get; set; }
 
 
     }

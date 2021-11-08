@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPIGeneration2));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSKU = new System.Windows.Forms.ToolStripButton();
             this.btnLoad = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.label4 = new DevExpress.XtraEditors.LabelControl();
@@ -44,6 +45,9 @@
             this.txtPIDate = new DevExpress.XtraEditors.DateEdit();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
@@ -53,6 +57,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPIDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPIDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -64,6 +71,7 @@
             this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
+            this.btnSKU,
             this.btnLoad,
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
@@ -84,6 +92,17 @@
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
+            // 
+            // btnSKU
+            // 
+            this.btnSKU.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnSKU.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSKU.Image = ((System.Drawing.Image)(resources.GetObject("btnSKU.Image")));
+            this.btnSKU.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSKU.Name = "btnSKU";
+            this.btnSKU.Size = new System.Drawing.Size(42, 28);
+            this.btnSKU.Text = "SKU";
+            this.btnSKU.Click += new System.EventHandler(this.BtnSKU_Click);
             // 
             // btnLoad
             // 
@@ -139,6 +158,7 @@
             this.InfoGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.InfoGridView.OptionsPrint.PrintFooter = false;
             this.InfoGridView.OptionsPrint.PrintGroupFooter = false;
+            this.InfoGridView.OptionsView.ColumnAutoWidth = false;
             this.InfoGridView.OptionsView.ShowFooter = true;
             this.InfoGridView.OptionsView.ShowGroupPanel = false;
             this.InfoGridView.OptionsView.ShowIndicator = false;
@@ -188,6 +208,7 @@
             this.txtStoreCode.Properties.MaxLength = 6;
             this.txtStoreCode.Size = new System.Drawing.Size(92, 22);
             this.txtStoreCode.TabIndex = 444;
+            this.txtStoreCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStoreCode_KeyDown);
             // 
             // txtPIDate
             // 
@@ -220,12 +241,49 @@
             this.txtAddress.TabIndex = 452;
             this.txtAddress.TabStop = false;
             // 
+            // HelpGrid
+            // 
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(104, 153);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(652, 318);
+            this.HelpGrid.TabIndex = 453;
+            this.HelpGrid.TabStop = false;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.DetailHeight = 458;
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView1
+            // 
+            this.gridView1.DetailHeight = 458;
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
+            // 
             // FrmPIGeneration2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(861, 625);
             this.ControlBox = false;
+            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.InfoGrid);
@@ -250,6 +308,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPIDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPIDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,5 +333,9 @@
         private System.Windows.Forms.ToolStripButton btnLoad;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraEditors.TextEdit txtAddress;
+        private System.Windows.Forms.ToolStripButton btnSKU;
+        private DevExpress.XtraGrid.GridControl HelpGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

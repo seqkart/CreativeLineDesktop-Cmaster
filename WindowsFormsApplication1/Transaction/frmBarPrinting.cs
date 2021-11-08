@@ -1344,5 +1344,23 @@ namespace WindowsFormsApplication1.Transaction
         {
 
         }
+
+        private void simpleButton1_Click_1(object sender, EventArgs e)
+        {
+
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadBarCodeEANSourceVaariant ");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                dt = ds.Tables[0];
+                BarCodeGrid.DataSource = dt;
+                BarCodeGridView.BestFitColumns();
+            }
+            else
+            {
+                BarCodeGrid.DataSource = null;
+                BarCodeGridView.BestFitColumns();
+
+            }
+        }
     }
 }
