@@ -1710,7 +1710,7 @@ namespace WindowsFormsApplication1
                         SpeakError("Whats App Disconnected");
                     }
                 }
-                ProjectFunctions.Speak("whatsapp already disconnected");
+                ProjectFunctions.Speak("whats app already disconnected");
             }
         }
 
@@ -1733,7 +1733,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1756,7 +1756,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1785,7 +1785,7 @@ namespace WindowsFormsApplication1
             //{
             //    using (var httpClient = new HttpClient())
             //    {
-            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://seqkartsolution:3000/918591115444/sendText"))
+            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendText"))
             //        {
             //            request.Headers.TryAddWithoutValidation("accept", "application/json");
 

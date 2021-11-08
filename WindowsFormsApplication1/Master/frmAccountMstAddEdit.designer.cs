@@ -329,7 +329,7 @@
             this.AInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.AInfoTab.Size = new System.Drawing.Size(817, 525);
+            this.AInfoTab.Size = new System.Drawing.Size(817, 519);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
@@ -373,7 +373,7 @@
             this.panelControl3.Location = new System.Drawing.Point(12, 13);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(793, 499);
+            this.panelControl3.Size = new System.Drawing.Size(793, 493);
             this.panelControl3.TabIndex = 0;
             // 
             // labelControl5
@@ -468,7 +468,7 @@
             this.chImportAll.Location = new System.Drawing.Point(396, 401);
             this.chImportAll.Name = "chImportAll";
             this.chImportAll.Properties.Caption = "Import All Info";
-            this.chImportAll.Size = new System.Drawing.Size(94, 21);
+            this.chImportAll.Size = new System.Drawing.Size(94, 24);
             this.chImportAll.TabIndex = 440;
             // 
             // btnBestMatch

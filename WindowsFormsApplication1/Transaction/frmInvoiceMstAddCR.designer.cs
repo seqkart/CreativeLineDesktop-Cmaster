@@ -1388,7 +1388,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(657, 210);
+            this.xtraTabPage5.Size = new System.Drawing.Size(657, 204);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // btnCalculate
@@ -2171,7 +2171,7 @@
             this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(433, 210);
+            this.xtraTabPage8.Size = new System.Drawing.Size(433, 204);
             this.xtraTabPage8.Text = "Documents Attached";
             // 
             // pictureEdit1
@@ -2182,7 +2182,7 @@
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(433, 210);
+            this.pictureEdit1.Size = new System.Drawing.Size(433, 204);
             this.pictureEdit1.TabIndex = 2;
             this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
@@ -2270,7 +2270,7 @@
             this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
             this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(87, 21);
+            this.chMultiParty.Size = new System.Drawing.Size(87, 24);
             this.chMultiParty.TabIndex = 558;
             // 
             // FrmInvoiceMstAddCR
