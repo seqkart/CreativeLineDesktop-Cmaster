@@ -1198,11 +1198,11 @@ namespace WindowsFormsApplication1.Transaction
         {
 
             var xlConn = string.Empty;
-            xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
-            using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] FROM [Sheet1$]", xlConn))
+            DataSet dsGeneric = ProjectFunctions.GetDataSet("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] from PISourceData Where Feeddt>='2021-11-02'");
+            if (dsGeneric.Tables[0].Rows.Count > 0)
             {
-                myCommand.Fill(dtGeneric);
 
+                dtGeneric = dsGeneric.Tables[0];
                 foreach (DataRow dr in dtGeneric.Rows)
                 {
                     DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
@@ -1228,6 +1228,37 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
 
+
+            //xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
+            //using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] FROM [Sheet1$]", xlConn))
+            //{
+            //    myCommand.Fill(dtGeneric);
+
+            //    foreach (DataRow dr in dtGeneric.Rows)
+            //    {
+            //        DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
+            //        if (dsCheckGroup.Tables[0].Rows.Count > 0)
+            //        {
+
+            //        }
+            //        else
+            //        {
+            //            ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpDesc)values((Select max(isnull(GrpCode,0))+1 from GrpMst),'" + dr["SEGMENT"].ToString().Trim() + "')");
+
+            //        }
+            //        DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
+            //        if (dsCheckSubGroup.Tables[0].Rows.Count > 0)
+            //        {
+
+            //        }
+            //        else
+            //        {
+            //            ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpSubCode,GrpDesc,GrpSubDesc,GrpHSNCode)values((Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'),((Select max(isnull(GrpSubCode,0))+1 from GrpMst Where GrpCode=(Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'))),'" + dr["SEGMENT"].ToString().Trim() + "','" + dr["BRICK DESCRIPTION"].ToString().Trim() + "','" + dr["HSN CODE"].ToString() + "')");
+
+            //        }
+            //    }
+            //}
+
             XtraMessageBox.Show("Process Completed");
         }
 
@@ -1241,12 +1272,12 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-
-                var xlConn2 = string.Empty;
-                xlConn2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog2.FileName + ";Extended Properties=\"Excel 12.0;\";";
-                using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],[MRP], [SIZE],[COLOR]  FROM [Sheet1$]", xlConn2))
+                DataSet dsVariant = ProjectFunctions.GetDataSet("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],[MRP], [SIZE],[COLOR] from PISourceVariants Where Feeddt>='2021-11-02'");
+                if (dsVariant.Tables[0].Rows.Count > 0)
                 {
-                    myCommand.Fill(dtVariants);
+
+                    dtVariants = dsVariant.Tables[0];
+
 
                     foreach (DataRow dr in dtVariants.Rows)
                     {
@@ -1273,6 +1304,38 @@ namespace WindowsFormsApplication1.Transaction
                 }
 
 
+
+                //var xlConn2 = string.Empty;
+                //xlConn2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog2.FileName + ";Extended Properties=\"Excel 12.0;\";";
+                //using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],[MRP], [SIZE],[COLOR]  FROM [Sheet1$]", xlConn2))
+                //{
+                //    myCommand.Fill(dtVariants);
+
+                //    foreach (DataRow dr in dtVariants.Rows)
+                //    {
+                //        DataSet dsCheckSIZE = ProjectFunctions.GetDataSet("select SZNAME from SIZEMAST Where SZNAME='" + dr["SIZE"].ToString().Trim() + "'");
+                //        if (dsCheckSIZE.Tables[0].Rows.Count > 0)
+                //        {
+
+                //        }
+                //        else
+                //        {
+                //            ProjectFunctions.GetDataSet("  Insert into SIZEMAST (SZNAME,SZDESC)values('" + dr["SIZE"].ToString().Trim() + "','" + dr["SIZE"].ToString().Trim() + "')");
+
+                //        }
+                //        DataSet dsCheckColor = ProjectFunctions.GetDataSet("select COLNAME from COLOURS Where COLNAME='" + dr["COLOR"].ToString().Trim() + "'");
+                //        if (dsCheckColor.Tables[0].Rows.Count > 0)
+                //        {
+
+                //        }
+                //        else
+                //        {
+                //            ProjectFunctions.GetDataSet(" Insert into COLOURS(COLNAME)values('" + dr["COLOR"].ToString().Trim() + "')");
+                //        }
+                //    }
+                //}
+
+
                 foreach (DataRow dr in dtGeneric.Rows)
                 {
 
@@ -1296,7 +1359,6 @@ namespace WindowsFormsApplication1.Transaction
                             }
                         }
                         ProjectFunctions.GetDataSet("Insert into Article (ARTDATE,ARTNO,ARTSECTIONID,ARTSBSECTIONID,ARTMRP,ATaxCodeLocal,ATaxCodeCentral,ARTBRANDID,ARTUOM,ARTMARGIN)values(getdate(), '" + dr["GENERIC ARTICLE NAME"].ToString().Trim() + "','" + dsCheckGroup.Tables[0].Rows[0]["GrpCode"].ToString() + "','" + dsCheckSubGroup.Tables[0].Rows[0]["GrpSubCode"].ToString() + "','" + MRP + "','0001','0002','1','0002','37.50')");
-
                     }
 
                 }

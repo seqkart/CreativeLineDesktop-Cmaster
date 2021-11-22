@@ -312,13 +312,23 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG250":
+                    var PROG250 = new Transaction.frmAttendenceFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG250.Show();
+                    PROG250.BringToFront();
+                    PROG250.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG249":
                     var PROG249 = new Transaction.FrmJobWork();
+
+
+                    PROG249.ShowDialog();
                     PROG249.Show();
                     PROG249.BringToFront();
-                    PROG249.ShowDialog(this.Parent);
                     break;
                 case "PROG248":
+
                     var PROG248 = new Master.FrmUploadBalances() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG248.Show();
                     PROG248.BringToFront();

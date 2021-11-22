@@ -166,7 +166,7 @@
             this.groupControl1.Location = new System.Drawing.Point(12, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1411, 180);
+            this.groupControl1.Size = new System.Drawing.Size(1411, 366);
             this.groupControl1.TabIndex = 544;
             this.groupControl1.Text = "ORDER DETAILS";
             // 
@@ -335,7 +335,6 @@
             // 
             // txtArtNo
             // 
-            this.txtArtNo.Enabled = false;
             this.txtArtNo.Location = new System.Drawing.Point(104, 73);
             this.txtArtNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtNo.Name = "txtArtNo";
@@ -488,15 +487,14 @@
             // tabNavigationPage1
             // 
             this.tabNavigationPage1.Caption = "Points Of Mesurement";
-            this.tabNavigationPage1.Controls.Add(this.HelpGrid);
             this.tabNavigationPage1.Controls.Add(this.MeasurementGird);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1432, 618);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1432, 606);
             // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(284, 156);
+            this.HelpGrid.Location = new System.Drawing.Point(153, 24);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -549,7 +547,7 @@
             this.MeasurementGird.Location = new System.Drawing.Point(0, 0);
             this.MeasurementGird.MainView = this.MeasurementGirdView;
             this.MeasurementGird.Name = "MeasurementGird";
-            this.MeasurementGird.Size = new System.Drawing.Size(1432, 618);
+            this.MeasurementGird.Size = new System.Drawing.Size(1432, 606);
             this.MeasurementGird.TabIndex = 0;
             this.MeasurementGird.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MeasurementGirdView});
@@ -585,6 +583,7 @@
             // tabNavigationPage3
             // 
             this.tabNavigationPage3.Caption = "ORDER";
+            this.tabNavigationPage3.Controls.Add(this.HelpGrid);
             this.tabNavigationPage3.Controls.Add(this.OrderGrid);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
             this.tabNavigationPage3.Size = new System.Drawing.Size(1432, 606);
@@ -592,18 +591,51 @@
             // OrderGrid
             // 
             this.OrderGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.OrderGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderGrid.Location = new System.Drawing.Point(0, 0);
             this.OrderGrid.MainView = this.OrderGridView;
+            this.OrderGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderGrid.Name = "OrderGrid";
             this.OrderGrid.Size = new System.Drawing.Size(1432, 606);
-            this.OrderGrid.TabIndex = 1;
+            this.OrderGrid.TabIndex = 683;
             this.OrderGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.OrderGridView});
             // 
             // OrderGridView
             // 
+            this.OrderGridView.Appearance.FixedLine.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.OrderGridView.Appearance.FixedLine.Options.UseFont = true;
+            this.OrderGridView.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.OrderGridView.Appearance.FocusedCell.Options.UseBackColor = true;
+            this.OrderGridView.Appearance.FocusedRow.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.OrderGridView.Appearance.FocusedRow.Options.UseBorderColor = true;
+            this.OrderGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.OrderGridView.Appearance.HeaderPanel.Options.UseFont = true;
+            this.OrderGridView.Appearance.HorzLine.BackColor = System.Drawing.Color.DimGray;
+            this.OrderGridView.Appearance.HorzLine.Options.UseBackColor = true;
+            this.OrderGridView.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.OrderGridView.Appearance.SelectedRow.Options.UseBackColor = true;
+            this.OrderGridView.Appearance.TopNewRow.Options.UseBorderColor = true;
+            this.OrderGridView.Appearance.VertLine.BackColor = System.Drawing.Color.Gray;
+            this.OrderGridView.Appearance.VertLine.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.OrderGridView.Appearance.VertLine.Options.UseBackColor = true;
+            this.OrderGridView.Appearance.VertLine.Options.UseBorderColor = true;
+            this.OrderGridView.DetailHeight = 458;
             this.OrderGridView.GridControl = this.OrderGrid;
             this.OrderGridView.Name = "OrderGridView";
+            this.OrderGridView.OptionsEditForm.ShowOnF2Key = DevExpress.Utils.DefaultBoolean.False;
+            this.OrderGridView.OptionsImageLoad.AnimationType = DevExpress.Utils.ImageContentAnimationType.Slide;
+            this.OrderGridView.OptionsNavigation.AutoFocusNewRow = true;
+            this.OrderGridView.OptionsSelection.MultiSelect = true;
+            this.OrderGridView.OptionsView.ColumnAutoWidth = false;
+            this.OrderGridView.OptionsView.EnableAppearanceEvenRow = true;
+            this.OrderGridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.OrderGridView.OptionsView.ShowFooter = true;
+            this.OrderGridView.OptionsView.ShowGroupPanel = false;
+            this.OrderGridView.OptionsView.ShowHorizontalLines = DevExpress.Utils.DefaultBoolean.True;
+            this.OrderGridView.OptionsView.ShowIndicator = false;
+            this.OrderGridView.OptionsView.ShowVerticalLines = DevExpress.Utils.DefaultBoolean.True;
+            this.OrderGridView.PaintStyleName = "Skin";
             // 
             // tabNavigationPage4
             // 
@@ -633,7 +665,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1470, 890);
-            this.ControlBox = false;
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.groupControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -723,8 +754,6 @@
         private DevExpress.XtraGrid.GridControl FabricGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView FabricGridView;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage3;
-        private DevExpress.XtraGrid.GridControl OrderGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView OrderGridView;
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage4;
         private DevExpress.XtraGrid.GridControl BomGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView BomGridView;
@@ -737,5 +766,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl15;
         private DevExpress.XtraEditors.TextEdit txtBrandCode;
         private DevExpress.XtraEditors.TextEdit txtBrandName;
+        private DevExpress.XtraGrid.GridControl OrderGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView OrderGridView;
     }
 }

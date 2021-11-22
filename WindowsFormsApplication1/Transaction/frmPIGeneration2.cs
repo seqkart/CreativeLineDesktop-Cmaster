@@ -17,6 +17,8 @@ namespace WindowsFormsApplication1.Transaction
         DataTable dt = new DataTable();
         public string S1 { get; set; }
         public string DocNo { get; set; }
+
+        public string FromExcel { get; set; }
         public DateTime DocDate { get; set; }
         public FrmPIGeneration2()
         {
@@ -78,41 +80,85 @@ namespace WindowsFormsApplication1.Transaction
                     txtPINo.Text = ds.Tables[0].Rows[0]["PINo"].ToString();
                     txtStoreCode.Text = ds.Tables[0].Rows[0]["PIStoreCode"].ToString();
 
-                    DataTable TempTable = new DataTable();
-                    TempTable = ds.Tables[1];
+                    // DataTable TempTable = new DataTable();
+                    //TempTable = ds.Tables[1];
 
 
-                    foreach (DataRow dr in TempTable.Rows)
+                    //foreach (DataRow dr in TempTable.Rows)
+                    //{
+                    //    DataSet dsInner = ProjectFunctions.GetDataSet("sp_LoadEANDataNew '" + dr["EANNo"].ToString() + "'");
+                    //    if (dsInner.Tables[0].Rows.Count > 0)
+                    //    {
+                    //        DataRow dataRow = dt.NewRow();
+
+                    //        dataRow["ARTNO"] = dsInner.Tables[0].Rows[0]["ARTNO"].ToString();
+                    //        dataRow["ARTALIAS"] = dsInner.Tables[0].Rows[0]["ARTALIAS"].ToString();
+                    //        dataRow["VARIANTART"] = dsInner.Tables[0].Rows[0]["VARIANT ART"].ToString();
+                    //        dataRow["ARTMRP"] = dsInner.Tables[0].Rows[0]["ARTMRP"].ToString();
+                    //        dataRow["SIZE"] = dsInner.Tables[0].Rows[0]["SIZE"].ToString();
+                    //        dataRow["COLOR"] = dsInner.Tables[0].Rows[0]["COLOR"].ToString();
+                    //        dataRow["COLSYSID"] = dsInner.Tables[0].Rows[0]["COLSYSID"].ToString();
+                    //        dataRow["SZSYSID"] = dsInner.Tables[0].Rows[0]["SZSYSID"].ToString();
+                    //        dataRow["ARTSYSID"] = dsInner.Tables[0].Rows[0]["ARTSYSID"].ToString();
+                    //        dataRow["GrpDesc"] = dsInner.Tables[0].Rows[0]["GrpDesc"].ToString();
+                    //        dataRow["GrpSubDesc"] = dsInner.Tables[0].Rows[0]["GrpSubDesc"].ToString();
+
+
+
+
+                    //        dataRow["PIQty"] = Convert.ToDecimal(dr["PIQty"]);
+                    //        dataRow["EANNo"] = Convert.ToDecimal(dr["EANNo"]);
+
+                    //        dataRow["GrpHSNCode"] = dsInner.Tables[0].Rows[0]["GrpHSNCode"].ToString();
+                    //        dt.Rows.Add(dataRow);
+                    //    }
+                    //}
+
+
+                    //foreach (DataRow dr in TempTable.Rows)
+                    //{
+
+                    //    foreach (DataRow dr2 in ds.Tables[2].Rows)
+                    //    {
+                    //        if (dr["EANNo"].ToString().ToUpper() == dr2["EAN NUMBER"].ToString().ToUpper())
+                    //        {
+                    //            DataRow dataRow = dt.NewRow();
+
+                    //            dataRow["ARTNO"] = dr2["ARTNO"].ToString();
+                    //            dataRow["ARTALIAS"] = dr2["ARTALIAS"].ToString();
+                    //            dataRow["VARIANTART"] = dr2["VARIANT ART"].ToString();
+                    //            dataRow["ARTMRP"] = dr2["ARTMRP"].ToString();
+                    //            dataRow["SIZE"] = dr2["SIZE"].ToString();
+                    //            dataRow["COLOR"] = dr2["COLOR"].ToString();
+                    //            dataRow["COLSYSID"] = dr2["COLSYSID"].ToString();
+                    //            dataRow["SZSYSID"] = dr2["SZSYSID"].ToString();
+                    //            dataRow["ARTSYSID"] = dr2["ARTSYSID"].ToString();
+                    //            dataRow["GrpDesc"] = dr2["GrpDesc"].ToString();
+                    //            dataRow["GrpSubDesc"] = dr2["GrpSubDesc"].ToString();
+                    //            dataRow["PIQty"] = Convert.ToDecimal(dr["PIQty"]);
+                    //            dataRow["EANNo"] = Convert.ToDecimal(dr["EANNo"]);
+                    //            dataRow["GrpHSNCode"] = dr2["GrpHSNCode"].ToString();
+                    //            dt.Rows.Add(dataRow);
+                    //            break;
+                    //        }
+
+                    //    }
+
+                    //}
+
+
+                    dt = ds.Tables[1];
+                    if (dt.Rows.Count > 0)
                     {
-                        DataSet dsInner = ProjectFunctions.GetDataSet("sp_LoadEANDataNew '" + dr["EANNo"].ToString() + "'");
-                        if (dsInner.Tables[0].Rows.Count > 0)
-                        {
-                            DataRow dataRow = dt.NewRow();
-
-                            dataRow["ARTNO"] = dsInner.Tables[0].Rows[0]["ARTNO"].ToString();
-                            dataRow["ARTALIAS"] = dsInner.Tables[0].Rows[0]["ARTALIAS"].ToString();
-                            dataRow["VARIANTART"] = dsInner.Tables[0].Rows[0]["VARIANT ART"].ToString();
-                            dataRow["ARTMRP"] = dsInner.Tables[0].Rows[0]["ARTMRP"].ToString();
-                            dataRow["SIZE"] = dsInner.Tables[0].Rows[0]["SIZE"].ToString();
-                            dataRow["COLOR"] = dsInner.Tables[0].Rows[0]["COLOR"].ToString();
-                            dataRow["COLSYSID"] = dsInner.Tables[0].Rows[0]["COLSYSID"].ToString();
-                            dataRow["SZSYSID"] = dsInner.Tables[0].Rows[0]["SZSYSID"].ToString();
-                            dataRow["ARTSYSID"] = dsInner.Tables[0].Rows[0]["ARTSYSID"].ToString();
-                            dataRow["GrpDesc"] = dsInner.Tables[0].Rows[0]["GrpDesc"].ToString();
-                            dataRow["GrpSubDesc"] = dsInner.Tables[0].Rows[0]["GrpSubDesc"].ToString();
-
-
-
-
-                            dataRow["PIQty"] = Convert.ToDecimal(dr["PIQty"]);
-                            dataRow["EANNo"] = Convert.ToDecimal(dr["EANNo"]);
-
-                            dataRow["GrpHSNCode"] = dsInner.Tables[0].Rows[0]["GrpHSNCode"].ToString();
-                            dt.Rows.Add(dataRow);
-                        }
+                        InfoGrid.DataSource = dt;
+                        InfoGridView.BestFitColumns();
                     }
-                    InfoGrid.DataSource = dt;
-                    InfoGridView.BestFitColumns();
+                    else
+                    {
+                        InfoGrid.DataSource = null;
+                        InfoGridView.BestFitColumns();
+                    }
+
                 }
             }
         }
@@ -153,7 +199,7 @@ namespace WindowsFormsApplication1.Transaction
         private void BtnSave_Click(object sender, EventArgs e)
         {
             SplashScreenManager.ShowForm(this, typeof(WaitForm1), true, true, false);
-            SplashScreenManager.Default.SetWaitFormDescription("Loading Data For Next PI ");
+            SplashScreenManager.Default.SetWaitFormDescription("Loading Data ");
 
             if (ValidateData())
             {
@@ -202,45 +248,90 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
 
+                        SplashScreenManager.Default.SetWaitFormDescription("Saving Data ");
+                        //foreach (DataRow dr in dt.Rows)
+                        //{
+                        //    sqlcom.CommandType = CommandType.Text;
 
-                        foreach (DataRow dr in dt.Rows)
+
+                        //    sqlcom.CommandText = " Insert into PIDataNew"
+                        //                               + " (PINo,PIDate,PIQty,EANNo)"
+                        //                               + " values(@PINo,@PIDate,@PIQty,@EANNo)";
+
+                        //    sqlcom.Parameters.AddWithValue("@PINo", txtPINo.Text.Trim());
+                        //    sqlcom.Parameters.AddWithValue("@PIDate", Convert.ToDateTime(txtPIDate.Text));
+                        //    sqlcom.Parameters.AddWithValue("@PIQty", Convert.ToDecimal(dr["PIQty"]));
+                        //    sqlcom.Parameters.AddWithValue("@EANNo", dr["EANNo"].ToString());
+
+                        //    sqlcom.ExecuteNonQuery();
+                        //    sqlcom.Parameters.Clear();
+                        //}
+
+
+
+
+                        DataTable dtFinal = new DataTable();
+                        dtFinal.Columns.Add("PINo", typeof(string));
+                        dtFinal.Columns.Add("PIDate", typeof(string));
+                        dtFinal.Columns.Add("PIQty", typeof(string));
+                        dtFinal.Columns.Add("EANNo", typeof(string));
+
+                        dtFinal.Rows.Clear();
+                        foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
                         {
-                            sqlcom.CommandType = CommandType.Text;
-
-
-                            sqlcom.CommandText = " Insert into PIDataNew"
-                                                       + " (PINo,PIDate,PIQty,EANNo)"
-                                                       + " values(@PINo,@PIDate,@PIQty,@EANNo)";
-
-                            sqlcom.Parameters.AddWithValue("@PINo", txtPINo.Text.Trim());
-                            sqlcom.Parameters.AddWithValue("@PIDate", Convert.ToDateTime(txtPIDate.Text));
-                            sqlcom.Parameters.AddWithValue("@PIQty", Convert.ToDecimal(dr["PIQty"]));
-                            sqlcom.Parameters.AddWithValue("@EANNo", dr["EANNo"].ToString());
-
-                            sqlcom.ExecuteNonQuery();
-                            sqlcom.Parameters.Clear();
+                            DataRow drRow = dtFinal.NewRow();
+                            drRow["PINo"] = txtPINo.Text.Trim();
+                            drRow["PIDate"] = Convert.ToDateTime(txtPIDate.Text).ToString("yyyy-MM-dd");
+                            drRow["PIQty"] = dr["PIQty"].ToString();
+                            drRow["EANNo"] = dr["EANNo"].ToString();
+                            dtFinal.Rows.Add(drRow);
                         }
+                        dtFinal.AcceptChanges();
+                        sqlcom.CommandType = CommandType.StoredProcedure;
+                        sqlcom.CommandText = "sp_InsertPINew";
+                        sqlcom.CommandTimeout = 600000;
+                        SqlParameter param = new SqlParameter
+                        {
+                            ParameterName = "@PerformaInv",
+                            Value = dtFinal
+                        };
+                        sqlcom.Parameters.Add(param);
+                        sqlcom.ExecuteNonQuery();
+                        sqlcom.Parameters.Clear();
+
+
+
+
                         transaction.Commit();
                         //ProjectFunctions.SpeakError("PI Data Saved Successfully");
                         sqlcon.Close();
-                        SplashScreenManager.Default.SetWaitFormDescription("Saving PI " + i.ToString());
-                        i++;
 
-
-                        LoadSheet();
-                        DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
-                        workbook.LoadDocument(openFileDialog1.FileName);
-                        DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[i];
-                        if (i <= workbook.Sheets.Count)
+                        if (FromExcel == "Y")
                         {
-                            BtnSave_Click(null, e);
+                            //  SplashScreenManager.Default.SetWaitFormDescription("Saving PI " + i.ToString());
+                            i++;
+
+
+                            LoadSheet();
+                            DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
+                            workbook.LoadDocument(openFileDialog1.FileName);
+                            DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[i];
+                            if (i <= workbook.Sheets.Count)
+                            {
+                                BtnSave_Click(null, e);
+                            }
+                            else
+                            {
+                                SplashScreenManager.CloseForm(false);
+                                Close();
+                            }
                         }
                         else
                         {
                             SplashScreenManager.CloseForm(false);
-                            Close();
                         }
-
+                        Close();
+                        FromExcel = "N";
                     }
                     catch (Exception ex)
                     {
@@ -260,6 +351,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void BtnLoad_Click(object sender, EventArgs e)
         {
+
             openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
             openFileDialog1.ShowDialog();
         }
@@ -327,6 +419,7 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void OpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            FromExcel = "Y";
             txtAddress.Text = openFileDialog1.FileName;
             LoadSheet();
 

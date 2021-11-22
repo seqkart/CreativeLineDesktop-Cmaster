@@ -184,7 +184,7 @@
             this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotQty.Appearance.Options.UseBackColor = true;
             this.lblTotQty.Appearance.Options.UseFont = true;
-            this.lblTotQty.Location = new System.Drawing.Point(566, 47);
+            this.lblTotQty.Location = new System.Drawing.Point(513, 53);
             this.lblTotQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotQty.Name = "lblTotQty";
             this.lblTotQty.Size = new System.Drawing.Size(71, 141);
@@ -197,7 +197,7 @@
             this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBox.Appearance.Options.UseBackColor = true;
             this.lblBox.Appearance.Options.UseFont = true;
-            this.lblBox.Location = new System.Drawing.Point(286, 47);
+            this.lblBox.Location = new System.Drawing.Point(233, 53);
             this.lblBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblBox.Name = "lblBox";
             this.lblBox.Size = new System.Drawing.Size(71, 141);
@@ -228,7 +228,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(147, 92);
+            this.labelControl1.Location = new System.Drawing.Point(94, 98);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 54);
@@ -239,7 +239,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(497, 92);
+            this.labelControl2.Location = new System.Drawing.Point(444, 98);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(62, 54);
@@ -836,7 +836,7 @@
             this.chOtherPS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chOtherPS.Name = "chOtherPS";
             this.chOtherPS.Properties.Caption = "Other PS";
-            this.chOtherPS.Size = new System.Drawing.Size(87, 24);
+            this.chOtherPS.Size = new System.Drawing.Size(87, 21);
             this.chOtherPS.TabIndex = 732;
             this.chOtherPS.CheckedChanged += new System.EventHandler(this.ChOtherPS_CheckedChanged);
             // 

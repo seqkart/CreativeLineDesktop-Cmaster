@@ -11,23 +11,52 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-
         private void LoadProductionOrderColorAndSize()
         {
             DataTable dsProductionOrder = new DataTable();
             dsProductionOrder.Columns.Add("COLSYSID", typeof(Int64));
             dsProductionOrder.Columns.Add("COLNAME", typeof(string));
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderColorAndSize");
+            OrderGridView.Columns.Clear();
+
+
+
+            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderColorAndSize '" + txtArtID.Text + "'");
             if (ds.Tables[0].Rows.Count > 0)
             {
-                dsProductionOrder = ds.Tables[1];
+
                 foreach (DataRow dr in ds.Tables[0].Rows)
                 {
                     dsProductionOrder.Columns.Add(dr["SZDESC"].ToString().Trim());
                 }
+                int Count = 0;
+
+                OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
+                OrderGridView.Columns[Count].OptionsColumn.AllowEdit = false;
+                OrderGridView.Columns[Count].Visible = true;
+                OrderGridView.Columns[Count].Caption = "COLSYSID";
+                OrderGridView.Columns[Count].FieldName = "COLSYSID";
+
+                Count++;
+
+                OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
+                OrderGridView.Columns[Count].OptionsColumn.AllowEdit = false;
+                OrderGridView.Columns[Count].Visible = true;
+                OrderGridView.Columns[Count].Caption = "COLNAME";
+                OrderGridView.Columns[Count].FieldName = "COLNAME";
 
 
 
+                Count++;
+
+                foreach (DataRow dr in ds.Tables[0].Rows)
+                {
+                    OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
+                    OrderGridView.Columns[Count].OptionsColumn.AllowEdit = true;
+                    OrderGridView.Columns[Count].Visible = true;
+                    OrderGridView.Columns[Count].Caption = dr["SZDESC"].ToString();
+                    OrderGridView.Columns[Count].FieldName = dr["SZSYSID"].ToString();
+                    Count++;
+                }
                 if (dsProductionOrder.Rows.Count > 0)
                 {
                     OrderGrid.DataSource = dsProductionOrder;
@@ -54,7 +83,7 @@ namespace WindowsFormsApplication1.Transaction
 
         private void FrmJobWork_Load(object sender, EventArgs e)
         {
-            //LoadMeasurementDataAsPerGroup();
+            // LoadProductionOrderColorAndSize();
         }
 
         private void TxtArtNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
@@ -82,6 +111,7 @@ namespace WindowsFormsApplication1.Transaction
                         txtArtNo.Text = ds.Tables[0].Rows[0]["ARTNO"].ToString();
                         txtArtID.Text = ds.Tables[0].Rows[0]["ARTSYSID"].ToString();
                         txtArtDesc.Text = ds.Tables[0].Rows[0]["GrpSubDesc"].ToString();
+                        LoadProductionOrderColorAndSize();
                         txtSampleWeight.Focus();
                     }
                     else
@@ -119,6 +149,8 @@ namespace WindowsFormsApplication1.Transaction
                 txtArtNo.Text = currentrow["ARTNO"].ToString();
                 txtArtID.Text = currentrow["ARTSYSID"].ToString();
                 txtArtDesc.Text = currentrow["GrpSubDesc"].ToString();
+                LoadProductionOrderColorAndSize();
+                HelpGrid.Visible = false;
                 txtSampleWeight.Focus();
             }
             if (HelpGrid.Text == "txtBrandCode")

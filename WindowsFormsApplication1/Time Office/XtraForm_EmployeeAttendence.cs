@@ -518,10 +518,12 @@ namespace WindowsFormsApplication1.Time_Office
             string tag = ((WindowsUIButton)e.Button).Tag.ToString();
 
 
+
             switch (tag)
             {
-                case "save":
 
+                case "save":
+                   
                     await CallAsyn_SaveEmployeeAttendanceDetails();
                     _frmAttendenceLaoding.LoadAttendanceDataGrid();
 
@@ -1913,6 +1915,7 @@ namespace WindowsFormsApplication1.Time_Office
         private void DateAttendance_ValueChanged(object sender, EventArgs e)
         {
             DateTime today = dateAttendance.Value;
+            SendKeys.Send(".");
             lblDayName.Text = today.ToString("dddd");
 
             // SendKeys.Send("{left}");
@@ -2060,10 +2063,7 @@ namespace WindowsFormsApplication1.Time_Office
             }
         }
 
-        private void WindowsUIButtonPanelMain_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void TxtNightOut_EditValueChanged(object sender, EventArgs e)
         {
@@ -2085,6 +2085,23 @@ namespace WindowsFormsApplication1.Time_Office
             dateAttendance.Format = DateTimePickerFormat.Custom;
             dateAttendance.CustomFormat = "dd>mm>yyyy";
         }
+
+
+
+        private void DateAttendance_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                txtEmpID.Focus();
+        }
+
+        private void grpBoxEmployee_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+      
+
+       
     }
 
 

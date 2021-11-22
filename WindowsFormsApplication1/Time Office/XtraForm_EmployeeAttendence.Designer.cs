@@ -65,6 +65,7 @@
             this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.grpBoxEmployee = new DevExpress.XtraEditors.GroupControl();
+            this.totalWorkingHours_Label = new DevExpress.XtraEditors.LabelControl();
             this.txtNightOverTimeHours = new DevExpress.XtraEditors.TextEdit();
             this.txtNightOut = new DevExpress.XtraEditors.TimeSpanEdit();
             this.txtNightIn = new DevExpress.XtraEditors.TimeSpanEdit();
@@ -75,7 +76,7 @@
             this.timeEdit_Time_Out_First = new DevExpress.XtraEditors.TimeSpanEdit();
             this.timeEdit_Time_In_First = new DevExpress.XtraEditors.TimeSpanEdit();
             this.timeEdit_Time_In_First_Testing = new DevExpress.XtraEditors.TimeSpanEdit();
-            this.totalWorkingHours_Label = new DevExpress.XtraEditors.LabelControl();
+            this.totalWorkingHours_Text = new DevExpress.XtraEditors.TextEdit();
             this.label18 = new DevExpress.XtraEditors.LabelControl();
             this.totalWorkingHours_Text_Main = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
@@ -88,7 +89,6 @@
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.totalWorkingHours_Text = new DevExpress.XtraEditors.TextEdit();
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
@@ -158,8 +158,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_First.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_First.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_First_Testing.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.totalWorkingHours_Text_Main.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalWorkingHours_Text.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalWorkingHours_Text_Main.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_First_Main.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_First_Main.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_Last_Main.Properties)).BeginInit();
@@ -206,7 +206,7 @@
             this.windowsUIButtonPanelCloseButton.Name = "windowsUIButtonPanelCloseButton";
             this.windowsUIButtonPanelCloseButton.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.windowsUIButtonPanelCloseButton.Padding = new System.Windows.Forms.Padding(6, 7, 0, 0);
-            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 768);
+            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 783);
             this.windowsUIButtonPanelCloseButton.TabIndex = 2;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
@@ -247,17 +247,16 @@
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 768);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 783);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 78);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 78);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(830, 78);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(840, 78);
             this.windowsUIButtonPanelMain.TabIndex = 0;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelMain_ButtonClick);
-            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.WindowsUIButtonPanelMain_Click);
             // 
             // labelControl
             // 
@@ -274,7 +273,7 @@
             this.labelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(12, 7, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(778, 39);
+            this.labelControl.Size = new System.Drawing.Size(788, 39);
             this.labelControl.TabIndex = 1;
             this.labelControl.Text = "Attendance";
             // 
@@ -472,15 +471,18 @@
             // 
             // dateAttendance
             // 
+            this.dateAttendance.CustomFormat = "dd/MM/yyyy";
+            this.dateAttendance.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
             this.dateAttendance.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateAttendance.Location = new System.Drawing.Point(112, 54);
             this.dateAttendance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateAttendance.Name = "dateAttendance";
-            this.dateAttendance.Size = new System.Drawing.Size(139, 22);
+            this.dateAttendance.Size = new System.Drawing.Size(139, 25);
             this.dateAttendance.TabIndex = 0;
             this.dateAttendance.Value = new System.DateTime(2021, 10, 12, 0, 0, 0, 0);
             this.dateAttendance.FormatChanged += new System.EventHandler(this.DateAttendance_FormatChanged);
             this.dateAttendance.ValueChanged += new System.EventHandler(this.DateAttendance_ValueChanged);
+            this.dateAttendance.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DateAttendance_KeyDown);
             // 
             // label7
             // 
@@ -626,6 +628,7 @@
             this.grpBoxEmployee.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.grpBoxEmployee.Appearance.Options.UseForeColor = true;
             this.grpBoxEmployee.CaptionImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("grpBoxEmployee.CaptionImageOptions.Image")));
+            this.grpBoxEmployee.Controls.Add(this.totalWorkingHours_Label);
             this.grpBoxEmployee.Controls.Add(this.txtNightOverTimeHours);
             this.grpBoxEmployee.Controls.Add(this.txtNightOut);
             this.grpBoxEmployee.Controls.Add(this.txtNightIn);
@@ -636,7 +639,7 @@
             this.grpBoxEmployee.Controls.Add(this.timeEdit_Time_Out_First);
             this.grpBoxEmployee.Controls.Add(this.timeEdit_Time_In_First);
             this.grpBoxEmployee.Controls.Add(this.timeEdit_Time_In_First_Testing);
-            this.grpBoxEmployee.Controls.Add(this.totalWorkingHours_Label);
+            this.grpBoxEmployee.Controls.Add(this.totalWorkingHours_Text);
             this.grpBoxEmployee.Controls.Add(this.label18);
             this.grpBoxEmployee.Controls.Add(this.totalWorkingHours_Text_Main);
             this.grpBoxEmployee.Controls.Add(this.labelControl6);
@@ -649,7 +652,6 @@
             this.grpBoxEmployee.Controls.Add(this.labelControl20);
             this.grpBoxEmployee.Controls.Add(this.labelControl19);
             this.grpBoxEmployee.Controls.Add(this.labelControl18);
-            this.grpBoxEmployee.Controls.Add(this.totalWorkingHours_Text);
             this.grpBoxEmployee.Controls.Add(this.labelControl16);
             this.grpBoxEmployee.Controls.Add(this.labelControl14);
             this.grpBoxEmployee.Controls.Add(this.labelControl13);
@@ -668,6 +670,18 @@
             this.grpBoxEmployee.Size = new System.Drawing.Size(712, 229);
             this.grpBoxEmployee.TabIndex = 13;
             this.grpBoxEmployee.Text = "Manual Attendance";
+            this.grpBoxEmployee.Paint += new System.Windows.Forms.PaintEventHandler(this.grpBoxEmployee_Paint);
+            // 
+            // totalWorkingHours_Label
+            // 
+            this.totalWorkingHours_Label.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Label.Appearance.Options.UseBackColor = true;
+            this.totalWorkingHours_Label.Location = new System.Drawing.Point(623, 100);
+            this.totalWorkingHours_Label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.totalWorkingHours_Label.Name = "totalWorkingHours_Label";
+            this.totalWorkingHours_Label.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
+            this.totalWorkingHours_Label.Size = new System.Drawing.Size(0, 19);
+            this.totalWorkingHours_Label.TabIndex = 5;
             // 
             // txtNightOverTimeHours
             // 
@@ -838,8 +852,9 @@
             this.timeEdit_Time_In_First.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_First.Properties.EditFormat.FormatString = "HH:mm";
             this.timeEdit_Time_In_First.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.timeEdit_Time_In_First.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_First.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.timeEdit_Time_In_First.Properties.MaskSettings.Set("mask", "HH:mm");
+            this.timeEdit_Time_In_First.Properties.MaskSettings.Set("useAdvancingCaret", true);
             this.timeEdit_Time_In_First.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_In_First.TabIndex = 1;
             this.timeEdit_Time_In_First.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_EditValueChanged);
@@ -847,7 +862,7 @@
             // timeEdit_Time_In_First_Testing
             // 
             this.timeEdit_Time_In_First_Testing.EditValue = System.TimeSpan.Parse("00:00:00");
-            this.timeEdit_Time_In_First_Testing.Location = new System.Drawing.Point(8, 160);
+            this.timeEdit_Time_In_First_Testing.Location = new System.Drawing.Point(25, 163);
             this.timeEdit_Time_In_First_Testing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.timeEdit_Time_In_First_Testing.Name = "timeEdit_Time_In_First_Testing";
             this.timeEdit_Time_In_First_Testing.Properties.AllowEditDays = false;
@@ -859,23 +874,40 @@
             this.timeEdit_Time_In_First_Testing.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Custom;
             this.timeEdit_Time_In_First_Testing.Properties.EditFormat.FormatString = "HH:mm";
             this.timeEdit_Time_In_First_Testing.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.Custom;
-            this.timeEdit_Time_In_First_Testing.Properties.Mask.EditMask = "HH:mm";
             this.timeEdit_Time_In_First_Testing.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.timeEdit_Time_In_First_Testing.Properties.MaskSettings.Set("mask", "HH:mm");
             this.timeEdit_Time_In_First_Testing.Size = new System.Drawing.Size(76, 22);
             this.timeEdit_Time_In_First_Testing.TabIndex = 253;
             this.timeEdit_Time_In_First_Testing.Visible = false;
             this.timeEdit_Time_In_First_Testing.EditValueChanged += new System.EventHandler(this.TimeEdit_Time_In_First_1_EditValueChanged);
             // 
-            // totalWorkingHours_Label
+            // totalWorkingHours_Text
             // 
-            this.totalWorkingHours_Label.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.totalWorkingHours_Label.Appearance.Options.UseBackColor = true;
-            this.totalWorkingHours_Label.Location = new System.Drawing.Point(607, 104);
-            this.totalWorkingHours_Label.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.totalWorkingHours_Label.Name = "totalWorkingHours_Label";
-            this.totalWorkingHours_Label.Padding = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.totalWorkingHours_Label.Size = new System.Drawing.Size(0, 19);
-            this.totalWorkingHours_Label.TabIndex = 5;
+            this.totalWorkingHours_Text.EditValue = "0";
+            this.totalWorkingHours_Text.EnterMoveNextControl = true;
+            this.totalWorkingHours_Text.Location = new System.Drawing.Point(618, 99);
+            this.totalWorkingHours_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.totalWorkingHours_Text.Name = "totalWorkingHours_Text";
+            this.totalWorkingHours_Text.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
+            this.totalWorkingHours_Text.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Text.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.totalWorkingHours_Text.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.totalWorkingHours_Text.Properties.Appearance.Options.UseBackColor = true;
+            this.totalWorkingHours_Text.Properties.Appearance.Options.UseFont = true;
+            this.totalWorkingHours_Text.Properties.Appearance.Options.UseForeColor = true;
+            this.totalWorkingHours_Text.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.totalWorkingHours_Text.Properties.AppearanceDisabled.Options.UseBackColor = true;
+            this.totalWorkingHours_Text.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.totalWorkingHours_Text.Properties.AppearanceReadOnly.BackColor2 = System.Drawing.Color.Red;
+            this.totalWorkingHours_Text.Properties.AppearanceReadOnly.Options.UseBackColor = true;
+            this.totalWorkingHours_Text.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.totalWorkingHours_Text.Properties.MaxLength = 10;
+            this.totalWorkingHours_Text.Properties.UseReadOnlyAppearance = false;
+            this.totalWorkingHours_Text.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.totalWorkingHours_Text.Size = new System.Drawing.Size(76, 26);
+            this.totalWorkingHours_Text.TabIndex = 15;
+            this.totalWorkingHours_Text.TabStop = false;
+            this.totalWorkingHours_Text.EditValueChanged += new System.EventHandler(this.TotalWorkingHours_Text_EditValueChanged);
             // 
             // label18
             // 
@@ -1031,34 +1063,6 @@
             this.labelControl18.Size = new System.Drawing.Size(36, 19);
             this.labelControl18.TabIndex = 235;
             this.labelControl18.Text = "FIRST";
-            // 
-            // totalWorkingHours_Text
-            // 
-            this.totalWorkingHours_Text.EditValue = "0";
-            this.totalWorkingHours_Text.EnterMoveNextControl = true;
-            this.totalWorkingHours_Text.Location = new System.Drawing.Point(605, 101);
-            this.totalWorkingHours_Text.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.totalWorkingHours_Text.Name = "totalWorkingHours_Text";
-            this.totalWorkingHours_Text.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
-            this.totalWorkingHours_Text.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.totalWorkingHours_Text.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            this.totalWorkingHours_Text.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.totalWorkingHours_Text.Properties.Appearance.Options.UseBackColor = true;
-            this.totalWorkingHours_Text.Properties.Appearance.Options.UseFont = true;
-            this.totalWorkingHours_Text.Properties.Appearance.Options.UseForeColor = true;
-            this.totalWorkingHours_Text.Properties.AppearanceDisabled.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.totalWorkingHours_Text.Properties.AppearanceDisabled.Options.UseBackColor = true;
-            this.totalWorkingHours_Text.Properties.AppearanceReadOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.totalWorkingHours_Text.Properties.AppearanceReadOnly.BackColor2 = System.Drawing.Color.Red;
-            this.totalWorkingHours_Text.Properties.AppearanceReadOnly.Options.UseBackColor = true;
-            this.totalWorkingHours_Text.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.totalWorkingHours_Text.Properties.MaxLength = 10;
-            this.totalWorkingHours_Text.Properties.UseReadOnlyAppearance = false;
-            this.totalWorkingHours_Text.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.totalWorkingHours_Text.Size = new System.Drawing.Size(76, 26);
-            this.totalWorkingHours_Text.TabIndex = 15;
-            this.totalWorkingHours_Text.TabStop = false;
-            this.totalWorkingHours_Text.EditValueChanged += new System.EventHandler(this.TotalWorkingHours_Text_EditValueChanged);
             // 
             // labelControl16
             // 
@@ -1349,7 +1353,7 @@
             // 
             this.lblOvertimeHours.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.lblOvertimeHours.Appearance.Options.UseBackColor = true;
-            this.lblOvertimeHours.Location = new System.Drawing.Point(203, 90);
+            this.lblOvertimeHours.Location = new System.Drawing.Point(290, 94);
             this.lblOvertimeHours.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblOvertimeHours.Name = "lblOvertimeHours";
             this.lblOvertimeHours.Size = new System.Drawing.Size(7, 16);
@@ -1423,7 +1427,7 @@
             // 
             // txtOverTImeHOurs
             // 
-            this.txtOverTImeHOurs.Location = new System.Drawing.Point(199, 85);
+            this.txtOverTImeHOurs.Location = new System.Drawing.Point(199, 88);
             this.txtOverTImeHOurs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOverTImeHOurs.Name = "txtOverTImeHOurs";
             this.txtOverTImeHOurs.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
@@ -1761,7 +1765,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(830, 846);
+            this.ClientSize = new System.Drawing.Size(840, 861);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.panelControlMachine);
             this.Controls.Add(this.panelControlManual);
@@ -1800,8 +1804,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_First.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_First.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_First_Testing.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.totalWorkingHours_Text_Main.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.totalWorkingHours_Text.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.totalWorkingHours_Text_Main.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_First_Main.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_Out_First_Main.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeEdit_Time_In_Last_Main.Properties)).EndInit();

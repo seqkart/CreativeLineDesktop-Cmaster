@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WindowsFormsApplication1</RootNamespace>
     <AssemblyName>SEQKART-ERP</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -1838,6 +1838,12 @@
     <Compile Include="Transaction\frmAttachmentViewer.Designer.cs">
       <DependentUpon>frmAttachmentViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmAttendenceFeeding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmAttendenceFeeding.Designer.cs">
+      <DependentUpon>frmAttendenceFeeding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmAttendenceReading.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2495,6 +2501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmAttachmentViewer.resx">
       <DependentUpon>frmAttachmentViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmAttendenceFeeding.resx">
+      <DependentUpon>frmAttendenceFeeding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmAttendenceReading.resx">
       <DependentUpon>frmAttendenceReading.cs</DependentUpon>

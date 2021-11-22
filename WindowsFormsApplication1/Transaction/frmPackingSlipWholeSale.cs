@@ -79,14 +79,14 @@ namespace WindowsFormsApplication1.Transaction
             else
             {
                 Ds = ProjectFunctions.GetDataSet("[sp_LoadPackingSLipMstCount] '" +
-                  PSWSNO +
-                  "','" +
-                  PSWSTOTBOXES +
-                  "','" +
-                  GlobalVariables.FinancialYear +
-                  "','" +
-                  GlobalVariables.CUnitID +
-                  "'");
+              PSWSNO +
+              "','" +
+              PSWSTOTBOXES +
+              "','" +
+              GlobalVariables.FinancialYear +
+              "','" +
+              GlobalVariables.CUnitID +
+              "'");
 
             }
 
@@ -737,7 +737,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
                         // Print 
-                        MessageBox.Show("Are you sure you want to print", "Are you sure?", MessageBoxButtons.YesNoCancel); //Gets users input by showing the message box
+                        DialogResult DialogResult = MessageBox.Show("Are you sure you want to print", "Are you sure?", MessageBoxButtons.YesNoCancel); //Gets users input by showing the message box
 
                         if (DialogResult == DialogResult.Yes) //Creates the yes function
                         {
@@ -782,38 +782,37 @@ namespace WindowsFormsApplication1.Transaction
 
 
 
-                        if (S1 == "&Add")
-                        {
-                            lblBox.Text = (Convert.ToInt32(lblBox.Text) + 1).ToString();
-                            BarCodeGrid.DataSource = null;
+                        //if (S1 == "&Add")
+                        //{
 
 
-                            dt.Clear();
-                            Count();
+                        //    Count();
+                        //    BarCodeGrid.DataSource = null;
+                        //    dt.Clear();
+                        //    lblBox.Text = (Convert.ToInt32(lblBox.Text) + 1).ToString();
+                        //    lblTotQty.Text = "0";
+                        //    //Count();
+                        //}
+                        //else
+                        //{
+                        lblBox.Text = ProjectFunctions.GetDataSet("select isnull( max(PSWSTOTBOXES),0)+1 from PSWSLMAIN where PSWSNO='" +
+                            txtPackingSlipNO.Text +
+                            "' And PSWSFNYR='" +
+                            GlobalVariables.FinancialYear +
+                            "' And UnitCode='" +
+                            GlobalVariables.CUnitID +
+                            "'")
+                            .Tables[0].Rows[0][0].ToString();
+                        BarCodeGrid.DataSource = null;
 
-                            lblTotQty.Text = "0";
-                            Count();
-                        }
-                        else
-                        {
-                            lblBox.Text = ProjectFunctions.GetDataSet("select isnull( max(PSWSTOTBOXES),0)+1 from PSWSLMAIN where PSWSNO='" +
-                                txtPackingSlipNO.Text +
-                                "' And PSWSFNYR='" +
-                                GlobalVariables.FinancialYear +
-                                "' And UnitCode='" +
-                                GlobalVariables.CUnitID +
-                                "'")
-                                .Tables[0].Rows[0][0].ToString();
-                            BarCodeGrid.DataSource = null;
 
+                        S1 = "&Add";
+                        dt.Clear();
+                        Count();
 
-                            S1 = "&Add";
-                            dt.Clear();
-                            Count();
-
-                            lblTotQty.Text = "0";
-                            Count();
-                        }
+                        lblTotQty.Text = "0";
+                        //Count();
+                        //}
                     }
                 }
             }

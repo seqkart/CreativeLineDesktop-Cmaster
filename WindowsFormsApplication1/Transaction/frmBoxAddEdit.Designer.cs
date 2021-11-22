@@ -430,7 +430,7 @@
             this.lblBox.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBox.Appearance.Options.UseBackColor = true;
             this.lblBox.Appearance.Options.UseFont = true;
-            this.lblBox.Location = new System.Drawing.Point(852, 35);
+            this.lblBox.Location = new System.Drawing.Point(769, 45);
             this.lblBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblBox.Name = "lblBox";
             this.lblBox.Size = new System.Drawing.Size(71, 141);
@@ -470,7 +470,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(713, 79);
+            this.labelControl1.Location = new System.Drawing.Point(630, 89);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(139, 54);
@@ -481,7 +481,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(1010, 79);
+            this.labelControl2.Location = new System.Drawing.Point(927, 89);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(62, 54);
@@ -494,7 +494,7 @@
             this.lblTotQty.Appearance.Font = new System.Drawing.Font("Cambria", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotQty.Appearance.Options.UseBackColor = true;
             this.lblTotQty.Appearance.Options.UseFont = true;
-            this.lblTotQty.Location = new System.Drawing.Point(1091, 35);
+            this.lblTotQty.Location = new System.Drawing.Point(1008, 45);
             this.lblTotQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblTotQty.Name = "lblTotQty";
             this.lblTotQty.Size = new System.Drawing.Size(71, 141);

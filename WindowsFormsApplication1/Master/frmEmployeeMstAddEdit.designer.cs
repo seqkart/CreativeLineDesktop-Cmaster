@@ -561,7 +561,7 @@
             this.AdditionalInfoTab.Controls.Add(this.panelControl2);
             this.AdditionalInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfoTab.Name = "AdditionalInfoTab";
-            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 358);
+            this.AdditionalInfoTab.Size = new System.Drawing.Size(696, 364);
             this.AdditionalInfoTab.Text = "Details";
             // 
             // panelControl2
@@ -603,7 +603,7 @@
             this.panelControl2.Location = new System.Drawing.Point(0, 0);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(696, 358);
+            this.panelControl2.Size = new System.Drawing.Size(696, 364);
             this.panelControl2.TabIndex = 248;
             // 
             // labelControl22
@@ -1035,7 +1035,7 @@
             this.AdditionalInfo1Tab.Controls.Add(this.panelControl3);
             this.AdditionalInfo1Tab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AdditionalInfo1Tab.Name = "AdditionalInfo1Tab";
-            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 358);
+            this.AdditionalInfo1Tab.Size = new System.Drawing.Size(696, 364);
             this.AdditionalInfo1Tab.Text = "Additional";
             // 
             // panelControl3
@@ -1071,7 +1071,7 @@
             this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(696, 358);
+            this.panelControl3.Size = new System.Drawing.Size(696, 364);
             this.panelControl3.TabIndex = 172;
             // 
             // txtBankBranchCode
@@ -1370,7 +1370,7 @@
             this.OtherSpecinfoTab.Controls.Add(this.textEdit10);
             this.OtherSpecinfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OtherSpecinfoTab.Name = "OtherSpecinfoTab";
-            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 358);
+            this.OtherSpecinfoTab.Size = new System.Drawing.Size(696, 364);
             this.OtherSpecinfoTab.Text = "Address ";
             // 
             // panelControl4
@@ -1394,7 +1394,7 @@
             this.panelControl4.Location = new System.Drawing.Point(0, 0);
             this.panelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(696, 358);
+            this.panelControl4.Size = new System.Drawing.Size(696, 364);
             this.panelControl4.TabIndex = 153;
             // 
             // txtCountry
@@ -1585,7 +1585,7 @@
             this.xtraTabPage1.Controls.Add(this.chkTeaBreak);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(696, 358);
+            this.xtraTabPage1.Size = new System.Drawing.Size(696, 364);
             this.xtraTabPage1.Text = "Employee Timing";
             // 
             // labelControl29
@@ -1776,7 +1776,6 @@
             this.txtDOJ.Location = new System.Drawing.Point(547, 73);
             this.txtDOJ.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDOJ.Name = "txtDOJ";
-            this.txtDOJ.Properties.BeepOnError = false;
             this.txtDOJ.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDOJ.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1806,7 +1805,6 @@
             this.txtDOL.Location = new System.Drawing.Point(547, 107);
             this.txtDOL.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDOL.Name = "txtDOL";
-            this.txtDOL.Properties.BeepOnError = false;
             this.txtDOL.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDOL.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1920,17 +1918,16 @@
             this.windowsUIButtonPanelMain.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.windowsUIButtonPanelMain.EnableImageTransparency = true;
             this.windowsUIButtonPanelMain.ForeColor = System.Drawing.Color.White;
-            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 840);
+            this.windowsUIButtonPanelMain.Location = new System.Drawing.Point(0, 843);
             this.windowsUIButtonPanelMain.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.windowsUIButtonPanelMain.MaximumSize = new System.Drawing.Size(0, 78);
             this.windowsUIButtonPanelMain.MinimumSize = new System.Drawing.Size(70, 78);
             this.windowsUIButtonPanelMain.Name = "windowsUIButtonPanelMain";
-            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(850, 78);
+            this.windowsUIButtonPanelMain.Size = new System.Drawing.Size(852, 78);
             this.windowsUIButtonPanelMain.TabIndex = 55;
             this.windowsUIButtonPanelMain.Text = "windowsUIButtonPanelMain";
             this.windowsUIButtonPanelMain.UseButtonBackgroundImages = false;
             this.windowsUIButtonPanelMain.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.WindowsUIButtonPanelMain_ButtonClick);
-//            this.windowsUIButtonPanelMain.Click += new System.EventHandler(this.WindowsUIButtonPanelMain_Click);
             // 
             // windowsUIButtonPanelCloseButton
             // 
@@ -1948,7 +1945,7 @@
             this.windowsUIButtonPanelCloseButton.Name = "windowsUIButtonPanelCloseButton";
             this.windowsUIButtonPanelCloseButton.Orientation = System.Windows.Forms.Orientation.Vertical;
             this.windowsUIButtonPanelCloseButton.Padding = new System.Windows.Forms.Padding(6, 7, 0, 0);
-            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 840);
+            this.windowsUIButtonPanelCloseButton.Size = new System.Drawing.Size(52, 843);
             this.windowsUIButtonPanelCloseButton.TabIndex = 247;
             this.windowsUIButtonPanelCloseButton.Text = "windowsUIButtonPanel1";
             this.windowsUIButtonPanelCloseButton.UseButtonBackgroundImages = false;
@@ -1968,7 +1965,7 @@
             this.labelControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl.Name = "labelControl";
             this.labelControl.Padding = new System.Windows.Forms.Padding(12, 7, 0, 0);
-            this.labelControl.Size = new System.Drawing.Size(798, 39);
+            this.labelControl.Size = new System.Drawing.Size(800, 39);
             this.labelControl.TabIndex = 248;
             this.labelControl.Text = "Employee Master";
             // 
@@ -2149,7 +2146,7 @@
             this.Appearance.Options.UseForeColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(850, 918);
+            this.ClientSize = new System.Drawing.Size(852, 921);
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
