@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
+    
     public partial class FrmLogins : DevExpress.XtraEditors.XtraForm
     {
         [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]

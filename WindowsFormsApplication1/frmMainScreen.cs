@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 
 namespace WindowsFormsApplication1
+
 {
     public partial class frmMainScreen : DevExpress.XtraEditors.XtraForm
     {

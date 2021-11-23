@@ -119,7 +119,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1166, 25);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1168, 25);
             this.Menu_ToolStrip.TabIndex = 208;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -663,7 +663,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1166, 710);
+            this.ClientSize = new System.Drawing.Size(1168, 712);
             this.Controls.Add(this.lblTotalRecordsToTransfer);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDestinationConnection);
