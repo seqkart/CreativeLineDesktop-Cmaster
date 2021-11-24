@@ -632,13 +632,13 @@
             // 
             this.simpleButton1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton1.Appearance.Options.UseFont = true;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(338, 17);
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(509, 72);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(210, 43);
             this.simpleButton1.TabIndex = 711;
-            this.simpleButton1.Text = "IMPORT RELIANCE SHEET 1";
+            this.simpleButton1.Text = "Relaince 2021 sheet";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
             // 
             // BTNIMPORT2

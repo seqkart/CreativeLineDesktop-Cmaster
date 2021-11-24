@@ -2,7 +2,6 @@
 using DevExpress.XtraSplashScreen;
 using System;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -1198,7 +1197,7 @@ namespace WindowsFormsApplication1.Transaction
         {
 
             var xlConn = string.Empty;
-            DataSet dsGeneric = ProjectFunctions.GetDataSet("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] from PISourceData Where Feeddt>='2021-11-02'");
+            DataSet dsGeneric = ProjectFunctions.GetDataSet("SELECT distinct [GENERIC ART],[GENERIC ARTICLE NAME], (case when segment like'%WOMEN%'then   'LADIES' else SEGMENT END) AS Segment,[POS DESCRIPTION],[HSN CODE] from PISourceData Where Feeddt>='2021-11-02'");
             if (dsGeneric.Tables[0].Rows.Count > 0)
             {
 
@@ -1215,14 +1214,14 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpDesc)values((Select max(isnull(GrpCode,0))+1 from GrpMst),'" + dr["SEGMENT"].ToString().Trim() + "')");
 
                     }
-                    DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
+                    DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["POS DESCRIPTION"].ToString().Trim() + "'");
                     if (dsCheckSubGroup.Tables[0].Rows.Count > 0)
                     {
 
                     }
                     else
                     {
-                        ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpSubCode,GrpDesc,GrpSubDesc,GrpHSNCode)values((Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'),((Select max(isnull(GrpSubCode,0))+1 from GrpMst Where GrpCode=(Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'))),'" + dr["SEGMENT"].ToString().Trim() + "','" + dr["BRICK DESCRIPTION"].ToString().Trim() + "','" + dr["HSN CODE"].ToString() + "')");
+                        ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpSubCode,GrpDesc,GrpSubDesc,GrpHSNCode)values((Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'),((Select max(isnull(GrpSubCode,0))+1 from GrpMst Where GrpCode=(Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'))),'" + dr["SEGMENT"].ToString().Trim() + "','" + dr["POS DESCRIPTION"].ToString().Trim() + "','" + dr["HSN CODE"].ToString() + "')");
 
                     }
                 }
@@ -1347,7 +1346,7 @@ namespace WindowsFormsApplication1.Transaction
                     else
                     {
                         DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpCode,GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
-                        DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode,GrpSubCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
+                        DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode,GrpSubCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["POS DESCRIPTION"].ToString().Trim() + "'");
 
                         decimal MRP = 0;
                         foreach (DataRow drMRP in dtVariants.Rows)
@@ -1395,11 +1394,13 @@ namespace WindowsFormsApplication1.Transaction
         {
             btnImport.Visible = true;
             BTNIMPORT2.Visible = true;
+            simpleButton1.Visible = false;
         }
         private void RBDIRECT_CheckedChanged(object sender, EventArgs e)
         {
             btnImport.Visible = false;
             BTNIMPORT2.Visible = false;
+            simpleButton1.Visible = true;
         }
 
         private void TxtDeptCode_EditValueChanged(object sender, EventArgs e)
