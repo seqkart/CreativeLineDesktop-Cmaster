@@ -1547,7 +1547,7 @@ namespace WindowsFormsApplication1
             {
                 HelpGrid_DoubleClick(null, e);
             }
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Escape)
             {
                 HelpGrid.Visible = false;
             }
@@ -2271,21 +2271,102 @@ namespace WindowsFormsApplication1
 
         private void TxtItemFlatRate_KeyDown(object sender, KeyEventArgs e)
         {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
+                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
+                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTWSP"], Convert.ToDecimal(txtItemMRP.Text));
+                    InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
+                    Calculation();
 
+                    InfoGridView.Focus();
+
+
+
+
+
+                    txtItemDiscAMount.EditValue = Convert.ToDecimal("0");
+                    txtItemDiscPer.EditValue = Convert.ToDecimal("0");
+                    txtItemMRP.EditValue = Convert.ToDecimal("0");
+                    txtItemFlatRate.EditValue = Convert.ToDecimal("0");
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
         }
 
         private void TxtItemFlatRate_EditValueChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (txtItemFlatRate.Enabled && Convert.ToDecimal(txtItemFlatRate.Text) > 0)
+                {
+                    txtItemDiscAMount.EditValue = (Convert.ToDecimal(txtItemMRP.Text) - Convert.ToDecimal(txtItemFlatRate.Text));
+                    txtItemDiscPer.EditValue = 100 - ((Convert.ToDecimal(txtItemFlatRate.Text) / Convert.ToDecimal(txtItemMRP.Text)) * 100);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
         }
 
         private void TxtItemDiscPer_EditValueChanged(object sender, EventArgs e)
         {
-
+            if (txtItemDiscPer.Enabled && Convert.ToDecimal(txtItemDiscPer.Text) > 0)
+            {
+                txtItemDiscAMount.EditValue = ((Convert.ToDecimal(txtItemMRP.Text) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
+                txtItemFlatRate.EditValue = Convert.ToDecimal(txtItemMRP.Text) - Convert.ToDecimal(txtItemDiscAMount.Text);
+            }
         }
 
         private void TxtItemDiscPer_KeyDown(object sender, KeyEventArgs e)
         {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+
+                    if (chall.Checked)
+                    {
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            if (txtItemDiscPer.Enabled)
+                            {
+                                dr["SIDITMDISCAMT"] = ((Convert.ToDecimal(dr["SIDARTWSP"]) * Convert.ToDecimal(txtItemDiscPer.Text)) / 100);
+                                dr["SIDITMDISCPRCN"] = Convert.ToDecimal(txtItemDiscPer.Text);
+
+                                Calculation();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCAMT"], Convert.ToDecimal(txtItemDiscAMount.Text));
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMDISCPRCN"], Convert.ToDecimal(txtItemDiscPer.Text));
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDARTWSP"], Convert.ToDecimal(txtItemMRP.Text));
+                        InfoGridView.SetRowCellValue(rowindex, InfoGridView.Columns["SIDITMNETAMT"], Convert.ToDecimal(txtItemFlatRate.Text));
+                        Calculation();
+                    }
+
+
+
+                    InfoGridView.Focus();
+
+                    txtItemDiscAMount.EditValue = Convert.ToDecimal("0");
+                    txtItemDiscPer.EditValue = Convert.ToDecimal("0");
+                    txtItemMRP.EditValue = Convert.ToDecimal("0");
+                    txtItemFlatRate.EditValue = Convert.ToDecimal("0");
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -2299,7 +2380,7 @@ namespace WindowsFormsApplication1
                     {
                         DataRow currentrow = InfoGridView.GetDataRow(InfoGridView.FocusedRowHandle);
                         rowindex = InfoGridView.FocusedRowHandle;
-                        txtItemMRP.EditValue = currentrow["SIDARTMRP"];
+                        txtItemMRP.EditValue = currentrow["SIDARTWSP"];
                         txtItemDiscAMount.EditValue = currentrow["SIDITMDISCAMT"];
                         txtItemDiscPer.EditValue = currentrow["SIDITMDISCPRCN"];
                         txtItemFlatRate.EditValue = currentrow["SIDITMNETAMT"];
@@ -2391,6 +2472,21 @@ namespace WindowsFormsApplication1
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
+        }
+
+        private void HelpGrid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chall_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemDiscAMount_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
