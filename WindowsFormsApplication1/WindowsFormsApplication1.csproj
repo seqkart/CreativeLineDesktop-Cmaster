@@ -1234,6 +1234,12 @@
     <Compile Include="Prints\BOXLABEL.Designer.cs">
       <DependentUpon>BOXLABEL.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prints\CASHMEMONOR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Prints\CASHMEMONOR.designer.cs">
+      <DependentUpon>CASHMEMONOR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prints\EmployeeSalaryDetails.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2194,6 +2200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\BOXLABEL.resx">
       <DependentUpon>BOXLABEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prints\CASHMEMONOR.resx">
+      <DependentUpon>CASHMEMONOR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prints\EmployeeSalaryDetails.resx">
       <DependentUpon>EmployeeSalaryDetails.cs</DependentUpon>
