@@ -76,7 +76,6 @@
             this.gridColumn27 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn28 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
@@ -108,6 +107,9 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.BtnViewDoc = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSaveDoc = new DevExpress.XtraEditors.SimpleButton();
+            this.btnScanDocs = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransporterName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransporterCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BarCodeGrid)).BeginInit();
@@ -577,13 +579,15 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.Controls.Add(this.BtnViewDoc);
+            this.groupControl1.Controls.Add(this.BtnSaveDoc);
+            this.groupControl1.Controls.Add(this.btnScanDocs);
             this.groupControl1.Controls.Add(this.labelControl7);
             this.groupControl1.Controls.Add(this.txtDocDate);
             this.groupControl1.Controls.Add(this.labelControl14);
             this.groupControl1.Controls.Add(this.txtDocNo);
             this.groupControl1.Controls.Add(this.panelControl1);
             this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.simpleButton1);
             this.groupControl1.Controls.Add(this.labelControl24);
             this.groupControl1.Controls.Add(this.txtTransporterName);
             this.groupControl1.Controls.Add(this.txtTransporterCode);
@@ -634,7 +638,6 @@
             this.txtDocDate.Location = new System.Drawing.Point(759, 47);
             this.txtDocDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDocDate.Name = "txtDocDate";
-            this.txtDocDate.Properties.BeepOnError = false;
             this.txtDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -747,16 +750,6 @@
             this.gridColumn29.Visible = true;
             this.gridColumn29.VisibleIndex = 3;
             this.gridColumn29.Width = 87;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(477, 85);
-            this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(155, 38);
-            this.simpleButton1.TabIndex = 559;
-            this.simpleButton1.Text = "Attach\r\nDocuments";
             // 
             // labelControl13
             // 
@@ -909,7 +902,6 @@
             this.txtTransDate.Location = new System.Drawing.Point(1168, 47);
             this.txtTransDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransDate.Name = "txtTransDate";
-            this.txtTransDate.Properties.BeepOnError = false;
             this.txtTransDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtTransDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -929,7 +921,6 @@
             this.txtReceivingDate.Location = new System.Drawing.Point(97, 47);
             this.txtReceivingDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReceivingDate.Name = "txtReceivingDate";
-            this.txtReceivingDate.Properties.BeepOnError = false;
             this.txtReceivingDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtReceivingDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1090,6 +1081,42 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // BtnViewDoc
+            // 
+            this.BtnViewDoc.Appearance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnViewDoc.Appearance.Options.UseFont = true;
+            this.BtnViewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.BtnViewDoc.Location = new System.Drawing.Point(710, 83);
+            this.BtnViewDoc.Name = "BtnViewDoc";
+            this.BtnViewDoc.Size = new System.Drawing.Size(110, 41);
+            this.BtnViewDoc.TabIndex = 568;
+            this.BtnViewDoc.Text = "View Docs";
+            this.BtnViewDoc.Click += new System.EventHandler(this.BtnViewDoc_Click);
+            // 
+            // BtnSaveDoc
+            // 
+            this.BtnSaveDoc.Appearance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveDoc.Appearance.Options.UseFont = true;
+            this.BtnSaveDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnSaveDoc.Location = new System.Drawing.Point(600, 83);
+            this.BtnSaveDoc.Name = "BtnSaveDoc";
+            this.BtnSaveDoc.Size = new System.Drawing.Size(110, 41);
+            this.BtnSaveDoc.TabIndex = 567;
+            this.BtnSaveDoc.Text = "Save Docs";
+            this.BtnSaveDoc.Click += new System.EventHandler(this.BtnSaveDoc_Click);
+            // 
+            // btnScanDocs
+            // 
+            this.btnScanDocs.Appearance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScanDocs.Appearance.Options.UseFont = true;
+            this.btnScanDocs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnScanDocs.ImageOptions.Image")));
+            this.btnScanDocs.Location = new System.Drawing.Point(490, 83);
+            this.btnScanDocs.Name = "btnScanDocs";
+            this.btnScanDocs.Size = new System.Drawing.Size(110, 41);
+            this.btnScanDocs.TabIndex = 566;
+            this.btnScanDocs.Text = "Scan";
+            this.btnScanDocs.Click += new System.EventHandler(this.BtnScanDocs_Click);
+            // 
             // Frm_Challaninward
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1193,7 +1220,6 @@
         private DevExpress.XtraEditors.DateEdit txtTransDate;
         private DevExpress.XtraEditors.LabelControl labelControl8;
         private DevExpress.XtraEditors.TextEdit txtTransNo;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
@@ -1230,5 +1256,8 @@
         private DevExpress.XtraEditors.TextEdit txtDocNo;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+        private DevExpress.XtraEditors.SimpleButton BtnViewDoc;
+        private DevExpress.XtraEditors.SimpleButton BtnSaveDoc;
+        private DevExpress.XtraEditors.SimpleButton btnScanDocs;
     }
 }

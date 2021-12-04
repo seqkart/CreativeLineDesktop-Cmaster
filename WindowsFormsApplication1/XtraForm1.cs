@@ -12,7 +12,9 @@ using SeqKartLibrary;
 using System;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
@@ -59,16 +61,16 @@ namespace WindowsFormsApplication1
         {
             labelControl1.Text = "Disconnected";
 
-            //ProjectFunctions.WhatsAppConnectionStatus();
+          //  ProjectFunctions.WhatsAppConnectionStatus();
             ProjectFunctions.WhatsAppStatusSpeak();
 
 
             Timer timer = new Timer
             {
-                Interval = (1 * 100000) // 10 secs
+                Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
-            //  timer.Start();
+           //   timer.Start();
 
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
@@ -206,38 +208,38 @@ namespace WindowsFormsApplication1
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    _ = ProjectFunctions.WhatsAppConnectionStatus();
+            try
+            {
+                _ = ProjectFunctions.WhatsAppConnectionStatus();
 
 
-            //    if (GlobalVariables.WhatAppStatus != null)
-            //    {
-            //        if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
-            //        {
-            //            pictureEdit1.Visible = false;
-            //            labelControl1.Text = GlobalVariables.WhatAppStatus;
-            //            labelControl2.Text = GlobalVariables.WhatAppMobileNo;
-            //        }
-            //        else
-            //        {
-            //            pictureEdit1.Visible = true;
-            //            ChangeQRData();
+                if (GlobalVariables.WhatAppStatus != null)
+                {
+                    if (GlobalVariables.WhatAppStatus.ToUpper() == "CONNECTED")
+                    {
+                        pictureEdit1.Visible = false;
+                        labelControl1.Text = GlobalVariables.WhatAppStatus;
+                        labelControl2.Text = GlobalVariables.WhatAppMobileNo;
+                    }
+                    else
+                    {
+                        pictureEdit1.Visible = true;
+                        ChangeQRData();
 
-            //        }
-            //    }
-            //    else
-            //    {
-            //        labelControl1.Text = "Disconnected";
-            //        pictureEdit1.Visible = true;
-            //        ChangeQRData();
-            //    }
+                    }
+                }
+                else
+                {
+                    labelControl1.Text = "Disconnected";
+                    pictureEdit1.Visible = true;
+                    ChangeQRData();
+                }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    ProjectFunctions.SpeakError(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
         }
 
         private void XtraForm1_FormClosed(object sender, FormClosedEventArgs e)
@@ -313,7 +315,7 @@ namespace WindowsFormsApplication1
             switch (myitem)
             {
                 case "PROG250":
-                    var PROG250 = new Transaction.frmAttendenceFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG250 = new Transaction.FrmAttendenceFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG250.Show();
                     PROG250.BringToFront();
                     PROG250.Parent = Page;
@@ -1897,10 +1899,47 @@ namespace WindowsFormsApplication1
             RemoveTab();
         }
 
+        private async void ChangeQRData()
+        {
+
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/qrcode"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "*/*");
+
+                    var response = await httpClient.SendAsync(request);
+
+                    if (response.IsSuccessStatusCode == true)
+                    {
+
+                        byte[] MyData = new byte[0];
+                        MyData = await response.Content.ReadAsByteArrayAsync();
+
+                        MemoryStream stream = new MemoryStream(MyData)
+                        {
+                            Position = 0
+                        };
+
+                        pictureEdit1.Image = Image.FromStream(stream);
+                        pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+
+                        //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
+                        //ProjectFunctions.SpeakError("Whatsapp status is connected on mobile no " + myDetails.user);
+
+
+                    }
+                }
+            }
+        }
+
         private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
         {
             ProjectFunctions.WhatsAppDisConnection();
         }
+
+
+
 
         private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
         {
@@ -1931,6 +1970,6 @@ namespace WindowsFormsApplication1
             HelpGrid.Visible = true;
         }
 
-
+       
     }
 }

@@ -1135,5 +1135,20 @@ namespace WindowsFormsApplication1.Transaction.challans
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
+
+        private void BtnScanDocs_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ScanDocuments();
+        }
+
+        private void BtnSaveDoc_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ViewDocuments(txtDocNo.Text, "CHIN", Convert.ToDateTime(txtDocDate.Text), this);
+        }
+
+        private void BtnViewDoc_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.SaveDocuments(txtDocNo.Text, "CHIN", Convert.ToDateTime(txtDocDate.Text));
+        }
     }
 }

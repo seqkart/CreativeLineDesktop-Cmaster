@@ -480,7 +480,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
                                 sqlcom.ExecuteNonQuery();
                                 sqlcom.Parameters.Clear();
 
-                                sqlcom.CommandType = CommandType.Text;
+                                sqlcom.CommandType = System.Data.CommandType.Text;
                                 sqlcom.CommandText = "update SFDET set Used='N' Where SFDBARCODE in (Select SIDBARCODE  from SALEINVDET Where SIDSERIES=@SIDSERIES And SIDNO=@SIDNO And SIDDATE=@SIDDATE And UnitCode='" + GlobalVariables.CUnitID + "') AND UnitCode='" + GlobalVariables.CUnitID + "'";
                                 sqlcom.Parameters.Add("@SIDSERIES", SqlDbType.NVarChar).Value = ImSeries;
                                 sqlcom.Parameters.Add("@SIDNO", SqlDbType.NVarChar).Value = ImNo;

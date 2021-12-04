@@ -32,6 +32,9 @@
             DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ChallanOutward));
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.BtnViewDoc = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSaveDoc = new DevExpress.XtraEditors.SimpleButton();
+            this.btnScanDocs = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl13 = new DevExpress.XtraEditors.LabelControl();
             this.txtBillingZIP = new DevExpress.XtraEditors.TextEdit();
             this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
@@ -143,6 +146,9 @@
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.Controls.Add(this.BtnViewDoc);
+            this.groupControl1.Controls.Add(this.BtnSaveDoc);
+            this.groupControl1.Controls.Add(this.btnScanDocs);
             this.groupControl1.Controls.Add(this.labelControl13);
             this.groupControl1.Controls.Add(this.txtBillingZIP);
             this.groupControl1.Controls.Add(this.labelControl10);
@@ -181,6 +187,42 @@
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Challan Details";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.GroupControl1_Paint);
+            // 
+            // BtnViewDoc
+            // 
+            this.BtnViewDoc.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnViewDoc.Appearance.Options.UseFont = true;
+            this.BtnViewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnViewDoc.ImageOptions.Image")));
+            this.BtnViewDoc.Location = new System.Drawing.Point(895, 188);
+            this.BtnViewDoc.Name = "BtnViewDoc";
+            this.BtnViewDoc.Size = new System.Drawing.Size(110, 36);
+            this.BtnViewDoc.TabIndex = 571;
+            this.BtnViewDoc.Text = "View Docs";
+            this.BtnViewDoc.Click += new System.EventHandler(this.BtnViewDoc_Click);
+            // 
+            // BtnSaveDoc
+            // 
+            this.BtnSaveDoc.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveDoc.Appearance.Options.UseFont = true;
+            this.BtnSaveDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSaveDoc.ImageOptions.Image")));
+            this.BtnSaveDoc.Location = new System.Drawing.Point(785, 188);
+            this.BtnSaveDoc.Name = "BtnSaveDoc";
+            this.BtnSaveDoc.Size = new System.Drawing.Size(110, 36);
+            this.BtnSaveDoc.TabIndex = 570;
+            this.BtnSaveDoc.Text = "Save Docs";
+            this.BtnSaveDoc.Click += new System.EventHandler(this.BtnSaveDoc_Click);
+            // 
+            // btnScanDocs
+            // 
+            this.btnScanDocs.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScanDocs.Appearance.Options.UseFont = true;
+            this.btnScanDocs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnScanDocs.ImageOptions.Image")));
+            this.btnScanDocs.Location = new System.Drawing.Point(675, 188);
+            this.btnScanDocs.Name = "btnScanDocs";
+            this.btnScanDocs.Size = new System.Drawing.Size(110, 36);
+            this.btnScanDocs.TabIndex = 569;
+            this.btnScanDocs.Text = "Scan";
+            this.btnScanDocs.Click += new System.EventHandler(this.BtnScanDocs_Click);
             // 
             // labelControl13
             // 
@@ -329,7 +371,6 @@
             this.txtIssuedBy.Location = new System.Drawing.Point(658, 103);
             this.txtIssuedBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIssuedBy.Name = "txtIssuedBy";
-            this.txtIssuedBy.Properties.BeepOnError = false;
             this.txtIssuedBy.Size = new System.Drawing.Size(353, 22);
             this.txtIssuedBy.TabIndex = 3;
             this.txtIssuedBy.EditValueChanged += new System.EventHandler(this.TxtIssuedBy_EditValueChanged);
@@ -473,7 +514,6 @@
             this.txtChallanDate.Location = new System.Drawing.Point(105, 49);
             this.txtChallanDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtChallanDate.Name = "txtChallanDate";
-            this.txtChallanDate.Properties.BeepOnError = false;
             this.txtChallanDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtChallanDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -980,5 +1020,8 @@
         private DevExpress.XtraEditors.LabelControl labelControl13;
         private DevExpress.XtraEditors.TextEdit txtBillingZIP;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.SimpleButton BtnViewDoc;
+        private DevExpress.XtraEditors.SimpleButton BtnSaveDoc;
+        private DevExpress.XtraEditors.SimpleButton btnScanDocs;
     }
 }

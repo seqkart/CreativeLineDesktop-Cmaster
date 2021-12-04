@@ -266,6 +266,9 @@
             this.labelControl30 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnScanDocs = new DevExpress.XtraEditors.SimpleButton();
             this.btnAttachDocs = new DevExpress.XtraEditors.SimpleButton();
             this.DocsGrid = new DevExpress.XtraGrid.GridControl();
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -273,7 +276,6 @@
             this.gridColumn56 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn57 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.groupControl10 = new DevExpress.XtraEditors.GroupControl();
             this.PSGrid = new DevExpress.XtraGrid.GridControl();
             this.PSGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -425,7 +427,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).BeginInit();
             this.groupControl10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PSGrid)).BeginInit();
@@ -2977,8 +2978,8 @@
             this.xtraTabControl2.TabIndex = 554;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage3,
-            this.xtraTabPage4,
-            this.xtraTabPage8});
+            this.xtraTabPage8,
+            this.xtraTabPage4});
             // 
             // xtraTabPage3
             // 
@@ -3316,21 +3317,61 @@
             // 
             // xtraTabPage8
             // 
+            this.xtraTabPage8.Controls.Add(this.simpleButton2);
+            this.xtraTabPage8.Controls.Add(this.simpleButton1);
+            this.xtraTabPage8.Controls.Add(this.btnScanDocs);
             this.xtraTabPage8.Controls.Add(this.btnAttachDocs);
             this.xtraTabPage8.Controls.Add(this.DocsGrid);
-            this.xtraTabPage8.Controls.Add(this.pictureEdit1);
             this.xtraTabPage8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage8.ImageOptions.Image")));
             this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage8.Name = "xtraTabPage8";
             this.xtraTabPage8.Size = new System.Drawing.Size(469, 210);
-            this.xtraTabPage8.Text = "Documents Attached";
+            this.xtraTabPage8.Text = "Attach Documents";
+            // 
+            // simpleButton2
+            // 
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.simpleButton2.Location = new System.Drawing.Point(338, 13);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(110, 29);
+            this.simpleButton2.TabIndex = 484;
+            this.simpleButton2.Text = "View Docs";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.simpleButton1.Location = new System.Drawing.Point(228, 13);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(110, 29);
+            this.simpleButton1.TabIndex = 483;
+            this.simpleButton1.Text = "Save Docs";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
+            // btnScanDocs
+            // 
+            this.btnScanDocs.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScanDocs.Appearance.Options.UseFont = true;
+            this.btnScanDocs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnScanDocs.ImageOptions.Image")));
+            this.btnScanDocs.Location = new System.Drawing.Point(118, 13);
+            this.btnScanDocs.Name = "btnScanDocs";
+            this.btnScanDocs.Size = new System.Drawing.Size(110, 29);
+            this.btnScanDocs.TabIndex = 482;
+            this.btnScanDocs.Text = "Scan";
+            this.btnScanDocs.Click += new System.EventHandler(this.btnScanDocs_Click);
             // 
             // btnAttachDocs
             // 
+            this.btnAttachDocs.Appearance.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAttachDocs.Appearance.Options.UseFont = true;
             this.btnAttachDocs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAttachDocs.ImageOptions.Image")));
-            this.btnAttachDocs.Location = new System.Drawing.Point(43, 13);
+            this.btnAttachDocs.Location = new System.Drawing.Point(3, 13);
             this.btnAttachDocs.Name = "btnAttachDocs";
-            this.btnAttachDocs.Size = new System.Drawing.Size(94, 29);
+            this.btnAttachDocs.Size = new System.Drawing.Size(115, 29);
             this.btnAttachDocs.TabIndex = 480;
             this.btnAttachDocs.Text = "Attach Doc\r\n";
             this.btnAttachDocs.Click += new System.EventHandler(this.BtnAttachDocs_Click);
@@ -3338,11 +3379,11 @@
             // DocsGrid
             // 
             this.DocsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DocsGrid.Location = new System.Drawing.Point(127, 61);
+            this.DocsGrid.Location = new System.Drawing.Point(3, 49);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(298, 140);
+            this.DocsGrid.Size = new System.Drawing.Size(446, 140);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -3403,18 +3444,6 @@
             this.gridView10.DetailHeight = 458;
             this.gridView10.GridControl = this.DocsGrid;
             this.gridView10.Name = "gridView10";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 61);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.ShowScrollBars = true;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.pictureEdit1.Size = new System.Drawing.Size(127, 140);
-            this.pictureEdit1.TabIndex = 1;
-            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
             // groupControl10
             // 
@@ -3872,7 +3901,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl10)).EndInit();
             this.groupControl10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PSGrid)).EndInit();
@@ -4121,7 +4149,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn54;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn53;
         private DevExpress.XtraEditors.SimpleButton btnRecalculate;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraGrid.GridControl DocsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView DocsGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
@@ -4156,5 +4183,8 @@
         private DevExpress.XtraEditors.LabelControl label20;
         private DevExpress.XtraEditors.SimpleButton btnAttachDocs;
         private DevExpress.XtraEditors.XtraOpenFileDialog xtraOpenFileDialog1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnScanDocs;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

@@ -178,9 +178,10 @@
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.TXMAINREMARKS = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.BtnViewDoc = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnSaveDoc = new DevExpress.XtraEditors.SimpleButton();
+            this.btnScanDocs = new DevExpress.XtraEditors.SimpleButton();
             this.DocsGrid = new DevExpress.XtraGrid.GridControl();
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn55 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -188,6 +189,7 @@
             this.gridView10 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.chMultiParty = new DevExpress.XtraEditors.CheckEdit();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -257,13 +259,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.TXMAINREMARKS.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).BeginInit();
             this.xtraTabControl2.SuspendLayout();
-            this.xtraTabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chMultiParty.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -1388,7 +1389,7 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(657, 204);
+            this.xtraTabPage5.Size = new System.Drawing.Size(657, 210);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // btnCalculate
@@ -2159,50 +2160,68 @@
             this.xtraTabControl2.Location = new System.Drawing.Point(17, 680);
             this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl2.Name = "xtraTabControl2";
-            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage8;
+            this.xtraTabControl2.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl2.Size = new System.Drawing.Size(435, 238);
             this.xtraTabControl2.TabIndex = 556;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage8,
             this.xtraTabPage1});
-            // 
-            // xtraTabPage8
-            // 
-            this.xtraTabPage8.Controls.Add(this.pictureEdit1);
-            this.xtraTabPage8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.xtraTabPage8.Name = "xtraTabPage8";
-            this.xtraTabPage8.Size = new System.Drawing.Size(433, 204);
-            this.xtraTabPage8.Text = "Documents Attached";
-            // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(433, 204);
-            this.pictureEdit1.TabIndex = 2;
-            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.pictureEdit1);
+            this.xtraTabPage1.Controls.Add(this.BtnViewDoc);
+            this.xtraTabPage1.Controls.Add(this.BtnSaveDoc);
+            this.xtraTabPage1.Controls.Add(this.btnScanDocs);
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(433, 210);
             this.xtraTabPage1.Text = "View Docs";
             // 
+            // BtnViewDoc
+            // 
+            this.BtnViewDoc.Appearance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnViewDoc.Appearance.Options.UseFont = true;
+            this.BtnViewDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnViewDoc.ImageOptions.Image")));
+            this.BtnViewDoc.Location = new System.Drawing.Point(271, 5);
+            this.BtnViewDoc.Name = "BtnViewDoc";
+            this.BtnViewDoc.Size = new System.Drawing.Size(110, 35);
+            this.BtnViewDoc.TabIndex = 487;
+            this.BtnViewDoc.Text = "View Docs";
+            this.BtnViewDoc.Click += new System.EventHandler(this.BtnViewDoc_Click);
+            // 
+            // BtnSaveDoc
+            // 
+            this.BtnSaveDoc.Appearance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSaveDoc.Appearance.Options.UseFont = true;
+            this.BtnSaveDoc.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSaveDoc.ImageOptions.Image")));
+            this.BtnSaveDoc.Location = new System.Drawing.Point(161, 5);
+            this.BtnSaveDoc.Name = "BtnSaveDoc";
+            this.BtnSaveDoc.Size = new System.Drawing.Size(110, 35);
+            this.BtnSaveDoc.TabIndex = 486;
+            this.BtnSaveDoc.Text = "Save Docs";
+            this.BtnSaveDoc.Click += new System.EventHandler(this.BtnSaveDoc_Click);
+            // 
+            // btnScanDocs
+            // 
+            this.btnScanDocs.Appearance.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScanDocs.Appearance.Options.UseFont = true;
+            this.btnScanDocs.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnScanDocs.ImageOptions.Image")));
+            this.btnScanDocs.Location = new System.Drawing.Point(51, 5);
+            this.btnScanDocs.Name = "btnScanDocs";
+            this.btnScanDocs.Size = new System.Drawing.Size(110, 35);
+            this.btnScanDocs.TabIndex = 485;
+            this.btnScanDocs.Text = "Scan";
+            this.btnScanDocs.Click += new System.EventHandler(this.BtnScanDocs_Click);
+            // 
             // DocsGrid
             // 
-            this.DocsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DocsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DocsGrid.Location = new System.Drawing.Point(0, 0);
+            this.DocsGrid.Location = new System.Drawing.Point(92, 45);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(433, 210);
+            this.DocsGrid.Size = new System.Drawing.Size(334, 163);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2270,8 +2289,16 @@
             this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
             this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(87, 24);
+            this.chMultiParty.Size = new System.Drawing.Size(87, 21);
             this.chMultiParty.TabIndex = 558;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Location = new System.Drawing.Point(4, 71);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Size = new System.Drawing.Size(82, 96);
+            this.pictureEdit1.TabIndex = 488;
             // 
             // FrmInvoiceMstAddCR
             // 
@@ -2377,13 +2404,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.TXMAINREMARKS.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl2)).EndInit();
             this.xtraTabControl2.ResumeLayout(false);
-            this.xtraTabPage8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chMultiParty.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2529,7 +2555,6 @@
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.TextEdit TXMAINREMARKS;
         private DevExpress.XtraTab.XtraTabControl xtraTabControl2;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage8;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
@@ -2542,11 +2567,14 @@
         private System.Windows.Forms.Button btnCalculate;
         private DevExpress.XtraEditors.TextEdit txtRound2;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraGrid.GridControl DocsGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView DocsGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn55;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn56;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
+        private DevExpress.XtraEditors.SimpleButton BtnViewDoc;
+        private DevExpress.XtraEditors.SimpleButton BtnSaveDoc;
+        private DevExpress.XtraEditors.SimpleButton btnScanDocs;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
     }
 }

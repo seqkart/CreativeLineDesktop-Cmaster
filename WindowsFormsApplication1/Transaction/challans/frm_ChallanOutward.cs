@@ -1222,5 +1222,20 @@ namespace WindowsFormsApplication1.Transaction.challans
         {
             ProjectFunctions.NumberOnly(e);
         }
+
+        private void BtnScanDocs_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ScanDocuments();
+        }
+
+        private void BtnSaveDoc_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ViewDocuments(txtChallanNo.Text, "CHOUT", Convert.ToDateTime(txtChallanDate.Text), this);
+        }
+
+        private void BtnViewDoc_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.SaveDocuments(txtChallanNo.Text, "CHOUT", Convert.ToDateTime(txtChallanDate.Text));
+        }
     }
 }

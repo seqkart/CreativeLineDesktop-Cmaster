@@ -1,23 +1,16 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmAttendenceFeeding : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAttendenceFeeding : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
-        public frmAttendenceFeeding()
+        public FrmAttendenceFeeding()
         {
             InitializeComponent(); ;
             dt.Columns.Add("attendance_date", typeof(DateTime));
@@ -35,17 +28,17 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("attendence_out_night", typeof(DateTime));
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtEmpID_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpID_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpName.Text = string.Empty;
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -124,7 +117,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             if (DtStartDate.Text.Trim().Length == 0)
             {
@@ -189,7 +182,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
         }
-        private void frmAttendenceFeeding_Load(object sender, EventArgs e)
+        private void FrmAttendenceFeeding_Load(object sender, EventArgs e)
         {
             LoadCombobox();
             DtStartDate.EditValue = DateTime.Now;
@@ -218,7 +211,7 @@ namespace WindowsFormsApplication1.Transaction
                             DateTime lunchendTime = Convert.ToDateTime(currentrow["attendance_in_last"].ToString());
                             TimeSpan spanbreak = lunchendTime.Subtract(lunchstartTime);
                             double TotalBreakMinutes = spanbreak.TotalMinutes;
-                            TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                            TotalMinutes -= TotalBreakMinutes;
 
 
                             double OvertimeMinutes = 0;
@@ -241,7 +234,7 @@ namespace WindowsFormsApplication1.Transaction
                                 OvertimeMinutes = spanovertime.TotalMinutes;
 
                                 TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
-                                OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                OvertimeMinutes -= TotalBreakMinutes;
                             }
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["ot_deducton_time"], OvertimeMinutes);
@@ -273,7 +266,7 @@ namespace WindowsFormsApplication1.Transaction
                                 TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
                                 OvertimeMinutes = spanovertime.TotalMinutes;
                                 TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
-                                OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                OvertimeMinutes -= TotalBreakMinutes;
                             }
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["ot_deducton_time"], OvertimeMinutes);
@@ -290,7 +283,7 @@ namespace WindowsFormsApplication1.Transaction
                             double TotalMinutes = spanattendence.TotalMinutes;
 
                             double TotalBreakMinutes = 0;
-                            TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                            TotalMinutes -= TotalBreakMinutes;
 
                             double OvertimeMinutes = 0;
 
@@ -312,7 +305,7 @@ namespace WindowsFormsApplication1.Transaction
                                 OvertimeMinutes = spanovertime.TotalMinutes;
 
                                 TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
-                                OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                OvertimeMinutes -= TotalBreakMinutes;
                             }
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["ot_deducton_time"], OvertimeMinutes);
@@ -329,7 +322,7 @@ namespace WindowsFormsApplication1.Transaction
                             double TotalMinutes = spanattendence.TotalMinutes;
 
                             double TotalBreakMinutes = 0;
-                            TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                            TotalMinutes -= TotalBreakMinutes;
 
                             double OvertimeMinutes = 0;
 
@@ -351,7 +344,7 @@ namespace WindowsFormsApplication1.Transaction
                                 OvertimeMinutes = spanovertime.TotalMinutes;
 
                                 TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
-                                OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                OvertimeMinutes -= TotalBreakMinutes;
                             }
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                             AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["ot_deducton_time"], OvertimeMinutes);
@@ -367,7 +360,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void repositoryItemComboBox2_EditValueChanged(object sender, EventArgs e)
+        private void RepositoryItemComboBox2_EditValueChanged(object sender, EventArgs e)
         {
             if ((sender as ComboBoxEdit).Text == "PPH" || (sender as ComboBoxEdit).Text == "AA" || (sender as ComboBoxEdit).Text == "HH" || (sender as ComboBoxEdit).Text == "RR" || (sender as ComboBoxEdit).Text == "NA")
             {
@@ -383,7 +376,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
 
 
@@ -469,7 +462,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
                         else
                         {
-                            sqlcom.Parameters.Add("@attendence_out_night", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendence_out_n.ToString()ight"]).ToString("HH:mm:ss");
+                            sqlcom.Parameters.Add("@attendence_out_night", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendence_out_night"].ToString()).ToString("HH:mm:ss");
                         }
                         sqlcom.ExecuteNonQuery();
                         sqlcom.Parameters.Clear();
@@ -482,7 +475,7 @@ namespace WindowsFormsApplication1.Transaction
 
 
                     sqlcon.Close();
-                    XtraMessageBox.Show("Attendence Saved");
+                    ProjectFunctions.SpeakError("Attendence Saved");
                 }
                 catch (Exception ex)
                 {

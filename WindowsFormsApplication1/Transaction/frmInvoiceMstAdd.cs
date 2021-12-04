@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using TaxProEWB.API;
+using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
 {
@@ -2192,7 +2193,7 @@ namespace WindowsFormsApplication1
             {
 
                 MemoryStream ms = new MemoryStream();
-                pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
+                //pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
                 byte[] photo = new byte[ms.Length];
                 ms.Position = 0;
                 ms.Read(photo, 0, photo.Length);
@@ -2252,8 +2253,8 @@ namespace WindowsFormsApplication1
                     Position = 0
                 };
 
-                pictureEdit1.Image = Image.FromStream(stream);
-                pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+                ///pictureEdit1.Image = Image.FromStream(stream);
+                //pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
                 WindowsFormsApplication1.Transaction.challans.XtraReport1 rpt = new Transaction.challans.XtraReport1();
                 rpt.xrPictureBox1.ImageUrl = "C:\\Temp\\A.jpg";
@@ -2420,7 +2421,7 @@ namespace WindowsFormsApplication1
         }
         void DrawImage(XGraphics gfx, String jpegSamplePath, int x, int y, int width, int height)
         {
-            XImage image = XImage.FromFile(xtraOpenFileDialog1.FileName);
+            XImage image = XImage.FromFile(jpegSamplePath);
             gfx.DrawImage(image, x, y, width, height);
         }
         private void XtraOpenFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
@@ -2487,6 +2488,89 @@ namespace WindowsFormsApplication1
         private void txtItemDiscAMount_EditValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnScanDocs_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ScanDocuments(); 
+
+            //string[] files = Directory.GetFiles("C:\\Temp\\");
+            //foreach (String str in files)
+            //{
+            //    System.IO.File.Delete(str);
+            //}
+            //var dlg = new WIA.CommonDialog();
+            //WIA.ICommonDialog dialog = new WIA.CommonDialog();
+            //WIA.Device device = dialog.ShowSelectDevice(WIA.WiaDeviceType.ScannerDeviceType, true, false);
+            //dlg.ShowAcquisitionWizard(device);
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+
+            //int i = 0;
+            //string[] files = Directory.GetFiles("C:\\Temp\\");
+            //foreach (String str in files)
+            //{
+            //    if (str.ToUpper().Contains(".JPG"))
+            //    {
+            //        if (File.Exists("C:\\Temp\\abc.pdf"))
+            //        {
+            //            File.Delete("C:\\Temp\\abc.pdf");
+            //        }
+
+            //        PdfSharp.Pdf.PdfDocument document = new PdfSharp.Pdf.PdfDocument();
+            //        document.Info.Title = "image1";
+            //        PdfSharp.Pdf.PdfPage page = document.AddPage();
+            //        XGraphics gfx = XGraphics.FromPdfPage(page);
+            //        DrawImage(gfx, str, 0, 0, (int)page.Width, (int)page.Height);
+            //        document.Save("C:\\Temp\\abc.pdf");
+            //        byte[] pdfb = null;
+            //        FileStream fs = new FileStream("C:\\Temp\\abc.pdf", FileMode.Open, FileAccess.Read);
+            //        BinaryReader br = new BinaryReader(fs);
+            //        pdfb = br.ReadBytes((int)fs.Length);
+            //        using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+            //        {
+            //            sqlcon.Open();
+            //            String strQuery = "insert into ImagesData(DocType,DocNo,DocDate,DocPDF) values(@DocType,@DocNo,@DocDate,@DocPDF)";
+            //            var sqlcom = new SqlCommand(strQuery, sqlcon);
+            //            sqlcom.Parameters.AddWithValue("@DocType", txtserial.Text);
+            //            sqlcom.Parameters.AddWithValue("@DocNo", txtSerialNo.Text);
+            //            sqlcom.Parameters.AddWithValue("@DocDate", Convert.ToDateTime(dtInvoiceDate.Text).ToString("yyyy-MM-dd"));
+            //            sqlcom.Parameters.AddWithValue("@DocPDF", pdfb);
+            //            sqlcom.CommandType = CommandType.Text;
+            //            sqlcom.ExecuteNonQuery();
+            //            sqlcon.Close();
+            //        }
+            //        fs.Close();
+            //        i++;
+            //    }
+            //}
+
+            //ProjectFunctions.SpeakError(i.ToString() + " Documents Uploaded Successfully");
+
+            ProjectFunctions.SaveDocuments(txtSerialNo.Text, txtserial.Text, Convert.ToDateTime(dtInvoiceDate.Text));
+            LoadDocs();
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ViewDocuments(txtSerialNo.Text, txtserial.Text, Convert.ToDateTime(dtInvoiceDate.Text), this);
+            //if (System.IO.File.Exists("C:\\Temp\\abc.pdf"))
+            //{
+            //    System.IO.File.Delete("C:\\Temp\\abc.pdf");
+            //}
+            //if (System.IO.File.Exists("C:\\Temp\\Quotation.pdf"))
+            //{
+            //    System.IO.File.Delete("C:\\Temp\\Quotation.pdf");
+            //}
+            //String DocNo = txtSerialNo.Text;
+            //String DocType = txtserial.Text;
+            //DateTime DocDate = Convert.ToDateTime(dtInvoiceDate.Text);
+            //frmPDFDocViewer frm = new frmPDFDocViewer() { DocNo = DocNo, DocType = DocType, DocDate = DocDate };
+            //var P = ProjectFunctions.GetPositionInForm(this);
+            //frm.Location = new System.Drawing.Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
+            //frm.ShowDialog();
         }
     }
 }

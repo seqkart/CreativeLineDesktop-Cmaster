@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmAttendenceFeeding
+    partial class FrmAttendenceFeeding
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Transaction
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAttendenceFeeding));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAttendenceFeeding));
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmpName = new DevExpress.XtraEditors.TextEdit();
             this.txtEmpCode = new DevExpress.XtraEditors.TextEdit();
@@ -116,8 +116,8 @@ namespace WindowsFormsApplication1.Transaction
             this.txtEmpCode.Properties.Appearance.Options.UseForeColor = true;
             this.txtEmpCode.Size = new System.Drawing.Size(140, 22);
             this.txtEmpCode.TabIndex = 11;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpID_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpID_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // btnLoad
             // 
@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnLoad.Size = new System.Drawing.Size(128, 39);
             this.btnLoad.TabIndex = 359;
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // DtStartDate
             // 
@@ -188,7 +188,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -199,7 +199,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnRefresh
             // 
@@ -296,7 +296,7 @@ namespace WindowsFormsApplication1.Transaction
             this.repositoryItemComboBox2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
-            this.repositoryItemComboBox2.EditValueChanged += new System.EventHandler(this.repositoryItemComboBox2_EditValueChanged);
+            this.repositoryItemComboBox2.EditValueChanged += new System.EventHandler(this.RepositoryItemComboBox2_EditValueChanged);
             // 
             // gridColumn5
             // 
@@ -456,7 +456,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Controls.Add(this.Menu_ToolStrip);
             this.Name = "frmAttendenceFeeding";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAttendenceFeeding_Load);
+            this.Load += new System.EventHandler(this.FrmAttendenceFeeding_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties)).EndInit();

@@ -6,6 +6,7 @@ using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using PdfSharp.Drawing;
 using SeqKartLibrary;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxProEWB.API;
-
+using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
 {
@@ -59,6 +60,87 @@ namespace WindowsFormsApplication1
             return Convert.ToBase64String(enc);
         }
 
+
+
+
+        public static void DrawImage(XGraphics gfx, String jpegSamplePath, int x, int y, int width, int height)
+        {
+            XImage image = XImage.FromFile(jpegSamplePath);
+            gfx.DrawImage(image, x, y, width, height);
+        }
+        public static void SaveDocuments(String DocNo, String DocType, DateTime DocDate)
+        {
+            int i = 0;
+            string[] files = Directory.GetFiles("C:\\Temp\\");
+            foreach (String str in files)
+            {
+                if (str.ToUpper().Contains(".JPG"))
+                {
+                    if (File.Exists("C:\\Temp\\abc.pdf"))
+                    {
+                        File.Delete("C:\\Temp\\abc.pdf");
+                    }
+
+                    PdfSharp.Pdf.PdfDocument document = new PdfSharp.Pdf.PdfDocument();
+                    document.Info.Title = "image1";
+                    PdfSharp.Pdf.PdfPage page = document.AddPage();
+                    XGraphics gfx = XGraphics.FromPdfPage(page);
+                    DrawImage(gfx, str, 0, 0, (int)page.Width, (int)page.Height);
+                    document.Save("C:\\Temp\\abc.pdf");
+                    byte[] pdfb = null;
+                    FileStream fs = new FileStream("C:\\Temp\\abc.pdf", FileMode.Open, FileAccess.Read);
+                    BinaryReader br = new BinaryReader(fs);
+                    pdfb = br.ReadBytes((int)fs.Length);
+                    using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+                    {
+                        sqlcon.Open();
+                        String strQuery = "insert into ImagesData(DocType,DocNo,DocDate,DocPDF) values(@DocType,@DocNo,@DocDate,@DocPDF)";
+                        var sqlcom = new SqlCommand(strQuery, sqlcon);
+                        sqlcom.Parameters.AddWithValue("@DocType", DocType);
+                        sqlcom.Parameters.AddWithValue("@DocNo", DocNo);
+                        sqlcom.Parameters.AddWithValue("@DocDate", DocDate.Date.ToString("yyyy-MM-dd"));
+                        sqlcom.Parameters.AddWithValue("@DocPDF", pdfb);
+                        sqlcom.CommandType = CommandType.Text;
+                        sqlcom.ExecuteNonQuery();
+                        sqlcon.Close();
+                    }
+                    fs.Close();
+                    i++;
+                }
+            }
+
+            ProjectFunctions.SpeakError(i.ToString() + " Documents Uploaded Successfully");
+           
+        }
+
+        public static void ScanDocuments()
+        {
+            string[] files = Directory.GetFiles("C:\\Temp\\");
+            foreach (String str in files)
+            {
+                System.IO.File.Delete(str);
+            }
+            var dlg = new WIA.CommonDialog();
+            WIA.ICommonDialog dialog = new WIA.CommonDialog();
+            WIA.Device device = dialog.ShowSelectDevice(WIA.WiaDeviceType.ScannerDeviceType, true, false);
+            dlg.ShowAcquisitionWizard(device);
+        }
+        public static void ViewDocuments(String DocNo, String DocType,DateTime DocDate,XtraForm Form1)
+        {
+            if (System.IO.File.Exists("C:\\Temp\\abc.pdf"))
+            {
+                System.IO.File.Delete("C:\\Temp\\abc.pdf");
+            }
+            if (System.IO.File.Exists("C:\\Temp\\Quotation.pdf"))
+            {
+                System.IO.File.Delete("C:\\Temp\\Quotation.pdf");
+            }
+            
+            frmPDFDocViewer frm = new frmPDFDocViewer() { DocNo = DocNo, DocType = DocType, DocDate = DocDate };
+            var P = ProjectFunctions.GetPositionInForm(Form1);
+            frm.Location = new System.Drawing.Point(P.X + (Form1.ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (Form1.ClientSize.Height / 2 - frm.Size.Height / 2));
+            frm.ShowDialog();
+        }
         public static string Decrypted(string encrypted)
         {
             byte[] textbytes = ASCIIEncoding.ASCII.GetBytes(encrypted);

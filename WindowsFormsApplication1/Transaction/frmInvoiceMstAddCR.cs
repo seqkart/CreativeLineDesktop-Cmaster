@@ -1381,5 +1381,20 @@ namespace WindowsFormsApplication1
                 Calculation();
             }
         }
+
+        private void BtnScanDocs_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ScanDocuments();
+        }
+
+        private void BtnSaveDoc_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.SaveDocuments(txtSerialNo.Text, txtserial.Text, Convert.ToDateTime(dtInvoiceDate.Text));
+        }
+
+        private void BtnViewDoc_Click(object sender, EventArgs e)
+        {
+            ProjectFunctions.ViewDocuments(txtSerialNo.Text, txtserial.Text, Convert.ToDateTime(dtInvoiceDate.Text), this);
+        }
     }
 }
