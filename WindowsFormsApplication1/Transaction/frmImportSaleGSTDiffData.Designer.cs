@@ -30,8 +30,8 @@ namespace WindowsFormsApplication1.Transaction
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmImportSaleGSTDiffData));
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode3 = new DevExpress.XtraGrid.GridLevelNode();
             DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.InfoGrid = new DevExpress.XtraGrid.GridControl();
             this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -202,29 +202,29 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(416, 65);
+            this.simpleButton4.Location = new System.Drawing.Point(522, 65);
             this.simpleButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(117, 30);
+            this.simpleButton4.Size = new System.Drawing.Size(149, 30);
             this.simpleButton4.TabIndex = 538;
             this.simpleButton4.Text = "PROCESS REPORT";
             this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(293, 65);
+            this.simpleButton3.Location = new System.Drawing.Point(373, 65);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(117, 30);
+            this.simpleButton3.Size = new System.Drawing.Size(149, 30);
             this.simpleButton3.TabIndex = 538;
             this.simpleButton3.Text = "EXPORT REPORT";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(169, 65);
+            this.simpleButton2.Location = new System.Drawing.Point(224, 65);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(117, 30);
+            this.simpleButton2.Size = new System.Drawing.Size(149, 30);
             this.simpleButton2.TabIndex = 538;
             this.simpleButton2.Text = "PRINT REPORT";
             this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
@@ -234,7 +234,7 @@ namespace WindowsFormsApplication1.Transaction
             this.simpleButton1.Location = new System.Drawing.Point(75, 65);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(87, 30);
+            this.simpleButton1.Size = new System.Drawing.Size(149, 30);
             this.simpleButton1.TabIndex = 538;
             this.simpleButton1.Text = "LOAD EXCEL";
             // 
@@ -243,7 +243,7 @@ namespace WindowsFormsApplication1.Transaction
             this.labelControl4.Location = new System.Drawing.Point(8, 22);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(68, 17);
+            this.labelControl4.Size = new System.Drawing.Size(71, 16);
             this.labelControl4.TabIndex = 537;
             this.labelControl4.Text = "Party Name";
             // 
@@ -256,7 +256,7 @@ namespace WindowsFormsApplication1.Transaction
             this.txtDebitPartyName.Name = "txtDebitPartyName";
             this.txtDebitPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyName.Properties.ReadOnly = true;
-            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 24);
+            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 22);
             this.txtDebitPartyName.TabIndex = 535;
             this.txtDebitPartyName.TabStop = false;
             // 
@@ -267,7 +267,7 @@ namespace WindowsFormsApplication1.Transaction
             this.txtDebitPartyCode.Name = "txtDebitPartyCode";
             this.txtDebitPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyCode.Properties.MaxLength = 6;
-            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 24);
+            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 22);
             this.txtDebitPartyCode.TabIndex = 536;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
@@ -275,9 +275,9 @@ namespace WindowsFormsApplication1.Transaction
             // EOSSGrid
             // 
             this.EOSSGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode3.RelationName = "Level1";
+            gridLevelNode1.RelationName = "Level1";
             this.EOSSGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode3});
+            gridLevelNode1});
             this.EOSSGrid.Location = new System.Drawing.Point(1072, 314);
             this.EOSSGrid.MainView = this.EOSSGridView;
             this.EOSSGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -312,9 +312,9 @@ namespace WindowsFormsApplication1.Transaction
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.HelpGrid.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.HelpGrid.Location = new System.Drawing.Point(257, 52);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -382,7 +382,7 @@ namespace WindowsFormsApplication1.Transaction
             this.gridView3.GridControl = this.FreshGrid;
             this.gridView3.Name = "gridView3";
             // 
-            // frmImportSaleGSTDiffData
+            // FrmImportSaleGSTDiffData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -393,7 +393,7 @@ namespace WindowsFormsApplication1.Transaction
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmImportSaleGSTDiffData";
+            this.Name = "FrmImportSaleGSTDiffData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmImportSaleGSTDiffData_Load);

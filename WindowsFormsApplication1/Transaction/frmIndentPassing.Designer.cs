@@ -59,14 +59,14 @@
             // 
             this.HelpGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(0, 27);
+            this.HelpGrid.Location = new System.Drawing.Point(0, 31);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemColorPickEdit1,
             this.repositoryItemButtonEdit1});
-            this.HelpGrid.Size = new System.Drawing.Size(1011, 504);
+            this.HelpGrid.Size = new System.Drawing.Size(1011, 500);
             this.HelpGrid.TabIndex = 454;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView});
@@ -256,7 +256,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1011, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1011, 31);
             this.Menu_ToolStrip.TabIndex = 453;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -267,7 +267,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
