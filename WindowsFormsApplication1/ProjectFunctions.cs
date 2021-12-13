@@ -113,6 +113,76 @@ namespace WindowsFormsApplication1
            
         }
 
+
+        public static void BindExcelToGrid(String FileName,DataTable dt, GridControl helpGrid, GridView helpGridView)
+        {
+            helpGridView.Columns.Clear();
+            helpGrid.DataSource = null;
+            DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
+            workbook.LoadDocument(FileName);
+            DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[0];
+            for (int row = 2; row < GetNoOfRowsInExcelSheet(FileName); row++)
+            {
+                DataRow dtnewrow = dt.NewRow();
+                if (worksheet.Cells["A" + row.ToString()].Value.ToString().Length > 0)
+                {
+                    int col = 0;
+                    for (char letter = 'A'; letter <= 'Z'; letter++)
+                    {
+                        if (col < dt.Columns.Count)
+                        {
+                            dtnewrow[col] = worksheet.Cells[letter.ToString() + row.ToString()].Value.ToString();
+                        }
+                        col++;
+                    }
+                    dt.Rows.Add(dtnewrow);
+                }
+            }
+
+            if (dt.Rows.Count > 0)
+            {
+                helpGrid.DataSource = dt;
+                helpGridView.BestFitColumns();
+            }
+            else
+            {
+                helpGrid.DataSource = null;
+                helpGridView.BestFitColumns();
+            }
+        }
+        public static Int32 GetNoOfRowsInExcelSheet(String FileName)
+        {
+            int RowCount = 0;
+            DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
+            workbook.LoadDocument(FileName);
+            DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[0];
+            for (int row = 1; row < 100000; row++)
+            {
+                if (worksheet.Cells["B" + row.ToString()].Value.ToString().Length == 0)
+                {
+                    break;
+                }
+                else
+                {
+                    RowCount++;
+                }
+            }
+            return RowCount;
+        }
+        public static DataTable CreateDataTableHeader(String FileName,DataTable dt)
+        {
+            DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
+            workbook.LoadDocument(FileName);
+            DevExpress.Spreadsheet.Worksheet worksheet = workbook.Worksheets[0];
+            for (char letter = 'A'; letter <= 'Z'; letter++)
+            {
+                if (worksheet.Cells[letter.ToString() + "1"].Value.ToString() != "")
+                {
+                    dt.Columns.Add(worksheet.Cells[letter.ToString() + "1"].Value.ToString(), typeof(String));
+                }
+            }
+            return dt;
+        }
         public static void ScanDocuments()
         {
             string[] files = Directory.GetFiles("C:\\Temp\\");

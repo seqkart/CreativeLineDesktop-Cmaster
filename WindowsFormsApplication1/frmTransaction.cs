@@ -90,6 +90,14 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG223")
+                {
+                    Transaction.FrmImportSaleGSTDiffData frm = new Transaction.FrmImportSaleGSTDiffData()
+                    { S1 = btnAdd.Text, Text = "GST SALE DIFF DOC Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
+                
                 if (GlobalVariables.ProgCode == "PROG245")
                 {
                     Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
@@ -352,6 +360,16 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG223")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    Transaction.FrmImportSaleGSTDiffData frm = new Transaction.FrmImportSaleGSTDiffData()
+                    { S1 = btnEdit.Text, Text = "GST SALE DIFF DOC Edition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.DocNo = CurrentRow["DocNo"].ToString();
+                    frm.DocDate = Convert.ToDateTime(CurrentRow["DocDate"]);
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG245")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

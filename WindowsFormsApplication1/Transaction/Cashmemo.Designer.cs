@@ -315,7 +315,7 @@
             this.btnCash.Appearance.Options.UseFont = true;
             this.btnCash.AutoWidthInLayoutControl = true;
             this.btnCash.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCash.ImageOptions.SvgImage")));
-            this.btnCash.Location = new System.Drawing.Point(1195, 684);
+            this.btnCash.Location = new System.Drawing.Point(1197, 687);
             this.btnCash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(142, 89);
@@ -393,7 +393,7 @@
             this.labelControl37.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl37.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl37.Appearance.Options.UseFont = true;
-            this.labelControl37.Location = new System.Drawing.Point(983, 799);
+            this.labelControl37.Location = new System.Drawing.Point(984, 802);
             this.labelControl37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl37.Name = "labelControl37";
             this.labelControl37.Size = new System.Drawing.Size(94, 21);
@@ -407,7 +407,7 @@
             this.simpleButton21.Appearance.Options.UseFont = true;
             this.simpleButton21.AutoWidthInLayoutControl = true;
             this.simpleButton21.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton21.ImageOptions.SvgImage")));
-            this.simpleButton21.Location = new System.Drawing.Point(1338, 773);
+            this.simpleButton21.Location = new System.Drawing.Point(1340, 776);
             this.simpleButton21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton21.Name = "simpleButton21";
             this.simpleButton21.Size = new System.Drawing.Size(142, 89);
@@ -446,7 +446,7 @@
             this.btnNextBill.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextBill.Appearance.Options.UseFont = true;
             this.btnNextBill.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNextBill.ImageOptions.Image")));
-            this.btnNextBill.Location = new System.Drawing.Point(229, 615);
+            this.btnNextBill.Location = new System.Drawing.Point(229, 618);
             this.btnNextBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNextBill.Name = "btnNextBill";
             this.btnNextBill.Size = new System.Drawing.Size(110, 67);
@@ -469,7 +469,7 @@
             this.btnUpdateCustomer.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateCustomer.Appearance.Options.UseFont = true;
             this.btnUpdateCustomer.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateCustomer.ImageOptions.Image")));
-            this.btnUpdateCustomer.Location = new System.Drawing.Point(229, 749);
+            this.btnUpdateCustomer.Location = new System.Drawing.Point(229, 752);
             this.btnUpdateCustomer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUpdateCustomer.Name = "btnUpdateCustomer";
             this.btnUpdateCustomer.Size = new System.Drawing.Size(110, 67);
@@ -667,7 +667,7 @@
             this.labelControl38.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelControl38.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl38.Appearance.Options.UseFont = true;
-            this.labelControl38.Location = new System.Drawing.Point(1011, 834);
+            this.labelControl38.Location = new System.Drawing.Point(1012, 837);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(64, 21);
@@ -819,7 +819,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(79, 21);
+            this.chExclusive.Size = new System.Drawing.Size(79, 24);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -868,7 +868,7 @@
             this.simpleButton16.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton16.Appearance.Options.UseFont = true;
             this.simpleButton16.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton16.ImageOptions.Image")));
-            this.simpleButton16.Location = new System.Drawing.Point(338, 815);
+            this.simpleButton16.Location = new System.Drawing.Point(338, 818);
             this.simpleButton16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton16.Name = "simpleButton16";
             this.simpleButton16.Size = new System.Drawing.Size(110, 67);
@@ -948,7 +948,7 @@
             this.simpleButton13.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton13.Appearance.Options.UseFont = true;
             this.simpleButton13.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton13.ImageOptions.Image")));
-            this.simpleButton13.Location = new System.Drawing.Point(9, 815);
+            this.simpleButton13.Location = new System.Drawing.Point(9, 818);
             this.simpleButton13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton13.Name = "simpleButton13";
             this.simpleButton13.Size = new System.Drawing.Size(110, 67);
@@ -965,7 +965,7 @@
             this.groupControl4.Location = new System.Drawing.Point(1030, 3);
             this.groupControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl4.Name = "groupControl4";
-            this.groupControl4.Size = new System.Drawing.Size(653, 224);
+            this.groupControl4.Size = new System.Drawing.Size(655, 224);
             this.groupControl4.TabIndex = 763;
             this.groupControl4.Text = "Net Payable";
             // 
@@ -1006,7 +1006,7 @@
             this.InfoGrid.MainView = this.InfoGridView;
             this.InfoGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InfoGrid.Name = "InfoGrid";
-            this.InfoGrid.Size = new System.Drawing.Size(1402, 320);
+            this.InfoGrid.Size = new System.Drawing.Size(1404, 323);
             this.InfoGrid.TabIndex = 811;
             this.InfoGrid.TabStop = false;
             this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -1287,7 +1287,7 @@
             this.groupControl6.Controls.Add(this.lblTotalTaxInclusive);
             this.groupControl6.Controls.Add(this.lblTotalTaxExclusive);
             this.groupControl6.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl6.Location = new System.Drawing.Point(738, 615);
+            this.groupControl6.Location = new System.Drawing.Point(738, 618);
             this.groupControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl6.Name = "groupControl6";
             this.groupControl6.Size = new System.Drawing.Size(231, 208);
@@ -1504,7 +1504,7 @@
             this.btnPreviousBill.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPreviousBill.Appearance.Options.UseFont = true;
             this.btnPreviousBill.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPreviousBill.ImageOptions.Image")));
-            this.btnPreviousBill.Location = new System.Drawing.Point(338, 615);
+            this.btnPreviousBill.Location = new System.Drawing.Point(338, 618);
             this.btnPreviousBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPreviousBill.Name = "btnPreviousBill";
             this.btnPreviousBill.Size = new System.Drawing.Size(110, 67);
@@ -1528,7 +1528,7 @@
             this.simpleButton15.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton15.Appearance.Options.UseFont = true;
             this.simpleButton15.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton15.ImageOptions.Image")));
-            this.simpleButton15.Location = new System.Drawing.Point(229, 815);
+            this.simpleButton15.Location = new System.Drawing.Point(229, 818);
             this.simpleButton15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton15.Name = "simpleButton15";
             this.simpleButton15.Size = new System.Drawing.Size(110, 67);
@@ -1563,7 +1563,7 @@
             this.simpleButton9.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton9.Appearance.Options.UseFont = true;
             this.simpleButton9.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton9.ImageOptions.Image")));
-            this.simpleButton9.Location = new System.Drawing.Point(9, 749);
+            this.simpleButton9.Location = new System.Drawing.Point(9, 752);
             this.simpleButton9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton9.Name = "simpleButton9";
             this.simpleButton9.Size = new System.Drawing.Size(110, 67);
@@ -1639,7 +1639,7 @@
             this.groupControl8.Location = new System.Drawing.Point(1030, 137);
             this.groupControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl8.Name = "groupControl8";
-            this.groupControl8.Size = new System.Drawing.Size(653, 85);
+            this.groupControl8.Size = new System.Drawing.Size(655, 85);
             this.groupControl8.TabIndex = 812;
             this.groupControl8.Text = "Tax Type";
             this.groupControl8.Visible = false;
@@ -1651,7 +1651,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(91, 21);
+            this.chInclusive.Size = new System.Drawing.Size(91, 24);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -1674,7 +1674,7 @@
             this.groupControl5.Controls.Add(this.labelControl24);
             this.groupControl5.Controls.Add(this.labelControl23);
             this.groupControl5.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl5.Location = new System.Drawing.Point(470, 615);
+            this.groupControl5.Location = new System.Drawing.Point(470, 618);
             this.groupControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl5.Name = "groupControl5";
             this.groupControl5.Size = new System.Drawing.Size(261, 243);
@@ -1857,7 +1857,7 @@
             this.lblPaymentMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPaymentMode.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentMode.Appearance.Options.UseFont = true;
-            this.lblPaymentMode.Location = new System.Drawing.Point(896, 831);
+            this.lblPaymentMode.Location = new System.Drawing.Point(896, 834);
             this.lblPaymentMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblPaymentMode.Name = "lblPaymentMode";
             this.lblPaymentMode.Size = new System.Drawing.Size(56, 25);
@@ -1871,7 +1871,7 @@
             this.simpleButton20.Appearance.Options.UseFont = true;
             this.simpleButton20.AutoWidthInLayoutControl = true;
             this.simpleButton20.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton20.ImageOptions.SvgImage")));
-            this.simpleButton20.Location = new System.Drawing.Point(1480, 773);
+            this.simpleButton20.Location = new System.Drawing.Point(1482, 776);
             this.simpleButton20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton20.Name = "simpleButton20";
             this.simpleButton20.Size = new System.Drawing.Size(142, 89);
@@ -1884,7 +1884,7 @@
             this.btnInvoiceConfig.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInvoiceConfig.Appearance.Options.UseFont = true;
             this.btnInvoiceConfig.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnInvoiceConfig.ImageOptions.Image")));
-            this.btnInvoiceConfig.Location = new System.Drawing.Point(338, 749);
+            this.btnInvoiceConfig.Location = new System.Drawing.Point(338, 752);
             this.btnInvoiceConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInvoiceConfig.Name = "btnInvoiceConfig";
             this.btnInvoiceConfig.Size = new System.Drawing.Size(110, 67);
@@ -1899,7 +1899,7 @@
             this.btnPG.Appearance.Options.UseFont = true;
             this.btnPG.AutoWidthInLayoutControl = true;
             this.btnPG.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPG.ImageOptions.SvgImage")));
-            this.btnPG.Location = new System.Drawing.Point(1480, 684);
+            this.btnPG.Location = new System.Drawing.Point(1482, 687);
             this.btnPG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPG.Name = "btnPG";
             this.btnPG.Size = new System.Drawing.Size(142, 89);
@@ -1927,7 +1927,7 @@
             this.labelControl27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelControl27.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl27.Appearance.Options.UseFont = true;
-            this.labelControl27.Location = new System.Drawing.Point(749, 831);
+            this.labelControl27.Location = new System.Drawing.Point(749, 834);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
             this.labelControl27.Size = new System.Drawing.Size(152, 25);
@@ -1940,7 +1940,7 @@
             this.btnHold.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHold.Appearance.Options.UseFont = true;
             this.btnHold.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnHold.ImageOptions.Image")));
-            this.btnHold.Location = new System.Drawing.Point(229, 682);
+            this.btnHold.Location = new System.Drawing.Point(229, 685);
             this.btnHold.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnHold.Name = "btnHold";
             this.btnHold.Size = new System.Drawing.Size(110, 67);
@@ -1956,7 +1956,7 @@
             this.btnSavePrint.AppearancePressed.Options.UseTextOptions = true;
             this.btnSavePrint.AppearancePressed.TextOptions.HotkeyPrefix = DevExpress.Utils.HKeyPrefix.Show;
             this.btnSavePrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSavePrint.ImageOptions.Image")));
-            this.btnSavePrint.Location = new System.Drawing.Point(119, 682);
+            this.btnSavePrint.Location = new System.Drawing.Point(119, 685);
             this.btnSavePrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSavePrint.Name = "btnSavePrint";
             this.btnSavePrint.Size = new System.Drawing.Size(110, 67);
@@ -1971,7 +1971,7 @@
             this.labelControl36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelControl36.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl36.Appearance.Options.UseFont = true;
-            this.labelControl36.Location = new System.Drawing.Point(1083, 620);
+            this.labelControl36.Location = new System.Drawing.Point(1085, 623);
             this.labelControl36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl36.Name = "labelControl36";
             this.labelControl36.Size = new System.Drawing.Size(62, 21);
@@ -1985,7 +1985,7 @@
             this.btnCard.Appearance.Options.UseFont = true;
             this.btnCard.AutoWidthInLayoutControl = true;
             this.btnCard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCard.ImageOptions.SvgImage")));
-            this.btnCard.Location = new System.Drawing.Point(1338, 684);
+            this.btnCard.Location = new System.Drawing.Point(1340, 687);
             this.btnCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCard.Name = "btnCard";
             this.btnCard.Size = new System.Drawing.Size(142, 89);
@@ -1999,7 +1999,7 @@
             this.btnCancel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Appearance.Options.UseFont = true;
             this.btnCancel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.ImageOptions.Image")));
-            this.btnCancel.Location = new System.Drawing.Point(119, 749);
+            this.btnCancel.Location = new System.Drawing.Point(119, 752);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 67);
@@ -2013,7 +2013,7 @@
             this.simpleButton14.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.simpleButton14.Appearance.Options.UseFont = true;
             this.simpleButton14.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton14.ImageOptions.Image")));
-            this.simpleButton14.Location = new System.Drawing.Point(119, 815);
+            this.simpleButton14.Location = new System.Drawing.Point(119, 818);
             this.simpleButton14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton14.Name = "simpleButton14";
             this.simpleButton14.Size = new System.Drawing.Size(110, 67);
@@ -2026,7 +2026,7 @@
             this.btnBottomBill.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBottomBill.Appearance.Options.UseFont = true;
             this.btnBottomBill.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnBottomBill.ImageOptions.Image")));
-            this.btnBottomBill.Location = new System.Drawing.Point(119, 615);
+            this.btnBottomBill.Location = new System.Drawing.Point(119, 618);
             this.btnBottomBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBottomBill.Name = "btnBottomBill";
             this.btnBottomBill.Size = new System.Drawing.Size(110, 67);
@@ -2037,7 +2037,7 @@
             // txtRemarks
             // 
             this.txtRemarks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRemarks.Location = new System.Drawing.Point(1151, 617);
+            this.txtRemarks.Location = new System.Drawing.Point(1153, 620);
             this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.AutoHeight = false;
@@ -2069,7 +2069,7 @@
             this.btnTopBill.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTopBill.Appearance.Options.UseFont = true;
             this.btnTopBill.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTopBill.ImageOptions.Image")));
-            this.btnTopBill.Location = new System.Drawing.Point(9, 615);
+            this.btnTopBill.Location = new System.Drawing.Point(9, 618);
             this.btnTopBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTopBill.Name = "btnTopBill";
             this.btnTopBill.Size = new System.Drawing.Size(110, 67);
@@ -2081,7 +2081,7 @@
             // 
             this.ArticleImageBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.ArticleImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ArticleImageBox.Location = new System.Drawing.Point(1418, 233);
+            this.ArticleImageBox.Location = new System.Drawing.Point(1420, 234);
             this.ArticleImageBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ArticleImageBox.Name = "ArticleImageBox";
             this.ArticleImageBox.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -2310,7 +2310,7 @@
             this.btnAddCashMemo.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCashMemo.Appearance.Options.UseFont = true;
             this.btnAddCashMemo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCashMemo.ImageOptions.Image")));
-            this.btnAddCashMemo.Location = new System.Drawing.Point(9, 682);
+            this.btnAddCashMemo.Location = new System.Drawing.Point(9, 685);
             this.btnAddCashMemo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAddCashMemo.Name = "btnAddCashMemo";
             this.btnAddCashMemo.Size = new System.Drawing.Size(110, 67);
@@ -2324,7 +2324,7 @@
             this.btnUnhold.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUnhold.Appearance.Options.UseFont = true;
             this.btnUnhold.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUnhold.ImageOptions.Image")));
-            this.btnUnhold.Location = new System.Drawing.Point(338, 682);
+            this.btnUnhold.Location = new System.Drawing.Point(338, 685);
             this.btnUnhold.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUnhold.Name = "btnUnhold";
             this.btnUnhold.Size = new System.Drawing.Size(110, 67);
@@ -2336,7 +2336,7 @@
             // 
             this.lblPAyBackAmount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblPAyBackAmount.EditValue = "0.00";
-            this.lblPAyBackAmount.Location = new System.Drawing.Point(1081, 828);
+            this.lblPAyBackAmount.Location = new System.Drawing.Point(1082, 831);
             this.lblPAyBackAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblPAyBackAmount.Name = "lblPAyBackAmount";
             this.lblPAyBackAmount.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -2364,7 +2364,7 @@
             // 
             this.lblCashTenderAmount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblCashTenderAmount.EditValue = "0.00";
-            this.lblCashTenderAmount.Location = new System.Drawing.Point(1081, 792);
+            this.lblCashTenderAmount.Location = new System.Drawing.Point(1082, 795);
             this.lblCashTenderAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblCashTenderAmount.Name = "lblCashTenderAmount";
             this.lblCashTenderAmount.Properties.Appearance.BackColor = System.Drawing.SystemColors.ControlLight;
@@ -2394,7 +2394,7 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 21);
+            this.chall.Size = new System.Drawing.Size(87, 24);
             this.chall.TabIndex = 815;
             // 
             // CashMemo
@@ -2402,7 +2402,7 @@
             this.ActiveGlowColor = System.Drawing.Color.Lime;
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1710, 936);
+            this.ClientSize = new System.Drawing.Size(1712, 939);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.chall);

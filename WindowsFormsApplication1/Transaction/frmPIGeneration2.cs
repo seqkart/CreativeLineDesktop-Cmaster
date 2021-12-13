@@ -368,6 +368,8 @@ namespace WindowsFormsApplication1.Transaction
                 txtStoreCode.Text = worksheet.Name;
 
                 DataTable TempTable = new DataTable();
+            
+
                 string xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + txtAddress.Text + ";Extended Properties=\"Excel 12.0;\";";
                 using (var myCommand = new OleDbDataAdapter("SELECT [EAN Code],[PI Qty] as [PI Qty] FROM [" + txtStoreCode.Text + "$]", xlConn))
                 {

@@ -37,10 +37,13 @@ namespace WindowsFormsApplication1.Transaction
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnLoad = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDocDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtDocNo = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
@@ -67,6 +70,9 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
             this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EOSSGrid)).BeginInit();
@@ -83,11 +89,11 @@ namespace WindowsFormsApplication1.Transaction
             // InfoGrid
             // 
             this.InfoGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.InfoGrid.Location = new System.Drawing.Point(0, 0);
+            this.InfoGrid.Location = new System.Drawing.Point(0, 29);
             this.InfoGrid.MainView = this.InfoGridView;
             this.InfoGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InfoGrid.Name = "InfoGrid";
-            this.InfoGrid.Size = new System.Drawing.Size(1070, 608);
+            this.InfoGrid.Size = new System.Drawing.Size(1070, 579);
             this.InfoGrid.TabIndex = 448;
             this.InfoGrid.TabStop = false;
             this.InfoGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -102,8 +108,10 @@ namespace WindowsFormsApplication1.Transaction
             this.InfoGridView.GridControl = this.InfoGrid;
             this.InfoGridView.Name = "InfoGridView";
             this.InfoGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.InfoGridView.OptionsBehavior.Editable = false;
             this.InfoGridView.OptionsPrint.PrintFooter = false;
             this.InfoGridView.OptionsPrint.PrintGroupFooter = false;
+            this.InfoGridView.OptionsView.ColumnAutoWidth = false;
             this.InfoGridView.OptionsView.ShowFooter = true;
             this.InfoGridView.OptionsView.ShowGroupPanel = false;
             this.InfoGridView.OptionsView.ShowIndicator = false;
@@ -123,7 +131,6 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btnQuit,
-            this.btnLoad,
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
@@ -143,17 +150,6 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.btnLoad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.Image")));
-            this.btnLoad.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(86, 28);
-            this.btnLoad.Text = "Load Excel";
-            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // btnSave
             // 
@@ -180,6 +176,10 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // splitContainerControl1.Panel1
             // 
+            this.splitContainerControl1.Panel1.Controls.Add(this.labelControl5);
+            this.splitContainerControl1.Panel1.Controls.Add(this.txtDocDate);
+            this.splitContainerControl1.Panel1.Controls.Add(this.labelControl1);
+            this.splitContainerControl1.Panel1.Controls.Add(this.txtDocNo);
             this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton4);
             this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton3);
             this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton2);
@@ -197,53 +197,119 @@ namespace WindowsFormsApplication1.Transaction
             this.splitContainerControl1.Panel2.Controls.Add(this.InfoGrid);
             this.splitContainerControl1.Panel2.Text = "Panel2";
             this.splitContainerControl1.Size = new System.Drawing.Size(1363, 738);
-            this.splitContainerControl1.SplitterPosition = 111;
+            this.splitContainerControl1.SplitterPosition = 136;
             this.splitContainerControl1.TabIndex = 449;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl5.Appearance.Options.UseFont = true;
+            this.labelControl5.Location = new System.Drawing.Point(408, 9);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(68, 21);
+            this.labelControl5.TabIndex = 546;
+            this.labelControl5.Text = "Doc Date";
+            // 
+            // txtDocDate
+            // 
+            this.txtDocDate.EditValue = null;
+            this.txtDocDate.Enabled = false;
+            this.txtDocDate.EnterMoveNextControl = true;
+            this.txtDocDate.Location = new System.Drawing.Point(482, 8);
+            this.txtDocDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDocDate.Name = "txtDocDate";
+            this.txtDocDate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocDate.Properties.Appearance.Options.UseFont = true;
+            this.txtDocDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtDocDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtDocDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.txtDocDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtDocDate.Properties.MaskSettings.Set("spinWithCarry", true);
+            this.txtDocDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.txtDocDate.Size = new System.Drawing.Size(154, 28);
+            this.txtDocDate.TabIndex = 545;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(9, 10);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(54, 21);
+            this.labelControl1.TabIndex = 544;
+            this.labelControl1.Text = "Doc No";
+            // 
+            // txtDocNo
+            // 
+            this.txtDocNo.Enabled = false;
+            this.txtDocNo.Location = new System.Drawing.Point(108, 6);
+            this.txtDocNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDocNo.Name = "txtDocNo";
+            this.txtDocNo.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDocNo.Properties.Appearance.Options.UseFont = true;
+            this.txtDocNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDocNo.Properties.MaxLength = 6;
+            this.txtDocNo.Size = new System.Drawing.Size(137, 28);
+            this.txtDocNo.TabIndex = 543;
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(522, 65);
+            this.simpleButton4.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton4.Appearance.Options.UseFont = true;
+            this.simpleButton4.Location = new System.Drawing.Point(603, 94);
             this.simpleButton4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(149, 30);
+            this.simpleButton4.Size = new System.Drawing.Size(165, 30);
             this.simpleButton4.TabIndex = 538;
             this.simpleButton4.Text = "PROCESS REPORT";
             this.simpleButton4.Click += new System.EventHandler(this.SimpleButton4_Click);
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(373, 65);
+            this.simpleButton3.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton3.Appearance.Options.UseFont = true;
+            this.simpleButton3.Location = new System.Drawing.Point(438, 94);
             this.simpleButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(149, 30);
+            this.simpleButton3.Size = new System.Drawing.Size(165, 30);
             this.simpleButton3.TabIndex = 538;
             this.simpleButton3.Text = "EXPORT REPORT";
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(224, 65);
+            this.simpleButton2.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton2.Appearance.Options.UseFont = true;
+            this.simpleButton2.Location = new System.Drawing.Point(273, 94);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(149, 30);
+            this.simpleButton2.Size = new System.Drawing.Size(165, 30);
             this.simpleButton2.TabIndex = 538;
             this.simpleButton2.Text = "PRINT REPORT";
-            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(75, 65);
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Location = new System.Drawing.Point(108, 94);
             this.simpleButton1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(149, 30);
+            this.simpleButton1.Size = new System.Drawing.Size(165, 30);
             this.simpleButton1.TabIndex = 538;
             this.simpleButton1.Text = "LOAD EXCEL";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(8, 22);
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl4.Appearance.Options.UseFont = true;
+            this.labelControl4.Location = new System.Drawing.Point(8, 46);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(71, 16);
+            this.labelControl4.Size = new System.Drawing.Size(91, 21);
             this.labelControl4.TabIndex = 537;
             this.labelControl4.Text = "Party Name";
             // 
@@ -251,23 +317,27 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.txtDebitPartyName.Enabled = false;
             this.txtDebitPartyName.EnterMoveNextControl = true;
-            this.txtDebitPartyName.Location = new System.Drawing.Point(169, 17);
+            this.txtDebitPartyName.Location = new System.Drawing.Point(192, 42);
             this.txtDebitPartyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDebitPartyName.Name = "txtDebitPartyName";
+            this.txtDebitPartyName.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDebitPartyName.Properties.Appearance.Options.UseFont = true;
             this.txtDebitPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyName.Properties.ReadOnly = true;
-            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 22);
+            this.txtDebitPartyName.Size = new System.Drawing.Size(444, 28);
             this.txtDebitPartyName.TabIndex = 535;
             this.txtDebitPartyName.TabStop = false;
             // 
             // txtDebitPartyCode
             // 
-            this.txtDebitPartyCode.Location = new System.Drawing.Point(79, 17);
+            this.txtDebitPartyCode.Location = new System.Drawing.Point(107, 42);
             this.txtDebitPartyCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDebitPartyCode.Name = "txtDebitPartyCode";
+            this.txtDebitPartyCode.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDebitPartyCode.Properties.Appearance.Options.UseFont = true;
             this.txtDebitPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDebitPartyCode.Properties.MaxLength = 6;
-            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 22);
+            this.txtDebitPartyCode.Size = new System.Drawing.Size(85, 28);
             this.txtDebitPartyCode.TabIndex = 536;
             this.txtDebitPartyCode.EditValueChanged += new System.EventHandler(this.TxtDebitPartyCode_EditValueChanged);
             this.txtDebitPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDebitPartyCode_KeyDown);
@@ -338,6 +408,7 @@ namespace WindowsFormsApplication1.Transaction
             this.HelpGridView.Name = "HelpGridView";
             this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.HelpGridView.OptionsBehavior.Editable = false;
+            this.HelpGridView.OptionsView.ColumnAutoWidth = false;
             this.HelpGridView.OptionsView.ShowGroupPanel = false;
             this.HelpGridView.OptionsView.ShowIndicator = false;
             this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
@@ -351,11 +422,11 @@ namespace WindowsFormsApplication1.Transaction
             // FreshGrid
             // 
             this.FreshGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.FreshGrid.Location = new System.Drawing.Point(1072, 0);
+            this.FreshGrid.Location = new System.Drawing.Point(1072, 29);
             this.FreshGrid.MainView = this.FreshGridView;
             this.FreshGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FreshGrid.Name = "FreshGrid";
-            this.FreshGrid.Size = new System.Drawing.Size(282, 306);
+            this.FreshGrid.Size = new System.Drawing.Size(282, 277);
             this.FreshGrid.TabIndex = 448;
             this.FreshGrid.TabStop = false;
             this.FreshGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -409,6 +480,9 @@ namespace WindowsFormsApplication1.Transaction
             this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDocNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDebitPartyCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EOSSGrid)).EndInit();
@@ -432,7 +506,6 @@ namespace WindowsFormsApplication1.Transaction
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
         private System.Windows.Forms.ToolStrip Menu_ToolStrip;
         private System.Windows.Forms.ToolStripButton btnQuit;
-        private System.Windows.Forms.ToolStripButton btnLoad;
         private System.Windows.Forms.ToolStripButton btnSave;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
@@ -452,5 +525,9 @@ namespace WindowsFormsApplication1.Transaction
         private DevExpress.XtraGrid.Views.Grid.GridView FreshGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtDocNo;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        public DevExpress.XtraEditors.DateEdit txtDocDate;
     }
 }

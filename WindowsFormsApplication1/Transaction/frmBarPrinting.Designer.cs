@@ -129,6 +129,8 @@
             // 
             // BarCodeGridView
             // 
+            this.BarCodeGridView.Appearance.EvenRow.Options.UseBackColor = true;
+            this.BarCodeGridView.Appearance.EvenRow.Options.UseBorderColor = true;
             this.BarCodeGridView.Appearance.FixedLine.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.BarCodeGridView.Appearance.FixedLine.Options.UseFont = true;
             this.BarCodeGridView.Appearance.FocusedCell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -137,12 +139,17 @@
             this.BarCodeGridView.Appearance.FocusedRow.Options.UseBorderColor = true;
             this.BarCodeGridView.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.BarCodeGridView.Appearance.HeaderPanel.Options.UseFont = true;
-            this.BarCodeGridView.Appearance.HorzLine.BackColor = System.Drawing.Color.DimGray;
+            this.BarCodeGridView.Appearance.HorzLine.BackColor = System.Drawing.Color.Black;
             this.BarCodeGridView.Appearance.HorzLine.Options.UseBackColor = true;
-            this.BarCodeGridView.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.BarCodeGridView.Appearance.HorzLine.Options.UseBorderColor = true;
+            this.BarCodeGridView.Appearance.RowSeparator.BackColor = System.Drawing.Color.Black;
+            this.BarCodeGridView.Appearance.RowSeparator.Options.UseBackColor = true;
+            this.BarCodeGridView.Appearance.RowSeparator.Options.UseBorderColor = true;
+            this.BarCodeGridView.Appearance.SelectedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.BarCodeGridView.Appearance.SelectedRow.BorderColor = System.Drawing.Color.Black;
             this.BarCodeGridView.Appearance.SelectedRow.Options.UseBackColor = true;
-            this.BarCodeGridView.Appearance.TopNewRow.Options.UseBorderColor = true;
-            this.BarCodeGridView.Appearance.VertLine.BackColor = System.Drawing.Color.Gray;
+            this.BarCodeGridView.Appearance.TopNewRow.ForeColor = System.Drawing.Color.Black;
+            this.BarCodeGridView.Appearance.VertLine.BackColor = System.Drawing.Color.Black;
             this.BarCodeGridView.Appearance.VertLine.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.BarCodeGridView.Appearance.VertLine.Options.UseBackColor = true;
             this.BarCodeGridView.Appearance.VertLine.Options.UseBorderColor = true;
@@ -180,9 +187,11 @@
             this.BarCodeGridView.OptionsEditForm.ShowOnF2Key = DevExpress.Utils.DefaultBoolean.False;
             this.BarCodeGridView.OptionsImageLoad.AnimationType = DevExpress.Utils.ImageContentAnimationType.Slide;
             this.BarCodeGridView.OptionsNavigation.AutoFocusNewRow = true;
+            this.BarCodeGridView.OptionsPrint.EnableAppearanceOddRow = true;
+            this.BarCodeGridView.OptionsPrint.ExpandAllDetails = true;
+            this.BarCodeGridView.OptionsPrint.PrintSelectedRowsOnly = true;
             this.BarCodeGridView.OptionsSelection.MultiSelect = true;
             this.BarCodeGridView.OptionsView.ColumnAutoWidth = false;
-            this.BarCodeGridView.OptionsView.EnableAppearanceEvenRow = true;
             this.BarCodeGridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.BarCodeGridView.OptionsView.ShowFooter = true;
             this.BarCodeGridView.OptionsView.ShowGroupPanel = false;

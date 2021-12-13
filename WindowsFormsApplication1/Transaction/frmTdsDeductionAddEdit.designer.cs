@@ -98,7 +98,7 @@
             this.txtReference.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReference.Name = "txtReference";
             this.txtReference.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtReference.Size = new System.Drawing.Size(463, 24);
+            this.txtReference.Size = new System.Drawing.Size(463, 22);
             this.txtReference.TabIndex = 6;
             this.txtReference.Leave += new System.EventHandler(this.TxtReference_Leave);
             // 
@@ -110,7 +110,7 @@
             this.txtTDSDesc.Name = "txtTDSDesc";
             this.txtTDSDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSDesc.Properties.ReadOnly = true;
-            this.txtTDSDesc.Size = new System.Drawing.Size(535, 24);
+            this.txtTDSDesc.Size = new System.Drawing.Size(535, 22);
             this.txtTDSDesc.TabIndex = 208;
             // 
             // txtOnAmount
@@ -123,7 +123,7 @@
             this.txtOnAmount.Properties.Mask.BeepOnError = true;
             this.txtOnAmount.Properties.Mask.EditMask = "N2";
             this.txtOnAmount.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
-            this.txtOnAmount.Size = new System.Drawing.Size(128, 24);
+            this.txtOnAmount.Size = new System.Drawing.Size(128, 22);
             this.txtOnAmount.TabIndex = 5;
             this.txtOnAmount.EditValueChanged += new System.EventHandler(this.TxtOnAmount_EditValueChanged);
             this.txtOnAmount.Leave += new System.EventHandler(this.TxtOnAmount_Leave);
@@ -136,7 +136,7 @@
             this.txtTTNo.Name = "txtTTNo";
             this.txtTTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTTNo.Properties.ReadOnly = true;
-            this.txtTTNo.Size = new System.Drawing.Size(128, 24);
+            this.txtTTNo.Size = new System.Drawing.Size(128, 22);
             this.txtTTNo.TabIndex = 0;
             this.txtTTNo.TabStop = false;
             // 
@@ -145,7 +145,7 @@
             this.label13.Location = new System.Drawing.Point(290, 187);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 17);
+            this.label13.Size = new System.Drawing.Size(63, 16);
             this.label13.TabIndex = 215;
             this.label13.Text = "Reference";
             // 
@@ -154,7 +154,7 @@
             this.label3.Location = new System.Drawing.Point(621, 271);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 17);
+            this.label3.Size = new System.Drawing.Size(60, 16);
             this.label3.TabIndex = 214;
             this.label3.Text = "TDS Rate";
             // 
@@ -163,7 +163,7 @@
             this.label2.Location = new System.Drawing.Point(67, 187);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 213;
             this.label2.Text = "On Amount";
             // 
@@ -172,7 +172,7 @@
             this.label1.Location = new System.Drawing.Point(51, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.Size = new System.Drawing.Size(84, 16);
             this.label1.TabIndex = 212;
             this.label1.Text = "Transction No";
             // 
@@ -183,7 +183,7 @@
             this.txtPCode.Name = "txtPCode";
             this.txtPCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPCode.Properties.MaxLength = 6;
-            this.txtPCode.Size = new System.Drawing.Size(128, 24);
+            this.txtPCode.Size = new System.Drawing.Size(128, 22);
             this.txtPCode.TabIndex = 3;
             this.txtPCode.EditValueChanged += new System.EventHandler(this.TxtPCode_EditValueChanged);
             this.txtPCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPCode_KeyDown);
@@ -197,7 +197,7 @@
             this.txtPDesc.Name = "txtPDesc";
             this.txtPDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPDesc.Properties.ReadOnly = true;
-            this.txtPDesc.Size = new System.Drawing.Size(535, 24);
+            this.txtPDesc.Size = new System.Drawing.Size(535, 22);
             this.txtPDesc.TabIndex = 220;
             this.txtPDesc.TabStop = false;
             // 
@@ -206,7 +206,7 @@
             this.label4.Location = new System.Drawing.Point(104, 106);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 17);
+            this.label4.Size = new System.Drawing.Size(31, 16);
             this.label4.TabIndex = 221;
             this.label4.Text = "Party";
             // 
@@ -217,7 +217,7 @@
             this.txtTDSCode.Name = "txtTDSCode";
             this.txtTDSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSCode.Properties.MaxLength = 4;
-            this.txtTDSCode.Size = new System.Drawing.Size(128, 24);
+            this.txtTDSCode.Size = new System.Drawing.Size(128, 22);
             this.txtTDSCode.TabIndex = 4;
             this.txtTDSCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTDSCode_KeyDown);
             this.txtTDSCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPCode_KeyPress);
@@ -227,7 +227,7 @@
             this.label5.Location = new System.Drawing.Point(75, 145);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 17);
+            this.label5.Size = new System.Drawing.Size(64, 16);
             this.label5.TabIndex = 223;
             this.label5.Text = "TDS Code";
             // 
@@ -238,7 +238,7 @@
             this.txtTDSRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTDSRate.Name = "txtTDSRate";
             this.txtTDSRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTDSRate.Size = new System.Drawing.Size(138, 24);
+            this.txtTDSRate.Size = new System.Drawing.Size(138, 22);
             this.txtTDSRate.TabIndex = 8;
             // 
             // txtTDSSurcharge
@@ -250,7 +250,7 @@
             this.txtTDSSurcharge.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTDSSurcharge.Properties.NullText = "0";
             this.txtTDSSurcharge.Properties.NullValuePrompt = "0";
-            this.txtTDSSurcharge.Size = new System.Drawing.Size(138, 24);
+            this.txtTDSSurcharge.Size = new System.Drawing.Size(138, 22);
             this.txtTDSSurcharge.TabIndex = 10;
             // 
             // label6
@@ -258,7 +258,7 @@
             this.label6.Location = new System.Drawing.Point(590, 313);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 17);
+            this.label6.Size = new System.Drawing.Size(93, 16);
             this.label6.TabIndex = 225;
             this.label6.Text = "TDS Surcharge";
             // 
@@ -267,7 +267,7 @@
             this.label7.Location = new System.Drawing.Point(41, 285);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 17);
+            this.label7.Size = new System.Drawing.Size(0, 16);
             this.label7.TabIndex = 228;
             // 
             // txtRemarks
@@ -277,7 +277,7 @@
             this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRemarks.Size = new System.Drawing.Size(691, 24);
+            this.txtRemarks.Size = new System.Drawing.Size(691, 22);
             this.txtRemarks.TabIndex = 11;
             // 
             // label8
@@ -285,7 +285,7 @@
             this.label8.Location = new System.Drawing.Point(83, 354);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(50, 17);
+            this.label8.Size = new System.Drawing.Size(55, 16);
             this.label8.TabIndex = 230;
             this.label8.Text = "Remarks";
             // 
@@ -304,7 +304,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(887, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(887, 31);
             this.Menu_ToolStrip.TabIndex = 231;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -314,7 +314,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -324,7 +324,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 24);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -335,7 +335,7 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(116, 27);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 31);
             // 
             // dtTransDate
             // 
@@ -364,7 +364,7 @@
             this.dtTransDate.Properties.Mask.BeepOnError = true;
             this.dtTransDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.dtTransDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret;
-            this.dtTransDate.Size = new System.Drawing.Size(114, 24);
+            this.dtTransDate.Size = new System.Drawing.Size(114, 22);
             this.dtTransDate.TabIndex = 1;
             // 
             // label9
@@ -372,7 +372,7 @@
             this.label9.Location = new System.Drawing.Point(674, 64);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 17);
+            this.label9.Size = new System.Drawing.Size(29, 16);
             this.label9.TabIndex = 233;
             this.label9.Text = "Date";
             // 
@@ -389,7 +389,7 @@
             this.txtTDSAmount.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtTDSAmount.Properties.NullText = "0";
             this.txtTDSAmount.Properties.NullValuePrompt = "0";
-            this.txtTDSAmount.Size = new System.Drawing.Size(128, 24);
+            this.txtTDSAmount.Size = new System.Drawing.Size(128, 22);
             this.txtTDSAmount.TabIndex = 7;
             // 
             // label10
@@ -397,7 +397,7 @@
             this.label10.Location = new System.Drawing.Point(61, 271);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 17);
+            this.label10.Size = new System.Drawing.Size(77, 16);
             this.label10.TabIndex = 235;
             this.label10.Text = "TDS Amount";
             // 
@@ -414,7 +414,7 @@
             this.txtSurcOnTDS.Properties.MaskSettings.Set("mask", "N0");
             this.txtSurcOnTDS.Properties.NullText = "0";
             this.txtSurcOnTDS.Properties.NullValuePrompt = "0";
-            this.txtSurcOnTDS.Size = new System.Drawing.Size(128, 24);
+            this.txtSurcOnTDS.Size = new System.Drawing.Size(128, 22);
             this.txtSurcOnTDS.TabIndex = 9;
             // 
             // label11
@@ -422,7 +422,7 @@
             this.label11.Location = new System.Drawing.Point(32, 313);
             this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 17);
+            this.label11.Size = new System.Drawing.Size(106, 16);
             this.label11.TabIndex = 237;
             this.label11.Text = "Surchare on TDS ";
             // 
@@ -434,7 +434,7 @@
             this.txtUnderSection.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnderSection.Name = "txtUnderSection";
             this.txtUnderSection.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtUnderSection.Size = new System.Drawing.Size(689, 24);
+            this.txtUnderSection.Size = new System.Drawing.Size(689, 22);
             this.txtUnderSection.TabIndex = 295;
             // 
             // label12
@@ -442,7 +442,7 @@
             this.label12.Location = new System.Drawing.Point(51, 229);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 17);
+            this.label12.Size = new System.Drawing.Size(85, 16);
             this.label12.TabIndex = 296;
             this.label12.Text = "Under Section";
             // 

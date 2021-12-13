@@ -502,7 +502,7 @@
             this.xtraTabPage1.Controls.Add(this.panelControl5);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 379);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1023, 373);
             this.xtraTabPage1.Text = "General";
             // 
             // panelControl5

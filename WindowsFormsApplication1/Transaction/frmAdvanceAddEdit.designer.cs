@@ -195,7 +195,6 @@
             this.DtDate.Location = new System.Drawing.Point(92, 74);
             this.DtDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtDate.Name = "DtDate";
-            this.DtDate.Properties.BeepOnError = false;
             this.DtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {

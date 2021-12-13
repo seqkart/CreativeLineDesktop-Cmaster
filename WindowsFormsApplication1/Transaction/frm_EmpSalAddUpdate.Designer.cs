@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_EmpSalAddUpdate));
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.TextAuthenticate = new System.Windows.Forms.ToolStripTextBox();
@@ -129,7 +129,7 @@
             this.btnSave});
             this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(602, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(606, 31);
             this.Menu_ToolStrip.TabIndex = 2;
             this.Menu_ToolStrip.Text = "toolStrip1";
             // 
@@ -142,7 +142,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -697,9 +697,9 @@
             this.dtMonthYear.Properties.MaxLength = 6;
             this.dtMonthYear.Size = new System.Drawing.Size(85, 22);
             this.dtMonthYear.TabIndex = 0;
-            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
-            conditionValidationRule2.ErrorText = "This value is not valid";
-            this.MyValidationProvider.SetValidationRule(this.dtMonthYear, conditionValidationRule2);
+            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.IsNotBlank;
+            conditionValidationRule1.ErrorText = "This value is not valid";
+            this.MyValidationProvider.SetValidationRule(this.dtMonthYear, conditionValidationRule1);
             // 
             // MyValidationProvider
             // 
@@ -763,7 +763,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(602, 627);
+            this.ClientSize = new System.Drawing.Size(606, 633);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.lblDocCode);

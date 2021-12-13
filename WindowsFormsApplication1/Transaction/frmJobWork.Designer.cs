@@ -64,16 +64,16 @@
             this.txtRemarks = new DevExpress.XtraEditors.MemoEdit();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MeasurementGird = new DevExpress.XtraGrid.GridControl();
             this.MeasurementGirdView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabNavigationPage2 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.FabricGrid = new DevExpress.XtraGrid.GridControl();
             this.FabricGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabNavigationPage3 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.OrderGrid = new DevExpress.XtraGrid.GridControl();
             this.OrderGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabNavigationPage4 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
@@ -103,16 +103,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeasurementGird)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeasurementGirdView)).BeginInit();
             this.tabNavigationPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FabricGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FabricGridView)).BeginInit();
             this.tabNavigationPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGridView)).BeginInit();
             this.tabNavigationPage4.SuspendLayout();
@@ -491,6 +491,53 @@
             this.tabNavigationPage1.Name = "tabNavigationPage1";
             this.tabNavigationPage1.Size = new System.Drawing.Size(1432, 606);
             // 
+            // MeasurementGird
+            // 
+            this.MeasurementGird.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MeasurementGird.Location = new System.Drawing.Point(0, 0);
+            this.MeasurementGird.MainView = this.MeasurementGirdView;
+            this.MeasurementGird.Name = "MeasurementGird";
+            this.MeasurementGird.Size = new System.Drawing.Size(1432, 606);
+            this.MeasurementGird.TabIndex = 0;
+            this.MeasurementGird.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.MeasurementGirdView});
+            // 
+            // MeasurementGirdView
+            // 
+            this.MeasurementGirdView.GridControl = this.MeasurementGird;
+            this.MeasurementGirdView.Name = "MeasurementGirdView";
+            // 
+            // tabNavigationPage2
+            // 
+            this.tabNavigationPage2.Caption = "Yarn / Fabric";
+            this.tabNavigationPage2.Controls.Add(this.FabricGrid);
+            this.tabNavigationPage2.Name = "tabNavigationPage2";
+            this.tabNavigationPage2.Size = new System.Drawing.Size(1432, 652);
+            // 
+            // FabricGrid
+            // 
+            this.FabricGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FabricGrid.Location = new System.Drawing.Point(0, 0);
+            this.FabricGrid.MainView = this.FabricGridView;
+            this.FabricGrid.Name = "FabricGrid";
+            this.FabricGrid.Size = new System.Drawing.Size(1432, 652);
+            this.FabricGrid.TabIndex = 1;
+            this.FabricGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.FabricGridView});
+            // 
+            // FabricGridView
+            // 
+            this.FabricGridView.GridControl = this.FabricGrid;
+            this.FabricGridView.Name = "FabricGridView";
+            // 
+            // tabNavigationPage3
+            // 
+            this.tabNavigationPage3.Caption = "ORDER";
+            this.tabNavigationPage3.Controls.Add(this.HelpGrid);
+            this.tabNavigationPage3.Controls.Add(this.OrderGrid);
+            this.tabNavigationPage3.Name = "tabNavigationPage3";
+            this.tabNavigationPage3.Size = new System.Drawing.Size(1432, 606);
+            // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -540,53 +587,6 @@
             this.gridView5.OptionsView.ShowGroupPanel = false;
             this.gridView5.OptionsView.ShowIndicator = false;
             this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            // 
-            // MeasurementGird
-            // 
-            this.MeasurementGird.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MeasurementGird.Location = new System.Drawing.Point(0, 0);
-            this.MeasurementGird.MainView = this.MeasurementGirdView;
-            this.MeasurementGird.Name = "MeasurementGird";
-            this.MeasurementGird.Size = new System.Drawing.Size(1432, 606);
-            this.MeasurementGird.TabIndex = 0;
-            this.MeasurementGird.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.MeasurementGirdView});
-            // 
-            // MeasurementGirdView
-            // 
-            this.MeasurementGirdView.GridControl = this.MeasurementGird;
-            this.MeasurementGirdView.Name = "MeasurementGirdView";
-            // 
-            // tabNavigationPage2
-            // 
-            this.tabNavigationPage2.Caption = "Yarn / Fabric";
-            this.tabNavigationPage2.Controls.Add(this.FabricGrid);
-            this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(1432, 652);
-            // 
-            // FabricGrid
-            // 
-            this.FabricGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FabricGrid.Location = new System.Drawing.Point(0, 0);
-            this.FabricGrid.MainView = this.FabricGridView;
-            this.FabricGrid.Name = "FabricGrid";
-            this.FabricGrid.Size = new System.Drawing.Size(1432, 652);
-            this.FabricGrid.TabIndex = 1;
-            this.FabricGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.FabricGridView});
-            // 
-            // FabricGridView
-            // 
-            this.FabricGridView.GridControl = this.FabricGrid;
-            this.FabricGridView.Name = "FabricGridView";
-            // 
-            // tabNavigationPage3
-            // 
-            this.tabNavigationPage3.Caption = "ORDER";
-            this.tabNavigationPage3.Controls.Add(this.HelpGrid);
-            this.tabNavigationPage3.Controls.Add(this.OrderGrid);
-            this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(1432, 606);
             // 
             // OrderGrid
             // 
@@ -664,7 +664,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1470, 890);
+            this.ClientSize = new System.Drawing.Size(1472, 893);
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.groupControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -696,16 +696,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeasurementGird)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MeasurementGirdView)).EndInit();
             this.tabNavigationPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FabricGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FabricGridView)).EndInit();
             this.tabNavigationPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OrderGridView)).EndInit();
             this.tabNavigationPage4.ResumeLayout(false);

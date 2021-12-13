@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_MaterialReceipt_Add_Update_GST));
-            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule1 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
+            DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule conditionValidationRule2 = new DevExpress.XtraEditors.DXErrorProvider.ConditionValidationRule();
             this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             this.TextDoc_NO = new DevExpress.XtraEditors.TextEdit();
             this.TextEntryDocType = new DevExpress.XtraEditors.TextEdit();
@@ -499,7 +499,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1367, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1369, 31);
             this.Menu_ToolStrip.TabIndex = 1;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1020,12 +1020,12 @@
             this.TextDocType.Properties.MaxLength = 1;
             this.TextDocType.Size = new System.Drawing.Size(50, 22);
             this.TextDocType.TabIndex = 0;
-            conditionValidationRule1.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotLike;
-            conditionValidationRule1.ErrorText = "This value is not valid";
-            conditionValidationRule1.Values.Add("I");
-            conditionValidationRule1.Values.Add("B");
-            conditionValidationRule1.Values.Add("O");
-            this.MyValidationProvider.SetValidationRule(this.TextDocType, conditionValidationRule1);
+            conditionValidationRule2.ConditionOperator = DevExpress.XtraEditors.DXErrorProvider.ConditionOperator.NotLike;
+            conditionValidationRule2.ErrorText = "This value is not valid";
+            conditionValidationRule2.Values.Add("I");
+            conditionValidationRule2.Values.Add("B");
+            conditionValidationRule2.Values.Add("O");
+            this.MyValidationProvider.SetValidationRule(this.TextDocType, conditionValidationRule2);
             this.TextDocType.EditValueChanging += new DevExpress.XtraEditors.Controls.ChangingEventHandler(this.CaptureChanges);
             this.TextDocType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoveBackOrForward);
             // 
@@ -3077,7 +3077,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1367, 639);
+            this.ClientSize = new System.Drawing.Size(1369, 647);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.EntryInfo_GridCtrl);

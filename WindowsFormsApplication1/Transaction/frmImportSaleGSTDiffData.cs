@@ -2,15 +2,23 @@
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Linq;
 using System.Windows.Forms;
+using DevExpress.Spreadsheet;
+using DevExpress.Spreadsheet.Export;
 namespace WindowsFormsApplication1.Transaction
 {
     public partial class FrmImportSaleGSTDiffData : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
+
+        public String S1 { get; set; }
+        public String DocNo { get; set; }
+        public DateTime DocDate { get; set; }
         public FrmImportSaleGSTDiffData()
         {
             InitializeComponent();
+          
         }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
@@ -20,7 +28,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
             {
-                if (dr["SNO#"].ToString().Trim().Length > 0)
+                if (dr["SNO."].ToString().Trim().Length > 0)
                 {
                     if (dr["NET QUANTITY"].ToString().Trim().Length == 0)
                     {
@@ -54,43 +62,44 @@ namespace WindowsFormsApplication1.Transaction
             }
             return true;
         }
-        private void BtnLoad_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
-            openFileDialog1.ShowDialog();
 
-        }
+        
 
+
+
+        
         private void OpenFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            dt.Rows.Clear();
-            var xlConn = string.Empty;
-            xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
-            using (var myCommand = new OleDbDataAdapter(" SELECT * FROM [Sheet1$] ", xlConn))
-            {
-                myCommand.Fill(dt);
-
-                InfoGrid.DataSource = dt;
-                InfoGridView.BestFitColumns();
-            }
+            dt.Clear();
+            dt.Columns.Clear();
+            ProjectFunctions.CreateDataTableHeader(openFileDialog1.FileName, dt);
+            ProjectFunctions.BindExcelToGrid(openFileDialog1.FileName, dt, InfoGrid, InfoGridView);
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateData())
             {
-                String DocNo = ProjectFunctions.GetDataSet("SELECT RIGHT('0000000000' + CAST((ISNULL(MAX(CAST(DocNo AS INT)), 0) + 1) AS VARCHAR(10)), 10) AS NewCode FROM SaleGSTDiffData").Tables[0].Rows[0][0].ToString().PadLeft(10, '0');
+                if (S1 == "&Add")
+                {
+                    txtDocNo.Text = GetNewDocCode().PadLeft(10, '0');
+                }
+                else
+                {
+                    ProjectFunctions.GetDataSet("Delete from SaleGSTDiffData Where DocNo='" + txtDocNo.Text + "'");
+                }
+
                 foreach (DataRow dr in (InfoGrid.DataSource as DataTable).Rows)
                 {
-                    if (dr["SNO#"].ToString().Trim().Length > 0)
+                    if (dr["SNO."].ToString().Trim().Length > 0)
                     {
                         string Query = "Insert into SaleGSTDiffData(AccCode,DocNo,DocDate, [SNO.],[BRANCH NAME],[BILL NO.] ,[BILL Date],[ITEM CODE],[ITEM NAME],[PACK / SIZE],[NET QUANTITY],[SALE Return QUANTITY],[MRP TOTAL],[CD VALUE],[NET AMOUNT],[SGST],[CGST])values(";
                         Query = Query + "'" + txtDebitPartyCode.Text + "',";
-                        Query = Query + "'" + DocNo + "',";
-                        Query = Query + "'" + DateTime.Now.ToString("yyyy-MM-dd") + "',";
-                        Query = Query + "'" + dr["SNO#"].ToString() + "',";
+                        Query = Query + "'" + txtDocNo.Text + "',";
+                        Query = Query + "'" + Convert.ToDateTime(txtDocDate.Text).ToString("yyyy-MM-dd") + "',";
+                        Query = Query + "'" + dr["SNO."].ToString() + "',";
                         Query = Query + "'" + dr["BRANCH NAME"].ToString() + "',";
-                        Query = Query + "'" + dr["BILL NO#"].ToString() + "',";
+                        Query = Query + "'" + dr["BILL NO."].ToString() + "',";
                         Query = Query + "'" + Convert.ToDateTime(dr["BILL Date"]).ToString("yyyy-MM-dd") + "',";
                         Query = Query + "'" + dr["ITEM CODE"].ToString() + "',";
                         Query = Query + "'" + dr["ITEM NAME"].ToString() + "',";
@@ -106,7 +115,7 @@ namespace WindowsFormsApplication1.Transaction
                         ProjectFunctions.GetDataSet(Query);
                     }
                 }
-                ProjectFunctions.SpeakError("Process Complete");
+                this.Close();
             }
         }
 
@@ -250,25 +259,61 @@ namespace WindowsFormsApplication1.Transaction
                 HelpGrid.Visible = false;
             }
         }
+        private string GetNewDocCode()
+        {
 
+            string s2 = string.Empty;
+            DataSet ds = ProjectFunctions.GetDataSet("SELECT RIGHT('0000000000' + CAST((ISNULL(MAX(CAST(DocNo AS INT)), 0)) AS VARCHAR(10)), 10) AS NewCode FROM SaleGSTDiffData");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                s2 = ds.Tables[0].Rows[0][0].ToString();
+                s2 = (Convert.ToInt32(s2) + 1).ToString();
+            }
+            return s2;
+
+        }
         private void FrmImportSaleGSTDiffData_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
+            if (S1 == "&Add")
+            {
+                txtDocNo.Text = GetNewDocCode().PadLeft(10, '0');
+                txtDocDate.EditValue = DateTime.Now;
+            }
+            if (S1 == "Edit")
+            {
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadGSTSaleDiffMstFEdit '" + DocNo + "','" + Convert.ToDateTime(DocDate).ToString("yyyy-MM-dd") + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    txtDocDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["DocDate"]);
+                    txtDocNo.Text = ds.Tables[0].Rows[0]["DocNo"].ToString();
+                    txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
+                    txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+                    dt = ds.Tables[0];
+                    InfoGrid.DataSource = dt;
+                   
+                    InfoGridView.BestFitColumns();
+                    SimpleButton4_Click(null, e);
+                }
+            }
         }
+    
 
         private void SimpleButton4_Click(object sender, EventArgs e)
         {
-            DataSet ds = ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '','',''");
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                InfoGrid.DataSource = ds.Tables[0];
-                InfoGridView.BestFitColumns();
-            }
-            else
-            {
-                InfoGrid.DataSource = null;
-                InfoGridView.BestFitColumns();
-            }
+
+            DataSet ds = ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '" + txtDocNo.Text + "' ,'" + Convert.ToDateTime(txtDocDate.Text).ToString("yyyy-MM-dd") + "'");
+            //if (ds.Tables[0].Rows.Count > 0)
+            //{
+            //    dt= ds.Tables[0];
+            //    InfoGrid.DataSource = dt;
+            //    InfoGridView.BestFitColumns();
+            //}
+            //else
+            //{
+            //    InfoGrid.DataSource = null;
+            //    InfoGridView.BestFitColumns();
+            //}
             if (ds.Tables[1].Rows.Count > 0)
             {
                 FreshGrid.DataSource = ds.Tables[1];
@@ -296,12 +341,14 @@ namespace WindowsFormsApplication1.Transaction
             try
             {
 
-                DataSet ds = ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '' ,'',''");
+                DataSet ds = ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '" + txtDocNo.Text + "' ,'" + Convert.ToDateTime(txtDocDate.Text).ToString("yyyy-MM-dd") + "'");
                 ds.WriteXmlSchema("C:\\Temp\\abc.xml");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    WindowsFormsApplication1.Prints.PartyReco rpt = new Prints.PartyReco();
-                    rpt.DataSource = ds;
+                    WindowsFormsApplication1.Prints.PartyReco rpt = new Prints.PartyReco
+                    {
+                        DataSource = ds
+                    };
                     payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
                     frm.documentViewer1.DocumentSource = rpt;
                     frm.ShowDialog();
@@ -312,6 +359,12 @@ namespace WindowsFormsApplication1.Transaction
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = " .xlsx files(*.xlsx)|*.xlsx";
+            openFileDialog1.ShowDialog();
         }
     }
 }

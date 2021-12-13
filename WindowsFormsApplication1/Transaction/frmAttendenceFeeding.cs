@@ -250,7 +250,7 @@ namespace WindowsFormsApplication1.Transaction
                             double TotalMinutes = 0;
                             double TotalBreakMinutes = 0;
                             double OvertimeMinutes = 0;
-                            if (currentrow["attendence_in_night"].ToString().Length > 0 && currentrow["attendence_out_night"].ToString().Length > 0)
+                            if (currentrow["attendence_in_night"].ToString().Length > 0 && currentrow["       "].ToString().Length > 0)
                             {
                                 DateTime overtimestartTime = Convert.ToDateTime(currentrow["attendence_in_night"].ToString());
                                 DateTime overtimeendTime = Convert.ToDateTime(currentrow["attendence_out_night"].ToString());

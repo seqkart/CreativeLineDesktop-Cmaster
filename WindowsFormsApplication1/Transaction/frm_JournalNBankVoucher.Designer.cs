@@ -192,7 +192,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(920, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(922, 31);
             this.Menu_ToolStrip.TabIndex = 3;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1237,7 +1237,7 @@
             this.ChoiceAllDlr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ChoiceAllDlr.Name = "ChoiceAllDlr";
             this.ChoiceAllDlr.Properties.Caption = "All";
-            this.ChoiceAllDlr.Size = new System.Drawing.Size(43, 21);
+            this.ChoiceAllDlr.Size = new System.Drawing.Size(43, 24);
             this.ChoiceAllDlr.TabIndex = 1;
             this.ChoiceAllDlr.Visible = false;
             // 
@@ -1610,14 +1610,14 @@
             this.CheckCB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.CheckCB.Name = "CheckCB";
             this.CheckCB.Properties.Caption = "CB Entries";
-            this.CheckCB.Size = new System.Drawing.Size(87, 21);
+            this.CheckCB.Size = new System.Drawing.Size(87, 24);
             this.CheckCB.TabIndex = 57;
             // 
             // frm_JournalNBankVoucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(920, 530);
+            this.ClientSize = new System.Drawing.Size(922, 538);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGridCtrl);
             this.Controls.Add(this.CheckCB);

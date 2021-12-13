@@ -342,7 +342,6 @@
             this.accordionContentContainer1.Name = "accordionContentContainer1";
             this.accordionContentContainer1.Size = new System.Drawing.Size(203, 239);
             this.accordionContentContainer1.TabIndex = 3;
-//            this.accordionContentContainer1.Click += new System.EventHandler(this.accordionContentContainer1_Click);
             // 
             // hyperlinkLabelControl2
             // 
@@ -430,6 +429,8 @@
             // 
             // xtraTabControl1
             // 
+            this.xtraTabControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.xtraTabControl1.Appearance.Options.UseBackColor = true;
             this.xtraTabControl1.Appearance.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.Header.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.HeaderHotTracked.Options.UseImage = true;

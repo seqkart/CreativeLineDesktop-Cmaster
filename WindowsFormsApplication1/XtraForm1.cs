@@ -314,6 +314,7 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+               
                 case "PROG250":
                     var PROG250 = new Transaction.FrmAttendenceFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG250.Show();
@@ -501,7 +502,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG223":
-                    var PROG223 = new Transaction.FrmImportSaleGSTDiffData() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG223 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG223.Show();
                     PROG223.BringToFront();
                     PROG223.Parent = Page;

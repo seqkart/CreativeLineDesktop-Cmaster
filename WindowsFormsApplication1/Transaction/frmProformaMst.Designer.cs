@@ -115,7 +115,7 @@
             this.txtAccName.Name = "txtAccName";
             this.txtAccName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccName.Properties.ReadOnly = true;
-            this.txtAccName.Size = new System.Drawing.Size(341, 24);
+            this.txtAccName.Size = new System.Drawing.Size(341, 22);
             this.txtAccName.TabIndex = 442;
             this.txtAccName.TabStop = false;
             // 
@@ -124,7 +124,7 @@
             this.label15.Location = new System.Drawing.Point(101, 51);
             this.label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(38, 17);
+            this.label15.Size = new System.Drawing.Size(41, 16);
             this.label15.TabIndex = 443;
             this.label15.Text = "Dealer";
             // 
@@ -135,7 +135,7 @@
             this.txtAccCode.Name = "txtAccCode";
             this.txtAccCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccCode.Properties.MaxLength = 6;
-            this.txtAccCode.Size = new System.Drawing.Size(92, 24);
+            this.txtAccCode.Size = new System.Drawing.Size(92, 22);
             this.txtAccCode.TabIndex = 433;
             this.txtAccCode.EditValueChanged += new System.EventHandler(this.TxtAccCode_EditValueChanged);
             this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown);
@@ -153,7 +153,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtPIDate.Properties.Mask.EditMask = "";
             this.txtPIDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtPIDate.Size = new System.Drawing.Size(92, 24);
+            this.txtPIDate.Size = new System.Drawing.Size(92, 22);
             this.txtPIDate.TabIndex = 439;
             this.txtPIDate.TabStop = false;
             // 
@@ -162,7 +162,7 @@
             this.label4.Location = new System.Drawing.Point(98, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 17);
+            this.label4.Size = new System.Drawing.Size(44, 16);
             this.label4.TabIndex = 440;
             this.label4.Text = "PI Date";
             // 
@@ -172,7 +172,7 @@
             this.txtPINo.Location = new System.Drawing.Point(264, 12);
             this.txtPINo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPINo.Name = "txtPINo";
-            this.txtPINo.Size = new System.Drawing.Size(173, 24);
+            this.txtPINo.Size = new System.Drawing.Size(173, 22);
             this.txtPINo.TabIndex = 441;
             this.txtPINo.TabStop = false;
             // 
@@ -181,7 +181,7 @@
             this.label5.Location = new System.Drawing.Point(232, 16);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 17);
+            this.label5.Size = new System.Drawing.Size(33, 16);
             this.label5.TabIndex = 438;
             this.label5.Text = "PI No";
             // 
@@ -431,7 +431,7 @@
             this.xtraTabPage2.Controls.Add(this.txtPIDate);
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1167, 734);
+            this.xtraTabPage2.Size = new System.Drawing.Size(1167, 729);
             this.xtraTabPage2.Text = "Entry Page";
             // 
             // xtraTabPage1
@@ -439,7 +439,7 @@
             this.xtraTabPage1.Controls.Add(this.InvoiceGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1167, 734);
+            this.xtraTabPage1.Size = new System.Drawing.Size(1167, 735);
             this.xtraTabPage1.Text = "Data";
             // 
             // InvoiceGrid
@@ -450,7 +450,7 @@
             this.InvoiceGrid.MainView = this.InvoiceGridView;
             this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
-            this.InvoiceGrid.Size = new System.Drawing.Size(1167, 734);
+            this.InvoiceGrid.Size = new System.Drawing.Size(1167, 735);
             this.InvoiceGrid.TabIndex = 446;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});

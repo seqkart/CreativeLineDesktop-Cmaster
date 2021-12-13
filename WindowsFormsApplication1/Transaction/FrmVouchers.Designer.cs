@@ -292,7 +292,6 @@ namespace WindowsFormsApplication1.Transaction
             this.txtVoucherDate.Name = "txtVoucherDate";
             this.txtVoucherDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVoucherDate.Properties.Appearance.Options.UseFont = true;
-            this.txtVoucherDate.Properties.BeepOnError = false;
             this.txtVoucherDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtVoucherDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
