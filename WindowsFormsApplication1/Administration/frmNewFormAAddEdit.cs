@@ -395,7 +395,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                ProjectFunctions.SpeakError(ex.Message);
+                //ProjectFunctions.SpeakError(ex.Message);
             }
 
         }
@@ -426,7 +426,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                ProjectFunctions.SpeakError(ex.Message);
+                //ProjectFunctions.SpeakError(ex.Message);
             }
 
         }
@@ -455,7 +455,7 @@ namespace WindowsFormsApplication1
             }
             catch (Exception ex)
             {
-                ProjectFunctions.SpeakError(ex.Message);
+               //ProjectFunctions.SpeakError(ex.Message);
             }
 
         }

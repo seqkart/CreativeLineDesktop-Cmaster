@@ -241,10 +241,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
 
         }
 
-        private void TxtCardNo_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
-        {
 
-        }
 
         private void TxtCardDigits_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
@@ -295,10 +292,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
             //txtBalanceAmount.EditValue = Convert.ToDecimal(txtMemoAmount.EditValue) - Convert.ToDecimal(txtAmountPaid.EditValue);
         }
 
-        private void TextEdit1_Enter(object sender, EventArgs e)
-        {
 
-        }
 
         private void TextEdit1_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
@@ -322,6 +316,20 @@ namespace WindowsFormsApplication1.Transaction.Pos
         private void Card_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             ProjectFunctions.SalePopUPForAllWindows(this, e);
+        }
+
+        private void BtnWhatsapp_Click(object sender, EventArgs e)
+        {
+            Save();
+            Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();
+            ProjectFunctions.PrintPDFDocumentONLY(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
+            DataSet ds = ProjectFunctions.GetDataSet("SELECT CAFINFO.CAFMOBILE FROM SALEINVMAIN INNER JOIN CAFINFO ON SALEINVMAIN.CustCode = CAFINFO.CAFSYSID WHERE  (SALEINVMAIN.SIMSERIES = 'S') And SIMNO='" + lblMemoNo.Text + "' aND SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "'");
+            if (ds.Tables[0].Rows[0]["CAFMOBILE"].ToString().Length >= 10)
+            {
+                ProjectFunctions.SendCashMemoImageAsync(ds.Tables[0].Rows[0]["CAFMOBILE"].ToString(), lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text));
+            }
+
+            Close();
         }
     }
 }

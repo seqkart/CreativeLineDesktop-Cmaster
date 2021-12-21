@@ -61,6 +61,27 @@ namespace WindowsFormsApplication1
         }
 
 
+        public static Double TimeFromMinutes(Double Minutes)
+        {
+            int i = 0;
+            if(Minutes<0)
+            {
+                i = 1;
+                Minutes = -Minutes;
+            }
+            Double TotalHours = 0;
+            TotalHours = TotalHours + (Int32)(Minutes / 60);
+            if(Minutes%60 != 0)
+            {
+                Double PendingMinutes = (Minutes % 60);
+                TotalHours = Convert.ToDouble(TotalHours.ToString() + "." + PendingMinutes.ToString());
+            }
+            if(i==1)
+            {
+                TotalHours = -TotalHours;
+            }
+            return TotalHours;
+        }
 
 
         public static void DrawImage(XGraphics gfx, String jpegSamplePath, int x, int y, int width, int height)
@@ -1900,6 +1921,8 @@ namespace WindowsFormsApplication1
             }
         }
 
+
+        
         public static async Task SendBillImageAsync(String MobileNo, String DocNo, DateTime DocDate)
         {
             byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//GST//" + DocNo + ".pdf");
@@ -1908,7 +1931,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1919,37 +1942,47 @@ namespace WindowsFormsApplication1
                 }
             }
 
+        }
+        public static async Task SendCashMemoImageAsync(String MobileNo,string DocNo,DateTime DocDate)
+        {
+            byte[] imageBytes = System.IO.File.ReadAllBytes("C:\\Application\\CashMemo.pdf");
 
+            string base64String = Convert.ToBase64String(imageBytes);
 
-            //DataSet ds = ProjectFunctions.GetDataSet("Select SIMGRANDTOT,simseries,SIMNO,SIMDATE from SALEINVMAIN where SIMDATE='" + BillDate.Date.ToString("yyyy-MM-dd") + "' And SIMNO='" + BillNo + "' And SIMSERIES='" + BillSeries + "' And UnitCode='" + GlobalVariables.CUnitID + "' ");
-            //String Message;
-            //if (BillSeries == "GST")
-            //{
-            //    Message = "You have been billed for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " for Invoice No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
-            //}
-            //else
-            //{
-            //    Message = "Your challan has been issued for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " against challan No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
-            //}
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + MobileNo + "/sendMedia"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
 
+                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"BILL - " + DocNo + " Date - " + DocDate.Date.ToString("dd-MM-yyyy") + ".pdf\"}");
+                    request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
 
-            //if (ds.Tables[0].Rows.Count > 0)
-            //{
-            //    using (var httpClient = new HttpClient())
-            //    {
-            //        using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/" + MobileNo + "/sendText"))
-            //        {
-            //            request.Headers.TryAddWithoutValidation("accept", "application/json");
+                    var response = await httpClient.SendAsync(request);
+                }
+            }
 
-            //            request.Content = new StringContent("{\"text\":\"" + Message + "\",\"sendLinkPreview\":false}");
-            //            request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
+        }
+        public static async Task SendAPPROVALImageAsync(String MobileNo, string DocNo, DateTime DocDate)
+        {
+            byte[] imageBytes = System.IO.File.ReadAllBytes("C:\\Application\\APPROVAL.pdf");
 
-            //            var response = await httpClient.SendAsync(request);
+            string base64String = Convert.ToBase64String(imageBytes);
 
-            //            //XtraMessageBox.Show(response.StatusCode.ToString());
-            //        }
-            //    }
-            //}
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + MobileNo + "/sendMedia"))
+                using (var request2 = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + 8591115444 + "/sendMedia"))
+                {
+                    request.Headers.TryAddWithoutValidation("accept", "application/json");
+
+                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"APPROVAL - " + DocNo + " Date - " + DocDate.Date.ToString("dd-MM-yyyy") + ".pdf\"}");
+                    request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                }
+            }
+
         }
 
         public static void GenerateAPIToken()
@@ -2620,6 +2653,71 @@ namespace WindowsFormsApplication1
             }
 
         }
+
+        public static void PrintPDFDocumentONLY(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        {
+            try
+
+            {
+                DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + DocNo + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    ds.WriteXmlSchema("C://Temp//abc.xml");
+                    Report.DataSource = ds;
+                    foreach (XRSubreport sub in Report.AllControls<XRSubreport>())
+                    {
+                        sub.ReportSource.DataSource = ds;
+                    }
+                    Report.CreateDocument();
+                   Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+
+
+
+                   // Report.ExportToPdf("C:\\Application\\" + ds.Tables[0].Rows[0]["FileName"].ToString() + ".pdf");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        public static void exportPDFDocumentONLY(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        {
+            try
+
+            {
+                DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + DocNo + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    ds.WriteXmlSchema("C://Temp//abc.xml");
+                    Report.DataSource = ds;
+                    foreach (XRSubreport sub in Report.AllControls<XRSubreport>())
+                    {
+                        sub.ReportSource.DataSource = ds;
+                    }
+                    Report.CreateDocument();
+                    Report.ExportToPdf("C:\\Application\\APPROVAL.pdf");
+
+
+
+                    // Report.ExportToPdf("C:\\Application\\" + ds.Tables[0].Rows[0]["FileName"].ToString() + ".pdf");
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+
+
+
         public static void PrintPDFDocument(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try

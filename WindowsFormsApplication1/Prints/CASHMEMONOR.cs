@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraReports.UI;
 using System;
+using System.Drawing;
 
 namespace WindowsFormsApplication1.Prints
 {
@@ -9,22 +10,30 @@ namespace WindowsFormsApplication1.Prints
         {
             InitializeComponent();
         }
+        //public XRLabel CreateHyperlink()
+        //{
+        //    // Create a label for a hyperlink.
+        //    XRLabel hyperlinkLabel = new XRLabel();
 
-        private void xrLabel3_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        //    // Set its main properties.
+        //    hyperlinkLabel.Text = "";
+        //    hyperlinkLabel.Width = 200;
+        //    hyperlinkLabel.ForeColor = Color.Blue;
+        //    hyperlinkLabel.Font = new Font("Bahnschrift", 10, FontStyle.Underline); 
+
+        //    // Set its URL and target.
+        //    hyperlinkLabel.NavigateUrl = "";
+        //    hyperlinkLabel.Target = "_blank";
+
+        //    return hyperlinkLabel;
+        //}
+            private void xrLabel3_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
 
         }
 
         private void xrLabel4_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
-
-
-
-
-
-
-
-
 
         }
 
@@ -304,5 +313,7 @@ namespace WindowsFormsApplication1.Prints
 
 
         }
+
+      
     }
 }

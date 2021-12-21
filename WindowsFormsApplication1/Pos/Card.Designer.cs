@@ -60,6 +60,7 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.btnSaveOnly = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnWhatsapp = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtCardType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCardNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNameOnCard.Properties)).BeginInit();
@@ -175,7 +176,6 @@
             this.txtCardNo.Properties.Appearance.Options.UseFont = true;
             this.txtCardNo.Size = new System.Drawing.Size(250, 28);
             this.txtCardNo.TabIndex = 5;
-            this.txtCardNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCardNo_KeyDown);
             // 
             // labelControl3
             // 
@@ -409,7 +409,7 @@
             // btnRevert
             // 
             this.btnRevert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRevert.ImageOptions.SvgImage")));
-            this.btnRevert.Location = new System.Drawing.Point(192, 322);
+            this.btnRevert.Location = new System.Drawing.Point(194, 322);
             this.btnRevert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRevert.Name = "btnRevert";
             this.btnRevert.Size = new System.Drawing.Size(148, 47);
@@ -462,20 +462,19 @@
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(404, 328);
+            this.textEdit1.Location = new System.Drawing.Point(603, 319);
             this.textEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Size = new System.Drawing.Size(12, 28);
             this.textEdit1.TabIndex = 14;
-            this.textEdit1.Enter += new System.EventHandler(this.TextEdit1_Enter);
             this.textEdit1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextEdit1_KeyDown);
             // 
             // btnSaveOnly
             // 
             this.btnSaveOnly.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveOnly.ImageOptions.SvgImage")));
-            this.btnSaveOnly.Location = new System.Drawing.Point(348, 322);
+            this.btnSaveOnly.Location = new System.Drawing.Point(346, 322);
             this.btnSaveOnly.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(84, 47);
@@ -483,11 +482,23 @@
             this.btnSaveOnly.Text = "Save ";
             this.btnSaveOnly.Click += new System.EventHandler(this.BtnSaveOnly_Click);
             // 
+            // BtnWhatsapp
+            // 
+            this.BtnWhatsapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnWhatsapp.ImageOptions.Image")));
+            this.BtnWhatsapp.Location = new System.Drawing.Point(434, 322);
+            this.BtnWhatsapp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnWhatsapp.Name = "BtnWhatsapp";
+            this.BtnWhatsapp.Size = new System.Drawing.Size(123, 47);
+            this.BtnWhatsapp.TabIndex = 16;
+            this.BtnWhatsapp.Text = "Whatsapp";
+            this.BtnWhatsapp.Click += new System.EventHandler(this.BtnWhatsapp_Click);
+            // 
             // Card
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(729, 383);
+            this.Controls.Add(this.BtnWhatsapp);
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.textEdit1);
             this.Controls.Add(this.txtCardDigits);
@@ -569,5 +580,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraEditors.SimpleButton btnSaveOnly;
+        private DevExpress.XtraEditors.SimpleButton BtnWhatsapp;
     }
 }

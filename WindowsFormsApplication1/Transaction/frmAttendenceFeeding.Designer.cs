@@ -29,6 +29,7 @@ namespace WindowsFormsApplication1.Transaction
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAttendenceFeeding));
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtEmpName = new DevExpress.XtraEditors.TextEdit();
@@ -55,11 +56,22 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn14 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.txtTotalOTHours = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalOTMins = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalWoringMins = new DevExpress.XtraEditors.TextEdit();
+            this.txtTotalWorkingHours = new DevExpress.XtraEditors.TextEdit();
+            this.Calculate = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties)).BeginInit();
@@ -68,6 +80,8 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.AttendenceGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -75,46 +89,55 @@ namespace WindowsFormsApplication1.Transaction
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalOTHours.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalOTMins.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalWoringMins.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalWorkingHours.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
             // 
-            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Appearance.Options.UseFont = true;
             this.label3.Appearance.Options.UseForeColor = true;
             this.label3.Location = new System.Drawing.Point(108, 61);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 19);
+            this.label3.Size = new System.Drawing.Size(77, 21);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Emp Code:";
+            this.label3.Text = "Emp Code";
             // 
             // txtEmpName
             // 
             this.txtEmpName.Enabled = false;
-            this.txtEmpName.Location = new System.Drawing.Point(345, 60);
+            this.txtEmpName.Location = new System.Drawing.Point(345, 59);
             this.txtEmpName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtEmpName.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpName.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmpName.Properties.Appearance.Options.UseBackColor = true;
+            this.txtEmpName.Properties.Appearance.Options.UseFont = true;
             this.txtEmpName.Properties.Appearance.Options.UseForeColor = true;
             this.txtEmpName.Properties.ReadOnly = true;
-            this.txtEmpName.Size = new System.Drawing.Size(396, 22);
+            this.txtEmpName.Size = new System.Drawing.Size(396, 28);
             this.txtEmpName.TabIndex = 14;
             // 
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(190, 58);
+            this.txtEmpCode.Location = new System.Drawing.Point(190, 59);
             this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.txtEmpCode.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpCode.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmpCode.Properties.Appearance.Options.UseBackColor = true;
+            this.txtEmpCode.Properties.Appearance.Options.UseFont = true;
             this.txtEmpCode.Properties.Appearance.Options.UseForeColor = true;
-            this.txtEmpCode.Size = new System.Drawing.Size(140, 22);
+            this.txtEmpCode.Size = new System.Drawing.Size(140, 28);
             this.txtEmpCode.TabIndex = 11;
             this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpID_EditValueChanged);
             this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
@@ -149,11 +172,11 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // label13
             // 
-            this.label13.Appearance.BackColor = System.Drawing.Color.White;
+            this.label13.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.label13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Appearance.Options.UseBackColor = true;
             this.label13.Appearance.Options.UseFont = true;
-            this.label13.Location = new System.Drawing.Point(48, 27);
+            this.label13.Location = new System.Drawing.Point(48, 26);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(137, 21);
@@ -175,7 +198,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1158, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1559, 31);
             this.Menu_ToolStrip.TabIndex = 360;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -222,11 +245,13 @@ namespace WindowsFormsApplication1.Transaction
             this.AttendenceGrid.Name = "AttendenceGrid";
             this.AttendenceGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
-            this.repositoryItemComboBox2});
-            this.AttendenceGrid.Size = new System.Drawing.Size(1158, 480);
+            this.repositoryItemComboBox2,
+            this.repositoryItemDateEdit1});
+            this.AttendenceGrid.Size = new System.Drawing.Size(1559, 480);
             this.AttendenceGrid.TabIndex = 362;
             this.AttendenceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.AttendenceGridView});
+            this.AttendenceGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AttendenceGrid_KeyDown);
             // 
             // AttendenceGridView
             // 
@@ -242,12 +267,15 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn7,
             this.gridColumn10,
             this.gridColumn12,
-            this.gridColumn13});
+            this.gridColumn13,
+            this.gridColumn11,
+            this.gridColumn14});
             this.AttendenceGridView.DetailHeight = 458;
             this.AttendenceGridView.GridControl = this.AttendenceGrid;
             this.AttendenceGridView.Name = "AttendenceGridView";
             this.AttendenceGridView.OptionsView.ShowFooter = true;
             this.AttendenceGridView.OptionsView.ShowGroupPanel = false;
+            this.AttendenceGridView.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.AttendenceGridView_RowStyle);
             this.AttendenceGridView.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.AttendenceGridView_CellValueChanged);
             // 
             // gridColumn1
@@ -301,6 +329,8 @@ namespace WindowsFormsApplication1.Transaction
             // gridColumn5
             // 
             this.gridColumn5.Caption = "attendance_in_first";
+            this.gridColumn5.DisplayFormat.FormatString = "HH:mm";
+            this.gridColumn5.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.gridColumn5.FieldName = "attendance_in_first";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
@@ -357,7 +387,7 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.OptionsColumn.AllowEdit = false;
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 9;
+            this.gridColumn10.VisibleIndex = 10;
             this.gridColumn10.Width = 116;
             // 
             // gridColumn12
@@ -380,12 +410,51 @@ namespace WindowsFormsApplication1.Transaction
             this.gridColumn13.VisibleIndex = 7;
             this.gridColumn13.Width = 102;
             // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "working_hours_f";
+            this.gridColumn11.DisplayFormat.FormatString = "N2";
+            this.gridColumn11.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn11.FieldName = "working_hours_f";
+            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 9;
+            this.gridColumn11.Width = 94;
+            // 
+            // gridColumn14
+            // 
+            this.gridColumn14.Caption = "ot_deducton_time_f";
+            this.gridColumn14.DisplayFormat.FormatString = "N2";
+            this.gridColumn14.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
+            this.gridColumn14.FieldName = "ot_deducton_time_f";
+            this.gridColumn14.MinWidth = 25;
+            this.gridColumn14.Name = "gridColumn14";
+            this.gridColumn14.Visible = true;
+            this.gridColumn14.VisibleIndex = 11;
+            this.gridColumn14.Width = 94;
+            // 
             // repositoryItemComboBox1
             // 
             this.repositoryItemComboBox1.AutoHeight = false;
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemDateEdit1
+            // 
+            this.repositoryItemDateEdit1.AutoHeight = false;
+            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.DisplayFormat.FormatString = "HH:mm";
+            this.repositoryItemDateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.EditFormat.FormatString = "HH:mm";
+            this.repositoryItemDateEdit1.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.MaskSettings.Set("mask", "HH:mm");
+            this.repositoryItemDateEdit1.MaskSettings.Set("useAdvancingCaret", true);
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
             // 
             // HelpGrid
             // 
@@ -432,10 +501,17 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtTotalOTHours);
+            this.splitContainer1.Panel1.Controls.Add(this.txtTotalOTMins);
+            this.splitContainer1.Panel1.Controls.Add(this.txtTotalWoringMins);
+            this.splitContainer1.Panel1.Controls.Add(this.txtTotalWorkingHours);
+            this.splitContainer1.Panel1.Controls.Add(this.Calculate);
             this.splitContainer1.Panel1.Controls.Add(this.DtStartDate);
             this.splitContainer1.Panel1.Controls.Add(this.btnLoad);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.txtEmpCode);
+            this.splitContainer1.Panel1.Controls.Add(this.labelControl2);
+            this.splitContainer1.Panel1.Controls.Add(this.labelControl1);
             this.splitContainer1.Panel1.Controls.Add(this.label13);
             this.splitContainer1.Panel1.Controls.Add(this.txtEmpName);
             // 
@@ -443,18 +519,93 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.splitContainer1.Panel2.Controls.Add(this.HelpGrid);
             this.splitContainer1.Panel2.Controls.Add(this.AttendenceGrid);
-            this.splitContainer1.Size = new System.Drawing.Size(1158, 600);
+            this.splitContainer1.Size = new System.Drawing.Size(1559, 600);
             this.splitContainer1.SplitterDistance = 116;
             this.splitContainer1.TabIndex = 364;
             // 
-            // frmAttendenceFeeding
+            // txtTotalOTHours
+            // 
+            this.txtTotalOTHours.Location = new System.Drawing.Point(1398, 55);
+            this.txtTotalOTHours.Name = "txtTotalOTHours";
+            this.txtTotalOTHours.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTotalOTHours.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalOTHours.Size = new System.Drawing.Size(125, 32);
+            this.txtTotalOTHours.TabIndex = 364;
+            // 
+            // txtTotalOTMins
+            // 
+            this.txtTotalOTMins.Location = new System.Drawing.Point(1114, 15);
+            this.txtTotalOTMins.Name = "txtTotalOTMins";
+            this.txtTotalOTMins.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTotalOTMins.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalOTMins.Size = new System.Drawing.Size(125, 32);
+            this.txtTotalOTMins.TabIndex = 363;
+            this.txtTotalOTMins.Visible = false;
+            // 
+            // txtTotalWoringMins
+            // 
+            this.txtTotalWoringMins.Location = new System.Drawing.Point(1114, 48);
+            this.txtTotalWoringMins.Name = "txtTotalWoringMins";
+            this.txtTotalWoringMins.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTotalWoringMins.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalWoringMins.Size = new System.Drawing.Size(125, 32);
+            this.txtTotalWoringMins.TabIndex = 363;
+            this.txtTotalWoringMins.Visible = false;
+            // 
+            // txtTotalWorkingHours
+            // 
+            this.txtTotalWorkingHours.Location = new System.Drawing.Point(1398, 22);
+            this.txtTotalWorkingHours.Name = "txtTotalWorkingHours";
+            this.txtTotalWorkingHours.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTotalWorkingHours.Properties.Appearance.Options.UseFont = true;
+            this.txtTotalWorkingHours.Size = new System.Drawing.Size(125, 32);
+            this.txtTotalWorkingHours.TabIndex = 363;
+            // 
+            // Calculate
+            // 
+            this.Calculate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Calculate.ImageOptions.Image")));
+            this.Calculate.Location = new System.Drawing.Point(968, 51);
+            this.Calculate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Calculate.Name = "Calculate";
+            this.Calculate.Size = new System.Drawing.Size(128, 39);
+            this.Calculate.TabIndex = 362;
+            this.Calculate.Text = "Recalculate";
+            this.Calculate.Click += new System.EventHandler(this.Calculate_Click);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseBackColor = true;
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(1284, 62);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(109, 21);
+            this.labelControl2.TabIndex = 361;
+            this.labelControl2.Text = "Total Overtime";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Options.UseBackColor = true;
+            this.labelControl1.Appearance.Options.UseFont = true;
+            this.labelControl1.Location = new System.Drawing.Point(1270, 29);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(123, 21);
+            this.labelControl1.TabIndex = 361;
+            this.labelControl1.Text = "Total Duty Hours";
+            // 
+            // FrmAttendenceFeeding
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 631);
+            this.ClientSize = new System.Drawing.Size(1559, 631);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Menu_ToolStrip);
-            this.Name = "frmAttendenceFeeding";
+            this.Name = "FrmAttendenceFeeding";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmAttendenceFeeding_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmpName.Properties)).EndInit();
@@ -466,6 +617,8 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.AttendenceGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -474,6 +627,11 @@ namespace WindowsFormsApplication1.Transaction
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalOTHours.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalOTMins.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalWoringMins.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalWorkingHours.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,5 +669,16 @@ namespace WindowsFormsApplication1.Transaction
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+        private DevExpress.XtraEditors.SimpleButton Calculate;
+        private DevExpress.XtraEditors.TextEdit txtTotalOTHours;
+        private DevExpress.XtraEditors.TextEdit txtTotalWorkingHours;
+        private DevExpress.XtraEditors.TextEdit txtTotalWoringMins;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.TextEdit txtTotalOTMins;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
     }
 }

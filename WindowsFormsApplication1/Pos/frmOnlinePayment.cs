@@ -217,9 +217,20 @@ namespace WindowsFormsApplication1.Pos
             Close();
         }
 
-        private void LabelControl49_Click(object sender, EventArgs e)
+      
+        private void BtnWhatsapp_Click(object sender, EventArgs e)
         {
+            Save();
+            Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();
+            ProjectFunctions.PrintPDFDocumentONLY(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
 
+            DataSet ds = ProjectFunctions.GetDataSet("SELECT CAFINFO.CAFMOBILE FROM SALEINVMAIN INNER JOIN CAFINFO ON SALEINVMAIN.CustCode = CAFINFO.CAFSYSID WHERE  (SALEINVMAIN.SIMSERIES = 'S') And SIMNO='" + lblMemoNo.Text + "' aND SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "'");
+            if (ds.Tables[0].Rows[0]["CAFMOBILE"].ToString().Length >= 10)
+            {
+                ProjectFunctions.SendCashMemoImageAsync(ds.Tables[0].Rows[0]["CAFMOBILE"].ToString(), lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text));
+            }
+
+            Close();
         }
     }
 }

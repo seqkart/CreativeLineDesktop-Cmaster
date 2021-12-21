@@ -62,6 +62,7 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.txtteatrate = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.btnUnlock = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.ChoiceSelect.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtStartDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SalaryGrid)).BeginInit();
@@ -444,12 +445,24 @@
             this.labelControl1.TabIndex = 358;
             this.labelControl1.Text = "Tea Rate";
             // 
+            // btnUnlock
+            // 
+            this.btnUnlock.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnUnlock.Location = new System.Drawing.Point(824, 0);
+            this.btnUnlock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUnlock.Name = "btnUnlock";
+            this.btnUnlock.Size = new System.Drawing.Size(111, 33);
+            this.btnUnlock.TabIndex = 359;
+            this.btnUnlock.Text = "Unlock";
+            this.btnUnlock.Click += new System.EventHandler(this.BtnUnlock_Click);
+            // 
             // FrmProcessSalary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1154, 790);
             this.ControlBox = false;
+            this.Controls.Add(this.btnUnlock);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtteatrate);
             this.Controls.Add(this.btnExportXsls);
@@ -521,5 +534,6 @@
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraEditors.TextEdit txtteatrate;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.SimpleButton btnUnlock;
     }
 }

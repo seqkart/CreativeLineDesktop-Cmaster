@@ -58,6 +58,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnPhonePe = new DevExpress.XtraEditors.SimpleButton();
             this.btnPayTM = new DevExpress.XtraEditors.SimpleButton();
             this.btnGooglePay = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnWhatsapp = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -74,7 +75,7 @@ namespace WindowsFormsApplication1.Pos
             // btnSaveOnly
             // 
             this.btnSaveOnly.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnSaveOnly.ImageOptions.SvgImage")));
-            this.btnSaveOnly.Location = new System.Drawing.Point(323, 322);
+            this.btnSaveOnly.Location = new System.Drawing.Point(322, 322);
             this.btnSaveOnly.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(84, 47);
@@ -106,7 +107,7 @@ namespace WindowsFormsApplication1.Pos
             // btnRevert
             // 
             this.btnRevert.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRevert.ImageOptions.SvgImage")));
-            this.btnRevert.Location = new System.Drawing.Point(173, 322);
+            this.btnRevert.Location = new System.Drawing.Point(172, 322);
             this.btnRevert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRevert.Name = "btnRevert";
             this.btnRevert.Size = new System.Drawing.Size(148, 47);
@@ -163,7 +164,6 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl49.Size = new System.Drawing.Size(130, 25);
             this.labelControl49.TabIndex = 5;
             this.labelControl49.Text = "Transaction No.";
-            this.labelControl49.Click += new System.EventHandler(this.LabelControl49_Click);
             // 
             // labelControl48
             // 
@@ -441,12 +441,24 @@ namespace WindowsFormsApplication1.Pos
             this.btnGooglePay.TabIndex = 16;
             this.btnGooglePay.Click += new System.EventHandler(this.BtnGooglePay_Click);
             // 
+            // BtnWhatsapp
+            // 
+            this.BtnWhatsapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnWhatsapp.ImageOptions.Image")));
+            this.BtnWhatsapp.Location = new System.Drawing.Point(408, 322);
+            this.BtnWhatsapp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnWhatsapp.Name = "BtnWhatsapp";
+            this.BtnWhatsapp.Size = new System.Drawing.Size(123, 47);
+            this.BtnWhatsapp.TabIndex = 39;
+            this.BtnWhatsapp.Text = "Whatsapp";
+            this.BtnWhatsapp.Click += new System.EventHandler(this.BtnWhatsapp_Click);
+            // 
             // frmOnlinePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(712, 384);
             this.ControlBox = false;
+            this.Controls.Add(this.BtnWhatsapp);
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.txtUPID);
             this.Controls.Add(this.labelControl4);
@@ -519,5 +531,6 @@ namespace WindowsFormsApplication1.Pos
         private DevExpress.XtraEditors.SimpleButton btnPhonePe;
         private DevExpress.XtraEditors.SimpleButton btnPayTM;
         private DevExpress.XtraEditors.SimpleButton btnGooglePay;
+        private DevExpress.XtraEditors.SimpleButton BtnWhatsapp;
     }
 }

@@ -170,6 +170,7 @@
             this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.btnSaveOnly = new DevExpress.XtraEditors.SimpleButton();
+            this.BtnWhatsapp = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtTotTotal.Properties)).BeginInit();
@@ -1949,7 +1950,7 @@
             // txtAutoCash
             // 
             this.txtAutoCash.EditValue = "0";
-            this.txtAutoCash.Location = new System.Drawing.Point(146, 306);
+            this.txtAutoCash.Location = new System.Drawing.Point(145, 306);
             this.txtAutoCash.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAutoCash.Name = "txtAutoCash";
             this.txtAutoCash.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3142,6 +3143,17 @@
             this.btnSaveOnly.Text = "Save";
             this.btnSaveOnly.Click += new System.EventHandler(this.BtnSaveOnly_Click);
             // 
+            // BtnWhatsapp
+            // 
+            this.BtnWhatsapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnWhatsapp.Location = new System.Drawing.Point(428, 579);
+            this.BtnWhatsapp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnWhatsapp.Name = "BtnWhatsapp";
+            this.BtnWhatsapp.Size = new System.Drawing.Size(123, 47);
+            this.BtnWhatsapp.TabIndex = 3;
+            this.BtnWhatsapp.Text = "Whatsapp";
+            this.BtnWhatsapp.Click += new System.EventHandler(this.BtnWhatsapp_Click);
+            // 
             // CashTender
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -3149,6 +3161,7 @@
             this.ClientSize = new System.Drawing.Size(926, 643);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.BtnWhatsapp);
             this.Controls.Add(this.btnSaveOnly);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.groupControl1);
@@ -3391,5 +3404,6 @@
         private DevExpress.XtraEditors.SimpleButton btnSaveOnly;
         private DevExpress.XtraEditors.LabelControl labelControl67;
         private DevExpress.XtraEditors.TextEdit txtAutoCash;
+        private DevExpress.XtraEditors.SimpleButton BtnWhatsapp;
     }
 }

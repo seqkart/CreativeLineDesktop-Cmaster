@@ -1436,7 +1436,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1291, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1293, 31);
             this.Menu_ToolStrip.TabIndex = 552;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1484,7 +1484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1291, 819);
+            this.ClientSize = new System.Drawing.Size(1293, 822);
             this.ControlBox = false;
             this.Controls.Add(this.TXTDC);
             this.Controls.Add(this.HelpGrid);

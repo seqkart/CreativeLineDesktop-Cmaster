@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1
         {
             labelControl1.Text = "Disconnected";
 
-          //  ProjectFunctions.WhatsAppConnectionStatus();
+           ProjectFunctions.WhatsAppConnectionStatus();
             ProjectFunctions.WhatsAppStatusSpeak();
 
 
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
                 Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
-           //   timer.Start();
+             timer.Start();
 
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
@@ -316,7 +316,7 @@ namespace WindowsFormsApplication1
             {
                
                 case "PROG250":
-                    var PROG250 = new Transaction.FrmAttendenceFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG250 = new Transaction.frmAttendenceFinal() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG250.Show();
                     PROG250.BringToFront();
                     PROG250.Parent = Page;

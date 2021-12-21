@@ -218,6 +218,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
         {
             GridView view = sender as GridView;
             bool _mark = ConvertTo.IntVal(view.GetRowCellValue(e.RowHandle, "SalaryLocked")) == 1 ? true : false; ;
+           
             if (e.Column.FieldName == "SalaryLocked")
             {
                 string hexBackColor = "#eb4d46";
@@ -238,6 +239,7 @@ namespace WindowsFormsApplication1.Forms_Transaction
             {
                 e.Appearance.TextOptions.HAlignment = HorzAlignment.Far;
             }
+            
         }
 
         private void GridView_SalaryProcess_CustomDrawCell(object sender, RowCellCustomDrawEventArgs e)
@@ -947,6 +949,18 @@ namespace WindowsFormsApplication1.Forms_Transaction
         private void Menu_ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void BtnUnlock_Click(object sender, EventArgs e)
+        {
+        //    GridView view = sender as GridView;
+        //    string cellValue = View.GetRowCellValue(View.FocusedRowHandle, gridView_SalaryProcess.Columns["SalaryLocked"]).ToString();
+        //    if (cellValue == "1")
+        //    {
+        //        e.Cancel = true;
+        //    }
+          
+        //    bool _mark = ConvertTo.IntVal(view.SetRowCellValue( "SalaryLocked")) == 0; ;
         }
     }
 

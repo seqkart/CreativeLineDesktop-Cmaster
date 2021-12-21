@@ -531,18 +531,16 @@ namespace WindowsFormsApplication1.Transaction.Pos
                                 ProjectFunctions.GetDataSet("update SFDET set Used='Y' Where SFDBARCODE='" + currentrow["SIDBARCODE"].ToString() + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
 
                             }
-
+                           
 
                             ProjectFunctions.SpeakError("Article Approval Saved Successfully");
                             sqlcon.Close();
 
                             Close();
                         }
-#pragma warning disable CS0168 // The variable 'ex' is declared but never used
                         catch (Exception ex)
-#pragma warning restore CS0168 // The variable 'ex' is declared but never used
                         {
-
+                            XtraMessageBox.Show(ex.Message);
                         }
                     }
                 }
@@ -555,6 +553,17 @@ namespace WindowsFormsApplication1.Transaction.Pos
         private void BtnSave_Click(object sender, EventArgs e)
         {
             SaveInvoice();
+            Prints.APPROVAL rpt = new Prints.APPROVAL();
+            ProjectFunctions.exportPDFDocumentONLY(txtApprovalNo.Text, Convert.ToDateTime(txtApprovalDate.Text), "AP", rpt);
+
+            DataSet ds = ProjectFunctions.GetDataSet("SELECT CAFINFO.CAFMOBILE FROM SALEINVMAIN INNER JOIN CAFINFO ON SALEINVMAIN.CustCode = CAFINFO.CAFSYSID WHERE  (SALEINVMAIN.SIMSERIES = 'AP') And SIMNO='" + txtApprovalNo.Text + "' aND SIMDATE='" + Convert.ToDateTime(txtApprovalDate.Text).ToString("yyyy-MM-dd") + "'");
+            if (ds.Tables[0].Rows[0]["CAFMOBILE"].ToString().Length >= 10)
+            {
+                ProjectFunctions.SendAPPROVALImageAsync(ds.Tables[0].Rows[0]["CAFMOBILE"].ToString(), txtApprovalNo.Text, Convert.ToDateTime(txtApprovalDate.Text));
+            }
+
+
+
         }
 
         private void InfoGridView_KeyDown(object sender, KeyEventArgs e)

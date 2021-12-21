@@ -351,7 +351,7 @@
             // 
             // txtMainDiscVal
             // 
-            this.txtMainDiscVal.Location = new System.Drawing.Point(164, 63);
+            this.txtMainDiscVal.Location = new System.Drawing.Point(172, 63);
             this.txtMainDiscVal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMainDiscVal.Name = "txtMainDiscVal";
             this.txtMainDiscVal.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,7 +407,7 @@
             this.simpleButton21.Appearance.Options.UseFont = true;
             this.simpleButton21.AutoWidthInLayoutControl = true;
             this.simpleButton21.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton21.ImageOptions.SvgImage")));
-            this.simpleButton21.Location = new System.Drawing.Point(1340, 776);
+            this.simpleButton21.Location = new System.Drawing.Point(1339, 776);
             this.simpleButton21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton21.Name = "simpleButton21";
             this.simpleButton21.Size = new System.Drawing.Size(142, 89);
@@ -481,7 +481,7 @@
             // 
             this.labelControl18.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl18.Appearance.Options.UseFont = true;
-            this.labelControl18.Location = new System.Drawing.Point(89, 231);
+            this.labelControl18.Location = new System.Drawing.Point(89, 230);
             this.labelControl18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl18.Name = "labelControl18";
             this.labelControl18.Size = new System.Drawing.Size(87, 17);
@@ -691,7 +691,7 @@
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(14, 66);
+            this.labelControl6.Location = new System.Drawing.Point(22, 66);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(85, 20);
@@ -705,7 +705,7 @@
             0,
             0,
             131072});
-            this.txtOtherCharges.Location = new System.Drawing.Point(104, 153);
+            this.txtOtherCharges.Location = new System.Drawing.Point(112, 153);
             this.txtOtherCharges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherCharges.Name = "txtOtherCharges";
             this.txtOtherCharges.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -736,7 +736,7 @@
             0,
             0,
             131072});
-            this.txtAlterCharges.Location = new System.Drawing.Point(104, 123);
+            this.txtAlterCharges.Location = new System.Drawing.Point(112, 123);
             this.txtAlterCharges.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAlterCharges.Name = "txtAlterCharges";
             this.txtAlterCharges.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -762,7 +762,7 @@
             // 
             // txtTotalTax
             // 
-            this.txtTotalTax.Location = new System.Drawing.Point(104, 93);
+            this.txtTotalTax.Location = new System.Drawing.Point(112, 93);
             this.txtTotalTax.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalTax.Name = "txtTotalTax";
             this.txtTotalTax.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -783,7 +783,7 @@
             // 
             this.labelControl10.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl10.Appearance.Options.UseFont = true;
-            this.labelControl10.Location = new System.Drawing.Point(1, 156);
+            this.labelControl10.Location = new System.Drawing.Point(9, 156);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
             this.labelControl10.Size = new System.Drawing.Size(98, 20);
@@ -819,7 +819,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(79, 24);
+            this.chExclusive.Size = new System.Drawing.Size(79, 21);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -925,7 +925,7 @@
             // 
             // txtRoundOff
             // 
-            this.txtRoundOff.Location = new System.Drawing.Point(104, 183);
+            this.txtRoundOff.Location = new System.Drawing.Point(112, 183);
             this.txtRoundOff.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoundOff.Name = "txtRoundOff";
             this.txtRoundOff.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1002,6 +1002,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.InfoGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InfoGrid.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoGrid.Location = new System.Drawing.Point(7, 290);
             this.InfoGrid.MainView = this.InfoGridView;
             this.InfoGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1467,7 +1468,7 @@
             // txtItemDiscPer
             // 
             this.txtItemDiscPer.EditValue = "0";
-            this.txtItemDiscPer.Location = new System.Drawing.Point(423, 255);
+            this.txtItemDiscPer.Location = new System.Drawing.Point(423, 252);
             this.txtItemDiscPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemDiscPer.Name = "txtItemDiscPer";
             this.txtItemDiscPer.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1514,7 +1515,7 @@
             // 
             // txtSMName
             // 
-            this.txtSMName.Location = new System.Drawing.Point(831, 255);
+            this.txtSMName.Location = new System.Drawing.Point(831, 254);
             this.txtSMName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSMName.Name = "txtSMName";
             this.txtSMName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1539,7 +1540,7 @@
             // 
             this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Location = new System.Drawing.Point(696, 260);
+            this.labelControl21.Location = new System.Drawing.Point(696, 257);
             this.labelControl21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl21.Name = "labelControl21";
             this.labelControl21.Size = new System.Drawing.Size(69, 20);
@@ -1596,7 +1597,7 @@
             // 
             this.labelControl22.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl22.Appearance.Options.UseFont = true;
-            this.labelControl22.Location = new System.Drawing.Point(588, 235);
+            this.labelControl22.Location = new System.Drawing.Point(588, 228);
             this.labelControl22.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl22.Name = "labelControl22";
             this.labelControl22.Size = new System.Drawing.Size(91, 20);
@@ -1607,7 +1608,7 @@
             // 
             this.labelControl11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl11.Appearance.Options.UseFont = true;
-            this.labelControl11.Location = new System.Drawing.Point(28, 186);
+            this.labelControl11.Location = new System.Drawing.Point(36, 186);
             this.labelControl11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl11.Name = "labelControl11";
             this.labelControl11.Size = new System.Drawing.Size(71, 20);
@@ -1651,7 +1652,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(91, 24);
+            this.chInclusive.Size = new System.Drawing.Size(91, 21);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -1871,7 +1872,7 @@
             this.simpleButton20.Appearance.Options.UseFont = true;
             this.simpleButton20.AutoWidthInLayoutControl = true;
             this.simpleButton20.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton20.ImageOptions.SvgImage")));
-            this.simpleButton20.Location = new System.Drawing.Point(1482, 776);
+            this.simpleButton20.Location = new System.Drawing.Point(1481, 776);
             this.simpleButton20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.simpleButton20.Name = "simpleButton20";
             this.simpleButton20.Size = new System.Drawing.Size(142, 89);
@@ -1899,7 +1900,7 @@
             this.btnPG.Appearance.Options.UseFont = true;
             this.btnPG.AutoWidthInLayoutControl = true;
             this.btnPG.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnPG.ImageOptions.SvgImage")));
-            this.btnPG.Location = new System.Drawing.Point(1482, 687);
+            this.btnPG.Location = new System.Drawing.Point(1481, 687);
             this.btnPG.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnPG.Name = "btnPG";
             this.btnPG.Size = new System.Drawing.Size(142, 89);
@@ -1985,7 +1986,7 @@
             this.btnCard.Appearance.Options.UseFont = true;
             this.btnCard.AutoWidthInLayoutControl = true;
             this.btnCard.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCard.ImageOptions.SvgImage")));
-            this.btnCard.Location = new System.Drawing.Point(1340, 687);
+            this.btnCard.Location = new System.Drawing.Point(1339, 687);
             this.btnCard.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCard.Name = "btnCard";
             this.btnCard.Size = new System.Drawing.Size(142, 89);
@@ -2046,7 +2047,7 @@
             // 
             // txtSubTotal
             // 
-            this.txtSubTotal.Location = new System.Drawing.Point(104, 33);
+            this.txtSubTotal.Location = new System.Drawing.Point(112, 33);
             this.txtSubTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2092,7 +2093,7 @@
             // 
             this.labelControl20.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Location = new System.Drawing.Point(481, 260);
+            this.labelControl20.Location = new System.Drawing.Point(481, 256);
             this.labelControl20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl20.Name = "labelControl20";
             this.labelControl20.Size = new System.Drawing.Size(13, 23);
@@ -2126,7 +2127,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(35, 36);
+            this.labelControl7.Location = new System.Drawing.Point(43, 36);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(64, 20);
@@ -2140,7 +2141,7 @@
             0,
             0,
             131072});
-            this.txtMainDisc.Location = new System.Drawing.Point(104, 63);
+            this.txtMainDisc.Location = new System.Drawing.Point(112, 63);
             this.txtMainDisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMainDisc.Name = "txtMainDisc";
             this.txtMainDisc.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2168,7 +2169,7 @@
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl8.Appearance.Options.UseFont = true;
-            this.labelControl8.Location = new System.Drawing.Point(37, 96);
+            this.labelControl8.Location = new System.Drawing.Point(45, 96);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(62, 20);
@@ -2179,7 +2180,7 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(7, 126);
+            this.labelControl9.Location = new System.Drawing.Point(15, 126);
             this.labelControl9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl9.Name = "labelControl9";
             this.labelControl9.Size = new System.Drawing.Size(92, 20);
@@ -2190,7 +2191,7 @@
             // 
             this.labelControl19.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Location = new System.Drawing.Point(425, 235);
+            this.labelControl19.Location = new System.Drawing.Point(425, 228);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
             this.labelControl19.Size = new System.Drawing.Size(162, 20);
@@ -2200,7 +2201,7 @@
             // txtItemFlatRate
             // 
             this.txtItemFlatRate.EditValue = "0";
-            this.txtItemFlatRate.Location = new System.Drawing.Point(588, 255);
+            this.txtItemFlatRate.Location = new System.Drawing.Point(588, 252);
             this.txtItemFlatRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemFlatRate.Name = "txtItemFlatRate";
             this.txtItemFlatRate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2230,7 +2231,7 @@
             // txtItemDiscAMount
             // 
             this.txtItemDiscAMount.EditValue = "0";
-            this.txtItemDiscAMount.Location = new System.Drawing.Point(496, 255);
+            this.txtItemDiscAMount.Location = new System.Drawing.Point(496, 252);
             this.txtItemDiscAMount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemDiscAMount.Name = "txtItemDiscAMount";
             this.txtItemDiscAMount.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2257,7 +2258,7 @@
             // 
             // txtSMCode
             // 
-            this.txtSMCode.Location = new System.Drawing.Point(766, 255);
+            this.txtSMCode.Location = new System.Drawing.Point(766, 254);
             this.txtSMCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSMCode.Name = "txtSMCode";
             this.txtSMCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2268,7 +2269,7 @@
             // txtItemMRP
             // 
             this.txtItemMRP.EditValue = "0";
-            this.txtItemMRP.Location = new System.Drawing.Point(321, 255);
+            this.txtItemMRP.Location = new System.Drawing.Point(321, 252);
             this.txtItemMRP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemMRP.Name = "txtItemMRP";
             this.txtItemMRP.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2297,7 +2298,7 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(321, 235);
+            this.labelControl14.Location = new System.Drawing.Point(321, 228);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(66, 20);
@@ -2394,7 +2395,7 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 24);
+            this.chall.Size = new System.Drawing.Size(87, 21);
             this.chall.TabIndex = 815;
             // 
             // CashMemo

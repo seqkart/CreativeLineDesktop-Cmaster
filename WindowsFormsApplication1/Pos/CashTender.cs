@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing.Printing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
@@ -14,6 +15,8 @@ namespace WindowsFormsApplication1.Transaction
         public decimal CardPayment { get; set; }
         public decimal PGPayment { get; set; }
         public decimal TotalMemoAmount { get; set; }
+        public PrinterSettings PrinterSettings { get; private set; }
+
         public CashTender()
         {
             InitializeComponent();
@@ -347,6 +350,7 @@ namespace WindowsFormsApplication1.Transaction
             Save();
             Prints.CASHMEMO rpt = new Prints.CASHMEMO();
             ProjectFunctions.PrintDocument(txtCashMemoNo.Text, Convert.ToDateTime(txtCashMemoDate.Text), "S", rpt);
+
             Close();
         }
 
@@ -359,10 +363,6 @@ namespace WindowsFormsApplication1.Transaction
         {
             Save();
             Close();
-            //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
-            //var P = ProjectFunctions.GetPositionInForm(this);
-            //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-            //frm.ShowDialog(Parent);
 
         }
 
@@ -373,6 +373,25 @@ namespace WindowsFormsApplication1.Transaction
 
         private void GroupControl3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void BtnWhatsapp_Click(object sender, EventArgs e)
+        {
+
+            Save();
+            Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();
+            ProjectFunctions.PrintPDFDocumentONLY(txtCashMemoNo.Text, Convert.ToDateTime(txtCashMemoDate.Text), "S", rpt);
+
+            DataSet ds = ProjectFunctions.GetDataSet("SELECT CAFINFO.CAFMOBILE FROM SALEINVMAIN INNER JOIN CAFINFO ON SALEINVMAIN.CustCode = CAFINFO.CAFSYSID WHERE  (SALEINVMAIN.SIMSERIES = 'S') And SIMNO='" + txtCashMemoNo.Text + "' aND SIMDATE='" + Convert.ToDateTime(txtCashMemoDate.Text).ToString("yyyy-MM-dd") + "'");
+            if (ds.Tables[0].Rows[0]["CAFMOBILE"].ToString().Length >= 10)
+            {
+                ProjectFunctions.SendCashMemoImageAsync(ds.Tables[0].Rows[0]["CAFMOBILE"].ToString(), txtCashMemoNo.Text, Convert.ToDateTime(txtCashMemoDate.Text));
+            }
+
+            Close();
+
+
 
         }
     }
