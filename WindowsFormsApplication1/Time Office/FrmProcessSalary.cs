@@ -218,7 +218,9 @@ namespace WindowsFormsApplication1.Forms_Transaction
         {
             GridView view = sender as GridView;
             bool _mark = ConvertTo.IntVal(view.GetRowCellValue(e.RowHandle, "SalaryLocked")) == 1 ? true : false; ;
-           
+  
+            
+
             if (e.Column.FieldName == "SalaryLocked")
             {
                 string hexBackColor = "#eb4d46";
