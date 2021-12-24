@@ -1867,6 +1867,12 @@
     <Compile Include="Transaction\frmAttendenceFeeding.Designer.cs">
       <DependentUpon>frmAttendenceFeeding.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\frmAttendenceFeedingDateWise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\frmAttendenceFeedingDateWise.Designer.cs">
+      <DependentUpon>frmAttendenceFeedingDateWise.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\frmAttendenceFinal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -2543,6 +2549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmAttendenceFeeding.resx">
       <DependentUpon>frmAttendenceFeeding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\frmAttendenceFeedingDateWise.resx">
+      <DependentUpon>frmAttendenceFeedingDateWise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\frmAttendenceFinal.resx">
       <DependentUpon>frmAttendenceFinal.cs</DependentUpon>

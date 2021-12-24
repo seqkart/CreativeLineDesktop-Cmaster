@@ -71,7 +71,6 @@ namespace seqkartsetup
             // 
             // closeFlyout
             // 
-            this.closeFlyout.Document = null;
             this.closeFlyout.FlyoutButtons = System.Windows.Forms.MessageBoxButtons.YesNo;
             this.closeFlyout.Name = "closeFlyout";
             // 
@@ -88,10 +87,11 @@ namespace seqkartsetup
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 495);
+            this.ClientSize = new System.Drawing.Size(1209, 609);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Wizard";
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();

@@ -140,7 +140,7 @@ namespace WindowsFormsApplication1.Transaction
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(403, 175);
+            this.HelpGrid.Location = new System.Drawing.Point(305, 13);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -200,8 +200,8 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.splitContainer1.Panel2.Controls.Add(this.HelpGrid);
             this.splitContainer1.Panel2.Controls.Add(this.AttendenceGrid);
-            this.splitContainer1.Size = new System.Drawing.Size(1289, 546);
-            this.splitContainer1.SplitterDistance = 105;
+            this.splitContainer1.Size = new System.Drawing.Size(1549, 689);
+            this.splitContainer1.SplitterDistance = 132;
             this.splitContainer1.TabIndex = 366;
             // 
             // txtTotalOTHours
@@ -378,7 +378,7 @@ namespace WindowsFormsApplication1.Transaction
             this.repositoryItemTextEdit4,
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
-            this.AttendenceGrid.Size = new System.Drawing.Size(1289, 437);
+            this.AttendenceGrid.Size = new System.Drawing.Size(1549, 553);
             this.AttendenceGrid.TabIndex = 364;
             this.AttendenceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.AttendenceGridView});
@@ -770,7 +770,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1289, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1549, 31);
             this.Menu_ToolStrip.TabIndex = 365;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -811,7 +811,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1289, 577);
+            this.ClientSize = new System.Drawing.Size(1549, 720);
             this.ControlBox = false;
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.Menu_ToolStrip);

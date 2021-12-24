@@ -314,7 +314,13 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
-               
+                case "PROG251":
+                    var PROG251 = new Transaction.frmAttendenceFeedingDateWise() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG251.Show();
+                    PROG251.BringToFront();
+                    PROG251.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    break;
                 case "PROG250":
                     var PROG250 = new Transaction.frmAttendenceFinal() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG250.Show();

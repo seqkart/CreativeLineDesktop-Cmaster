@@ -329,7 +329,7 @@
             this.AInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.AInfoTab.Size = new System.Drawing.Size(817, 519);
+            this.AInfoTab.Size = new System.Drawing.Size(817, 523);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
@@ -373,7 +373,7 @@
             this.panelControl3.Location = new System.Drawing.Point(12, 13);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(793, 493);
+            this.panelControl3.Size = new System.Drawing.Size(793, 497);
             this.panelControl3.TabIndex = 0;
             // 
             // labelControl5
@@ -1616,7 +1616,7 @@
             this.txtMRPMarkDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMRPMarkDown.Name = "txtMRPMarkDown";
             this.txtMRPMarkDown.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMRPMarkDown.Properties.MaxLength = 4;
+            this.txtMRPMarkDown.Properties.MaxLength = 6;
             this.txtMRPMarkDown.Size = new System.Drawing.Size(72, 22);
             this.txtMRPMarkDown.TabIndex = 5;
             // 

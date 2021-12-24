@@ -284,34 +284,25 @@ namespace WindowsFormsApplication1
                 decimal WSP = 0;
                 if (chInclusive.Checked)
                 {
-                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P")
-                    {
-                        WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
-                    }
-                    else
-                    {
+                   
                         decimal TaxRate = Convert.ToDecimal(dr["SIDCGSTPER"]) + Convert.ToDecimal(dr["SIDSGSTPER"]) + Convert.ToDecimal(dr["SIDIGSTPER"]);
                         WSP = Convert.ToDecimal(dr["SIDARTMRP"]) - ((Convert.ToDecimal(dr["SIDARTMRP"]) * TaxRate) / (100 + TaxRate));
-                    }
+                   
                 }
 
                 else
                 {
 
-                    if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P")
-                    {
-                        WSP = Convert.ToDecimal(dr["SIDARTWSP"]);
-                    }
-                    else
-                    {
-                        WSP = (Convert.ToDecimal(dr["SIDARTMRP"]));
-                    }
+                      WSP = (Convert.ToDecimal(dr["SIDARTMRP"]));
+                  
                 }
-
+///////////////////////////////////////---------PANGA HAI------///////////////////////////////////////////////////////
                 if (AccMRPMarkDown > 0)
                 {
                     WSP -= ((WSP * AccMRPMarkDown) / 100);
                 }
+
+/////////////////////////////////////---------HARPREET CHECK HERE THIS IS CHANGING MRP---------------//////////////////
                 else
                 {
                     if (dsActMst.Tables[0].Rows[0]["AccFixBarCodeTag"].ToString().ToUpper() == "P" && Convert.ToDecimal(dsActMst.Tables[0].Rows[0]["AccMrpMarkDown"]) == 0)
