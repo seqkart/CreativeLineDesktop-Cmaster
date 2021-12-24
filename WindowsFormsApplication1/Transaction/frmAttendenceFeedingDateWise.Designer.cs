@@ -377,6 +377,7 @@ namespace WindowsFormsApplication1.Transaction
             this.Menu_ToolStrip.Size = new System.Drawing.Size(1443, 31);
             this.Menu_ToolStrip.TabIndex = 367;
             this.Menu_ToolStrip.Text = "Options";
+            this.Menu_ToolStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.Menu_ToolStrip_ItemClicked);
             // 
             // btnQuit
             // 
@@ -488,13 +489,13 @@ namespace WindowsFormsApplication1.Transaction
             this.splitContainer1.Panel2.Controls.Add(this.HelpGrid);
             this.splitContainer1.Panel2.Controls.Add(this.AttendenceGrid);
             this.splitContainer1.Size = new System.Drawing.Size(1443, 673);
-            this.splitContainer1.SplitterDistance = 129;
+            this.splitContainer1.SplitterDistance = 73;
             this.splitContainer1.TabIndex = 368;
             // 
             // btnLoadFromMachine
             // 
             this.btnLoadFromMachine.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoadFromMachine.ImageOptions.Image")));
-            this.btnLoadFromMachine.Location = new System.Drawing.Point(647, 26);
+            this.btnLoadFromMachine.Location = new System.Drawing.Point(647, 18);
             this.btnLoadFromMachine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoadFromMachine.Name = "btnLoadFromMachine";
             this.btnLoadFromMachine.Size = new System.Drawing.Size(186, 39);
@@ -504,7 +505,7 @@ namespace WindowsFormsApplication1.Transaction
             // DtStartDate
             // 
             this.DtStartDate.EnterMoveNextControl = true;
-            this.DtStartDate.Location = new System.Drawing.Point(190, 22);
+            this.DtStartDate.Location = new System.Drawing.Point(190, 23);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -523,7 +524,7 @@ namespace WindowsFormsApplication1.Transaction
             // btnLoad
             // 
             this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(403, 25);
+            this.btnLoad.Location = new System.Drawing.Point(403, 18);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(222, 39);
@@ -537,7 +538,7 @@ namespace WindowsFormsApplication1.Transaction
             this.label13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Appearance.Options.UseBackColor = true;
             this.label13.Appearance.Options.UseFont = true;
-            this.label13.Location = new System.Drawing.Point(48, 26);
+            this.label13.Location = new System.Drawing.Point(101, 26);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 21);
@@ -569,7 +570,7 @@ namespace WindowsFormsApplication1.Transaction
             this.repositoryItemTextEdit4,
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
-            this.AttendenceGrid.Size = new System.Drawing.Size(1443, 540);
+            this.AttendenceGrid.Size = new System.Drawing.Size(1443, 596);
             this.AttendenceGrid.TabIndex = 364;
             this.AttendenceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.AttendenceGridView});

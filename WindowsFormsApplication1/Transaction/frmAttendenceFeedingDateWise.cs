@@ -379,5 +379,10 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
+
+        private void Menu_ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

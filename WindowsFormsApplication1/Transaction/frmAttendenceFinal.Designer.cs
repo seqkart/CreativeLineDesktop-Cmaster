@@ -130,7 +130,7 @@ namespace WindowsFormsApplication1.Transaction
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseBackColor = true;
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(1270, 29);
+            this.labelControl1.Location = new System.Drawing.Point(1270, 16);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(123, 21);
@@ -201,12 +201,12 @@ namespace WindowsFormsApplication1.Transaction
             this.splitContainer1.Panel2.Controls.Add(this.HelpGrid);
             this.splitContainer1.Panel2.Controls.Add(this.AttendenceGrid);
             this.splitContainer1.Size = new System.Drawing.Size(1549, 689);
-            this.splitContainer1.SplitterDistance = 132;
+            this.splitContainer1.SplitterDistance = 98;
             this.splitContainer1.TabIndex = 366;
             // 
             // txtTotalOTHours
             // 
-            this.txtTotalOTHours.Location = new System.Drawing.Point(1398, 55);
+            this.txtTotalOTHours.Location = new System.Drawing.Point(1398, 50);
             this.txtTotalOTHours.Name = "txtTotalOTHours";
             this.txtTotalOTHours.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtTotalOTHours.Properties.Appearance.Options.UseFont = true;
@@ -215,7 +215,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // txtTotalOTMins
             // 
-            this.txtTotalOTMins.Location = new System.Drawing.Point(1114, 15);
+            this.txtTotalOTMins.Location = new System.Drawing.Point(1114, 10);
             this.txtTotalOTMins.Name = "txtTotalOTMins";
             this.txtTotalOTMins.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtTotalOTMins.Properties.Appearance.Options.UseFont = true;
@@ -225,7 +225,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // txtTotalWoringMins
             // 
-            this.txtTotalWoringMins.Location = new System.Drawing.Point(1114, 48);
+            this.txtTotalWoringMins.Location = new System.Drawing.Point(1114, 50);
             this.txtTotalWoringMins.Name = "txtTotalWoringMins";
             this.txtTotalWoringMins.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtTotalWoringMins.Properties.Appearance.Options.UseFont = true;
@@ -235,7 +235,7 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // txtTotalWorkingHours
             // 
-            this.txtTotalWorkingHours.Location = new System.Drawing.Point(1398, 22);
+            this.txtTotalWorkingHours.Location = new System.Drawing.Point(1398, 10);
             this.txtTotalWorkingHours.Name = "txtTotalWorkingHours";
             this.txtTotalWorkingHours.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.txtTotalWorkingHours.Properties.Appearance.Options.UseFont = true;
@@ -245,7 +245,7 @@ namespace WindowsFormsApplication1.Transaction
             // Calculate
             // 
             this.Calculate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Calculate.ImageOptions.Image")));
-            this.Calculate.Location = new System.Drawing.Point(968, 51);
+            this.Calculate.Location = new System.Drawing.Point(968, 47);
             this.Calculate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Calculate.Name = "Calculate";
             this.Calculate.Size = new System.Drawing.Size(128, 39);
@@ -256,7 +256,7 @@ namespace WindowsFormsApplication1.Transaction
             // DtStartDate
             // 
             this.DtStartDate.EnterMoveNextControl = true;
-            this.DtStartDate.Location = new System.Drawing.Point(190, 22);
+            this.DtStartDate.Location = new System.Drawing.Point(190, 12);
             this.DtStartDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtStartDate.Name = "DtStartDate";
             this.DtStartDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,7 +273,7 @@ namespace WindowsFormsApplication1.Transaction
             // btnLoad
             // 
             this.btnLoad.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnLoad.ImageOptions.Image")));
-            this.btnLoad.Location = new System.Drawing.Point(804, 51);
+            this.btnLoad.Location = new System.Drawing.Point(804, 47);
             this.btnLoad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(128, 39);
@@ -287,7 +287,7 @@ namespace WindowsFormsApplication1.Transaction
             this.label3.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Appearance.Options.UseFont = true;
             this.label3.Appearance.Options.UseForeColor = true;
-            this.label3.Location = new System.Drawing.Point(108, 61);
+            this.label3.Location = new System.Drawing.Point(108, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 21);
@@ -297,7 +297,7 @@ namespace WindowsFormsApplication1.Transaction
             // txtEmpCode
             // 
             this.txtEmpCode.EnterMoveNextControl = true;
-            this.txtEmpCode.Location = new System.Drawing.Point(190, 59);
+            this.txtEmpCode.Location = new System.Drawing.Point(190, 52);
             this.txtEmpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpCode.Name = "txtEmpCode";
             this.txtEmpCode.Properties.Appearance.BackColor = System.Drawing.Color.White;
@@ -317,7 +317,7 @@ namespace WindowsFormsApplication1.Transaction
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseBackColor = true;
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(1284, 62);
+            this.labelControl2.Location = new System.Drawing.Point(1284, 56);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(109, 21);
@@ -330,7 +330,7 @@ namespace WindowsFormsApplication1.Transaction
             this.label13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Appearance.Options.UseBackColor = true;
             this.label13.Appearance.Options.UseFont = true;
-            this.label13.Location = new System.Drawing.Point(48, 26);
+            this.label13.Location = new System.Drawing.Point(48, 16);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(137, 21);
@@ -340,7 +340,7 @@ namespace WindowsFormsApplication1.Transaction
             // txtEmpName
             // 
             this.txtEmpName.Enabled = false;
-            this.txtEmpName.Location = new System.Drawing.Point(345, 59);
+            this.txtEmpName.Location = new System.Drawing.Point(345, 52);
             this.txtEmpName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Properties.Appearance.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -378,7 +378,7 @@ namespace WindowsFormsApplication1.Transaction
             this.repositoryItemTextEdit4,
             this.repositoryItemTextEdit5,
             this.repositoryItemTextEdit6});
-            this.AttendenceGrid.Size = new System.Drawing.Size(1549, 553);
+            this.AttendenceGrid.Size = new System.Drawing.Size(1549, 587);
             this.AttendenceGrid.TabIndex = 364;
             this.AttendenceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.AttendenceGridView});
