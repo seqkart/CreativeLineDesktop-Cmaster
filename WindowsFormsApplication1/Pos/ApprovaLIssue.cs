@@ -554,7 +554,7 @@ namespace WindowsFormsApplication1.Transaction.Pos
         {
             SaveInvoice();
             Prints.APPROVAL rpt = new Prints.APPROVAL();
-            ProjectFunctions.exportPDFDocumentONLY(txtApprovalNo.Text, Convert.ToDateTime(txtApprovalDate.Text), "AP", rpt);
+            ProjectFunctions.ExportPDFDocumentONLY(txtApprovalNo.Text, Convert.ToDateTime(txtApprovalDate.Text), "AP", rpt);
 
             DataSet ds = ProjectFunctions.GetDataSet("SELECT CAFINFO.CAFMOBILE FROM SALEINVMAIN INNER JOIN CAFINFO ON SALEINVMAIN.CustCode = CAFINFO.CAFSYSID WHERE  (SALEINVMAIN.SIMSERIES = 'AP') And SIMNO='" + txtApprovalNo.Text + "' aND SIMDATE='" + Convert.ToDateTime(txtApprovalDate.Text).ToString("yyyy-MM-dd") + "'");
             if (ds.Tables[0].Rows[0]["CAFMOBILE"].ToString().Length >= 10)

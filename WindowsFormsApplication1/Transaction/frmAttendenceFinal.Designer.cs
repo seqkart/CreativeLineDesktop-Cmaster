@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Transaction
 {
-    partial class frmAttendenceFinal
+    partial class FrmAttendenceFinal
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace WindowsFormsApplication1.Transaction
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAttendenceFinal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAttendenceFinal));
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -279,7 +279,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnLoad.Size = new System.Drawing.Size(128, 39);
             this.btnLoad.TabIndex = 359;
             this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnLoad.Click += new System.EventHandler(this.BtnLoad_Click);
             // 
             // label3
             // 
@@ -308,8 +308,8 @@ namespace WindowsFormsApplication1.Transaction
             this.txtEmpCode.Properties.Appearance.Options.UseForeColor = true;
             this.txtEmpCode.Size = new System.Drawing.Size(140, 28);
             this.txtEmpCode.TabIndex = 11;
-            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.txtEmpCode_EditValueChanged);
-            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmpCode_KeyDown);
+            this.txtEmpCode.EditValueChanged += new System.EventHandler(this.TxtEmpCode_EditValueChanged);
+            this.txtEmpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtEmpCode_KeyDown);
             // 
             // labelControl2
             // 
@@ -479,7 +479,7 @@ namespace WindowsFormsApplication1.Transaction
             this.repositoryItemTextEdit1.MaskSettings.Set("useAdvancingCaret", true);
             this.repositoryItemTextEdit1.MaskSettings.Set("mask", "HH:mm");
             this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
-            this.repositoryItemTextEdit1.ParseEditValue += new DevExpress.XtraEditors.Controls.ConvertEditValueEventHandler(this.repositoryItemTextEdit1_ParseEditValue);
+            this.repositoryItemTextEdit1.ParseEditValue += new DevExpress.XtraEditors.Controls.ConvertEditValueEventHandler(this.RepositoryItemTextEdit1_ParseEditValue);
             // 
             // gridColumn6
             // 
@@ -783,7 +783,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -794,7 +794,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnRefresh
             // 
@@ -806,6 +806,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnRefresh.Size = new System.Drawing.Size(77, 28);
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // frmAttendenceFinal
             // 
@@ -818,7 +819,7 @@ namespace WindowsFormsApplication1.Transaction
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAttendenceFinal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmAttendenceFinal_Load);
+            this.Load += new System.EventHandler(this.FrmAttendenceFinal_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

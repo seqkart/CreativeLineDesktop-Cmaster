@@ -89,7 +89,7 @@ namespace WindowsFormsApplication1.Transaction
                     //    DataSet dsInner = ProjectFunctions.GetDataSet("sp_LoadEANDataNew '" + dr["EANNo"].ToString() + "'");
                     //    if (dsInner.Tables[0].Rows.Count > 0)
                     //    {
-                    //        DataRow dataRow = dt.NewRow();
+                    //        DataRow = dt.NewRow();
 
                     //        dataRow["ARTNO"] = dsInner.Tables[0].Rows[0]["ARTNO"].ToString();
                     //        dataRow["ARTALIAS"] = dsInner.Tables[0].Rows[0]["ARTALIAS"].ToString();
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1.Transaction
                     //    {
                     //        if (dr["EANNo"].ToString().ToUpper() == dr2["EAN NUMBER"].ToString().ToUpper())
                     //        {
-                    //            DataRow dataRow = dt.NewRow();
+                    //            DataRow = dt.NewRow();
 
                     //            dataRow["ARTNO"] = dr2["ARTNO"].ToString();
                     //            dataRow["ARTALIAS"] = dr2["ARTALIAS"].ToString();

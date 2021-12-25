@@ -300,7 +300,7 @@ namespace WindowsFormsApplication1.Transaction
             this.simpleButton1.Size = new System.Drawing.Size(165, 30);
             this.simpleButton1.TabIndex = 538;
             this.simpleButton1.Text = "LOAD EXCEL";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click);
             // 
             // labelControl4
             // 

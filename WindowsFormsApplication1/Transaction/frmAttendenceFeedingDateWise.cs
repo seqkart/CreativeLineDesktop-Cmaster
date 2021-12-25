@@ -1,8 +1,10 @@
 ﻿using DevExpress.XtraEditors;
+using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -76,7 +78,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
         
-        private void frmAttendenceFeedingDateWise_Load(object sender, EventArgs e)
+        private void FrmAttendenceFeedingDateWise_Load(object sender, EventArgs e)
         {
             LoadCombobox();
             DtStartDate.EditValue = DateTime.Now;
@@ -167,8 +169,8 @@ namespace WindowsFormsApplication1.Transaction
                                 double OvertimeMinutes = 0;
                                 if (DeductLunch > 0)
                                 {
-                                    TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                                    OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                    TotalMinutes -= TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
                                 if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                                 {
@@ -192,7 +194,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                    OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                    OvertimeMinutes += spanovertime.TotalMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours_f"], Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes)));
@@ -225,7 +227,7 @@ namespace WindowsFormsApplication1.Transaction
                                         TotalBreakMinutes = spanbreak.TotalMinutes;
                                         if (DeductLunch > 0)
                                         {
-                                            TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                                            TotalMinutes -= TotalBreakMinutes;
                                         }
                                     }
                                     else
@@ -250,7 +252,7 @@ namespace WindowsFormsApplication1.Transaction
                                         }
 
                                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                        OvertimeMinutes += spanovertime.TotalMinutes;
                                     }
 
                                 }
@@ -277,8 +279,8 @@ namespace WindowsFormsApplication1.Transaction
                                 double OvertimeMinutes = 0;
                                 if (DeductLunch > 0)
                                 {
-                                    TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                                    OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                    TotalMinutes -= TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
 
                                 if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
@@ -306,7 +308,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                    OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                    OvertimeMinutes += spanovertime.TotalMinutes;
                                     TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
@@ -360,7 +362,7 @@ namespace WindowsFormsApplication1.Transaction
                                         }
 
                                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                        OvertimeMinutes += spanovertime.TotalMinutes;
                                     }
 
                                     AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
@@ -383,6 +385,122 @@ namespace WindowsFormsApplication1.Transaction
         private void Menu_ToolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void BtnQuit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
+            {
+                //var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
+
+                var MaxRow = ((AttendenceGrid.FocusedView as GridView).RowCount);
+                sqlcon.Open();
+                var sqlcom = sqlcon.CreateCommand();
+                var transaction = sqlcon.BeginTransaction("SaveTransaction");
+                sqlcom.Connection = sqlcon;
+                sqlcom.Transaction = transaction;
+                sqlcom.CommandType = CommandType.StoredProcedure;
+                try
+                {
+                    sqlcom.CommandType = CommandType.Text;
+                    sqlcom.CommandText = "Delete from EmployeeAttendance Where attendance_date='" + Convert.ToDateTime(DtStartDate.Text).ToString("yyyy-MM-dd") + "'";
+                    sqlcom.ExecuteNonQuery();
+                    sqlcom.Parameters.Clear();
+                    for (var i = 0; i < MaxRow; i++)
+                    {
+                        sqlcom.CommandType = CommandType.Text;
+                        var currentrow = AttendenceGridView.GetDataRow(i);
+                        if (currentrow["status_code"].ToString().ToUpper() != "NA")
+                        {
+                            sqlcom.CommandText = " Insert into EmployeeAttendance "
+                                                        + " (entry_date, attendance_date, employee_code, status_id, attendance_in_first, attendance_out_first, attendance_in_last, attendance_out_last, " +
+                                                        "working_hours, shift_id, ot_deducton_time, attendence_in_night, attendence_out_night)"
+                                                        + " values(@entry_date, @attendance_date, @employee_code, @status_id, @attendance_in_first, @attendance_out_first, @attendance_in_last, @attendance_out_last," +
+                                                        "@working_hours,@shift_id, @ot_deducton_time, @attendence_in_night, " +
+                                                        "@attendence_out_night)";
+                            sqlcom.Parameters.Add("@entry_date", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                            sqlcom.Parameters.Add("@attendance_date", SqlDbType.NVarChar).Value = Convert.ToDateTime(DtStartDate.Text).ToString("yyyy-MM-dd");
+                            sqlcom.Parameters.Add("@employee_code", SqlDbType.NVarChar).Value = currentrow["EmpCode"].ToString(); ;
+                            sqlcom.Parameters.Add("@status_id", SqlDbType.NVarChar).Value = ProjectFunctions.GetDataSet("select status_id from AttendanceStatus where status_code='" + currentrow["status_code"]+ "'").Tables[0].Rows[0][0].ToString();
+                            if (currentrow["attendance_in_first"].ToString().Trim() == "" || currentrow["attendance_in_first"].ToString().Trim() == "00:00:00")
+                            {
+                                sqlcom.Parameters.Add("@attendance_in_first", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
+                            }
+                            else
+                            {
+                                sqlcom.Parameters.Add("@attendance_in_first", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendance_in_first"].ToString()).ToString("HH:mm:ss");
+                            }
+                            if (currentrow["attendance_out_first"].ToString().Trim() == "" || currentrow["attendance_out_first"].ToString().Trim() == "00:00:00")
+                            {
+                                sqlcom.Parameters.Add("@attendance_out_first", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
+                            }
+                            else
+                            {
+                                sqlcom.Parameters.Add("@attendance_out_first", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendance_out_first"].ToString()).ToString("HH:mm:ss");
+                            }
+                            if (currentrow["attendance_in_last"].ToString().Trim() == "" || currentrow["attendance_in_last"].ToString().Trim() == "00:00:00")
+                            {
+                                sqlcom.Parameters.Add("@attendance_in_last", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
+                            }
+                            else
+                            {
+                                sqlcom.Parameters.Add("@attendance_in_last", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendance_in_last"].ToString()).ToString("HH:mm:ss");
+                            }
+                            if (currentrow["attendance_out_last"].ToString().Trim() == "" || currentrow["attendance_out_last"].ToString().Trim() == "00:00:00")
+                            {
+                                sqlcom.Parameters.Add("@attendance_out_last", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
+                            }
+                            else
+                            {
+                                sqlcom.Parameters.Add("@attendance_out_last", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendance_out_last"].ToString()).ToString("HH:mm:ss");
+                            }
+                            sqlcom.Parameters.Add("@working_hours", SqlDbType.NVarChar).Value = Convert.ToInt32(currentrow["working_hours"]);
+                            sqlcom.Parameters.Add("@shift_id", SqlDbType.NVarChar).Value = "1";
+                            sqlcom.Parameters.Add("@ot_deducton_time", SqlDbType.NVarChar).Value = Convert.ToInt32(currentrow["ot_deducton_time"]);
+                            if (currentrow["attendence_in_night"].ToString().Trim() == "" || currentrow["attendence_in_night"].ToString().Trim() == "00:00:00")
+                            {
+                                sqlcom.Parameters.Add("@attendence_in_night", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
+                            }
+                            else
+                            {
+                                sqlcom.Parameters.Add("@attendence_in_night", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendence_in_night"].ToString()).ToString("HH:mm:ss");
+                            }
+                            if (currentrow["attendence_out_night"].ToString().Trim() == "" || currentrow["attendence_out_night"].ToString().Trim() == "00:00:00")
+                            {
+                                sqlcom.Parameters.Add("@attendence_out_night", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
+                            }
+                            else
+                            {
+                                sqlcom.Parameters.Add("@attendence_out_night", SqlDbType.NVarChar).Value = Convert.ToDateTime(currentrow["attendence_out_night"].ToString()).ToString("HH:mm:ss");
+                            }
+                            sqlcom.ExecuteNonQuery();
+                            sqlcom.Parameters.Clear();
+                        }
+                    }
+                    transaction.Commit();
+
+
+                    sqlcon.Close();
+                    ProjectFunctions.SpeakError("Attendence Saved");
+                }
+                catch (Exception ex)
+                {
+                    ProjectFunctions.SpeakError("Something Wrong. \n I am going to Roll Back." + ex.Message);
+                    try
+                    {
+                        transaction.Rollback();
+                    }
+                    catch (Exception ex2)
+                    {
+                        ProjectFunctions.SpeakError("Something Wrong. \n Roll Back Failed." + ex2.Message);
+                    }
+                }
+            }
         }
     }
 }

@@ -670,7 +670,7 @@
             this.grpBoxEmployee.Size = new System.Drawing.Size(712, 229);
             this.grpBoxEmployee.TabIndex = 13;
             this.grpBoxEmployee.Text = "Manual Attendance";
-            this.grpBoxEmployee.Paint += new System.Windows.Forms.PaintEventHandler(this.grpBoxEmployee_Paint);
+            this.grpBoxEmployee.Paint += new System.Windows.Forms.PaintEventHandler(this.GrpBoxEmployee_Paint);
             // 
             // totalWorkingHours_Label
             // 

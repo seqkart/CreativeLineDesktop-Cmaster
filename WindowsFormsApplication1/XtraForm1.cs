@@ -322,7 +322,7 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     break;
                 case "PROG250":
-                    var PROG250 = new Transaction.frmAttendenceFinal() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG250 = new Transaction.FrmAttendenceFinal() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG250.Show();
                     PROG250.BringToFront();
                     PROG250.Parent = Page;

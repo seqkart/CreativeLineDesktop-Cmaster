@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1
                 Minutes = -Minutes;
             }
             Double TotalHours = 0;
-            TotalHours = TotalHours + (Int32)(Minutes / 60);
+            TotalHours += (Int32)(Minutes / 60);
             if(Minutes%60 != 0)
             {
                 Double PendingMinutes = (Minutes % 60);
@@ -2684,7 +2684,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static void exportPDFDocumentONLY(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        public static void ExportPDFDocumentONLY(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
 

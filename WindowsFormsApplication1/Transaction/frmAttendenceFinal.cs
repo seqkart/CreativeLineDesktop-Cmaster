@@ -8,12 +8,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmAttendenceFinal : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAttendenceFinal : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
         Decimal DutyHours = 0;
         Decimal DeductLunch = 0;
-        public frmAttendenceFinal()
+        public FrmAttendenceFinal()
         {
             InitializeComponent();
             dt.Columns.Add("attendance_date", typeof(DateTime));
@@ -33,17 +33,17 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("attendence_out_night", typeof(DateTime));
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void txtEmpCode_EditValueChanged(object sender, EventArgs e)
+        private void TxtEmpCode_EditValueChanged(object sender, EventArgs e)
         {
             txtEmpName.Text = string.Empty;
         }
 
-        private void txtEmpCode_KeyDown(object sender, KeyEventArgs e)
+        private void TxtEmpCode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -141,7 +141,7 @@ namespace WindowsFormsApplication1.Transaction
                 }
             }
         }
-        private void btnLoad_Click(object sender, EventArgs e)
+        private void BtnLoad_Click(object sender, EventArgs e)
         {
             if (DtStartDate.Text.Trim().Length == 0)
             {
@@ -203,7 +203,7 @@ namespace WindowsFormsApplication1.Transaction
             CalculateHrs();
         }
 
-        private void frmAttendenceFinal_Load(object sender, EventArgs e)
+        private void FrmAttendenceFinal_Load(object sender, EventArgs e)
         {
             LoadCombobox();
             DtStartDate.EditValue = DateTime.Now;
@@ -211,7 +211,7 @@ namespace WindowsFormsApplication1.Transaction
          
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
             {
@@ -340,8 +340,8 @@ namespace WindowsFormsApplication1.Transaction
                     double OvertimeMinutes = 0;
                     if (DeductLunch > 0)
                     {
-                        TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                        OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                        TotalMinutes -= TotalBreakMinutes;
+                        OvertimeMinutes -= TotalBreakMinutes;
                     }
                     if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                     {
@@ -365,7 +365,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                        OvertimeMinutes += spanovertime.TotalMinutes;
                     }
                     dr["working_hours"] = TotalMinutes;
                     dr["working_hours_f"] = Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes));
@@ -393,7 +393,7 @@ namespace WindowsFormsApplication1.Transaction
                             TotalBreakMinutes = spanbreak.TotalMinutes;
                             if (DeductLunch > 0)
                             {
-                                TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                                TotalMinutes -= TotalBreakMinutes;
                             }
                         }
                         else
@@ -417,7 +417,7 @@ namespace WindowsFormsApplication1.Transaction
                                 overtimeendTime = Convert.ToDateTime("2001-01-01 " + Convert.ToDateTime(dr["attendence_out_night"]).ToString("HH:mm"));
                             }
                             TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                            OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                            OvertimeMinutes += spanovertime.TotalMinutes;
                         }
                     }
                     dr["working_hours"] = 0;
@@ -438,8 +438,8 @@ namespace WindowsFormsApplication1.Transaction
                     double OvertimeMinutes = 0;
                     if (DeductLunch > 0)
                     {
-                        TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                        OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                        TotalMinutes -= TotalBreakMinutes;
+                        OvertimeMinutes -= TotalBreakMinutes;
                     }
                     if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                     {
@@ -467,7 +467,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                        OvertimeMinutes += spanovertime.TotalMinutes;
                         TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
                     }
                     dr["working_hours"] = TotalMinutes;
@@ -491,7 +491,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
                     if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                     {
-                        TotalMinutes = TotalMinutes - Convert.ToDouble(DutyHours * 60);
+                        TotalMinutes -= Convert.ToDouble(DutyHours * 60);
                     }
                     else
                     {
@@ -511,7 +511,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                        OvertimeMinutes += spanovertime.TotalMinutes;
                     }
                     dr["working_hours"] = TotalMinutes;
                     dr["working_hours_f"] = Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes));
@@ -532,8 +532,8 @@ namespace WindowsFormsApplication1.Transaction
 
             foreach (DataRow dr in dt.Rows)
             {
-                TotalWorkingHrs = TotalWorkingHrs + Convert.ToDecimal(dr["working_hours"]);
-                TotalOTHrs = TotalOTHrs + Convert.ToDecimal(dr["ot_deducton_time"]);
+                TotalWorkingHrs += Convert.ToDecimal(dr["working_hours"]);
+                TotalOTHrs += Convert.ToDecimal(dr["ot_deducton_time"]);
             }
             txtTotalWoringMins.Text = TotalWorkingHrs.ToString("0.00");
             txtTotalOTMins.Text = TotalOTHrs.ToString("0.00");
@@ -647,8 +647,8 @@ namespace WindowsFormsApplication1.Transaction
                                 double OvertimeMinutes = 0;
                                 if (DeductLunch > 0)
                                 {
-                                    TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                                    OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                    TotalMinutes -= TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
                                 if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                                 {
@@ -672,7 +672,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                    OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                    OvertimeMinutes += spanovertime.TotalMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours_f"], Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes)));
@@ -705,7 +705,7 @@ namespace WindowsFormsApplication1.Transaction
                                         TotalBreakMinutes = spanbreak.TotalMinutes;
                                         if (DeductLunch > 0)
                                         {
-                                            TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                                            TotalMinutes -= TotalBreakMinutes;
                                         }
                                     }
                                     else
@@ -730,7 +730,7 @@ namespace WindowsFormsApplication1.Transaction
                                         }
 
                                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                        OvertimeMinutes += spanovertime.TotalMinutes;
                                     }
 
                                 }
@@ -757,8 +757,8 @@ namespace WindowsFormsApplication1.Transaction
                                 double OvertimeMinutes = 0;
                                 if (DeductLunch > 0)
                                 {
-                                    TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                                    OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                    TotalMinutes -= TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
 
                                 if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
@@ -786,7 +786,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                    OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                    OvertimeMinutes += spanovertime.TotalMinutes;
                                     TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
@@ -840,7 +840,7 @@ namespace WindowsFormsApplication1.Transaction
                                         }
 
                                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                        OvertimeMinutes += spanovertime.TotalMinutes;
                                     }
 
                                     AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
@@ -865,9 +865,14 @@ namespace WindowsFormsApplication1.Transaction
             AttendenceGrid_KeyDown(null, e);
         }
 
-        private void repositoryItemTextEdit1_ParseEditValue(object sender, DevExpress.XtraEditors.Controls.ConvertEditValueEventArgs e)
+        private void RepositoryItemTextEdit1_ParseEditValue(object sender, DevExpress.XtraEditors.Controls.ConvertEditValueEventArgs e)
         {
             e.Value = Convert.ToDateTime(e.Value).ToString("HH:mm:ss");
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

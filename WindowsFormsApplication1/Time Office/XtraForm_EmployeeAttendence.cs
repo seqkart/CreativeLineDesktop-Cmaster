@@ -2094,7 +2094,7 @@ namespace WindowsFormsApplication1.Time_Office
                 txtEmpID.Focus();
         }
 
-        private void grpBoxEmployee_Paint(object sender, PaintEventArgs e)
+        private void GrpBoxEmployee_Paint(object sender, PaintEventArgs e)
         {
 
         }

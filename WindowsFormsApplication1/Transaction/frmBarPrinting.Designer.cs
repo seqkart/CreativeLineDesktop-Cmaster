@@ -648,7 +648,7 @@
             this.simpleButton1.Size = new System.Drawing.Size(210, 43);
             this.simpleButton1.TabIndex = 711;
             this.simpleButton1.Text = "Relaince 2021 sheet";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click_1);
+            this.simpleButton1.Click += new System.EventHandler(this.SimpleButton1_Click_1);
             // 
             // BTNIMPORT2
             // 

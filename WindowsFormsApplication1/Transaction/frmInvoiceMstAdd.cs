@@ -2471,17 +2471,17 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void chall_CheckedChanged(object sender, EventArgs e)
+        private void Chall_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtItemDiscAMount_EditValueChanged(object sender, EventArgs e)
+        private void TxtItemDiscAMount_EditValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnScanDocs_Click(object sender, EventArgs e)
+        private void BtnScanDocs_Click(object sender, EventArgs e)
         {
             ProjectFunctions.ScanDocuments(); 
 
@@ -2496,7 +2496,7 @@ namespace WindowsFormsApplication1
             //dlg.ShowAcquisitionWizard(device);
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+        private void SimpleButton1_Click(object sender, EventArgs e)
         {
 
             //int i = 0;
@@ -2544,7 +2544,7 @@ namespace WindowsFormsApplication1
             LoadDocs();
         }
 
-        private void simpleButton2_Click(object sender, EventArgs e)
+        private void SimpleButton2_Click(object sender, EventArgs e)
         {
             ProjectFunctions.ViewDocuments(txtSerialNo.Text, txtserial.Text, Convert.ToDateTime(dtInvoiceDate.Text), this);
             //if (System.IO.File.Exists("C:\\Temp\\abc.pdf"))

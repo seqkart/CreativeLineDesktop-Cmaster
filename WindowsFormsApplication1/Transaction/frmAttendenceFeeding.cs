@@ -427,8 +427,8 @@ namespace WindowsFormsApplication1.Transaction
                                 double OvertimeMinutes = 0;
                                 if (DeductLunch > 0)
                                 {
-                                    TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                                    OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                    TotalMinutes -= TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
                                 if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                                 {
@@ -452,7 +452,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                    OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                    OvertimeMinutes += spanovertime.TotalMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours_f"], Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes)));
@@ -485,7 +485,7 @@ namespace WindowsFormsApplication1.Transaction
                                         TotalBreakMinutes = spanbreak.TotalMinutes;
                                         if (DeductLunch > 0)
                                         {
-                                            TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                                            TotalMinutes -= TotalBreakMinutes;
                                         }
                                     }
                                     else
@@ -510,7 +510,7 @@ namespace WindowsFormsApplication1.Transaction
                                         }
 
                                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                        OvertimeMinutes += spanovertime.TotalMinutes;
                                     }
 
                                 }
@@ -537,8 +537,8 @@ namespace WindowsFormsApplication1.Transaction
                                 double OvertimeMinutes = 0;
                                 if (DeductLunch > 0)
                                 {
-                                    TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                                    OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                                    TotalMinutes -= TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
 
                                 if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
@@ -566,7 +566,7 @@ namespace WindowsFormsApplication1.Transaction
                                     }
 
                                     TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                                    OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                                    OvertimeMinutes += spanovertime.TotalMinutes;
                                     TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], TotalMinutes);
@@ -604,7 +604,7 @@ namespace WindowsFormsApplication1.Transaction
                                 if (DeductLunch > 0)
                                 {
 
-                                    OvertimeMinutes = TotalMinutes - TotalBreakMinutes;
+                                    OvertimeMinutes -= TotalBreakMinutes;
                                 }
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours"], 0);
                                 AttendenceGridView.SetRowCellValue(AttendenceGridView.FocusedRowHandle, AttendenceGridView.Columns["working_hours_f"], Convert.ToDecimal("0"));
@@ -691,8 +691,8 @@ namespace WindowsFormsApplication1.Transaction
                     double OvertimeMinutes = 0;
                     if (DeductLunch > 0)
                     {
-                        TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                        OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                        TotalMinutes -= TotalBreakMinutes;
+                        OvertimeMinutes -= TotalBreakMinutes;
                     }
                     if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                     {
@@ -716,7 +716,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                        OvertimeMinutes += spanovertime.TotalMinutes;
                     }
                     dr["working_hours"] = TotalMinutes;
                     dr["working_hours_f"] = Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes));
@@ -744,7 +744,7 @@ namespace WindowsFormsApplication1.Transaction
                             TotalBreakMinutes = spanbreak.TotalMinutes;
                             if (DeductLunch > 0)
                             {
-                                TotalMinutes = TotalMinutes - TotalBreakMinutes;
+                                TotalMinutes -= TotalBreakMinutes;
                             }
                         }
                         else
@@ -768,7 +768,7 @@ namespace WindowsFormsApplication1.Transaction
                                 overtimeendTime = Convert.ToDateTime(dr["attendence_out_night"].ToString());
                             }
                             TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                            OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                            OvertimeMinutes += spanovertime.TotalMinutes;
                         }
                     }
                     dr["working_hours"] = 0;
@@ -789,8 +789,8 @@ namespace WindowsFormsApplication1.Transaction
                     double OvertimeMinutes = 0;
                     if (DeductLunch > 0)
                     {
-                        TotalMinutes = TotalMinutes - TotalBreakMinutes;
-                        OvertimeMinutes = OvertimeMinutes - TotalBreakMinutes;
+                        TotalMinutes -= TotalBreakMinutes;
+                        OvertimeMinutes -= TotalBreakMinutes;
                     }
                     if (spanattendence.TotalMinutes > Convert.ToDouble(DutyHours * 60))
                     {
@@ -818,7 +818,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                        OvertimeMinutes += spanovertime.TotalMinutes;
                         TotalMinutes = TotalMinutes - TotalBreakMinutes + OvertimeMinutes;
                     }
                     dr["working_hours"] = TotalMinutes;
@@ -867,7 +867,7 @@ namespace WindowsFormsApplication1.Transaction
                         }
 
                         TimeSpan spanovertime = overtimeendTime.Subtract(overtimestartTime);
-                        OvertimeMinutes = OvertimeMinutes + spanovertime.TotalMinutes;
+                        OvertimeMinutes += spanovertime.TotalMinutes;
                     }
                     dr["working_hours"] = TotalMinutes;
                     dr["working_hours_f"] = Convert.ToDecimal(ProjectFunctions.TimeFromMinutes(TotalMinutes));
@@ -889,8 +889,8 @@ namespace WindowsFormsApplication1.Transaction
 
             foreach (DataRow dr in dt.Rows)
             {
-                TotalWorkingHrs = TotalWorkingHrs + Convert.ToDecimal(dr["working_hours"]);
-                TotalOTHrs = TotalOTHrs + Convert.ToDecimal(dr["ot_deducton_time"]);
+                TotalWorkingHrs += Convert.ToDecimal(dr["working_hours"]);
+                TotalOTHrs += Convert.ToDecimal(dr["ot_deducton_time"]);
             }
             txtTotalWoringMins.Text = TotalWorkingHrs.ToString("0.00");
             txtTotalOTMins.Text = TotalOTHrs.ToString("0.00");

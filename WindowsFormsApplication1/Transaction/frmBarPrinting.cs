@@ -1408,7 +1408,7 @@ namespace WindowsFormsApplication1.Transaction
 
         }
 
-        private void simpleButton1_Click_1(object sender, EventArgs e)
+        private void SimpleButton1_Click_1(object sender, EventArgs e)
         {
 
             DataSet ds = ProjectFunctions.GetDataSet("sp_LoadBarCodeEANSourceVaariant ");
