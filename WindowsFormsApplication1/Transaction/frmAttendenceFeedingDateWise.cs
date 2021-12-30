@@ -396,8 +396,6 @@ namespace WindowsFormsApplication1.Transaction
         {
             using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
             {
-                //var MaxRow = ((InfoGrid.FocusedView as GridView).RowCount);
-
                 var MaxRow = ((AttendenceGrid.FocusedView as GridView).RowCount);
                 sqlcon.Open();
                 var sqlcom = sqlcon.CreateCommand();
@@ -482,7 +480,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Clear();
                         }
                     }
-                    transaction.Commit();
+                    transaction.Commit(); 
 
 
                     sqlcon.Close();
@@ -501,6 +499,11 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }
             }
+        }
+
+        private void btnLoadFromMachine_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

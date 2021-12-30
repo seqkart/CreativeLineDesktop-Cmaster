@@ -503,6 +503,7 @@ namespace WindowsFormsApplication1.Transaction
             this.btnLoadFromMachine.Size = new System.Drawing.Size(186, 39);
             this.btnLoadFromMachine.TabIndex = 362;
             this.btnLoadFromMachine.Text = "Load From Machine";
+            this.btnLoadFromMachine.Click += new System.EventHandler(this.btnLoadFromMachine_Click);
             // 
             // DtStartDate
             // 
