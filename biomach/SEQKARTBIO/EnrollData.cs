@@ -1,8 +1,10 @@
 ﻿using System;
-using System.Data;
-
-using System.Data.OleDb;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+
+using System.Data;
+using System.Data.OleDb;
 
 namespace SEQKARTBIO
 {
@@ -40,7 +42,7 @@ namespace SEQKARTBIO
                 return ds;
             }
             finally
-            {
+            {            	
                 conn.Close();
                 conn.Dispose();
             }
@@ -53,7 +55,7 @@ namespace SEQKARTBIO
             try
             {
                 string sql = "Select * from tblEnroll";
-                OleDbDataAdapter da = new OleDbDataAdapter(sql, conn);
+                OleDbDataAdapter da  = new OleDbDataAdapter(sql, conn);
                 DataSet ds = new DataSet();
                 try
                 {

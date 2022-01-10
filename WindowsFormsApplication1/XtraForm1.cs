@@ -20,7 +20,7 @@ using WindowsFormsApplication1.Administration;
 using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Forms_Master;
-
+using WindowsFormsApplication1.Misc_forms ;
 
 namespace WindowsFormsApplication1
 {
@@ -60,11 +60,17 @@ namespace WindowsFormsApplication1
         private void XtraForm1_Load(object sender, EventArgs e)
         {
             labelControl1.Text = "Disconnected";
-
-           ProjectFunctions.WhatsAppConnectionStatus();
+           
+            ProjectFunctions.WhatsAppConnectionStatus();
             ProjectFunctions.WhatsAppStatusSpeak();
 
-
+            pictureEdit2.BringToFront();
+            if (System.IO.File.Exists(Application.StartupPath + "//BACKGROUND.JPG"))
+            {
+                pictureEdit2.Image = Image.FromFile(Application.StartupPath + "//BACKGROUND.JPG");
+            }
+           
+           
             Timer timer = new Timer
             {
                 Interval = (1 * 10000) // 10 secs
@@ -247,9 +253,26 @@ namespace WindowsFormsApplication1
             Application.Exit();
         }
 
+
+        private void SetImage()
+        {
+            if (xtraTabControl1.TabPages.Count > 0)
+            {
+                xtraTabControl1.BringToFront();
+                pictureEdit2.SendToBack();
+
+            }
+            else
+            {
+                pictureEdit2.BringToFront();
+                xtraTabControl1.SendToBack();
+            }
+        }
+
         private void XtraTabControl1_CloseButtonClick(object sender, EventArgs e)
         {
             xtraTabControl1.TabPages.Remove(xtraTabControl1.SelectedTabPage);
+            SetImage();
         }
 
         private void XtraTabControl1_Validating(object sender, System.ComponentModel.CancelEventArgs e)
@@ -320,6 +343,7 @@ namespace WindowsFormsApplication1
                     PROG251.BringToFront();
                     PROG251.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG250":
                     var PROG250 = new Transaction.FrmAttendenceFinal() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -327,14 +351,14 @@ namespace WindowsFormsApplication1
                     PROG250.BringToFront();
                     PROG250.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG249":
                     var PROG249 = new Transaction.FrmJobWork();
-
-
                     PROG249.ShowDialog();
                     PROG249.Show();
                     PROG249.BringToFront();
+                    SetImage();
                     break;
                 case "PROG248":
 
@@ -343,6 +367,7 @@ namespace WindowsFormsApplication1
                     PROG248.BringToFront();
                     PROG248.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG247":
                     var PROG247 = new Master.FrmAccountsMappingBusy() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -350,6 +375,7 @@ namespace WindowsFormsApplication1
                     PROG247.BringToFront();
                     PROG247.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG246":
                     var PROG246 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -357,6 +383,7 @@ namespace WindowsFormsApplication1
                     PROG246.BringToFront();
                     PROG246.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG245":
                     var PROG245 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -364,6 +391,7 @@ namespace WindowsFormsApplication1
                     PROG245.BringToFront();
                     PROG245.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG244":
                     var PROG244 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -371,6 +399,7 @@ namespace WindowsFormsApplication1
                     PROG244.BringToFront();
                     PROG244.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG243":
                     var PROG243 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -378,6 +407,7 @@ namespace WindowsFormsApplication1
                     PROG243.BringToFront();
                     PROG243.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG242":
                     var PROG242 = new FrmSaleReportParameterised() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -385,6 +415,7 @@ namespace WindowsFormsApplication1
                     PROG242.BringToFront();
                     PROG242.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG241":
                     var PROG241 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -392,6 +423,7 @@ namespace WindowsFormsApplication1
                     PROG241.BringToFront();
                     PROG241.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG240":
                     var PROG240 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -399,6 +431,7 @@ namespace WindowsFormsApplication1
                     PROG240.BringToFront();
                     PROG240.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG239":
                     var PROG239 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -406,6 +439,7 @@ namespace WindowsFormsApplication1
                     PROG239.BringToFront();
                     PROG239.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG238":
                     var PROG238 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -413,6 +447,7 @@ namespace WindowsFormsApplication1
                     PROG238.BringToFront();
                     PROG238.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG237":
                     var PROG237 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -420,6 +455,7 @@ namespace WindowsFormsApplication1
                     PROG237.BringToFront();
                     PROG237.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG236":
                     var PROG236 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -427,6 +463,7 @@ namespace WindowsFormsApplication1
                     PROG236.BringToFront();
                     PROG236.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG235":
                     var PROG235 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -434,6 +471,7 @@ namespace WindowsFormsApplication1
                     PROG235.BringToFront();
                     PROG235.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG234":
                     var PROG234 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -441,6 +479,7 @@ namespace WindowsFormsApplication1
                     PROG234.BringToFront();
                     PROG234.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG233":
                     var PROG233 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -448,6 +487,7 @@ namespace WindowsFormsApplication1
                     PROG233.BringToFront();
                     PROG233.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
 
@@ -457,6 +497,7 @@ namespace WindowsFormsApplication1
                     PROG232.BringToFront();
                     PROG232.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG230":
                     var PROG230 = new Transaction.FrmProcessWiseRateFeeding() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -464,6 +505,7 @@ namespace WindowsFormsApplication1
                     PROG230.BringToFront();
                     PROG230.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG229":
                     var PROG229 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -471,6 +513,7 @@ namespace WindowsFormsApplication1
                     PROG229.BringToFront();
                     PROG229.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG228":
                     var PROG228 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -478,6 +521,7 @@ namespace WindowsFormsApplication1
                     PROG228.BringToFront();
                     PROG228.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG227":
                     var PROG227 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -485,6 +529,7 @@ namespace WindowsFormsApplication1
                     PROG227.BringToFront();
                     PROG227.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG226":
                     var PROG226 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -492,6 +537,7 @@ namespace WindowsFormsApplication1
                     PROG226.BringToFront();
                     PROG226.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG225":
                     var PROG225 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -499,6 +545,7 @@ namespace WindowsFormsApplication1
                     PROG225.BringToFront();
                     PROG225.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG224":
                     var PROG224 = new FrmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -506,6 +553,7 @@ namespace WindowsFormsApplication1
                     PROG224.BringToFront();
                     PROG224.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG223":
                     var PROG223 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -513,6 +561,7 @@ namespace WindowsFormsApplication1
                     PROG223.BringToFront();
                     PROG223.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG222":
                     var PROG222 = new Frm_StockIndentPassing() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -520,6 +569,7 @@ namespace WindowsFormsApplication1
                     PROG222.BringToFront();
                     PROG222.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG221":
                     var PROG221 = new WindowsFormsApplication1.frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -527,6 +577,7 @@ namespace WindowsFormsApplication1
                     PROG221.BringToFront();
                     PROG221.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG220":
                     var PROG220 = new WindowsFormsApplication1.Transaction.FrmImportSaleFromExcel() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -534,6 +585,7 @@ namespace WindowsFormsApplication1
                     PROG220.BringToFront();
                     PROG220.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG214":
                     var PROG214 = new FrmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -541,6 +593,7 @@ namespace WindowsFormsApplication1
                     PROG214.BringToFront();
                     PROG214.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG213":
                     var PROG213 = new FrmGridReports
@@ -550,6 +603,7 @@ namespace WindowsFormsApplication1
                     PROG213.BringToFront();
                     PROG213.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG212":
                     var PROG212 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -557,6 +611,7 @@ namespace WindowsFormsApplication1
                     PROG212.BringToFront();
                     PROG212.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG211":
                     var PROG211 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -564,6 +619,7 @@ namespace WindowsFormsApplication1
                     PROG211.BringToFront();
                     PROG211.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG210":
                     var PROG210 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -571,6 +627,7 @@ namespace WindowsFormsApplication1
                     PROG210.BringToFront();
                     PROG210.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG181":
                     var PROG181 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -578,6 +635,7 @@ namespace WindowsFormsApplication1
                     PROG181.BringToFront();
                     PROG181.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG180":
                     var PROG180 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -585,6 +643,7 @@ namespace WindowsFormsApplication1
                     PROG180.BringToFront();
                     PROG180.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG176":
                     var PROG176 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -592,6 +651,7 @@ namespace WindowsFormsApplication1
                     PROG176.BringToFront();
                     PROG176.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG175":
                     var PROG175 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -599,6 +659,7 @@ namespace WindowsFormsApplication1
                     PROG175.BringToFront();
                     PROG175.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG174":
                     var PROG174 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -606,6 +667,7 @@ namespace WindowsFormsApplication1
                     PROG174.BringToFront();
                     PROG174.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG201":
                     var PROG201 = new FrmGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -613,6 +675,7 @@ namespace WindowsFormsApplication1
                     PROG201.BringToFront();
                     PROG201.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case WIN_APP_TABS._frmNewFormAAddEdit:
                     var PROG1 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -620,6 +683,7 @@ namespace WindowsFormsApplication1
                     PROG1.BringToFront();
                     PROG1.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case WIN_APP_TABS._frm_Chng_Pswd:
                     var PROG2 = new Frm_Chng_Pswd() { Dock = DockStyle.Fill };
@@ -641,6 +705,7 @@ namespace WindowsFormsApplication1
                     PROG172.BringToFront();
                     PROG172.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
 
                     break;
                 //USER MASTER
@@ -651,13 +716,14 @@ namespace WindowsFormsApplication1
                     PROG3.BringToFront();
                     PROG3.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case WIN_APP_TABS._frmUserFinancialYearAddition:
                     var PROG4 = new frmUserFinancialYearAddition();
                     PROG4.ShowDialog(Parent);
                     PROG4.BringToFront();
-
+                    SetImage();
                     break;
 
                 case WIN_APP_TABS._frmWorkAllocation:
@@ -667,6 +733,7 @@ namespace WindowsFormsApplication1
                     PROG5.BringToFront();
                     PROG5.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     RemoveTab();
                     break;
                 case "PROG6":
@@ -676,6 +743,7 @@ namespace WindowsFormsApplication1
                     PROG6.BringToFront();
                     PROG6.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG7":
@@ -686,6 +754,7 @@ namespace WindowsFormsApplication1
                     PROG7.BringToFront();
                     PROG7.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG8":
                     var PROG8 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -695,6 +764,7 @@ namespace WindowsFormsApplication1
                     PROG8.BringToFront();
                     PROG8.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG9":
                     var PROG9 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -704,6 +774,7 @@ namespace WindowsFormsApplication1
                     PROG9.BringToFront();
                     PROG9.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG10":
                     var PROG10 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -713,6 +784,7 @@ namespace WindowsFormsApplication1
                     PROG10.BringToFront();
                     PROG10.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG11":
                     var PROG11 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -722,6 +794,7 @@ namespace WindowsFormsApplication1
                     PROG11.BringToFront();
                     PROG11.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG12":
                     var PROG12 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -731,6 +804,7 @@ namespace WindowsFormsApplication1
                     PROG12.BringToFront();
                     PROG12.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG13":
                     var PROG13 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -740,6 +814,7 @@ namespace WindowsFormsApplication1
                     PROG13.BringToFront();
                     PROG13.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG14":
@@ -750,6 +825,7 @@ namespace WindowsFormsApplication1
                     PROG14.BringToFront();
                     PROG14.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG15":
@@ -760,6 +836,7 @@ namespace WindowsFormsApplication1
                     PROG15.BringToFront();
                     PROG15.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
 
@@ -771,6 +848,7 @@ namespace WindowsFormsApplication1
                     PROG16.BringToFront();
                     PROG16.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
 
@@ -782,6 +860,7 @@ namespace WindowsFormsApplication1
                     PROG17.BringToFront();
                     PROG17.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG18":
@@ -792,6 +871,7 @@ namespace WindowsFormsApplication1
                     PROG18.BringToFront();
                     PROG18.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG200":
                     var PROG200 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -801,6 +881,7 @@ namespace WindowsFormsApplication1
                     PROG200.BringToFront();
                     PROG200.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG19":
@@ -811,6 +892,7 @@ namespace WindowsFormsApplication1
                     PROG19.BringToFront();
                     PROG19.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG20":
                     var PROG20 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -820,6 +902,7 @@ namespace WindowsFormsApplication1
                     PROG20.BringToFront();
                     PROG20.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG21":
@@ -830,6 +913,7 @@ namespace WindowsFormsApplication1
                     PROG21.BringToFront();
                     PROG21.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG22":
@@ -840,6 +924,7 @@ namespace WindowsFormsApplication1
                     PROG22.BringToFront();
                     PROG22.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG23":
@@ -850,6 +935,7 @@ namespace WindowsFormsApplication1
                     PROG23.BringToFront();
                     PROG23.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG24":
@@ -860,6 +946,7 @@ namespace WindowsFormsApplication1
                     PROG24.BringToFront();
                     PROG24.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG25":
@@ -870,6 +957,7 @@ namespace WindowsFormsApplication1
                     PROG25.BringToFront();
                     PROG25.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG26":
@@ -880,6 +968,7 @@ namespace WindowsFormsApplication1
                     PROG26.BringToFront();
                     PROG26.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG27":
@@ -890,6 +979,7 @@ namespace WindowsFormsApplication1
                     PROG27.BringToFront();
                     PROG27.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG28":
@@ -900,6 +990,7 @@ namespace WindowsFormsApplication1
                     PROG28.BringToFront();
                     PROG28.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG29":
@@ -910,6 +1001,7 @@ namespace WindowsFormsApplication1
                     PROG29.BringToFront();
                     PROG29.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG30":
                     var PROG30 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -919,6 +1011,7 @@ namespace WindowsFormsApplication1
                     PROG30.BringToFront();
                     PROG30.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG31":
@@ -929,6 +1022,7 @@ namespace WindowsFormsApplication1
                     PROG31.BringToFront();
                     PROG31.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG32":
@@ -939,6 +1033,7 @@ namespace WindowsFormsApplication1
                     PROG32.BringToFront();
                     PROG32.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG33":
                     var PROG33 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -948,6 +1043,7 @@ namespace WindowsFormsApplication1
                     PROG33.BringToFront();
                     PROG33.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG34":
                     var PROG34 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -957,6 +1053,7 @@ namespace WindowsFormsApplication1
                     PROG34.BringToFront();
                     PROG34.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG35":
                     var PROG35 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -966,6 +1063,7 @@ namespace WindowsFormsApplication1
                     PROG35.BringToFront();
                     PROG35.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG49":
                     var PROG49 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -975,6 +1073,7 @@ namespace WindowsFormsApplication1
                     PROG49.BringToFront();
                     PROG49.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG43":
                     var PROG43 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -984,6 +1083,7 @@ namespace WindowsFormsApplication1
                     PROG43.BringToFront();
                     PROG43.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG42":
                     var PROG42 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -993,6 +1093,7 @@ namespace WindowsFormsApplication1
                     PROG42.BringToFront();
                     PROG42.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG36":
 
@@ -1005,6 +1106,7 @@ namespace WindowsFormsApplication1
                     PROG52.BringToFront();
                     PROG52.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG50":
                     var PROG50 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1014,6 +1116,7 @@ namespace WindowsFormsApplication1
                     PROG50.BringToFront();
                     PROG50.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG48":
                     var PROG48 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1023,6 +1126,7 @@ namespace WindowsFormsApplication1
                     PROG48.BringToFront();
                     PROG48.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG44":
 
@@ -1035,6 +1139,7 @@ namespace WindowsFormsApplication1
                     PROG38.BringToFront();
                     PROG38.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG40":
 
@@ -1047,6 +1152,7 @@ namespace WindowsFormsApplication1
                     PROG54.BringToFront();
                     PROG54.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG58":
                     var PROG58 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1056,6 +1162,7 @@ namespace WindowsFormsApplication1
                     PROG58.BringToFront();
                     PROG58.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG59":
                     var PROG59 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1065,6 +1172,7 @@ namespace WindowsFormsApplication1
                     PROG59.BringToFront();
                     PROG59.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG60":
                     var PROG60 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1074,6 +1182,7 @@ namespace WindowsFormsApplication1
                     PROG60.BringToFront();
                     PROG60.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG61":
 
@@ -1092,6 +1201,7 @@ namespace WindowsFormsApplication1
                     PROG55.BringToFront();
                     PROG55.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG87":
                     var PROG87 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1101,6 +1211,7 @@ namespace WindowsFormsApplication1
                     PROG87.BringToFront();
                     PROG87.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG89":
                     var PROG89 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1110,6 +1221,7 @@ namespace WindowsFormsApplication1
                     PROG89.BringToFront();
                     PROG89.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG91":
                     var PROG91 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1119,6 +1231,7 @@ namespace WindowsFormsApplication1
                     PROG91.BringToFront();
                     PROG91.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
 
                     break;
                 case "PROG56":
@@ -1129,7 +1242,7 @@ namespace WindowsFormsApplication1
                     PROG56.BringToFront();
                     PROG56.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
-
+                    SetImage();
                     break;
                 case "PROG65":
                     var PROG65 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1139,6 +1252,7 @@ namespace WindowsFormsApplication1
                     PROG65.BringToFront();
                     PROG65.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG37":
                     var PROG37 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1148,6 +1262,7 @@ namespace WindowsFormsApplication1
                     PROG37.BringToFront();
                     PROG37.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG66":
                     var PROG66 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1157,6 +1272,7 @@ namespace WindowsFormsApplication1
                     PROG66.BringToFront();
                     PROG66.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG67":
                     var PROG67 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1165,6 +1281,7 @@ namespace WindowsFormsApplication1
                     PROG67.BringToFront();
                     PROG67.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG68":
                     var PROG68 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1174,6 +1291,7 @@ namespace WindowsFormsApplication1
                     PROG68.BringToFront();
                     PROG68.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG71":
                     var PROG71 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1183,6 +1301,7 @@ namespace WindowsFormsApplication1
                     PROG71.BringToFront();
                     PROG71.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG72":
                     var PROG72 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1192,6 +1311,7 @@ namespace WindowsFormsApplication1
                     PROG72.BringToFront();
                     PROG72.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG69":
                     var PROG69 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1201,6 +1321,7 @@ namespace WindowsFormsApplication1
                     PROG69.BringToFront();
                     PROG69.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
 
                     break;
                 case "PROG70":
@@ -1211,6 +1332,7 @@ namespace WindowsFormsApplication1
                     PROG70.BringToFront();
                     PROG70.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG73":
                     var PROG73 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1220,6 +1342,7 @@ namespace WindowsFormsApplication1
                     PROG73.BringToFront();
                     PROG73.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG74":
                     var PROG74 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1229,6 +1352,7 @@ namespace WindowsFormsApplication1
                     PROG74.BringToFront();
                     PROG74.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG75":
                     var PROG75 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1238,6 +1362,7 @@ namespace WindowsFormsApplication1
                     PROG75.BringToFront();
                     PROG75.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG76":
                     var PROG76 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1247,6 +1372,7 @@ namespace WindowsFormsApplication1
                     PROG76.BringToFront();
                     PROG76.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG77":
                     var PROG77 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1256,6 +1382,7 @@ namespace WindowsFormsApplication1
                     PROG77.BringToFront();
                     PROG77.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG78":
                     var PROG78 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1265,6 +1392,7 @@ namespace WindowsFormsApplication1
                     PROG78.BringToFront();
                     PROG78.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG79":
                     var PROG79 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1274,6 +1402,7 @@ namespace WindowsFormsApplication1
                     PROG79.BringToFront();
                     PROG79.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG57":
                     var PROG57 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1283,6 +1412,7 @@ namespace WindowsFormsApplication1
                     PROG57.BringToFront();
                     PROG57.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG46":
                     var PROG46 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1292,6 +1422,7 @@ namespace WindowsFormsApplication1
                     PROG46.BringToFront();
                     PROG46.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG80":
                     var PROG80 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1301,6 +1432,7 @@ namespace WindowsFormsApplication1
                     PROG80.BringToFront();
                     PROG80.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG102":
                     var PROG102 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1310,6 +1442,7 @@ namespace WindowsFormsApplication1
                     PROG102.BringToFront();
                     PROG102.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG104":
                     var PROG104 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1319,6 +1452,7 @@ namespace WindowsFormsApplication1
                     PROG104.BringToFront();
                     PROG104.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG105":
                     var PROG105 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1328,6 +1462,7 @@ namespace WindowsFormsApplication1
                     PROG105.BringToFront();
                     PROG105.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG103":
                     var PROG103 = new FrmProcessSMCommission() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1337,6 +1472,7 @@ namespace WindowsFormsApplication1
                     PROG103.BringToFront();
                     PROG103.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG90":
                     var PROG90 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1346,6 +1482,7 @@ namespace WindowsFormsApplication1
                     PROG90.BringToFront();
                     PROG90.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG101":
                     var PROG101 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1355,6 +1492,7 @@ namespace WindowsFormsApplication1
                     PROG101.BringToFront();
                     PROG101.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG106":
@@ -1365,6 +1503,7 @@ namespace WindowsFormsApplication1
                     PROG106.BringToFront();
                     PROG106.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG107":
                     var PROG107 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1374,6 +1513,7 @@ namespace WindowsFormsApplication1
                     PROG107.BringToFront();
                     PROG107.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG108":
                     var PROG108 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1383,6 +1523,7 @@ namespace WindowsFormsApplication1
                     PROG108.BringToFront();
                     PROG108.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG109":
@@ -1393,6 +1534,7 @@ namespace WindowsFormsApplication1
                     PROG109.BringToFront();
                     PROG109.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG110":
                     var PROG110 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1402,6 +1544,7 @@ namespace WindowsFormsApplication1
                     PROG110.BringToFront();
                     PROG110.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG111":
                     var PROG111 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1411,6 +1554,7 @@ namespace WindowsFormsApplication1
                     PROG111.BringToFront();
                     PROG111.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG112":
                     var PROG112 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1420,6 +1564,7 @@ namespace WindowsFormsApplication1
                     PROG112.BringToFront();
                     PROG112.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG113":
                     var PROG113 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1429,6 +1574,7 @@ namespace WindowsFormsApplication1
                     PROG113.BringToFront();
                     PROG113.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case WIN_APP_TABS._frmRoleMst:
@@ -1437,6 +1583,7 @@ namespace WindowsFormsApplication1
                     PROG115.BringToFront();
                     PROG115.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG116":
                     var PROG116 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1444,6 +1591,7 @@ namespace WindowsFormsApplication1
                     PROG116.BringToFront();
                     PROG116.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG117":
                     var PROG117 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1451,6 +1599,7 @@ namespace WindowsFormsApplication1
                     PROG117.BringToFront();
                     PROG117.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG118":
                     var PROG118 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1458,6 +1607,7 @@ namespace WindowsFormsApplication1
                     PROG118.BringToFront();
                     PROG118.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG119":
                     var PROG119 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1465,6 +1615,7 @@ namespace WindowsFormsApplication1
                     PROG119.BringToFront();
                     PROG119.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG120":
                     var PROG120 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1472,6 +1623,7 @@ namespace WindowsFormsApplication1
                     PROG120.BringToFront();
                     PROG120.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG121":
                     var PROG121 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1479,6 +1631,7 @@ namespace WindowsFormsApplication1
                     PROG121.BringToFront();
                     PROG121.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG122":
                     var PROG122 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1486,6 +1639,7 @@ namespace WindowsFormsApplication1
                     PROG122.BringToFront();
                     PROG122.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG123":
                     var PROG123 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1493,6 +1647,7 @@ namespace WindowsFormsApplication1
                     PROG123.BringToFront();
                     PROG123.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG124":
                     var PROG124 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1500,6 +1655,7 @@ namespace WindowsFormsApplication1
                     PROG124.BringToFront();
                     PROG124.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG125":
                     var PROG125 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1507,6 +1663,7 @@ namespace WindowsFormsApplication1
                     PROG125.BringToFront();
                     PROG125.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG126":
                     var PROG126 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1514,6 +1671,7 @@ namespace WindowsFormsApplication1
                     PROG126.BringToFront();
                     PROG126.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG127":
                     var PROG127 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1521,6 +1679,7 @@ namespace WindowsFormsApplication1
                     PROG127.BringToFront();
                     PROG127.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG128":
                     var PROG128 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1528,6 +1687,7 @@ namespace WindowsFormsApplication1
                     PROG128.BringToFront();
                     PROG128.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG129":
                     var PROG129 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1535,6 +1695,7 @@ namespace WindowsFormsApplication1
                     PROG129.BringToFront();
                     PROG129.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG130":
                     var PROG130 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1542,6 +1703,7 @@ namespace WindowsFormsApplication1
                     PROG130.BringToFront();
                     PROG130.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG131":
                     var PROG131 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1550,6 +1712,7 @@ namespace WindowsFormsApplication1
                     PROG131.BringToFront();
                     PROG131.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG132":
                     var PROG132 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1557,6 +1720,7 @@ namespace WindowsFormsApplication1
                     PROG132.BringToFront();
                     PROG132.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG133":
                     var PROG133 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1564,6 +1728,7 @@ namespace WindowsFormsApplication1
                     PROG133.BringToFront();
                     PROG133.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG134":
                     var PROG134 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1571,6 +1736,7 @@ namespace WindowsFormsApplication1
                     PROG134.BringToFront();
                     PROG134.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG135":
                     var PROG135 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1578,6 +1744,7 @@ namespace WindowsFormsApplication1
                     PROG135.BringToFront();
                     PROG135.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG136":
                     var PROG136 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1585,11 +1752,13 @@ namespace WindowsFormsApplication1
                     PROG136.BringToFront();
                     PROG136.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG137":
                     var PROG137 = new FormReports.FrmPrintReportDesigner() { StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG137.Show();
                     PROG137.BringToFront();
+                    SetImage();
 
 
                     break;
@@ -1599,6 +1768,7 @@ namespace WindowsFormsApplication1
                     PROG138.BringToFront();
                     PROG138.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG139":
 
@@ -1622,6 +1792,7 @@ namespace WindowsFormsApplication1
                     PROG141.BringToFront();
                     PROG141.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG142":
                     var PROG142 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1629,6 +1800,7 @@ namespace WindowsFormsApplication1
                     PROG142.BringToFront();
                     PROG142.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG143":
                     var PROG143 = new CommonTemplate() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1636,6 +1808,7 @@ namespace WindowsFormsApplication1
                     PROG143.BringToFront();
                     PROG143.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG144":
                     var PROG144 = new CommonTemplate() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1643,6 +1816,7 @@ namespace WindowsFormsApplication1
                     PROG144.BringToFront();
                     PROG144.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG145":
                     var PROG145 = new CommonTemplate() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1650,6 +1824,7 @@ namespace WindowsFormsApplication1
                     PROG145.BringToFront();
                     PROG145.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG147":
                     var PROG147 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1657,6 +1832,7 @@ namespace WindowsFormsApplication1
                     PROG147.BringToFront();
                     PROG147.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG148":
                     var PROG148 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1664,6 +1840,7 @@ namespace WindowsFormsApplication1
                     PROG148.BringToFront();
                     PROG148.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG149":
                     var PROG149 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1671,6 +1848,7 @@ namespace WindowsFormsApplication1
                     PROG149.BringToFront();
                     PROG149.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG150":
                     var PROG150 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1678,6 +1856,7 @@ namespace WindowsFormsApplication1
                     PROG150.BringToFront();
                     PROG150.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG151":
                     var PROG151 = new CommonTemplate() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1685,6 +1864,7 @@ namespace WindowsFormsApplication1
                     PROG151.BringToFront();
                     PROG151.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG156":
@@ -1693,6 +1873,7 @@ namespace WindowsFormsApplication1
                     PROG156.BringToFront();
                     PROG156.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG157":
@@ -1709,6 +1890,7 @@ namespace WindowsFormsApplication1
                     PROG160.BringToFront();
                     PROG160.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG155":
@@ -1717,6 +1899,7 @@ namespace WindowsFormsApplication1
                     PROG155.BringToFront();
                     PROG155.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG164":
@@ -1725,6 +1908,7 @@ namespace WindowsFormsApplication1
                     PROG164.BringToFront();
                     PROG164.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG163":
                     var PROG163 = new WindowsFormsApplication1.Forms_Master.frmEmployeeSalaryMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1732,6 +1916,8 @@ namespace WindowsFormsApplication1
                     PROG163.BringToFront();
                     PROG163.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    SetImage();
                     break;
                 case "PROG162":
                     var PROG162 = new WindowsFormsApplication1.Forms_Transaction.FrmProcessSalary() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1739,6 +1925,7 @@ namespace WindowsFormsApplication1
                     PROG162.BringToFront();
                     PROG162.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG161":
                     var PROG161 = new WindowsFormsApplication1.Forms_Master.FrmLoanMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1746,6 +1933,7 @@ namespace WindowsFormsApplication1
                     PROG161.BringToFront();
                     PROG161.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG159":
                     var PROG159 = new WindowsFormsApplication1.Forms_Master.frmExcelStructureLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1753,6 +1941,7 @@ namespace WindowsFormsApplication1
                     PROG159.BringToFront();
                     PROG159.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
 
                 case "PROG153":
@@ -1761,6 +1950,7 @@ namespace WindowsFormsApplication1
                     PROG153.BringToFront();
                     PROG153.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG152":
                     var PROG152 = new WindowsFormsApplication1.Forms_Transaction.frmAdvanceMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1768,6 +1958,7 @@ namespace WindowsFormsApplication1
                     PROG152.BringToFront();
                     PROG152.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG165":
                     var PROG165 = new CommonTemplate() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1775,6 +1966,7 @@ namespace WindowsFormsApplication1
                     PROG165.BringToFront();
                     PROG165.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG166":
                     var PROG166 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1782,6 +1974,7 @@ namespace WindowsFormsApplication1
                     PROG166.BringToFront();
                     PROG166.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG167":
                     var PROG167 = new FrmPartyAccounts() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1789,6 +1982,7 @@ namespace WindowsFormsApplication1
                     PROG167.BringToFront();
                     PROG167.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG168":
                     var PROG168 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1796,6 +1990,7 @@ namespace WindowsFormsApplication1
                     PROG168.BringToFront();
                     PROG168.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG169":
                     var PROG169 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1803,6 +1998,7 @@ namespace WindowsFormsApplication1
                     PROG169.BringToFront();
                     PROG169.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG170":
                     var PROG170 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1810,6 +2006,7 @@ namespace WindowsFormsApplication1
                     PROG170.BringToFront();
                     PROG170.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG171":
                     var PROG171 = new Transaction.FrmBarPrinting() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1817,6 +2014,7 @@ namespace WindowsFormsApplication1
                     PROG171.BringToFront();
                     PROG171.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 case "PROG231":
                     var PROG231 = new FormReports.FrmPivotGridReports() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1824,6 +2022,7 @@ namespace WindowsFormsApplication1
                     PROG231.BringToFront();
                     PROG231.Parent = Page;
                     xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
                     break;
                 default:
 
@@ -1977,6 +2176,21 @@ namespace WindowsFormsApplication1
             HelpGrid.Visible = true;
         }
 
-       
+        private void btnWhatsAp_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            DevExpress.XtraTab.XtraTabPage Page = new DevExpress.XtraTab.XtraTabPage
+            {
+                ShowCloseButton = DevExpress.Utils.DefaultBoolean.True
+            };
+            xtraTabControl1.TabPages.Add(Page);
+            Page.Text = "WHAT'S APP";
+            Page.Name = "WHAT'S APP";
+            var PROG2000 = new FrmWhatsAppIntegration() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+            PROG2000.Show();
+            PROG2000.BringToFront();
+            PROG2000.Parent = Page;
+            xtraTabControl1.SelectedTabPage = Page;
+            SetImage();
+        }
     }
 }

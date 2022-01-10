@@ -60,7 +60,7 @@
             // cmdOpen
             // 
             this.cmdOpen.AutoSize = true;
-            this.cmdOpen.BackColor = System.Drawing.Color.Transparent;
+            this.cmdOpen.BackColor = System.Drawing.SystemColors.Control;
             this.cmdOpen.Cursor = System.Windows.Forms.Cursors.Default;
             this.cmdOpen.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdOpen.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -75,7 +75,7 @@
             // 
             // frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain
             // 
-            this.frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain.BackColor = System.Drawing.Color.Transparent;
+            this.frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain.BackColor = System.Drawing.SystemColors.Control;
             this.frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain.Controls.Add(this.cmdExit);
             this.frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain.Controls.Add(this.cmdLogData);
             this.frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,7 +142,7 @@
             this.Label1.Cursor = System.Windows.Forms.Cursors.Default;
             this.Label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.Blue;
-            this.Label1.Location = new System.Drawing.Point(386, 54);
+            this.Label1.Location = new System.Drawing.Point(370, 326);
             this.Label1.Name = "Label1";
             this.Label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Label1.Size = new System.Drawing.Size(163, 22);
@@ -157,7 +157,7 @@
             this.lbSubject.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbSubject.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubject.ForeColor = System.Drawing.Color.Red;
-            this.lbSubject.Location = new System.Drawing.Point(144, 23);
+            this.lbSubject.Location = new System.Drawing.Point(69, 23);
             this.lbSubject.Name = "lbSubject";
             this.lbSubject.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbSubject.Size = new System.Drawing.Size(409, 31);
@@ -182,7 +182,7 @@
             // 
             // Frame2
             // 
-            this.Frame2.BackColor = System.Drawing.Color.Transparent;
+            this.Frame2.BackColor = System.Drawing.SystemColors.Control;
             this.Frame2.Controls.Add(this.txtDevId);
             this.Frame2.Controls.Add(this.txtPassword);
             this.Frame2.Controls.Add(this.txtIPAddress);
@@ -291,7 +291,7 @@
             // cmdClose
             // 
             this.cmdClose.AutoSize = true;
-            this.cmdClose.BackColor = System.Drawing.Color.Transparent;
+            this.cmdClose.BackColor = System.Drawing.SystemColors.Control;
             this.cmdClose.Cursor = System.Windows.Forms.Cursors.Default;
             this.cmdClose.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdClose.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -306,7 +306,7 @@
             // 
             // Frame4
             // 
-            this.Frame4.BackColor = System.Drawing.Color.Transparent;
+            this.Frame4.BackColor = System.Drawing.SystemColors.Control;
             this.Frame4.Controls.Add(this.cmdOpen);
             this.Frame4.Controls.Add(this.cmdClose);
             this.Frame4.Controls.Add(this.cmbMachineNumber);
@@ -348,7 +348,7 @@
             // lblMachineNumber
             // 
             this.lblMachineNumber.AutoSize = true;
-            this.lblMachineNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblMachineNumber.BackColor = System.Drawing.SystemColors.Control;
             this.lblMachineNumber.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblMachineNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMachineNumber.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -373,16 +373,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::SEQKARTBIO.Properties.Resources.login;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(696, 357);
+            this.ClientSize = new System.Drawing.Size(547, 357);
             this.Controls.Add(this.SBXPC1);
             this.Controls.Add(this.frmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMainfrmMain);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.lbSubject);
             this.Controls.Add(this.Frame2);
             this.Controls.Add(this.Frame4);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "BIOMETRIC MACHINE LINKER";

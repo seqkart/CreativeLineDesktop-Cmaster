@@ -34,8 +34,8 @@
             DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
             DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
             DevExpress.XtraBars.Navigation.AccordionContextButton accordionContextButton1 = new DevExpress.XtraBars.Navigation.AccordionContextButton();
-            DevExpress.Utils.Animation.CombTransition combTransition1 = new DevExpress.Utils.Animation.CombTransition();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm1));
+            DevExpress.Utils.Animation.CombTransition combTransition1 = new DevExpress.Utils.Animation.CombTransition();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this._ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
@@ -74,6 +74,7 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.radialMenu1 = new DevExpress.XtraBars.Ribbon.RadialMenu(this.components);
             this.toolbarFormControl1 = new DevExpress.XtraBars.ToolbarForm.ToolbarFormControl();
@@ -90,6 +91,7 @@
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnWhatsAp = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
@@ -103,6 +105,7 @@
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).BeginInit();
@@ -429,14 +432,16 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.xtraTabControl1.AllowHtmlDraw = true;
+            this.xtraTabControl1.Appearance.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.xtraTabControl1.Appearance.Options.UseBackColor = true;
             this.xtraTabControl1.Appearance.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.Header.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.HeaderHotTracked.Options.UseImage = true;
             this.xtraTabControl1.AppearancePage.PageClient.Options.UseImage = true;
-            this.xtraTabControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            this.xtraTabControl1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("xtraTabControl1.BackgroundImage")));
+            this.xtraTabControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.xtraTabControl1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
             this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -465,6 +470,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel2.Controls.Add(this.pictureEdit2);
             this.splitContainer1.Panel2.Controls.Add(this.xtraTabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1172, 835);
             this.splitContainer1.SplitterDistance = 223;
@@ -479,6 +485,18 @@
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(117, 22);
             this.textEdit1.TabIndex = 4;
+            // 
+            // pictureEdit2
+            // 
+            this.pictureEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit2.EditValue = ((object)(resources.GetObject("pictureEdit2.EditValue")));
+            this.pictureEdit2.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit2.MenuManager = this._ribbonControl;
+            this.pictureEdit2.Name = "pictureEdit2";
+            this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit2.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit2.Size = new System.Drawing.Size(944, 835);
+            this.pictureEdit2.TabIndex = 1;
             // 
             // popupMenu1
             // 
@@ -501,6 +519,7 @@
             this.toolbarFormControl1.TabStop = false;
             this.toolbarFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem2);
             this.toolbarFormControl1.TitleItemLinks.Add(this.barButtonItem4);
+            this.toolbarFormControl1.TitleItemLinks.Add(this.btnWhatsAp);
             this.toolbarFormControl1.ToolbarForm = this;
             // 
             // toolbarFormManager1
@@ -515,8 +534,9 @@
             this.skinBarSubItem1,
             this.skinPaletteDropDownButtonItem1,
             this.skinDropDownButtonItem2,
-            this.barButtonItem4});
-            this.toolbarFormManager1.MaxItemId = 5;
+            this.barButtonItem4,
+            this.btnWhatsAp});
+            this.toolbarFormManager1.MaxItemId = 6;
             // 
             // barDockControlTop
             // 
@@ -593,7 +613,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(677, 43);
+            this.HelpGrid.Location = new System.Drawing.Point(567, 39);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -624,6 +644,13 @@
             this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
+            // 
+            // btnWhatsAp
+            // 
+            this.btnWhatsAp.Caption = "Whats App";
+            this.btnWhatsAp.Id = 5;
+            this.btnWhatsAp.Name = "btnWhatsAp";
+            this.btnWhatsAp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWhatsAp_ItemClick);
             // 
             // XtraForm1
             // 
@@ -667,6 +694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radialMenu1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toolbarFormControl1)).EndInit();
@@ -734,5 +762,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView HelpGridView;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit2;
+        private DevExpress.XtraBars.BarButtonItem btnWhatsAp;
     }
 }

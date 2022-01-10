@@ -151,10 +151,6 @@
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
             // 
-            // defaultLookAndFeel1
-            // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "The Bezier";
-            // 
             // label2
             // 
             this.label2.Appearance.BackColor = System.Drawing.Color.Transparent;

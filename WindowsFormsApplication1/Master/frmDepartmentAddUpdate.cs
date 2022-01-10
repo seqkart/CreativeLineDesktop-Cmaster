@@ -35,13 +35,13 @@ namespace WindowsFormsApplication1
             {
                 //txtDesc.Enabled = false;
                 DataSet ds = ProjectFunctions.GetDataSet("SELECT DeptCode,DeptDesc,Remarks FROM DeptMst Where DeptCode='" + DeptCode + "'");
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    txtDeptCode.Text = ds.Tables[0].Rows[0]["DeptCode"].ToString();
-                    txtDesc.Text = ds.Tables[0].Rows[0]["DeptDesc"].ToString();
-                    txtRemarks.Text = ds.Tables[0].Rows[0]["Remarks"].ToString();
-                    txtDesc.Focus();
-                }
+                //if (ds.Tables[0].Rows.Count > 0)
+                //{
+                //    txtDeptCode.Text = ds.Tables[0].Rows[0]["DeptCode"].ToString();
+                //    txtDesc.Text = ds.Tables[0].Rows[0]["DeptDesc"].ToString();
+                //    txtRemarks.Text = ds.Tables[0].Rows[0]["Remarks"].ToString();
+                //    txtDesc.Focus();
+                //}
             }
         }
         private bool ValidateData()

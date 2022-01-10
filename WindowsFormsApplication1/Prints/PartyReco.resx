@@ -168,6 +168,15 @@
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;
+        &lt;xs:element name="Table3"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="FromDate" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="ToDate" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="Total" type="xs:decimal" minOccurs="0" /&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
       &lt;/xs:choice&gt;
     &lt;/xs:complexType&gt;
   &lt;/xs:element&gt;

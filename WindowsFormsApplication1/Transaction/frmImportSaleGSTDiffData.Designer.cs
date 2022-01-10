@@ -60,6 +60,10 @@ namespace WindowsFormsApplication1.Transaction
             this.FreshGrid = new DevExpress.XtraGrid.GridControl();
             this.FreshGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtFromDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.txtToDate = new DevExpress.XtraEditors.DateEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
@@ -84,6 +88,10 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.FreshGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FreshGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFromDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFromDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // InfoGrid
@@ -176,7 +184,11 @@ namespace WindowsFormsApplication1.Transaction
             // 
             // splitContainerControl1.Panel1
             // 
+            this.splitContainerControl1.Panel1.Controls.Add(this.labelControl3);
+            this.splitContainerControl1.Panel1.Controls.Add(this.labelControl2);
             this.splitContainerControl1.Panel1.Controls.Add(this.labelControl5);
+            this.splitContainerControl1.Panel1.Controls.Add(this.txtToDate);
+            this.splitContainerControl1.Panel1.Controls.Add(this.txtFromDate);
             this.splitContainerControl1.Panel1.Controls.Add(this.txtDocDate);
             this.splitContainerControl1.Panel1.Controls.Add(this.labelControl1);
             this.splitContainerControl1.Panel1.Controls.Add(this.txtDocNo);
@@ -289,6 +301,7 @@ namespace WindowsFormsApplication1.Transaction
             this.simpleButton2.Size = new System.Drawing.Size(165, 30);
             this.simpleButton2.TabIndex = 538;
             this.simpleButton2.Text = "PRINT REPORT";
+            this.simpleButton2.Click += new System.EventHandler(this.SimpleButton2_Click);
             // 
             // simpleButton1
             // 
@@ -453,6 +466,70 @@ namespace WindowsFormsApplication1.Transaction
             this.gridView3.GridControl = this.FreshGrid;
             this.gridView3.Name = "gridView3";
             // 
+            // txtFromDate
+            // 
+            this.txtFromDate.EditValue = null;
+            this.txtFromDate.Enabled = false;
+            this.txtFromDate.EnterMoveNextControl = true;
+            this.txtFromDate.Location = new System.Drawing.Point(795, 8);
+            this.txtFromDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtFromDate.Name = "txtFromDate";
+            this.txtFromDate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFromDate.Properties.Appearance.Options.UseFont = true;
+            this.txtFromDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFromDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtFromDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.txtFromDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtFromDate.Properties.MaskSettings.Set("spinWithCarry", true);
+            this.txtFromDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.txtFromDate.Size = new System.Drawing.Size(154, 28);
+            this.txtFromDate.TabIndex = 545;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(698, 9);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(90, 21);
+            this.labelControl2.TabIndex = 546;
+            this.labelControl2.Text = "FROM DATE";
+            // 
+            // txtToDate
+            // 
+            this.txtToDate.EditValue = null;
+            this.txtToDate.Enabled = false;
+            this.txtToDate.EnterMoveNextControl = true;
+            this.txtToDate.Location = new System.Drawing.Point(1030, 8);
+            this.txtToDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtToDate.Name = "txtToDate";
+            this.txtToDate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtToDate.Properties.Appearance.Options.UseFont = true;
+            this.txtToDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtToDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.txtToDate.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.ClassicNew;
+            this.txtToDate.Properties.MaskSettings.Set("useAdvancingCaret", true);
+            this.txtToDate.Properties.MaskSettings.Set("spinWithCarry", true);
+            this.txtToDate.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.txtToDate.Size = new System.Drawing.Size(154, 28);
+            this.txtToDate.TabIndex = 545;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(956, 9);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(64, 21);
+            this.labelControl3.TabIndex = 546;
+            this.labelControl3.Text = "TO DATE";
+            // 
             // FrmImportSaleGSTDiffData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -494,6 +571,10 @@ namespace WindowsFormsApplication1.Transaction
             ((System.ComponentModel.ISupportInitialize)(this.FreshGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FreshGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFromDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFromDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtToDate.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -529,5 +610,9 @@ namespace WindowsFormsApplication1.Transaction
         private DevExpress.XtraEditors.TextEdit txtDocNo;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         public DevExpress.XtraEditors.DateEdit txtDocDate;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        public DevExpress.XtraEditors.DateEdit txtToDate;
+        public DevExpress.XtraEditors.DateEdit txtFromDate;
     }
 }

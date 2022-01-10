@@ -6,6 +6,8 @@ using System.Linq;
 using System.Windows.Forms;
 using DevExpress.Spreadsheet;
 using DevExpress.Spreadsheet.Export;
+using DevExpress.XtraReports.UI;
+
 namespace WindowsFormsApplication1.Transaction
 {
     public partial class FrmImportSaleGSTDiffData : DevExpress.XtraEditors.XtraForm
@@ -289,6 +291,10 @@ namespace WindowsFormsApplication1.Transaction
                     txtDocNo.Text = ds.Tables[0].Rows[0]["DocNo"].ToString();
                     txtDebitPartyCode.Text = ds.Tables[0].Rows[0]["AccCode"].ToString();
                     txtDebitPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+
+                    txtFromDate.EditValue = Convert.ToDateTime(ds.Tables[1].Rows[0]["FromDate"]);
+                    txtToDate.EditValue = Convert.ToDateTime(ds.Tables[1].Rows[0]["ToDate"]);
+
                     dt = ds.Tables[0];
                     InfoGrid.DataSource = dt;
                    
@@ -342,13 +348,27 @@ namespace WindowsFormsApplication1.Transaction
             {
 
                 DataSet ds = ProjectFunctions.GetDataSet("sp_GSTSaleDiffData '" + txtDocNo.Text + "' ,'" + Convert.ToDateTime(txtDocDate.Text).ToString("yyyy-MM-dd") + "'");
-                ds.WriteXmlSchema("C:\\Temp\\abc.xml");
+                
                 if (ds.Tables[0].Rows.Count > 0)
                 {
                     WindowsFormsApplication1.Prints.PartyReco rpt = new Prints.PartyReco
                     {
                         DataSource = ds
                     };
+
+                    foreach (XRSubreport sub in rpt.AllControls<XRSubreport>())
+                    {
+                        sub.ReportSource.DataSource = ds;
+                    }
+
+
+                    if(ds.Tables[3].Rows.Count>0)
+                    {
+                        ds.Tables[3].Columns.Add("Total", typeof(Decimal));
+                        ds.Tables[3].Rows[0]["Total"] = Convert.ToDecimal(ds.Tables[1].Rows[4][1]) + Convert.ToDecimal(ds.Tables[2].Rows[4][1]);
+                    }
+
+                    ds.WriteXmlSchema("C:\\Temp\\abc.xml");
                     payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
                     frm.documentViewer1.DocumentSource = rpt;
                     frm.ShowDialog();

@@ -1606,10 +1606,10 @@
             this.xrLabel100.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[SIMPartyDANO]")});
             this.xrLabel100.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(108.0625F, 36.63054F);
+            this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(101.0625F, 36.63054F);
             this.xrLabel100.Name = "xrLabel100";
             this.xrLabel100.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel100.SizeF = new System.Drawing.SizeF(146.875F, 16.04169F);
+            this.xrLabel100.SizeF = new System.Drawing.SizeF(151.875F, 16.04169F);
             this.xrLabel100.StylePriority.UseFont = false;
             this.xrLabel100.Text = "PACK SLIP :";
             this.xrLabel100.WordWrap = false;
@@ -1620,10 +1620,10 @@
             this.xrLabel99.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[AccDCCode]")});
             this.xrLabel99.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel99.LocationFloat = new DevExpress.Utils.PointFloat(108.0625F, 17.79443F);
+            this.xrLabel99.LocationFloat = new DevExpress.Utils.PointFloat(101.0625F, 17.79443F);
             this.xrLabel99.Name = "xrLabel99";
             this.xrLabel99.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel99.SizeF = new System.Drawing.SizeF(146.875F, 18.04169F);
+            this.xrLabel99.SizeF = new System.Drawing.SizeF(151.875F, 18.04169F);
             this.xrLabel99.StylePriority.UseFont = false;
             this.xrLabel99.Text = "PACK SLIP :";
             this.xrLabel99.WordWrap = false;
@@ -1663,10 +1663,10 @@
             this.xrLabel97.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Table].[SIMPartyPONO]")});
             this.xrLabel97.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel97.LocationFloat = new DevExpress.Utils.PointFloat(108.0625F, 0F);
+            this.xrLabel97.LocationFloat = new DevExpress.Utils.PointFloat(101.0625F, 0F);
             this.xrLabel97.Name = "xrLabel97";
             this.xrLabel97.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel97.SizeF = new System.Drawing.SizeF(146.875F, 17.00002F);
+            this.xrLabel97.SizeF = new System.Drawing.SizeF(176.875F, 17.00002F);
             this.xrLabel97.StylePriority.UseFont = false;
             this.xrLabel97.Text = "PACK SLIP :";
             this.xrLabel97.WordWrap = false;
@@ -1675,7 +1675,7 @@
             // 
             this.xrLabel55.CanGrow = false;
             this.xrLabel55.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(45.81262F, 36.63054F);
+            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(39.58333F, 36.63054F);
             this.xrLabel55.Name = "xrLabel55";
             this.xrLabel55.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel55.SizeF = new System.Drawing.SizeF(58.58328F, 16.04169F);
@@ -1689,7 +1689,7 @@
             // 
             this.xrLabel54.CanGrow = false;
             this.xrLabel54.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(6.229289F, 17.79443F);
+            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(0F, 17.79443F);
             this.xrLabel54.Name = "xrLabel54";
             this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel54.SizeF = new System.Drawing.SizeF(98.16662F, 18.04169F);
@@ -1727,7 +1727,7 @@
             // 
             this.xrLabel47.CanGrow = false;
             this.xrLabel47.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold);
-            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(42.47921F, 0F);
+            this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(36.24992F, 0F);
             this.xrLabel47.Name = "xrLabel47";
             this.xrLabel47.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel47.SizeF = new System.Drawing.SizeF(61.91667F, 17.00002F);
@@ -1779,7 +1779,7 @@
             // 
             this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(59.2916F, 150.75F);
             this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.GSTTAXDETAILS();
+            this.xrSubreport1.ReportSource = new WindowsFormsApplication1.Prints.CASHMEMO();
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(727.0833F, 17.79167F);
             // 
             // xrLabel27

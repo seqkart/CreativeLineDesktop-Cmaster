@@ -23,8 +23,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEBAPISample", "WEBAPISample\WEBAPISample.csproj", "{9E635E01-58FA-455A-A63C-797E33B7C472}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "seqkart setup", "seqkart setup\seqkart setup.vdproj", "{329B6AA3-D142-4C23-8932-F3E066C3A271}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -134,16 +132,6 @@ Global
 		{9E635E01-58FA-455A-A63C-797E33B7C472}.Release|x64.Build.0 = Release|Any CPU
 		{9E635E01-58FA-455A-A63C-797E33B7C472}.Release|x86.ActiveCfg = Release|Any CPU
 		{9E635E01-58FA-455A-A63C-797E33B7C472}.Release|x86.Build.0 = Release|Any CPU
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Debug|Any CPU.ActiveCfg = Debug
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Debug|ARM.ActiveCfg = Debug
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Debug|ARM64.ActiveCfg = Debug
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Debug|x64.ActiveCfg = Debug
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Debug|x86.ActiveCfg = Debug
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Release|Any CPU.ActiveCfg = Release
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Release|ARM.ActiveCfg = Release
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Release|ARM64.ActiveCfg = Release
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Release|x64.ActiveCfg = Release
-		{329B6AA3-D142-4C23-8932-F3E066C3A271}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

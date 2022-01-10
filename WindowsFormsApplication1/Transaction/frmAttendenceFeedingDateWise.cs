@@ -501,9 +501,29 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
+
+        private void Essl_Connect(string IpAddress, int MachineNo)
+        {
+            try
+            {
+                zkemkeeper.CZKEM axCZKEM1 = new zkemkeeper.CZKEM();
+                if (axCZKEM1.Connect_Net(IpAddress, 5005))
+                {
+                    XtraMessageBox.Show("Machine Connected");
+                }
+                else
+                {
+                    XtraMessageBox.Show("Machine Not Connected");
+                }
+            }
+            catch (Exception ex)
+            {
+                
+            }
+        }
         private void btnLoadFromMachine_Click(object sender, EventArgs e)
         {
-
+            Essl_Connect("192.168.1.224", 1);
         }
     }
 }

@@ -272,9 +272,8 @@
             this.Controls.Add(this.cmdAllSLogData);
             this.Controls.Add(this.LabelTotal);
             this.Controls.Add(this.lblMessage);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLog";
-            this.Text = "DATA LOG FECTHER";
+            this.Text = "frmLog";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmLog_FormClosing);
             this.Load += new System.EventHandler(this.frmLog_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridSLogData2)).EndInit();

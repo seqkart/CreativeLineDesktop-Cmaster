@@ -1,8 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
+
+using System.Runtime.InteropServices;
+using System.IO;
 
 namespace SEQKARTBIO
 {
@@ -45,7 +51,7 @@ namespace SEQKARTBIO
             gridSLogData.Height = 298;
             gridSLogData.Clear();
 
-            gstrLogItem = new Object[] { string.Empty, "TMNo", "SEnlNo", "SMNo", "GEnlNo", "GMNo", "Manipulation", "FpNo", "DateTime" };
+            gstrLogItem = new Object[] { "", "TMNo", "SEnlNo", "SMNo", "GEnlNo", "GMNo", "Manipulation", "FpNo", "DateTime" };
 
             // gridSLogData
             gridSLogData.Cols = 9;
@@ -107,18 +113,18 @@ namespace SEQKARTBIO
                 i = 1;
                 while (true)
                 {
-                    vRet = bpc.GetSuperLogData(Program.gMachineNumber,
-                                                ref vTMachineNumber,
-                                                ref vSEnrollNumber,
-                                                ref vSMachineNumber,
-                                                ref vGEnrollNumber,
-                                                ref vGMachineNumber,
-                                                ref vManipulation,
-                                                ref vFingerNumber,
-                                                ref vYear,
-                                                ref vMonth,
-                                                ref vDay,
-                                                ref vHour,
+                    vRet = bpc.GetSuperLogData( Program.gMachineNumber, 
+                                                ref vTMachineNumber, 
+                                                ref vSEnrollNumber, 
+                                                ref vSMachineNumber, 
+                                                ref vGEnrollNumber, 
+                                                ref vGMachineNumber, 
+                                                ref vManipulation, 
+                                                ref vFingerNumber, 
+                                                ref vYear, 
+                                                ref vMonth, 
+                                                ref vDay, 
+                                                ref vHour, 
                                                 ref vMinute,
                                                 ref vSecond);
                     if (!vRet) break;
@@ -228,7 +234,7 @@ namespace SEQKARTBIO
             gridSLogData.Height = 298;
             gridSLogData.Clear();
 
-            gstrLogItem = new Object[] { string.Empty, "TMNo", "SEnlNo", "SMNo", "GEnlNo", "GMNo", "Manipulation", "FpNo", "DateTime" };
+            gstrLogItem = new Object[] { "", "TMNo", "SEnlNo", "SMNo", "GEnlNo", "GMNo", "Manipulation", "FpNo", "DateTime" };
 
             // gridSLogData
             gridSLogData.Cols = 9;
@@ -290,18 +296,18 @@ namespace SEQKARTBIO
                 i = 1;
                 while (true)
                 {
-                    vRet = bpc.GetAllSLogData(Program.gMachineNumber,
-                                                ref vTMachineNumber,
-                                                ref vSEnrollNumber,
-                                                ref vSMachineNumber,
-                                                ref vGEnrollNumber,
-                                                ref vGMachineNumber,
-                                                ref vManipulation,
-                                                ref vFingerNumber,
-                                                ref vYear,
-                                                ref vMonth,
-                                                ref vDay,
-                                                ref vHour,
+                    vRet = bpc.GetAllSLogData(  Program.gMachineNumber, 
+                                                ref vTMachineNumber, 
+                                                ref vSEnrollNumber, 
+                                                ref vSMachineNumber, 
+                                                ref vGEnrollNumber, 
+                                                ref vGMachineNumber, 
+                                                ref vManipulation, 
+                                                ref vFingerNumber, 
+                                                ref vYear, 
+                                                ref vMonth, 
+                                                ref vDay, 
+                                                ref vHour, 
                                                 ref vMinute,
                                                 ref vSecond);
                     if (!vRet) break;
@@ -454,7 +460,7 @@ namespace SEQKARTBIO
             gridSLogData2.Redraw = false;
             gridSLogData2.Clear();
 
-            gstrLogItem = new Object[] { string.Empty, "PhotoNo", "EnrollNo", "EMachineNo", "VeriMode", "DateTime" };
+            gstrLogItem = new Object[] { "", "PhotoNo", "EnrollNo", "EMachineNo", "VeriMode", "DateTime" };
 
             // gridSLogData
             gridSLogData.Row = 0;
@@ -572,15 +578,15 @@ namespace SEQKARTBIO
                 i = 1;
                 while (true)
                 {
-                    vRet = bpc.GetGeneralLogData(Program.gMachineNumber,
-                                                    ref vTMachineNumber,
-                                                    ref vSEnrollNumber,
-                                                    ref vSMachineNumber,
-                                                    ref vVerifyMode,
-                                                    ref vYear,
-                                                    ref vMonth,
-                                                    ref vDay,
-                                                    ref vHour,
+                    vRet = bpc.GetGeneralLogData(   Program.gMachineNumber, 
+                                                    ref vTMachineNumber, 
+                                                    ref vSEnrollNumber, 
+                                                    ref vSMachineNumber, 
+                                                    ref vVerifyMode, 
+                                                    ref vYear, 
+                                                    ref vMonth, 
+                                                    ref vDay, 
+                                                    ref vHour, 
                                                     ref vMinute,
                                                     ref vSecond);
                     if (!vRet) break;
@@ -590,8 +596,8 @@ namespace SEQKARTBIO
                     vVerifyMode = vVerifyMode % vDiv;
                     vAttStatus = vVerifyMode / 256;
                     vVerifyMode = vVerifyMode % 256;
-                    stAttStatus = string.Empty;
-                    stAntipass = string.Empty;
+                    stAttStatus = "";
+                    stAntipass = "";
                     if (vAttStatus == 0)
                         stAttStatus = "_DutyOn";
                     else if (vAttStatus == 1)
@@ -679,15 +685,15 @@ namespace SEQKARTBIO
 
                     while (true)
                     {
-                        vRet = bpc.GetGeneralLogData(Program.gMachineNumber,
-                                                        ref vTMachineNumber,
-                                                        ref vSEnrollNumber,
-                                                        ref vSMachineNumber,
-                                                        ref vVerifyMode,
-                                                        ref vYear,
-                                                        ref vMonth,
-                                                        ref vDay,
-                                                        ref vHour,
+                        vRet = bpc.GetGeneralLogData(   Program.gMachineNumber, 
+                                                        ref vTMachineNumber, 
+                                                        ref vSEnrollNumber, 
+                                                        ref vSMachineNumber, 
+                                                        ref vVerifyMode, 
+                                                        ref vYear, 
+                                                        ref vMonth, 
+                                                        ref vDay, 
+                                                        ref vHour, 
                                                         ref vMinute,
                                                         ref vSecond);
                         if (!vRet) break;
@@ -699,8 +705,8 @@ namespace SEQKARTBIO
                         vVerifyMode = vVerifyMode % vDiv;
                         vAttStatus = vVerifyMode / 256;
                         vVerifyMode = vVerifyMode % 256;
-                        stAttStatus = string.Empty;
-                        stAntipass = string.Empty;
+                        stAttStatus = "";
+                        stAntipass = "";
                         if (vAttStatus == 0)
                             stAttStatus = "_DutyOn";
                         else if (vAttStatus == 1)
@@ -792,15 +798,15 @@ namespace SEQKARTBIO
 
                     while (true)
                     {
-                        vRet = bpc.GetGeneralLogData(Program.gMachineNumber,
-                                                        ref vTMachineNumber,
-                                                        ref vSEnrollNumber,
-                                                        ref vSMachineNumber,
-                                                        ref vVerifyMode,
-                                                        ref vYear,
-                                                        ref vMonth,
-                                                        ref vDay,
-                                                        ref vHour,
+                        vRet = bpc.GetGeneralLogData(Program.gMachineNumber, 
+                                                        ref vTMachineNumber, 
+                                                        ref vSEnrollNumber, 
+                                                        ref vSMachineNumber, 
+                                                        ref vVerifyMode, 
+                                                        ref vYear, 
+                                                        ref vMonth, 
+                                                        ref vDay, 
+                                                        ref vHour, 
                                                         ref vMinute,
                                                         ref vSecond);
                         if (!vRet) break;
@@ -812,8 +818,8 @@ namespace SEQKARTBIO
                         vVerifyMode = vVerifyMode % vDiv;
                         vAttStatus = vVerifyMode / 256;
                         vVerifyMode = vVerifyMode % 256;
-                        stAttStatus = string.Empty;
-                        stAntipass = string.Empty;
+                        stAttStatus = "";
+                        stAntipass = "";
                         if (vAttStatus == 0)
                             stAttStatus = "_DutyOn";
                         else if (vAttStatus == 1)
@@ -903,13 +909,13 @@ namespace SEQKARTBIO
 
 
             DataTable dt = new DataTable();
-
+            
             dt.Columns.Add("EnrollNo", typeof(String));
             dt.Columns.Add("EMachineNo", typeof(String));
             dt.Columns.Add("VeriMode", typeof(String));
             dt.Columns.Add("DateTime", typeof(String));
-
-            for (int ii = 1; ii < gridSLogData.Rows; ii++)
+           
+            for (int ii=1; ii < gridSLogData.Rows; ii++)
             {
                 DataRow dr = dt.NewRow();
                 String str2 = gridSLogData.get_TextMatrix(ii, 2);
@@ -926,47 +932,16 @@ namespace SEQKARTBIO
             }
 
 
-
-            if (dt.Rows.Count > 0)
+            
+            if(dt.Rows.Count>0)
             {
                 dt.TableName = "SS";
-
-                foreach(DataRow dr in dt.Rows)
-                {
-                    if(dr["EnrollNo"].ToString().Trim().Length>0)
-                    {
-                        GetDataSet("Insert into HCM_RawInOut(EmpID,Punchdatetime,UpdFlag,CrDate)values('" + dr["EnrollNo"].ToString() + "','" + Convert.ToDateTime(dr["DateTime"]).ToString("yyyy-MM-dd HH:mm:ss") + "','N','" + DateTime.Now.ToString("yyyy-MM-dd") + "')");
-                    }
-                  
-                }
-
+                dt.WriteXml("C:\\Temp\\AtdData1.xml");
             }
 
-
+          
         }
-  
-        private DataSet GetDataSet(string Query)
-        {
-            using (var _VarDataSet = new DataSet())
-            {
-                try
-                {
-                    using (var _VarSqlDataAdapter = new SqlDataAdapter(Query, new SqlConnection(@"Data Source=SEQKARTSOLUTION;Initial Catalog=PANDA;User ID=sa;pwd=123")))
-                    {
-                        _VarSqlDataAdapter.SelectCommand.CommandTimeout = 1200;
-                        _VarSqlDataAdapter.Fill(_VarDataSet);
-                    }
-                    return _VarDataSet;
-                }
 
-                catch (Exception ex)
-
-                {
-
-                    return null;
-                }
-            }
-        }
         private void cmdAllGLogData_Click(object sender, EventArgs e)
         {
             int vTMachineNumber = 0;
@@ -1002,7 +977,7 @@ namespace SEQKARTBIO
             gridSLogData2.Redraw = false;
             gridSLogData2.Clear();
 
-            gstrLogItem = new Object[] { string.Empty, "PhotoNo", "EnrollNo", "EMachineNo", "VeriMode", "DateTime" };
+            gstrLogItem = new Object[] { "", "PhotoNo", "EnrollNo", "EMachineNo", "VeriMode", "DateTime" };
 
             // gridSLogData
             gridSLogData.Row = 0;
@@ -1120,30 +1095,30 @@ namespace SEQKARTBIO
                 i = 1;
                 while (true)
                 {
-                    vRet = bpc.GetAllGLogData(Program.gMachineNumber,
-                                                ref vTMachineNumber,
-                                                ref vSEnrollNumber,
-                                                ref vSMachineNumber,
-                                                ref vVerifyMode,
-                                                ref vYear,
-                                                ref vMonth,
-                                                ref vDay,
-                                                ref vHour,
+                    vRet = bpc.GetAllGLogData(  Program.gMachineNumber, 
+                                                ref vTMachineNumber, 
+                                                ref vSEnrollNumber, 
+                                                ref vSMachineNumber, 
+                                                ref vVerifyMode, 
+                                                ref vYear, 
+                                                ref vMonth, 
+                                                ref vDay, 
+                                                ref vHour, 
                                                 ref vMinute,
                                                 ref vSecond);
                     if (!vRet) break;
                     if (vRet && i != 1) gridSLogData.AddItem(Convert.ToString(1));
 
-                    AddGLogItem(vTMachineNumber,
-                                vSEnrollNumber,
-                                vSMachineNumber,
-                                vVerifyMode,
-                                vYear,
-                                vMonth,
-                                vDay,
-                                vHour,
-                                vMinute,
-                                vSecond,
+                    AddGLogItem(vTMachineNumber, 
+                                vSEnrollNumber, 
+                                vSMachineNumber, 
+                                vVerifyMode, 
+                                vYear, 
+                                vMonth, 
+                                vDay, 
+                                vHour, 
+                                vMinute, 
+                                vSecond, 
                                 i,
                                 0,
                                 gridSLogData
@@ -1164,15 +1139,15 @@ namespace SEQKARTBIO
 
                     while (true)
                     {
-                        vRet = bpc.GetAllGLogData(Program.gMachineNumber,
-                                                    ref vTMachineNumber,
-                                                    ref vSEnrollNumber,
-                                                    ref vSMachineNumber,
-                                                    ref vVerifyMode,
-                                                    ref vYear,
-                                                    ref vMonth,
-                                                    ref vDay,
-                                                    ref vHour,
+                        vRet = bpc.GetAllGLogData(  Program.gMachineNumber, 
+                                                    ref vTMachineNumber, 
+                                                    ref vSEnrollNumber, 
+                                                    ref vSMachineNumber, 
+                                                    ref vVerifyMode, 
+                                                    ref vYear, 
+                                                    ref vMonth, 
+                                                    ref vDay, 
+                                                    ref vHour, 
                                                     ref vMinute,
                                                     ref vSecond);
                         if (!vRet) break;
@@ -1214,15 +1189,15 @@ namespace SEQKARTBIO
 
                     while (true)
                     {
-                        vRet = bpc.GetAllGLogData(Program.gMachineNumber,
-                                                    ref vTMachineNumber,
-                                                    ref vSEnrollNumber,
-                                                    ref vSMachineNumber,
-                                                    ref vVerifyMode,
-                                                    ref vYear,
-                                                    ref vMonth,
-                                                    ref vDay,
-                                                    ref vHour,
+                        vRet = bpc.GetAllGLogData(  Program.gMachineNumber, 
+                                                    ref vTMachineNumber, 
+                                                    ref vSEnrollNumber, 
+                                                    ref vSMachineNumber, 
+                                                    ref vVerifyMode, 
+                                                    ref vYear, 
+                                                    ref vMonth, 
+                                                    ref vDay, 
+                                                    ref vHour, 
                                                     ref vMinute,
                                                     ref vSecond);
                         if (!vRet) break;
@@ -1318,8 +1293,8 @@ namespace SEQKARTBIO
             vVerifyMode = vVerifyMode % vDiv;
             vAttStatus = vVerifyMode / 256;
             vVerifyMode = vVerifyMode % 256;
-            stAttStatus = string.Empty;
-            stAntipass = string.Empty;
+            stAttStatus = "";
+            stAntipass = "";
             if (vAttStatus == 0)
                 stAttStatus = "_DutyOn";
             else if (vAttStatus == 1)
@@ -1390,7 +1365,7 @@ namespace SEQKARTBIO
             gridGlogData.Text = gridGlogData.Text + stAntipass;
             gridGlogData.Col = 5;
             gridGlogData.Text = Convert.ToString(vYear) + "/" + String.Format("{0:D2}", vMonth) + "/" + String.Format("{0:D2}", vDay) + " " + String.Format("{0:D2}", vHour) + ":" + String.Format("{0:D2}", vMinute);
-
+            
 
 
         }

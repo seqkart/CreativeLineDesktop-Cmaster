@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace SEQKARTBIO
@@ -33,7 +38,7 @@ namespace SEQKARTBIO
                     cmdClose.Enabled = true;
 
                     cmdLogData.Enabled = true;
-
+                    
                     if (nError == 4)
                         MessageBox.Show("Relayed Connection!");
                     else if (nError == 5)
@@ -69,7 +74,7 @@ namespace SEQKARTBIO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+           
             lblIPAddress.Enabled = true;
             txtIPAddress.Enabled = true;
             lblPortNo.Enabled = true;
@@ -83,7 +88,7 @@ namespace SEQKARTBIO
             cmdLogData.Enabled = false;
             mOpenFlag = false;
             cmbMachineNumber.Text = Convert.ToString(1);
-            SBXPC1.DotNET();
+           SBXPC1.DotNET();
         }
 
         private void cmdClose_Click(object sender, EventArgs e)
@@ -99,17 +104,17 @@ namespace SEQKARTBIO
 
             }
         }
-
+           
         private void optNetworkDevice_CheckedChanged(object sender, EventArgs e)
         {
             String lpszIPAddress;
-
-            lblIPAddress.Enabled = false;
-            txtIPAddress.Enabled = false;
-            lblPortNo.Enabled = false;
-            txtPortNo.Enabled = false;
-            lblPassword.Enabled = false;
-            txtPassword.Enabled = false;
+           
+                lblIPAddress.Enabled = false;
+                txtIPAddress.Enabled = false;
+                lblPortNo.Enabled = false;
+                txtPortNo.Enabled = false;
+                lblPassword.Enabled = false;
+                txtPassword.Enabled = false;
         }
 
         private void cmdLogData_Click(object sender, EventArgs e)

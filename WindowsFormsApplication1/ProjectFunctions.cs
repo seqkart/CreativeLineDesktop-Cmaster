@@ -23,6 +23,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxProEWB.API;
+using WAProAPI;
 using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
@@ -1886,6 +1887,8 @@ namespace WindowsFormsApplication1
                 ProjectFunctions.Speak("whats app already disconnected");
             }
         }
+
+        
 
 
         public static async Task SendBillMessageAsync(String BillNo, DateTime BillDate, String BillSeries)

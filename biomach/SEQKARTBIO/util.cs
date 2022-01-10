@@ -1,23 +1,25 @@
 ﻿using System;
-using System.IO;
-
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace SEQKARTBIO
 {
     static class util
     {
 
-        //        Public Declare Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As Integer)
-        //        Public Declare Function GetSystemDefaultLangID Lib "kernel32" () As Short
+//        Public Declare Sub Sleep Lib "kernel32" (ByVal dwMilliseconds As Integer)
+//        Public Declare Function GetSystemDefaultLangID Lib "kernel32" () As Short
         [DllImport("user32.dll", CharSet = CharSet.Ansi)]
         public static extern int MessageBox(IntPtr hWnd, String text, String caption, uint type);
         [DllImport("kernel32.dll", CharSet = CharSet.Ansi)]
         public static extern void Sleep(int dwMilliseconds);
 
         public static string gstrNoDevice = "No Device";
-        public static string gTempPhotoFile = "C:\\temp\\TempPhoto.jpg";
+        public static string gTempPhotoFile = "C:\\TempPhoto.jpg";
         public static int gCompressPhotoSize = 8192; // 8K
 
         public static short FK_Company = 1;
@@ -51,7 +53,7 @@ namespace SEQKARTBIO
                 default:
                     return "NO_ERROR";
             }
-
+            
         }
         public static int pubIPAddrToLong(string txtIP)
         {
@@ -60,7 +62,7 @@ namespace SEQKARTBIO
             int k;
             string szTmp;
             k = txtIP.IndexOf('.');
-            if (k == 0)
+            if (k == 0) 
                 return 0;
             szTmp = txtIP.Substring(0, k);
             txtIP = txtIP.Remove(0, k + 1);
@@ -94,15 +96,15 @@ namespace SEQKARTBIO
             txtIP = Convert.ToString(remain);
             vValue = (vValue - remain) / 256;
             remain = vValue % 256;
-            if (remain < 0) remain = 256 + remain;
+            if (remain < 0)  remain = 256 + remain;
+            txtIP = Convert.ToString(remain) + "." + txtIP; 
+            vValue = (vValue - remain) / 256;
+            remain = vValue % 256;
+            if (remain < 0)  remain = 256 + remain;
             txtIP = Convert.ToString(remain) + "." + txtIP;
             vValue = (vValue - remain) / 256;
             remain = vValue % 256;
-            if (remain < 0) remain = 256 + remain;
-            txtIP = Convert.ToString(remain) + "." + txtIP;
-            vValue = (vValue - remain) / 256;
-            remain = vValue % 256;
-            if (remain < 0) remain = 256 + remain;
+            if (remain < 0)  remain = 256 + remain;
             txtIP = Convert.ToString(remain) + "." + txtIP;
 
             return txtIP;
@@ -142,7 +144,7 @@ namespace SEQKARTBIO
             }
             finally
             {
-                if (FS != null)
+                if(FS != null)
                 {
                     FS.Close();
                     FS.Dispose();

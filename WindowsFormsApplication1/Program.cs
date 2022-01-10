@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1
             DevExpress.Skins.SkinManager.EnableFormSkins();
 
 
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("Sharp");
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle("SHARP");
 
             Application.Run(new FrmLogins());
             //Application.Run(new Transaction.FrmJobWork());
