@@ -819,7 +819,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(79, 24);
+            this.chExclusive.Size = new System.Drawing.Size(79, 21);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -1652,7 +1652,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(91, 24);
+            this.chInclusive.Size = new System.Drawing.Size(91, 21);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -1858,7 +1858,7 @@
             this.lblPaymentMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPaymentMode.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPaymentMode.Appearance.Options.UseFont = true;
-            this.lblPaymentMode.Location = new System.Drawing.Point(896, 834);
+            this.lblPaymentMode.Location = new System.Drawing.Point(922, 834);
             this.lblPaymentMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblPaymentMode.Name = "lblPaymentMode";
             this.lblPaymentMode.Size = new System.Drawing.Size(56, 25);
@@ -1931,9 +1931,9 @@
             this.labelControl27.Location = new System.Drawing.Point(749, 834);
             this.labelControl27.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl27.Name = "labelControl27";
-            this.labelControl27.Size = new System.Drawing.Size(152, 25);
+            this.labelControl27.Size = new System.Drawing.Size(157, 25);
             this.labelControl27.TabIndex = 780;
-            this.labelControl27.Text = "PAYMENT MODE";
+            this.labelControl27.Text = "PAYMENT MODE:";
             // 
             // btnHold
             // 
@@ -2395,7 +2395,7 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 24);
+            this.chall.Size = new System.Drawing.Size(87, 21);
             this.chall.TabIndex = 815;
             // 
             // CashMemo

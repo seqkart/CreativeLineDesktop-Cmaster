@@ -7488,7 +7488,7 @@
             <summary>Lists command sub items.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Location(DevExtreme.AspNet.Mvc.ToolbarItemLocation)">
-            <summary></summary>
+            <summary>Specifies a location for the command or separator on the main toolbar.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Name(DevExtreme.AspNet.Mvc.DiagramCommand)">
             <summary>Specifies the custom command&apos;s identifier.</summary>

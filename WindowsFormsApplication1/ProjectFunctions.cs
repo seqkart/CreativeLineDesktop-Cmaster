@@ -1,6 +1,8 @@
-﻿using DevExpress.Utils.Menu;
+﻿using DevExpress.Data;
+using DevExpress.Utils.Menu;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Menu;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
@@ -1386,7 +1388,15 @@ namespace WindowsFormsApplication1
         }
         public static void BindReportToGrid(string ProcedureName, DateTime From, DateTime To, DevExpress.XtraGrid.GridControl ReportGrid, DevExpress.XtraGrid.Views.Grid.GridView ReportGridView)
         {
-            //ReportGridView.Columns.Clear();
+            ReportGridView.Columns.Clear();
+            ReportGridView.GroupSummary.Clear();
+            foreach (GridColumn column in ReportGridView.Columns)
+            {
+                GridSummaryItem item = column.SummaryItem;
+                if (item != null)
+                    column.Summary.Remove(item);
+            }
+
             DataSet dsMaster = GetDataSet(ProcedureName + "'" + From.Date.ToString("yyyy-MM-dd") + "','" + To.Date.ToString("yyyy-MM-dd") + "','" + GlobalVariables.CUnitID + "'");
             if (dsMaster.Tables[0].Rows.Count > 0)
             {
@@ -1409,9 +1419,43 @@ namespace WindowsFormsApplication1
                 }
                 if (dsMaster.Tables[0].Rows.Count > 0)
                 {
-                    ReportGrid.DataSource = dsMaster.Tables[0];
-                    ReportGridView.BestFitColumns();
+                    if (GlobalVariables.ProgCode == "PROG214")
+                    {
+                        ReportGrid.DataSource = dsMaster.Tables[0];
+                        ReportGridView.BestFitColumns();
+                        ReportGridView.Columns["ArtNo"].GroupIndex = 1;
+                        ReportGridView.Appearance.GroupRow.FontSizeDelta = 3;
 
+                        ReportGridView.ExpandAllGroups();
+
+                        ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "Quantity", ReportGridView.Columns["Quantity"], "{0}");
+                        ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "ItemAmount", ReportGridView.Columns["ItemAmount"], "{0}");
+                        ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "SGSTAmount", ReportGridView.Columns["SGSTAmount"], "{0}");
+                        ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "CGSTAmount", ReportGridView.Columns["CGSTAmount"], "{0}");
+                       // ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "IGSTAmount", ReportGridView.Columns["IGSTAmount"], "{0}");
+                        ReportGridView.Appearance.GroupFooter.FontSizeDelta = 3;
+
+                        ReportGridView.Columns["Quantity"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Quantity", "{0}") });
+                        ReportGridView.Columns["ItemAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "ItemAmount", "{0}") });
+                        ReportGridView.Columns["SGSTAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SGSTAmount", "{0}") });
+
+                        ReportGridView.Columns["CGSTAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CGSTAmount", "{0}") });
+                        
+                        //ReportGridView.Columns["IGSTAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "IGSTAmount", "{0}") });
+                        foreach(DevExpress.XtraGrid.Columns.GridColumn dr in ReportGridView.Columns)
+                        {
+                            if(dr.FieldName.ToUpper()== "SZINDEX"|| dr.FieldName.ToUpper() == "ARTIMAGE")
+                            {
+                                dr.Visible = false;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        ReportGrid.DataSource = dsMaster.Tables[0];
+                        ReportGridView.BestFitColumns();
+                    }
+                   
                 }
                 else
                 {

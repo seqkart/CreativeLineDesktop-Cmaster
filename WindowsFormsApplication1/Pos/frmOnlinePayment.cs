@@ -1,6 +1,14 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Paytm;
+using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Pos
@@ -18,19 +26,69 @@ namespace WindowsFormsApplication1.Pos
             InitializeComponent();
         }
 
+        private async Task SendPAYTMPaymentRequestAsync()
+        {
+
+            System.Collections.Generic.Dictionary<string, string> paytmParams = new System.Collections.Generic.Dictionary<string, string>();
+            paytmParams.Add("MID", "ysPvfj29969077881276");
+            paytmParams.Add("ORDER_ID", "ABC");
+            String paytmChecksum = Paytm.Checksum.generateSignature(paytmParams, "&Woeh3rvetLAbr&n");
+            bool verifySignature = Paytm.Checksum.verifySignature(paytmParams, "&Woeh3rvetLAbr&n", paytmChecksum);
+            string body = "{\"mid\":\"ysPvfj29969077881276\",\"orderId\":\"ABC\"}";
+            paytmChecksum = Paytm.Checksum.generateSignature(body, "&Woeh3rvetLAbr&n");
+            verifySignature = Paytm.Checksum.verifySignature(body, "&Woeh3rvetLAbr&n", paytmChecksum);
+            //using (var httpClient = new HttpClient())
+            //{
+            //    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://securegw-stage.paytm.in/order/sendpaymentrequest"))
+            //    {
+            //        request.Content = new StringContent("{\"body\":{\"mid\":\"ysPvfj29969077881276\",\"merchantOrderId\":\"ABC\",\"amount\":\"1303.00\",\"userPhoneNo\":\"859115444\",\"posId\":\"S1234_P1235\"}},\n\"head\":{\"clientId\":\"\",\"version\":\"v1\",\"signature\":\"" + paytmChecksum + "\"}");
+            //        request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+            //        var response = await httpClient.SendAsync(request);
+            //    }
+            //}
+            using (var httpClient = new HttpClient())
+            {
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://securegw-stage.paytm.in/order/sendpaymentrequest"))
+                {
+                    request.Content = new StringContent("{\"body\":{\"mid\":\"{ysPvfj29969077881276}\",\"merchantOrderId\":\"ABC\",\"amount\":\"1303.00\",\"userPhoneNo\":\"9855630394\",\"posId\":\"S1234_P1235\"}},\n\"head\":{\"clientId\":\"\",\"version\":\"v1\",\"signature\":\"{" + paytmChecksum + "}\"}}");
+                    request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
+
+                    var response = await httpClient.SendAsync(request);
+                }
+            }
+
+
+
+        }
+
+        private void SendGOOGLEPAYRequest()
+        {
+
+        }
+
+
+        private void SendPHONEPAYRequest()
+        {
+
+        }
+
         private void BtnPayTM_Click(object sender, EventArgs e)
         {
-            txtUPIDType.Text = "PayTM";
+            txtUPIDType.Text = "PayTM"; 
+            SendPAYTMPaymentRequestAsync();
         }
 
         private void BtnGooglePay_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "GooglePay";
+            SendGOOGLEPAYRequest();
         }
 
         private void BtnPhonePe_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "PhonePe";
+            SendPHONEPAYRequest();
         }
 
         private void FrmOnlinePayment_Load(object sender, EventArgs e)
@@ -231,6 +289,13 @@ namespace WindowsFormsApplication1.Pos
             }
 
             Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Save();
+            Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();
+            ProjectFunctions.PrintPDFDocument(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
         }
     }
 }

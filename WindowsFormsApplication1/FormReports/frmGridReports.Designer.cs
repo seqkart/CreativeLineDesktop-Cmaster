@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.XtraGrid.GridFormatRule gridFormatRule1 = new DevExpress.XtraGrid.GridFormatRule();
             this.MasterGrid = new DevExpress.XtraGrid.GridControl();
             this.MasterGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.xtraSaveFileDialog1 = new DevExpress.XtraEditors.XtraSaveFileDialog(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MasterGridView)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +46,7 @@
             this.MasterGrid.MainView = this.MasterGridView;
             this.MasterGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MasterGrid.Name = "MasterGrid";
-            this.MasterGrid.Size = new System.Drawing.Size(1297, 702);
+            this.MasterGrid.Size = new System.Drawing.Size(1482, 661);
             this.MasterGrid.TabIndex = 1;
             this.MasterGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MasterGridView});
@@ -52,9 +54,13 @@
             // 
             // MasterGridView
             // 
+            this.MasterGridView.Appearance.GroupFooter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MasterGridView.Appearance.GroupFooter.Options.UseFont = true;
+            this.MasterGridView.Appearance.GroupRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MasterGridView.Appearance.GroupRow.Options.UseFont = true;
             this.MasterGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1});
-            this.MasterGridView.DetailHeight = 458;
+            this.MasterGridView.DetailHeight = 431;
             gridFormatRule1.Name = "Format0";
             gridFormatRule1.Rule = null;
             this.MasterGridView.FormatRules.Add(gridFormatRule1);
@@ -66,6 +72,7 @@
             this.MasterGridView.Name = "MasterGridView";
             this.MasterGridView.OptionsBehavior.AllowIncrementalSearch = true;
             this.MasterGridView.OptionsBehavior.Editable = false;
+            this.MasterGridView.OptionsClipboard.AllowExcelFormat = DevExpress.Utils.DefaultBoolean.True;
             this.MasterGridView.OptionsView.ColumnAutoWidth = false;
             this.MasterGridView.OptionsView.ShowFooter = true;
             this.MasterGridView.OptionsView.ShowGroupPanel = false;
@@ -76,23 +83,28 @@
             // 
             this.gridColumn1.Caption = "NET AMOUNT";
             this.gridColumn1.FieldName = "NET AMOUNT";
-            this.gridColumn1.MinWidth = 23;
+            this.gridColumn1.MinWidth = 26;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Custom)});
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 87;
+            this.gridColumn1.Width = 99;
             // 
-            // frmGridReports
+            // xtraSaveFileDialog1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
+            this.xtraSaveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.xtraSaveFileDialog1_FileOk);
+            // 
+            // FrmGridReports
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1297, 702);
+            this.ClientSize = new System.Drawing.Size(1482, 661);
             this.Controls.Add(this.MasterGrid);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmGridReports";
+            this.Name = "FrmGridReports";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmGridReports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.MasterGrid)).EndInit();
@@ -106,5 +118,6 @@
         private DevExpress.XtraGrid.GridControl MasterGrid;
         private DevExpress.XtraGrid.Views.Grid.GridView MasterGridView;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraEditors.XtraSaveFileDialog xtraSaveFileDialog1;
     }
 }

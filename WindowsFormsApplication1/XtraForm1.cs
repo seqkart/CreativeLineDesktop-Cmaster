@@ -59,8 +59,10 @@ namespace WindowsFormsApplication1
 
         private void XtraForm1_Load(object sender, EventArgs e)
         {
+            
+
             labelControl1.Text = "Disconnected";
-           
+
             ProjectFunctions.WhatsAppConnectionStatus();
             ProjectFunctions.WhatsAppStatusSpeak();
 
@@ -69,14 +71,14 @@ namespace WindowsFormsApplication1
             {
                 pictureEdit2.Image = Image.FromFile(Application.StartupPath + "//BACKGROUND.JPG");
             }
-           
-           
+
+
             Timer timer = new Timer
             {
                 Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
-             timer.Start();
+            timer.Start();
 
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
@@ -169,7 +171,7 @@ namespace WindowsFormsApplication1
 
 
 
-            _ribbonControl.Minimized = true;
+            _ribbonControl.Minimized = false;
 
 
             DevExpress.XtraTab.XtraTabPage Page = new DevExpress.XtraTab.XtraTabPage
@@ -189,7 +191,7 @@ namespace WindowsFormsApplication1
             //var PROG1 = new frmMainDashBoard() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
             //PROG1.Show();
             //PROG1.BringToFront();
-            //PROG1.Parent = Page;
+            //PROG1.Parent = Page;_Load
             //xtraTabControl1.SelectedTabPage = Page;
 
 
@@ -337,6 +339,126 @@ namespace WindowsFormsApplication1
 
             switch (myitem)
             {
+                case "PROG266":
+                    var PROG266 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG266.Show();
+                    PROG266.BringToFront();
+                    PROG266.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG265":
+                    var PROG265 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG265.Show();
+                    PROG265.BringToFront();
+                    PROG265.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG264":
+                    var PROG264 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG264.Show();
+                    PROG264.BringToFront();
+                    PROG264.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG263":
+                    var PROG263 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG263.Show();
+                    PROG263.BringToFront();
+                    PROG263.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG262":
+                    var PROG262 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG262.Show();
+                    PROG262.BringToFront();
+                    PROG262.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG261":
+                    var PROG261 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG261.Show();
+                    PROG261.BringToFront();
+                    PROG261.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG260":
+                    var PROG260 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG260.Show();
+                    PROG260.BringToFront();
+                    PROG260.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG259":
+                    var PROG259 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG259.Show();
+                    PROG259.BringToFront();
+                    PROG259.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG258":
+                    var PROG258 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG258.Show();
+                    PROG258.BringToFront();
+                    PROG258.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG257":
+                    var PROG257 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG257.Show();
+                    PROG257.BringToFront();
+                    PROG257.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG256":
+                    var PROG256 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG256.Show();
+                    PROG256.BringToFront();
+                    PROG256.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG255":
+                    var PROG255 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG255.Show();
+                    PROG255.BringToFront();
+                    PROG255.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG254":
+                    var PROG254 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG254.Show();
+                    PROG254.BringToFront();
+                    PROG254.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG253":
+                    var PROG253 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG253.Show();
+                    PROG253.BringToFront();
+                    PROG253.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
+                case "PROG252":
+                    var PROG252 = new WindowsFormsApplication1.Misc_forms.frmWhatsGroupMessageSender() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    PROG252.Show();
+                    PROG252.BringToFront();
+                    PROG252.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
+                    SetImage();
+                    break;
                 case "PROG251":
                     var PROG251 = new Transaction.frmAttendenceFeedingDateWise() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG251.Show();
@@ -2191,6 +2313,46 @@ namespace WindowsFormsApplication1
             PROG2000.Parent = Page;
             xtraTabControl1.SelectedTabPage = Page;
             SetImage();
+        }
+
+        private void skinDropDownButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
+        }
+
+        private void skinDropDownButtonItem2_DownChanged(object sender, ItemClickEventArgs e)
+        {
+            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
+        }
+
+        private void skinDropDownButtonItem2_HyperlinkClick(object sender, DevExpress.Utils.HyperlinkClickEventArgs e)
+        {
+            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Text  + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
+        }
+
+        private void skinDropDownButtonItem2_ItemPress(object sender, ItemClickEventArgs e)
+        {
+            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
+        }
+
+        private void skinDropDownButtonItem2_ItemDoubleClick(object sender, ItemClickEventArgs e)
+        {
+            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
+        }
+
+        private void skinBarSubItem2_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
+        }
+
+        private void skinBarSubItem2_GetItemData(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void skinBarSubItem2_CloseUp(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -241,6 +241,7 @@ namespace WindowsFormsApplication1
             SqlConnection cnn = new SqlConnection(ProjectFunctions.ConnectionString);
             try
             {
+               
                 cnn.Open();
                 cnn.Close();
             }

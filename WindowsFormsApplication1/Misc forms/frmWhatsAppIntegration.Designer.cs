@@ -36,21 +36,16 @@ namespace WindowsFormsApplication1.Misc_forms
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.txtMobileNo = new DevExpress.XtraEditors.TextEdit();
             this.txtStatus = new DevExpress.XtraEditors.TextEdit();
-            this.ChatItemGrid = new DevExpress.XtraGrid.GridControl();
-            this.ChatItemGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSync = new DevExpress.XtraEditors.SimpleButton();
             this.txtMessageCount = new DevExpress.XtraEditors.TextEdit();
-            this.radChat1 = new Telerik.WinControls.UI.RadChat();
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMobileNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChatItemGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChatItemGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMessageCount.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radChat1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearchBar
@@ -91,6 +86,7 @@ namespace WindowsFormsApplication1.Misc_forms
             this.simpleButton1.Size = new System.Drawing.Size(85, 29);
             this.simpleButton1.TabIndex = 5;
             this.simpleButton1.Text = "Send";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // txtMobileNo
             // 
@@ -106,30 +102,14 @@ namespace WindowsFormsApplication1.Misc_forms
             this.txtStatus.Size = new System.Drawing.Size(359, 22);
             this.txtStatus.TabIndex = 7;
             // 
-            // ChatItemGrid
+            // btnSync
             // 
-            this.ChatItemGrid.Location = new System.Drawing.Point(389, 15);
-            this.ChatItemGrid.MainView = this.ChatItemGridView;
-            this.ChatItemGrid.Name = "ChatItemGrid";
-            this.ChatItemGrid.Size = new System.Drawing.Size(210, 310);
-            this.ChatItemGrid.TabIndex = 8;
-            this.ChatItemGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.ChatItemGridView});
-            // 
-            // ChatItemGridView
-            // 
-            this.ChatItemGridView.GridControl = this.ChatItemGrid;
-            this.ChatItemGridView.Name = "ChatItemGridView";
-            this.ChatItemGridView.OptionsView.ShowGroupPanel = false;
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.Location = new System.Drawing.Point(289, 129);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(85, 29);
-            this.btnLoad.TabIndex = 9;
-            this.btnLoad.Text = "Load";
-            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            this.btnSync.Location = new System.Drawing.Point(67, 120);
+            this.btnSync.Name = "btnSync";
+            this.btnSync.Size = new System.Drawing.Size(185, 29);
+            this.btnSync.TabIndex = 9;
+            this.btnSync.Text = "Sync With Whats App";
+            this.btnSync.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // txtMessageCount
             // 
@@ -139,14 +119,14 @@ namespace WindowsFormsApplication1.Misc_forms
             this.txtMessageCount.Size = new System.Drawing.Size(60, 22);
             this.txtMessageCount.TabIndex = 10;
             // 
-            // radChat1
+            // simpleButton2
             // 
-            this.radChat1.Location = new System.Drawing.Point(620, 15);
-            this.radChat1.Name = "radChat1";
-            this.radChat1.Size = new System.Drawing.Size(295, 440);
-            this.radChat1.TabIndex = 11;
-            this.radChat1.Text = "radChat1";
-            this.radChat1.TimeSeparatorInterval = System.TimeSpan.Parse("1.00:00:00");
+            this.simpleButton2.Location = new System.Drawing.Point(282, 120);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.Size = new System.Drawing.Size(92, 29);
+            this.simpleButton2.TabIndex = 11;
+            this.simpleButton2.Text = "Load";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // FrmWhatsAppIntegration
             // 
@@ -154,10 +134,9 @@ namespace WindowsFormsApplication1.Misc_forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 508);
             this.ControlBox = false;
-            this.Controls.Add(this.radChat1);
+            this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.txtMessageCount);
-            this.Controls.Add(this.btnLoad);
-            this.Controls.Add(this.ChatItemGrid);
+            this.Controls.Add(this.btnSync);
             this.Controls.Add(this.txtStatus);
             this.Controls.Add(this.txtMobileNo);
             this.Controls.Add(this.simpleButton1);
@@ -175,10 +154,7 @@ namespace WindowsFormsApplication1.Misc_forms
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMobileNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChatItemGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChatItemGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMessageCount.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radChat1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,10 +168,8 @@ namespace WindowsFormsApplication1.Misc_forms
         private DevExpress.XtraEditors.TextEdit txtMobileNo;
         private DevExpress.XtraEditors.TextEdit txtStatus;
         public DevExpress.XtraGrid.GridControl ContactGrid;
-        public DevExpress.XtraGrid.GridControl ChatItemGrid;
-        private DevExpress.XtraGrid.Views.Grid.GridView ChatItemGridView;
-        private DevExpress.XtraEditors.SimpleButton btnLoad;
+        private DevExpress.XtraEditors.SimpleButton btnSync;
         private DevExpress.XtraEditors.TextEdit txtMessageCount;
-        private Telerik.WinControls.UI.RadChat radChat1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

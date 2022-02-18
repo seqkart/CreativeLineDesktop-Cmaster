@@ -1,9 +1,9 @@
 /*!
  * DevExpress Gantt (dx-gantt)
- * Version: 4.0.0
- * Build date: Thu Dec 02 2021
+ * Version: 4.0.3
+ * Build date: Wed Jan 12 2022
  * 
- * Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
+ * Copyright (c) 2012 - 2022 Developer Express Inc. ALL RIGHTS RESERVED
  * Read about DevExpress licensing here: https://www.devexpress.com/Support/EULAs
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -1796,6 +1796,7 @@ var TaskAreaStateEventNames = (function () {
     TaskAreaStateEventNames.TASK_AREA_ZOOM_IN = "taskAreaZoomIn";
     TaskAreaStateEventNames.TASK_AREA_ZOOM_OUT = "taskAreaZoomOut";
     TaskAreaStateEventNames.CONTEXTMENU_SHOW = "contextMenuShow";
+    TaskAreaStateEventNames.CONTEXTMENU_HIDE = "contextMenuHide";
     TaskAreaStateEventNames.DEPENDENCY_SELECTION = "dependencySelection";
     TaskAreaStateEventNames.STATE_EXIT = "stateExit";
     TaskAreaStateEventNames.TASK_SELECTION = "taskSelection";
@@ -2499,7 +2500,7 @@ var CollectionBase = (function () {
             this.createItemFromObjectAndAdd(source);
     };
     CollectionBase.prototype.createItemFromObjectAndAdd = function (source) {
-        if ((0, common_1.isDefined)(source)) {
+        if ((0, common_1.isDefined)(source) && Object.keys(source).length > 0) {
             var item = this.createItem();
             item.assignFromObject(source);
             this.add(item);
@@ -2870,7 +2871,7 @@ var GridLayoutCalculator = (function () {
         var viewItem = this.getViewItem(index);
         if (viewItem.task.isMilestone() && !viewItem.isCustom)
             return this.milestoneWidth;
-        if (this.viewModel.isTaskToCalculateByChildren(viewItem.task.id))
+        if (this.viewModel.isTaskToCalculateByChildren(viewItem.task.internalId))
             return this.parentTaskHeight;
         return (viewItem.isCustom && viewItem.size.height) ? viewItem.size.height : this.taskHeight;
     };
@@ -5244,8 +5245,7 @@ var TaskEditController = (function () {
         if (this.task.isMilestone() && !this.viewItem.isCustom)
             this.baseElement.className = this.baseElement.className + " milestone";
         else {
-            var isHideTaskEditBox = !this.ganttSettings.editing.enabled || !this.ganttSettings.editing.allowTaskUpdate;
-            if (isHideTaskEditBox)
+            if (!this.isTaskUpdateAllowed())
                 this.baseElement.className = this.baseElement.className + " hide-updating";
             if (this.viewItem.isCustom) {
                 this.baseElement.classList.add(TaskEditController.CLASSNAMES.TASK_EDIT_BOX_CUSTOM);
@@ -5258,7 +5258,8 @@ var TaskEditController = (function () {
         this.displayStartEndEditElements();
     };
     TaskEditController.prototype.displayStartEndEditElements = function () {
-        if (!this.canUpdateTask()) {
+        var showElements = this.isTaskUpdateAllowed() && this.canUpdateTask();
+        if (!showElements) {
             this.startEdit.style.display = "none";
             this.endEdit.style.display = "none";
         }
@@ -5268,8 +5269,7 @@ var TaskEditController = (function () {
         }
     };
     TaskEditController.prototype.displayProgressEdit = function () {
-        var isEditingAllowed = this.ganttSettings.editing.enabled && this.ganttSettings.editing.allowTaskUpdate;
-        if (!this.viewItem.isCustom && this.canUpdateTask() && isEditingAllowed && this.wrapInfo.size.width > this.wrapInfo.size.height) {
+        if (!this.viewItem.isCustom && this.canUpdateTask() && this.isTaskUpdateAllowed() && this.wrapInfo.size.width > this.wrapInfo.size.height) {
             this.progressEdit.style.display = "block";
             this.progressEdit.style.left = ((this.task.progress / 100) * this.wrapInfo.size.width - (this.progressEdit.offsetWidth / 2)) + "px";
         }
@@ -5344,6 +5344,8 @@ var TaskEditController = (function () {
         this.successorIndex = -1;
     };
     TaskEditController.prototype.processProgress = function (position) {
+        if (!this.isTaskUpdateAllowed())
+            return;
         this.isEditingInProgress = true;
         var progressOffset = position.x - this.wrapInfo.position.x;
         var progress = 0;
@@ -5357,11 +5359,15 @@ var TaskEditController = (function () {
         this.tooltip.showProgress(progress, dom_1.DomUtils.getAbsolutePositionX(this.progressEdit) + this.progressEdit.offsetWidth / 2);
     };
     TaskEditController.prototype.confirmProgress = function () {
-        this.isEditingInProgress = false;
-        var progress = Math.round((this.progressEdit.offsetLeft + (this.progressEdit.offsetWidth / 2)) / this.wrapInfo.size.width * 100);
-        this.commandManager.changeTaskProgressCommand.execute(this.taskId, progress);
+        if (this.isTaskUpdateAllowed()) {
+            this.isEditingInProgress = false;
+            var progress = Math.round((this.progressEdit.offsetLeft + (this.progressEdit.offsetWidth / 2)) / this.wrapInfo.size.width * 100);
+            this.commandManager.changeTaskProgressCommand.execute(this.taskId, progress);
+        }
     };
     TaskEditController.prototype.processEnd = function (position) {
+        if (!this.isTaskUpdateAllowed())
+            return;
         this.baseElement.className = this.baseElement.className + " move";
         this.isEditingInProgress = true;
         var positionX = position.x > this.wrapInfo.position.x ? position.x : this.wrapInfo.position.x;
@@ -5377,13 +5383,17 @@ var TaskEditController = (function () {
         this.tooltip.showTime(startDate, this.taskDateRange.end, dom_1.DomUtils.getAbsolutePositionX(this.baseElement) + this.baseElement.clientWidth);
     };
     TaskEditController.prototype.confirmEnd = function () {
-        this.baseElement.className = TaskEditController.CLASSNAMES.TASK_EDIT_BOX;
-        this.isEditingInProgress = false;
-        this.commandManager.changeTaskEndCommand.execute(this.taskId, this.taskDateRange.end);
-        this.hide();
-        this.updateWrapInfo();
+        if (this.isTaskUpdateAllowed()) {
+            this.baseElement.className = TaskEditController.CLASSNAMES.TASK_EDIT_BOX;
+            this.isEditingInProgress = false;
+            this.commandManager.changeTaskEndCommand.execute(this.taskId, this.taskDateRange.end);
+            this.hide();
+            this.updateWrapInfo();
+        }
     };
     TaskEditController.prototype.processStart = function (position) {
+        if (!this.isTaskUpdateAllowed())
+            return;
         this.baseElement.className = this.baseElement.className + " move";
         this.isEditingInProgress = true;
         var positionX = position.x < this.wrapInfo.position.x + this.wrapInfo.size.width ? position.x : this.wrapInfo.position.x + this.wrapInfo.size.width;
@@ -5400,14 +5410,16 @@ var TaskEditController = (function () {
         this.tooltip.showTime(this.taskDateRange.start, endDate, dom_1.DomUtils.getAbsolutePositionX(this.baseElement));
     };
     TaskEditController.prototype.confirmStart = function () {
-        this.baseElement.className = TaskEditController.CLASSNAMES.TASK_EDIT_BOX;
-        this.isEditingInProgress = false;
-        this.commandManager.changeTaskStartCommand.execute(this.taskId, this.taskDateRange.start);
-        this.hide();
-        this.updateWrapInfo();
+        if (this.isTaskUpdateAllowed()) {
+            this.baseElement.className = TaskEditController.CLASSNAMES.TASK_EDIT_BOX;
+            this.isEditingInProgress = false;
+            this.commandManager.changeTaskStartCommand.execute(this.taskId, this.taskDateRange.start);
+            this.hide();
+            this.updateWrapInfo();
+        }
     };
     TaskEditController.prototype.processMove = function (delta) {
-        if (this.ganttSettings.editing.enabled && this.ganttSettings.editing.allowTaskUpdate && this.isTaskEditBoxShown) {
+        if (this.isTaskUpdateAllowed() && this.isTaskEditBoxShown) {
             this.baseElement.className = this.baseElement.className + " move";
             var left = this.baseElement.offsetLeft + delta;
             this.baseElement.style.left = left + "px";
@@ -5435,7 +5447,7 @@ var TaskEditController = (function () {
         this.taskDateRange.end = newEnd;
     };
     TaskEditController.prototype.confirmMove = function () {
-        if (this.ganttSettings.editing.enabled && this.ganttSettings.editing.allowTaskUpdate) {
+        if (this.isTaskUpdateAllowed()) {
             if (!this.ganttSettings.editing.allowDependencyInsert)
                 this.baseElement.className = this.baseElement.className + " hide-dependency";
             if (this.isEditingInProgress) {
@@ -5566,6 +5578,10 @@ var TaskEditController = (function () {
     };
     TaskEditController.prototype.canUpdateTask = function () {
         return !this.viewModel.isTaskToCalculateByChildren(this.task.internalId);
+    };
+    TaskEditController.prototype.isTaskUpdateAllowed = function () {
+        var settings = this.ganttSettings.editing;
+        return settings.enabled && settings.allowTaskUpdate;
     };
     TaskEditController.prototype.detachEvents = function () {
         var _a;
@@ -5757,6 +5773,10 @@ var GanttView = (function () {
     };
     GanttView.prototype.showPopupMenu = function (info) {
         this.ganttOwner.showPopupMenu(info);
+    };
+    GanttView.prototype.hidePopupMenu = function () {
+        if (this.ganttOwner.hidePopupMenu)
+            this.ganttOwner.hidePopupMenu();
     };
     GanttView.prototype.collapseAll = function () {
         this.ganttOwner.collapseAll();
@@ -12129,12 +12149,15 @@ var ScaleCalculator = (function () {
     ScaleCalculator.prototype.getScaleIndexByPos = function (pos, scaleType) {
         scaleType !== null && scaleType !== void 0 ? scaleType : (scaleType = this.viewType);
         var items = scaleType === this.viewType ? this.bottomScaleItems : this.topScaleItems;
-        for (var i = 0; i < items.length; i++) {
-            var item = items[i];
-            if (pos >= item.position.x && pos <= item.position.x + item.size.width)
-                return i;
+        var index = -1;
+        if (items.findIndex)
+            index = items.findIndex(function (i) { return pos >= i.position.x && pos <= i.position.x + i.size.width; });
+        else {
+            var item = items.filter(function (i) { return pos >= i.position.x && pos <= i.position.x + i.size.width; })[0];
+            if (item)
+                index = items.indexOf(item);
         }
-        return -1;
+        return index;
     };
     ScaleCalculator.prototype.getScaleBorderPosition = function (index, scaleType) {
         var item = this.getScaleItems(scaleType)[index];
@@ -12229,14 +12252,27 @@ var ScaleCalculator = (function () {
     };
     ScaleCalculator.prototype.calculateTopScale = function (scaleType) {
         var items = new Array();
-        var currentDate = this.range.start;
-        var x = 0;
-        while (currentDate.getTime() < this.range.end.getTime()) {
-            var nextDate = this.getNextScaleDate(currentDate, scaleType);
-            var width = this.getPosInScale(nextDate) - this.getPosInScale(currentDate);
-            items.push(new ScaleItemInfo(currentDate, nextDate, new point_1.Point(x, undefined), new size_1.Size(width, 0)));
-            currentDate = nextDate;
-            x += width;
+        var endRangeTime = this.range.end.getTime();
+        var itemStartDate = this.range.start;
+        var itemStartPos = 0;
+        var lastBottomIndex = 0;
+        while (itemStartDate.getTime() < endRangeTime) {
+            var itemNextDate = this.getNextScaleDate(itemStartDate, scaleType);
+            var nextDateTime = itemNextDate.getTime();
+            for (var i = lastBottomIndex; i < this.bottomScaleItems.length; i++) {
+                var item = this.bottomScaleItems[i];
+                var startTime = item.start.getTime();
+                var endTime = item.end.getTime();
+                var isNextDateInItem = nextDateTime >= startTime && nextDateTime <= endTime;
+                if (isNextDateInItem) {
+                    var itemEndPos = (nextDateTime - startTime) / (endTime - startTime) * item.size.width + item.position.x;
+                    items.push(new ScaleItemInfo(itemStartDate, itemNextDate, new point_1.Point(itemStartPos, undefined), new size_1.Size(itemEndPos - itemStartPos, 0)));
+                    lastBottomIndex = i;
+                    itemStartPos = itemEndPos;
+                    itemStartDate = itemNextDate;
+                    break;
+                }
+            }
         }
         return items;
     };
@@ -12253,18 +12289,6 @@ var ScaleCalculator = (function () {
             }
         }
         return new Date(this.range.end);
-    };
-    ScaleCalculator.prototype.getPosInScale = function (date) {
-        var time = date.getTime();
-        for (var i = 0; i < this.bottomScaleItems.length; i++) {
-            var item = this.bottomScaleItems[i];
-            var startTime = item.start.getTime();
-            var endTime = item.end.getTime();
-            var width = item.size.width;
-            if (time >= startTime && time <= endTime)
-                return (time - startTime) / (endTime - startTime) * width + item.position.x;
-        }
-        return 0;
     };
     ScaleCalculator.prototype.getNextScaleDate = function (start, scaleType) {
         var date;
@@ -17582,7 +17606,10 @@ var TaskAreaDefaultState = (function (_super) {
     function TaskAreaDefaultState() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    TaskAreaDefaultState.prototype.finish = function () { this.clearTimers(); };
+    TaskAreaDefaultState.prototype.finish = function () {
+        this.clearTimers();
+        this.raiseEvent(TaskAreaStateEventNames_1.TaskAreaStateEventNames.CONTEXTMENU_HIDE);
+    };
     TaskAreaDefaultState.prototype.onMouseDownInternal = function (evt) { this.onPointerDownBase(evt); };
     TaskAreaDefaultState.prototype.onDocumentPointerDownInternal = function (evt) { this.onPointerDownBase(evt); };
     TaskAreaDefaultState.prototype.onDocumentPointerUpInternal = function (evt) { this.onPointerUpBase(evt); };
@@ -17598,7 +17625,11 @@ var TaskAreaDefaultState = (function (_super) {
         if (isMouse)
             this.changeSelectionOnTouchDown(evt);
         else {
-            setTimeout(function () { return _this.changeSelectionOnTouchDown(evt); }, 0);
+            setTimeout(function () {
+                if (!TaskAreaDomHelper_1.TaskAreaDomHelper.isMousePointer(evt))
+                    _this.raiseEvent(TaskAreaStateEventNames_1.TaskAreaStateEventNames.CONTEXTMENU_HIDE, evt);
+                _this.changeSelectionOnTouchDown(evt);
+            }, 0);
             clearTimeout(this._contextMenuTimer);
             this._contextMenuTimer = setTimeout(function () { return _this.showContextMenuOnTouchDown(evt); }, TaskAreaDefaultState.defaultContextMenuTimeout);
         }
@@ -17613,6 +17644,8 @@ var TaskAreaDefaultState = (function (_super) {
             if (!this._lastEmulatedClickTime) {
                 var clickCanceled = !this.raiseEvent(TaskAreaStateEventNames_1.TaskAreaStateEventNames.TASK_AREA_CLICK, evt, rowIndex);
                 clearTimeout(this._dblClickClearTimer);
+                if (TaskAreaDomHelper_1.TaskAreaDomHelper.isMousePointer(evt))
+                    this.raiseEvent(TaskAreaStateEventNames_1.TaskAreaStateEventNames.CONTEXTMENU_HIDE, evt);
                 if (!clickCanceled) {
                     this._lastEmulatedClickTime = now;
                     this._dblClickClearTimer = setTimeout(function () { delete _this._lastEmulatedClickTime; }, TaskAreaDefaultState.defaultDblClickClearTimeout);
@@ -21199,6 +21232,7 @@ var TaskAreaEventsListener = (function () {
         handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.TASK_AREA_ZOOM_IN] = this.taskAreaZoomInHandler.bind(this);
         handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.TASK_AREA_ZOOM_OUT] = this.taskAreaZoomOutHandler.bind(this);
         handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.CONTEXTMENU_SHOW] = this.taskAreaContextMenuShowHandler.bind(this);
+        handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.CONTEXTMENU_HIDE] = this.taskAreaContextMenuHideHandler.bind(this);
         handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.TASK_SELECTION] = this.taskSelectionHandler.bind(this);
         handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.DEPENDENCY_SELECTION] = this.dependencySelectionHandler.bind(this);
         handlers[TaskAreaStateEventNames_1.TaskAreaStateEventNames.TASK_EDIT_START] = this.taskEditStartHandler.bind(this);
@@ -21232,6 +21266,9 @@ var TaskAreaEventsListener = (function () {
     };
     TaskAreaEventsListener.prototype.taskAreaContextMenuShowHandler = function (args) {
         this._owner.onTaskAreaContextMenu(args.rowIndex, args.triggerEvent, args.info["type"]);
+    };
+    TaskAreaEventsListener.prototype.taskAreaContextMenuHideHandler = function () {
+        this._owner.hidePopupMenu();
     };
     TaskAreaEventsListener.prototype.taskAreaScrollHandler = function (args) {
         this._owner.updateView();

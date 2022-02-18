@@ -1,18 +1,14 @@
 ﻿using DevExpress.XtraEditors;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
+using Telerik.WinControls.UI;
 
 namespace WindowsFormsApplication1.Misc_forms
 {
@@ -89,9 +85,12 @@ namespace WindowsFormsApplication1.Misc_forms
                         {
    
                             DataTable dtNew = new DataTable();
+                            dtNew.Columns.Add("FROMCHATNO");
+                            dtNew.Columns.Add("TOCHATNO");
                             dtNew.Columns.Add("YOU");
                             dtNew.Columns.Add("OTHER");
                             dtNew.Columns.Add("YOUMEDIA");
+                            dtNew.Columns.Add("WHATSAPPID");
 
                             foreach (DataRow dr in dt.Rows)
                             {
@@ -103,6 +102,7 @@ namespace WindowsFormsApplication1.Misc_forms
                                 if (dr[@"\fromMe\"].ToString().ToUpper() == "TRUE")
                                 {
                                     dataRow["YOU"] = dr[@"\body\"].ToString().Replace(@"\","");
+                                    dataRow["FROMCHATNO"] = GlobalVariables.WhatAppMobileNo;
                                 }
                                 else
                                 {
@@ -111,23 +111,37 @@ namespace WindowsFormsApplication1.Misc_forms
                                 if (dr[@"\fromMe\"].ToString().ToUpper() == "FALSE")
                                 {
                                     dataRow["OTHER"] = dr[@"\body\"].ToString().Replace(@"\", "");
+                                    dataRow["TOCHATNO"] = dr[@"\senderPhoneNumber\"].ToString().Replace(@"\", "");
                                 }
                                 else
                                 {
                                     dataRow["OTHER"] = "";
                                 }
-                                
+                                dataRow["WHATSAPPID"] = dr[@"\id\"].ToString().Replace(@"\", "");
                                 dtNew.Rows.Add(dataRow);
                             }
                             if (dtNew.Rows.Count > 0)
                             {
-                                ChatItemGrid.DataSource = dtNew;
-                                ChatItemGridView.BestFitColumns();
-                            }
-                            else
-                            {
-                                ChatItemGrid.DataSource = null;
-                                ChatItemGridView.BestFitColumns();
+                                foreach (DataRow dr in dtNew.Rows)
+                                {
+                                  DataSet ds=  ProjectFunctions.GetDataSet("Select FROMCHATNO from CHATDATA where WHATSAPPID='" + dr["WHATSAPPID"].ToString() + "'");
+                                    if(ds.Tables[0].Rows.Count>0)
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        String Query = "Insert into CHATDATA(FROMCHATNO,TOCHATNO,FROMCHAT,TOCHAT,WHATSAPPID)values(";
+                                        Query = Query + "'" + dr["FROMCHATNO"].ToString() + "',";
+                                        Query = Query + "'" + dr["TOCHATNO"].ToString() + "',";
+                                        Query = Query + "'" + dr["YOU"].ToString() + "',";
+                                        Query = Query + "'" + dr["OTHER"].ToString() + "',";
+                                        Query = Query + "'" + dr["WHATSAPPID"].ToString() + "')";
+
+                                        ProjectFunctions.GetDataSet(Query);
+                                    }
+                                   
+                                }
                             }
                         }
                     }
@@ -193,11 +207,23 @@ namespace WindowsFormsApplication1.Misc_forms
            
             txtStatus.Text = GlobalVariables.WhatAppStatus;
             txtMobileNo.Text = GlobalVariables.WhatAppMobileNo;
+
+           
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
         {
             WhatsAppchat(txtSearchBar.Text, txtMessageCount.Text);
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void simpleButton2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

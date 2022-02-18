@@ -124,6 +124,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnSave.Size = new System.Drawing.Size(148, 47);
             this.btnSave.TabIndex = 33;
             this.btnSave.Text = "Save && Print";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // groupControl1
             // 

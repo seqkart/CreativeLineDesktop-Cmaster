@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup3 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem1 = new DevExpress.XtraBars.Ribbon.GalleryItem();
-            DevExpress.XtraBars.Navigation.AccordionContextButton accordionContextButton1 = new DevExpress.XtraBars.Navigation.AccordionContextButton();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup4 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup5 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup6 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.GalleryItem galleryItem2 = new DevExpress.XtraBars.Ribbon.GalleryItem();
+            DevExpress.XtraBars.Navigation.AccordionContextButton accordionContextButton2 = new DevExpress.XtraBars.Navigation.AccordionContextButton();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(XtraForm1));
-            DevExpress.Utils.Animation.CombTransition combTransition1 = new DevExpress.Utils.Animation.CombTransition();
+            DevExpress.Utils.Animation.CombTransition combTransition2 = new DevExpress.Utils.Animation.CombTransition();
             this.tabbedView = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this._ribbonControl = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.skinDropDownButtonItem1 = new DevExpress.XtraBars.SkinDropDownButtonItem();
@@ -88,10 +88,11 @@
             this.skinPaletteDropDownButtonItem1 = new DevExpress.XtraBars.SkinPaletteDropDownButtonItem();
             this.skinDropDownButtonItem2 = new DevExpress.XtraBars.SkinDropDownButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnWhatsAp = new DevExpress.XtraBars.BarButtonItem();
+            this.skinBarSubItem2 = new DevExpress.XtraBars.SkinBarSubItem();
             this.HelpGrid = new DevExpress.XtraGrid.GridControl();
             this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnWhatsAp = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._ribbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.galleryDropDown1)).BeginInit();
@@ -154,6 +155,7 @@
             this._ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
             this._ribbonControl.Size = new System.Drawing.Size(1172, 153);
             this._ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
+            this._ribbonControl.Visible = false;
             // 
             // skinDropDownButtonItem1
             // 
@@ -220,11 +222,11 @@
             // 
             // 
             // 
-            galleryItemGroup1.Caption = "Group2";
-            galleryItemGroup2.Caption = "Group3";
+            galleryItemGroup4.Caption = "Group2";
+            galleryItemGroup5.Caption = "Group3";
             this.ribbonGalleryBarItem2.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup1,
-            galleryItemGroup2});
+            galleryItemGroup4,
+            galleryItemGroup5});
             this.ribbonGalleryBarItem2.Id = 82;
             this.ribbonGalleryBarItem2.Name = "ribbonGalleryBarItem2";
             // 
@@ -234,12 +236,12 @@
             // 
             // 
             // 
-            galleryItemGroup3.Caption = "Group4";
-            galleryItem1.Caption = "Item6";
-            galleryItemGroup3.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
-            galleryItem1});
+            galleryItemGroup6.Caption = "Group4";
+            galleryItem2.Caption = "Item6";
+            galleryItemGroup6.Items.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItem[] {
+            galleryItem2});
             this.ribbonGalleryBarItem3.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup3});
+            galleryItemGroup6});
             this.ribbonGalleryBarItem3.GalleryDropDown = this.galleryDropDown1;
             this.ribbonGalleryBarItem3.Id = 83;
             this.ribbonGalleryBarItem3.Name = "ribbonGalleryBarItem3";
@@ -313,12 +315,12 @@
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.WhatsappQrCode,
             this.accordionControlSeparator2});
-            accordionContextButton1.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
-            accordionContextButton1.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
-            accordionContextButton1.Caption = "accordionContextButton1";
-            accordionContextButton1.Id = new System.Guid("72f9461c-093c-40e4-a957-9f3a633e8a33");
-            accordionContextButton1.Name = "SKIN";
-            this.accordionControl1.ItemContextButtons.Add(accordionContextButton1);
+            accordionContextButton2.AlignmentOptions.Panel = DevExpress.Utils.ContextItemPanel.Center;
+            accordionContextButton2.AlignmentOptions.Position = DevExpress.Utils.ContextItemPosition.Far;
+            accordionContextButton2.Caption = "accordionContextButton1";
+            accordionContextButton2.Id = new System.Guid("72f9461c-093c-40e4-a957-9f3a633e8a33");
+            accordionContextButton2.Name = "SKIN";
+            this.accordionControl1.ItemContextButtons.Add(accordionContextButton2);
             this.accordionControl1.Location = new System.Drawing.Point(0, 0);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
@@ -329,7 +331,6 @@
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
             this.accordionControl1.Size = new System.Drawing.Size(223, 835);
             this.accordionControl1.TabIndex = 0;
-            this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
             // accordionContentContainer1
             // 
@@ -450,7 +451,7 @@
             this.xtraTabControl1.Size = new System.Drawing.Size(944, 835);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.Transition.EasingMode = DevExpress.Data.Utils.EasingMode.EaseInOut;
-            this.xtraTabControl1.Transition.TransitionType = combTransition1;
+            this.xtraTabControl1.Transition.TransitionType = combTransition2;
             this.xtraTabControl1.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTabControl1_SelectedPageChanged);
             this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.XtraTabControl1_CloseButtonClick);
             this.xtraTabControl1.Validating += new System.ComponentModel.CancelEventHandler(this.XtraTabControl1_Validating);
@@ -520,6 +521,7 @@
             this.toolbarFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem2);
             this.toolbarFormControl1.TitleItemLinks.Add(this.barButtonItem4);
             this.toolbarFormControl1.TitleItemLinks.Add(this.btnWhatsAp);
+            this.toolbarFormControl1.TitleItemLinks.Add(this.skinBarSubItem2);
             this.toolbarFormControl1.ToolbarForm = this;
             // 
             // toolbarFormManager1
@@ -535,8 +537,9 @@
             this.skinPaletteDropDownButtonItem1,
             this.skinDropDownButtonItem2,
             this.barButtonItem4,
-            this.btnWhatsAp});
-            this.toolbarFormManager1.MaxItemId = 6;
+            this.btnWhatsAp,
+            this.skinBarSubItem2});
+            this.toolbarFormManager1.MaxItemId = 7;
             // 
             // barDockControlTop
             // 
@@ -600,6 +603,11 @@
             this.skinDropDownButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.skinDropDownButtonItem2.Id = 3;
             this.skinDropDownButtonItem2.Name = "skinDropDownButtonItem2";
+            this.skinDropDownButtonItem2.DownChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_DownChanged);
+            this.skinDropDownButtonItem2.HyperlinkClick += new DevExpress.Utils.HyperlinkClickEventHandler(this.skinDropDownButtonItem2_HyperlinkClick);
+            this.skinDropDownButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemClick);
+            this.skinDropDownButtonItem2.ItemDoubleClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemDoubleClick);
+            this.skinDropDownButtonItem2.ItemPress += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemPress);
             // 
             // barButtonItem4
             // 
@@ -610,10 +618,27 @@
             this.barButtonItem4.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BarButtonItem4_ItemClick);
             // 
+            // btnWhatsAp
+            // 
+            this.btnWhatsAp.Caption = "Whats App";
+            this.btnWhatsAp.Id = 5;
+            this.btnWhatsAp.Name = "btnWhatsAp";
+            this.btnWhatsAp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWhatsAp_ItemClick);
+            // 
+            // skinBarSubItem2
+            // 
+            this.skinBarSubItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.skinBarSubItem2.Caption = "skinBarSubItem2";
+            this.skinBarSubItem2.Id = 6;
+            this.skinBarSubItem2.Name = "skinBarSubItem2";
+            this.skinBarSubItem2.GetItemData += new System.EventHandler(this.skinBarSubItem2_GetItemData);
+            this.skinBarSubItem2.CloseUp += new System.EventHandler(this.skinBarSubItem2_CloseUp);
+            this.skinBarSubItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinBarSubItem2_ItemClick);
+            // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(567, 39);
+            this.HelpGrid.Location = new System.Drawing.Point(596, 95);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -644,13 +669,6 @@
             this.gridView1.DetailHeight = 458;
             this.gridView1.GridControl = this.HelpGrid;
             this.gridView1.Name = "gridView1";
-            // 
-            // btnWhatsAp
-            // 
-            this.btnWhatsAp.Caption = "Whats App";
-            this.btnWhatsAp.Id = 5;
-            this.btnWhatsAp.Name = "btnWhatsAp";
-            this.btnWhatsAp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWhatsAp_ItemClick);
             // 
             // XtraForm1
             // 
@@ -764,5 +782,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraBars.BarButtonItem btnWhatsAp;
+        private DevExpress.XtraBars.SkinBarSubItem skinBarSubItem2;
     }
 }

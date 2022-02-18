@@ -1,5 +1,6 @@
 ﻿using DevExpress.Utils.Menu;
 using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
 using System;
 using System.Data;
 using System.Drawing;
@@ -49,7 +50,14 @@ namespace WindowsFormsApplication1.FormReports
                 DXMenuItem FixLeft;
                 DXMenuItem FixRight;
                 DXMenuItem UnFix;
+                DXMenuItem EXPORTTOEXCEL;
 
+                EXPORTTOEXCEL = new DXMenuItem("EXPORT TO EXCEL", (o1, e1) =>
+                {
+                    xtraSaveFileDialog1.FileName = "SALE.xlsx";
+                    xtraSaveFileDialog1.ShowDialog();
+
+                });
 
                 Copy = new DXMenuItem("Copy", (o1, e1) =>
                 {
@@ -112,13 +120,14 @@ namespace WindowsFormsApplication1.FormReports
                 e.Menu.Items.Add(FixLeft);
                 e.Menu.Items.Add(FixRight);
                 e.Menu.Items.Add(UnFix);
+                e.Menu.Items.Add(EXPORTTOEXCEL);
 
             }
 
             catch (Exception ex)
 
             {
-                ProjectFunctions.SpeakError(ex.Message);
+                
             }
         }
 
@@ -144,6 +153,13 @@ namespace WindowsFormsApplication1.FormReports
                 frm.ShowDialog(Parent);
             }
 
+        }
+
+       
+
+        private void xtraSaveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MasterGridView.ExportToXlsx(xtraSaveFileDialog1.FileName, new XlsxExportOptionsEx());
         }
     }
 }

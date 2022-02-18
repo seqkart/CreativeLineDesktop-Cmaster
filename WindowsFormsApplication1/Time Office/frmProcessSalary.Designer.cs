@@ -447,7 +447,7 @@
             // 
             // btnUnlock
             // 
-            this.btnUnlock.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.btnUnlock.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnUnlock.ImageOptions.SvgImage")));
             this.btnUnlock.Location = new System.Drawing.Point(824, 0);
             this.btnUnlock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUnlock.Name = "btnUnlock";
