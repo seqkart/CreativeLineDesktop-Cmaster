@@ -47,7 +47,7 @@
             this.cmbSelectUser.Location = new System.Drawing.Point(87, 52);
             this.cmbSelectUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSelectUser.Name = "cmbSelectUser";
-            this.cmbSelectUser.Size = new System.Drawing.Size(305, 25);
+            this.cmbSelectUser.Size = new System.Drawing.Size(305, 24);
             this.cmbSelectUser.TabIndex = 0;
             // 
             // Menu_ToolStrip
@@ -99,7 +99,7 @@
             this.label3.Location = new System.Drawing.Point(20, 56);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 336;
             this.label3.Text = "UserName";
             // 
@@ -109,7 +109,7 @@
             this.cmbSelectFY.Location = new System.Drawing.Point(87, 86);
             this.cmbSelectFY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbSelectFY.Name = "cmbSelectFY";
-            this.cmbSelectFY.Size = new System.Drawing.Size(305, 25);
+            this.cmbSelectFY.Size = new System.Drawing.Size(305, 24);
             this.cmbSelectFY.TabIndex = 2;
             this.cmbSelectFY.SelectedIndexChanged += new System.EventHandler(this.CmbSelectFY_SelectedIndexChanged);
             // 
@@ -118,7 +118,7 @@
             this.label1.Location = new System.Drawing.Point(29, 90);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 17);
+            this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 341;
             this.label1.Text = "Select FY";
             // 

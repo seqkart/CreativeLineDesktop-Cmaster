@@ -49,7 +49,7 @@
             this.label3.Location = new System.Drawing.Point(85, 99);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 17);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 19;
             this.label3.Text = "Desc";
             // 
@@ -58,7 +58,7 @@
             this.label2.Location = new System.Drawing.Point(85, 133);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(28, 17);
+            this.label2.Size = new System.Drawing.Size(32, 16);
             this.label2.TabIndex = 18;
             this.label2.Text = "Type";
             // 
@@ -67,7 +67,7 @@
             this.label1.Location = new System.Drawing.Point(82, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 16;
             this.label1.Text = "Code";
             // 
@@ -117,7 +117,7 @@
             this.txtLedgerDesc.Name = "txtLedgerDesc";
             this.txtLedgerDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLedgerDesc.Properties.MaxLength = 30;
-            this.txtLedgerDesc.Size = new System.Drawing.Size(267, 24);
+            this.txtLedgerDesc.Size = new System.Drawing.Size(267, 22);
             this.txtLedgerDesc.TabIndex = 1;
             // 
             // txtLedgerType
@@ -128,7 +128,7 @@
             this.txtLedgerType.Name = "txtLedgerType";
             this.txtLedgerType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLedgerType.Properties.MaxLength = 1;
-            this.txtLedgerType.Size = new System.Drawing.Size(65, 24);
+            this.txtLedgerType.Size = new System.Drawing.Size(65, 22);
             this.txtLedgerType.TabIndex = 3;
             // 
             // txtLedgerCode
@@ -137,7 +137,7 @@
             this.txtLedgerCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLedgerCode.Name = "txtLedgerCode";
             this.txtLedgerCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtLedgerCode.Size = new System.Drawing.Size(65, 24);
+            this.txtLedgerCode.Size = new System.Drawing.Size(65, 22);
             this.txtLedgerCode.TabIndex = 1;
             this.txtLedgerCode.TabStop = false;
             // 

@@ -182,7 +182,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtApprovalDate.Properties.Mask.EditMask = "";
             this.txtApprovalDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtApprovalDate.Size = new System.Drawing.Size(113, 24);
+            this.txtApprovalDate.Size = new System.Drawing.Size(113, 22);
             this.txtApprovalDate.TabIndex = 714;
             this.txtApprovalDate.TabStop = false;
             // 
@@ -192,7 +192,7 @@
             this.txtApprovalNo.Location = new System.Drawing.Point(126, 54);
             this.txtApprovalNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtApprovalNo.Name = "txtApprovalNo";
-            this.txtApprovalNo.Size = new System.Drawing.Size(114, 24);
+            this.txtApprovalNo.Size = new System.Drawing.Size(114, 22);
             this.txtApprovalNo.TabIndex = 711;
             this.txtApprovalNo.TabStop = false;
             // 
@@ -317,7 +317,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtReturnedUpTo.Properties.Mask.EditMask = "";
             this.txtReturnedUpTo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtReturnedUpTo.Size = new System.Drawing.Size(274, 24);
+            this.txtReturnedUpTo.Size = new System.Drawing.Size(274, 22);
             this.txtReturnedUpTo.TabIndex = 5;
             // 
             // ArticleImageBox

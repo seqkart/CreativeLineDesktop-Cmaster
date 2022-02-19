@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(25, 23);
+            this.labelControl1.Location = new System.Drawing.Point(43, 22);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(89, 20);
             this.labelControl1.TabIndex = 0;
@@ -64,7 +64,7 @@ namespace WindowsFormsApplication1.Master
             this.txtServerName.Name = "txtServerName";
             this.txtServerName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtServerName.Size = new System.Drawing.Size(328, 24);
+            this.txtServerName.Size = new System.Drawing.Size(328, 22);
             this.txtServerName.TabIndex = 1;
             this.txtServerName.SelectedIndexChanged += new System.EventHandler(this.TxtServerName_SelectedIndexChanged);
             // 
@@ -77,7 +77,7 @@ namespace WindowsFormsApplication1.Master
             this.txtLoginType.Properties.Items.AddRange(new object[] {
             "SQLSERVER",
             "WINDOW"});
-            this.txtLoginType.Size = new System.Drawing.Size(328, 24);
+            this.txtLoginType.Size = new System.Drawing.Size(328, 22);
             this.txtLoginType.TabIndex = 3;
             this.txtLoginType.SelectedIndexChanged += new System.EventHandler(this.TxtLoginType_SelectedIndexChanged);
             // 
@@ -85,7 +85,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(37, 53);
+            this.labelControl2.Location = new System.Drawing.Point(57, 52);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(75, 20);
             this.labelControl2.TabIndex = 2;
@@ -100,14 +100,14 @@ namespace WindowsFormsApplication1.Master
             this.txtDataBaseName.Properties.Items.AddRange(new object[] {
             "WINDOW",
             "SQLSERVER"});
-            this.txtDataBaseName.Size = new System.Drawing.Size(328, 24);
+            this.txtDataBaseName.Size = new System.Drawing.Size(328, 22);
             this.txtDataBaseName.TabIndex = 5;
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(46, 140);
+            this.labelControl3.Location = new System.Drawing.Point(69, 139);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(63, 20);
             this.labelControl3.TabIndex = 4;
@@ -117,7 +117,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.txtUserName.Location = new System.Drawing.Point(139, 79);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(328, 24);
+            this.txtUserName.Size = new System.Drawing.Size(328, 22);
             this.txtUserName.TabIndex = 6;
             // 
             // txtPassword
@@ -125,7 +125,7 @@ namespace WindowsFormsApplication1.Master
             this.txtPassword.Location = new System.Drawing.Point(139, 108);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(328, 24);
+            this.txtPassword.Size = new System.Drawing.Size(328, 22);
             this.txtPassword.TabIndex = 7;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPassword_KeyDown);
             // 
@@ -133,7 +133,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(42, 82);
+            this.labelControl4.Location = new System.Drawing.Point(63, 81);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(69, 20);
             this.labelControl4.TabIndex = 8;
@@ -143,7 +143,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(45, 110);
+            this.labelControl5.Location = new System.Drawing.Point(68, 109);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(64, 20);
             this.labelControl5.TabIndex = 9;

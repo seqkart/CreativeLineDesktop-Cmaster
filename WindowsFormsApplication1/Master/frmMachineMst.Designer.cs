@@ -93,7 +93,7 @@ namespace WindowsFormsApplication1.Master
             this.txtMachineCode.Name = "txtMachineCode";
             this.txtMachineCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMachineCode.Properties.MaxLength = 8;
-            this.txtMachineCode.Size = new System.Drawing.Size(86, 24);
+            this.txtMachineCode.Size = new System.Drawing.Size(86, 22);
             this.txtMachineCode.TabIndex = 399;
             this.txtMachineCode.TabStop = false;
             // 
@@ -119,7 +119,7 @@ namespace WindowsFormsApplication1.Master
             this.txtTypeDesc.Name = "txtTypeDesc";
             this.txtTypeDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTypeDesc.Properties.MaxLength = 8;
-            this.txtTypeDesc.Size = new System.Drawing.Size(385, 24);
+            this.txtTypeDesc.Size = new System.Drawing.Size(385, 22);
             this.txtTypeDesc.TabIndex = 401;
             this.txtTypeDesc.TabStop = false;
             // 
@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1.Master
             this.txtGauge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGauge.Name = "txtGauge";
             this.txtGauge.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtGauge.Size = new System.Drawing.Size(478, 24);
+            this.txtGauge.Size = new System.Drawing.Size(478, 22);
             this.txtGauge.TabIndex = 404;
             // 
             // txtTypeCode
@@ -183,7 +183,7 @@ namespace WindowsFormsApplication1.Master
             this.txtTypeCode.Name = "txtTypeCode";
             this.txtTypeCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTypeCode.Properties.MaxLength = 8;
-            this.txtTypeCode.Size = new System.Drawing.Size(86, 24);
+            this.txtTypeCode.Size = new System.Drawing.Size(86, 22);
             this.txtTypeCode.TabIndex = 400;
             this.txtTypeCode.EditValueChanged += new System.EventHandler(this.TxtTypeCode_EditValueChanged);
             this.txtTypeCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtTypeCode_KeyDown);
@@ -223,7 +223,7 @@ namespace WindowsFormsApplication1.Master
             this.txtBrandDesc.Name = "txtBrandDesc";
             this.txtBrandDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandDesc.Properties.MaxLength = 8;
-            this.txtBrandDesc.Size = new System.Drawing.Size(385, 24);
+            this.txtBrandDesc.Size = new System.Drawing.Size(385, 22);
             this.txtBrandDesc.TabIndex = 422;
             this.txtBrandDesc.TabStop = false;
             // 
@@ -235,7 +235,7 @@ namespace WindowsFormsApplication1.Master
             this.txtBrandCode.Name = "txtBrandCode";
             this.txtBrandCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandCode.Properties.MaxLength = 8;
-            this.txtBrandCode.Size = new System.Drawing.Size(86, 24);
+            this.txtBrandCode.Size = new System.Drawing.Size(86, 22);
             this.txtBrandCode.TabIndex = 421;
             this.txtBrandCode.EditValueChanged += new System.EventHandler(this.TxtBrandCode_EditValueChanged);
             this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBrandCode_KeyDown);

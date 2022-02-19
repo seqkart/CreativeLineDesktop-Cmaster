@@ -55,7 +55,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(536, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(613, 27);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -81,46 +81,46 @@
             // 
             // txtRoleDesc
             // 
-            this.txtRoleDesc.Location = new System.Drawing.Point(125, 88);
+            this.txtRoleDesc.Location = new System.Drawing.Point(143, 83);
             this.txtRoleDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleDesc.Name = "txtRoleDesc";
             this.txtRoleDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRoleDesc.Properties.MaxLength = 100;
-            this.txtRoleDesc.Size = new System.Drawing.Size(379, 24);
+            this.txtRoleDesc.Size = new System.Drawing.Size(433, 22);
             this.txtRoleDesc.TabIndex = 197;
             // 
             // txtRoleCode
             // 
-            this.txtRoleCode.Location = new System.Drawing.Point(125, 38);
+            this.txtRoleCode.Location = new System.Drawing.Point(143, 36);
             this.txtRoleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRoleCode.Size = new System.Drawing.Size(97, 24);
+            this.txtRoleCode.Size = new System.Drawing.Size(111, 22);
             this.txtRoleCode.TabIndex = 196;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(20, 92);
+            this.label3.Location = new System.Drawing.Point(23, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 17);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 199;
             this.label3.Text = "Role Description";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(55, 42);
+            this.label1.Location = new System.Drawing.Point(63, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 198;
             this.label1.Text = "Role Code";
             // 
-            // frmRoleMst
+            // FrmRoleMst
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 134);
+            this.ClientSize = new System.Drawing.Size(613, 126);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtRoleDesc);
@@ -130,7 +130,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmRoleMst";
+            this.Name = "FrmRoleMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmRoleMst_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmRoleMst_KeyDown);

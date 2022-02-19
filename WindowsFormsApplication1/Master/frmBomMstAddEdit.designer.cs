@@ -275,7 +275,7 @@
             this.label4.Location = new System.Drawing.Point(37, 188);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
+            this.label4.Size = new System.Drawing.Size(77, 16);
             this.label4.TabIndex = 400;
             this.label4.Text = "Req Quantity";
             // 
@@ -286,7 +286,7 @@
             this.txtReqQuantity.Name = "txtReqQuantity";
             this.txtReqQuantity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtReqQuantity.Properties.MaxLength = 8;
-            this.txtReqQuantity.Size = new System.Drawing.Size(84, 24);
+            this.txtReqQuantity.Size = new System.Drawing.Size(84, 22);
             this.txtReqQuantity.TabIndex = 392;
             // 
             // label2
@@ -294,7 +294,7 @@
             this.label2.Location = new System.Drawing.Point(645, 154);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.Size = new System.Drawing.Size(82, 16);
             this.label2.TabIndex = 399;
             this.label2.Text = "Product Code";
             // 
@@ -306,7 +306,7 @@
             this.txtProductCode2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductCode2.Properties.MaxLength = 4;
             this.txtProductCode2.Properties.ReadOnly = true;
-            this.txtProductCode2.Size = new System.Drawing.Size(48, 24);
+            this.txtProductCode2.Size = new System.Drawing.Size(48, 22);
             this.txtProductCode2.TabIndex = 398;
             this.txtProductCode2.TabStop = false;
             // 
@@ -318,7 +318,7 @@
             this.txtProductName2.Name = "txtProductName2";
             this.txtProductName2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductName2.Properties.ReadOnly = true;
-            this.txtProductName2.Size = new System.Drawing.Size(400, 24);
+            this.txtProductName2.Size = new System.Drawing.Size(400, 22);
             this.txtProductName2.TabIndex = 396;
             this.txtProductName2.TabStop = false;
             // 
@@ -327,7 +327,7 @@
             this.label3.Location = new System.Drawing.Point(69, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 397;
             this.label3.Text = "Product";
             // 
@@ -338,7 +338,7 @@
             this.txtPrdAsgnCode2.Name = "txtPrdAsgnCode2";
             this.txtPrdAsgnCode2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrdAsgnCode2.Properties.MaxLength = 8;
-            this.txtPrdAsgnCode2.Size = new System.Drawing.Size(84, 24);
+            this.txtPrdAsgnCode2.Size = new System.Drawing.Size(84, 22);
             this.txtPrdAsgnCode2.TabIndex = 391;
             this.txtPrdAsgnCode2.EditValueChanged += new System.EventHandler(this.TxtPrdAsgnCode2_EditValueChanged);
             this.txtPrdAsgnCode2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPrdAsgnCode2_KeyDown);
@@ -402,7 +402,7 @@
             this.label30.Location = new System.Drawing.Point(645, 88);
             this.label30.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(80, 17);
+            this.label30.Size = new System.Drawing.Size(82, 16);
             this.label30.TabIndex = 382;
             this.label30.Text = "Product Code";
             // 
@@ -414,7 +414,7 @@
             this.txtProductCode1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductCode1.Properties.MaxLength = 4;
             this.txtProductCode1.Properties.ReadOnly = true;
-            this.txtProductCode1.Size = new System.Drawing.Size(48, 24);
+            this.txtProductCode1.Size = new System.Drawing.Size(48, 22);
             this.txtProductCode1.TabIndex = 381;
             this.txtProductCode1.TabStop = false;
             // 
@@ -426,7 +426,7 @@
             this.txtProductName1.Name = "txtProductName1";
             this.txtProductName1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductName1.Properties.ReadOnly = true;
-            this.txtProductName1.Size = new System.Drawing.Size(400, 24);
+            this.txtProductName1.Size = new System.Drawing.Size(400, 22);
             this.txtProductName1.TabIndex = 378;
             this.txtProductName1.TabStop = false;
             // 
@@ -435,7 +435,7 @@
             this.label7.Location = new System.Drawing.Point(69, 88);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(45, 17);
+            this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 380;
             this.label7.Text = "Product";
             // 
@@ -446,7 +446,7 @@
             this.txtPrdAsgnCode1.Name = "txtPrdAsgnCode1";
             this.txtPrdAsgnCode1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrdAsgnCode1.Properties.MaxLength = 8;
-            this.txtPrdAsgnCode1.Size = new System.Drawing.Size(84, 24);
+            this.txtPrdAsgnCode1.Size = new System.Drawing.Size(84, 22);
             this.txtPrdAsgnCode1.TabIndex = 2;
             this.txtPrdAsgnCode1.EditValueChanged += new System.EventHandler(this.TxtPrdAsgnCode1_EditValueChanged);
             this.txtPrdAsgnCode1.Enter += new System.EventHandler(this.TxtPrdAsgnCode1_Enter);
@@ -457,7 +457,7 @@
             this.label1.Location = new System.Drawing.Point(58, 54);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 17);
+            this.label1.Size = new System.Drawing.Size(60, 16);
             this.label1.TabIndex = 384;
             this.label1.Text = "Bomm No";
             // 
@@ -468,7 +468,7 @@
             this.txtBomNo.Name = "txtBomNo";
             this.txtBomNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBomNo.Properties.MaxLength = 8;
-            this.txtBomNo.Size = new System.Drawing.Size(84, 24);
+            this.txtBomNo.Size = new System.Drawing.Size(84, 22);
             this.txtBomNo.TabIndex = 0;
             this.txtBomNo.TabStop = false;
             // 
@@ -479,7 +479,7 @@
             this.txtProductionBag.Name = "txtProductionBag";
             this.txtProductionBag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProductionBag.Properties.MaxLength = 8;
-            this.txtProductionBag.Size = new System.Drawing.Size(48, 24);
+            this.txtProductionBag.Size = new System.Drawing.Size(48, 22);
             this.txtProductionBag.TabIndex = 1;
             this.txtProductionBag.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProductionBag_KeyPress);
             // 
@@ -488,7 +488,7 @@
             this.label5.Location = new System.Drawing.Point(637, 54);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(89, 17);
+            this.label5.Size = new System.Drawing.Size(92, 16);
             this.label5.TabIndex = 386;
             this.label5.Text = "Production Bag";
             // 
@@ -500,7 +500,7 @@
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRemarks.Properties.MaxLength = 60;
-            this.txtRemarks.Size = new System.Drawing.Size(506, 24);
+            this.txtRemarks.Size = new System.Drawing.Size(506, 22);
             this.txtRemarks.TabIndex = 382;
             // 
             // label6
@@ -508,7 +508,7 @@
             this.label6.Location = new System.Drawing.Point(65, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(50, 17);
+            this.label6.Size = new System.Drawing.Size(55, 16);
             this.label6.TabIndex = 388;
             this.label6.Text = "Remarks";
             // 
@@ -517,7 +517,7 @@
             this.label8.Location = new System.Drawing.Point(686, 122);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 17);
+            this.label8.Size = new System.Drawing.Size(37, 16);
             this.label8.TabIndex = 390;
             this.label8.Text = "Active";
             // 
@@ -528,11 +528,11 @@
             this.txtActive.Name = "txtActive";
             this.txtActive.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtActive.Properties.MaxLength = 8;
-            this.txtActive.Size = new System.Drawing.Size(48, 24);
+            this.txtActive.Size = new System.Drawing.Size(48, 22);
             this.txtActive.TabIndex = 383;
             this.txtActive.Validating += new System.ComponentModel.CancelEventHandler(this.TxtActive_Validating);
             // 
-            // frmBomMstAddEdit
+            // FrmBomMstAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -566,7 +566,7 @@
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmBomMstAddEdit";
+            this.Name = "FrmBomMstAddEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmBomMstAddEdit_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

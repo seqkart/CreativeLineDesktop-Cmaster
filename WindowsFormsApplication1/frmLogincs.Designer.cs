@@ -77,7 +77,7 @@
             this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label3.Appearance.Options.UseBackColor = true;
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(136, 29);
+            this.label3.Location = new System.Drawing.Point(147, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 20);
@@ -104,7 +104,7 @@
             this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label1.Appearance.Options.UseBackColor = true;
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(110, 64);
+            this.label1.Location = new System.Drawing.Point(121, 64);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
@@ -157,7 +157,7 @@
             this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseBackColor = true;
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(109, 164);
+            this.label2.Location = new System.Drawing.Point(120, 164);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
@@ -170,7 +170,7 @@
             this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label4.Appearance.Options.UseBackColor = true;
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(145, 200);
+            this.label4.Location = new System.Drawing.Point(156, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 20);
@@ -183,7 +183,7 @@
             this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label5.Appearance.Options.UseBackColor = true;
             this.label5.Appearance.Options.UseFont = true;
-            this.label5.Location = new System.Drawing.Point(78, 237);
+            this.label5.Location = new System.Drawing.Point(89, 237);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(96, 20);
@@ -196,7 +196,7 @@
             this.label6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label6.Appearance.Options.UseBackColor = true;
             this.label6.Appearance.Options.UseFont = true;
-            this.label6.Location = new System.Drawing.Point(100, 274);
+            this.label6.Location = new System.Drawing.Point(111, 274);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 20);
@@ -297,7 +297,7 @@
             this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.label7.Appearance.Options.UseBackColor = true;
             this.label7.Appearance.Options.UseFont = true;
-            this.label7.Location = new System.Drawing.Point(149, 128);
+            this.label7.Location = new System.Drawing.Point(160, 128);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(25, 20);

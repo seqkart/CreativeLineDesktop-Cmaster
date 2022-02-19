@@ -51,7 +51,7 @@
             this.txtColorName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtColorName.Name = "txtColorName";
             this.txtColorName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtColorName.Size = new System.Drawing.Size(316, 24);
+            this.txtColorName.Size = new System.Drawing.Size(316, 22);
             this.txtColorName.TabIndex = 771;
             // 
             // txtSysColorID
@@ -63,7 +63,7 @@
             this.txtSysColorID.Name = "txtSysColorID";
             this.txtSysColorID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysColorID.Properties.MaxLength = 8;
-            this.txtSysColorID.Size = new System.Drawing.Size(86, 24);
+            this.txtSysColorID.Size = new System.Drawing.Size(86, 22);
             this.txtSysColorID.TabIndex = 760;
             this.txtSysColorID.TabStop = false;
             // 
@@ -85,7 +85,7 @@
             this.txtColorCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtColorCode.Size = new System.Drawing.Size(316, 24);
+            this.txtColorCode.Size = new System.Drawing.Size(316, 22);
             this.txtColorCode.TabIndex = 765;
             // 
             // Menu_ToolStrip
@@ -152,7 +152,7 @@
             this.LBDEPCODE.TabIndex = 756;
             this.LBDEPCODE.Text = "Sys Code :";
             // 
-            // frmColors
+            // FrmColors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -168,7 +168,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmColors";
+            this.Name = "FrmColors";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmColors_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmColors_KeyDown);

@@ -87,7 +87,7 @@ namespace WindowsFormsApplication1.Administration
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(668, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(494, 31);
             this.Menu_ToolStrip.TabIndex = 423;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -117,157 +117,157 @@ namespace WindowsFormsApplication1.Administration
             // 
             // txtASPPassword
             // 
-            this.txtASPPassword.Location = new System.Drawing.Point(102, 150);
+            this.txtASPPassword.Location = new System.Drawing.Point(140, 146);
             this.txtASPPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtASPPassword.Name = "txtASPPassword";
-            this.txtASPPassword.Size = new System.Drawing.Size(540, 24);
+            this.txtASPPassword.Size = new System.Drawing.Size(329, 22);
             this.txtASPPassword.TabIndex = 411;
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(18, 153);
+            this.label11.Location = new System.Drawing.Point(33, 149);
             this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(78, 17);
+            this.label11.Size = new System.Drawing.Size(90, 16);
             this.label11.TabIndex = 421;
-            this.label11.Text = "ASPPassword";
+            this.label11.Text = "ASP Password";
             // 
             // txtTransId
             // 
             this.txtTransId.EnterMoveNextControl = true;
-            this.txtTransId.Location = new System.Drawing.Point(102, 44);
+            this.txtTransId.Location = new System.Drawing.Point(140, 44);
             this.txtTransId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransId.Name = "txtTransId";
             this.txtTransId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransId.Properties.MaxLength = 8;
-            this.txtTransId.Size = new System.Drawing.Size(159, 24);
+            this.txtTransId.Size = new System.Drawing.Size(118, 22);
             this.txtTransId.TabIndex = 407;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(52, 47);
+            this.label9.Location = new System.Drawing.Point(72, 47);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 17);
+            this.label9.Size = new System.Drawing.Size(51, 16);
             this.label9.TabIndex = 419;
-            this.label9.Text = "TransID";
+            this.label9.Text = "Trans ID";
             // 
             // txtGSPName
             // 
             this.txtGSPName.EnterMoveNextControl = true;
-            this.txtGSPName.Location = new System.Drawing.Point(102, 79);
+            this.txtGSPName.Location = new System.Drawing.Point(140, 78);
             this.txtGSPName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGSPName.Name = "txtGSPName";
             this.txtGSPName.Properties.MaxLength = 150;
-            this.txtGSPName.Size = new System.Drawing.Size(540, 24);
+            this.txtGSPName.Size = new System.Drawing.Size(329, 22);
             this.txtGSPName.TabIndex = 409;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(38, 82);
+            this.label8.Location = new System.Drawing.Point(55, 81);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 17);
+            this.label8.Size = new System.Drawing.Size(68, 16);
             this.label8.TabIndex = 418;
-            this.label8.Text = "GSPName";
+            this.label8.Text = "GSP Name";
             // 
             // txtASPNetUser
             // 
-            this.txtASPNetUser.Location = new System.Drawing.Point(102, 114);
+            this.txtASPNetUser.Location = new System.Drawing.Point(140, 112);
             this.txtASPNetUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtASPNetUser.Name = "txtASPNetUser";
-            this.txtASPNetUser.Size = new System.Drawing.Size(540, 24);
+            this.txtASPNetUser.Size = new System.Drawing.Size(329, 22);
             this.txtASPNetUser.TabIndex = 410;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(26, 118);
+            this.label7.Location = new System.Drawing.Point(40, 115);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 17);
+            this.label7.Size = new System.Drawing.Size(83, 16);
             this.label7.TabIndex = 417;
-            this.label7.Text = "ASPNetUser";
+            this.label7.Text = "ASP Net User";
             // 
             // txtBaseUrl
             // 
-            this.txtBaseUrl.Location = new System.Drawing.Point(102, 184);
+            this.txtBaseUrl.Location = new System.Drawing.Point(140, 180);
             this.txtBaseUrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBaseUrl.Name = "txtBaseUrl";
-            this.txtBaseUrl.Size = new System.Drawing.Size(540, 24);
+            this.txtBaseUrl.Size = new System.Drawing.Size(329, 22);
             this.txtBaseUrl.TabIndex = 424;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(52, 187);
+            this.labelControl1.Location = new System.Drawing.Point(71, 183);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(44, 17);
+            this.labelControl1.Size = new System.Drawing.Size(52, 16);
             this.labelControl1.TabIndex = 425;
-            this.labelControl1.Text = "BaseUrl";
+            this.labelControl1.Text = "Base Url";
             // 
             // txtEWBGSTIN
             // 
-            this.txtEWBGSTIN.Location = new System.Drawing.Point(102, 218);
+            this.txtEWBGSTIN.Location = new System.Drawing.Point(140, 214);
             this.txtEWBGSTIN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEWBGSTIN.Name = "txtEWBGSTIN";
-            this.txtEWBGSTIN.Size = new System.Drawing.Size(540, 24);
+            this.txtEWBGSTIN.Size = new System.Drawing.Size(329, 22);
             this.txtEWBGSTIN.TabIndex = 426;
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(34, 221);
+            this.labelControl2.Location = new System.Drawing.Point(48, 217);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(62, 17);
+            this.labelControl2.Size = new System.Drawing.Size(75, 16);
             this.labelControl2.TabIndex = 427;
-            this.labelControl2.Text = "EWBGSTIN";
+            this.labelControl2.Text = "EWB GSTIN";
             // 
             // txtEWBUserID
             // 
-            this.txtEWBUserID.Location = new System.Drawing.Point(102, 252);
+            this.txtEWBUserID.Location = new System.Drawing.Point(140, 248);
             this.txtEWBUserID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEWBUserID.Name = "txtEWBUserID";
-            this.txtEWBUserID.Size = new System.Drawing.Size(540, 24);
+            this.txtEWBUserID.Size = new System.Drawing.Size(329, 22);
             this.txtEWBUserID.TabIndex = 428;
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(31, 255);
+            this.labelControl3.Location = new System.Drawing.Point(44, 251);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 17);
+            this.labelControl3.Size = new System.Drawing.Size(79, 16);
             this.labelControl3.TabIndex = 429;
-            this.labelControl3.Text = "EWBUserID";
+            this.labelControl3.Text = "EWB User ID";
             // 
             // txtEWBPassword
             // 
-            this.txtEWBPassword.Location = new System.Drawing.Point(102, 286);
+            this.txtEWBPassword.Location = new System.Drawing.Point(140, 282);
             this.txtEWBPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEWBPassword.Name = "txtEWBPassword";
-            this.txtEWBPassword.Size = new System.Drawing.Size(540, 24);
+            this.txtEWBPassword.Size = new System.Drawing.Size(329, 22);
             this.txtEWBPassword.TabIndex = 430;
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(14, 289);
+            this.labelControl4.Location = new System.Drawing.Point(29, 285);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(82, 17);
+            this.labelControl4.Size = new System.Drawing.Size(94, 16);
             this.labelControl4.TabIndex = 431;
-            this.labelControl4.Text = "EWBPassword";
+            this.labelControl4.Text = "EWB Password";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(62, 325);
+            this.labelControl5.Location = new System.Drawing.Point(86, 319);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(34, 17);
+            this.labelControl5.Size = new System.Drawing.Size(37, 16);
             this.labelControl5.TabIndex = 433;
             this.labelControl5.Text = "Active";
             // 
             // txtstatusTag
             // 
-            this.txtstatusTag.Location = new System.Drawing.Point(102, 321);
+            this.txtstatusTag.Location = new System.Drawing.Point(140, 316);
             this.txtstatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtstatusTag.Name = "txtstatusTag";
             this.txtstatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -277,14 +277,14 @@ namespace WindowsFormsApplication1.Administration
             "Y",
             "N"});
             this.txtstatusTag.Properties.MaxLength = 1;
-            this.txtstatusTag.Size = new System.Drawing.Size(48, 24);
+            this.txtstatusTag.Size = new System.Drawing.Size(95, 22);
             this.txtstatusTag.TabIndex = 434;
             // 
             // FrmAPIIntegrationInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(668, 364);
+            this.ClientSize = new System.Drawing.Size(494, 364);
             this.ControlBox = false;
             this.Controls.Add(this.txtstatusTag);
             this.Controls.Add(this.labelControl5);

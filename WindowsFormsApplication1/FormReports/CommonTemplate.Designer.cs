@@ -130,11 +130,11 @@
             this.RefreshBtn,
             this.GenExcel,
             this.Email});
-            this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 34);
+            this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 30);
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1132, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1294, 31);
             this.Menu_ToolStrip.TabIndex = 198;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -191,10 +191,11 @@
             // Preview
             // 
             this.Preview.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Preview.Location = new System.Drawing.Point(0, 65);
+            this.Preview.IsMetric = true;
+            this.Preview.Location = new System.Drawing.Point(0, 61);
             this.Preview.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Preview.Name = "Preview";
-            this.Preview.Size = new System.Drawing.Size(1132, 439);
+            this.Preview.Size = new System.Drawing.Size(1294, 413);
             this.Preview.TabIndex = 199;
             // 
             // documentViewerBarManager1
@@ -706,34 +707,34 @@
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.documentViewerBarManager1;
             this.barDockControlTop.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlTop.Size = new System.Drawing.Size(1132, 34);
+            this.barDockControlTop.Size = new System.Drawing.Size(1294, 30);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 504);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 474);
             this.barDockControlBottom.Manager = this.documentViewerBarManager1;
             this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1132, 28);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1294, 27);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
             this.barDockControlLeft.Manager = this.documentViewerBarManager1;
             this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 470);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 444);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1132, 34);
+            this.barDockControlRight.Location = new System.Drawing.Point(1294, 30);
             this.barDockControlRight.Manager = this.documentViewerBarManager1;
             this.barDockControlRight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 470);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 444);
             // 
             // printPreviewSubItem1
             // 
@@ -982,11 +983,11 @@
             // HelpGridCtrl
             // 
             this.HelpGridCtrl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGridCtrl.Location = new System.Drawing.Point(422, 78);
+            this.HelpGridCtrl.Location = new System.Drawing.Point(482, 73);
             this.HelpGridCtrl.MainView = this.HelpGrid;
             this.HelpGridCtrl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGridCtrl.Name = "HelpGridCtrl";
-            this.HelpGridCtrl.Size = new System.Drawing.Size(579, 458);
+            this.HelpGridCtrl.Size = new System.Drawing.Size(662, 431);
             this.HelpGridCtrl.TabIndex = 204;
             this.HelpGridCtrl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGrid});
@@ -996,7 +997,7 @@
             // 
             // HelpGrid
             // 
-            this.HelpGrid.DetailHeight = 458;
+            this.HelpGrid.DetailHeight = 431;
             this.HelpGrid.GridControl = this.HelpGridCtrl;
             this.HelpGrid.Name = "HelpGrid";
             this.HelpGrid.OptionsBehavior.AllowIncrementalSearch = true;
@@ -1010,12 +1011,12 @@
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 65);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 61);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
             this.crystalReportViewer1.ShowCloseButton = false;
             this.crystalReportViewer1.ShowLogo = false;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1132, 439);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1293, 413);
             this.crystalReportViewer1.TabIndex = 209;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
             this.crystalReportViewer1.Visible = false;
@@ -1026,9 +1027,9 @@
             // 
             // CommonTemplate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 532);
+            this.ClientSize = new System.Drawing.Size(1294, 501);
             this.ControlBox = false;
             this.Controls.Add(this.crystalReportViewer1);
             this.Controls.Add(this.Preview);

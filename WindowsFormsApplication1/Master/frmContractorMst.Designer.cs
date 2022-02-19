@@ -105,7 +105,7 @@ namespace WindowsFormsApplication1.Master
             this.txtIDNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIDNo.Name = "txtIDNo";
             this.txtIDNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtIDNo.Size = new System.Drawing.Size(183, 24);
+            this.txtIDNo.Size = new System.Drawing.Size(183, 22);
             this.txtIDNo.TabIndex = 770;
             // 
             // txtIDType
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1.Master
             "PASSPORT",
             "OTHER ID",
             "LISCENSE"});
-            this.txtIDType.Size = new System.Drawing.Size(199, 24);
+            this.txtIDType.Size = new System.Drawing.Size(199, 22);
             this.txtIDType.TabIndex = 769;
             // 
             // txtOtherNo
@@ -132,7 +132,7 @@ namespace WindowsFormsApplication1.Master
             this.txtOtherNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherNo.Name = "txtOtherNo";
             this.txtOtherNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOtherNo.Size = new System.Drawing.Size(183, 24);
+            this.txtOtherNo.Size = new System.Drawing.Size(183, 22);
             this.txtOtherNo.TabIndex = 767;
             // 
             // txtContCode
@@ -144,7 +144,7 @@ namespace WindowsFormsApplication1.Master
             this.txtContCode.Name = "txtContCode";
             this.txtContCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContCode.Properties.MaxLength = 8;
-            this.txtContCode.Size = new System.Drawing.Size(86, 24);
+            this.txtContCode.Size = new System.Drawing.Size(86, 22);
             this.txtContCode.TabIndex = 760;
             this.txtContCode.TabStop = false;
             // 
@@ -166,7 +166,7 @@ namespace WindowsFormsApplication1.Master
             this.txtEMailId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEMailId.Name = "txtEMailId";
             this.txtEMailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEMailId.Size = new System.Drawing.Size(478, 24);
+            this.txtEMailId.Size = new System.Drawing.Size(478, 22);
             this.txtEMailId.TabIndex = 765;
             // 
             // txtMobileNo
@@ -176,7 +176,7 @@ namespace WindowsFormsApplication1.Master
             this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMobileNo.Size = new System.Drawing.Size(199, 24);
+            this.txtMobileNo.Size = new System.Drawing.Size(199, 22);
             this.txtMobileNo.TabIndex = 764;
             // 
             // Label4
@@ -197,7 +197,7 @@ namespace WindowsFormsApplication1.Master
             this.txtContName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtContName.Name = "txtContName";
             this.txtContName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtContName.Size = new System.Drawing.Size(478, 24);
+            this.txtContName.Size = new System.Drawing.Size(478, 22);
             this.txtContName.TabIndex = 763;
             // 
             // LBDEPNAME

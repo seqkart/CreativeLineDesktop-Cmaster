@@ -201,7 +201,7 @@
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSysID.Properties.MaxLength = 8;
-            this.txtSysID.Size = new System.Drawing.Size(86, 24);
+            this.txtSysID.Size = new System.Drawing.Size(86, 22);
             this.txtSysID.TabIndex = 616;
             this.txtSysID.TabStop = false;
             // 
@@ -212,7 +212,7 @@
             this.txtItemName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItemName.Size = new System.Drawing.Size(394, 24);
+            this.txtItemName.Size = new System.Drawing.Size(394, 22);
             this.txtItemName.TabIndex = 617;
             // 
             // txtItemSubGroup
@@ -222,7 +222,7 @@
             this.txtItemSubGroup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemSubGroup.Name = "txtItemSubGroup";
             this.txtItemSubGroup.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItemSubGroup.Size = new System.Drawing.Size(394, 24);
+            this.txtItemSubGroup.Size = new System.Drawing.Size(394, 22);
             this.txtItemSubGroup.TabIndex = 618;
             // 
             // txtRackNo
@@ -232,7 +232,7 @@
             this.txtRackNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRackNo.Name = "txtRackNo";
             this.txtRackNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRackNo.Size = new System.Drawing.Size(171, 24);
+            this.txtRackNo.Size = new System.Drawing.Size(171, 22);
             this.txtRackNo.TabIndex = 619;
             // 
             // txtRackLocation
@@ -242,7 +242,7 @@
             this.txtRackLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRackLocation.Name = "txtRackLocation";
             this.txtRackLocation.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtRackLocation.Size = new System.Drawing.Size(218, 24);
+            this.txtRackLocation.Size = new System.Drawing.Size(218, 22);
             this.txtRackLocation.TabIndex = 620;
             // 
             // label8
@@ -271,7 +271,7 @@
             "BOX",
             "LTR",
             "ROLL"});
-            this.txtUOM.Size = new System.Drawing.Size(394, 24);
+            this.txtUOM.Size = new System.Drawing.Size(394, 22);
             this.txtUOM.TabIndex = 622;
             // 
             // txtItemWeight
@@ -281,7 +281,7 @@
             this.txtItemWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemWeight.Name = "txtItemWeight";
             this.txtItemWeight.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItemWeight.Size = new System.Drawing.Size(171, 24);
+            this.txtItemWeight.Size = new System.Drawing.Size(171, 22);
             this.txtItemWeight.TabIndex = 623;
             this.txtItemWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -303,7 +303,7 @@
             this.txtItemWeightPerQty.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemWeightPerQty.Name = "txtItemWeightPerQty";
             this.txtItemWeightPerQty.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItemWeightPerQty.Size = new System.Drawing.Size(181, 24);
+            this.txtItemWeightPerQty.Size = new System.Drawing.Size(181, 22);
             this.txtItemWeightPerQty.TabIndex = 625;
             this.txtItemWeightPerQty.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -314,7 +314,7 @@
             this.txtPurchasePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPurchasePrice.Name = "txtPurchasePrice";
             this.txtPurchasePrice.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPurchasePrice.Size = new System.Drawing.Size(394, 24);
+            this.txtPurchasePrice.Size = new System.Drawing.Size(394, 22);
             this.txtPurchasePrice.TabIndex = 626;
             this.txtPurchasePrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -325,7 +325,7 @@
             this.txtMinLevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMinLevel.Name = "txtMinLevel";
             this.txtMinLevel.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMinLevel.Size = new System.Drawing.Size(169, 24);
+            this.txtMinLevel.Size = new System.Drawing.Size(169, 22);
             this.txtMinLevel.TabIndex = 628;
             this.txtMinLevel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -336,7 +336,7 @@
             this.txtMaxLevel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMaxLevel.Name = "txtMaxLevel";
             this.txtMaxLevel.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMaxLevel.Size = new System.Drawing.Size(181, 24);
+            this.txtMaxLevel.Size = new System.Drawing.Size(181, 22);
             this.txtMaxLevel.TabIndex = 629;
             this.txtMaxLevel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -347,7 +347,7 @@
             this.txtOpBal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOpBal.Name = "txtOpBal";
             this.txtOpBal.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtOpBal.Size = new System.Drawing.Size(169, 24);
+            this.txtOpBal.Size = new System.Drawing.Size(169, 22);
             this.txtOpBal.TabIndex = 630;
             this.txtOpBal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -365,7 +365,7 @@
             this.txtOPBalDate.Properties.Mask.EditMask = "dd-MM-yyyy";
             this.txtOPBalDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtOPBalDate.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.txtOPBalDate.Size = new System.Drawing.Size(181, 24);
+            this.txtOPBalDate.Size = new System.Drawing.Size(181, 22);
             this.txtOPBalDate.TabIndex = 631;
             // 
             // txtTotalIssued
@@ -375,7 +375,7 @@
             this.txtTotalIssued.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalIssued.Name = "txtTotalIssued";
             this.txtTotalIssued.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalIssued.Size = new System.Drawing.Size(181, 24);
+            this.txtTotalIssued.Size = new System.Drawing.Size(181, 22);
             this.txtTotalIssued.TabIndex = 633;
             this.txtTotalIssued.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -386,7 +386,7 @@
             this.txtTotalReceived.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalReceived.Name = "txtTotalReceived";
             this.txtTotalReceived.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTotalReceived.Size = new System.Drawing.Size(169, 24);
+            this.txtTotalReceived.Size = new System.Drawing.Size(169, 22);
             this.txtTotalReceived.TabIndex = 632;
             this.txtTotalReceived.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -397,7 +397,7 @@
             this.txtCurrentStock.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCurrentStock.Name = "txtCurrentStock";
             this.txtCurrentStock.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCurrentStock.Size = new System.Drawing.Size(169, 24);
+            this.txtCurrentStock.Size = new System.Drawing.Size(169, 22);
             this.txtCurrentStock.TabIndex = 634;
             this.txtCurrentStock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCurrentStock_KeyPress);
             // 
@@ -450,7 +450,7 @@
             this.txtItemCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtItemCode.Name = "txtItemCode";
             this.txtItemCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItemCode.Size = new System.Drawing.Size(218, 24);
+            this.txtItemCode.Size = new System.Drawing.Size(218, 22);
             this.txtItemCode.TabIndex = 637;
             // 
             // label5

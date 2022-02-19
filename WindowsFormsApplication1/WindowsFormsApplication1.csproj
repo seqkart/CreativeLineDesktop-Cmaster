@@ -1032,53 +1032,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Users\Seqkart Solutions\Downloads\TaxProEWBApiIntigrationDemo (2)\TaxProEWBApiIntigrationDemo.NET\bin\x86\Debug\TaxProEWB.API.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.JustMock">
-      <HintPath>../JustMock/Telerik.JustMock.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.WinControls, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Crystal, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Crystal.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.CrystalDark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.CrystalDark.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Office2010Blue, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Office2010Blue.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Office2010Silver, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Office2010Silver.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Office2013Dark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Office2013Dark.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.VisualStudio2012Dark, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.VisualStudio2012Dark.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Windows7, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Windows7.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.Themes.Windows8, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.Themes.Windows8.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Telerik.WinControls.UI, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\Telerik.WinControls.UI.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="TelerikCommon, Version=2021.3.1109.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
-      <HintPath>..\lib\RCWF\2021.3.1109.40\TelerikCommon.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="UIAutomationClient" />
     <Reference Include="WAProAPI">
       <HintPath>C:\Users\ASUS\Downloads\WAProAPIDotNetDemoIntegrationProject\WAProAPIDotNetDemoIntegrationProject\WAProAPIDemoIntegrationProject\Assemblies\AnyCPU\WAProAPI.dll</HintPath>
@@ -1351,23 +1304,11 @@
     <Compile Include="Master\frmUploadBalances.Designer.cs">
       <DependentUpon>frmUploadBalances.cs</DependentUpon>
     </Compile>
-    <Compile Include="Misc forms\frmWhatsAppIntegration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc forms\frmWhatsAppIntegration.Designer.cs">
-      <DependentUpon>frmWhatsAppIntegration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Misc forms\frmWhatsGroupMessageSender.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Misc forms\frmWhatsGroupMessageSender.Designer.cs">
       <DependentUpon>frmWhatsGroupMessageSender.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Misc forms\ShapedForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Misc forms\ShapedForm1.Designer.cs">
-      <DependentUpon>ShapedForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Pos\frmOnlinePayment.cs">
       <SubType>Form</SubType>
@@ -2381,14 +2322,8 @@
     <EmbeddedResource Include="Master\frmUploadBalances.resx">
       <DependentUpon>frmUploadBalances.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Misc forms\frmWhatsAppIntegration.resx">
-      <DependentUpon>frmWhatsAppIntegration.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Misc forms\frmWhatsGroupMessageSender.resx">
       <DependentUpon>frmWhatsGroupMessageSender.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Misc forms\ShapedForm1.resx">
-      <DependentUpon>ShapedForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pos\frmOnlinePayment.resx">
       <DependentUpon>frmOnlinePayment.cs</DependentUpon>
@@ -2891,23 +2826,6 @@
     <None Include="bin\Debug\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ChatJs\css\jquery.chatjs.css" />
-    <Content Include="ChatJs\Images\add.png" />
-    <Content Include="ChatJs\Images\ajax-loader.gif" />
-    <Content Include="ChatJs\Images\chat-offline.png" />
-    <Content Include="ChatJs\Images\chat-online.png" />
-    <Content Include="ChatJs\Images\clear.png" />
-    <Content Include="ChatJs\Images\Emoticons\smile-1.png" />
-    <Content Include="ChatJs\Images\Emoticons\smile-2.png" />
-    <Content Include="ChatJs\Images\Emoticons\smile-3.png" />
-    <Content Include="ChatJs\Images\Emoticons\smile-4.png" />
-    <Content Include="ChatJs\Images\Emoticons\smile-5.png" />
-    <Content Include="ChatJs\Images\Emoticons\smile-6.png" />
-    <Content Include="ChatJs\Images\users.png" />
-    <Content Include="ChatJs\js\jquery.chatjs.min.js" />
-    <Content Include="ChatJs\Sounds\chat.mp3" />
-    <Content Include="ChatJs\Sounds\chat.ogg" />
-    <Content Include="ChatJs\Sounds\chat.wav" />
     <Content Include="Content\dx-diagram.css" />
     <Content Include="Content\dx-diagram.min.css" />
     <Content Include="Content\dx-gantt.css" />

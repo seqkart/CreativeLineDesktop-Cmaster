@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1.Master
             this.txtStatusDesc.Name = "txtStatusDesc";
             this.txtStatusDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStatusDesc.Properties.MaxLength = 100;
-            this.txtStatusDesc.Size = new System.Drawing.Size(409, 24);
+            this.txtStatusDesc.Size = new System.Drawing.Size(409, 22);
             this.txtStatusDesc.TabIndex = 390;
             // 
             // txtStatusCode
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication1.Master
             this.txtStatusCode.Name = "txtStatusCode";
             this.txtStatusCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStatusCode.Properties.MaxLength = 100;
-            this.txtStatusCode.Size = new System.Drawing.Size(409, 24);
+            this.txtStatusCode.Size = new System.Drawing.Size(409, 22);
             this.txtStatusCode.TabIndex = 388;
             // 
             // txtStatusID
@@ -145,7 +145,7 @@ namespace WindowsFormsApplication1.Master
             this.txtStatusID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatusID.Name = "txtStatusID";
             this.txtStatusID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtStatusID.Size = new System.Drawing.Size(97, 24);
+            this.txtStatusID.Size = new System.Drawing.Size(97, 22);
             this.txtStatusID.TabIndex = 387;
             // 
             // labelControl1
@@ -166,10 +166,10 @@ namespace WindowsFormsApplication1.Master
             this.txtatttype.Name = "txtatttype";
             this.txtatttype.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtatttype.Properties.MaxLength = 100;
-            this.txtatttype.Size = new System.Drawing.Size(97, 24);
+            this.txtatttype.Size = new System.Drawing.Size(97, 22);
             this.txtatttype.TabIndex = 390;
             // 
-            // frmAttendanceStatusMst
+            // FrmAttendanceStatusMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -185,7 +185,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.Label16);
             this.Controls.Add(this.Label15);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmAttendanceStatusMst";
+            this.Name = "FrmAttendanceStatusMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmAttendenceStatusMst_Load);
             this.Menu_ToolStrip.ResumeLayout(false);

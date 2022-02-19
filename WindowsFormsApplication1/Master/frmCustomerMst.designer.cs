@@ -125,7 +125,7 @@
             this.txtDuringEOSS.Name = "txtDuringEOSS";
             this.txtDuringEOSS.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDuringEOSS.Properties.MaxLength = 100;
-            this.txtDuringEOSS.Size = new System.Drawing.Size(103, 24);
+            this.txtDuringEOSS.Size = new System.Drawing.Size(103, 22);
             this.txtDuringEOSS.TabIndex = 650;
             // 
             // Label21
@@ -168,7 +168,7 @@
             this.txtDuringNormalSale.Name = "txtDuringNormalSale";
             this.txtDuringNormalSale.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDuringNormalSale.Properties.MaxLength = 100;
-            this.txtDuringNormalSale.Size = new System.Drawing.Size(409, 24);
+            this.txtDuringNormalSale.Size = new System.Drawing.Size(409, 22);
             this.txtDuringNormalSale.TabIndex = 647;
             // 
             // txtDiscountType
@@ -178,7 +178,7 @@
             this.txtDiscountType.Name = "txtDiscountType";
             this.txtDiscountType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDiscountType.Properties.MaxLength = 100;
-            this.txtDiscountType.Size = new System.Drawing.Size(184, 24);
+            this.txtDiscountType.Size = new System.Drawing.Size(184, 22);
             this.txtDiscountType.TabIndex = 649;
             // 
             // Label18
@@ -371,7 +371,7 @@
             this.txtDatefBirth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDatefBirth.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtDatefBirth.Properties.MaxLength = 100;
-            this.txtDatefBirth.Size = new System.Drawing.Size(153, 24);
+            this.txtDatefBirth.Size = new System.Drawing.Size(153, 22);
             this.txtDatefBirth.TabIndex = 648;
             // 
             // txtEmail
@@ -381,7 +381,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmail.Properties.MaxLength = 100;
-            this.txtEmail.Size = new System.Drawing.Size(482, 24);
+            this.txtEmail.Size = new System.Drawing.Size(482, 22);
             this.txtEmail.TabIndex = 646;
             // 
             // txtState
@@ -391,7 +391,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
-            this.txtState.Size = new System.Drawing.Size(192, 24);
+            this.txtState.Size = new System.Drawing.Size(192, 22);
             this.txtState.TabIndex = 645;
             // 
             // txtCity
@@ -401,7 +401,7 @@
             this.txtCity.Name = "txtCity";
             this.txtCity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCity.Properties.MaxLength = 100;
-            this.txtCity.Size = new System.Drawing.Size(153, 24);
+            this.txtCity.Size = new System.Drawing.Size(153, 22);
             this.txtCity.TabIndex = 644;
             // 
             // txtAddress3
@@ -411,7 +411,7 @@
             this.txtAddress3.Name = "txtAddress3";
             this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress3.Properties.MaxLength = 100;
-            this.txtAddress3.Size = new System.Drawing.Size(482, 24);
+            this.txtAddress3.Size = new System.Drawing.Size(482, 22);
             this.txtAddress3.TabIndex = 643;
             // 
             // txtAddress2
@@ -421,7 +421,7 @@
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 100;
-            this.txtAddress2.Size = new System.Drawing.Size(482, 24);
+            this.txtAddress2.Size = new System.Drawing.Size(482, 22);
             this.txtAddress2.TabIndex = 642;
             // 
             // txtAddress1
@@ -431,7 +431,7 @@
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 100;
-            this.txtAddress1.Size = new System.Drawing.Size(482, 24);
+            this.txtAddress1.Size = new System.Drawing.Size(482, 22);
             this.txtAddress1.TabIndex = 641;
             // 
             // txtRefBy
@@ -441,7 +441,7 @@
             this.txtRefBy.Name = "txtRefBy";
             this.txtRefBy.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRefBy.Properties.MaxLength = 100;
-            this.txtRefBy.Size = new System.Drawing.Size(482, 24);
+            this.txtRefBy.Size = new System.Drawing.Size(482, 22);
             this.txtRefBy.TabIndex = 640;
             // 
             // label1
@@ -462,7 +462,7 @@
             this.txtLoyaltyCardNo.Name = "txtLoyaltyCardNo";
             this.txtLoyaltyCardNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLoyaltyCardNo.Properties.MaxLength = 100;
-            this.txtLoyaltyCardNo.Size = new System.Drawing.Size(192, 24);
+            this.txtLoyaltyCardNo.Size = new System.Drawing.Size(192, 22);
             this.txtLoyaltyCardNo.TabIndex = 653;
             // 
             // txtCardExpiryDate
@@ -479,7 +479,7 @@
             this.txtCardExpiryDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtCardExpiryDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCardExpiryDate.Properties.MaxLength = 100;
-            this.txtCardExpiryDate.Size = new System.Drawing.Size(192, 24);
+            this.txtCardExpiryDate.Size = new System.Drawing.Size(192, 22);
             this.txtCardExpiryDate.TabIndex = 655;
             // 
             // txtCardIssueDate
@@ -496,7 +496,7 @@
             this.txtCardIssueDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtCardIssueDate.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtCardIssueDate.Properties.MaxLength = 100;
-            this.txtCardIssueDate.Size = new System.Drawing.Size(153, 24);
+            this.txtCardIssueDate.Size = new System.Drawing.Size(153, 22);
             this.txtCardIssueDate.TabIndex = 654;
             // 
             // txtMobileNo
@@ -506,7 +506,7 @@
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobileNo.Properties.MaxLength = 100;
-            this.txtMobileNo.Size = new System.Drawing.Size(153, 24);
+            this.txtMobileNo.Size = new System.Drawing.Size(153, 22);
             this.txtMobileNo.TabIndex = 656;
             // 
             // txtFirstName
@@ -516,7 +516,7 @@
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFirstName.Properties.MaxLength = 100;
-            this.txtFirstName.Size = new System.Drawing.Size(155, 24);
+            this.txtFirstName.Size = new System.Drawing.Size(155, 22);
             this.txtFirstName.TabIndex = 0;
             // 
             // txtMiddleName
@@ -526,7 +526,7 @@
             this.txtMiddleName.Name = "txtMiddleName";
             this.txtMiddleName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiddleName.Properties.MaxLength = 100;
-            this.txtMiddleName.Size = new System.Drawing.Size(155, 24);
+            this.txtMiddleName.Size = new System.Drawing.Size(155, 22);
             this.txtMiddleName.TabIndex = 659;
             // 
             // txtSurName
@@ -536,7 +536,7 @@
             this.txtSurName.Name = "txtSurName";
             this.txtSurName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSurName.Properties.MaxLength = 100;
-            this.txtSurName.Size = new System.Drawing.Size(155, 24);
+            this.txtSurName.Size = new System.Drawing.Size(155, 22);
             this.txtSurName.TabIndex = 660;
             // 
             // txtCustId
@@ -548,7 +548,7 @@
             this.txtCustId.Name = "txtCustId";
             this.txtCustId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCustId.Properties.MaxLength = 8;
-            this.txtCustId.Size = new System.Drawing.Size(155, 24);
+            this.txtCustId.Size = new System.Drawing.Size(155, 22);
             this.txtCustId.TabIndex = 661;
             this.txtCustId.TabStop = false;
             // 
@@ -566,7 +566,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(678, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(678, 27);
             this.Menu_ToolStrip.TabIndex = 662;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -576,7 +576,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -586,7 +586,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -609,11 +609,11 @@
             this.TXTCUSTGSTNO.Name = "TXTCUSTGSTNO";
             this.TXTCUSTGSTNO.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TXTCUSTGSTNO.Properties.MaxLength = 8;
-            this.TXTCUSTGSTNO.Size = new System.Drawing.Size(166, 24);
+            this.TXTCUSTGSTNO.Size = new System.Drawing.Size(166, 22);
             this.TXTCUSTGSTNO.TabIndex = 661;
             this.TXTCUSTGSTNO.TabStop = false;
             // 
-            // frmCustomerMst
+            // FrmCustomerMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -659,7 +659,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmCustomerMst";
+            this.Name = "FrmCustomerMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmCustomerMst_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCustomerMst_KeyDown);

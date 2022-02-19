@@ -84,7 +84,7 @@
             this.txtCatgDesc.Name = "txtCatgDesc";
             this.txtCatgDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCatgDesc.Properties.MaxLength = 100;
-            this.txtCatgDesc.Size = new System.Drawing.Size(244, 24);
+            this.txtCatgDesc.Size = new System.Drawing.Size(244, 22);
             this.txtCatgDesc.TabIndex = 197;
             // 
             // txtCatgCode
@@ -93,7 +93,7 @@
             this.txtCatgCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCatgCode.Name = "txtCatgCode";
             this.txtCatgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCatgCode.Size = new System.Drawing.Size(97, 24);
+            this.txtCatgCode.Size = new System.Drawing.Size(97, 22);
             this.txtCatgCode.TabIndex = 196;
             // 
             // label3
@@ -101,7 +101,7 @@
             this.label3.Location = new System.Drawing.Point(21, 93);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 199;
             this.label3.Text = "Description";
             // 
@@ -110,11 +110,11 @@
             this.label1.Location = new System.Drawing.Point(58, 43);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 198;
             this.label1.Text = "Code";
             // 
-            // frmCategoryMst
+            // FrmCategoryMst
             // 
             this.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Appearance.Options.UseBackColor = true;
@@ -130,7 +130,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmCategoryMst";
+            this.Name = "FrmCategoryMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmCategoryMst_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmCategoryMst_KeyDown);

@@ -58,7 +58,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 27);
             this.Menu_ToolStrip.TabIndex = 382;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -68,7 +68,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -122,7 +122,7 @@
             this.txtBrandAlias.Name = "txtBrandAlias";
             this.txtBrandAlias.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandAlias.Properties.MaxLength = 100;
-            this.txtBrandAlias.Size = new System.Drawing.Size(409, 24);
+            this.txtBrandAlias.Size = new System.Drawing.Size(409, 22);
             this.txtBrandAlias.TabIndex = 383;
             // 
             // txtBrandName
@@ -132,7 +132,7 @@
             this.txtBrandName.Name = "txtBrandName";
             this.txtBrandName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandName.Properties.MaxLength = 100;
-            this.txtBrandName.Size = new System.Drawing.Size(409, 24);
+            this.txtBrandName.Size = new System.Drawing.Size(409, 22);
             this.txtBrandName.TabIndex = 381;
             // 
             // txtSysID
@@ -141,10 +141,10 @@
             this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSysID.Size = new System.Drawing.Size(97, 24);
+            this.txtSysID.Size = new System.Drawing.Size(97, 22);
             this.txtSysID.TabIndex = 380;
             // 
-            // frmBrand
+            // FrmBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -160,7 +160,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmBrand";
+            this.Name = "FrmBrand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmBrand_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBrand_KeyDown);

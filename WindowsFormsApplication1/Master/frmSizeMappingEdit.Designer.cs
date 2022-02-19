@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(74, 90);
+            this.label1.Location = new System.Drawing.Point(40, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 19);
@@ -72,7 +72,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label9.Appearance.Options.UseFont = true;
-            this.label9.Location = new System.Drawing.Point(44, 122);
+            this.label9.Location = new System.Drawing.Point(10, 101);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 19);
@@ -83,7 +83,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(74, 150);
+            this.labelControl1.Location = new System.Drawing.Point(44, 131);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(44, 19);
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(62, 177);
+            this.labelControl2.Location = new System.Drawing.Point(28, 161);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(60, 19);
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtTempSizeDesc
             // 
-            this.txtTempSizeDesc.Location = new System.Drawing.Point(128, 179);
+            this.txtTempSizeDesc.Location = new System.Drawing.Point(94, 159);
             this.txtTempSizeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTempSizeDesc.Name = "txtTempSizeDesc";
             this.txtTempSizeDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1.Master
             // txtSizeDesc
             // 
             this.txtSizeDesc.Enabled = false;
-            this.txtSizeDesc.Location = new System.Drawing.Point(212, 149);
+            this.txtSizeDesc.Location = new System.Drawing.Point(178, 129);
             this.txtSizeDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSizeDesc.Name = "txtSizeDesc";
             this.txtSizeDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1.Master
             // txtSizeID
             // 
             this.txtSizeID.Enabled = false;
-            this.txtSizeID.Location = new System.Drawing.Point(128, 149);
+            this.txtSizeID.Location = new System.Drawing.Point(94, 129);
             this.txtSizeID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSizeID.Name = "txtSizeID";
             this.txtSizeID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -137,7 +137,7 @@ namespace WindowsFormsApplication1.Master
             // txtGrpDesc
             // 
             this.txtGrpDesc.Enabled = false;
-            this.txtGrpDesc.Location = new System.Drawing.Point(212, 87);
+            this.txtGrpDesc.Location = new System.Drawing.Point(178, 69);
             this.txtGrpDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrpDesc.Name = "txtGrpDesc";
             this.txtGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1.Master
             // txtGrpCode
             // 
             this.txtGrpCode.Enabled = false;
-            this.txtGrpCode.Location = new System.Drawing.Point(128, 87);
+            this.txtGrpCode.Location = new System.Drawing.Point(94, 69);
             this.txtGrpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrpCode.Name = "txtGrpCode";
             this.txtGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -161,7 +161,7 @@ namespace WindowsFormsApplication1.Master
             // txtSGrpDesc
             // 
             this.txtSGrpDesc.Enabled = false;
-            this.txtSGrpDesc.Location = new System.Drawing.Point(212, 119);
+            this.txtSGrpDesc.Location = new System.Drawing.Point(178, 99);
             this.txtSGrpDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSGrpDesc.Name = "txtSGrpDesc";
             this.txtSGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1.Master
             // txtSGrpCode
             // 
             this.txtSGrpCode.Enabled = false;
-            this.txtSGrpCode.Location = new System.Drawing.Point(128, 119);
+            this.txtSGrpCode.Location = new System.Drawing.Point(94, 99);
             this.txtSGrpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSGrpCode.Name = "txtSGrpCode";
             this.txtSGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -195,7 +195,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(520, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(447, 31);
             this.Menu_ToolStrip.TabIndex = 705;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -227,7 +227,7 @@ namespace WindowsFormsApplication1.Master
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(62, 55);
+            this.labelControl3.Location = new System.Drawing.Point(40, 41);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(48, 19);
@@ -236,7 +236,7 @@ namespace WindowsFormsApplication1.Master
             // 
             // txtTransID
             // 
-            this.txtTransID.Location = new System.Drawing.Point(128, 57);
+            this.txtTransID.Location = new System.Drawing.Point(94, 39);
             this.txtTransID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransID.Name = "txtTransID";
             this.txtTransID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -245,11 +245,11 @@ namespace WindowsFormsApplication1.Master
             this.txtTransID.TabIndex = 706;
             this.txtTransID.TabStop = false;
             // 
-            // frmSizeMappingEdit
+            // FrmSizeMappingEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 236);
+            this.ClientSize = new System.Drawing.Size(447, 205);
             this.ControlBox = false;
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.txtTransID);
@@ -266,7 +266,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.txtSGrpCode);
             this.Controls.Add(this.label9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmSizeMappingEdit";
+            this.Name = "FrmSizeMappingEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmSizeMappingEdit_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtTempSizeDesc.Properties)).EndInit();

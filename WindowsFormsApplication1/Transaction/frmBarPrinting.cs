@@ -1226,38 +1226,6 @@ namespace WindowsFormsApplication1.Transaction
                     }
                 }
             }
-
-
-            //xlConn = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog1.FileName + ";Extended Properties=\"Excel 12.0;\";";
-            //using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],SEGMENT,[BRICK DESCRIPTION],[HSN CODE] FROM [Sheet1$]", xlConn))
-            //{
-            //    myCommand.Fill(dtGeneric);
-
-            //    foreach (DataRow dr in dtGeneric.Rows)
-            //    {
-            //        DataSet dsCheckGroup = ProjectFunctions.GetDataSet("select GrpDesc from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'");
-            //        if (dsCheckGroup.Tables[0].Rows.Count > 0)
-            //        {
-
-            //        }
-            //        else
-            //        {
-            //            ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpDesc)values((Select max(isnull(GrpCode,0))+1 from GrpMst),'" + dr["SEGMENT"].ToString().Trim() + "')");
-
-            //        }
-            //        DataSet dsCheckSubGroup = ProjectFunctions.GetDataSet("select GrpSubDesc,GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "' And GrpSubDesc='" + dr["BRICK DESCRIPTION"].ToString().Trim() + "'");
-            //        if (dsCheckSubGroup.Tables[0].Rows.Count > 0)
-            //        {
-
-            //        }
-            //        else
-            //        {
-            //            ProjectFunctions.GetDataSet(" Insert into GrpMst(GrpCode,GrpSubCode,GrpDesc,GrpSubDesc,GrpHSNCode)values((Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'),((Select max(isnull(GrpSubCode,0))+1 from GrpMst Where GrpCode=(Select Distinct GrpCode from GrpMst Where GrpDesc='" + dr["SEGMENT"].ToString().Trim() + "'))),'" + dr["SEGMENT"].ToString().Trim() + "','" + dr["BRICK DESCRIPTION"].ToString().Trim() + "','" + dr["HSN CODE"].ToString() + "')");
-
-            //        }
-            //    }
-            //}
-
             XtraMessageBox.Show("Process Completed");
         }
 
@@ -1303,36 +1271,6 @@ namespace WindowsFormsApplication1.Transaction
                 }
 
 
-
-                //var xlConn2 = string.Empty;
-                //xlConn2 = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + openFileDialog2.FileName + ";Extended Properties=\"Excel 12.0;\";";
-                //using (var myCommand = new OleDbDataAdapter("SELECT [GENERIC ART],[GENERIC ARTICLE NAME],[MRP], [SIZE],[COLOR]  FROM [Sheet1$]", xlConn2))
-                //{
-                //    myCommand.Fill(dtVariants);
-
-                //    foreach (DataRow dr in dtVariants.Rows)
-                //    {
-                //        DataSet dsCheckSIZE = ProjectFunctions.GetDataSet("select SZNAME from SIZEMAST Where SZNAME='" + dr["SIZE"].ToString().Trim() + "'");
-                //        if (dsCheckSIZE.Tables[0].Rows.Count > 0)
-                //        {
-
-                //        }
-                //        else
-                //        {
-                //            ProjectFunctions.GetDataSet("  Insert into SIZEMAST (SZNAME,SZDESC)values('" + dr["SIZE"].ToString().Trim() + "','" + dr["SIZE"].ToString().Trim() + "')");
-
-                //        }
-                //        DataSet dsCheckColor = ProjectFunctions.GetDataSet("select COLNAME from COLOURS Where COLNAME='" + dr["COLOR"].ToString().Trim() + "'");
-                //        if (dsCheckColor.Tables[0].Rows.Count > 0)
-                //        {
-
-                //        }
-                //        else
-                //        {
-                //            ProjectFunctions.GetDataSet(" Insert into COLOURS(COLNAME)values('" + dr["COLOR"].ToString().Trim() + "')");
-                //        }
-                //    }
-                //}
 
 
                 foreach (DataRow dr in dtGeneric.Rows)
@@ -1403,10 +1341,7 @@ namespace WindowsFormsApplication1.Transaction
             simpleButton1.Visible = true;
         }
 
-        private void TxtDeptCode_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void SimpleButton1_Click_1(object sender, EventArgs e)
         {

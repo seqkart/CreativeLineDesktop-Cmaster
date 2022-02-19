@@ -168,7 +168,7 @@
             // 
             this.skinRibbonGalleryBarItem.Id = 14;
             this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
-            this.skinRibbonGalleryBarItem.GalleryItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.SkinRibbonGalleryBarItem_GalleryItemClick);
+            this.skinRibbonGalleryBarItem.GalleryItemClick += new DevExpress.XtraBars.Ribbon.GalleryItemClickEventHandler(this.SkinRibbonGalleryBarItem_ItemClick);
             // 
             // barSubItemNavigation
             // 
@@ -521,7 +521,6 @@
             this.toolbarFormControl1.TitleItemLinks.Add(this.skinDropDownButtonItem2);
             this.toolbarFormControl1.TitleItemLinks.Add(this.barButtonItem4);
             this.toolbarFormControl1.TitleItemLinks.Add(this.btnWhatsAp);
-            this.toolbarFormControl1.TitleItemLinks.Add(this.skinBarSubItem2);
             this.toolbarFormControl1.ToolbarForm = this;
             // 
             // toolbarFormManager1
@@ -603,11 +602,7 @@
             this.skinDropDownButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.skinDropDownButtonItem2.Id = 3;
             this.skinDropDownButtonItem2.Name = "skinDropDownButtonItem2";
-            this.skinDropDownButtonItem2.DownChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_DownChanged);
-            this.skinDropDownButtonItem2.HyperlinkClick += new DevExpress.Utils.HyperlinkClickEventHandler(this.skinDropDownButtonItem2_HyperlinkClick);
             this.skinDropDownButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemClick);
-            this.skinDropDownButtonItem2.ItemDoubleClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemDoubleClick);
-            this.skinDropDownButtonItem2.ItemPress += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemPress);
             // 
             // barButtonItem4
             // 
@@ -623,7 +618,7 @@
             this.btnWhatsAp.Caption = "Whats App";
             this.btnWhatsAp.Id = 5;
             this.btnWhatsAp.Name = "btnWhatsAp";
-            this.btnWhatsAp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnWhatsAp_ItemClick);
+            this.btnWhatsAp.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnWhatsAp_ItemClick);
             // 
             // skinBarSubItem2
             // 
@@ -631,9 +626,6 @@
             this.skinBarSubItem2.Caption = "skinBarSubItem2";
             this.skinBarSubItem2.Id = 6;
             this.skinBarSubItem2.Name = "skinBarSubItem2";
-            this.skinBarSubItem2.GetItemData += new System.EventHandler(this.skinBarSubItem2_GetItemData);
-            this.skinBarSubItem2.CloseUp += new System.EventHandler(this.skinBarSubItem2_CloseUp);
-            this.skinBarSubItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinBarSubItem2_ItemClick);
             // 
             // HelpGrid
             // 

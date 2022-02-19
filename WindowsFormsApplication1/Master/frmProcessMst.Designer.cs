@@ -31,12 +31,12 @@ namespace WindowsFormsApplication1.Master
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProcessMst));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.Label17 = new DevExpress.XtraEditors.LabelControl();
             this.Label16 = new DevExpress.XtraEditors.LabelControl();
             this.Label15 = new DevExpress.XtraEditors.LabelControl();
             this.txtProcessRate = new DevExpress.XtraEditors.TextEdit();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtProcessName = new DevExpress.XtraEditors.TextEdit();
             this.txtProcessCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -63,50 +63,6 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.TabIndex = 389;
             this.Menu_ToolStrip.Text = "Options";
             // 
-            // Label17
-            // 
-            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(45, 126);
-            this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(108, 19);
-            this.Label17.TabIndex = 385;
-            this.Label17.Text = "PROCESS  NAME";
-            // 
-            // Label16
-            // 
-            this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label16.Appearance.Options.UseFont = true;
-            this.Label16.Location = new System.Drawing.Point(56, 169);
-            this.Label16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(97, 19);
-            this.Label16.TabIndex = 386;
-            this.Label16.Text = "PROCESS RATE";
-            // 
-            // Label15
-            // 
-            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
-            this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(48, 83);
-            this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(105, 19);
-            this.Label15.TabIndex = 384;
-            this.Label15.Text = "PROCESS CODE ";
-            // 
-            // txtProcessRate
-            // 
-            this.txtProcessRate.Location = new System.Drawing.Point(160, 166);
-            this.txtProcessRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProcessRate.Name = "txtProcessRate";
-            this.txtProcessRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProcessRate.Properties.MaxLength = 100;
-            this.txtProcessRate.Size = new System.Drawing.Size(301, 24);
-            this.txtProcessRate.TabIndex = 2;
-            this.txtProcessRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProcessRate_KeyPress);
-            // 
             // btnQuit
             // 
             this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -127,23 +83,67 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // Label17
+            // 
+            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label17.Appearance.Options.UseFont = true;
+            this.Label17.Location = new System.Drawing.Point(27, 87);
+            this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Label17.Name = "Label17";
+            this.Label17.Size = new System.Drawing.Size(108, 19);
+            this.Label17.TabIndex = 385;
+            this.Label17.Text = "PROCESS  NAME";
+            // 
+            // Label16
+            // 
+            this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label16.Appearance.Options.UseFont = true;
+            this.Label16.Location = new System.Drawing.Point(38, 130);
+            this.Label16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Label16.Name = "Label16";
+            this.Label16.Size = new System.Drawing.Size(97, 19);
+            this.Label16.TabIndex = 386;
+            this.Label16.Text = "PROCESS RATE";
+            // 
+            // Label15
+            // 
+            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label15.Appearance.Options.UseFont = true;
+            this.Label15.Location = new System.Drawing.Point(30, 44);
+            this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Label15.Name = "Label15";
+            this.Label15.Size = new System.Drawing.Size(105, 19);
+            this.Label15.TabIndex = 384;
+            this.Label15.Text = "PROCESS CODE ";
+            // 
+            // txtProcessRate
+            // 
+            this.txtProcessRate.Location = new System.Drawing.Point(141, 129);
+            this.txtProcessRate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtProcessRate.Name = "txtProcessRate";
+            this.txtProcessRate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtProcessRate.Properties.MaxLength = 100;
+            this.txtProcessRate.Size = new System.Drawing.Size(301, 22);
+            this.txtProcessRate.TabIndex = 2;
+            this.txtProcessRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtProcessRate_KeyPress);
+            // 
             // txtProcessName
             // 
-            this.txtProcessName.Location = new System.Drawing.Point(160, 123);
+            this.txtProcessName.Location = new System.Drawing.Point(141, 86);
             this.txtProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProcessName.Name = "txtProcessName";
             this.txtProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProcessName.Properties.MaxLength = 100;
-            this.txtProcessName.Size = new System.Drawing.Size(301, 24);
+            this.txtProcessName.Size = new System.Drawing.Size(301, 22);
             this.txtProcessName.TabIndex = 1;
             // 
             // txtProcessCode
             // 
-            this.txtProcessCode.Location = new System.Drawing.Point(160, 80);
+            this.txtProcessCode.Location = new System.Drawing.Point(141, 43);
             this.txtProcessCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProcessCode.Name = "txtProcessCode";
             this.txtProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtProcessCode.Size = new System.Drawing.Size(97, 24);
+            this.txtProcessCode.Size = new System.Drawing.Size(97, 22);
             this.txtProcessCode.TabIndex = 0;
             // 
             // FrmProcessMst

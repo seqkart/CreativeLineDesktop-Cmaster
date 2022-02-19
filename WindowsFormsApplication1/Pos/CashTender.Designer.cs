@@ -3145,7 +3145,7 @@
             // 
             // BtnWhatsapp
             // 
-            this.BtnWhatsapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.BtnWhatsapp.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnWhatsapp.ImageOptions.Image")));
             this.BtnWhatsapp.Location = new System.Drawing.Point(428, 579);
             this.BtnWhatsapp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnWhatsapp.Name = "BtnWhatsapp";

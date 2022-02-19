@@ -55,7 +55,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(355, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(355, 27);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -65,7 +65,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -75,7 +75,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -87,7 +87,7 @@
             this.txtBSDesc.Name = "txtBSDesc";
             this.txtBSDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBSDesc.Properties.MaxLength = 30;
-            this.txtBSDesc.Size = new System.Drawing.Size(267, 24);
+            this.txtBSDesc.Size = new System.Drawing.Size(267, 22);
             this.txtBSDesc.TabIndex = 195;
             // 
             // txtBSCode
@@ -96,7 +96,7 @@
             this.txtBSCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBSCode.Name = "txtBSCode";
             this.txtBSCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBSCode.Size = new System.Drawing.Size(65, 24);
+            this.txtBSCode.Size = new System.Drawing.Size(65, 22);
             this.txtBSCode.TabIndex = 196;
             this.txtBSCode.TabStop = false;
             // 
@@ -105,7 +105,7 @@
             this.label3.Location = new System.Drawing.Point(17, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 17);
+            this.label3.Size = new System.Drawing.Size(32, 16);
             this.label3.TabIndex = 198;
             this.label3.Text = "Desc";
             // 
@@ -114,7 +114,7 @@
             this.label1.Location = new System.Drawing.Point(17, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 197;
             this.label1.Text = "Code";
             // 

@@ -172,7 +172,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.txtReturnDate.Properties.Mask.EditMask = "";
             this.txtReturnDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtReturnDate.Size = new System.Drawing.Size(114, 24);
+            this.txtReturnDate.Size = new System.Drawing.Size(114, 22);
             this.txtReturnDate.TabIndex = 1;
             this.txtReturnDate.TabStop = false;
             // 
@@ -182,7 +182,7 @@
             this.txtReturnNo.Location = new System.Drawing.Point(145, 88);
             this.txtReturnNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtReturnNo.Name = "txtReturnNo";
-            this.txtReturnNo.Size = new System.Drawing.Size(114, 24);
+            this.txtReturnNo.Size = new System.Drawing.Size(114, 22);
             this.txtReturnNo.TabIndex = 0;
             this.txtReturnNo.TabStop = false;
             // 
@@ -356,7 +356,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 

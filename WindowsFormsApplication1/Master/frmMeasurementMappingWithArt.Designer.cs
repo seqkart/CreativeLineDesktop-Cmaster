@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeasurementMappingWithArt));
+            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
+            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
+            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
             DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
             DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
             DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
             this.InfoGrid = new DevExpress.XtraGrid.GridControl();
             this.InfoGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -161,7 +161,7 @@
             this.txtArtNo.Name = "txtArtNo";
             this.txtArtNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtArtNo.Properties.MaxLength = 8;
-            this.txtArtNo.Size = new System.Drawing.Size(86, 24);
+            this.txtArtNo.Size = new System.Drawing.Size(86, 22);
             this.txtArtNo.TabIndex = 776;
             this.txtArtNo.TabStop = false;
             // 
@@ -173,7 +173,7 @@
             this.txtArtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtDesc.Name = "txtArtDesc";
             this.txtArtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtArtDesc.Size = new System.Drawing.Size(341, 24);
+            this.txtArtDesc.Size = new System.Drawing.Size(341, 22);
             this.txtArtDesc.TabIndex = 777;
             // 
             // Menu_ToolStrip
@@ -237,7 +237,7 @@
             this.txtARTID.Name = "txtARTID";
             this.txtARTID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtARTID.Properties.MaxLength = 8;
-            this.txtARTID.Size = new System.Drawing.Size(86, 24);
+            this.txtARTID.Size = new System.Drawing.Size(86, 22);
             this.txtARTID.TabIndex = 780;
             this.txtARTID.TabStop = false;
             this.txtARTID.EditValueChanged += new System.EventHandler(this.TxtARTID_EditValueChanged);
@@ -291,14 +291,14 @@
             this.txtMeasurement.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtMeasurement.Properties.SelectAllItemVisible = false;
-            this.txtMeasurement.Size = new System.Drawing.Size(527, 24);
-            toolTipTitleItem2.Text = "Help";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+            this.txtMeasurement.Size = new System.Drawing.Size(527, 22);
+            toolTipTitleItem1.Text = "Help";
+            toolTipItem1.LeftIndent = 6;
+            toolTipItem1.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
     "elect Items.\r\nAtlast Press Enter Save Choice.";
-            superToolTip2.Items.Add(toolTipTitleItem2);
-            superToolTip2.Items.Add(toolTipItem2);
-            this.txtMeasurement.SuperTip = superToolTip2;
+            superToolTip1.Items.Add(toolTipTitleItem1);
+            superToolTip1.Items.Add(toolTipItem1);
+            this.txtMeasurement.SuperTip = superToolTip1;
             this.txtMeasurement.TabIndex = 785;
             // 
             // txtSize
@@ -311,14 +311,14 @@
             this.txtSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSize.Properties.SelectAllItemVisible = false;
-            this.txtSize.Size = new System.Drawing.Size(527, 24);
-            toolTipTitleItem3.Text = "Help";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
+            this.txtSize.Size = new System.Drawing.Size(527, 22);
+            toolTipTitleItem2.Text = "Help";
+            toolTipItem2.LeftIndent = 6;
+            toolTipItem2.Text = "Please Select Only One Item at a Time.\r\nPress F4 to Show Popup.\r\nPress Space to S" +
     "elect Items.\r\nAtlast Press Enter Save Choice.";
-            superToolTip3.Items.Add(toolTipTitleItem3);
-            superToolTip3.Items.Add(toolTipItem3);
-            this.txtSize.SuperTip = superToolTip3;
+            superToolTip2.Items.Add(toolTipTitleItem2);
+            superToolTip2.Items.Add(toolTipItem2);
+            this.txtSize.SuperTip = superToolTip2;
             this.txtSize.TabIndex = 787;
             // 
             // label3

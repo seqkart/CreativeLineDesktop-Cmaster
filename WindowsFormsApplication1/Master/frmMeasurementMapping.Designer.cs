@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMeasurementMapping));
             this.Label3 = new DevExpress.XtraEditors.LabelControl();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.LBDEPCODE = new DevExpress.XtraEditors.LabelControl();
             this.txtMCode = new DevExpress.XtraEditors.TextEdit();
             this.txtMDesc = new DevExpress.XtraEditors.TextEdit();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtMCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMDesc.Properties)).BeginInit();
@@ -70,40 +70,6 @@
             this.Menu_ToolStrip.TabIndex = 772;
             this.Menu_ToolStrip.Text = "Options";
             // 
-            // LBDEPCODE
-            // 
-            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBDEPCODE.Appearance.Options.UseFont = true;
-            this.LBDEPCODE.Location = new System.Drawing.Point(11, 52);
-            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.LBDEPCODE.Name = "LBDEPCODE";
-            this.LBDEPCODE.Size = new System.Drawing.Size(141, 20);
-            this.LBDEPCODE.TabIndex = 768;
-            this.LBDEPCODE.Text = "Measurement Code :";
-            // 
-            // txtMCode
-            // 
-            this.txtMCode.Enabled = false;
-            this.txtMCode.EnterMoveNextControl = true;
-            this.txtMCode.Location = new System.Drawing.Point(165, 50);
-            this.txtMCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMCode.Name = "txtMCode";
-            this.txtMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMCode.Properties.MaxLength = 8;
-            this.txtMCode.Size = new System.Drawing.Size(86, 24);
-            this.txtMCode.TabIndex = 770;
-            this.txtMCode.TabStop = false;
-            // 
-            // txtMDesc
-            // 
-            this.txtMDesc.EnterMoveNextControl = true;
-            this.txtMDesc.Location = new System.Drawing.Point(165, 82);
-            this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMDesc.Name = "txtMDesc";
-            this.txtMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtMDesc.Size = new System.Drawing.Size(316, 24);
-            this.txtMDesc.TabIndex = 771;
-            // 
             // btnQuit
             // 
             this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -127,6 +93,40 @@
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // LBDEPCODE
+            // 
+            this.LBDEPCODE.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBDEPCODE.Appearance.Options.UseFont = true;
+            this.LBDEPCODE.Location = new System.Drawing.Point(11, 52);
+            this.LBDEPCODE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.LBDEPCODE.Name = "LBDEPCODE";
+            this.LBDEPCODE.Size = new System.Drawing.Size(141, 20);
+            this.LBDEPCODE.TabIndex = 768;
+            this.LBDEPCODE.Text = "Measurement Code :";
+            // 
+            // txtMCode
+            // 
+            this.txtMCode.Enabled = false;
+            this.txtMCode.EnterMoveNextControl = true;
+            this.txtMCode.Location = new System.Drawing.Point(165, 50);
+            this.txtMCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMCode.Name = "txtMCode";
+            this.txtMCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMCode.Properties.MaxLength = 8;
+            this.txtMCode.Size = new System.Drawing.Size(86, 22);
+            this.txtMCode.TabIndex = 770;
+            this.txtMCode.TabStop = false;
+            // 
+            // txtMDesc
+            // 
+            this.txtMDesc.EnterMoveNextControl = true;
+            this.txtMDesc.Location = new System.Drawing.Point(165, 82);
+            this.txtMDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMDesc.Name = "txtMDesc";
+            this.txtMDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtMDesc.Size = new System.Drawing.Size(316, 22);
+            this.txtMDesc.TabIndex = 771;
             // 
             // frmMeasurementMapping
             // 

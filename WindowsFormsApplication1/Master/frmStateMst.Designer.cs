@@ -58,7 +58,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(434, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(383, 31);
             this.Menu_ToolStrip.TabIndex = 376;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -88,58 +88,58 @@
             // 
             // txtStateName
             // 
-            this.txtStateName.Location = new System.Drawing.Point(114, 110);
+            this.txtStateName.Location = new System.Drawing.Point(108, 73);
             this.txtStateName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStateName.Name = "txtStateName";
             this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateName.Properties.MaxLength = 100;
-            this.txtStateName.Size = new System.Drawing.Size(246, 24);
+            this.txtStateName.Size = new System.Drawing.Size(246, 22);
             this.txtStateName.TabIndex = 388;
             // 
             // txtStateCode
             // 
-            this.txtStateCode.Location = new System.Drawing.Point(114, 67);
+            this.txtStateCode.Location = new System.Drawing.Point(108, 46);
             this.txtStateCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStateCode.Name = "txtStateCode";
             this.txtStateCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtStateCode.Size = new System.Drawing.Size(97, 24);
+            this.txtStateCode.Size = new System.Drawing.Size(97, 22);
             this.txtStateCode.TabIndex = 387;
             // 
             // txtCountry
             // 
             this.txtCountry.EditValue = "INDIA";
-            this.txtCountry.Location = new System.Drawing.Point(114, 153);
+            this.txtCountry.Location = new System.Drawing.Point(108, 100);
             this.txtCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtCountry.Size = new System.Drawing.Size(246, 24);
+            this.txtCountry.Size = new System.Drawing.Size(246, 22);
             this.txtCountry.TabIndex = 389;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(64, 72);
+            this.labelControl1.Location = new System.Drawing.Point(53, 49);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(44, 17);
+            this.labelControl1.Size = new System.Drawing.Size(49, 16);
             this.labelControl1.TabIndex = 390;
             this.labelControl1.Text = "SYS ID :";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(24, 115);
+            this.labelControl2.Location = new System.Drawing.Point(9, 76);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(84, 17);
+            this.labelControl2.Size = new System.Drawing.Size(93, 16);
             this.labelControl2.TabIndex = 390;
             this.labelControl2.Text = "STATE NAME :";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(42, 158);
+            this.labelControl3.Location = new System.Drawing.Point(29, 103);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(66, 17);
+            this.labelControl3.Size = new System.Drawing.Size(73, 16);
             this.labelControl3.TabIndex = 390;
             this.labelControl3.Text = "COUNTRY :";
             // 
@@ -147,7 +147,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(434, 241);
+            this.ClientSize = new System.Drawing.Size(383, 157);
             this.ControlBox = false;
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.labelControl2);

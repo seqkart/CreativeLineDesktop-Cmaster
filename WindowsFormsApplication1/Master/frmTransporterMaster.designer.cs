@@ -236,7 +236,7 @@
             this.txtTransporterName.Name = "txtTransporterName";
             this.txtTransporterName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTransporterName.Properties.MaxLength = 100;
-            this.txtTransporterName.Size = new System.Drawing.Size(451, 24);
+            this.txtTransporterName.Size = new System.Drawing.Size(451, 22);
             this.txtTransporterName.TabIndex = 211;
             // 
             // txtTransporterCode
@@ -245,7 +245,7 @@
             this.txtTransporterCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTransporterCode.Name = "txtTransporterCode";
             this.txtTransporterCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTransporterCode.Size = new System.Drawing.Size(97, 24);
+            this.txtTransporterCode.Size = new System.Drawing.Size(97, 22);
             this.txtTransporterCode.TabIndex = 210;
             // 
             // txtAddress1
@@ -255,7 +255,7 @@
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 100;
-            this.txtAddress1.Size = new System.Drawing.Size(451, 24);
+            this.txtAddress1.Size = new System.Drawing.Size(451, 22);
             this.txtAddress1.TabIndex = 212;
             // 
             // txtAddress2
@@ -265,7 +265,7 @@
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 100;
-            this.txtAddress2.Size = new System.Drawing.Size(451, 24);
+            this.txtAddress2.Size = new System.Drawing.Size(451, 22);
             this.txtAddress2.TabIndex = 213;
             // 
             // txtCityCode
@@ -275,7 +275,7 @@
             this.txtCityCode.Name = "txtCityCode";
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 100;
-            this.txtCityCode.Size = new System.Drawing.Size(96, 24);
+            this.txtCityCode.Size = new System.Drawing.Size(96, 22);
             this.txtCityCode.TabIndex = 214;
             this.txtCityCode.EditValueChanged += new System.EventHandler(this.TxtCity_EditValueChanged);
             this.txtCityCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCityCode_KeyDown);
@@ -288,7 +288,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
-            this.txtState.Size = new System.Drawing.Size(451, 24);
+            this.txtState.Size = new System.Drawing.Size(451, 22);
             this.txtState.TabIndex = 215;
             this.txtState.TabStop = false;
             // 
@@ -299,7 +299,7 @@
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtContactPerson.Properties.MaxLength = 100;
-            this.txtContactPerson.Size = new System.Drawing.Size(451, 24);
+            this.txtContactPerson.Size = new System.Drawing.Size(451, 22);
             this.txtContactPerson.TabIndex = 216;
             this.txtContactPerson.EditValueChanged += new System.EventHandler(this.TxtContactPerson_EditValueChanged);
             // 
@@ -310,7 +310,7 @@
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobileNo.Properties.MaxLength = 100;
-            this.txtMobileNo.Size = new System.Drawing.Size(185, 24);
+            this.txtMobileNo.Size = new System.Drawing.Size(185, 22);
             this.txtMobileNo.TabIndex = 218;
             // 
             // txtLandlineNo
@@ -320,7 +320,7 @@
             this.txtLandlineNo.Name = "txtLandlineNo";
             this.txtLandlineNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLandlineNo.Properties.MaxLength = 100;
-            this.txtLandlineNo.Size = new System.Drawing.Size(159, 24);
+            this.txtLandlineNo.Size = new System.Drawing.Size(159, 22);
             this.txtLandlineNo.TabIndex = 217;
             // 
             // txtWebSite
@@ -330,7 +330,7 @@
             this.txtWebSite.Name = "txtWebSite";
             this.txtWebSite.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtWebSite.Properties.MaxLength = 100;
-            this.txtWebSite.Size = new System.Drawing.Size(451, 24);
+            this.txtWebSite.Size = new System.Drawing.Size(451, 22);
             this.txtWebSite.TabIndex = 220;
             // 
             // txtEmailId
@@ -340,7 +340,7 @@
             this.txtEmailId.Name = "txtEmailId";
             this.txtEmailId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmailId.Properties.MaxLength = 100;
-            this.txtEmailId.Size = new System.Drawing.Size(451, 24);
+            this.txtEmailId.Size = new System.Drawing.Size(451, 22);
             this.txtEmailId.TabIndex = 219;
             // 
             // label11
@@ -362,7 +362,7 @@
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityName.Properties.MaxLength = 100;
-            this.txtCityName.Size = new System.Drawing.Size(348, 24);
+            this.txtCityName.Size = new System.Drawing.Size(348, 22);
             this.txtCityName.TabIndex = 222;
             this.txtCityName.TabStop = false;
             // 
@@ -374,7 +374,7 @@
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCountry.Properties.MaxLength = 100;
-            this.txtCountry.Size = new System.Drawing.Size(451, 24);
+            this.txtCountry.Size = new System.Drawing.Size(451, 22);
             this.txtCountry.TabIndex = 224;
             this.txtCountry.TabStop = false;
             // 
@@ -426,7 +426,7 @@
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.MaxLength = 100;
-            this.txtGSTNo.Size = new System.Drawing.Size(451, 24);
+            this.txtGSTNo.Size = new System.Drawing.Size(451, 22);
             this.txtGSTNo.TabIndex = 377;
             // 
             // labelControl1

@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGroupMstAddEdit));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.label2 = new DevExpress.XtraEditors.LabelControl();
             this.txtHSNCode = new DevExpress.XtraEditors.TextEdit();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtGrpDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtSGrpCode = new DevExpress.XtraEditors.TextEdit();
             this.txtSGrpDesc = new DevExpress.XtraEditors.TextEdit();
@@ -68,61 +68,6 @@
             this.Menu_ToolStrip.TabIndex = 241;
             this.Menu_ToolStrip.Text = "Options";
             // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(35, 107);
-            this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 17);
-            this.label9.TabIndex = 240;
-            this.label9.Text = "Group Desc";
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(9, 141);
-            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 17);
-            this.label8.TabIndex = 239;
-            this.label8.Text = "Sub Group Desc";
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(6, 73);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-            this.label3.TabIndex = 237;
-            this.label3.Text = "Sub Group Code";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(32, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
-            this.label1.TabIndex = 236;
-            this.label1.Text = "Group Code";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(47, 175);
-            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 17);
-            this.label2.TabIndex = 243;
-            this.label2.Text = "HSNCode";
-            // 
-            // txtHSNCode
-            // 
-            this.txtHSNCode.Location = new System.Drawing.Point(113, 170);
-            this.txtHSNCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtHSNCode.Name = "txtHSNCode";
-            this.txtHSNCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtHSNCode.Properties.MaxLength = 12;
-            this.txtHSNCode.Size = new System.Drawing.Size(425, 24);
-            this.txtHSNCode.TabIndex = 242;
-            // 
             // btnQuit
             // 
             this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -143,6 +88,61 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(36, 105);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.TabIndex = 240;
+            this.label9.Text = "Group Desc";
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(9, 139);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 16);
+            this.label8.TabIndex = 239;
+            this.label8.Text = "Sub Group Desc";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(8, 71);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.TabIndex = 237;
+            this.label3.Text = "Sub Group Code";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(35, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 236;
+            this.label1.Text = "Group Code";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(46, 173);
+            this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.TabIndex = 243;
+            this.label2.Text = "HSNCode";
+            // 
+            // txtHSNCode
+            // 
+            this.txtHSNCode.Location = new System.Drawing.Point(113, 170);
+            this.txtHSNCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtHSNCode.Name = "txtHSNCode";
+            this.txtHSNCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtHSNCode.Properties.MaxLength = 12;
+            this.txtHSNCode.Size = new System.Drawing.Size(425, 22);
+            this.txtHSNCode.TabIndex = 242;
+            // 
             // txtGrpDesc
             // 
             this.txtGrpDesc.Location = new System.Drawing.Point(113, 102);
@@ -150,7 +150,7 @@
             this.txtGrpDesc.Name = "txtGrpDesc";
             this.txtGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpDesc.Properties.MaxLength = 50;
-            this.txtGrpDesc.Size = new System.Drawing.Size(425, 24);
+            this.txtGrpDesc.Size = new System.Drawing.Size(425, 22);
             this.txtGrpDesc.TabIndex = 3;
             this.txtGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGrpDesc_KeyPress);
             this.txtGrpDesc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtGrpDesc_KeyUp);
@@ -161,7 +161,7 @@
             this.txtSGrpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSGrpCode.Name = "txtSGrpCode";
             this.txtSGrpCode.Properties.MaxLength = 4;
-            this.txtSGrpCode.Size = new System.Drawing.Size(83, 24);
+            this.txtSGrpCode.Size = new System.Drawing.Size(83, 22);
             this.txtSGrpCode.TabIndex = 2;
             // 
             // txtSGrpDesc
@@ -171,7 +171,7 @@
             this.txtSGrpDesc.Name = "txtSGrpDesc";
             this.txtSGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGrpDesc.Properties.MaxLength = 50;
-            this.txtSGrpDesc.Size = new System.Drawing.Size(425, 24);
+            this.txtSGrpDesc.Size = new System.Drawing.Size(425, 22);
             this.txtSGrpDesc.TabIndex = 4;
             this.txtSGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSGrpDesc_KeyPress);
             // 
@@ -182,7 +182,7 @@
             this.txtGrpCode.Name = "txtGrpCode";
             this.txtGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpCode.Properties.MaxLength = 4;
-            this.txtGrpCode.Size = new System.Drawing.Size(83, 24);
+            this.txtGrpCode.Size = new System.Drawing.Size(83, 22);
             this.txtGrpCode.TabIndex = 1;
             this.txtGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtGrpCode_KeyDown);
             this.txtGrpCode.Validating += new System.ComponentModel.CancelEventHandler(this.TxtGrpCode_Validating);

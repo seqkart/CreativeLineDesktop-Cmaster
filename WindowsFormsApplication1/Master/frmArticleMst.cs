@@ -243,7 +243,7 @@ namespace WindowsFormsApplication1
                     txtSGrpCode.Focus();
                     RBMANUART.Checked = true;
                     RBARTINDVI.Checked = true;
-                    txtMargin.Text = "37.50";
+                    txtMargin.Text = "40";
                     RBARTUNIQUE.Checked = true;
                 }
                 if (S1 == "Edit")
@@ -265,7 +265,6 @@ namespace WindowsFormsApplication1
                         txtHSNCode.Text = ds.Tables[0].Rows[0]["GrpHSNCode"].ToString();
                         txtSGrpCode.Text = ds.Tables[0].Rows[0]["ARTSBSECTIONID"].ToString();
                         txtSGrpDesc.Text = ds.Tables[0].Rows[0]["GrpSubDesc"].ToString();
-                        //////txtTo.Text = ds.Tables[0].Rows[0]["PrdTaxCodeC"].ToString();
                         txtUMCode.Text = ds.Tables[0].Rows[0]["ARTUOM"].ToString();
                         txtUMDesc.Text = ds.Tables[0].Rows[0]["UomDesc"].ToString();
 
@@ -401,7 +400,7 @@ namespace WindowsFormsApplication1
                 if (txtHSNCode.Text.Trim().Length == 0)
                 {
                     ProjectFunctions.SpeakError("Invalid Article HSN");
-                    //  txtHSNCode.Focus();
+
                     return false;
                 }
                 if (txtTaxCodeL.Text.Trim().Length == 0)

@@ -784,7 +784,6 @@
             this.txtDeptCode.Properties.MaxLength = 4;
             this.txtDeptCode.Size = new System.Drawing.Size(68, 22);
             this.txtDeptCode.TabIndex = 694;
-            this.txtDeptCode.EditValueChanged += new System.EventHandler(this.TxtDeptCode_EditValueChanged);
             this.txtDeptCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDeptCode_KeyDown);
             // 
             // txtDeptDesc

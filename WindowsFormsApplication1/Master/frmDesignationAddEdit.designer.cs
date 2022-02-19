@@ -45,7 +45,7 @@
             this.label3.Location = new System.Drawing.Point(15, 95);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 24;
             this.label3.Text = "Description";
             // 
@@ -54,7 +54,7 @@
             this.label1.Location = new System.Drawing.Point(50, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 22;
             this.label1.Text = "Code";
             // 
@@ -72,7 +72,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(366, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(366, 27);
             this.Menu_ToolStrip.TabIndex = 195;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -102,7 +102,7 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDesc.Properties.MaxLength = 100;
-            this.txtDesc.Size = new System.Drawing.Size(244, 24);
+            this.txtDesc.Size = new System.Drawing.Size(244, 22);
             this.txtDesc.TabIndex = 2;
             // 
             // txtDesgCode
@@ -111,7 +111,7 @@
             this.txtDesgCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDesgCode.Name = "txtDesgCode";
             this.txtDesgCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDesgCode.Size = new System.Drawing.Size(97, 24);
+            this.txtDesgCode.Size = new System.Drawing.Size(97, 22);
             this.txtDesgCode.TabIndex = 1;
             // 
             // FrmDesignationAddEdit

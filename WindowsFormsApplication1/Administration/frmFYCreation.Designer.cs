@@ -61,7 +61,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(268, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(306, 27);
             this.Menu_ToolStrip.TabIndex = 317;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -71,7 +71,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "&Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -81,16 +81,16 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(10, 41);
+            this.label1.Location = new System.Drawing.Point(11, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 17);
+            this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 318;
             this.label1.Text = "Financial Year";
             // 
@@ -104,28 +104,28 @@
             "2023-2024",
             "2024-2025",
             "2025-2026"});
-            this.cmbFY.Location = new System.Drawing.Point(102, 37);
+            this.cmbFY.Location = new System.Drawing.Point(117, 35);
             this.cmbFY.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbFY.Name = "cmbFY";
-            this.cmbFY.Size = new System.Drawing.Size(140, 25);
+            this.cmbFY.Size = new System.Drawing.Size(159, 24);
             this.cmbFY.TabIndex = 316;
             this.cmbFY.SelectedIndexChanged += new System.EventHandler(this.CmbSelectUser_SelectedIndexChanged);
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(43, 116);
+            this.labelControl3.Location = new System.Drawing.Point(49, 109);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(46, 17);
+            this.labelControl3.Size = new System.Drawing.Size(49, 16);
             this.labelControl3.TabIndex = 320;
             this.labelControl3.Text = "To Date";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(28, 79);
+            this.labelControl2.Location = new System.Drawing.Point(32, 74);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(61, 17);
+            this.labelControl2.Size = new System.Drawing.Size(63, 16);
             this.labelControl2.TabIndex = 321;
             this.labelControl2.Text = "From Date";
             // 
@@ -133,36 +133,36 @@
             // 
             this.DtEnd.EditValue = null;
             this.DtEnd.EnterMoveNextControl = true;
-            this.DtEnd.Location = new System.Drawing.Point(102, 112);
+            this.DtEnd.Location = new System.Drawing.Point(117, 105);
             this.DtEnd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtEnd.Name = "DtEnd";
             this.DtEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtEnd.Size = new System.Drawing.Size(141, 24);
+            this.DtEnd.Size = new System.Drawing.Size(161, 22);
             this.DtEnd.TabIndex = 322;
             // 
             // DtFrom
             // 
             this.DtFrom.EditValue = null;
             this.DtFrom.EnterMoveNextControl = true;
-            this.DtFrom.Location = new System.Drawing.Point(102, 75);
+            this.DtFrom.Location = new System.Drawing.Point(117, 71);
             this.DtFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DtFrom.Name = "DtFrom";
             this.DtFrom.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.DtFrom.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.DtFrom.Size = new System.Drawing.Size(141, 24);
+            this.DtFrom.Size = new System.Drawing.Size(161, 22);
             this.DtFrom.TabIndex = 319;
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(55, 153);
+            this.label12.Location = new System.Drawing.Point(63, 144);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 17);
+            this.label12.Size = new System.Drawing.Size(37, 16);
             this.label12.TabIndex = 331;
             this.label12.Text = "Active";
             // 
@@ -172,17 +172,17 @@
             this.txtStatusTag.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.txtStatusTag.Location = new System.Drawing.Point(102, 149);
+            this.txtStatusTag.Location = new System.Drawing.Point(117, 140);
             this.txtStatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStatusTag.Name = "txtStatusTag";
-            this.txtStatusTag.Size = new System.Drawing.Size(140, 25);
+            this.txtStatusTag.Size = new System.Drawing.Size(159, 24);
             this.txtStatusTag.TabIndex = 332;
             // 
             // frmFYCreation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(268, 198);
+            this.ClientSize = new System.Drawing.Size(306, 186);
             this.ControlBox = false;
             this.Controls.Add(this.txtStatusTag);
             this.Controls.Add(this.label12);

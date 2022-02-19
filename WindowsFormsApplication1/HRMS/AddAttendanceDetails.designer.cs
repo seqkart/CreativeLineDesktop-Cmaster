@@ -82,7 +82,7 @@
             this.groupBox1.Controls.Add(this.txtFName);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Location = new System.Drawing.Point(16, 63);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(883, 420);
             this.groupBox1.TabIndex = 212;
@@ -91,43 +91,43 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(128, 154);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
             this.dateTimePicker1.TabIndex = 6;
             // 
             // label16
             // 
             this.label16.Location = new System.Drawing.Point(11, 250);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label16.Margin = new System.Windows.Forms.Padding(4);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 17);
+            this.label16.Size = new System.Drawing.Size(93, 16);
             this.label16.TabIndex = 222;
             this.label16.Text = "Overtime Hours";
             // 
             // txtOvertimeHours
             // 
             this.txtOvertimeHours.Location = new System.Drawing.Point(128, 246);
-            this.txtOvertimeHours.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtOvertimeHours.Margin = new System.Windows.Forms.Padding(4);
             this.txtOvertimeHours.Name = "txtOvertimeHours";
-            this.txtOvertimeHours.Size = new System.Drawing.Size(247, 23);
+            this.txtOvertimeHours.Size = new System.Drawing.Size(247, 22);
             this.txtOvertimeHours.TabIndex = 9;
             // 
             // label12
             // 
             this.label12.Location = new System.Drawing.Point(468, 112);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label12.Margin = new System.Windows.Forms.Padding(4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 17);
+            this.label12.Size = new System.Drawing.Size(72, 16);
             this.label12.TabIndex = 220;
             this.label12.Text = "Designation";
             // 
             // label11
             // 
             this.label11.Location = new System.Drawing.Point(35, 111);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label11.Margin = new System.Windows.Forms.Padding(4);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(69, 17);
+            this.label11.Size = new System.Drawing.Size(71, 16);
             this.label11.TabIndex = 219;
             this.label11.Text = "Department";
             // 
@@ -135,18 +135,18 @@
             // 
             this.txtDesignation.Enabled = false;
             this.txtDesignation.Location = new System.Drawing.Point(560, 108);
-            this.txtDesignation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDesignation.Margin = new System.Windows.Forms.Padding(4);
             this.txtDesignation.Name = "txtDesignation";
-            this.txtDesignation.Size = new System.Drawing.Size(247, 23);
+            this.txtDesignation.Size = new System.Drawing.Size(247, 22);
             this.txtDesignation.TabIndex = 5;
             // 
             // txtDepartment
             // 
             this.txtDepartment.Enabled = false;
             this.txtDepartment.Location = new System.Drawing.Point(128, 108);
-            this.txtDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.txtDepartment.Name = "txtDepartment";
-            this.txtDepartment.Size = new System.Drawing.Size(247, 23);
+            this.txtDepartment.Size = new System.Drawing.Size(247, 22);
             this.txtDepartment.TabIndex = 4;
             // 
             // btnClose
@@ -156,7 +156,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnClose.Location = new System.Drawing.Point(447, 370);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(96, 28);
             this.btnClose.TabIndex = 12;
@@ -167,34 +167,34 @@
             // label15
             // 
             this.label15.Location = new System.Drawing.Point(816, 204);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label15.Margin = new System.Windows.Forms.Padding(4);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(45, 17);
+            this.label15.Size = new System.Drawing.Size(45, 16);
             this.label15.TabIndex = 215;
             this.label15.Text = "HH:MM";
             // 
             // label14
             // 
             this.label14.Location = new System.Drawing.Point(380, 204);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label14.Margin = new System.Windows.Forms.Padding(4);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 17);
+            this.label14.Size = new System.Drawing.Size(45, 16);
             this.label14.TabIndex = 214;
             this.label14.Text = "HH:MM";
             // 
             // label13
             // 
             this.label13.Location = new System.Drawing.Point(45, 295);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label13.Margin = new System.Windows.Forms.Padding(4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 17);
+            this.label13.Size = new System.Drawing.Size(55, 16);
             this.label13.TabIndex = 213;
             this.label13.Text = "Remarks";
             // 
             // txtRemarks
             // 
             this.txtRemarks.Location = new System.Drawing.Point(128, 292);
-            this.txtRemarks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRemarks.Margin = new System.Windows.Forms.Padding(4);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Size = new System.Drawing.Size(471, 57);
             this.txtRemarks.TabIndex = 10;
@@ -203,63 +203,63 @@
             // label10
             // 
             this.label10.Location = new System.Drawing.Point(481, 204);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label10.Margin = new System.Windows.Forms.Padding(4);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 17);
+            this.label10.Size = new System.Drawing.Size(57, 16);
             this.label10.TabIndex = 188;
             this.label10.Text = "Time Out:";
             // 
             // label9
             // 
             this.label9.Location = new System.Drawing.Point(57, 204);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label9.Margin = new System.Windows.Forms.Padding(4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 17);
+            this.label9.Size = new System.Drawing.Size(47, 16);
             this.label9.TabIndex = 187;
             this.label9.Text = "Time In:";
             // 
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(77, 159);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label3.Margin = new System.Windows.Forms.Padding(4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 17);
+            this.label3.Size = new System.Drawing.Size(29, 16);
             this.label3.TabIndex = 181;
             this.label3.Text = "Date";
             // 
             // label2
             // 
             this.label2.Location = new System.Drawing.Point(28, 68);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label2.Margin = new System.Windows.Forms.Padding(4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.Size = new System.Drawing.Size(78, 16);
             this.label2.TabIndex = 180;
             this.label2.Text = "Employee ID";
             // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(41, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label1.Margin = new System.Windows.Forms.Padding(4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(65, 16);
             this.label1.TabIndex = 179;
             this.label1.Text = "First Name";
             // 
             // txtTimeOut
             // 
             this.txtTimeOut.Location = new System.Drawing.Point(560, 201);
-            this.txtTimeOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimeOut.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeOut.Name = "txtTimeOut";
-            this.txtTimeOut.Size = new System.Drawing.Size(247, 23);
+            this.txtTimeOut.Size = new System.Drawing.Size(247, 22);
             this.txtTimeOut.TabIndex = 8;
             this.txtTimeOut.TextChanged += new System.EventHandler(this.TxtTimeOut_TextChanged);
             // 
             // txtTimeIn
             // 
             this.txtTimeIn.Location = new System.Drawing.Point(128, 201);
-            this.txtTimeIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimeIn.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimeIn.Name = "txtTimeIn";
-            this.txtTimeIn.Size = new System.Drawing.Size(247, 23);
+            this.txtTimeIn.Size = new System.Drawing.Size(247, 22);
             this.txtTimeIn.TabIndex = 7;
             this.txtTimeIn.TextChanged += new System.EventHandler(this.TxtTimeIn_TextChanged);
             // 
@@ -267,18 +267,18 @@
             // 
             this.txtEmpID.Enabled = false;
             this.txtEmpID.Location = new System.Drawing.Point(128, 64);
-            this.txtEmpID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmpID.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmpID.Name = "txtEmpID";
-            this.txtEmpID.Size = new System.Drawing.Size(247, 23);
+            this.txtEmpID.Size = new System.Drawing.Size(247, 22);
             this.txtEmpID.TabIndex = 3;
             // 
             // txtFName
             // 
             this.txtFName.Enabled = false;
             this.txtFName.Location = new System.Drawing.Point(128, 20);
-            this.txtFName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFName.Margin = new System.Windows.Forms.Padding(4);
             this.txtFName.Name = "txtFName";
-            this.txtFName.Size = new System.Drawing.Size(247, 23);
+            this.txtFName.Size = new System.Drawing.Size(247, 22);
             this.txtFName.TabIndex = 2;
             // 
             // btnAdd
@@ -287,7 +287,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnAdd.Location = new System.Drawing.Point(337, 370);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(96, 28);
             this.btnAdd.TabIndex = 11;
@@ -298,9 +298,9 @@
             // label29
             // 
             this.label29.Location = new System.Drawing.Point(263, 21);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.label29.Margin = new System.Windows.Forms.Padding(4);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(160, 17);
+            this.label29.Size = new System.Drawing.Size(168, 16);
             this.label29.TabIndex = 211;
             this.label29.Text = "Select an Employee ID First:";
             // 
@@ -309,7 +309,7 @@
             this.cbEmpID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEmpID.FormattingEnabled = true;
             this.cbEmpID.Location = new System.Drawing.Point(457, 17);
-            this.cbEmpID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbEmpID.Margin = new System.Windows.Forms.Padding(4);
             this.cbEmpID.Name = "cbEmpID";
             this.cbEmpID.Size = new System.Drawing.Size(215, 24);
             this.cbEmpID.TabIndex = 1;
@@ -327,7 +327,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.cbEmpID);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(919, 523);
             this.MinimumSize = new System.Drawing.Size(919, 523);

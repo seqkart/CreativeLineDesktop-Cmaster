@@ -47,7 +47,7 @@
             this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(70, 28);
+            this.btnQuit.Size = new System.Drawing.Size(70, 24);
             this.btnQuit.Text = "Close";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -65,7 +65,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(422, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(422, 27);
             this.Menu_ToolStrip.TabIndex = 203;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -75,7 +75,7 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Margin = new System.Windows.Forms.Padding(0, 1, 10, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(65, 28);
+            this.btnSave.Size = new System.Drawing.Size(65, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -87,7 +87,7 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDesc.Properties.MaxLength = 40;
-            this.txtDesc.Size = new System.Drawing.Size(244, 24);
+            this.txtDesc.Size = new System.Drawing.Size(244, 22);
             this.txtDesc.TabIndex = 198;
             // 
             // txtDeptCode
@@ -96,7 +96,7 @@
             this.txtDeptCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDeptCode.Size = new System.Drawing.Size(82, 24);
+            this.txtDeptCode.Size = new System.Drawing.Size(82, 22);
             this.txtDeptCode.TabIndex = 197;
             // 
             // txtRemarks
@@ -112,28 +112,28 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(35, 80);
+            this.label3.Location = new System.Drawing.Point(30, 80);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 202;
             this.label3.Text = "Description";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(51, 116);
+            this.label2.Location = new System.Drawing.Point(43, 116);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 201;
             this.label2.Text = "Remarks";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(70, 46);
+            this.label1.Location = new System.Drawing.Point(65, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 17);
+            this.label1.Size = new System.Drawing.Size(33, 16);
             this.label1.TabIndex = 200;
             this.label1.Text = "Code";
             // 

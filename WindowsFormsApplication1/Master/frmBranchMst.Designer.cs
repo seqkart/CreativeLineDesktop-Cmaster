@@ -121,7 +121,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(597, 27);
             this.Menu_ToolStrip.TabIndex = 417;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -131,7 +131,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -141,7 +141,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -153,7 +153,7 @@
             this.txtBranchName.Name = "txtBranchName";
             this.txtBranchName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBranchName.Properties.MaxLength = 30;
-            this.txtBranchName.Size = new System.Drawing.Size(379, 24);
+            this.txtBranchName.Size = new System.Drawing.Size(379, 22);
             this.txtBranchName.TabIndex = 413;
             // 
             // txtBranchCode
@@ -162,7 +162,7 @@
             this.txtBranchCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBranchCode.Name = "txtBranchCode";
             this.txtBranchCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBranchCode.Size = new System.Drawing.Size(65, 24);
+            this.txtBranchCode.Size = new System.Drawing.Size(65, 22);
             this.txtBranchCode.TabIndex = 414;
             this.txtBranchCode.TabStop = false;
             // 
@@ -171,7 +171,7 @@
             this.label3.Location = new System.Drawing.Point(19, 123);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 17);
+            this.label3.Size = new System.Drawing.Size(82, 16);
             this.label3.TabIndex = 416;
             this.label3.Text = "Branch Name";
             // 
@@ -180,7 +180,7 @@
             this.label1.Location = new System.Drawing.Point(21, 89);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 17);
+            this.label1.Size = new System.Drawing.Size(78, 16);
             this.label1.TabIndex = 415;
             this.label1.Text = "Branch Code";
             // 
@@ -193,7 +193,7 @@
             this.txtCityCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityCode.Properties.MaxLength = 4;
-            this.txtCityCode.Size = new System.Drawing.Size(80, 24);
+            this.txtCityCode.Size = new System.Drawing.Size(80, 22);
             this.txtCityCode.TabIndex = 422;
             this.txtCityCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCityCode_KeyDown);
             // 
@@ -202,7 +202,7 @@
             this.label2.Location = new System.Drawing.Point(75, 260);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(21, 17);
+            this.label2.Size = new System.Drawing.Size(22, 16);
             this.label2.TabIndex = 424;
             this.label2.Text = "City";
             // 
@@ -214,7 +214,7 @@
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCityName.Properties.ReadOnly = true;
-            this.txtCityName.Size = new System.Drawing.Size(288, 24);
+            this.txtCityName.Size = new System.Drawing.Size(288, 22);
             this.txtCityName.TabIndex = 423;
             this.txtCityName.TabStop = false;
             // 
@@ -227,7 +227,7 @@
             this.txtAccCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
             this.txtAccCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccCode.Properties.MaxLength = 4;
-            this.txtAccCode.Size = new System.Drawing.Size(80, 24);
+            this.txtAccCode.Size = new System.Drawing.Size(80, 22);
             this.txtAccCode.TabIndex = 425;
             this.txtAccCode.EditValueChanged += new System.EventHandler(this.TxtAccCode_EditValueChanged);
             this.txtAccCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAccCode_KeyDown);
@@ -237,7 +237,7 @@
             this.label4.Location = new System.Drawing.Point(45, 327);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 17);
+            this.label4.Size = new System.Drawing.Size(56, 16);
             this.label4.TabIndex = 427;
             this.label4.Text = "AccCode";
             // 
@@ -248,7 +248,7 @@
             this.txtAccName.Name = "txtAccName";
             this.txtAccName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAccName.Properties.ReadOnly = true;
-            this.txtAccName.Size = new System.Drawing.Size(288, 24);
+            this.txtAccName.Size = new System.Drawing.Size(288, 22);
             this.txtAccName.TabIndex = 426;
             this.txtAccName.TabStop = false;
             // 
@@ -260,7 +260,7 @@
             this.txtAddress1.Name = "txtAddress1";
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 30;
-            this.txtAddress1.Size = new System.Drawing.Size(379, 24);
+            this.txtAddress1.Size = new System.Drawing.Size(379, 22);
             this.txtAddress1.TabIndex = 428;
             // 
             // label5
@@ -268,7 +268,7 @@
             this.label5.Location = new System.Drawing.Point(42, 157);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 17);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 429;
             this.label5.Text = "Address1";
             // 
@@ -280,7 +280,7 @@
             this.txtAddress2.Name = "txtAddress2";
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 30;
-            this.txtAddress2.Size = new System.Drawing.Size(379, 24);
+            this.txtAddress2.Size = new System.Drawing.Size(379, 22);
             this.txtAddress2.TabIndex = 430;
             // 
             // label6
@@ -288,7 +288,7 @@
             this.label6.Location = new System.Drawing.Point(42, 191);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(55, 17);
+            this.label6.Size = new System.Drawing.Size(58, 16);
             this.label6.TabIndex = 431;
             this.label6.Text = "Address2";
             // 
@@ -300,7 +300,7 @@
             this.txtAddress3.Name = "txtAddress3";
             this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress3.Properties.MaxLength = 30;
-            this.txtAddress3.Size = new System.Drawing.Size(379, 24);
+            this.txtAddress3.Size = new System.Drawing.Size(379, 22);
             this.txtAddress3.TabIndex = 432;
             // 
             // label7
@@ -308,7 +308,7 @@
             this.label7.Location = new System.Drawing.Point(42, 225);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 17);
+            this.label7.Size = new System.Drawing.Size(58, 16);
             this.label7.TabIndex = 433;
             this.label7.Text = "Address3";
             // 
@@ -320,7 +320,7 @@
             this.txtGSTNo.Name = "txtGSTNo";
             this.txtGSTNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGSTNo.Properties.MaxLength = 30;
-            this.txtGSTNo.Size = new System.Drawing.Size(379, 24);
+            this.txtGSTNo.Size = new System.Drawing.Size(379, 22);
             this.txtGSTNo.TabIndex = 434;
             // 
             // label8
@@ -328,7 +328,7 @@
             this.label8.Location = new System.Drawing.Point(52, 361);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(45, 17);
+            this.label8.Size = new System.Drawing.Size(49, 16);
             this.label8.TabIndex = 435;
             this.label8.Text = "GST No";
             // 
@@ -342,7 +342,7 @@
             this.comboBoxEdit1.Properties.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(48, 24);
+            this.comboBoxEdit1.Size = new System.Drawing.Size(48, 22);
             this.comboBoxEdit1.TabIndex = 466;
             // 
             // txtStatusTag
@@ -355,7 +355,7 @@
             this.txtStatusTag.Properties.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.txtStatusTag.Size = new System.Drawing.Size(48, 24);
+            this.txtStatusTag.Size = new System.Drawing.Size(48, 22);
             this.txtStatusTag.TabIndex = 467;
             // 
             // labelControl10
@@ -363,7 +363,7 @@
             this.labelControl10.Location = new System.Drawing.Point(315, 90);
             this.labelControl10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(39, 17);
+            this.labelControl10.Size = new System.Drawing.Size(41, 16);
             this.labelControl10.TabIndex = 462;
             this.labelControl10.Text = "IS \'HO\'";
             // 
@@ -372,7 +372,7 @@
             this.labelControl7.Location = new System.Drawing.Point(182, 90);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(59, 17);
+            this.labelControl7.Size = new System.Drawing.Size(66, 16);
             this.labelControl7.TabIndex = 463;
             this.labelControl7.Text = "THIS UNIT";
             // 
@@ -381,7 +381,7 @@
             this.textEdit7.Location = new System.Drawing.Point(539, 85);
             this.textEdit7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit7.Name = "textEdit7";
-            this.textEdit7.Size = new System.Drawing.Size(51, 24);
+            this.textEdit7.Size = new System.Drawing.Size(51, 22);
             this.textEdit7.TabIndex = 465;
             // 
             // labelControl8
@@ -389,7 +389,7 @@
             this.labelControl8.Location = new System.Drawing.Point(430, 90);
             this.labelControl8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(100, 17);
+            this.labelControl8.Size = new System.Drawing.Size(116, 16);
             this.labelControl8.TabIndex = 464;
             this.labelControl8.Text = "BARCODE PREFIX";
             // 
@@ -401,7 +401,7 @@
             this.txtState.Name = "txtState";
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
-            this.txtState.Size = new System.Drawing.Size(281, 24);
+            this.txtState.Size = new System.Drawing.Size(281, 22);
             this.txtState.TabIndex = 469;
             this.txtState.TabStop = false;
             // 
@@ -410,11 +410,11 @@
             this.label9.Location = new System.Drawing.Point(66, 294);
             this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 17);
+            this.label9.Size = new System.Drawing.Size(31, 16);
             this.label9.TabIndex = 468;
             this.label9.Text = "State";
             // 
-            // frmBranchMst
+            // FrmBranchMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -451,7 +451,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmBranchMst";
+            this.Name = "FrmBranchMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmBranchMst_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmBranchMst_KeyDown);

@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1.Master
             this.txtHolidayName.Name = "txtHolidayName";
             this.txtHolidayName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtHolidayName.Properties.MaxLength = 100;
-            this.txtHolidayName.Size = new System.Drawing.Size(409, 24);
+            this.txtHolidayName.Size = new System.Drawing.Size(409, 22);
             this.txtHolidayName.TabIndex = 390;
             // 
             // Menu_ToolStrip
@@ -69,7 +69,7 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(535, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(535, 27);
             this.Menu_ToolStrip.TabIndex = 389;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -79,7 +79,7 @@ namespace WindowsFormsApplication1.Master
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -98,7 +98,6 @@ namespace WindowsFormsApplication1.Master
             this.txtHolidayDate.Location = new System.Drawing.Point(110, 77);
             this.txtHolidayDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtHolidayDate.Name = "txtHolidayDate";
-            this.txtHolidayDate.Properties.BeepOnError = false;
             this.txtHolidayDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtHolidayDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.txtHolidayDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
@@ -108,7 +107,7 @@ namespace WindowsFormsApplication1.Master
             this.txtHolidayDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtHolidayDate.Properties.MaxLength = 100;
             this.txtHolidayDate.Properties.UseMaskAsDisplayFormat = true;
-            this.txtHolidayDate.Size = new System.Drawing.Size(409, 24);
+            this.txtHolidayDate.Size = new System.Drawing.Size(409, 22);
             this.txtHolidayDate.TabIndex = 388;
             // 
             // Label17
@@ -150,10 +149,10 @@ namespace WindowsFormsApplication1.Master
             this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSysID.Size = new System.Drawing.Size(97, 24);
+            this.txtSysID.Size = new System.Drawing.Size(97, 22);
             this.txtSysID.TabIndex = 387;
             // 
-            // frmHOlidayMst
+            // FrmHOlidayMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -167,7 +166,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.Label15);
             this.Controls.Add(this.txtSysID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmHOlidayMst";
+            this.Name = "FrmHOlidayMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmHOlidayMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtHolidayName.Properties)).EndInit();

@@ -30,10 +30,10 @@ namespace WindowsFormsApplication1.Master
         private void InitializeComponent()
         {
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
-            this.label3 = new DevExpress.XtraEditors.LabelControl();
-            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtBrandName = new DevExpress.XtraEditors.TextEdit();
             this.txtBrandCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -59,24 +59,6 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.TabIndex = 205;
             this.Menu_ToolStrip.Text = "Options";
             // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(52, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 17);
-            this.label3.TabIndex = 204;
-            this.label3.Text = "MachineBrandName";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(52, 88);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 17);
-            this.label1.TabIndex = 203;
-            this.label1.Text = "Machine Brand Code";
-            // 
             // btnQuit
             // 
             this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
@@ -96,6 +78,24 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(52, 137);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(124, 16);
+            this.label3.TabIndex = 204;
+            this.label3.Text = "MachineBrandName";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(52, 88);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 16);
+            this.label1.TabIndex = 203;
+            this.label1.Text = "Machine Brand Code";
+            // 
             // txtBrandName
             // 
             this.txtBrandName.Location = new System.Drawing.Point(189, 133);
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Master
             this.txtBrandName.Name = "txtBrandName";
             this.txtBrandName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandName.Properties.MaxLength = 100;
-            this.txtBrandName.Size = new System.Drawing.Size(244, 24);
+            this.txtBrandName.Size = new System.Drawing.Size(244, 22);
             this.txtBrandName.TabIndex = 202;
             // 
             // txtBrandCode
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1.Master
             this.txtBrandCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrandCode.Name = "txtBrandCode";
             this.txtBrandCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtBrandCode.Size = new System.Drawing.Size(97, 24);
+            this.txtBrandCode.Size = new System.Drawing.Size(97, 22);
             this.txtBrandCode.TabIndex = 201;
             // 
             // FrmMachineBrandMst

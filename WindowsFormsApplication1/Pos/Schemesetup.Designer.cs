@@ -200,7 +200,7 @@
             this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(648, 457);
+            this.xtraTabPage4.Size = new System.Drawing.Size(648, 462);
             this.xtraTabPage4.Text = "Power Scheme";
             // 
             // PowerSchemeGrid
@@ -357,7 +357,7 @@
             this.cmbPowerSchemeName.Name = "cmbPowerSchemeName";
             this.cmbPowerSchemeName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbPowerSchemeName.Size = new System.Drawing.Size(325, 24);
+            this.cmbPowerSchemeName.Size = new System.Drawing.Size(325, 22);
             this.cmbPowerSchemeName.TabIndex = 740;
             // 
             // labelControl12
@@ -386,7 +386,7 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(27, 21);
+            this.labelControl14.Location = new System.Drawing.Point(26, 21);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
             this.labelControl14.Size = new System.Drawing.Size(98, 20);
@@ -473,7 +473,7 @@
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(648, 457);
+            this.xtraTabPage3.Size = new System.Drawing.Size(648, 464);
             this.xtraTabPage3.Text = "Flat Scheme";
             // 
             // FlatSchemeGrid
@@ -588,7 +588,7 @@
             this.cmbFlatSchemeName.Name = "cmbFlatSchemeName";
             this.cmbFlatSchemeName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cmbFlatSchemeName.Size = new System.Drawing.Size(325, 24);
+            this.cmbFlatSchemeName.Size = new System.Drawing.Size(325, 22);
             this.cmbFlatSchemeName.TabIndex = 12;
             // 
             // labelControl9
@@ -617,7 +617,7 @@
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(34, 35);
+            this.labelControl7.Location = new System.Drawing.Point(32, 35);
             this.labelControl7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(98, 20);
@@ -633,7 +633,7 @@
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(648, 457);
+            this.xtraTabPage2.Size = new System.Drawing.Size(648, 464);
             this.xtraTabPage2.Text = "Scheme Type";
             // 
             // textEdit3
@@ -669,14 +669,14 @@
             this.cmbSchmType.Properties.Items.AddRange(new object[] {
             "DISCOUNTED SCHEME",
             "POWER SCHEME"});
-            this.cmbSchmType.Size = new System.Drawing.Size(325, 24);
+            this.cmbSchmType.Size = new System.Drawing.Size(325, 22);
             this.cmbSchmType.TabIndex = 8;
             // 
             // labelControl6
             // 
             this.labelControl6.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl6.Appearance.Options.UseFont = true;
-            this.labelControl6.Location = new System.Drawing.Point(51, 52);
+            this.labelControl6.Location = new System.Drawing.Point(48, 52);
             this.labelControl6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(90, 20);
@@ -699,7 +699,7 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(648, 457);
+            this.xtraTabPage1.Size = new System.Drawing.Size(648, 464);
             this.xtraTabPage1.Text = "New Scheme";
             // 
             // groupControl1
@@ -739,45 +739,45 @@
             // txtToDate
             // 
             this.txtToDate.EditValue = null;
-            this.txtToDate.Location = new System.Drawing.Point(323, 88);
+            this.txtToDate.Location = new System.Drawing.Point(338, 88);
             this.txtToDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtToDate.Name = "txtToDate";
             this.txtToDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtToDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtToDate.Size = new System.Drawing.Size(155, 24);
+            this.txtToDate.Size = new System.Drawing.Size(155, 22);
             this.txtToDate.TabIndex = 8;
             // 
             // txtFromDate
             // 
             this.txtFromDate.EditValue = null;
-            this.txtFromDate.Location = new System.Drawing.Point(101, 88);
+            this.txtFromDate.Location = new System.Drawing.Point(116, 88);
             this.txtFromDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFromDate.Name = "txtFromDate";
             this.txtFromDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtFromDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtFromDate.Size = new System.Drawing.Size(155, 24);
+            this.txtFromDate.Size = new System.Drawing.Size(155, 22);
             this.txtFromDate.TabIndex = 8;
             // 
             // txtSchmDate
             // 
             this.txtSchmDate.EditValue = null;
-            this.txtSchmDate.Location = new System.Drawing.Point(323, 14);
+            this.txtSchmDate.Location = new System.Drawing.Point(338, 14);
             this.txtSchmDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSchmDate.Name = "txtSchmDate";
             this.txtSchmDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSchmDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtSchmDate.Size = new System.Drawing.Size(155, 24);
+            this.txtSchmDate.Size = new System.Drawing.Size(155, 22);
             this.txtSchmDate.TabIndex = 8;
             // 
             // txtSchemeName
             // 
-            this.txtSchemeName.Location = new System.Drawing.Point(101, 51);
+            this.txtSchemeName.Location = new System.Drawing.Point(116, 51);
             this.txtSchemeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSchemeName.Name = "txtSchemeName";
             this.txtSchemeName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -789,7 +789,7 @@
             // 
             this.labelControl5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl5.Appearance.Options.UseFont = true;
-            this.labelControl5.Location = new System.Drawing.Point(268, 92);
+            this.labelControl5.Location = new System.Drawing.Point(283, 89);
             this.labelControl5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(53, 20);
@@ -798,7 +798,7 @@
             // 
             // txtSchmID
             // 
-            this.txtSchmID.Location = new System.Drawing.Point(101, 13);
+            this.txtSchmID.Location = new System.Drawing.Point(116, 13);
             this.txtSchmID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSchmID.Name = "txtSchmID";
             this.txtSchmID.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -810,7 +810,7 @@
             // 
             this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(29, 92);
+            this.labelControl4.Location = new System.Drawing.Point(41, 89);
             this.labelControl4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(72, 20);
@@ -821,7 +821,7 @@
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(3, 56);
+            this.labelControl3.Location = new System.Drawing.Point(15, 54);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(98, 20);
@@ -832,7 +832,7 @@
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(226, 18);
+            this.labelControl2.Location = new System.Drawing.Point(238, 16);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(98, 20);
@@ -843,7 +843,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(26, 18);
+            this.labelControl1.Location = new System.Drawing.Point(41, 16);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(72, 20);
@@ -910,7 +910,7 @@
             this.richEditControl1.Size = new System.Drawing.Size(363, 459);
             this.richEditControl1.TabIndex = 739;
             // 
-            // Schemesetup
+            // SchemeSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -921,7 +921,7 @@
             this.Controls.Add(this.treeList1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Schemesetup";
+            this.Name = "SchemeSetup";
             this.Text = "Schemesetup";
             this.Load += new System.EventHandler(this.Schemesetup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();

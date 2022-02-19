@@ -90,7 +90,7 @@ namespace WindowsFormsApplication1
 
 
 
-            // DevExpress.Utils.AppearanceObject.DefaultFont = new Font(DevExpress.Utils.AppearanceObject.DefaultFont.FontFamily.Name, 10);
+            
             Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
             CreateMenuType1();
 
@@ -180,20 +180,7 @@ namespace WindowsFormsApplication1
             };
 
 
-            //xtraTabControl1.TabPages.Add(Page);
-
-            //Page.Text = "Default DashBoard";
-
-
-
-
-
-            //var PROG1 = new frmMainDashBoard() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-            //PROG1.Show();
-            //PROG1.BringToFront();
-            //PROG1.Parent = Page;_Load
-            //xtraTabControl1.SelectedTabPage = Page;
-
+          
 
             DataSet dsUserTheme = ProjectFunctions.GetDataSet("select isnull(UserTheme,'') as UserTheme from UserMaster where UserName='" + GlobalVariables.CurrentUser + "'");
             if (dsUserTheme.Tables[0].Rows[0][0].ToString().Length > 0)
@@ -2158,7 +2145,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        private void SkinRibbonGalleryBarItem_GalleryItemClick(object sender, GalleryItemClickEventArgs e)
+        private void SkinRibbonGalleryBarItem_ItemClick(object sender, GalleryItemClickEventArgs e)
         {
             ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
         }
@@ -2298,7 +2285,7 @@ namespace WindowsFormsApplication1
             HelpGrid.Visible = true;
         }
 
-        private void btnWhatsAp_ItemClick(object sender, ItemClickEventArgs e)
+        private void BtnWhatsAp_ItemClick(object sender, ItemClickEventArgs e)
         {
             DevExpress.XtraTab.XtraTabPage Page = new DevExpress.XtraTab.XtraTabPage
             {
@@ -2307,52 +2294,17 @@ namespace WindowsFormsApplication1
             xtraTabControl1.TabPages.Add(Page);
             Page.Text = "WHAT'S APP";
             Page.Name = "WHAT'S APP";
-            var PROG2000 = new FrmWhatsAppIntegration() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
-            PROG2000.Show();
-            PROG2000.BringToFront();
-            PROG2000.Parent = Page;
+           // var PROG2000 = new FrmWhatsAppIntegration() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+            //PROG2000.Show();
+            //PROG2000.BringToFront();
+            //PROG2000.Parent = Page;
             xtraTabControl1.SelectedTabPage = Page;
             SetImage();
         }
 
         private void skinDropDownButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
-        }
 
-        private void skinDropDownButtonItem2_DownChanged(object sender, ItemClickEventArgs e)
-        {
-            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
-        }
-
-        private void skinDropDownButtonItem2_HyperlinkClick(object sender, DevExpress.Utils.HyperlinkClickEventArgs e)
-        {
-            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Text  + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
-        }
-
-        private void skinDropDownButtonItem2_ItemPress(object sender, ItemClickEventArgs e)
-        {
-            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
-        }
-
-        private void skinDropDownButtonItem2_ItemDoubleClick(object sender, ItemClickEventArgs e)
-        {
-            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
-        }
-
-        private void skinBarSubItem2_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //ProjectFunctions.GetDataSet("Update UserMaster Set UserTheme='" + e.Item.Caption + "' Where UserName='" + GlobalVariables.CurrentUser + "'");
-        }
-
-        private void skinBarSubItem2_GetItemData(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void skinBarSubItem2_CloseUp(object sender, EventArgs e)
-        {
-            
         }
     }
 }

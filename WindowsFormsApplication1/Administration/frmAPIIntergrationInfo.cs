@@ -175,5 +175,7 @@ namespace WindowsFormsApplication1.Administration
         {
             this.Close();
         }
+
+       
     }
 }

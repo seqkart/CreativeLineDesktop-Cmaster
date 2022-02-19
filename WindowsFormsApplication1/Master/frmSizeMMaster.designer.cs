@@ -51,7 +51,7 @@
             // 
             this.Label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label1.Appearance.Options.UseFont = true;
-            this.Label1.Location = new System.Drawing.Point(40, 127);
+            this.Label1.Location = new System.Drawing.Point(6, 112);
             this.Label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(92, 19);
@@ -62,7 +62,7 @@
             // 
             this.LABEL4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.LABEL4.Appearance.Options.UseFont = true;
-            this.LABEL4.Location = new System.Drawing.Point(58, 93);
+            this.LABEL4.Location = new System.Drawing.Point(24, 78);
             this.LABEL4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LABEL4.Name = "LABEL4";
             this.LABEL4.Size = new System.Drawing.Size(74, 19);
@@ -71,12 +71,12 @@
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(134, 124);
+            this.txtDescription.Location = new System.Drawing.Point(100, 109);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescription.Properties.MaxLength = 100;
-            this.txtDescription.Size = new System.Drawing.Size(409, 24);
+            this.txtDescription.Size = new System.Drawing.Size(409, 22);
             this.txtDescription.TabIndex = 1;
             // 
             // Menu_ToolStrip
@@ -93,7 +93,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(588, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(524, 27);
             this.Menu_ToolStrip.TabIndex = 599;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -120,27 +120,27 @@
             // txtSizeName
             // 
             this.txtSizeName.EnterMoveNextControl = true;
-            this.txtSizeName.Location = new System.Drawing.Point(134, 90);
+            this.txtSizeName.Location = new System.Drawing.Point(100, 75);
             this.txtSizeName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSizeName.Name = "txtSizeName";
             this.txtSizeName.Properties.MaxLength = 100;
-            this.txtSizeName.Size = new System.Drawing.Size(262, 24);
+            this.txtSizeName.Size = new System.Drawing.Size(262, 22);
             this.txtSizeName.TabIndex = 0;
             // 
             // txtSysID
             // 
-            this.txtSysID.Location = new System.Drawing.Point(134, 56);
+            this.txtSysID.Location = new System.Drawing.Point(100, 41);
             this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSysID.Size = new System.Drawing.Size(97, 24);
+            this.txtSysID.Size = new System.Drawing.Size(97, 22);
             this.txtSysID.TabIndex = 597;
             // 
             // Label15
             // 
             this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(83, 59);
+            this.Label15.Location = new System.Drawing.Point(49, 44);
             this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label15.Name = "Label15";
             this.Label15.Size = new System.Drawing.Size(49, 19);
@@ -151,7 +151,7 @@
             // 
             this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(410, 93);
+            this.label2.Location = new System.Drawing.Point(376, 78);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 19);
@@ -160,19 +160,19 @@
             // 
             // txtIndex
             // 
-            this.txtIndex.Location = new System.Drawing.Point(455, 90);
+            this.txtIndex.Location = new System.Drawing.Point(421, 75);
             this.txtIndex.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtIndex.Name = "txtIndex";
             this.txtIndex.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtIndex.Properties.MaxLength = 100;
-            this.txtIndex.Size = new System.Drawing.Size(89, 24);
+            this.txtIndex.Size = new System.Drawing.Size(89, 22);
             this.txtIndex.TabIndex = 2;
             // 
             // FrmSizeMMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(588, 175);
+            this.ClientSize = new System.Drawing.Size(524, 149);
             this.ControlBox = false;
             this.Controls.Add(this.txtIndex);
             this.Controls.Add(this.label2);

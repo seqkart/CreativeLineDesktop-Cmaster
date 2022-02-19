@@ -59,7 +59,7 @@
             this.txtstatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtstatusTag.Name = "txtstatusTag";
             this.txtstatusTag.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtstatusTag.Size = new System.Drawing.Size(121, 24);
+            this.txtstatusTag.Size = new System.Drawing.Size(121, 22);
             this.txtstatusTag.TabIndex = 2;
             this.txtstatusTag.Validating += new System.ComponentModel.CancelEventHandler(this.TxtstatusTag_Validating);
             // 
@@ -68,7 +68,7 @@
             this.label12.Location = new System.Drawing.Point(282, 62);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 17);
+            this.label12.Size = new System.Drawing.Size(37, 16);
             this.label12.TabIndex = 329;
             this.label12.Text = "Active";
             // 
@@ -79,7 +79,7 @@
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Properties.MaxLength = 8;
             this.txtConfirmPassword.Properties.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(327, 24);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(327, 22);
             this.txtConfirmPassword.TabIndex = 5;
             // 
             // label4
@@ -87,7 +87,7 @@
             this.label4.Location = new System.Drawing.Point(7, 165);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 17);
+            this.label4.Size = new System.Drawing.Size(108, 16);
             this.label4.TabIndex = 313;
             this.label4.Text = "Confirm Password";
             // 
@@ -105,7 +105,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(464, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(464, 27);
             this.Menu_ToolStrip.TabIndex = 312;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -115,7 +115,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(58, 28);
+            this.btnQuit.Size = new System.Drawing.Size(58, 24);
             this.btnQuit.Text = "&Cancel";
             this.btnQuit.ToolTipText = "Cancel";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
@@ -136,7 +136,7 @@
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Properties.MaxLength = 8;
-            this.txtUserName.Size = new System.Drawing.Size(327, 24);
+            this.txtUserName.Size = new System.Drawing.Size(327, 22);
             this.txtUserName.TabIndex = 3;
             // 
             // txtPassword
@@ -146,7 +146,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.MaxLength = 8;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(327, 24);
+            this.txtPassword.Size = new System.Drawing.Size(327, 22);
             this.txtPassword.TabIndex = 4;
             // 
             // label3
@@ -154,7 +154,7 @@
             this.label3.Location = new System.Drawing.Point(51, 97);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 17);
+            this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 310;
             this.label3.Text = "UserName";
             // 
@@ -163,7 +163,7 @@
             this.label2.Location = new System.Drawing.Point(57, 131);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(60, 16);
             this.label2.TabIndex = 308;
             this.label2.Text = "Password";
             // 
@@ -172,7 +172,7 @@
             this.label1.Location = new System.Drawing.Point(67, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 307;
             this.label1.Text = "LogInAs";
             // 
@@ -182,7 +182,7 @@
             this.cmbLoginAs.Location = new System.Drawing.Point(118, 58);
             this.cmbLoginAs.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbLoginAs.Name = "cmbLoginAs";
-            this.cmbLoginAs.Size = new System.Drawing.Size(140, 25);
+            this.cmbLoginAs.Size = new System.Drawing.Size(140, 24);
             this.cmbLoginAs.TabIndex = 1;
             // 
             // txtRoleCode
@@ -191,7 +191,7 @@
             this.txtRoleCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoleCode.Name = "txtRoleCode";
             this.txtRoleCode.Properties.MaxLength = 40;
-            this.txtRoleCode.Size = new System.Drawing.Size(327, 24);
+            this.txtRoleCode.Size = new System.Drawing.Size(327, 22);
             this.txtRoleCode.TabIndex = 330;
             // 
             // label5
@@ -199,11 +199,11 @@
             this.label5.Location = new System.Drawing.Point(81, 199);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 17);
+            this.label5.Size = new System.Drawing.Size(36, 16);
             this.label5.TabIndex = 331;
             this.label5.Text = "Roles";
             // 
-            // frmUserDetails
+            // FrmUserDetails
             // 
             this.Appearance.BackColor = System.Drawing.Color.Gainsboro;
             this.Appearance.Options.UseBackColor = true;
@@ -227,7 +227,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmUserDetails";
+            this.Name = "FrmUserDetails";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmUserDetails_Load);

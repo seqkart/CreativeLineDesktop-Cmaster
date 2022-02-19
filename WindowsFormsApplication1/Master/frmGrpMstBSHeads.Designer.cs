@@ -31,12 +31,12 @@ namespace WindowsFormsApplication1.Master
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGrpMstBSHeads));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.label9 = new DevExpress.XtraEditors.LabelControl();
             this.label8 = new DevExpress.XtraEditors.LabelControl();
             this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
-            this.btnQuit = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.txtGrpDesc = new DevExpress.XtraEditors.TextEdit();
             this.txtSGrpCode = new DevExpress.XtraEditors.TextEdit();
             this.txtSGrpDesc = new DevExpress.XtraEditors.TextEdit();
@@ -62,45 +62,9 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(662, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(627, 27);
             this.Menu_ToolStrip.TabIndex = 250;
             this.Menu_ToolStrip.Text = "Options";
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(86, 130);
-            this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 17);
-            this.label9.TabIndex = 249;
-            this.label9.Text = "Group Desc";
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(60, 164);
-            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 17);
-            this.label8.TabIndex = 248;
-            this.label8.Text = "Sub Group Desc";
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(57, 96);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 17);
-            this.label3.TabIndex = 247;
-            this.label3.Text = "Sub Group Code";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(83, 62);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 17);
-            this.label1.TabIndex = 246;
-            this.label1.Text = "Group Code";
             // 
             // btnQuit
             // 
@@ -122,56 +86,92 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(43, 112);
+            this.label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 16);
+            this.label9.TabIndex = 249;
+            this.label9.Text = "Group Desc";
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(16, 144);
+            this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(99, 16);
+            this.label8.TabIndex = 248;
+            this.label8.Text = "Sub Group Desc";
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(15, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 16);
+            this.label3.TabIndex = 247;
+            this.label3.Text = "Sub Group Code";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(42, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 246;
+            this.label1.Text = "Group Code";
+            // 
             // txtGrpDesc
             // 
-            this.txtGrpDesc.Location = new System.Drawing.Point(164, 125);
+            this.txtGrpDesc.Location = new System.Drawing.Point(119, 109);
             this.txtGrpDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrpDesc.Name = "txtGrpDesc";
             this.txtGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpDesc.Properties.MaxLength = 50;
-            this.txtGrpDesc.Size = new System.Drawing.Size(425, 24);
+            this.txtGrpDesc.Size = new System.Drawing.Size(486, 22);
             this.txtGrpDesc.TabIndex = 244;
             this.txtGrpDesc.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtGrpDesc_KeyUp);
             // 
             // txtSGrpCode
             // 
-            this.txtSGrpCode.Location = new System.Drawing.Point(164, 91);
+            this.txtSGrpCode.Location = new System.Drawing.Point(119, 77);
             this.txtSGrpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSGrpCode.Name = "txtSGrpCode";
             this.txtSGrpCode.Properties.MaxLength = 4;
-            this.txtSGrpCode.Size = new System.Drawing.Size(83, 24);
+            this.txtSGrpCode.Size = new System.Drawing.Size(95, 22);
             this.txtSGrpCode.TabIndex = 243;
             this.txtSGrpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSGrpCode_KeyPress);
             // 
             // txtSGrpDesc
             // 
-            this.txtSGrpDesc.Location = new System.Drawing.Point(164, 159);
+            this.txtSGrpDesc.Location = new System.Drawing.Point(119, 141);
             this.txtSGrpDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSGrpDesc.Name = "txtSGrpDesc";
             this.txtSGrpDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSGrpDesc.Properties.MaxLength = 50;
-            this.txtSGrpDesc.Size = new System.Drawing.Size(425, 24);
+            this.txtSGrpDesc.Size = new System.Drawing.Size(486, 22);
             this.txtSGrpDesc.TabIndex = 245;
             this.txtSGrpDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSGrpDesc_KeyPress);
             // 
             // txtGrpCode
             // 
-            this.txtGrpCode.Location = new System.Drawing.Point(164, 57);
+            this.txtGrpCode.Location = new System.Drawing.Point(119, 45);
             this.txtGrpCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGrpCode.Name = "txtGrpCode";
             this.txtGrpCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGrpCode.Properties.MaxLength = 4;
-            this.txtGrpCode.Size = new System.Drawing.Size(83, 24);
+            this.txtGrpCode.Size = new System.Drawing.Size(95, 22);
             this.txtGrpCode.TabIndex = 242;
             this.txtGrpCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtGrpCode_KeyDown);
             this.txtGrpCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGrpCode_KeyPress);
             this.txtGrpCode.Validating += new System.ComponentModel.CancelEventHandler(this.TxtGrpCode_Validating);
             // 
-            // frmGrpMstBSHeads
+            // FrmGrpMstBSHeads
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 237);
+            this.ClientSize = new System.Drawing.Size(627, 178);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtGrpDesc);
@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1.Master
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Name = "frmGrpMstBSHeads";
+            this.Name = "FrmGrpMstBSHeads";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmGrpMstBSHeads_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGrpMstBSHeads_KeyDown);

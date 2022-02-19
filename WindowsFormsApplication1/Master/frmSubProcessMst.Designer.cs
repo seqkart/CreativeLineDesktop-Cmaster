@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1.Master
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(33, 35);
+            this.HelpGrid.Location = new System.Drawing.Point(28, 35);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1.Master
             this.txtSubProcessCode.Name = "txtSubProcessCode";
             this.txtSubProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSubProcessCode.Properties.MaxLength = 8;
-            this.txtSubProcessCode.Size = new System.Drawing.Size(86, 24);
+            this.txtSubProcessCode.Size = new System.Drawing.Size(86, 22);
             this.txtSubProcessCode.TabIndex = 394;
             this.txtSubProcessCode.TabStop = false;
             // 
@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1.Master
             this.txtProcessName.Name = "txtProcessName";
             this.txtProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProcessName.Properties.MaxLength = 8;
-            this.txtProcessName.Size = new System.Drawing.Size(259, 24);
+            this.txtProcessName.Size = new System.Drawing.Size(259, 22);
             this.txtProcessName.TabIndex = 396;
             this.txtProcessName.TabStop = false;
             // 
@@ -168,7 +168,7 @@ namespace WindowsFormsApplication1.Master
             this.txtProcessCode.Name = "txtProcessCode";
             this.txtProcessCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtProcessCode.Properties.MaxLength = 8;
-            this.txtProcessCode.Size = new System.Drawing.Size(86, 24);
+            this.txtProcessCode.Size = new System.Drawing.Size(86, 22);
             this.txtProcessCode.TabIndex = 395;
             this.txtProcessCode.EditValueChanged += new System.EventHandler(this.TxtProcessCode_EditValueChanged);
             this.txtProcessCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtProcessCode_KeyDown);
@@ -180,7 +180,7 @@ namespace WindowsFormsApplication1.Master
             this.txtSubProcessName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSubProcessName.Name = "txtSubProcessName";
             this.txtSubProcessName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSubProcessName.Size = new System.Drawing.Size(352, 24);
+            this.txtSubProcessName.Size = new System.Drawing.Size(352, 22);
             this.txtSubProcessName.TabIndex = 400;
             // 
             // label19
@@ -209,7 +209,7 @@ namespace WindowsFormsApplication1.Master
             this.labelControl1.TabIndex = 402;
             this.labelControl1.Text = "Under Process";
             // 
-            // frmSubProcessMst
+            // FrmSubProcessMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -227,7 +227,7 @@ namespace WindowsFormsApplication1.Master
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmSubProcessMst";
+            this.Name = "FrmSubProcessMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmSubProcessMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();

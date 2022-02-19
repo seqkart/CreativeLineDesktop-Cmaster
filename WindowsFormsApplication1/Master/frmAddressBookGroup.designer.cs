@@ -86,7 +86,7 @@
             this.txtGroupDesc.Name = "txtGroupDesc";
             this.txtGroupDesc.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtGroupDesc.Properties.MaxLength = 100;
-            this.txtGroupDesc.Size = new System.Drawing.Size(316, 24);
+            this.txtGroupDesc.Size = new System.Drawing.Size(316, 22);
             this.txtGroupDesc.TabIndex = 197;
             // 
             // txtGroupCode
@@ -95,7 +95,7 @@
             this.txtGroupCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGroupCode.Name = "txtGroupCode";
             this.txtGroupCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtGroupCode.Size = new System.Drawing.Size(97, 24);
+            this.txtGroupCode.Size = new System.Drawing.Size(97, 22);
             this.txtGroupCode.TabIndex = 196;
             // 
             // label3
@@ -103,7 +103,7 @@
             this.label3.Location = new System.Drawing.Point(19, 88);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 17);
+            this.label3.Size = new System.Drawing.Size(161, 16);
             this.label3.TabIndex = 199;
             this.label3.Text = "Address Book Group Desc";
             // 
@@ -112,11 +112,11 @@
             this.label1.Location = new System.Drawing.Point(16, 44);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(157, 17);
+            this.label1.Size = new System.Drawing.Size(162, 16);
             this.label1.TabIndex = 198;
             this.label1.Text = "Address Book Group Code";
             // 
-            // frmAddressBookGroup
+            // FrmAddressBookGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -130,7 +130,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmAddressBookGroup";
+            this.Name = "FrmAddressBookGroup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmAddressBookGroup_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAddressBookGroup_KeyDown);

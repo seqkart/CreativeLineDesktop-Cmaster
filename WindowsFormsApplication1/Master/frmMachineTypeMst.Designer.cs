@@ -30,10 +30,10 @@ namespace WindowsFormsApplication1.Master
         private void InitializeComponent()
         {
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
-            this.label3 = new DevExpress.XtraEditors.LabelControl();
-            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
             this.txtTypeName = new DevExpress.XtraEditors.TextEdit();
             this.txtTypeCode = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
@@ -59,24 +59,6 @@ namespace WindowsFormsApplication1.Master
             this.Menu_ToolStrip.TabIndex = 210;
             this.Menu_ToolStrip.Text = "Options";
             // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(24, 94);
-            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 17);
-            this.label3.TabIndex = 209;
-            this.label3.Text = "Machine Type Name";
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(24, 44);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 17);
-            this.label1.TabIndex = 208;
-            this.label1.Text = "Machine Type Code";
-            // 
             // btnQuit
             // 
             this.btnQuit.Image = global::WindowsFormsApplication1.Properties.Resources.Close;
@@ -96,6 +78,24 @@ namespace WindowsFormsApplication1.Master
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(24, 94);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(126, 16);
+            this.label3.TabIndex = 209;
+            this.label3.Text = "Machine Type Name";
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(24, 44);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 16);
+            this.label1.TabIndex = 208;
+            this.label1.Text = "Machine Type Code";
+            // 
             // txtTypeName
             // 
             this.txtTypeName.Location = new System.Drawing.Point(161, 90);
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Master
             this.txtTypeName.Name = "txtTypeName";
             this.txtTypeName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTypeName.Properties.MaxLength = 100;
-            this.txtTypeName.Size = new System.Drawing.Size(244, 24);
+            this.txtTypeName.Size = new System.Drawing.Size(244, 22);
             this.txtTypeName.TabIndex = 207;
             // 
             // txtTypeCode
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1.Master
             this.txtTypeCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTypeCode.Name = "txtTypeCode";
             this.txtTypeCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTypeCode.Size = new System.Drawing.Size(97, 24);
+            this.txtTypeCode.Size = new System.Drawing.Size(97, 22);
             this.txtTypeCode.TabIndex = 206;
             // 
             // FrmMachineTypeMst
