@@ -521,7 +521,7 @@ namespace WindowsFormsApplication1.Transaction
                 
             }
         }
-        private void btnLoadFromMachine_Click(object sender, EventArgs e)
+        private void BtnLoadFromMachine_Click(object sender, EventArgs e)
         {
             Essl_Connect("192.168.1.224", 1);
         }

@@ -14,15 +14,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Misc_forms
 {
-    public partial class frmWhatsGroupMessageSender : DevExpress.XtraEditors.XtraForm
+    public partial class FrmWhatsGroupMessageSender : DevExpress.XtraEditors.XtraForm
     {
-        public frmWhatsGroupMessageSender()
+        public FrmWhatsGroupMessageSender()
         {
             InitializeComponent();
         }
 
 
-        private void fillGrid()
+        private void FillGrid()
         {
             DataSet ds = new DataSet();
             ds = ProjectFunctions.GetDataSet("Select * from WhatsAppContacts");
@@ -48,10 +48,10 @@ namespace WindowsFormsApplication1.Misc_forms
             this.Close();
         }
 
-        private void frmWhatsGroupMessageSender_Load(object sender, EventArgs e)
+        private void FrmWhatsGroupMessageSender_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-            fillGrid();
+            FillGrid();
         }
 
         private void ContactGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
@@ -149,7 +149,7 @@ namespace WindowsFormsApplication1.Misc_forms
             }
 
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             foreach (DataRow dr in (ContactGrid.DataSource as DataTable).Rows)
             {

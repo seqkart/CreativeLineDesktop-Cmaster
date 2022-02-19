@@ -183,8 +183,8 @@ namespace WindowsFormsApplication1
                             {
                                 var strQry = string.Empty;
                                 strQry = " Insert into UserMaster";
-                                strQry = strQry + " (UserName,Login_As,UserPwd,UserActive,RoleCode)";
-                                strQry = strQry + " values(";
+                                strQry += " (UserName,Login_As,UserPwd,UserActive,RoleCode)";
+                                strQry += " values(";
                                 strQry = strQry + "'" + txtUserName.Text.Trim() + "',";
                                 strQry = strQry + "'" + cmbLoginAs.Text.Trim() + "',";
                                 strQry = strQry + "'" + txtPassword.Text.Trim() + "',";
@@ -208,7 +208,7 @@ namespace WindowsFormsApplication1
                     {
                         var strQry = string.Empty;
                         strQry = " UPDATE    UserMaster";
-                        strQry = strQry + " SET  ";
+                        strQry += " SET  ";
                         strQry = strQry + "UserName ='" + txtUserName.Text.Trim() + "',";
                         strQry = strQry + "Login_As ='" + cmbLoginAs.Text.Trim() + "',";
                         strQry = strQry + "UserPwd ='" + txtPassword.Text.Trim() + "',";

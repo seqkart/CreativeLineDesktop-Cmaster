@@ -207,7 +207,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG174")
                 {
-                    WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst()
+                    WindowsFormsApplication1.Master.FrmStateMst frm = new WindowsFormsApplication1.Master.FrmStateMst()
                     { S1 = btnAdd.Text, Text = "State Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -217,7 +217,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG200")
                 {
-                    WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
+                    WindowsFormsApplication1.FrmFYCreation frm = new WindowsFormsApplication1.FrmFYCreation()
                     { S1 = btnAdd.Text, Text = "Financial Year Creation" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -227,7 +227,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG170")
                 {
-                    Master.frmMeasurementMappingWithArt frm = new Master.frmMeasurementMappingWithArt()
+                    Master.FrmMeasurementMappingWithArt frm = new Master.FrmMeasurementMappingWithArt()
                     { S1 = btnAdd.Text, Text = "Measurement Mapping With Art Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -406,7 +406,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG9")
                 {
-                    frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
+                    FrmDepartmentAddUpdate frm = new FrmDepartmentAddUpdate()
                     { S1 = btnAdd.Text, Text = "Department Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -425,7 +425,7 @@ namespace WindowsFormsApplication1
 
                 if (GlobalVariables.ProgCode == "PROG12")
                 {
-                    frmLedgerAddEdit frm = new frmLedgerAddEdit() { S1 = btnAdd.Text, Text = "Ledger Addition" };
+                    FrmLedgerAddEdit frm = new FrmLedgerAddEdit() { S1 = btnAdd.Text, Text = "Ledger Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
 
@@ -542,7 +542,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG156")
                 {
-                    frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
+                    FrmDepartmentAddUpdate frm = new FrmDepartmentAddUpdate()
                     { S1 = btnAdd.Text, Text = "Department Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -762,7 +762,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmStateMst frm = new WindowsFormsApplication1.Master.frmStateMst()
+                    WindowsFormsApplication1.Master.FrmStateMst frm = new WindowsFormsApplication1.Master.FrmStateMst()
                     { S1 = btnEdit.Text, Text = "State Editing", StateCode = CurrentRow["STSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -772,7 +772,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.frmFYCreation frm = new WindowsFormsApplication1.frmFYCreation()
+                    WindowsFormsApplication1.FrmFYCreation frm = new WindowsFormsApplication1.FrmFYCreation()
                     {
                         S1 = btnEdit.Text,
                         Text = "Financial Year Editing",
@@ -784,7 +784,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG170")
                 {
-                    Master.frmMeasurementMappingWithArt frm = new Master.frmMeasurementMappingWithArt()
+                    Master.FrmMeasurementMappingWithArt frm = new Master.FrmMeasurementMappingWithArt()
                     { S1 = btnEdit.Text, Text = "Measurement Mapping With Art Edition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -1003,7 +1003,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG9")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
+                    FrmDepartmentAddUpdate frm = new FrmDepartmentAddUpdate()
                     { S1 = btnEdit.Text, Text = "Department Editing", DeptCode = CurrentRow["DeptCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -1023,7 +1023,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG12")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmLedgerAddEdit frm = new frmLedgerAddEdit()
+                    FrmLedgerAddEdit frm = new FrmLedgerAddEdit()
                     { S1 = btnEdit.Text, Text = "Ledger  Editing", LgrCode = CurrentRow["LgrCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -1155,7 +1155,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG156")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmDepartmentAddUpdate frm = new frmDepartmentAddUpdate()
+                    FrmDepartmentAddUpdate frm = new FrmDepartmentAddUpdate()
                     { S1 = btnEdit.Text, Text = "Department Editing", DeptCode = CurrentRow["DeptCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 

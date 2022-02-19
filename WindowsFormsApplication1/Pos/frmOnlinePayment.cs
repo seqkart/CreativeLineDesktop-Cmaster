@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Pos
 {
-    public partial class frmOnlinePayment : DevExpress.XtraEditors.XtraForm
+    public partial class FrmOnlinePayment : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string MemoNo { get; set; }
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Pos
         public decimal CardPayment { get; set; }
         public decimal PGPayment { get; set; }
         public decimal TotalMemoAmount { get; set; }
-        public frmOnlinePayment()
+        public FrmOnlinePayment()
         {
             InitializeComponent();
         }
@@ -291,7 +291,7 @@ namespace WindowsFormsApplication1.Pos
             Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             Save();
             Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Pos
 {
-    partial class frmOnlinePayment
+    partial class FrmOnlinePayment
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Pos
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOnlinePayment));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOnlinePayment));
             this.btnSaveOnly = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
@@ -124,7 +124,7 @@ namespace WindowsFormsApplication1.Pos
             this.btnSave.Size = new System.Drawing.Size(148, 47);
             this.btnSave.TabIndex = 33;
             this.btnSave.Text = "Save && Print";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // groupControl1
             // 

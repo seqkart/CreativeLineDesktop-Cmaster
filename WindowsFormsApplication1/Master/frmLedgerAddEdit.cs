@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frmLedgerAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmLedgerAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string LgrCode { get; set; }
-        public frmLedgerAddEdit()
+        public FrmLedgerAddEdit()
         {
             InitializeComponent();
         }

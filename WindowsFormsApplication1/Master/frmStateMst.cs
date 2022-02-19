@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmStateMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmStateMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string StateCode { get; set; }
-        public frmStateMst()
+        public FrmStateMst()
         {
             InitializeComponent();
         }

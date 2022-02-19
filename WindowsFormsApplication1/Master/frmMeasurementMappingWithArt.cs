@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmMeasurementMappingWithArt : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMeasurementMappingWithArt : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
-        public frmMeasurementMappingWithArt()
+        public FrmMeasurementMappingWithArt()
         {
             InitializeComponent();
         }

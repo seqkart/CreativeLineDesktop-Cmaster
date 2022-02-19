@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmFYCreation : DevExpress.XtraEditors.XtraForm
+    public partial class FrmFYCreation : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public int TransId { get; set; }
-        public frmFYCreation()
+        public FrmFYCreation()
         {
             InitializeComponent();
         }

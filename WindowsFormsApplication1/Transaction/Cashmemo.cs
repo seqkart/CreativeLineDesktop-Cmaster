@@ -1526,7 +1526,7 @@ namespace WindowsFormsApplication1.Transaction
                 ImNo = lblCashMemoNo.Text;
                 ImSeries = "S";
                 Cashmemo_Load(null, e);
-                WindowsFormsApplication1.Pos.frmOnlinePayment frm = new WindowsFormsApplication1.Pos.frmOnlinePayment() { MemoNo = lblCashMemoNo.Text, MemoDate = Convert.ToDateTime(lblCashMemoDate.Text), TotalMemoAmount = Convert.ToDecimal(lblNetPayable.Text) };
+                WindowsFormsApplication1.Pos.FrmOnlinePayment frm = new WindowsFormsApplication1.Pos.FrmOnlinePayment() { MemoNo = lblCashMemoNo.Text, MemoDate = Convert.ToDateTime(lblCashMemoDate.Text), TotalMemoAmount = Convert.ToDecimal(lblNetPayable.Text) };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                 frm.ShowDialog(Parent);

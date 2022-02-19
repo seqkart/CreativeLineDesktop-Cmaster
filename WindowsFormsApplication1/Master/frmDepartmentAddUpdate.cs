@@ -6,11 +6,11 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frmDepartmentAddUpdate : DevExpress.XtraEditors.XtraForm
+    public partial class FrmDepartmentAddUpdate : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string DeptCode { get; set; }
-        public frmDepartmentAddUpdate()
+        public FrmDepartmentAddUpdate()
         {
             InitializeComponent();
         }

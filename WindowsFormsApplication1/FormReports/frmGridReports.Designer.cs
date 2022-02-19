@@ -94,7 +94,7 @@
             // xtraSaveFileDialog1
             // 
             this.xtraSaveFileDialog1.FileName = "xtraSaveFileDialog1";
-            this.xtraSaveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.xtraSaveFileDialog1_FileOk);
+            this.xtraSaveFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.XtraSaveFileDialog1_FileOk);
             // 
             // FrmGridReports
             // 

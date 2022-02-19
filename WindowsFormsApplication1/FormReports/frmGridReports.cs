@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1.FormReports
 
        
 
-        private void xtraSaveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        private void XtraSaveFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
         {
             MasterGridView.ExportToXlsx(xtraSaveFileDialog1.FileName, new XlsxExportOptionsEx());
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1
 {
-    partial class frmCLApiMst
+    partial class FrmCLApiMst
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCLApiMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCLApiMst));
             this.InvoiceGrid = new DevExpress.XtraGrid.GridControl();
             this.InvoiceGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -138,7 +138,7 @@ namespace WindowsFormsApplication1
             this.Name = "frmCLApiMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmCLApiMst_Load);
+            this.Load += new System.EventHandler(this.FrmCLApiMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();

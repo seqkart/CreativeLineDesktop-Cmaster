@@ -1,25 +1,15 @@
-﻿using DevExpress.XtraEditors;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmCLApiMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCLApiMst : DevExpress.XtraEditors.XtraForm
     {
-        public frmCLApiMst()
+        public FrmCLApiMst()
         {
             InitializeComponent();
         }
@@ -95,7 +85,7 @@ namespace WindowsFormsApplication1
             }
             return dt;
         }
-        private void fillGrid()
+        private void FillGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select ProgAPI from ProgramMaster where ProgCode='" + GlobalVariables.ProgCode + "'");
             if (ds.Tables[0].Rows.Count > 0)
@@ -109,7 +99,7 @@ namespace WindowsFormsApplication1
                     var result = streamReader.ReadToEnd();
                     DataTable dt = JsonStringToDataTable(result.ToString());
                     //DataSet dsInner = ReadDataFromJson(result.ToString());
-                    if(dt.Rows.Count>0)
+                    if (dt.Rows.Count > 0)
                     {
                         InvoiceGrid.DataSource = dt;
                         InvoiceGridView.BestFitColumns();
@@ -123,10 +113,10 @@ namespace WindowsFormsApplication1
                 Console.WriteLine(httpResponse.StatusCode);
             }
         }
-        private void frmCLApiMst_Load(object sender, EventArgs e)
+        private void FrmCLApiMst_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-            fillGrid();
+            FillGrid();
         }
     }
 }

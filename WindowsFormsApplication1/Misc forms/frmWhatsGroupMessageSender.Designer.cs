@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Misc_forms
 {
-    partial class frmWhatsGroupMessageSender
+    partial class FrmWhatsGroupMessageSender
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Misc_forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWhatsGroupMessageSender));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmWhatsGroupMessageSender));
             this.ContactGrid = new DevExpress.XtraGrid.GridControl();
             this.ContactGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -140,7 +140,7 @@ namespace WindowsFormsApplication1.Misc_forms
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // panelControl1
             // 
@@ -173,7 +173,7 @@ namespace WindowsFormsApplication1.Misc_forms
             this.Name = "frmWhatsGroupMessageSender";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmWhatsGroupMessageSender_Load);
+            this.Load += new System.EventHandler(this.FrmWhatsGroupMessageSender_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ContactGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactGridView)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);

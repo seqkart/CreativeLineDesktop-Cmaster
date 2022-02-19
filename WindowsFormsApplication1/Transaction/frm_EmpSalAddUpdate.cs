@@ -5,12 +5,12 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1
 {
-    public partial class frm_EmpSalAddUpdate : XtraForm
+    public partial class Frm_EmpSalAddUpdate : XtraForm
     {
         public string S1 { get; set; }
         public string MonthYear { get; set; }
         public string EmpCode { get; set; }
-        public frm_EmpSalAddUpdate()
+        public Frm_EmpSalAddUpdate()
         {
             InitializeComponent();
         }

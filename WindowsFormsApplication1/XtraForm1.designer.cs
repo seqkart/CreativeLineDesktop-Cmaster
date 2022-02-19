@@ -602,7 +602,7 @@
             this.skinDropDownButtonItem2.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
             this.skinDropDownButtonItem2.Id = 3;
             this.skinDropDownButtonItem2.Name = "skinDropDownButtonItem2";
-            this.skinDropDownButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.skinDropDownButtonItem2_ItemClick);
+            this.skinDropDownButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.SkinDropDownButtonItem2_ItemClick);
             // 
             // barButtonItem4
             // 

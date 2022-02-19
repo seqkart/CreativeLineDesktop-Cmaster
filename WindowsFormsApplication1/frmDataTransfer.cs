@@ -114,7 +114,7 @@ namespace WindowsFormsApplication1
             {
                 if (j == 0)
                 {
-                    Query = Query + "  Select ";
+                    Query += "Select ";
                     j++;
                 }
                 if (dr["Source"].ToString().Length > 0 || dr["Value"].ToString().Length > 0)
