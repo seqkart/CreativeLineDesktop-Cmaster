@@ -127,7 +127,7 @@ namespace WindowsFormsApplication1.FormReports
             catch (Exception ex)
 
             {
-                
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 

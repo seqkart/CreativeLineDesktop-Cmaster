@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -77,7 +76,7 @@ namespace WindowsFormsApplication1.Transaction
                         DutyHours = Convert.ToDecimal(ds.Tables[0].Rows[0]["WorkingHours"]);
                         DeductLunch = Convert.ToDecimal(ds.Tables[0].Rows[0]["DeductLunch"]);
                         btnLoad.PerformClick();
-                        CalculateHrs(); 
+                        CalculateHrs();
                         // btnLoad.Focus();
                     }
 
@@ -114,7 +113,7 @@ namespace WindowsFormsApplication1.Transaction
                 txtEmpName.Text = Row["EmpName"].ToString();
                 DutyHours = Convert.ToDecimal(Row["WorkingHours"]);
                 DeductLunch = Convert.ToDecimal(Row["DeductLunch"]);
-                CalculateHrs(); 
+                CalculateHrs();
                 HelpGrid.Visible = false;
                 btnLoad.Focus();
             }
@@ -217,7 +216,7 @@ namespace WindowsFormsApplication1.Transaction
             DtStartDate.EditValue = DateTime.Now;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
-           
+
         }
 
         private void AttendenceGridView_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -921,7 +920,7 @@ namespace WindowsFormsApplication1.Transaction
                     e.Appearance.BackColor = Color.LightYellow;
                     e.Appearance.ForeColor = Color.Black;
                 }
-                if (status_code.ToUpper() == "AA" )
+                if (status_code.ToUpper() == "AA")
                 {
                     e.Appearance.BackColor = Color.Red;
                     e.Appearance.ForeColor = Color.White;

@@ -1,14 +1,8 @@
 ﻿using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
@@ -77,7 +71,7 @@ namespace WindowsFormsApplication1.Transaction
                 AttendenceGridView.BestFitColumns();
             }
         }
-        
+
         private void FrmAttendenceFeedingDateWise_Load(object sender, EventArgs e)
         {
             LoadCombobox();
@@ -106,7 +100,7 @@ namespace WindowsFormsApplication1.Transaction
                     if (AttendenceGridView.DataSource != null)
                     {
                         DataRow currentrow = AttendenceGridView.GetDataRow(AttendenceGridView.FocusedRowHandle);
-                        DataSet dsEmp = ProjectFunctions.GetDataSet("select EmpCode,EmpName,WorkingHours,isnull(LunchBreak,0)+isnull(TeaBreakTime,0)+isnull(TeaBreak,0) as DeductLunch from EmpMst Where  EmpCode= '" + currentrow["EmpCode"].ToString() + "'") ;
+                        DataSet dsEmp = ProjectFunctions.GetDataSet("select EmpCode,EmpName,WorkingHours,isnull(LunchBreak,0)+isnull(TeaBreakTime,0)+isnull(TeaBreak,0) as DeductLunch from EmpMst Where  EmpCode= '" + currentrow["EmpCode"].ToString() + "'");
                         if (dsEmp.Tables[0].Rows.Count > 0)
                         {
                             DutyHours = Convert.ToDecimal(dsEmp.Tables[0].Rows[0]["WorkingHours"]);
@@ -424,7 +418,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@entry_date", SqlDbType.NVarChar).Value = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                             sqlcom.Parameters.Add("@attendance_date", SqlDbType.NVarChar).Value = Convert.ToDateTime(DtStartDate.Text).ToString("yyyy-MM-dd");
                             sqlcom.Parameters.Add("@employee_code", SqlDbType.NVarChar).Value = currentrow["EmpCode"].ToString(); ;
-                            sqlcom.Parameters.Add("@status_id", SqlDbType.NVarChar).Value = ProjectFunctions.GetDataSet("select status_id from AttendanceStatus where status_code='" + currentrow["status_code"]+ "'").Tables[0].Rows[0][0].ToString();
+                            sqlcom.Parameters.Add("@status_id", SqlDbType.NVarChar).Value = ProjectFunctions.GetDataSet("select status_id from AttendanceStatus where status_code='" + currentrow["status_code"] + "'").Tables[0].Rows[0][0].ToString();
                             if (currentrow["attendance_in_first"].ToString().Trim() == "" || currentrow["attendance_in_first"].ToString().Trim() == "00:00:00")
                             {
                                 sqlcom.Parameters.Add("@attendance_in_first", SqlDbType.NVarChar).Value = System.Data.SqlTypes.SqlDateTime.Null;
@@ -480,7 +474,7 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Clear();
                         }
                     }
-                    transaction.Commit(); 
+                    transaction.Commit();
 
 
                     sqlcon.Close();
@@ -518,7 +512,7 @@ namespace WindowsFormsApplication1.Transaction
             }
             catch (Exception ex)
             {
-                
+                ProjectFunctions.SpeakError("Something Wrong. \n Roll Back Failed." + ex.Message);
             }
         }
         private void BtnLoadFromMachine_Click(object sender, EventArgs e)

@@ -1,5 +1,4 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -208,7 +207,7 @@ namespace WindowsFormsApplication1.Transaction
             LoadCombobox();
             DtStartDate.EditValue = DateTime.Now;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-         
+
         }
 
         private void BtnSave_Click(object sender, EventArgs e)
@@ -577,7 +576,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             try
             {
-                
+
 
                 if (e.KeyCode == Keys.Enter)
                 {
@@ -634,7 +633,7 @@ namespace WindowsFormsApplication1.Transaction
                                 double TotalBreakMinutes = 0;
                                 double TotalMinutes = 0;
 
-                                DateTime startTime = Convert.ToDateTime("2001-01-01 "+ Convert.ToDateTime(currentrow["attendance_in_first"]).ToString("HH:mm"));
+                                DateTime startTime = Convert.ToDateTime("2001-01-01 " + Convert.ToDateTime(currentrow["attendance_in_first"]).ToString("HH:mm"));
                                 DateTime endTime = Convert.ToDateTime("2001-01-01 " + Convert.ToDateTime(currentrow["attendance_out_last"]).ToString("HH:mm"));
                                 TimeSpan spanattendence = endTime.Subtract(startTime);
                                 TotalMinutes = spanattendence.TotalMinutes;
@@ -710,8 +709,8 @@ namespace WindowsFormsApplication1.Transaction
                                     }
                                     else
                                     {
-                                        DateTime startTime = Convert.ToDateTime("2001-01-01 "+ Convert.ToDateTime(currentrow["attendance_in_first"]).ToString("HH:mm"));
-                                        DateTime endTime = Convert.ToDateTime("2001-01-01 "+ Convert.ToDateTime(currentrow["attendance_out_first"]).ToString("HH:mm"));
+                                        DateTime startTime = Convert.ToDateTime("2001-01-01 " + Convert.ToDateTime(currentrow["attendance_in_first"]).ToString("HH:mm"));
+                                        DateTime endTime = Convert.ToDateTime("2001-01-01 " + Convert.ToDateTime(currentrow["attendance_out_first"]).ToString("HH:mm"));
                                         TimeSpan spanattendence = endTime.Subtract(startTime);
                                         TotalMinutes = spanattendence.TotalMinutes;
                                     }

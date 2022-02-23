@@ -115,7 +115,7 @@ namespace HumanResourceManagementSystem
                         string str2 = txtTimeOut.Text.ToString();
                         foreach (char c in str1)
                         {
-                            i = i + 1;
+                            i++;
                             if (i > 5)
                             {
                                 MessageBox.Show("Time is not in proper format");
@@ -132,7 +132,7 @@ namespace HumanResourceManagementSystem
                         }
                         foreach (char c in str2)
                         {
-                            j = j + 1;
+                            j++;
                             if (j > 5)
                             {
                                 MessageBox.Show("Time is not in proper format");
