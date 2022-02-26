@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApplication1.Misc_forms
+namespace WindowsFormsApplication1.Miscforms
 {
     partial class FrmWhatsGroupMessageSender
     {

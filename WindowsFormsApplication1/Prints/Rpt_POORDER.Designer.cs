@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1.Prints
 {
     partial class Rpt_POORDER
     {

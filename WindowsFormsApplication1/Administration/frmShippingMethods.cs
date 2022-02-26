@@ -8,8 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
-namespace School_Management_System
+namespace WindowsFormsApplication1.Administration
 {
     public partial class frmShippingMethods : DevExpress.XtraEditors.XtraForm
     {

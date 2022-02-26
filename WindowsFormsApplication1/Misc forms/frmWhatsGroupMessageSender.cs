@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Misc_forms
+namespace WindowsFormsApplication1.Miscforms
 {
     public partial class FrmWhatsGroupMessageSender : DevExpress.XtraEditors.XtraForm
     {

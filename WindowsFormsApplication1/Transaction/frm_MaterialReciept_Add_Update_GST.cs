@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Transaction
 {
     public partial class Frm_MaterialReceipt_Add_Update_GST : XtraForm, IDisposable
     {

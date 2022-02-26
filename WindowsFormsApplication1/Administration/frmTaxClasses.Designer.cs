@@ -1,5 +1,5 @@
 ﻿
-namespace School_Management_System
+namespace WindowsFormsApplication1.Administration
 {
     partial class frmTaxClasses
     {
@@ -38,9 +38,9 @@ namespace School_Management_System
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtname = new DevExpress.XtraEditors.TextEdit();
             this.txtslug = new DevExpress.XtraEditors.TextEdit();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new DevExpress.XtraEditors.LabelControl();
+            this.label2 = new DevExpress.XtraEditors.LabelControl();
+            this.label3 = new DevExpress.XtraEditors.LabelControl();
             this.txtlinks = new DevExpress.XtraEditors.TextEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtname.Properties)).BeginInit();
@@ -199,11 +199,11 @@ namespace School_Management_System
         private System.Windows.Forms.ToolStripLabel lbl;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private DevExpress.XtraEditors.LabelControl label1;
+        private DevExpress.XtraEditors.LabelControl label2;
         public DevExpress.XtraEditors.TextEdit txtname;
         public DevExpress.XtraEditors.TextEdit txtslug;
-        private System.Windows.Forms.Label label3;
+        private DevExpress.XtraEditors.LabelControl label3;
         public DevExpress.XtraEditors.TextEdit txtlinks;
     }
 }

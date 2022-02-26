@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Administration
 {
     public partial class FrmFYCreation : DevExpress.XtraEditors.XtraForm
     {

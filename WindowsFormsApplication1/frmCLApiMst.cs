@@ -1,27 +1,19 @@
 ﻿using DevExpress.Utils.Menu;
-using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Xml;
+using WindowsFormsApplication1.Administration;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmCLApiMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmCLApiMst : DevExpress.XtraEditors.XtraForm
     {
-        public frmCLApiMst()
+        public FrmCLApiMst()
         {
             InitializeComponent();
         }
@@ -48,7 +40,7 @@ namespace WindowsFormsApplication1
             DataTable dt = new DataTable();
             if (jsonString.Length > 5)
             {
-                
+
                 string[] jsonStringArray = Regex.Split(jsonString.Replace("[", "").Replace("]", ""), "},{");
                 List<string> ColumnsName = new List<string>();
                 foreach (string jSA in jsonStringArray)
@@ -111,7 +103,7 @@ namespace WindowsFormsApplication1
                 return dt;
             }
         }
-        private void fillGrid()
+        private void FillGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select ProgAPI from ProgramMaster where ProgCode='" + GlobalVariables.ProgCode + "'");
             if (ds.Tables[0].Rows.Count > 0)
@@ -139,10 +131,10 @@ namespace WindowsFormsApplication1
                 Console.WriteLine(httpResponse.StatusCode);
             }
         }
-        private void frmCLApiMst_Load(object sender, EventArgs e)
+        private void FrmCLApiMst_Load(object sender, EventArgs e)
         {
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-            fillGrid();
+            FillGrid();
         }
 
         private void InvoiceGridView_PopupMenuShowing(object sender, DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventArgs e)
@@ -175,103 +167,103 @@ namespace WindowsFormsApplication1
             catch (Exception ex)
 
             {
-
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (btnAdd.Enabled)
             {
                 if (GlobalVariables.ProgCode == "PROG258")
                 {
-                    School_Management_System.frmAPIProducts frm = new School_Management_System.frmAPIProducts() { s1 = btnAdd.Text, Text = " Product Addition" };
+                    frmAPIProducts frm = new frmAPIProducts() { s1 = btnAdd.Text, Text = " Product Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG262")
                 {
-                    School_Management_System.frmAPITaxRates frm = new School_Management_System.frmAPITaxRates() { s1 = btnAdd.Text, Text = " Tax Addition" };
+                    frmAPITaxRates frm = new frmAPITaxRates() { s1 = btnAdd.Text, Text = " Tax Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG253")
                 {
-                    School_Management_System.frmAPICoupon frm = new School_Management_System.frmAPICoupon() { s1 = btnAdd.Text, Text = " Coupon Addition" };
+                    FrmAPICoupon frm = new FrmAPICoupon() { S1 = btnAdd.Text, Text = " Coupon Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG267")
                 {
-                    School_Management_System.frmTaxClasses frm = new School_Management_System.frmTaxClasses() { s1 = btnAdd.Text, Text = " Tax Classes Addition" };
+                    frmTaxClasses frm = new frmTaxClasses() { s1 = btnAdd.Text, Text = " Tax Classes Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG266")
                 {
-                    School_Management_System.frmShippingMethods frm = new School_Management_System.frmShippingMethods() { s1 = btnAdd.Text, Text = " Shipping Methods Addition" };
+                    frmShippingMethods frm = new frmShippingMethods() { s1 = btnAdd.Text, Text = " Shipping Methods Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG263")
                 {
-                    School_Management_System.frmShippingZones frm = new School_Management_System.frmShippingZones() { s1 = btnAdd.Text, Text = " Shipping Zone Addition" };
+                    frmShippingZones frm = new frmShippingZones() { s1 = btnAdd.Text, Text = " Shipping Zone Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG261")
                 {
-                    School_Management_System.frmProductReview frm = new School_Management_System.frmProductReview() { s1 = btnAdd.Text, Text = " Product  Review Addition" };
+                    frmProductReview frm = new frmProductReview() { s1 = btnAdd.Text, Text = " Product  Review Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG260")
                 {
-                    School_Management_System.frmProductCategories frm = new School_Management_System.frmProductCategories() { s1 = btnAdd.Text, Text = " Product  Category Addition" };
+                    frmProductCategories frm = new frmProductCategories() { s1 = btnAdd.Text, Text = " Product  Category Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG254")
                 {
-                    School_Management_System.frmAPICustomers frm = new School_Management_System.frmAPICustomers() { s1 = btnAdd.Text, Text = " Customer Addition" };
+                    frmAPICustomers frm = new frmAPICustomers() { s1 = btnAdd.Text, Text = " Customer Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
             }
-            
+
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void BtnEdit_Click(object sender, EventArgs e)
         {
             if (btnEdit.Enabled)
             {
                 if (GlobalVariables.ProgCode == "PROG258")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    School_Management_System.frmAPIProducts frm = new School_Management_System.frmAPIProducts() { s1 = btnEdit.Text, Text = " Product Edition" };
+                    frmAPIProducts frm = new frmAPIProducts() { s1 = btnEdit.Text, Text = " Product Edition" };
                     frm.txtdescription.Text = CurrentRow["description"].ToString();
                     frm.txtid.Text = CurrentRow["id"].ToString();
                     frm.txtname.Text = CurrentRow["name"].ToString();
                     frm.txtregular_price.Text = CurrentRow["regular_price"].ToString();
                     frm.txtshort_description.Text = CurrentRow["short_description"].ToString();
                     frm.txttype.Text = CurrentRow["type"].ToString();
-                     var P = ProjectFunctions.GetPositionInForm(this);
+                    var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG262")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    School_Management_System.frmAPITaxRates frm = new School_Management_System.frmAPITaxRates() { s1 = btnEdit.Text, Text = " Tax Edition" };
+                    frmAPITaxRates frm = new frmAPITaxRates() { s1 = btnEdit.Text, Text = " Tax Edition" };
                     frm.txtid.Text = CurrentRow["id"].ToString();
                     frm.txtcity.Text = CurrentRow["city"].ToString();
                     frm.txtcountry.Text = CurrentRow["country"].ToString();
@@ -288,7 +280,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    School_Management_System.frmAPICoupon frm = new School_Management_System.frmAPICoupon() { s1 = btnEdit.Text, Text = " Coupon Edition" };
+                    FrmAPICoupon frm = new FrmAPICoupon() { S1 = btnEdit.Text, Text = " Coupon Edition" };
                     frm.txtid.Text = CurrentRow["id"].ToString();
                     frm.txtamount.Text = CurrentRow["amount"].ToString();
                     frm.txtcode.Text = CurrentRow["code"].ToString();
@@ -304,7 +296,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    School_Management_System.frmTaxClasses frm = new School_Management_System.frmTaxClasses() { s1 = btnEdit.Text, Text = " Tax Classes Edition" };
+                    frmTaxClasses frm = new frmTaxClasses() { s1 = btnEdit.Text, Text = " Tax Classes Edition" };
                     frm.txtslug.Text = CurrentRow["slug"].ToString();
                     frm.txtname.Text = CurrentRow["name"].ToString();
                     frm.txtlinks.Text = CurrentRow["_links"].ToString();
@@ -315,7 +307,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG266")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    School_Management_System.frmShippingMethods frm = new School_Management_System.frmShippingMethods() { s1 = btnEdit.Text, Text = " Shipping Methods Edition" };
+                    frmShippingMethods frm = new frmShippingMethods() { s1 = btnEdit.Text, Text = " Shipping Methods Edition" };
                     frm.ID = CurrentRow["id"].ToString();
                     frm.Title = CurrentRow["title"].ToString();
                     frm.Description = CurrentRow["description"].ToString();
@@ -329,7 +321,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    School_Management_System.frmShippingZones frm = new School_Management_System.frmShippingZones() { s1 = btnEdit.Text, Text = " Shipping Zone Edition" };
+                    frmShippingZones frm = new frmShippingZones() { s1 = btnEdit.Text, Text = " Shipping Zone Edition" };
                     frm.ID = CurrentRow["id"].ToString();
                     frm.Name = CurrentRow["name"].ToString();
                     frm.Order = CurrentRow["order"].ToString();
@@ -343,7 +335,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG261")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    School_Management_System.frmProductReview frm = new School_Management_System.frmProductReview() { s1 = btnEdit.Text, Text = " Product Review Edition" };
+                    frmProductReview frm = new frmProductReview() { s1 = btnEdit.Text, Text = " Product Review Edition" };
                     frm.id = CurrentRow["id"].ToString();
                     frm.date_created = CurrentRow["date_created"].ToString();
                     frm.date_created_gmt = CurrentRow["date_created_gmt"].ToString();
@@ -368,7 +360,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG260")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    School_Management_System.frmProductCategories frm = new School_Management_System.frmProductCategories() { s1 = btnEdit.Text, Text = " Product  Category Edition" };
+                    frmProductCategories frm = new frmProductCategories() { s1 = btnEdit.Text, Text = " Product  Category Edition" };
                     frm.id = CurrentRow["id"].ToString();
                     frm.name = CurrentRow["name"].ToString();
                     frm.slug = CurrentRow["slug"].ToString();
@@ -395,7 +387,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    School_Management_System.frmAPICustomers frm = new School_Management_System.frmAPICustomers() { s1 = btnEdit.Text, Text = " Customer Edition" };
+                    frmAPICustomers frm = new frmAPICustomers() { s1 = btnEdit.Text, Text = " Customer Edition" };
                     frm.txtaddress_1.Text = CurrentRow["address_1"].ToString();
                     frm.txtaddress_2.Text = CurrentRow["address_2"].ToString();
                     frm.txtavatar_url.Text = CurrentRow["avatar_url"].ToString();
@@ -421,7 +413,7 @@ namespace WindowsFormsApplication1
                     frm.txtusername.Text = CurrentRow["username"].ToString();
                     frm.txtvalue.Text = CurrentRow["value"].ToString();
                     frm.txt_is_paying_customer.Text = CurrentRow["is_paying_customer"].ToString();
-                 
+
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -429,9 +421,9 @@ namespace WindowsFormsApplication1
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
-            fillGrid();
+            FillGrid();
         }
     }
 }

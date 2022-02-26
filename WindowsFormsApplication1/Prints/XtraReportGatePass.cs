@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace WindowsFormsApplication1.FormReports
+namespace WindowsFormsApplication1.Prints
 {
     public partial class XtraReportGatePass : DevExpress.XtraReports.UI.XtraReport
     {

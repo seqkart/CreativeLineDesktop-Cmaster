@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsApplication1.Forms_Master
+namespace WindowsFormsApplication1.TimeOffice
 {
     partial class FrmGatePassLoading
     {

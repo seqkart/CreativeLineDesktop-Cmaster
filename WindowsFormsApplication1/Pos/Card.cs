@@ -3,7 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Transaction.Pos
+namespace WindowsFormsApplication1.Pos
 {
     public partial class Card : DevExpress.XtraEditors.XtraForm
     {

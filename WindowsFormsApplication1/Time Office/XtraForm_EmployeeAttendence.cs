@@ -14,10 +14,9 @@ using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1.Forms_Master;
 
 
-namespace WindowsFormsApplication1.Time_Office
+namespace WindowsFormsApplication1.TimeOffice
 {
     public partial class XtraForm_EmployeeAttendance : DevExpress.XtraEditors.XtraForm
     {

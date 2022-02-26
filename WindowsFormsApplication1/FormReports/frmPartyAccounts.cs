@@ -231,7 +231,7 @@ namespace WindowsFormsApplication1.FormReports
 
 
             // LedgerGridView.ShowRibbonPrintPreview();
-            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+            PrintReportViewer frm = new PrintReportViewer();
             Prints.PartyLedgerUpdated Report = new Prints.PartyLedgerUpdated();
             Report.txtCompanyName.Text = GlobalVariables.CompanyName;
             Report.txtReportName.Text = "Statement of Accounts";

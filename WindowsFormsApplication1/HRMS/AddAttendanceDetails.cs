@@ -2,9 +2,8 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-using WindowsFormsApplication1.HRMS;
 
-namespace HumanResourceManagementSystem
+namespace WindowsFormsApplication1.HRMS
 {
 
     public partial class AddAttendanceDetails : Form

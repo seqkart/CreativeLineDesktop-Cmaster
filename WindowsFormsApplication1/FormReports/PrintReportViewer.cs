@@ -1,7 +1,6 @@
 ﻿using DevExpress.XtraReports.UI;
 using System;
-using WindowsFormsApplication1;
-namespace payroll.FormReports
+namespace WindowsFormsApplication1.FormReports
 {
     public partial class PrintReportViewer : DevExpress.XtraEditors.XtraForm
     {

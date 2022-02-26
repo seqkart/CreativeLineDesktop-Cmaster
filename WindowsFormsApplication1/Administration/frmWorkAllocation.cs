@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Administration
 {
     public partial class FrmWorkAllocation : XtraForm
     {

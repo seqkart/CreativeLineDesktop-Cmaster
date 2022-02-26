@@ -7,7 +7,6 @@ using DevExpress.XtraGrid.Columns;
 using DevExpress.XtraGrid.Views.Base;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraReports.UI;
-using HumanResourceManagementSystem;
 using SeqKartLibrary;
 using SeqKartLibrary.CrudTask;
 using SeqKartLibrary.HelperClass;
@@ -21,10 +20,10 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using WindowsFormsApplication1.HRMS;
 using WindowsFormsApplication1.Prints;
-using WindowsFormsApplication1.Time_Office;
 
-namespace WindowsFormsApplication1.Forms_Master
+namespace WindowsFormsApplication1.TimeOffice
 {
 
     public partial class FrmAttendanceLoading : XtraForm

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-namespace WindowsFormsApplication1.Forms_Master
+namespace WindowsFormsApplication1.TimeOffice
 {
     public partial class FrmEmployeeMDataPAddEdit : DevExpress.XtraEditors.XtraForm
     {

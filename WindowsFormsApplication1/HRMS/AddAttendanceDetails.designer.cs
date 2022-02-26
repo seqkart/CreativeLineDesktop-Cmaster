@@ -1,4 +1,4 @@
-﻿namespace HumanResourceManagementSystem
+﻿namespace WindowsFormsApplication1.HRMS
 {
     partial class AddAttendanceDetails
     {

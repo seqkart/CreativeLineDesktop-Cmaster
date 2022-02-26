@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraPrinting;
-using DevExpress.XtraReports.Import.Import.PRINTS;
 using DevExpress.XtraReports.UI;
 using SeqKartLibrary;
 using System;
@@ -9,6 +8,10 @@ using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApplication1.FormReports;
+using WindowsFormsApplication1.Pos;
+using WindowsFormsApplication1.Prints;
+using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
 {
@@ -149,7 +152,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG168")
                 {
-                    WindowsFormsApplication1.Frm_Asset_AddUpd frm = new WindowsFormsApplication1.Frm_Asset_AddUpd
+                    Frm_Asset_AddUpd frm = new Frm_Asset_AddUpd
                     { IsUpdate = false, Text = "Asset Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -163,7 +166,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG149")
                 {
-                    WindowsFormsApplication1.Frm_poAddition_GST frm = new WindowsFormsApplication1.Frm_poAddition_GST
+                    Frm_poAddition_GST frm = new Frm_poAddition_GST
                     { IsUpdate = false, Text = "Purchase Order     Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -177,7 +180,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG141")
                 {
-                    WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
+                    FrmInvoiceMstAddCR frm = new FrmInvoiceMstAddCR()
                     { S1 = btnAdd.Text, Text = "Credit Note Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -191,14 +194,14 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG134")
                 {
-                    Transaction.Pos.ApprovaLIssue frm = new Transaction.Pos.ApprovaLIssue()
+                    ApprovaLIssue frm = new ApprovaLIssue()
                     { S1 = btnAdd.Text, Text = "Approval Issue Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG133")
                 {
-                    Transaction.Pos.ApprovalLReturn frm = new Transaction.Pos.ApprovalLReturn()
+                    ApprovalLReturn frm = new ApprovalLReturn()
                     { S1 = btnAdd.Text, Text = "Approval Return Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -452,7 +455,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Frm_poAddition_GST frm = new WindowsFormsApplication1.Frm_poAddition_GST
+                    Frm_poAddition_GST frm = new Frm_poAddition_GST
                     {
                         IsUpdate = true,
                         Text = "Purchase Order Edition",
@@ -497,7 +500,7 @@ namespace WindowsFormsApplication1
 
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.FrmInvoiceMstAddCR frm = new WindowsFormsApplication1.FrmInvoiceMstAddCR()
+                    FrmInvoiceMstAddCR frm = new FrmInvoiceMstAddCR()
                     {
                         S1 = btnEdit.Text,
                         Text = "Credit Note Edition",
@@ -529,7 +532,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.Pos.ApprovaLIssue frm = new Transaction.Pos.ApprovaLIssue()
+                    ApprovaLIssue frm = new ApprovaLIssue()
                     {
                         S1 = btnEdit.Text,
                         Text = "Approval Issue Edition",
@@ -544,7 +547,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.Pos.ApprovalLReturn frm = new Transaction.Pos.ApprovalLReturn()
+                    ApprovalLReturn frm = new ApprovalLReturn()
                     {
                         S1 = btnEdit.Text,
                         Text = "Approval Return Edition",
@@ -1191,7 +1194,7 @@ namespace WindowsFormsApplication1
                                                                                                   .Remove(rowToRemove);
                                                                                           }
                                                                                       }
-                                                                                      using (var pt = new ReportPrintTool(new WindowsFormsApplication1.Report.Rpt_VoucherPrint()
+                                                                                      using (var pt = new ReportPrintTool(new Rpt_VoucherPrint()
                                                                                       { DataSource = Ds.Tables[0] }))
                                                                                       {
                                                                                           pt.ShowRibbonPreviewDialog();
@@ -1241,7 +1244,7 @@ namespace WindowsFormsApplication1
                                                                                                   .Remove(rowToRemove);
                                                                                           }
                                                                                       }
-                                                                                      using (var pt = new ReportPrintTool(new WindowsFormsApplication1.Report.Rpt_VoucherPrint()
+                                                                                      using (var pt = new ReportPrintTool(new Rpt_VoucherPrint()
                                                                                       { DataSource = Ds.Tables[0] }))
                                                                                       {
                                                                                           Ds.Tables[0].WriteXmlSchema("C:\\Temp\\abc.xml");
@@ -1586,7 +1589,7 @@ namespace WindowsFormsApplication1
                                                                               //{ DataSource = ds.Tables[0] };
                                                                               rpt.CreateDocument();
 
-                                                                              payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                                                              PrintReportViewer frm = new PrintReportViewer();
 
                                                                               frm.documentViewer1.DocumentSource = rpt;
                                                                               frm.ShowDialog(Parent);
@@ -1630,7 +1633,7 @@ namespace WindowsFormsApplication1
                                                                               //{ DataSource = ds.Tables[0] };
                                                                               rpt.CreateDocument();
 
-                                                                              payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                                                              PrintReportViewer frm = new PrintReportViewer();
 
                                                                               frm.documentViewer1.DocumentSource = rpt;
                                                                               frm.ShowDialog(Parent);
@@ -1680,7 +1683,7 @@ namespace WindowsFormsApplication1
                                                                              //{ DataSource = ds.Tables[0] };
                                                                              rpt.CreateDocument();
 
-                                                                             payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                                                             PrintReportViewer frm = new PrintReportViewer();
 
                                                                              frm.documentViewer1.DocumentSource = rpt;
                                                                              frm.ShowDialog(Parent);
@@ -2052,7 +2055,7 @@ namespace WindowsFormsApplication1
 
 
                                 //ReportToExport.Pages.AddRange(rpt.Pages);
-                                payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                PrintReportViewer frm = new PrintReportViewer();
                                 frm.documentViewer1.DocumentSource = rpt;
                                 frm.ShowDialog();
 
@@ -2127,7 +2130,7 @@ namespace WindowsFormsApplication1
                                             ///////////mobile number from fetch
                                             ProjectFunctions.SendBillImageAsync(ds.Tables[0].Rows[0]["WhatsAppNo"].ToString(), drBills["BillNo"].ToString(), Convert.ToDateTime(drBills["BillDate"]));
 
-                                            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                            PrintReportViewer frm = new PrintReportViewer();
                                             frm.documentViewer1.DocumentSource = rpt;
                                             frm.ShowDialog();
                                             //ReportToExport.Pages.AddRange(rpt.Pages);
@@ -2148,7 +2151,7 @@ namespace WindowsFormsApplication1
                                             }
                                             rpt.CreateDocument();
                                             //ReportToExport.Pages.AddRange(rpt.Pages);
-                                            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                            PrintReportViewer frm = new PrintReportViewer();
                                             frm.documentViewer1.DocumentSource = rpt;
                                             frm.ShowDialog();
                                         }
@@ -2172,7 +2175,7 @@ namespace WindowsFormsApplication1
                                             }
                                             rpt.CreateDocument();
                                             //ReportToExport.Pages.AddRange(rpt.Pages);
-                                            payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                                            PrintReportViewer frm = new PrintReportViewer();
                                             frm.documentViewer1.DocumentSource = rpt;
                                             frm.ShowDialog();
                                         }

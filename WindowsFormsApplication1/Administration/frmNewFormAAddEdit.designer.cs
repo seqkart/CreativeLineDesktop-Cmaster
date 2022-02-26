@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace WindowsFormsApplication1.Administration
 {
     partial class FrmNewFormAAddEdit
     {

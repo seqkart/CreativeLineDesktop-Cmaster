@@ -2,7 +2,7 @@
 using System;
 using System.Data;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Administration
 {
     public partial class frmUserFinancialYearAddition : XtraForm
     {

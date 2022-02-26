@@ -1,5 +1,4 @@
-﻿using WindowsFormsApplication1.DataBindings;
-
+﻿
 namespace WindowsFormsApplication1.Administration
 {
     partial class XtraForm_UserMaster

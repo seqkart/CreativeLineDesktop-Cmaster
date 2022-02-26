@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.Crystal_Reports
+﻿namespace WindowsFormsApplication1.FormReports
 {
     partial class CommonTemplate
     {

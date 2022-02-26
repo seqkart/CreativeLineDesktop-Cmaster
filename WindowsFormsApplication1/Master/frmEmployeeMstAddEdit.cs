@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Master
 {
     public partial class FrmEmployeeMstAddEdit : DevExpress.XtraEditors.XtraForm
     {

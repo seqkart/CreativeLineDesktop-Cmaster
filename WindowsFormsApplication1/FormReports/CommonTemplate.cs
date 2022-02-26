@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Prints;
 
-namespace WindowsFormsApplication1.Crystal_Reports
+namespace WindowsFormsApplication1.FormReports
 {
     public partial class CommonTemplate : XtraForm
     {

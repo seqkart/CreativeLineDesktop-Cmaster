@@ -6,8 +6,9 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Master;
 
-namespace WindowsFormsApplication1.Transaction.Pos
+namespace WindowsFormsApplication1.Pos
 {
     public partial class ApprovalLReturn : DevExpress.XtraEditors.XtraForm
     {

@@ -7,7 +7,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Administration
 {
     public partial class FrmNewFormAAddEdit : DevExpress.XtraEditors.XtraForm
     {

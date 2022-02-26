@@ -10,9 +10,8 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WindowsFormsApplication1;
 
-namespace School_Management_System
+namespace WindowsFormsApplication1.Administration
 {
     public partial class frmAPICustomers : DevExpress.XtraEditors.XtraForm
     {

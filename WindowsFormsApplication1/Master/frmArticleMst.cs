@@ -7,7 +7,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Master
 {
     public partial class FrmArticleMst : DevExpress.XtraEditors.XtraForm
     {

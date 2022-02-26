@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Master
 {
     public partial class FrmBomMstAddEdit : DevExpress.XtraEditors.XtraForm
     {

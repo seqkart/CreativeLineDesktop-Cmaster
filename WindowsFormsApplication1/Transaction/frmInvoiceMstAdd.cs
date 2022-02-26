@@ -11,9 +11,9 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using TaxProEWB.API;
-using WindowsFormsApplication1.Transaction;
+using WindowsFormsApplication1.Master;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Transaction
 {
     public partial class FrmInvoiceMstAdd : DevExpress.XtraEditors.XtraForm
     {
@@ -2247,7 +2247,7 @@ namespace WindowsFormsApplication1
                 ///pictureEdit1.Image = Image.FromStream(stream);
                 //pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
-                WindowsFormsApplication1.Transaction.challans.XtraReport1 rpt = new Transaction.challans.XtraReport1();
+                XtraReport1 rpt = new XtraReport1();
                 rpt.xrPictureBox1.ImageUrl = "C:\\Temp\\A.jpg";
                 using (var pt = new ReportPrintTool(rpt))
                 {

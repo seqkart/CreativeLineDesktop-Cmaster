@@ -1,5 +1,5 @@
 ﻿using System;
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Prints
 {
     public partial class Rpt_POORDER : DevExpress.XtraReports.UI.XtraReport
     {

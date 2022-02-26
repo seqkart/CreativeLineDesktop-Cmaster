@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Windows.Forms;
+using WindowsFormsApplication1.FormReports;
 using DevExpress.Spreadsheet;
 using DevExpress.Spreadsheet.Export;
 using DevExpress.XtraReports.UI;
@@ -369,7 +370,7 @@ namespace WindowsFormsApplication1.Transaction
                     }
 
                     ds.WriteXmlSchema("C:\\Temp\\abc.xml");
-                    payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                    PrintReportViewer frm = new PrintReportViewer();
                     frm.documentViewer1.DocumentSource = rpt;
                     frm.ShowDialog();
                 }

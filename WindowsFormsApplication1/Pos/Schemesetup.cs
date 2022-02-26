@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace WindowsFormsApplication1.Transaction.Pos
+namespace WindowsFormsApplication1.Pos
 {
     public partial class SchemeSetup : DevExpress.XtraEditors.XtraForm
     {

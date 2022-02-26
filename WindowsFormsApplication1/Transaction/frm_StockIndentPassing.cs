@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Transaction
 {
     public partial class Frm_StockIndentPassing : XtraForm
     {

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.Transaction.Pos
+﻿namespace WindowsFormsApplication1.Pos
 {
     partial class SchemeSetup
     {

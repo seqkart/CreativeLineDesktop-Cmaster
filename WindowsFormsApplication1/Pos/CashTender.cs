@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Drawing.Printing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Transaction
+namespace WindowsFormsApplication1.Pos
 {
     public partial class CashTender : DevExpress.XtraEditors.XtraForm
     {

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1
 {
-    partial class frmCLApiMst
+    partial class FrmCLApiMst
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCLApiMst));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCLApiMst));
             this.InvoiceGrid = new DevExpress.XtraGrid.GridControl();
             this.InvoiceGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnEdit.Size = new System.Drawing.Size(42, 23);
             this.btnEdit.Text = "Edit";
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // btnAdd
             // 
@@ -122,7 +122,7 @@ namespace WindowsFormsApplication1
             this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnAdd.Size = new System.Drawing.Size(43, 23);
             this.btnAdd.Text = "&Add";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lbl
             // 
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnRefresh.Size = new System.Drawing.Size(65, 23);
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // frmCLApiMst
             // 
@@ -157,7 +157,7 @@ namespace WindowsFormsApplication1
             this.Name = "frmCLApiMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmCLApiMst_Load);
+            this.Load += new System.EventHandler(this.FrmCLApiMst_Load);
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();

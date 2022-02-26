@@ -4,6 +4,9 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using WindowsFormsApplication1.Administration;
+using WindowsFormsApplication1.Master;
+using WindowsFormsApplication1.Pos;
 
 namespace WindowsFormsApplication1
 {
@@ -217,7 +220,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG200")
                 {
-                    WindowsFormsApplication1.FrmFYCreation frm = new WindowsFormsApplication1.FrmFYCreation()
+                    FrmFYCreation frm = new FrmFYCreation()
                     { S1 = btnAdd.Text, Text = "Financial Year Creation" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -247,7 +250,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG135")
                 {
-                    Transaction.Pos.SchemeSetup frm = new Transaction.Pos.SchemeSetup()
+                    SchemeSetup frm = new SchemeSetup()
                     { S1 = btnAdd.Text, Text = "Scheme Setup Addition" };
 
                     frm.StartPosition = FormStartPosition.CenterScreen;
@@ -772,7 +775,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.FrmFYCreation frm = new WindowsFormsApplication1.FrmFYCreation()
+                    FrmFYCreation frm = new FrmFYCreation()
                     {
                         S1 = btnEdit.Text,
                         Text = "Financial Year Editing",
@@ -805,7 +808,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    Transaction.Pos.SchemeSetup frm = new Transaction.Pos.SchemeSetup()
+                    SchemeSetup frm = new SchemeSetup()
                     { S1 = btnEdit.Text, Text = "Scheme Setup Edition", SchemeID = CurrentRow["SchmID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 

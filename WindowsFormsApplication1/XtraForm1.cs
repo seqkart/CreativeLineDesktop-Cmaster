@@ -17,10 +17,10 @@ using System.Linq;
 using System.Net.Http;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Administration;
-using WindowsFormsApplication1.Crystal_Reports;
 using WindowsFormsApplication1.FormReports;
-using WindowsFormsApplication1.Forms_Master;
-using WindowsFormsApplication1.Misc_forms ;
+using WindowsFormsApplication1.Miscforms;
+using WindowsFormsApplication1.TimeOffice;
+using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
 {
@@ -327,7 +327,7 @@ namespace WindowsFormsApplication1
             switch (myitem)
             {
                 case "PROG266":
-                    var PROG266 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG266 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG266.Show();
                     PROG266.BringToFront();
                     PROG266.Parent = Page;
@@ -335,7 +335,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG265":
-                    var PROG265 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG265 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG265.Show();
                     PROG265.BringToFront();
                     PROG265.Parent = Page;
@@ -343,7 +343,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG264":
-                    var PROG264 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG264 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG264.Show();
                     PROG264.BringToFront();
                     PROG264.Parent = Page;
@@ -351,7 +351,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG263":
-                    var PROG263 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG263 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG263.Show();
                     PROG263.BringToFront();
                     PROG263.Parent = Page;
@@ -359,7 +359,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG262":
-                    var PROG262 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG262 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG262.Show();
                     PROG262.BringToFront();
                     PROG262.Parent = Page;
@@ -367,7 +367,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG261":
-                    var PROG261 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG261 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG261.Show();
                     PROG261.BringToFront();
                     PROG261.Parent = Page;
@@ -375,7 +375,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG260":
-                    var PROG260 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG260 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG260.Show();
                     PROG260.BringToFront();
                     PROG260.Parent = Page;
@@ -383,7 +383,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG259":
-                    var PROG259 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG259 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG259.Show();
                     PROG259.BringToFront();
                     PROG259.Parent = Page;
@@ -391,7 +391,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG258":
-                    var PROG258 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG258 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG258.Show();
                     PROG258.BringToFront();
                     PROG258.Parent = Page;
@@ -399,7 +399,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG257":
-                    var PROG257 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG257 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG257.Show();
                     PROG257.BringToFront();
                     PROG257.Parent = Page;
@@ -407,7 +407,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG256":
-                    var PROG256 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG256 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG256.Show();
                     PROG256.BringToFront();
                     PROG256.Parent = Page;
@@ -415,7 +415,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG255":
-                    var PROG255 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG255 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG255.Show();
                     PROG255.BringToFront();
                     PROG255.Parent = Page;
@@ -423,7 +423,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG254":
-                    var PROG254 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG254 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG254.Show();
                     PROG254.BringToFront();
                     PROG254.Parent = Page;
@@ -431,7 +431,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG253":
-                    var PROG253 = new frmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG253 = new FrmCLApiMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG253.Show();
                     PROG253.BringToFront();
                     PROG253.Parent = Page;
@@ -439,7 +439,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG252":
-                    var PROG252 = new WindowsFormsApplication1.Misc_forms.FrmWhatsGroupMessageSender() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG252 = new FrmWhatsGroupMessageSender() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG252.Show();
                     PROG252.BringToFront();
                     PROG252.Parent = Page;
@@ -447,7 +447,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG251":
-                    var PROG251 = new Transaction.frmAttendenceFeedingDateWise() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG251 = new Transaction.FrmAttendenceFeedingDateWise() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG251.Show();
                     PROG251.BringToFront();
                     PROG251.Parent = Page;
@@ -2012,7 +2012,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG164":
-                    var PROG164 = new WindowsFormsApplication1.Forms_Master.frmEmployeeMDataPassing() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG164 = new frmEmployeeMDataPassing() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG164.Show();
                     PROG164.BringToFront();
                     PROG164.Parent = Page;
@@ -2020,7 +2020,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG163":
-                    var PROG163 = new WindowsFormsApplication1.Forms_Master.frmEmployeeSalaryMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG163 = new frmEmployeeSalaryMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG163.Show();
                     PROG163.BringToFront();
                     PROG163.Parent = Page;
@@ -2029,7 +2029,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG162":
-                    var PROG162 = new WindowsFormsApplication1.Forms_Transaction.FrmProcessSalary() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG162 = new FrmProcessSalary() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG162.Show();
                     PROG162.BringToFront();
                     PROG162.Parent = Page;
@@ -2037,7 +2037,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG161":
-                    var PROG161 = new WindowsFormsApplication1.Forms_Master.FrmLoanMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG161 = new FrmLoanMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG161.Show();
                     PROG161.BringToFront();
                     PROG161.Parent = Page;
@@ -2045,7 +2045,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG159":
-                    var PROG159 = new WindowsFormsApplication1.Forms_Master.frmExcelStructureLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG159 = new frmExcelStructureLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG159.Show();
                     PROG159.BringToFront();
                     PROG159.Parent = Page;
@@ -2054,7 +2054,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG153":
-                    var PROG153 = new WindowsFormsApplication1.Forms_Master.FrmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG153 = new FrmAttendanceLoading() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG153.Show();
                     PROG153.BringToFront();
                     PROG153.Parent = Page;
@@ -2062,7 +2062,7 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG152":
-                    var PROG152 = new WindowsFormsApplication1.Forms_Transaction.frmAdvanceMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
+                    var PROG152 = new frmAdvanceMst() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG152.Show();
                     PROG152.BringToFront();
                     PROG152.Parent = Page;

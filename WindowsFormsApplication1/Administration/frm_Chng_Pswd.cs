@@ -1,7 +1,7 @@
 ﻿using DevExpress.XtraEditors;
 using SeqKartLibrary;
 using System;
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Administration
 {
     public partial class Frm_Chng_Pswd : XtraUserControl
     {

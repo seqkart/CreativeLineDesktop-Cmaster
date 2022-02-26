@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxProEWB.API;
 
-namespace WindowsFormsApplication1
+namespace WindowsFormsApplication1.Master
 {
     public partial class FrmAccountMstAddEdit : XtraForm
     {

@@ -8,9 +8,9 @@ using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using WindowsFormsApplication1.FormReports;
+using WindowsFormsApplication1.Prints;
 
-namespace WindowsFormsApplication1.Forms_Transaction
+namespace WindowsFormsApplication1.TimeOffice
 {
     public partial class FrmGatePassTimeAddEdit : DevExpress.XtraEditors.XtraForm
     {

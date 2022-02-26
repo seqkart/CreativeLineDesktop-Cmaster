@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.FormReports
+﻿namespace WindowsFormsApplication1.Prints
 {
     partial class XtraReportGatePass
     {

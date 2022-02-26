@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmAttendenceFeedingDateWise : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAttendenceFeedingDateWise : DevExpress.XtraEditors.XtraForm
     {
         DataTable dt = new DataTable();
         Decimal DutyHours = 0;
         Decimal DeductLunch = 0;
-        public frmAttendenceFeedingDateWise()
+        public FrmAttendenceFeedingDateWise()
         {
             InitializeComponent();
             dt.Columns.Add("EmpCode", typeof(string));

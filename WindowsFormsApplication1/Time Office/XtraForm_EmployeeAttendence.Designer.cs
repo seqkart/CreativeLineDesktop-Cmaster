@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.Time_Office
+﻿namespace WindowsFormsApplication1.TimeOffice
 {
     partial class XtraForm_EmployeeAttendance
     {

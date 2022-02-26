@@ -1194,7 +1194,7 @@ namespace WindowsFormsApplication1.Transaction
                 pictureEdit1.Image = Image.FromStream(stream);
                 pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
-                WindowsFormsApplication1.Transaction.challans.XtraReport1 rpt = new challans.XtraReport1();
+                XtraReport1 rpt = new XtraReport1();
                 rpt.xrPictureBox1.ImageUrl = "C:\\Temp\\A.jpg";
                 using (var pt = new ReportPrintTool(rpt))
                 {

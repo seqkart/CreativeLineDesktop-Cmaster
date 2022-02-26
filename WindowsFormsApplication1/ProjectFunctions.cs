@@ -26,6 +26,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TaxProEWB.API;
 using WAProAPI;
+using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
@@ -2667,7 +2668,7 @@ namespace WindowsFormsApplication1
                     else
                     {
 
-                        payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                        PrintReportViewer frm = new PrintReportViewer();
                         frm.documentViewer1.DocumentSource = Report;
 
                         if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length < 10 && DocType == "GST" && Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]) >= 50000)
@@ -2811,7 +2812,7 @@ namespace WindowsFormsApplication1
                     }
                     Report.CreateDocument();
 
-                    payroll.FormReports.PrintReportViewer frm = new payroll.FormReports.PrintReportViewer();
+                    PrintReportViewer frm = new PrintReportViewer();
                     frm.documentViewer1.DocumentSource = Report;
                     frm.ShowDialog();
                 }

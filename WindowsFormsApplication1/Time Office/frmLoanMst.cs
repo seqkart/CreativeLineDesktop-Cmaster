@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Forms_Master
+namespace WindowsFormsApplication1.TimeOffice
 {
     public partial class FrmLoanMst : DevExpress.XtraEditors.XtraForm
     {

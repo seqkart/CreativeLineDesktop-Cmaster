@@ -3,7 +3,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-namespace WindowsFormsApplication1.Forms_Master
+namespace WindowsFormsApplication1.TimeOffice
 {
     public partial class FrmLoanMstAddEdit : DevExpress.XtraEditors.XtraForm
     {

@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.Forms_Transaction
+﻿namespace WindowsFormsApplication1.TimeOffice
 {
     partial class FrmAdvanceAddEdit
     {

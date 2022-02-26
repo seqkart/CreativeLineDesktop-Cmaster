@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1.Transaction.challans
+﻿namespace WindowsFormsApplication1.Transaction
 {
     public partial class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
     {

@@ -1,7 +1,7 @@
 ﻿using System.Data;
 
 
-namespace DevExpress.XtraReports.Import.Import.PRINTS
+namespace WindowsFormsApplication1.Prints
 {
     public partial class Challanoutward : DevExpress.XtraReports.UI.XtraReport
     {

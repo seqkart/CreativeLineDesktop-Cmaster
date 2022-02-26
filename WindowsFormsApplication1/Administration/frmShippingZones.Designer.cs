@@ -1,5 +1,5 @@
 ﻿
-namespace School_Management_System
+namespace WindowsFormsApplication1.Administration
 {
     partial class frmShippingZones
     {

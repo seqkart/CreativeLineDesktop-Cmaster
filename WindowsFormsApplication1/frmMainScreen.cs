@@ -8,7 +8,8 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-
+using WindowsFormsApplication1.Administration;
+using WindowsFormsApplication1.Transaction;
 
 namespace WindowsFormsApplication1
 {

@@ -1,4 +1,4 @@
-﻿namespace payroll.FormReports
+﻿namespace WindowsFormsApplication1.FormReports
 {
     partial class PrintReportViewer
     {
