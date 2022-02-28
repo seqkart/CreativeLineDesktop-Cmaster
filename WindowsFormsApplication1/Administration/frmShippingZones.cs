@@ -13,16 +13,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmShippingZones : DevExpress.XtraEditors.XtraForm
+    public partial class FrmShippingZones : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public String ID { get; set; }
-        public String Name { get; set; }
-        public String Order { get; set; }
-        public String Link { get; set; }
-        public String Collection { get; set; }
-        public String DescribedBy { get; set; }
-        public frmShippingZones()
+        public string S1 { get; set; }
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Order { get; set; }
+        public string Link { get; set; }
+        public string Collection { get; set; }
+        public string DescribedBy { get; set; }
+        public FrmShippingZones()
         {
             InitializeComponent();
         }
@@ -73,22 +73,22 @@ namespace WindowsFormsApplication1.Administration
             }   
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmShippingZones_Load(object sender, EventArgs e)
+        private void FrmShippingZones_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 txtName.Focus();
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtID.Text = ID;
                 txtName.Text = Name;
@@ -100,13 +100,13 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             DeleteShippingZoneAsync();
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtName.Text.Trim().Length == 0)
             {
@@ -116,12 +116,12 @@ namespace WindowsFormsApplication1.Administration
             }
             
 
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 AddShippingZoneAsync();
                 this.Close();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 UpdateShippingZoneAsync ();
                 this.Close();

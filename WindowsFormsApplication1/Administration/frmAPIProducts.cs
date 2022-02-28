@@ -32,10 +32,19 @@ namespace WindowsFormsApplication1.Administration
                     var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
-                    request.Content = new StringContent("{\n  \"name\": \""+txtname.Text+"\",\n  \"type\": \""+txttype.Text+"\",\n  \"regular_price\": \""+txtregular_price.Text+"\",\n  \"description\": \""+txtdescription.Text+"\",\n  \"short_description\": \""+txtshort_description.Text+"\",\n  \"categories\": [\n    {\n      \"id\": 9\n    },\n    {\n      \"id\": 14\n    }\n  ],\n  \"images\": [\n    {\n      \"src\": \"http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg\"\n    },\n    {\n      \"src\": \"http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg\"\n    }\n  ]\n}");
+                    request.Content = new StringContent("{\n  \"name\": \""+txtname.Text+"\",\n  \"type\": \""+txttype.Text+"\",\n  \"regular_price\": \""+txtregular_price.Text+ "\",\n  \"sale_price\": \"" + txtsale_price.Text + "\",\n  \"price\": \"" + txtprice.Text + "\",\n  \"description\": \"" + txtdescription.Text+"\",\n  \"short_description\": \""+txtshort_description.Text+"\",\n  \"categories\": [\n    {\n      \"id\": 9\n    },\n    {\n      \"id\": 14\n    }\n  ],\n  \"images\": [\n    {\n      \"src\": \"http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg\"\n    },\n    {\n      \"src\": \"http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg\"\n    }\n  ]\n}");
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
+                    if (response.StatusCode.ToString() == "Created")
+                    {
+                        XtraMessageBox.Show("API Product Created");
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("There is something wrong");
+
+                    }
                 }
             }
         }
@@ -43,17 +52,27 @@ namespace WindowsFormsApplication1.Administration
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("PUT"), "https://creativelineindia.com/wp-json/wc/v3/products/" + txtid.Text + ""))
+                using (var request = new HttpRequestMessage(new HttpMethod("PUT"), "https://creativelineindia.com/wp-json/wc/v3/products/"+txtid.Text+""))
                 {
                     var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
-                    request.Content = new StringContent("{\n  \"regular_price\": \"" + txtregular_price.Text + "\"\n}");
+                    request.Content = new StringContent("{\n  \"name\": \""+txtname.Text+"\",\n  \"type\": \""+txttype.Text+"\",\n  \"regular_price\": \""+txtregular_price.Text+"\",\n  \"price\": \""+txtprice.Text+"\",\n  \"sale_price\": \""+txtsale_price.Text+"\",\n  \"description\": \""+txtdescription.Text+"\",\n  \"short_description\": \""+txtshort_description.Text+"\",\n  \"categories\": [\n    {\n      \"id\": 9\n    },\n    {\n      \"id\": 14\n    }\n  ],\n  \"images\": [\n    {\n      \"src\": \"http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_front.jpg\"\n    },\n    {\n      \"src\": \"http://demo.woothemes.com/woocommerce/wp-content/uploads/sites/56/2013/06/T_2_back.jpg\"\n    }\n  ]\n}");
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
+                    if (response.StatusCode.ToString() == "OK")
+                    {
+                        XtraMessageBox.Show("API Product Updated");
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("There is something wrong");
+
+                    }
                 }
             }
+            
         }
 
         private async Task DeleteProductAsync()
@@ -66,11 +85,23 @@ namespace WindowsFormsApplication1.Administration
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
                     var response = await httpClient.SendAsync(request);
+                    if (response.StatusCode.ToString() == "OK")
+                    {
+                        XtraMessageBox.Show("API Product Deleted");
+                    }
+                    else
+                    {
+                        XtraMessageBox.Show("There is something wrong");
+
+                    }
                 }
             }
         }
         private void frmAPIProducts_Load(object sender, EventArgs e)
         {
+            
+
+
             txtid.Enabled = false;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
@@ -121,8 +152,18 @@ namespace WindowsFormsApplication1.Administration
                 txtregular_price.Focus();
                 return;
             }
-           
-
+            if (txtsale_price.Text.Trim().Length == 0)
+            {
+                XtraMessageBox.Show("Invalid sale price");
+                txtsale_price.Focus();
+                return;
+            }
+            if (txtprice.Text.Trim().Length == 0)
+            {
+                XtraMessageBox.Show("Invalid  price");
+                txtprice.Focus();
+                return;
+            }
             if (s1 == "&Add")
             {
                 AddProductAsync();

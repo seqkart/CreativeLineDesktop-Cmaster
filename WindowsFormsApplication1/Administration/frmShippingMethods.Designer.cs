@@ -53,76 +53,86 @@ namespace WindowsFormsApplication1.Administration
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(135, 59);
+            this.txtID.Location = new System.Drawing.Point(180, 73);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(485, 20);
+            this.txtID.Size = new System.Drawing.Size(647, 22);
             this.txtID.TabIndex = 0;
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(135, 85);
+            this.txtTitle.Location = new System.Drawing.Point(180, 105);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(485, 20);
+            this.txtTitle.Size = new System.Drawing.Size(647, 22);
             this.txtTitle.TabIndex = 1;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(135, 111);
+            this.txtDescription.Location = new System.Drawing.Point(180, 137);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(485, 20);
+            this.txtDescription.Size = new System.Drawing.Size(647, 22);
             this.txtDescription.TabIndex = 2;
             // 
             // txt_Links
             // 
-            this.txt_Links.Location = new System.Drawing.Point(135, 137);
+            this.txt_Links.Location = new System.Drawing.Point(180, 169);
+            this.txt_Links.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Links.Name = "txt_Links";
-            this.txt_Links.Size = new System.Drawing.Size(485, 20);
+            this.txt_Links.Size = new System.Drawing.Size(647, 22);
             this.txt_Links.TabIndex = 3;
             // 
             // txtCollection
             // 
-            this.txtCollection.Location = new System.Drawing.Point(135, 163);
+            this.txtCollection.Location = new System.Drawing.Point(180, 201);
+            this.txtCollection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCollection.Name = "txtCollection";
-            this.txtCollection.Size = new System.Drawing.Size(485, 20);
+            this.txtCollection.Size = new System.Drawing.Size(647, 22);
             this.txtCollection.TabIndex = 4;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(66, 62);
+            this.labelControl1.Location = new System.Drawing.Point(88, 76);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(11, 13);
+            this.labelControl1.Size = new System.Drawing.Size(13, 16);
             this.labelControl1.TabIndex = 5;
             this.labelControl1.Text = "ID";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(65, 87);
+            this.labelControl2.Location = new System.Drawing.Point(87, 107);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(20, 13);
+            this.labelControl2.Size = new System.Drawing.Size(26, 16);
             this.labelControl2.TabIndex = 6;
             this.labelControl2.Text = "Title";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(66, 114);
+            this.labelControl3.Location = new System.Drawing.Point(88, 140);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(53, 13);
+            this.labelControl3.Size = new System.Drawing.Size(68, 16);
             this.labelControl3.TabIndex = 7;
             this.labelControl3.Text = "Description";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(65, 140);
+            this.labelControl4.Location = new System.Drawing.Point(87, 172);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(18, 13);
+            this.labelControl4.Size = new System.Drawing.Size(24, 16);
             this.labelControl4.TabIndex = 8;
             this.labelControl4.Text = "Link";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(65, 166);
+            this.labelControl5.Location = new System.Drawing.Point(87, 204);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(46, 13);
+            this.labelControl5.Size = new System.Drawing.Size(59, 16);
             this.labelControl5.TabIndex = 9;
             this.labelControl5.Text = "Collection";
             // 
@@ -140,7 +150,7 @@ namespace WindowsFormsApplication1.Administration
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(689, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(919, 31);
             this.Menu_ToolStrip.TabIndex = 200;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -152,7 +162,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnClose.Name = "btnClose";
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnClose.Size = new System.Drawing.Size(56, 23);
+            this.btnClose.Size = new System.Drawing.Size(67, 28);
             this.btnClose.Text = "CLOSE";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -161,13 +171,13 @@ namespace WindowsFormsApplication1.Administration
             this.lbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.lbl.ForeColor = System.Drawing.Color.White;
             this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(0, 23);
+            this.lbl.Size = new System.Drawing.Size(0, 28);
             // 
             // frmShippingMethods
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 254);
+            this.ClientSize = new System.Drawing.Size(919, 265);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.labelControl5);
@@ -182,6 +192,7 @@ namespace WindowsFormsApplication1.Administration
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmShippingMethods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmShippingMethods_Load);

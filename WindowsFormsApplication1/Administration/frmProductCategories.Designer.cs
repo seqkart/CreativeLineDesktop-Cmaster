@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmProductCategories
+    partial class FrmProductCategories
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Administration
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductCategories));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductCategories));
             this.labelControl16 = new DevExpress.XtraEditors.LabelControl();
             this.txtcollection = new DevExpress.XtraEditors.TextEdit();
             this.labelControl15 = new DevExpress.XtraEditors.LabelControl();
@@ -172,7 +172,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnClose.Size = new System.Drawing.Size(56, 23);
             this.btnClose.Text = "CLOSE";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnSave
             // 
@@ -184,7 +184,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(49, 23);
             this.btnSave.Text = "SAVE";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lbl
             // 
@@ -297,7 +297,7 @@ namespace WindowsFormsApplication1.Administration
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.toolStripButton1.Size = new System.Drawing.Size(61, 23);
             this.toolStripButton1.Text = "DELETE";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // labelControl6
             // 
@@ -431,7 +431,7 @@ namespace WindowsFormsApplication1.Administration
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "frmProductCategories";
-            this.Load += new System.EventHandler(this.frmProductCategories_Load);
+            this.Load += new System.EventHandler(this.FrmProductCategories_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtcollection.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_links.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcount.Properties)).EndInit();

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmShippingZones
+    partial class FrmShippingZones
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Administration
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShippingZones));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShippingZones));
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnClose = new System.Windows.Forms.ToolStripButton();
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnClose.Size = new System.Drawing.Size(56, 23);
             this.btnClose.Text = "CLOSE";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnDelete
             // 
@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnDelete.Size = new System.Drawing.Size(61, 23);
             this.btnDelete.Text = "DELETE";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnSave
             // 
@@ -110,7 +110,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(49, 23);
             this.btnSave.Text = "SAVE";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lbl
             // 
@@ -232,7 +232,7 @@ namespace WindowsFormsApplication1.Administration
             this.KeyPreview = true;
             this.Name = "frmShippingZones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmShippingZones_Load);
+            this.Load += new System.EventHandler(this.FrmShippingZones_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtCollection.Properties)).EndInit();

@@ -103,6 +103,76 @@ namespace WindowsFormsApplication1
                 return dt;
             }
         }
+
+        private void MakeApiProductGrid()
+        {
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col0 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 0
+            };
+            InvoiceGridView.Columns.Add(col0);
+            DevExpress.XtraGrid.Columns.GridColumn co11 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "name",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 1
+            };
+            InvoiceGridView.Columns.Add(co11);
+            DevExpress.XtraGrid.Columns.GridColumn co12 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "slug",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 2
+            };
+            InvoiceGridView.Columns.Add(co12);
+            DevExpress.XtraGrid.Columns.GridColumn co13 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "type",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex =3            
+            };
+            InvoiceGridView.Columns.Add(co13);
+           
+            DevExpress.XtraGrid.Columns.GridColumn col6 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "price",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 6
+            };
+            InvoiceGridView.Columns.Add(col6);
+            DevExpress.XtraGrid.Columns.GridColumn co17 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "regular_price",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 7
+            };
+            InvoiceGridView.Columns.Add(co17);
+            DevExpress.XtraGrid.Columns.GridColumn co18 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "sale_price",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 8
+            };
+            InvoiceGridView.Columns.Add(co18);
+            DevExpress.XtraGrid.Columns.GridColumn co19 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "description",
+                Visible = true,
+                SortOrder = (DevExpress.Data.ColumnSortOrder.Ascending),
+                VisibleIndex = 9
+            };
+            InvoiceGridView.Columns.Add(co19);
+        }
         private void FillGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select ProgAPI from ProgramMaster where ProgCode='" + GlobalVariables.ProgCode + "'");
@@ -119,6 +189,11 @@ namespace WindowsFormsApplication1
                     //DataSet dsInner = ReadDataFromJson(result.ToString());
                     if (dt.Rows.Count > 0)
                     {
+                        if (GlobalVariables.ProgCode == "PROG258")
+                        {
+                            MakeApiProductGrid();
+                        }
+
                         InvoiceGrid.DataSource = dt;
                         InvoiceGridView.BestFitColumns();
                     }
@@ -212,7 +287,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG263")
                 {
-                    frmShippingZones frm = new frmShippingZones() { s1 = btnAdd.Text, Text = " Shipping Zone Addition" };
+                    FrmShippingZones frm = new FrmShippingZones() { S1 = btnAdd.Text, Text = " Shipping Zone Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -226,7 +301,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG260")
                 {
-                    frmProductCategories frm = new frmProductCategories() { s1 = btnAdd.Text, Text = " Product  Category Addition" };
+                    FrmProductCategories frm = new FrmProductCategories() { S1 = btnAdd.Text, Text = " Product  Category Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -254,6 +329,8 @@ namespace WindowsFormsApplication1
                     frm.txtid.Text = CurrentRow["id"].ToString();
                     frm.txtname.Text = CurrentRow["name"].ToString();
                     frm.txtregular_price.Text = CurrentRow["regular_price"].ToString();
+                    frm.txtprice.Text = CurrentRow["price"].ToString();
+                    frm.txtsale_price.Text = CurrentRow["sale_price"].ToString();
                     frm.txtshort_description.Text = CurrentRow["short_description"].ToString();
                     frm.txttype.Text = CurrentRow["type"].ToString();
                     var P = ProjectFunctions.GetPositionInForm(this);
@@ -321,7 +398,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    frmShippingZones frm = new frmShippingZones() { s1 = btnEdit.Text, Text = " Shipping Zone Edition" };
+                    FrmShippingZones frm = new FrmShippingZones() { S1 = btnEdit.Text, Text = " Shipping Zone Edition" };
                     frm.ID = CurrentRow["id"].ToString();
                     frm.Name = CurrentRow["name"].ToString();
                     frm.Order = CurrentRow["order"].ToString();
@@ -360,23 +437,23 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG260")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmProductCategories frm = new frmProductCategories() { s1 = btnEdit.Text, Text = " Product  Category Edition" };
-                    frm.id = CurrentRow["id"].ToString();
-                    frm.name = CurrentRow["name"].ToString();
-                    frm.slug = CurrentRow["slug"].ToString();
-                    frm.parent = CurrentRow["parent"].ToString();
-                    frm.description = CurrentRow["description"].ToString();
-                    frm.display = CurrentRow["display"].ToString();
-                    frm.image = CurrentRow["image"].ToString();
-                    frm.date_created = CurrentRow["date_created"].ToString();
-                    frm.date_created_gmt = CurrentRow["date_created_gmt"].ToString();
-                    frm.date_modified_gmt = CurrentRow["date_modified_gmt"].ToString();
-                    frm.src = CurrentRow["src"].ToString();
-                    frm.alt = CurrentRow["alt"].ToString();
-                    frm.menu_order = CurrentRow["menu_order"].ToString();
-                    frm.count = CurrentRow["count"].ToString();
-                    frm._links = CurrentRow["_links"].ToString();
-                    frm.collection = CurrentRow["collection"].ToString();
+                    FrmProductCategories frm = new FrmProductCategories() { S1 = btnEdit.Text, Text = " Product  Category Edition" };
+                    frm.Id = CurrentRow["id"].ToString();
+                    frm.Name = CurrentRow["name"].ToString();
+                    frm.Slug = CurrentRow["slug"].ToString();
+                    frm.Parent = CurrentRow["parent"].ToString();
+                    frm.Description = CurrentRow["description"].ToString();
+                    frm.Display = CurrentRow["display"].ToString();
+                    frm.Image = CurrentRow["image"].ToString();
+                    frm.Date_created = CurrentRow["date_created"].ToString();
+                    frm.Date_created_gmt = CurrentRow["date_created_gmt"].ToString();
+                    frm.Date_modified_gmt = CurrentRow["date_modified_gmt"].ToString();
+                    frm.Src = CurrentRow["src"].ToString();
+                    frm.Alt = CurrentRow["alt"].ToString();
+                    frm.Menu_order = CurrentRow["menu_order"].ToString();
+                    frm.Count = CurrentRow["count"].ToString();
+                    frm.Links = CurrentRow["_links"].ToString();
+                    frm.Collection = CurrentRow["collection"].ToString();
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
