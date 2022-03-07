@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1.Administration
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(180, 73);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(647, 22);
             this.txtID.TabIndex = 0;
@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1.Administration
             // txtTitle
             // 
             this.txtTitle.Location = new System.Drawing.Point(180, 105);
-            this.txtTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(4);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(647, 22);
             this.txtTitle.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace WindowsFormsApplication1.Administration
             // txtDescription
             // 
             this.txtDescription.Location = new System.Drawing.Point(180, 137);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(647, 22);
             this.txtDescription.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace WindowsFormsApplication1.Administration
             // txt_Links
             // 
             this.txt_Links.Location = new System.Drawing.Point(180, 169);
-            this.txt_Links.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Links.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Links.Name = "txt_Links";
             this.txt_Links.Size = new System.Drawing.Size(647, 22);
             this.txt_Links.TabIndex = 3;
@@ -86,7 +86,7 @@ namespace WindowsFormsApplication1.Administration
             // txtCollection
             // 
             this.txtCollection.Location = new System.Drawing.Point(180, 201);
-            this.txtCollection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCollection.Margin = new System.Windows.Forms.Padding(4);
             this.txtCollection.Name = "txtCollection";
             this.txtCollection.Size = new System.Drawing.Size(647, 22);
             this.txtCollection.TabIndex = 4;
@@ -94,7 +94,7 @@ namespace WindowsFormsApplication1.Administration
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(88, 76);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(13, 16);
             this.labelControl1.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace WindowsFormsApplication1.Administration
             // labelControl2
             // 
             this.labelControl2.Location = new System.Drawing.Point(87, 107);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(26, 16);
             this.labelControl2.TabIndex = 6;
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1.Administration
             // labelControl3
             // 
             this.labelControl3.Location = new System.Drawing.Point(88, 140);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(68, 16);
             this.labelControl3.TabIndex = 7;
@@ -121,7 +121,7 @@ namespace WindowsFormsApplication1.Administration
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(87, 172);
-            this.labelControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl4.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(24, 16);
             this.labelControl4.TabIndex = 8;
@@ -130,7 +130,7 @@ namespace WindowsFormsApplication1.Administration
             // labelControl5
             // 
             this.labelControl5.Location = new System.Drawing.Point(87, 204);
-            this.labelControl5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelControl5.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(59, 16);
             this.labelControl5.TabIndex = 9;
@@ -192,7 +192,7 @@ namespace WindowsFormsApplication1.Administration
             this.Controls.Add(this.txtID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmShippingMethods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.frmShippingMethods_Load);

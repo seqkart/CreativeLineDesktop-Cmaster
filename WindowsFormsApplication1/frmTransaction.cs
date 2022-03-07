@@ -93,6 +93,13 @@ namespace WindowsFormsApplication1
         {
             if (btnAdd.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG249")
+                {
+                    Transaction.FrmJobWork frm = new Transaction.FrmJobWork()
+                    { S1 = btnAdd.Text, Text = "Production Order Addition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG223")
                 {
                     Transaction.FrmImportSaleGSTDiffData frm = new Transaction.FrmImportSaleGSTDiffData()
@@ -363,6 +370,16 @@ namespace WindowsFormsApplication1
         {
             if (btnEdit.Enabled)
             {
+                if (GlobalVariables.ProgCode == "PROG249")
+                {
+                    DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
+                    Transaction.FrmJobWork frm = new Transaction.FrmJobWork()
+                    { S1 = btnEdit.Text, Text = "Production Order Edition" };
+                    frm.StartPosition = FormStartPosition.CenterScreen;
+                    frm.OrderNo = CurrentRow["OrderNo"].ToString();
+                    frm.OrderDate = Convert.ToDateTime(CurrentRow["OrderDate"]);
+                    frm.ShowDialog(Parent);
+                }
                 if (GlobalVariables.ProgCode == "PROG223")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);

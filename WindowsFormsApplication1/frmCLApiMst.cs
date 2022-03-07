@@ -173,6 +173,334 @@ namespace WindowsFormsApplication1
             };
             InvoiceGridView.Columns.Add(co19);
         }
+
+        private void MakeAPIGridForProduct()
+        {
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "type",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col3);
+            DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "regular_price",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col4);
+            DevExpress.XtraGrid.Columns.GridColumn col5 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "description",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col5);
+            DevExpress.XtraGrid.Columns.GridColumn col6 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "short_description",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col6);
+
+        }
+
+        private void MakeAPIGridForTaxRate()
+        {
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "city",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "country",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col3);
+            DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col4);
+            DevExpress.XtraGrid.Columns.GridColumn col5 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "postcode",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col5);
+            DevExpress.XtraGrid.Columns.GridColumn col6 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "rate",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col6);
+            DevExpress.XtraGrid.Columns.GridColumn col7 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "shipping",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col7);
+            DevExpress.XtraGrid.Columns.GridColumn col8 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "state",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col8);
+
+        }
+
+        private void MakeAPIGridForCoupon()
+        {
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "code",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "discount_type",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col3);
+            DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col4);
+            DevExpress.XtraGrid.Columns.GridColumn col5 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "exclude_sale_items",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col5);
+            DevExpress.XtraGrid.Columns.GridColumn col6 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "individual_use",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col6);
+            DevExpress.XtraGrid.Columns.GridColumn col7 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "minimum_amount",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col7);
+            DevExpress.XtraGrid.Columns.GridColumn col8 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "amount",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col8);
+
+        }
+
+        private void MakeAPIGridForShippingMethods()
+        {
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "title",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "description",
+                Visible = true,
+            };
+        }
+        private void MakeAPIGridForShippingZone()
+        {
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+        }
+
+        private void MakeAPIGridForProductRreview()
+        {
+
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "product_id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "status",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col3);
+            DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "reviewer",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col4);
+            DevExpress.XtraGrid.Columns.GridColumn col5 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "reviewer_email",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col5);
+            DevExpress.XtraGrid.Columns.GridColumn col6 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "review",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col6);
+            DevExpress.XtraGrid.Columns.GridColumn col7 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "rating",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col7);
+        }
+
+
+        private void MakeAPIGridForProductCategory()
+        {
+
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "slug",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col3);
+            DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "description",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col4);
+        }
+
+        private void MakeAPIGridForCustomer()
+        {
+
+            InvoiceGridView.Columns.Clear();
+            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "id",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col1);
+            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "first_name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col2);
+            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "last_name",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col3);
+            DevExpress.XtraGrid.Columns.GridColumn col4 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "country",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col4);
+            DevExpress.XtraGrid.Columns.GridColumn col5 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "city",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col5);
+            DevExpress.XtraGrid.Columns.GridColumn col6 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "email",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col6);
+            DevExpress.XtraGrid.Columns.GridColumn col7 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "phone",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col7);
+            DevExpress.XtraGrid.Columns.GridColumn col8 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "postcode",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col8);
+            DevExpress.XtraGrid.Columns.GridColumn col9 = new DevExpress.XtraGrid.Columns.GridColumn
+            {
+                FieldName = "state",
+                Visible = true,
+            };
+            InvoiceGridView.Columns.Add(col9);
+        }
+
         private void FillGrid()
         {
             DataSet ds = ProjectFunctions.GetDataSet("Select ProgAPI from ProgramMaster where ProgCode='" + GlobalVariables.ProgCode + "'");
@@ -189,12 +517,51 @@ namespace WindowsFormsApplication1
                     //DataSet dsInner = ReadDataFromJson(result.ToString());
                     if (dt.Rows.Count > 0)
                     {
+                        DataTable dtNew = new DataTable();
+                        dtNew = dt.Clone();
+                        if (GlobalVariables.ProgCode == "PROG253")
+                        {
+                            MakeAPIGridForCoupon();
+                            foreach (DataRow dr in dt.Rows)
+                            {
+
+                                dtNew.ImportRow(dr);
+                            }
+                        }
+                        if (GlobalVariables.ProgCode == "PROG254")
+                        {
+                            MakeAPIGridForCustomer();
+                            foreach(DataRow dr in dt.Rows)
+                            {
+                                if(dr["first_name"].ToString().Trim()!="")
+                                {
+                                    dtNew.ImportRow(dr);
+                                }
+                            }
+
+                        }
                         if (GlobalVariables.ProgCode == "PROG258")
                         {
-                            MakeApiProductGrid();
+                            MakeAPIGridForProduct();
+                        }
+                        if (GlobalVariables.ProgCode == "PROG260")
+                        {
+                            MakeAPIGridForProductCategory();
+                        }
+                        if (GlobalVariables.ProgCode == "PROG261")
+                        {
+                            MakeAPIGridForProductRreview();
+                        }
+                        if (GlobalVariables.ProgCode == "PROG262")
+                        {
+                            MakeAPIGridForTaxRate();
+                        }
+                        if (GlobalVariables.ProgCode == "PROG263")
+                        {
+                            MakeAPIGridForShippingZone();
                         }
 
-                        InvoiceGrid.DataSource = dt;
+                        InvoiceGrid.DataSource = dtNew;
                         InvoiceGridView.BestFitColumns();
                     }
                     else
@@ -252,7 +619,7 @@ namespace WindowsFormsApplication1
             {
                 if (GlobalVariables.ProgCode == "PROG258")
                 {
-                    frmAPIProducts frm = new frmAPIProducts() { s1 = btnAdd.Text, Text = " Product Addition" };
+                    FrmAPIProducts frm = new FrmAPIProducts() { S1 = btnAdd.Text, Text = " Product Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -324,7 +691,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG258")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmAPIProducts frm = new frmAPIProducts() { s1 = btnEdit.Text, Text = " Product Edition" };
+                    FrmAPIProducts frm = new FrmAPIProducts() { S1 = btnEdit.Text, Text = " Product Edition" };
                     frm.txtdescription.Text = CurrentRow["description"].ToString();
                     frm.txtid.Text = CurrentRow["id"].ToString();
                     frm.txtname.Text = CurrentRow["name"].ToString();
@@ -467,30 +834,22 @@ namespace WindowsFormsApplication1
                     frmAPICustomers frm = new frmAPICustomers() { s1 = btnEdit.Text, Text = " Customer Edition" };
                     frm.txtaddress_1.Text = CurrentRow["address_1"].ToString();
                     frm.txtaddress_2.Text = CurrentRow["address_2"].ToString();
-                    frm.txtavatar_url.Text = CurrentRow["avatar_url"].ToString();
-                    frm.txtbilling.Text = CurrentRow["billing"].ToString();
+                    
                     frm.txtcity.Text = CurrentRow["city"].ToString();
                     frm.txtcompany.Text = CurrentRow["company"].ToString();
                     frm.txtcountry.Text = CurrentRow["country"].ToString();
-                    frm.txtdate_created.Text = CurrentRow["date_created"].ToString();
-                    frm.txtdate_created_gmt.Text = CurrentRow["date_created_gmt"].ToString();
-                    frm.txtdate_modified.Text = CurrentRow["date_modified"].ToString();
-                    frm.txtdate_modified_gmt.Text = CurrentRow["date_modified_gmt"].ToString();
+                   
                     frm.txtemail.Text = CurrentRow["email"].ToString();
                     frm.txtfirst_name.Text = CurrentRow["first_name"].ToString();
                     frm.txtid.Text = CurrentRow["id"].ToString();
-                    frm.txtkey.Text = CurrentRow["key"].ToString();
+                   
                     frm.txtlast_name.Text = CurrentRow["last_name"].ToString();
-                    frm.txtmeta_data.Text = CurrentRow["meta_data"].ToString();
+                   
                     frm.txtphone.Text = CurrentRow["phone"].ToString();
                     frm.txtpostcode.Text = CurrentRow["postcode"].ToString();
-                    frm.txtrole.Text = CurrentRow["role"].ToString();
-                    frm.txtshipping.Text = CurrentRow["shipping"].ToString();
+                  
                     frm.txtstate.Text = CurrentRow["state"].ToString();
-                    frm.txtusername.Text = CurrentRow["username"].ToString();
-                    frm.txtvalue.Text = CurrentRow["value"].ToString();
-                    frm.txt_is_paying_customer.Text = CurrentRow["is_paying_customer"].ToString();
-
+                   
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);

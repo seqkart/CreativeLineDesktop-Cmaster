@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1.Administration
                     var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
-                    request.Content = new StringContent("{\n  \"first_name\": \"" + txtfirst_name.Text + "\",\n  \"billing\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\"\n  },\n  \"shipping\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\"\n  }\n}");
+                    request.Content = new StringContent("{\n  \"email\": \"" + txtemail.Text + "\",\n  \"first_name\": \"" + txtfirst_name.Text + "\",\n  \"last_name\": \"" + txtlast_name.Text + "\",\n  \"billing\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\",\n    \"last_name\": \"" + txtlast_name.Text + "\",\n    \"company\": \"\",\n    \"address_1\": \"" + txtaddress_1.Text + "\",\n    \"address_2\": \"" + txtaddress_2.Text + "\",\n    \"city\": \"" + txtcity.Text + "\",\n    \"state\": \"" + txtstate.Text + "\",\n    \"postcode\": \"" + txtpostcode.Text + "\",\n    \"country\": \"" + txtcountry.Text + "\",\n    \"email\": \"" + txtemail.Text + "\",\n    \"phone\": \"" + txtphone.Text + "\"\n  },\n  \"shipping\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\",\n    \"last_name\": \"" + txtlast_name.Text + "\",\n    \"company\": \"" + txtcompany.Text + "\",\n    \"address_1\": \"" + txtaddress_1.Text + "\",\n    \"address_2\": \"" + txtaddress_2.Text + "\",\n    \"city\": \"" + txtcity.Text + "\",\n    \"state\": \"" + txtstate.Text + "\",\n    \"postcode\": \"" + txtpostcode.Text + "\",\n    \"country\": \"" + txtcountry.Text + "\"\n  }\n}");
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1.Administration
                     var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
-                    request.Content = new StringContent("{\n  \"email\": \"" + txtemail.Text + "\",\n  \"first_name\": \"" + txtfirst_name.Text + "\",\n  \"last_name\": \"" + txtlast_name.Text + "\",\n  \"username\": \"" + txtusername.Text + "\",\n  \"billing\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\",\n    \"last_name\": \"" + txtlast_name.Text + "\",\n    \"company\": \"\",\n    \"address_1\": \"" + txtaddress_1.Text + "\",\n    \"address_2\": \"" + txtaddress_2.Text + "\",\n    \"city\": \"" + txtcity.Text + "\",\n    \"state\": \"" + txtstate.Text + "\",\n    \"postcode\": \"" + txtpostcode.Text + "\",\n    \"country\": \"" + txtcountry.Text + "\",\n    \"email\": \"" + txtemail.Text + "\",\n    \"phone\": \"" + txtphone.Text + "\"\n  },\n  \"shipping\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\",\n    \"last_name\": \"" + txtlast_name.Text + "\",\n    \"company\": \"\",\n    \"address_1\": \"" + txtaddress_1.Text + "\",\n    \"address_2\": \"" + txtaddress_2.Text + "\",\n    \"city\": \"" + txtcity.Text + "\",\n    \"state\": \"" + txtstate.Text + "\",\n    \"postcode\": \"" + txtpostcode.Text + "\",\n    \"country\": \"" + txtcountry.Text + "\"\n  }\n}");
+                    request.Content = new StringContent("{\n  \"email\": \"" + txtemail.Text + "\",\n  \"first_name\": \"" + txtfirst_name.Text + "\",\n  \"last_name\": \"" + txtlast_name.Text + "\",\n  \"billing\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\",\n    \"last_name\": \"" + txtlast_name.Text + "\",\n    \"company\": \"\",\n    \"address_1\": \"" + txtaddress_1.Text + "\",\n    \"address_2\": \"" + txtaddress_2.Text + "\",\n    \"city\": \"" + txtcity.Text + "\",\n    \"state\": \"" + txtstate.Text + "\",\n    \"postcode\": \"" + txtpostcode.Text + "\",\n    \"country\": \"" + txtcountry.Text + "\",\n    \"email\": \"" + txtemail.Text + "\",\n    \"phone\": \"" + txtphone.Text + "\"\n  },\n  \"shipping\": {\n    \"first_name\": \"" + txtfirst_name.Text + "\",\n    \"last_name\": \"" + txtlast_name.Text + "\",\n    \"company\": \"" + txtcompany.Text + "\",\n    \"address_1\": \"" + txtaddress_1.Text + "\",\n    \"address_2\": \"" + txtaddress_2.Text + "\",\n    \"city\": \"" + txtcity.Text + "\",\n    \"state\": \"" + txtstate.Text + "\",\n    \"postcode\": \"" + txtpostcode.Text + "\",\n    \"country\": \"" + txtcountry.Text + "\"\n  }\n}");
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
@@ -81,12 +81,12 @@ namespace WindowsFormsApplication1.Administration
             ProjectFunctions.TextBoxVisualize(this);
             if (s1 == "Add")
             {
-                txtdate_created.Focus();
+                txtfirst_name.Focus();
             }
             if (s1 == "Edit")
             {
 
-                txtdate_created.Focus();
+                txtfirst_name.Focus();
             }
         }
 

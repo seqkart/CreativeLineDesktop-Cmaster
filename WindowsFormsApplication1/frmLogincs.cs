@@ -70,26 +70,26 @@ namespace WindowsFormsApplication1
                 txtUserName.Focus();
                 return false;
             }
-            if (DateTime.Now.Date <= GlobalVariables.LicenseToExpireDate.Date)
-            {
-                if (DateTime.Now.Date >= Convert.ToDateTime("2019-04-1").Date && DateTime.Now.Date <= Convert.ToDateTime("2026-03-31").Date)
-                {
-                    if (Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) < 30)
-                    {
-                        ProjectFunctions.SpeakError("Only " + Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) + " Days Left For License To Expire,Please Recharge Immediately");
-                    }
-                }
-                else
-                {
-                    ProjectFunctions.SpeakError("Unauthorised Access");
-                    return false;
-                }
-            }
-            else
-            {
-                ProjectFunctions.SpeakError("License Has Been Expired");
-                return false;
-            }
+            //if (DateTime.Now.Date <= GlobalVariables.LicenseToExpireDate.Date)
+            //{
+            //    if (DateTime.Now.Date >= Convert.ToDateTime("2019-04-1").Date && DateTime.Now.Date <= Convert.ToDateTime("2026-03-31").Date)
+            //    {
+            //        if (Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) < 30)
+            //        {
+            //            ProjectFunctions.SpeakError("Only " + Math.Abs((DateTime.Now.Date - GlobalVariables.LicenseToExpireDate.Date).Days) + " Days Left For License To Expire,Please Recharge Immediately");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        ProjectFunctions.SpeakError("Unauthorised Access");
+            //        return false;
+            //    }
+            //}
+            //else
+            //{
+            //    ProjectFunctions.SpeakError("License Has Been Expired");
+            //    return false;
+            //}
 
             return true;
         }

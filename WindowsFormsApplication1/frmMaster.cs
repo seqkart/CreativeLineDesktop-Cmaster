@@ -1267,6 +1267,7 @@ namespace WindowsFormsApplication1
                                           view.OptionsSelection.MultiSelect = true;
                                           view.CopyToClipboard();
                                       });
+              
                 SAR = new DXMenuItem("Select All Records",
                                      (o1, e1) =>
                                      {

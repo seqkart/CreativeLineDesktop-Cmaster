@@ -32,6 +32,9 @@
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtComboCount = new DevExpress.XtraEditors.TextEdit();
+            this.btnLoadSizes = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLoadColors = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.txtBrandCode = new DevExpress.XtraEditors.TextEdit();
             this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
@@ -57,10 +60,14 @@
             this.txtPartyCode = new DevExpress.XtraEditors.TextEdit();
             this.txtSeason = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtFitType = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtKnitCut = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtSampleType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtRemarks = new DevExpress.XtraEditors.MemoEdit();
             this.txtArtID = new DevExpress.XtraEditors.TextEdit();
+            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tabPane1 = new DevExpress.XtraBars.Navigation.TabPane();
             this.tabNavigationPage1 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.MeasurementGird = new DevExpress.XtraGrid.GridControl();
@@ -74,16 +81,26 @@
             this.tabNavigationPage4 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.BomGrid = new DevExpress.XtraGrid.GridControl();
             this.BomGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.HelpGrid = new DevExpress.XtraGrid.GridControl();
-            this.HelpGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridView5 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabNavigationPage5 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.ColorGrid = new DevExpress.XtraGrid.GridControl();
+            this.ColorGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.tabNavigationPage6 = new DevExpress.XtraBars.Navigation.TabNavigationPage();
+            this.SizeGrid = new DevExpress.XtraGrid.GridControl();
+            this.SizeGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.HelpGridControl = new DevExpress.XtraGrid.GridControl();
+            this.HelpGridControlView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
+            this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.btnQuit = new System.Windows.Forms.ToolStripButton();
+            this.btnSave = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComboCount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderDate.Properties)).BeginInit();
@@ -97,10 +114,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeason.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFitType.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKnitCut.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSampleType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArtID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).BeginInit();
             this.tabPane1.SuspendLayout();
             this.tabNavigationPage1.SuspendLayout();
@@ -115,12 +136,20 @@
             this.tabNavigationPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BomGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BomGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).BeginInit();
+            this.tabNavigationPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorGridView)).BeginInit();
+            this.tabNavigationPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SizeGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SizeGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
+            this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridControlView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).BeginInit();
+            this.Menu_ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridView3
@@ -135,6 +164,9 @@
             // 
             this.groupControl1.AutoSize = true;
             this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
+            this.groupControl1.Controls.Add(this.txtComboCount);
+            this.groupControl1.Controls.Add(this.btnLoadSizes);
+            this.groupControl1.Controls.Add(this.btnLoadColors);
             this.groupControl1.Controls.Add(this.labelControl14);
             this.groupControl1.Controls.Add(this.txtBrandCode);
             this.groupControl1.Controls.Add(this.labelControl11);
@@ -160,17 +192,45 @@
             this.groupControl1.Controls.Add(this.txtPartyCode);
             this.groupControl1.Controls.Add(this.txtSeason);
             this.groupControl1.Controls.Add(this.txtFitType);
-            this.groupControl1.Controls.Add(this.comboBoxEdit1);
+            this.groupControl1.Controls.Add(this.txtKnitCut);
             this.groupControl1.Controls.Add(this.txtSampleType);
             this.groupControl1.Controls.Add(this.txtRemarks);
             this.groupControl1.Controls.Add(this.txtArtID);
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(12, 0);
+            this.groupControl1.Location = new System.Drawing.Point(20, 0);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1258, 180);
+            this.groupControl1.Size = new System.Drawing.Size(1610, 193);
             this.groupControl1.TabIndex = 544;
             this.groupControl1.Text = "ORDER DETAILS";
+            // 
+            // txtComboCount
+            // 
+            this.txtComboCount.Location = new System.Drawing.Point(768, 151);
+            this.txtComboCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtComboCount.Name = "txtComboCount";
+            this.txtComboCount.Size = new System.Drawing.Size(126, 22);
+            this.txtComboCount.TabIndex = 551;
+            this.txtComboCount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComboCount_KeyDown);
+            this.txtComboCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtComboCount_KeyPress);
+            // 
+            // btnLoadSizes
+            // 
+            this.btnLoadSizes.Location = new System.Drawing.Point(668, 144);
+            this.btnLoadSizes.Name = "btnLoadSizes";
+            this.btnLoadSizes.Size = new System.Drawing.Size(94, 29);
+            this.btnLoadSizes.TabIndex = 550;
+            this.btnLoadSizes.Text = "Load Sizes";
+            this.btnLoadSizes.Click += new System.EventHandler(this.btnLoadSizes_Click);
+            // 
+            // btnLoadColors
+            // 
+            this.btnLoadColors.Location = new System.Drawing.Point(568, 144);
+            this.btnLoadColors.Name = "btnLoadColors";
+            this.btnLoadColors.Size = new System.Drawing.Size(94, 29);
+            this.btnLoadColors.TabIndex = 549;
+            this.btnLoadColors.Text = "Load Colors";
+            this.btnLoadColors.Click += new System.EventHandler(this.btnLoadColors_Click);
             // 
             // labelControl14
             // 
@@ -183,13 +243,11 @@
             // 
             // txtBrandCode
             // 
-            this.txtBrandCode.Enabled = false;
             this.txtBrandCode.Location = new System.Drawing.Point(1018, 71);
             this.txtBrandCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrandCode.Name = "txtBrandCode";
             this.txtBrandCode.Size = new System.Drawing.Size(51, 22);
-            this.txtBrandCode.TabIndex = 546;
-            this.txtBrandCode.TabStop = false;
+            this.txtBrandCode.TabIndex = 9;
             this.txtBrandCode.EditValueChanged += new System.EventHandler(this.TxtBrandCode_EditValueChanged);
             this.txtBrandCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtBrandCode_KeyDown);
             // 
@@ -268,6 +326,7 @@
             // txtOrderDate
             // 
             this.txtOrderDate.EditValue = null;
+            this.txtOrderDate.EnterMoveNextControl = true;
             this.txtOrderDate.Location = new System.Drawing.Point(104, 42);
             this.txtOrderDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderDate.Name = "txtOrderDate";
@@ -275,9 +334,13 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtOrderDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.txtOrderDate.Properties.MaskSettings.Set("mask", "");
+            this.txtOrderDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
+            this.txtOrderDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtOrderDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
+            this.txtOrderDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.txtOrderDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtOrderDate.Size = new System.Drawing.Size(126, 22);
-            this.txtOrderDate.TabIndex = 538;
+            this.txtOrderDate.TabIndex = 0;
             this.txtOrderDate.TabStop = false;
             this.txtOrderDate.EditValueChanged += new System.EventHandler(this.TxtOrderDate_EditValueChanged);
             // 
@@ -314,29 +377,27 @@
             this.txtArtNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtNo.Name = "txtArtNo";
             this.txtArtNo.Size = new System.Drawing.Size(126, 22);
-            this.txtArtNo.TabIndex = 539;
-            this.txtArtNo.TabStop = false;
+            this.txtArtNo.TabIndex = 5;
             this.txtArtNo.EditValueChanged += new System.EventHandler(this.TxtArtNo_EditValueChanged);
             this.txtArtNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtArtNo_KeyDown);
             // 
             // txtOrderNo
             // 
-            this.txtOrderNo.Enabled = false;
+            this.txtOrderNo.EnterMoveNextControl = true;
             this.txtOrderNo.Location = new System.Drawing.Point(309, 42);
             this.txtOrderNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOrderNo.Name = "txtOrderNo";
             this.txtOrderNo.Size = new System.Drawing.Size(108, 22);
-            this.txtOrderNo.TabIndex = 539;
-            this.txtOrderNo.TabStop = false;
+            this.txtOrderNo.TabIndex = 1;
             // 
             // txtSampleSize
             // 
-            this.txtSampleSize.Enabled = false;
+            this.txtSampleSize.EnterMoveNextControl = true;
             this.txtSampleSize.Location = new System.Drawing.Point(628, 71);
             this.txtSampleSize.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSampleSize.Name = "txtSampleSize";
             this.txtSampleSize.Size = new System.Drawing.Size(103, 22);
-            this.txtSampleSize.TabIndex = 540;
+            this.txtSampleSize.TabIndex = 7;
             // 
             // txtArtDesc
             // 
@@ -345,16 +406,19 @@
             this.txtArtDesc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtArtDesc.Name = "txtArtDesc";
             this.txtArtDesc.Size = new System.Drawing.Size(232, 22);
-            this.txtArtDesc.TabIndex = 541;
+            this.txtArtDesc.TabIndex = 6;
+            this.txtArtDesc.TabStop = false;
+            this.txtArtDesc.EditValueChanged += new System.EventHandler(this.txtArtDesc_EditValueChanged);
             // 
             // txtSampleWeight
             // 
-            this.txtSampleWeight.Enabled = false;
+            this.txtSampleWeight.EnterMoveNextControl = true;
             this.txtSampleWeight.Location = new System.Drawing.Point(854, 71);
             this.txtSampleWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSampleWeight.Name = "txtSampleWeight";
             this.txtSampleWeight.Size = new System.Drawing.Size(110, 22);
-            this.txtSampleWeight.TabIndex = 541;
+            this.txtSampleWeight.TabIndex = 8;
+            this.txtSampleWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSampleWeight_KeyPress);
             // 
             // labelControl4
             // 
@@ -375,7 +439,7 @@
             this.txtBrandName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandName.Properties.ReadOnly = true;
             this.txtBrandName.Size = new System.Drawing.Size(181, 22);
-            this.txtBrandName.TabIndex = 532;
+            this.txtBrandName.TabIndex = 10;
             this.txtBrandName.TabStop = false;
             // 
             // txtPartyName
@@ -388,7 +452,7 @@
             this.txtPartyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPartyName.Properties.ReadOnly = true;
             this.txtPartyName.Size = new System.Drawing.Size(444, 22);
-            this.txtPartyName.TabIndex = 532;
+            this.txtPartyName.TabIndex = 3;
             this.txtPartyName.TabStop = false;
             // 
             // txtPartyCode
@@ -399,48 +463,62 @@
             this.txtPartyCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPartyCode.Properties.MaxLength = 6;
             this.txtPartyCode.Size = new System.Drawing.Size(90, 22);
-            this.txtPartyCode.TabIndex = 533;
+            this.txtPartyCode.TabIndex = 2;
             this.txtPartyCode.EditValueChanged += new System.EventHandler(this.TxtPartyCode_EditValueChanged);
+            this.txtPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartyCode_KeyDown);
             // 
             // txtSeason
             // 
+            this.txtSeason.EnterMoveNextControl = true;
             this.txtSeason.Location = new System.Drawing.Point(1086, 42);
             this.txtSeason.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSeason.Name = "txtSeason";
             this.txtSeason.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSeason.Size = new System.Drawing.Size(159, 22);
-            this.txtSeason.TabIndex = 541;
+            this.txtSeason.TabIndex = 4;
             // 
             // txtFitType
             // 
+            this.txtFitType.EnterMoveNextControl = true;
             this.txtFitType.Location = new System.Drawing.Point(473, 100);
             this.txtFitType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFitType.Name = "txtFitType";
             this.txtFitType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtFitType.Properties.Items.AddRange(new object[] {
+            "SLIM",
+            "REGULAR"});
             this.txtFitType.Size = new System.Drawing.Size(266, 22);
-            this.txtFitType.TabIndex = 540;
+            this.txtFitType.TabIndex = 13;
             // 
-            // comboBoxEdit1
+            // txtKnitCut
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(309, 100);
-            this.comboBoxEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxEdit1.Name = "comboBoxEdit1";
-            this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtKnitCut.EnterMoveNextControl = true;
+            this.txtKnitCut.Location = new System.Drawing.Point(309, 100);
+            this.txtKnitCut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtKnitCut.Name = "txtKnitCut";
+            this.txtKnitCut.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboBoxEdit1.Size = new System.Drawing.Size(103, 22);
-            this.comboBoxEdit1.TabIndex = 540;
+            this.txtKnitCut.Properties.Items.AddRange(new object[] {
+            "KNIT",
+            "CUT"});
+            this.txtKnitCut.Size = new System.Drawing.Size(103, 22);
+            this.txtKnitCut.TabIndex = 12;
             // 
             // txtSampleType
             // 
+            this.txtSampleType.EnterMoveNextControl = true;
             this.txtSampleType.Location = new System.Drawing.Point(104, 100);
             this.txtSampleType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSampleType.Name = "txtSampleType";
             this.txtSampleType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtSampleType.Properties.Items.AddRange(new object[] {
+            "FIRST PROTOTYPE SAMPLE",
+            "SALESMAN SAMPLE"});
             this.txtSampleType.Size = new System.Drawing.Size(126, 22);
-            this.txtSampleType.TabIndex = 540;
+            this.txtSampleType.TabIndex = 11;
             // 
             // txtRemarks
             // 
@@ -448,8 +526,7 @@
             this.txtRemarks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRemarks.Name = "txtRemarks";
             this.txtRemarks.Size = new System.Drawing.Size(458, 46);
-            this.txtRemarks.TabIndex = 539;
-            this.txtRemarks.TabStop = false;
+            this.txtRemarks.TabIndex = 14;
             // 
             // txtArtID
             // 
@@ -460,6 +537,55 @@
             this.txtArtID.Size = new System.Drawing.Size(38, 22);
             this.txtArtID.TabIndex = 545;
             // 
+            // HelpGrid
+            // 
+            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Location = new System.Drawing.Point(188, 96);
+            this.HelpGrid.MainView = this.HelpGridView;
+            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGrid.Name = "HelpGrid";
+            this.HelpGrid.Size = new System.Drawing.Size(776, 306);
+            this.HelpGrid.TabIndex = 369;
+            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridView,
+            this.gridView1,
+            this.gridView5});
+            this.HelpGrid.Visible = false;
+            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
+            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            // 
+            // HelpGridView
+            // 
+            this.HelpGridView.DetailHeight = 458;
+            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridView.GridControl = this.HelpGrid;
+            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridView.Name = "HelpGridView";
+            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridView.OptionsView.ShowIndicator = false;
+            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // gridView1
+            // 
+            this.gridView1.DetailHeight = 458;
+            this.gridView1.GridControl = this.HelpGrid;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridView5
+            // 
+            this.gridView5.DetailHeight = 458;
+            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView5.GridControl = this.HelpGrid;
+            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.gridView5.Name = "gridView5";
+            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
+            this.gridView5.OptionsBehavior.Editable = false;
+            this.gridView5.OptionsView.ColumnAutoWidth = false;
+            this.gridView5.OptionsView.ShowGroupPanel = false;
+            this.gridView5.OptionsView.ShowIndicator = false;
+            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
             // tabPane1
             // 
             this.tabPane1.AllowHtmlDraw = true;
@@ -467,26 +593,31 @@
             this.tabPane1.Controls.Add(this.tabNavigationPage2);
             this.tabPane1.Controls.Add(this.tabNavigationPage3);
             this.tabPane1.Controls.Add(this.tabNavigationPage4);
-            this.tabPane1.Location = new System.Drawing.Point(12, 192);
+            this.tabPane1.Controls.Add(this.tabNavigationPage5);
+            this.tabPane1.Controls.Add(this.tabNavigationPage6);
+            this.tabPane1.Location = new System.Drawing.Point(20, 206);
             this.tabPane1.Name = "tabPane1";
             this.tabPane1.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
             this.tabNavigationPage3,
             this.tabNavigationPage1,
             this.tabNavigationPage2,
-            this.tabNavigationPage4});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1245, 652);
+            this.tabNavigationPage4,
+            this.tabNavigationPage5,
+            this.tabNavigationPage6});
+            this.tabPane1.RegularSize = new System.Drawing.Size(1176, 458);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
-            this.tabPane1.Size = new System.Drawing.Size(1245, 652);
+            this.tabPane1.Size = new System.Drawing.Size(1176, 458);
             this.tabPane1.TabIndex = 545;
             this.tabPane1.Text = "tabPane1";
             // 
             // tabNavigationPage1
             // 
             this.tabNavigationPage1.Caption = "Points Of Mesurement";
+            this.tabNavigationPage1.Controls.Add(this.HelpGrid);
             this.tabNavigationPage1.Controls.Add(this.MeasurementGird);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1245, 606);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1176, 417);
             // 
             // MeasurementGird
             // 
@@ -494,7 +625,7 @@
             this.MeasurementGird.Location = new System.Drawing.Point(0, 0);
             this.MeasurementGird.MainView = this.MeasurementGirdView;
             this.MeasurementGird.Name = "MeasurementGird";
-            this.MeasurementGird.Size = new System.Drawing.Size(1245, 606);
+            this.MeasurementGird.Size = new System.Drawing.Size(1176, 417);
             this.MeasurementGird.TabIndex = 0;
             this.MeasurementGird.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MeasurementGirdView});
@@ -509,7 +640,7 @@
             this.tabNavigationPage2.Caption = "Yarn / Fabric";
             this.tabNavigationPage2.Controls.Add(this.FabricGrid);
             this.tabNavigationPage2.Name = "tabNavigationPage2";
-            this.tabNavigationPage2.Size = new System.Drawing.Size(1432, 652);
+            this.tabNavigationPage2.Size = new System.Drawing.Size(1176, 417);
             // 
             // FabricGrid
             // 
@@ -517,7 +648,7 @@
             this.FabricGrid.Location = new System.Drawing.Point(0, 0);
             this.FabricGrid.MainView = this.FabricGridView;
             this.FabricGrid.Name = "FabricGrid";
-            this.FabricGrid.Size = new System.Drawing.Size(1432, 652);
+            this.FabricGrid.Size = new System.Drawing.Size(1176, 417);
             this.FabricGrid.TabIndex = 1;
             this.FabricGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.FabricGridView});
@@ -532,7 +663,7 @@
             this.tabNavigationPage3.Caption = "ORDER";
             this.tabNavigationPage3.Controls.Add(this.OrderGrid);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(1245, 606);
+            this.tabNavigationPage3.Size = new System.Drawing.Size(1176, 417);
             // 
             // OrderGrid
             // 
@@ -542,7 +673,7 @@
             this.OrderGrid.MainView = this.OrderGridView;
             this.OrderGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderGrid.Name = "OrderGrid";
-            this.OrderGrid.Size = new System.Drawing.Size(1245, 606);
+            this.OrderGrid.Size = new System.Drawing.Size(1176, 417);
             this.OrderGrid.TabIndex = 683;
             this.OrderGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.OrderGridView});
@@ -588,7 +719,7 @@
             this.tabNavigationPage4.Caption = "Bom";
             this.tabNavigationPage4.Controls.Add(this.BomGrid);
             this.tabNavigationPage4.Name = "tabNavigationPage4";
-            this.tabNavigationPage4.Size = new System.Drawing.Size(1432, 652);
+            this.tabNavigationPage4.Size = new System.Drawing.Size(1176, 417);
             // 
             // BomGrid
             // 
@@ -596,7 +727,7 @@
             this.BomGrid.Location = new System.Drawing.Point(0, 0);
             this.BomGrid.MainView = this.BomGridView;
             this.BomGrid.Name = "BomGrid";
-            this.BomGrid.Size = new System.Drawing.Size(1432, 652);
+            this.BomGrid.Size = new System.Drawing.Size(1176, 417);
             this.BomGrid.TabIndex = 1;
             this.BomGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.BomGridView});
@@ -606,62 +737,115 @@
             this.BomGridView.GridControl = this.BomGrid;
             this.BomGridView.Name = "BomGridView";
             // 
-            // HelpGrid
+            // tabNavigationPage5
             // 
-            this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(204, 164);
-            this.HelpGrid.MainView = this.HelpGridView;
-            this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(776, 306);
-            this.HelpGrid.TabIndex = 369;
-            this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.HelpGridView,
-            this.gridView1,
-            this.gridView5});
-            this.HelpGrid.Visible = false;
-            this.HelpGrid.DoubleClick += new System.EventHandler(this.HelpGrid_DoubleClick);
-            this.HelpGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGrid_KeyDown);
+            this.tabNavigationPage5.Caption = "Colors";
+            this.tabNavigationPage5.Controls.Add(this.ColorGrid);
+            this.tabNavigationPage5.Name = "tabNavigationPage5";
+            this.tabNavigationPage5.Size = new System.Drawing.Size(1176, 417);
             // 
-            // HelpGridView
+            // ColorGrid
             // 
-            this.HelpGridView.DetailHeight = 458;
-            this.HelpGridView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.HelpGridView.GridControl = this.HelpGrid;
-            this.HelpGridView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.HelpGridView.Name = "HelpGridView";
-            this.HelpGridView.OptionsBehavior.AllowIncrementalSearch = true;
-            this.HelpGridView.OptionsBehavior.Editable = false;
-            this.HelpGridView.OptionsView.ShowGroupPanel = false;
-            this.HelpGridView.OptionsView.ShowIndicator = false;
-            this.HelpGridView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.ColorGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ColorGrid.Location = new System.Drawing.Point(0, 0);
+            this.ColorGrid.MainView = this.ColorGridView;
+            this.ColorGrid.Name = "ColorGrid";
+            this.ColorGrid.Size = new System.Drawing.Size(1176, 417);
+            this.ColorGrid.TabIndex = 1;
+            this.ColorGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.ColorGridView});
             // 
-            // gridView1
+            // ColorGridView
             // 
-            this.gridView1.DetailHeight = 458;
-            this.gridView1.GridControl = this.HelpGrid;
-            this.gridView1.Name = "gridView1";
+            this.ColorGridView.GridControl = this.ColorGrid;
+            this.ColorGridView.Name = "ColorGridView";
+            this.ColorGridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
+            this.ColorGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ColorGridView_KeyDown);
             // 
-            // gridView5
+            // tabNavigationPage6
             // 
-            this.gridView5.DetailHeight = 458;
-            this.gridView5.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.gridView5.GridControl = this.HelpGrid;
-            this.gridView5.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
-            this.gridView5.Name = "gridView5";
-            this.gridView5.OptionsBehavior.AllowIncrementalSearch = true;
-            this.gridView5.OptionsBehavior.Editable = false;
-            this.gridView5.OptionsView.ColumnAutoWidth = false;
-            this.gridView5.OptionsView.ShowGroupPanel = false;
-            this.gridView5.OptionsView.ShowIndicator = false;
-            this.gridView5.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.tabNavigationPage6.Caption = "Size Wise";
+            this.tabNavigationPage6.Controls.Add(this.SizeGrid);
+            this.tabNavigationPage6.Name = "tabNavigationPage6";
+            this.tabNavigationPage6.Size = new System.Drawing.Size(1176, 417);
+            // 
+            // SizeGrid
+            // 
+            this.SizeGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SizeGrid.Location = new System.Drawing.Point(0, 0);
+            this.SizeGrid.MainView = this.SizeGridView;
+            this.SizeGrid.Name = "SizeGrid";
+            this.SizeGrid.Size = new System.Drawing.Size(1176, 417);
+            this.SizeGrid.TabIndex = 2;
+            this.SizeGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.SizeGridView});
+            // 
+            // SizeGridView
+            // 
+            this.SizeGridView.GridControl = this.SizeGrid;
+            this.SizeGridView.Name = "SizeGridView";
+            this.SizeGridView.OptionsSelection.MultiSelect = true;
+            this.SizeGridView.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CellSelect;
+            this.SizeGridView.PopupMenuShowing += new DevExpress.XtraGrid.Views.Grid.PopupMenuShowingEventHandler(this.SizeGridView_PopupMenuShowing);
+            // 
+            // panelControl1
+            // 
+            this.panelControl1.Controls.Add(this.HelpGridControl);
+            this.panelControl1.Controls.Add(this.txtSearchBox);
+            this.panelControl1.Location = new System.Drawing.Point(513, 201);
+            this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelControl1.Name = "panelControl1";
+            this.panelControl1.Size = new System.Drawing.Size(762, 385);
+            this.panelControl1.TabIndex = 687;
+            // 
+            // HelpGridControl
+            // 
+            this.HelpGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.HelpGridControl.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridControl.Location = new System.Drawing.Point(2, 24);
+            this.HelpGridControl.MainView = this.HelpGridControlView;
+            this.HelpGridControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.HelpGridControl.Name = "HelpGridControl";
+            this.HelpGridControl.Size = new System.Drawing.Size(758, 359);
+            this.HelpGridControl.TabIndex = 245;
+            this.HelpGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.HelpGridControlView});
+            this.HelpGridControl.DoubleClick += new System.EventHandler(this.HelpGridControl_DoubleClick);
+            this.HelpGridControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HelpGridControl_KeyDown);
+            // 
+            // HelpGridControlView
+            // 
+            this.HelpGridControlView.DetailHeight = 458;
+            this.HelpGridControlView.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.HelpGridControlView.GridControl = this.HelpGridControl;
+            this.HelpGridControlView.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            this.HelpGridControlView.Name = "HelpGridControlView";
+            this.HelpGridControlView.OptionsBehavior.AllowIncrementalSearch = true;
+            this.HelpGridControlView.OptionsBehavior.Editable = false;
+            this.HelpGridControlView.OptionsView.ShowGroupPanel = false;
+            this.HelpGridControlView.OptionsView.ShowIndicator = false;
+            this.HelpGridControlView.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Never;
+            // 
+            // txtSearchBox
+            // 
+            this.txtSearchBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSearchBox.EnterMoveNextControl = true;
+            this.txtSearchBox.Location = new System.Drawing.Point(2, 2);
+            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSearchBox.Properties.MaxLength = 400;
+            this.txtSearchBox.Size = new System.Drawing.Size(758, 22);
+            this.txtSearchBox.TabIndex = 246;
+            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(1276, 12);
+            this.pictureEdit1.Location = new System.Drawing.Point(1276, 103);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(269, 353);
+            this.pictureEdit1.Size = new System.Drawing.Size(269, 262);
             this.pictureEdit1.TabIndex = 546;
             // 
             // pictureEdit2
@@ -672,16 +856,61 @@
             this.pictureEdit2.Size = new System.Drawing.Size(269, 353);
             this.pictureEdit2.TabIndex = 546;
             // 
+            // Menu_ToolStrip
+            // 
+            this.Menu_ToolStrip.BackColor = System.Drawing.Color.DodgerBlue;
+            this.Menu_ToolStrip.CanOverflow = false;
+            this.Menu_ToolStrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Menu_ToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.Menu_ToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.Menu_ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnQuit,
+            this.btnSave});
+            this.Menu_ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.Menu_ToolStrip.Name = "Menu_ToolStrip";
+            this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1557, 31);
+            this.Menu_ToolStrip.TabIndex = 688;
+            this.Menu_ToolStrip.Text = "Options";
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnQuit.ForeColor = System.Drawing.Color.White;
+            this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
+            this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnQuit.Size = new System.Drawing.Size(53, 28);
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnSave.Size = new System.Drawing.Size(55, 28);
+            this.btnSave.Text = "&Save";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // FrmJobWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1557, 893);
+            this.ControlBox = false;
+            this.Controls.Add(this.Menu_ToolStrip);
+            this.Controls.Add(this.panelControl1);
             this.Controls.Add(this.pictureEdit2);
             this.Controls.Add(this.pictureEdit1);
-            this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.tabPane1);
             this.Controls.Add(this.groupControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmJobWork";
             this.Text = "  ";
@@ -691,6 +920,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtComboCount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOrderDate.Properties)).EndInit();
@@ -704,10 +934,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartyCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSeason.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFitType.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtKnitCut.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSampleType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtRemarks.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtArtID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPane1)).EndInit();
             this.tabPane1.ResumeLayout(false);
             this.tabNavigationPage1.ResumeLayout(false);
@@ -722,12 +956,21 @@
             this.tabNavigationPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BomGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BomGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.HelpGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView5)).EndInit();
+            this.tabNavigationPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ColorGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ColorGridView)).EndInit();
+            this.tabNavigationPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SizeGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SizeGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
+            this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HelpGridControlView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit2.Properties)).EndInit();
+            this.Menu_ToolStrip.ResumeLayout(false);
+            this.Menu_ToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -760,7 +1003,7 @@
         private DevExpress.XtraEditors.TextEdit txtArtDesc;
         private DevExpress.XtraEditors.ComboBoxEdit txtSeason;
         private DevExpress.XtraEditors.ComboBoxEdit txtFitType;
-        private DevExpress.XtraEditors.ComboBoxEdit comboBoxEdit1;
+        private DevExpress.XtraEditors.ComboBoxEdit txtKnitCut;
         private DevExpress.XtraEditors.ComboBoxEdit txtSampleType;
         private DevExpress.XtraEditors.MemoEdit txtRemarks;
         private DevExpress.XtraBars.Navigation.TabPane tabPane1;
@@ -786,5 +1029,21 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraEditors.PictureEdit pictureEdit2;
         private DevExpress.XtraEditors.TextEdit txtBrandName;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage5;
+        private DevExpress.XtraBars.Navigation.TabNavigationPage tabNavigationPage6;
+        private DevExpress.XtraEditors.SimpleButton btnLoadSizes;
+        private DevExpress.XtraEditors.SimpleButton btnLoadColors;
+        private DevExpress.XtraGrid.GridControl ColorGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView ColorGridView;
+        private DevExpress.XtraGrid.GridControl SizeGrid;
+        private DevExpress.XtraGrid.Views.Grid.GridView SizeGridView;
+        private DevExpress.XtraEditors.TextEdit txtComboCount;
+        private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraGrid.GridControl HelpGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView HelpGridControlView;
+        private DevExpress.XtraEditors.TextEdit txtSearchBox;
+        private System.Windows.Forms.ToolStrip Menu_ToolStrip;
+        private System.Windows.Forms.ToolStripButton btnQuit;
+        private System.Windows.Forms.ToolStripButton btnSave;
     }
 }

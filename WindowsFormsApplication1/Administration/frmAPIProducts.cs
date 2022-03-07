@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmAPIProducts : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAPIProducts : DevExpress.XtraEditors.XtraForm
     {
-        public String  s1 { get; set; }
-        public frmAPIProducts()
+        public string S1 { get; set; }
+        public FrmAPIProducts()
         {
             InitializeComponent();
         }
@@ -97,7 +97,7 @@ namespace WindowsFormsApplication1.Administration
                 }
             }
         }
-        private void frmAPIProducts_Load(object sender, EventArgs e)
+        private void FrmAPIProducts_Load(object sender, EventArgs e)
         {
             
 
@@ -105,22 +105,22 @@ namespace WindowsFormsApplication1.Administration
             txtid.Enabled = false;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtname.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtname.Focus();
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtname.Text.Trim().Length == 0)
             {
@@ -164,19 +164,19 @@ namespace WindowsFormsApplication1.Administration
                 txtprice.Focus();
                 return;
             }
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 AddProductAsync();
                 this.Close();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 UpdateProductAsync();
                 this.Close();
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             DeleteProductAsync();
             this.Close();

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmAPIProducts
+    partial class FrmAPIProducts
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Administration
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAPIProducts));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAPIProducts));
             this.btnDelete = new System.Windows.Forms.ToolStripButton();
             this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.txtid = new DevExpress.XtraEditors.TextEdit();
@@ -76,13 +76,13 @@ namespace WindowsFormsApplication1.Administration
             this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnDelete.Size = new System.Drawing.Size(75, 28);
             this.btnDelete.Text = "DELETE";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // label7
             // 
             this.label7.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Appearance.Options.UseFont = true;
-            this.label7.Location = new System.Drawing.Point(130, 46);
+            this.label7.Location = new System.Drawing.Point(130, 44);
             this.label7.Margin = new System.Windows.Forms.Padding(4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 20);
@@ -99,7 +99,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             // txttype
             // 
-            this.txttype.Location = new System.Drawing.Point(160, 107);
+            this.txttype.Location = new System.Drawing.Point(160, 103);
             this.txttype.Margin = new System.Windows.Forms.Padding(4);
             this.txttype.Name = "txttype";
             this.txttype.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(59, 28);
             this.btnSave.Text = "SAVE";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnClose
             // 
@@ -138,13 +138,13 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnClose.Size = new System.Drawing.Size(67, 28);
             this.btnClose.Text = "CLOSE";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // label3
             // 
             this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Appearance.Options.UseFont = true;
-            this.label3.Location = new System.Drawing.Point(53, 195);
+            this.label3.Location = new System.Drawing.Point(53, 194);
             this.label3.Margin = new System.Windows.Forms.Padding(4);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 20);
@@ -163,7 +163,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Appearance.Options.UseFont = true;
-            this.label2.Location = new System.Drawing.Point(113, 110);
+            this.label2.Location = new System.Drawing.Point(113, 104);
             this.label2.Margin = new System.Windows.Forms.Padding(4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 20);
@@ -174,7 +174,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(105, 78);
+            this.label1.Location = new System.Drawing.Point(105, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 20);
@@ -203,7 +203,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             // txtname
             // 
-            this.txtname.Location = new System.Drawing.Point(160, 75);
+            this.txtname.Location = new System.Drawing.Point(160, 73);
             this.txtname.Margin = new System.Windows.Forms.Padding(4);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(421, 22);
@@ -213,7 +213,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.label4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Appearance.Options.UseFont = true;
-            this.label4.Location = new System.Drawing.Point(67, 226);
+            this.label4.Location = new System.Drawing.Point(67, 224);
             this.label4.Margin = new System.Windows.Forms.Padding(4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
@@ -232,7 +232,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.label5.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Appearance.Options.UseFont = true;
-            this.label5.Location = new System.Drawing.Point(26, 258);
+            this.label5.Location = new System.Drawing.Point(26, 254);
             this.label5.Margin = new System.Windows.Forms.Padding(4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 20);
@@ -241,7 +241,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             // txtshort_description
             // 
-            this.txtshort_description.Location = new System.Drawing.Point(160, 255);
+            this.txtshort_description.Location = new System.Drawing.Point(160, 253);
             this.txtshort_description.Margin = new System.Windows.Forms.Padding(4);
             this.txtshort_description.Name = "txtshort_description";
             this.txtshort_description.Size = new System.Drawing.Size(421, 22);
@@ -251,7 +251,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(77, 165);
+            this.labelControl1.Location = new System.Drawing.Point(77, 164);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(66, 20);
@@ -270,7 +270,7 @@ namespace WindowsFormsApplication1.Administration
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(109, 135);
+            this.labelControl2.Location = new System.Drawing.Point(109, 134);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(34, 20);
@@ -295,13 +295,13 @@ namespace WindowsFormsApplication1.Administration
             // 
             // pictureEdit2
             // 
-            this.pictureEdit2.Location = new System.Drawing.Point(160, 309);
+            this.pictureEdit2.Location = new System.Drawing.Point(160, 298);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.pictureEdit2.Size = new System.Drawing.Size(149, 165);
             this.pictureEdit2.TabIndex = 340;
             // 
-            // frmAPIProducts
+            // FrmAPIProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -329,9 +329,9 @@ namespace WindowsFormsApplication1.Administration
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmAPIProducts";
+            this.Name = "FrmAPIProducts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmAPIProducts_Load);
+            this.Load += new System.EventHandler(this.FrmAPIProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txttype.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtregular_price.Properties)).EndInit();

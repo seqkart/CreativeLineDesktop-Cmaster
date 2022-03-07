@@ -463,10 +463,11 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG249":
-                    var PROG249 = new Transaction.FrmJobWork();
-                    PROG249.ShowDialog();
+                    var PROG249 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     PROG249.Show();
                     PROG249.BringToFront();
+                    PROG249.Parent = Page;
+                    xtraTabControl1.SelectedTabPage = Page;
                     SetImage();
                     break;
                 case "PROG248":

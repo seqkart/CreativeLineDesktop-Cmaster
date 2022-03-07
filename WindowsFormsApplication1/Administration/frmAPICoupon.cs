@@ -42,32 +42,14 @@ namespace WindowsFormsApplication1.Administration
                 {
                     var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
-                    // request.Content = new StringContent("{\n  \"code\": \"" + txtcode.Text + "\",\n  \"discount_type\": \"" + txtdiscount_type.Text + "\",\n  \"amount\": \"" + txtamount.Text + "\",\n  \"individual_use\": " + txtindividual_use + ",\n  \"exclude_sale_items\": " + txtexclude_sale_items.Text + ",\n  \"minimum_amount\": \"" + txtminimum_amount.Text + "\"\n}");
 
                     request.Content = new StringContent("{\n  \"code\": \"" + txtcode.Text + "\",\n  \"discount_type\": \"" + txtdiscount_type.Text + "\",\n  \"amount\": \"" + txtamount.Text + "\",\n  \"individual_use\": " + txtindividual_use.Text + ",\n  \"exclude_sale_items\": " + txtexclude_sale_items.Text + ",\n  \"minimum_amount\": \"" + txtminimum_amount.Text + "\"\n}");
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
+                    XtraMessageBox.Show(response.ToString());
                 }
             }
-
-
-            //using (var httpClient = new HttpClient())
-            //{
-            //    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "https://creativelineindia.com/wp-json/wc/v3/coupons"))
-            //    {
-            //      //  var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
-            //        request.Headers.TryAddWithoutValidation("Authorization", $"Basic Y2tfMWQzZjdhOWE4ZGQ1NTI5NTQwN2M3ZDUxMmJiY2Y3ODA1Y2YzMTY2Yjpjc184NzE2ODQ5MmQ2YzA4OWQyYmY4NGJhZTVkNWZkNGE5Y2UzZTQ4NTJm");
-            //       // request.Headers["Authorization"] = "Basic Y2tfMWQzZjdhOWE4ZGQ1NTI5NTQwN2M3ZDUxMmJiY2Y3ODA1Y2YzMTY2Yjpjc184NzE2ODQ5MmQ2YzA4OWQyYmY4NGJhZTVkNWZkNGE5Y2UzZTQ4NTJm";
-
-
-
-            //        request.Content = new StringContent("{\n  \"code\": \"" + txtcode.Text + "\",\n  \"discount_type\": \"" + txtdiscount_type.Text + "\",\n  \"amount\": \"" + txtamount.Text + "\",\n  \"individual_use\": " + txtindividual_use + ",\n  \"exclude_sale_items\": " + txtexclude_sale_items.Text + ",\n  \"minimum_amount\": \"" + txtminimum_amount.Text + "\"\n}");
-            //        request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
-
-            //        var response = await httpClient.SendAsync(request);
-            //    }
-            //}
         }
 
 
@@ -81,6 +63,7 @@ namespace WindowsFormsApplication1.Administration
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
                     var response = await httpClient.SendAsync(request);
+                    XtraMessageBox.Show(response.ToString());
                 }
             }
         }
@@ -94,10 +77,11 @@ namespace WindowsFormsApplication1.Administration
                     var base64authorization = Convert.ToBase64String(Encoding.ASCII.GetBytes("ck_1d3f7a9a8dd55295407c7d512bbcf7805cf3166b:cs_87168492d6c089d2bf84bae5d5fd4a9ce3e4852f"));
                     request.Headers.TryAddWithoutValidation("Authorization", $"Basic {base64authorization}");
 
-                    request.Content = new StringContent("{\n  \"amount\": \"" + txtamount.Text + "\"\n}");
+                    request.Content = new StringContent("{\n  \"code\": \"" + txtcode.Text + "\",\n  \"discount_type\": \"" + txtdiscount_type.Text + "\",\n  \"amount\": \"" + txtamount.Text + "\",\n  \"individual_use\": " + txtindividual_use.Text + ",\n  \"exclude_sale_items\": " + txtexclude_sale_items.Text + ",\n  \"minimum_amount\": \"" + txtminimum_amount.Text + "\"\n}");
                     request.Content.Headers.ContentType = MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
+                    XtraMessageBox.Show(response.ToString());
                 }
             }
         }

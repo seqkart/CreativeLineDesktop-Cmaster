@@ -103,8 +103,10 @@ namespace WindowsFormsApplication1.Administration
                         {
                             Byte[] MyData = new byte[0];
                             MyData = (Byte[])ds.Tables[0].Rows[0]["ProgSVG1"];
-                            MemoryStream stream = new MemoryStream(MyData);
-                            stream.Position = 0;
+                            MemoryStream stream = new MemoryStream(MyData)
+                            {
+                                Position = 0
+                            };
                             svgImageBox1.SvgImage = DevExpress.Utils.Svg.SvgImage.FromStream(stream);
                         }
 
@@ -112,8 +114,10 @@ namespace WindowsFormsApplication1.Administration
                         {
                             Byte[] MyData = new byte[0];
                             MyData = (Byte[])ds.Tables[0].Rows[0]["ProgSVG2"];
-                            MemoryStream stream = new MemoryStream(MyData);
-                            stream.Position = 0;
+                            MemoryStream stream = new MemoryStream(MyData)
+                            {
+                                Position = 0
+                            };
                             svgImageBox2.SvgImage = DevExpress.Utils.Svg.SvgImage.FromStream(stream);
                         }
 
@@ -121,8 +125,10 @@ namespace WindowsFormsApplication1.Administration
                         {
                             Byte[] MyData = new byte[0];
                             MyData = (Byte[])ds.Tables[0].Rows[0]["ProgSVG3"];
-                            MemoryStream stream = new MemoryStream(MyData);
-                            stream.Position = 0;
+                            MemoryStream stream = new MemoryStream(MyData)
+                            {
+                                Position = 0
+                            };
                             svgImageBox3.SvgImage = DevExpress.Utils.Svg.SvgImage.FromStream(stream);
                         }
                     }
