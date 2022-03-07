@@ -98,7 +98,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                             PrepareActMstHelpGrid();
                                             HelpGrid.Text = "txtDebitPartyCode";
                                             txtSearchBox.Text = string.Empty;
-                                            txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                             HelpGrid.Show();
                                             panelControl1.Visible = true;
                                             HelpGrid.Visible = true;
@@ -832,7 +832,7 @@ namespace WindowsFormsApplication1.Transaction.challans
 
 
                                                     HelpGrid.Text = "CHOPrdName";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -887,7 +887,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 else
                                                 {
                                                     HelpGrid.Text = "CHOArtNo";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -919,7 +919,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                     UpdateTag = "Y";
 
                                                     HelpGrid.Text = "CHOColName";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -931,7 +931,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 else
                                                 {
                                                     HelpGrid.Text = "CHOColName";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -948,7 +948,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                             if (currentrow == null)
                                             {
                                                 HelpGrid.Text = "CHOSizeName";
-                                                txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                 panelControl1.Visible = true;
                                                 panelControl1.Select();
                                                 txtSearchBox.Focus();
@@ -965,7 +965,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                     UpdateTag = "Y";
 
                                                     HelpGrid.Text = "CHOSizeName";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();
@@ -977,7 +977,7 @@ namespace WindowsFormsApplication1.Transaction.challans
                                                 else
                                                 {
                                                     HelpGrid.Text = "CHOSizeName";
-                                                    txtSearchBox.Text = txtSearchBox.Text + ProjectFunctions.ValidateKeysForSearchBox(e);
+                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
                                                     panelControl1.Visible = true;
                                                     panelControl1.Select();
                                                     txtSearchBox.Focus();

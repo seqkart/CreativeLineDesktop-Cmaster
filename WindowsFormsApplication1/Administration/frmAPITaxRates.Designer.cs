@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmAPITaxRates
+    partial class FrmAPITaxRates
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Administration
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAPITaxRates));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAPITaxRates));
             this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.txtid = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new DevExpress.XtraEditors.LabelControl();
@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnClose.Size = new System.Drawing.Size(67, 28);
             this.btnClose.Text = "CLOSE";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnDelete
             // 
@@ -130,7 +130,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnDelete.Size = new System.Drawing.Size(75, 28);
             this.btnDelete.Text = "DELETE";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnSave
             // 
@@ -142,7 +142,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(59, 28);
             this.btnSave.Text = "SAVE";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lbl
             // 
@@ -294,7 +294,7 @@ namespace WindowsFormsApplication1.Administration
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmAPITaxRates";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmAPITaxRates_Load);
+            this.Load += new System.EventHandler(this.FrmAPITaxRates_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtid.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();

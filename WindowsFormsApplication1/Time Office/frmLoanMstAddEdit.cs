@@ -170,7 +170,7 @@ namespace WindowsFormsApplication1.TimeOffice
 
             var strsql = string.Empty;
             var ds = new DataSet();
-            strsql = strsql + "select isnull(max(Cast(LoanANo as int)),00000) from LoanMst";
+            strsql += "select isnull(max(Cast(LoanANo as int)),00000) from LoanMst";
 
             ds = ProjectFunctions.GetDataSet(strsql);
             if (ds.Tables[0].Rows.Count > 0)
@@ -191,8 +191,8 @@ namespace WindowsFormsApplication1.TimeOffice
                 if (S1 == "Add")
                 {
                     var strQry = " Insert into LoanMst";
-                    strQry = strQry + " (EmpCode,LoanAmt,LoanInstlmnt,LoanLUyrmn,LoanANo,LoanFBy,LoanFDt,LoanADate)";
-                    strQry = strQry + " values(";
+                    strQry += " (EmpCode,LoanAmt,LoanInstlmnt,LoanLUyrmn,LoanANo,LoanFBy,LoanFDt,LoanADate)";
+                    strQry += " values(";
                     strQry = strQry + "'" + txtEmpCode.Text.Trim() + "',";
                     strQry = strQry + "'" + Convert.ToDecimal(txtLoanAmount.Text) + "',";
                     strQry = strQry + "'" + Convert.ToDecimal(txtLoanInstlmnt.Text) + "',";
@@ -220,7 +220,7 @@ namespace WindowsFormsApplication1.TimeOffice
                 if (S1 == "Edit")
                 {
                     var strQry = " UPDATE    LoanMst";
-                    strQry = strQry + " SET  ";
+                    strQry += " SET  ";
                     strQry = strQry + "EmpCode ='" + txtEmpCode.Text.Trim() + "',";
                     strQry = strQry + "LoanAmt ='" + Convert.ToDecimal(txtLoanAmount.Text) + "',";
                     strQry = strQry + "LoanInstlmnt ='" + Convert.ToDecimal(txtLoanInstlmnt.Text) + "',";

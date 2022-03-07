@@ -10,15 +10,15 @@ namespace WindowsFormsApplication1.Transaction
 {
     public partial class FrmJobWork : DevExpress.XtraEditors.XtraForm
     {
-        public String S1 { get; set; }
+        public string S1 { get; set; }
 
-        public String OrderNo { get; set; }
+        public string OrderNo { get; set; }
         public DateTime OrderDate { get; set; }
         DataTable dtColors = new DataTable();
 
         DataSet dsPopUps = new DataSet();
 
-        String ColumnName = "";
+        string ColumnName = "";
 
         int RowIndex = 0;
         string UpdateTag = "N";
@@ -232,8 +232,8 @@ namespace WindowsFormsApplication1.Transaction
             if (HelpGrid.Text == "COLOR")
             {
                 DataTable dtColor = new DataTable();
-                dtColor.Columns.Add("COLSYSID", typeof(String));
-                dtColor.Columns.Add("COLNAME", typeof(String));
+                dtColor.Columns.Add("COLSYSID", typeof(string));
+                dtColor.Columns.Add("COLNAME", typeof(string));
                 foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
                 {
                     if (dr["Select"].ToString().ToUpper() == "TRUE")
@@ -261,7 +261,7 @@ namespace WindowsFormsApplication1.Transaction
             if (HelpGrid.Text == "SIZE")
             {
                 DataTable dtSize = new DataTable();
-                dtSize.Columns.Add("COMBO", typeof(String));
+                dtSize.Columns.Add("COMBO", typeof(string));
 
                 DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
                 col1.FieldName = "COMBO";
@@ -280,7 +280,7 @@ namespace WindowsFormsApplication1.Transaction
                         col2.OptionsColumn.AllowEdit = true;
                         SizeGridView.Columns.Add(col2);
 
-                        dtSize.Columns.Add(dr["SZSYSID"].ToString(), typeof(String));
+                        dtSize.Columns.Add(dr["SZSYSID"].ToString(), typeof(string));
                     }
                 }
                 
@@ -337,17 +337,17 @@ namespace WindowsFormsApplication1.Transaction
             LoadProductionOrderColorAndSize();
         }
 
-        private void txtPartyCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtPartyCode_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             ProjectFunctions.CreatePopUpForTwoBoxes("Select AccName,AccCode from ActMst ", " Where AccCode", txtPartyCode, txtPartyName, txtSeason, HelpGrid, HelpGridView, e);
         }
 
-        private void txtSampleWeight_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void TxtSampleWeight_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             ProjectFunctions.NumericWithDecimal(e);
         }
 
-        private void txtArtDesc_EditValueChanged(object sender, EventArgs e)
+        private void TxtArtDesc_EditValueChanged(object sender, EventArgs e)
         {
 
         }
@@ -395,7 +395,7 @@ namespace WindowsFormsApplication1.Transaction
             HelpGridView.Columns.Add(col3);
 
         }
-        private void btnLoadColors_Click(object sender, EventArgs e)
+        private void BtnLoadColors_Click(object sender, EventArgs e)
         {
             HelpGrid.Text = "COLOR";
             PrepareColorMstHelpGrid();
@@ -443,7 +443,7 @@ namespace WindowsFormsApplication1.Transaction
             HelpGridView.Columns.Add(col3);
 
         }
-        private void btnLoadSizes_Click(object sender, EventArgs e)
+        private void BtnLoadSizes_Click(object sender, EventArgs e)
         {
             HelpGrid.Text = "SIZE";
             PrepareSizeMstHelpGrid();
@@ -467,7 +467,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtComboCount_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        private void TxtComboCount_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
             if (e.KeyCode == System.Windows.Forms.Keys.Enter)
             {
@@ -480,14 +480,14 @@ namespace WindowsFormsApplication1.Transaction
                     col2.Visible = true;
                     col2.OptionsColumn.AllowEdit = false;
                     ColorGridView.Columns.Add(col2);
-                    dtColors.Columns.Add("CB" + (i + 1).ToString(), typeof(String));
+                    dtColors.Columns.Add("CB" + (i + 1).ToString(), typeof(string));
                 }
 
                 ColorGrid.DataSource = dtColors;
             }
         }
 
-        private void txtComboCount_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
+        private void TxtComboCount_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
             ProjectFunctions.NumberOnly(e);
         }
@@ -638,7 +638,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
+        private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
             try
             {
@@ -674,7 +674,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
+        private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             try
 
@@ -742,7 +742,7 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -750,7 +750,7 @@ namespace WindowsFormsApplication1.Transaction
         {
             return true;
         }
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (ValidateDataForSaving())
             {

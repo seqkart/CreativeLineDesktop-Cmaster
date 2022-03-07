@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Administration
 {
-    partial class frmUserFinancialYearAddition
+    partial class FrmUserFinancialYearAddition
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserFinancialYearAddition));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUserFinancialYearAddition));
             this.cmbSelectUser = new System.Windows.Forms.ComboBox();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();

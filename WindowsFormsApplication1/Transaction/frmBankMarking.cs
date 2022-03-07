@@ -22,7 +22,7 @@ namespace WindowsFormsApplication1.Transaction
         private void FillGrid()
         {
             var str = " SELECT       VutID,VutNo,VutType, VutDate,  VutNart,(case when VutAmt < 0 then -VutAmt  END ) as Credit, ";
-            str = str + "(case when VutAmt > 0 then VutAmt  END ) as Debit,vutChqClearDt";
+            str += "(case when VutAmt > 0 then VutAmt  END ) as Debit,vutChqClearDt";
             str = str + " FROM            vuData Where VutACode='" + AccCode + "' And VutDate Between '" + StartDate.Date.ToString("yyyy-MM-dd") + "' And '" + EndDate.Date.ToString("yyyy-MM-dd") + "' ORDER BY vutChqClearDt ,DEBIT ,CREDIT";
             DataSet ds = ProjectFunctions.GetDataSet(str);
             if (ds.Tables[0].Rows.Count > 0)

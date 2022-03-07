@@ -211,8 +211,8 @@
             this.txtComboCount.Name = "txtComboCount";
             this.txtComboCount.Size = new System.Drawing.Size(126, 22);
             this.txtComboCount.TabIndex = 551;
-            this.txtComboCount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtComboCount_KeyDown);
-            this.txtComboCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtComboCount_KeyPress);
+            this.txtComboCount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtComboCount_KeyDown);
+            this.txtComboCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtComboCount_KeyPress);
             // 
             // btnLoadSizes
             // 
@@ -221,7 +221,7 @@
             this.btnLoadSizes.Size = new System.Drawing.Size(94, 29);
             this.btnLoadSizes.TabIndex = 550;
             this.btnLoadSizes.Text = "Load Sizes";
-            this.btnLoadSizes.Click += new System.EventHandler(this.btnLoadSizes_Click);
+            this.btnLoadSizes.Click += new System.EventHandler(this.BtnLoadSizes_Click);
             // 
             // btnLoadColors
             // 
@@ -230,7 +230,7 @@
             this.btnLoadColors.Size = new System.Drawing.Size(94, 29);
             this.btnLoadColors.TabIndex = 549;
             this.btnLoadColors.Text = "Load Colors";
-            this.btnLoadColors.Click += new System.EventHandler(this.btnLoadColors_Click);
+            this.btnLoadColors.Click += new System.EventHandler(this.BtnLoadColors_Click);
             // 
             // labelControl14
             // 
@@ -408,7 +408,7 @@
             this.txtArtDesc.Size = new System.Drawing.Size(232, 22);
             this.txtArtDesc.TabIndex = 6;
             this.txtArtDesc.TabStop = false;
-            this.txtArtDesc.EditValueChanged += new System.EventHandler(this.txtArtDesc_EditValueChanged);
+            this.txtArtDesc.EditValueChanged += new System.EventHandler(this.TxtArtDesc_EditValueChanged);
             // 
             // txtSampleWeight
             // 
@@ -418,7 +418,7 @@
             this.txtSampleWeight.Name = "txtSampleWeight";
             this.txtSampleWeight.Size = new System.Drawing.Size(110, 22);
             this.txtSampleWeight.TabIndex = 8;
-            this.txtSampleWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSampleWeight_KeyPress);
+            this.txtSampleWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSampleWeight_KeyPress);
             // 
             // labelControl4
             // 
@@ -465,7 +465,7 @@
             this.txtPartyCode.Size = new System.Drawing.Size(90, 22);
             this.txtPartyCode.TabIndex = 2;
             this.txtPartyCode.EditValueChanged += new System.EventHandler(this.TxtPartyCode_EditValueChanged);
-            this.txtPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPartyCode_KeyDown);
+            this.txtPartyCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPartyCode_KeyDown);
             // 
             // txtSeason
             // 
@@ -837,8 +837,8 @@
             this.txtSearchBox.Properties.MaxLength = 400;
             this.txtSearchBox.Size = new System.Drawing.Size(758, 22);
             this.txtSearchBox.TabIndex = 246;
-            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.txtSearchBox_EditValueChanged);
-            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchBox_KeyDown);
+            this.txtSearchBox.EditValueChanged += new System.EventHandler(this.TxtSearchBox_EditValueChanged);
+            this.txtSearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtSearchBox_KeyDown);
             // 
             // pictureEdit1
             // 
@@ -884,7 +884,7 @@
             this.btnQuit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnQuit.Size = new System.Drawing.Size(53, 28);
             this.btnQuit.Text = "Quit";
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
             // btnSave
             // 
@@ -896,7 +896,7 @@
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(55, 28);
             this.btnSave.Text = "&Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // FrmJobWork
             // 

@@ -4,7 +4,7 @@ using System.Data;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmUserFinancialYearAddition : XtraForm
+    public partial class FrmUserFinancialYearAddition : XtraForm
     {
         public string S1 { get; set; }
         private void SetMyControls()
@@ -21,7 +21,7 @@ namespace WindowsFormsApplication1.Administration
                 ProjectFunctions.SpeakError(ex.Message);
             }
         }
-        public frmUserFinancialYearAddition()
+        public FrmUserFinancialYearAddition()
         {
             InitializeComponent();
         }

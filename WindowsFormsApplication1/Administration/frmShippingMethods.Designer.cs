@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApplication1.Administration
 {
-    partial class frmShippingMethods
+    partial class FrmShippingMethods
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace WindowsFormsApplication1.Administration
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShippingMethods));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmShippingMethods));
             this.txtID = new DevExpress.XtraEditors.TextEdit();
             this.txtTitle = new DevExpress.XtraEditors.TextEdit();
             this.txtDescription = new DevExpress.XtraEditors.TextEdit();
@@ -164,7 +164,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnClose.Size = new System.Drawing.Size(67, 28);
             this.btnClose.Text = "CLOSE";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // lbl
             // 
@@ -195,7 +195,7 @@ namespace WindowsFormsApplication1.Administration
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmShippingMethods";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmShippingMethods_Load);
+            this.Load += new System.EventHandler(this.FrmShippingMethods_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitle.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescription.Properties)).EndInit();

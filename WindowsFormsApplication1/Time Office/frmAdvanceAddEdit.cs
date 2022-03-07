@@ -212,7 +212,7 @@ string.Empty;
                     {
                         string DocNo = GetNewLoanPassNo().PadLeft(6, '0');
                         var str = "Insert into ExMst(ExDate,ExEmpCode,ExAmt,ExTag,ExDatePost,ExFedDate,ExNo";
-                        str = str + ")values(";
+                        str += ")values(";
                         str = str + "'" + Convert.ToDateTime(DtDate.Text).ToString("yyyy-MM-dd") + "',";
                         str = str + "'" + txtEmpCode.Text.Trim() + "',";
                         str = str + "'" + Convert.ToDecimal(txtAmount.Text) + "',";
@@ -246,7 +246,7 @@ string.Empty;
                     if (ValidateData())
                     {
                         var str = " UPDATE    ExMst";
-                        str = str + " SET  ";
+                        str += " SET  ";
                         str = str + " ExEmpCode='" + txtEmpCode.Text.Trim() + "',";
                         str = str + " ExAmt='" + Convert.ToDecimal(txtAmount.Text) + "',";
                         str = str + " ExTag='" + txtType.Text.Trim() + "',";
@@ -287,7 +287,7 @@ string.Empty;
 
             var strsql = string.Empty;
             var ds = new DataSet();
-            strsql = strsql + "select isnull(max(Cast(ExNo as int)),00000) from ExMst";
+            strsql += "select isnull(max(Cast(ExNo as int)),00000) from ExMst";
 
             ds = ProjectFunctionsUtils.GetDataSet(strsql);
             if (ds.Tables[0].Rows.Count > 0)
@@ -349,7 +349,7 @@ string.Empty;
                 {
                     if (txtEmpCode.Text.Length == 0)
                     {
-                        strQry = strQry + "select Empcode as Code,Empname as Description,EmpFHName from EmpMst  order by Empname";
+                        strQry += "select Empcode as Code,Empname as Description,EmpFHName from EmpMst  order by Empname";
                         ds = ProjectFunctions.GetDataSet(strQry);
                         HelpGrid.DataSource = ds.Tables[0];
                         HelpGridView.BestFitColumns();
@@ -371,7 +371,7 @@ string.Empty;
                         else
                         {
                             var strQry1 = string.Empty;
-                            strQry1 = strQry1 + "select empcode as Code,empname as Description,EmpFHName from EmpMst  order by Empname";
+                            strQry1 += "select empcode as Code,empname as Description,EmpFHName from EmpMst  order by Empname";
                             var ds1 = ProjectFunctions.GetDataSet(strQry1);
                             HelpGrid.DataSource = ds1.Tables[0];
                             HelpGridView.BestFitColumns();

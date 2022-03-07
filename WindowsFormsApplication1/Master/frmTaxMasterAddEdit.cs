@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmTaxMasterAddEdit : DevExpress.XtraEditors.XtraForm
+    public partial class FrmTaxMasterAddEdit : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string TaxCode { get; set; }
-        public frmTaxMasterAddEdit()
+        public FrmTaxMasterAddEdit()
         {
             InitializeComponent();
         }

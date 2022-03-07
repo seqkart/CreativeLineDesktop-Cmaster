@@ -1,18 +1,11 @@
-﻿using DevExpress.XtraEditors;
-using DevExpress.XtraGrid.Views.Grid;
+﻿using DevExpress.XtraGrid.Views.Grid;
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace WindowsFormsApplication1.Miscforms
+namespace WindowsFormsApplication1.MiscForms
 {
     public partial class FrmWhatsGroupMessageSender : DevExpress.XtraEditors.XtraForm
     {
@@ -74,8 +67,8 @@ namespace WindowsFormsApplication1.Miscforms
                                                           (o1, e1) =>
                                                           {
                                                               var MaxRow = ((ContactGrid.FocusedView as GridView).RowCount);
-                                                                  //     var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
-                                                                  for (var i = 0; i < MaxRow; i++)
+                                                              //     var MaxRow = ((InvoiceGrid.KeyboardFocusView as GridView).RowCount);
+                                                              for (var i = 0; i < MaxRow; i++)
                                                               {
                                                                   ContactGridView.SetRowCellValue(i,
                                                                                                ContactGridView.Columns["Select"],
@@ -94,7 +87,7 @@ namespace WindowsFormsApplication1.Miscforms
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
                     //request.Content = new StringContent("{\"text\":\"*GREETINGS FROM CREATIVE LINE* <br> Offer%20you%20can%E2%80%99t%20resist/%20/*Flat%2050%%20off%20on%20New%20Winter%20Wear%20Collection*/%20/T&C%20Apply/%20/At:%20CREATIVE%20LINE%20SHOWROOM,%201-G,%20SARABHA%20NAGAR,%20LUDHIANA/%22\",\"sendLinkPreview\":false}");
-                     
+
                     request.Content = new StringContent("{\"text\":\"*GREETINGS FROM CREATIVE LINE* \n Offer you can’t resist\n \n*Flat 50% off on New Winter Wear Collection*\n \nT&C Apply\n \nAt: CREATIVE LINE SHOWROOM, 1-G, SARABHA NAGAR, LUDHIANA\",\"sendLinkPreview\":false}");
                     request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
 

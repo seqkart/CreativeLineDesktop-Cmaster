@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication1.Master
 {
-    partial class frmTaxMasterAddEdit
+    partial class FrmTaxMasterAddEdit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTaxMasterAddEdit));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTaxMasterAddEdit));
             this.label7 = new DevExpress.XtraEditors.LabelControl();
             this.label5 = new DevExpress.XtraEditors.LabelControl();
             this.txtCGSTRate = new DevExpress.XtraEditors.TextEdit();

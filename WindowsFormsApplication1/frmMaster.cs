@@ -10,9 +10,9 @@ using WindowsFormsApplication1.Pos;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmMaster : DevExpress.XtraEditors.XtraForm
+    public partial class FrmMaster : DevExpress.XtraEditors.XtraForm
     {
-        public frmMaster() { InitializeComponent(); }
+        public FrmMaster() { InitializeComponent(); }
 
         private void FillGrid()
         {
@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG237")
                 {
-                    WindowsFormsApplication1.Production.frmYarnTypeMst frm = new WindowsFormsApplication1.Production.frmYarnTypeMst()
+                    WindowsFormsApplication1.Production.FrmYarnTypeMst frm = new WindowsFormsApplication1.Production.FrmYarnTypeMst()
                     { S1 = btnAdd.Text, Text = "Yarn Type Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -160,7 +160,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG225")
                 {
-                    WindowsFormsApplication1.Master.frmContractorMst frm = new WindowsFormsApplication1.Master.frmContractorMst()
+                    WindowsFormsApplication1.Master.FrmContractorMst frm = new WindowsFormsApplication1.Master.FrmContractorMst()
                     { S1 = btnAdd.Text, Text = "Contractor Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -471,7 +471,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG18")
                 {
-                    frmTaxMasterAddEdit frm = new frmTaxMasterAddEdit()
+                    FrmTaxMasterAddEdit frm = new FrmTaxMasterAddEdit()
                     { S1 = btnAdd.Text, Text = "Tax Master Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -517,7 +517,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG34")
                 {
-                    Master.frmBalanceSheetHeads frm = new Master.frmBalanceSheetHeads()
+                    Master.FrmBalanceSheetHeads frm = new Master.FrmBalanceSheetHeads()
                     { S1 = btnAdd.Text, Text = "Balance Sheet Head Addition" };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -625,7 +625,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Production.frmYarnTypeMst frm = new WindowsFormsApplication1.Production.frmYarnTypeMst()
+                    WindowsFormsApplication1.Production.FrmYarnTypeMst frm = new WindowsFormsApplication1.Production.FrmYarnTypeMst()
                     { S1 = btnEdit.Text, Text = "Yarn Type Edition", YarnTypeCode = CurrentRow["YarnTypeCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -725,7 +725,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    WindowsFormsApplication1.Master.frmContractorMst frm = new WindowsFormsApplication1.Master.frmContractorMst()
+                    WindowsFormsApplication1.Master.FrmContractorMst frm = new WindowsFormsApplication1.Master.FrmContractorMst()
                     { S1 = btnEdit.Text, Text = "Contractor Master Edition", CNTSYSID = CurrentRow["CNTSYSID"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
@@ -1088,7 +1088,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG18")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmTaxMasterAddEdit frm = new frmTaxMasterAddEdit()
+                    FrmTaxMasterAddEdit frm = new FrmTaxMasterAddEdit()
                     { S1 = btnEdit.Text, Text = "Tax Master Editing", TaxCode = CurrentRow["TaxCode"].ToString() };
                     frm.StartPosition = FormStartPosition.CenterScreen;
 
@@ -1143,7 +1143,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG34")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    Master.frmBalanceSheetHeads frm = new Master.frmBalanceSheetHeads()
+                    Master.FrmBalanceSheetHeads frm = new Master.FrmBalanceSheetHeads()
                     {
                         S1 = btnEdit.Text,
                         Text = "Balance Sheet Head  Editing",
@@ -1267,7 +1267,7 @@ namespace WindowsFormsApplication1
                                           view.OptionsSelection.MultiSelect = true;
                                           view.CopyToClipboard();
                                       });
-              
+
                 SAR = new DXMenuItem("Select All Records",
                                      (o1, e1) =>
                                      {
@@ -1387,7 +1387,7 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.F2)
             {
-                frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Today" };
+                FrmSaleReportF2 frm = new FrmSaleReportF2() { Text = "Sale Report", WorkingTag = "Today" };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2),
                                          P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
@@ -1395,7 +1395,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.F4)
             {
-                frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Month" };
+                FrmSaleReportF2 frm = new FrmSaleReportF2() { Text = "Sale Report", WorkingTag = "Month" };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2),
                                          P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
@@ -1403,7 +1403,7 @@ namespace WindowsFormsApplication1
             }
             if (e.KeyCode == Keys.F6)
             {
-                frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Year" };
+                FrmSaleReportF2 frm = new FrmSaleReportF2() { Text = "Sale Report", WorkingTag = "Year" };
                 var P = ProjectFunctions.GetPositionInForm(this);
                 frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2),
                                          P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));

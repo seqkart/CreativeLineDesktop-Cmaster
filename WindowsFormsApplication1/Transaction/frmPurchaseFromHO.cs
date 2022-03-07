@@ -88,7 +88,7 @@ namespace WindowsFormsApplication1.Transaction
                         foreach (DataRow dr in dt.Rows)
                         {
                             lblBox.Text = Convert.ToDecimal(dr["SFDBOXNO"]).ToString("0");
-                            QtySum = QtySum + Convert.ToDecimal(dr["SFDSCANQTY"]);
+                            QtySum += Convert.ToDecimal(dr["SFDSCANQTY"]);
                         }
                         lblTotQty.Text = QtySum.ToString("0");
                     }
@@ -336,7 +336,7 @@ namespace WindowsFormsApplication1.Transaction
                     decimal QtySum = 0;
                     foreach (DataRow dr in dt.Rows)
                     {
-                        QtySum = QtySum + Convert.ToDecimal(dr["SFDSCANQTY"]);
+                        QtySum += Convert.ToDecimal(dr["SFDSCANQTY"]);
                     }
                     lblTotQty.Text = QtySum.ToString("0");
                 }));
@@ -379,7 +379,7 @@ namespace WindowsFormsApplication1.Transaction
                         foreach (DataRow dr in dt.Rows)
                         {
                             dr["SFDBOXNO"] = Convert.ToDecimal(lblBox.Text);
-                            QtySum = QtySum + Convert.ToDecimal(dr["SFDSCANQTY"]);
+                            QtySum += Convert.ToDecimal(dr["SFDSCANQTY"]);
                         }
                         lblTotQty.Text = QtySum.ToString("0");
                         BarCodeGrid.DataSource = dt;

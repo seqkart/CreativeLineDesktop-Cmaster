@@ -16,28 +16,28 @@ namespace WindowsFormsApplication1.Administration
     public partial class frmProductReview : DevExpress.XtraEditors.XtraForm
     {
 
-        public String s1 { get; set; }
-        public String id { get; set; }
-        public String date_created { get; set; }
-        public String date_created_gmt { get; set; }
-        public String product_id { get; set; }
-        public String status { get; set; }
-        public String reviewer { get; set; }
+        public string S1 { get; set; }
+        public string Id { get; set; }
+        public string Date_created { get; set; }
+        public string Date_created_gmt { get; set; }
+        public string Product_id { get; set; }
+        public string Status { get; set; }
+        public string Reviewer { get; set; }
 
-        public String reviewer_email { get; set; }
+        public string Reviewer_email { get; set; }
 
-        public String review { get; set; }
+        public string Review { get; set; }
 
-        public String rating { get; set; }
+        public string Rating { get; set; }
 
-        public String verified { get; set; }
+        public string Verified { get; set; }
 
-        public String reviewer_avatar_urls { get; set; }
-        public String A48 { get; set; }
-        public String A96 { get; set; }
-        public String _links { get; set; }
-        public String collection { get; set; }
-        public String up { get; set; }
+        public string Reviewer_avatar_urls { get; set; }
+        public string A48 { get; set; }
+        public string A96 { get; set; }
+        public string _links { get; set; }
+        public string Collection { get; set; }
+        public string Up { get; set; }
 
 
 
@@ -96,45 +96,45 @@ namespace WindowsFormsApplication1.Administration
             this.Close();
         }
 
-        private void frmProductReview_Load(object sender, EventArgs e)
+        private void FrmProductReview_Load(object sender, EventArgs e)
         {
             txtID.Enabled = false;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 txtDateCreated.Focus();
 
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
-                txtID.Text = id;
-                txtDateCreated.Text = date_created;
-                txtDateCreatedGMT.Text = date_created_gmt;
-                txtProduct_ID.Text = product_id;
-                txtStatus.Text = status;
-                txtReviewer.Text = reviewer;
-                txtReviewerEmail.Text = reviewer_email;
-                txtReview.Text = review;
-                txtRating.Text = rating;
-                txtVerified.Text = verified;
-                txtreviewer_avatar_urls.Text = reviewer_avatar_urls;
+                txtID.Text = Id;
+                txtDateCreated.Text = Date_created;
+                txtDateCreatedGMT.Text = Date_created_gmt;
+                txtProduct_ID.Text = Product_id;
+                txtStatus.Text = Status;
+                txtReviewer.Text = Reviewer;
+                txtReviewerEmail.Text = Reviewer_email;
+                txtReview.Text = Review;
+                txtRating.Text = Rating;
+                txtVerified.Text = Verified;
+                txtreviewer_avatar_urls.Text = Reviewer_avatar_urls;
                 txtA48.Text = A48;
                 txtA96.Text = A96;
                 txtLinks.Text = _links;
-                txtCollection.Text = collection;
-                txtUp.Text = up;
+                txtCollection.Text = Collection;
+                txtUp.Text = Up;
                 txtDateCreated.Focus();
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             DeleteProductReviewAsync();
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtReview.Text.Trim().Length == 0)
             {
@@ -144,12 +144,12 @@ namespace WindowsFormsApplication1.Administration
             }
 
 
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 AddProductReviewAsync();
                 this.Close();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 UpdateProductReviewAsync();
                 this.Close();

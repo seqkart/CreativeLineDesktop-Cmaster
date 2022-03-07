@@ -407,21 +407,21 @@ namespace WindowsFormsApplication1
         {
             if (e.KeyCode == Keys.F2)
             {
-                frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Today" };
+                FrmSaleReportF2 frm = new FrmSaleReportF2() { Text = "Sale Report", WorkingTag = "Today" };
                 var P = ProjectFunctions.GetPositionInForm(frmUpper);
                 frm.Location = new Point(P.X + (frmUpper.ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (frmUpper.Height / 2 - frm.Size.Height / 2));
                 frm.ShowDialog(frmUpper.Parent);
             }
             if (e.KeyCode == Keys.F4)
             {
-                frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Month" };
+                FrmSaleReportF2 frm = new FrmSaleReportF2() { Text = "Sale Report", WorkingTag = "Month" };
                 var P = ProjectFunctions.GetPositionInForm(frmUpper);
                 frm.Location = new Point(P.X + (frmUpper.Width / 2 - frm.Size.Width / 2), P.Y + (frmUpper.Height / 2 - frm.Size.Height / 2));
                 frm.ShowDialog(frmUpper.Parent);
             }
             if (e.KeyCode == Keys.F6)
             {
-                frmSaleReportF2 frm = new frmSaleReportF2() { Text = "Sale Report", WorkingTag = "Year" };
+                FrmSaleReportF2 frm = new FrmSaleReportF2() { Text = "Sale Report", WorkingTag = "Year" };
                 var P = ProjectFunctions.GetPositionInForm(frmUpper);
                 frm.Location = new Point(P.X + (frmUpper.Width / 2 - frm.Size.Width / 2), P.Y + (frmUpper.Height / 2 - frm.Size.Height / 2));
                 frm.ShowDialog(frmUpper.Parent);

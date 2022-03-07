@@ -128,7 +128,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnDelete.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnDelete.Size = new System.Drawing.Size(75, 28);
             this.btnDelete.Text = "DELETE";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
             // btnSave
             // 
@@ -140,7 +140,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(59, 28);
             this.btnSave.Text = "SAVE";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lbl
             // 
@@ -464,7 +464,7 @@ namespace WindowsFormsApplication1.Administration
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmProductReview";
-            this.Load += new System.EventHandler(this.frmProductReview_Load);
+            this.Load += new System.EventHandler(this.FrmProductReview_Load);
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtReviewer.Properties)).EndInit();

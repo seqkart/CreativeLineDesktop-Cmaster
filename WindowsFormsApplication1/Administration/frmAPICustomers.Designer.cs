@@ -229,7 +229,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnClose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnClose.Size = new System.Drawing.Size(67, 28);
             this.btnClose.Text = "CLOSE";
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // toolStripButton1
             // 
@@ -241,7 +241,7 @@ namespace WindowsFormsApplication1.Administration
             this.toolStripButton1.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.toolStripButton1.Size = new System.Drawing.Size(75, 28);
             this.toolStripButton1.Text = "DELETE";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolStripButton1_Click);
             // 
             // btnSave
             // 
@@ -253,7 +253,7 @@ namespace WindowsFormsApplication1.Administration
             this.btnSave.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnSave.Size = new System.Drawing.Size(59, 28);
             this.btnSave.Text = "SAVE";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // lbl
             // 
@@ -401,7 +401,7 @@ namespace WindowsFormsApplication1.Administration
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAPICustomers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-            this.Load += new System.EventHandler(this.frmAPICustomers_Load);
+            this.Load += new System.EventHandler(this.FrmAPICustomers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtpostcode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtcity.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtaddress_2.Properties)).EndInit();

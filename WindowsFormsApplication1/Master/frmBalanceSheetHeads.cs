@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmBalanceSheetHeads : DevExpress.XtraEditors.XtraForm
+    public partial class FrmBalanceSheetHeads : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string BSCode { get; set; }
-        public frmBalanceSheetHeads()
+        public FrmBalanceSheetHeads()
         {
             InitializeComponent();
         }

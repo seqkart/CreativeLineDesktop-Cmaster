@@ -15,7 +15,7 @@ namespace WindowsFormsApplication1.Administration
 {
     public partial class frmAPICustomers : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
+        public string S1 { get; set; }
         public frmAPICustomers()
         {
             InitializeComponent();
@@ -69,38 +69,38 @@ namespace WindowsFormsApplication1.Administration
                 }
             }
         }
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void frmAPICustomers_Load(object sender, EventArgs e)
+        private void FrmAPICustomers_Load(object sender, EventArgs e)
         {
             txtid.Enabled = false;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
-            if (s1 == "Add")
+            if (S1 == "Add")
             {
                 txtfirst_name.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
 
                 txtfirst_name.Focus();
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtfirst_name.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Invalid firstname");
+                XtraMessageBox.Show("Invalid first name");
                 txtfirst_name.Focus();
                 return;
             }
             if (txtlast_name.Text.Trim().Length == 0)
             {
-                XtraMessageBox.Show("Invalid lastname");
+                XtraMessageBox.Show("Invalid last name");
                 txtlast_name.Focus();
                 return;
             }
@@ -148,19 +148,19 @@ namespace WindowsFormsApplication1.Administration
             }
            
 
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 AddCustomerAsync();
                 this.Close();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 UpdateCustomerAsync();
                 this.Close();
             }
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void ToolStripButton1_Click(object sender, EventArgs e)
         {
             DeleteCustomerAsync();
             this.Close();

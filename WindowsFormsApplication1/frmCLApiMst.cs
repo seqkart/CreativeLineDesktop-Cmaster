@@ -626,7 +626,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG262")
                 {
-                    frmAPITaxRates frm = new frmAPITaxRates() { s1 = btnAdd.Text, Text = " Tax Addition" };
+                    FrmAPITaxRates frm = new FrmAPITaxRates() { S1 = btnAdd.Text, Text = " Tax Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -640,14 +640,14 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG267")
                 {
-                    frmTaxClasses frm = new frmTaxClasses() { s1 = btnAdd.Text, Text = " Tax Classes Addition" };
+                    FrmTaxClasses frm = new FrmTaxClasses() { S1 = btnAdd.Text, Text = " Tax Classes Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
                 }
                 if (GlobalVariables.ProgCode == "PROG266")
                 {
-                    frmShippingMethods frm = new frmShippingMethods() { s1 = btnAdd.Text, Text = " Shipping Methods Addition" };
+                    FrmShippingMethods frm = new FrmShippingMethods() { S1 = btnAdd.Text, Text = " Shipping Methods Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -661,7 +661,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG261")
                 {
-                    frmProductReview frm = new frmProductReview() { s1 = btnAdd.Text, Text = " Product  Review Addition" };
+                    frmProductReview frm = new frmProductReview() { S1 = btnAdd.Text, Text = " Product  Review Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -675,7 +675,7 @@ namespace WindowsFormsApplication1
                 }
                 if (GlobalVariables.ProgCode == "PROG254")
                 {
-                    frmAPICustomers frm = new frmAPICustomers() { s1 = btnAdd.Text, Text = " Customer Addition" };
+                    frmAPICustomers frm = new frmAPICustomers() { S1 = btnAdd.Text, Text = " Customer Addition" };
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -707,7 +707,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG262")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmAPITaxRates frm = new frmAPITaxRates() { s1 = btnEdit.Text, Text = " Tax Edition" };
+                    FrmAPITaxRates frm = new FrmAPITaxRates() { S1 = btnEdit.Text, Text = " Tax Edition" };
                     frm.txtid.Text = CurrentRow["id"].ToString();
                     frm.txtcity.Text = CurrentRow["city"].ToString();
                     frm.txtcountry.Text = CurrentRow["country"].ToString();
@@ -740,7 +740,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    frmTaxClasses frm = new frmTaxClasses() { s1 = btnEdit.Text, Text = " Tax Classes Edition" };
+                    FrmTaxClasses frm = new FrmTaxClasses() { S1 = btnEdit.Text, Text = " Tax Classes Edition" };
                     frm.txtslug.Text = CurrentRow["slug"].ToString();
                     frm.txtname.Text = CurrentRow["name"].ToString();
                     frm.txtlinks.Text = CurrentRow["_links"].ToString();
@@ -751,7 +751,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG266")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmShippingMethods frm = new frmShippingMethods() { s1 = btnEdit.Text, Text = " Shipping Methods Edition" };
+                    FrmShippingMethods frm = new FrmShippingMethods() { S1 = btnEdit.Text, Text = " Shipping Methods Edition" };
                     frm.ID = CurrentRow["id"].ToString();
                     frm.Title = CurrentRow["title"].ToString();
                     frm.Description = CurrentRow["description"].ToString();
@@ -779,23 +779,23 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG261")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    frmProductReview frm = new frmProductReview() { s1 = btnEdit.Text, Text = " Product Review Edition" };
-                    frm.id = CurrentRow["id"].ToString();
-                    frm.date_created = CurrentRow["date_created"].ToString();
-                    frm.date_created_gmt = CurrentRow["date_created_gmt"].ToString();
-                    frm.product_id = CurrentRow["product_id"].ToString();
-                    frm.status = CurrentRow["status"].ToString();
-                    frm.reviewer = CurrentRow["reviewer"].ToString();
-                    frm.reviewer_email = CurrentRow["reviewer_email"].ToString();
-                    frm.review = CurrentRow["review"].ToString();
-                    frm.rating = CurrentRow["rating"].ToString();
-                    frm.verified = CurrentRow["verified"].ToString();
-                    frm.reviewer_avatar_urls = CurrentRow["reviewer_avatar_urls"].ToString();
+                    frmProductReview frm = new frmProductReview() { S1 = btnEdit.Text, Text = " Product Review Edition" };
+                    frm.Id = CurrentRow["id"].ToString();
+                    frm.Date_created = CurrentRow["date_created"].ToString();
+                    frm.Date_created_gmt = CurrentRow["date_created_gmt"].ToString();
+                    frm.Product_id = CurrentRow["product_id"].ToString();
+                    frm.Status = CurrentRow["status"].ToString();
+                    frm.Reviewer = CurrentRow["reviewer"].ToString();
+                    frm.Reviewer_email = CurrentRow["reviewer_email"].ToString();
+                    frm.Review = CurrentRow["review"].ToString();
+                    frm.Rating = CurrentRow["rating"].ToString();
+                    frm.Verified = CurrentRow["verified"].ToString();
+                    frm.Reviewer_avatar_urls = CurrentRow["reviewer_avatar_urls"].ToString();
                     frm.A48 = CurrentRow["48"].ToString();
                     frm.A96 = CurrentRow["96"].ToString();
                     frm._links = CurrentRow["_links"].ToString();
-                    frm.collection = CurrentRow["collection"].ToString();
-                    frm.up = CurrentRow["up"].ToString();
+                    frm.Collection = CurrentRow["collection"].ToString();
+                    frm.Up = CurrentRow["up"].ToString();
                     var P = ProjectFunctions.GetPositionInForm(this);
                     frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
                     frm.ShowDialog(Parent);
@@ -831,7 +831,7 @@ namespace WindowsFormsApplication1
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
 
-                    frmAPICustomers frm = new frmAPICustomers() { s1 = btnEdit.Text, Text = " Customer Edition" };
+                    frmAPICustomers frm = new frmAPICustomers() { S1 = btnEdit.Text, Text = " Customer Edition" };
                     frm.txtaddress_1.Text = CurrentRow["address_1"].ToString();
                     frm.txtaddress_2.Text = CurrentRow["address_2"].ToString();
                     

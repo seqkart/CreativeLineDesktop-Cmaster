@@ -263,7 +263,7 @@ namespace WindowsFormsApplication1.TimeOffice
                 {
                     if (txtEmpCode.Text.Length == 0)
                     {
-                        strQry = strQry + "select Empcode as Code,Empname as Description,EmpImage from EmpMst  order by Empname";
+                        strQry += "select Empcode as Code,Empname as Description,EmpImage from EmpMst  order by Empname";
                         ds = ProjectFunctions.GetDataSet(strQry);
                         HelpGrid.DataSource = ds.Tables[0];
                         HelpGridView.BestFitColumns();
@@ -288,7 +288,7 @@ namespace WindowsFormsApplication1.TimeOffice
                         else
                         {
                             var strQry1 = string.Empty;
-                            strQry1 = strQry1 + "select empcode as Code,empname as Description,EmpImage from EmpMst  order by Empname";
+                            strQry1 += "select empcode as Code,empname as Description,EmpImage from EmpMst  order by Empname";
                             var ds1 = ProjectFunctions.GetDataSet(strQry1);
                             HelpGrid.DataSource = ds1.Tables[0];
                             HelpGridView.BestFitColumns();

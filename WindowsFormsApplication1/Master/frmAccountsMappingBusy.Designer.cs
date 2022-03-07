@@ -111,7 +111,7 @@ namespace WindowsFormsApplication1.Master
             this.btnclose.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
             this.btnclose.Size = new System.Drawing.Size(53, 28);
             this.btnclose.Text = "Quit";
-            this.btnclose.Click += new System.EventHandler(this.Btnclose_Click);
+            this.btnclose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnImport
             // 

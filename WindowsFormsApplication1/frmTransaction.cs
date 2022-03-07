@@ -717,7 +717,7 @@ namespace WindowsFormsApplication1
                 if (GlobalVariables.ProgCode == "PROG89")
                 {
                     DataRow CurrentRow = InvoiceGridView.GetDataRow(InvoiceGridView.FocusedRowHandle);
-                    Transaction.frmIndentPassing frm = new Transaction.frmIndentPassing()
+                    Transaction.FrmIndentPassing frm = new Transaction.FrmIndentPassing()
                     {
                         Text = "Indent Editing",
                         IndentNo = CurrentRow["IndentNo"].ToString(),

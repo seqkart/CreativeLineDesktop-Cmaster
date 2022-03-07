@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Production
 {
-    public partial class frmYarnTypeMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmYarnTypeMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string YarnTypeCode { get; set; }
-        public frmYarnTypeMst()
+        public FrmYarnTypeMst()
         {
             InitializeComponent();
         }

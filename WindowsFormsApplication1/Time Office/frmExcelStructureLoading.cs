@@ -8,10 +8,10 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 namespace WindowsFormsApplication1.TimeOffice
 {
-    public partial class frmExcelStructureLoading : DevExpress.XtraEditors.XtraForm
+    public partial class FrmExcelStructureLoading : DevExpress.XtraEditors.XtraForm
     {
         private DataTable dt = new DataTable();
-        public frmExcelStructureLoading()
+        public FrmExcelStructureLoading()
         {
             InitializeComponent();
             dt.Columns.Add("EmpPartyCode", typeof(string));
@@ -54,7 +54,7 @@ namespace WindowsFormsApplication1.TimeOffice
             {
                 var strsql = string.Empty;
                 var ds = new DataSet();
-                strsql = strsql + ("select isnull(max(Cast(EmpCode as int)),00000) from EmpMst");
+                strsql += ("select isnull(max(Cast(EmpCode as int)),00000) from EmpMst");
                 ds = ProjectFunctions.GetDataSet(strsql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {

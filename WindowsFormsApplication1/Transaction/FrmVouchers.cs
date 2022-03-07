@@ -408,7 +408,7 @@ namespace WindowsFormsApplication1.Transaction
             Decimal VoucherAmount = 0;
             foreach (DataRow dr in dt.Rows)
             {
-                VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Amount"]);
+                VoucherAmount += Convert.ToDecimal(dr["Amount"]);
             }
 
 
@@ -498,7 +498,7 @@ namespace WindowsFormsApplication1.Transaction
             Decimal VoucherAmount = 0;
             foreach (DataRow dr in dt.Rows)
             {
-                VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Amount"]);
+                VoucherAmount += Convert.ToDecimal(dr["Amount"]);
             }
 
             using (var con = new SqlConnection(ProjectFunctions.GetConnection()))

@@ -3,11 +3,11 @@ using System;
 using System.Data;
 namespace WindowsFormsApplication1.Transaction
 {
-    public partial class frmIndentPassing : DevExpress.XtraEditors.XtraForm
+    public partial class FrmIndentPassing : DevExpress.XtraEditors.XtraForm
     {
         public string IndentNo { get; set; }
         public DateTime IndentDate { get; set; }
-        public frmIndentPassing()
+        public FrmIndentPassing()
         {
             InitializeComponent();
         }

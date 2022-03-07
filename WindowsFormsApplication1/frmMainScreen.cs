@@ -144,19 +144,19 @@ namespace WindowsFormsApplication1
                     PROG233.BringToFront();
                     break;
                 case "PROG200":
-                    var PROG200 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG200 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG200);
                     PROG200.Show();
                     PROG200.BringToFront();
                     break;
                 case "PROG201":
-                    var PROG201 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG201 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG201);
                     PROG201.Show();
                     PROG201.BringToFront();
                     break;
                 case "PROG1":
-                    var PROG1 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG1 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG1);
                     PROG1.Show();
                     PROG1.BringToFront();
@@ -168,13 +168,13 @@ namespace WindowsFormsApplication1
                     PROG2.BringToFront();
                     break;
                 case "PROG3":
-                    var PROG3 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG3 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG3);
                     PROG3.Show();
                     PROG3.BringToFront();
                     break;
                 case "PROG4":
-                    var PROG4 = new frmUserFinancialYearAddition() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG4 = new FrmUserFinancialYearAddition() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG4);
                     PROG4.Show();
                     PROG4.BringToFront();
@@ -186,7 +186,7 @@ namespace WindowsFormsApplication1
                     PROG5.BringToFront();
                     break;
                 case "PROG6":
-                    var PROG6 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG6 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     _WorkAreaPanel.Controls.Add(PROG6);
                     PROG6.Show();
                     PROG6.BringToFront();
@@ -200,42 +200,42 @@ namespace WindowsFormsApplication1
                     PROG7.BringToFront();
                     break;
                 case "PROG8":
-                    var PROG8 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG8 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG8";
                     _WorkAreaPanel.Controls.Add(PROG8);
                     PROG8.Show();
                     PROG8.BringToFront();
                     break;
                 case "PROG9":
-                    var PROG9 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG9 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG9";
                     _WorkAreaPanel.Controls.Add(PROG9);
                     PROG9.Show();
                     PROG9.BringToFront();
                     break;
                 case "PROG10":
-                    var PROG10 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG10 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG10";
                     _WorkAreaPanel.Controls.Add(PROG10);
                     PROG10.Show();
                     PROG10.BringToFront();
                     break;
                 case "PROG11":
-                    var PROG11 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG11 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG11";
                     _WorkAreaPanel.Controls.Add(PROG11);
                     PROG11.Show();
                     PROG11.BringToFront();
                     break;
                 case "PROG12":
-                    var PROG12 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG12 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG12";
                     _WorkAreaPanel.Controls.Add(PROG12);
                     PROG12.Show();
                     PROG12.BringToFront();
                     break;
                 case "PROG13":
-                    var PROG13 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG13 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG13";
                     _WorkAreaPanel.Controls.Add(PROG13);
                     PROG13.Show();
@@ -243,7 +243,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG14":
-                    var PROG14 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG14 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG14";
                     _WorkAreaPanel.Controls.Add(PROG14);
                     PROG14.Show();
@@ -251,7 +251,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG15":
-                    var PROG15 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG15 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG15";
                     _WorkAreaPanel.Controls.Add(PROG15);
                     PROG15.Show();
@@ -260,7 +260,7 @@ namespace WindowsFormsApplication1
 
 
                 case "PROG16":
-                    var PROG16 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG16 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG16";
                     _WorkAreaPanel.Controls.Add(PROG16);
                     PROG16.Show();
@@ -269,7 +269,7 @@ namespace WindowsFormsApplication1
 
 
                 case "PROG17":
-                    var PROG17 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG17 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG17";
                     _WorkAreaPanel.Controls.Add(PROG17);
                     PROG17.Show();
@@ -277,7 +277,7 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG18":
-                    var PROG18 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG18 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG18";
                     _WorkAreaPanel.Controls.Add(PROG18);
                     PROG18.Show();
@@ -286,14 +286,14 @@ namespace WindowsFormsApplication1
 
 
                 case "PROG19":
-                    var PROG19 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG19 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG19";
                     _WorkAreaPanel.Controls.Add(PROG19);
                     PROG19.Show();
                     PROG19.BringToFront();
                     break;
                 case "PROG20":
-                    var PROG20 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG20 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG20";
                     _WorkAreaPanel.Controls.Add(PROG20);
                     PROG20.Show();
@@ -361,14 +361,14 @@ namespace WindowsFormsApplication1
                     PROG28.BringToFront();
                     break;
                 case "PROG29":
-                    var PROG29 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG29 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG29";
                     _WorkAreaPanel.Controls.Add(PROG29);
                     PROG29.Show();
                     PROG29.BringToFront();
                     break;
                 case "PROG30":
-                    var PROG30 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG30 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG30";
                     _WorkAreaPanel.Controls.Add(PROG30);
                     PROG30.Show();
@@ -396,14 +396,14 @@ namespace WindowsFormsApplication1
                     PROG33.BringToFront();
                     break;
                 case "PROG34":
-                    var PROG34 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG34 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG34";
                     _WorkAreaPanel.Controls.Add(PROG34);
                     PROG34.Show();
                     PROG34.BringToFront();
                     break;
                 case "PROG35":
-                    var PROG35 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG35 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG35";
                     _WorkAreaPanel.Controls.Add(PROG35);
                     PROG35.Show();
@@ -559,14 +559,14 @@ namespace WindowsFormsApplication1
                     PROG37.BringToFront();
                     break;
                 case "PROG66":
-                    var PROG66 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG66 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG66";
                     _WorkAreaPanel.Controls.Add(PROG66);
                     PROG66.Show();
                     PROG66.BringToFront();
                     break;
                 case "PROG67":
-                    var PROG67 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG67 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG67";
                     _WorkAreaPanel.Controls.Add(PROG67);
                     PROG67.Show();
@@ -594,7 +594,7 @@ namespace WindowsFormsApplication1
                     PROG72.BringToFront();
                     break;
                 case "PROG69":
-                    var PROG69 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG69 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG69";
                     _WorkAreaPanel.Controls.Add(PROG69);
                     PROG69.Show();
@@ -721,14 +721,14 @@ namespace WindowsFormsApplication1
                     break;
 
                 case "PROG106":
-                    var PROG106 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG106 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG106";
                     _WorkAreaPanel.Controls.Add(PROG106);
                     PROG106.Show();
                     PROG106.BringToFront();
                     break;
                 case "PROG107":
-                    var PROG107 = new frmMaster() { Dock = DockStyle.Fill, TopLevel = false };
+                    var PROG107 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false };
                     GlobalVariables.ProgCode = "PROG107";
                     _WorkAreaPanel.Controls.Add(PROG107);
                     PROG107.Show();

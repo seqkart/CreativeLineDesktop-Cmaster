@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1.Administration
 {
-    public partial class frmAPITaxRates : DevExpress.XtraEditors.XtraForm
+    public partial class FrmAPITaxRates : DevExpress.XtraEditors.XtraForm
     {
-        public String s1 { get; set; }
-        public frmAPITaxRates()
+        public String S1 { get; set; }
+        public FrmAPITaxRates()
         {
             InitializeComponent();
         }
@@ -62,27 +62,27 @@ namespace WindowsFormsApplication1.Administration
             }
         }
 
-        private void frmAPITaxRates_Load(object sender, EventArgs e)
+        private void FrmAPITaxRates_Load(object sender, EventArgs e)
         {
             txtid.Enabled = false;
             ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
             ProjectFunctions.TextBoxVisualize(this);
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 txtname.Focus();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 txtname.Focus();
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (txtname.Text.Trim().Length == 0)
             {
@@ -97,19 +97,19 @@ namespace WindowsFormsApplication1.Administration
                 return;
             }
             
-            if (s1 == "&Add")
+            if (S1 == "&Add")
             {
                 AddTaxRateAsync();
                 this.Close();
             }
-            if (s1 == "Edit")
+            if (S1 == "Edit")
             {
                 EditTaxRateAsync();
                 this.Close();
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             DeleteTaxRateAsync();
             this.Close();

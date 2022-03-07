@@ -58,7 +58,7 @@ namespace WindowsFormsApplication1.Master
             FillGrid();
         }
 
-        private void Btnclose_Click(object sender, EventArgs e)
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             this.Close();
         }

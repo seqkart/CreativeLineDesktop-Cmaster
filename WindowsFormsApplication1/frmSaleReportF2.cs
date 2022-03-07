@@ -4,12 +4,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication1
 {
-    public partial class frmSaleReportF2 : DevExpress.XtraEditors.XtraForm
+    public partial class FrmSaleReportF2 : DevExpress.XtraEditors.XtraForm
     {
         public string WorkingTag { get; set; }
         DataTable dt = new DataTable();
         string HOTAG = string.Empty;
-        public frmSaleReportF2()
+        public FrmSaleReportF2()
         {
             InitializeComponent();
             dt.Columns.Add("Name", typeof(string));

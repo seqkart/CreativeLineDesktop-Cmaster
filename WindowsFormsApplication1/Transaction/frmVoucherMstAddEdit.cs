@@ -237,8 +237,8 @@ namespace WindowsFormsApplication1.Transaction
             decimal CreditAmt = 0;
             foreach (DataRow dr in dt.Rows)
             {
-                DebitAmt = DebitAmt + Convert.ToDecimal(dr["Debit"]);
-                CreditAmt = CreditAmt + Convert.ToDecimal(dr["Credit"]);
+                DebitAmt += Convert.ToDecimal(dr["Debit"]);
+                CreditAmt += Convert.ToDecimal(dr["Credit"]);
             }
             if (DebitAmt == CreditAmt)
             {

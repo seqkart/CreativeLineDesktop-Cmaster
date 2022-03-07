@@ -331,7 +331,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 var strsql = string.Empty;
                 var ds = new DataSet();
-                strsql = strsql + "select isnull(max(Cast(VumNo as int)),0) from VuMst Where  VumType='JL'";
+                strsql += "select isnull(max(Cast(VumNo as int)),0) from VuMst Where  VumType='JL'";
                 ds = ProjectFunctions.GetDataSet(strsql);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -352,7 +352,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 if (Convert.ToDecimal(dr["Debit"]) > 0)
                 {
-                    VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Debit"]);
+                    VoucherAmount += Convert.ToDecimal(dr["Debit"]);
                 }
 
             }
@@ -419,7 +419,7 @@ namespace WindowsFormsApplication1.Transaction
             {
                 if (Convert.ToDecimal(dr["Debit"]) > 0)
                 {
-                    VoucherAmount = VoucherAmount + Convert.ToDecimal(dr["Debit"]);
+                    VoucherAmount += Convert.ToDecimal(dr["Debit"]);
 
                 }
 
@@ -520,8 +520,8 @@ namespace WindowsFormsApplication1.Transaction
             decimal CreditAmt = 0;
             foreach (DataRow dr in dt.Rows)
             {
-                DebitAmt = DebitAmt + Convert.ToDecimal(dr["Debit"]);
-                CreditAmt = CreditAmt + Convert.ToDecimal(dr["Credit"]);
+                DebitAmt += Convert.ToDecimal(dr["Debit"]);
+                CreditAmt += Convert.ToDecimal(dr["Credit"]);
             }
             if (DebitAmt == CreditAmt)
             {

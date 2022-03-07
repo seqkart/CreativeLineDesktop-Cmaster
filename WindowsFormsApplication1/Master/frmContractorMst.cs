@@ -4,11 +4,11 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApplication1.Master
 {
-    public partial class frmContractorMst : DevExpress.XtraEditors.XtraForm
+    public partial class FrmContractorMst : DevExpress.XtraEditors.XtraForm
     {
         public string S1 { get; set; }
         public string CNTSYSID { get; set; }
-        public frmContractorMst()
+        public FrmContractorMst()
         {
             InitializeComponent();
         }
