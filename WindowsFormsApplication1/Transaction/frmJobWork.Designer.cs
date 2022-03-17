@@ -197,10 +197,10 @@
             this.groupControl1.Controls.Add(this.txtRemarks);
             this.groupControl1.Controls.Add(this.txtArtID);
             this.groupControl1.GroupStyle = DevExpress.Utils.GroupStyle.Light;
-            this.groupControl1.Location = new System.Drawing.Point(20, 0);
+            this.groupControl1.Location = new System.Drawing.Point(12, 32);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1610, 193);
+            this.groupControl1.Size = new System.Drawing.Size(1525, 193);
             this.groupControl1.TabIndex = 544;
             this.groupControl1.Text = "ORDER DETAILS";
             // 
@@ -262,7 +262,7 @@
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(62, 74);
+            this.labelControl3.Location = new System.Drawing.Point(59, 74);
             this.labelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(37, 16);
@@ -280,7 +280,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(30, 45);
+            this.labelControl1.Location = new System.Drawing.Point(27, 45);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(69, 16);
@@ -595,7 +595,7 @@
             this.tabPane1.Controls.Add(this.tabNavigationPage4);
             this.tabPane1.Controls.Add(this.tabNavigationPage5);
             this.tabPane1.Controls.Add(this.tabNavigationPage6);
-            this.tabPane1.Location = new System.Drawing.Point(20, 206);
+            this.tabPane1.Location = new System.Drawing.Point(12, 253);
             this.tabPane1.Name = "tabPane1";
             this.tabPane1.PageProperties.ShowMode = DevExpress.XtraBars.Navigation.ItemShowMode.ImageAndText;
             this.tabPane1.Pages.AddRange(new DevExpress.XtraBars.Navigation.NavigationPageBase[] {
@@ -605,9 +605,9 @@
             this.tabNavigationPage4,
             this.tabNavigationPage5,
             this.tabNavigationPage6});
-            this.tabPane1.RegularSize = new System.Drawing.Size(1176, 458);
+            this.tabPane1.RegularSize = new System.Drawing.Size(1245, 628);
             this.tabPane1.SelectedPage = this.tabNavigationPage1;
-            this.tabPane1.Size = new System.Drawing.Size(1176, 458);
+            this.tabPane1.Size = new System.Drawing.Size(1245, 628);
             this.tabPane1.TabIndex = 545;
             this.tabPane1.Text = "tabPane1";
             // 
@@ -617,7 +617,7 @@
             this.tabNavigationPage1.Controls.Add(this.HelpGrid);
             this.tabNavigationPage1.Controls.Add(this.MeasurementGird);
             this.tabNavigationPage1.Name = "tabNavigationPage1";
-            this.tabNavigationPage1.Size = new System.Drawing.Size(1176, 417);
+            this.tabNavigationPage1.Size = new System.Drawing.Size(1176, 412);
             // 
             // MeasurementGird
             // 
@@ -625,7 +625,7 @@
             this.MeasurementGird.Location = new System.Drawing.Point(0, 0);
             this.MeasurementGird.MainView = this.MeasurementGirdView;
             this.MeasurementGird.Name = "MeasurementGird";
-            this.MeasurementGird.Size = new System.Drawing.Size(1176, 417);
+            this.MeasurementGird.Size = new System.Drawing.Size(1176, 412);
             this.MeasurementGird.TabIndex = 0;
             this.MeasurementGird.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.MeasurementGirdView});
@@ -663,7 +663,7 @@
             this.tabNavigationPage3.Caption = "ORDER";
             this.tabNavigationPage3.Controls.Add(this.OrderGrid);
             this.tabNavigationPage3.Name = "tabNavigationPage3";
-            this.tabNavigationPage3.Size = new System.Drawing.Size(1176, 417);
+            this.tabNavigationPage3.Size = new System.Drawing.Size(1245, 582);
             // 
             // OrderGrid
             // 
@@ -673,7 +673,7 @@
             this.OrderGrid.MainView = this.OrderGridView;
             this.OrderGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.OrderGrid.Name = "OrderGrid";
-            this.OrderGrid.Size = new System.Drawing.Size(1176, 417);
+            this.OrderGrid.Size = new System.Drawing.Size(1245, 582);
             this.OrderGrid.TabIndex = 683;
             this.OrderGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.OrderGridView});
@@ -742,7 +742,7 @@
             this.tabNavigationPage5.Caption = "Colors";
             this.tabNavigationPage5.Controls.Add(this.ColorGrid);
             this.tabNavigationPage5.Name = "tabNavigationPage5";
-            this.tabNavigationPage5.Size = new System.Drawing.Size(1176, 417);
+            this.tabNavigationPage5.Size = new System.Drawing.Size(1176, 412);
             // 
             // ColorGrid
             // 
@@ -750,7 +750,7 @@
             this.ColorGrid.Location = new System.Drawing.Point(0, 0);
             this.ColorGrid.MainView = this.ColorGridView;
             this.ColorGrid.Name = "ColorGrid";
-            this.ColorGrid.Size = new System.Drawing.Size(1176, 417);
+            this.ColorGrid.Size = new System.Drawing.Size(1176, 412);
             this.ColorGrid.TabIndex = 1;
             this.ColorGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.ColorGridView});
@@ -792,7 +792,7 @@
             // 
             this.panelControl1.Controls.Add(this.HelpGridControl);
             this.panelControl1.Controls.Add(this.txtSearchBox);
-            this.panelControl1.Location = new System.Drawing.Point(513, 201);
+            this.panelControl1.Location = new System.Drawing.Point(144, 233);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(762, 385);
@@ -842,18 +842,18 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(1276, 103);
+            this.pictureEdit1.Location = new System.Drawing.Point(1297, 252);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Size = new System.Drawing.Size(269, 262);
+            this.pictureEdit1.Size = new System.Drawing.Size(227, 280);
             this.pictureEdit1.TabIndex = 546;
             // 
             // pictureEdit2
             // 
-            this.pictureEdit2.Location = new System.Drawing.Point(1276, 386);
+            this.pictureEdit2.Location = new System.Drawing.Point(1297, 582);
             this.pictureEdit2.Name = "pictureEdit2";
             this.pictureEdit2.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit2.Size = new System.Drawing.Size(269, 353);
+            this.pictureEdit2.Size = new System.Drawing.Size(227, 280);
             this.pictureEdit2.TabIndex = 546;
             // 
             // Menu_ToolStrip

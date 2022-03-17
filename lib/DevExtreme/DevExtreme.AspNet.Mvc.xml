@@ -4373,21 +4373,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RowDragging(System.Action{DevExtreme.AspNet.Mvc.Builders.DataGridRowDraggingBuilder})">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RowTemplate(System.String)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RowTemplate(DevExtreme.AspNet.Mvc.RazorBlock)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RowTemplate(DevExtreme.AspNet.Mvc.TemplateName)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RowTemplate(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RowTemplate(System.Action)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.RtlEnabled(System.Boolean)">
             <summary></summary>
         </member>

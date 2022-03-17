@@ -399,7 +399,11 @@ namespace WindowsFormsApplication1.Administration
 
                 }
             }
+#pragma warning disable IDE0059 // Unnecessary assignment of a value
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // Variable is declared but never used
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
             {
                 //ProjectFunctions.SpeakError(ex.Message);
             }
@@ -430,7 +434,11 @@ namespace WindowsFormsApplication1.Administration
 
                 }
             }
+#pragma warning disable IDE0059 // Unnecessary assignment of a value
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // Variable is declared but never used
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
             {
                 //ProjectFunctions.SpeakError(ex.Message);
             }
@@ -459,7 +467,11 @@ namespace WindowsFormsApplication1.Administration
 
                 }
             }
+#pragma warning disable IDE0059 // Unnecessary assignment of a value
+#pragma warning disable CS0168 // Variable is declared but never used
             catch (Exception ex)
+#pragma warning restore CS0168 // Variable is declared but never used
+#pragma warning restore IDE0059 // Unnecessary assignment of a value
             {
                //ProjectFunctions.SpeakError(ex.Message);
             }

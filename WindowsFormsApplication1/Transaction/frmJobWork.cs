@@ -31,60 +31,67 @@ namespace WindowsFormsApplication1.Transaction
 
         private void LoadProductionOrderColorAndSize()
         {
-            DataTable dsProductionOrder = new DataTable();
-            dsProductionOrder.Columns.Add("COLSYSID", typeof(Int64));
-            dsProductionOrder.Columns.Add("COLNAME", typeof(string));
-            OrderGridView.Columns.Clear();
-
-
-
-            DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderColorAndSize '" + txtArtID.Text + "'");
-            if (ds.Tables[0].Rows.Count > 0)
+            try
             {
+                DataTable dsProductionOrder = new DataTable();
+                dsProductionOrder.Columns.Add("COLSYSID", typeof(Int64));
+                dsProductionOrder.Columns.Add("COLNAME", typeof(string));
+                OrderGridView.Columns.Clear();
 
-                foreach (DataRow dr in ds.Tables[0].Rows)
+
+
+                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderColorAndSize '" + txtArtID.Text + "'");
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    dsProductionOrder.Columns.Add(dr["SZDESC"].ToString().Trim());
-                }
-                int Count = 0;
 
-                OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
-                OrderGridView.Columns[Count].OptionsColumn.AllowEdit = false;
-                OrderGridView.Columns[Count].Visible = true;
-                OrderGridView.Columns[Count].Caption = "COLSYSID";
-                OrderGridView.Columns[Count].FieldName = "COLSYSID";
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        dsProductionOrder.Columns.Add(dr["SZDESC"].ToString().Trim());
+                    }
+                    int Count = 0;
 
-                Count++;
-
-                OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
-                OrderGridView.Columns[Count].OptionsColumn.AllowEdit = false;
-                OrderGridView.Columns[Count].Visible = true;
-                OrderGridView.Columns[Count].Caption = "COLNAME";
-                OrderGridView.Columns[Count].FieldName = "COLNAME";
-
-
-
-                Count++;
-
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
                     OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
-                    OrderGridView.Columns[Count].OptionsColumn.AllowEdit = true;
+                    OrderGridView.Columns[Count].OptionsColumn.AllowEdit = false;
                     OrderGridView.Columns[Count].Visible = true;
-                    OrderGridView.Columns[Count].Caption = dr["SZDESC"].ToString();
-                    OrderGridView.Columns[Count].FieldName = dr["SZSYSID"].ToString();
+                    OrderGridView.Columns[Count].Caption = "COLSYSID";
+                    OrderGridView.Columns[Count].FieldName = "COLSYSID";
+
                     Count++;
+
+                    OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
+                    OrderGridView.Columns[Count].OptionsColumn.AllowEdit = false;
+                    OrderGridView.Columns[Count].Visible = true;
+                    OrderGridView.Columns[Count].Caption = "COLNAME";
+                    OrderGridView.Columns[Count].FieldName = "COLNAME";
+
+
+
+                    Count++;
+
+                    foreach (DataRow dr in ds.Tables[0].Rows)
+                    {
+                        OrderGridView.Columns.Add(new DevExpress.XtraGrid.Columns.GridColumn());
+                        OrderGridView.Columns[Count].OptionsColumn.AllowEdit = true;
+                        OrderGridView.Columns[Count].Visible = true;
+                        OrderGridView.Columns[Count].Caption = dr["SZDESC"].ToString();
+                        OrderGridView.Columns[Count].FieldName = dr["SZSYSID"].ToString();
+                        Count++;
+                    }
+                    if (dsProductionOrder.Rows.Count > 0)
+                    {
+                        OrderGrid.DataSource = dsProductionOrder;
+                        OrderGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        OrderGrid.DataSource = null;
+                        OrderGridView.BestFitColumns();
+                    }
                 }
-                if (dsProductionOrder.Rows.Count > 0)
-                {
-                    OrderGrid.DataSource = dsProductionOrder;
-                    OrderGridView.BestFitColumns();
-                }
-                else
-                {
-                    OrderGrid.DataSource = null;
-                    OrderGridView.BestFitColumns();
-                }
+            }
+            catch(Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -101,49 +108,56 @@ namespace WindowsFormsApplication1.Transaction
 
         private void FrmJobWork_Load(object sender, EventArgs e)
         {
-            panelControl1.Visible = false;
-            ProjectFunctions.TextBoxVisualize(groupControl1);
-            ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
-           
-            // LoadProductionOrderColorAndSize();
-            txtSeason.Properties.Items.Clear();
-            DataSet dsSeason = ProjectFunctions.GetDataSet("Select SeasonName from SeasonMst");
-            if (dsSeason.Tables[0].Rows.Count > 0)
+            try
             {
-                foreach (DataRow dr in dsSeason.Tables[0].Rows)
-                {
-                    txtSeason.Properties.Items.Add(dr["SeasonName"].ToString());
-                }
-            }
+                panelControl1.Visible = false;
+                ProjectFunctions.TextBoxVisualize(groupControl1);
+                ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
-            if (S1 == "&Add")
-            {
-                txtOrderDate.EditValue = DateTime.Now;
-                txtOrderDate.Select();
-            }
-            if (S1 == "Edit")
-            {
-                DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderMstFEdit '" + OrderNo + "','" + OrderDate.Date.ToString("yyyy-MM-dd") + "'");
-                if(ds.Tables[0].Rows.Count>0)
+                // LoadProductionOrderColorAndSize();
+                txtSeason.Properties.Items.Clear();
+                DataSet dsSeason = ProjectFunctions.GetDataSet("Select SeasonName from SeasonMst");
+                if (dsSeason.Tables[0].Rows.Count > 0)
                 {
-                    txtOrderNo.Text = ds.Tables[0].Rows[0]["OrderNo"].ToString();
-                    txtOrderDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["OrderDate"]);
-                    txtPartyCode.Text = ds.Tables[0].Rows[0]["PartyCode"].ToString();
-                    txtPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
-                    txtArtID.Text = ds.Tables[0].Rows[0]["ArtID"].ToString();
-                    txtArtNo.Text = ds.Tables[0].Rows[0]["ARTNO"].ToString();
-                    txtArtDesc.Text = ds.Tables[0].Rows[0]["ARTALIAS"].ToString();
-                    txtBrandCode.Text = ds.Tables[0].Rows[0]["BrandCode"].ToString();
-                    txtBrandName.Text = ds.Tables[0].Rows[0]["BRNAME"].ToString();
-                    txtSeason.Text = ds.Tables[0].Rows[0]["Season"].ToString();
-                    txtSampleSize.Text = ds.Tables[0].Rows[0]["SampleSize"].ToString();
-                    txtSampleWeight.Text = ds.Tables[0].Rows[0]["SampleWeight"].ToString();
-                    txtSampleType.Text = ds.Tables[0].Rows[0]["SampleType"].ToString();
-                    txtKnitCut.Text = ds.Tables[0].Rows[0]["KnitCut"].ToString();
-                    txtFitType.Text = ds.Tables[0].Rows[0]["FitType"].ToString();
-                    txtRemarks.Text = ds.Tables[0].Rows[0]["Remarks"].ToString();
-                    txtPartyCode.Focus();
+                    foreach (DataRow dr in dsSeason.Tables[0].Rows)
+                    {
+                        txtSeason.Properties.Items.Add(dr["SeasonName"].ToString());
+                    }
                 }
+
+                if (S1 == "&Add")
+                {
+                    txtOrderDate.EditValue = DateTime.Now;
+                    txtOrderDate.Select();
+                }
+                if (S1 == "Edit")
+                {
+                    DataSet ds = ProjectFunctions.GetDataSet("sp_LoadProductionOrderMstFEdit '" + OrderNo + "','" + OrderDate.Date.ToString("yyyy-MM-dd") + "'");
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        txtOrderNo.Text = ds.Tables[0].Rows[0]["OrderNo"].ToString();
+                        txtOrderDate.EditValue = Convert.ToDateTime(ds.Tables[0].Rows[0]["OrderDate"]);
+                        txtPartyCode.Text = ds.Tables[0].Rows[0]["PartyCode"].ToString();
+                        txtPartyName.Text = ds.Tables[0].Rows[0]["AccName"].ToString();
+                        txtArtID.Text = ds.Tables[0].Rows[0]["ArtID"].ToString();
+                        txtArtNo.Text = ds.Tables[0].Rows[0]["ARTNO"].ToString();
+                        txtArtDesc.Text = ds.Tables[0].Rows[0]["ARTALIAS"].ToString();
+                        txtBrandCode.Text = ds.Tables[0].Rows[0]["BrandCode"].ToString();
+                        txtBrandName.Text = ds.Tables[0].Rows[0]["BRNAME"].ToString();
+                        txtSeason.Text = ds.Tables[0].Rows[0]["Season"].ToString();
+                        txtSampleSize.Text = ds.Tables[0].Rows[0]["SampleSize"].ToString();
+                        txtSampleWeight.Text = ds.Tables[0].Rows[0]["SampleWeight"].ToString();
+                        txtSampleType.Text = ds.Tables[0].Rows[0]["SampleType"].ToString();
+                        txtKnitCut.Text = ds.Tables[0].Rows[0]["KnitCut"].ToString();
+                        txtFitType.Text = ds.Tables[0].Rows[0]["FitType"].ToString();
+                        txtRemarks.Text = ds.Tables[0].Rows[0]["Remarks"].ToString();
+                        txtPartyCode.Focus();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -205,103 +219,110 @@ namespace WindowsFormsApplication1.Transaction
 
         private void HelpGrid_DoubleClick(object sender, EventArgs e)
         {
-            DataRow currentrow = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
-            if (HelpGrid.Text == "txtArtNo")
+            try
             {
-                txtArtNo.Text = currentrow["ARTNO"].ToString();
-                txtArtID.Text = currentrow["ARTSYSID"].ToString();
-                txtArtDesc.Text = currentrow["GrpSubDesc"].ToString();
-                LoadProductionOrderColorAndSize();
-                HelpGrid.Visible = false;
-                txtSampleSize.Focus();
-            }
-            if (HelpGrid.Text == "txtBrandCode")
-            {
-                txtBrandCode.Text = currentrow["BRSYSID"].ToString();
-                txtBrandName.Text = currentrow["BRNAME"].ToString();
-                HelpGrid.Visible = false;
-                txtSampleType.Focus();
-            }
-            if (HelpGrid.Text == "txtPartyCode")
-            {
-                txtPartyCode.Text = currentrow["AccCode"].ToString();
-                txtPartyName.Text = currentrow["AccName"].ToString();
-                HelpGrid.Visible = false;
-                txtSeason.Focus();
-            }
-            if (HelpGrid.Text == "COLOR")
-            {
-                DataTable dtColor = new DataTable();
-                dtColor.Columns.Add("COLSYSID", typeof(string));
-                dtColor.Columns.Add("COLNAME", typeof(string));
-                foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
+                DataRow currentrow = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
+                if (HelpGrid.Text == "txtArtNo")
                 {
-                    if (dr["Select"].ToString().ToUpper() == "TRUE")
+                    txtArtNo.Text = currentrow["ARTNO"].ToString();
+                    txtArtID.Text = currentrow["ARTSYSID"].ToString();
+                    txtArtDesc.Text = currentrow["GrpSubDesc"].ToString();
+                    LoadProductionOrderColorAndSize();
+                    HelpGrid.Visible = false;
+                    txtSampleSize.Focus();
+                }
+                if (HelpGrid.Text == "txtBrandCode")
+                {
+                    txtBrandCode.Text = currentrow["BRSYSID"].ToString();
+                    txtBrandName.Text = currentrow["BRNAME"].ToString();
+                    HelpGrid.Visible = false;
+                    txtSampleType.Focus();
+                }
+                if (HelpGrid.Text == "txtPartyCode")
+                {
+                    txtPartyCode.Text = currentrow["AccCode"].ToString();
+                    txtPartyName.Text = currentrow["AccName"].ToString();
+                    HelpGrid.Visible = false;
+                    txtSeason.Focus();
+                }
+                if (HelpGrid.Text == "COLOR")
+                {
+                    DataTable dtColor = new DataTable();
+                    dtColor.Columns.Add("COLSYSID", typeof(string));
+                    dtColor.Columns.Add("COLNAME", typeof(string));
+                    foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
                     {
-                        DataRow drNewRow = dtColor.NewRow();
-                        drNewRow["COLSYSID"] = dr["COLSYSID"].ToString();
-                        drNewRow["COLNAME"] = dr["COLNAME"].ToString();
-                        dtColor.Rows.Add(drNewRow);
+                        if (dr["Select"].ToString().ToUpper() == "TRUE")
+                        {
+                            DataRow drNewRow = dtColor.NewRow();
+                            drNewRow["COLSYSID"] = dr["COLSYSID"].ToString();
+                            drNewRow["COLNAME"] = dr["COLNAME"].ToString();
+                            dtColor.Rows.Add(drNewRow);
+                        }
                     }
-                }
 
-                if(dtColor.Rows.Count>0)
-                {
-                    ColorGrid.DataSource = dtColor;
-                    ColorGridView.BestFitColumns();
-                }
-                else
-                {
-                    ColorGrid.DataSource = null;
-                    ColorGridView.BestFitColumns();
-                }
-                HelpGrid.Visible = false;
-            }
-
-            if (HelpGrid.Text == "SIZE")
-            {
-                DataTable dtSize = new DataTable();
-                dtSize.Columns.Add("COMBO", typeof(string));
-
-                DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
-                col1.FieldName = "COMBO";
-                col1.Caption = "COMBO";
-                col1.Visible = true;
-                col1.OptionsColumn.AllowEdit = false;
-                SizeGridView.Columns.Add(col1);
-                foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
-                {
-                    if (dr["Select"].ToString().ToUpper() == "TRUE")
+                    if (dtColor.Rows.Count > 0)
                     {
-                        DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
-                        col2.FieldName = dr["SZSYSID"].ToString();
-                        col2.Caption = dr["SZDESC"].ToString();
-                        col2.Visible = true;
-                        col2.OptionsColumn.AllowEdit = true;
-                        SizeGridView.Columns.Add(col2);
-
-                        dtSize.Columns.Add(dr["SZSYSID"].ToString(), typeof(string));
+                        ColorGrid.DataSource = dtColor;
+                        ColorGridView.BestFitColumns();
                     }
-                }
-                
-                foreach(GridColumn col in ColorGridView.Columns)
-                {
-                    DataRow drNewRow = dtSize.NewRow();
-                    drNewRow["COMBO"] = col.FieldName.ToString();
-                    dtSize.Rows.Add(drNewRow);
+                    else
+                    {
+                        ColorGrid.DataSource = null;
+                        ColorGridView.BestFitColumns();
+                    }
+                    HelpGrid.Visible = false;
                 }
 
-                if (dtSize.Rows.Count > 0)
+                if (HelpGrid.Text == "SIZE")
                 {
-                    SizeGrid.DataSource = dtSize;
-                    SizeGridView.BestFitColumns();
+                    DataTable dtSize = new DataTable();
+                    dtSize.Columns.Add("COMBO", typeof(string));
+
+                    DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
+                    col1.FieldName = "COMBO";
+                    col1.Caption = "COMBO";
+                    col1.Visible = true;
+                    col1.OptionsColumn.AllowEdit = false;
+                    SizeGridView.Columns.Add(col1);
+                    foreach (DataRow dr in (HelpGrid.DataSource as DataTable).Rows)
+                    {
+                        if (dr["Select"].ToString().ToUpper() == "TRUE")
+                        {
+                            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
+                            col2.FieldName = dr["SZSYSID"].ToString();
+                            col2.Caption = dr["SZDESC"].ToString();
+                            col2.Visible = true;
+                            col2.OptionsColumn.AllowEdit = true;
+                            SizeGridView.Columns.Add(col2);
+
+                            dtSize.Columns.Add(dr["SZSYSID"].ToString(), typeof(string));
+                        }
+                    }
+
+                    foreach (GridColumn col in ColorGridView.Columns)
+                    {
+                        DataRow drNewRow = dtSize.NewRow();
+                        drNewRow["COMBO"] = col.FieldName.ToString();
+                        dtSize.Rows.Add(drNewRow);
+                    }
+
+                    if (dtSize.Rows.Count > 0)
+                    {
+                        SizeGrid.DataSource = dtSize;
+                        SizeGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        SizeGrid.DataSource = null;
+                        SizeGridView.BestFitColumns();
+                    }
+                    HelpGrid.Visible = false;
                 }
-                else
-                {
-                    SizeGrid.DataSource = null;
-                    SizeGridView.BestFitColumns();
-                }
-                HelpGrid.Visible = false;
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -353,137 +374,179 @@ namespace WindowsFormsApplication1.Transaction
         }
         private void PrepareActMstHelpGrid()
         {
-            HelpGridView.Columns.Clear();
-            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col1.FieldName = "AccName";
-            col1.Caption = "AccName";
-            col1.Visible = true;
-            col1.OptionsColumn.AllowEdit = false;
-            HelpGridView.Columns.Add(col1);
+            try
+            {
+                HelpGridView.Columns.Clear();
+                DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col1.FieldName = "AccName";
+                col1.Caption = "AccName";
+                col1.Visible = true;
+                col1.OptionsColumn.AllowEdit = false;
+                HelpGridView.Columns.Add(col1);
 
-            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col1.FieldName = "AccCode";
-            col1.Caption = "AccCode";
-            col1.Visible = true;
-            col1.OptionsColumn.AllowEdit = false;
-            HelpGridView.Columns.Add(col2);
+                DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col1.FieldName = "AccCode";
+                col1.Caption = "AccCode";
+                col1.Visible = true;
+                col1.OptionsColumn.AllowEdit = false;
+                HelpGridView.Columns.Add(col2);
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
 
         }
 
         private void PrepareColorMstHelpGrid()
         {
-            HelpGridView.Columns.Clear();
-            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col1.FieldName = "COLSYSID";
-            col1.Caption = "COLSYSID";
-            col1.Visible = true;
-            col1.OptionsColumn.AllowEdit = false;
-            HelpGridView.Columns.Add(col1);
+            try
+            {
+                HelpGridView.Columns.Clear();
+                DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col1.FieldName = "COLSYSID";
+                col1.Caption = "COLSYSID";
+                col1.Visible = true;
+                col1.OptionsColumn.AllowEdit = false;
+                HelpGridView.Columns.Add(col1);
 
-            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col2.FieldName = "COLNAME";
-            col2.Caption = "COLNAME";
-            col2.Visible = true;
-            col2.OptionsColumn.AllowEdit = false;
-            HelpGridView.Columns.Add(col2);
+                DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col2.FieldName = "COLNAME";
+                col2.Caption = "COLNAME";
+                col2.Visible = true;
+                col2.OptionsColumn.AllowEdit = false;
+                HelpGridView.Columns.Add(col2);
 
-            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col3.FieldName = "Select";
-            col3.Caption = "Select";
-            col3.Visible = true;
-            col3.OptionsColumn.AllowEdit = true;
-            HelpGridView.Columns.Add(col3);
+                DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col3.FieldName = "Select";
+                col3.Caption = "Select";
+                col3.Visible = true;
+                col3.OptionsColumn.AllowEdit = true;
+                HelpGridView.Columns.Add(col3);
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
 
         }
         private void BtnLoadColors_Click(object sender, EventArgs e)
         {
-            HelpGrid.Text = "COLOR";
-            PrepareColorMstHelpGrid();
-            DataSet dsColors = ProjectFunctions.GetDataSet("select COLSYSID,COLNAME from COLOURS order by COLNAME");
-            if(dsColors.Tables[0].Rows.Count>0)
+            try
             {
-                dsColors.Tables[0].Columns.Add("Select", typeof(bool));
-                foreach(DataRow dr in dsColors.Tables[0].Rows)
+                HelpGrid.Text = "COLOR";
+                PrepareColorMstHelpGrid();
+                DataSet dsColors = ProjectFunctions.GetDataSet("select COLSYSID,COLNAME from COLOURS order by COLNAME");
+                if (dsColors.Tables[0].Rows.Count > 0)
                 {
-                    dr["Select"] = false;
-                }
+                    dsColors.Tables[0].Columns.Add("Select", typeof(bool));
+                    foreach (DataRow dr in dsColors.Tables[0].Rows)
+                    {
+                        dr["Select"] = false;
+                    }
 
-                HelpGrid.DataSource = dsColors.Tables[0];
-                HelpGridView.BestFitColumns();
-                HelpGrid.Visible = true;
-                HelpGrid.Focus();
+                    HelpGrid.DataSource = dsColors.Tables[0];
+                    HelpGridView.BestFitColumns();
+                    HelpGrid.Visible = true;
+                    HelpGrid.Focus();
+                }
+                else
+                {
+                    ProjectFunctions.SpeakError("No Color To Load");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ProjectFunctions.SpeakError("No Color To Load");
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
         private void PrepareSizeMstHelpGrid()
         {
-            HelpGridView.Columns.Clear();
-            DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col1.FieldName = "SZSYSID";
-            col1.Caption = "SZSYSID";
-            col1.Visible = true;
-            col1.OptionsColumn.AllowEdit = false;
-            HelpGridView.Columns.Add(col1);
+            try
+            {
+                HelpGridView.Columns.Clear();
+                DevExpress.XtraGrid.Columns.GridColumn col1 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col1.FieldName = "SZSYSID";
+                col1.Caption = "SZSYSID";
+                col1.Visible = true;
+                col1.OptionsColumn.AllowEdit = false;
+                HelpGridView.Columns.Add(col1);
 
-            DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col2.FieldName = "SZDESC";
-            col2.Caption = "SZDESC";
-            col2.Visible = true;
-            col2.OptionsColumn.AllowEdit = false;
-            HelpGridView.Columns.Add(col2);
+                DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col2.FieldName = "SZDESC";
+                col2.Caption = "SZDESC";
+                col2.Visible = true;
+                col2.OptionsColumn.AllowEdit = false;
+                HelpGridView.Columns.Add(col2);
 
-            DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            col3.FieldName = "Select";
-            col3.Caption = "Select";
-            col3.Visible = true;
-            col3.OptionsColumn.AllowEdit = true;
-            HelpGridView.Columns.Add(col3);
+                DevExpress.XtraGrid.Columns.GridColumn col3 = new DevExpress.XtraGrid.Columns.GridColumn();
+                col3.FieldName = "Select";
+                col3.Caption = "Select";
+                col3.Visible = true;
+                col3.OptionsColumn.AllowEdit = true;
+                HelpGridView.Columns.Add(col3);
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
+            }
 
         }
         private void BtnLoadSizes_Click(object sender, EventArgs e)
         {
-            HelpGrid.Text = "SIZE";
-            PrepareSizeMstHelpGrid();
-            DataSet dsSize = ProjectFunctions.GetDataSet("select SZSYSID,SZDESC from SIZEMAST order by SZDESC");
-            if (dsSize.Tables[0].Rows.Count > 0)
+            try
             {
-                dsSize.Tables[0].Columns.Add("Select", typeof(bool));
-                foreach (DataRow dr in dsSize.Tables[0].Rows)
+                HelpGrid.Text = "SIZE";
+                PrepareSizeMstHelpGrid();
+                DataSet dsSize = ProjectFunctions.GetDataSet("select SZSYSID,SZDESC from SIZEMAST order by SZDESC");
+                if (dsSize.Tables[0].Rows.Count > 0)
                 {
-                    dr["Select"] = false;
-                }
+                    dsSize.Tables[0].Columns.Add("Select", typeof(bool));
+                    foreach (DataRow dr in dsSize.Tables[0].Rows)
+                    {
+                        dr["Select"] = false;
+                    }
 
-                HelpGrid.DataSource = dsSize.Tables[0];
-                HelpGridView.BestFitColumns();
-                HelpGrid.Visible = true;
-                HelpGrid.Focus();
+                    HelpGrid.DataSource = dsSize.Tables[0];
+                    HelpGridView.BestFitColumns();
+                    HelpGrid.Visible = true;
+                    HelpGrid.Focus();
+                }
+                else
+                {
+                    ProjectFunctions.SpeakError("No Color To Load");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ProjectFunctions.SpeakError("No Color To Load");
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
         private void TxtComboCount_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
         {
-            if (e.KeyCode == System.Windows.Forms.Keys.Enter)
-            {
-                int MaxCols = Convert.ToInt32(txtComboCount.Text);
-                for (int i = 0; i < MaxCols; i++)
+            try
+            { 
+                if (e.KeyCode == System.Windows.Forms.Keys.Enter)
                 {
-                    DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
-                    col2.FieldName = "CB" + (i + 1).ToString();
-                    col2.Caption = "CB" + (i + 1).ToString();
-                    col2.Visible = true;
-                    col2.OptionsColumn.AllowEdit = false;
-                    ColorGridView.Columns.Add(col2);
-                    dtColors.Columns.Add("CB" + (i + 1).ToString(), typeof(string));
-                }
+                    int MaxCols = Convert.ToInt32(txtComboCount.Text);
+                    for (int i = 0; i < MaxCols; i++)
+                    {
+                        DevExpress.XtraGrid.Columns.GridColumn col2 = new DevExpress.XtraGrid.Columns.GridColumn();
+                        col2.FieldName = "CB" + (i + 1).ToString();
+                        col2.Caption = "CB" + (i + 1).ToString();
+                        col2.Visible = true;
+                        col2.OptionsColumn.AllowEdit = false;
+                        ColorGridView.Columns.Add(col2);
+                        dtColors.Columns.Add("CB" + (i + 1).ToString(), typeof(string));
+                    }
 
-                ColorGrid.DataSource = dtColors;
+                    ColorGrid.DataSource = dtColors;
+                }
+            }
+            catch (Exception ex)
+            {
+                ProjectFunctions.SpeakError(ex.Message);
             }
         }
 
@@ -677,7 +740,6 @@ namespace WindowsFormsApplication1.Transaction
         private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
         {
             try
-
             {
                 HelpGridControlView.CloseEditor();
                 HelpGridControlView.UpdateCurrentRow();
@@ -742,12 +804,41 @@ namespace WindowsFormsApplication1.Transaction
             }
         }
 
+        private void LoadColorComboData()
+        {
+            dtColors.Columns.Clear();
+            DataSet dsCombo=   ProjectFunctions.GetDataSet("Select Distinct ComboName from ProductionOrderComboMst Where OrderNo='" + txtOrderNo.Text + "'");
+            foreach(DataRow dr in dsCombo.Tables[0].Rows)
+            {
+                dtColors.Columns.Add(dr["ComboName"].ToString(), typeof(String));
+            }
+
+            
+        }
+        private void SaveColorComboData()
+        {
+            ProjectFunctions.GetDataSet("Delete From ProductionOrderComboMst Where OrderNo='" + txtOrderNo.Text + "' And OrderDate ='" + Convert.ToDateTime(txtOrderDate.Text).ToString("yyyy-MM-dd") + "'");
+            foreach (DataRow drRow in (ColorGrid.DataSource as DataTable).Rows)
+            {
+                foreach(DataColumn drColumn in (ColorGrid.DataSource as DataTable).Columns)
+                {
+                    String ColorID = ProjectFunctions.GetDataSet("select distinct COLSYSID from COLOURS WHERE COLNAME='" + drRow[drColumn.ColumnName] + "' ").Tables[0].Rows[0][0].ToString();
+                    String Query = "Insert into ProductionOrderComboMst(OrderNo,OrderDate,ComboName,ColorID)values('" + txtOrderNo.Text + "','" + Convert.ToDateTime(txtOrderDate.Text).ToString("yyyy-MM-dd") + "','" + drColumn.ColumnName + "','" + ColorID + "')";
+                    ProjectFunctions.GetDataSet(Query);
+                }
+            }
+
+        }
         private void BtnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         private bool ValidateDataForSaving()
         {
+            if(txtSampleWeight.Text.Trim().Length>0)
+            {
+                txtSampleWeight.Text = "0";
+            }
             return true;
         }
         private void BtnSave_Click(object sender, EventArgs e)
@@ -787,7 +878,6 @@ namespace WindowsFormsApplication1.Transaction
                             sqlcom.Parameters.Add("@KnitCut", SqlDbType.NVarChar).Value = txtKnitCut.Text.Trim();
                             sqlcom.Parameters.Add("@FitType", SqlDbType.NVarChar).Value = txtFitType.Text.Trim();
                             sqlcom.Parameters.Add("@Remarks", SqlDbType.NVarChar).Value = txtRemarks.Text.Trim();
-
                             sqlcom.ExecuteNonQuery();
                             sqlcom.Parameters.Clear();
                         }
@@ -814,6 +904,8 @@ namespace WindowsFormsApplication1.Transaction
 
                         }
 
+
+                        SaveColorComboData();
                         ProjectFunctions.SpeakError("Invoice Data Saved Successfully");
                         sqlcon.Close();
 
