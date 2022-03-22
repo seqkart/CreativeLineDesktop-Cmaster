@@ -54,7 +54,7 @@
             this.labelCopyright.Location = new System.Drawing.Point(31, 352);
             this.labelCopyright.Margin = new System.Windows.Forms.Padding(4);
             this.labelCopyright.Name = "labelCopyright";
-            this.labelCopyright.Size = new System.Drawing.Size(57, 17);
+            this.labelCopyright.Size = new System.Drawing.Size(58, 16);
             this.labelCopyright.TabIndex = 6;
             this.labelCopyright.Text = "Copyright";
             // 
@@ -63,7 +63,7 @@
             this.labelStatus.Location = new System.Drawing.Point(31, 254);
             this.labelStatus.Margin = new System.Windows.Forms.Padding(4);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(54, 17);
+            this.labelStatus.Size = new System.Drawing.Size(54, 16);
             this.labelStatus.TabIndex = 7;
             this.labelStatus.Text = "Starting...";
             // 

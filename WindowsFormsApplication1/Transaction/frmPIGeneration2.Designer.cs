@@ -234,10 +234,10 @@
             // txtAddress
             // 
             this.txtAddress.Enabled = false;
-            this.txtAddress.Location = new System.Drawing.Point(164, 93);
+            this.txtAddress.Location = new System.Drawing.Point(170, 93);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(643, 22);
+            this.txtAddress.Size = new System.Drawing.Size(637, 22);
             this.txtAddress.TabIndex = 452;
             this.txtAddress.TabStop = false;
             // 

@@ -896,6 +896,8 @@
             // 
             // InfoGridView
             // 
+            this.InfoGridView.Appearance.FocusedRow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.InfoGridView.Appearance.FocusedRow.Options.UseBackColor = true;
             this.InfoGridView.AppearancePrint.HeaderPanel.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoGridView.AppearancePrint.HeaderPanel.Options.UseFont = true;
             this.InfoGridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -950,6 +952,7 @@
             this.InfoGridView.OptionsNavigation.AutoFocusNewRow = true;
             this.InfoGridView.OptionsPrint.PrintFooter = false;
             this.InfoGridView.OptionsPrint.PrintGroupFooter = false;
+            this.InfoGridView.OptionsScrollAnnotations.ShowFocusedRow = DevExpress.Utils.DefaultBoolean.True;
             this.InfoGridView.OptionsView.BestFitMode = DevExpress.XtraGrid.Views.Grid.GridBestFitMode.Fast;
             this.InfoGridView.OptionsView.ColumnAutoWidth = false;
             this.InfoGridView.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
@@ -1346,11 +1349,11 @@
             // xtraTabControl3
             // 
             this.xtraTabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.xtraTabControl3.Location = new System.Drawing.Point(458, 680);
+            this.xtraTabControl3.Location = new System.Drawing.Point(523, 680);
             this.xtraTabControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl3.Name = "xtraTabControl3";
             this.xtraTabControl3.SelectedTabPage = this.xtraTabPage5;
-            this.xtraTabControl3.Size = new System.Drawing.Size(659, 238);
+            this.xtraTabControl3.Size = new System.Drawing.Size(594, 238);
             this.xtraTabControl3.TabIndex = 555;
             this.xtraTabControl3.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage5,
@@ -1389,13 +1392,13 @@
             this.xtraTabPage5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage5.ImageOptions.Image")));
             this.xtraTabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(657, 208);
+            this.xtraTabPage5.Size = new System.Drawing.Size(592, 210);
             this.xtraTabPage5.Text = "Bill Sundries";
             // 
             // btnCalculate
             // 
             this.btnCalculate.ForeColor = System.Drawing.Color.Black;
-            this.btnCalculate.Location = new System.Drawing.Point(24, 144);
+            this.btnCalculate.Location = new System.Drawing.Point(110, 146);
             this.btnCalculate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCalculate.Name = "btnCalculate";
             this.btnCalculate.Size = new System.Drawing.Size(111, 35);
@@ -1407,7 +1410,7 @@
             // txtRound2
             // 
             this.txtRound2.EditValue = "0";
-            this.txtRound2.Location = new System.Drawing.Point(488, 124);
+            this.txtRound2.Location = new System.Drawing.Point(429, 124);
             this.txtRound2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRound2.Name = "txtRound2";
             this.txtRound2.Properties.Appearance.Options.UseTextOptions = true;
@@ -1427,7 +1430,7 @@
             // 
             // cmbTradeDisc
             // 
-            this.cmbTradeDisc.Location = new System.Drawing.Point(266, 37);
+            this.cmbTradeDisc.Location = new System.Drawing.Point(207, 37);
             this.cmbTradeDisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbTradeDisc.Name = "cmbTradeDisc";
             this.cmbTradeDisc.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -1437,7 +1440,7 @@
             // 
             // labelControl47
             // 
-            this.labelControl47.Location = new System.Drawing.Point(470, 71);
+            this.labelControl47.Location = new System.Drawing.Point(411, 71);
             this.labelControl47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl47.Name = "labelControl47";
             this.labelControl47.Size = new System.Drawing.Size(7, 16);
@@ -1446,7 +1449,7 @@
             // 
             // labelControl42
             // 
-            this.labelControl42.Location = new System.Drawing.Point(470, 40);
+            this.labelControl42.Location = new System.Drawing.Point(411, 40);
             this.labelControl42.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl42.Name = "labelControl42";
             this.labelControl42.Size = new System.Drawing.Size(7, 16);
@@ -1455,7 +1458,7 @@
             // 
             // labelControl41
             // 
-            this.labelControl41.Location = new System.Drawing.Point(386, 40);
+            this.labelControl41.Location = new System.Drawing.Point(327, 40);
             this.labelControl41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl41.Name = "labelControl41";
             this.labelControl41.Size = new System.Drawing.Size(12, 16);
@@ -1466,7 +1469,7 @@
             // 
             this.labelControl46.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl46.Appearance.Options.UseFont = true;
-            this.labelControl46.Location = new System.Drawing.Point(312, 157);
+            this.labelControl46.Location = new System.Drawing.Point(253, 157);
             this.labelControl46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl46.Name = "labelControl46";
             this.labelControl46.Size = new System.Drawing.Size(167, 21);
@@ -1475,7 +1478,7 @@
             // 
             // labelControl49
             // 
-            this.labelControl49.Location = new System.Drawing.Point(419, 127);
+            this.labelControl49.Location = new System.Drawing.Point(360, 127);
             this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
             this.labelControl49.Size = new System.Drawing.Size(60, 16);
@@ -1484,7 +1487,7 @@
             // 
             // labelControl48
             // 
-            this.labelControl48.Location = new System.Drawing.Point(443, 98);
+            this.labelControl48.Location = new System.Drawing.Point(384, 98);
             this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
             this.labelControl48.Size = new System.Drawing.Size(35, 16);
@@ -1493,7 +1496,7 @@
             // 
             // labelControl44
             // 
-            this.labelControl44.Location = new System.Drawing.Point(17, 98);
+            this.labelControl44.Location = new System.Drawing.Point(48, 98);
             this.labelControl44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl44.Name = "labelControl44";
             this.labelControl44.Size = new System.Drawing.Size(185, 16);
@@ -1502,7 +1505,7 @@
             // 
             // labelControl40
             // 
-            this.labelControl40.Location = new System.Drawing.Point(175, 40);
+            this.labelControl40.Location = new System.Drawing.Point(116, 40);
             this.labelControl40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl40.Name = "labelControl40";
             this.labelControl40.Size = new System.Drawing.Size(87, 16);
@@ -1511,7 +1514,7 @@
             // 
             // labelControl50
             // 
-            this.labelControl50.Location = new System.Drawing.Point(338, 71);
+            this.labelControl50.Location = new System.Drawing.Point(279, 71);
             this.labelControl50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl50.Name = "labelControl50";
             this.labelControl50.Size = new System.Drawing.Size(58, 16);
@@ -1520,7 +1523,7 @@
             // 
             // labelControl43
             // 
-            this.labelControl43.Location = new System.Drawing.Point(8, 71);
+            this.labelControl43.Location = new System.Drawing.Point(5, 71);
             this.labelControl43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl43.Name = "labelControl43";
             this.labelControl43.Size = new System.Drawing.Size(106, 16);
@@ -1529,7 +1532,7 @@
             // 
             // labelControl39
             // 
-            this.labelControl39.Location = new System.Drawing.Point(337, 11);
+            this.labelControl39.Location = new System.Drawing.Point(278, 11);
             this.labelControl39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl39.Name = "labelControl39";
             this.labelControl39.Size = new System.Drawing.Size(163, 16);
@@ -1538,7 +1541,7 @@
             // 
             // labelControl38
             // 
-            this.labelControl38.Location = new System.Drawing.Point(26, 11);
+            this.labelControl38.Location = new System.Drawing.Point(22, 11);
             this.labelControl38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl38.Name = "labelControl38";
             this.labelControl38.Size = new System.Drawing.Size(88, 16);
@@ -1547,7 +1550,7 @@
             // 
             // txtValueOfGoods
             // 
-            this.txtValueOfGoods.Location = new System.Drawing.Point(119, 8);
+            this.txtValueOfGoods.Location = new System.Drawing.Point(115, 8);
             this.txtValueOfGoods.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtValueOfGoods.Name = "txtValueOfGoods";
             this.txtValueOfGoods.Properties.Appearance.Options.UseTextOptions = true;
@@ -1568,7 +1571,7 @@
             // 
             // txtTotalTaxAmount
             // 
-            this.txtTotalTaxAmount.Location = new System.Drawing.Point(119, 68);
+            this.txtTotalTaxAmount.Location = new System.Drawing.Point(116, 68);
             this.txtTotalTaxAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalTaxAmount.Name = "txtTotalTaxAmount";
             this.txtTotalTaxAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1589,7 +1592,7 @@
             // 
             // txtMainDiscVal
             // 
-            this.txtMainDiscVal.Location = new System.Drawing.Point(486, 37);
+            this.txtMainDiscVal.Location = new System.Drawing.Point(427, 37);
             this.txtMainDiscVal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMainDiscVal.Name = "txtMainDiscVal";
             this.txtMainDiscVal.Properties.Appearance.Options.UseTextOptions = true;
@@ -1610,7 +1613,7 @@
             // 
             // txtRoundOffAmount
             // 
-            this.txtRoundOffAmount.Location = new System.Drawing.Point(582, 124);
+            this.txtRoundOffAmount.Location = new System.Drawing.Point(523, 124);
             this.txtRoundOffAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoundOffAmount.Name = "txtRoundOffAmount";
             this.txtRoundOffAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1634,7 +1637,7 @@
             0,
             0,
             131072});
-            this.txtOctoriAmount.Location = new System.Drawing.Point(486, 95);
+            this.txtOctoriAmount.Location = new System.Drawing.Point(427, 95);
             this.txtOctoriAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOctoriAmount.Name = "txtOctoriAmount";
             this.txtOctoriAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -1660,7 +1663,7 @@
             // 
             // txtTotalDisc
             // 
-            this.txtTotalDisc.Location = new System.Drawing.Point(506, 8);
+            this.txtTotalDisc.Location = new System.Drawing.Point(447, 8);
             this.txtTotalDisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalDisc.Name = "txtTotalDisc";
             this.txtTotalDisc.Properties.Appearance.Options.UseTextOptions = true;
@@ -1686,7 +1689,7 @@
             0,
             0,
             131072});
-            this.txtPKGFrt.Location = new System.Drawing.Point(210, 95);
+            this.txtPKGFrt.Location = new System.Drawing.Point(241, 95);
             this.txtPKGFrt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPKGFrt.Name = "txtPKGFrt";
             this.txtPKGFrt.Properties.Appearance.Options.UseTextOptions = true;
@@ -1713,7 +1716,7 @@
             // 
             // txtRNetAmount
             // 
-            this.txtRNetAmount.Location = new System.Drawing.Point(486, 153);
+            this.txtRNetAmount.Location = new System.Drawing.Point(427, 153);
             this.txtRNetAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRNetAmount.Name = "txtRNetAmount";
             this.txtRNetAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1737,7 +1740,7 @@
             // txtInsurancePer
             // 
             this.txtInsurancePer.EditValue = "0.00";
-            this.txtInsurancePer.Location = new System.Drawing.Point(404, 68);
+            this.txtInsurancePer.Location = new System.Drawing.Point(345, 68);
             this.txtInsurancePer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInsurancePer.Name = "txtInsurancePer";
             this.txtInsurancePer.Properties.Appearance.Options.UseTextOptions = true;
@@ -1768,7 +1771,7 @@
             0,
             0,
             131072});
-            this.txtMainDisc.Location = new System.Drawing.Point(404, 37);
+            this.txtMainDisc.Location = new System.Drawing.Point(345, 37);
             this.txtMainDisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMainDisc.Name = "txtMainDisc";
             this.txtMainDisc.Properties.Appearance.Options.UseTextOptions = true;
@@ -1794,7 +1797,7 @@
             // 
             // txtInsuranceAmount
             // 
-            this.txtInsuranceAmount.Location = new System.Drawing.Point(486, 68);
+            this.txtInsuranceAmount.Location = new System.Drawing.Point(427, 68);
             this.txtInsuranceAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtInsuranceAmount.Name = "txtInsuranceAmount";
             this.txtInsuranceAmount.Properties.Appearance.Options.UseTextOptions = true;
@@ -2161,7 +2164,7 @@
             this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl2.Name = "xtraTabControl2";
             this.xtraTabControl2.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl2.Size = new System.Drawing.Size(435, 238);
+            this.xtraTabControl2.Size = new System.Drawing.Size(464, 238);
             this.xtraTabControl2.TabIndex = 556;
             this.xtraTabControl2.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1});
@@ -2175,7 +2178,7 @@
             this.xtraTabPage1.Controls.Add(this.DocsGrid);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(433, 208);
+            this.xtraTabPage1.Size = new System.Drawing.Size(462, 210);
             this.xtraTabPage1.Text = "View Docs";
             // 
             // pictureEdit1
@@ -2225,11 +2228,11 @@
             // DocsGrid
             // 
             this.DocsGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.DocsGrid.Location = new System.Drawing.Point(92, 45);
+            this.DocsGrid.Location = new System.Drawing.Point(92, 40);
             this.DocsGrid.MainView = this.DocsGridView;
             this.DocsGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DocsGrid.Name = "DocsGrid";
-            this.DocsGrid.Size = new System.Drawing.Size(334, 163);
+            this.DocsGrid.Size = new System.Drawing.Size(367, 163);
             this.DocsGrid.TabIndex = 479;
             this.DocsGrid.TabStop = false;
             this.DocsGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -2297,7 +2300,7 @@
             this.chMultiParty.Properties.Appearance.ForeColor = System.Drawing.Color.Black;
             this.chMultiParty.Properties.Appearance.Options.UseForeColor = true;
             this.chMultiParty.Properties.Caption = "Multi Party";
-            this.chMultiParty.Size = new System.Drawing.Size(87, 24);
+            this.chMultiParty.Size = new System.Drawing.Size(87, 21);
             this.chMultiParty.TabIndex = 558;
             // 
             // FrmInvoiceMstAddCR

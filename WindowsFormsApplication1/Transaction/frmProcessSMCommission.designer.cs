@@ -164,7 +164,7 @@
             this.labelControl1.Location = new System.Drawing.Point(28, 64);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(30, 17);
+            this.labelControl1.Size = new System.Drawing.Size(31, 16);
             this.labelControl1.TabIndex = 193;
             this.labelControl1.Text = "From";
             // 
@@ -173,7 +173,7 @@
             this.labelControl2.Location = new System.Drawing.Point(183, 64);
             this.labelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(15, 17);
+            this.labelControl2.Size = new System.Drawing.Size(17, 16);
             this.labelControl2.TabIndex = 192;
             this.labelControl2.Text = "To";
             // 
@@ -199,7 +199,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtEndDate.Properties.Mask.EditMask = "";
             this.DtEndDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtEndDate.Size = new System.Drawing.Size(94, 24);
+            this.DtEndDate.Size = new System.Drawing.Size(94, 22);
             this.DtEndDate.TabIndex = 1;
             // 
             // DtStartDate
@@ -214,7 +214,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton()});
             this.DtStartDate.Properties.Mask.EditMask = "";
             this.DtStartDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.DtStartDate.Size = new System.Drawing.Size(94, 24);
+            this.DtStartDate.Size = new System.Drawing.Size(94, 22);
             this.DtStartDate.TabIndex = 0;
             // 
             // Menu_ToolStrip

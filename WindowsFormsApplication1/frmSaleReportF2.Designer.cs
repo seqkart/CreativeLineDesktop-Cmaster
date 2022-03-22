@@ -290,7 +290,7 @@
             this.lblTotalSale.TabIndex = 698;
             this.lblTotalSale.Text = "0";
             // 
-            // frmSaleReportF2
+            // FrmSaleReportF2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -311,7 +311,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmSaleReportF2";
+            this.Name = "FrmSaleReportF2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmSaleReportF2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmSaleReportF2_KeyDown);

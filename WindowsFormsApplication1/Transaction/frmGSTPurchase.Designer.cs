@@ -169,6 +169,7 @@
             this.xtraTabControl2 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage8 = new DevExpress.XtraTab.XtraTabPage();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.DocsGrid = new DevExpress.XtraGrid.GridControl();
             this.DocsGridView = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -179,7 +180,6 @@
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.labelControl14 = new DevExpress.XtraEditors.LabelControl();
             this.comboBoxEdit1 = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InfoGridView)).BeginInit();
@@ -250,13 +250,13 @@
             this.xtraTabControl2.SuspendLayout();
             this.xtraTabPage8.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu_ToolStrip
@@ -831,7 +831,7 @@
             // 
             this.labelControl46.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl46.Appearance.Options.UseFont = true;
-            this.labelControl46.Location = new System.Drawing.Point(141, 13);
+            this.labelControl46.Location = new System.Drawing.Point(131, 17);
             this.labelControl46.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl46.Name = "labelControl46";
             this.labelControl46.Size = new System.Drawing.Size(167, 21);
@@ -1201,6 +1201,7 @@
             // 
             // xtraTabControl3
             // 
+            this.xtraTabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.xtraTabControl3.Location = new System.Drawing.Point(520, 673);
             this.xtraTabControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl3.Name = "xtraTabControl3";
@@ -1891,6 +1892,7 @@
             // 
             // xtraTabControl2
             // 
+            this.xtraTabControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.xtraTabControl2.HeaderOrientation = DevExpress.XtraTab.TabOrientation.Horizontal;
             this.xtraTabControl2.Location = new System.Drawing.Point(26, 673);
             this.xtraTabControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1925,6 +1927,18 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(475, 210);
             this.xtraTabPage1.Text = "Attach Docs";
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(475, 210);
+            this.pictureEdit1.TabIndex = 0;
+            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
             // 
             // xtraTabPage2
             // 
@@ -2030,18 +2044,6 @@
             this.comboBoxEdit1.Size = new System.Drawing.Size(296, 22);
             this.comboBoxEdit1.TabIndex = 731;
             // 
-            // pictureEdit1
-            // 
-            this.pictureEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureEdit1.Location = new System.Drawing.Point(0, 0);
-            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(475, 210);
-            this.pictureEdit1.TabIndex = 0;
-            this.pictureEdit1.PopupMenuShowing += new DevExpress.XtraEditors.Events.PopupMenuShowingEventHandler(this.PictureEdit1_PopupMenuShowing);
-            // 
             // FrmGSTPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -2145,13 +2147,13 @@
             this.xtraTabPage8.ResumeLayout(false);
             this.xtraTabPage8.PerformLayout();
             this.xtraTabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DocsGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DocsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

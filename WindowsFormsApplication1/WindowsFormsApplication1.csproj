@@ -1159,12 +1159,6 @@
     <Compile Include="Administration\XtraForm_UserMaster.Designer.cs">
       <DependentUpon>XtraForm_UserMaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Crystals\SalePrint.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Crystals\SalePrint.Designer.cs">
-      <DependentUpon>SalePrint.cs</DependentUpon>
-    </Compile>
     <Compile Include="CustomControls\MyDateTimePicker.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1262,6 +1256,12 @@
     <Compile Include="Master\frmAccountsMappingBusy.Designer.cs">
       <DependentUpon>frmAccountsMappingBusy.cs</DependentUpon>
     </Compile>
+    <Compile Include="Master\frmAreaMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmAreaMaster.Designer.cs">
+      <DependentUpon>frmAreaMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="Master\frmAttendenceStatusMst.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1351,6 +1351,12 @@
     </Compile>
     <Compile Include="Master\frmSubProcessMst.Designer.cs">
       <DependentUpon>frmSubProcessMst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Master\frmTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Master\frmTreeView.Designer.cs">
+      <DependentUpon>frmTreeView.cs</DependentUpon>
     </Compile>
     <Compile Include="Master\frmUploadBalances.cs">
       <SubType>Form</SubType>
@@ -2307,9 +2313,6 @@
     <EmbeddedResource Include="Administration\XtraForm_UserMaster.resx">
       <DependentUpon>XtraForm_UserMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Crystals\SalePrint.resx">
-      <DependentUpon>SalePrint.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormReports\CommonTemplate.resx">
       <DependentUpon>CommonTemplate.cs</DependentUpon>
     </EmbeddedResource>
@@ -2355,6 +2358,9 @@
     <EmbeddedResource Include="Master\frmAccountsMappingBusy.resx">
       <DependentUpon>frmAccountsMappingBusy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmAreaMaster.resx">
+      <DependentUpon>frmAreaMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Master\frmAttendenceStatusMst.resx">
       <DependentUpon>frmAttendenceStatusMst.cs</DependentUpon>
     </EmbeddedResource>
@@ -2399,6 +2405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmSubProcessMst.resx">
       <DependentUpon>frmSubProcessMst.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Master\frmTreeView.resx">
+      <DependentUpon>frmTreeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master\frmUploadBalances.resx">
       <DependentUpon>frmUploadBalances.cs</DependentUpon>
