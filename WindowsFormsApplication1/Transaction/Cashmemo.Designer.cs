@@ -819,7 +819,7 @@
             this.chExclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chExclusive.Name = "chExclusive";
             this.chExclusive.Properties.Caption = "Exclusive";
-            this.chExclusive.Size = new System.Drawing.Size(79, 24);
+            this.chExclusive.Size = new System.Drawing.Size(79, 21);
             this.chExclusive.TabIndex = 533;
             this.chExclusive.CheckedChanged += new System.EventHandler(this.ChExclusive_CheckedChanged);
             // 
@@ -1652,7 +1652,7 @@
             this.chInclusive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chInclusive.Name = "chInclusive";
             this.chInclusive.Properties.Caption = "Inclusive";
-            this.chInclusive.Size = new System.Drawing.Size(91, 24);
+            this.chInclusive.Size = new System.Drawing.Size(91, 21);
             this.chInclusive.TabIndex = 533;
             this.chInclusive.CheckedChanged += new System.EventHandler(this.ChInclusive_CheckedChanged);
             // 
@@ -2194,9 +2194,9 @@
             this.labelControl19.Location = new System.Drawing.Point(425, 228);
             this.labelControl19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(162, 20);
+            this.labelControl19.Size = new System.Drawing.Size(122, 20);
             this.labelControl19.TabIndex = 781;
-            this.labelControl19.Text = "Item Discount             F9";
+            this.labelControl19.Text = "Item Discount   F9";
             // 
             // txtItemFlatRate
             // 
@@ -2298,12 +2298,12 @@
             // 
             this.labelControl14.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl14.Appearance.Options.UseFont = true;
-            this.labelControl14.Location = new System.Drawing.Point(321, 228);
+            this.labelControl14.Location = new System.Drawing.Point(317, 228);
             this.labelControl14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(66, 20);
+            this.labelControl14.Size = new System.Drawing.Size(94, 20);
             this.labelControl14.TabIndex = 785;
-            this.labelControl14.Text = "Item MRP";
+            this.labelControl14.Text = "Item MRP   F8";
             // 
             // btnAddCashMemo
             // 
@@ -2395,7 +2395,7 @@
             this.chall.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chall.Name = "chall";
             this.chall.Properties.Caption = "All";
-            this.chall.Size = new System.Drawing.Size(87, 24);
+            this.chall.Size = new System.Drawing.Size(87, 21);
             this.chall.TabIndex = 815;
             // 
             // CashMemo
