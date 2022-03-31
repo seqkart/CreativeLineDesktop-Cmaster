@@ -1372,7 +1372,7 @@ namespace WindowsFormsApplication1
 
                 e.Menu.Items.Add(Copy);
                 e.Menu.Items.Add(SAR);
-                e.Menu.Items.Add(Collapse);
+                e.Menu.Items.Add(Collapse)
                 e.Menu.Items.Add(Expand);
                 e.Menu.Items.Add(FixLeft);
                 e.Menu.Items.Add(FixRight);
