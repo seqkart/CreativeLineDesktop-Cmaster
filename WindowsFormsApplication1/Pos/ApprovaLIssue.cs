@@ -279,33 +279,33 @@ namespace WindowsFormsApplication1.Pos
                     if (ds.Tables[0].Rows.Count > 0)
                     {
 
-                        if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
-                        {
-                            ProjectFunctions.SpeakError("BarCode Already Used In Some Other Document");
-                            txtBarCode.Focus();
-                            txtBarCode.SelectAll();
-                            e.Handled = true;
-                            return;
-                        }
-                        foreach (DataRow dr in dt.Rows)
-                        {
-                            if (dr["SIDBARCODE"].ToString().ToUpper() == txtBarCode.Text.Trim())
-                            {
-                                ProjectFunctions.SpeakError("BarCode Already Loaded In This Document");
-                                txtBarCode.Focus();
-                                txtBarCode.SelectAll();
-                                e.Handled = true;
-                                return;
-                            }
-                        }
-                        if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) != Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
-                        {
-                            ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
-                            txtBarCode.Focus();
-                            txtBarCode.SelectAll();
-                            e.Handled = true;
-                            return;
-                        }
+                        //if (ds.Tables[0].Rows[0]["Used"].ToString().ToUpper() == "Y")
+                        //{
+                        //    ProjectFunctions.SpeakError("BarCode Already Used In Some Other Document");
+                        //    txtBarCode.Focus();
+                        //    txtBarCode.SelectAll();
+                        //    e.Handled = true;
+                        //    return;
+                        //}
+                        //foreach (DataRow dr in dt.Rows)
+                        //{
+                        //    if (dr["SIDBARCODE"].ToString().ToUpper() == txtBarCode.Text.Trim())
+                        //    {
+                        //        ProjectFunctions.SpeakError("BarCode Already Loaded In This Document");
+                        //        txtBarCode.Focus();
+                        //        txtBarCode.SelectAll();
+                        //        e.Handled = true;
+                        //        return;
+                        //    }
+                        //}
+                        //if (Convert.ToDecimal(ds.Tables[0].Rows[0]["SIDARTMRP"]) != Convert.ToDecimal(ds.Tables[0].Rows[0]["ARTMRP"]))
+                        //{
+                        //    ProjectFunctions.SpeakError("Difference In MRP( MRP In Article is - " + ds.Tables[0].Rows[0]["ARTMRP"].ToString() + ")");
+                        //    txtBarCode.Focus();
+                        //    txtBarCode.SelectAll();
+                        //    e.Handled = true;
+                        //    return;
+                        //}
 
 
 
@@ -335,7 +335,7 @@ namespace WindowsFormsApplication1.Pos
                         InfoGrid.DataSource = null;
                     }
                     txtBarCode.Text = string.Empty;
-                    txtBarCode.Focus();
+                    txtBarCode.SelectAll();
                 }
             }
             catch (Exception ex)
@@ -534,7 +534,7 @@ namespace WindowsFormsApplication1.Pos
                             }
                            
 
-                            ProjectFunctions.SpeakError("Article Approval Saved Successfully");
+                            ProjectFunctions.SpeakError("Approval Saved Successfully");
                             sqlcon.Close();
 
                             Close();

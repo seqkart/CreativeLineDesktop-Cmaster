@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
         public static string CAddress3 = string.Empty;
         public static string CPlantAddress1 = string.Empty;
         public static string CashCode = "000279";
-        public static string UserPwd = "Happy";
+        public static string UserPwd = "Varun";
         public static string FinancialYear = "2020-2021";
         public static string SampleDealerCode = "000281";
         public static string CmpEmailID = "000281";
@@ -45,7 +45,7 @@ namespace WindowsFormsApplication1
         public static string TelNo = string.Empty;
         public static string FSSAI = string.Empty;
         public static string CUnitID = string.Empty;
-
+        public static string WAppApiLink = string.Empty;
 
         public static DateTime LicenseToExpireDate = Convert.ToDateTime("2022-03-31");
 

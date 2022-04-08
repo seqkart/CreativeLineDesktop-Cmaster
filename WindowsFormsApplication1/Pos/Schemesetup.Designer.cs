@@ -30,9 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SchemeSetup));
-            this.treeListColumn1 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeListColumn2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.treeList1 = new DevExpress.XtraTreeList.TreeList();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.dragDropEvents1 = new DevExpress.Utils.DragDrop.DragDropEvents(this.components);
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
@@ -96,8 +93,6 @@
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnQuit = new System.Windows.Forms.ToolStripButton();
             this.btnSave = new System.Windows.Forms.ToolStripButton();
-            this.richEditControl1 = new DevExpress.XtraRichEdit.RichEditControl();
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PowerSchemeGrid)).BeginInit();
@@ -146,39 +141,6 @@
             this.Menu_ToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // treeListColumn1
-            // 
-            this.treeListColumn1.Caption = "treeListColumn1";
-            this.treeListColumn1.FieldName = "Flat Scheme";
-            this.treeListColumn1.MinWidth = 23;
-            this.treeListColumn1.Name = "treeListColumn1";
-            this.treeListColumn1.Width = 87;
-            // 
-            // treeListColumn2
-            // 
-            this.treeListColumn2.Caption = "treeListColumn2";
-            this.treeListColumn2.FieldName = "Power Scheme";
-            this.treeListColumn2.MinWidth = 23;
-            this.treeListColumn2.Name = "treeListColumn2";
-            this.treeListColumn2.Width = 87;
-            // 
-            // treeList1
-            // 
-            this.behaviorManager1.SetBehaviors(this.treeList1, new DevExpress.Utils.Behaviors.Behavior[] {
-            ((DevExpress.Utils.Behaviors.Behavior)(DevExpress.Utils.DragDrop.DragDropBehavior.Create(typeof(DevExpress.XtraTreeList.TreeListDragDropSource), true, true, true, true, this.dragDropEvents1)))});
-            this.treeList1.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.treeListColumn1,
-            this.treeListColumn2});
-            this.treeList1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.treeList1.CustomizationFormBounds = new System.Drawing.Rectangle(551, 347, 272, 200);
-            this.treeList1.Location = new System.Drawing.Point(14, 80);
-            this.treeList1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.treeList1.MinWidth = 23;
-            this.treeList1.Name = "treeList1";
-            this.treeList1.Size = new System.Drawing.Size(229, 492);
-            this.treeList1.TabIndex = 0;
-            this.treeList1.TreeLevelWidth = 21;
-            // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Controls.Add(this.PowerSchemeGrid);
@@ -200,7 +162,7 @@
             this.xtraTabPage4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage4.ImageOptions.Image")));
             this.xtraTabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(648, 462);
+            this.xtraTabPage4.Size = new System.Drawing.Size(864, 464);
             this.xtraTabPage4.Text = "Power Scheme";
             // 
             // PowerSchemeGrid
@@ -473,7 +435,7 @@
             this.xtraTabPage3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage3.ImageOptions.Image")));
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(648, 464);
+            this.xtraTabPage3.Size = new System.Drawing.Size(864, 464);
             this.xtraTabPage3.Text = "Flat Scheme";
             // 
             // FlatSchemeGrid
@@ -537,7 +499,7 @@
             this.chFlatSKU.Properties.Appearance.ForeColor = System.Drawing.Color.Red;
             this.chFlatSKU.Properties.Appearance.Options.UseFont = true;
             this.chFlatSKU.Properties.Appearance.Options.UseForeColor = true;
-            this.chFlatSKU.Properties.Caption = "SKU";
+            this.chFlatSKU.Properties.Caption = "Barcode";
             this.chFlatSKU.Size = new System.Drawing.Size(86, 25);
             this.chFlatSKU.TabIndex = 13;
             this.chFlatSKU.CheckedChanged += new System.EventHandler(this.ChFlatSKU_CheckedChanged);
@@ -633,12 +595,12 @@
             this.xtraTabPage2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage2.ImageOptions.Image")));
             this.xtraTabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(648, 464);
+            this.xtraTabPage2.Size = new System.Drawing.Size(864, 464);
             this.xtraTabPage2.Text = "Scheme Type";
             // 
             // textEdit3
             // 
-            this.textEdit3.Location = new System.Drawing.Point(367, 99);
+            this.textEdit3.Location = new System.Drawing.Point(444, 100);
             this.textEdit3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -656,7 +618,7 @@
             this.checkEdit3.Properties.Appearance.Options.UseFont = true;
             this.checkEdit3.Properties.Appearance.Options.UseForeColor = true;
             this.checkEdit3.Properties.Caption = "Charge Tax If Discount % is More Than";
-            this.checkEdit3.Size = new System.Drawing.Size(296, 25);
+            this.checkEdit3.Size = new System.Drawing.Size(327, 25);
             this.checkEdit3.TabIndex = 9;
             // 
             // cmbSchmType
@@ -699,7 +661,7 @@
             this.xtraTabPage1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("xtraTabPage1.ImageOptions.Image")));
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(648, 464);
+            this.xtraTabPage1.Size = new System.Drawing.Size(864, 464);
             this.xtraTabPage1.Text = "New Scheme";
             // 
             // groupControl1
@@ -724,7 +686,7 @@
             this.chSelectLocation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chSelectLocation.Name = "chSelectLocation";
             this.chSelectLocation.Properties.Caption = "Selected Location";
-            this.chSelectLocation.Size = new System.Drawing.Size(132, 24);
+            this.chSelectLocation.Size = new System.Drawing.Size(132, 21);
             this.chSelectLocation.TabIndex = 0;
             // 
             // chAllLocations
@@ -733,7 +695,7 @@
             this.chAllLocations.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chAllLocations.Name = "chAllLocations";
             this.chAllLocations.Properties.Caption = "All Locations";
-            this.chAllLocations.Size = new System.Drawing.Size(101, 24);
+            this.chAllLocations.Size = new System.Drawing.Size(101, 21);
             this.chAllLocations.TabIndex = 0;
             // 
             // txtToDate
@@ -852,11 +814,11 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(250, 80);
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 40);
             this.xtraTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(650, 492);
+            this.xtraTabControl1.Size = new System.Drawing.Size(866, 492);
             this.xtraTabControl1.TabIndex = 1;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -902,29 +864,18 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // richEditControl1
-            // 
-            this.richEditControl1.Location = new System.Drawing.Point(906, 110);
-            this.richEditControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(363, 459);
-            this.richEditControl1.TabIndex = 739;
-            // 
             // SchemeSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1283, 711);
-            this.Controls.Add(this.richEditControl1);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.xtraTabControl1);
-            this.Controls.Add(this.treeList1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SchemeSetup";
             this.Text = "Schemesetup";
             this.Load += new System.EventHandler(this.Schemesetup_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.treeList1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             this.xtraTabPage4.PerformLayout();
@@ -982,10 +933,6 @@
         }
 
         #endregion
-
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn1;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn treeListColumn2;
-        private DevExpress.XtraTreeList.TreeList treeList1;
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.Utils.DragDrop.DragDropEvents dragDropEvents1;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
@@ -1049,6 +996,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraRichEdit.RichEditControl richEditControl1;
     }
 }

@@ -38,6 +38,7 @@
             this.txtBrandAlias = new DevExpress.XtraEditors.TextEdit();
             this.txtBrandName = new DevExpress.XtraEditors.TextEdit();
             this.txtSysID = new DevExpress.XtraEditors.TextEdit();
+            this.btnSave2 = new DevExpress.XtraEditors.SimpleButton();
             this.Menu_ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandAlias.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtBrandName.Properties)).BeginInit();
@@ -79,77 +80,93 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 24);
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Label17
             // 
-            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label17.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label17.Appearance.Options.UseFont = true;
-            this.Label17.Location = new System.Drawing.Point(6, 87);
+            this.Label17.Location = new System.Drawing.Point(13, 80);
             this.Label17.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label17.Name = "Label17";
-            this.Label17.Size = new System.Drawing.Size(98, 19);
+            this.Label17.Size = new System.Drawing.Size(120, 23);
             this.Label17.TabIndex = 377;
             this.Label17.Text = "BRAND NAME :";
             // 
             // Label16
             // 
-            this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label16.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label16.Appearance.Options.UseFont = true;
-            this.Label16.Location = new System.Drawing.Point(9, 130);
+            this.Label16.Location = new System.Drawing.Point(18, 115);
             this.Label16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label16.Name = "Label16";
-            this.Label16.Size = new System.Drawing.Size(95, 19);
+            this.Label16.Size = new System.Drawing.Size(115, 23);
             this.Label16.TabIndex = 378;
             this.Label16.Text = "BRAND ALIAS :";
             // 
             // Label15
             // 
-            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Label15.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label15.Appearance.Options.UseFont = true;
-            this.Label15.Location = new System.Drawing.Point(55, 44);
+            this.Label15.Location = new System.Drawing.Point(74, 45);
             this.Label15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label15.Name = "Label15";
-            this.Label15.Size = new System.Drawing.Size(49, 19);
+            this.Label15.Size = new System.Drawing.Size(59, 23);
             this.Label15.TabIndex = 376;
             this.Label15.Text = "SYS ID :";
             // 
             // txtBrandAlias
             // 
-            this.txtBrandAlias.Location = new System.Drawing.Point(106, 127);
+            this.txtBrandAlias.Location = new System.Drawing.Point(139, 111);
             this.txtBrandAlias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrandAlias.Name = "txtBrandAlias";
+            this.txtBrandAlias.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrandAlias.Properties.Appearance.Options.UseFont = true;
             this.txtBrandAlias.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandAlias.Properties.MaxLength = 100;
-            this.txtBrandAlias.Size = new System.Drawing.Size(409, 22);
+            this.txtBrandAlias.Size = new System.Drawing.Size(409, 30);
             this.txtBrandAlias.TabIndex = 383;
             // 
             // txtBrandName
             // 
-            this.txtBrandName.Location = new System.Drawing.Point(106, 84);
+            this.txtBrandName.Location = new System.Drawing.Point(139, 76);
             this.txtBrandName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBrandName.Name = "txtBrandName";
+            this.txtBrandName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBrandName.Properties.Appearance.Options.UseFont = true;
             this.txtBrandName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtBrandName.Properties.MaxLength = 100;
-            this.txtBrandName.Size = new System.Drawing.Size(409, 22);
+            this.txtBrandName.Size = new System.Drawing.Size(409, 30);
             this.txtBrandName.TabIndex = 381;
             // 
             // txtSysID
             // 
-            this.txtSysID.Location = new System.Drawing.Point(106, 41);
+            this.txtSysID.Location = new System.Drawing.Point(139, 41);
             this.txtSysID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSysID.Name = "txtSysID";
+            this.txtSysID.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSysID.Properties.Appearance.Options.UseFont = true;
             this.txtSysID.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtSysID.Size = new System.Drawing.Size(97, 22);
+            this.txtSysID.Size = new System.Drawing.Size(97, 30);
             this.txtSysID.TabIndex = 380;
+            // 
+            // btnSave2
+            // 
+            this.btnSave2.Location = new System.Drawing.Point(203, 148);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(94, 29);
+            this.btnSave2.TabIndex = 384;
+            this.btnSave2.Text = "Save";
+            this.btnSave2.Click += new System.EventHandler(this.btnSave2_Click);
             // 
             // FrmBrand
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(597, 169);
+            this.ClientSize = new System.Drawing.Size(597, 184);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSave2);
             this.Controls.Add(this.txtBrandAlias);
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.txtBrandName);
@@ -185,5 +202,6 @@
         internal DevExpress.XtraEditors.LabelControl Label17;
         internal DevExpress.XtraEditors.LabelControl Label16;
         internal DevExpress.XtraEditors.LabelControl Label15;
+        private DevExpress.XtraEditors.SimpleButton btnSave2;
     }
 }

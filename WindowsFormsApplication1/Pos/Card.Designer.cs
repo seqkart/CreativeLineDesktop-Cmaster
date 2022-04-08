@@ -84,7 +84,7 @@
             this.Btmaestro.Name = "Btmaestro";
             this.Btmaestro.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Btmaestro.Size = new System.Drawing.Size(129, 84);
-            this.Btmaestro.TabIndex = 0;
+            this.Btmaestro.TabIndex = 2;
             this.Btmaestro.Click += new System.EventHandler(this.Btmaestro_Click);
             // 
             // Btamex
@@ -96,7 +96,7 @@
             this.Btamex.Name = "Btamex";
             this.Btamex.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Btamex.Size = new System.Drawing.Size(119, 99);
-            this.Btamex.TabIndex = 0;
+            this.Btamex.TabIndex = 3;
             this.Btamex.Click += new System.EventHandler(this.Btamex_Click);
             // 
             // Btvisa
@@ -120,7 +120,7 @@
             this.Btmaster.Name = "Btmaster";
             this.Btmaster.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Btmaster.Size = new System.Drawing.Size(129, 84);
-            this.Btmaster.TabIndex = 0;
+            this.Btmaster.TabIndex = 1;
             this.Btmaster.Click += new System.EventHandler(this.Btmaster_Click);
             // 
             // Btdci
@@ -132,7 +132,7 @@
             this.Btdci.Name = "Btdci";
             this.Btdci.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.Btdci.Size = new System.Drawing.Size(129, 84);
-            this.Btdci.TabIndex = 0;
+            this.Btdci.TabIndex = 4;
             this.Btdci.Click += new System.EventHandler(this.Btdci_Click);
             // 
             // txtCardType
@@ -143,7 +143,8 @@
             this.txtCardType.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardType.Properties.Appearance.Options.UseFont = true;
             this.txtCardType.Size = new System.Drawing.Size(250, 28);
-            this.txtCardType.TabIndex = 5;
+            this.txtCardType.TabIndex = 1;
+            this.txtCardType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCardType_KeyDown);
             // 
             // labelControl1
             // 
@@ -166,6 +167,7 @@
             this.labelControl2.Size = new System.Drawing.Size(72, 25);
             this.labelControl2.TabIndex = 4;
             this.labelControl2.Text = "Card No.";
+            this.labelControl2.Visible = false;
             // 
             // txtCardNo
             // 
@@ -176,6 +178,7 @@
             this.txtCardNo.Properties.Appearance.Options.UseFont = true;
             this.txtCardNo.Size = new System.Drawing.Size(250, 28);
             this.txtCardNo.TabIndex = 5;
+            this.txtCardNo.Visible = false;
             // 
             // labelControl3
             // 
@@ -187,6 +190,7 @@
             this.labelControl3.Size = new System.Drawing.Size(119, 25);
             this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Name on Card";
+            this.labelControl3.Visible = false;
             // 
             // txtNameOnCard
             // 
@@ -197,9 +201,14 @@
             this.txtNameOnCard.Properties.Appearance.Options.UseFont = true;
             this.txtNameOnCard.Size = new System.Drawing.Size(250, 28);
             this.txtNameOnCard.TabIndex = 5;
+            this.txtNameOnCard.Visible = false;
             // 
             // groupControl1
             // 
+            this.groupControl1.Appearance.Options.UseFont = true;
+            this.groupControl1.AppearanceCaption.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupControl1.AppearanceCaption.Options.UseFont = true;
+            this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
             this.groupControl1.Controls.Add(this.labelControl50);
             this.groupControl1.Controls.Add(this.labelControl49);
             this.groupControl1.Controls.Add(this.labelControl48);
@@ -220,7 +229,7 @@
             // 
             this.labelControl50.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl50.Appearance.Options.UseFont = true;
-            this.labelControl50.Location = new System.Drawing.Point(23, 131);
+            this.labelControl50.Location = new System.Drawing.Point(23, 138);
             this.labelControl50.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl50.Name = "labelControl50";
             this.labelControl50.Size = new System.Drawing.Size(136, 25);
@@ -231,7 +240,7 @@
             // 
             this.labelControl49.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl49.Appearance.Options.UseFont = true;
-            this.labelControl49.Location = new System.Drawing.Point(94, 97);
+            this.labelControl49.Location = new System.Drawing.Point(94, 104);
             this.labelControl49.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl49.Name = "labelControl49";
             this.labelControl49.Size = new System.Drawing.Size(65, 25);
@@ -242,7 +251,7 @@
             // 
             this.labelControl48.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl48.Appearance.Options.UseFont = true;
-            this.labelControl48.Location = new System.Drawing.Point(50, 63);
+            this.labelControl48.Location = new System.Drawing.Point(50, 70);
             this.labelControl48.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl48.Name = "labelControl48";
             this.labelControl48.Size = new System.Drawing.Size(109, 25);
@@ -253,7 +262,7 @@
             // 
             this.labelControl47.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.labelControl47.Appearance.Options.UseFont = true;
-            this.labelControl47.Location = new System.Drawing.Point(32, 30);
+            this.labelControl47.Location = new System.Drawing.Point(32, 36);
             this.labelControl47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl47.Name = "labelControl47";
             this.labelControl47.Size = new System.Drawing.Size(127, 25);
@@ -264,7 +273,7 @@
             // 
             this.txtBalanceAmount.EditValue = "0";
             this.txtBalanceAmount.Enabled = false;
-            this.txtBalanceAmount.Location = new System.Drawing.Point(161, 128);
+            this.txtBalanceAmount.Location = new System.Drawing.Point(161, 136);
             this.txtBalanceAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBalanceAmount.Name = "txtBalanceAmount";
             this.txtBalanceAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,7 +299,7 @@
             // 
             // txtSLipNo
             // 
-            this.txtSLipNo.Location = new System.Drawing.Point(161, 94);
+            this.txtSLipNo.Location = new System.Drawing.Point(161, 102);
             this.txtSLipNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSLipNo.Name = "txtSLipNo";
             this.txtSLipNo.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,7 +319,7 @@
             // txtAmountPaid
             // 
             this.txtAmountPaid.EditValue = "0";
-            this.txtAmountPaid.Location = new System.Drawing.Point(161, 60);
+            this.txtAmountPaid.Location = new System.Drawing.Point(161, 68);
             this.txtAmountPaid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAmountPaid.Name = "txtAmountPaid";
             this.txtAmountPaid.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -332,13 +341,15 @@
             this.txtAmountPaid.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txtAmountPaid.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.txtAmountPaid.Size = new System.Drawing.Size(133, 28);
-            this.txtAmountPaid.TabIndex = 12;
+            this.txtAmountPaid.TabIndex = 0;
             this.txtAmountPaid.EditValueChanged += new System.EventHandler(this.TxtAmountPaid_EditValueChanged);
+            this.txtAmountPaid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtAmountPaid_KeyDown);
             // 
             // txtMemoAmount
             // 
             this.txtMemoAmount.EditValue = "0";
-            this.txtMemoAmount.Location = new System.Drawing.Point(161, 26);
+            this.txtMemoAmount.Enabled = false;
+            this.txtMemoAmount.Location = new System.Drawing.Point(161, 34);
             this.txtMemoAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMemoAmount.Name = "txtMemoAmount";
             this.txtMemoAmount.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -366,7 +377,7 @@
             // 
             this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Location = new System.Drawing.Point(191, 5);
+            this.labelControl25.Location = new System.Drawing.Point(225, 5);
             this.labelControl25.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl25.Name = "labelControl25";
             this.labelControl25.Size = new System.Drawing.Size(115, 25);
@@ -388,7 +399,7 @@
             // 
             this.lblMemoNo.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMemoNo.Appearance.Options.UseFont = true;
-            this.lblMemoNo.Location = new System.Drawing.Point(122, 5);
+            this.lblMemoNo.Location = new System.Drawing.Point(129, 5);
             this.lblMemoNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblMemoNo.Name = "lblMemoNo";
             this.lblMemoNo.Size = new System.Drawing.Size(22, 25);
@@ -399,7 +410,7 @@
             // 
             this.lblMemoDate.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMemoDate.Appearance.Options.UseFont = true;
-            this.lblMemoDate.Location = new System.Drawing.Point(319, 5);
+            this.lblMemoDate.Location = new System.Drawing.Point(353, 5);
             this.lblMemoDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblMemoDate.Name = "lblMemoDate";
             this.lblMemoDate.Size = new System.Drawing.Size(104, 25);
@@ -413,7 +424,7 @@
             this.btnRevert.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRevert.Name = "btnRevert";
             this.btnRevert.Size = new System.Drawing.Size(148, 47);
-            this.btnRevert.TabIndex = 9;
+            this.btnRevert.TabIndex = 3;
             this.btnRevert.Text = "Revert";
             this.btnRevert.Click += new System.EventHandler(this.BtnRevert_Click);
             // 
@@ -424,7 +435,7 @@
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(148, 47);
-            this.btnSave.TabIndex = 10;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save && Print";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -436,7 +447,7 @@
             this.separatorControl1.Name = "separatorControl1";
             this.separatorControl1.Padding = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.separatorControl1.Size = new System.Drawing.Size(689, 5);
-            this.separatorControl1.TabIndex = 11;
+            this.separatorControl1.TabIndex = 0;
             // 
             // txtCardDigits
             // 
@@ -447,6 +458,7 @@
             this.txtCardDigits.Properties.Appearance.Options.UseFont = true;
             this.txtCardDigits.Size = new System.Drawing.Size(250, 28);
             this.txtCardDigits.TabIndex = 13;
+            this.txtCardDigits.Visible = false;
             this.txtCardDigits.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtCardDigits_KeyDown);
             // 
             // labelControl4
@@ -459,6 +471,7 @@
             this.labelControl4.Size = new System.Drawing.Size(92, 25);
             this.labelControl4.TabIndex = 12;
             this.labelControl4.Text = "Card Digits";
+            this.labelControl4.Visible = false;
             // 
             // textEdit1
             // 
@@ -469,6 +482,7 @@
             this.textEdit1.Properties.Appearance.Options.UseFont = true;
             this.textEdit1.Size = new System.Drawing.Size(12, 28);
             this.textEdit1.TabIndex = 14;
+            this.textEdit1.Visible = false;
             this.textEdit1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextEdit1_KeyDown);
             // 
             // btnSaveOnly
@@ -478,7 +492,7 @@
             this.btnSaveOnly.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSaveOnly.Name = "btnSaveOnly";
             this.btnSaveOnly.Size = new System.Drawing.Size(84, 47);
-            this.btnSaveOnly.TabIndex = 15;
+            this.btnSaveOnly.TabIndex = 4;
             this.btnSaveOnly.Text = "Save ";
             this.btnSaveOnly.Click += new System.EventHandler(this.BtnSaveOnly_Click);
             // 
@@ -489,7 +503,7 @@
             this.BtnWhatsapp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnWhatsapp.Name = "BtnWhatsapp";
             this.BtnWhatsapp.Size = new System.Drawing.Size(123, 47);
-            this.BtnWhatsapp.TabIndex = 16;
+            this.BtnWhatsapp.TabIndex = 5;
             this.BtnWhatsapp.Text = "Whatsapp";
             this.BtnWhatsapp.Click += new System.EventHandler(this.BtnWhatsapp_Click);
             // 

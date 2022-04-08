@@ -589,6 +589,9 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.sqlDataSource1});
             this.DataSourceSchema = resources.GetString("$this.DataSourceSchema");
+            this.DesignerOptions.ShowDesignerHints = false;
+            this.DesignerOptions.ShowExportWarnings = false;
+            this.DesignerOptions.ShowPrintingWarnings = false;
             this.DisplayName = "Bar Printing";
             this.Dpi = 254F;
             this.DrawGrid = false;
@@ -598,7 +601,7 @@
             this.PageWidth = 1039;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.PaperName = "sticker";
-            this.PrinterName = "\\\\creativeqpc\\TSC TTP-345";
+            this.PrinterName = "";
             this.ReportPrintOptions.DetailCountOnEmptyDataSource = 0;
             this.ReportPrintOptions.PrintOnEmptyDataSource = false;
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
@@ -611,7 +614,7 @@
             this.SnapGridSize = 0.2645833F;
             this.SnapGridStepCount = 1;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
-            this.Version = "20.1";
+            this.Version = "21.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

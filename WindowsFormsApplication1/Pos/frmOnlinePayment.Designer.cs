@@ -93,6 +93,7 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl4.Size = new System.Drawing.Size(42, 25);
             this.labelControl4.TabIndex = 35;
             this.labelControl4.Text = "UPID";
+            this.labelControl4.Visible = false;
             // 
             // separatorControl1
             // 
@@ -299,6 +300,7 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl3.Size = new System.Drawing.Size(123, 25);
             this.labelControl3.TabIndex = 23;
             this.labelControl3.Text = "Name on UPID";
+            this.labelControl3.Visible = false;
             // 
             // labelControl25
             // 
@@ -315,7 +317,7 @@ namespace WindowsFormsApplication1.Pos
             // 
             this.lblMemoDate.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMemoDate.Appearance.Options.UseFont = true;
-            this.lblMemoDate.Location = new System.Drawing.Point(294, 9);
+            this.lblMemoDate.Location = new System.Drawing.Point(306, 9);
             this.lblMemoDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lblMemoDate.Name = "lblMemoDate";
             this.lblMemoDate.Size = new System.Drawing.Size(104, 25);
@@ -354,6 +356,7 @@ namespace WindowsFormsApplication1.Pos
             this.labelControl2.Size = new System.Drawing.Size(136, 25);
             this.labelControl2.TabIndex = 22;
             this.labelControl2.Text = "UPID Mobile No";
+            this.labelControl2.Visible = false;
             // 
             // labelControl1
             // 
@@ -375,6 +378,7 @@ namespace WindowsFormsApplication1.Pos
             this.txtUPID.Properties.Appearance.Options.UseFont = true;
             this.txtUPID.Size = new System.Drawing.Size(224, 28);
             this.txtUPID.TabIndex = 36;
+            this.txtUPID.Visible = false;
             // 
             // txtNameOnUPID
             // 
@@ -385,6 +389,7 @@ namespace WindowsFormsApplication1.Pos
             this.txtNameOnUPID.Properties.Appearance.Options.UseFont = true;
             this.txtNameOnUPID.Size = new System.Drawing.Size(224, 28);
             this.txtNameOnUPID.TabIndex = 25;
+            this.txtNameOnUPID.Visible = false;
             // 
             // txtUPIDMobileNo
             // 
@@ -395,6 +400,7 @@ namespace WindowsFormsApplication1.Pos
             this.txtUPIDMobileNo.Properties.Appearance.Options.UseFont = true;
             this.txtUPIDMobileNo.Size = new System.Drawing.Size(224, 28);
             this.txtUPIDMobileNo.TabIndex = 26;
+            this.txtUPIDMobileNo.Visible = false;
             // 
             // txtUPIDType
             // 
@@ -405,6 +411,7 @@ namespace WindowsFormsApplication1.Pos
             this.txtUPIDType.Properties.Appearance.Options.UseFont = true;
             this.txtUPIDType.Size = new System.Drawing.Size(224, 28);
             this.txtUPIDType.TabIndex = 24;
+            this.txtUPIDType.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUPIDType_KeyDown);
             // 
             // btnPhonePe
             // 
@@ -453,7 +460,7 @@ namespace WindowsFormsApplication1.Pos
             this.BtnWhatsapp.Text = "Whatsapp";
             this.BtnWhatsapp.Click += new System.EventHandler(this.BtnWhatsapp_Click);
             // 
-            // frmOnlinePayment
+            // FrmOnlinePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -482,7 +489,7 @@ namespace WindowsFormsApplication1.Pos
             this.Controls.Add(this.btnGooglePay);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "frmOnlinePayment";
+            this.Name = "FrmOnlinePayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.FrmOnlinePayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();

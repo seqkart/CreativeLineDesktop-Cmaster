@@ -64,12 +64,12 @@ namespace WindowsFormsApplication1.Master
                     txtBrandName.Focus();
                     return false;
                 }
-                if (txtBrandAlias.Text.Trim().Length == 0)
-                {
-                    ProjectFunctions.SpeakError("Invalid Brand Alias");
-                    txtBrandAlias.Focus();
-                    return false;
-                }
+                //if (txtBrandAlias.Text.Trim().Length == 0)
+                //{
+                //    ProjectFunctions.SpeakError("Invalid Brand Alias");
+                //    txtBrandAlias.Focus();
+                //    return false;
+                //}
                 return true;
             }
             catch (Exception ex)
@@ -146,6 +146,11 @@ namespace WindowsFormsApplication1.Master
             {
                 Close();
             }
+        }
+
+        private void btnSave2_Click(object sender, EventArgs e)
+        {
+            BtnSave_Click(null, e);
         }
     }
 }

@@ -35,9 +35,9 @@ namespace WindowsFormsApplication1
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.btnEdit = new System.Windows.Forms.ToolStripButton();
+            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             this.btnAdd = new System.Windows.Forms.ToolStripButton();
             this.lbl = new System.Windows.Forms.ToolStripLabel();
-            this.btnRefresh = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.InvoiceGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
@@ -47,14 +47,14 @@ namespace WindowsFormsApplication1
             // InvoiceGrid
             // 
             this.InvoiceGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InvoiceGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.InvoiceGrid.Location = new System.Drawing.Point(0, 26);
+            this.InvoiceGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.InvoiceGrid.Location = new System.Drawing.Point(0, 31);
             this.InvoiceGrid.MainView = this.InvoiceGridView;
-            this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.InvoiceGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.InvoiceGrid.Name = "InvoiceGrid";
             this.InvoiceGrid.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemCheckEdit1});
-            this.InvoiceGrid.Size = new System.Drawing.Size(948, 429);
+            this.InvoiceGrid.Size = new System.Drawing.Size(1264, 529);
             this.InvoiceGrid.TabIndex = 200;
             this.InvoiceGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.InvoiceGridView});
@@ -62,7 +62,7 @@ namespace WindowsFormsApplication1
             // 
             // InvoiceGridView
             // 
-            this.InvoiceGridView.DetailHeight = 372;
+            this.InvoiceGridView.DetailHeight = 458;
             this.InvoiceGridView.GridControl = this.InvoiceGrid;
             this.InvoiceGridView.Name = "InvoiceGridView";
             this.InvoiceGridView.OptionsBehavior.AllowIncrementalSearch = true;
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(948, 26);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1264, 31);
             this.Menu_ToolStrip.TabIndex = 199;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -108,28 +108,9 @@ namespace WindowsFormsApplication1
             this.btnEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnEdit.Size = new System.Drawing.Size(42, 23);
+            this.btnEdit.Size = new System.Drawing.Size(50, 28);
             this.btnEdit.Text = "Edit";
             this.btnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnAdd.Size = new System.Drawing.Size(43, 23);
-            this.btnAdd.Text = "&Add";
-            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
-            // 
-            // lbl
-            // 
-            this.lbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.lbl.ForeColor = System.Drawing.Color.White;
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(0, 23);
             // 
             // btnRefresh
             // 
@@ -140,21 +121,40 @@ namespace WindowsFormsApplication1
             this.btnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
-            this.btnRefresh.Size = new System.Drawing.Size(65, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(77, 28);
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
-            // frmCLApiMst
+            // btnAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.btnAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Padding = new System.Windows.Forms.Padding(5, 2, 5, 2);
+            this.btnAdd.Size = new System.Drawing.Size(52, 28);
+            this.btnAdd.Text = "&Add";
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // lbl
+            // 
+            this.lbl.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.lbl.ForeColor = System.Drawing.Color.White;
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(0, 28);
+            // 
+            // FrmCLApiMst
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 455);
+            this.ClientSize = new System.Drawing.Size(1264, 560);
             this.ControlBox = false;
             this.Controls.Add(this.InvoiceGrid);
             this.Controls.Add(this.Menu_ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "frmCLApiMst";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "FrmCLApiMst";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmCLApiMst_Load);

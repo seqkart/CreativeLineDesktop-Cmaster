@@ -1,11 +1,6 @@
-﻿using Newtonsoft.Json;
-using Paytm;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -75,20 +70,29 @@ namespace WindowsFormsApplication1.Pos
 
         private void BtnPayTM_Click(object sender, EventArgs e)
         {
-            txtUPIDType.Text = "PayTM"; 
-            SendPAYTMPaymentRequestAsync();
+            txtUPIDType.Text = "PayTM";
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            txtAmountPaid.Focus();
+            txtAmountPaid.SelectAll();
+            //  SendPAYTMPaymentRequestAsync();
         }
 
         private void BtnGooglePay_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "GooglePay";
-            SendGOOGLEPAYRequest();
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            txtAmountPaid.Focus();
+            txtAmountPaid.SelectAll();
+            //SendGOOGLEPAYRequest();
         }
 
         private void BtnPhonePe_Click(object sender, EventArgs e)
         {
             txtUPIDType.Text = "PhonePe";
-            SendPHONEPAYRequest();
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            txtAmountPaid.Focus();
+            txtAmountPaid.SelectAll();
+            // SendPHONEPAYRequest();
         }
 
         private void FrmOnlinePayment_Load(object sender, EventArgs e)
@@ -101,9 +105,6 @@ namespace WindowsFormsApplication1.Pos
 
                 txtMemoAmount.Text = TotalMemoAmount.ToString("0.00");
 
-
-
-
                 DataSet ds = ProjectFunctions.GetDataSet("Select * from CASHTENDER Where CATMEMONO='" + MemoNo + "' And CATMEMODATE='" + MemoDate.Date.ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
                 if (ds.Tables[0].Rows.Count > 0)
                 {
@@ -112,13 +113,11 @@ namespace WindowsFormsApplication1.Pos
                     txtNameOnUPID.Text = ds.Tables[0].Rows[0]["UPIDName"].ToString();
                     txtUPID.Text = ds.Tables[0].Rows[0]["UPIDAddress"].ToString();
 
-
-
-
-
+                    txtAmountPaid.Text = txtMemoAmount.Text;
                     txtAmountPaid.EditValue = ds.Tables[0].Rows[0]["CATPGAMT"].ToString();
                     txtBalanceAmount.EditValue = (Convert.ToDecimal(txtMemoAmount.Text) - Convert.ToDecimal(txtAmountPaid.Text));
                 }
+                txtUPIDType.Focus();
             }
 
             catch (Exception ex)
@@ -275,7 +274,7 @@ namespace WindowsFormsApplication1.Pos
             Close();
         }
 
-      
+
         private void BtnWhatsapp_Click(object sender, EventArgs e)
         {
             Save();
@@ -294,8 +293,22 @@ namespace WindowsFormsApplication1.Pos
         private void BtnSave_Click(object sender, EventArgs e)
         {
             Save();
-            Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();
-            ProjectFunctions.PrintPDFDocument(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
+            ProjectFunctions.GetDataSet("update CASHTENDER set CATMODE = 2 WHERE CATMEMONO='" + lblMemoNo.Text + "' And CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
+            ProjectFunctions.GetDataSet("update SALEINVMAIN set NOTPAID = 'Y' Where SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' And SIMNO='" + lblMemoNo.Text + "' And SIMSERIES='" + 'S' + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+
+
+            Prints.CASHMEMO rpt = new Prints.CASHMEMO();
+            ProjectFunctions.PrintDocument(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
+            Close();
+        }
+
+        private void TxtUPIDType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAmountPaid.Text = txtMemoAmount.Text;
+                txtAmountPaid.Focus();
+            }
         }
     }
 }

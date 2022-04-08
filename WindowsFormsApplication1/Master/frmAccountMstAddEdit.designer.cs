@@ -156,7 +156,7 @@
             this.BtnSave = new System.Windows.Forms.ToolStripButton();
             this.Menu_ToolStrip = new System.Windows.Forms.ToolStrip();
             this.label7 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStatusTag = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.txtACTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtLCTag = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label25 = new DevExpress.XtraEditors.LabelControl();
             this.txtFixBArCodeTag = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -237,7 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMRPMarkDown.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).BeginInit();
             this.Menu_ToolStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStatusTag.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtACTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLCTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFixBArCodeTag.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockTransferTag.Properties)).BeginInit();
@@ -329,7 +329,7 @@
             this.AInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AInfoTab.Name = "AInfoTab";
             this.AInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.AInfoTab.Size = new System.Drawing.Size(817, 523);
+            this.AInfoTab.Size = new System.Drawing.Size(817, 525);
             this.AInfoTab.Text = "&Account Info";
             // 
             // panelControl3
@@ -373,7 +373,7 @@
             this.panelControl3.Location = new System.Drawing.Point(12, 13);
             this.panelControl3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(793, 497);
+            this.panelControl3.Size = new System.Drawing.Size(793, 499);
             this.panelControl3.TabIndex = 0;
             // 
             // labelControl5
@@ -468,7 +468,7 @@
             this.chImportAll.Location = new System.Drawing.Point(396, 401);
             this.chImportAll.Name = "chImportAll";
             this.chImportAll.Properties.Caption = "Import All Info";
-            this.chImportAll.Size = new System.Drawing.Size(94, 24);
+            this.chImportAll.Size = new System.Drawing.Size(94, 21);
             this.chImportAll.TabIndex = 440;
             // 
             // btnBestMatch
@@ -767,7 +767,7 @@
             this.BInfoTab.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BInfoTab.Name = "BInfoTab";
             this.BInfoTab.Padding = new System.Windows.Forms.Padding(12, 13, 12, 13);
-            this.BInfoTab.Size = new System.Drawing.Size(817, 523);
+            this.BInfoTab.Size = new System.Drawing.Size(817, 525);
             this.BInfoTab.Text = "&Billing Info";
             // 
             // panelControl2
@@ -822,7 +822,7 @@
             this.panelControl2.Location = new System.Drawing.Point(12, 13);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(793, 497);
+            this.panelControl2.Size = new System.Drawing.Size(793, 499);
             this.panelControl2.TabIndex = 0;
             // 
             // txtAddress4
@@ -1136,6 +1136,7 @@
             this.txtGSTNo.Properties.MaxLength = 15;
             this.txtGSTNo.Size = new System.Drawing.Size(327, 22);
             this.txtGSTNo.TabIndex = 7;
+            this.txtGSTNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGSTNo_KeyDown);
             // 
             // label2
             // 
@@ -1331,7 +1332,7 @@
             this.xtraTabPage1.Controls.Add(this.txtDelCitycode);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(817, 523);
+            this.xtraTabPage1.Size = new System.Drawing.Size(817, 525);
             this.xtraTabPage1.Text = "Addresses";
             // 
             // labelControl2
@@ -1584,7 +1585,7 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(640, 31);
+            this.HelpGrid.Location = new System.Drawing.Point(173, 79);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -1717,18 +1718,18 @@
             this.label7.Tag = "";
             this.label7.Text = "Local / Central";
             // 
-            // txtStatusTag
+            // txtACTag
             // 
-            this.txtStatusTag.Location = new System.Drawing.Point(420, 38);
-            this.txtStatusTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtStatusTag.Name = "txtStatusTag";
-            this.txtStatusTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.txtACTag.Location = new System.Drawing.Point(420, 38);
+            this.txtACTag.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtACTag.Name = "txtACTag";
+            this.txtACTag.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtStatusTag.Properties.Items.AddRange(new object[] {
+            this.txtACTag.Properties.Items.AddRange(new object[] {
             "Y",
             "N"});
-            this.txtStatusTag.Size = new System.Drawing.Size(48, 22);
-            this.txtStatusTag.TabIndex = 2;
+            this.txtACTag.Size = new System.Drawing.Size(48, 22);
+            this.txtACTag.TabIndex = 2;
             // 
             // txtLCTag
             // 
@@ -1817,7 +1818,7 @@
             this.Controls.Add(this.label25);
             this.Controls.Add(this.StockTransfer1111);
             this.Controls.Add(this.txtLCTag);
-            this.Controls.Add(this.txtStatusTag);
+            this.Controls.Add(this.txtACTag);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtOBalance);
             this.Controls.Add(this.label29);
@@ -1921,7 +1922,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtOBalance.Properties)).EndInit();
             this.Menu_ToolStrip.ResumeLayout(false);
             this.Menu_ToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStatusTag.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtACTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLCTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFixBArCodeTag.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStockTransferTag.Properties)).EndInit();
@@ -1989,7 +1990,7 @@
         private DevExpress.XtraEditors.LabelControl label14;
         private DevExpress.XtraEditors.ComboBoxEdit txtGSTType;
         private DevExpress.XtraEditors.LabelControl label16;
-        private DevExpress.XtraEditors.ComboBoxEdit txtStatusTag;
+        private DevExpress.XtraEditors.ComboBoxEdit txtACTag;
         private DevExpress.XtraEditors.ComboBoxEdit txtLCTag;
         private DevExpress.XtraEditors.TextEdit txtAgentName;
         private DevExpress.XtraEditors.TextEdit txtAgentCode;

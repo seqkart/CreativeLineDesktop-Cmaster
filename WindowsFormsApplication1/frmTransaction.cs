@@ -107,7 +107,7 @@ namespace WindowsFormsApplication1
                     frm.StartPosition = FormStartPosition.CenterScreen;
                     frm.ShowDialog(Parent);
                 }
-                
+
                 if (GlobalVariables.ProgCode == "PROG245")
                 {
                     Transaction.FrmJournalVoucher frm = new Transaction.FrmJournalVoucher()
@@ -1658,8 +1658,7 @@ namespace WindowsFormsApplication1
                                                                       }
                                                                   }));
 
-                    e.Menu.Items
-                       .Add(new DevExpress.Utils.Menu.DXMenuItem("PRINT BOX LABEL",
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("PRINT BOX LABEL",
                                                                  (o1, e1) =>
                                                                  {
 
@@ -1791,38 +1790,38 @@ namespace WindowsFormsApplication1
                         }
                     }
 
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print BarCode", (o1, e1) =>
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print 3 pcs", (o1, e1) =>
                     {
 
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Sticker.btw");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\stic3.btw");
                         PrintOutGrid.DataSource = null;
 
                     }));
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print EAN Tag", (o1, e1) =>
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print 4 pcs", (o1, e1) =>
                     {
 
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\EAN.btw");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\stic4.btw");
                         PrintOutGrid.DataSource = null;
                         //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
 
                     }));
 
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Tag", (o1, e1) =>
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print 2 pcs", (o1, e1) =>
                     {
 
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Tag.btw");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\stic2.btw");
                         PrintOutGrid.DataSource = null;
                         // ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
                     }));
 
-                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Muffler", (o1, e1) =>
+                    e.Menu.Items.Add(new DevExpress.Utils.Menu.DXMenuItem("Print Other", (o1, e1) =>
                     {
 
                         PrintOutGridView.ExportToCsv(Application.StartupPath + @"\Label\Sticker.csv");
-                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\Muffler.btw");
+                        System.Diagnostics.Process.Start(Application.StartupPath + @"\Label\other.btw");
                         PrintOutGrid.DataSource = null;
                         //  ProjectFunctions.GetDataSet("Update sku set SKUPrintTag='Y' Where skuvouchno='" + currentrow["SKUVOUCHNO"].ToString() + "','" + GlobalVariables.FinancialYear + "','" + currentrow["BarCodeType"].ToString() + "'");
                     }));

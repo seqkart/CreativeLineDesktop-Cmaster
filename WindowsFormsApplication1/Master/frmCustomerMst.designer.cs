@@ -111,444 +111,487 @@
             this.GroupBox1.Controls.Add(this.Label19);
             this.GroupBox1.Controls.Add(this.txtDuringNormalSale);
             this.GroupBox1.Controls.Add(this.txtDiscountType);
-            this.GroupBox1.Location = new System.Drawing.Point(47, 511);
+            this.GroupBox1.Location = new System.Drawing.Point(53, 490);
             this.GroupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Size = new System.Drawing.Size(603, 124);
+            this.GroupBox1.Size = new System.Drawing.Size(654, 119);
             this.GroupBox1.TabIndex = 34;
             this.GroupBox1.Text = "Customer Discount ";
             // 
             // txtDuringEOSS
             // 
-            this.txtDuringEOSS.Location = new System.Drawing.Point(157, 78);
+            this.txtDuringEOSS.Location = new System.Drawing.Point(470, 45);
             this.txtDuringEOSS.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuringEOSS.Name = "txtDuringEOSS";
+            this.txtDuringEOSS.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuringEOSS.Properties.Appearance.Options.UseFont = true;
             this.txtDuringEOSS.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDuringEOSS.Properties.MaxLength = 100;
-            this.txtDuringEOSS.Size = new System.Drawing.Size(103, 22);
-            this.txtDuringEOSS.TabIndex = 650;
+            this.txtDuringEOSS.Size = new System.Drawing.Size(103, 28);
+            this.txtDuringEOSS.TabIndex = 1;
             // 
             // Label21
             // 
-            this.Label21.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label21.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label21.Appearance.Options.UseFont = true;
-            this.Label21.Location = new System.Drawing.Point(271, 81);
+            this.Label21.Location = new System.Drawing.Point(87, 80);
             this.Label21.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label21.Name = "Label21";
-            this.Label21.Size = new System.Drawing.Size(109, 19);
+            this.Label21.Size = new System.Drawing.Size(126, 21);
             this.Label21.TabIndex = 35;
             this.Label21.Text = "DISCOUNT TYPE:";
             // 
             // Label20
             // 
-            this.Label20.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label20.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label20.Appearance.Options.UseFont = true;
-            this.Label20.Location = new System.Drawing.Point(62, 81);
+            this.Label20.Location = new System.Drawing.Point(353, 48);
             this.Label20.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(95, 19);
+            this.Label20.Size = new System.Drawing.Size(111, 21);
             this.Label20.TabIndex = 35;
             this.Label20.Text = "DURING EOSS:";
             // 
             // Label19
             // 
-            this.Label19.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label19.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label19.Appearance.Options.UseFont = true;
-            this.Label19.Location = new System.Drawing.Point(1, 46);
+            this.Label19.Location = new System.Drawing.Point(29, 48);
             this.Label19.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(156, 19);
+            this.Label19.Size = new System.Drawing.Size(184, 21);
             this.Label19.TabIndex = 35;
             this.Label19.Text = "DURING NORMAL SALE:";
             // 
             // txtDuringNormalSale
             // 
-            this.txtDuringNormalSale.Location = new System.Drawing.Point(157, 41);
+            this.txtDuringNormalSale.Location = new System.Drawing.Point(219, 43);
             this.txtDuringNormalSale.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDuringNormalSale.Name = "txtDuringNormalSale";
+            this.txtDuringNormalSale.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuringNormalSale.Properties.Appearance.Options.UseFont = true;
             this.txtDuringNormalSale.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDuringNormalSale.Properties.MaxLength = 100;
-            this.txtDuringNormalSale.Size = new System.Drawing.Size(409, 22);
-            this.txtDuringNormalSale.TabIndex = 647;
+            this.txtDuringNormalSale.Size = new System.Drawing.Size(103, 28);
+            this.txtDuringNormalSale.TabIndex = 0;
             // 
             // txtDiscountType
             // 
-            this.txtDiscountType.Location = new System.Drawing.Point(383, 78);
+            this.txtDiscountType.Location = new System.Drawing.Point(219, 77);
             this.txtDiscountType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDiscountType.Name = "txtDiscountType";
+            this.txtDiscountType.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscountType.Properties.Appearance.Options.UseFont = true;
             this.txtDiscountType.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDiscountType.Properties.MaxLength = 100;
-            this.txtDiscountType.Size = new System.Drawing.Size(184, 22);
-            this.txtDiscountType.TabIndex = 649;
+            this.txtDiscountType.Size = new System.Drawing.Size(184, 28);
+            this.txtDiscountType.TabIndex = 2;
             // 
             // Label18
             // 
-            this.Label18.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label18.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label18.Appearance.Options.UseFont = true;
-            this.Label18.Location = new System.Drawing.Point(328, 413);
+            this.Label18.Location = new System.Drawing.Point(354, 413);
             this.Label18.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label18.Name = "Label18";
-            this.Label18.Size = new System.Drawing.Size(127, 19);
+            this.Label18.Size = new System.Drawing.Size(154, 21);
             this.Label18.TabIndex = 14;
             this.Label18.Text = "CARD EXPIRY DATE:";
             // 
             // Label8
             // 
-            this.Label8.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label8.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label8.Appearance.Options.UseFont = true;
-            this.Label8.Location = new System.Drawing.Point(2, 449);
+            this.Label8.Location = new System.Drawing.Point(7, 449);
             this.Label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(161, 19);
+            this.Label8.Size = new System.Drawing.Size(186, 21);
             this.Label8.TabIndex = 8;
             this.Label8.Text = "CUSTOMER MOBILE NO.:";
             // 
             // Label2
             // 
-            this.Label2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.Appearance.Options.UseFont = true;
-            this.Label2.Location = new System.Drawing.Point(67, 74);
+            this.Label2.Location = new System.Drawing.Point(56, 75);
             this.Label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(96, 19);
+            this.Label2.Size = new System.Drawing.Size(110, 21);
             this.Label2.TabIndex = 10;
             this.Label2.Text = "CUSTOMER ID:";
             // 
             // Label11
             // 
-            this.Label11.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label11.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label11.Appearance.Options.UseFont = true;
-            this.Label11.Location = new System.Drawing.Point(539, 107);
+            this.Label11.Location = new System.Drawing.Point(397, 108);
             this.Label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label11.Name = "Label11";
-            this.Label11.Size = new System.Drawing.Size(67, 19);
+            this.Label11.Size = new System.Drawing.Size(78, 21);
             this.Label11.TabIndex = 3;
             this.Label11.Text = "SURNAME";
             // 
             // Label10
             // 
-            this.Label10.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label10.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label10.Appearance.Options.UseFont = true;
-            this.Label10.Location = new System.Drawing.Point(384, 107);
+            this.Label10.Location = new System.Drawing.Point(566, 108);
             this.Label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label10.Name = "Label10";
-            this.Label10.Size = new System.Drawing.Size(51, 19);
+            this.Label10.Size = new System.Drawing.Size(60, 21);
             this.Label10.TabIndex = 5;
             this.Label10.Text = "MIDDLE";
+            this.Label10.Visible = false;
             // 
             // Label9
             // 
-            this.Label9.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label9.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label9.Appearance.Options.UseFont = true;
-            this.Label9.Location = new System.Drawing.Point(229, 107);
+            this.Label9.Location = new System.Drawing.Point(261, 107);
             this.Label9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Label9.Name = "Label9";
-            this.Label9.Size = new System.Drawing.Size(36, 19);
+            this.Label9.Size = new System.Drawing.Size(45, 21);
             this.Label9.TabIndex = 11;
             this.Label9.Text = "FIRST";
             // 
             // label33
             // 
-            this.label33.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Appearance.Options.UseFont = true;
-            this.label33.Location = new System.Drawing.Point(44, 415);
+            this.label33.Location = new System.Drawing.Point(49, 415);
             this.label33.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(119, 19);
+            this.label33.Size = new System.Drawing.Size(144, 21);
             this.label33.TabIndex = 24;
             this.label33.Text = "CARD ISSUE DATE:";
             // 
             // label34
             // 
-            this.label34.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Appearance.Options.UseFont = true;
-            this.label34.Location = new System.Drawing.Point(327, 379);
+            this.label34.Location = new System.Drawing.Point(359, 379);
             this.label34.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(128, 19);
+            this.label34.Size = new System.Drawing.Size(149, 21);
             this.label34.TabIndex = 25;
             this.label34.Text = "LOYALTY CARD NO:";
             // 
             // label35
             // 
-            this.label35.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Appearance.Options.UseFont = true;
-            this.label35.Location = new System.Drawing.Point(61, 378);
+            this.label35.Location = new System.Drawing.Point(71, 378);
             this.label35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(102, 19);
+            this.label35.Size = new System.Drawing.Size(122, 21);
             this.label35.TabIndex = 26;
             this.label35.Text = "DATE OF BIRTH:";
             // 
             // label36
             // 
-            this.label36.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Appearance.Options.UseFont = true;
-            this.label36.Location = new System.Drawing.Point(87, 276);
+            this.label36.Location = new System.Drawing.Point(101, 276);
             this.label36.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(76, 19);
+            this.label36.Size = new System.Drawing.Size(92, 21);
             this.label36.TabIndex = 20;
             this.label36.Text = "ADDRESS 3:";
             // 
             // label37
             // 
-            this.label37.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Appearance.Options.UseFont = true;
-            this.label37.Location = new System.Drawing.Point(87, 242);
+            this.label37.Location = new System.Drawing.Point(101, 242);
             this.label37.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(76, 19);
+            this.label37.Size = new System.Drawing.Size(92, 21);
             this.label37.TabIndex = 19;
             this.label37.Text = "ADDRESS 2:";
             // 
             // label38
             // 
-            this.label38.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.Appearance.Options.UseFont = true;
-            this.label38.Location = new System.Drawing.Point(89, 208);
+            this.label38.Location = new System.Drawing.Point(104, 208);
             this.label38.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(74, 19);
+            this.label38.Size = new System.Drawing.Size(89, 21);
             this.label38.TabIndex = 21;
             this.label38.Text = "ADDRESS 1:";
             // 
             // label39
             // 
-            this.label39.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.Appearance.Options.UseFont = true;
-            this.label39.Location = new System.Drawing.Point(77, 174);
+            this.label39.Location = new System.Drawing.Point(81, 174);
             this.label39.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(86, 19);
+            this.label39.Size = new System.Drawing.Size(112, 21);
             this.label39.TabIndex = 22;
             this.label39.Text = "REFFERED BY:";
             // 
             // label40
             // 
-            this.label40.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Appearance.Options.UseFont = true;
-            this.label40.Location = new System.Drawing.Point(41, 138);
+            this.label40.Location = new System.Drawing.Point(53, 138);
             this.label40.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(122, 19);
+            this.label40.Size = new System.Drawing.Size(140, 21);
             this.label40.TabIndex = 23;
             this.label40.Text = "CUSTOMER NAME:";
             // 
             // label43
             // 
-            this.label43.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Appearance.Options.UseFont = true;
-            this.label43.Location = new System.Drawing.Point(131, 310);
+            this.label43.Location = new System.Drawing.Point(156, 310);
             this.label43.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(32, 19);
+            this.label43.Size = new System.Drawing.Size(37, 21);
             this.label43.TabIndex = 28;
             this.label43.Text = "CITY:";
             // 
             // label44
             // 
-            this.label44.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label44.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Appearance.Options.UseFont = true;
-            this.label44.Location = new System.Drawing.Point(120, 343);
+            this.label44.Location = new System.Drawing.Point(140, 343);
             this.label44.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(43, 19);
+            this.label44.Size = new System.Drawing.Size(53, 21);
             this.label44.TabIndex = 27;
             this.label44.Text = "EMAIL:";
             // 
             // txtDatefBirth
             // 
-            this.txtDatefBirth.Location = new System.Drawing.Point(168, 375);
+            this.txtDatefBirth.Location = new System.Drawing.Point(200, 375);
             this.txtDatefBirth.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDatefBirth.Name = "txtDatefBirth";
+            this.txtDatefBirth.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDatefBirth.Properties.Appearance.Options.UseFont = true;
             this.txtDatefBirth.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDatefBirth.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.txtDatefBirth.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtDatefBirth.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.txtDatefBirth.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtDatefBirth.Properties.Mask.EditMask = "dd-MM-yyyy";
-            this.txtDatefBirth.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtDatefBirth.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtDatefBirth.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.txtDatefBirth.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtDatefBirth.Properties.MaxLength = 100;
-            this.txtDatefBirth.Size = new System.Drawing.Size(153, 22);
-            this.txtDatefBirth.TabIndex = 648;
+            this.txtDatefBirth.Size = new System.Drawing.Size(153, 28);
+            this.txtDatefBirth.TabIndex = 9;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(168, 341);
+            this.txtEmail.Location = new System.Drawing.Point(200, 341);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Properties.Appearance.Options.UseFont = true;
             this.txtEmail.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEmail.Properties.MaxLength = 100;
-            this.txtEmail.Size = new System.Drawing.Size(482, 22);
-            this.txtEmail.TabIndex = 646;
+            this.txtEmail.Size = new System.Drawing.Size(482, 28);
+            this.txtEmail.TabIndex = 8;
             // 
             // txtState
             // 
-            this.txtState.Location = new System.Drawing.Point(457, 307);
+            this.txtState.EditValue = "PUNJAB";
+            this.txtState.Location = new System.Drawing.Point(489, 307);
             this.txtState.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtState.Name = "txtState";
+            this.txtState.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtState.Properties.Appearance.Options.UseFont = true;
             this.txtState.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtState.Properties.MaxLength = 100;
-            this.txtState.Size = new System.Drawing.Size(192, 22);
-            this.txtState.TabIndex = 645;
+            this.txtState.Size = new System.Drawing.Size(193, 28);
+            this.txtState.TabIndex = 7;
             // 
             // txtCity
             // 
-            this.txtCity.Location = new System.Drawing.Point(168, 307);
+            this.txtCity.EditValue = "LUDHIANA";
+            this.txtCity.Location = new System.Drawing.Point(200, 307);
             this.txtCity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCity.Name = "txtCity";
+            this.txtCity.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCity.Properties.Appearance.Options.UseFont = true;
             this.txtCity.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCity.Properties.MaxLength = 100;
-            this.txtCity.Size = new System.Drawing.Size(153, 22);
-            this.txtCity.TabIndex = 644;
+            this.txtCity.Size = new System.Drawing.Size(153, 28);
+            this.txtCity.TabIndex = 6;
+            this.txtCity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCity_KeyDown);
             // 
             // txtAddress3
             // 
-            this.txtAddress3.Location = new System.Drawing.Point(168, 273);
+            this.txtAddress3.Location = new System.Drawing.Point(200, 273);
             this.txtAddress3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress3.Name = "txtAddress3";
+            this.txtAddress3.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress3.Properties.Appearance.Options.UseFont = true;
             this.txtAddress3.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress3.Properties.MaxLength = 100;
-            this.txtAddress3.Size = new System.Drawing.Size(482, 22);
-            this.txtAddress3.TabIndex = 643;
+            this.txtAddress3.Size = new System.Drawing.Size(482, 28);
+            this.txtAddress3.TabIndex = 5;
             // 
             // txtAddress2
             // 
-            this.txtAddress2.Location = new System.Drawing.Point(168, 239);
+            this.txtAddress2.Location = new System.Drawing.Point(200, 239);
             this.txtAddress2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress2.Name = "txtAddress2";
+            this.txtAddress2.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress2.Properties.Appearance.Options.UseFont = true;
             this.txtAddress2.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress2.Properties.MaxLength = 100;
-            this.txtAddress2.Size = new System.Drawing.Size(482, 22);
-            this.txtAddress2.TabIndex = 642;
+            this.txtAddress2.Size = new System.Drawing.Size(482, 28);
+            this.txtAddress2.TabIndex = 4;
             // 
             // txtAddress1
             // 
-            this.txtAddress1.Location = new System.Drawing.Point(168, 205);
+            this.txtAddress1.Location = new System.Drawing.Point(200, 205);
             this.txtAddress1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress1.Name = "txtAddress1";
+            this.txtAddress1.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress1.Properties.Appearance.Options.UseFont = true;
             this.txtAddress1.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtAddress1.Properties.MaxLength = 100;
-            this.txtAddress1.Size = new System.Drawing.Size(482, 22);
-            this.txtAddress1.TabIndex = 641;
+            this.txtAddress1.Size = new System.Drawing.Size(482, 28);
+            this.txtAddress1.TabIndex = 3;
             // 
             // txtRefBy
             // 
-            this.txtRefBy.Location = new System.Drawing.Point(168, 171);
+            this.txtRefBy.Location = new System.Drawing.Point(200, 171);
             this.txtRefBy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRefBy.Name = "txtRefBy";
+            this.txtRefBy.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRefBy.Properties.Appearance.Options.UseFont = true;
             this.txtRefBy.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRefBy.Properties.MaxLength = 100;
-            this.txtRefBy.Size = new System.Drawing.Size(482, 22);
-            this.txtRefBy.TabIndex = 640;
+            this.txtRefBy.Size = new System.Drawing.Size(482, 28);
+            this.txtRefBy.TabIndex = 2;
             // 
             // label1
             // 
-            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Appearance.Options.UseFont = true;
-            this.label1.Location = new System.Drawing.Point(408, 308);
+            this.label1.Location = new System.Drawing.Point(419, 308);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 19);
+            this.label1.Size = new System.Drawing.Size(56, 21);
             this.label1.TabIndex = 652;
             this.label1.Text = "STATE :";
             // 
             // txtLoyaltyCardNo
             // 
-            this.txtLoyaltyCardNo.Location = new System.Drawing.Point(457, 375);
+            this.txtLoyaltyCardNo.Location = new System.Drawing.Point(514, 375);
             this.txtLoyaltyCardNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtLoyaltyCardNo.Name = "txtLoyaltyCardNo";
+            this.txtLoyaltyCardNo.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLoyaltyCardNo.Properties.Appearance.Options.UseFont = true;
             this.txtLoyaltyCardNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtLoyaltyCardNo.Properties.MaxLength = 100;
-            this.txtLoyaltyCardNo.Size = new System.Drawing.Size(192, 22);
-            this.txtLoyaltyCardNo.TabIndex = 653;
+            this.txtLoyaltyCardNo.Size = new System.Drawing.Size(167, 28);
+            this.txtLoyaltyCardNo.TabIndex = 10;
             // 
             // txtCardExpiryDate
             // 
-            this.txtCardExpiryDate.Location = new System.Drawing.Point(457, 412);
+            this.txtCardExpiryDate.Location = new System.Drawing.Point(514, 412);
             this.txtCardExpiryDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCardExpiryDate.Name = "txtCardExpiryDate";
+            this.txtCardExpiryDate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardExpiryDate.Properties.Appearance.Options.UseFont = true;
             this.txtCardExpiryDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCardExpiryDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.txtCardExpiryDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtCardExpiryDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.txtCardExpiryDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtCardExpiryDate.Properties.Mask.EditMask = "dd-MM-yyyy";
-            this.txtCardExpiryDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtCardExpiryDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCardExpiryDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.txtCardExpiryDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtCardExpiryDate.Properties.MaxLength = 100;
-            this.txtCardExpiryDate.Size = new System.Drawing.Size(192, 22);
-            this.txtCardExpiryDate.TabIndex = 655;
+            this.txtCardExpiryDate.Size = new System.Drawing.Size(167, 28);
+            this.txtCardExpiryDate.TabIndex = 12;
             // 
             // txtCardIssueDate
             // 
-            this.txtCardIssueDate.Location = new System.Drawing.Point(168, 409);
+            this.txtCardIssueDate.Location = new System.Drawing.Point(200, 409);
             this.txtCardIssueDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCardIssueDate.Name = "txtCardIssueDate";
+            this.txtCardIssueDate.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardIssueDate.Properties.Appearance.Options.UseFont = true;
             this.txtCardIssueDate.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCardIssueDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
             this.txtCardIssueDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.txtCardIssueDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
             this.txtCardIssueDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.txtCardIssueDate.Properties.Mask.EditMask = "dd-MM-yyyy";
-            this.txtCardIssueDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTime;
             this.txtCardIssueDate.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.txtCardIssueDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateTimeMaskManager));
+            this.txtCardIssueDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.txtCardIssueDate.Properties.MaxLength = 100;
-            this.txtCardIssueDate.Size = new System.Drawing.Size(153, 22);
-            this.txtCardIssueDate.TabIndex = 654;
+            this.txtCardIssueDate.Size = new System.Drawing.Size(153, 28);
+            this.txtCardIssueDate.TabIndex = 11;
             // 
             // txtMobileNo
             // 
-            this.txtMobileNo.Location = new System.Drawing.Point(168, 443);
+            this.txtMobileNo.Location = new System.Drawing.Point(200, 443);
             this.txtMobileNo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMobileNo.Name = "txtMobileNo";
+            this.txtMobileNo.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobileNo.Properties.Appearance.Options.UseFont = true;
             this.txtMobileNo.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMobileNo.Properties.MaxLength = 100;
-            this.txtMobileNo.Size = new System.Drawing.Size(153, 22);
-            this.txtMobileNo.TabIndex = 656;
+            this.txtMobileNo.Size = new System.Drawing.Size(153, 28);
+            this.txtMobileNo.TabIndex = 13;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(168, 137);
+            this.txtFirstName.Location = new System.Drawing.Point(200, 137);
             this.txtFirstName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Properties.Appearance.Options.UseFont = true;
             this.txtFirstName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtFirstName.Properties.MaxLength = 100;
-            this.txtFirstName.Size = new System.Drawing.Size(155, 22);
+            this.txtFirstName.Size = new System.Drawing.Size(155, 28);
             this.txtFirstName.TabIndex = 0;
             // 
             // txtMiddleName
             // 
-            this.txtMiddleName.Location = new System.Drawing.Point(331, 137);
+            this.txtMiddleName.Location = new System.Drawing.Point(523, 137);
             this.txtMiddleName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMiddleName.Name = "txtMiddleName";
+            this.txtMiddleName.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddleName.Properties.Appearance.Options.UseFont = true;
             this.txtMiddleName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtMiddleName.Properties.MaxLength = 100;
-            this.txtMiddleName.Size = new System.Drawing.Size(155, 22);
+            this.txtMiddleName.Size = new System.Drawing.Size(155, 28);
             this.txtMiddleName.TabIndex = 659;
+            this.txtMiddleName.Visible = false;
             // 
             // txtSurName
             // 
-            this.txtSurName.Location = new System.Drawing.Point(495, 137);
+            this.txtSurName.Location = new System.Drawing.Point(362, 137);
             this.txtSurName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSurName.Name = "txtSurName";
+            this.txtSurName.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurName.Properties.Appearance.Options.UseFont = true;
             this.txtSurName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtSurName.Properties.MaxLength = 100;
-            this.txtSurName.Size = new System.Drawing.Size(155, 22);
-            this.txtSurName.TabIndex = 660;
+            this.txtSurName.Size = new System.Drawing.Size(155, 28);
+            this.txtSurName.TabIndex = 1;
             // 
             // txtCustId
             // 
             this.txtCustId.Enabled = false;
             this.txtCustId.EnterMoveNextControl = true;
-            this.txtCustId.Location = new System.Drawing.Point(168, 71);
+            this.txtCustId.Location = new System.Drawing.Point(173, 72);
             this.txtCustId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCustId.Name = "txtCustId";
+            this.txtCustId.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustId.Properties.Appearance.Options.UseFont = true;
             this.txtCustId.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCustId.Properties.MaxLength = 8;
-            this.txtCustId.Size = new System.Drawing.Size(155, 22);
+            this.txtCustId.Size = new System.Drawing.Size(155, 28);
             this.txtCustId.TabIndex = 661;
             this.txtCustId.TabStop = false;
             // 
@@ -566,7 +609,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(678, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(748, 27);
             this.Menu_ToolStrip.TabIndex = 662;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -587,37 +630,39 @@
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 24);
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "&Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(348, 74);
+            this.labelControl1.Location = new System.Drawing.Point(353, 75);
             this.labelControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(134, 19);
+            this.labelControl1.Size = new System.Drawing.Size(151, 21);
             this.labelControl1.TabIndex = 10;
             this.labelControl1.Text = "CUSTOMER GST NO:";
             // 
             // TXTCUSTGSTNO
             // 
             this.TXTCUSTGSTNO.EnterMoveNextControl = true;
-            this.TXTCUSTGSTNO.Location = new System.Drawing.Point(484, 71);
+            this.TXTCUSTGSTNO.Location = new System.Drawing.Point(514, 72);
             this.TXTCUSTGSTNO.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TXTCUSTGSTNO.Name = "TXTCUSTGSTNO";
+            this.TXTCUSTGSTNO.Properties.Appearance.Font = new System.Drawing.Font("Bahnschrift", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TXTCUSTGSTNO.Properties.Appearance.Options.UseFont = true;
             this.TXTCUSTGSTNO.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TXTCUSTGSTNO.Properties.MaxLength = 8;
-            this.TXTCUSTGSTNO.Size = new System.Drawing.Size(166, 22);
-            this.TXTCUSTGSTNO.TabIndex = 661;
+            this.TXTCUSTGSTNO.Size = new System.Drawing.Size(195, 28);
+            this.TXTCUSTGSTNO.TabIndex = 14;
             this.TXTCUSTGSTNO.TabStop = false;
             // 
             // FrmCustomerMst
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(678, 659);
+            this.ClientSize = new System.Drawing.Size(748, 625);
             this.ControlBox = false;
             this.Controls.Add(this.Menu_ToolStrip);
             this.Controls.Add(this.TXTCUSTGSTNO);

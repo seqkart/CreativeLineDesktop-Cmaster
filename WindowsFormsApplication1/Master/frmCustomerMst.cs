@@ -36,23 +36,33 @@ namespace WindowsFormsApplication1.Master
             txtSurName.Properties.MaxLength = 20;
             TXTCUSTGSTNO.Properties.MaxLength = 15;
             txtCustId.Enabled = false;
-            AutoCompleteStringCollection CITY = new AutoCompleteStringCollection
+            //AutoCompleteStringCollection CITY = new AutoCompleteStringCollection
+            //{
+            //    "LUDHIANA"
+            //};
+            //txtCity.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //txtCity.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            ////txtCity.MaskBox.AutoCompleteCustomSource = CITY;
+
+            ////AutoCompleteStringCollection ST = new AutoCompleteStringCollection
+            ////{
+            ////    "PUNJAB"
+            ////};
+            //txtState.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            //txtState.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            //txtState.MaskBox.AutoCompleteCustomSource = ST;
+
+            AutoCompleteStringCollection CITY = new AutoCompleteStringCollection();
+            
+            DataSet dsCity = ProjectFunctions.GetDataSet("Select distinct CTNAME FROM CITYMASTER ");
+            foreach (DataRow dr in dsCity.Tables[0].Rows)
             {
-                "LUDHIANA"
-            };
+                CITY.Add(dr["CTNAME"].ToString());
+            }
+           
             txtCity.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txtCity.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txtCity.MaskBox.AutoCompleteCustomSource = CITY;
-
-            AutoCompleteStringCollection ST = new AutoCompleteStringCollection
-            {
-                "PUNJAB"
-            };
-            txtState.MaskBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-            txtState.MaskBox.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-            txtState.MaskBox.AutoCompleteCustomSource = ST;
-
-
 
         }
         private void FrmCustomerMst_Load(object sender, EventArgs e)
@@ -101,25 +111,25 @@ namespace WindowsFormsApplication1.Master
                 txtFirstName.Focus();
                 return false;
             }
-            if (txtSurName.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Customer Sur Name");
-                txtSurName.Focus();
-                return false;
-            }
+            //if (txtSurName.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Customer Sur Name");
+            //    txtSurName.Focus();
+            //    return false;
+            //}
 
-            if (txtState.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Customer State");
-                txtState.Focus();
-                return false;
-            }
-            if (txtCity.Text.Trim().Length == 0)
-            {
-                ProjectFunctions.SpeakError("Invalid Customer Address");
-                txtCity.Focus();
-                return false;
-            }
+            //if (txtState.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Customer State");
+            //    txtState.Focus();
+            //    return false;
+            //}
+            //if (txtCity.Text.Trim().Length == 0)
+            //{
+            //    ProjectFunctions.SpeakError("Invalid Customer Address");
+            //    txtCity.Focus();
+            //    return false;
+            //}
 
             if (txtDuringNormalSale.Text.Length == 0)
             {
@@ -157,6 +167,7 @@ namespace WindowsFormsApplication1.Master
                 using (var sqlcon = new SqlConnection(ProjectFunctions.GetConnection()))
                 {
                     sqlcon.Open();
+                    
                     var sqlcom = sqlcon.CreateCommand();
                     var transaction = sqlcon.BeginTransaction("SaveTransaction");
                     sqlcom.Connection = sqlcon;
@@ -187,6 +198,7 @@ namespace WindowsFormsApplication1.Master
                                                 + " Where CAFSYSID=@CAFSYSID";
                             sqlcom.Parameters.AddWithValue("@CAFSYSID", txtCustId.Text.Trim());
                         }
+                       
                         sqlcom.Parameters.AddWithValue("@CAFMOBILE", txtMobileNo.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFFNAME", txtFirstName.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFMNAME", txtMiddleName.Text.Trim());
@@ -196,7 +208,7 @@ namespace WindowsFormsApplication1.Master
 
                         sqlcom.Parameters.AddWithValue("@CAFADD1", txtAddress2.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFADD2", txtAddress3.Text.Trim());
-                        sqlcom.Parameters.AddWithValue("@CAFCITY", txtAddress1.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@CAFCITY", txtCity.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFSTATE", txtState.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@CAFEMAILID", txtEmail.Text.Trim());
 
@@ -254,6 +266,15 @@ namespace WindowsFormsApplication1.Master
                         }
                     }
                 }
+            }
+        }
+
+        private void txtCity_KeyDown(object sender, KeyEventArgs e)
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("Select distinct UNDERST FROM CITYMASTER WHERE CTNAME='" + txtCity.Text + "'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                txtState.Text = ds.Tables[0].Rows[0]["UNDERST"].ToString();
             }
         }
     }

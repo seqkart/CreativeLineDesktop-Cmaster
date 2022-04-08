@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraEditors;
+using SeqKartLibrary;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -15,7 +16,14 @@ namespace WindowsFormsApplication1.Master
 
         public string PrdCode { get; set; }
 
-        public FrmArticleMst() { InitializeComponent(); }
+        DataSet dsPopUps = new DataSet();
+
+
+        public FrmArticleMst()
+        {
+            InitializeComponent();
+            dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_POPUPForArticle");
+        }
 
 
         private void TxtUMCode_EditValueChanged(object sender, EventArgs e)
@@ -27,22 +35,61 @@ namespace WindowsFormsApplication1.Master
 
         private void TxtUMCode_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+
+            if (e.KeyCode != Keys.Back)
             {
-                ProjectFunctions.CreatePopUpForTwoBoxes("Select UomCode,UomDesc from UomMst",
-                                                        " Where UomCode",
-                                                        txtUMCode,
-                                                        txtUMDesc,
-                                                        txtUMCode,
-                                                        HelpGrid,
-                                                        HelpGridView,
-                                                        e);
+                if (e.KeyCode != Keys.Delete)
+                {
+                    if (e.KeyCode != Keys.Up)
+                    {
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            HelpGrid.Text = "txtUMCode";
+                                            txtSearchBox.Text = string.Empty;
+                                            txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl1.Visible = true;
+                                            HelpGrid.Visible = true;
+
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtUMCode.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
+            //try
+            //{
+            //    ProjectFunctions.CreatePopUpForTwoBoxes("Select UomDesc,UomCode from UomMst",
+            //                                            " Where UomCode",
+
+            //                                            txtUMDesc,
+            //                                            txtUMCode,
+
+            //                                            txtMRP,
+            //                                            HelpGrid,
+            //                                            HelpGridView,
+            //                                            e);
+            //}
+
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError(ex.Message);
+            //}
 
         }
 
@@ -55,31 +102,67 @@ namespace WindowsFormsApplication1.Master
 
         private void TxtSGrpCode_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (e.KeyCode != Keys.Back)
             {
-                if (e.KeyCode == Keys.Enter)
+                if (e.KeyCode != Keys.Delete)
                 {
-                    HelpGridView.Columns.Clear();
-                    HelpGrid.Text = "txtSGrpCode";
-                    DataSet ds = ProjectFunctions.GetDataSet("Select GrpSubCode,GrpSubDesc,GrpCode,GrpDesc,GrpHSNCode from GrpMst");
-                    if (ds.Tables[0].Rows.Count > 0)
+                    if (e.KeyCode != Keys.Up)
                     {
-                        HelpGrid.DataSource = ds.Tables[0];
-                        HelpGrid.Visible = true;
-                        HelpGrid.Focus();
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        ProjectFunctions.SpeakError("No Records To Display");
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            HelpGrid.Text = "txtSGrpCode";
+                                            txtSearchBox.Text = string.Empty;
+                                            txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl1.Visible = true;
+                                            HelpGrid.Visible = true;
+
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtSGrpCode.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
-                e.Handled = true;
             }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
+
+            //try
+            //{
+            //    if (e.KeyCode == Keys.Enter)
+            //    {
+            //        HelpGridView.Columns.Clear();
+            //        HelpGrid.Text = "txtSGrpCode";
+            //        DataSet ds = ProjectFunctions.GetDataSet("Select GrpSubCode,GrpSubDesc,GrpCode,GrpDesc,GrpHSNCode from GrpMst");
+            //        if (ds.Tables[0].Rows.Count > 0)
+            //        {
+            //            HelpGrid.DataSource = ds.Tables[0];
+            //            HelpGrid.Visible = true;
+            //            HelpGrid.Focus();
+            //            HelpGridView.BestFitColumns();
+            //        }
+            //        else
+            //        {
+            //            ProjectFunctions.SpeakError("No Records To Display");
+            //        }
+            //    }
+            //    e.Handled = true;
+            //}
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError(ex.Message);
+            //}
         }
 
         private void SetMyControls()
@@ -88,11 +171,11 @@ namespace WindowsFormsApplication1.Master
             {
                 ProjectFunctions.TextBoxVisualize(this);
 
-                ProjectFunctions.TextBoxVisualize(GroupBox16);
+
                 ProjectFunctions.TextBoxVisualize(GroupBox2);
                 ProjectFunctions.TextBoxVisualize(GroupBox3);
                 ProjectFunctions.TextBoxVisualize(GroupBox4);
-                ProjectFunctions.TextBoxVisualize(GroupBox6);
+
                 ProjectFunctions.TextBoxVisualize(GroupBox7);
                 ProjectFunctions.ToolStripVisualize(Menu_ToolStrip);
 
@@ -140,28 +223,29 @@ namespace WindowsFormsApplication1.Master
                 {
                     txtTaxCodeL.Text = row["TaxCode"].ToString();
                     txtTaxCodeLDesc.Text = row["TaxDesc"].ToString();
-                    HelpGrid.Visible = false;
+                    panelControl1.Visible = false;
                     txtTaxCodeC.Focus();
                 }
                 if (HelpGrid.Text == "txtTaxCodeC")
                 {
                     txtTaxCodeC.Text = row["TaxCode"].ToString();
                     txtTaxCodeCDesc.Text = row["TaxDesc"].ToString();
-                    HelpGrid.Visible = false;
+                    panelControl1.Visible = false;
                     txtTaxCodeC.Focus();
                 }
                 if (HelpGrid.Text == "txtUMCode")
                 {
                     txtUMCode.Text = row["UomCode"].ToString();
                     txtUMDesc.Text = row["UomDesc"].ToString();
-                    HelpGrid.Visible = false;
+                    panelControl1.Visible = false;
                     txtMRP.Focus();
                 }
                 if (HelpGrid.Text == "txtBrandCode")
                 {
                     txtBrandCode.Text = row["BRSYSID"].ToString();
                     txtBrandDesc.Text = row["BRNAME"].ToString();
-                    HelpGrid.Visible = false;
+                    panelControl1.Visible = false;
+                    //txtMRP.Focus();
                     txtUMCode.Focus();
                 }
                 if (HelpGrid.Text == "txtSGrpCode")
@@ -171,7 +255,7 @@ namespace WindowsFormsApplication1.Master
                     txtGrpCode.Text = row["GrpCode"].ToString();
                     txtGrpDesc.Text = row["GrpDesc"].ToString();
                     txtHSNCode.Text = row["GrpHSNCode"].ToString();
-                    HelpGrid.Visible = false;
+                    panelControl1.Visible = false;
                     txtArtNo.Focus();
                 }
             }
@@ -199,32 +283,32 @@ namespace WindowsFormsApplication1.Master
         {
             try
             {
-                MemoryStream ms = new MemoryStream();
-                ArticleImageBox.Image.Save(ms, ImageFormat.Jpeg);
-                byte[] photo = new byte[ms.Length];
-                ms.Position = 0;
-                ms.Read(photo, 0, photo.Length);
+                //MemoryStream ms = new MemoryStream();
+                //ArticleImageBox.Image.Save(ms, ImageFormat.Jpeg);
+                //byte[] photo = new byte[ms.Length];
+                //ms.Position = 0;
+                //ms.Read(photo, 0, photo.Length);
 
 
 
-                using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
-                {
-                    sqlcon.Open();
-                    string str = string.Empty;
-                    DataSet ds = ProjectFunctions.GetDataSet("Select * from article where ARTSYSID='" + PrdCode + "'");
-                    if (ds.Tables[0].Rows.Count > 0)
-                    {
-                        str = "update article Set ARTIMAGE= @photo Where ARTSYSID=@ARTSYSID";
+                //using (var sqlcon = new SqlConnection(ProjectFunctions.ConnectionString))
+                //{
+                //    sqlcon.Open();
+                //    string str = string.Empty;
+                //    DataSet ds = ProjectFunctions.GetDataSet("Select * from article where ARTSYSID='" + PrdCode + "'");
+                //    if (ds.Tables[0].Rows.Count > 0)
+                //    {
+                //        str = "update article Set ARTIMAGE= @photo Where ARTSYSID=@ARTSYSID";
 
-                        var sqlcom = new SqlCommand(str, sqlcon);
-                        sqlcom.Parameters.AddWithValue("@photo", photo);
-                        sqlcom.Parameters.AddWithValue("@ARTSYSID", PrdCode);
-                        sqlcom.CommandType = CommandType.Text;
-                        sqlcom.ExecuteNonQuery();
-                        sqlcon.Close();
-                        ProjectFunctions.SpeakError("Picture Saved Successfully");
-                    }
-                }
+                //        var sqlcom = new SqlCommand(str, sqlcon);
+                //        sqlcom.Parameters.AddWithValue("@photo", photo);
+                //        sqlcom.Parameters.AddWithValue("@ARTSYSID", PrdCode);
+                //        sqlcom.CommandType = CommandType.Text;
+                //        sqlcom.ExecuteNonQuery();
+                //        sqlcon.Close();
+                //        ProjectFunctions.SpeakError("Picture Saved Successfully");
+                //    }
+                //}
             }
             catch (Exception ex)
             {
@@ -236,6 +320,7 @@ namespace WindowsFormsApplication1.Master
         {
             try
             {
+                panelControl1.Visible = false;  
                 SetMyControls();
                 if (S1 == "&Add")
                 {
@@ -243,8 +328,8 @@ namespace WindowsFormsApplication1.Master
                     txtSGrpCode.Focus();
                     RBMANUART.Checked = true;
                     RBARTINDVI.Checked = true;
-                    txtMargin.Text = "40";
-                    RBARTUNIQUE.Checked = true;
+                    txtMargin.Text = "0";
+
                 }
                 if (S1 == "Edit")
                 {
@@ -282,21 +367,9 @@ namespace WindowsFormsApplication1.Master
                         txtMargin.Text = ds.Tables[0].Rows[0]["ARTMARGIN"].ToString();
                         txtRSP.Text = ds.Tables[0].Rows[0]["ARTRSP"].ToString();
 
-                        if (ds.Tables[0].Rows[0]["ARTCODSCHEM"].ToString() == "0")
-                        {
-                            RBARTUNIQUE.Checked = true;
-                        }
-                        else
-                        {
-                            if (ds.Tables[0].Rows[0]["ARTCODSCHEM"].ToString() == "1")
-                            {
-                                RBARTFIXD.Checked = true;
-                            }
-                            else
-                            {
-                                RBARTLOT.Checked = false;
-                            }
-                        }
+                        txtARTEAN.Text = ds.Tables[0].Rows[0]["ARTEAN"].ToString();
+                        txtDiscRate.Text = ds.Tables[0].Rows[0]["ARTDISCRATE"].ToString();
+
 
 
                         if (ds.Tables[0].Rows[0]["ARTGENMODAUTO"].ToString() == "1")
@@ -330,22 +403,7 @@ namespace WindowsFormsApplication1.Master
                             RBARTSET.Checked = false;
                         }
 
-                        if (ds.Tables[0].Rows[0]["ARTNMAINTSTK"].ToString() == "1")
-                        {
-                            CHKARTNONMAINT.Checked = true;
-                        }
-                        else
-                        {
-                            CHKARTNONMAINT.Checked = false;
-                        }
-                        if (ds.Tables[0].Rows[0]["ARTMRKFXPRC"].ToString() == "1")
-                        {
-                            CHKARTFXPRICE.Checked = true;
-                        }
-                        else
-                        {
-                            CHKARTFXPRICE.Checked = false;
-                        }
+
 
                         txtSGrpCode.Focus();
 
@@ -391,7 +449,7 @@ namespace WindowsFormsApplication1.Master
 
                 if (txtUMCode.Text.Trim().Length == 0)
                 {
-                    ProjectFunctions.SpeakError("Invalid Article Unit Of Measurment");
+                    ProjectFunctions.SpeakError("Invalid Article Unit Of Measurement");
                     txtUMCode.Focus();
                     return false;
                 }
@@ -449,6 +507,10 @@ namespace WindowsFormsApplication1.Master
                 {
                     txtWSP.Text = "0";
                 }
+                if (txtDiscRate.Text.Trim().Length == 0)
+                {
+                    txtDiscRate.Text = "0";
+                }
                 return true;
             }
             catch (Exception ex)
@@ -477,35 +539,21 @@ namespace WindowsFormsApplication1.Master
                             if (S1 == "&Add")
                             {
                                 sqlcom.CommandText = "Insert into ARTICLE" +
-                                    " (ARTCODSCHEM, ARTGENMODAUTO,ARTIDENTMOD,ARTDATE,ARTNO,ARTALIAS,ARTSETNAME,ARTNAME,ARTDESC,ARTSECTIONID," +
-                                    " ARTSBSECTIONID,ARTBRANDID,ARTUOM,ARTPURPRICE,ARTWSP,ARTMRP,ARTMARGIN,ARTNMAINTSTK,ARTMRKFXPRC,ATaxCodeLocal,ATaxCodeCentral)" +
-                                    " values(@ARTCODSCHEM,@ARTGENMODAUTO,@ARTIDENTMOD,@ARTDATE,@ARTNO,@ARTALIAS,@ARTSETNAME,@ARTNAME,@ARTDESC,@ARTSECTIONID," +
-                                    " @ARTSBSECTIONID,@ARTBRANDID,@ARTUOM,@ARTPURPRICE,@ARTWSP,@ARTMRP,@ARTMARGIN,@ARTNMAINTSTK,@ARTMRKFXPRC,@ATaxCodeLocal,@ATaxCodeCentral)";
+                                    " (ARTGENMODAUTO,ARTIDENTMOD,ARTDATE,ARTNO,ARTALIAS,ARTSETNAME,ARTNAME,ARTDESC,ARTSECTIONID," +
+                                    " ARTSBSECTIONID,ARTBRANDID,ARTUOM,ARTPURPRICE,ARTWSP,ARTMRP,ARTMARGIN,ATaxCodeLocal,ATaxCodeCentral,ARTEAN,ARTDISCRATE)" +
+                                    " values(@ARTGENMODAUTO,@ARTIDENTMOD,@ARTDATE,@ARTNO,@ARTALIAS,@ARTSETNAME,@ARTNAME,@ARTDESC,@ARTSECTIONID," +
+                                    " @ARTSBSECTIONID,@ARTBRANDID,@ARTUOM,@ARTPURPRICE,@ARTWSP,@ARTMRP,@ARTMARGIN,@ATaxCodeLocal,@ATaxCodeCentral,@ARTEAN,@ARTDISCRATE)";
                             }
                             if (S1 == "Edit")
                             {
                                 sqlcom.CommandText = " UPDATE  ARTICLE Set" +
-                                    " ARTCODSCHEM=@ARTCODSCHEM,ARTGENMODAUTO=@ARTGENMODAUTO,ARTIDENTMOD=@ARTIDENTMOD,ARTDATE=@ARTDATE,ARTNO=@ARTNO,ARTALIAS=@ARTALIAS,ARTSETNAME=@ARTSETNAME,ARTNAME=@ARTNAME,ARTDESC=@ARTDESC,ARTBRANDID=@ARTBRANDID,ARTSECTIONID=@ARTSECTIONID,ARTSBSECTIONID=@ARTSBSECTIONID, " +
-                                    "ARTUOM=@ARTUOM,ARTPURPRICE=@ARTPURPRICE,ARTWSP=@ARTWSP,ARTMRP=@ARTMRP,ARTMARGIN=@ARTMARGIN,ARTNMAINTSTK=@ARTNMAINTSTK,ARTMRKFXPRC=@ARTMRKFXPRC,ATaxCodeLocal=@ATaxCodeLocal,ATaxCodeCentral=@ATaxCodeCentral" +
+                                    " ARTGENMODAUTO=@ARTGENMODAUTO,ARTIDENTMOD=@ARTIDENTMOD,ARTDATE=@ARTDATE,ARTNO=@ARTNO,ARTALIAS=@ARTALIAS,ARTSETNAME=@ARTSETNAME,ARTNAME=@ARTNAME,ARTDESC=@ARTDESC,ARTBRANDID=@ARTBRANDID,ARTSECTIONID=@ARTSECTIONID,ARTSBSECTIONID=@ARTSBSECTIONID, " +
+                                    "ARTUOM=@ARTUOM,ARTPURPRICE=@ARTPURPRICE,ARTWSP=@ARTWSP,ARTMRP=@ARTMRP,ARTMARGIN=@ARTMARGIN,ATaxCodeLocal=@ATaxCodeLocal,ATaxCodeCentral=@ATaxCodeCentral,ARTEAN=@ARTEAN,ARTDISCRATE=@ARTDISCRATE" +
                                     " Where ARTSYSID=@ARTSYSID";
                                 sqlcom.Parameters.AddWithValue("@ARTSYSID", txtSysID.Text.Trim());
                                 CaptureScreen();
                             }
-                            if (RBARTUNIQUE.Checked)
-                            {
-                                sqlcom.Parameters.AddWithValue("@ARTCODSCHEM", "0");
-                            }
-                            else
-                            {
-                                if (RBARTFIXD.Checked)
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTCODSCHEM", "1");
-                                }
-                                else
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTCODSCHEM", "2");
-                                }
-                            }
+
                             if (RBMANUART.Checked)
                             {
                                 sqlcom.Parameters.AddWithValue("@ARTGENMODAUTO", "0");
@@ -547,24 +595,13 @@ namespace WindowsFormsApplication1.Master
 
                             sqlcom.Parameters.AddWithValue("@ARTRSP", Convert.ToDecimal(txtRSP.Text));
                             sqlcom.Parameters.AddWithValue("@ARTMARGIN", Convert.ToDecimal(txtMargin.Text));
-                            if (CHKARTNONMAINT.Checked)
-                            {
-                                sqlcom.Parameters.AddWithValue("@ARTNMAINTSTK", "1");
-                            }
-                            else
-                            {
-                                sqlcom.Parameters.AddWithValue("@ARTNMAINTSTK", "0");
-                            }
-                            if (CHKARTFXPRICE.Checked)
-                            {
-                                sqlcom.Parameters.AddWithValue("@ARTMRKFXPRC", "1");
-                            }
-                            else
-                            {
-                                sqlcom.Parameters.AddWithValue("@ARTMRKFXPRC", "0");
-                            }
+
                             sqlcom.Parameters.AddWithValue("@ATaxCodeLocal", txtTaxCodeL.Text);
                             sqlcom.Parameters.AddWithValue("@ATaxCodeCentral", txtTaxCodeC.Text);
+                            sqlcom.Parameters.AddWithValue("@ARTEAN", txtARTEAN.Text);
+                            sqlcom.Parameters.AddWithValue("@ARTDISCRATE", txtDiscRate.Text);
+
+                            
                             sqlcom.ExecuteNonQuery();
                             transaction.Commit();
                             sqlcon.Close();
@@ -596,21 +633,63 @@ namespace WindowsFormsApplication1.Master
 
         private void TxtBrandCode_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+
+            if (e.KeyCode != Keys.Back)
             {
-                ProjectFunctions.CreatePopUpForTwoBoxes("Select BRSYSID,BRNAME from BRANDS",
-                                                        " Where BRSYSID",
-                                                        txtBrandCode,
-                                                        txtBrandDesc,
-                                                        txtUMCode,
-                                                        HelpGrid,
-                                                        HelpGridView,
-                                                        e);
+                if (e.KeyCode != Keys.Delete)
+                {
+                    if (e.KeyCode != Keys.Up)
+                    {
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            HelpGrid.Text = "txtBrandCode";
+                                            txtSearchBox.Text = string.Empty;
+                                            txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl1.Visible = true;
+                                            HelpGrid.Visible = true;
+
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtBrandCode.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
+
+
+
+
+
+
+
+            //try
+            //{
+            //    ProjectFunctions.CreatePopUpForTwoBoxes("Select BRNAME,BRSYSID from BRANDS",
+            //                                            " Where BRSYSID", txtBrandDesc,
+            //                                            txtBrandCode,
+            //                                            txtUMCode,
+            //                                            HelpGrid,
+            //                                            HelpGridView,
+            //                                            e);
+            //}
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError(ex.Message);
+            //}
         }
 
         private void TxtPurPrice_KeyPress(object sender, KeyPressEventArgs e)
@@ -662,8 +741,8 @@ namespace WindowsFormsApplication1.Master
                 txtWSP.Text = "0";
             }
 
-            txtMRP.EditValue = ProjectFunctions.RoundFive((Convert.ToDecimal(txtWSP.Text) /
-                (100 - Convert.ToDecimal(txtMargin.Text)) * 100));
+            //txtMRP.EditValue = ProjectFunctions.RoundFive((Convert.ToDecimal(txtWSP.Text) /
+            //    (100 - Convert.ToDecimal(txtMargin.Text)) * 100));
         }
 
 
@@ -675,7 +754,7 @@ namespace WindowsFormsApplication1.Master
 
         private void TxtWSP_EditValueChanged(object sender, EventArgs e)
         {
-            // CalculationWSP();
+          CalculationWSP();
         }
 
         private void TxtWSP_KeyDown(object sender, KeyEventArgs e)
@@ -690,7 +769,9 @@ namespace WindowsFormsApplication1.Master
         {
             if (e.KeyCode == Keys.Enter)
             {
+             
                 CalculationMRP();
+                txtDiscRate.Focus();
             }
         }
 
@@ -712,6 +793,9 @@ namespace WindowsFormsApplication1.Master
 
                         txtArticleName.Text = txtArtNo.Text;
                         txtDescription.Text = txtGrpDesc.Text + " - " + txtSGrpDesc.Text;
+                        txtUMCode.Text = "0011";
+                       
+                        txtUMDesc.Text = ProjectFunctions.GetDataSet("select UomDesc from UomMst where UomCode='" + txtUMCode.Text.Substring(0, 4) + "' ").Tables[0].Rows[0][0].ToString();
                     }
                 }
             }
@@ -744,18 +828,6 @@ namespace WindowsFormsApplication1.Master
                                     " @ARTSBSECTIONID,@ARTBRANDID,@ARTUOM,@ARTPURPRICE,@ARTWPPRCN,@ARTWSP,@ARTMRP,@ARTMPPRCN,@ARTRSP,@ARTMARGIN,@ARTNMAINTSTK,@ARTMRKFXPRC,@ATaxCodeLocal,@ATaxCodeCentral)";
 
 
-                                if (RBARTUNIQUE.Checked)
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTCODSCHEM", "0");
-                                }
-                                else if (RBARTFIXD.Checked)
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTCODSCHEM", "1");
-                                }
-                                else
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTCODSCHEM", "2");
-                                }
 
                                 if (RBMANUART.Checked)
                                 {
@@ -801,23 +873,6 @@ namespace WindowsFormsApplication1.Master
 
                                 sqlcom.Parameters.AddWithValue("@ARTRSP", Convert.ToDecimal(txtRSP.Text));
                                 sqlcom.Parameters.AddWithValue("@ARTMARGIN", Convert.ToDecimal(txtMargin.Text));
-                                if (CHKARTNONMAINT.Checked)
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTNMAINTSTK", "1");
-                                }
-                                else
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTNMAINTSTK", "0");
-                                }
-
-                                if (CHKARTFXPRICE.Checked)
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTMRKFXPRC", "1");
-                                }
-                                else
-                                {
-                                    sqlcom.Parameters.AddWithValue("@ARTMRKFXPRC", "0");
-                                }
 
                                 sqlcom.Parameters.AddWithValue("@ATaxCodeLocal", txtTaxCodeL.Text);
                                 sqlcom.Parameters.AddWithValue("@ATaxCodeCentral", txtTaxCodeC.Text);
@@ -907,35 +962,156 @@ namespace WindowsFormsApplication1.Master
 
         private void TxtTaxCodeL_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (e.KeyCode != Keys.Back)
             {
-                ProjectFunctions.CreatePopUpForTwoBoxes("Select TaxCode,TaxDesc from TaxMst",
-                                                        " Where TaxCode",
-                                                        txtTaxCodeL,
-                                                        txtTaxCodeLDesc,
-                                                        txtTaxCodeC,
-                                                        HelpGrid,
-                                                        HelpGridView,
-                                                        e);
+                if (e.KeyCode != Keys.Delete)
+                {
+                    if (e.KeyCode != Keys.Up)
+                    {
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            HelpGrid.Text = "txtTaxCodeL";
+                                            txtSearchBox.Text = string.Empty;
+                                            txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl1.Visible = true;
+                                            HelpGrid.Visible = true;
+
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtTaxCodeL.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            catch (Exception ex)
-            {
-                ProjectFunctions.SpeakError(ex.Message);
-            }
+            //try
+            //{
+            //    ProjectFunctions.CreatePopUpForTwoBoxes("Select TaxCode,TaxDesc from TaxMst",
+            //                                            " Where TaxCode",
+            //                                            txtTaxCodeL,
+            //                                            txtTaxCodeLDesc,
+            //                                            txtTaxCodeC,
+            //                                            HelpGrid,
+            //                                            HelpGridView,
+            //                                            e);
+            //}
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError(ex.Message);
+            //}
         }
 
         private void TxtTaxCodeC_KeyDown(object sender, KeyEventArgs e)
         {
-            try
+            if (e.KeyCode != Keys.Back)
             {
-                ProjectFunctions.CreatePopUpForTwoBoxes("Select TaxCode,TaxDesc from TaxMst",
-                                                        " Where TaxCode",
-                                                        txtTaxCodeC,
-                                                        txtTaxCodeCDesc,
-                                                        txtTaxCodeC,
-                                                        HelpGrid,
-                                                        HelpGridView,
-                                                        e);
+                if (e.KeyCode != Keys.Delete)
+                {
+                    if (e.KeyCode != Keys.Up)
+                    {
+                        if (e.KeyCode != Keys.Down)
+                        {
+                            if (e.KeyCode != Keys.Left)
+                            {
+                                if (e.KeyCode != Keys.Right)
+                                {
+                                    if (e.KeyCode != Keys.F12)
+                                    {
+                                        if (e.KeyCode != Keys.Enter)
+                                        {
+                                            HelpGrid.Text = "txtTaxCodeC";
+                                            txtSearchBox.Text = string.Empty;
+                                            txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
+                                            HelpGrid.Show();
+                                            panelControl1.Visible = true;
+                                            HelpGrid.Visible = true;
+
+                                            txtSearchBox.Focus();
+                                            txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
+                                            txtSearchBox.SelectionLength = 0;
+                                            txtTaxCodeC.Text = string.Empty;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+            //try
+            //{
+            //    ProjectFunctions.CreatePopUpForTwoBoxes("Select TaxCode,TaxDesc from TaxMst",
+            //                                            " Where TaxCode",
+            //                                            txtTaxCodeC,
+            //                                            txtTaxCodeCDesc,
+            //                                            txtTaxCodeC,
+            //                                            HelpGrid,
+            //                                            HelpGridView,
+            //                                            e);
+            //}
+            //catch (Exception ex)
+            //{
+            //    ProjectFunctions.SpeakError(ex.Message);
+            //}
+        }
+
+        private void LabelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SimpleButton1_Click(object sender, EventArgs e)
+        {
+            FrmGroupMstAddEdit frm = new FrmGroupMstAddEdit() { S1 = "&Add", Text = "Group Head Addition" };
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog(Parent);
+            dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_POPUPForArticle");
+        }
+
+        private void SimpleButton2_Click(object sender, EventArgs e)
+        {
+            FrmBrand frm = new FrmBrand() { S1 = "&Add", Text = "Brand Addition" };
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.ShowDialog(Parent);
+            dsPopUps = ProjectFunctionsUtils.GetDataSet("sp_POPUPForArticle");
+        }
+
+        private void TxtSearchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+
+            {
+                HelpGridView.CloseEditor();
+                HelpGridView.UpdateCurrentRow();
+                if (e.KeyCode == Keys.Enter)
+                {
+                    HelpGrid_DoubleClick(null, e);
+                }
+                if (e.KeyCode == Keys.Down)
+                {
+                    HelpGrid.Focus();
+                }
+                if (e.KeyCode == Keys.Escape)
+                {
+                    panelControl1.Visible = false;
+                }
+                e.Handled = true;
             }
             catch (Exception ex)
             {
@@ -943,5 +1119,141 @@ namespace WindowsFormsApplication1.Master
             }
         }
 
+        private void TxtSearchBox_EditValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                HelpGridView.Columns.Clear();
+                    HelpGrid.Show();
+                if (HelpGrid.Text == "txtBrandCode")
+                {
+
+                    DataTable dtNew = dsPopUps.Tables[0].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[0].Select("BRNAME like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+                        
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["BRSYSID"] = dr["BRSYSID"];
+                        NewRow["BRNAME"] = dr["BRNAME"];
+
+
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+             
+                if (HelpGrid.Text == "txtUMCode")
+                {
+
+                    DataTable dtNew = dsPopUps.Tables[1].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[1].Select("UomDesc like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["UomCode"] = dr["UomCode"];
+                        NewRow["UomDesc"] = dr["UomDesc"];
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+                if (HelpGrid.Text == "txtTaxCodeC"|| HelpGrid.Text == "txtTaxCodeL")
+                {
+                    
+                    DataTable dtNew = dsPopUps.Tables[2].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[2].Select("TaxDesc like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["TaxCode"] = dr["TaxCode"];
+                        NewRow["TaxDesc"] = dr["TaxDesc"];
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+                if (HelpGrid.Text == "txtSGrpCode")
+                {
+                    
+                    DataTable dtNew = dsPopUps.Tables[3].Clone();
+                    DataRow[] dtRow = dsPopUps.Tables[3].Select("GrpSubDesc like '" + txtSearchBox.Text + "%'");
+                    foreach (DataRow dr in dtRow)
+                    {
+                        DataRow NewRow = dtNew.NewRow();
+                        NewRow["GrpDesc"] = dr["GrpDesc"];
+                        NewRow["GrpSubDesc"] = dr["GrpSubDesc"];
+                        NewRow["GrpCode"] = dr["GrpCode"];
+                        NewRow["GrpSubCode"] = dr["GrpSubCode"];
+                        NewRow["GrpHSNCode"] = dr["GrpHSNCode"];
+                        
+                        dtNew.Rows.Add(NewRow);
+                    }
+                    if (dtNew.Rows.Count > 0)
+                    {
+                        HelpGrid.DataSource = dtNew;
+                        HelpGridView.BestFitColumns();
+                    }
+                    else
+                    {
+                        HelpGrid.DataSource = null;
+                        HelpGridView.BestFitColumns();
+                    }
+                }
+               
+            }
+
+            catch (Exception)
+            {
+
+            }
+        }
+
+        private void txtArtNo_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtHSNCode_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void txtHSNCode_EditValueChanged(object sender, EventArgs e)
+        {
+            DataSet ds = ProjectFunctions.GetDataSet("SELECT distinct GrpMst.TaxCodeLocal, GrpMst.TaxCodeCentral, TaxMst.TaxDesc AS TaxDescLocal, TaxMst_1.TaxDesc AS TaxDescCentral FROM GrpMst INNER JOIN TaxMst ON GrpMst.TaxCodeLocal = TaxMst.TaxCode INNER JOIN TaxMst AS TaxMst_1 ON GrpMst.TaxCodeCentral = TaxMst_1.TaxCode where GrpHSNCode='" + txtHSNCode.Text + "'");
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                txtTaxCodeL.Text = ds.Tables[0].Rows[0]["TaxCodeLocal"].ToString();
+                txtTaxCodeLDesc.Text = ds.Tables[0].Rows[0]["TaxDescLocal"].ToString();
+                txtTaxCodeC.Text = ds.Tables[0].Rows[0]["TaxCodeCentral"].ToString();
+                txtTaxCodeCDesc.Text = ds.Tables[0].Rows[0]["TaxDescCentral"].ToString();
+            }
+        }
     }
 }

@@ -8,6 +8,7 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Ribbon;
 using DevExpress.XtraEditors;
 using DevExpress.XtraTab;
+using Newtonsoft.Json;
 using SeqKartLibrary;
 using System;
 using System.Data;
@@ -2228,7 +2229,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/qrcode"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), GlobalVariables.WAppApiLink+"/qrcode"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "*/*");
 
@@ -2248,8 +2249,8 @@ namespace WindowsFormsApplication1
                         pictureEdit1.Image = Image.FromStream(stream);
                         pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
-                        //var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
-                        //ProjectFunctions.SpeakError("Whatsapp status is connected on mobile no " + myDetails.user);
+                      // var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
+                      //ProjectFunctions.SpeakError("Whatsapp status is connected on mobile no " + myDetails.user);
 
 
                     }

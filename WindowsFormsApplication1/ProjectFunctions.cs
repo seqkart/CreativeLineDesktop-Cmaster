@@ -28,6 +28,10 @@ using TaxProEWB.API;
 using WAProAPI;
 using WindowsFormsApplication1.FormReports;
 using WindowsFormsApplication1.Transaction;
+using DevExpress.Pdf.Drawing;
+using DevExpress.XtraPrinting;
+
+
 
 namespace WindowsFormsApplication1
 {
@@ -68,19 +72,19 @@ namespace WindowsFormsApplication1
         public static Double TimeFromMinutes(Double Minutes)
         {
             int i = 0;
-            if(Minutes<0)
+            if (Minutes < 0)
             {
                 i = 1;
                 Minutes = -Minutes;
             }
             Double TotalHours = 0;
             TotalHours += (Int32)(Minutes / 60);
-            if(Minutes%60 != 0)
+            if (Minutes % 60 != 0)
             {
                 Double PendingMinutes = (Minutes % 60);
                 TotalHours = Convert.ToDouble(TotalHours.ToString() + "." + PendingMinutes.ToString());
             }
-            if(i==1)
+            if (i == 1)
             {
                 TotalHours = -TotalHours;
             }
@@ -135,11 +139,11 @@ namespace WindowsFormsApplication1
             }
 
             ProjectFunctions.SpeakError(i.ToString() + " Documents Uploaded Successfully");
-           
+
         }
 
 
-        public static void BindExcelToGrid(String FileName,DataTable dt, GridControl helpGrid, GridView helpGridView)
+        public static void BindExcelToGrid(String FileName, DataTable dt, GridControl helpGrid, GridView helpGridView)
         {
             helpGridView.Columns.Clear();
             helpGrid.DataSource = null;
@@ -194,7 +198,7 @@ namespace WindowsFormsApplication1
             }
             return RowCount;
         }
-        public static DataTable CreateDataTableHeader(String FileName,DataTable dt)
+        public static DataTable CreateDataTableHeader(String FileName, DataTable dt)
         {
             DevExpress.Spreadsheet.Workbook workbook = new DevExpress.Spreadsheet.Workbook();
             workbook.LoadDocument(FileName);
@@ -220,7 +224,7 @@ namespace WindowsFormsApplication1
             WIA.Device device = dialog.ShowSelectDevice(WIA.WiaDeviceType.ScannerDeviceType, true, false);
             dlg.ShowAcquisitionWizard(device);
         }
-        public static void ViewDocuments(String DocNo, String DocType,DateTime DocDate,XtraForm Form1)
+        public static void ViewDocuments(String DocNo, String DocType, DateTime DocDate, XtraForm Form1)
         {
             if (System.IO.File.Exists("C:\\Temp\\abc.pdf"))
             {
@@ -230,7 +234,7 @@ namespace WindowsFormsApplication1
             {
                 System.IO.File.Delete("C:\\Temp\\Quotation.pdf");
             }
-            
+
             frmPDFDocViewer frm = new frmPDFDocViewer() { DocNo = DocNo, DocType = DocType, DocDate = DocDate };
             var P = ProjectFunctions.GetPositionInForm(Form1);
             frm.Location = new System.Drawing.Point(P.X + (Form1.ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (Form1.ClientSize.Height / 2 - frm.Size.Height / 2));
@@ -304,6 +308,27 @@ namespace WindowsFormsApplication1
             return XtraMessageBox.Show(message, caption, messageBoxButtons);
 
         }
+
+        public static DialogResult SpeakConfirmationyes(string message, string caption, MessageBoxButtons messageBoxButtons)
+        {
+
+            Task.Run(() => _synthesizer.Speak(message));
+
+
+            DialogResult dialogResult = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
+            //if (DialogResult == DialogResult.Yes)
+            //{
+                
+            //}
+            //else if (DialogResult == DialogResult.No)
+            //{
+            //    return ;
+            //}
+
+            return XtraMessageBox.Show(message, caption, messageBoxButtons);
+
+        }
+
         public static void SpeakError(string Error)
         {
 
@@ -1433,7 +1458,7 @@ namespace WindowsFormsApplication1
                         ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "ItemAmount", ReportGridView.Columns["ItemAmount"], "{0}");
                         ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "SGSTAmount", ReportGridView.Columns["SGSTAmount"], "{0}");
                         ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "CGSTAmount", ReportGridView.Columns["CGSTAmount"], "{0}");
-                       // ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "IGSTAmount", ReportGridView.Columns["IGSTAmount"], "{0}");
+                        // ReportGridView.GroupSummary.Add(SummaryItemType.Sum, "IGSTAmount", ReportGridView.Columns["IGSTAmount"], "{0}");
                         ReportGridView.Appearance.GroupFooter.FontSizeDelta = 3;
 
                         ReportGridView.Columns["Quantity"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Quantity", "{0}") });
@@ -1441,11 +1466,11 @@ namespace WindowsFormsApplication1
                         ReportGridView.Columns["SGSTAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "SGSTAmount", "{0}") });
 
                         ReportGridView.Columns["CGSTAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CGSTAmount", "{0}") });
-                        
+
                         //ReportGridView.Columns["IGSTAmount"].Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] { new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "IGSTAmount", "{0}") });
-                        foreach(DevExpress.XtraGrid.Columns.GridColumn dr in ReportGridView.Columns)
+                        foreach (DevExpress.XtraGrid.Columns.GridColumn dr in ReportGridView.Columns)
                         {
-                            if(dr.FieldName.ToUpper()== "SZINDEX"|| dr.FieldName.ToUpper() == "ARTIMAGE")
+                            if (dr.FieldName.ToUpper() == "SZINDEX" || dr.FieldName.ToUpper() == "ARTIMAGE")
                             {
                                 dr.Visible = false;
                             }
@@ -1456,7 +1481,7 @@ namespace WindowsFormsApplication1
                         ReportGrid.DataSource = dsMaster.Tables[0];
                         ReportGridView.BestFitColumns();
                     }
-                   
+
                 }
                 else
                 {
@@ -1619,9 +1644,9 @@ namespace WindowsFormsApplication1
         }
 
 
-        public static bool CheckAllPossible(string ArticleID, decimal MRP, string ColorID, string SizeID)
+        public static bool CheckAllPossible(string ArticleID, decimal MRP, string v, string v1)
         {
-            DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData '" + ArticleID + "','" + ColorID + "','" + SizeID + "' ");
+            DataSet dsCheckART = ProjectFunctions.GetDataSet("sp_CheckSKUData '" + ArticleID +"'");
             if (dsCheckART.Tables[0].Rows.Count > 0)
             {
                 if (MRP == Convert.ToDecimal(dsCheckART.Tables[0].Rows[0]["ARTMRP"]))
@@ -1640,24 +1665,24 @@ namespace WindowsFormsApplication1
                 return false;
             }
 
-            if (dsCheckART.Tables[1].Rows.Count > 0)
-            {
+            //if (dsCheckART.Tables[1].Rows.Count > 0)
+            //{
 
-            }
-            else
-            {
-                ProjectFunctions.SpeakError("No Color Found");
-                return false;
-            }
-            if (dsCheckART.Tables[2].Rows.Count > 0)
-            {
+            //}
+            //else
+            //{
+            //    ProjectFunctions.SpeakError("No Color Found");
+            //    return false;
+            //}
+            //if (dsCheckART.Tables[2].Rows.Count > 0)
+            //{
 
-            }
-            else
-            {
-                ProjectFunctions.SpeakError("No Size Found");
-                return false;
-            }
+            //}
+            //else
+            //{
+            //    ProjectFunctions.SpeakError("No Size Found");
+            //    return false;
+            //}
             return true;
 
         }
@@ -1836,16 +1861,20 @@ namespace WindowsFormsApplication1
         public static void SendToDirectPrint(string filename)
         {
 
+
             using (var pdfViewer = new DevExpress.XtraPdfViewer.PdfViewer())
             {
                 pdfViewer.LoadDocument(filename);
 
                 PrinterSettings settings = new PrinterSettings();
-
+               
 
                 DevExpress.Pdf.PdfPrinterSettings printerSettings = new DevExpress.Pdf.PdfPrinterSettings();
                 printerSettings.Settings.PrinterName = settings.PrinterName;
+               
+
                 printerSettings.Settings.PrintFileName = filename;
+
                 pdfViewer.ShowPrintStatusDialog = false;
 
                 pdfViewer.Print(printerSettings);
@@ -1858,7 +1887,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), GlobalVariables.WAppApiLink + "/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1871,7 +1900,7 @@ namespace WindowsFormsApplication1
                         GlobalVariables.WhatAppStatus = myDetails.State;
                         GlobalVariables.WhatAppMobileNo = myDetails.User;
 
-                        //ProjectFunctions.Speak(myDetails.state);
+                      //Speak(myDetails.State);
                     }
                     else
                     {
@@ -1888,7 +1917,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "http://103.223.12.170:3000/state"))
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), GlobalVariables.WAppApiLink + "/state"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1919,7 +1948,7 @@ namespace WindowsFormsApplication1
         {
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), "http://103.223.12.170:3000/disconnect"))
+                using (var request = new HttpRequestMessage(new HttpMethod("DELETE"), GlobalVariables.WAppApiLink + "/disconnect"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1929,11 +1958,11 @@ namespace WindowsFormsApplication1
                         SpeakError("Whats App Disconnected");
                     }
                 }
-                ProjectFunctions.Speak("whats app already disconnected");
+               Speak("whats app already disconnected");
             }
         }
 
-        
+
 
 
         public static async Task SendBillMessageAsync(String BillNo, DateTime BillDate, String BillSeries)
@@ -1946,7 +1975,7 @@ namespace WindowsFormsApplication1
             }
             else
             {
-                Message = "Your challan has been issued for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " against challan No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
+                Message = "Your Delivery challan has been issued for Rs. " + Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]).ToString("0.00") + " against challan No . " + BillSeries + "-" + BillNo + " dated - " + BillDate.Date.ToString("dd-MM-yyyy");
             }
 
 
@@ -1954,7 +1983,7 @@ namespace WindowsFormsApplication1
             {
                 using (var httpClient = new HttpClient())
                 {
-                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/918591115444/sendText"))
+                    using (var request = new HttpRequestMessage(new HttpMethod("POST"), GlobalVariables.WAppApiLink + "/918591115444/sendText"))
                     {
                         request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1970,7 +1999,7 @@ namespace WindowsFormsApplication1
         }
 
 
-        
+
         public static async Task SendBillImageAsync(String MobileNo, String DocNo, DateTime DocDate)
         {
             byte[] imageBytes = System.IO.File.ReadAllBytes("C://Temp//GST//" + DocNo + ".pdf");
@@ -1979,7 +2008,7 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), GlobalVariables.WAppApiLink + "/91" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -1991,7 +2020,7 @@ namespace WindowsFormsApplication1
             }
 
         }
-        public static async Task SendCashMemoImageAsync(String MobileNo,string DocNo,DateTime DocDate)
+        public static async Task SendCashMemoImageAsync(String MobileNo, string DocNo, DateTime DocDate)
         {
             byte[] imageBytes = System.IO.File.ReadAllBytes("C:\\Application\\CashMemo.pdf");
 
@@ -1999,11 +2028,11 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + MobileNo + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), GlobalVariables.WAppApiLink + "/91" + MobileNo + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
-                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"BILL - " + DocNo + " Date - " + DocDate.Date.ToString("dd-MM-yyyy") + ".pdf\"}");
+                    request.Content = new StringContent("{\"base64data\":\"" + base64String + "\",\"mimeType\":\"application/pdf\",\"caption\":\"i'm a media caption!\",\"filename\":\"Memo - " + DocNo + " Dated - " + DocDate.Date.ToString("dd-MM-yyyy") + ".pdf\"}");
                     request.Content.Headers.ContentType = System.Net.Http.Headers.MediaTypeHeaderValue.Parse("application/json");
 
                     var response = await httpClient.SendAsync(request);
@@ -2019,8 +2048,8 @@ namespace WindowsFormsApplication1
 
             using (var httpClient = new HttpClient())
             {
-                using (var request = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + MobileNo + "/sendMedia"))
-                using (var request2 = new HttpRequestMessage(new HttpMethod("POST"), "http://103.223.12.170:3000/91" + 8591115444 + "/sendMedia"))
+                using (var request = new HttpRequestMessage(new HttpMethod("POST"), GlobalVariables.WAppApiLink + "/91" + MobileNo + "/sendMedia"))
+                //using (var request2 = new HttpRequestMessage(new HttpMethod("POST"), GlobalVariables.WAppApiLink + "/91" + 8591115444 + "/sendMedia"))
                 {
                     request.Headers.TryAddWithoutValidation("accept", "application/json");
 
@@ -2661,8 +2690,73 @@ namespace WindowsFormsApplication1
                     Report.CreateDocument();
                     if (GlobalVariables.ProgCode == "PROG132")
                     {
+
+                        ReportPrintTool printTool = new ReportPrintTool(Report);
+                        PrintToolBase tool = new PrintToolBase(Report.PrintingSystem);
+                        //printTool.PrintDialog();
+                        tool.Print();
+                        
                         Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
-                        SendToDirectPrint("C:\\Application\\CashMemo.pdf");
+                    
+                    }
+
+                    else
+                    {
+
+                        PrintReportViewer frm = new PrintReportViewer();
+                        frm.documentViewer1.DocumentSource = Report;
+
+                        if (ds.Tables[0].Rows[0]["SIMTRDPRMWYBLNO"].ToString().Trim().Length < 10 && DocType == "GST" && Convert.ToDecimal(ds.Tables[0].Rows[0]["SIMGRANDTOT"]) >= 50000)
+                        {
+                            if (ds.Tables[0].Rows[0]["AccGSTNo"].ToString().Trim().Length < 10)
+                            {
+                                ProjectFunctions.SpeakError("Kindly Update GST No First");
+
+                            }
+                            
+                            frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
+                            frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
+                        }
+
+                        frm.ShowDialog();
+                        frm.documentViewer1.PrintingSystem.ExportToPdf("C:\\Temp\\" + "GST\\" + DocNo + ".pdf");
+
+                        ///////////mobile number from fetch
+                        //SendBillImageAsync(ds.Tables[0].Rows[0]["WhatsAppNo"].ToString(), DocNo, DocDate);
+                    }
+
+
+
+                }
+            }
+
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        public static void PrintPreview(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
+        {
+            try
+            {
+                DataSet ds = ProjectFunctions.GetDataSet(" sp_DocPrint '" + DocNo + "','" + Convert.ToDateTime(DocDate).Date.ToString("yyyy-MM-dd") + "','" + DocType + "','" + GlobalVariables.CUnitID + "'");
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    ds.WriteXmlSchema("C://Temp//abc.xml");
+                    Report.DataSource = ds;
+                    foreach (XRSubreport sub in Report.AllControls<XRSubreport>())
+                    {
+                        sub.ReportSource.DataSource = ds;
+                    }
+
+                    Report.CreateDocument();
+                    if (GlobalVariables.ProgCode == "PROG132")
+                    {
+                        Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+                        Report.ShowRibbonPreviewDialog();
                     }
 
                     else
@@ -2701,7 +2795,6 @@ namespace WindowsFormsApplication1
             }
 
         }
-
         public static void PrintPDFDocumentONLY(string DocNo, DateTime DocDate, string DocType, DevExpress.XtraReports.UI.XtraReport Report)
         {
             try
@@ -2717,11 +2810,11 @@ namespace WindowsFormsApplication1
                         sub.ReportSource.DataSource = ds;
                     }
                     Report.CreateDocument();
-                   Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
+                    Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
 
 
 
-                   // Report.ExportToPdf("C:\\Application\\" + ds.Tables[0].Rows[0]["FileName"].ToString() + ".pdf");
+                    // Report.ExportToPdf("C:\\Application\\" + ds.Tables[0].Rows[0]["FileName"].ToString() + ".pdf");
                 }
             }
 

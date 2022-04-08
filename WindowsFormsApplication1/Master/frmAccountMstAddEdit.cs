@@ -118,7 +118,7 @@ namespace WindowsFormsApplication1.Master
                     txtSLCode.Text = ds.Tables[0].Rows[0]["AccLedger"].ToString();
                     txtSLDesc.Text = ds.Tables[0].Rows[0]["LgrDesc"].ToString();
 
-                    txtStatusTag.Text = ds.Tables[0].Rows[0]["AccAnATag"].ToString();
+                    
 
                     txtTel.Text = ds.Tables[0].Rows[0]["AccTeleFax"].ToString();
                     txtTinNo.Text = ds.Tables[0].Rows[0]["AccTIN"].ToString();
@@ -127,6 +127,7 @@ namespace WindowsFormsApplication1.Master
                     txtGSTStateDesc.Text = ds.Tables[0].Rows[0]["GSTStateDesc"].ToString();
                     txtGSTType.Text = ds.Tables[0].Rows[0]["AccGSTType"].ToString();
 
+                    txtACTag.Text = ds.Tables[0].Rows[0]["AccActive"].ToString();
 
                     txtLCTag.Text = ds.Tables[0].Rows[0]["AccLCTag"].ToString();
                     txtMobileNo.Text = ds.Tables[0].Rows[0]["AccMobNo"].ToString();
@@ -155,13 +156,6 @@ namespace WindowsFormsApplication1.Master
                     txtMainLedgerDesc.Text = ds.Tables[0].Rows[0]["GrpDesc"].ToString();
                     txtSubLedgerCode.Text = ds.Tables[0].Rows[0]["AccSubLedgerCode"].ToString();
                     txtSubLedgerDesc.Text = ds.Tables[0].Rows[0]["GrpSubDesc"].ToString();
-
-
-
-
-
-
-
 
                     txtAcCategory.Focus();
                     LoadDelAddresses();
@@ -245,23 +239,23 @@ namespace WindowsFormsApplication1.Master
                 }
                 else
                 {
-                    ProjectFunctions.SpeakError("Valid Vales Are L/C");
+                    ProjectFunctions.SpeakError("Valid Values Are L/C");
                     txtLCTag.Text = string.Empty;
                     return false;
                 }
 
-                if (txtGSTStateCode.Text.Trim().Length == 0)
-                {
-                    ProjectFunctions.SpeakError("Invalid GST State Desc");
-                    txtGSTStateCode.Focus();
-                    return false;
-                }
-                if (txtGSTStateDesc.Text.Trim().Length == 0)
-                {
-                    ProjectFunctions.SpeakError("Invalid GST State Desc");
-                    txtGSTStateCode.Focus();
-                    return false;
-                }
+                //if (txtGSTStateCode.Text.Trim().Length == 0)
+                //{
+                //    ProjectFunctions.SpeakError("Invalid GST State Desc");
+                //    txtGSTStateCode.Focus();
+                //    return false;
+                //}
+                //if (txtGSTStateDesc.Text.Trim().Length == 0)
+                //{
+                //    ProjectFunctions.SpeakError("Invalid GST State Desc");
+                //    txtGSTStateCode.Focus();
+                //    return false;
+                //}
 
 
                 return true;
@@ -301,7 +295,7 @@ namespace WindowsFormsApplication1.Master
                                                      + " Where AccCode=@AccCode";
                         }
                         sqlcom.Parameters.AddWithValue("@AccTaxType", cmbTaxType.Text.Trim());
-                        sqlcom.Parameters.AddWithValue("@AccActive", txtStatusTag.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@AccActive", txtACTag.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccCode", txtAcCode.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccType", txtAcCategory.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccName", txtAcName.Text.Trim());
@@ -361,7 +355,7 @@ namespace WindowsFormsApplication1.Master
                         sqlcom.Parameters.AddWithValue("@AccEmail", txtEmail.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccContactPerson", txtContactPerson.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccPSTCST", txtCstPst.Text.Trim());
-                        sqlcom.Parameters.AddWithValue("@AccAnATag", txtStatusTag.Text.Trim());
+                        sqlcom.Parameters.AddWithValue("@AccAnATag", txtACTag.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccChqName", txtChequeName.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccTIN", txtTinNo.Text.Trim());
                         sqlcom.Parameters.AddWithValue("@AccPANno", txtPanNo.Text.Trim());
@@ -583,7 +577,7 @@ namespace WindowsFormsApplication1.Master
             }
             else
             {
-                ProjectFunctions.SpeakError("Valid Vales Are A/L/E/P/I/S");
+                ProjectFunctions.SpeakError("Valid Values Are A/L/E/P/I/S");
                 txtAcCategory.Text = string.Empty;
                 txtAcCategory.Focus();
             }
@@ -895,6 +889,15 @@ namespace WindowsFormsApplication1.Master
                 }
             }
             e.Handled = true;
+        }
+
+        private void txtGSTNo_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            txtGSTStateCode.Text = txtGSTNo.Text.Substring(0, 2);
+            txtGSTStateDesc.Text = ProjectFunctions.GetDataSet("select GSTStateDesc from GSTStateMst where GSTStateCode='" + txtGSTNo.Text.Substring(0, 2) + "' ").Tables[0].Rows[0][0].ToString();
+
+
         }
     }
 }

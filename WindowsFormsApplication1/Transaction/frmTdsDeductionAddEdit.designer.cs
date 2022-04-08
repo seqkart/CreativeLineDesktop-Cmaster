@@ -160,7 +160,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(67, 187);
+            this.label2.Location = new System.Drawing.Point(54, 186);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 16);
@@ -169,7 +169,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(51, 64);
+            this.label1.Location = new System.Drawing.Point(38, 63);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 16);
@@ -203,7 +203,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(104, 106);
+            this.label4.Location = new System.Drawing.Point(91, 105);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(31, 16);
@@ -224,7 +224,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(75, 145);
+            this.label5.Location = new System.Drawing.Point(62, 144);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(64, 16);
@@ -264,7 +264,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(41, 285);
+            this.label7.Location = new System.Drawing.Point(28, 284);
             this.label7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 16);
@@ -282,7 +282,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(83, 354);
+            this.label8.Location = new System.Drawing.Point(70, 353);
             this.label8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 16);
@@ -304,7 +304,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(887, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(887, 27);
             this.Menu_ToolStrip.TabIndex = 231;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -314,7 +314,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 28);
+            this.btnQuit.Size = new System.Drawing.Size(43, 24);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -324,7 +324,7 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 28);
+            this.btnSave.Size = new System.Drawing.Size(45, 24);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
@@ -335,7 +335,7 @@
             this.TextAuthenticate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.TextAuthenticate.Name = "TextAuthenticate";
             this.TextAuthenticate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TextAuthenticate.Size = new System.Drawing.Size(116, 31);
+            this.TextAuthenticate.Size = new System.Drawing.Size(116, 27);
             // 
             // dtTransDate
             // 
@@ -394,7 +394,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(61, 271);
+            this.label10.Location = new System.Drawing.Point(48, 270);
             this.label10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 16);
@@ -419,7 +419,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(32, 313);
+            this.label11.Location = new System.Drawing.Point(19, 312);
             this.label11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 16);
@@ -439,7 +439,7 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(51, 229);
+            this.label12.Location = new System.Drawing.Point(38, 228);
             this.label12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(85, 16);
@@ -457,11 +457,11 @@
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(225, 31);
+            this.HelpGrid.Location = new System.Drawing.Point(211, 31);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
-            this.HelpGrid.Size = new System.Drawing.Size(593, 387);
+            this.HelpGrid.Size = new System.Drawing.Size(676, 387);
             this.HelpGrid.TabIndex = 369;
             this.HelpGrid.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.HelpGridView,
@@ -507,7 +507,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(887, 424);
+            this.ClientSize = new System.Drawing.Size(887, 418);
             this.ControlBox = false;
             this.Controls.Add(this.HelpGrid);
             this.Controls.Add(this.txtUnderSection);

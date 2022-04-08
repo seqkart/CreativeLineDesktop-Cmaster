@@ -26,19 +26,15 @@ namespace WindowsFormsApplication1.Transaction
         public FrmGSTPurchase()
         {
             InitializeComponent();
-            dt.Columns.Add("SIDPRDCODE", typeof(string));
-            dt.Columns.Add("SIDPRDNAME", typeof(string));
+          
             dt.Columns.Add("SIDARTNO", typeof(string));
             dt.Columns.Add("SIDARTDESC", typeof(string));
-            dt.Columns.Add("SIDCOLN", typeof(string));
-            dt.Columns.Add("SIDSIZN", typeof(string));
+           
             dt.Columns.Add("SIDITMRATE", typeof(decimal));
             dt.Columns.Add("SIDITMDISCPRCN", typeof(decimal));
             dt.Columns.Add("SIDITMDISCAMT", typeof(decimal));
             dt.Columns.Add("SIDITMNETAMT", typeof(decimal));
             dt.Columns.Add("SIDARTID", typeof(string));
-            dt.Columns.Add("SIDCOLID", typeof(string));
-            dt.Columns.Add("SIDSIZID", typeof(string));
             dt.Columns.Add("SIDQTY", typeof(string));
             dt.Columns.Add("SIDSGSTAMT", typeof(decimal));
             dt.Columns.Add("SIDCGSTAMT", typeof(decimal));
@@ -46,6 +42,8 @@ namespace WindowsFormsApplication1.Transaction
             dt.Columns.Add("SIDCGSTPER", typeof(decimal));
             dt.Columns.Add("SIDSGSTPER", typeof(decimal));
             dt.Columns.Add("SIDIGSTPER", typeof(decimal));
+            dt.Columns.Add("TOTALTAXRATE", typeof(decimal));
+            dt.Columns.Add("TOTALTAXAMOUNT", typeof(decimal));
             dt.Columns.Add("TAXCODE", typeof(string));
             dt.Columns.Add("GRPHSNCODE", typeof(string));
 
@@ -66,6 +64,7 @@ namespace WindowsFormsApplication1.Transaction
             decimal SumCGSTAmount = 0;
             decimal SumSGSTAmount = 0;
             decimal SumIGSTAmount = 0;
+           
             foreach (DataRow dr in dt.Rows)
             {
 
@@ -74,7 +73,6 @@ namespace WindowsFormsApplication1.Transaction
                 SumCGSTAmount += Convert.ToDecimal(dr["SIDCGSTAMT"]);
                 SumSGSTAmount += Convert.ToDecimal(dr["SIDSGSTAMT"]);
                 SumIGSTAmount += Convert.ToDecimal(dr["SIDIGSTAMT"]);
-
             }
 
             txtTotalTaxAmount.Text = (SumCGSTAmount + SumSGSTAmount + SumIGSTAmount).ToString("0.00");
@@ -193,11 +191,13 @@ namespace WindowsFormsApplication1.Transaction
             if (HelpGridView.RowCount > 0)
             {
 
-                if (HelpGrid.Text == "SIDPRDNAME")
+
+                if (HelpGrid.Text == "SIDARTNO")
                 {
                     DataRow dtNewRow = dt.NewRow();
-                    dtNewRow["SIDPRDCODE"] = row["PrdCode"].ToString();
-                    dtNewRow["SIDPRDNAME"] = row["PrdName"].ToString();
+                    dtNewRow["SIDARTNO"] = row["ARTNO"].ToString();
+                    dtNewRow["SIDARTDESC"] = row["ARTDESC"].ToString();
+                    dtNewRow["SIDARTID"] = row["ARTSYSID"].ToString();
                     dtNewRow["SIDITMDISCPRCN"] = Convert.ToDecimal("0");
                     dtNewRow["SIDITMDISCAMT"] = Convert.ToDecimal("0");
                     dtNewRow["SIDITMRATE"] = Convert.ToDecimal("0");
@@ -209,7 +209,8 @@ namespace WindowsFormsApplication1.Transaction
                     dtNewRow["SIDCGSTPER"] = Convert.ToDecimal("0");
                     dtNewRow["SIDSGSTPER"] = Convert.ToDecimal("0");
                     dtNewRow["SIDIGSTPER"] = Convert.ToDecimal("0");
-
+                    dtNewRow["TOTALTAXRATE"] = Convert.ToDecimal("0");
+                    dtNewRow["TOTALTAXAMOUNT"] = Convert.ToDecimal("0");
                     dt.Rows.Add(dtNewRow);
                     if (dt.Rows.Count > 0)
                     {
@@ -219,31 +220,8 @@ namespace WindowsFormsApplication1.Transaction
                     panelControl1.Visible = false;
                     InfoGridView.Focus();
                     InfoGridView.MoveLast();
-                    InfoGridView.FocusedColumn = InfoGridView.Columns["SIDARTNO"];
-                    txtSearchBox.Text = string.Empty;
-                    Calculation();
-                }
-                if (HelpGrid.Text == "SIDARTNO")
-                {
-                    //DataRow dtNewRow = dt.NewRow();
-                    //dtNewRow["SIDARTNO"] = row["ARTNO"].ToString();
-                    //dtNewRow["SIDARTDESC"] = row["ARTDESC"].ToString();
-                    //dtNewRow["SIDARTID"] = row["ARTSYSID"].ToString();
-                    //dtNewRow["SIDITMDISCPRCN"] = Convert.ToDecimal("0");
-                    //dtNewRow["SIDITMDISCAMT"] = Convert.ToDecimal("0");
-                    //dtNewRow["SIDITMRATE"] = Convert.ToDecimal("0");
-
-                    //dt.Rows.Add(dtNewRow);
-                    //if (dt.Rows.Count > 0)
-                    //{
-                    //    InfoGrid.DataSource = dt;
-                    //    InfoGridView.BestFitColumns();
-                    //}
-                    //panelControl1.Visible = false;
-                    //InfoGridView.Focus();
-                    //InfoGridView.MoveLast();
-                    //InfoGridView.FocusedColumn = InfoGridView.Columns["SIDCOLN"];
-                    //txtSearchBox.Text = String.Empty;
+                    InfoGridView.FocusedColumn = InfoGridView.Columns["SIDQTY"];
+                    txtSearchBox.Text = String.Empty;
 
 
 
@@ -259,37 +237,6 @@ namespace WindowsFormsApplication1.Transaction
                     InfoGridView.FocusedRowHandle = RowIndex;
                     txtSearchBox.Text = string.Empty;
                     dt.AcceptChanges();
-                }
-
-
-
-                if (HelpGrid.Text == "SIDCOLN")
-                {
-
-                    InfoGridView.UpdateCurrentRow();
-
-                    InfoGridView.SetRowCellValue(RowIndex, InfoGridView.Columns["SIDCOLID"], row["COLSYSID"].ToString());
-                    InfoGridView.SetRowCellValue(RowIndex, InfoGridView.Columns["SIDCOLN"], row["COLNAME"].ToString());
-                    InfoGridView.Focus();
-                    panelControl1.Visible = false;
-                    InfoGridView.FocusedColumn = InfoGridView.Columns["SIDSIZN"];
-                    InfoGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = string.Empty;
-                    dt.AcceptChanges();
-                }
-                if (HelpGrid.Text == "SIDSIZN")
-                {
-
-                    UpdateTag = "N";
-                    InfoGridView.SetRowCellValue(RowIndex, InfoGridView.Columns["SIDSIZID"], row["SZSYSID"].ToString());
-                    InfoGridView.SetRowCellValue(RowIndex, InfoGridView.Columns["SIDSIZN"], row["SZNAME"].ToString());
-                    panelControl1.Visible = false;
-                    InfoGridView.Focus();
-                    InfoGridView.FocusedColumn = InfoGridView.Columns["SIDQTY"];
-                    InfoGridView.FocusedRowHandle = RowIndex;
-                    txtSearchBox.Text = string.Empty;
-                    dt.AcceptChanges();
-                    InfoGridView.ShowEditor();
                 }
             }
         }
@@ -616,38 +563,17 @@ namespace WindowsFormsApplication1.Transaction
                         foreach (DataRow dr in dt.Rows)
                         {
                             sqlcom.CommandText = " Insert into PURCHASEDET "
-                                                    + " (SIDFYR,SIDNO,SIDTYPE,SIDDATE,SIDPrdCode,"
-                                                    + " SIDARTID,SIDCOLID,SIDSIZID,SIDITMRATE,SIDITMNETAMT,SIDITMDISCPRCN,SIDITMDISCAMT,SIDQTY,"
+                                                    + " (SIDFYR,SIDNO,SIDTYPE,SIDDATE,"
+                                                    + " SIDARTID,SIDITMRATE,SIDITMNETAMT,SIDITMDISCPRCN,SIDITMDISCAMT,SIDQTY,"
                                                     + " SIDSGSTAMT,SIDCGSTAMT,SIDIGSTAMT,SIDCGSTPER,SIDSGSTPER,SIDIGSTPER,TAXCODE,GRPHSNCODE,UnitCode)"
-                                                    + " values(@SIDFYR,@SIDNO,@SIDTYPE,@SIDDATE,@SIDPrdCode,"
-                                                    + " @SIDARTID,@SIDCOLID,@SIDSIZID,@SIDITMRATE,@SIDITMNETAMT,@SIDITMDISCPRCN,@SIDITMDISCAMT,@SIDQTY,"
+                                                    + " values(@SIDFYR,@SIDNO,@SIDTYPE,@SIDDATE,"
+                                                    + " @SIDARTID,@SIDITMRATE,@SIDITMNETAMT,@SIDITMDISCPRCN,@SIDITMDISCAMT,@SIDQTY,"
                                                     + " @SIDSGSTAMT,@SIDCGSTAMT,@SIDIGSTAMT,@SIDCGSTPER,@SIDSGSTPER,@SIDIGSTPER,@TAXCODE,@GRPHSNCODE,@UnitCode)";
                             sqlcom.Parameters.Add("@SIDFYR", SqlDbType.NVarChar).Value = GlobalVariables.FinancialYear;
                             sqlcom.Parameters.Add("@SIDNO", SqlDbType.NVarChar).Value = txtPurchaseNo.Text;
                             sqlcom.Parameters.Add("@SIDTYPE", SqlDbType.NVarChar).Value = "RM";
                             sqlcom.Parameters.Add("@SIDDATE", SqlDbType.NVarChar).Value = Convert.ToDateTime(txtPurchaseDate.Text).ToString("yyyy-MM-dd");
-                            if (dr["SIDPrdCode"].ToString() == string.Empty)
-                            {
-                                dr["SIDPrdCode"] = "0";
-                            }
-                            sqlcom.Parameters.Add("@SIDPrdCode", SqlDbType.NVarChar).Value = dr["SIDPrdCode"].ToString();
-                            if (dr["SIDARTID"].ToString() == string.Empty)
-                            {
-                                dr["SIDARTID"] = "0";
-                            }
-
-
-                            sqlcom.Parameters.Add("@SIDARTID", SqlDbType.NVarChar).Value = dr["SIDARTID"].ToString();
-                            if (dr["SIDCOLID"].ToString() == string.Empty)
-                            {
-                                dr["SIDCOLID"] = "0";
-                            }
-                            sqlcom.Parameters.Add("@SIDCOLID", SqlDbType.NVarChar).Value = dr["SIDCOLID"].ToString();
-                            if (dr["SIDSIZID"].ToString() == string.Empty)
-                            {
-                                dr["SIDSIZID"] = "0";
-                            }
-                            sqlcom.Parameters.Add("@SIDSIZID", SqlDbType.NVarChar).Value = dr["SIDSIZID"].ToString();
+                            sqlcom.Parameters.Add("@SIDARTID", SqlDbType.NVarChar).Value = dr["SIDARTID"].ToString();                                           
                             sqlcom.Parameters.Add("@SIDITMRATE", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["SIDITMRATE"]);
                             sqlcom.Parameters.Add("@SIDITMNETAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["SIDITMNETAMT"]);
                             sqlcom.Parameters.Add("@SIDITMDISCPRCN", SqlDbType.NVarChar).Value = Convert.ToDecimal(dr["SIDITMDISCPRCN"]);
@@ -720,50 +646,7 @@ namespace WindowsFormsApplication1.Transaction
                                     if (e.KeyCode != Keys.Enter)
                                     {
 
-                                        if (InfoGridView.FocusedColumn.FieldName == "SIDPRDNAME")
-                                        {
-                                            if (currentrow == null)
-                                            {
-                                                HelpGrid.Text = "SIDPRDNAME";
-
-                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
-                                                txtSearchBox.Focus();
-                                                txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                txtSearchBox.SelectionLength = 0;
-                                            }
-                                            else
-                                            {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from PrdMst where PrdCode='" + ProjectFunctions.CheckNull(currentrow["SIDPRDCODE"].ToString()) + "'");
-                                                if (dsCheck.Tables[0].Rows.Count > 0)
-                                                {
-
-                                                    UpdateTag = "Y";
-
-
-                                                    HelpGrid.Text = "SIDPRDNAME";
-                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
-                                                    txtSearchBox.Focus();
-                                                    txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                    txtSearchBox.SelectionLength = 0;
-                                                    RowIndex = InfoGridView.FocusedRowHandle;
-                                                }
-                                                else
-                                                {
-                                                    HelpGrid.Text = "SIDPRDNAME";
-                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
-                                                    txtSearchBox.Focus();
-                                                    txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                    txtSearchBox.SelectionLength = 0;
-                                                    RowIndex = InfoGridView.FocusedRowHandle;
-                                                }
-                                            }
-                                        }
+                                        
                                         if (InfoGridView.FocusedColumn.FieldName == "SIDARTNO")
                                         {
                                             if (currentrow == null)
@@ -808,97 +691,7 @@ namespace WindowsFormsApplication1.Transaction
                                                 }
                                             }
                                         }
-                                        if (InfoGridView.FocusedColumn.FieldName == "SIDCOLN")
-                                        {
-
-                                            if (currentrow == null)
-                                            {
-                                                HelpGrid.Text = "SIDCOLN";
-                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
-                                                txtSearchBox.Focus();
-                                                txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                txtSearchBox.SelectionLength = 0;
-                                            }
-                                            else
-                                            {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from COLOURS where COLSYSID='" + ProjectFunctions.CheckNull(currentrow["SIDCOLID"].ToString()) + "'");
-                                                if (dsCheck.Tables[0].Rows.Count > 0)
-                                                {
-
-                                                    UpdateTag = "Y";
-
-                                                    HelpGrid.Text = "SIDCOLN";
-                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
-                                                    txtSearchBox.Focus();
-                                                    txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                    txtSearchBox.SelectionLength = 0;
-
-                                                    RowIndex = InfoGridView.FocusedRowHandle;
-                                                }
-                                                else
-                                                {
-                                                    HelpGrid.Text = "SIDCOLN";
-                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
-                                                    txtSearchBox.Focus();
-                                                    txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                    txtSearchBox.SelectionLength = 0;
-
-                                                    RowIndex = InfoGridView.FocusedRowHandle;
-                                                }
-                                            }
-                                        }
-
-                                        if (InfoGridView.FocusedColumn.FieldName == "SIDSIZN")
-                                        {
-                                            if (currentrow == null)
-                                            {
-                                                HelpGrid.Text = "SIDSIZN";
-                                                txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                panelControl1.Visible = true;
-                                                panelControl1.Select();
-                                                txtSearchBox.Focus();
-                                                txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                txtSearchBox.SelectionLength = 0;
-
-
-                                            }
-                                            else
-                                            {
-                                                DataSet dsCheck = ProjectFunctions.GetDataSet("Select * from SIZEMAST where SZSYSID='" + ProjectFunctions.CheckNull(currentrow["SIDSIZID"].ToString()) + "' ORDER BY SZINDEX,SZSYSID");
-                                                if (dsCheck.Tables[0].Rows.Count > 0)
-                                                {
-                                                    UpdateTag = "Y";
-
-                                                    HelpGrid.Text = "SIDSIZN";
-                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
-                                                    txtSearchBox.Focus();
-                                                    txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                    txtSearchBox.SelectionLength = 0;
-
-                                                    RowIndex = InfoGridView.FocusedRowHandle;
-                                                }
-                                                else
-                                                {
-                                                    HelpGrid.Text = "SIDSIZN";
-                                                    txtSearchBox.Text += ProjectFunctions.ValidateKeysForSearchBox(e);
-                                                    panelControl1.Visible = true;
-                                                    panelControl1.Select();
-                                                    txtSearchBox.Focus();
-                                                    txtSearchBox.SelectionStart = txtSearchBox.Text.Length;
-                                                    txtSearchBox.SelectionLength = 0;
-
-                                                    RowIndex = InfoGridView.FocusedRowHandle;
-                                                }
-                                            }
-                                        }
+                                      
 
 
                                         dt.AcceptChanges();
@@ -973,28 +766,7 @@ namespace WindowsFormsApplication1.Transaction
             {
 
                 HelpGrid.Show();
-                if (HelpGrid.Text == "SIDPRDNAME")
-                {
-                    DataTable dtNew = dsPopUps.Tables[3].Clone();
-                    DataRow[] dtRow = dsPopUps.Tables[3].Select("PrdName like '" + txtSearchBox.Text + "%'");
-                    foreach (DataRow dr in dtRow)
-                    {
-                        DataRow NewRow = dtNew.NewRow();
-                        NewRow["PrdCode"] = dr["PrdCode"];
-                        NewRow["PrdName"] = dr["PrdName"];
-                        dtNew.Rows.Add(NewRow);
-                    }
-                    if (dtNew.Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = dtNew;
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        HelpGrid.DataSource = null;
-                        HelpGridView.BestFitColumns();
-                    }
-                }
+               
                 if (HelpGrid.Text == "SIDARTNO")
                 {
                     DataTable dtNew = dsPopUps.Tables[0].Clone();
@@ -1020,54 +792,7 @@ namespace WindowsFormsApplication1.Transaction
                         HelpGridView.BestFitColumns();
                     }
                 }
-                if (HelpGrid.Text == "SIDCOLN")
-                {
-                    DataTable dtNew = dsPopUps.Tables[1].Clone();
-                    DataRow[] dtRow = dsPopUps.Tables[1].Select("COLNAME like '" + txtSearchBox.Text + "%'");
-                    foreach (DataRow dr in dtRow)
-                    {
-                        DataRow NewRow = dtNew.NewRow();
-                        NewRow["COLNAME"] = dr["COLNAME"];
-                        NewRow["COLSYSID"] = dr["COLSYSID"];
-                        dtNew.Rows.Add(NewRow);
-                    }
-                    if (dtNew.Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = dtNew;
-                        HelpGridView.BestFitColumns();
-                    }
-                    else
-                    {
-                        HelpGrid.DataSource = null;
-                        HelpGridView.BestFitColumns();
-                    }
-                }
-                if (HelpGrid.Text == "SIDSIZN")
-                {
-                    DataTable dtNew = dsPopUps.Tables[2].Clone();
-                    DataRow[] dtRow = dsPopUps.Tables[2].Select("SZNAME like '" + txtSearchBox.Text + "%'");
-                    foreach (DataRow dr in dtRow)
-                    {
-                        DataRow NewRow = dtNew.NewRow();
-                        NewRow["SZNAME"] = dr["SZNAME"];
-                        NewRow["SZSYSID"] = dr["SZSYSID"];
-                        NewRow["SZINDEX"] = dr["SZINDEX"];
-                        dtNew.Rows.Add(NewRow);
-                    }
-                    if (dtNew.Rows.Count > 0)
-                    {
-                        HelpGrid.DataSource = dtNew;
-                        HelpGridView.BestFitColumns();
-
-                        HelpGridView.Columns[2].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
-                        HelpGridView.FocusedRowHandle = 0;
-                    }
-                    else
-                    {
-                        HelpGrid.DataSource = null;
-                        HelpGridView.BestFitColumns();
-                    }
-                }
+                
             }
 
             catch (Exception ex)
@@ -1102,6 +827,8 @@ namespace WindowsFormsApplication1.Transaction
                             currentrow["SIDCGSTPER"] = Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxCGSTRate"]);
                             currentrow["SIDSGSTPER"] = Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxSGSTRate"]);
                             currentrow["SIDIGSTPER"] = Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxIGSTRate"]);
+
+                            currentrow["TOTALTAXRATE"] = Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxCGSTRate"])+ Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxSGSTRate"])+ Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxIGSTRate"]);
                         }
 
                         currentrow["SIDITMNETAMT"] = (Convert.ToDecimal(currentrow["SIDITMRATE"]) * Convert.ToDecimal(currentrow["SIDQTY"])) - Convert.ToDecimal(currentrow["SIDITMDISCAMT"]);
@@ -1110,6 +837,8 @@ namespace WindowsFormsApplication1.Transaction
                         currentrow["SIDIGSTAMT"] = (Convert.ToDecimal(currentrow["SIDITMNETAMT"]) * Convert.ToDecimal(dsTax.Tables[0].Rows[0]["TaxIGSTRate"])) / 100;
                         currentrow["TAXCODE"] = dsTax.Tables[0].Rows[0]["TaxCode"].ToString();
                         currentrow["GRPHSNCODE"] = dsTax.Tables[0].Rows[0]["GrpHSNCode"].ToString();
+                        currentrow["TOTALTAXAMOUNT"] = (Convert.ToDecimal(currentrow["SIDSGSTAMT"]) + Convert.ToDecimal(currentrow["SIDCGSTAMT"]) + Convert.ToDecimal(currentrow["SIDIGSTAMT"]));
+
                         Calculation();
 
                     }
@@ -1126,7 +855,7 @@ namespace WindowsFormsApplication1.Transaction
             {
 
                 MemoryStream ms = new MemoryStream();
-                pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
+                //pictureEdit1.Image.Save(ms, ImageFormat.Jpeg);
                 byte[] photo = new byte[ms.Length];
                 ms.Position = 0;
                 ms.Read(photo, 0, photo.Length);
@@ -1191,8 +920,8 @@ namespace WindowsFormsApplication1.Transaction
                     Position = 0
                 };
 
-                pictureEdit1.Image = Image.FromStream(stream);
-                pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+                //pictureEdit1.Image = Image.FromStream(stream);
+                //pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
                 XtraReport1 rpt = new XtraReport1();
                 rpt.xrPictureBox1.ImageUrl = "C:\\Temp\\A.jpg";
@@ -1225,6 +954,26 @@ namespace WindowsFormsApplication1.Transaction
             {
                 ProjectFunctions.SpeakError(ex.Message);
             }
+        }
+
+        private void labelControl49_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRoundOffAmount_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTransporterName_EditValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

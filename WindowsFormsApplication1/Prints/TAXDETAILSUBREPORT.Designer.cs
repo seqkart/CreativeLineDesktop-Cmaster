@@ -80,7 +80,7 @@
             this.xrTable1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(274.8189F, 14.99999F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(272.5967F, 14.99999F);
             this.xrTable1.StylePriority.UseBorders = false;
             this.xrTable1.StylePriority.UseFont = false;
             this.xrTable1.StylePriority.UseTextAlignment = false;
@@ -182,7 +182,7 @@
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
             this.xrTableCell6.Text = "xrTableCell6";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.xrTableCell6.Weight = 1.0487132714188812D;
+            this.xrTableCell6.Weight = 1.0072784984699517D;
             // 
             // ReportHeader
             // 
@@ -303,7 +303,7 @@
             this.xrShape2.Name = "xrShape2";
             shapeRectangle1.Fillet = 20;
             this.xrShape2.Shape = shapeRectangle1;
-            this.xrShape2.SizeF = new System.Drawing.SizeF(280.3077F, 18.125F);
+            this.xrShape2.SizeF = new System.Drawing.SizeF(276.1411F, 18.125F);
             this.xrShape2.Stretch = true;
             this.xrShape2.StylePriority.UseBorders = false;
             // 
@@ -322,12 +322,15 @@
             this.Font = new System.Drawing.Font("Bahnschrift", 9.75F);
             this.Margins = new System.Drawing.Printing.Margins(0, 1, 0, 0);
             this.PageHeight = 1169;
-            this.PageWidth = 827;
-            this.PaperKind = System.Drawing.Printing.PaperKind.A4;
+            this.PageWidth = 284;
+            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            this.PaperName = "72 x 297mm";
+            this.PrinterName = "RP3200 plus(U) 1";
+            this.RollPaper = true;
             this.SnapGridStepCount = 1;
             this.SnappingMode = DevExpress.XtraReports.UI.SnappingMode.None;
             this.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.Version = "20.1";
+            this.Version = "21.2";
             this.VerticalContentSplitting = DevExpress.XtraPrinting.VerticalContentSplitting.Smart;
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

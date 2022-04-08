@@ -298,11 +298,5 @@ namespace WindowsFormsApplication1.Prints
         {
 
         }
-
-        private void xrLabel26_TextChanged(object sender, EventArgs e)
-        {
-
-
-        }
     }
 }

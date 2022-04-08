@@ -100,6 +100,11 @@ namespace WindowsFormsApplication1
                 if (ValidateData())
                 {
                     DataSet dsCompany = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_COMCONF_ALL());
+                    
+                    
+                    GlobalVariables.WAppApiLink = dsCompany.Tables[0].Rows[0]["WAppApiLink"].ToString();
+
+
                     DataRow dr = dsCompany.Tables[0].Rows[0];
 
                     GlobalVariables.CAddress1 = dr[SQL_COLUMNS.COMCONF._COMADD].ToString();
@@ -163,14 +168,14 @@ namespace WindowsFormsApplication1
             {
                 System.IO.Directory.CreateDirectory("C:\\Temp");
             }
-            if (System.IO.Directory.Exists("C:\\ERP To Busy"))
-            {
+            //if (System.IO.Directory.Exists("C:\\ERP To Busy"))
+            //{
 
-            }
-            else
-            {
-                System.IO.Directory.CreateDirectory("C:\\ERP To Busy");
-            }
+            //}
+            //else
+            //{
+            //    System.IO.Directory.CreateDirectory("C:\\ERP To Busy");
+            //}
 
             if (System.IO.Directory.Exists(Application.StartupPath + "\\PTFile"))
             {
@@ -214,15 +219,15 @@ namespace WindowsFormsApplication1
                 System.IO.Directory.CreateDirectory(Application.StartupPath + "\\PI");
             }
            
-            if (System.IO.Directory.Exists(Application.StartupPath + "\\Salary"))
-            {
+            //if (System.IO.Directory.Exists(Application.StartupPath + "\\Salary"))
+            //{
 
-            }
-            else
-            {
-                System.IO.Directory.CreateDirectory(Application.StartupPath + "\\salary");
+            //}
+            //else
+            //{
+            //    System.IO.Directory.CreateDirectory(Application.StartupPath + "\\salary");
 
-            }
+            //}
             if (System.IO.Directory.Exists("C:\\Temp\\GST"))
             {
 
@@ -268,7 +273,7 @@ namespace WindowsFormsApplication1
             {
                 //MessageBox.Show(dsFNYear.Tables[0].Rows.Count.ToString());
                 txtPassword.Text = "123";
-                txtUserName.Text = "HAPPY";
+                txtUserName.Text = "Varun";
                 SendKeys.Send("{Enter}");
 
                 txtUserName.Focus();
@@ -330,7 +335,7 @@ namespace WindowsFormsApplication1
             if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 txtFNYear.Focus();
-                txtFNYear.Text = "2021-2022";
+                txtFNYear.Text = "2022-2023";
             }
         }
 
@@ -345,7 +350,7 @@ namespace WindowsFormsApplication1
         private void TxtUserName_DoubleClick(object sender, EventArgs e)
         {
 
-            txtUserName.Text = "HAPPY";
+            txtUserName.Text = "Varun";
             SendKeys.Send("{Enter}");
             dTP1.Text = DateTime.Now.ToLongDateString();
 
@@ -360,9 +365,11 @@ namespace WindowsFormsApplication1
 
         private void BtnBackup_Click(object sender, EventArgs e)
         {
-            Task.Run(() => ProjectFunctions.GetDataSet("msdb.dbo.sp_start_job 'BackUp'"));
+            Task.Run(() => ProjectFunctions.GetDataSet("msdb.dbo.sp_start_job 'BackUpindra'"));
             ProjectFunctions.Speak("Database Successfully backed up on Server dated" + DateTime.Now.ToShortDateString());
 
         }
+
+        //cnjdsbchzdvyzcb
     }
 }

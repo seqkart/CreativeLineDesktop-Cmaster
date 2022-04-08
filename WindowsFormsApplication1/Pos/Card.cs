@@ -22,6 +22,9 @@ namespace WindowsFormsApplication1.Pos
         private void Btvisa_Click(object sender, EventArgs e)
         {
             txtCardType.Text = "VISA";
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            btnSave.PerformClick();
+          //  txtAmountPaid.Focus();
         }
 
 
@@ -29,21 +32,34 @@ namespace WindowsFormsApplication1.Pos
         private void Btmaestro_Click(object sender, EventArgs e)
         {
             txtCardType.Text = "MAESTRO";
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            btnSave.PerformClick();
+            //txtAmountPaid.Focus();
         }
 
         private void Btamex_Click(object sender, EventArgs e)
         {
             txtCardType.Text = "AMEX";
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            btnSave.PerformClick();
+           // txtAmountPaid.Focus();
         }
 
         private void Btmaster_Click(object sender, EventArgs e)
         {
             txtCardType.Text = "MASTER CARD";
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            btnSave.PerformClick();
+
+           // txtAmountPaid.Focus();
         }
 
         private void Btdci_Click(object sender, EventArgs e)
         {
             txtCardType.Text = "DINERS CLUB";
+            txtAmountPaid.Text = txtMemoAmount.Text;
+            btnSave.PerformClick();
+           // txtAmountPaid.Focus();
         }
 
 
@@ -54,8 +70,10 @@ namespace WindowsFormsApplication1.Pos
         {
             try
             {
+               
                 lblMemoNo.Text = MemoNo;
                 lblMemoDate.Text = MemoDate.ToString("dd-MM-yyyy");
+
 
                 txtMemoAmount.Text = TotalMemoAmount.ToString("0.00");
 
@@ -82,6 +100,7 @@ namespace WindowsFormsApplication1.Pos
                     //    frm.ShowDialog(this.Parent);
                     //}
                 }
+                txtCardType.Focus();
             }
 
             catch (Exception ex)
@@ -135,6 +154,7 @@ namespace WindowsFormsApplication1.Pos
                             sqlcom.Parameters.Add("@CATMEMOAMT", SqlDbType.NVarChar).Value = TotalMemoAmount.ToString("0.00");
                             sqlcom.Parameters.Add("@CATCARDAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal(txtAmountPaid.Text);
                             sqlcom.Parameters.Add("@CATPGAMT", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
+
                             sqlcom.Parameters.Add("@CURIN2000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN1000", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
                             sqlcom.Parameters.Add("@CURIN200", SqlDbType.NVarChar).Value = Convert.ToDecimal("0");
@@ -230,14 +250,13 @@ namespace WindowsFormsApplication1.Pos
         private void BtnSave_Click(object sender, EventArgs e)
         {
             Save();
+            ProjectFunctions.GetDataSet("update CASHTENDER set CATMODE = 2 WHERE CATMEMONO='" + lblMemoNo.Text + "' And CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
+            ProjectFunctions.GetDataSet("update SALEINVMAIN set NOTPAID = 'Y' Where SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' And SIMNO='" + lblMemoNo.Text + "' And SIMSERIES='" + 'S' + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+
             Prints.CASHMEMO rpt = new Prints.CASHMEMO();
             ProjectFunctions.PrintDocument(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
             Close();
-            //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
-            //var P = ProjectFunctions.GetPositionInForm(this);
-            //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-            //frm.ShowDialog(Parent);
-
+            
 
         }
 
@@ -289,7 +308,7 @@ namespace WindowsFormsApplication1.Pos
 
         private void TxtAmountPaid_EditValueChanged(object sender, EventArgs e)
         {
-            //txtBalanceAmount.EditValue = Convert.ToDecimal(txtMemoAmount.EditValue) - Convert.ToDecimal(txtAmountPaid.EditValue);
+          txtBalanceAmount.EditValue = Convert.ToDecimal(txtMemoAmount.EditValue) - Convert.ToDecimal(txtAmountPaid.EditValue);
         }
 
 
@@ -305,11 +324,11 @@ namespace WindowsFormsApplication1.Pos
         private void BtnSaveOnly_Click(object sender, EventArgs e)
         {
             Save();
+            ProjectFunctions.GetDataSet("update CASHTENDER set CATMODE = 2 WHERE CATMEMONO='" + lblMemoNo.Text + "' And CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
+            ProjectFunctions.GetDataSet("update SALEINVMAIN set NOTPAID = 'Y' Where SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' And SIMNO='" + lblMemoNo.Text + "' And SIMSERIES='" + 'S' + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+
             Close();
-            //Transaction.Cashmemo frm = new Transaction.Cashmemo() { s1 = "&Add", Text = "Cash Memo Addition" };
-            //var P = ProjectFunctions.GetPositionInForm(this);
-            //frm.Location = new Point(P.X + (ClientSize.Width / 2 - frm.Size.Width / 2), P.Y + (ClientSize.Height / 2 - frm.Size.Height / 2));
-            //frm.ShowDialog(Parent);
+           
 
         }
 
@@ -321,6 +340,9 @@ namespace WindowsFormsApplication1.Pos
         private void BtnWhatsapp_Click(object sender, EventArgs e)
         {
             Save();
+            ProjectFunctions.GetDataSet("update CASHTENDER set CATMODE = 2 WHERE CATMEMONO='" + lblMemoNo.Text + "' And CATMEMODATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' ANd UnitCode='" + GlobalVariables.CUnitID + "'");
+            ProjectFunctions.GetDataSet("update SALEINVMAIN set NOTPAID = 'Y' Where SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "' And SIMNO='" + lblMemoNo.Text + "' And SIMSERIES='" + 'S' + "' And UnitCode='" + GlobalVariables.CUnitID + "'");
+
             Prints.CASHMEMONOR rpt = new Prints.CASHMEMONOR();
             ProjectFunctions.PrintPDFDocumentONLY(lblMemoNo.Text, Convert.ToDateTime(lblMemoDate.Text), "S", rpt);
             DataSet ds = ProjectFunctions.GetDataSet("SELECT CAFINFO.CAFMOBILE FROM SALEINVMAIN INNER JOIN CAFINFO ON SALEINVMAIN.CustCode = CAFINFO.CAFSYSID WHERE  (SALEINVMAIN.SIMSERIES = 'S') And SIMNO='" + lblMemoNo.Text + "' aND SIMDATE='" + Convert.ToDateTime(lblMemoDate.Text).ToString("yyyy-MM-dd") + "'");
@@ -330,6 +352,22 @@ namespace WindowsFormsApplication1.Pos
             }
 
             Close();
+        }
+
+        private void TxtCardType_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtAmountPaid.Text = txtMemoAmount.Text;
+                txtAmountPaid.Focus();
+                txtAmountPaid.SelectAll();
+                
+            }
+        }
+
+        private void TxtAmountPaid_KeyDown(object sender, KeyEventArgs e)
+        {
+            btnSave.PerformClick();
         }
     }
 }

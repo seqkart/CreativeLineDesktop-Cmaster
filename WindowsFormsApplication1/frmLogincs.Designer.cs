@@ -206,7 +206,6 @@
             // dTP1
             // 
             this.dTP1.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 10F);
-            this.dTP1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dTP1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.dTP1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dTP1.Location = new System.Drawing.Point(192, 269);
@@ -215,7 +214,7 @@
             this.dTP1.Name = "dTP1";
             this.dTP1.Size = new System.Drawing.Size(266, 27);
             this.dTP1.TabIndex = 55;
-            this.dTP1.Value = new System.DateTime(2020, 9, 9, 17, 48, 0, 0);
+            this.dTP1.Value = new System.DateTime(2022, 4, 3, 0, 0, 0, 0);
             // 
             // txtCompany
             // 

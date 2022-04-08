@@ -2720,6 +2720,9 @@
             this.xrCrossBandBox1});
             this.DataMember = "Table1";
             this.DataSourceSchema = resources.GetString("$this.DataSourceSchema");
+            this.DesignerOptions.ShowDesignerHints = false;
+            this.DesignerOptions.ShowExportWarnings = false;
+            this.DesignerOptions.ShowPrintingWarnings = false;
             this.Landscape = true;
             this.Margins = new System.Drawing.Printing.Margins(25, 25, 35, 20);
             this.PageHeight = 827;

@@ -64,7 +64,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(486, 27);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(486, 31);
             this.Menu_ToolStrip.TabIndex = 204;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -74,7 +74,7 @@
             this.btnQuit.Image = ((System.Drawing.Image)(resources.GetObject("btnQuit.Image")));
             this.btnQuit.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(43, 24);
+            this.btnQuit.Size = new System.Drawing.Size(43, 28);
             this.btnQuit.Text = "Quit";
             this.btnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
@@ -84,53 +84,61 @@
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(45, 24);
+            this.btnSave.Size = new System.Drawing.Size(45, 28);
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // txtCItyName
             // 
             this.txtCItyName.EnterMoveNextControl = true;
-            this.txtCItyName.Location = new System.Drawing.Point(85, 70);
+            this.txtCItyName.Location = new System.Drawing.Point(107, 71);
             this.txtCItyName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCItyName.Name = "txtCItyName";
+            this.txtCItyName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCItyName.Properties.Appearance.Options.UseFont = true;
             this.txtCItyName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCItyName.Properties.MaxLength = 30;
-            this.txtCItyName.Size = new System.Drawing.Size(379, 22);
+            this.txtCItyName.Size = new System.Drawing.Size(367, 30);
             this.txtCItyName.TabIndex = 200;
             // 
             // txtCityCode
             // 
-            this.txtCityCode.Location = new System.Drawing.Point(85, 36);
+            this.txtCityCode.Location = new System.Drawing.Point(107, 37);
             this.txtCityCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCityCode.Name = "txtCityCode";
+            this.txtCityCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCityCode.Properties.Appearance.Options.UseFont = true;
             this.txtCityCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCityCode.Size = new System.Drawing.Size(65, 22);
+            this.txtCityCode.Size = new System.Drawing.Size(65, 30);
             this.txtCityCode.TabIndex = 201;
             this.txtCityCode.TabStop = false;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(16, 74);
+            this.label3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Appearance.Options.UseFont = true;
+            this.label3.Location = new System.Drawing.Point(14, 74);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
+            this.label3.Size = new System.Drawing.Size(81, 23);
             this.label3.TabIndex = 203;
             this.label3.Text = "City Name";
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(18, 40);
+            this.label1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Appearance.Options.UseFont = true;
+            this.label1.Location = new System.Drawing.Point(20, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(75, 23);
             this.label1.TabIndex = 202;
             this.label1.Text = "City Code";
             // 
             // HelpGrid
             // 
             this.HelpGrid.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.HelpGrid.Location = new System.Drawing.Point(40, 40);
+            this.HelpGrid.Location = new System.Drawing.Point(52, 33);
             this.HelpGrid.MainView = this.HelpGridView;
             this.HelpGrid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.HelpGrid.Name = "HelpGrid";
@@ -158,34 +166,40 @@
             // txtStateCode
             // 
             this.txtStateCode.EnterMoveNextControl = true;
-            this.txtStateCode.Location = new System.Drawing.Point(85, 104);
+            this.txtStateCode.Location = new System.Drawing.Point(107, 105);
             this.txtStateCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStateCode.Name = "txtStateCode";
             this.txtStateCode.Properties.AllowHtmlDraw = DevExpress.Utils.DefaultBoolean.False;
+            this.txtStateCode.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStateCode.Properties.Appearance.Options.UseFont = true;
             this.txtStateCode.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateCode.Properties.MaxLength = 4;
-            this.txtStateCode.Size = new System.Drawing.Size(65, 22);
+            this.txtStateCode.Size = new System.Drawing.Size(65, 30);
             this.txtStateCode.TabIndex = 410;
             this.txtStateCode.EditValueChanged += new System.EventHandler(this.TxtStateCode_EditValueChanged);
             this.txtStateCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtStateCode_KeyDown);
             // 
             // label13
             // 
+            this.label13.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Appearance.Options.UseFont = true;
             this.label13.Location = new System.Drawing.Point(4, 109);
             this.label13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 16);
+            this.label13.Size = new System.Drawing.Size(91, 23);
             this.label13.TabIndex = 412;
             this.label13.Text = "Under State";
             // 
             // txtStateName
             // 
-            this.txtStateName.Location = new System.Drawing.Point(157, 104);
+            this.txtStateName.Location = new System.Drawing.Point(179, 105);
             this.txtStateName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtStateName.Name = "txtStateName";
+            this.txtStateName.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStateName.Properties.Appearance.Options.UseFont = true;
             this.txtStateName.Properties.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtStateName.Properties.ReadOnly = true;
-            this.txtStateName.Size = new System.Drawing.Size(307, 22);
+            this.txtStateName.Size = new System.Drawing.Size(295, 30);
             this.txtStateName.TabIndex = 411;
             this.txtStateName.TabStop = false;
             // 

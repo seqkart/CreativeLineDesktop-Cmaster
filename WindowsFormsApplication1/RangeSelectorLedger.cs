@@ -159,7 +159,7 @@ namespace WindowsFormsApplication1
         }
         private void FillPartyGrid()
         {
-            DataSet ds = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst where  AccActive='y' order by AccName ");
+            DataSet ds = ProjectFunctions.GetDataSet("Select AccCode,AccName from ActMst where  AccActive='Y' order by AccName ");
             if (ds.Tables[0].Rows.Count > 0)
             {
                 ds.Tables[0].Columns.Add("Select", typeof(bool));

@@ -1065,7 +1065,7 @@
             // 
             // pictureEdit1
             // 
-            this.pictureEdit1.Location = new System.Drawing.Point(1265, 509);
+            this.pictureEdit1.Location = new System.Drawing.Point(1262, 257);
             this.pictureEdit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
@@ -1100,7 +1100,7 @@
             this.xtraTabPage1.Controls.Add(this.labelControl24);
             this.xtraTabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(246, 186);
+            this.xtraTabPage1.Size = new System.Drawing.Size(246, 192);
             this.xtraTabPage1.Text = "Sundry Details";
             // 
             // txtNetAmount
@@ -1287,7 +1287,7 @@
             this.xtraTabPage3.Controls.Add(this.labelControl34);
             this.xtraTabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(477, 105);
+            this.xtraTabPage3.Size = new System.Drawing.Size(477, 111);
             this.xtraTabPage3.Text = "Transport Details";
             // 
             // labelControl23
@@ -1436,7 +1436,7 @@
             this.Menu_ToolStrip.Name = "Menu_ToolStrip";
             this.Menu_ToolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.Menu_ToolStrip.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Menu_ToolStrip.Size = new System.Drawing.Size(1293, 31);
+            this.Menu_ToolStrip.Size = new System.Drawing.Size(1497, 31);
             this.Menu_ToolStrip.TabIndex = 552;
             this.Menu_ToolStrip.Text = "Options";
             // 
@@ -1484,7 +1484,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1293, 822);
+            this.ClientSize = new System.Drawing.Size(1497, 822);
             this.ControlBox = false;
             this.Controls.Add(this.TXTDC);
             this.Controls.Add(this.HelpGrid);

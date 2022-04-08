@@ -106,17 +106,17 @@ namespace WindowsFormsApplication1.Transaction
                 ProjectFunctions.SpeakError("No Data To Save");
 
             }
-
+//---------------------------------------------------
             foreach (DataRow dr in dt.Rows)
             {
-                if (ProjectFunctions.CheckAllPossible(dr["SFDARTID"].ToString(), Convert.ToDecimal(dr["SFDARTMRP"]), dr["SFDCOLID"].ToString(), dr["SFDSIZID"].ToString()))
-                {
+                //if (ProjectFunctions.CheckAllPossible(dr["SFDARTID"].ToString(), Convert.ToDecimal(dr["SFDARTMRP"])))
+                //{
 
-                }
-                else
-                {
-                    return false;
-                }
+                //}
+                //else
+                //{
+                //    return false;
+                //}
             }
             return true;
         }
