@@ -21,14 +21,11 @@ namespace WindowsFormsApplication1
         [DllImport("user32.dll")]
         public static extern void Keybd_event(byte bVk, byte bScan, uint dwFlags, IntPtr dwExtraInfo);
 
-
-
         [DllImport("user32.dll")]
 
         [return: MarshalAs(UnmanagedType.Bool)]
 
         static extern bool SetForegroundWindow(IntPtr hWnd);
-
 
         private readonly bool isDebug = false;
         public FrmLogins()
@@ -100,10 +97,8 @@ namespace WindowsFormsApplication1
                 if (ValidateData())
                 {
                     DataSet dsCompany = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_COMCONF_ALL());
-                    
-                    
-                    GlobalVariables.WAppApiLink = dsCompany.Tables[0].Rows[0]["WAppApiLink"].ToString();
 
+              //      GlobalVariables.WAppApiLink = dsCompany.Tables[0].Rows[0]["WAppApiLink"].ToString();
 
                     DataRow dr = dsCompany.Tables[0].Rows[0];
 
@@ -237,11 +232,9 @@ namespace WindowsFormsApplication1
                 System.IO.Directory.CreateDirectory("C:\\Temp\\GST");
             }
 
-
             defaultLookAndFeel1.LookAndFeel.SkinName = "McSkin";
             ProjectFunctions.TextBoxVisualize(this);
             ProjectFunctions.ButtonVisualize(this);
-
 
             SqlConnection cnn = new SqlConnection(ProjectFunctions.ConnectionString);
             try
@@ -260,7 +253,6 @@ namespace WindowsFormsApplication1
                 return;
             }
 
-
             DataSet dsCompany = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_COMCONF());
             if (ComparisonUtils.IsNotNull_DataSet(dsCompany))
             {
@@ -273,7 +265,7 @@ namespace WindowsFormsApplication1
             {
                 //MessageBox.Show(dsFNYear.Tables[0].Rows.Count.ToString());
                 txtPassword.Text = "123";
-                txtUserName.Text = "Varun";
+                txtUserName.Text = "Happy";
                 SendKeys.Send("{Enter}");
 
                 txtUserName.Focus();
@@ -348,9 +340,11 @@ namespace WindowsFormsApplication1
         }
 
         private void TxtUserName_DoubleClick(object sender, EventArgs e)
+        
+        
         {
 
-            txtUserName.Text = "Varun";
+            txtUserName.Text = "Happy";
             SendKeys.Send("{Enter}");
             dTP1.Text = DateTime.Now.ToLongDateString();
 

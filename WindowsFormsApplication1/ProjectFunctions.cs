@@ -318,7 +318,7 @@ namespace WindowsFormsApplication1
             DialogResult dialogResult = MessageBox.Show(message, caption, MessageBoxButtons.YesNo);
             //if (DialogResult == DialogResult.Yes)
             //{
-                
+
             //}
             //else if (DialogResult == DialogResult.No)
             //{
@@ -1867,11 +1867,11 @@ namespace WindowsFormsApplication1
                 pdfViewer.LoadDocument(filename);
 
                 PrinterSettings settings = new PrinterSettings();
-               
+
 
                 DevExpress.Pdf.PdfPrinterSettings printerSettings = new DevExpress.Pdf.PdfPrinterSettings();
                 printerSettings.Settings.PrinterName = settings.PrinterName;
-               
+
 
                 printerSettings.Settings.PrintFileName = filename;
 
@@ -2695,9 +2695,11 @@ namespace WindowsFormsApplication1
                         PrintToolBase tool = new PrintToolBase(Report.PrintingSystem);
                         //printTool.PrintDialog();
                         tool.Print();
-                        
+
                         Report.ExportToPdf("C:\\Application\\CashMemo.pdf");
-                    
+                        Report.SaveLayoutToXml("C:\\Temp\\abc1.xml");
+
+
                     }
 
                     else
@@ -2713,7 +2715,7 @@ namespace WindowsFormsApplication1
                                 ProjectFunctions.SpeakError("Kindly Update GST No First");
 
                             }
-                            
+
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.Print, DevExpress.XtraPrinting.CommandVisibility.None);
                             frm.documentViewer1.PrintingSystem.SetCommandVisibility(DevExpress.XtraPrinting.PrintingSystemCommand.PrintDirect, DevExpress.XtraPrinting.CommandVisibility.None);
                         }

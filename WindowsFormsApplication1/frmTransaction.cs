@@ -2148,6 +2148,10 @@ namespace WindowsFormsApplication1
 
                                             PrintReportViewer frm = new PrintReportViewer();
                                             frm.documentViewer1.DocumentSource = rpt;
+
+                                            rpt.SaveLayoutToXml("C://Temp//abc1.xml");
+                                           
+
                                             frm.ShowDialog();
                                             //ReportToExport.Pages.AddRange(rpt.Pages);
                                         }

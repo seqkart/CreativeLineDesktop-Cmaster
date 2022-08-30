@@ -33,7 +33,6 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
 
-
             //engine.SetInputToDefaultAudioDevice();
             //GrammarBuilder gb = new GrammarBuilder(new Choices(new string[]
             //{
@@ -60,7 +59,6 @@ namespace WindowsFormsApplication1
 
         private void XtraForm1_Load(object sender, EventArgs e)
         {
-            
 
             labelControl1.Text = "Disconnected";
 
@@ -73,14 +71,12 @@ namespace WindowsFormsApplication1
                 pictureEdit2.Image = Image.FromFile(Application.StartupPath + "//BACKGROUND.JPG");
             }
 
-
             Timer timer = new Timer
             {
                 Interval = (1 * 10000) // 10 secs
             };
             timer.Tick += Timer_Tick;
             timer.Start();
-
 
             DataSet dsFNYear = ProjectFunctionsUtils.GetDataSet(SQL_QUERIES.SQL_USER_FN_ACCESS_BY_USER(GlobalVariables.CurrentUser));
             if (ComparisonUtils.IsNotNull_DataSet(dsFNYear))
@@ -89,12 +85,8 @@ namespace WindowsFormsApplication1
                 HelpGridView.BestFitColumns();
             }
 
-
-
-            
             Text = GlobalVariables.CompanyName + " - " + GlobalVariables.FinancialYear;
             CreateMenuType1();
-
 
             var str = string.Format("[sp_LoadUserAllocatedWork2] '" + GlobalVariables.CurrentUser + "'");
             using (var ds = ProjectFunctions.GetDataSet(str))
@@ -147,11 +139,8 @@ namespace WindowsFormsApplication1
                 }
                 Refresh();
 
-
-
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-
 
                     foreach (DataRow dr in ds.Tables[0].Rows)
                     {
@@ -170,18 +159,12 @@ namespace WindowsFormsApplication1
                 }
             }
 
-
-
             _ribbonControl.Minimized = false;
-
 
             DevExpress.XtraTab.XtraTabPage Page = new DevExpress.XtraTab.XtraTabPage
             {
                 ShowCloseButton = DevExpress.Utils.DefaultBoolean.True
             };
-
-
-          
 
             DataSet dsUserTheme = ProjectFunctions.GetDataSet("select isnull(UserTheme,'') as UserTheme from UserMaster where UserName='" + GlobalVariables.CurrentUser + "'");
             if (dsUserTheme.Tables[0].Rows[0][0].ToString().Length > 0)
@@ -199,7 +182,6 @@ namespace WindowsFormsApplication1
         {
             RunProgAccordin(e.Item.Name, e.Item.Caption);
 
-
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -207,7 +189,6 @@ namespace WindowsFormsApplication1
             try
             {
                 _ = ProjectFunctions.WhatsAppConnectionStatus();
-
 
                 if (GlobalVariables.WhatAppStatus != null)
                 {
@@ -242,7 +223,6 @@ namespace WindowsFormsApplication1
         {
             Application.Exit();
         }
-
 
         private void SetImage()
         {
@@ -298,8 +278,6 @@ namespace WindowsFormsApplication1
             GlobalVariables.ProgCode = myitem;
             GlobalVariables.ProgDesc = itemcaption;
 
-
-
             foreach (DevExpress.XtraTab.XtraTabPage p in xtraTabControl1.TabPages)
             {
                 if (p.Text.ToUpper() == GlobalVariables.ProgDesc.ToUpper())
@@ -313,17 +291,13 @@ namespace WindowsFormsApplication1
                 ShowCloseButton = DevExpress.Utils.DefaultBoolean.True
             };
 
-
             xtraTabControl1.TabPages.Add(Page);
 
             Page.Text = GlobalVariables.ProgDesc;
             Page.Name = GlobalVariables.ProgCode;
 
-
             Console.WriteLine("WriteLine ********** " + myitem);
             PrintLogWin.PrintLog("Write ********** " + myitem);
-
-
 
             switch (myitem)
             {
@@ -608,7 +582,6 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     SetImage();
                     break;
-
 
                 case "PROG232":
                     var PROG232 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -958,7 +931,6 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
 
-
                 case "PROG16":
                     var PROG16 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
                     GlobalVariables.ProgCode = "PROG16";
@@ -969,7 +941,6 @@ namespace WindowsFormsApplication1
                     xtraTabControl1.SelectedTabPage = Page;
                     SetImage();
                     break;
-
 
                 case "PROG17":
                     var PROG17 = new FrmMaster() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1879,7 +1850,6 @@ namespace WindowsFormsApplication1
                     PROG137.BringToFront();
                     SetImage();
 
-
                     break;
                 case "PROG138":
                     var PROG138 = new FrmTransaction() { Dock = DockStyle.Fill, TopLevel = false, StartPosition = FormStartPosition.Manual, WindowState = System.Windows.Forms.FormWindowState.Normal };
@@ -1890,7 +1860,6 @@ namespace WindowsFormsApplication1
                     SetImage();
                     break;
                 case "PROG139":
-
 
                     ProjectFunctions.GetDataSet("sp_SinkDCOWithOnline");
                     XtraMessageBox.Show("Data Uploaded");
@@ -2145,7 +2114,6 @@ namespace WindowsFormsApplication1
                     break;
                 default:
 
-
                     break;
             }
         }
@@ -2153,7 +2121,6 @@ namespace WindowsFormsApplication1
         {
             RunProgAccordin((sender as DevExpress.XtraBars.Navigation.AccordionControlElement).Name, (sender as DevExpress.XtraBars.Navigation.AccordionControlElement).Text);
         }
-
 
         private void SkinRibbonGalleryBarItem_ItemClick(object sender, GalleryItemClickEventArgs e)
         {
@@ -2165,9 +2132,6 @@ namespace WindowsFormsApplication1
 
             _ribbonControl.Minimized = true;
         }
-
-
-
 
         private void XtraForm1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -2227,44 +2191,40 @@ namespace WindowsFormsApplication1
         private async void ChangeQRData()
         {
 
-            using (var httpClient = new HttpClient())
-            {
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), GlobalVariables.WAppApiLink+"/qrcode"))
-                {
-                    request.Headers.TryAddWithoutValidation("accept", "*/*");
+            //using (var httpClient = new HttpClient())
+            //{
+            //    using (var request = new HttpRequestMessage(new HttpMethod("GET"), GlobalVariables.WAppApiLink+"/qrcode"))
+            //    {
+            //        request.Headers.TryAddWithoutValidation("accept", "*/*");
 
-                    var response = await httpClient.SendAsync(request);
+            //    //    var response = await httpClient.SendAsync(request);
 
-                    if (response.IsSuccessStatusCode == true)
-                    {
+            //        if (response.IsSuccessStatusCode == true)
+            //        {
 
-                        byte[] MyData = new byte[0];
-                        MyData = await response.Content.ReadAsByteArrayAsync();
+            //            byte[] MyData = new byte[0];
+            //            MyData = await response.Content.ReadAsByteArrayAsync();
 
-                        MemoryStream stream = new MemoryStream(MyData)
-                        {
-                            Position = 0
-                        };
+            //            MemoryStream stream = new MemoryStream(MyData)
+            //            {
+            //                Position = 0
+            //            };
 
-                        pictureEdit1.Image = Image.FromStream(stream);
-                        pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
+            //            pictureEdit1.Image = Image.FromStream(stream);
+            //            pictureEdit1.Image.Save("C:\\Temp\\A.jpg");
 
                       // var myDetails = JsonConvert.DeserializeObject<WhatsAppClasses.WhatsAppLoginStatus>(content);
                       //ProjectFunctions.SpeakError("Whatsapp status is connected on mobile no " + myDetails.user);
 
-
-                    }
-                }
-            }
+            //        }
+            //    }
+            //}
         }
 
-        private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
-        {
-            ProjectFunctions.WhatsAppDisConnection();
-        }
-
-
-
+        //private void HyperlinkLabelControl1_Click(object sender, EventArgs e)
+        //{
+        //    ProjectFunctions.WhatsAppDisConnection();
+        //}
 
         private void HyperlinkLabelControl2_Click(object sender, EventArgs e)
         {
@@ -2275,12 +2235,10 @@ namespace WindowsFormsApplication1
         {
             DataRow row = HelpGridView.GetDataRow(HelpGridView.FocusedRowHandle);
 
-
             DataSet dsFY = ProjectFunctions.GetDataSet(SQL_QUERIES.SQL_FN_YEAR(row[0].ToString()));
             DataRow drFY = dsFY.Tables[0].Rows[0];
 
             //GlobalVariables.CUnitID = txtUnit.SelectedValue.ToString().PadLeft(2, '0');
-
 
             GlobalVariables.FinancialYear = drFY[SQL_COLUMNS.FN_YEAR._FNYearCode].ToString();
             GlobalVariables.FinYearStartDate = Convert.ToDateTime(drFY[SQL_COLUMNS.FN_YEAR._FNStartDate]).Date;

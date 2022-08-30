@@ -34,6 +34,7 @@ namespace WindowsFormsApplication1.FormReports
             {
                 XtraReport rpt = new XtraReport();
                 rpt = (XtraReport)documentViewer1.DocumentSource;
+                rpt.SaveLayoutToXml("C:\\Temp\\abc1.xml");
                 ReportPrintTool printTool = new ReportPrintTool(rpt);
                 printTool.Print(PkInstalledPrinters);
                 Close();

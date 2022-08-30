@@ -3368,12 +3368,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.Animation(System.Action{DevExtreme.AspNet.Mvc.Builders.ContextMenuAnimationBuilder})">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.CloseOnOutsideClick(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.CloseOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.CssClass(System.String)">
             <summary></summary>
         </member>
@@ -3438,6 +3432,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.HideOnOutsideClick(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.HideOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ContextMenuBuilder.Hint(System.String)">
@@ -4334,6 +4334,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.OnSelectionChanged(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.OnToolbarPreparing(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.OnToolbarPreparing(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.Pager(System.Action{DevExtreme.AspNet.Mvc.Builders.DataGridPagerBuilder})">
             <summary></summary>
         </member>
@@ -4434,6 +4440,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.Summary(System.Action{DevExtreme.AspNet.Mvc.Builders.DataGridSummaryBuilder{`0}})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.SyncLookupFilterValues(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.SyncLookupFilterValues(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridBuilder`1.TabIndex(System.Int32)">
@@ -5316,6 +5328,15 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridExportBuilder.Enabled(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridExportBuilder.Formats(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.DataGridExportFormat})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridExportBuilder.Formats(System.Collections.Generic.IEnumerable{System.String})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridExportBuilder.Formats(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DataGridExportBuilder.Texts(System.Action{DevExtreme.AspNet.Mvc.Builders.DataGridExportTextsBuilder})">
@@ -7473,7 +7494,7 @@
             <summary>Lists command sub items.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Location(DevExtreme.AspNet.Mvc.ToolbarItemLocation)">
-            <summary>Specifies a location for the command or separator on the main toolbar.</summary>
+            <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.DiagramCustomCommandBuilder.Name(DevExtreme.AspNet.Mvc.DiagramCommand)">
             <summary>Specifies the custom command&apos;s identifier.</summary>
@@ -10580,6 +10601,390 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderBuilder.Width(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
+        <member name="T:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Option(System.String,System.Object)">
+            <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AbortUpload(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AbortUpload(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Accept(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Accept(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AccessKey(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AccessKey(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ActiveStateEnabled(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ActiveStateEnabled(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AllowCanceling(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AllowCanceling(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AllowedFileExtensions(System.Collections.Generic.IEnumerable{System.String})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.AllowedFileExtensions(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ChunkSize(System.Double)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ChunkSize(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.DialogTrigger(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.DialogTrigger(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Disabled(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Disabled(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.DropZone(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.DropZone(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ElementAttr(System.String,System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ElementAttr(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ElementAttr(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ElementAttr(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.FocusStateEnabled(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.FocusStateEnabled(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Height(System.Double)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Height(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Hint(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Hint(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.HoverStateEnabled(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.HoverStateEnabled(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InputAttr(System.String,System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InputAttr(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InputAttr(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InputAttr(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InvalidFileExtensionMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InvalidFileExtensionMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InvalidMaxFileSizeMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InvalidMaxFileSizeMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InvalidMinFileSizeMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.InvalidMinFileSizeMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.IsValid(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.IsValid(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.LabelText(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.LabelText(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.MaxFileSize(System.Double)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.MaxFileSize(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.MinFileSize(System.Double)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.MinFileSize(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Multiple(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Multiple(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Name(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Name(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnBeforeSend(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnBeforeSend(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnContentReady(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnContentReady(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnDisposing(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnDisposing(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnDropZoneEnter(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnDropZoneEnter(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnDropZoneLeave(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnDropZoneLeave(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnFilesUploaded(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnFilesUploaded(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnInitialized(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnInitialized(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnOptionChanged(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnOptionChanged(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnProgress(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnProgress(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploadAborted(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploadAborted(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploaded(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploaded(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploadError(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploadError(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploadStarted(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnUploadStarted(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnValueChanged(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.OnValueChanged(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Progress(System.Double)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Progress(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ReadOnly(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ReadOnly(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ReadyToUploadMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ReadyToUploadMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.RtlEnabled(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.RtlEnabled(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.SelectButtonText(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.SelectButtonText(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ShowFileList(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ShowFileList(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.TabIndex(System.Int32)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.TabIndex(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadAbortedMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadAbortedMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadButtonText(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadButtonText(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadChunk(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadChunk(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadCustomData(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadedMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadedMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadFailedMessage(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadFailedMessage(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadFile(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadFile(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadHeaders(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadMethod(DevExtreme.AspNet.Mvc.UploadHttpMethod)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadMode(DevExtreme.AspNet.Mvc.FileUploadMode)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadUrl(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.UploadUrl(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ValidationError(System.Object)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ValidationErrors(System.Collections.IEnumerable)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ValidationErrors(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.ValidationStatus(DevExtreme.AspNet.Mvc.ValidationStatus)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Value(System.Collections.IEnumerable)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Value(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Visible(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Visible(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Width(System.Double)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Width(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder.Width(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.FilterBuilderBuilder`1">
             <summary>The FilterBuilder UI component allows a user to build complex filter expressions with an unlimited number of filter conditions, combined by logical operations using the UI.</summary>
         </member>
@@ -11096,6 +11501,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormatBuilder.Type(DevExtreme.AspNet.Mvc.JS)">
             <summary>Specifies a predefined format. Does not apply if you have specified the formatter function.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FormatBuilder.UseCurrencyAccountingStyle(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.FormatBuilder.UseCurrencyAccountingStyle(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.FormBuilder`1">
             <summary>The Form UI component represents fields of a data object as a collection of label-editor pairs. These pairs can be arranged in several groups, tabs and columns.</summary>
         </member>
@@ -11565,16 +11976,16 @@
             <summary>Specifies an option by its name.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.Alignment(DevExtreme.AspNet.Mvc.HorizontalAlignment)">
-            <summary>Specifies the label&apos;s horizontal alignment. Applies only to labels outside their editors (see labelMode).</summary>
+            <summary>Specifies the label&apos;s horizontal alignment. Applies only if the labelMode is &apos;outside&apos;.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.Location(DevExtreme.AspNet.Mvc.FormLabelLocation)">
-            <summary>Specifies the location of a label against the editor. Applies only to labels outside their editors (see labelMode).</summary>
+            <summary>Specifies the location of a label against the editor. Applies only if the labelMode is &apos;outside&apos;.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.ShowColon(System.Boolean)">
-            <summary>Specifies whether a colon is displayed at the end of the current label. Applies only to labels outside their editors (see labelMode).</summary>
+            <summary>Specifies whether or not a colon is displayed at the end of the current label.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.ShowColon(DevExtreme.AspNet.Mvc.JS)">
-            <summary>Specifies whether a colon is displayed at the end of the current label. Applies only to labels outside their editors (see labelMode).</summary>
+            <summary>Specifies whether or not a colon is displayed at the end of the current label.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.Text(System.String)">
             <summary>Specifies the label text.</summary>
@@ -11583,10 +11994,10 @@
             <summary>Specifies the label text.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.Visible(System.Boolean)">
-            <summary>Controls the visibility of the label outside the editor.</summary>
+            <summary>Specifies whether or not the label is visible.</summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.FormItemLabelBuilder.Visible(DevExtreme.AspNet.Mvc.JS)">
-            <summary>Controls the visibility of the label outside the editor.</summary>
+            <summary>Specifies whether or not the label is visible.</summary>
         </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.FormSimpleItemBuilder">
             <summary>This article describes configuration properties of a simple form item.</summary>
@@ -12170,7 +12581,7 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.Columns(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.Columns(System.Action{DevExtreme.AspNet.Mvc.Factories.CollectionFactory{DevExtreme.AspNet.Mvc.Builders.TreeListColumnBuilder{`0}}})">
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.Columns(System.Action{DevExtreme.AspNet.Mvc.Factories.CollectionFactory{DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder{`0}}})">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.ContextMenu(System.Action{DevExtreme.AspNet.Mvc.Builders.GanttContextMenuBuilder})">
@@ -12354,6 +12765,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.OnResourceUnassigning(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.OnScaleCellPrepared(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.OnScaleCellPrepared(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.OnSelectionChanged(System.String)">
@@ -12568,6 +12985,264 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttBuilder`1.Width(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
+        </member>
+        <member name="T:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Option(System.String,System.Object)">
+            <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Alignment(DevExtreme.AspNet.Mvc.HorizontalAlignment)">
+            <summary>Aligns the content of the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.AllowFiltering(System.Boolean)">
+            <summary>Specifies whether data can be filtered by this column. Applies only if filterRow.visible is true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.AllowFiltering(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether data can be filtered by this column. Applies only if filterRow.visible is true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.AllowHeaderFiltering(System.Boolean)">
+            <summary>Specifies whether the header filter can be used to filter data by this column. Applies only if headerFilter.visible is true. By default, inherits the value of the allowFiltering property.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.AllowHeaderFiltering(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether the header filter can be used to filter data by this column. Applies only if headerFilter.visible is true. By default, inherits the value of the allowFiltering property.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.AllowSorting(System.Boolean)">
+            <summary>Specifies whether a user can sort rows by this column at runtime. Applies only if sorting.mode differs from &apos;none&apos;.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.AllowSorting(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether a user can sort rows by this column at runtime. Applies only if sorting.mode differs from &apos;none&apos;.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateCellValue(System.String)">
+            <summary>Calculates custom cell values. Use this function to create an unbound data column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateCellValue(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Calculates custom cell values. Use this function to create an unbound data column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateDisplayValue(System.String)">
+            <summary>Calculates custom display values for column cells. Requires specifying the dataField or calculateCellValue property. Used in lookup optimization.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateDisplayValue(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Calculates custom display values for column cells. Requires specifying the dataField or calculateCellValue property. Used in lookup optimization.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateFilterExpression(System.String)">
+            <summary>Specifies the column&apos;s custom rules to filter data.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateFilterExpression(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Specifies the column&apos;s custom rules to filter data.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateSortValue(System.String)">
+            <summary>Calculates custom values used to sort this column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CalculateSortValue(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Calculates custom values used to sort this column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Caption(System.String)">
+            <summary>Specifies a caption for the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Caption(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies a caption for the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CellTemplate(System.String)">
+            <summary>Specifies a custom template for data cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CellTemplate(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Specifies a custom template for data cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CellTemplate(DevExtreme.AspNet.Mvc.TemplateName)">
+            <summary>Specifies a custom template for data cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CellTemplate(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies a custom template for data cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CellTemplate(System.Action)">
+            <summary>Specifies a custom template for data cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CssClass(System.String)">
+            <summary>Specifies a CSS class to be applied to the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CssClass(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies a CSS class to be applied to the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CustomizeText(System.String)">
+            <summary>Customizes the text displayed in column cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Customizes the text displayed in column cells.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.DataField(System.String)">
+            <summary>Binds the column to a field of the dataSource.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.DataField(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Binds the column to a field of the dataSource.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.DataType(DevExtreme.AspNet.Mvc.GridColumnDataType)">
+            <summary>Casts column values to a specific data type.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.EncodeHtml(System.Boolean)">
+            <summary>Specifies whether HTML tags are displayed as plain text or applied to the values of the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.EncodeHtml(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether HTML tags are displayed as plain text or applied to the values of the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FalseText(System.String)">
+            <summary>In a boolean column, replaces all false items with a specified text. Applies only if showEditorAlways property is false.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FalseText(DevExtreme.AspNet.Mvc.JS)">
+            <summary>In a boolean column, replaces all false items with a specified text. Applies only if showEditorAlways property is false.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.GridFilterOperations})">
+            <summary>Specifies available filter operations. Applies if allowFiltering is true and the filterRow and/or filterPanel are visible.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterOperations(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>Specifies available filter operations. Applies if allowFiltering is true and the filterRow and/or filterPanel are visible.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterOperations(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies available filter operations. Applies if allowFiltering is true and the filterRow and/or filterPanel are visible.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterType(DevExtreme.AspNet.Mvc.FilterType)">
+            <summary>Specifies whether a user changes the current filter by including (selecting) or excluding (clearing the selection of) values. Applies only if headerFilter.visible and allowHeaderFiltering are true.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterValue(System.Object)">
+            <summary>Specifies the column&apos;s filter value displayed in the filter row.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterValues(System.Collections.IEnumerable)">
+            <summary>Specifies values selected in the column&apos;s header filter.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.FilterValues(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies values selected in the column&apos;s header filter.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Format(DevExtreme.AspNet.Mvc.Format)">
+            <summary>Formats a value before it is displayed in a column cell.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Format(System.String)">
+            <summary>Formats a value before it is displayed in a column cell.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Format(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Formats a value before it is displayed in a column cell.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Format(System.Action{DevExtreme.AspNet.Mvc.Builders.FormatBuilder})">
+            <summary>Formats a value before it is displayed in a column cell.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.HeaderCellTemplate(System.String)">
+            <summary>Specifies a custom template for column headers.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.HeaderCellTemplate(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Specifies a custom template for column headers.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.HeaderCellTemplate(DevExtreme.AspNet.Mvc.TemplateName)">
+            <summary>Specifies a custom template for column headers.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.HeaderCellTemplate(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies a custom template for column headers.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.HeaderCellTemplate(System.Action)">
+            <summary>Specifies a custom template for column headers.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.HeaderFilter(System.Action{DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder})">
+            <summary>Specifies data settings for the header filter.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.MinWidth(System.Double)">
+            <summary>Specifies the minimum width of the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.MinWidth(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the minimum width of the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.SelectedFilterOperation(DevExtreme.AspNet.Mvc.FilterOperations)">
+            <summary>Specifies a filter operation that applies when users use the filter row to filter the column.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.SortIndex(System.Int32)">
+            <summary>Specifies the index according to which columns participate in sorting.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.SortIndex(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the index according to which columns participate in sorting.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.SortingMethod(System.String)">
+            <summary>Specifies a custom comparison function for sorting. Applies only when sorting is performed on the client.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.SortingMethod(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Specifies a custom comparison function for sorting. Applies only when sorting is performed on the client.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.SortOrder(DevExtreme.AspNet.Mvc.SortOrder)">
+            <summary>Specifies the sort order of column values.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.TrueText(System.String)">
+            <summary>In a boolean column, replaces all true items with a specified text. Applies only if showEditorAlways property is false.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.TrueText(DevExtreme.AspNet.Mvc.JS)">
+            <summary>In a boolean column, replaces all true items with a specified text. Applies only if showEditorAlways property is false.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.VisibleIndex(System.Int32)">
+            <summary>Specifies the position of the column regarding other columns in the resulting UI component.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.VisibleIndex(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the position of the column regarding other columns in the resulting UI component.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Width(System.Double)">
+            <summary>Specifies the column&apos;s width in pixels or as a percentage. Ignored if it is less than minWidth.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Width(System.String)">
+            <summary>Specifies the column&apos;s width in pixels or as a percentage. Ignored if it is less than minWidth.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Width(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the column&apos;s width in pixels or as a percentage. Ignored if it is less than minWidth.</summary>
+        </member>
+        <member name="T:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder">
+            <summary>Specifies data settings for the header filter.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.Option(System.String,System.Object)">
+            <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.AllowSearch(System.Boolean)">
+            <summary>Specifies whether searching is enabled in the header filter.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.AllowSearch(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether searching is enabled in the header filter.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSource(System.String)">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSource(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSource(System.Func{DevExtreme.AspNet.Mvc.Factories.DataSourceFactory,DevExtreme.AspNet.Mvc.Builders.OptionsOwnerBuilder})">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSource(System.String,System.String[])">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSource(System.Collections.IEnumerable,System.String[])">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSource(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.DataSourceOptions(System.Action{DevExtreme.AspNet.Mvc.Builders.DataSources.DataSourceOptionsBuilder})">
+            <summary>Specifies the header filter&apos;s data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.GroupInterval(DevExtreme.AspNet.Mvc.HeaderFilterGroupInterval)">
+            <summary>Specifies how the header filter combines values into groups. Does not apply if you specify a custom header filter data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.GroupInterval(System.Double)">
+            <summary>Specifies how the header filter combines values into groups. Does not apply if you specify a custom header filter data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.GroupInterval(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies how the header filter combines values into groups. Does not apply if you specify a custom header filter data source.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.Height(System.Double)">
+            <summary>Specifies the height of the popup menu containing filtering values.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the height of the popup menu containing filtering values.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.SearchMode(DevExtreme.AspNet.Mvc.CollectionSearchMode)">
+            <summary>Specifies a comparison operation used to search header filter values.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.Width(System.Double)">
+            <summary>Specifies the width of the popup menu containing filtering values.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnHeaderFilterBuilder.Width(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies the width of the popup menu containing filtering values.</summary>
         </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.GanttContextMenuBuilder">
             <summary>Configures the context menu.</summary>
@@ -13317,7 +13992,7 @@
             <summary></summary>
         </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.GaugeIndicatorBuilder">
-            <summary>A base object for gauge value and subvalue indicators. Includes the properties of indicators of all types.</summary>
+            <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GaugeIndicatorBuilder.Option(System.String,System.Object)">
             <summary>Specifies an option by its name.</summary>
@@ -13541,6 +14216,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorBuilder.HoverStateEnabled(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorBuilder.ImageUpload(System.Action{DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder})">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorBuilder.IsValid(System.Boolean)">
             <summary></summary>
         </member>
@@ -13674,6 +14352,45 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorBuilder.Width(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="T:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.Option(System.String,System.Object)">
+            <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.FileUploaderOptions(System.Action{DevExtreme.AspNet.Mvc.Builders.FileUploaderOptionsBuilder})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.FileUploadMode(DevExtreme.AspNet.Mvc.HtmlEditorImageUploadFileUploadMode)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.Tabs(System.Collections.Generic.IEnumerable{DevExtreme.AspNet.Mvc.HtmlEditorImageUploadTab})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.Tabs(System.Action{DevExtreme.AspNet.Mvc.Factories.CollectionFactory{DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadTabItemBuilder}})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.UploadDirectory(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.UploadDirectory(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.UploadUrl(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadBuilder.UploadUrl(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="T:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadTabItemBuilder">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadTabItemBuilder.Option(System.String,System.Object)">
+            <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.HtmlEditorImageUploadTabItemBuilder.Name(DevExtreme.AspNet.Mvc.HtmlEditorImageUploadTab)">
             <summary></summary>
         </member>
         <member name="T:DevExtreme.AspNet.Mvc.Builders.HtmlEditorMediaResizingBuilder">
@@ -14711,12 +15428,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.Animation(System.Action{DevExtreme.AspNet.Mvc.Builders.LoadPanelAnimationBuilder})">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.CloseOnOutsideClick(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.CloseOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.Container(System.String)">
             <summary></summary>
         </member>
@@ -14748,6 +15459,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.HideOnOutsideClick(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.HideOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LoadPanelBuilder.HideOnParentScroll(System.Boolean)">
@@ -15305,6 +16022,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.SearchPlaceholder(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.SearchStartEvent(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.SearchStartEvent(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.SearchTimeout(System.Double)">
             <summary></summary>
         </member>
@@ -15372,12 +16095,6 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.Value(System.Object)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.ValueChangeEvent(System.String)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.ValueChangeEvent(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.LookupBuilder.ValueExpr(System.String)">
@@ -18101,12 +18818,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.Animation(System.Action{DevExtreme.AspNet.Mvc.Builders.PopoverAnimationBuilder})">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.CloseOnOutsideClick(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.CloseOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.Container(System.String)">
             <summary></summary>
         </member>
@@ -18156,6 +18867,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.HideEvent(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.HideOnOutsideClick(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.HideOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopoverBuilder.HideOnParentScroll(System.Boolean)">
@@ -18482,12 +19199,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.Animation(System.Action{DevExtreme.AspNet.Mvc.Builders.PopupAnimationBuilder})">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.CloseOnOutsideClick(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.CloseOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.Container(System.String)">
             <summary></summary>
         </member>
@@ -18558,6 +19269,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.HideOnOutsideClick(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.HideOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PopupBuilder.HideOnParentScroll(System.Boolean)">
@@ -19766,6 +20483,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.Option(System.String,System.Object)">
             <summary>Specifies an option by its name.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.Area(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.Area(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.ElementAttr(System.String,System.Object)">
             <summary></summary>
         </member>
@@ -19788,6 +20511,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.KeepAspectRatio(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.KeepAspectRatio(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ResizableBuilder.MaxHeight(System.Double)">
@@ -21314,6 +22043,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.AllDayExpr(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.AllDayPanelMode(DevExtreme.AspNet.Mvc.AllDayPanelMode)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.AppointmentCollectorTemplate(System.String)">
             <summary></summary>
         </member>
@@ -21638,6 +22370,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.OnAppointmentRendered(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.OnAppointmentTooltipShowing(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.OnAppointmentTooltipShowing(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerBuilder.OnAppointmentUpdated(System.String)">
             <summary></summary>
         </member>
@@ -21954,6 +22692,9 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerViewBuilder.AgendaDuration(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerViewBuilder.AllDayPanelMode(DevExtreme.AspNet.Mvc.AllDayPanelMode)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.SchedulerViewBuilder.AppointmentCollectorTemplate(System.String)">
@@ -26201,10 +26942,7 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TileViewBuilder.RtlEnabled(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.TileViewBuilder.ShowScrollbar(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.TileViewBuilder.ShowScrollbar(DevExtreme.AspNet.Mvc.JS)">
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TileViewBuilder.ShowScrollbar(DevExtreme.AspNet.Mvc.ShowScrollbarMode)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TileViewBuilder.TabIndex(System.Int32)">
@@ -26324,12 +27062,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.CloseOnClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.CloseOnOutsideClick(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.CloseOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.CloseOnSwipe(System.Boolean)">
             <summary></summary>
         </member>
@@ -26376,6 +27108,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.Height(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.HideOnOutsideClick(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.HideOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ToastBuilder.HideOnParentScroll(System.Boolean)">
@@ -26816,12 +27554,6 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.Animation(System.Action{DevExtreme.AspNet.Mvc.Builders.TooltipAnimationBuilder})">
             <summary></summary>
         </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.CloseOnOutsideClick(System.Boolean)">
-            <summary></summary>
-        </member>
-        <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.CloseOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
-            <summary></summary>
-        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.Container(System.String)">
             <summary></summary>
         </member>
@@ -26871,6 +27603,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.HideEvent(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.HideOnOutsideClick(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.HideOnOutsideClick(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TooltipBuilder.HideOnParentScroll(System.Boolean)">
@@ -27599,6 +28337,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.OnSelectionChanged(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.OnToolbarPreparing(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.OnToolbarPreparing(DevExtreme.AspNet.Mvc.RazorBlock)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.Pager(System.Action{DevExtreme.AspNet.Mvc.Builders.TreeListPagerBuilder})">
             <summary></summary>
         </member>
@@ -27690,6 +28434,12 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.StateStoring(System.Action{DevExtreme.AspNet.Mvc.Builders.TreeListStateStoringBuilder})">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.SyncLookupFilterValues(System.Boolean)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.SyncLookupFilterValues(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.TreeListBuilder`1.TabIndex(System.Int32)">
@@ -32015,6 +32765,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartArgumentAxisBuilder.AggregateByCategory(DevExtreme.AspNet.Mvc.JS)">
             <summary></summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartArgumentAxisBuilder.AggregatedPointsPosition(DevExtreme.AspNet.Mvc.AggregatedPointsPosition)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartArgumentAxisBuilder.AggregationGroupWidth(System.Double)">
             <summary></summary>
         </member>
@@ -33746,6 +34499,9 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonAxisSettingsBuilder.Option(System.String,System.Object)">
             <summary>Specifies an option by its name.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonAxisSettingsBuilder.AggregatedPointsPosition(DevExtreme.AspNet.Mvc.AggregatedPointsPosition)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonAxisSettingsBuilder.AllowDecimals(System.Boolean)">
             <summary></summary>
         </member>
@@ -34702,6 +35458,12 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonSeriesSettingsLabelBuilder.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary>Customizes the text displayed by point labels.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonSeriesSettingsLabelBuilder.DisplayFormat(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonSeriesSettingsLabelBuilder.DisplayFormat(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartCommonSeriesSettingsLabelBuilder.Font(System.Action{DevExtreme.AspNet.Mvc.Builders.VizFontBuilder})">
             <summary>Specifies font properties for point labels.</summary>
@@ -36377,6 +37139,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartSeriesLabelBuilder.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary>Customizes the text displayed by point labels.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartSeriesLabelBuilder.DisplayFormat(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartSeriesLabelBuilder.DisplayFormat(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartSeriesLabelBuilder.Font(System.Action{DevExtreme.AspNet.Mvc.Builders.VizFontBuilder})">
             <summary>Specifies font properties for point labels.</summary>
         </member>
@@ -37219,6 +37987,9 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartValueAxisBuilder.Option(System.String,System.Object)">
             <summary>Specifies an option by its name.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartValueAxisBuilder.AggregatedPointsPosition(DevExtreme.AspNet.Mvc.AggregatedPointsPosition)">
+            <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.ChartValueAxisBuilder.AllowDecimals(System.Boolean)">
             <summary></summary>
@@ -42431,6 +43202,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartCommonSeriesSettingsLabelBuilder.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary>Specifies a callback function that returns the text to be displayed by point labels.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartCommonSeriesSettingsLabelBuilder.DisplayFormat(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartCommonSeriesSettingsLabelBuilder.DisplayFormat(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartCommonSeriesSettingsLabelBuilder.Font(System.Action{DevExtreme.AspNet.Mvc.Builders.VizFontBuilder})">
             <summary>Specifies font properties for the text displayed in point labels.</summary>
         </member>
@@ -43234,6 +44011,12 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartSeriesLabelBuilder.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary>Specifies a callback function that returns the text to be displayed by point labels.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartSeriesLabelBuilder.DisplayFormat(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartSeriesLabelBuilder.DisplayFormat(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PieChartSeriesLabelBuilder.Font(System.Action{DevExtreme.AspNet.Mvc.Builders.VizFontBuilder})">
             <summary>Specifies font properties for the text displayed in point labels.</summary>
@@ -46001,6 +46784,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartCommonSeriesSettingsLabelBuilder.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary>Specifies a callback function that returns the text to be displayed by point labels.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartCommonSeriesSettingsLabelBuilder.DisplayFormat(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartCommonSeriesSettingsLabelBuilder.DisplayFormat(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartCommonSeriesSettingsLabelBuilder.Font(System.Action{DevExtreme.AspNet.Mvc.Builders.VizFontBuilder})">
             <summary>Specifies font properties for the text displayed in point labels.</summary>
         </member>
@@ -47116,6 +47905,12 @@
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartSeriesLabelBuilder.CustomizeText(DevExtreme.AspNet.Mvc.RazorBlock)">
             <summary>Specifies a callback function that returns the text to be displayed by point labels.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartSeriesLabelBuilder.DisplayFormat(System.String)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartSeriesLabelBuilder.DisplayFormat(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.PolarChartSeriesLabelBuilder.Font(System.Action{DevExtreme.AspNet.Mvc.Builders.VizFontBuilder})">
             <summary>Specifies font properties for the text displayed in point labels.</summary>
@@ -49281,6 +50076,9 @@
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.RangeSelectorScaleBuilder.Categories(DevExtreme.AspNet.Mvc.JS)">
+            <summary></summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.RangeSelectorScaleBuilder.DiscreteAxisDivisionMode(DevExtreme.AspNet.Mvc.DiscreteAxisDivisionMode)">
             <summary></summary>
         </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.RangeSelectorScaleBuilder.EndOnTick(System.Boolean)">

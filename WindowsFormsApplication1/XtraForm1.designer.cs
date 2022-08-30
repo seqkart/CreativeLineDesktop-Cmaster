@@ -365,7 +365,7 @@
             this.hyperlinkLabelControl1.Size = new System.Drawing.Size(68, 16);
             this.hyperlinkLabelControl1.TabIndex = 2;
             this.hyperlinkLabelControl1.Text = "Disconnect";
-            this.hyperlinkLabelControl1.Click += new System.EventHandler(this.HyperlinkLabelControl1_Click);
+            this.hyperlinkLabelControl1.Click += new System.EventHandler(this.HyperlinkLabelControl2_Click);
             // 
             // labelControl3
             // 
