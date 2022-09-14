@@ -13172,6 +13172,12 @@
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.TrueText(DevExtreme.AspNet.Mvc.JS)">
             <summary>In a boolean column, replaces all true items with a specified text. Applies only if showEditorAlways property is false.</summary>
         </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Visible(System.Boolean)">
+            <summary>Specifies whether the column is visible, that is, occupies space in the table.</summary>
+        </member>
+        <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.Visible(DevExtreme.AspNet.Mvc.JS)">
+            <summary>Specifies whether the column is visible, that is, occupies space in the table.</summary>
+        </member>
         <member name="M:DevExtreme.AspNet.Mvc.Builders.GanttColumnBuilder`1.VisibleIndex(System.Int32)">
             <summary>Specifies the position of the column regarding other columns in the resulting UI component.</summary>
         </member>

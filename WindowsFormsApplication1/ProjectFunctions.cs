@@ -2475,7 +2475,7 @@ namespace WindowsFormsApplication1
 
                 //txtPKGFrt.Text = ds.Tables[0].Rows[0]["SIMFREIGHTAMT"].ToString();
 
-                otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]),
+                otherValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMROFFAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMINSURANCEAMT"]) + Convert.ToDouble(ds.Tables[0].Rows[0]["SIMOCTORIAMT"]) ,
                 // ewbGen.totalValue = Convert.ToDouble(ds.Tables[0].Rows[0]["SIMGRANDTOT"]);
                 totalValue = Convert.ToDouble("0"),
                 cgstValue = Convert.ToDouble(ds.Tables[0].Rows[0]["CGSTAmount"]),
