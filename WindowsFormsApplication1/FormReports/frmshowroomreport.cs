@@ -196,7 +196,6 @@ namespace WindowsFormsApplication1.FormReports
                     {
                         gridControl1.DataSource = null;
                     }
-
                     DataSet ds8 = GetDataSet("Select * from SFDET", ShowConnectionString);
                     if (ds8.Tables[0].Rows.Count > 0)
                     {
